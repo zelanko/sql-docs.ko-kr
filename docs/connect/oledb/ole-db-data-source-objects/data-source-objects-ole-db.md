@@ -22,27 +22,27 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a69fbb260c594ad095872049b06b1f7084bfc29b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 58007040bc4f96749172644b229dba4769929d66
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665653"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106079"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대 한 데이터 원본 이라는 용어를 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 공급자의 데이터 원본 개체의 인스턴스를 만들기는 OLE DB Driver for SQL Server 소비자의 첫 번째 작업입니다.  
+  SQL Server용 OLE DB 드라이버에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 데이터 저장소에 연결할 때 사용되는 OLE DB 인터페이스 집합에 데이터 원본이라는 용어를 사용합니다. 공급자의 데이터 원본 개체의 인스턴스를 만드는 첫 번째 태스크는 OLE DB Driver for SQL Server 소비자의 경우  
   
- 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. OLE DB Driver for SQL Server에 대 한 CLSID는 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 올바른로 확인 되는 기호 참조 하는 msoledbsql.h 파일에 progid). CLSID를 소비자에서 사용 하 여 OLE **CoCreateInstance** 함수를 데이터 원본 개체의 인스턴스를 제조 합니다.  
+ 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. OLE DB Driver for SQL Server에 대 한 CLSID가 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 올바른로 확인 되는 기호를 참조 하는 msoledbsql.h 파일에 progid). CLSID가 있으면 소비자는 OLE **CoCreateInstance** 함수를 사용하여 데이터 원본 개체의 인스턴스를 만듭니다.  
   
- OLE DB Driver for SQL Server가 프로세스 서버입니다. SQL Server 개체에 대 한 OLE DB Driver의 인스턴스는 실행 컨텍스트를 나타내기 위해 위해 CLSCTX_INPROC_SERVER 매크로 사용 하 여 만들어집니다.  
+ OLE DB Driver for SQL Server는 처리 중인 서버. SQL Server용 OLE DB 드라이버 개체의 인스턴스는 실행 가능 콘텐츠를 나타내기 위해 CLSCTX_INPROC_SERVER 매크로를 사용하여 만들어집니다.  
   
- OLE DB 드라이버에서 SQL Server 데이터 원본 개체를 변경할 수 있도록 기존 클러스터에 연결 하는 OLE DB 초기화 인터페이스 노출 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스.  
+ SQL Server용 OLE DB 드라이버 데이터 원본 개체는 소비자가 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 데 사용할 수 있는 OLE DB 초기화 인터페이스를 노출합니다.  
   
- SQL Server 용 OLE DB 드라이버를 통해 만든 모든 연결이 이러한 옵션을 자동으로 설정 합니다.  
+ 모든 연결은 OLE DB 드라이버를 통해 SQL Server에 대 한 이러한 옵션을 자동으로 설정 합니다.  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665653"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 이 예제에서는 클래스 식별자 매크로 사용 하 여 SQL Server 데이터 원본 개체에 대 한 참조를 가져올에 대 한 OLE DB 드라이버를 만들려는 해당 **IDBInitialize** 인터페이스입니다.  
+ 이 예에서는 클래스 식별자 매크로를 사용하여 SQL Server용 OLE DB 드라이버 데이터 원본 개체를 만들고 **IDBInitialize** 인터페이스에 대한 참조를 가져옵니다.  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -77,13 +77,13 @@ else
 }  
 ```  
   
- 성공적으로 만들어지면은 OLE DB Driver for SQL Server 데이터 원본 개체의 인스턴스를 소비자 응용 프로그램에서는 데이터 원본을 초기화 하 고 세션을 만들어 여 계속할 수 있습니다. OLE DB 세션은 데이터 액세스 및 조작을 가능하게 하는 인터페이스를 제공합니다.  
+ SQL Server용 OLE DB 드라이버 데이터 원본 개체의 인스턴스가 성공적으로 만들어지면 소비자 응용 프로그램에서는 데이터 원본을 초기화하고 세션을 만들어 작업을 계속할 수 있습니다. OLE DB 세션은 데이터 액세스 및 조작을 가능하게 하는 인터페이스를 제공합니다.  
   
- OLE DB Driver for SQL Server의 지정 된 인스턴스에 처음 연결 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 성공적인 데이터 원본 초기화의 일부로 합니다. 연결이 때까지 또는 모든 데이터 원본 초기화 인터페이스에 대 한 참조를 유지 관리 되는 그대로 유지 되는 **idbinitialize:: Uninitialize** 메서드를 호출 합니다.  
+ 데이터 원본이 성공적으로 초기화되면SQL Server용 OLE DB 드라이버는 초기화의 일부로 지정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 처음 연결합니다. 이 연결은 데이터 원본 초기화 인터페이스에 대한 참조가 유지되는 동안이나 **IDBInitialize::Uninitialize** 메서드가 호출될 때까지 유지됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [데이터 원본 속성 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [데이터 원본 속성&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [데이터 원본 정보 속성](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -95,7 +95,7 @@ else
   
 -   [지속형 데이터 원본 개체](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

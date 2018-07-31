@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 201692b9ec795fd2ca472b2cd1eb1a938b5e1854
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: a458f5968a2cc56accf18b5cfac43eaef09a76ea
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690236"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107735"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,7 +43,7 @@ HRESULT BCPColumns(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 내부적으로 호출 [ibcpsession:: Bcpcolfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 필드 데이터에 대 한 기본 값을 설정 합니다. 이 값은 기본값을 통해 테이블 이름을 지정할 때 공급자가 내부적으로 검색 하는 SQL Server 열 정보에서 가져오는 [ibcpsession:: Bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)합니다.  
+ 이 메서드는 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 를 내부적으로 호출하여 필드 데이터의 기본값을 설정합니다. 이러한 기본값은 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)를 통해 테이블 이름을 지정할 때 공급자가 내부적으로 검색하는 SQL Server 열 정보에서 가져옵니다.  
   
 > [!NOTE]  
 >  이 메서드는 유효한 파일 이름을 사용하여 **BCPInit** 를 호출한 후에만 호출할 수 있습니다.  
@@ -61,7 +61,7 @@ HRESULT BCPColumns(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생 했습니다. 자세한 내용은 사용 하 여는 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스입니다.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용하세요.  
   
  E_UNEXPECTED  
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 **BCPInit** 메서드를 호출하지 않았습니다. 대량 복사 작업에 이 메서드를 두 번 이상 호출한 경우에도 발생합니다.  
@@ -69,7 +69,7 @@ HRESULT BCPColumns(
  E_OUTOFMEMORY  
  메모리 부족 오류가 발생했습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   

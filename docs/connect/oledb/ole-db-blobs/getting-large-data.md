@@ -1,6 +1,6 @@
 ---
 title: 대규모 데이터 가져오기 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 대규모 데이터 가져오기
+description: SQL Server 용 OLE DB 드라이버를 사용 하는 대규모 데이터 가져오기
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666203"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106185"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  일반적으로 소비자는 OLE DB Driver for SQL Server 저장소 개체를 통해 참조 되지 않은 데이터를 처리 하는 다른 코드를 만드는 코드를 격리 해야는 **ISequentialStream** 인터페이스 포인터입니다.  
+  일반적으로 소비자는 SQL Server용 OLE DB 드라이버 저장소 개체를 만드는 코드를 **ISequentialStream** 인터페이스 포인터를 통해 참조되지 않는 데이터를 처리하는 다른 코드와 구분해야 합니다.  
   
- 이 문서에서는 다음 함수와 함께 사용할 수 있는 기능.  
+ 이 문서에서는 다음 함수와 함께 사용할 수 있는 기능에 대해 설명합니다.  
   
 -   IRowset:GetData  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35666203"
   
 -   ICommand::Execute  
   
- 소비자에 대 한 호출에서 데이터의 단일 행만 인출 해야는 **GetNextRows** 행 집합 속성 그룹의 DBPROP_ACCESSORDER 속성이 DBPROPVAL_AO_SEQUENTIAL 또는 DBPROPVAL_AO_로 설정 된 경우 메서드 SEQUENTIALSTORAGEOBJECTS 합니다. BLOB 데이터가 버퍼링 되지 않기 때문입니다. 소비자에 데이터의 여러 행을 인출할 수 dbprop_accessorder 값이 dbpropval_ao_random 설정 하는 경우 **GetNextRows**합니다.  
+ 행 집합 속성 그룹의 DBPROP_ACCESSORDER 속성이 DBPROPVAL_AO_SEQUENTIAL 또는 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 중 하나로 설정되어 있으면 소비자는 **GetNextRows** 메서드 호출에서 단일 데이터 행만 인출해야 합니다. BLOB 데이터가 버퍼링 되지 때문입니다. DBPROP_ACCESSORDER 값이 DBPROPVAL_AO_RANDOM으로 설정되어 있으면 소비자가 **GetNextRows**에서 여러 데이터 행을 인출할 수 있습니다.  
   
  OLE DB Driver for SQL Server에서 큰 데이터를 검색 하지 않습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이렇게 하려면 소비자가 요청할 때까지 합니다. 소비자는 모든 소규모 데이터를 하나의 접근자에 바인딩한 다음 필요에 따라 하나 이상의 임시 접근자를 사용하여 대규모 데이터 값을 검색해야 합니다.  
   
@@ -153,8 +153,8 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>참고 항목  
+ [BLOB 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../oledb/features/using-large-value-types.md)  
   
   

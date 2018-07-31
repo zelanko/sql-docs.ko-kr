@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c411bf9275f28b13896103565efb2af7dfbb8c66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308982"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983577"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-문을 취소합니다. 즉, 문에 대해 보류 중인 결과가 삭제됩니다. 이 함수가 호출 된 후 문을 다시 실행할 수 있습니다으로 준비 된 경우 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)합니다. 문과 연결된 모든 결과가 사용되는 경우에는 이 함수를 호출할 필요가 없습니다.  
+문을 취소합니다. 즉, 문에 대해 보류 중인 결과가 삭제됩니다. 이 함수가 호출된 후 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)가 준비되었으면 명령문을 다시 실행할 수 있습니다. 문과 연결된 모든 결과가 사용되는 경우에는 이 함수를 호출할 필요가 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ sqlsrv_cancel( resource $stmt)
 부울 값: 작업이 성공하면 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  
-다음 예에서는 대상은 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 쿼리를 실행 하는 데이터베이스를 선택한 다음 사용 하 고 변수 될 때까지 결과 계산 *$salesTotal* 지정된 된 양에 도달할 합니다. 나머지 쿼리 결과는 삭제됩니다. 이 예제에서는 SQL Server 및 AdventureWorks 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스를 대상으로 쿼리를 실행한 다음, 변수 *$salesTotal*이 지정된 양에 도달할 때까지 결과를 사용하고 계산합니다. 나머지 쿼리 결과는 삭제됩니다. 이 예제에서는 SQL Server 및 AdventureWorks 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -96,9 +96,9 @@ sqlsrv_cancel( $stmt);
 ```  
   
 ## <a name="comments"></a>주석  
-준비 되 고의 조합을 사용 하 여 실행 하는 문을 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 및 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 여 다시 실행 될 수 **sqlsrv_execute** 를호출한후**sqlsrv_cancel**합니다. 로 실행 되는 문 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 호출한 후에 다시 실행할 수 없습니다 **sqlsrv_cancel**합니다.  
+[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 및 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 조합을 사용하여 준비되고 실행되는 명령문은 **sqlsrv_cancel**을 호출한 후 **sqlsrv_execute**를 사용하여 다시 실행될 수 있습니다. **sqlsrv_cancel**을 호출한 후에는 [sqlsrv_query](../../connect/php/sqlsrv-query.md)로 실행되는 명령문을 다시 실행할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [서버에 연결](../../connect/php/connecting-to-the-server.md)

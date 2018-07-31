@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: getavailabledrivers | Microsoft Docs'
+title: PDO::getAvailableDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be61e256b025d9bcf290176dd322132c1c2d3918
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975206"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +51,7 @@ print_r(PDO::getAvailableDrivers());
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

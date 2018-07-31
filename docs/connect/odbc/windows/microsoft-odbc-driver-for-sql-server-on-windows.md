@@ -1,5 +1,5 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Windows 기반 Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -15,27 +15,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32856658"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047441"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC 드라이버에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] microsoft 표준 ODBC 인터페이스를 구현 응용 프로그래밍 인터페이스 (API)를 제공 하는 독립 실행형 ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.
+에 대 한 Microsoft ODBC Driver [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 는 Microsoft 표준 ODBC 인터페이스를 구현 응용 프로그래밍 인터페이스 (API)를 제공 하는 독립 실행형 ODBC 드라이버 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.
 
-Microsoft ODBC Driver for SQL Server는 새 응용 프로그램을 만드는 데 사용할 수 있습니다. 또한 현재 이전 ODBC 드라이버를 사용 하는 이전 응용 프로그램을 업그레이드할 수 있습니다. ODBC Driver for SQL Server는 Azure SQL 데이터베이스, Azure SQL 데이터 웨어하우스, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 SQL Server 2005에 대 한 연결을 지원합니다.  
+Microsoft ODBC Driver for SQL Server를 사용하여 새 응용 프로그램을 만들 수 있습니다. 또한 현재 이전 ODBC 드라이버를 사용하는 이전 응용 프로그램을 업그레이드할 수도 있습니다. ODBC Driver for SQL Server는 Azure SQL 데이터베이스, Azure SQL 데이터 웨어하우스, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 SQL Server 2005에 대한 연결을 지원합니다.  
 
 ## <a name="summary"></a>요약
 
-| 버전       | 지원 되는 기능      |
+| 버전 옵션       | 지원 되는 기능      |
 | ------------- |---------------| 
-| 17 Microsoft ODBC Driver for SQL Server | <ul><li>BCP API에 대 한 상시 암호화 지원</li><li>새 연결 문자열 특성 UseFMTONLY로 인해 임시 테이블을 요구 하는 특별 한 경우에서 레거시 메타 데이터를 사용 하는 드라이버</li>
+| Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API에 대 한 always Encrypted 지원</li><li>새 연결 문자열 특성 UseFMTONLY 하면 임시 테이블이 필요한 특별 한 경우 레거시 메타 데이터를 사용 하는 드라이버</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>항상 암호화</li><li>Azure AD 인증</li><li>AlwaysOn AG(가용성 그룹)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>IDN(다국어 도메인 이름)</li></ul> |
-| Microsoft ODBC Driver 11 for SQL Server | <ul><li>드라이버 인식 연결 풀링</li><li>연결 복원력</li><li>비동기 실행 (폴링 방법)</li></ul> |    
+| Microsoft ODBC Driver 11 for SQL Server | <ul><li>드라이버 인식 연결 풀링</li><li>연결 복원력</li><li>비동기 실행(폴링 메서드)</li></ul> |    
 
 ## <a name="documentation"></a>설명서  
 이 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 문서에는 다음이 포함되어 있습니다.  
@@ -46,17 +46,17 @@ Microsoft ODBC Driver for SQL Server는 새 응용 프로그램을 만드는 데
 -   [ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [비동기 실행&#40;알림 방법&#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Windows ODBC 드라이버의 연결 복원](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
--   [ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+-   [상시 암호화와 ODBC 드라이버 사용](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [ODBC 드라이버에서 Azure Active Directory 사용](../../../connect/odbc/using-azure-active-directory.md) 
--   [투명 네트워크 IP 확인을 사용 하 여](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
+-   [투명 네트워크 IP 확인 사용](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>커뮤니티  
 - [Microsoft ODBC Driver for SQL Server 팀 블로그](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [SQL Server 데이터 액세스 포럼](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 - [SQL Server Native Client 정보](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [SQL Server Native Client 사용한 응용 프로그램 작성](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
+- [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [ODBC 프로그래머 참조](../../../odbc/reference/odbc-programmer-s-reference.md)   
 - [SQL Server Native Client(ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

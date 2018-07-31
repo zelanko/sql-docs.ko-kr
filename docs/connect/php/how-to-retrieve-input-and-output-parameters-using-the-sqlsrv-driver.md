@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054081"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 항목에서는 SQLSRV 드라이버를 사용하여 하나의 매개 변수가 입출력 매개 변수로 정의된 저장 프로시저를 호출하는 방법 및 결과를 검색하는 방법을 보여 줍니다. 출력 또는 입력/출력 매개 변수를 검색할 때 저장된 프로시저에서 반환 된 모든 결과 반환 된 매개 변수 값에 액세스 하기 전에 사용 되어야 합니다.  
+이 항목에서는 SQLSRV 드라이버를 사용하여 하나의 매개 변수가 입출력 매개 변수로 정의된 저장 프로시저를 호출하는 방법 및 결과를 검색하는 방법을 보여 줍니다. 출력 또는 입출력 매개 변수를 검색할 때 반환되는 매개 변수 값에 액세스하기 전에 저장 프로시저에서 반환된 모든 결과를 사용해야 합니다.  
   
 > [!NOTE]  
 > 초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
@@ -36,12 +36,12 @@ ms.locfileid: "34563931"
 > [!NOTE]  
 > *$vacationHrs* 를 4로 초기화하면 반환된 PHPTYPE을 정수로 설정합니다. 데이터 형식 무결성을 보장하려면 저장 프로시저를 호출하기 전에 입출력 매개 변수를 초기화하거나 원하는 PHPTYPE을 지정해야 합니다. PHPTYPE 지정에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
-저장된 프로시저가 두 결과 반환 하기 때문에 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 저장된 프로시저가 출력 매개 변수의 값을 사용할 수 있도록 실행 된 후 호출 해야 합니다. 호출한 후 **sqlsrv_next_result**, *$vacationHrs* 저장된 프로시저에서 반환 된 출력 매개 변수의 값을 포함 합니다.  
+저장 프로시저가 두 결과를 반환하기 때문에 저장 프로시저가 출력 매개 변수 값을 사용할 수 있도록 실행된 후 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)가 호출되어야 합니다. **sqlsrv_next_result**를 호출한 후 *$vacationHrs*에는 저장 프로시저에서 반환된 출력 매개 변수의 값이 들어 있습니다.  
   
 > [!NOTE]  
-> 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대 한 자세한 내용은 참조 [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)합니다.  
+> 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대한 자세한 내용은 [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)을 참조하세요.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -126,10 +126,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 값의 범위 밖에 있는 될 수 있습니다 하는 경우는 입/출력 매개 변수는 bigint 형식에 바인딩할 때는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), SQL 필드 유형을 해당 SQLSRV_SQLTYPE_BIGINT로 지정 해야 합니다. 그렇지 않으면 "값 범위를 벗어났습니다" 예외가 발생할 수 있습니다.
+> 값의 범위를 벗어나는 결국 경우 bigint 형식에 입/출력 매개 변수를 바인딩하는 경우는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), 해당 SQL 필드 유형을 SQLSRV_SQLTYPE_BIGINT로 지정 해야 합니다. 그렇지 않으면 "범위를 벗어났습니다. 값" 예외가 발생할 수 있습니다 것입니다.
 
 ## <a name="example-2"></a>예제 2
-이 코드 예제를 입/출력 매개 변수로 큰 bigint 값을 바인딩하는 방법을 보여 줍니다.  
+이 코드 샘플 입/출력 매개 변수로 큰 bigint 값을 바인딩하는 방법을 보여 줍니다.  
 
 ```
 <?php
@@ -155,7 +155,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)

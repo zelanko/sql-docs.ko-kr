@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308272"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979747"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>매개 변수  
 *$statement*: 실행하려는 SQL 문입니다.  
   
-*$fetch_style*: 쿼리를 수행 하는 방법에 대 한 선택적 지침입니다. 자세한 내용은 설명 섹션을 참조하세요. $*fetch_style* pdo:: query의 $로 재정의할 수 있습니다*fetch_style* pdo:: fetch의 합니다.  
+*$fetch_style*: 쿼리를 수행하는 방법에 대한 선택적 지침입니다. 자세한 내용은 설명 섹션을 참조하세요.PDO::query의 $ $*fetch_style*은 PDO::fetch의 $*fetch_style*로 재정의할 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
 호출이 성공하면 PDO::query에서 PDOStatement 개체를 반환합니다. 호출이 실패하면 PDO::ATTR_ERRMODE의 설정에 따라 PDO::query에서 PDOException 개체를 발생시키거나 false를 반환합니다.  
@@ -45,17 +45,17 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 PDOException입니다.  
   
 ## <a name="remarks"></a>Remarks  
-Pdo:: query를 사용 하 여 실행 하는 쿼리는 준비 된 문을 실행할 수 있습니다 또는 pdo:: SQLSRV_ATTR_DIRECT_QUERY의 설정에 따라 직접 합니다. 자세한 내용은 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)(PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행)를 참조하세요.  
+PDO::query를 사용하여 실행하는 쿼리는 PDO::SQLSRV_ATTR_DIRECT_QUERY의 설정에 따라 준비된 문을 실행하거나 직접 실행할 수 있습니다. 자세한 내용은 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)(PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행)를 참조하세요.  
   
-Pdo:: SQLSRV_ATTR_QUERY_TIMEOUT; exec의 동작을도 영향을 줍니다. 자세한 내용은 참조 [pdo:: setattribute](../../connect/php/pdo-setattribute.md)합니다.  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT은 또한 PDO::exec의 동작에 영향을 줍니다. 자세한 내용은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)를 참조하세요.  
   
-$ 다음 옵션을 지정할 수 있습니다*fetch_style*합니다.  
+$*fetch_style*에 대해 다음 옵션을 지정할 수 있습니다.  
   
-|style|Description|  
+|style|설명|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|지정된 열의 데이터에 대한 쿼리입니다. 테이블의 첫 번째 열은 0입니다.|  
-|Fetch_class, '*classname*', 배열 ( *arglist* )|클래스의 인스턴스를 만들고 열 이름을 클래스의 속성에 할당합니다. 클래스 생성자가 하나 이상의 매개 변수를 사용하는 경우 *arglist*를 전달할 수도 있습니다.|  
-|PDO::FETCH_CLASS, '*classname*'|열 이름을 기존 클래스의 속성에 할당합니다.|  
+|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|클래스의 인스턴스를 만들고 열 이름을 클래스의 속성에 할당합니다. 클래스 생성자가 하나 이상의 매개 변수를 사용하는 경우 *arglist*를 전달할 수도 있습니다.|  
+|Fetch_class, '*classname*'|열 이름을 기존 클래스의 속성에 할당합니다.|  
   
 PDO::query를 다시 호출하기 전에 PDOStatement::closeCursor를 호출하여 PDOStatement 개체와 연결된 데이터베이스 리소스를 해제합니다.  
   
@@ -121,7 +121,7 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

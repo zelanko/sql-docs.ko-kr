@@ -1,6 +1,6 @@
 ---
-title: SQL Server 인증 사용자 암호 (OLE DB) 변경 | Microsoft Docs
-description: SQL Server 인증 사용자 암호 (OLE DB) 변경
+title: SQL Server 인증 사용자 암호 변경(OLE DB) | Microsoft Docs
+description: SQL Server 인증 사용자 암호 변경(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 985b6a8c22342ae130558024752b42387fcd4996
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 681c5f4e7e3fda6bdee45ce2ca9bd7902d4c99d5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666263"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108985"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 인증 사용자 암호 변경(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "35666263"
 ## <a name="example"></a>예제  
  빌드하기 전에 .C++ 코드를 업데이트하여 사용자 ID, 이전 암호 및 새 암호를 지정합니다.  
   
- 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  ole32.lib oleaut32.lib를 사용하여 컴파일합니다.  
   

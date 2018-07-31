@@ -1,6 +1,6 @@
 ---
 title: 명령 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버에서 명령
+description: SQL Server용 OLE DB 드라이버의 명령
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a518a4a718007e1c1efb3b7c53732beef7d7c0ab
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc1b32e3e27fc70b5d96585194152621fc1f7b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665393"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108005"
 ---
 # <a name="commands"></a>명령
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 노출 된 **ICommand** 이 섹션에서 설명 하는 인터페이스 및 명령 개체:  
+  SQL Server용 OLE DB 드라이버는 이 섹션에서 설명하는 **ICommand** 인터페이스 및 명령 개체를 제공합니다.  
   
 -   [명령 구문](../../oledb/ole-db-commands/command-syntax.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "35665393"
   
 -   [여러 행 집합 결과를 생성하는 명령](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

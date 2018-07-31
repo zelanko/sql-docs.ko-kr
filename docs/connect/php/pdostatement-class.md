@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7366455a5ba12ff2c987f7337b185e45b48ed44f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308282"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983138"
 ---
 # <a name="pdostatement-class"></a>PDOStatement 클래스
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -75,10 +75,10 @@ PDOStatement 클래스에 다음과 같은 메서드가 있습니다.
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO_SQLSRV 드라이버 참조](../../connect/php/pdo-sqlsrv-driver-reference.md) 
 
-[Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

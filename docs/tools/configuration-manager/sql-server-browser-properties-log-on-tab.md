@@ -1,5 +1,5 @@
 ---
-title: SQL Server Browser 속성 (로그온 탭) | Microsoft Docs
+title: SQL Server Browser 속성(로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 814b8f9f6c94e0c0907ee662565fd5377455a5a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070330"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022621"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server Browser 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "33070330"
   
  계정의 암호를 변경하면 서비스를 다시 시작하지 않고 즉시 적용됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **로컬 시스템 계정**  
  로컬 시스템 계정의 보안 컨텍스트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 실행합니다. 가능하면 이보다 낮은 권한의 계정을 사용하십시오.  
   

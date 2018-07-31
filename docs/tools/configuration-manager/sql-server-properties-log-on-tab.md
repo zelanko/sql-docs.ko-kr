@@ -1,5 +1,5 @@
 ---
-title: SQL Server 속성 (로그온 탭) | Microsoft Docs
+title: SQL Server 속성(로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18fe05a7d7d89b726c5f0ae2a49c71736b6dbd9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072540"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057712"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33072540"
 >   
 >  서비스를 실행할 계정을 선택하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "Windows 서비스 계정 설정"을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **기본 제공 계정**  
  **로컬 시스템**  
  -   로컬 시스템 계정을 지정합니다. 이 계정에는 암호가 필요하지 않습니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 서비스가 다른 서버와 상호 작용하지 못하도록 할 수 있습니다.  

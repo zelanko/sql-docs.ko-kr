@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd6fbcc2813fbd1e19078e94e4ba23b002e2818c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982158"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>매개 변수가 없는 SQL 문 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  에 데이터로 작업 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 매개 변수를 포함 하는 SQL 문을 사용 하 여 사용할 수 있습니다는 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 반환 하는 클래스는 [ SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 요청 된 데이터를 포함 하는 합니다. 이 수행 하려면 먼저 만들어야 합니다 SQLServerStatement 개체를 사용 하 여는 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 의 메서드는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스입니다.  
+  매개 변수가 없는 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서 데이터 작업을 수행하려면 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 사용하여 요청한 데이터가 포함될 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)를 반환합니다. 이렇게 하려면 먼저 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 메서드를 사용하여 SQLServerStatement 개체를 만들어야 합니다.  
   
- 다음 예에서는 열린 연결에에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스에 전달 함수에, SQL 문을 생성 및 실행 하 고 다음 결과 결과 집합에서 읽습니다.  
+ 다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고 SQL 문을 생성 및 실행한 후 결과 집합에서 결과를 읽습니다.  
   
  [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]  
   
- 결과 집합을 사용 하는 방법에 대 한 자세한 내용은 참조 [JDBC 드라이버로 결과 집합 관리](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)합니다.  
+ 결과 집합을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버로 결과 집합 관리](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL에 문 사용](../../connect/jdbc/using-statements-with-sql.md)  
   
   

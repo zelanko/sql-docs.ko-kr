@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032992"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>방법: 매개 변수가 있는 쿼리 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "35307572"
   
 2.  Transact-SQL 쿼리의 자리 표시자에 해당하는 PHP 변수를 초기화하거나 업데이트합니다.  
   
-3.  2 단계의 PHP 변수를 사용 하 여 만들거나 TRANSACT-SQL 문자열의 매개 변수 자리 표시자에 해당 하는 매개 변수 값의 배열을 업데이트 합니다. 배열에 매개 변수 값을 나타내기 위한 자리 표시자와 동일한 순서로 이어야 합니다.
+3.  2단계의 PHP 변수를 사용하여 Transact-SQL 문자열의 매개 변수 자리 표시자에 해당하는 매개 변수 값의 배열을 만들거나 업데이트합니다. 배열에 매개 변수 값을 나타내야 하기 위한 자리 표시자로 동일한 순서 여야 합니다.
   
 4.  다음 쿼리를 실행합니다.  
   
     -   SQLSRV 드라이버를 사용하는 경우 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)를 사용합니다.  
   
-    -   PDO_SQLSRV 드라이버를 사용 하는 경우로 쿼리를 실행 [pdo:: prepare](../../connect/php/pdo-prepare.md) 및 [pdostatement:: Execute](../../connect/php/pdostatement-execute.md)합니다. [PDO::prepare](../../connect/php/pdo-prepare.md) 및 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 에 대한 항목에 코드 예제가 있습니다.  
+    -   PDO_SQLSRV 드라이버를 사용하는 경우 [PDO::prepare](../../connect/php/pdo-prepare.md) 및 [PDOStatement::execute](../../connect/php/pdostatement-execute.md)를 사용하여 쿼리를 실행합니다. [PDO::prepare](../../connect/php/pdo-prepare.md) 및 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 에 대한 항목에 코드 예제가 있습니다.  
   
 이 항목의 나머지 부분에서는 SQLSRV 드라이버를 사용하여 매개 변수가 있는 쿼리를 설명합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35307572"
   
 다음 예제에서는 데이터베이스를 쿼리하여 수량이 올바르게 업데이트되었는지 확인합니다. 제품 ID는 SELECT 쿼리의 매개 변수입니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -114,12 +114,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-이전 예제에서는 쿼리를 실행하기 위해 **sqlsrv_query** 함수를 사용했습니다. 이 함수는 문을 준비하고 실행하므로 일회성 쿼리를 실행할 때 유용합니다. 조합의 **sqlsrv_prepare**/**sqlsrv_execute** 다른 매개 변수 값으로 쿼리를 다시 실행에 가장 적합 합니다. 다른 매개 변수 값으로 쿼리를 다시 실행하는 예제를 확인하려면 다음 예제를 참조하세요.  
+이전 예제에서는 쿼리를 실행하기 위해 **sqlsrv_query** 함수를 사용했습니다. 이 함수는 문을 준비하고 실행하므로 일회성 쿼리를 실행할 때 유용합니다. **sqlsrv_prepare**/**sqlsrv_execute** 조합은 다른 매개 변수 값을 사용하는 쿼리를 다시 실행할 때 적합합니다. 다른 매개 변수 값으로 쿼리를 다시 실행하는 예제를 확인하려면 다음 예제를 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 **sqlsrv_prepare** 함수를 사용할 때 변수의 암시적 바인딩을 보여 줍니다. 예제에서는 *Sales.SalesOrderDetail* 테이블에 여러 개의 판매 주문을 삽입합니다. *$params* 배열 문에 바인딩된 (*$stmt*) 때 **sqlsrv_prepare** 호출 됩니다. 테이블에 새 판매 주문을 삽입하는 각 쿼리를 실행하기 전에 *$params* 배열이 판매 주문 세부 사항에 해당하는 새 값으로 업데이트됩니다. 후속 쿼리를 실행할 때는 새 매개 변수 값을 사용합니다.  
+다음 예제에서는 **sqlsrv_prepare** 함수를 사용할 때 변수의 암시적 바인딩을 보여 줍니다. 예제에서는 *Sales.SalesOrderDetail* 테이블에 여러 개의 판매 주문을 삽입합니다. *$params* 배열은 **sqlsrv_prepare**가 호출될 때 명령문(*$stmt*)에 바인딩됩니다. 테이블에 새 판매 주문을 삽입하는 각 쿼리를 실행하기 전에 *$params* 배열이 판매 주문 세부 사항에 해당하는 새 값으로 업데이트됩니다. 후속 쿼리를 실행할 때는 새 매개 변수 값을 사용합니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -191,7 +191,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 형식 변환](../../connect/php/converting-data-types.md)
 
 [보안 고려 사항 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)

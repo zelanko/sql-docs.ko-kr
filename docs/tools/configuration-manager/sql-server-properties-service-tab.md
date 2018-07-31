@@ -1,5 +1,5 @@
 ---
-title: SQL Server 속성 (서비스 탭) | Microsoft Docs
+title: SQL Server 속성(서비스 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f84bc46e2739f94cb9a1425ee8af78c739e61b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068971"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970665"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 속성(서비스 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   **MSSQLSERVER 속성**대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이진 경로**  
  이 서비스에 사용되는 프로그램 파일의 위치를 표시합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 비동기 실행 (알림 방법) 샘플 | Microsoft Docs
+title: 비동기 실행(알림 방법) 샘플 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c0fb14245c5e3365389bb127ba735c4829f03e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047496"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>비동기 실행(알림 방법) 샘플
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  이 항목의 코드 예제에 사용 하는 방법을 보여 줍니다는 [비동기 실행 (알림 방법)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)합니다.  
+  이 항목의 코드 샘플은 [비동기 실행(알림 방법)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)을 사용하는 방법을 보여 줍니다.  
   
- 이 함수는 비동기 알림을 사용 하 여 다섯 개의 연결을 열고 하 고 각 연결의 문에서 하나의 쿼리를 실행 합니다.  
+ 이 함수는 비동기 알림을 사용하여 다섯 개의 연결을 열고 각 연결의 명령문에서 하나의 쿼리를 실행합니다.  
   
 ```  
   
@@ -354,7 +354,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Windows의 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

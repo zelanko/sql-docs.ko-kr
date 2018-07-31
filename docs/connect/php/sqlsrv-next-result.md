@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309442"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019611"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309442"
 지정된 문의 다음 결과(결과 집합, 행 개수 또는 출력 매개 변수)를 활성화합니다.  
   
 > [!NOTE]  
-> 일괄 처리 쿼리 또는 저장된 프로시저에서 반환 되는 첫 번째 (또는 유일한) 결과에 대 한 호출 하지 않아도 활성화 됩니다. **sqlsrv_next_result**합니다.  
+> 배치 쿼리 또는 저장 프로시저에서 반환된 첫 번째(또는 유일한) 결과는 **sqlsrv_next_result**를 호출하지 않아도 활성화됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,12 +51,12 @@ sqlsrv_next_result( resource $stmt )
 다음 결과가 성공적으로 활성화되면 부울 값 **true** 가 반환됩니다. 다음 결과가 활성화될 때 오류가 발생한 경우 **false** 가 반환됩니다. 더 이상 결과가 없는 경우 **null** 이 반환됩니다.  
   
 ## <a name="example"></a>예제  
-다음 예제는 제품 검토를 *Production.ProductReview* 테이블에 삽입하는 저장 프로시저를 만들고 실행한 다음 지정된 제품에 대해 모든 검토를 선택합니다. 저장된 프로시저의 실행 후 첫 번째 결과 (저장된 프로시저의 INSERT 쿼리에 의해 영향을 받는 행 수)는 호출 하지 않아도 사용 **sqlsrv_next_result**합니다. 다음 결과 (저장된 프로시저의 SELECT 쿼리에서 반환 되는 행)를 호출 하 여 사용할 수는 **sqlsrv_next_result** 사용 및 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)합니다.  
+다음 예제는 제품 검토를 *Production.ProductReview* 테이블에 삽입하는 저장 프로시저를 만들고 실행한 다음 지정된 제품에 대해 모든 검토를 선택합니다. 저장 프로시저를 실행한 후 첫 번째 결과(저장 프로시저의 INSERT 쿼리에 의해 영향을 받는 행 수)는 **sqlsrv_next_result**를 호출하지 않아도 사용됩니다. 다음 결과(저장 프로시저의 SELECT 쿼리에서 반환되는 행)는 **sqlsrv_next_result**를 호출하여 사용 가능하게 설정할 수 있으며 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)에서 사용됩니다.  
   
 > [!NOTE]  
-> 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대 한 자세한 내용은 참조 [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)합니다.  
+> 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대한 자세한 내용은 [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)을 참조하세요.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -187,9 +187,9 @@ sqlsrv_close( $conn );
 다음 예제는 지정된 제품 ID에 대한 제품 검토 정보를 검색하고, 제품에 대한 검토를 삽입한 다음, 지정된 제품 ID에 대한 제품 검토 정보를 다시 검색하는 배치 쿼리를 실행합니다. 새로 삽입된 제품 검토는 배치 쿼리의 최종 결과 집합에 포함됩니다. 예제에서는 배치 쿼리의 한 결과에서 다른 결과로 이동하기 위해 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 를 사용합니다.  
   
 > [!NOTE]  
-> 일괄 처리 쿼리 또는 저장된 프로시저에서 반환 되는 첫 번째 (또는 유일한) 결과에 대 한 호출 하지 않아도 활성화 됩니다. **sqlsrv_next_result**합니다.  
+> 배치 쿼리 또는 저장 프로시저에서 반환된 첫 번째(또는 유일한) 결과는 **sqlsrv_next_result**를 호출하지 않아도 활성화됩니다.  
   
-이 예제에서는 사용는 *Purchasing.ProductReview* 목차는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스 및이 데이터베이스 서버에 설치 되어 있다고 가정 합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+예제는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스의 *Purchasing.ProductReview* 테이블을 사용하며 이 데이터베이스가 서버에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -268,7 +268,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: SQLSRV 드라이버를 사용 하 여 스트림으로 이진 데이터를 검색 합니다. | Microsoft Docs'
+title: '방법: SQLSRV 드라이버를 사용하여 스트림으로 이진 데이터 검색 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d10cc259971d2a81177ee8e04844a54b26cf147c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307942"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979840"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 스트림으로 이진 데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-스트림을의 SQLSRV 드라이버에서 사용할 수 있는 그대로 데이터를 검색 하는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], 되며 PDO_SQLSRV 드라이버에서 사용할 수 없습니다.  
+스트림으로 데이터 검색은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 SQLSRV 드라이버에서만 사용 가능하고 PDO_SQLSRV 드라이버에서는 사용할 수 없습니다.  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 PHP 스트림을 활용하여 서버로부터 대용량 이진 데이터를 검색합니다. 이 항목에서는 스트림으로 이진 데이터를 검색하는 방법을 보여 줍니다.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "35307942"
 ## <a name="example"></a>예제  
 다음 예제에서는 AdventureWorks 데이터베이스의 *Production.ProductPhoto* 테이블에서 이진 데이터(이 경우 이미지)를 검색합니다. 이미지는 스트림으로 가져와서 브라우저에 표시됩니다.  
   
-스트림으로 이미지 데이터를 검색하려면 이진 스트림으로 지정된 반환 형식의 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 및 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 를 사용합니다. 상수를 사용 하 여 반환 형식을 지정 **SQLSRV_PHPTYPE_STREAM**합니다. 에 대 한 내용은 **sqlsrv** 상수 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.  
+스트림으로 이미지 데이터를 검색하려면 이진 스트림으로 지정된 반환 형식의 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 및 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 를 사용합니다. 반환 형식은 상수 **SQLSRV_PHPTYPE_STREAM**을 사용하여 지정합니다. **sqlsrv** 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   
 ```  
 <?php  
@@ -91,9 +91,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-예제에서 반환 형식을 지정하여 PHP 반환 형식을 이진 스트림으로 지정하는 방법을 보여 줍니다. 기술적으로 필요는 없습니다 예제에서 때문에 *LargePhoto* 필드에 SQL Server 형식 varbinary (max) 및 기본적으로 이진 스트림으로 반환 되므로 됩니다. 기본 PHP 데이터 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요. PHP 반환 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+예제에서 반환 형식을 지정하여 PHP 반환 형식을 이진 스트림으로 지정하는 방법을 보여 줍니다. 기술적으로 볼 때, *LargePhoto* 필드에는 SQL Server 형식 varbinary(max)가 있어 기본적으로 이진 스트림으로 반환되므로 이 예제에서는 필요하지 않습니다. 기본 PHP 데이터 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요. PHP 반환 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)
 
 [SQLSRV 드라이버를 사용하여 스트림으로 데이터 검색](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

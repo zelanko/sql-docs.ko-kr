@@ -1,5 +1,5 @@
 ---
-title: setTrustStore 메서드 (SQLServerDataSource) | Microsoft Docs
+title: setTrustStore 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf5d6034fbf2e9ce9d1c1b58909146dbcf56f0c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846738"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042283"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,24 +41,24 @@ public void setTrustStore(java.lang.String trustStore)
 #### <a name="parameters"></a>매개 변수  
  *trustStore*  
   
- A **문자열** 인증서 trustStore 파일의 경로 (파일 이름 포함)를 포함 하 합니다.  
+ 인증서 trustStore 파일의 경로(파일 이름 포함)가 들어 있는 **문자열**입니다.  
   
-## <a name="remarks"></a>주의  
- TrustStore 속성이 지정 되지 않았거나 설정 null 인 경우는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 트러스트 관리자 팩터리의 조회 규칙에 인증서 저장소를 사용 하 여 확인에 의존 합니다. 기본 SunX509 TrustManagerFactory에서는 다음 위치의 순서에 따라 트러스트 자료를 찾으려고 합니다.  
+## <a name="remarks"></a>Remarks  
+ trustStore 속성이 지정되어 있지 않거나 null로 설정되어 있으면 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 트러스트 관리자 팩터리의 조회 규칙에 따라 사용할 인증서 저장소를 결정합니다. 기본 SunX509 TrustManagerFactory에서는 다음 위치의 순서에 따라 트러스트 자료를 찾으려고 합니다.  
   
 -   1. "javax.net.ssl.trustStore" JVM(Java Virtual Machine) 시스템 속성에 지정된 파일  
   
--   2. "\<java 홈 >/lib/보안/jssecacerts" 파일입니다.  
+-   2. "\<java 홈 >/lib/security/jssecacerts" 파일입니다.  
   
--   3. "\<java 홈 >/lib/보안/cacerts" 파일입니다.  
+-   3. "\<java 홈 >/lib/security/cacerts" 파일입니다.  
   
  자세한 내용은 Sun Microsystems 웹 사이트에서 SunX509 TrustManager 인터페이스 설명서를 참조하십시오.  
   
  trustStore 속성이 문자열이나 빈 문자열 ""로 설정되어 있으면 드라이버에서는 해당 값으로 trustStore 파일을 찾아서 서버 SSL 인증서의 유효성을 검사합니다.  
   
- trustStorePassword 속성은 trustStore 속성과 함께 지정할 수 있으며 해당 값을 사용하여 trustStore 파일을 엽니다. 자세한 내용은 참조 [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)합니다.  
+ trustStorePassword 속성은 trustStore 속성과 함께 지정할 수 있으며 해당 값을 사용하여 trustStore 파일을 엽니다. 자세한 내용은 [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

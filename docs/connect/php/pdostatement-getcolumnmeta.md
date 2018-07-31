@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Getcolumnmeta | Microsoft Docs'
+title: PDOStatement::getColumnMeta | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308532"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983011"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-*$conn*: (정수) 메타 데이터를 검색 하려는 열의 수가 0부터 시작 합니다.  
+*$conn*: (정수) 메타데이터를 검색할 열의 번호(0부터 시작)입니다.  
   
 ## <a name="return-value"></a>반환 값  
 열에 대한 메타데이터를 포함하는 결합형 배열(키 및 값)입니다. 배열에 있는 필드에 대한 설명은 설명 섹션을 참조하세요.  
@@ -73,7 +73,7 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

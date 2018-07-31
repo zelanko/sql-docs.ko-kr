@@ -1,6 +1,6 @@
 ---
 title: 명령 준비 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 명령 준비
+description: SQL Server 용 OLE DB 드라이버를 사용 하는 명령 준비
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666063"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106019"
 ---
 # <a name="preparing-commands"></a>명령 준비
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server; 단일 명령으로 여러 번 실행 액세스에 최적화 된 명령 준비를 지원 그러나 명령 준비 오버 헤드를 생성 하 고 두 번 이상 실행할 명령을 준비 하는 소비자 필요 하지 않습니다. 일반적으로 4번 이상 실행할 명령을 준비해야 합니다.  
+  SQL Server용 OLE DB 드라이버는 단일 명령을 효율적으로 여러 번 실행하기 위한 명령 준비를 지원합니다. 그러나 명령 준비로 인해 오버헤드가 늘어나며 소비자가 명령을 두 번 이상 실행하기 위해 준비할 필요는 없습니다. 일반적으로 4번 이상 실행할 명령을 준비해야 합니다.  
   
  성능상의 이유로 명령 준비는 명령이 실행될 때까지 지연되며 이것이 기본 동작입니다. 따라서 준비 중인 명령에서 발생하는 모든 오류는 명령이 실행되거나 메타 속성 작업이 수행될 때까지 알려지지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 속성 SSPROP_DEFERPREPARE를 FALSE로 설정하면 이 기본 동작을 해제할 수 있습니다.  
   
@@ -43,23 +43,23 @@ ms.locfileid: "35666063"
   
  일부 명령은 준비하면 안 됩니다. 예를 들어 저장 프로시저 실행을 지정하거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저 생성에 대한 잘못된 텍스트를 포함하는 명령은 준비하면 안 됩니다.  
   
- 임시 저장된 프로시저를 만든 경우의 OLE DB Driver for SQL Server 실행 임시 저장된 프로시저를 문 자체를 실행 하는 경우 결과 반환 합니다.  
+ 임시 저장 프로시저가 만들어지면 SQL Server 용 OLE DB 드라이버는 임시 저장 프로시저를 실행하여 문 자체를 실행한 것처럼 결과를 반환합니다.  
   
- 임시 저장된 프로시저를 만들 SQL Server 용 OLE DB 드라이버에 의해 제어 됩니다-초기화 속성 SSPROP_INIT_USEPROCFORPREP 합니다. 속성 값 SSPROPVAL_USEPROCFORPREP_ON 또는 SSPROPVAL_USEPROCFORPREP_ON_DROP 이면는 OLE DB Driver for SQL Server에서는 명령이 준비 될 때 저장된 프로시저를 만들 하려고 합니다. 응용 프로그램 사용자에게 충분한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한이 있으면 저장 프로시저가 성공적으로 만들어집니다.  
+ 임시 저장 프로시저 생성은 SQL Server 용 OLE DB 드라이버별 초기화 속성 SSPROP_INIT_USEPROCFORPREP에서 제어합니다. 이 속성 값이 SSPROPVAL_USEPROCFORPREP_ON 또는 SSPROPVAL_USEPROCFORPREP_ON_DROP이면 SQL Server 용 OLE DB 드라이버는 명령을 준비할 때 저장 프로시저를 만들려고 합니다. 응용 프로그램 사용자에게 충분한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한이 있으면 저장 프로시저가 성공적으로 만들어집니다.  
   
- 연결이 자주 끊기지 않는 소비자, 임시 저장된 프로시저의 만들기의 리소스가 상당히 필요 **tempdb**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 임시 개체가 만들어지는 시스템 데이터베이스입니다. SQL Server 용 OLE DB 드라이버에서 만든 임시 저장된 프로시저는 명령을 만든 세션 연결이 끊어져서 서비스를 인스턴스의경우에삭제됩니다SSPROP_INIT_USEPROCFORPREP값이SSPROPVAL_USEPROCFORPREP_ON이면[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 해당 연결이 데이터 원본 초기화 시 만들어진 기본 연결인 경우 임시 저장 프로시저는 데이터 원본 초기화가 취소되는 경우에만 삭제됩니다.  
+ 연결이 자주 끊기지 않는 소비자의 경우 임시 저장 프로시저 생성에는 임시 개체가 만들어지는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터베이스인 **tempdb**의 리소스가 상당히 필요합니다. SSPROP_INIT_USEPROCFORPREP 값이 SSPROPVAL_USEPROCFORPREP_ ON이면 SQL Server 용 OLE DB 드라이버가 만든 임시 저장 프로시저는 명령을 만든 세션과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 사이의 연결이 끊기는 경우에만 삭제됩니다. 해당 연결이 데이터 원본 초기화 시 만들어진 기본 연결인 경우 임시 저장 프로시저는 데이터 원본 초기화가 취소되는 경우에만 삭제됩니다.  
   
- Ssprop_init_useprocforprep 값이 SSPROPVAL_USEPROCFORPREP_ON_DROP 이면 OLE DB Driver for SQL Server 임시 저장 프로시저는 다음 중 하나가 발생 하면 삭제 됩니다.  
+ SSPROP_INIT_USEPROCFORPREP 값이 SSPROPVAL_USEPROCFORPREP_ON_DROP이면 SQL Server 용 OLE DB 드라이버 임시 저장 프로시저는 다음과 같은 경우 삭제됩니다.  
   
--   소비자는 **icommandtext:: Setcommandtext** 새 명령을 나타냅니다.  
+-   소비자가 **ICommandText::SetCommandText**를 사용하여 새 명령을 지정합니다.  
   
--   소비자는 **icommandprepare:: Unprepare** 명령 텍스트가 더 이상 필요 함을 나타냅니다.  
+-   소비자가 **ICommandPrepare::Unprepare**를 사용하여 명령 텍스트가 더 이상 필요 없음을 나타냅니다.  
   
 -   소비자가 임시 저장 프로시저를 사용하여 명령 개체에 대한 모든 참조를 해제합니다.  
   
- 명령 개체 최대 하나의 임시 저장된 프로시저에 **tempdb**합니다. 기존 임시 저장 프로시저는 특정 명령 개체의 현재 명령 텍스트를 나타냅니다.  
+ 명령 개체는 **tempdb**에 임시 저장 프로시저를 하나만 포함합니다. 기존 임시 저장 프로시저는 특정 명령 개체의 현재 명령 텍스트를 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [도구](../../oledb/ole-db-commands/commands.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d47fe33801ca8a4932b6295a5052e9948bc5ef0f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007194"
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 응용 프로그램(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,17 +30,17 @@ AdventureWorks 제품 검토 예제 응용 프로그램은 [!INCLUDE[ssDriverPHP
   
 ### <a name="running-the-example-application"></a>예제 응용 프로그램 실행  
   
-1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 참조 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)합니다.
+1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 [Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)합니다.
 2.  이 문서의 뒷부분에 나열된 코드를 adventureworks_demo.php 및 photo.php 두 파일에 복사합니다.  
 3.  adventureworks_demo.php 및 photo.php 파일을 웹 서버의 루트 디렉터리에 배치합니다.  
-4.  응용 프로그램을 시작 하 여 실행 http://localhost/adventureworks_demo.php 브라우저에서 합니다.  
+4.  시작 하 여 응용 프로그램을 실행 http://localhost/adventureworks_demo.php 브라우저에서 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 응용 프로그램을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  
   
--   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 참조 [Microsoft Drivers for PHP for SQL Server에 대 한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)합니다.  
+-   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers for PHP for SQL Server에 대 한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)합니다.  
 -   adventureworks_demo.php 및 photo.php 파일이 웹 서버의 루트 디렉터리에 있어야 합니다. 파일에 이 문서 뒷부분에 나열된 코드가 있어야 합니다.  
--   SQL Server 2005 또는 SQL Server 2008와는 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결 된 로컬 컴퓨터에 설치 합니다.  
+-   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
 -   웹 브라우저가 설치됩니다.  
   
 ## <a name="demonstrates"></a>데모  
@@ -559,7 +559,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)
 
 [함수 실행 비교](../../connect/php/comparing-execution-functions.md)

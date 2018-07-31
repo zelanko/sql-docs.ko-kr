@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307231"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979575"
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "35307231"
 |Object|지원되지 않습니다.|지원되지 않습니다.|  
 |DateTime(1)|DATETIME|지원되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [데이터 형식 변환](../../connect/php/converting-data-types.md)
@@ -53,5 +53,5 @@ ms.locfileid: "35307231"
 
 [PHP 형식](http://php.net/manual/language.types.php)
 
-[데이터 형식 (Transact SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[데이터 형식(Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

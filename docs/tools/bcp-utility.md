@@ -35,22 +35,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE75
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075670"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974282"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 이전 버전의 SQL Server와 관련된 콘텐츠는 [bcp 유틸리티](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)를 참조하세요.
 
- > 최신 버전의 bcp 유틸리티에 대 한 참조 [SQL Server 용 Microsoft 명령줄 유틸리티 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Bcp 유틸리티의 최신 버전을 참조 하세요. [SQL Server 용 Microsoft 명령줄 유틸리티 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
- > Bcp를 사용 하 여 Linux에서, 참조 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
+ > Bcp를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
- > Bcp를 사용 하 여 Azure SQL 데이터 웨어하우스에 대 한 자세한 내용은 참조 [bcp 사용 하 여 데이터 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)합니다.
+ > Bcp를 사용 하 여 Azure SQL Data warehouse에 대 한 자세한 내용은 [bcp 사용 하 여 데이터 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)합니다.
 
   **대**량 **복**사 **프**프로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
   
@@ -150,7 +150,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > 데이터 정렬/코드 페이지 사양보다 65001 옵션에 더 높은 우선 순위를 두려는 경우를 제외하고는 서식 파일의 각 열에 대한 데이터 정렬 이름을 지정하는 것이 좋습니다.
   
-|코드 페이지 값|Description|  
+|코드 페이지 값|설명|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows(ISO 1252)입니다.|  
 |OEM|클라이언트가 사용하는 기본 코드 페이지입니다. **-C** 를 지정하지 않은 경우 사용되는 기본 코드 페이지입니다.|  
@@ -190,21 +190,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F** *first_row* 는 1부터 시작합니다.  
 
 **-G**<a name="G"></a>  
- 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치 필요 [14.0.3008.27 버전 이상](http://go.microsoft.com/fwlink/?LinkID=825643)합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 참조 [SQL 데이터 웨어하우스 또는 SQL 데이터베이스에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다. 
+ 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](http://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 또는 SQL Data Warehouse에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다. 
 
 > [!TIP]
->  Bcp 버전 Active Directory 인증 AAD (Azure) 형식에 대 한 지원을 포함 하는 경우를 확인 하려면 **bcp-** (bcp\<공간 >\<대시 >\<대시 >)-G 목록에 표시 되는지 확인 하 고 사용할 수 있는 인수입니다.
+>  Bcp 버전 Azure Active Directory 인증 (AAD) 형식에 대 한 지원을 포함 하는 경우 검사할 **bcp-** (bcp\<공간 >\<dash >\<dash >)-G 목록에 표시 되는지 확인 하 고 사용 가능한 인수입니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
     Azure Active Directory의 사용자 이름과 암호를 사용하려는 경우 **-G** 옵션을 제공하고 **-U** 및 **-P** 옵션도 제공하여 사용자 이름 및 암호를 사용할 수 있습니다. 
 
-    다음 예제에서는 Azure AD 사용자 이름을 사용 하 여 데이터를 내보냅니다 및 사용자와 암호는는 AAD 자격 증명 암호입니다. 이 예제에서는 테이블 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버에서 `aadserver.database.windows.net` 파일에 데이터를 저장 하 고 `c:\last\data1.dat`:
+    다음 예제에서는 Azure AD 사용자를 사용 하 여 데이터 내보내기 및 사용자 이름 및 암호는 AAD 자격 증명 암호입니다. 이 예제에서는 테이블을 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버의 `aadserver.database.windows.net` 파일에서 데이터를 가져와 `c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    다음 예제에서는 Azure AD 사용자 이름을 사용 하 여 데이터 및 사용자와 암호는는 AAD 자격 증명 암호입니다. 이 예제에서는 파일에서 데이터를 가져오는 `c:\last\data1.dat` 테이블로 `bcptest` 데이터베이스에 대 한 `testdb` Azure 서버에서 `aadserver.database.windows.net` Azure AD 사용자/암호를 사용 하 여:
+    다음 예제에서는 Azure AD 사용자를 사용 하 여 데이터 및 사용자 이름 및 암호는 AAD 자격 증명 암호입니다. 이 예제에서는 파일에서 데이터를 가져옵니다 `c:\last\data1.dat` 테이블로 `bcptest` 데이터베이스용 `testdb` Azure 서버의 `aadserver.database.windows.net` Azure AD 사용자/암호를 사용 하 여:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -213,15 +213,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 통합** 
  
-    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성에서는 현재 Windows 사용자 계정 (bcp 명령을 실행 중인 계정)가 Azure AD와 페더레이션된 가정 합니다. 
+    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성은 현재 Windows 사용자 계정 (bcp 명령을 실행 중인 계정)를 Azure AD와 페더레이션 되는 가정 합니다. 
 
-    다음 예제에서는 Azure AD 통합된 계정을 사용 하 여 데이터를 내보냅니다. 이 예제에서는 테이블 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버에서 Azure AD 통합을 사용 하 여 `aadserver.database.windows.net` 파일에 데이터를 저장 하 고 `c:\last\data2.dat`:
+    다음 예제에서는 Azure AD 통합된 계정을 사용 하 여 데이터를 내보냅니다. 이 예제에서는 테이블을 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버에서 Azure AD 통합을 사용 하 여 `aadserver.database.windows.net` 파일에서 데이터를 가져와 `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    다음 예제에서는 Azure AD 통합된 인증을 사용 하 여 데이터를 가져옵니다. 이 예제에서는 파일에서 데이터를 가져오는 `c:\last\data2.txt` 테이블로 `bcptest` 데이터베이스에 대 한 `testdb` Azure 서버에서 `aadserver.database.windows.net` Azure AD 통합된 인증을 사용 하 여:
+    다음 예제에서는 Azure AD 통합된 인증을 사용 하 여 데이터를 가져옵니다. 이 예제에서는 파일에서 데이터를 가져옵니다 `c:\last\data2.txt` 테이블로 `bcptest` 데이터베이스용 `testdb` Azure 서버의 `aadserver.database.windows.net` Azure AD 통합된 인증을 사용 하 여:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -446,7 +446,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 |SQLNCHAR 또는 SQLNVARCHAR|데이터를 유니코드로 보냅니다. 이는 서식 파일을 지정하지 않고 **-w** 스위치를 지정하는 것과 효과가 동일합니다.|  
 |SQLBINARY 또는 SQLVARYBIN|데이터를 변환하지 않고 보냅니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **bcp out** 작업을 수행하려면 원본 테이블에 대한 SELECT 권한이 있어야 합니다.  
   
  **bcp in** 작업을 수행하려면 적어도 대상 테이블에 대한 SELECT/INSERT 권한이 있어야 합니다. 또한 다음과 같은 경우 ALTER TABLE 권한이 있어야 합니다.  

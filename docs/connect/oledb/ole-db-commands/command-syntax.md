@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a3ea215d3596842503517a9485187ba2b1368059
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8e7fab68cc4a945bc34c64b2b832b182c734d927
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665753"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105939"
 ---
 # <a name="command-syntax"></a>명령 구문
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 DBGUID_SQL 매크로로 지정 된 명령 구문을 인식 합니다. OLE DB Driver for SQL Server를 사용할 경우 지정자 하 고 있음을 나타냅니다 ODBC sql, ISO 모두 유효함 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 유효한 구문이 있습니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
+  OLE DB Driver for SQL Server는 DBGUID_SQL 매크로로 지정 된 명령 구문을 인식 합니다. OLE DB 드라이버의 SQL Server에 대 한 경우 지정자를 나타냅니다 ODBC sql, ISO 모두 유효함 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 올바른 구문입니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -43,10 +43,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- OLE DB Driver for SQL Server에는 두 가지 형식의 문 명령 텍스트로 지정 하는 경우에 성공적으로 처리 합니다.  
+ 명령 텍스트로 지정할 경우 SQL Server용 OLE DB 드라이버는 위의 두 가지 명령문 형식 모두를 문제 없이 처리합니다.  
   
 ## <a name="stored-procedures"></a>저장 프로시저  
- 실행할 때 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 드라이버를 사용 하 여 SQL Server 명령에 대 한 저장된 프로시저 명령 텍스트에 ODBC CALL 이스케이프 시퀀스를 사용 합니다. OLE DB Driver for SQL Server의 원격 프로시저 호출 메커니즘에 다음 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 명령 처리를 최적화 합니다. 예를 들어 다음 중 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 형식보다는 ODBC SQL 문을 명령 텍스트로 사용하는 것이 좋습니다.  
+ SQL Server용 OLE DB 드라이버 명령을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 실행할 경우 명령 텍스트에 ODBC CALL 이스케이프 시퀀스를 사용해야 합니다. SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 원격 프로시저 호출 메커니즘을 사용하여 명령 처리를 최적화합니다. 예를 들어 다음 중 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 형식보다는 ODBC SQL 문을 명령 텍스트로 사용하는 것이 좋습니다.  
   
 -   ODBC SQL  
   
@@ -60,7 +60,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [도구](../../oledb/ole-db-commands/commands.md)  
   
   

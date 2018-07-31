@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f6f5bc493af3ea74c5c96448f293376a2dc036a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020071"
 ---
-# <a name="typessscrollkeyset-field-sqlserverresultset"></a>TYPE_SS_SCROLL_KEYSET 필드 (SQLServerResultSet)
+# <a name="typessscrollkeyset-field-sqlserverresultset"></a>TYPE_SS_SCROLL_KEYSET 필드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 키 집합 커서 유형입니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 키 집합 커서 유형을 지정하는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ public static final int TYPE_SS_SCROLL_KEYSET
 ## <a name="field-value"></a>필드 값  
  **int** 값 1005입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: updateNCharacterStream 메서드 (int, java.io.Reader) | Microsoft Docs
+title: updateNCharacterStream 메서드(int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 029d14d4da5ee795f09286d540ead8344f920424
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849778"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040631"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>updateNCharacterStream 메서드(int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +46,13 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updateNCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 updateNCharacterStream 메서드에 의해 지정 됩니다.  
   
- 이 메서드는 판독기 개체를 유니코드 문자를 전달 **nchar**, **nvarchar (max)**, **ntext** 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 선택한 판독기 개체에서 유니코드 문자를 전달 **nchar**, **nvarchar (max)** 를 **ntext** 하 고 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [updateNCharacterStream 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>참고 항목  
+ [updateNCharacterStream 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

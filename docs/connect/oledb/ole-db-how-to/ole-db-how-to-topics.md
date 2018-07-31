@@ -16,55 +16,55 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d26d126d8a25c59fa30b9ac7a51e33bcdb3f0f97
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 253f239cbbde4944fe9444360378d129d9fa7b2b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665903"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109615"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server를 사용 하려면 서버에 연결 명령을 실행 하 고 결과 처리 하는 방법을 이해 해야 합니다.  
+  SQL Server용 OLE DB 드라이버를 사용하려면 서버에 연결하고 명령을 실행하고 결과를 처리하는 방법을 알아야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+-   [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
 -   [대형 데이터 설정 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
--   [OLE DB 데이터 원본 열거 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
+-   [OLE DB 데이터 원본 열거&#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
--   [데이터 대량 복사 IRowsetFastLoad를 사용 하 여 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
+-   [IRowsetFastLoad&#40;OLE DB&#41;를 사용한 데이터 대량 복사](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
   
 -   [FAST_FORWARD 커서 가져오기](../../oledb/ole-db-how-to/obtain-a-fast-forward-cursor.md)  
   
--   [책갈피를 사용 하 여 행 검색 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
+-   [책갈피를 사용하여 행 검색&#40;OLE DB&#41;](../../oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Irow:: Getcolumns를 사용 하 여 열 인출 &#40;또는 irow:: Open&#41; 및 ISequentialStream](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [IRow::Open&#40;또는 IRow::Open&#41; 및 ISequentialStream을 사용하여 열 인출](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Irow:: Getcolumns를 사용 하 여 열 인출 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [IRow::GetColumns&#40;OLE DB&#41;를 사용하여 열 인출](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [SQL Server 인증 사용자 암호 변경 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [SQL Server 인증 사용자 암호&#40;OLE DB&#41; 변경](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [사용 하 여 날짜 및 시간 기능 향상 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [향상된 날짜 및 시간 기능&#40;OLE DB&#41; 사용](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [Filestream 및 OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
--   [IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL SERVER로 BLOB 데이터를 보낼 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [IROWSETFASTLOAD 및 ISEQUENTIALSTREAM&#40;OLE DB&#41;을 사용하여 BLOB 데이터를 SQL Server로 보내기](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
 -   [큰 CLR Udt를 사용 하 여 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
--   [표시 열 및 스파스 열의 카탈로그 메타 데이터 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [열 및 스파스 열의 카탈로그 메타데이터&#40;OLE DB&#41; 표시](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [통합 Kerberos 인증 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
+-   [통합 Kerberos 인증&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
--   [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+-   [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server.md)  
   
   

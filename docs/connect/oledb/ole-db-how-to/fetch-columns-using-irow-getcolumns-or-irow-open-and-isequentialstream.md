@@ -1,6 +1,6 @@
 ---
-title: 'Irow:: Getcolumns (또는 irow:: Open)를 사용 하 여 열 인출 및 ISequentialStream | Microsoft Docs'
-description: 'Irow:: Getcolumns (또는 irow:: Open)를 사용 하 여 열 인출 및 ISequentialStream'
+title: IRow::GetColumns(또는 IRow::Open) 및 ISequentialStream을 사용하여 열 인출 | Microsoft Docs
+description: IRow::GetColumns(또는 IRow::Open) 및 ISequentialStream을 사용하여 열 인출
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8eac2f4cd623ac488de6d1d16a40e71965b3193d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e51fb6d127657cddcdca3cde3d3d7d769088f53f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666183"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107009"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  큰 데이터 바인딩될 수 또는 사용 하 여 검색 된 **ISequentialStream** 인터페이스입니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
+  큰 데이터는 **ISequentialStream** 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -39,15 +39,15 @@ ms.locfileid: "35666183"
   
 1.  데이터 원본에 대한 연결을 설정합니다.  
   
-2.  명령을 실행 (이 예제에서는 **여** 를 IID_IRow로 호출).  
+2.  명령을 실행합니다. 다음 예에서는 IID_IRow를 사용하여 **ICommandExecute::Execute()** 가 호출됩니다.  
   
-3.  사용 하 여 열 데이터 인출 **IRow::Open()** 또는 **irow:: Getcolumns**합니다.  
+3.  사용 하 여 열의 데이터 페치 **IRow::Open()** 하거나 **IRow::GetColumns()** 합니다.  
   
-    -   **IRow::Open()** 하는 데 사용할 수는 **ISequentialStream** 행에 있습니다. 열에 이진 데이터 스트림을 포함 되어 있음을 나타내려면 DBGUID_STREAM을 지정 (**IStream** 또는 **ISequentialStream** 열에서 데이터를 읽을 다음 사용할 수 있습니다).  
+    -   **IRow::Open()** 열에 사용할 수는 **ISequentialStream** 행입니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream**을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
-    -   경우 **irow:: Getcolumns** 사용 되는 **pData** DBCOLUMNACCESS 구조의 요소는 스트림 개체를 가리키도록 설정 합니다.  
+    -   **IRow::GetColumns()** 를 사용하는 경우 DBCOLUMNACCESS 구조의 **pData** 요소가 스트림 개체를 가리키도록 설정됩니다.  
   
-4.  사용 하 여 **ISequentialStream::Read()** 반복 해 서 지정 된 바이트 수를 소비자 버퍼로 읽어오기 합니다.  
+4.  사용 하 여 **ISequentialStream::Read()** 반복 하 여 소비자 버퍼에 지정 된 바이트 수를 읽습니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 IRow를 사용하여 단일 행을 인출하는 방법을 보여 줍니다. 이 예에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예에서는 IRow::GetColumns()와 IRow::Open()을 사용하는 방법을 보여 줍니다. 이 예에서는 ISequentialStream::Read를 사용하여 열 데이터를 읽습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "35666183"
   
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 만듭니다.  
   
- Ole32.lib oleaut32.lib를 컴파일하고 두 번째 (c + +) 코드 목록을 실행 합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 삭제합니다.  
   
@@ -677,7 +677,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

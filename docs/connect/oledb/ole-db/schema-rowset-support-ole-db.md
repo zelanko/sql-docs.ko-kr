@@ -1,6 +1,6 @@
 ---
 title: 스키마 행 집합 지원 (OLE DB) | Microsoft Docs
-description: 스키마 행 집합 지원 (OLE DB)
+description: 스키마 행 집합 지원(OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,30 +20,30 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1f78cbad6d328ba3e9a95a97a1eac4e3320b08de
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: a90779203502c8df145a1b25f628a7657d065edb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612078"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107079"
 ---
 # <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server에서는 연결된 된 서버에서 스키마 정보를 반환을 처리할 때 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 분산 쿼리 합니다.  
+  SQL Server용 OLE DB 드라이버는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 분산 쿼리를 처리할 때 연결된 서버에서 스키마 정보를 반환하는 것도 지원합니다.  
   
 > [!NOTE]  
->  하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 동의어가 반환 되지 OLE DB Driver for SQL Server에 대 한 동의어를 메타 데이터를 지원 합니다.  
+>  하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 동의어 SQL Server 용 OLE DB 드라이버에서 반환 되지 않습니다에 대 한 동의어, 메타 데이터를 지원 합니다.  
   
- 다음 표에서 스키마 행 집합 및 SQL Server 용 OLE DB 드라이버에서 지 원하는 제한 열.  
+ 다음 표에는 SQL Server용 OLE DB 드라이버가 지원하는 스키마 행 집합 및 제한 열이 나와 있습니다.  
   
 |스키마 행 집합|제한 열|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 다음의 추가 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 관련됩니다.<br /><br /> COLUMN_LCID. 데이터 정렬의 로캘 ID입니다. COLUMN_LCID는 Windows LCID 값과 같습니다.<br /><br /> COLUMN_COMPFLAGS. 데이터 정렬에 지원되는 비교를 정의합니다. 데이터 형식은 DBPROB_FINDCOMPAREOPS와 같습니다.<br /><br /> COLUMN_SORTID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬에 대 한 스타일을 정렬 합니다.<br /><br /> COLUMN_TDSCOLLATION. 열에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬입니다.<br /><br /> IS_COMPUTED. 열이 계산 열이면 VARIANT_TRUE이고, 그렇지 않으면 VARIANT_FALSE입니다.|  
+|DBSCHEMA_COLUMNS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 다음의 추가 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 관련됩니다.<br /><br /> COLUMN_LCID. 데이터 정렬의 로캘 ID입니다. COLUMN_LCID는 Windows LCID 값과 같습니다.<br /><br /> COLUMN_COMPFLAGS. 데이터 정렬에 지원되는 비교를 정의합니다. 데이터 형식은 DBPROB_FINDCOMPAREOPS와 같습니다.<br /><br /> COLUMN_SORTID. 데이터 정렬에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 정렬 스타일입니다.<br /><br /> COLUMN_TDSCOLLATION. 열에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬입니다.<br /><br /> IS_COMPUTED. 열이 계산 열이면 VARIANT_TRUE이고, 그렇지 않으면 VARIANT_FALSE입니다.|  
 |DBSCHEMA_FOREIGN_KEYS|모든 제한 사항이 지원됩니다.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|제한 사항 1, 2, 3 및 5가 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -62,8 +62,8 @@ ms.locfileid: "35612078"
   
  [LINKEDSERVERS 행 집합 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [사용자 정의 형식 사용](../../oledb/features/using-user-defined-types.md)  
   
   

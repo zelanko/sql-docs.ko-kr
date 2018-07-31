@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b840ab60ac59501d1a7e2c3908af36e9e9a31d38
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd24a45be060eaa091899d6ca499ece902c463c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690276"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106689"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,7 +42,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 다른 작업이 호출 될 수는 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 호출한 후 인터페이스는 **BCPDone** 메서드. 호출 하는 것만 가능은 [ibcpsession:: Bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 새 대량 복사 작업을 시작 하려면 메서드. 이 호출 비슷합니다는 [irowsetfastload:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 메서드.  
+ **BCPDone** 메서드를 호출한 후에는 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 인터페이스에 대해 다른 작업을 호출할 수 없습니다. [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하여 새 대량 복사 작업을 시작하는 것만 가능합니다. 이 동작은 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 메서드를 호출하는 것과 유사합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  
@@ -70,7 +70,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP를 사용하여 이 데이터를 테이블에 다시 추가할 수 있습니다. 예를 들어 다음 명령을 사용할 수 있습니다.  
   
- **bcp 마스터... outfile.dat 파일-n-T-S에서 fltest** *서버*  
+ **bcp master..fltest in outfile.dat -n -T -S** *서버*  
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
@@ -467,7 +467,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   

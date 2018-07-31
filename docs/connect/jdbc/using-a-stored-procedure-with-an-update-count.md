@@ -1,5 +1,5 @@
 ---
-title: 업데이트 횟수가 있는 저장된 프로시저를 사용 하 여 | Microsoft Docs
+title: 업데이트 횟수가 있는 저장 프로시저 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040821"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>업데이트 횟수가 있는 저장 프로시저 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  데이터를 수정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 저장된 프로시저를 사용 하 여 데이터베이스의 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 제공는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스입니다. SQLServerCallableStatement 클래스를 사용 하 여 데이터베이스에 포함 된 데이터를 수정 하는 저장된 프로시저를 호출할 수 있으며 업데이트 횟수 라고도, 영향을 받는 행의 수를 반환할 수 있습니다.  
+  저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스의 데이터를 수정하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다. SQLServerCallableStatement 클래스를 사용하면 데이터베이스에 포함된 데이터를 수정하고 영향을 받은 행 수(업데이트 횟수라고도 함)를 반환하는 저장 프로시저를 호출할 수 있습니다.  
   
- 저장된 프로시저에 대 한 호출에서 SQLServerCallableStatement 클래스를 사용 하 여 설정한 후 호출할 수 있습니다는 저장된 프로시저 중 하나를 사용 하 여는 [실행](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 또는 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드. ExecuteUpdate 메서드는 반환 된 **int** 값 execute 메서드에서 않고 저장된 프로시저에 영향을 받은 행 수를 포함 하는 그렇지 않습니다. Execute 메서드를 사용 하 고 영향을 받는 행 수를 확인 하고자 하는 경우 호출할 수 있습니다는 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 메서드 후 저장된 프로시저를 실행 합니다.  
+ SQLServerCallableStatement 클래스를 사용하여 저장 프로시저에 대한 호출을 설정한 후에는 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 또는 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드를 사용하여 저장 프로시저를 호출할 수 있습니다. executeUpdate 메서드는 저장 프로시저에 의해 영향을 받은 행 수가 포함된 **int** 값을 반환하지만 execute 메서드는 그렇지 않습니다. execute 메서드를 사용하여 영향을 받은 행 수를 가져오려면 저장 프로시저를 실행한 후 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 메서드를 호출합니다.  
   
 > [!NOTE]  
->  JDBC 드라이버가 발생 가능성이 있는 모든 트리거가 반환한 업데이트 횟수를 포함하여 모든 업데이트 횟수를 반환하게 하려면 lastUpdateCount 연결 문자열 속성을 "false"로 설정합니다. LastUpdateCount 속성이 사용에 대 한 자세한 내용은 참조 [연결 속성을 설정할](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+>  JDBC 드라이버가 발생 가능성이 있는 모든 트리거가 반환한 업데이트 횟수를 포함하여 모든 업데이트 횟수를 반환하게 하려면 lastUpdateCount 연결 문자열 속성을 "false"로 설정합니다. LastUpdateCount 속성이 사용에 대 한 자세한 내용은 참조 하세요. [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
   
- 예를 들어 다음 테이블 및 저장된 프로시저를 만들고 있는 샘플 데이터를 삽입할 수도 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스.  
+ 이에 대한 예로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음 테이블 및 저장 프로시저를 만들고 예제 데이터도 삽입합니다.  
   
 ```  
 CREATE TABLE TestTable   
@@ -50,11 +50,11 @@ END;
 INSERT INTO dbo.TestTable (Col2, Col3) VALUES ('b', 10);  
 ```  
   
- 다음 예에서는 열린 연결에에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스는 함수에 전달 된 UpdateTestTable 저장 프로시저를 호출 하 고 execute 메서드를 사용 하 고 다음 getUpdateCount 메서드를 사용 하 되는 행의 개수를 반환 저장된 프로시저에 의해 영향을 합니다.  
+ 다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고, execute 메서드를 사용하여 UpdateTestTable 저장 프로시저를 호출한 다음, getUpdateCount 메서드를 사용하여 저장 프로시저에 의해 영향을 받은 행 수를 반환합니다.  
   
  [!code[JDBC#UsingSprocWithUpdateCount1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_0_1.java)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저가 있는 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   

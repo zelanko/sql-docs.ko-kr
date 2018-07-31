@@ -4,22 +4,20 @@ description: Microsoft SQL Server용 도구 설명서에서 최근에 변경된 
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: tools
 ms.date: 04/28/2018
-ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 31df25173ad475c733bc7239366a6c2ce820289e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32739165"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088185"
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server 용 도구
+# <a name="new-and-recently-updated-tools-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 됨: SQL Server 용 도구
 
 
 
@@ -32,7 +30,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 - 업데이트 날짜 범위: &nbsp; **2018-02-03**&nbsp; - &nbsp;**2018-04-28**
-- *주제 영역:* &nbsp; **for SQL Server 도구**합니다.
+- *주제 영역:* &nbsp; **SQL Server 용 도구**합니다.
 
 
 
@@ -94,16 +92,16 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-**-G**<a name="G"></a> 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](http://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 참조 [SQL 데이터 웨어하우스 또는 SQL 데이터베이스에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다.
+**-G**<a name="G"></a> 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](http://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 또는 SQL Data Warehouse에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다.
 
 > [!TIP]
->  Bcp 버전 Active Directory 인증 AAD (Azure) 형식에 대 한 지원을 포함 하는 경우를 확인 하려면 **bcp-** (bcp\<공간 >\<대시 >\<대시 >)-G 목록에 표시 되는지 확인 하 고 사용할 수 있는 인수입니다.
+>  Bcp 버전 Azure Active Directory 인증 (AAD) 형식에 대 한 지원을 포함 하는 경우 검사할 **bcp-** (bcp\<공간 >\<dash >\<dash >)-G 목록에 표시 되는지 확인 하 고 사용 가능한 인수입니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:**
 
     Azure Active Directory의 사용자 이름과 암호를 사용하려는 경우 **-G** 옵션을 제공하고 **-U** 및 **-P** 옵션도 제공하여 사용자 이름 및 암호를 사용할 수 있습니다.
 
-    다음 예제에서는 Azure AD 사용자 이름을 사용 하 여 데이터를 내보냅니다 및 사용자와 암호는는 AAD 자격 증명 암호입니다. 이 예제에서는 테이블 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버에서 `aadserver.database.windows.net` 파일에 데이터를 저장 하 고 `c:\last\data1.dat`:
+    다음 예제에서는 Azure AD 사용자를 사용 하 여 데이터 내보내기 및 사용자 이름 및 암호는 AAD 자격 증명 암호입니다. 이 예제에서는 테이블을 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버의 `aadserver.database.windows.net` 파일에서 데이터를 가져와 `c:\last\data1.dat`:
 ```
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
 ```
@@ -117,7 +115,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 - **Azure Active Directory 통합**
 
-    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성에서는 현재 Windows 사용자 계정 (bcp 명령을 실행 중인 계정)가 Azure AD와 페더레이션된 가정 합니다.
+    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성은 현재 Windows 사용자 계정 (bcp 명령을 실행 중인 계정)를 Azure AD와 페더레이션 되는 가정 합니다.
 
 
 

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309192"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983039"
 ---
 # <a name="retrieving-data"></a>데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "35309192"
   
 쿼리가 둘 이상의 결과 집합을 검색하는 경우 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)로 다음 결과 집합으로 이동할 수 있습니다.  
   
-버전 1.1부터는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용할 수 있습니다 [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) 결과 집합 행에 있는지 확인 합니다.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1부터 [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md)를 사용하여 결과 집합에 행이 있는지 확인할 수 있습니다.  
   
 ## <a name="pdosqlsrv-driver"></a>PDO_SQLSRV 드라이버  
-PDO_SQLSRV 드라이버는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 결과 집합에서 데이터를 검색 하기 위한 다음 옵션을 제공 합니다.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 PDO_SQLSRV 드라이버는 결과 집합에서 데이터를 검색하기 위한 다음 옵션을 제공합니다.  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -73,7 +73,7 @@ PDO_SQLSRV 드라이버는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[데이터를 스트림으로 검색](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|서버에서 데이터를 스트리밍하는 방법의 개요를 제공하고 특정 사용 사례에 대한 링크를 제공합니다.|  
 |[방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)|저장 프로시저를 호출할 때 방향 매개 변수를 사용하는 방법을 설명합니다.|  
@@ -83,7 +83,7 @@ PDO_SQLSRV 드라이버는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.
 ## <a name="related-sections"></a>관련 섹션  
 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [데이터 검색](../../connect/php/retrieving-data.md)  

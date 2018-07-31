@@ -1,5 +1,5 @@
 ---
-title: '방법: Multiple Active Resultsets (MARS) 사용 안 함 | Microsoft Docs'
+title: '방법: MARS(Multiple Active Result Set)를 사용하지 않도록 설정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc5e138bbd9e293076b0f05173d9d4a8d1747fde
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307912"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985605"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>방법: MARS(Multiple Active Resultsets)를 사용하지 않도록 설정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 MARS(Multiple Active Result Sets)를 사용하지 않도록 설정된 SQL Server 데이터 원본에 연결해야 하는 경우 MultipleActiveResultSets 연결 옵션을 사용하여 MARS를 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   
-## <a name="procedure"></a>프로시저  
+## <a name="procedure"></a>절차  
   
 #### <a name="to-disable-mars-support"></a>MARS 지원을 사용하지 않도록 설정하려면  
   
@@ -64,7 +64,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>예제  
-PDO_SQLSRV 드라이버를 사용 하 여 MARS 지원을 사용 하지 않도록 설정 하는 방법을 보여 주는 다음 예제는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]합니다.  
+다음 예제에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 PDO_SQLSRV 드라이버를 사용하여 MARS 지원을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
   
 ```  
 <?php  
@@ -85,6 +85,6 @@ $conn = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  
   

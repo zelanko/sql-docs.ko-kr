@@ -1,6 +1,6 @@
 ---
-title: RPC로 저장된 프로시저를 실행 하 고 출력 처리 | Microsoft Docs
-description: RPC로 저장 프로시저를 실행 하 고 출력 처리
+title: RPC 및 프로세스 출력을 사용하여 저장 프로시저 실행 | Microsoft Docs
+description: RPC 및 프로세스 출력을 사용하여 저장 프로시저 실행
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 74ff0256020e67a40a5da5809f83615e0e8114e3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2dc5c64fb00238810b3636391713b4405e0742ae
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666153"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109355"
 ---
-# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC로 저장된 프로시저를 실행 하 고 출력 처리
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC 및 프로세스 출력을 사용하여 저장 프로시저 실행
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 응용 프로그램에서 사용할 수 없습니다. 명령이 여러 결과 반환 하는 경우 출력 매개 변수 데이터를 사용할 수 있는 경우 **imultipleresults:: Getresult** DB_S_NORESULT를 반환 하거나는 **IMultipleResults** 인터페이스는 완전히 해제 중 먼저 발생 합니다.  
+  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 응용 프로그램에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 **IMultipleResults::GetResult** 에서 DB_S_NORESULT를 반환하거나 **IMultipleResults** 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "35666153"
   
 1.  RPC 이스케이프 시퀀스를 사용하는 SQL 문을 생성합니다.  
   
-2.  호출 된 **icommandwithparameters:: Setparameterinfo** 매개 변수는 공급자를 설명 하는 메서드. PARAMBINDINFO 구조의 배열에 매개 변수 정보를 채웁니다.  
+2.  **ICommandWithParameters::SetParameterInfo** 메서드를 호출하여 공급자에게 매개 변수를 설명합니다. PARAMBINDINFO 구조의 배열에 매개 변수 정보를 채웁니다.  
   
 3.  DBBINDING 구조의 배열을 사용하여 각 매개 변수 작성자에 대해 하나씩, 바인딩 집합을 만듭니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "35666153"
   
  첫 번째([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 저장 프로시저를 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 저장 프로시저를 삭제합니다.  
   
@@ -401,7 +401,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>참고 항목  
+ [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

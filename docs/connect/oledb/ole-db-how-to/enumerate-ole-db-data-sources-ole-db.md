@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665883"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107986"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB 데이터 원본 열거(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 열거자 개체를 사용하여 사용 가능한 데이터 원본을 나열하는 방법을 보여 줍니다.  
   
- MSOLEDBSQL 열거자에 표시 되는 데이터 소스를 나열 하려면 소비자 호출는 [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) 메서드. 이 메서드는 현재 표시되는 데이터 원본에 대한 정보의 행 집합을 반환합니다.  
+ 소비자는 [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) 메서드를 호출하여 MSOLEDBSQL 열거자에 표시되는 데이터 원본을 나열할 수 있습니다. 이 메서드는 현재 표시되는 데이터 원본에 대한 정보의 행 집합을 반환합니다.  
   
  사용 중인 네트워크 라이브러리에 따라 적절한 도메인에서 데이터 원본이 검색됩니다. 명명된 파이프를 사용하는 경우 클라이언트가 로그온한 도메인에서 데이터 원본을 검색하고 AppleTalk를 사용하는 경우 기본 영역에서 데이터 원본을 검색하며 SPX/IPX를 사용하는 경우 바인더리에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 목록에서 데이터 원본을 검색하고 Banyan VINES를 사용하는 경우 로컬 네트워크에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터 원본을 검색합니다. 멀티프로토콜 및 TCP/IP 소켓은 지원되지 않습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665883"
 6.  **IRowset::GetData**를 호출하여 행 집합의 행 복사본에서 데이터를 검색합니다.  
   
 ## <a name="example"></a>예제  
- ole32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ ole32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
 ```  
 // compile with: ole32.lib  

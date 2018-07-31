@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저 (OLE DB)를 실행 | Microsoft Docs
+title: 저장된 프로시저 (OLE DB) 실행 | Microsoft Docs
 description: 저장 프로시저 실행(OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611888"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108965"
 ---
-# <a name="stored-procedures---running"></a>저장된 프로시저-실행
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>저장 프로시저 - 실행
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "35611888"
   
 -   기능 추가  
   
- OLE DB Driver for SQL Server 세 가지 메커니즘을 지원 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 반환 하려면 저장된 프로시저를 사용 합니다.  
+ OLE DB Driver for SQL Server를 지 원하는 세 가지 메커니즘을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 반환 데이터를 사용 하 여 저장된 프로시저:  
   
 -   프로시저의 모든 SELECT 문은 결과 집합을 생성합니다.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "35611888"
   
  응용 프로그램은 저장 프로시저의 이러한 모든 출력을 처리할 수 있어야 합니다.  
   
- OLE DB 공급자는 결과를 처리하는 동안 각각 다른 시기에 출력 매개 변수와 반환 값을 반환합니다. OLE DB Driver for SQL Server를 발생 시 출력 매개 변수 및 반환 코드 제공 하지 않는 될 때까지 소비자가 검색 또는 저장된 프로시저에서 반환 된 결과 집합을 취소 한 후 합니다. 반환 코드와 출력 매개 변수는 서버에서 보내는 마지막 TDS 패킷에서 반환됩니다.  
+ OLE DB 공급자는 결과를 처리하는 동안 각각 다른 시기에 출력 매개 변수와 반환 값을 반환합니다. SQL Server용 OLE DB 드라이버의 경우 저장 프로시저에서 반환되는 결과 집합을 소비자가 검색 또는 취소하기 전에는 출력 매개 변수와 반환 코드를 제공하지 않습니다. 반환 코드와 출력 매개 변수는 서버에서 보내는 마지막 TDS 패킷에서 반환됩니다.  
   
  공급자는 출력 매개 변수와 반환 값을 반환할 때 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 사용하여 보고합니다. 이 속성은 DBPROPSET_DATASOURCEINFO 속성 집합에 들어 있습니다.  
   
- OLE DB Driver for SQL Server는 반환 코드 및 출력 매개 변수는 반환 되지 않습니다는 결과 집합 처리 또는 해제 될 때까지 나타내려면 DBPROPVAL_OA_ATROWRELEASE를 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 설정 합니다.  
+ SQL Server용 OLE DB 드라이버는 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 DBPROPVAL_OA_ATROWRELEASE로 설정하여 결과 집합이 처리 또는 해제되기 전에는 반환 코드와 출력 매개 변수가 반환되지 않도록 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저](../../oledb/ole-db/stored-procedures.md)  
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e5a0d3cbf54917f32d0e30f2d0b1f15929d6836
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309073"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019691"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,10 +46,10 @@ sqlsrv_free_stmt( resource $stmt)
 잘못된 매개 변수를 사용하여 함수를 호출하지 않는 한 부울 값 **true** 입니다. 잘못된 매개 변수를 사용하여 함수를 호출하는 경우에는 **false** 가 반환됩니다.  
   
 > [!NOTE]  
-> **Null** 은 이 함수에 대해 유효한 매개 변수입니다. 그러면 스크립트에서 함수가 여러 번 호출될 수 있습니다. 예를 들어 오류 조건에서 문을 해제 하 고 스크립트의 끝에서 다시 해제 하는 경우 두 번째 호출에서를 **sqlsrv_free_stmt** 돌아갑니다 **true** 에 첫 번째 호출 하므로 **sqlsrv_ free_stmt** (오류 조건) 문 리소스를 설정 **null**합니다.  
+> **Null** 은 이 함수에 대해 유효한 매개 변수입니다. 그러면 스크립트에서 함수가 여러 번 호출될 수 있습니다. 예를 들어 오류 조건에서 문을 해제하고 스크립트의 끝에서 다시 해제하는 경우 **sqlsrv_free_stmt**(오류 조건)에 대한 첫 번째 호출은 문 리소스를 **null**로 설정하기 때문에 **sqlsrv_free_stmt**에 대한 두 번째 호출에서 **true**를 반환합니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문 리소스를 만들어 간단한 쿼리를 실행하고 **sqlsrv_free_stmt** 를 호출하여 문과 연결된 모든 리소스를 해제합니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문 리소스를 만들어 간단한 쿼리를 실행하고 **sqlsrv_free_stmt** 를 호출하여 문과 연결된 모든 리소스를 해제합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -85,7 +85,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  

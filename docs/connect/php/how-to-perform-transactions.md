@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307662"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015790"
 ---
 # <a name="how-to-perform-transactions"></a>방법: 트랜잭션 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,15 +49,15 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
 ## <a name="remarks"></a>Remarks  
 트랜잭션을 실행하는 단계는 다음과 같이 요약할 수 있습니다.  
   
-1.  사용 하 여 트랜잭션을 시작 **sqlsrv_begin_transaction**합니다.  
+1.  **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  
   
 2.  트랜잭션의 일부인 각 쿼리의 성공 또는 실패 여부를 확인합니다.  
   
-3.  해당하는 경우 **sqlsrv_commit**을 사용하여 트랜잭션을 시작합니다. 그렇지 않으면 **sqlsrv_rollback**을 사용하여 트랜잭션을 시작합니다. 호출한 후 **sqlsrv_commit** 또는 **sqlsrv_rollback**, 드라이버가 자동 커밋 모드로 반환 됩니다.  
+3.  해당하는 경우 **sqlsrv_commit**을 사용하여 트랜잭션을 시작합니다. 그렇지 않으면 **sqlsrv_rollback**을 사용하여 트랜잭션을 시작합니다. **sqlsrv_commit** 또는 **sqlsrv_rollback**을 호출한 후 드라이버가 자동 커밋 모드로 반환됩니다.  
   
-    기본적으로는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 자동 커밋 모드에 있습니다. 즉, **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  
+    기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 자동 커밋 모드로 실행됩니다. 즉, **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  
   
-    명시적 트랜잭션을으로 커밋되지 않는 경우 **sqlsrv_commit**, 연결 또는 스크립트의 종료 시 다시 롤백됩니다.  
+    명시적 트랜잭션이 **sqlsrv_commit**으로 커밋되지 않는 경우 스크립트의 연결을 끊거나 종료할 때 롤백됩니다.  
   
     포함된 Transact-SQL을 사용하여 트랜잭션을 수행하지 마세요. 예를 들어 트랜잭션을 시작하는 Transact-SQL 쿼리로 "BEGIN TRANSACTION"을 사용하여 문을 실행하지 마세요. 포함된 Transact-SQL을 사용하여 트랜잭션을 수행하는 경우 예상 트랜잭션 동작을 보장할 수 없습니다.  
   
@@ -65,7 +65,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
 다음 예제는 트랜잭션의 일부로 여러 개의 쿼리를 실행합니다. 모든 쿼리가 성공하면 트랜잭션이 커밋됩니다. 쿼리 중 하나라도 실패하면 트랜잭션이 롤백됩니다.  
   
 이 예제에서는 *Sales.SalesOrderDetail* 테이블에서 판매 주문을 삭제하고 판매 주문의 각 제품에 대해 *Product.ProductInventory* 테이블에서 제품 재고 수준을 조정합니다. 두 쿼리 모두 성공해야 데이터베이스에 주문 및 제품 가용성 상태가 정확하게 반영되므로 이러한 쿼리가 트랜잭션에 포함되어 있습니다.  
@@ -74,7 +74,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 뒤이은 쿼리(판매 주문의 삭제 또는 제품 재고 수량 업데이트)는 트랜잭션의 일부입니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ### <a name="code"></a>코드  
   
@@ -154,12 +154,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>주석  
-트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 프로덕션 응용 프로그램에 대 한 모든 호출에 검사 권장는 **sqlsrv** 오류에 대 한 함수를 그에 따라 처리 합니다.
+트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 응용 프로그램을 프로덕션에 대 한 검사를 호출할 때 권장을 **sqlsrv** 오류에 대 한 함수를 적절 하 게 처리 합니다.
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[트랜잭션 (데이터베이스 엔진)](https://msdn.microsoft.com/library/ms190612.aspx)
+[트랜잭션(데이터베이스 엔진)](https://msdn.microsoft.com/library/ms190612.aspx)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

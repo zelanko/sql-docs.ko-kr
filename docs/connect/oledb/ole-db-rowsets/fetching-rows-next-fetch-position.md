@@ -1,6 +1,6 @@
 ---
 title: 다음 인출 위치 | Microsoft Docs
-description: 가져오는 행-다음 인출 위치
+description: 행 인출 - 다음 인출 위치
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 46e6e3b9898d6c1adbe4df4bdc2b33444b623df9
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: ec1149b615c64f2113afc007c0ea04e4c4665698
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690116"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106109"
 ---
-# <a name="fetching-rows---next-fetch-position"></a>가져오는 행-다음 인출 위치
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="fetching-rows---next-fetch-position"></a>행 인출 - 다음 인출 위치
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver 유지 하는 SQL Server에 대 한 트랙에 다음 인출 위치 하므로 하는 호출의 시퀀스는 **GetNextRows** 메서드 (없이 건너뛰고, 방향, 또는 중간 변경 내용에 대 한 호출이 **FindNextRow** **Seek**, 또는 **restartposition이** 메서드) 건너뛰는 중 또는 모든 행을 반복 하지 않고 전체 행 집합을 읽습니다. 다음 인출 위치를 변경할 호출 하 여 **irowset:: Getnextrows**, **irowset:: Restartposition**, 또는 **IRowsetIndex::Seek**, 를호출하여**FindNextRow** null *pBookmark* 값입니다. 호출 **FindNextRow** null이 아닌와 *pBookmark* 값은 다음 인출 위치에 영향을 주지 않습니다.  
+  SQL Server용 OLE DB 드라이버는 **GetNextRows** 메서드 호출 시퀀스에서 어떤 행도 건너뛰거나 반복하지 않고(행을 건너뛰거나 방향을 변경하거나 중간에 **FindNextRow**, **Seek** 또는 **RestartPosition** 메서드를 호출하지 않음) 전체 행 집합을 읽을 수 있도록 다음 인출 위치를 추적합니다. **IRowset::GetNextRows**, **IRowset::RestartPosition** 또는 **IRowsetIndex::Seek**을 호출하거나 null *pBookmark* 값을 사용해 **FindNextRow**를 호출하여 다음 인출 위치를 변경할 수 있습니다. null이 아닌 *pBookmark* 값을 사용해 **FindNextRow**를 호출하면 다음 인출 위치가 변경되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [행 페치](../../oledb/ole-db-rowsets/fetching-rows.md)  
   
   

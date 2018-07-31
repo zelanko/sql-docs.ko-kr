@@ -1,5 +1,5 @@
 ---
-title: SQL 문을 사용 하 여 데이터베이스 개체를 수정 하려면 | Microsoft Docs
+title: SQL 문을 사용하여 데이터베이스 개체 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b126fb0b5a72688c1801cf8854d8035763c8245f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851498"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040581"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>SQL 문을 사용하여 데이터베이스 개체 수정
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  수정 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용할 수는 SQL 문을 사용 하 여 데이터베이스 개체는 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스입니다. ExecuteUpdate 메서드는 처리를 위해 데이터베이스에는 SQL 문을 전달 되며 행이 없는 영향을 하기 때문에 0 값을 반환 합니다.  
+  SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체를 수정하려면 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드를 사용합니다. executeUpdate 메서드는 SQL 문을 데이터베이스에 전달하여 처리한 다음, 적용된 행이 없기 때문에 0 값을 반환합니다.  
   
- 이 수행 하려면 먼저 만들어야 합니다 SQLServerStatement 개체를 사용 하 여는 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 의 메서드는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스입니다.  
+ 이렇게 하려면 먼저 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 메서드를 사용하여 SQLServerStatement 개체를 만들어야 합니다.  
   
 > [!NOTE]  
->  데이터베이스에서 개체를 수정하는 SQL 문은 DDL(데이터 정의 언어) 문이라고 합니다. DDL 문에는 CREATE TABLE, DROP TABLE, CREATE INDEX 및 DROP INDEX 등의 문이 있습니다. 지원 되는 DDL 문의 종류에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 참조 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서.  
+>  데이터베이스에서 개체를 수정하는 SQL 문은 DDL(데이터 정의 언어) 문이라고 합니다. DDL 문에는 CREATE TABLE, DROP TABLE, CREATE INDEX 및 DROP INDEX 등의 문이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 지원하는 DDL 문의 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서를 참조하세요.  
   
- 다음 예에서는 열린 연결에에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스는 함수에 전달 되는 SQL 문을 생성, 데이터베이스에 간단한 테스트 테이블을 만듭니다는 다음 문을 실행 및 반환 값을 표시 합니다.  
+ 다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고, 데이터베이스에 간단한 테스트 테이블을 만드는 SQL 문을 생성한 다음, 해당 명령문을 실행하고 반환 값을 표시합니다.  
   
  [!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL에 문 사용](../../connect/jdbc/using-statements-with-sql.md)  
   
   

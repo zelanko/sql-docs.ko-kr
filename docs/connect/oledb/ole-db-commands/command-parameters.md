@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2d1fb6d8461f9b23842b3f94c6fb88ebbf207598
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 9b4e12d36c00769be83e01e47fafbd2e18421aa1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666043"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106429"
 ---
 # <a name="command-parameters"></a>명령 매개 변수
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -38,9 +38,9 @@ ms.locfileid: "35666043"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- 네트워크 트래픽을 줄여 성능을 향상 시키려면는 OLE DB Driver for SQL Server 파생 되지 않은 자동으로 매개 변수 정보 하지 않는 한 **icommandwithparameters:: Getparameterinfo** 또는 **ICommandPrepare:: 준비** 명령을 실행 하기 전에 호출 됩니다. 이 OLE DB Driver for SQL Server를 자동으로 나타나지 않을 것을 의미 합니다.  
+ 네트워크 트래픽을 줄여 성능을 향상하기 위해 SQL Server용 OLE DB 드라이버는 명령 실행 전에 **ICommandWithParameters::GetParameterInfo** 또는 **ICommandPrepare::Prepare**를 호출하지 않는 한 매개 변수 정보를 자동으로 파생시키지 않습니다. 이 OLE DB Driver for SQL Server를 자동으로 나타나지 않을 것을 의미 합니다.  
   
--   지정 된 데이터 형식이 올바른지 확인 **icommandwithparameters:: Setparameterinfo**합니다.  
+-   **ICommandWithParameters::SetParameterInfo**에 지정된 데이터 형식이 올바른지 확인합니다.  
   
 -   접근자 바인딩 정보에 지정된 DBTYPE에서 매개 변수의 올바른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식으로 매핑  
   
@@ -48,25 +48,25 @@ ms.locfileid: "35666043"
   
  이 문제가 발생하지 않게 하려면 응용 프로그램에서 다음을 수행해야 합니다.  
   
--   되도록 *pwszDataSourceType* 일치는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하드 코딩 하는 경우 데이터 형식 매개 변수에 대해 **icommandwithparameters:: Setparameterinfo**합니다.  
+-   **ICommandWithParameters::SetParameterInfo**를 하드 코딩할 경우 *pwszDataSourceType*이 매개 변수의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 일치하는지 확인합니다.  
   
 -   접근자를 하드 코딩할 경우 매개 변수에 바인딩되는 DBTYPE 값이 매개 변수의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 같은 형식인지 확인합니다.  
   
--   호출 하 여 응용 프로그램을 코딩할 **icommandwithparameters:: Getparameterinfo** 공급자 얻을 수 있도록는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수의 데이터 형식을 동적으로 합니다. 이로 인해 서버로의 네트워크 왕복이 추가로 발생합니다.  
+-   공급자가 매개 변수의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 동적으로 얻을 수 있도록 **ICommandWithParameters::GetParameterInfo**를 호출하는 응용 프로그램을 코딩합니다. 이로 인해 서버로의 네트워크 왕복이 추가로 발생합니다.  
   
 > [!NOTE]  
->  공급자 호출을 지원 하지 않습니다 **icommandwithparameters:: Getparameterinfo** 에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE 또는 DELETE 문의 FROM 절;이 포함 된 지정 매개 변수를 포함 하는 하위 쿼리에 SQL 문에 대 정량화 된 조건자; 또는 like, 비교의 두 식이나 매개 변수 표식이 포함 된 SQL 문에 대 한 또는 쿼리 함수에 매개 변수는 매개 변수 중 하나입니다. SQL 문의 일괄 처리를 처리할 때는 공급자도 지원 하지 않습니다 호출 **icommandwithparameters:: Getparameterinfo** 문 일괄 처리의 첫 번째 문 다음에 매개 변수 표식에 대 한 합니다. 주석 (/ * \*/)에서 허용 되지 않습니다는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 명령입니다.  
+>  공급자에서는 FROM 절이 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE 또는 DELETE 문, 매개 변수를 포함하는 하위 쿼리에 종속된 SQL 문, 비교, like 또는 한정된 조건자의 두 식이나 매개 변수 중 하나가 함수의 매개 변수인 쿼리에 매개 변수 표식이 포함된 SQL 문에 대해 **ICommandWithParameters::GetParameterInfo**를 호출할 수 없습니다. 또한 SQL 문을 일괄 처리할 경우 공급자에서는 일괄 처리의 첫 번째 문 다음에 나오는 문의 매개 변수 표식에 대해 **ICommandWithParameters::GetParameterInfo**를 호출할 수 없습니다. 주석(/* \*/)이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 명령에 허용되지 않습니다.  
   
- OLE DB Driver for SQL Server는 SQL 문 명령에서 입력된 매개 변수를 지원합니다. 프로시저 호출 명령에는 OLE DB Driver for SQL Server 입력, 출력 및 입/출력 매개 변수를 지원합니다. 실행 시(반환되는 행 집합이 없는 경우에만 해당) 또는 반환된 행 집합이 응용 프로그램에서 모두 사용된 경우에 출력 매개 변수 값이 응용 프로그램에 반환됩니다. 반환 된 값이 유효한 지 하려면 사용 하 여 **IMultipleResults** 강제로 행 집합 소비 합니다.  
+ OLE DB Driver for SQL Server는 SQL 문 명령에서 입력된 매개 변수를 지원합니다. 프로시저 호출 명령에는 OLE DB Driver for SQL Server는 입력, 출력 및 입/출력 매개 변수를 지원합니다. 실행 시(반환되는 행 집합이 없는 경우에만 해당) 또는 반환된 행 집합이 응용 프로그램에서 모두 사용된 경우에 출력 매개 변수 값이 응용 프로그램에 반환됩니다. 반환된 값이 유효한지 확인하려면 **IMultipleResults**를 사용하여 행 집합을 강제로 소비합니다.  
   
- 저장 프로시저 매개 변수의 이름은 DBPARAMBINDINFO 구조에서 지정하지 않아도 됩니다. 값에 대해 NULL을 사용 하 여는 *pwszName* 표시 되는 OLE DB Driver for SQL Server 해야 무시 매개 변수 이름에 지정 된 서 수에만 사용 하 여 멤버는 *rgParamOrdinals* 의구성원 **Icommandwithparameters:: Setparameterinfo**합니다. 명령 텍스트에 명명된 매개 변수와 명명되지 않은 매개 변수가 모두 포함된 경우 모든 명명되지 않은 매개 변수를 명명된 매개 변수보다 먼저 지정해야 합니다.  
+ 저장 프로시저 매개 변수의 이름은 DBPARAMBINDINFO 구조에서 지정하지 않아도 됩니다. SQL Server용 OLE DB 드라이버가 매개 변수 이름을 무시하고 **ICommandWithParameters::SetParameterInfo**의 *rgParamOrdinals* 멤버에 지정된 서수만 사용하도록 *pwszName* 멤버 값에 NULL을 사용합니다. 명령 텍스트에 명명된 매개 변수와 명명되지 않은 매개 변수가 모두 포함된 경우 모든 명명되지 않은 매개 변수를 명명된 매개 변수보다 먼저 지정해야 합니다.  
   
- 저장된 프로시저 매개 변수의 이름을 지정 하는 경우에 OLE DB Driver for SQL Server 유효한 지 확인 하는 이름을 확인 합니다. OLE DB Driver for SQL Server 소비자 로부터 잘못 된 매개 변수 이름의 받을 때 오류가 반환 됩니다.  
+ 저장 프로시저 매개 변수의 이름을 지정하면 SQL Server용 OLE DB 드라이버는 이름이 유효한지 확인합니다. OLE DB Driver for SQL Server는 잘못 된 매개 변수 이름을 소비자 로부터 받을 때 오류를 반환 합니다.  
   
 > [!NOTE]  
->  에 대 한 지원을 공개 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 및 사용자 정의 형식 (UDT)는 OLE DB Driver for SQL Server를 구현 하는 새 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스입니다.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 및 UDT(사용자 정의 형식)에 대한 지원을 제공하기 위해 SQL Server용 OLE DB 드라이버는 새로운 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스를 구현합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [도구](../../oledb/ole-db-commands/commands.md)  
   
   

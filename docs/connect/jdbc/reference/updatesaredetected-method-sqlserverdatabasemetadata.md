@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a91c3c3366a2f158b9ecf2f6e4b0d9341a60b2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016044"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  검색을 호출 하 여 표시 되는 행 업데이트를 검색할 수 여부는 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다.  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 업데이트를 검색할 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ public boolean updatesAreDetected(int type)
 #### <a name="parameters"></a>매개 변수  
  *type*  
   
- **int** 하는 결과 집합 유형을 나타내는, java.sql.ResultSet 또는 SQLServerResultSet에 정의 된 다음 값 중 하나일 수 있습니다.  
+ 결과 집합 유형을 나타내는 **int**이며, java.sql.ResultSet 또는 SQLServerResultSet에 정의된 다음 값 중 하나일 수 있습니다.  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 형식  
  TYPE_FORWARD_ONLY  
@@ -62,15 +62,15 @@ public boolean updatesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>반환 값  
- **true 이면** 경우 행 업데이트를 검색할 수 있습니다. 그렇지 않으면 **false**입니다.  
+ 행 업데이트를 검색할 수 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updatesAreDetected 메서드는 java.sql.DatabaseMetaData 인터페이스의 updatesAreDetected 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

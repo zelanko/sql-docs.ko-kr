@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70d02f3b7422e575d1ce5ae7bd02533c258ab8d1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 099da725f1d8103499ea5a6a31f2cf2ca0538249
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308392"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983505"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,11 +34,11 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*매개 변수*: (혼합된) 매개 변수 식별자입니다. 명명 된 자리 표시자를 사용 하 여 문을 사용 하 여 매개 변수 이름 (: name). 물음표 구문을 사용 하 여 준비 된 문의 경우이 매개 변수의 1부터 시작 인덱스입니다.
+$*parameter*: (혼합) 매개 변수 식별자입니다. 명명된 자리 표시자를 사용하는 명령문의 경우 매개 변수 이름(:name)을 사용합니다. 물음표 구문을 사용하는 준비된 명령문의 경우 매개 변수의 1부터 시작하는 인덱스입니다.
   
-$*값*: 매개 변수에 바인딩할 (혼합된) 값입니다.  
+$*value*: 매개 변수에 바인딩할 (혼합) 값입니다.  
   
-$*data_type*: pdo:: PARAM_ * 상수 나타내는 선택적 (정수) 데이터 형식입니다. 기본값은 PDO::PARAM_STR입니다.  
+$*data_type*: PDO::PARAM_* 상수로 표현되는 선택적(정수) 데이터 형식입니다. 기본값은 PDO::PARAM_STR입니다.  
   
 ## <a name="return-value"></a>반환 값  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
@@ -80,10 +80,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [10 진수 또는 숫자 열](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP 정밀도 대 한 제한 된 대로 정밀도 정확도 진행 하려면 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다. 마찬가지 bigint 열에 값의 범위 밖에 있는 경우 특히는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
+> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [소수 또는 숫자 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP에 대 한 전체 자릿수를 제한적으로 되도록 정밀도 정확도 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다. 값의 범위 밖에 있는 경우 특히 bigint 열에도 마찬가지는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
 
 ## <a name="example"></a>예제  
-이 코드 예제에는 10 진수 값을 입력된 매개 변수로 바인딩하는 방법을 보여 줍니다.  
+이 코드 샘플에는 입력된 매개 변수로 10 진수 값을 바인딩하는 방법을 보여 줍니다.  
 
 ```
 <?php  
@@ -100,7 +100,7 @@ $stmt->bindValue(1, $input, PDO::PARAM_STR);
 $stmt->execute();
 ```
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

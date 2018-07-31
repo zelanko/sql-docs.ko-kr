@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60437df28456c949d3a03cb58cef89136acbdf2d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309412"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991285"
 ---
 # <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +46,9 @@ sqlsrv_get_config( string $setting )
 *$setting* 매개 변수에서 지정한 설정 값입니다. 잘못된 설정이 지정된 경우 **false** 가 반환되고 오류가 오류 수집에 추가됩니다.  
   
 ## <a name="remarks"></a>Remarks  
-경우 **false** 반환한 **sqlsrv_get_config**, 호출 해야 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 아니면 오류가 발생 하는지 확인 하려면 **false** 는 지정한 설정의 값은 *$setting* 매개 변수입니다.  
+**sqlsrv_get_config**에서 **false**가 반환되는 경우 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)를 호출하여 오류가 발생한 것인지 아니면 *$setting* 매개 변수에서 **alse**를 설정 값으로 지정했는지 확인해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  

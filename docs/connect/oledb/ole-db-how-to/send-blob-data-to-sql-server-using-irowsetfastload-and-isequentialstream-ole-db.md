@@ -1,6 +1,6 @@
 ---
-title: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL Server로 BLOB 데이터를 보낼 | Microsoft Docs
-description: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL Server BLOB 데이터 보내기
+title: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기 | Microsoft Docs
+description: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bcad0b5d9842380965e2dcc5634f563c4de6cfda
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: cefb12471433c34162f71249d4f84f7653707a02
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666133"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106839"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,15 +30,15 @@ ms.locfileid: "35666133"
   
  기본적으로 이 예제는 인라인 바인딩을 사용하여 다양한 길이의 BLOB 데이터를 행별로 보내기 위해 IRowsetFastLoad를 사용하는 방법을 보여 줍니다. 인라인 BLOB 데이터는 가용 메모리를 초과해서는 안 됩니다. 이 방법은 BLOB 데이터가 수 MB 이하일 때 추가적인 스트림 오버헤드가 없기 때문에 최상으로 수행됩니다. 수 MB 이상의 데이터인 경우, 특히 하나의 블록으로 사용할 수 없는 데이터인 경우 스트리밍이 더 나은 성능을 제공합니다.  
   
- #define USE_ISEQSTREAM 주석 처리를 제거한 경우 원본 코드에서 이 예제는 ISequentialStream을 사용합니다. 스트림 구현은, 샘플에 정의 되어 있으며 MAX_BLOB 변경 하 여 모든 크기 BLOB 데이터를 보낼 수 있습니다. 따라서 스트림 데이터는 메모리 크기에 맞거나 하나의 블록 크기일 필요가 없습니다. IRowsetFastLoad::InsertRow를 사용하여 이 공급자를 호출합니다. IRowsetFastLoad::InsertRow를 사용하는 포인터를 스트림에서 읽을 수 있는 데이터의 양과 함께 데이터 버퍼(rgBinding.obValue 오프셋)에 있는 스트림 구현으로 전달합니다. 일부 공급자는 바인딩이 발생할 때 데이터의 길이를 반드시 알 필요가 없습니다. 이런 경우 바인딩에서 길이가 생략될 수 있습니다.  
+ #define USE_ISEQSTREAM 주석 처리를 제거한 경우 원본 코드에서 이 예제는 ISequentialStream을 사용합니다. 스트림 구현은 예제에 정의되어 있으며 MAX_BLOB만 변경하면 크기에 관계 없이 BLOB 데이터를 보낼 수 있습니다. 따라서 스트림 데이터는 메모리 크기에 맞거나 하나의 블록 크기일 필요가 없습니다. IRowsetFastLoad::InsertRow를 사용하여 이 공급자를 호출합니다. IRowsetFastLoad::InsertRow를 사용하는 포인터를 스트림에서 읽을 수 있는 데이터의 양과 함께 데이터 버퍼(rgBinding.obValue 오프셋)에 있는 스트림 구현으로 전달합니다. 일부 공급자는 바인딩이 발생할 때 데이터의 길이를 반드시 알 필요가 없습니다. 이런 경우 바인딩에서 길이가 생략될 수 있습니다.  
   
- 이 예제는 공급자에 데이터를 쓰는 데 공급자의 스트림 인터페이스를 사용하지 않습니다. 대신 공급자가 데이터를 읽는 데 소모하는 스트림 개체로 포인터를 전달합니다. 일반적으로 Microsoft 공급자 (SQLOLEDB, SQLNCLI, 및 MSOLEDBSQL)는 모든 데이터가 처리 될 때까지 개체에서 1024 바이트 청크로 데이터를에서 읽습니다. SQLOLEDB 또는 SQLNCLI 아니고 MSOLEDBSQL 서로 소비자 데이터 공급자의 스트림 개체를 쓸 수 있도록 하는 것에 대 한 전체 구현이 있습니다. 공급자의 스트림 개체를 통해서 보낼 수 있는 데이터는 길이가 0인 데이터뿐입니다.  
+ 이 예제는 공급자에 데이터를 쓰는 데 공급자의 스트림 인터페이스를 사용하지 않습니다. 대신 공급자가 데이터를 읽는 데 소모하는 스트림 개체로 포인터를 전달합니다. 일반적으로 Microsoft 공급자(SQLOLEDB, SQLNCLI 및 MSOLEDBSQL)는 모든 데이터가 처리될 때까지 개체에서 1024바이트 청크 형식으로 데이터를 읽습니다. SQLOLEDB나 SQLNCLI나 MSOLEDBSQL 모두 소비자가 공급자의 스트림 개체에 데이터를 쓰도록 허용하기 위한 일체의 구현을 갖고 있지 않습니다. 공급자의 스트림 개체를 통해서 보낼 수 있는 데이터는 길이가 0인 데이터뿐입니다.  
   
  소비자가 구현한 ISequentialStream 개체는 행 집합 데이터(IRowsetChange::InsertRow, IRowsetChange::SetData)와 함께 사용하거나 매개 변수를 DBTYPE_IUNKNOWN으로 바인딩하여 매개 변수와 함께 사용할 수 있습니다.  
   
  DBTYPE_IUNKNOWN은 바인딩에 데이터 형식으로 지정되었으므로 열이나 대상 매개 변수의 유형과 일치해야 합니다. 행 집합 인터페이스에서 ISequentialStream을 통해 데이터를 보낼 때 변환은 불가능합니다. 매개 변수의 경우 ICommandWithParameters::SetParameterInfo의 사용을 피하고 다른 유형을 지정하여 변환을 강제 실행하도록 합니다. 이 경우 공급자는 모든 BLOB 데이터를 SQL Server로 보내기 전에 로컬에서 데이터를 캐싱하고 변환해야 할 수 있습니다. 큰 BLOB을 로컬에서 캐싱하고 변환하면 성능이 저하됩니다.  
   
- 자세한 내용은 참조 [and OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)합니다.  
+ 자세한 내용은 [Blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)합니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "35666133"
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 테이블을 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 테이블을 삭제합니다.  
   

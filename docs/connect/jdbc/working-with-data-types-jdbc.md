@@ -15,32 +15,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73be4e0bc7a20a8a592493badf95a123ad6ade84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851204"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970058"
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식(JDBC) 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  기본 기능은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Java 개발자에 포함 된 데이터에 액세스할 수 있도록 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스. 이를 위해 JDBC 드라이버는 사이의 변환을 중재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식과 Java 언어 형식 및 개체입니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 기본 기능은 Java 개발자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 포함된 데이터에 액세스할 수 있게 하는 것입니다. 이를 위해 JDBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식과 Java 언어 형식 및 개체 사이의 변환을 중재합니다.  
   
 > [!NOTE]  
->  에 대 한 자세한 설명은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 간 차이점 및 Java 언어 데이터 형식으로 변환 하는 방법을 포함 하 여 JDBC 드라이버 데이터 형식을 참조 및 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)합니다.  
+>  형식 간 차이점 및 Java 언어 데이터 형식으로 변환하는 방법에 대한 내용을 포함한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 JDBC 드라이버 데이터 형식에 대한 자세한 내용은 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)를 참조하세요.  
   
- SQL Server 데이터 형식을 사용 하려면 JDBC 드라이버는 get\<유형 > 설정 및\<유형 >에 대 한 메서드는 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스 및 그 제공 get\<유형 > 업데이트 및\<유형 >에 대 한 메서드는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다. 어떤 메서드를 사용할지는 작업하는 데이터 형식 및 결과 집합이나 쿼리 사용 여부에 따라 달라집니다.  
+ SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스에 대해 get\<Type> 및 set\<Type> 메서드를 제공하며, [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스에 대해 get\<Type> 및 update\<Type> 메서드를 제공합니다. 어떤 메서드를 사용할지는 작업하는 데이터 형식 및 결과 집합이나 쿼리 사용 여부에 따라 달라집니다.  
   
- 이 섹션의 항목에 액세스 하려면 JDBC 드라이버 데이터 형식을 사용 하는 방법에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Java 응용 프로그램의 데이터입니다.  
+ 이 섹션의 항목에서는 JDBC 드라이버 데이터 형식을 사용하여 Java 응용 프로그램의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터에 액세스하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)|기본 검색 하려면 결과 집합 getter 메서드를 사용 하는 방법을 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식 값 및 결과 집합 업데이트 메서드를 사용 하 여 이러한 값을 업데이트 하는 방법입니다.|  
-|[SQLXML 데이터 형식 샘플](../../connect/jdbc/sqlxml-data-type-sample.md)|관계형 데이터베이스에 XML 데이터를 저장 하는 방법, 데이터베이스에서 XML 데이터를 검색 하는 방법 및 사용 하 여 XML 데이터를 구문 분석 하는 방법에 설명 된 **SQLXML** Java 데이터 형식입니다.|  
+|[기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)|결과 집합 getter 메서드를 사용하여 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식 값을 검색하는 방법 및 결과 집합 업데이트 메서드를 사용하여 이러한 값을 업데이트하는 방법을 설명합니다.|  
+|[SQLXML 데이터 형식 샘플](../../connect/jdbc/sqlxml-data-type-sample.md)|XML 데이터를 관계형 데이터베이스에 저장하는 방법, XML 데이터를 데이터베이스에서 검색하는 방법 및 **SQLXML** Java 데이터 형식으로 XML 데이터를 구문 분석하는 방법을 보여 줍니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [샘플 JDBC 드라이버 응용 프로그램](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   

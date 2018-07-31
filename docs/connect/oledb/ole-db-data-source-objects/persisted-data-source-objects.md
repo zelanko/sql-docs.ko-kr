@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665613"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106949"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 지원으로 지속형된 데이터 원본 개체는 **IPersistFile** 인터페이스입니다.  
+  OLE DB 드라이버 SQL Server에 대 한 지속형된 데이터 원본 개체를 지원 합니다 **IPersistFile** 인터페이스입니다.  
   
 ## <a name="examples"></a>예  
  **A. 데이터 원본 초기화 지속:**  
   
- 이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 서버 이름 및 데이터베이스 이름에서 수신 되는 *pLocation* 및 *pDatasource* 함수의 매개 변수입니다.  
+ 이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 서버 이름과 데이터베이스 이름은 함수의 *pLocation* 및 *pDatasource* 매개 변수로 받습니다.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -145,7 +145,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. 지속형된 데이터 원본 초기화 사용:**  
+ **B. 지속형 데이터 원본 초기화 사용:**  
   
  이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인과 암호를 제공하는 추가 초기화 속성이 있는 지속형 데이터 원본 개체를 사용합니다.  
   
@@ -233,9 +233,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **ipersistfile:: Save** 메서드 호출 전후 **idbinitialize:: Initialize**합니다. 성공적인 반환 후에 메서드를 호출 **idbinitialize:: Initialize** 유효한 데이터 원본 지정이 지속 되도록 합니다.  
+ **IDBInitialize::Initialize**를 호출하기 전이나 호출한 후에 **IPersistFile::Save** 메서드를 호출할 수 있습니다. **IDBInitialize::Initialize**가 성공적으로 반환된 후에 이 메서드를 호출하면 유효한 데이터 원본 지정이 지속됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

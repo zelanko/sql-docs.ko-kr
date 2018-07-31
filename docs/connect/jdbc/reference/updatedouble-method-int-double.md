@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d92dabbb9dda1091f3fc1c395da5183653989a01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849578"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995955"
 ---
 # <a name="updatedouble-method-int-double"></a>updateDouble 메서드(int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  으로 지정된 된 열 업데이트는 **double** 열 인덱스가 지정 된 값입니다.  
+  열 인덱스가 지정된 경우 지정된 열을 **double** 값으로 업데이트합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,22 +40,22 @@ public void updateDouble(int index,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱스*  
+ *index*  
   
  열 인덱스를 나타내는 **int**입니다.  
   
  *x*  
   
- A **double** 값입니다.  
+ A **이중** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updateDouble 메서드는 java.sql.ResultSet 인터페이스의 updateDouble 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [updateDouble 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
+## <a name="see-also"></a>참고 항목  
+ [updateDouble 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

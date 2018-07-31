@@ -1,6 +1,6 @@
 ---
-title: ISequentialStream (OLE DB)를 사용 하 여 FILESTREAM 열에서 데이터를 검색 합니다. | Microsoft Docs
-description: ISequentialStream (OLE DB)를 사용 하 여 FILESTREAM 열에서 데이터를 검색 합니다.
+title: ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB) | Microsoft Docs
+description: ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,30 +14,30 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: df98e47d26a9e6cce3e5f98e74deae4b0783aafa
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a975a770b870ada72af1a7c5eb8b1ed582b25ea9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665543"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107019"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 ICommandText 인터페이스의 ISequentialStream 인터페이스를 사용하여 Filestream 열에서 레코드 하나를 검색하는 방법을 보여 줍니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원](../../../oledb/features/filestream-support.md)합니다.  
+ Filestream 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원](../../../oledb/features/filestream-support.md)합니다.  
   
 ## <a name="example"></a>예제  
- INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  다음 예제 중 하나를 사용하여 이 예제에서 읽어들이는 테이블을 만듭니다.  
   
--   [ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용 하 여 FILESTREAM 열에 데이터를 전송 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload를 사용 하 여 FILESTREAM 열에 데이터를 전송 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   

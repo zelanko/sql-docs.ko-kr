@@ -1,5 +1,5 @@
 ---
-title: updateString 메서드 (SQLServerResultSet) | Microsoft Docs
+title: updateString 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bbfea2e2daec9b71f54a8c3c1a1a901579d14fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979225"
 ---
-# <a name="updatestring-method-sqlserverresultset"></a>updateString 메서드 (SQLServerResultSet)
+# <a name="updatestring-method-sqlserverresultset"></a>updateString 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  으로 지정된 된 열 업데이트는 **문자열** 값입니다.  
+  지정된 열을 **문자열** 값으로 업데이트합니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|으로 지정된 된 열 업데이트는 **문자열** 열 인덱스가 지정 된 값입니다.|  
-|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|으로 지정된 된 열 업데이트는 **문자열** 열 이름이 지정 된 값입니다.|  
+|[updateString(int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|열 인덱스가 지정된 경우 지정된 열을 **문자열** 값으로 업데이트합니다.|  
+|[updateString(java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|열 이름이 지정된 경우 지정된 열을 **문자열** 값으로 업데이트합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

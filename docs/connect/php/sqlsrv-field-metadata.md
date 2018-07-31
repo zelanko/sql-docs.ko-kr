@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309392"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991275"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-준비된 문의 필드에 대한 메타데이터를 검색합니다. 문 준비에 대한 자세한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)를 참조하세요. **sqlsrv_field_metadata** 실행 전 또는 후 준비 된 문에서 호출할 수 있습니다.  
+준비된 문의 필드에 대한 메타데이터를 검색합니다. 문 준비에 대한 자세한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)를 참조하세요. 실행 전 또는 후에 준비된 문에서 **sqlsrv_field_metadata**를 호출할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,14 +45,14 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>반환 값  
 배열의 **array** 또는 **false**입니다. 배열은 결과 집합의 각 필드에 대한 하나의 배열로 구성됩니다. 각 하위 배열에는 아래 표에 설명된 키가 있습니다. 필드 메타데이터 검색 중 오류가 발생하면 **false** 가 반환됩니다.  
   
-|Key|Description|  
+|Key|설명|  
 |-------|---------------|  
 |속성|필드에 해당하는 열의 이름입니다.|  
 |형식|SQL 형식에 해당하는 숫자 값입니다.|  
 |크기|문자 형식 필드(char(n), varchar(n), nchar(n), nvarchar(n), XML)의 문자 수입니다. 이진 형식 필드(binary(n), varbinary(n), UDT)의 바이트 수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |전체 자릿수|가변 전체 자릿수 형식(real, numeric, decimal, datetime2, datetimeoffset, time)의 전체 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |소수 자릿수|가변 소수 자릿수 형식(numeric, decimal, datetime2, datetimeoffset, time)의 소수 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
-|Null 허용|열이 null을 허용 하는지 여부를 나타내는 열거형된 값 (**SQLSRV_NULLABLE_YES**), 열이 nullable이 아닌 (**SQLSRV_NULLABLE_NO**), 또는 열이 null을 허용 하는 경우 알려지지 않은 ( **SQLSRV_NULLABLE_UNKNOWN**).|  
+|Null 허용|열이 Null을 허용하는지(**SQLSRV_NULLABLE_YES**), 열이 Null을 허용하지 않는지(**SQLSRV_NULLABLE_NO**) 또는 열이 null 허용 여부를 알 수 없는지(**SQLSRV_NULLABLE_UNKNOWN**) 여부를 나타내는 열거형 값입니다.|  
   
 다음 표에서는 각 하위 배열 키에 대한 자세한 내용을 제공합니다. 이러한 형식에 대한 자세한 내용은 SQL Server 설명서를 참조하세요.  
   
@@ -94,7 +94,7 @@ sqlsrv_field_metadata( resource $stmt)
 Null을 허용하는 키는 yes 또는 no입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문 리소스를 만든 다음 필드 메타데이터를 검색 및 표시합니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문 리소스를 만든 다음 필드 메타데이터를 검색 및 표시합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

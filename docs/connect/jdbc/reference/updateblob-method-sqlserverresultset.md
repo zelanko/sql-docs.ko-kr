@@ -1,5 +1,5 @@
 ---
-title: updateBlob 메서드 (SQLServerResultSet) | Microsoft Docs
+title: updateBlob 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b6178a7da337197d2fe6b979bcd7e64c3d60245
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850918"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019921"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>updateBlob 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,16 +33,16 @@ ms.locfileid: "32850918"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|지정된 열을 java.sql.Blob 값으로 업데이트합니다.|  
-|[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|지정된 입력 스트림을 사용하여 지정된 열을 업데이트합니다.|  
-|[updateBlob (int, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|지정된 열을 지정된 바이트 수를 포함하는 지정된 입력 스트림을 사용하여 업데이트합니다.|  
-|[updateBlob (java.lang.String, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|지정된 열을 java.sql.Blob 값으로 업데이트합니다.|  
-|[updateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|지정된 입력 스트림을 사용하여 지정된 열을 업데이트합니다.|  
-|[updateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|지정된 열을 지정된 바이트 수를 포함하는 지정된 입력 스트림을 사용하여 업데이트합니다.|  
+|[updateBlob(int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|지정된 열을 java.sql.Blob 값으로 업데이트합니다.|  
+|[updateBlob(int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|지정된 입력 스트림을 사용하여 지정된 열을 업데이트합니다.|  
+|[updateBlob(int, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|지정된 열을 지정된 바이트 수를 포함하는 지정된 입력 스트림을 사용하여 업데이트합니다.|  
+|[updateBlob(java.lang.String, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|지정된 열을 java.sql.Blob 값으로 업데이트합니다.|  
+|[updateBlob(java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|지정된 입력 스트림을 사용하여 지정된 열을 업데이트합니다.|  
+|[updateBlob(java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|지정된 열을 지정된 바이트 수를 포함하는 지정된 입력 스트림을 사용하여 업데이트합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

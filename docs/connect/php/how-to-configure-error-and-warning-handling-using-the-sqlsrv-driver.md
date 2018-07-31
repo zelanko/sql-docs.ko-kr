@@ -1,5 +1,5 @@
 ---
-title: 오류 및 경고 처리 SQLSRV 드라이버를 사용 하 여 구성 | Microsoft Docs
+title: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,36 +17,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307412"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999247"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 항목에서는 오류 및 경고를 처리하기 위해 SQLSRV 드라이버를 구성하는 방법을 설명합니다.  
   
-기본적으로 SQLSRV 드라이버는 경고를 처리 오류가 있습니다. 에 대 한 호출을 **sqlsrv** 오류 또는 경고를 생성 하는 함수 반환 **false**합니다. 사용 하 여이 동작을 사용 하지는 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 함수입니다. 다음 코드 줄이 스크립트의 시작 부분에 포함 된 경우는 **sqlsrv** (오류 없음) 경고만 생성 하는 함수 반환 하지 것입니다 **false**:  
+기본적으로 SQLSRV 드라이버는 경고를 오류로 처리합니다. 오류 또는 경고를 생성하는 **sqlsrv** 함수를 호출하면 **false**가 반환됩니다. 이 동작을 사용하지 않도록 설정하려면 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 함수를 사용합니다. 다음 코드 줄이 스크립트의 시작 부분에 포함되는 경우 경고(오류 없음)만 생성하는 **sqlsrv** 함수는 **false**를 반환하지 않습니다.  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-다음 코드 줄 (경고는 오류로 처리 됩니다.) 기본 동작을 다시 설정 합니다.  
+다음 코드 줄은 기본 동작을 다시 설정합니다(경고를 오류로 처리).  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > SQLSTATE 값 01000, 01001, 01003 및 01S02에 해당하는 경고는 오류로 처리되지 않습니다. 구성에 관계없이 이러한 상태 중 하나에 해당하는 경고만 생성하는 **sqlsrv** 함수는 **false**를 반환하지 않습니다.  
   
-**WarningsReturnAsErrors** 에 대한 값은 php.ini 파일에서 설정할 수도 있습니다. 예를 들어이 항목에는 `[sqlsrv]` 섹션 php.ini 파일의 기본 동작을 해제 합니다.  
+**WarningsReturnAsErrors** 에 대한 값은 php.ini 파일에서 설정할 수도 있습니다. 예를 들어 php.ini 파일의 `[sqlsrv]` 섹션에서 이 항목은 기본 동작을 해제합니다.  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 오류 및 경고 정보를 검색하는 방법에 대한 정보는 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 및 [방법: 오류 및 경고 처리](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 코드 예제에서는 기본 오류 처리 동작을 사용하지 않도록 설정하는 방법을 보여 줍니다. 이 예제에서는 Transact-SQL 인쇄 명령을 사용하여 경고를 생성합니다. 인쇄 명령에 대 한 자세한 내용은 참조 [인쇄 (Transact SQL)](../../t-sql/language-elements/print-transact-sql.md)합니다.  
+다음 코드 예제에서는 기본 오류 처리 동작을 사용하지 않도록 설정하는 방법을 보여 줍니다. 이 예제에서는 Transact-SQL 인쇄 명령을 사용하여 경고를 생성합니다. 인쇄 명령에 대한 자세한 내용은 [PRINT(Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)를 참조하세요.  
   
 먼저 예제에서는 경고를 생성하는 쿼리를 실행하여 기본 오류 처리 동작을 보여 줍니다. 이 경고는 오류로 처리 됩니다. 오류 처리 구성을 변경한 후에 동일한 쿼리가 실행됩니다. 이 경고는 오류로 처리되지 않습니다.  
   
@@ -101,7 +101,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [작업 로깅](../../connect/php/logging-activity.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)

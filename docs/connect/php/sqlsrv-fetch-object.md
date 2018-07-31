@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309152"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991245"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행된 문에 해당하는 문 리소스입니다.  
   
-*$className* [선택 사항]: 인스턴스화할 클래스의 이름을 지정 하는 문자열입니다. *$className* 매개 변수의 값이 지정되지 않은 경우 PHP **stdClass** 의 인스턴스가 인스턴스화됩니다.  
+*$className* [선택 사항]: 인스턴스화할 클래스의 이름을 지정하는 문자열입니다. *$className* 매개 변수의 값이 지정되지 않은 경우 PHP **stdClass** 의 인스턴스가 인스턴스화됩니다.  
   
-*$ctorParams* [선택 사항]: 지정 된 클래스의 생성자에 전달 된 값을 포함 하는 배열에서 *$className* 매개 변수입니다. 지정된 클래스의 생성자가 매개 변수 값을 허용하는 경우 *$ctorParams* object **sqlsrv_fetch_object**매개 변수를 사용해야 합니다.  
+*$ctorParams* [선택 사항]: *$className* 매개 변수로 지정된 클래스의 생성자에 전달된 값을 포함하는 배열입니다. 지정된 클래스의 생성자가 매개 변수 값을 허용하는 경우 *$ctorParams* object **sqlsrv_fetch_object**매개 변수를 사용해야 합니다.  
   
-*행* [선택 사항]: 스크롤 가능 커서를 사용 하는 결과 집합에서 액세스할 행을 지정 하는 다음 값 중 하나입니다. (경우 *행* 지정 된 *$className* 및 *$ctorParams* 명시적으로 지정 해야에 대 한 null을 지정 해야 하는 경우에 *$className*및 *$ctorParams*.)  
+*row* [선택 사항]: 다음 값 중 하나로, 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (*행*이 지정된 경우 *$className* 및 *$ctorParams*가 명시적으로 지정되어야 합니다. *$className* 및 *$ctorParams*에 null을 지정해야 하는 경우도 마찬가지입니다.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -63,7 +63,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.  
   
-*오프셋* [선택 사항]: 검색할 행을 지정 하려면 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE 함께 사용 합니다. 결과 집합의 첫 번째 레코드는 0입니다.  
+*offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
 ## <a name="return-value"></a>반환 값  
 결과 집합 필드 이름에 해당하는 속성을 가진 PHP 개체입니다. 속성 값은 해당 결과 집합 필드 값으로 채워집니다. 선택적 *$className* 매개 변수로 지정된 클래스가 존재하지 않거나 지정된 문과 연결된 활성 결과 집합이 없는 경우 **false** 가 반환됩니다. 검색할 행이 더 이상 없는 경우 **null** 이 반환됩니다.  
@@ -93,7 +93,7 @@ SELECT SCOPE_IDENTITY()</pre>
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>예제  
-다음 예제는 결과 집합의 각 행을 PHP 개체로 검색합니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 된 합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제는 결과 집합의 각 행을 PHP 개체로 검색합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>예제  
-다음 예제는 결과 집합의 각 행을 스크립트에서 정의된 *Product* 클래스의 인스턴스로 검색합니다. 제품 정보를 검색 하는 예제는 *Purchasing.PurchaseOrderDetail* 및 *Production.Product* 지정 된 제품에 대 한 AdventureWorks 데이터베이스의 테이블 (기한 *DueDate*), 및 재고량 (*StockQty*) 지정된 된 값 보다 작아야 합니다. 예제에서는 **sqlsrv_fetch_object**에 대한 호출에서 클래스를 지정할 때 적용하는 일부 규칙을 강조합니다.  
+다음 예제는 결과 집합의 각 행을 스크립트에서 정의된 *Product* 클래스의 인스턴스로 검색합니다. 예제에서는 AdventureWorks 데이터베이스의 *Purchasing.PurchaseOrderDetail* 및 *Production.Product* 테이블에서 지정된 마감일(*DueDate*) 및 지정된 값보다 재고량(*StockQty*)이 적은 제품에 대해 제품 정보를 검색합니다. 예제에서는 **sqlsrv_fetch_object**에 대한 호출에서 클래스를 지정할 때 적용하는 일부 규칙을 강조합니다.  
   
 -   *$product* 변수는 *Product* 클래스의 인스턴스입니다. 그 이유는 "제품"이 *$className* 매개 변수로 지정되었고 *Product* 클래스가 존재하기 때문입니다.  
   
@@ -142,7 +142,7 @@ sqlsrv_close( $conn);
   
 -   개인 속성 *UnitPrice* 는 *UnitPrice* 필드 값으로 채워집니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -245,7 +245,7 @@ SELECT SCOPE_IDENTITY()</pre>
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)  
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  

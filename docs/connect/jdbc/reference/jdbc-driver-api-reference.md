@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 API 참조 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,56 +14,82 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b9dc05cfa6e96fc3dd987095917a932883df4e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 14e597d2788e57eb49903f52ebd40132ead9a35f
+ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843187"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39174910"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 드라이버 API 참조
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 제공 하는 API Java 내에서 사용할 수 있는 프로그래밍 코드에 연결 하 고 상호 작용 한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스입니다.  
-  
+[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 Java 프로그래밍 코드 내에서 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에 연결하고 조작하는 데 사용할 수 있는 API를 제공합니다.
+
+
+
+### <a name="javadocio-website-is-primary"></a>JavaDoc.io 웹 사이트는 주
+
+Microsoft JDBC API 참조 설명서는 JavaDoc.io 웹 사이트에서 사용자 보기에 대 한 호스트 됩니다. JavaDoc.io는 JDBC 참조 설명서에 대 한 기본 웹 사이트 되었습니다. JavaDoc.io에 JDBC 참조 설명서는 다음 직접 링크를 통해 제공 됩니다.
+
+- [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
+
+JavaDoc.io 버전 6.0부터 JDBC 참조 설명서를 있습니다.
+
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>만 레거시 JDBC 설명서는 여기에서 문서
+
+JDBC API 참조 설명서는 여기 기사 **https://docs.microsoft.com/sql/connect/jdbc/reference/** 새 릴리스에 대 한 JDBC 클래스를 업데이트할 때 업데이트할 더 이상. 그러나이 문서를 수행할 JDBC 버전 4.1 및 4.2에 대 한 모든 참조를 포함 합니다.
+
+JDBC 버전 6.0 및 일부 이상 버전에 대 한 설명서는 또한 여기 있습니다. 하지만 모든 버전 6.0 이상 JavaDoc.io 웹 사이트를 사용 합니다.
+
+
+
+### <a name="important-notes"></a>중요 사항
+
 > [!NOTE]  
->  JDBC 드라이버를 사용 하는 방법에 대 한 개념 정보를 참조 하십시오. [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)합니다.  
+>  JDBC 드라이버를 사용 하는 방법에 대 한 개념 정보를 참조 하세요 [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)합니다.  
   
 > [!IMPORTANT]  
->  JDBC 4.1 및 4.2 준수 지원에 대 한 Microsoft JDBC Driver 4.2 (또는 이상)를 사용 하 여 SQL Server에 대 한 합니다. Microsoft JDBC Driver 4.1 및 4.0 이전 릴리스에서는 JDBC 4.1 또는 4.2에 도입된 새로운 메서드가 지원되지 않습니다.  
+>  JDBC 4.1 및 4.2 준수를 지원하려면 SQL Server용 Microsoft JDBC Driver 4.2 이상을 사용하세요. Microsoft JDBC Driver 4.1 및 4.0 이전 릴리스에서는 JDBC 4.1 또는 4.2에 도입된 새로운 메서드가 지원되지 않습니다.  
 >   
->  JDBC 4.1 준수에 대한 API 세부 정보는 이 섹션에서 제공하지 않습니다. 참조 [JDBC 4.1 준수 JDBC 드라이버에 대 한](../../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)합니다.  
+>  JDBC 4.1 준수에 대한 API 세부 정보는 이 섹션에서 제공하지 않습니다. [JDBC 드라이버의 JDBC 4.1 준수](../../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)를 참조하세요.  
 >   
->  JDBC 4.2 준수에 대한 API 세부 정보는 이 섹션에서 제공하지 않습니다. 참조 [JDBC 4.2 JDBC 드라이버에 대 한 준수](../../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)합니다.  
+>  JDBC 4.2 준수에 대한 API 세부 정보는 이 섹션에서 제공하지 않습니다. [JDBC 드라이버의 JDBC 4.2 준수](../../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)를 참조하세요.  
 >   
->  이 섹션에는 SQL Server 용 Microsoft JDBC Driver 4.2부터 사용할 수 있는 대량 복사에 대 한 API 세부 정보를 찾을 수 없습니다. 참조 [대량 복사를 사용 하 여 JDBC 드라이버와 함께](../../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)합니다.  
+>  SQL Server용 Microsoft JDBC Driver 4.2부터 사용할 수 있는 대량 복사 기능에 대한 API 세부 정보는 이 섹션에서 제공하지 않습니다. [JDBC 드라이버에서 대량 복사 사용](../../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)을 참조하세요.  
 >   
->  이 섹션에는 상시 암호화, SQL Server 용 Microsoft JDBC Driver 6.0부터 사용할 수에 대 한 API 세부 정보를 찾을 수 없습니다. 참조 [상시 암호화는 JDBC 드라이버에 대 한 API 참조](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
+>  이 섹션에는 SQL Server용 Microsoft JDBC Driver 6.0부터 사용할 수 있는 Always Encrypted에 대한 API 세부 정보는 없습니다. [JDBC 드라이버에 대해 Always Encrypted API 참조](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조  
 >   
->  이 섹션에는 Using Table-Valued 매개 변수를 사용할 수 있는 SQL Server 용 Microsoft JDBC Driver 6.0부터에 대 한 API 세부 정보를 찾을 수 없습니다. 참조 [테이블 반환 매개 변수를 사용 하 여](../../../connect/jdbc/using-table-valued-parameters.md)  
+>  이 단원의 Using Table-Valued 매개 변수를 SQL Server 용 Microsoft JDBC Driver 6.0부터 사용할 수 있습니다에 대 한 API 세부 정보를 제공 하지 않습니다. [테이블 반환 매개 변수 사용](../../../connect/jdbc/using-table-valued-parameters.md) 참조  
 >   
->  Microsoft JDBC 드라이버 6.4 JDK 7.0, 8.0 및 9.0을 사용한 컴파일을 지원합니다.  
+>  Microsoft JDBC Driver 6.4에서는 JDK 7.0, 8.0 및 9.0을 사용한 컴파일이 지원됩니다.  
 >   
->  Microsoft JDBC 드라이버 6.2 JDK 7.0 및 8.0을 사용한 컴파일을 지원합니다.  
+>  Microsoft JDBC Driver 6.2에서는 JDK 7.0 및 8.0을 사용한 컴파일이 지원됩니다.  
 >   
->  Microsoft JDBC Driver 6.0 및 JDK 5.0, 6.0, 7.0 및 8.0을 사용한 컴파일을 4.2 지원 합니다.  
+>  Microsoft JDBC Driver 6.0 및 4.2에서는 JDK 5.0, 6.0, 7.0 및 8.0을 사용한 컴파일이 지원됩니다.  
 >   
 >  Microsoft JDBC Driver 4.1에서는 JDK 5.0, 6.0 및 7.0을 사용한 컴파일을 지원합니다.  
 
+
+
 ## <a name="interfaces"></a>인터페이스  
   
-|인터페이스 이름|Description|  
+|인터페이스 이름|설명|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement 인터페이스](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|입력 및 출력 매개 변수와 함께 호출할 저장 프로시저 이름을 지정할 수 있도록 합니다.|  
-|[ISQLServerConnection 인터페이스](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|JDBC 연결을 나타내며는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스입니다.|  
-|[SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|에 연결 하는 데 관련 된 속성 목록을 나타냅니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 사용 하 여 데이터베이스를 [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.|  
+|[ISQLServerConnection 인터페이스](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에 대한 JDBC 연결을 나타냅니다.|  
+|[SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|[ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에 연결에 관련된 속성의 목록을 나타냅니다.|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|JDBC의 준비된 문 기능에 대한 기본 구현을 나타냅니다.|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|JDBC 결과 집합을 나타냅니다.|  
-|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|JDBC 문 기능의 기본 구현을 나타냅니다.|  
+|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|JDBC 문 기능의 기본 구현을 나타냅니다.|
+| &nbsp; | &nbsp; |
+
+
   
 ## <a name="classes"></a>클래스  
   
-|클래스 이름|Description|  
+|클래스 이름|설명|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|microsoft.sql.DateTimeOffset 형식의 개체를 나타냅니다.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|BLOB(Binary Large Object)을 나타냅니다.|  
@@ -72,9 +98,9 @@ ms.locfileid: "32843187"
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|ISQLServerConnection을 구현합니다.|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|연결 풀 관리자를 위한 실제 데이터베이스 연결을 나타냅니다.|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|데이터베이스의 메타데이터를 나타냅니다.|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|에 연결 하는 데 관련 된 속성 목록을 나타냅니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 사용 하 여 데이터베이스를 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에 연결하는 경우와 관련된 속성 목록을 나타냅니다.|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|JNDI(Java Naming and Directory Interface)의 데이터 원본을 구체화하기 위한 개체 팩터리를 나타냅니다.|  
-|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|JDBC 드라이버를 나타냅니다. 이 클래스에 연결 하기 위한 메서드를 포함 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스, JDBC 드라이버에 대 한 정보를 얻기 위한 합니다.|  
+|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|JDBC 드라이버를 나타냅니다. 이 클래스에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에 연결하고 JDBC 드라이버에 대한 정보를 얻기 위한 메서드가 포함되어 있습니다.|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|실패하거나 완료되지 않은 SQL 문 실행을 나타냅니다.|  
 |[SQLServerNClob 클래스](../../../connect/jdbc/reference/sqlservernclob-class.md)|국가별 문자 집합을 사용하여 CLOB(Character Large Binary Object)을 나타냅니다.|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|준비된 문 매개 변수의 메타데이터를 나타냅니다.|  
@@ -86,10 +112,12 @@ ms.locfileid: "32843187"
 |[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)|트랜잭션에서 롤백할 수 있는 검사점을 나타냅니다.|  
 |[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)|ISQLServerStatement를 구현합니다.|  
 |[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)|분산(XA) 트랜잭션에 참여할 수 있는 JDBC 연결을 나타냅니다.|  
-|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|에 대 한 팩터리를 나타내는 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 내부적으로 사용 되는 개체입니다.|  
-|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|XAResource 나타냅니다 XA에 대 한 분산 트랜잭션 관리 합니다.|  
-  
-## <a name="see-also"></a>관련 항목:  
- [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
+|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|내부적으로 사용되는 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 개체에 대한 팩터리를 나타냅니다.|  
+|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|XA 분산 트랜잭션 관리를 위한 XAResource를 나타냅니다.|
+| &nbsp; | &nbsp; |
+
+
+
+## <a name="see-also"></a>참고 항목  
+ [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
+

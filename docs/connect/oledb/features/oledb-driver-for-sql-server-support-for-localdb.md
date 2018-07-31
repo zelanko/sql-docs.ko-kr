@@ -1,6 +1,6 @@
 ---
-title: SQL Server Support for LocalDB에 대 한 OLE DB 드라이버 | Microsoft Docs
-description: OLE DB Driver LocalDB에 대 한 SQL Server 지원
+title: SQL Server용 OLE DB 드라이버의 LocalDB 지원 | Microsoft Docs
+description: SQL Server용 OLE DB 드라이버의 LocalDB 지원
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c66855285d9912b8a818b5e270f38880c7828ebc
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 669d221ada6ff693194266618952d53c17bb6d87
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612318"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107685"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>SQL Server Support for LocalDB에 대 한 OLE DB 드라이버
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>SQL Server용 OLE DB 드라이버의 LocalDB 지원
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -49,7 +49,7 @@ SERVER=(localdb)\v11.0
   
  필요한 경우 sqllocaldb.exe를 사용하여 LocalDB 인스턴스를 만들 수 있습니다. 또한 sqlcmd.exe를 사용하여 LocalDB 인스턴스에서 데이터베이스를 추가하고 수정할 수 있습니다. **sqlcmd -S (localdb)\v11.0**).  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

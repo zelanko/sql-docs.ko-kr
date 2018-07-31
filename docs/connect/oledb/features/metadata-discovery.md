@@ -14,23 +14,23 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3980b8064b565dc09ebb79e9d81be9c6f85fc21a
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 7f16d0b4b7143721118840d839a4fb99cfaf9bec
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611638"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105889"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  메타 데이터 검색 개선 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] OLE DB Driver for SQL Server 응용 프로그램을 해당 열을 허용 또는 쿼리 실행에서 반환 된 매개 변수 메타 데이터는 동일 하거나 하기 전에 지정한 메타 데이터 형식과 호환 쿼리를 실행 합니다. 쿼리 실행 후 반환된 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 호환되지 않는 경우 오류가 발생합니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서의 메타데이터 검색 개선 사항으로 인해 SQL Server용 OLE DB 드라이버 응용 프로그램에서는 쿼리 실행 시 반환된 열 또는 매개 변수 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 일치하거나 호환되도록 지정할 수 있습니다. 쿼리 실행 후 반환된 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 호환되지 않는 경우 오류가 발생합니다.  
   
- Bcp 및 IBCPSession 및 IBCPSession2 인터페이스에서는 이제 지정할 수 있습니다는 지연 된 쿼리 출력 작업에 대 한 메타 데이터 검색을 방지 하기 위해 읽기 (지연 된 메타 데이터 검색). 이로 인해 성능이 향상되고 메타데이터 검색 오류가 발생하지 않습니다.  
+ bcp 및 IBCPSession 및 IBCPSession2 인터페이스에서는 이제 쿼리 출력 작업에서 메타데이터를 검색하지 않도록 지연된 읽기(지연된 메타데이터 검색)을 지정할 수 있습니다. 이로 인해 성능이 향상되고 메타데이터 검색 오류가 발생하지 않습니다.  
   
- SQL Server 용 OLE DB 드라이버를 사용 하 여 응용 프로그램을 개발 하지만 서버 버전에 연결 하는 경우 보다 이전 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], 메타 데이터 검색 기능이 서버 버전에 해당 됩니다.  
+ SQL Server용 OLE DB 드라이버를 사용하여 응용 프로그램을 개발하지만 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이전 버전의 서버에 연결하는 경우 해당 서버 버전에 해당되는 메타데이터 검색 기능이 제공됩니다.  
   
 ## <a name="remarks"></a>Remarks   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 OLE DB 멤버 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
@@ -39,17 +39,17 @@ ms.locfileid: "35611638"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   Icommandwithparameters:: Getparameterinfo (참조 [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) 자세한 내용은)  
+-   Icommandwithparameters:: Getparameterinfo (참조 [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) 자세한)  
   
- IBCPSession::BCPSetBulkMode를 사용 하 여 메타 데이터 형식 지정 하는 경우에 성능이 향상 될 됩니다.  
+ 또한 IBCPSession::BCPSetBulkMode를 사용하여 메타데이터 형식을 지정하는 경우 향상된 성능을 경험할 수 있습니다.  
   
- OLE DB 드라이버에서 SQL Server에 대 한 향상 된 메타 데이터 검색은 두 개의 저장된 프로시저에 추가 되어 가능한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ OLE DB 드라이버에서 SQL Server에 대 한 향상 된 메타 데이터 검색 되어 있는 두 개의 저장된 프로시저의 추가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
   
 -   sp_describe_first_result_set  
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

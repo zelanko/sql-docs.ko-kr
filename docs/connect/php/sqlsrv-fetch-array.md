@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308972"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979716"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,15 +43,15 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 실행된 문에 해당하는 문 리소스입니다.  
   
-*$fetchType* [선택 사항]: 미리 정의 된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
+*$fetchType* [선택 사항]: 미리 정의된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|데이터의 다음 행이 숫자형 배열로 반환됩니다.|  
 |SQLSRV_FETCH_ASSOC|데이터의 다음 행이 결합형 배열로 반환됩니다. 배열 키는 결과 집합의 열 이름입니다.|  
 |SQLSRV_FETCH_BOTH|데이터의 다음 행이 숫자형 배열과 결합형 배열 둘 다로 반환됩니다. 이것은 기본값입니다.|  
   
-*행* [선택 사항]: 버전 1.1에에서 추가 합니다. 다음 값 중 하나로 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (때 *행* 지정 된 *fetchtype* 명시적으로 지정 해야 기본값을 지정 하는 경우에 합니다.)  
+*row* [선택 사항]: 버전 1.1에서 추가되었습니다. 다음 값 중 하나로 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (*row*가 지정된 경우 기본값을 지정하는 경우에도 *fetchtype*이 명시적으로 지정되어야 합니다.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -62,7 +62,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요. 스크롤 가능 커서 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1에 추가되었습니다.  
   
-*오프셋* [선택 사항]: 검색할 행을 지정 하려면 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE 함께 사용 합니다. 결과 집합의 첫 번째 레코드는 0입니다.  
+*offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
 ## <a name="return-value"></a>반환 값  
 데이터 행이 검색되는 경우 **배열** 이 반환됩니다. 검색할 행이 더 이상 없는 경우 **null** 이 반환됩니다. 오류가 발생하면 **false** 가 반환됩니다.  
@@ -77,7 +77,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-반환 된 결과 집합이 `SELECT SCOPE_IDENTITY()` 이 문의 부분 결합형 배열로 검색 되 인 반환된 된 값에 대 한 키는 빈 문자열 ("")는 반환 된 열에 이름이 없기 때문에 합니다. 이를 방지하려면 결과를 숫자형 배열로 검색하거나 Transact-SQL 문에서 반환된 열에 대한 이름을 지정할 수 있습니다. 다음은 Transact-SQL에 열 이름을 지정하는 한 가지 방법입니다.  
+이 명령문의 `SELECT SCOPE_IDENTITY()` 부분에서 반환된 결과 집합이 결합형 배열로 검색되는 경우 반환된 열에 이름이 없기 때문에 반환된 값에 대한 키는 빈 문자열("")입니다. 이를 방지하려면 결과를 숫자형 배열로 검색하거나 Transact-SQL 문에서 반환된 열에 대한 이름을 지정할 수 있습니다. 다음은 Transact-SQL에 열 이름을 지정하는 한 가지 방법입니다.  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -86,7 +86,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 결과 집합에 이름이 없는 여러 열이 포함된 경우 마지막으로 이름이 지정되지 않은 열의 값이 빈 문자열("") 키에 할당됩니다.  
   
 ## <a name="example"></a>예제  
-다음 예제는 결과 집합의 각 행을 결합형 **배열**로 검색합니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 된 합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제는 결과 집합의 각 행을 결합형 **배열**로 검색합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -127,9 +127,9 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>예제  
 다음 예제는 결과 집합의 각 행을 숫자로 인덱싱된 배열로 검색합니다.  
   
-제품 정보를 검색 하는 예제는 *Purchasing.PurchaseOrderDetail* 지정된 된 날짜와 재고량이 있는 제품에 대 한 AdventureWorks 데이터베이스의 테이블 (*StockQty*) 지정된 된 값 보다 작습니다.  
+예제에서는 AdventureWorks 데이터베이스의 *Purchasing.PurchaseOrderDetail* 테이블에서 지정된 날짜 및 지정된 값보다 재고량(*StockQty*)이 작은 제품에 대해 제품 정보를 검색합니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -180,11 +180,11 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-**sqlsrv_fetch_array** 함수에 따라 데이터는 항상 반환 된 [기본 PHP 데이터 형식](../../connect/php/default-php-data-types.md)합니다. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+**sqlsrv_fetch_array** 함수는 항상 [기본 PHP 데이터 형식](../../connect/php/default-php-data-types.md)에 따라 데이터를 반환합니다. PHP 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 이름이 없는 필드가 검색되는 경우 배열 요소에 대한 결합형 키는 빈 문자열("")입니다. 자세한 내용은 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [데이터 검색](../../connect/php/retrieving-data.md)

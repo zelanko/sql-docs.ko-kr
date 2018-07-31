@@ -17,23 +17,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611728"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105769"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>스키마 행 집합-LINKEDSERVERS 행 집합
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---linkedservers-rowset"></a>스키마 행 집합 - LINKEDSERVERS 행 집합
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **LINKEDSERVERS** 행 집합에 참여할 수 있는 조직 데이터 원본을 열거 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리 합니다.  
+  **LINKEDSERVERS** 행 집합은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리에 참여할 수 있는 조직 데이터 원본을 열거합니다.  
   
  **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|열 이름|유형 표시기|Description|  
+|열 이름|유형 표시기|설명|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|연결된 서버의 이름입니다.|  
 |SVR_PRODUCT|DBTYPE_WSTR|연결된 서버 이름이 나타내는 데이터 저장소 유형을 식별하는 제조업체 또는 기타 이름입니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "35611728"
   
  행 집합은 SRV_NAME을 기준으로 정렬되며 SRV_NAME에서 하나의 제한이 지원됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [스키마 행 집합 지원 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>참고 항목  
+ [스키마 행 집합 지원&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

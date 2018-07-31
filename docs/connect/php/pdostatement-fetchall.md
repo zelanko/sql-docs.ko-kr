@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308992"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983023"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,11 +34,11 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*fetch_style*: 행 데이터의 형식을 지정 하는 (정수) 기호입니다. 값 목록은 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 를 참조하세요. PDO::FETCH_COLUMN도 허용됩니다. PDO::FETCH_BOTH가 기본값입니다.  
+$*fetch_style*: 행 데이터의 형식을 지정하는 (정수) 기호입니다. 값 목록은 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 를 참조하세요. PDO::FETCH_COLUMN도 허용됩니다. PDO::FETCH_BOTH가 기본값입니다.  
   
-$*column_index*: 경우 반환할 열을 나타내는 정수 값 $*fetch_style* pdo:: FETCH_COLUMN 됩니다. 기본값은 0입니다.  
+$*column_index*: $*fetch_style*이 PDO::FETCH_COLUMN인 경우 반환할 열을 나타내는 정수 값입니다. 기본값은 0입니다.  
   
-$*ctor_args*: 클래스 생성자에 대 한 매개 변수 배열을 때 $*fetch_style* FETCH_CLASS 또는 pdo:: 됩니다.  
+$*ctor_args*: $*fetch_style*이 PDO::FETCH_CLASS 또는 PDO::FETCH_OBJ인 경우 클래스 생성자에 대한 매개 변수 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
 결과 집합의 나머지 행 배열 또는 메서드 호출에 실패하면 false입니다.  
@@ -87,7 +87,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

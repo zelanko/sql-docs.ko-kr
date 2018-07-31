@@ -1,6 +1,6 @@
 ---
 title: 'Ibcpsession:: Bcpreadfmt (OLE DB) | Microsoft Docs'
-description: 'Ibcpsession:: Bcpreadfmt (OLE DB)는 서식 파일에서 데이터를 읽는 데 사용 하 여'
+description: 'Ibcpsession:: Bcpreadfmt (OLE DB) 형식 파일에서 데이터를 읽기 위한 사용 하 여'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6cbdb38e8318c40113a6e6b43e6ba0ca96c5221a
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 723bdccfc891d82bb9f219bd02b4b821f3da4797
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689046"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107160"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,13 +43,13 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- **BCPReadFmt** 데이터 파일에 데이터의 형식을 지정 하는 서식 파일에서 데이터를 읽기 위한 메서드를 사용 합니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. SQL Server BCP에 대 한 OLE DB 드라이버에서 지 원하는 서식 파일 버전은 버전 6.0 이상.  
+ **BCPReadFmt** 메서드는 데이터 파일의 데이터 형식을 지정하는 서식 파일에서 데이터를 읽을 때 사용됩니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. SQL Server BCP에 대 한 OLE DB 드라이버에서 지 원하는 서식 파일 버전은 버전 6.0 이상입니다.  
   
- 후의 **BCPReadFmt** 메서드 형식 값을 읽고, 적절 한 호출에서 [ibcpsession:: Bcpcolumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 및 [ibcpsession:: Bcpcolfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 메서드. 따라서 사용자가 서식 파일의 구문을 분석하여 메서드를 호출할 필요가 없습니다.  
+ **BCPReadFmt** 메서드는 형식 값을 읽은 후 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 및 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 메서드를 적절히 호출합니다. 따라서 사용자가 서식 파일의 구문을 분석하여 메서드를 호출할 필요가 없습니다.  
   
- 서식 파일을 저장 하려면 호출는 [ibcpsession:: Bcpwritefmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 메서드. 에 대 한 호출이 **BCPReadFmt** 메서드는 저장 된 서식을 참조할 수 있습니다. 대량 복사 유틸리티 또는 (**bcp**) 사용자 정의 데이터 형식에서 참조 될 수 있는 파일에 저장할 수는 **BCPReadFmt** 메서드.  
+ 서식 파일을 저장하려면 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 메서드를 호출합니다. **BCPReadFmt** 메서드를 호출할 때 저장된 형식을 참조할 수 있습니다. 또한 대량 복사 유틸리티(**bcp**)로 사용자 정의 데이터 형식을 **BCPReadFmt** 메서드가 참조할 수 있는 파일에 저장할 수 있습니다.  
   
- **BCP_OPTION_DELAYREADFMT** 의 값은 *eOption* 의 매개 변수 [ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) ibcpsession:: Bcpreadfmt의 동작을 수정 합니다.  
+ **BCP_OPTION_DELAYREADFMT** 의 값을 *eOption* 의 매개 변수 [ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) ibcpsession:: Bcpreadfmt의 동작을 수정 합니다.  
   
 ## <a name="arguments"></a>인수  
  *pwszFormatFile*[in]  
@@ -60,15 +60,15 @@ HRESULT BCPReadFmt(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 사용 하 여 자세한 정보에 대 한 공급자 관련 오류가 발생 한는 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스입니다.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용하세요.  
   
  E_OUTOFMEMORY  
  메모리 부족 오류가 발생했습니다.  
   
  E_UNEXPECTED  
- 예기치 않은 메서드가 호출되었습니다. 예를 들어는 [ibcpsession:: Bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 이 메서드를 호출 하기 전에 메서드를 호출 하지 않았습니다.  
+ 예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   

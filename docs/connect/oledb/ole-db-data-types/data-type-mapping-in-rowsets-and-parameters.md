@@ -1,6 +1,6 @@
 ---
 title: 행 집합 및 매개 변수 데이터 형식 매핑 | Microsoft Docs
-description: 행 집합 및 매개 변수 데이터 형식 매핑
+description: 행 집합 및 매개 변수의 데이터 형식 매핑
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -25,19 +25,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: c9c6d56cdbbbcd9b35b09f405154497a5fa3bc8f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666123"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108795"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server를 나타내는 행 집합 및 매개 변수 값으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 OLE DB를 사용 하 여 데이터 정의 함수에 보고 되는 데이터 형식을 **icolumnsinfo:: Getcolumninfo** 및  **Icommandwithparameters:: Getparameterinfo**합니다.  
+  행 집합과 매개 변수 값으로 SQL Server용 OLE DB 드라이버는 **IColumnsInfo::GetColumnInfo** 및 **ICommandWithParameters::GetParameterInfo** 함수에 보고된 다음 OLE DB 정의 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 나타냅니다.  
   
 |SQL Server 데이터 형식|OLE DB 데이터 형식|  
 |--------------------------|----------------------|  
@@ -71,22 +71,22 @@ ms.locfileid: "35666123"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- OLE DB Driver for SQL Server는 그림과 같이 소비자가 요청한 데이터 변환을 지원 합니다.  
+ OLE DB Driver for SQL Server는 그림에 나와 있는 것 처럼 소비자가 요청한 데이터 변환을 지원 합니다.  
   
- **sql_variant** 개체의 데이터를 저장할 수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] text, ntext, 이미지, varchar (max), nvarchar (max), varbinary (max), xml, timestamp 및 Microsoft.NET Framework 공용 언어 런타임 (CLR)를 제외 하 고 데이터 형식 사용자 정의 형식입니다. 또한 sql_variant 데이터 인스턴스는 sql_variant를 기본 데이터 형식으로 사용할 수 없습니다. 열이 포함 될 수 있습니다 예를 들어 **smallint** 일부 행에 대 한 값 **float** 다른 행에 대 한 값 및 **char**/**nchar**나머지 부분에는 값입니다.  
+ **sql_variant** 개체는 text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp 및 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 형식을 제외한 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식의 데이터를 포함할 수 있습니다. 또한 sql_variant 데이터 인스턴스는 sql_variant를 기본 데이터 형식으로 사용할 수 없습니다. 예를 들어 열의 일부 행에는 **smallint** 값이 포함되고, 다른 행에는 **float** 값이 포함되고, 나머지 행에는 **char**/**nchar** 값이 포함될 수 있습니다.  
   
 > [!NOTE]  
->  **sql_variant** Microsoft Visual Basic® 및 DBTYPE_VARIANT, DBTYPE_SQLVARIANT OLEDB에 Variant 데이터 형식을 데이터 형식은 비슷합니다.  
+>  **sql_variant** 데이터 형식은 Microsoft Visual Basic®의 Variant 데이터 형식 및 OLE DB의 DBTYPE_VARIANT, DBTYPE_SQLVARIANT와 유사합니다.  
   
- 때 **sql_variant** 데이터가 DBTYPE_VARIANT로 인출 되, 버퍼의 VARIANT 구조에 저장 됩니다. 하지만 VARIANT 구조의 하위 형식에 정의 된 하위 유형에 매핑되지 않을 수도 있습니다는 **sql_variant** 데이터 형식입니다. **sql_variant** 데이터 해야 일치 하도록 모든 하위 형식에 대 한 순서 대로 다음 DBTYPE_SQLVARIANT로 인출 하는 수입니다.  
+ **sql_variant** 데이터가 DBTYPE_VARIANT로 인출되면 버퍼의 VARIANT 구조에 배치됩니다. 그러나 VARIANT 구조의 하위 유형이 **sql_variant** 데이터 형식으로 정의된 하위 유형에 매핑되지 않을 수도 있습니다. 모든 하위 유형이 일치하려면 **sql_variant** 데이터가 DBTYPE_SQLVARIANT로 인출되어야 합니다.  
   
 ## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT 데이터 형식  
- 지원 하기 위해는 **sql_variant** 데이터 형식에서 OLE DB Driver for SQL Server 노출 DBTYPE_SQLVARIANT 라는 공급자별 데이터 형식입니다. 때 **sql_variant** 데이터가 DBTYPE_SQLVARIANT로 인출 되 고 그 공급자별 SSVARIANT 구조에 저장 됩니다. SSVARIANT 구조 모든 하위 유형과 일치 하는 하위 유형이 포함 된 **sql_variant** 데이터 형식입니다.  
+ **sql_variant** 데이터 형식을 지원하기 위해 SQL Server용 OLE DB 드라이버는 DBTYPE_SQLVARIANT라는 공급자별 데이터 형식을 노출합니다. **sql_variant** 데이터가 DBTYPE_SQLVARIANT로 인출되면 공급자별 SSVARIANT 구조에 저장됩니다. SSVARIANT 구조에는 **sql_variant** 데이터 형식의 하위 유형과 일치하는 모든 하위 유형이 포함됩니다.  
   
  또한 세션 속성 SSPROP_ALLOWNATIVEVARIANT를 TRUE로 설정해야 합니다.  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>공급자별 속성 SSPROP_ALLOWNATIVEVARIANT  
- 데이터를 인출할 때 열 또는 매개 변수에 대해 반환되어야 하는 데이터 형식 종류를 명시적으로 지정할 수 있습니다. **IColumnsInfo** 를 한 열 정보를 사용 하는으로 바인딩을 수행할 사용할 수도 있습니다. 때 **IColumnsInfo** SSPROP_ALLOWNATIVEVARIANT 세션 속성이 FALSE (기본값) 이면 DBTYPE_VARIANT에 대해 반환 되 면 바인딩 목적에 대 한 열 정보를 가져오는 데는 **sql_variant**열입니다. SSPROP_ALLOWNATIVEVARIANT 속성이 FALSE이면 DBTYPE_SQLVARIANT가 지원되지 않습니다. SSPROP_ALLOWNATIVEVARIANT 속성을 TRUE로 설정하면 열 유형이 DBTYPE_SQLVARIANT로 반환되고, 이 경우 버퍼에 SSVARIANT 구조가 포함됩니다. 인출 **sql_variant** 데이터를 DBTYPE_SQLVARIANT 세션 속성 SSPROP_ALLOWNATIVEVARIANT TRUE로 설정 되어야 합니다.  
+ 데이터를 인출할 때 열 또는 매개 변수에 대해 반환되어야 하는 데이터 형식 종류를 명시적으로 지정할 수 있습니다. **IColumnsInfo**를 사용하여 열 정보를 가져오고 이 정보를 기반으로 바인딩을 수행할 수도 있습니다. 바인딩 목적을 위해 **IColumnsInfo**를 사용하여 열 정보를 가져오는 경우 SSPROP_ALLOWNATIVEVARIANT 세션 속성이 FALSE(기본값)이면 **sql_variant** 열에 대해 DBTYPE_VARIANT가 반환됩니다. SSPROP_ALLOWNATIVEVARIANT 속성이 FALSE이면 DBTYPE_SQLVARIANT가 지원되지 않습니다. SSPROP_ALLOWNATIVEVARIANT 속성을 TRUE로 설정하면 열 유형이 DBTYPE_SQLVARIANT로 반환되고, 이 경우 버퍼에 SSVARIANT 구조가 포함됩니다. **sql_variant** 데이터를 DBTYPE_SQLVARIANT로 인출하는 경우 세션 속성 SSPROP_ALLOWNATIVEVARIANT를 TRUE로 설정해야 합니다.  
   
  SSPROP_ALLOWNATIVEVARIANT 속성은 공급자별 DBPROPSET_SQLSERVERSESSION 속성 집합의 일부이며 세션 속성입니다.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "35666123"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|형식: VT_BOOL<br /><br /> R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: DBTYPE_VARIANT 또는 DBTYPE_SQLVARIANT로 인출 데이터 인지 여부를 확인 합니다.<br /><br /> VARIANT_TRUE: 열 유형이 DBTYPE_SQLVARIANT로 반환 되는 경우 버퍼 SSVARIANT 구조가 포함 됩니다.<br /><br /> VARIANT_FALSE: 열 유형이 DBTYPE_VARIANT로 반환 되 고 버퍼에 VARIANT 구조가 포함 됩니다.|  
+|SSPROP_ALLOWNATIVEVARIANT|형식: VT_BOOL<br /><br /> R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 데이터가 DBTYPE_VARIANT 또는 DBTYPE_SQLVARIANT로 인출되는지를 결정합니다.<br /><br /> VARIANT_TRUE: 열 유형이 DBTYPE_SQLVARIANT로 반환되고, 이 경우 버퍼에 SSVARIANT 구조가 포함됩니다.<br /><br /> VARIANT_FALSE: 열 유형이 DBTYPE_VARIANT로 반환되고, 이 경우 버퍼에 VARIANT 구조가 포함됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

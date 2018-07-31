@@ -1,24 +1,23 @@
 ---
 title: SqlPackage.exe | Microsoft Docs
-ms.custom:
-- SSDT
+ms.prod: sql
+ms.technology: ssdt
 ms.date: 2018-06-27
-ms.prod: sql-non-specified
 ms.reviewer: alayu; sstein
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4c206a60e0b494d4e060864eefcb50424d316938
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
-ms.translationtype: HT
+ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080081"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085415"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -137,7 +136,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|배포 참가자에 대한 추가 배포 참가자 인수를 지정합니다. 세미콜론으로 구분된 값의 목록이어야 합니다.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac가 배포될 때 실행되어야 하는 추가 배포 기여자를 지정합니다. 세미콜론으로 구분된 정규화된 빌드 참가자 이름 또는 ID의 목록이어야 합니다.|
-|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|이 속성은 SqlClr 배포에서 배포 계획의 일부로 차단 어셈블리를 삭제하는 데 사용됩니다. 기본적으로 어셈블리를 삭제해야 하는 경우에는 모든 차단/참조 어셈블리가 어셈블리 업데이트를 차단합니다.|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|이 속성은 SqlClr 배포에서 배포 계획의 일부로 차단 어셈블리를 삭제하는 데 사용됩니다. 기본적으로 어셈블리를 삭제해야 하는 경우에는 모든 차단/참조 어셈블리가 어셈블리 업데이트를 차단합니다.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|SQL Server 플랫폼이 호환되지 않을 수 있는 경우에도 작업을 시도해야 하는지 여부를 지정합니다.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|이 속성이 True로 설정되어 있으면 행 수준 보안이 설정된 테이블에서 데이터 이동을 차단하지 않습니다. 기본값은 false입니다.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|변경 내용을 배포하기 전 데이터베이스를 백업합니다.|
@@ -548,7 +547,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|IgnoreFilegroupPlacement (BOOLEAN ' True') =|데이터베이스에 게시할 때 FILEGROUP에서의 개체 배치에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreFileSize (BOOLEAN ' True') =|데이터베이스에 게시할 때 파일 크기의 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
 |**/p:**|IgnoreFillFactor (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 저장소의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
-|**/p:**|IgnoreFullTextCatalogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 저장소의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
+|**/p:**|IgnoreFullTextCatalogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 전체 텍스트의 파일 경로의 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 시드에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 증가값에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|데이터베이스에 게시할 때 인덱스 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.|

@@ -28,7 +28,7 @@ ms.locfileid: "33042970"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장하는 데 사용됩니다. **파일** *<file>* ****  **저장** ( *<file>* 은 현재 항목의 이름)을 클릭하거나 코드 편집기에서 Alt+F, A를 누릅니다.  
+지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장하는 데 사용됩니다. 클릭 **저장** *<file>* **으로** 에 **파일** 메뉴 (여기서 *<file>* 되는 이름 현재 항목), 또는 ALT + F, A 코드 편집기에서 키를 누릅니다.  
   
 ## <a name="central-panel"></a>중앙 창  
 **저장 위치**  

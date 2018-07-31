@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308552"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983375"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-데이터베이스의 테이블에 가장 최근에 삽입된 행에 대한 식별자를 반환합니다. 테이블에 IDENTITY NOT NULL 열이 있어야 합니다. 시퀀스 이름을 제공 하는 경우 `lastInsertId` 반환 시퀀스 제공 된 이름에 대 한 시퀀스 번호를 가장 최근에 삽입 (시퀀스 번호에 대 한 자세한 내용은 참조 [여기](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers)).
+데이터베이스의 테이블에 가장 최근에 삽입된 행에 대한 식별자를 반환합니다. 테이블에 IDENTITY NOT NULL 열이 있어야 합니다. 시퀀스 이름을 제공 하는 경우 `lastInsertId` 반환 제공 된 시퀀스 이름에 대 한 시퀀스 번호를 가장 최근에 삽입 (시퀀스 번호에 대 한 자세한 내용은 참조 하세요. [여기](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## <a name="syntax"></a>구문  
   
@@ -34,19 +34,19 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*이름*: 시퀀스 이름을 지정할 수 있는 선택적 문자열입니다. 
+$*name*: 시퀀스 이름을 지정할 수 있는 선택적 문자열입니다. 
   
 ## <a name="return-value"></a>반환 값  
-시퀀스 이름을 제공 하지 않으면, 행에 대 한 식별자의 문자열 가장 최근에 추가 합니다.
+없는 시퀀스 이름을 제공 하는 경우 행에 대 한 식별자의 문자열 가장 최근에 추가 합니다.
 시퀀스 이름을 제공 하는 경우 시퀀스에 대 한 식별자의 문자열 가장 최근에 추가 합니다.
-메서드 호출이 실패 하는 경우 빈 문자열이 반환 됩니다.
+메서드 호출에 실패 하는 경우 빈 문자열이 반환 됩니다.
   
 ## <a name="remarks"></a>Remarks  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
-버전 2.0과 사이의 4.3, 선택적 매개 변수는 테이블 이름이 며, 반환 값은 제공된 된 테이블에 가장 최근에 추가 된 행의 ID입니다.
-5.0 이상에서는 선택적 매개 변수는 시퀀스 이름으로 간주 하 고 반환 값은 가장 최근에 추가 된 제공 된 시퀀스 이름에 대 한 시퀀스.
+버전 2.0과 사이의 4.3, 선택적 매개 변수는 테이블 이름 및 반환 값은 제공 된 테이블에 가장 최근에 추가 된 행의 ID입니다.
+5.0 이상에서는 선택적 매개 변수 순서 이름으로 간주 됩니다 및 반환 값은 제공 된 시퀀스 이름에 대 한 가장 최근에 추가 된 시퀀스입니다.
 테이블 이름이 제공 되는 버전 4.3을 후 경우 `lastInsertId` 빈 문자열을 반환 합니다.
-시퀀스는 이상 SQL Server 2012 에서만에서 지원 됩니다.
+시퀀스는 SQL Server 2012에만 지원 됩니다.
   
 ## <a name="example"></a>예제  
   
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

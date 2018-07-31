@@ -1,6 +1,6 @@
 ---
-title: 실행 한 사용자 정의 함수 및 반환 코드 처리 (OLE DB) | Microsoft Docs
-description: 사용자 정의 함수 및 반환 코드 처리 OLE DB 드라이버를 사용 하 여 SQL server를 실행 합니다.
+title: 사용자 정의 함수 실행 및 반환 코드 처리(OLE DB) | Microsoft Docs
+description: 사용자 정의 함수 및 프로세스 반환 코드를 SQL Server 용 OLE DB 드라이버를 사용 하 여 실행
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a11b48a03bef7b6842b427d43d1a73c311a08b42
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 5d1e3496904b180ca56d425be0b03e781a1a5117
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665553"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107766"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>사용자 정의 함수 실행 및 반환 코드 처리(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -38,7 +38,7 @@ ms.locfileid: "35665553"
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 저장 프로시저를 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 저장 프로시저를 삭제합니다.  
   
@@ -371,7 +371,7 @@ drop function fn_RectangleArea
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>참고 항목  
+ [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

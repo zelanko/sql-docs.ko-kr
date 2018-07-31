@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83c62cf6a9ec637573682cc3b0193b173875a42
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309202"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983148"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "35309202"
 지정된 연결에서 트랜잭션을 시작합니다. 현재 트랜잭션에는 **sqlsrv_begin_transaction** 을 호출한 후와 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 또는 [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)을 호출하기 전에 실행된 지정된 연결에 대한 모든 문이 포함됩니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 기본적으로 자동 커밋 모드에 있습니다. 즉, **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  
+> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 기본적으로 자동 커밋 모드입니다. 즉, **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  
   
 > [!NOTE]  
-> 경우 **sqlsrv_begin_transaction** 트랜잭션이 이미 후 호출 되는 연결에서 시작 되었지만 호출 하 여 완료 되지 **sqlsrv_commit** 또는 **sqlsrv_rollback**, 호출이 반환 **false** 및 *Already in Transaction* 오류가 오류 수집에 추가 됩니다.  
+> **sqlsrv_commit** 또는 **sqlsrv_rollback**을 호출하여 연결에서 트랜잭션이 시작되었지만 아직 완료되지 않은 상태에서 **sqlsrv_begin_transaction**이 호출되면 호출이 **false**를 반환하고 *Already in Transaction* 오류가 오류 수집에 추가됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ sqlsrv_begin_transaction( resource $conn)
   
 예제의 첫 번째 쿼리는 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 새 판매 주문을 삽입합니다. 주문은 제품 ID가 709인 제품 5단위에 대한 것입니다. 두 번째 쿼리는 제품 ID가 709인 제품의 재고 수량을 5단위 줄입니다. 두 쿼리 모두 성공해야 데이터베이스에 주문 및 제품 가용성 상태가 정확하게 반영되므로 이러한 쿼리가 트랜잭션에 포함되어 있습니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -127,10 +127,10 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > 포함된 Transact-SQL을 사용하여 트랜잭션을 수행하지 마세요. 예를 들어 트랜잭션을 시작하는 Transact-SQL 쿼리로 "BEGIN TRANSACTION"을 사용하여 문을 실행하지 마세요. 포함된 Transact-SQL을 사용하여 트랜잭션을 수행하는 경우 예상 트랜잭션 동작을 보장할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [방법: 트랜잭션 수행](../../connect/php/how-to-perform-transactions.md)
 
-[Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md) 
+[Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md) 
   

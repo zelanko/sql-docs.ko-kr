@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20e79158a2b38dac6799e9affe7ac4bd656ff4f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983247"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*column_number*: 0부터 시작 열 번호를 나타내는 선택적 정수입니다. 기본값은 0입니다(행의 첫 번째 열).  
+$*column_number*: 0부터 시작하는 열 번호를 나타내는 선택적 정수입니다. 기본값은 0입니다(행의 첫 번째 열).  
   
 ## <a name="return-value"></a>반환 값  
 한 열이거나 행이 더 이상 없는 경우 false입니다.  
@@ -57,7 +57,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

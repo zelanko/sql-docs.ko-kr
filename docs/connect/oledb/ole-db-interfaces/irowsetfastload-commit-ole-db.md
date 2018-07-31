@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8f4baa2339105e8dac65c29e5efc35663b7c4b8d
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3e6b27907770d54ef8ac0ef0e664c1b310c85bfb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689856"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109715"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  일괄 삽입되는 행의 끝을 표시하고 행을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 씁니다. 샘플을 보려면 [대량 복사 데이터를 사용 하 여 IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 및 [BLOB 데이터를 SQL SERVER를 사용 하 여 IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 보내기 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)합니다.  
+  일괄 삽입되는 행의 끝을 표시하고 행을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 씁니다. 샘플을 보려면 [IRowsetFastLoad를 통한 복사본 데이터 대량 &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 하 고 [BLOB 데이터를 SQL SERVER를 사용 하 여 IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 보내기 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,18 +54,18 @@ HRESULT Commit(
  공급자 관련 오류가 발생했습니다. 오류 정보에서 공급자 관련 오류 텍스트를 검색하십시오.  
   
  E_UNEXPECTED  
- 이전에 무효화 된 대량 복사 행 집합에서 호출 되는 **irowsetfastload:: Commit** 메서드.  
+ 이전에 **IRowsetFastLoad::Commit** 메서드에 의해 무효화된 대량 복사 행 집합에서 메서드가 호출되었습니다.  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB Driver for SQL Server 대량 복사 행 집합은 지연 업데이트 모드 행 집합으로 동작합니다. 행 집합을 통해 행 데이터를 삽입 하는 사용자, 삽입 된 행은 처리 되는 동일한 방식으로 삽입 지 원하는 행 집합에서 보류 중인 **IRowsetUpdate**합니다.  
+ OLE DB 드라이버를 SQL Server 대량 복사 행 집합에 대 한 지연 업데이트 모드 행 집합으로 동작합니다. 사용자가 행 집합을 통해 행 데이터를 삽입하면 삽입된 행은 **IRowsetUpdate**를 지원하는 행 집합에서 보류 중인 삽입과 같은 방법으로 처리됩니다.  
   
- 소비자를 호출 해야는 **커밋** 작성 된 행을 삽입된 하는 대량 복사 행 집합에 대 한 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 동일한 방식으로 테이블의 **irowsetupdate:: Update** 메서드는 보류 중인 행을 제출 하는 데 사용 됩니다는 SQL Server의 인스턴스입니다.  
+ **IRowsetUpdate::Update** 메서드를 사용하여 보류 중인 행을 SQL Server 인스턴스로 전송하는 것과 같은 방법으로 소비자는 대량 복사 행 집합에 대해 **Commit** 메서드를 호출하여 삽입된 행을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 써야 합니다.  
   
- 소비자는 호출 하지 않고 대량 복사 행 집합에서 참조를 해제 하는 경우는 **커밋** 메서드를 삽입된 한 모든 작성 된 적이 없는 행이 손실 됩니다.  
+ 소비자가 **Commit** 메서드를 호출하지 않고 대량 복사 행 집합에 대한 참조를 해제하면 기존에 쓰지 않은 삽입된 행이 모두 손실됩니다.  
   
- 소비자를 호출 하 여 삽입 된 행 일괄 처리 수 있습니다는 **커밋** 메서드는 *fDone* 인수가 FALSE로 설정 합니다. 때 *fDone*가 TRUE로 설정 된 행 집합은 유효 하지 않게 합니다. 잘못 된 대량 복사 행 집합 지원는 **ISupportErrorInfo** 인터페이스 및 **irowsetfastload:: Release** 메서드.  
+ 소비자는 *fDone* 인수를 FALSE로 설정하고 **Commit** 메서드를 호출하여 삽입된 행을 일괄 처리할 수 있습니다. *fDone*을 TRUE로 설정하면 행 집합이 무효화됩니다. 무효화된 대량 복사 행 집합에는 **ISupportErrorInfo** 인터페이스 및 **IRowsetFastLoad::Release** 메서드만 지원됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

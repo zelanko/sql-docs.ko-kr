@@ -1,5 +1,5 @@
 ---
-title: SQL Server Browser 속성 (서비스 탭) | Microsoft Docs
+title: SQL Server Browser 속성(서비스 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e8ba31710865718b18e4797daf4250867ebb799
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068770"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984423"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server Browser 속성(서비스 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "33068770"
   
  **SQL Server Browser 속성** 대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 확인할 수 있습니다. **시작 모드** 를 제외한 모든 속성은 읽기 전용입니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이진 경로**  
  이 서비스에 사용되는 프로그램 파일의 위치를 표시합니다.  
   

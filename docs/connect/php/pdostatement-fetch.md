@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308422"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020001"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,19 +34,19 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*fetch_style*: 행 데이터의 형식을 지정 하는 선택적 (정수) 기호입니다. $에 대 한 가능한 값의 목록에 대 한 설명 섹션을 참조 하십시오.*fetch_style*합니다. 기본값은 PDO::FETCH_BOTH입니다. $*fetch_style* 페치에서 재정의 합니다 $*fetch_style* pdo:: query 메서드에서 지정 합니다.  
+$*fetch_style*: 행 데이터의 형식을 지정하는 선택적 (정수) 기호입니다. $*fetch_style*에 가능한 값 목록은 설명 섹션을 참조하세요. 기본값은 PDO::FETCH_BOTH입니다.fetch 메서드의  $*fetch_style*은 PDO::query 메서드에서 지정된 $*fetch_style*을 재정의합니다.  
   
-$*cursor_orientation*: prepare 문이 지정 하는 경우 검색할 행을 나타내는 선택적 (정수) 기호 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`합니다. $에 대 한 가능한 값의 목록에 대 한 설명 섹션을 참조 하십시오.*cursor_orientation*합니다. 스크롤 가능 커서를 사용하는 샘플은 [PDO::prepare](../../connect/php/pdo-prepare.md) 를 참조하세요.  
+$*cursor_orientation*: prepare 문이 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`을 지정할 때 검색할 행을 나타내는 선택적 (정수) 기호입니다. $*cursor_orientation*에 가능한 값 목록은 설명 섹션을 참조하세요. 스크롤 가능 커서를 사용하는 샘플은 [PDO::prepare](../../connect/php/pdo-prepare.md) 를 참조하세요.  
   
-$*cursor_offset*: 경우 페치할 행을 지정 하는 선택적 (정수) 기호 $*cursor_orientation* 인 또는 FETCH_ORI_REL 및 pdo:: ATTR_CURSOR가 pdo:: CURSOR_SCROLL 합니다.  
+$*cursor_offset*: $*cursor_orientation*이 PDO::FETCH_ORI_ABS이거나 PDO::FETCH_ORI_REL 및 PDO::ATTR_CURSOR가 PDO::CURSOR_SCROLL인 경우 페치할 행을 지정하는 선택적 (정수) 기호입니다.  
   
 ## <a name="return-value"></a>반환 값  
 행 또는 false를 반환하는 혼합 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
-페치가 호출되면 커서가 자동으로 이동합니다. 다음 표에서 가능한 $ 목록이*fetch_style* 값입니다.  
+페치가 호출되면 커서가 자동으로 이동합니다. 다음 표에는 가능한 $*fetch_style* 값 목록이 나와 있습니다.  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|설명|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|열 이름으로 인덱싱된 배열을 지정합니다.|  
 |PDO::FETCH_BOTH|열 이름 및 0부터 시작하는 순서에 따라 인덱싱된 배열을 지정합니다. 기본값입니다.|  
@@ -59,18 +59,18 @@ $*cursor_offset*: 경우 페치할 행을 지정 하는 선택적 (정수) 기�
   
 커서가 결과 집합 끝에 있고(마지막 행이 검색되고 커서가 결과 집합의 경계를 지나 이동) 커서가 정방향 전용인 경우(PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY) 후속 페치 호출이 실패합니다.  
   
-커서가 스크롤 가능한 경우(PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL) 페치는 결과 집합 경계 내에서 커서를 이동합니다. 다음 표에서 가능한 $ 목록이*cursor_orientation* 값입니다.  
+커서가 스크롤 가능한 경우(PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL) 페치는 결과 집합 경계 내에서 커서를 이동합니다. 다음 표에는 가능한 $*cursor_orientation* 값 목록이 나와 있습니다.  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|설명|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|다음 행을 검색합니다. 기본값입니다.|  
 |PDO::FETCH_ORI_PRIOR|이전 행을 검색합니다.|  
 |PDO::FETCH_ORI_FIRST|첫 번째 행을 검색합니다.|  
 |PDO::FETCH_ORI_LAST|마지막 행을 검색합니다.|  
-|PDO::FETCH_ORI_ABS, *num*|$에서 요청 된 행을 검색*cursor_offset* 행 번호입니다.|  
-|PDO::FETCH_ORI_REL, *num*|$에서 요청 된 행을 검색*cursor_offset* 현재 위치의 상대 위치로 합니다.|  
+|PDO::FETCH_ORI_ABS, *num*|$*cursor_offset*에서 요청된 행을 행 번호로 검색합니다.|  
+|PDO::FETCH_ORI_REL, *num*|$*cursor_offset*에서 요청된 행을 현재 위치의 상대 위치로 검색합니다.|  
   
-$ 지정 된 값*cursor_offset* 또는 $*cursor_orientation* 결과 집합 경계를 벗어난 위치에 결과 페치가 실패 합니다.  
+$*cursor_offset* 또는 $*cursor_orientation*에 대해 지정된 값이 결과 집합 경계를 벗어난 위치에 있는 경우 페치가 실패합니다.  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
@@ -144,7 +144,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

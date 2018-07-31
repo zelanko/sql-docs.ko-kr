@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060334"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  응용 프로그램에 연결 되어 있는지 확인 하는 [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], Windows 기반 ODBC 드라이버가 유휴 연결을 복원 합니다.  
+  응용 프로그램이 [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]에 연결되어 있는지 확인하려면 Windows 기반 ODBC 드라이버가 유휴 연결을 복원하면 됩니다.  
   
 > [!IMPORTANT]  
 >  연결 복원력 기능은 Microsoft Azure SQL Database 및 SQL Server 2014 이상 서버 버전에서 지원됩니다.  
   
- 유휴 연결 복원 력에 대 한 자세한 내용은 참조 하십시오. [기술 문서-유휴 연결 복원 력](http://go.microsoft.com/fwlink/?LinkId=393996)합니다.  
+ 유휴 연결 복원력에 대한 자세한 내용은 [기술 문서 - 유휴 연결 복원력](http://go.microsoft.com/fwlink/?LinkId=393996)을 참조하세요.  
   
  재연결 동작을 제어하기 위해 Windows 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 에 다음과 같은 두 가지 옵션이 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32852868"
   
     -   **ConnectRetryCount** 연결 문자열 키워드를 사용합니다.  
   
-     연결 다시 시도 횟수를 검색 하려면 사용 된 **SQL_COPT_SS_CONNECT_RETRY_COUNT** (읽기 전용) 연결 특성입니다. 응용 프로그램이 연결 복원 력을 지원 하지 않는 서버에 연결 하는 경우 **SQL_COPT_SS_CONNECT_RETRY_COUNT** 0을 반환 합니다.  
+     연결 다시 시도 횟수를 검색하려면 **SQL_COPT_SS_CONNECT_RETRY_COUNT**(읽기 전용) 연결 특성을 사용합니다. 응용 프로그램이 연결 복원력을 지원하지 않는 서버에 연결된 경우 **SQL_COPT_SS_CONNECT_RETRY_COUNT**에서 0을 반환합니다.  
   
 -   연결 다시 시도 간격  
   
@@ -55,13 +55,13 @@ ms.locfileid: "32852868"
   
     -   **ConnectRetryInterval** 연결 문자열 키워드를 사용합니다.  
   
-     연결 다시 시도 간격의 길이 검색 하려면 사용 된 **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (읽기 전용) 연결 특성입니다.  
+     연결 다시 시도 간격 시간을 검색하려면 **SQL_COPT_SS_CONNECT_RETRY_INTERVAL**(읽기 전용) 연결 특성을 사용합니다.  
   
  응용 프로그램이 SQL_DRIVER_COMPLETE_REQUIRED에 연결하고 나중에 끊어진 연결에 대해 문을 실행하려는 경우 ODBC 드라이버가 대화 상자를 다시 표시하지 않습니다. 복구가 진행 중인 동안  
   
--   호출에 복구 하는 동안 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** 를 반환 해야 **SQL_CD_FALSE**합니다.  
+-   복구 중에 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** 에 대한 호출은 **SQL_CD_FALSE**를 반환해야 합니다.  
   
--   복구가 실패 한 경우를 호출할 때 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** 를 반환 해야 **SQL_CD_TRUE**합니다.  
+-   복구가 실패한 경우 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** 에 대한 호출은 **SQL_CD_TRUE**를 반환해야 합니다.  
   
  다음 상태 코드는 서버에서 명령을 실행하는 함수에 의해 반환됩니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "32852868"
 |IMC06|연결이 끊어져서 복구가 불가능합니다. 클라이언트 드라이버에서 연결을 복구할 수 없다고 표시합니다. 연결을 복원하려고 시도하지 않았습니다.|  
   
 ## <a name="example"></a>예제  
- 다음 샘플에는 두 가지 함수가 포함되어 있습니다. **func1** 에 대 한 ODBC 드라이버를 사용 하는 데이터 원본 이름 (DSN)으로 연결 하는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows에서 합니다. DSN은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인증을 사용하고 사용자 ID를 지정합니다. **func1** 와 다시 연결의 수를 검색 한 다음 **SQL_COPT_SS_CONNECT_RETRY_COUNT**합니다.  
+ 다음 샘플에는 두 가지 함수가 포함되어 있습니다. **func1**은 Windows 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]를 사용하는 DSN(데이터 원본 이름)과 연결할 수 있는 방법을 보여 줍니다. DSN은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인증을 사용하고 사용자 ID를 지정합니다. **func1** 사용 하 여 연결 재시도 횟수를 검색 한 다음 **SQL_COPT_SS_CONNECT_RETRY_COUNT**합니다.  
   
  **func2** 가 **SQLDriverConnect**, **ConnectRetryCount** 연결 문자열 키워드 및 연결 특성을 사용하여 연결 다시 시도 및 다시 시도 간격에 대한 설정을 검색합니다.  
   
@@ -176,7 +176,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Windows의 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

@@ -15,52 +15,52 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852438"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994815"
 ---
 # <a name="wrappers-and-interfaces"></a>래퍼 및 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 에 관련 된 JDBC API에 대 한 확장에 액세스는 클래스의 프록시를 만들 수 있는 지원 인터페이스 및 수 있는 래퍼는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 프록시 인터페이스를 통해 합니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 클래스의 프록시를 만들 수 있는 인터페이스와 프록시 인터페이스를 통해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스할 수 있도록 하는 래퍼를 지원합니다.  
   
 ## <a name="wrappers"></a>래퍼  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] java.sql.Wrapper 인터페이스를 지원 합니다. 관련 된 JDBC API에 확장에 액세스할 수는 메커니즘을 제공 하는이 인터페이스는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 프록시 인터페이스를 통해 합니다.  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 java.sql.Wrapper 인터페이스를 지원합니다. 이 인터페이스는 프록시 인터페이스를 통해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스할 수 있는 메커니즘을 제공합니다.  
   
- 두 메서드를 정의 하는 java.sql.Wrapper 인터페이스: **isWrapperFor** 및 **unwrap**합니다. **isWrapperFor** 메서드는 지정 된 입력된 개체가이 인터페이스를 구현 하는지 확인 합니다. **unwrap** 에 대 한 액세스를 허용 하려면이 인터페이스를 구현 하는 개체를 반환 하는 메서드는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 특정 메서드.  
+ Java.sql.Wrapper 인터페이스는 두 메서드를 정의 합니다. **isWrapperFor** 하 고 **unwrap**. **isWrapperFor** 메서드는 지정된 입력 개체가 이 인터페이스를 구현하는지 확인합니다. **unwrap** 메서드는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드에 액세스할 수 있도록 이 인터페이스를 구현하는 개체를 반환합니다.  
   
- **isWrapperFor** 및 **unwrap** 메서드는 다음과 같이 노출 됩니다.  
+ **isWrapperFor** 하 고 **unwrap** 메서드는 다음과 같이 노출 됩니다.  
   
--   [isWrapperFor 메서드 &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
+-   [isWrapperFor 메서드&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
   
--   [unwrap 메서드 &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
+-   [unwrap 메서드&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
   
--   [isWrapperFor 메서드 &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
+-   [isWrapperFor 메서드&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
   
--   [unwrap 메서드 &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
+-   [unwrap 메서드&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
   
--   [isWrapperFor 메서드 &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
+-   [isWrapperFor 메서드&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
   
 -   [unwrap 메서드 &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
   
--   [isWrapperFor 메서드 &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
+-   [isWrapperFor 메서드&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
   
--   [unwrap 메서드 &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
+-   [unwrap 메서드&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
   
--   [isWrapperFor 메서드 &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
+-   [isWrapperFor 메서드&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
   
 -   [unwrap 메서드 &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
   
--   [isWrapperFor 메서드 &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
+-   [isWrapperFor 메서드&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
   
 -   [unwrap 메서드 &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>인터페이스  
- 부터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0에서는 인터페이스는 관련된 클래스의 드라이버 관련 메서드에 액세스할 수 있는 응용 프로그램 서버에 사용할 수 있습니다. 응용 프로그램 서버를 노출 하는 프록시를 만들고 여 클래스를 래핑할 수는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-인터페이스에서 특정 기능입니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 있는 인터페이스를 지원는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 응용 프로그램 서버 클래스의 프록시를 만들 수 있도록 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0부터 응용 프로그램 서버는 인터페이스를 사용하여 관련 클래스의 드라이버 관련 메서드에 액세스할 수 있습니다. 응용 프로그램 서버는 프록시를 만들고 인터페이스에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 기능을 노출하여 클래스를 래핑할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 응용 프로그램 서버가 클래스의 프록시를 만들 수 있도록 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 있는 인터페이스를 지원합니다.  
   
- 인터페이스는 표준 드라이버 특정 기능에 액세스에 대해 래핑 해제할 또는 일반 되 면 동일한 개체를 사용할 수 있도록 Java 인터페이스에서 파생 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 기능입니다.  
+ 인터페이스는 표준 Java 인터페이스에서 파생되므로 드라이버 관련 기능이나 제네릭 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 기능에 액세스하기 위해 래핑 해제되면 동일한 개체를 사용할 수 있습니다.  
   
  다음 인터페이스가 추가되었습니다.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "32852438"
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
- 이 샘플에 액세스 하는 방법을 보여 줍니다는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-DataSource 개체에서 특정 함수입니다. 응용 프로그램 서버에서이 데이터 원본 클래스 래핑 되었습니다. JDBC 드라이버 관련 함수나 상수에 액세스 하려면 unwrap ISQLServerDataSource 인터페이스 데이터 원본의 수 있으며이 인터페이스에서 선언 된 함수를 사용 하 여 키를 누릅니다.  
+### <a name="description"></a>설명  
+ 이 샘플에서는 DataSource 개체에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 함수에 액세스하는 방법을 보여 줍니다. 이 DataSource 클래스는 응용 프로그램 서버에 의해 래핑되었을 수 있습니다. JDBC 드라이버 관련 함수나 상수에 액세스하려면 데이터 원본을 ISQLServerDataSource 인터페이스로 래핑 해제하고 이 인터페이스에서 선언된 함수를 사용할 수 있습니다.  
   
 ### <a name="code"></a>코드  
   
@@ -111,7 +111,7 @@ public class UnWrapTest {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

@@ -21,23 +21,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8b69559a6c89f30c73245633aa67db90ce7cd78a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 5273717ac646be50f03a360e2a3a9e5aafa7b054
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665583"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108735"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 공급자별 오류 인터페이스를 정의 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
+  공급자별 오류 인터페이스를 정의 하는 OLE DB Driver for SQL Server [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
   
- 두 가지 방법으로 액세스 권한을 얻을 수 **ISQLServerErrorInfo** 인터페이스입니다.  
+ **ISQLServerErrorInfo** 인터페이스에 액세스하는 두 가지 방법이 있습니다.  
   
- 소비자를 호출할 수 있습니다 **ierrorrecords:: Getcustomererrorobject** 얻으려고는 **ISQLServerErrorInfo** 다음 코드 예제에 나와 있는 것 처럼 포인터입니다. (가져올 필요가 없습니다 **ISQLErrorInfo.**) 둘 다 **ISQLErrorInfo** 및 **ISQLServerErrorInfo** 와 사용자 지정 OLE DB 오류 개체는 **ISQLServerErrorInfo** 프로시저 이름 및 줄 번호와 같은 세부 정보를 포함 하 여 서버 오류 정보를 얻기 위해 사용 하는 인터페이스입니다.  
+ 소비자는 다음 코드 예제와 같이 **IErrorRecords::GetCustomerErrorObject**를 호출하여 **ISQLServerErrorInfo** 포인터를 얻을 수 있습니다. (**ISQLErrorInfo**를 얻을 필요는 없습니다.) **ISQLErrorInfo** 및 **ISQLServerErrorInfo**는 모두 사용자 지정 OLE DB 오류 개체이고, **ISQLServerErrorInfo**는 프로시저 이름 및 줄 번호와 같은 세부 정보를 비롯하여 서버 오류 정보를 얻기 위해 사용하는 인터페이스입니다.  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -46,23 +46,23 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- 가져오는 다른 방법은 **ISQLServerErrorInfo** 포인터를 호출 하는 **QueryInterface** 메서드를 이미 얻은 **ISQLErrorInfo** 포인터입니다. 되므로 **ISQLServerErrorInfo** 에서 사용할 수 있는 정보의 상위 집합이 포함 되어 **ISQLErrorInfo**, 바로 이동할 수는 의미가 **ISQLServerErrorInfo** 통해 **GetCustomerErrorObject**합니다.  
+ **ISQLServerErrorInfo** 포인터를 가져오는 다른 방법은 이미 얻은 **ISQLErrorInfo** 포인터에서 **QueryInterface** 메서드를 호출하는 것입니다. **ISQLServerErrorInfo**에는 **ISQLErrorInfo**에서 사용할 수 있는 정보의 상위 집합이 포함되어 있으므로 **GetCustomerErrorObject**를 통해 **ISQLServerErrorInfo**로 직접 이동하는 것이 좋습니다.  
   
- **ISQLServerErrorInfo** 인터페이스 멤버 함수를 노출 [isqlservererrorinfo:: Geterrorinfo](../../oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)합니다. 이 함수는 SSERRORINFO 구조에 대한 포인터와 문자열 버퍼에 대한 포인터를 반환합니다. 소비자를 사용 하 여 할당 취소 해야 하는 메모리를 참조 하는 두 포인터는 **imalloc:: Free** 메서드.  
+ **ISQLServerErrorInfo** 인터페이스는 멤버 함수 [ISQLServerErrorInfo::GetErrorInfo](../../oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)를 노출합니다. 이 함수는 SSERRORINFO 구조에 대한 포인터와 문자열 버퍼에 대한 포인터를 반환합니다. 두 포인터는 모두 소비자가 **IMalloc::Free** 메서드를 사용하여 할당 취소해야 하는 메모리를 참조합니다.  
   
  SSERRORINFO 구조 멤버는 소비자에 의해 다음과 같이 해석됩니다.  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지입니다. 반환 된 문자열과 동일한 **ierrorinfo:: Getdescription**합니다.|  
+|*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지입니다. **IErrorInfo::GetDescription**에 반환된 문자열과 같습니다.|  
 |*pwszServer*|세션에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |*pwszProcedure*|해당되는 경우 오류가 발생한 프로시저의 이름입니다. 그렇지 않으면 빈 문자열입니다.|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]원시 오류 번호입니다. 반환 된 값과 동일한 지는 *plNativeError* 의 매개 변수 **isqlerrorinfo:: Getsqlinfo**합니다.|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]원시 오류 번호입니다. **ISQLErrorInfo::GetSQLInfo**의 *plNativeError* 매개 변수에 반환된 값과 같습니다.|  
 |*bState*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지의 상태입니다.|  
 |*bClass*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지의 심각도입니다.|  
 |*wLineNumber*|해당되는 경우 오류가 발생한 저장 프로시저의 줄 번호입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   

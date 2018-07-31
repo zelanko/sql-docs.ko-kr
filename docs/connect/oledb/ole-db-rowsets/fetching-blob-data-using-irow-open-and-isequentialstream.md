@@ -1,6 +1,6 @@
 ---
-title: 'Irow:: Open 및 ISequentialStream을 사용 하 여 BLOB 데이터 인출 | Microsoft Docs'
-description: 'Irow:: Open 및 ISequentialStream을 사용 하 여 BLOB 데이터 인출'
+title: IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출 | Microsoft Docs
+description: IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 25482d58c4cac6e6d396171c4a76ccbf30e74f74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 1121e3ae5e0e7ce4926f7908c3aeb9d8f7aa7887
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690086"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109775"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **Irow:: Open** 만 DBGUID_STREAM 및 DBGUID_NULL 개체 유형의 열을 지원 합니다.  
+  **IRow::Open**은 DBGUID_STREAM 및 DBGUID_NULL 개체 유형만 열 수 있습니다.  
   
- 다음 함수는 **irow:: Open** 및 **ISequentialStream** 큰 데이터를 인출 합니다.  
+ 다음 함수는 **IRow::Open** 및 **ISequentialStream**을 사용하여 대형 데이터를 인출합니다.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,9 +84,9 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 큰 데이터 바인딩된 하거나 사용 하 여 검색할 수는 **ISequentialStream** 인터페이스입니다. 바인딩된 열에서 상태 플래그는 DBSTATUS_S_TRUNCATED를 설정하여 데이터가 잘렸음을 나타냅니다.  
+ 큰 데이터는 **ISequentialStream** 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그는 DBSTATUS_S_TRUNCATED를 설정하여 데이터가 잘렸음을 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [IRow를 사용하여 BLOB 데이터 인출](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

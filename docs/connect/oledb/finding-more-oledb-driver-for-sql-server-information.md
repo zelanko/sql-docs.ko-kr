@@ -1,6 +1,6 @@
 ---
-title: SQL Server 정보에 대 한 더 많은 OLE DB 드라이버를 찾기 | Microsoft Docs
-description: SQL Server 정보에 대 한 자세한 OLE DB 드라이버를 찾을 수 있는 위치
+title: SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기 | Microsoft Docs
+description: SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾는 위치
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dca26d61ca49a0e7e3baa0e4f8304311d90668a6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 0b0131f2b2bce3af1eb4d0c7550d77b4089385af
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689786"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106279"
 ---
-# <a name="finding-more-ole-db-driver-for-sql-server-information"></a>SQL Server 정보에 대 한 더 많은 OLE DB 드라이버를 찾기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="finding-more-ole-db-driver-for-sql-server-information"></a>SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  SQL Server와 기타 유형의 데이터 액세스 프로그래밍에 대 한 OLE DB Driver에 대 한 자세한 내용은 다음 온라인 리소스를 참조 하세요.  
+  SQL Server용 OLE DB 드라이버 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
   
  [데이터 액세스 및 저장소 개발자 센터](http://go.microsoft.com/fwlink?linkid=4173)  
- 이 사이트에서는 기술 문서, 예제 코드를 제공 하 고 OLE DB Driver for SQL Server 및 기타 데이터에 대 한 기타 리소스 액세스 기술입니다.  
+ 이 사이트에서는 SQL Server용 OLE DB 드라이버 및 다른 데이터 액세스 기술에 대한 기술 문서, 예제 코드 및 기타 리소스를 제공합니다.  
   
  [데이터 액세스 블로그](http://go.microsoft.com/fwlink/?LinkId=48617)  
  이 블로그 사이트에서는 데이터 액세스 기술에 대한 정보를 제공하며 제품 팀의 멤버와 직접 상호 작용할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "35689786"
  Window DAC SDK에는 ADO(ActiveX Data Object), OLE DB 및 ODBC(Open Database Connectivity)에 대한 설명서가 포함되어 있습니다.  
   
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server용 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server.md)  
   
   

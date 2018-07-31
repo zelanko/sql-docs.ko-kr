@@ -1,6 +1,6 @@
 ---
 title: 통합 Kerberos 인증 (OLE DB) | Microsoft Docs
-description: 통합된 kerberos 인증 (OLE DB)
+description: 통합 Kerberos 인증(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665633"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109135"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>통합 Kerberos 인증(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 샘플에는 SQL Server 용 OLE DB 드라이버에서 OLE DB를 사용 하 여 상호 Kerberos 인증을 가져오는 방법을 보여 줍니다. 이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
   
- Spn 및 Kerberos 인증에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)합니다.  
+ SPN 및 Kerberos 인증에 대한 자세한 내용은 [클라이언트 연결의 서비스 보안 주체 이름&#40;SPN&#41; 지원](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)을 참조하십시오.  
   
 ## <a name="example"></a>예제  
  서버를 지정해야 합니다. .cpp 파일에서 "MyServer"를 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 인스턴스가 있는 컴퓨터 이름으로 변경합니다.  
   
  고객이 제공한 SPN도 지정해야 합니다. .cpp 파일에서 "CPSPN"을 고객이 제공한 SPN으로 변경합니다.  
   
- INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다. ole32.lib oleaut32.lib를 사용하여 컴파일합니다.  
+ INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다. ole32.lib oleaut32.lib를 사용하여 컴파일합니다.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

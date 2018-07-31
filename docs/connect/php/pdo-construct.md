@@ -1,5 +1,5 @@
 ---
-title: ':: __Construct | Microsoft Docs'
+title: 'Pdo:: __construct | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979706"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,13 +34,13 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-*$dsn*: 접두사 이름을 포함 하는 문자열 (항상 `sqlsrv`), 콜론 및 서버 키워드입니다. `"sqlsrv:server=(local)"`)을 입력합니다. 필요에 따라 다른 연결 키워드를 지정할 수 있습니다. 서버 키워드 및 다른 연결 키워드에 대한 설명은 [Connection Options](../../connect/php/connection-options.md) 를 참조하세요. 전체 *$dsn* 가 따옴표 안에 있으므로 각 연결 키워드를 각각 따옴표로 묶으면 안 됩니다.  
+*$dsn*: 접두사 이름(항상 `sqlsrv`), 콜론 및 서버 키워드를 포함하는 문자열입니다. `"sqlsrv:server=(local)"`)을 입력합니다. 필요에 따라 다른 연결 키워드를 지정할 수 있습니다. 서버 키워드 및 다른 연결 키워드에 대한 설명은 [Connection Options](../../connect/php/connection-options.md) 를 참조하세요. 전체 *$dsn* 가 따옴표 안에 있으므로 각 연결 키워드를 각각 따옴표로 묶으면 안 됩니다.  
   
 *$username*: 선택 사항입니다. 사용자 이름을 포함하는 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인증을 사용하여 연결하려면 로그인 ID를 지정합니다. Windows 인증을 사용하여 연결하려면 `""`를 지정합니다.  
   
 *$password*: 선택 사항입니다. 사용자의 암호를 포함하는 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인증을 사용하여 연결하려면 암호를 지정합니다. Windows 인증을 사용하여 연결하려면 `""`를 지정합니다.  
   
-*$driver_options*: 선택 사항입니다. PDO 드라이버 관리자 특성을 지정할 수 있습니다 및 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 관련 드라이버 특성 pdo:: SQLSRV_ATTR_ENCODING, pdo:: SQLSRV_ATTR_DIRECT_QUERY 합니다. 잘못 된 특성이 예외를 생성 하지 않습니다. [PDO::setAttribute](../../connect/php/pdo-setattribute.md)로 지정되면 잘못된 특성이 예외를 생성합니다.  
+*$driver_options*: 선택 사항입니다. PDO 드라이버 관리자 특성 및 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 관련 드라이버 특성(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY)을 지정할 수 있습니다. 잘못된 특성은 예외를 생성하지 않습니다. [PDO::setAttribute](../../connect/php/pdo-setattribute.md)로 지정되면 잘못된 특성이 예외를 생성합니다.  
   
 ## <a name="return-value"></a>반환 값  
 PDO 개체를 반환합니다. 실패하는 경우 PDOException 개체를 반환합니다.  
@@ -53,7 +53,7 @@ PDOException
   
 연결 되 면 pdo:: errorcode는 00000 대신 01000을 표시합니다.  
   
-:: __Construct 어떤 이유로 든 실패 하면 pdo:: ATTR_ERRMODE가 pdo:: ERRMODE_SILENT로 설정 된 경우에 예외가 throw 됩니다.  
+어떤 이유로 PDO::__construct가 실패하는 경우 예외가 throw됩니다. PDO::ATTR_ERRMODE가 PDO::ERRMODE_SILENT로 설정된 경우에도 마찬가지입니다.  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
@@ -90,7 +90,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

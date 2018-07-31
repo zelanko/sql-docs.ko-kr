@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307972"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020891"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +37,13 @@ bool PDO::beginTransaction();
 메서드 호출에 성공하면 true이고, 그렇지 않으면 false입니다.  
   
 ## <a name="remarks"></a>Remarks  
-Pdo:: begintransaction으로 시작한 트랜잭션은 하면 끝납니다 [pdo:: commit](../../connect/php/pdo-commit.md) 또는 [pdo:: rollback](../../connect/php/pdo-rollback.md) 호출 됩니다.  
+PDO::beginTransaction으로 시작한 트랜잭션은 [PDO::commit](../../connect/php/pdo-commit.md) 또는 [PDO::rollback](../../connect/php/pdo-rollback.md) 이 호출될 때 종료됩니다.  
   
 PDO::beginTransaction은 PDO::ATTR_AUTOCOMMIT 값에 의해 영향을 받지도 않고 영향을 주지도 않습니다.  
   
 이전 PDO::beginTransaction이 PDO::rollback 또는 PDO::commit으로 종료되기 전에는 PDO::beginTransaction을 호출할 수 없습니다.  
   
-이 방법이 실패 하면 연결을 자동 커밋 모드로 반환 합니다.  
+이 메서드가 실패하면 연결이 자동 커밋 모드로 돌아갑니다.  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
@@ -63,7 +63,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

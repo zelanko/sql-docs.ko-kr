@@ -1,5 +1,5 @@
 ---
-title: '방법: SQLSRV 드라이버를 사용 하는 경우 SQL Server 데이터 형식 지정 | Microsoft Docs'
+title: '방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032977"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ SQL Server 데이터 형식을 지정하려면 데이터를 삽입하거나 업�
 다음 단계는 서버에 데이터를 보낼 때 SQL Server 데이터 형식을 지정하는 방법을 요약합니다.  
   
 > [!NOTE]  
-> SQL Server 데이터 형식이 지정 되지 않은, 기본 형식이 사용 됩니다. 기본 SQL Server 데이터 형식에 대한 자세한 내용은 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)을 참조하세요.  
+> SQL Server 데이터 형식이 지정되지 않으면 기본 형식이 사용됩니다. 기본 SQL Server 데이터 형식에 대한 자세한 내용은 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)을 참조하세요.  
   
 1.  데이터를 삽입하거나 업데이트하는 Transact-SQL 쿼리를 정의합니다. 쿼리에서 매개 변수 값에 대한 자리 표시자로 물음표(?)를 사용합니다.  
   
@@ -42,7 +42,7 @@ SQL Server 데이터 형식을 지정하려면 데이터를 삽입하거나 업�
   
 3.  쿼리를 준비하거나 실행할 때 사용되는 *$params* 배열을 생성합니다. 또한 *$params* 배열의 각 요소는 SQL Server 데이터 형식을 지정할 때 배열이어야 합니다.  
   
-4.  적절 한 사용 하 여 원하는 SQL Server 데이터 형식을 지정 **SQLSRV_SQLTYPE_\***  의 각 하위 배열에서 네 번째 매개 변수로 상수는 *$params* 배열입니다. 전체 목록은 **SQLSRV_SQLTYPE_\***  의 SQLTYPEs 섹션을 참조 하는 상수, [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다. 예를 들어 아래 코드에서 *$changeDate*, *$rate*및 *$payFrequency* 는 **$params**배열에서 SQL Server 형식 **datetime**, **money** 및 *tinyint* 로 각각 지정됩니다. *$employeeId* 에 대해 SQL Server 형식이 지정되지 않고 정수로 초기화되었기 때문에 기본 SQL Server 형식 **정수** 가 사용됩니다.  
+4.  *$params* 배열의 각 하위 배열에서 네 번째 매개 변수로 적절한 **SQLSRV_SQLTYPE_\*** 상수를 사용하여 원하는 SQL Server 데이터 형식을 지정합니다. **SQLSRV_SQLTYPE_\*** 상수의 전체 목록은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 SQLTYPE 섹션을 참조하세요. 예를 들어 아래 코드에서 *$changeDate*, *$rate*및 *$payFrequency* 는 **$params**배열에서 SQL Server 형식 **datetime**, **money** 및 *tinyint* 로 각각 지정됩니다. *$employeeId* 에 대해 SQL Server 형식이 지정되지 않고 정수로 초기화되었기 때문에 기본 SQL Server 형식 **정수** 가 사용됩니다.  
   
     ```  
     $employeeId = 5;  
@@ -58,9 +58,9 @@ SQL Server 데이터 형식을 지정하려면 데이터를 삽입하거나 업�
     ```  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 데이터를 삽입는 *HumanResources.EmployeePayHistory* AdventureWorks 데이터베이스의 테이블입니다. *$changeDate*, *$rate*및 *$payFrequency* 매개 변수에 대해 SQL Server 형식이 지정됩니다. 기본 SQL Server 형식이 *$employeeId* 매개 변수에 사용됩니다. 데이터가 성공적으로 삽입된 것을 확인하기 위해 동일한 데이터가 검색되고 표시됩니다.  
+다음 예제에서는 AdventureWorks 데이터베이스의 *HumanResources.EmployeePayHistory* 테이블에 데이터를 삽입합니다. *$changeDate*, *$rate*및 *$payFrequency* 매개 변수에 대해 SQL Server 형식이 지정됩니다. 기본 SQL Server 형식이 *$employeeId* 매개 변수에 사용됩니다. 데이터가 성공적으로 삽입된 것을 확인하기 위해 동일한 데이터가 검색되고 표시됩니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -138,7 +138,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)

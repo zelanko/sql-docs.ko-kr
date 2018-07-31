@@ -1,6 +1,6 @@
 ---
-title: SQL Server 용 OLE DB 드라이버에서 u t F-16 지원 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버의 utf-16 지원
+title: SQL Server 용 OLE DB 드라이버에서 utf-16 지원 | Microsoft Docs
+description: SQL Server용 OLE DB 드라이버에서 UTF-16 지원
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bcb7393315063102315fdf5062bdfa05ee07282d
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 8374545412ca244e6af643ed10f101a714985da6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611628"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108145"
 ---
-# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버의 utf-16 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 UTF-16 지원
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  부터는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공 하 고 경우는 **wchar** 종결 문자 크기의 상위 서로게이트 코드 포인트를 버퍼에 기록 되는 문자는 서로게이트 쌍을 쓰고 다음 **wchar** 문자 하위 서로게이트 코드 포인트는, OLE DB Driver for SQL Server 버퍼를 상위 서로게이트 코드 포인트를 추가 하지 것입니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터는 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공하는 경우, 종결 문자 이전에 버퍼에 작성된 **wchar** 문자가 서로게이트 쌍의 상위 서로게이트 코드 포인트인 경우 및 다음 **wchar** 문자가 하위 서로게이트 코드 포인트인 경우 SQL Server용 OLE DB 드라이버에서 상위 서로게이트 코드 포인트를 버퍼에 추가하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)   
   
   

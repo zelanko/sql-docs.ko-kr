@@ -1,6 +1,6 @@
 ---
-title: SQL Server 프로그래밍에 대 한 OLE DB 드라이버 | Microsoft Docs
-description: SQL Server 프로그래밍에 대 한 OLE DB 드라이버
+title: SQL Server 프로그래밍 용 OLE DB 드라이버 | Microsoft Docs
+description: SQL Server 프로그래밍용 OLE DB 드라이버
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -22,23 +22,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 53b88cb2ecd2b74d8ea1a4670a5fbd34abbb1723
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612188"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109155"
 ---
-# <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 프로그래밍에 대 한 OLE DB 드라이버
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 프로그래밍용 OLE DB 드라이버
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 데이터에 액세스 하기 위해 사용 되는 낮은 수준의 COM API. OLE DB Driver for SQL Server 도구, 유틸리티 또는 고성능 해야 하는 하위 수준의 구성 요소를 개발 하기 위한 것이 좋습니다. OLE DB 드라이버 SQL Server가 액세스 하는 고성능 네이티브 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스트림 TDS (Tabular Data) 프로토콜에 직접적 합니다.  
+  OLE DB Driver for SQL Server에는 데이터 액세스에 사용 되는 낮은 수준의 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 SQL Server용 OLE DB 드라이버를 사용하는 것이 좋습니다. SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
   
  OLE DB Driver for SQL Server에 연결 하는 응용 프로그램에 OLE DB 지원을 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
- OLE DB Driver for SQL Server OLE DB 버전 2.0 호환 공급자입니다.  
+ OLE DB Driver for SQL Server는 OLE DB 버전 2.0 호환 공급자입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -58,13 +58,13 @@ ms.locfileid: "35612188"
   
 -   [데이터 형식 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
--   [스키마 행 집합 지원 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+-   [스키마 행 집합 지원&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
--   [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
+-   [테이블 반환 매개 변수&#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [날짜 및 시간 기능 향상 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [큰 CLR 사용자 정의 형식 &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
+-   [큰 CLR 사용자 정의 형식&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [FILESTREAM 지원](../../oledb/features/filestream-support.md)  
   
@@ -72,15 +72,15 @@ ms.locfileid: "35612188"
   
 -   [오류](../../oledb/ole-db-errors/errors.md)  
   
--   [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [클라이언트 연결&#40;OLE DB&#41;의 SPN&#40;서비스 사용자 이름&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [스파스 열 지원 &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
+-   [스파스 열 지원&#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB Driver for SQL Server &#40;OLE DB&#41; 참조](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [SQL Server 용 OLE DB 드라이버 &#40;OLE DB&#41; 참조](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server.md)  
   
   

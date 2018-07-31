@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006792"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_num_rows( resource $stmt )
 행 수를 계산하는 중 오류가 발생하면**false** 이고, 그렇지 않으면 결과 집합의 행 수를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
-sqlsrv_num_rows 클라이언트 쪽, 정적 또는 키 집합 커서를 차지 하며 돌아갑니다 **false** 정방향 커서 또는 동적 커서를 사용 하는 경우. 정방향 커서가 기본값입니다. 커서에 대 한 자세한 내용은 참조 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [커서 유형 &#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)합니다.  
+sqlsrv_num_rows에는 클라이언트 쪽, 정적 또는 키 집합 커서가 필요하며 정방향 커서 또는 동적 커서를 사용하는 경우 **false**를 반환합니다. 정방향 커서가 기본값입니다. 커서에 대한 자세한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [커서 유형&#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
   
@@ -96,6 +96,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   

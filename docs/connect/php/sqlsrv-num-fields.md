@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309182"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006878"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +46,9 @@ sqlsrv_num_fields( resource $stmt)
 활성 결과 집합에서 필드의 수를 나타내는 정수 값입니다. 오류가 발생하면 부울 값 **false** 가 반환됩니다.  
   
 ## <a name="example"></a>예제  
-상위 3 개의 행에 대 한 모든 필드를 검색 하는 쿼리를 실행 하는 다음 예제는 *HumanResources.Department* AdventureWorks 데이터베이스의 테이블입니다. **sqlsrv_num_fields** 함수 결과 집합의 필드 수를 결정 합니다. 이렇게 하면 반환된 각 행의 필드를 반복하면서 데이터를 표시할 수 있습니다.  
+다음 예제에서는 쿼리를 실행하여 AdventureWorks 데이터베이스의 *HumanResources.Department* 테이블에 있는 상위 3개의 행에 대해 모든 필드를 검색합니다. **sqlsrv_num_fields** 함수는 결과 집합의 필드 수를 결정합니다. 이렇게 하면 반환된 각 행의 필드를 반복하면서 데이터를 표시할 수 있습니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -93,7 +93,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  

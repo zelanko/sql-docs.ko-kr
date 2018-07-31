@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 87dbfd1740223f6d3d2116ada8d8c0c109aba15f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 98d04b56c6e1709e629be46ad00fd3f7b8007a5b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665518"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105999"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 메시지 결과
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 실행할 때 영향을 받는 행의 개수 또는 SQL Server 행 집합에 대 한 OLE DB 드라이버를 생성 하지 않습니다.  
+  다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 실행하면 SQL Server용 OLE DB 드라이버 행 집합이나 영향을 받는 행 수가 생성되지 않습니다.  
   
 -   PRINT  
   
@@ -42,13 +42,13 @@ ms.locfileid: "35665518"
   
 -   SET STATISTICS  
   
- 이러한 문은 하나 이상의 정보 메시지를 반환하거나, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 행 집합이나 개수 결과 대신 정보 메시지를 반환하도록 합니다. 실행에 성공는 OLE DB Driver for SQL Server S_OK를 반환 하며, 메시지는 OLE DB driver for SQL Server 소비자는 사용할 수 있습니다.  
+ 이러한 문은 하나 이상의 정보 메시지를 반환하거나, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 행 집합이나 개수 결과 대신 정보 메시지를 반환하도록 합니다. 실행에 성공 하면는 OLE DB Driver for SQL Server S_OK를 반환 하 고 메시지는 OLE DB Driver for SQL Server 소비자를 사용할 수 있습니다.  
   
- OLE DB Driver for SQL Server는 S_OK를 반환 되었으며 하나 이상의 정보 메시지는 여러 실행 후 사용 가능한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 또는 소비자는 OLE DB Driver for SQL Server 멤버 함수를 실행 합니다.  
+ OLE DB Driver for SQL Server S_OK를 반환 하며 하나 이상의 정보 제공 용 이므로 사용할 수 있는 메시지의 여러 실행에 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 또는 소비자는 OLE DB Driver for SQL Server 멤버 함수를 실행 합니다.  
   
- OLE DB 드라이버에서 쿼리 텍스트의 동적 지정을 허용 하는 SQL Server 소비자의 반환 코드, 유무는 반환 값에 관계 없이 모든 멤버 함수 실행 후 오류 인터페이스를 확인 해야 **IRowset** 또는 **IMultipleResults** 인터페이스 참조 또는 영향을 받는 행 수입니다.  
+ 쿼리 텍스트의 동적 지정을 허용하는 SQL Server용 OLE DB 드라이버 소비자는 반환 코드 값, 반환된 **IRowset** 또는 **IMultipleResults** 인터페이스 참조가 있는지 여부 또는 영향을 받는 행 수에 관계없이 모든 멤버 함수 실행 후에 오류 인터페이스를 확인해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류](../../oledb/ole-db-errors/errors.md)  
   
   

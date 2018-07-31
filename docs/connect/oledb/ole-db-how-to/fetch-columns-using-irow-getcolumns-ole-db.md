@@ -1,6 +1,6 @@
 ---
 title: 'Irow:: Getcolumns (OLE DB)를 사용 하 여 열 인출 | Microsoft Docs'
-description: 'Irow:: Getcolumns (OLE DB)를 사용 하 여 열 인출'
+description: IRow::GetColumns를 사용하여 열 인출(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,25 +16,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 15d2531eb06f742644c6e7cf207ca45c8ca8dc8f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8340996f96d2307a980797e93073001768dbc98f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666333"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108885"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow** 인터페이스 결과 집합의 단일 행의 열에 직접 액세스할 수 있습니다. 따라서 **IRow** 은 하나의 행이 있는 결과 집합에서 열을 검색 하는 효율적인 방법입니다.  
+  **IRow** 인터페이스를 사용하여 결과 집합에 있는 단일 행의 열에 직접 액세스할 수 있습니다. 따라서 **IRow**는 행이 한 개인 결과 집합에서 열을 검색하는 데 효과적입니다.  
   
- 코드 샘플은 사용할 수 있는 사용 하 여 단일 행을 인출 하는 방법을 보여 주는 **IRow**합니다. 이 예제에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
+ **IRow**를 사용하여 단일 행을 인출하는 방법을 보여 주는 코드 예제가 있습니다. 이 예제에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
 -   열 그룹을 순서대로 인출하는 방법  
   
--   한 열에 두 번 액세스하는 방법. 처음에는 실제 열 너비를 가져오고 다음에는 실제 데이터에 액세스합니다. DBCOLUMNACCESS 구조에서 경우 **pData** null 및 **cbMaxLen** 가 0 이면 호출 **IRow**-**> GetColumns()** 실제 열 길이만을 반환합니다. 이 경우 **IRow GetColumns()->** 실제 데이터를 검색 하려면 같은 열에 대해 다시 호출할 수 있습니다.  
+-   한 열에 두 번 액세스하는 방법. 처음에는 실제 열 너비를 가져오고 다음에는 실제 데이터에 액세스합니다. DBCOLUMNACCESS 구조에서 **pData**가 NULL이고 **cbMaxLen**이 0이면 **IRow**-**>GetColumns()** 호출에서 실제 열 길이만 반환합니다. 이 경우 같은 열에 대해 **IRow->GetColumns()** 를 다시 호출하여 실제 데이터를 검색할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "35666333"
   
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 삭제합니다.  
   
@@ -524,7 +524,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

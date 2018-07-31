@@ -1,5 +1,5 @@
 ---
-title: wasNull 메서드 (SQLServerCallableStatement) | Microsoft Docs
+title: wasNull 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce699426d08cf783aee881a0af0a51dee0268551
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851628"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021172"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>wasNull 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +39,15 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true 이면** 마지막 매개 변수는 null을 읽을 경우. 그렇지 않으면 **false**입니다.  
+ 마지막으로 읽은 매개 변수가 null이었으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 wasNull 메서드는 java.sql.CallableStatement 인터페이스의 wasNull 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 wasNull 메서드는 java.sql.CallableStatement 인터페이스의 wasNull 메서드에 의해 지정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

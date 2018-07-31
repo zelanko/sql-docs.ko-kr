@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308452"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006895"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,15 +34,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*열*: 열 (인덱스 1부터 시작) 또는 결과 집합의 열 이름입니다 (혼합된) 수입니다.  
+$*column*: 결과 집합의 (혼합) 열 번호(인덱스 1부터 시작) 또는 열 이름입니다.  
   
-&$*param*: PHP 변수는 열이 바인딩될 (혼합된) 이름입니다.  
+&$*param*: 열이 바인딩될 (혼합) PHP 변수 이름입니다.  
   
-$*형식*: pdo:: PARAM_ * 상수로 표현 된 매개 변수의 선택적 데이터 형식입니다.  
+$*type*: PDO::PARAM_* 상수로 표현된 매개 변수의 선택적 데이터 형식입니다.  
   
 $*maxLen*: Microsoft Drivers for PHP for SQL Server에서 사용되지 않는 선택적 정수입니다.  
   
-$*driverdata*: 선택적 혼합 매개 변수는 드라이버에 대 한 합니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
+$*driverdata*: 드라이버의 선택적 혼합 매개 변수입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
@@ -70,7 +70,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

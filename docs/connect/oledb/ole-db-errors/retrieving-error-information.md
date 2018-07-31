@@ -1,6 +1,6 @@
 ---
 title: 오류 정보 검색 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 오류 정보 검색
+description: SQL Server 용 OLE DB 드라이버를 사용 하는 오류 정보 검색
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 514ff67f699b8dc0f3fb70881d24880e84aed390
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 24bb40aa1f6fcaf26f82a27a0601946c2c200cf5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665913"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108075"
 ---
 # <a name="retrieving-error-information"></a>오류 정보 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 예제에서는 SQL Server 용 OLE DB 드라이버에 의해 노출 되는 다양 한 오류 인터페이스에서 정보를 가져옵니다.  
+  이 예에서는 SQL Server용 OLE DB 드라이버에서 공개하는 다양한 오류 인터페이스에서 정보를 확인합니다.  
   
 ```  
 // DumpErrorInfo queries MSOLEDBSQL error interfaces, retrieving available  
@@ -224,7 +224,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류](../../oledb/ole-db-errors/errors.md)  
   
   

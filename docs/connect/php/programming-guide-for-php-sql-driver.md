@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308912"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992795"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "35308912"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[서버에 연결](../../connect/php/connecting-to-the-server.md)|SQL Server에 연결하기 위한 옵션 및 절차를 설명합니다.|  
 |[함수 실행 비교](../../connect/php/comparing-execution-functions.md)|각각에 대해 다른 사용 사례를 검토하여 쿼리를 실행하는 데 사용하는 함수를 비교합니다. 특히 이 문서는 단일 쿼리를 실행하는 것과 준비된 쿼리를 여러 번 실행하는 것을 비교합니다.|  
@@ -38,11 +38,11 @@ ms.locfileid: "35308912"
 |[데이터 형식 변환](../../connect/php/converting-data-types.md)|데이터 형식을 지정하고 기본 데이터 형식에 대한 세부 정보를 제공하는 방법을 다룹니다.|  
 |[오류 및 경고 처리](../../connect/php/handling-errors-and-warnings.md)|오류 및 경고를 처리하는 방법을 다룹니다.|  
 |[작업 로깅](../../connect/php/logging-activity.md)|오류 및 경고를 로깅하는 방법에 대한 정보를 제공합니다.|  
-|[사용 하 여 상시 암호화와 Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|항상 암호화 기능을 사용 하 여 PHP 드라이버를 사용 하는 방법에 대 한 정보를 제공 합니다.|  
+|[Using Always Encrypted with Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|상시 암호화 기능을 사용 하 여 PHP 드라이버에 대 한 정보를 제공 합니다.|  
 |[보안 고려 사항 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|응용 프로그램을 개발, 배포 및 실행하기 위한 보안 고려 사항을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
-[Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>참고 항목  
+[Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

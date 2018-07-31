@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2c02170c88066ed30b99fb1fca46505b099752f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308512"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983284"
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ mixed PDOStatement::getAttribute( $attribute );
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*특성*::: ATTR_ * 또는 pdo:: SQLSRV_ATTR_ 중 하나는 정수\* 상수입니다. 지원 되는 특성은 특성으로 설정할 수 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), pdo:: SQLSRV_ATTR_DIRECT_QUERY (자세한 내용은 참조 [직접 문 실행 및 준비 된 문 실행에서 PDO_SQLSRV 드라이버](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)), pdo:: ATTR_CURSOR 및 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE (자세한 내용은 참조 [커서 유형 (PDO_SQLSRV 드라이버)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)).  
+$*attribute*: PDO::ATTR_* 또는 PDO::SQLSRV_ATTR_\* 상수 중 하나인 정수입니다. 지원 되는 특성은 이러한 특성에 사용 하 여 설정할 수 있습니다 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), pdo:: SQLSRV_ATTR_DIRECT_QUERY (자세한 내용은 참조 하세요. [직접 문 실행 및 준비 된 문 실행에서 PDO_SQLSRV 드라이버](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)), pdo:: ATTR_CURSOR 및 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE (자세한 내용은 참조 하십시오 [커서 유형 (PDO_SQLSRV 드라이버)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)).  
   
 ## <a name="return-value"></a>반환 값  
 성공하면 미리 정의된 PDO 특성 또는 사용자 지정 드라이버 특성에 대한 (혼합) 값을 반환합니다. 실패한 경우 null을 반환합니다.  
@@ -44,7 +44,7 @@ $*특성*::: ATTR_ * 또는 pdo:: SQLSRV_ATTR_ 중 하나는 정수\* 상수입�
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

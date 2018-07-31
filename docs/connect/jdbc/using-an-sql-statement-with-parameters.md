@@ -1,5 +1,5 @@
 ---
-title: 매개 변수가 있는 SQL 문을 사용 하 여 | Microsoft Docs
+title: 매개 변수를 사용 하 여 SQL 문을 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35f23003f62ab9ea0188d54d7c4ad08d094eb440
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992955"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>매개 변수가 있는 SQL 문 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  에 데이터로 작업 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 매개 변수를 포함 하는 SQL 문을 사용 하 여 사용할 수 있습니다는 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 의 메서드는 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 는 반환하는클래스[ SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 요청 된 데이터를 포함 하는 합니다. 이 수행 하려면 먼저 만들어야 합니다는 SQLServerPreparedStatement 개체를 사용 하 여는 [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 의 메서드는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스입니다.  
+  입력 매개 변수가 있는 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서 데이터 작업을 수행하려면 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 메서드를 사용하여 요청한 데이터가 포함될 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)을 반환합니다. 이렇게 하려면 먼저 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 메서드를 사용하여 SQLServerPreparedStatement 개체를 만들어야 합니다.  
   
- SQL 문을 생성할 때 물음표(?)를 사용하여 입력 매개 변수를 지정하면 SQL 문으로 전달될 매개 변수 값에 대한 자리 표시자로 사용됩니다. 매개 변수에 대해 값을 지정 하려면 SQLServerPreparedStatement 클래스의 setter 메서드 중 하나를 사용할 수 있습니다. 사용하는 setter 메서드는 SQL 문에 전달할 값의 데이터 형식에 따라 결정됩니다.  
+ SQL 문을 생성할 때 물음표(?)를 사용하여 입력 매개 변수를 지정하면 SQL 문으로 전달될 매개 변수 값에 대한 자리 표시자로 사용됩니다. 매개 변수의 값을 지정 하려면 SQLServerPreparedStatement 클래스의 setter 메서드 중 하나를 사용할 수 있습니다. 사용하는 setter 메서드는 SQL 문에 전달할 값의 데이터 형식에 따라 결정됩니다.  
   
- setter 메서드에 값을 전달할 때는 SQL 문에 사용할 실제 값은 물론 SQL 문에서 해당 매개 변수의 서수 위치도 지정해야 합니다. 예를 들어 단일 매개 변수를 포함 하는 SQL 문의 서 수 값 1이 됩니다. 문에 두 개의 매개 변수가 있으면 두 번째 서 수 값은 2가 됩니다 하는 동안 첫 번째 서 수 값이 1 됩니다.  
+ setter 메서드에 값을 전달할 때는 SQL 문에 사용할 실제 값은 물론 SQL 문에서 해당 매개 변수의 서수 위치도 지정해야 합니다. 예를 들어, 단일 매개 변수를 포함 하는 SQL 문의 해당 서 수 값 1이 됩니다. 명령문에 두 개의 매개 변수가 포함된 경우 첫 번째 서수 값은 1이고 두 번째 서수 값은 2가 됩니다.  
   
- 다음 예에서는 열린 연결에에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스에 전달 함수에, 준비 된 문의 SQL 구현 되 고 단일 문자열 매개 변수 값과 함께 실행 하 고 다음 결과 결과 집합에서 읽습니다.  
+ 다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고, SQL의 준비된 명령문을 생성하여 단일 String 매개 변수 값으로 실행한 다음, 결과 집합에서 결과를 읽습니다.  
   
  [!code[JDBC#UsingSQLWithParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_1_1.java)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL에 문 사용](../../connect/jdbc/using-statements-with-sql.md)  
   
   

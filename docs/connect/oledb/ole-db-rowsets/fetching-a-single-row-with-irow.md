@@ -1,6 +1,6 @@
 ---
-title: IRow 단일 행 인출 | Microsoft Docs
-description: SQL Server 용 OLE DB Driver의 IRow 인터페이스를 사용 하 여 단일 행 인출
+title: IRow 사용 하 여 단일 행 페치 | Microsoft Docs
+description: SQL Server 용 OLE DB 드라이버의 IRow 인터페이스를 사용 하 여 단일 행 페치
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 21123e4d9918216f9b23ca2c7304bdcb1be2b0c7
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 7398658ce254bcfd8b4b1059625d8628852225aa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690046"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108945"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>IRow를 사용하여 단일 행 인출
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow** 성능을 향상 시키기 위해 SQL Server가 단순화 인터페이스 OLE DB 드라이버에서 구현 합니다. **IRow** 단일 행 개체의 열에 직접 액세스할 수 있습니다. 명령 실행의 결과 정확히 하나의 행을 생성 합니다 미리 알고 있으면 **IRow** 해당 행의 열을 검색 합니다. 결과 집합에 여러 행을 포함 하는 경우 **IRow** 첫 번째 행만 표시 됩니다.  
+  합니다 **IRow** 성능 향상을 위해 간소화 되어 SQL Server에 대 한 인터페이스 OLE DB 드라이버에서 구현 합니다. **IRow**를 사용하여 단일 행 개체의 열에 직접 액세스할 수 있습니다. 명령 실행의 결과로 정확히 하나의 행이 생성된다는 것을 미리 알고 있는 경우 **IRow**는 해당 행의 열을 검색합니다. 결과 집합에 여러 행이 포함되는 경우 **IRow**는 첫 번째 행만 노출합니다.  
   
- **IRow** 구현 행의 모든 탐색을 허용 하지 않습니다. 한 가지 경우를 제외하고 행의 각 열은 한 번만 액세스할 수 있습니다. 한 가지 예외는 열 크기를 찾기 위해 열에 한 번 액세스하고 데이터를 인출하기 위해 다시 액세스할 수 있다는 점입니다.  
+ **IRow** 구현에서는 행을 탐색할 수 없습니다. 한 가지 경우를 제외하고 행의 각 열은 한 번만 액세스할 수 있습니다. 한 가지 예외는 열 크기를 찾기 위해 열에 한 번 액세스하고 데이터를 인출하기 위해 다시 액세스할 수 있다는 점입니다.  
   
 > [!NOTE]  
->  **Irow:: Open** 만 DBGUID_STREAM 및 DBGUID_NULL 개체 유형의 열을 지원 합니다.  
+>  **IRow::Open**은 DBGUID_STREAM 및 DBGUID_NULL 개체 유형만 열 수 있습니다.  
   
- 사용 하 여 행 개체를 가져올 **icommand:: Execute** 메서드를 IID_IRow를 전달 되어야 합니다. **IMultipleResults** 인터페이스에서 여러 결과 집합을 처리 하는 데 사용 해야 합니다. **IMultipleResults** 지원 **IRow** 및 **IRowset**합니다. **IRowset** 대량 작업에 사용 됩니다.  
+ **ICommand::Execute** 메서드를 사용하여 행 개체를 가져오려면 IID_IRow를 전달해야 합니다. 여러 결과 집합을 처리하려면 **IMultipleResults** 인터페이스를 사용해야 합니다. **IMultipleResults**는 **IRow** 및 **IRowset**을 지원합니다. **IRowset**은 대량 작업에 사용합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
 -   [IRow::GetColumns 사용](../../oledb/ole-db-rowsets/using-irow-getcolumns.md)   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [행 집합](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

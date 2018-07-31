@@ -1,6 +1,6 @@
 ---
-title: 열 및 표시 (OLE DB) 스파스 열의 카탈로그 메타 데이터 | Microsoft Docs
-description: 스파스 열 (OLE DB)에 대 한 열 및 카탈로그 메타 데이터 표시
+title: 열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB) | Microsoft Docs
+description: 열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7fff85eaf61d32f2e064a827e53349bd832e411c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665603"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108995"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 세 개의 열(스파스 열, 스파스 열이 아닌 열, 열 집합 열)이 포함된 테이블을 만듭니다. 그런 다음 열 및 스파스가 아닌 열과 열 집합 열의 카탈로그 메타데이터를 보여 주는 OLE DB 플래그를 표시합니다.  
   
- 이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다. 스파스 열에 대 한 자세한 내용은 참조 [OLE DB Driver for SQL Server의에서 스파스 열 지원](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)합니다.  
+ 이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다. 스파스 열에 대한 자세한 내용은 [SQL Server용 OLE DB 드라이버의 스파스 열 지원](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
 ```  
 #include <stddef.h>  

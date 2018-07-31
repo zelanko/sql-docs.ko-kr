@@ -1,6 +1,6 @@
 ---
 title: OLE DB 테이블 반환 매개 변수 형식 지원 | Microsoft Docs
-description: OLE DB Table-Valued 매개 변수 형식 지원
+description: OLE DB 테이블 반환 매개 변수 형식 지원
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e82f8675bc154ddfc3ec6bd6821a8f25b90ca2ac
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 6491e8b81efbd70a69fdd7a7e7541b4262ede7dd
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690126"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106989"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 테이블 반환 매개 변수 형식 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  여기에서는 테이블 반환 매개 변수에 대 한 OLE DB 형식 지원에 설명합니다.  
+  이 문서에서는 테이블 반환 매개 변수에 대한 OLE DB 형식 지원에 대해 설명합니다.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>테이블 반환 매개 변수 행 집합 개체  
- 테이블 반환 매개 변수에 대한 특수한 행 집합 개체를 만들 수 있습니다. ITableDefinitionWithConstraints::CreateTableWithConstraints 또는 iopenrowset:: Openrowset을 사용 하 여 테이블 반환 매개 변수 행 집합 개체를 만듭니다. 이 작업을 수행 하려면 설정는 *eKind* 의 멤버는 *pTableID* 매개 변수를 DBKIND_GUID_NAME로 고 clsid_rowset_inmemory는 *guid* 멤버입니다. 테이블 반환 매개 변수의 서버 유형 이름은에 지정 해야 합니다는 *pwszName* 소속 *pTableID* iopenrowset:: Openrowset을 사용 하는 경우. 테이블 반환 매개 변수 행 집합 개체는 일반 OLE DB Driver for SQL Server 개체 처럼 동작합니다.  
+ 테이블 반환 매개 변수에 대한 특수한 행 집합 개체를 만들 수 있습니다. ITableDefinitionWithConstraints::CreateTableWithConstraints 또는 iopenrowset:: Openrowset을 사용 하 여 테이블 반환 매개 변수 행 집합 개체를 만듭니다. 이렇게 하려면 *pTableID* 매개 변수의 *eKind* 멤버를 DBKIND_GUID_NAME으로 설정하고 CLSID_ROWSET_INMEMORY를 *guid* 멤버로 지정합니다. 테이블 반환 매개 변수의 서버 유형 이름을 지정 해야 합니다는 *pwszName* 소속 *pTableID* iopenrowset:: Openrowset을 사용 하는 경우. 테이블 반환 매개 변수 행 집합 개체는 일반 OLE DB 드라이버를 SQL Server 개체 처럼 동작합니다.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -57,18 +57,18 @@ CoType RowsetTVP
 #define DBTYPE_TABLE (143)  
 ```  
   
- DBTYPE_TABLE은 DBTYPE_IUNKNOWN과 형식이 동일하며 데이터 버퍼에 있는 개체에 대 한 포인터는 바인딩에서 전체 사양에 대 한 소비자는 DBOBJECT 버퍼으로 채웁니다 *iid* 행 집합 개체 인터페이스 (IID_IRowset) 중 하나로 설정 합니다. DBOBJECT를 지정 하지는 바인딩에, IID_IRowset 간주 됩니다.  
+ DBTYPE_TABLE은 DBTYPE_IUNKNOWN과 형식이 동일하며 데이터 버퍼의 개체에 대한 포인터입니다. 전체 바인딩 지정을 위해 소비자는 DBOBJECT 버퍼를 채우고 *iid*를 행 집합 개체 인터페이스 중 하나(IID_IRowset)로 설정합니다. 바인딩에 DBOBJECT를 지정하지 않으면 IID_IRowset으로 간주됩니다.  
   
- 에서 변환 DBTYPE_TABLE 다른 형식에 대해 지원 되지 않습니다. IConvertType::CanConvert는 DBTYPE_TABLE로의 변환이 DBTYPE_TABLE 이외의 모든 요청에 대 한 지원 되지 않는 변환에 대 한 S_FALSE를 반환 합니다. 이의 dbconvertflags_parameter 명령 개체입니다.  
+ DBTYPE_TABLE과 다른 형식 간의 변환은 지원되지 않습니다. DBTYPE_TABLE에서 DBTYPE_TABLE로의 변환이 아닌 지원되지 않는 변환을 요청하면 IConvertType::CanConvert에서 S_FALSE를 반환합니다. 이는 명령 개체의 DBCONVERTFLAGS_PARAMETER로 간주됩니다.  
   
 ## <a name="methods"></a>메서드  
- 테이블 반환 매개 변수를 지 원하는 OLE DB 방법에 대 한 정보를 참조 하십시오. [OLE DB Table-Valued 매개 변수 형식 지원 &#40;메서드&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)합니다.  
+ 테이블 반환 매개 변수를 지 원하는 OLE DB 메서드에 대 한 자세한 내용은 [OLE DB Table-Valued 매개 변수 형식 지원 &#40;메서드&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)합니다.  
   
 ## <a name="properties"></a>속성  
- 테이블 반환 매개 변수를 지 원하는 OLE DB 속성에 대 한 정보를 참조 하십시오. [OLE DB Table-Valued 매개 변수 형식 지원 &#40;속성&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)합니다.  
+ 테이블 반환 매개 변수를 지 원하는 OLE DB 속성에 대 한 정보를 참조 하세요 [OLE DB Table-Valued 매개 변수 형식 지원 &#40;속성&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 반환 매개 변수&#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

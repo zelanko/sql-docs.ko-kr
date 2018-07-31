@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e071fc2ac51931a52ba6672e97936dc60ee12072
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309112"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006845"
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_close( resource $conn )
 잘못된 매개 변수를 사용하여 함수를 호출하지 않는 한 부울 값 **true** 입니다. 잘못된 매개 변수를 사용하여 함수를 호출하는 경우에는 **false** 가 반환됩니다.  
   
 > [!NOTE]  
-> **Null** 은 이 함수에 대해 유효한 매개 변수입니다. 그러면 스크립트에서 함수가 여러 번 호출될 수 있습니다. 예를 들어 오류 조건에서 연결을 닫고 스크립트 끝에서 다시 닫는 경우 두 번째 호출에서를 **sqlsrv_close** 돌아갑니다 **true** 에 첫 번째 호출 하므로 **sqlsrv_ 닫기** (오류 조건)를 설정 하는 연결 리소스 **null**합니다.  
+> **Null** 은 이 함수에 대해 유효한 매개 변수입니다. 그러면 스크립트에서 함수가 여러 번 호출될 수 있습니다. 예를 들어 오류 조건에서 연결을 닫고 스크립트 끝에서 다시 닫는 경우 **sqlsrv_close**(오류 조건)에 대한 첫 번째 호출은 연결 리소스를 **null**로 설정하기 때문에 **sqlsrv_close**에 대한 두 번째 호출에서 **true**를 반환합니다.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 연결을 닫습니다. 이 예제에서는 SQL Server가 로컬 컴퓨터에 설치된 것으로 가정합니다. 명령줄에서 예제가 실행될 때 모든 출력은 콘솔에 기록됩니다.  
@@ -73,7 +73,7 @@ echo "Connection closed.\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  

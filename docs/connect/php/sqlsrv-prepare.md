@@ -21,12 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3b376d9fb4333489bf841f04cfb2d429803c6f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 62789cd3b0ab8cea6d744addd35721746a443328
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309682"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982295"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,9 +43,9 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 #### <a name="parameters"></a>매개 변수  
 *$conn*: 만들어진 문과 연결된 연결 리소스입니다.  
   
-*$tsql*: 만들어진 문에 해당 하는 TRANSACT-SQL 식입니다.  
+*$tsql*: 만들어진 명령문에 해당하는 Transact-SQL 식입니다.  
   
-*$params* [선택 사항]:는 **배열** 매개 변수가 있는 쿼리 매개 변수에 해당 하는 값입니다. 배열의 각 요소는 다음 중 하나일 수 있습니다.
+*$params* [선택 사항]: 매개 변수가 있는 쿼리의 매개 변수에 해당하는 값의 **배열**입니다. 배열의 각 요소는 다음 중 하나일 수 있습니다.
   
 -   리터럴 값입니다.  
   
@@ -58,23 +58,23 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     ```  
   
     > [!NOTE]  
-    > 쿼리 매개 변수로 전달된 변수는 값 대신 참조로 전달되어야 합니다. 예를 들어 `&$myVariable` 대신 `$myVariable`을 전달합니다. 값으로 매개 변수가 있는 쿼리가 실행 될 때 PHP 경고가 발생 합니다.  
+    > 쿼리 매개 변수로 전달된 변수는 값 대신 참조로 전달되어야 합니다. 예를 들어 `&$myVariable` 대신 `$myVariable`을 전달합니다. by-value 매개 변수가 있는 쿼리가 실행될 때 PHP 경고가 발생합니다.  
   
     다음 표에서는 이러한 배열 요소를 설명합니다.  
   
-    |요소|Description|  
+    |요소|설명|  
     |-----------|---------------|  
     |*&$value*|PHP 변수에 대한 리터럴 값 또는 참조입니다.|  
-    |*$direction*[선택 사항]|다음 중 하나 **SQLSRV_PARAM_\***  매개 변수 방향을 나타내기 위해 사용 되는 상수: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**합니다. 기본값은 **SQLSRV_PARAM_IN**합니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
-    |*$phpType*[선택 사항]|A **SQLSRV_PHPTYPE_\***  반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.|  
-    |*$sqlType*[선택 사항]|A **SQLSRV_SQLTYPE_\***  입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.|  
+    |*$direction*[선택 사항]|매개 변수 방향을 나타내기 위해 사용되는 다음 **SQLSRV_PARAM_\*** 상수 중 하나입니다. **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. 기본값은 **SQLSRV_PARAM_IN**입니다.<br /><br />PHP 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.|  
+    |*$phpType*[선택 사항]|반환된 값의 PHP 데이터 형식을 지정하는 **SQLSRV_PHPTYPE_\*** 상수입니다.|  
+    |*$sqlType*[선택 사항]|입력 값의 SQL Server 데이터 형식을 지정하는 **SQLSRV_SQLTYPE_\*** 상수입니다.|  
   
-*$options* [선택 사항]: 쿼리 속성을 설정 하는 결합형 배열입니다. 다음 표에서 지원 되는 키와 해당 값을 나열합니다.  
+*$options* [선택 사항]: 쿼리 속성을 설정하는 결합형 배열입니다. 다음 표는 지원되는 키와 해당 값을 나열합니다.  
   
-|Key|지원되는 값|Description|  
+|Key|지원되는 값|설명|  
 |-------|--------------------|---------------|  
-|QueryTimeout|양의 정수 값입니다.|쿼리 시간 제한(초)을 설정합니다. 기본적으로 드라이버가 결과 얻으려면 무기한 대기합니다.|  
-|SendStreamParamsAtExec|**true** 또는 **false**<br /><br />기본값은 **true**입니다.|실행 시 모든 스트림 데이터를 보내려고 드라이버를 구성 합니다 (**true**), 또는 스트림 데이터를 청크로 보내도록 (**false**). 기본적으로 이 값은 **true**로 설정되어 있습니다. 자세한 내용은 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)을 참조하세요.|  
+|QueryTimeout|양의 정수 값입니다.|쿼리 시간 제한(초)을 설정합니다. 기본적으로 드라이버가 결과를 무한정 기다립니다.|  
+|SendStreamParamsAtExec|**true** 또는 **false**<br /><br />기본값은 **true**입니다.|실행 시 모든 스트림 데이터를 보내거나(**true**) 스트림 데이터를 청크로 보내도록(**false**) 드라이버를 구성합니다. 기본적으로 이 값은 **true**로 설정되어 있습니다. 자세한 내용은 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)을 참조하세요.|  
 |스크롤 가능|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.|  
   
 ## <a name="return-value"></a>반환 값  
@@ -83,14 +83,14 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="remarks"></a>Remarks  
 변수를 매개 변수로 사용하는 문을 준비할 때 변수가 문에 바인딩됩니다. 이는 변수 값을 업데이트하는 경우 다음에 문을 실행할 때 업데이트된 매개 변수 값으로 실행한다는 것입니다.  
   
-조합의 **sqlsrv_prepare** 및 **sqlsrv_execute** 함수 호출 및 매개 변수가 있는 쿼리를 실행 하는 데 사용 될 구분 문 준비와 문 두 개를 실행 합니다. 이 함수는 각 실행에 다른 매개 변수 값을 사용하여 문을 여러 번 실행하는 데 이상적입니다.  
+**sqlsrv_prepare**와 **sqlsrv_execute**의 조합은 문 준비와 문 실행을 두 개의 함수 호출로 분리하고 매개 변수가 있는 쿼리를 실행하는 데 사용할 수 있습니다. 이 함수는 각 실행에 다른 매개 변수 값을 사용하여 문을 여러 번 실행하는 데 이상적입니다.  
   
-많은 양의 정보를 읽고 쓰기 위한 대체 전략에 대 한 참조 [SQL 문 일괄 처리](../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)합니다.  
+많은 양의 정보를 읽고 쓰기 위한 대체 전략은 [SQL 문 일괄 처리](../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
-자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
+자세한 내용은 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문을 준비하고 실행합니다. 문을 실행 하면 (참조 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), 필드를 업데이트 하는 *Sales.SalesOrderDetail* AdventureWorks 데이터베이스의 테이블입니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문을 준비하고 실행합니다. 명령문은 실행될 때([sqlsrv_execute 참조](../../connect/php/sqlsrv-execute.md)) AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 있는 필드를 업데이트합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -137,7 +137,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문을 준비한 다음 다른 매개 변수 값으로 다시 실행하는 방법을 보여 줍니다. 예제에서는 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 있는 *OrderQty* 열을 업데이트합니다. 업데이트가 발생한 후 업데이트가 성공했는지 확인하기 위해 데이터베이스가 쿼리됩니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문을 준비한 다음 다른 매개 변수 값으로 다시 실행하는 방법을 보여 줍니다. 예제에서는 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 있는 *OrderQty* 열을 업데이트합니다. 업데이트가 발생한 후 업데이트가 성공했는지 확인하기 위해 데이터베이스가 쿼리됩니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -222,10 +222,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [10 진수 또는 숫자 열](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP 정밀도 대 한 제한 된 대로 정밀도 정확도 진행 하려면 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다. 마찬가지 bigint 열에 값의 범위 밖에 있는 경우 특히는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
+> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [소수 또는 숫자 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP에 대 한 전체 자릿수를 제한적으로 되도록 정밀도 정확도 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다. 값의 범위 밖에 있는 경우 특히 bigint 열에도 마찬가지는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
 
 ## <a name="example"></a>예제  
-이 코드 예제에는 10 진수 값을 입력된 매개 변수로 바인딩하는 방법을 보여 줍니다.  
+이 코드 샘플에는 입력된 매개 변수로 10 진수 값을 바인딩하는 방법을 보여 줍니다.  
 
 ```
 <?php
@@ -249,7 +249,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)

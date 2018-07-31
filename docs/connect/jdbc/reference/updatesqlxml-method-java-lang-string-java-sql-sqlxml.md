@@ -1,5 +1,5 @@
 ---
-title: updateSQLXML 메서드 (java.lang.String, java.sql.SQLXML) | Microsoft Docs
+title: updateSQLXML 메서드(java.lang.String, java.sql.SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4678a6611e2f13624cb2cfefda15c37a8195e3aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849688"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039229"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>updateSQLXML 메서드(java.lang.String, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateSQLXML(java.lang.String columnLabel,
 #### <a name="parameters"></a>매개 변수  
  *columnLabel*  
   
- A **문자열** 열 레이블을 나타내는입니다.  
+ 열 레이블을 나타내는 **문자열**입니다.  
   
  *xmlObject*  
   
@@ -46,11 +46,11 @@ public void updateSQLXML(java.lang.String columnLabel,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updateSQLXML 메서드는 java.sql.ResultSet 인터페이스의 updateSQLXML 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [updateSQLXML 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
+## <a name="see-also"></a>참고 항목  
+ [updateSQLXML 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

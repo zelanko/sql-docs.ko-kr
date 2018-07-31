@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309052"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979794"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-확장 오류 및/또는 경고 정보에 대 한 마지막 반환 **sqlsrv** 작업을 수행 합니다.  
+마지막으로 수행된 **sqlsrv** 작업에 대한 확장 오류 및/또는 경고 정보를 반환합니다.  
   
-**sqlsrv_errors** 함수 매개 변수 섹션 아래에 지정 된 매개 변수 값 중 하나를 호출 하 여 오류 및/또는 경고 정보를 반환할 수 있습니다.  
+**sqlsrv_errors** 함수는 아래의 매개 변수 섹션에 지정된 매개 변수 값 중 하나에서 호출하여 오류 및/또는 경고 정보를 반환할 수 있습니다.  
   
 기본적으로 **sqlsrv** 함수를 호출할 때 생성되는 경고는 오류로 처리되며 **sqlsrv** 함수를 호출할 때 경고가 발생하면 함수가 false를 반환합니다. 그러나 SQLSTATE 값 01000, 01001, 01003 및 01S02에 해당하는 경고는 오류로 처리되지 않습니다.  
   
@@ -49,7 +49,7 @@ sqlsrv_configure("WarningsReturnAsErrors", 0);
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-설정에 관계 없이 경고만 검색할 수 있습니다를 호출 하 여 **sqlsrv_errors** 하나로 **SQLSRV_ERR_ALL** 또는 **SQLSRV_ERR_WARNINGS** 매개 변수 값 (참조 매개 변수에 자세한 내용은 아래의 섹션)입니다.  
+설정과 관계없이 **SQLSRV_ERR_ALL** 또는 **SQLSRV_ERR_WARNINGS** 매개 변수 값 중 하나를 사용하여 **sqlsrv_errors**를 호출해야만 경고를 검색할 수 있습니다(자세한 내용은 아래의 매개 변수 섹션 참조).  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,9 +59,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-*$errorsAndOrWarnings*[선택 사항]: 미리 정의 된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
+*$errorsAndOrWarnings*[선택 사항]: 미리 정의된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다.|  
 |SQLSRV_ERR_ERRORS|마지막 **sqlsrv** 함수 호출 시 생성된 오류가 반환됩니다.|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 매개 변수 값을 지정하지 않은 경우 마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다.  
   
 ## <a name="return-value"></a>반환 값  
-배열의 **배열** 또는 **null**입니다. 각 **배열** 반환 된 **배열** 세 가지 키-값 쌍을 포함 합니다. 다음 표에는 각 키와 해당 설명이 나와 있습니다.  
+배열의 **배열** 또는 **null**입니다. 반환된 **배열**의 각 **배열**에는 세 쌍의 키 값이 들어 있습니다. 다음 표에는 각 키와 해당 설명이 나와 있습니다.  
   
-|Key|Description|  
+|Key|설명|  
 |-------|---------------|  
-|SQLSTATE|ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환한 SQLSTATE입니다. SQLSTATE 값에 대 한 ODBC에 대 한 정보를 참조 하십시오. [ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 IMSSP의 SQLSTATE입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 경고의 경우 01SSP의 SQLSTATE입니다.|  
+|SQLSTATE|ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환한 SQLSTATE입니다. ODBC의 SQLSTATE 값에 대한 자세한 내용은 [ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)를 참조하세요.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 IMSSP의 SQLSTATE입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 경고의 경우 01SSP의 SQLSTATE입니다.|  
 |코드|SQL Server에서 발생하는 오류의 경우 네이티브 SQL Server 오류 코드입니다.<br /><br />ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환된 오류 코드입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 오류 코드입니다. 자세한 내용은 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)을 참조하세요.|  
 |message|오류에 대한 설명입니다.|  
   
 배열 값은 숫자 키 0, 1 및 2를 사용하여 액세스할 수도 있습니다. 오류나 경고가 발생하지 않는 경우 **null** 이 반환됩니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 실패한 문을 실행하는 동안 발생하는 오류를 표시합니다. (때문에 문이 실패 **InvalidColumName** 지정된 된 테이블의 유효한 열 이름이 아닙니다.) 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 실패한 문을 실행하는 동안 발생하는 오류를 표시합니다. (**InvalidColumName**이 지정한 테이블에서 올바른 열 이름이 아니기 때문에 문이 실패합니다.) 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -120,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  

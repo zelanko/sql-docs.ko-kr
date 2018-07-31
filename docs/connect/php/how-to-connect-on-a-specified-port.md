@@ -1,5 +1,5 @@
 ---
-title: '방법: 지정된 된 포트에서 연결 | Microsoft Docs'
+title: '방법: 지정된 된 포트에 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6dd90c68aa47f21c35c2f566a2a8206ba421ace6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033028"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>방법: 지정된 포트에서 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "35307622"
   
 ### <a name="to-connect-on-a-specified-port"></a>지정된 포트에서 연결하려면  
   
-1.  연결을 허용하도록 서버가 구성된 포트를 확인합니다. 지정된 된 포트에서 연결을 허용 하도록 서버를 구성 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 특정 TCP 포트로 (SQL Server 구성 관리자)에서 수신 하도록 서버 구성](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)합니다.  
+1.  연결을 허용하도록 서버가 구성된 포트를 확인합니다. 지정된 포트에서 연결을 허용하도록 서버를 구성하는 방법에 대한 자세한 내용은 [방법: 특정 TCP 포트에서 수신할 서버 구성(SQL Server 구성 관리자)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
-2.  원하는 포트를 추가 *$serverName* 의 매개 변수는 [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) 함수입니다. 서버 이름과 포트를 쉼표로 구분합니다. 예를 들어 다음 코드 줄은 포트 1521에서 *myServer* 라는 서버에 연결하는 방법을 보여 주기 위해 SQLSRV 드라이버를 사용합니다.  
+2.  원하는 포트를 [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) 함수의 *$serverName* 매개 변수에 추가합니다. 서버 이름과 포트를 쉼표로 구분합니다. 예를 들어 다음 코드 줄은 포트 1521에서 *myServer* 라는 서버에 연결하는 방법을 보여 주기 위해 SQLSRV 드라이버를 사용합니다.  
   
     ```  
     $serverName = "myServer, 1521";  
     sqlsrv_connect( $serverName );  
     ```  
   
-    다음 코드 줄 라는 서버에 연결 하는 방법을 보여 주기 위해 PDO_SQLSRV 드라이버를 사용 하 여 *myServer* 포트 1521에서:  
+    다음 코드 줄은 포트 1521에서 *myServer*라는 서버에 연결하는 방법을 보여 주기 위해 PDO_SQLSRV 드라이버를 사용합니다.  
   
     ```  
     $serverName = "(local), 1521";  
@@ -47,7 +47,7 @@ ms.locfileid: "35307622"
     $conn = new PDO( "sqlsrv:server=$serverName;Database=$database", "", "");  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)

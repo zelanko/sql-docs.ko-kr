@@ -1,6 +1,6 @@
 ---
 title: 대규모 데이터 설정 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 대규모 데이터 설정
+description: SQL Server 용 OLE DB 드라이버를 사용 하는 대규모 데이터 설정
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 27e50280df7bfe1bcbadcb76988d8962ebee1d77
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665933"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107199"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "35665933"
   
  소비자는 이 데이터가 포함된 저장소 개체를 만들고 이 저장소 개체에 대한 포인터를 공급자에게 전달합니다. 그러면 공급자는 소비자 저장소 개체에서 데이터를 읽고 이를 BLOB 열에 씁니다.  
   
- 자체의 저장소 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 소비자는 다음 호출에서 **irowsetchange:: Setdata** 또는 **irowsetchange:: Insertrow** BLOB 열을 바인딩하는 접근자를 사용 하 여 메서드. 그러면 소비자의 저장소 개체에 저장소 인터페이스에 대한 포인터가 전달됩니다.  
+ 자체의 저장소 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 그런 다음, 소비자는 BLOB 열을 바인딩하는 접근자와 함께 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 호출합니다. 그러면 소비자의 저장소 개체에 저장소 인터페이스에 대한 포인터가 전달됩니다.  
   
  이 항목에서는 다음 함수와 함께 사용할 수 있는 기능에 대해 설명합니다.  
   
@@ -49,17 +49,17 @@ ms.locfileid: "35665933"
 ## <a name="how-to-set-large-data"></a>대규모 데이터를 설정하는 방법  
  자체의 저장소 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 호출합니다. BLOB 데이터를 설정하려면 다음과 같이 하십시오.  
   
-1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. 설정의 *dwFlag* 을 설정 하 고 STGM_READ DBOBJECT 구조의 요소는 *iid* 를 IID_ISequentialStream (표시할 인터페이스) 요소입니다.  
+1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. DBOBJECT 구조의 *dwFlag* 요소를 STGM_READ로 설정하고 *iid* 요소를 IID_ISequentialStream (표시할 인터페이스)으로 설정합니다.  
   
 2.  행 집합 업데이트가 가능하도록 DBPROPSET_ROWSET 속성 그룹의 속성을 설정합니다.  
   
-3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. 설정의 *wType* dbtype_iunknown으로 DBBINDING 구조에는 요소 및 *pObject* 요소 만든 DBOBJECT 구조를 가리키도록 합니다.  
+3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. DBBINDING 구조의 *wType* 요소를 DBTYPE_IUNKNOWN으로 설정하고 *pObject* 요소를 앞에서 만든 DBOBJECT 구조를 가리키도록 설정합니다.  
   
 4.  구조의 DBBINDINGS 배열에 있는 바인딩 정보를 사용하여 접근자를 만듭니다.  
   
 5.  **GetNextRows** 를 호출하여 다음 행을 행 집합으로 인출합니다. **GetData** 를 호출하여 행 집합에서 데이터를 읽습니다.  
   
-6.  데이터 (및 길이 표시기), 포함 된 저장소 개체를 만들고 다음 호출 **irowsetchange:: Setdata** (또는 **irowsetchange:: Insertrow**)는 데이터를 설정 하려면 해당 BLOB 열을 바인딩하는 접근자를 사용 합니다.  
+6.  데이터 및 길이 표시기가 포함된 저장소 개체를 만든 다음, 해당 BLOB 열을 바인딩하는 접근자와 함께 **IRowsetChange::SetData**(또는 **IRowsetChange::InsertRow**)를 호출하여 데이터를 설정합니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 BLOB 데이터를 설정하는 방법을 보여 줍니다. 이 예에서는 데이터를 만들어 예제 레코드를 추가하고 행 집합에서 해당 레코드를 인출한 다음 BLOB 필드의 값을 설정합니다.  
@@ -725,8 +725,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>참고 항목  
+ [BLOB 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../oledb/features/using-large-value-types.md)  
   
   

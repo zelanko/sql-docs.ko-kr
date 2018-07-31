@@ -1,6 +1,6 @@
 ---
-title: IRowsetFastUpload (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기 | Microsoft Docs
-description: IRowsetFastUpload (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기
+title: IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB) | Microsoft Docs
+description: IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a708966a35ef6311cf6912a988bcf4822f53b6f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666193"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106559"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 IRowsetFastUpload 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 전송합니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원](../../../oledb/features/filestream-support.md)합니다.  
+ Filestream 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원](../../../oledb/features/filestream-support.md)합니다.  
   
 ## <a name="example"></a>예제  
  컴파일 및이 샘플을 실행 하기 전에 FILESTREAM 지원 사용 ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  
+ INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
   
