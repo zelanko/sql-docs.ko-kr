@@ -1,0 +1,16 @@
+- name: SQLXML 예 실행을 위한 요구 사항
+  href: requirements-for-running-sqlxml-examples.md
+- name: 서식 지정 +
+  href: ../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
+- name: 주석이 추가된 XSD 스키마 +
+  href: ../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md
+- name: SQLXML 4.0 프로그래밍 개념
+  href: sqlxml-4-0-programming-concepts.md
+- name: SQLXML이 SQL Server에 설치되지 않음
+  href: sqlxml-is-not-installed-in-sql-server.md
+- name: ADO를 사용하여 SQLXML 4.0 쿼리 실행
+  href: using-ado-to-execute-sqlxml-4-0-queries.md
+- name: SQLXML 4.0 SP1의 새로운 기능
+  href: what-s-new-in-sqlxml-4-0-sp1.md
+- name: SQLXML 4.0의 xml 데이터 형식 지원
+  href: xml-data-type-support-in-sqlxml-4-0.md

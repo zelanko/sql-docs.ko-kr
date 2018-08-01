@@ -1,0 +1,46 @@
+- name: 개요
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: SQL Server 보안 설정
+  href: securing-sql-server.md
+- name: 감사
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: 인증 액세스
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: 암호화
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: SQL Server 지적 재산 보호
+  href: protecting-your-sql-server-intellectual-property.md
+- name: 보안 개체
+  href: securables.md
+- name: 포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
+  href: contained-database-users-making-your-database-portable.md
+- name: 인증 모드 선택
+  href: choose-an-authentication-mode.md
+- name: 메타데이터 표시 유형 구성
+  href: metadata-visibility-configuration.md
+- name: 노출 영역 구성
+  href: surface-area-configuration.md
+- name: SQL 인젝션
+  href: sql-injection.md
+- name: SQL 취약성 평가
+  href: sql-vulnerability-assessment.md
+- name: SQL 데이터 검색 및 분류
+  href: sql-data-discovery-and-classification.md
+- name: TRUSTWORTHY 데이터베이스 속성
+  href: trustworthy-database-property.md
+- name: Permissions
+  href: permissions-database-engine.md
+- name: 사용 권한 계층
+  href: permissions-hierarchy-database-engine.md
+- name: 사용 권한 또는 보안 개체 페이지
+  href: permissions-or-securables-page.md
+- name: 암호 정책
+  href: password-policy.md
+- name: 강력한 암호
+  href: strong-passwords.md
+- name: 행 수준 보안
+  href: row-level-security.md
+- name: 동적 데이터 마스킹
+  href: dynamic-data-masking.md
+- name: SQL Server 인증서 및 비대칭 키
+  href: sql-server-certificates-and-asymmetric-keys.md

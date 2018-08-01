@@ -1,0 +1,10 @@
+- name: XMLA 요소 - 헤더
+  href: xml-elements-headers.md
+- name: BeginSession 요소(XMLA)
+  href: beginsession-element-xmla.md
+- name: EndSession 요소(XMLA)
+  href: endsession-element-xmla.md
+- name: ProtocolCapabilities 요소(XMLA)
+  href: protocolcapabilities-element-xmla.md
+- name: Session 요소(XMLA)
+  href: session-element-xmla.md

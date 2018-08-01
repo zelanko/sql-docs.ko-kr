@@ -1,0 +1,121 @@
+- name: 개요
+  href: sql-server-profiler.md
+- name: SQL Server Profiler 실행
+  href: start-sql-server-profiler.md
+- name: SQL Server Profiler 템플릿 및 권한
+  href: sql-server-profiler-templates-and-permissions.md
+  items:
+    - name: SQL Server Profiler 템플릿
+      href: sql-server-profiler-templates.md
+    - name: 추적 템플릿 만들기
+      href: create-a-trace-template-sql-server-profiler.md
+    - name: 추적 템플릿 수정
+      href: modify-trace-templates.md
+    - name: 실행 중인 추적에서 템플릿 파생
+      href: derive-a-template-from-a-running-trace-sql-server-profiler.md
+    - name: 추적 파일 또는 추적 테이블에서 템플릿 파생
+      href: derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
+    - name: 추적 템플릿 내보내기
+      href: export-a-trace-template-sql-server-profiler.md
+    - name: 추적 템플릿 가져오기
+      href: import-a-trace-template-sql-server-profiler.md
+    - name: SQL Server 프로파일러 실행에 필요한 권한
+      href: permissions-required-to-run-sql-server-profiler.md
+- name: 전역 추적 옵션 설정
+  href: set-global-trace-options-sql-server-profiler.md
+  items:
+    - name: 추적 정의 기본값 설정
+      href: set-trace-definition-defaults-sql-server-profiler.md
+    - name: 추적 표시 기본값 설정
+      href: set-trace-display-defaults-sql-server-profiler.md
+- name: 추적 만들기
+  href: create-a-trace-sql-server-profiler.md
+  items:
+    - name: 추적 실행을 위한 Transact-SQL 스크립트 만들기
+      href: create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
+- name: 추적 시작
+  href: start-a-trace.md
+  items:
+    - name: 서버 연결 후 자동으로 추적 시작
+      href: start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md
+- name: 추적 중 값 또는 데이터 열 찾기
+  href: find-a-value-or-data-column-while-tracing-sql-server-profiler.md
+- name: 추적에 표시된 열 구성
+  href: organize-columns-displayed-in-a-trace-sql-server-profiler.md
+- name: 추적에서 스크립트 추출
+  href: extract-a-script-from-a-trace-sql-server-profiler.md
+- name: 추적 일시 중지
+  href: pause-a-trace-sql-server-profiler.md
+- name: 추적 중지
+  href: stop-a-trace-sql-server-profiler.md
+- name: 일시 중지 또는 중지 후 추적 실행
+  href: run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md
+- name: 추적 창 지우기
+  href: clear-a-trace-window-sql-server-profiler.md
+- name: 추적 창 닫기
+  href: close-a-trace-window-sql-server-profiler.md
+- name: SQL Server Profiler를 사용하여 추적 보기 및 분석
+  href: view-and-analyze-traces-with-sql-server-profiler.md
+  items:
+    - name: SQL Server Profiler를 사용하여 교착 상태 분석
+      href: analyze-deadlocks-with-sql-server-profiler.md
+    - name: SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석
+      href: analyze-queries-with-showplan-results-in-sql-server-profiler.md
+- name: Windows 성능 로그 데이터와 추적의 상관 관계 지정
+  href: correlate-a-trace-with-windows-performance-log-data.md
+- name: SQL Server Profiler로 추적 필터링
+  href: filter-traces-with-sql-server-profiler.md
+  items:
+    - name: 추적에서 이벤트 필터링
+      href: filter-events-in-a-trace-sql-server-profiler.md
+    - name: 필터 정보 보기
+      href: view-filter-information-sql-server-profiler.md
+    - name: 필터 수정
+      href: modify-a-filter-sql-server-profiler.md
+    - name: 이벤트 시작 시간을 기준으로 이벤트 필터링
+      href: filter-events-based-on-the-event-start-time-sql-server-profiler.md
+    - name: 이벤트 종료 시간을 기준으로 이벤트 필터링
+      href: filter-events-based-on-the-event-end-time-sql-server-profiler.md
+    - name: 추적의 SPID(서버 프로세스 ID) 필터링
+      href: filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
+- name: 추적 및 추적 템플릿 저장
+  href: save-traces-and-trace-templates.md
+- name: 파일에 추적 결과 저장
+  href: save-trace-results-to-a-file-sql-server-profiler.md
+  items:
+    - name: 추적 파일에 최대 파일 크기 설정
+      href: set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md
+    - name: 추적 파일에 대해 이벤트 및 데이터 열 지정
+      href: specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md
+- name: 테이블에 추적 결과 저장
+  href: save-trace-results-to-a-table-sql-server-profiler.md
+  items:
+    - name: 추적 테이블에 최대 테이블 크기 설정
+      href: set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md
+- name: 추적 파일 열기
+  href: open-a-trace-file-sql-server-profiler.md
+- name: 추적 테이블 열기
+  href: open-a-trace-table-sql-server-profiler.md
+- name: 추적 재생
+  href: replay-traces.md
+  items:
+    - name: Replay Requirements
+      href: replay-requirements.md
+    - name: 재생 옵션
+      href: replay-options-sql-server-profiler.md
+    - name: 추적 재생 시 고려 사항
+      href: considerations-for-replaying-traces-sql-server-profiler.md
+    - name: 추적 테이블 재생
+      href: replay-a-trace-table-sql-server-profiler.md
+    - name: 추적 파일 재생
+      href: replay-a-trace-file-sql-server-profiler.md
+    - name: 단일 이벤트를 한 번에 하나씩 재생
+      href: replay-a-single-event-at-a-time-sql-server-profiler.md
+    - name: 중단점까지 재생
+      href: replay-to-a-breakpoint-sql-server-profiler.md
+    - name: 커서까지 재생
+      href: replay-to-a-cursor-sql-server-profiler.md
+    - name: Transact-SQL 스크립트 재생
+      href: replay-a-transact-sql-script-sql-server-profiler.md
+- name: SQL Server Profiler 대화 상자
+  href: sql-server-profiler-f1-help.md

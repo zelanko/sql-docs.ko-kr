@@ -1,0 +1,13 @@
+- name: SQL Server 2014의 고가용성 솔루션
+  href: high-availability-solutions-sql-server.md
+  items:
+    - name: 자동 페이지 복구(가용성 그룹 및 데이터베이스 미러링)
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: 역할 전환 후 로그인 및 작업 관리
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+    - name: 분리된 사용자 문제 해결
+      href: troubleshoot-orphaned-users-sql-server.md
+- name: SQL Server 장애 조치(Failover) 클러스터 설치 +
+  href: install/sql-server-failover-cluster-installation.md
+- name: WSFC(Windows Server 장애 조치(Failover) 클러스터링) +
+  href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md

@@ -1,0 +1,30 @@
+- name: 시스템 요구 사항
+  href: system-requirements.md
+- name: 드라이버 관리자 설치
+  href: installing-the-driver-manager.md
+- name: Microsoft ODBC Driver for SQL Server 설치
+  href: installing-the-microsoft-odbc-driver-for-sql-server.md
+- name: 기능 가이드
+  items:
+    - name: 연결 문자열 키워드 및 DSN(데이터 원본 이름)
+      href: connection-string-keywords-and-data-source-names-dsns.md
+    - name: Linux 및 macOS에서 ODBC 드라이버를 사용하여 데이터 액세스 추적
+      href: data-access-tracing-with-the-odbc-driver-on-linux.md
+    - name: Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구
+      href: odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md
+    - name: 프로그래밍 지침
+      href: programming-guidelines.md
+    - name: Tools
+      items:
+        - name: bcp.exe로 연결
+          href: connecting-with-bcp.md
+        - name: sqlcmd.exe로 연결
+          href: connecting-with-sqlcmd.md
+    - name: 통합 인증 사용
+      href: using-integrated-authentication.md
+- name: 릴리스 정보
+  href: release-notes.md
+- name: 알려진 문제
+  href: known-issues-in-this-version-of-the-driver.md
+- name: ODBC Linux 및 macOS에 대한 FAQ(질문과 대답)
+  href: frequently-asked-questions-faq-for-odbc-linux.md

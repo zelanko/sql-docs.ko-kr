@@ -1,0 +1,707 @@
+- name: Microsoft 제공 ODBC 드라이버
+  href: microsoft-supplied-odbc-drivers.md
+- name: 32비트 드라이버와 16비트 및 32비트 응용 프로그램 사용
+  href: using-16-bit-and-32-bit-applications-with-32-bit-drivers.md
+  items:
+    - name: 32비트 드라이버와 16비트 응용 프로그램 사용
+      href: using-16-bit-applications-with-32-bit-drivers.md
+    - name: 32비트 드라이버와 32비트 응용 프로그램 사용
+      href: using-32-bit-applications-with-32-bit-drivers.md
+- name: Microsoft ODBC 데스크톱 데이터베이스 드라이버
+  href: microsoft-odbc-desktop-database-drivers.md
+  items:
+    - name: 데스크톱 데이터베이스 드라이버 아키텍처
+      href: desktop-database-drivers-architecture.md
+    - name: 데스크톱 데이터베이스 드라이버의 기록
+      href: history-of-the-desktop-database-drivers.md
+    - name: 기술 지원 서비스
+      href: product-support.md
+    - name: 데스크톱 데이터베이스 드라이버 구현
+      href: implementing-desktop-database-drivers.md
+      items:
+        - name: 데스크톱 데이터베이스 드라이버와 사용할 파일
+          href: files-to-use-with-the-desktop-database-drivers.md
+        - name: ODBC 구성 요소 파일
+          href: odbc-component-files.md
+        - name: 하드웨어 및 소프트웨어 요구 사항(ODBC)
+          href: hardware-and-software-requirements-odbc.md
+        - name: 설명자 및 데스크톱 데이터베이스 드라이버
+          href: descriptors-and-desktop-database-drivers.md
+        - name: 데스크톱 데이터베이스 드라이버에 대한 진단
+          href: diagnostics-for-desktop-database-drivers.md
+        - name: 문자열 매개 변수를 수락하는 함수
+          href: functions-accepting-string-parameters.md
+        - name: SQL-92 호환성
+          href: sql-92-compliance.md
+        - name: 드라이버의 기본 주소
+          href: base-address-of-drivers.md
+        - name: 설정 DLL
+          href: setup-dll.md
+        - name: 변환 DLL 및 데스크톱 데이터베이스 드라이버
+          href: translation-dlls-and-desktop-database-drivers.md
+        - name: 데스크톱 데이터베이스 드라이버 호환성
+          href: desktop-database-driver-compatibility.md
+        - name: 데스크톱 데이터베이스 드라이버 성능 문제
+          href: desktop-database-driver-performance-issues.md
+    - name: Microsoft Access 드라이버 프로그래밍 고려 사항
+      href: microsoft-access-driver-programming-considerations.md
+      items:
+        - name: Access 드라이버에 프로그래밍 방식으로 옵션 설정
+          href: setting-options-programmatically-for-the-access-driver.md
+        - name: Microsoft Access 데이터 형식
+          href: microsoft-access-data-types.md
+        - name: Access에 대한 SQLGetInfo 반환 값
+          href: sqlgetinfo-returned-values-for-access.md
+        - name: 기타 Access 드라이버 프로그래밍 세부 정보
+          href: other-access-driver-programming-details.md
+          items:
+            - name: SQLColAttributes(Access 드라이버)
+              href: sqlcolattributes-access-driver.md
+            - name: SQLColumns(Access 드라이버)
+              href: sqlcolumns-access-driver.md
+            - name: SQLConfigDataSource(Access 드라이버)
+              href: sqlconfigdatasource-access-driver.md
+            - name: SQLDriverConnect(Access 드라이버)
+              href: sqldriverconnect-access-driver.md
+            - name: SQLGetInfo(Access 드라이버)
+              href: sqlgetinfo-access-driver.md
+            - name: SQLGetTypeInfo(Access 드라이버)
+              href: sqlgettypeinfo-access-driver.md
+            - name: SQLProcedureColumns(Access 드라이버)
+              href: sqlprocedurecolumns-access-driver.md
+            - name: SQLSetConnectOption(Access 드라이버)
+              href: sqlsetconnectoption-access-driver.md
+            - name: SQLStatistics(Access 드라이버)
+              href: sqlstatistics-access-driver.md
+            - name: SQLTables(Access 드라이버)
+              href: sqltables-access-driver.md
+            - name: SQLTransact(Access 드라이버)
+              href: sqltransact-access-driver.md
+            - name: Encryption(Access 드라이버)
+              href: encryption-access-driver.md
+            - name: ExtendedAnsiSQL 연결 문자열 특성 사용(Access 드라이버)
+              href: using-the-extendedansisql-connection-string-attribute-access-driver.md
+              items:
+                - name: ExtendedAnsiSQL 설정
+                  href: setting-extendedansisql.md
+                - name: ExtendedAnsiSQL을 설정하여 새 데이터 형식을 사용하도록 설정
+                  href: enabling-new-data-types-by-setting-extendedansisql.md
+                - name: ExtendedAnsiSQL을 사용하여 보기 및 프로시저 만들기 및 삭제
+                  href: creating-and-dropping-views-and-procedures-using-extendedansisql.md
+                - name: ExtendedAnsiSQL을 사용하여 활성화된 데이터 잘림 검색
+                  href: data-truncation-detection-enabled-using-extendedansisql.md
+                - name: Jet 4.0은 ExtendedAnsiSQL_Set을 사용할 때 SQL-92 예약어 목록을 사용합니다.
+                  href: jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md
+    - name: Microsoft Excel 드라이버 프로그래밍 고려 사항
+      href: microsoft-excel-driver-programming-considerations.md
+      items:
+        - name: Excel 드라이버에 프로그래밍 방식으로 옵션 설정
+          href: setting-options-programmatically-for-the-excel-driver.md
+        - name: Microsoft Excel 데이터 형식
+          href: microsoft-excel-data-types.md
+        - name: Excel에 대한 SQLGetInfo 반환 값
+          href: sqlgetinfo-returned-values-for-excel.md
+        - name: 기타 Excel 드라이버 프로그래밍 세부 정보
+          href: other-excel-driver-programming-details.md
+          items:
+            - name: SQLBindParameter(Excel 드라이버)
+              href: sqlbindparameter-excel-driver.md
+            - name: SQLColAttributes(Excel 드라이버)
+              href: sqlcolattributes-excel-driver.md
+            - name: SQLColumns(Excel 드라이버)
+              href: sqlcolumns-excel-driver.md
+            - name: ODBC Jet SQLConfigDataSource(Excel 드라이버)
+              href: odbc-jet-sqlconfigdatasource-excel-driver.md
+            - name: SQLDriverConnect(Excel 드라이버)
+              href: sqldriverconnect-excel-driver.md
+            - name: SQLGetInfo(Excel 드라이버)
+              href: sqlgetinfo-excel-driver.md
+            - name: SQLGetTypeInfo(Excel 드라이버)
+              href: sqlgettypeinfo-excel-driver.md
+            - name: SQLSetConnectOption(Excel 드라이버)
+              href: sqlsetconnectoption-excel-driver.md
+            - name: SQLStatistics(Excel 드라이버)
+              href: sqlstatistics-excel-driver.md
+            - name: SQLTables(Excel 드라이버)
+              href: sqltables-excel-driver.md
+            - name: SQLTransact(Excel 드라이버)
+              href: sqltransact-excel-driver.md
+            - name: 읽기 전용 상태(Excel 드라이버)
+              href: read-only-status-excel-driver.md
+    - name: Paradox 드라이버 프로그래밍 고려 사항
+      href: paradox-driver-programming-considerations.md
+      items:
+        - name: Paradox 드라이버에 프로그래밍 방식으로 옵션 설정
+          href: setting-options-programmatically-for-the-paradox-driver.md
+        - name: Paradox 데이터 형식
+          href: paradox-data-types.md
+        - name: Paradox에 대한 SQLGetInfo 반환 값
+          href: sqlgetinfo-returned-values-for-paradox.md
+        - name: 기타 Paradox 드라이버 프로그래밍 세부 정보
+          href: other-paradox-driver-programming-details.md
+          items:
+            - name: SQLColAttributes(Paradox 드라이버)
+              href: sqlcolattributes-paradox-driver.md
+            - name: SQLColumns(Paradox 드라이버)
+              href: sqlcolumns-paradox-driver.md
+            - name: SQLConfigDataSource(Paradox 드라이버)
+              href: sqlconfigdatasource-paradox-driver.md
+            - name: SQLDriverConnect(Paradox 드라이버)
+              href: sqldriverconnect-paradox-driver.md
+            - name: SQLGetInfo(Paradox 드라이버)
+              href: sqlgetinfo-paradox-driver.md
+            - name: SQLGetTypeInfo(Paradox 드라이버)
+              href: sqlgettypeinfo-paradox-driver.md
+            - name: SQLSetConnectOption(Paradox 드라이버)
+              href: sqlsetconnectoption-paradox-driver.md
+            - name: SQLStatistics(Paradox 드라이버)
+              href: sqlstatistics-paradox-driver.md
+            - name: SQLTables(Paradox 드라이버)
+              href: sqltables-paradox-driver.md
+            - name: SQLTransact(Paradox 드라이버)
+              href: sqltransact-paradox-driver.md
+            - name: Paradox용 CREATE INDEX
+              href: create-index-for-paradox.md
+            - name: 다중 hstmts(Paradox 드라이버)
+              href: multiple-hstmts-paradox-driver.md
+    - name: dBASE 드라이버 프로그래밍 고려 사항
+      href: dbase-driver-programming-considerations.md
+      items:
+        - name: dBASE 드라이버에 프로그래밍 방식으로 옵션 설정
+          href: setting-options-programmatically-for-the-dbase-driver.md
+        - name: dBASE 데이터 형식
+          href: dbase-data-types.md
+        - name: dBASE에 대한 SQLGetInfo 반환 값
+          href: sqlgetinfo-returned-values-for-dbase.md
+        - name: 기타 dBASE 드라이버 프로그래밍 세부 정보
+          href: other-dbase-driver-programming-details.md
+          items:
+            - name: SQLColAttributes(dBASE 드라이버)
+              href: sqlcolattributes-dbase-driver.md
+            - name: SQLColumns(dBASE 드라이버)
+              href: sqlcolumns-dbase-driver.md
+            - name: SQLConfigDataSource(dBASE 드라이버)
+              href: sqlconfigdatasource-dbase-driver.md
+            - name: SQLDriverConnect(dBASE 드라이버)
+              href: sqldriverconnect-dbase-driver.md
+            - name: SQLGetInfo(dBASE 드라이버)
+              href: sqlgetinfo-dbase-driver.md
+            - name: SQLGetTypeInfo(dBASE 드라이버)
+              href: sqlgettypeinfo-dbase-driver.md
+            - name: SQLSetConnectOption(dBASE 드라이버)
+              href: sqlsetconnectoption-dbase-driver.md
+            - name: SQLStatistics(dBASE 드라이버)
+              href: sqlstatistics-dbase-driver.md
+            - name: SQLTables(dBASE 드라이버)
+              href: sqltables-dbase-driver.md
+            - name: SQLTransact(dBASE 드라이버)
+              href: sqltransact-dbase-driver.md
+            - name: dBASE 인덱스
+              href: dbase-indexes.md
+    - name: 텍스트 파일 드라이버 프로그래밍 고려 사항
+      href: text-file-driver-programming-considerations.md
+      items:
+        - name: 텍스트 파일 드라이버에 프로그래밍 방식으로 옵션 설정
+          href: setting-options-programmatically-for-the-text-file-driver.md
+        - name: 텍스트 파일 데이터 형식
+          href: text-file-data-types.md
+        - name: 텍스트 파일에 대한 SQLGetInfo 반환 값
+          href: sqlgetinfo-returned-values-for-text-files.md
+        - name: 기타 텍스트 파일 드라이버 프로그래밍 세부 정보
+          href: other-text-file-driver-programming-details.md
+          items:
+            - name: 텍스트 형식 정의(텍스트 파일 드라이버)
+              href: defining-text-format-text-file-driver.md
+            - name: 스키마(텍스트 파일 드라이버)
+              href: schema-text-file-driver.md
+            - name: Schema.ini 파일(텍스트 파일 드라이버)
+              href: schema-ini-file-text-file-driver.md
+            - name: 텍스트 파일 형식(텍스트 파일 드라이버)
+              href: text-file-format-text-file-driver.md
+            - name: SQLColAttributes(텍스트 파일 드라이버)
+              href: sqlcolattributes-text-file-driver.md
+            - name: SQLColumns(텍스트 파일 드라이버)
+              href: sqlcolumns-text-file-driver.md
+            - name: SQLConfigDataSource(텍스트 파일 드라이버)
+              href: sqlconfigdatasource-text-file-driver.md
+            - name: SQLDriverConnect(텍스트 파일 드라이버)
+              href: sqldriverconnect-text-file-driver.md
+            - name: SQLGetInfo(텍스트 파일 드라이버)
+              href: sqlgetinfo-text-file-driver.md
+            - name: SQLGetTypeInfo(텍스트 파일 드라이버)
+              href: sqlgettypeinfo-text-file-driver.md
+            - name: SQLSetConnectOption(텍스트 파일 드라이버)
+              href: sqlsetconnectoption-text-file-driver.md
+            - name: SQLStatistics(텍스트 파일 드라이버)
+              href: sqlstatistics-text-file-driver.md
+            - name: SQLTables(텍스트 파일 드라이버)
+              href: sqltables-text-file-driver.md
+            - name: SQLTransact(텍스트 파일 드라이버)
+              href: sqltransact-text-file-driver.md
+            - name: 테이블 만들기 및 열기(텍스트 파일 드라이버)
+              href: creating-and-opening-tables-text-file-driver.md
+            - name: 읽기 전용 상태(텍스트 파일 드라이버)
+              href: read-only-status-text-file-driver.md
+    - name: 추가 지원되는 ODBC SQL 문법
+      href: additional-supported-odbc-sql-grammar.md
+      items:
+        - name: ALTER TABLE 문
+          href: alter-table-statement.md
+        - name: 상관 관계 이름
+          href: correlation-names.md
+        - name: 프로시저 호출
+          href: procedure-invocation.md
+        - name: BETWEEN 조건자
+          href: between-predicate.md
+        - name: CREATE INDEX 문
+          href: create-index-statement.md
+        - name: 날짜 산술
+          href: date-arithmetic.md
+        - name: 'Jet: 날짜, 시간, 타임스탬프 리터럴'
+          href: jet-date-time-and-timestamp-literals.md
+        - name: DROP INDEX 문
+          href: drop-index-statement.md
+        - name: 고정 너비 텍스트 파일
+          href: fixed-width-text-file.md
+        - name: GROUP BY 식 목록
+          href: group-by-expression-list.md
+        - name: ORDER BY 식 목록
+          href: order-by-expression-list.md
+        - name: ORDER BY와 GROUP BY
+          href: order-by-with-group-by.md
+        - name: 'Jet: 외부 조인'
+          href: jet-outer-joins.md
+        - name: 스칼라 함수
+          href: scalar-functions.md
+        - name: 테이블 이름
+          href: table-names.md
+    - name: 제한 사항
+      href: limitations.md
+      items:
+        - name: 집계 함수 제한 사항
+          href: aggregate-function-limitations.md
+        - name: 열 이름 제한 사항
+          href: column-name-limitations.md
+        - name: 데이터 형식 제한 사항
+          href: data-type-limitations.md
+        - name: 날짜 산술 제한 사항
+          href: date-arithmetic-limitations.md
+        - name: 식별자 제한 사항
+          href: identifiers-limitations.md
+        - name: 인덱스 이름 제한 사항
+          href: index-name-limitations.md
+        - name: 매개 변수가 있는 쿼리 제한 사항
+          href: parameterized-query-limitations.md
+        - name: 예약 단어 제한 사항
+          href: reserved-word-limitations.md
+        - name: 스칼라 함수 제한 사항
+          href: scalar-function-limitations.md
+        - name: 집합 함수 제한 사항
+          href: set-functions-limitations.md
+        - name: 정렬 제한 사항
+          href: sorting-limitations.md
+        - name: 문자열 제한 사항
+          href: string-limitations.md
+        - name: 테이블 이름 제한 사항
+          href: table-name-limitations.md
+        - name: 테이블 참조 제한 사항
+          href: table-references-limitations.md
+        - name: 보기 제한 사항
+          href: views-limitations.md
+        - name: ALTER TABLE 문 제한 사항
+          href: alter-table-statement-limitations.md
+        - name: AND 조건자 제한 사항
+          href: and-predicate-limitations.md
+        - name: CALL 문 제한 사항
+          href: call-statement-limitations.md
+        - name: CONVERT 함수 제한 사항
+          href: convert-function-limitations.md
+        - name: CREATE INDEX 문 제한 사항
+          href: create-index-statement-limitations.md
+        - name: CREATE TABLE 문 제한 사항
+          href: create-table-statement-limitations.md
+          items:
+            - name: DELETE 문 제한 사항
+              href: delete-statement-limitations.md
+        - name: DISTINCT 키워드 제한 사항
+          href: distinct-keyword-limitations.md
+        - name: DROP INDEX 문 제한 사항
+          href: drop-index-statement-limitations.md
+        - name: DROP TABLE 문 제한 사항
+          href: drop-table-statement-limitations.md
+        - name: FROM 절 제한 사항
+          href: from-clause-limitations.md
+        - name: HAVING 절 제한 사항
+          href: having-clause-limitations.md
+        - name: INSERT 문 제한 사항
+          href: insert-statement-limitations.md
+        - name: LIKE 조건자 제한 사항
+          href: like-predicate-limitations.md
+        - name: NOT NULL 제한 사항
+          href: not-null-limitations.md
+        - name: ORDER BY 절 제한 사항
+          href: order-by-clause-limitations.md
+        - name: SELECT DISTINCT 제한 사항
+          href: select-distinct-limitations.md
+        - name: SELECT 문 제한 사항
+          href: select-statement-limitations.md
+        - name: UPDATE 문 제한 사항
+          href: update-statement-limitations.md
+        - name: WHERE 절 제한 사항
+          href: where-clause-limitations.md
+        - name: WHERE CURRENT OF 절 제한 사항
+          href: where-current-of-clause-limitations.md
+    - name: ODBC 오류
+      href: odbc-errors.md
+      items:
+        - name: 원시 오류
+          href: native-error.md
+        - name: SQLSTATE
+          href: sqlstate.md
+        - name: ODBC Jet 오류 메시지
+          href: odbc-jet-error-messages.md
+        - name: 산술 오류
+          href: arithmetic-errors.md
+    - name: 지원되는 ODBC API 함수
+      href: supported-odbc-api-functions.md
+      items:
+        - name: SQLGetCursorName(데스크톱 데이터베이스 드라이버)
+          href: sqlgetcursorname-desktop-database-drivers.md
+        - name: SQLGetData(데스크톱 데이터베이스 드라이버)
+          href: sqlgetdata-desktop-database-drivers.md
+        - name: SQLGetStmtOption(데스크톱 데이터베이스 드라이버)
+          href: sqlgetstmtoption-desktop-database-drivers.md
+        - name: SQLMoreResults(데스크톱 데이터베이스 드라이버)
+          href: sqlmoreresults-desktop-database-drivers.md
+        - name: SQLPrepare(데스크톱 데이터베이스 드라이버)
+          href: sqlprepare-desktop-database-drivers.md
+        - name: SQLProcedures(데스크톱 데이터베이스 드라이버)
+          href: sqlprocedures-desktop-database-drivers.md
+        - name: SQLSetCursorName(데스크톱 데이터베이스 드라이버)
+          href: sqlsetcursorname-desktop-database-drivers.md
+        - name: SQLSetPos(데스크톱 데이터베이스 드라이버)
+          href: sqlsetpos-desktop-database-drivers.md
+        - name: SQLSetScrollOptions(데스크톱 데이터베이스 드라이버)
+          href: sqlsetscrolloptions-desktop-database-drivers.md
+        - name: SQLSetStmtOption(데스크톱 데이터베이스 드라이버)
+          href: sqlsetstmtoption-desktop-database-drivers.md
+        - name: SQLSpecialColumns(데스크톱 데이터베이스 드라이버)
+          href: sqlspecialcolumns-desktop-database-drivers.md
+- name: Oracle용 ODBC 드라이버
+  href: odbc-driver-for-oracle.md
+  items:
+    - name: Oracle용 ODBC 드라이버 사용자 가이드
+      href: odbc-driver-for-oracle-user-s-guide.md
+      items:
+        - name: 드라이버 버전 구성표
+          href: driver-version-scheme.md
+        - name: 소프트웨어 설치(ODBC)
+          href: installing-the-software-odbc.md
+        - name: Oracle 소프트웨어 패치
+          href: oracle-software-patches.md
+        - name: 설정을 사용하여 데이터 원본 추가 및 수정
+          href: adding-and-modifying-data-sources-using-setup.md
+        - name: ODBC 연결 테스트
+          href: testing-the-odbc-connection.md
+        - name: Oracle용 ODBC 드라이버 구성
+          href: configuring-the-odbc-driver-for-oracle.md
+        - name: 데이터 원본에 연결(Oracle용 ODBC 드라이버)
+          href: connecting-to-a-data-source-odbc-driver-for-oracle.md
+        - name: 설치된 Oracle 구성 요소 확인
+          href: determining-installed-oracle-components.md
+        - name: 연결 시 날짜 형식 설정
+          href: setting-the-date-format-on-connection.md
+    - name: Oracle용 ODBC 드라이버 프로그래머 참조
+      href: odbc-driver-for-oracle-programmer-s-reference.md
+      items:
+        - name: 연결 문자열 형식 및 특성
+          href: connection-string-format-and-attributes.md
+        - name: 연결 옵션
+          href: connect-options.md
+        - name: 명령문 옵션
+          href: statement-options.md
+        - name: 커서 형식 및 동시성 조합
+          href: cursor-type-and-concurrency-combinations.md
+        - name: Microsoft 구성 요소 서비스 사용
+          href: using-microsoft-component-services.md
+        - name: Microsoft IIS(인터넷 정보 서비스) 사용
+          href: using-microsoft-internet-information-services.md
+        - name: 운영 체제 인증 사용
+          href: using-operating-system-authentication.md
+        - name: Oracle용 ODBC 드라이버와 SQLConfigDatasource 사용
+          href: using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md
+        - name: 키 집합 커서 사용 제한 사항
+          href: limitations-of-using-keyset-driven-cursors.md
+        - name: 저장 프로시저(Oracle용 ODBC 드라이버)
+          href: stored-procedures-odbc-driver-for-oracle.md
+          items:
+            - name: 저장 프로시저 매개 변수 제한 사항
+              href: stored-procedure-parameter-limitations.md
+            - name: 저장 프로시저와 동의어 사용
+              href: using-synonyms-with-stored-procedures.md
+            - name: 저장 프로시저를 사용할 때 권한 취소 및 권한 부여
+              href: revoking-and-granting-rights-when-using-stored-procedures.md
+            - name: 저장 프로시저에서 배열 매개 변수 반환
+              href: returning-array-parameters-from-stored-procedures.md
+        - name: 오류 메시지(Oracle용 ODBC 드라이버)
+          href: error-messages-odbc-driver-for-oracle.md
+          items:
+            - name: Oracle용 ODBC 드라이버에서 반환한 메시지
+              href: messages-returned-by-the-odbc-driver-for-oracle.md
+        - name: Oracle용 ODBC 드라이버 적합성 수준
+          href: odbc-driver-for-oracle-conformance-levels.md
+          items:
+            - name: API 적합성 수준(Oracle용 ODBC 드라이버)
+              href: api-conformance-level-odbc-driver-for-oracle.md
+            - name: 지원되는 옵션(Oracle용 ODBC 드라이버)
+              href: supported-options-odbc-driver-for-oracle.md
+            - name: SQL 적합성 수준(Oracle용 ODBC 드라이버)
+              href: sql-conformance-levels-odbc-driver-for-oracle.md
+        - name: API 함수(Oracle용 ODBC 드라이버)
+          href: api-functions-odbc-driver-for-oracle.md
+          items:
+            - name: API 함수에 대한 스레드 안전 참고(Oracle용 ODBC 드라이버)
+              href: thread-safety-notes-on-api-functions-odbc-driver-for-oracle.md
+            - name: 핵심 수준 API 함수(Oracle용 ODBC 드라이버)
+              href: core-level-api-functions-odbc-driver-for-oracle.md
+            - name: 수준 1 API 함수(Oracle용 ODBC 드라이버)
+              href: level-1-api-functions-odbc-driver-for-oracle.md
+            - name: 수준 2 API 함수(Oracle용 ODBC 드라이버)
+              href: level-2-api-functions-odbc-driver-for-oracle.md
+        - name: 지원되는 데이터 형식(Oracle용 ODBC 드라이버)
+          href: supported-data-types-odbc-driver-for-oracle.md
+        - name: 매핑 데이터 형식(Oracle용 ODBC 드라이버)
+          href: mapping-data-types-odbc-driver-for-oracle.md
+        - name: VARCHAR 열 크기(Oracle용 ODBC 드라이버)
+          href: varchar-column-size-odbc-driver-for-oracle.md
+- name: Visual FoxPro ODBC 드라이버
+  href: visual-foxpro-odbc-driver.md
+  items:
+    - name: 드라이버 아키텍처 개요
+      href: driver-architecture-overview.md
+    - name: Visual FoxPro 용어
+      href: visual-foxpro-terminology.md
+    - name: 설치 및 구성
+      href: installing-and-configuring.md
+      items:
+        - name: 시스템 요구 사항(Visual FoxPro ODBC 드라이버)
+          href: system-requirements-visual-foxpro-odbc-driver.md
+        - name: 지원되는 FoxPro 버전
+          href: supported-versions-of-foxpro.md
+        - name: Visual FoxPro ODBC 드라이버 설정
+          href: setting-up-the-visual-foxpro-odbc-driver.md
+        - name: ODBC Visual FoxPro 설치 대화 상자
+          href: odbc-visual-foxpro-setup-dialog-box.md
+    - name: Visual FoxPro ODBC 드라이버 사용
+      href: using-the-visual-foxpro-odbc-driver.md
+      items:
+        - name: Visual FoxPro 데이터 원본 추가
+          href: adding-a-visual-foxpro-data-source.md
+        - name: Visual FoxPro 데이터 원본 수정
+          href: modifying-a-visual-foxpro-data-source.md
+        - name: Visual FoxPro 데이터 원본 삭제
+          href: deleting-a-visual-foxpro-data-source.md
+        - name: Visual FoxPro 데이터 원본에 연결
+          href: connecting-to-a-visual-foxpro-data-source.md
+        - name: 연결 문자열 사용
+          href: using-connection-strings.md
+        - name: Visual Basic 응용 프로그램과 함께 VFP FoxPro ODBC 드라이버 사용
+          href: using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md
+        - name: C 또는 Visual C++ 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용
+          href: using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md
+        - name: Microsoft Office에서 Visual FoxPro 데이터에 액세스
+          href: accessing-visual-foxpro-data-from-microsoft-office.md
+          items:
+            - name: Microsoft Access에서 Visual FoxPro 데이터 쿼리 및 업데이트
+              href: querying-and-updating-visual-foxpro-data-from-microsoft-access.md
+            - name: Microsoft Access로 Visual FoxPro 데이터 가져오기
+              href: importing-visual-foxpro-data-into-microsoft-access.md
+            - name: Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스
+              href: accessing-a-visual-foxpro-data-source-from-microsoft-excel.md
+            - name: Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기
+              href: importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md
+            - name: Visual FoxPro 데이터를 사용하여 Microsoft Word에서 우편 레이블 만들기
+              href: creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md
+    - name: Visual FoxPro ODBC 드라이버 프로그래머 참조
+      href: visual-foxpro-odbc-driver-programmer-s-reference.md
+      items:
+        - name: 책갈피 지원(Visual FoxPro ODBC 드라이버)
+          href: bookmark-support-visual-foxpro-odbc-driver.md
+        - name: 지원되는 동시성 모델(Visual FoxPro ODBC 드라이버)
+          href: supported-concurrency-model-visual-foxpro-odbc-driver.md
+        - name: 지원되는 커서 모델(Visual FoxPro ODBC 드라이버)
+          href: supported-cursor-model-visual-foxpro-odbc-driver.md
+        - name: 지원되는 데이터 형식(Visual FoxPro ODBC 드라이버)
+          href: supported-data-types-visual-foxpro-odbc-driver.md
+        - name: 다국어 기능 지원(Visual FoxPro ODBC 드라이버)
+          href: international-support-visual-foxpro-odbc-driver.md
+        - name: '규칙, 트리거, 기본값 및 저장 프로시저 지원(Visual FoxPro ODBC 드라이버)'
+          href: support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md
+        - name: 지원되는 ODBC SQL 문법(Visual FoxPro ODBC 드라이버)
+          href: supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md
+        - name: 레지스트리 항목(Visual FoxPro ODBC 드라이버)
+          href: registry-entries-visual-foxpro-odbc-driver.md
+        - name: 지원되는 스칼라 함수(Visual FoxPro ODBC 드라이버)
+          href: supported-scalar-functions-visual-foxpro-odbc-driver.md
+          items:
+            - name: 문자열 함수(Visual FoxPro ODBC 드라이버)
+              href: string-functions-visual-foxpro-odbc-driver.md
+            - name: 숫자 함수(Visual FoxPro ODBC 드라이버)
+              href: numeric-functions-visual-foxpro-odbc-driver.md
+            - name: 날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)
+              href: time-and-date-functions-visual-foxpro-odbc-driver.md
+        - name: 지원되는 SET 명령(Visual FoxPro ODBC 드라이버)
+          href: supported-set-commands-visual-foxpro-odbc-driver.md
+        - name: 스레드 지원(Visual FoxPro ODBC 드라이버)
+          href: thread-support-visual-foxpro-odbc-driver.md
+        - name: 지원되지 않는 Visual FoxPro 명령 및 함수(Visual FoxPro ODBC 드라이버)
+          href: unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md
+        - name: 오류 메시지(Visual FoxPro ODBC 드라이버)
+          href: error-messages-visual-foxpro-odbc-driver.md
+          items:
+            - name: Visual FoxPro ODBC 드라이버 원시 오류 메시지
+              href: visual-foxpro-odbc-driver-native-error-messages.md
+            - name: ODBC 오류 코드(Visual FoxPro ODBC 드라이버)
+              href: odbc-error-codes-visual-foxpro-odbc-driver.md
+        - name: 문제 해결(Visual FoxPro ODBC 드라이버)
+          href: troubleshooting-visual-foxpro-odbc-driver.md
+    - name: ODBC 함수 및 Visual FoxPro ODBC 드라이버
+      href: odbc-functions-and-the-visual-foxpro-odbc-driver.md
+      items:
+        - name: SQLAllocConnect(Visual FoxPro ODBC 드라이버)
+          href: sqlallocconnect-visual-foxpro-odbc-driver.md
+        - name: SQLAllocEnv(Visual FoxPro ODBC 드라이버)
+          href: sqlallocenv-visual-foxpro-odbc-driver.md
+        - name: SQLAllocStmt(Visual FoxPro ODBC 드라이버)
+          href: sqlallocstmt-visual-foxpro-odbc-driver.md
+        - name: SQLBindCol(Visual FoxPro ODBC 드라이버)
+          href: sqlbindcol-visual-foxpro-odbc-driver.md
+        - name: SQLBindParameter(Visual FoxPro ODBC 드라이버)
+          href: sqlbindparameter-visual-foxpro-odbc-driver.md
+        - name: SQLCancel(Visual FoxPro ODBC 드라이버)
+          href: sqlcancel-visual-foxpro-odbc-driver.md
+        - name: SQLColAttributes(Visual FoxPro ODBC 드라이버)
+          href: sqlcolattributes-visual-foxpro-odbc-driver.md
+        - name: SQLColumns(Visual FoxPro ODBC 드라이버)
+          href: sqlcolumns-visual-foxpro-odbc-driver.md
+        - name: SQLConnect(Visual FoxPro ODBC 드라이버)
+          href: sqlconnect-visual-foxpro-odbc-driver.md
+        - name: SQLDataSources(Visual FoxPro ODBC 드라이버)
+          href: sqldatasources-visual-foxpro-odbc-driver.md
+        - name: SQLDescribeCol(Visual FoxPro ODBC 드라이버)
+          href: sqldescribecol-visual-foxpro-odbc-driver.md
+        - name: SQLDisconnect(Visual FoxPro ODBC 드라이버)
+          href: sqldisconnect-visual-foxpro-odbc-driver.md
+        - name: SQLDriverConnect(Visual FoxPro ODBC 드라이버)
+          href: sqldriverconnect-visual-foxpro-odbc-driver.md
+        - name: SQLDrivers(Visual FoxPro ODBC 드라이버)
+          href: sqldrivers-visual-foxpro-odbc-driver.md
+        - name: SQLError(Visual FoxPro ODBC 드라이버)
+          href: sqlerror-visual-foxpro-odbc-driver.md
+        - name: SQLExecDirect(Visual FoxPro ODBC 드라이버)
+          href: sqlexecdirect-visual-foxpro-odbc-driver.md
+        - name: SQLExecute(Visual FoxPro ODBC 드라이버)
+          href: sqlexecute-visual-foxpro-odbc-driver.md
+        - name: SQLExtendedFetch(Visual FoxPro ODBC 드라이버)
+          href: sqlextendedfetch-visual-foxpro-odbc-driver.md
+        - name: SQLFetch(Visual FoxPro ODBC 드라이버)
+          href: sqlfetch-visual-foxpro-odbc-driver.md
+        - name: SQLFreeConnect(Visual FoxPro ODBC 드라이버)
+          href: sqlfreeconnect-visual-foxpro-odbc-driver.md
+        - name: SQLFreeEnv(Visual FoxPro ODBC 드라이버)
+          href: sqlfreeenv-visual-foxpro-odbc-driver.md
+        - name: SQLFreeStmt(Visual FoxPro ODBC 드라이버)
+          href: sqlfreestmt-visual-foxpro-odbc-driver.md
+        - name: SQLGetConnectOption(Visual FoxPro ODBC 드라이버)
+          href: sqlgetconnectoption-visual-foxpro-odbc-driver.md
+        - name: SQLGetCursorName(Visual FoxPro ODBC 드라이버)
+          href: sqlgetcursorname-visual-foxpro-odbc-driver.md
+        - name: SQLGetData(Visual FoxPro ODBC 드라이버)
+          href: sqlgetdata-visual-foxpro-odbc-driver.md
+        - name: SQLGetFunctions(Visual FoxPro ODBC 드라이버)
+          href: sqlgetfunctions-visual-foxpro-odbc-driver.md
+        - name: SQLGetInfo(Visual FoxPro ODBC 드라이버)
+          href: sqlgetinfo-visual-foxpro-odbc-driver.md
+        - name: SQLGetStmtOption(Visual FoxPro ODBC 드라이버)
+          href: sqlgetstmtoption-visual-foxpro-odbc-driver.md
+        - name: SQLGetTypeInfo(Visual FoxPro ODBC 드라이버)
+          href: sqlgettypeinfo-visual-foxpro-odbc-driver.md
+        - name: SQLMoreResults(Visual FoxPro ODBC 드라이버)
+          href: sqlmoreresults-visual-foxpro-odbc-driver.md
+        - name: SQLNumParams(Visual FoxPro ODBC 드라이버)
+          href: sqlnumparams-visual-foxpro-odbc-driver.md
+        - name: SQLNumResultCols(Visual FoxPro ODBC 드라이버)
+          href: sqlnumresultcols-visual-foxpro-odbc-driver.md
+        - name: SQLParamData(Visual FoxPro ODBC 드라이버)
+          href: sqlparamdata-visual-foxpro-odbc-driver.md
+        - name: SQLParamOptions(Visual FoxPro ODBC 드라이버)
+          href: sqlparamoptions-visual-foxpro-odbc-driver.md
+        - name: SQLPrepare(Visual FoxPro ODBC 드라이버)
+          href: sqlprepare-visual-foxpro-odbc-driver.md
+        - name: SQLPrimaryKeys(Visual FoxPro ODBC 드라이버)
+          href: sqlprimarykeys-visual-foxpro-odbc-driver.md
+        - name: SQLPutData(Visual FoxPro ODBC 드라이버)
+          href: sqlputdata-visual-foxpro-odbc-driver.md
+        - name: SQL 행 수(Visual FoxPro ODBC 드라이버)
+          href: sql-row-count-visual-foxpro-odbc-driver.md
+        - name: SQLSetConnectOption(Visual FoxPro ODBC 드라이버)
+          href: sqlsetconnectoption-visual-foxpro-odbc-driver.md
+        - name: SQLSetCursorName(Visual FoxPro ODBC 드라이버)
+          href: sqlsetcursorname-visual-foxpro-odbc-driver.md
+        - name: SQLSetPos(Visual FoxPro ODBC 드라이버)
+          href: sqlsetpos-visual-foxpro-odbc-driver.md
+        - name: SQLSetScrollOptions(Visual FoxPro ODBC 드라이버)
+          href: sqlsetscrolloptions-visual-foxpro-odbc-driver.md
+        - name: SQLSetStmtOption(Visual FoxPro ODBC 드라이버)
+          href: sqlsetstmtoption-visual-foxpro-odbc-driver.md
+        - name: SQLSpecialColumns(Visual FoxPro ODBC 드라이버)
+          href: sqlspecialcolumns-visual-foxpro-odbc-driver.md
+        - name: SQLStatistics(Visual FoxPro ODBC 드라이버)
+          href: sqlstatistics-visual-foxpro-odbc-driver.md
+        - name: SQLTables(Visual FoxPro ODBC 드라이버)
+          href: sqltables-visual-foxpro-odbc-driver.md
+        - name: SQLTransact(Visual FoxPro ODBC 드라이버)
+          href: sqltransact-visual-foxpro-odbc-driver.md
+    - name: Visual FoxPro 언어 참조
+      href: visual-foxpro-language-reference.md
+      items:
+        - name: ALTER TABLE - SQL 명령
+          href: alter-table-sql-command.md
+        - name: CREATE TABLE - SQL 명령
+          href: create-table-sql-command.md
+        - name: DELETE - SQL 명령
+          href: delete-sql-command.md
+        - name: DELETE TAG 명령
+          href: delete-tag-command.md
+        - name: DROP TABLE 명령
+          href: drop-table-command.md
+        - name: INDEX 명령
+          href: index-command.md
+        - name: INSERT - SQL 명령
+          href: insert-sql-command.md
+        - name: SELECT - SQL 명령
+          href: select-sql-command.md
+        - name: SET ANSI 명령
+          href: set-ansi-command.md
+        - name: SET BLOCKSIZE 명령
+          href: set-blocksize-command.md
+        - name: SET COLLATE 명령
+          href: set-collate-command.md
+        - name: SET DELETED 명령
+          href: set-deleted-command.md
+        - name: SET EXACT 명령
+          href: set-exact-command.md
+        - name: SET EXCLUSIVE 명령
+          href: set-exclusive-command.md
+        - name: SET NULL 명령
+          href: set-null-command.md
+        - name: SET PATH 명령
+          href: set-path-command.md
+        - name: SET REPROCESS 명령
+          href: set-reprocess-command.md
+        - name: SET UNIQUE 명령
+          href: set-unique-command.md
+        - name: UPDATE - SQL 명령
+          href: update-sql-command.md
+        - name: Visual FoxPro 필드 데이터 형식
+          href: visual-foxpro-field-data-types.md

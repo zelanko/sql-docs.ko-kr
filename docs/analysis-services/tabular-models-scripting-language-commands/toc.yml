@@ -1,0 +1,26 @@
+- name: TMSL 참조 - 명령
+  href: tmsl-reference-commands.md
+- name: Alter 명령(TMSL)
+  href: alter-command-tmsl.md
+- name: Attach 명령(TMSL)
+  href: attach-command-tmsl.md
+- name: Backup 명령(TMSL)
+  href: backup-command-tmsl.md
+- name: Create 명령(TMSL)
+  href: create-command-tmsl.md
+- name: CreateOrReplace 명령(TMSL)
+  href: createorreplace-command-tmsl.md
+- name: Delete 명령(TMSL)
+  href: delete-command-tmsl.md
+- name: Detach 명령(TMSL)
+  href: detach-command-tmsl.md
+- name: MergePartitions 명령(TMSL)
+  href: mergepartitions-command-tmsl.md
+- name: Refresh 명령(TMSL)
+  href: refresh-command-tmsl.md
+- name: Restore 명령(TMSL)
+  href: restore-command-tmsl.md
+- name: Sequence 명령(TMSL)
+  href: sequence-command-tmsl.md
+- name: Synchronize 명령(TMSL)
+  href: synchronize-command-tmsl.md

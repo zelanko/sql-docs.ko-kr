@@ -1,0 +1,60 @@
+- name: 인덱스(데이터베이스 엔진)
+  href: indexes.md
+- name: 힙(클러스터형 인덱스가 없는 테이블)
+  href: heaps-tables-without-clustered-indexes.md
+- name: 클러스터형 및 비클러스터형 인덱스 소개
+  href: clustered-and-nonclustered-indexes-described.md
+- name: Columnstore Indexes Described
+  href: columnstore-indexes-described.md
+- name: Columnstore 인덱스 사용
+  href: dbengine-columnstore-indexes.md
+- name: 클러스터형 인덱스 만들기
+  href: create-clustered-indexes.md
+- name: 비클러스터형 인덱스 만들기
+  href: create-nonclustered-indexes.md
+- name: 고유 인덱스 만들기
+  href: create-unique-indexes.md
+- name: 필터링된 인덱스 만들기
+  href: create-filtered-indexes.md
+- name: 포괄 열을 사용하여 인덱스 만들기
+  href: create-indexes-with-included-columns.md
+- name: 인덱스 삭제
+  href: delete-an-index.md
+- name: 인덱스 수정
+  href: modify-an-index.md
+- name: 다른 파일 그룹으로 기존 인덱스 이동
+  href: move-an-existing-index-to-a-different-filegroup.md
+- name: 계산 열의 인덱스
+  href: indexes-on-computed-columns.md
+- name: 인덱스에 대한 SORT_IN_TEMPDB 옵션
+  href: sort-in-tempdb-option-for-indexes.md
+- name: 인덱스 및 제약 조건 비활성화
+  href: disable-indexes-and-constraints.md
+- name: 인덱스 및 제약 조건 활성화
+  href: enable-indexes-and-constraints.md
+- name: 인덱스 이름 바꾸기
+  href: rename-indexes.md
+- name: 인덱스 옵션 설정
+  href: set-index-options.md
+- name: Disk Space Requirements for Index DDL Operations
+  href: disk-space-requirements-for-index-ddl-operations.md
+  items:
+    - name: 인덱스 작업에 필요한 트랜잭션 로그 디스크 공간
+      href: transaction-log-disk-space-for-index-operations.md
+    - name: 인덱스 디스크 공간 예
+      href: index-disk-space-example.md
+- name: 인덱스 다시 구성 및 다시 작성
+  href: reorganize-and-rebuild-indexes.md
+- name: 인덱스의 채우기 비율 지정
+  href: specify-fill-factor-for-an-index.md
+- name: 온라인으로 인덱스 작업 수행
+  href: perform-index-operations-online.md
+  items:
+    - name: 온라인 인덱스 작동 방식
+      href: how-online-index-operations-work.md
+    - name: 온라인 인덱스 작업에 대한 지침
+      href: guidelines-for-online-index-operations.md
+- name: 병렬 인덱스 작업 구성
+  href: configure-parallel-index-operations.md
+- name: 인덱스 속성 F1 도움말
+  href: index-properties-f1-help.md

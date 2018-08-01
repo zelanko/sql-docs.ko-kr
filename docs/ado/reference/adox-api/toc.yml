@@ -1,0 +1,306 @@
+- name: ADOX 개체 모델
+  href: adox-object-model.md
+- name: ADOX 개체
+  href: adox-objects.md
+  items:
+    - name: 카탈로그 개체(ADOX)
+      href: catalog-object-adox.md
+      items:
+        - name: '카탈로그 개체 속성, 메서드 및 이벤트'
+          href: catalog-object-properties-methods-and-events.md
+    - name: 열 개체(ADOX)
+      href: column-object-adox.md
+      items:
+        - name: '열 개체 속성, 메서드 및 이벤트'
+          href: column-object-properties-methods-and-events.md
+    - name: 그룹 개체(ADOX)
+      href: group-object-adox.md
+      items:
+        - name: '그룹 개체 속성, 메서드 및 이벤트'
+          href: group-object-properties-methods-and-events.md
+    - name: 인덱스 개체(ADOX)
+      href: index-object-adox.md
+      items:
+        - name: '인덱스 개체 속성, 메서드 및 이벤트'
+          href: index-object-properties-methods-and-events.md
+    - name: 키 개체(ADOX)
+      href: key-object-adox.md
+      items:
+        - name: '키 개체 속성, 메서드 및 이벤트'
+          href: key-object-properties-methods-and-events.md
+    - name: 프로시저 개체(ADOX)
+      href: procedure-object-adox.md
+      items:
+        - name: '프로시저 개체 속성, 메서드 및 이벤트'
+          href: procedure-object-properties-methods-and-events.md
+    - name: 속성 개체(ADOX)
+      href: property-object-adox.md
+      items:
+        - name: 'ADOX 속성 개체 속성, 메서드 및 이벤트'
+          href: adox-property-object-properties-methods-and-events.md
+    - name: 테이블 개체(ADOX)
+      href: table-object-adox.md
+      items:
+        - name: '테이블 개체 속성, 메서드 및 이벤트'
+          href: table-object-properties-methods-and-events.md
+    - name: 사용자 개체(ADOX)
+      href: user-object-adox.md
+      items:
+        - name: '사용자 개체 속성, 메서드 및 이벤트'
+          href: user-object-properties-methods-and-events.md
+    - name: 보기 개체(ADOX)
+      href: view-object-adox.md
+      items:
+        - name: '보기 개체 속성, 메서드 및 이벤트'
+          href: view-object-properties-methods-and-events.md
+- name: ADOX 컬렉션
+  href: adox-collections.md
+  items:
+    - name: Columns 컬렉션(ADOX)
+      href: columns-collection-adox.md
+      items:
+        - name: 'Columns 컬렉션 속성, 메서드 및 이벤트'
+          href: columns-collection-properties-methods-and-events.md
+    - name: Groups 컬렉션(ADOX)
+      href: groups-collection-adox.md
+      items:
+        - name: 'Groups 컬렉션 속성, 메서드 및 이벤트'
+          href: groups-collection-properties-methods-and-events.md
+    - name: Indexes 컬렉션(ADOX)
+      href: indexes-collection-adox.md
+      items:
+        - name: 'Indexes 컬렉션 속성, 메서드 및 이벤트'
+          href: indexes-collection-properties-methods-and-events.md
+    - name: Keys 컬렉션(ADOX)
+      href: keys-collection-adox.md
+      items:
+        - name: 'Keys 컬렉션 속성, 메서드 및 이벤트'
+          href: keys-collection-properties-methods-and-events.md
+    - name: Procedures 컬렉션(ADOX)
+      href: procedures-collection-adox.md
+      items:
+        - name: 'Procedures 컬렉션 속성, 메서드 및 이벤트'
+          href: procedures-collection-properties-methods-and-events.md
+    - name: Tables 컬렉션(ADOX)
+      href: tables-collection-adox.md
+      items:
+        - name: 'Tables 컬렉션 속성, 메서드 및 이벤트'
+          href: tables-collection-properties-methods-and-events.md
+    - name: Users 컬렉션(ADOX)
+      href: users-collection-adox.md
+      items:
+        - name: 'Users 컬렉션 속성, 메서드 및 이벤트'
+          href: users-collection-properties-methods-and-events.md
+    - name: Views 컬렉션(ADOX)
+      href: views-collection-adox.md
+      items:
+        - name: 'Views 컬렉션 속성, 메서드 및 이벤트'
+          href: views-collection-properties-methods-and-events.md
+- name: ADOX 속성
+  href: adox-properties.md
+  items:
+    - name: ActiveConnection 속성(ADOX)
+      href: activeconnection-property-adox.md
+    - name: Attributes 속성(ADOX)
+      href: attributes-property-adox.md
+    - name: Clustered 속성(ADOX)
+      href: clustered-property-adox.md
+    - name: Command 속성(ADOX)
+      href: command-property-adox.md
+    - name: DateCreated 속성(ADOX)
+      href: datecreated-property-adox.md
+    - name: DateModified 속성(ADOX)
+      href: datemodified-property-adox.md
+    - name: DefinedSize 속성(ADOX)
+      href: definedsize-property-adox.md
+    - name: DeleteRule 속성(ADOX)
+      href: deleterule-property-adox.md
+    - name: IndexNulls 속성(ADOX)
+      href: indexnulls-property-adox.md
+    - name: Name 속성(ADOX)
+      href: name-property-adox.md
+    - name: NumericScale 속성(ADOX)
+      href: numericscale-property-adox.md
+    - name: ParentCatalog 속성(ADOX)
+      href: parentcatalog-property-adox.md
+    - name: Precision 속성(ADOX)
+      href: precision-property-adox.md
+    - name: PrimaryKey 속성(ADOX)
+      href: primarykey-property-adox.md
+    - name: RelatedColumn 속성(ADOX)
+      href: relatedcolumn-property-adox.md
+    - name: RelatedTable 속성(ADOX)
+      href: relatedtable-property-adox.md
+    - name: SortOrder 속성(ADOX)
+      href: sortorder-property-adox.md
+    - name: Type 속성(열)(ADOX)
+      href: type-property-column-adox.md
+    - name: Type 속성(키)(ADOX)
+      href: type-property-key-adox.md
+    - name: Type 속성(테이블)(ADOX)
+      href: type-property-table-adox.md
+    - name: Unique 속성(ADOX)
+      href: unique-property-adox.md
+    - name: UpdateRule 속성(ADOX)
+      href: updaterule-property-adox.md
+- name: ADOX 메서드
+  href: adox-methods.md
+  items:
+    - name: Append 메서드(ADOX 열)
+      href: append-method-adox-columns.md
+    - name: Append 메서드(ADOX 그룹)
+      href: append-method-adox-groups.md
+    - name: Append 메서드(ADOX 인덱스)
+      href: append-method-adox-indexes.md
+    - name: Append 메서드(ADOX 키)
+      href: append-method-adox-keys.md
+    - name: Append 메서드(ADOX 프로시저)
+      href: append-method-adox-procedures.md
+    - name: Append 메서드(ADOX 테이블)
+      href: append-method-adox-tables.md
+    - name: Append 메서드(ADOX 사용자)
+      href: append-method-adox-users.md
+    - name: Append 메서드(ADOX 보기)
+      href: append-method-adox-views.md
+    - name: ChangePassword 메서드(ADOX)
+      href: changepassword-method-adox.md
+    - name: Create 메서드(ADOX)
+      href: create-method-adox.md
+    - name: Delete 메서드(ADOX 컬렉션)
+      href: delete-method-adox-collections.md
+    - name: GetObjectOwner 메서드(ADOX)
+      href: getobjectowner-method-adox.md
+    - name: GetPermissions 메서드(ADOX)
+      href: getpermissions-method-adox.md
+    - name: SetObjectOwner 메서드
+      href: setobjectowner-method.md
+    - name: SetPermissions 메서드(ADOX)
+      href: setpermissions-method-adox.md
+- name: ADOX 열거 상수
+  href: adox-enumerated-constants.md
+  items:
+    - name: AllowNullsEnum
+      href: allownullsenum.md
+    - name: ActionEnum
+      href: actionenum.md
+    - name: SortOrderEnum
+      href: sortorderenum.md
+    - name: RightsEnum
+      href: rightsenum.md
+    - name: RuleEnum
+      href: ruleenum.md
+    - name: KeyTypeEnum
+      href: keytypeenum.md
+    - name: InheritTypeEnum
+      href: inherittypeenum.md
+    - name: ObjectTypeEnum
+      href: objecttypeenum.md
+    - name: ColumnAttributesEnum
+      href: columnattributesenum.md
+- name: ADOX 코드 예제
+  href: adox-code-examples.md
+  items:
+    - name: Microsoft Visual Basic의 ADOX 코드 예제
+      href: adox-code-examples-in-microsoft-visual-basic.md
+      items:
+        - name: Attributes 속성 예제(VB)
+          href: attributes-property-example-vb.md
+        - name: Catalog ActiveConnection 속성 예제(VB)
+          href: catalog-activeconnection-property-example-vb.md
+        - name: Clustered 속성 예제(VB)
+          href: clustered-property-example-vb.md
+        - name: 'Columns 및 Tables Append 메서드, Name 속성 예제 (VB)'
+          href: columns-and-tables-append-methods-name-property-example-vb.md
+        - name: Command 및 CommandText 속성 예제(VB)
+          href: command-and-commandtext-properties-example-vb.md
+        - name: 'Connection Close 메서드, Table Type 속성 예제(VB)'
+          href: connection-close-method-table-type-property-example-vb.md
+        - name: Create 메서드 예제(VB)
+          href: create-method-example-vb.md
+        - name: DateCreated 및 DateModified 속성 예제(VB)
+          href: datecreated-and-datemodified-properties-example-vb.md
+        - name: DefinedSize 속성 예제(VB)
+          href: definedsize-property-example-vb.md
+        - name: DeleteRule 속성 예제(VB)
+          href: deleterule-property-example-vb.md
+        - name: GetObjectOwner 및 SetObjectOwner 메서드 예제(VB)
+          href: getobjectowner-and-setobjectowner-methods-example-vb.md
+        - name: GetPermissions 및 SetPermissions 메서드 예제(VB)
+          href: getpermissions-and-setpermissions-methods-example-vb.md
+        - name: 'Groups 및 Users Append, ChangePassword 메서드 예제(VB)'
+          href: groups-and-users-append-changepassword-methods-example-vb.md
+        - name: Indexes Append 메서드 예제(VB)
+          href: indexes-append-method-example-vb.md
+        - name: IndexNulls 속성 예제(VB)
+          href: indexnulls-property-example-vb.md
+        - name: 'Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VB)'
+          href: keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
+        - name: 'ADOX 코드 예제: NumericScale 및 Precision 속성 예제(VB)'
+          href: adox-code-example-numericscale-and-precision-properties-example-vb.md
+        - name: 'Parameters 컬렉션, Command 속성 예제(VB)'
+          href: parameters-collection-command-property-example-vb.md
+        - name: ParentCatalog 속성 예제(VB)
+          href: parentcatalog-property-example-vb.md
+        - name: PrimaryKey 및 Unique 속성 예제(VB)
+          href: primarykey-and-unique-properties-example-vb.md
+        - name: Procedures Append 메서드 예제(VB)
+          href: procedures-append-method-example-vb.md
+        - name: Procedures Delete 메서드 예제(VB)
+          href: procedures-delete-method-example-vb.md
+        - name: Procedures Refresh 메서드 예제(VB)
+          href: procedures-refresh-method-example-vb.md
+        - name: SortOrder 속성 예제(VB)
+          href: sortorder-property-example-vb.md
+        - name: 보기 및 필드 컬렉션 예제(VB)
+          href: views-and-fields-collections-example-vb.md
+        - name: Views Append 메서드 예제(VB)
+          href: views-append-method-example-vb.md
+        - name: '보기 컬렉션, CommandText 속성 예제(VB)'
+          href: views-collection-commandtext-property-example-vb.md
+        - name: Views Delete 메서드 예제(VB)
+          href: views-delete-method-example-vb.md
+        - name: Views Refresh 메서드 예제(VB)
+          href: views-refresh-method-example-vb.md
+    - name: Microsoft Visual C++의 ADOX 코드 예제
+      href: adox-code-examples-in-microsoft-visual-c.md
+      items:
+        - name: Attributes 속성 예제(VC++)
+          href: attributes-property-example-vc.md
+        - name: Catalog ActiveConnection 속성 예제(VC++)
+          href: catalog-activeconnection-property-example-vc.md
+        - name: Clustered 속성 예제(VC++)
+          href: clustered-property-example-vc.md
+        - name: 'Columns 및 Tables Append 메서드, Name 속성 예제(VC++)'
+          href: columns-and-tables-append-methods-name-property-example-vc.md
+        - name: Command 및 CommandText 속성 예제(VC++)
+          href: command-and-commandtext-properties-example-vc.md
+        - name: 'Connection Close 메서드, Table Type 속성 예제(VC++)'
+          href: connection-close-method-table-type-property-example-vc.md
+        - name: Create 메서드 예제(VC++)
+          href: create-method-example-vc.md
+        - name: DateCreated 및 DateModified 속성 예제(VC++)
+          href: datecreated-and-datemodified-properties-example-vc.md
+        - name: DefinedSize 속성 예제(VC++)
+          href: definedsize-property-example-vc.md
+        - name: DeleteRule 속성 예제(VC++)
+          href: deleterule-property-example-vc.md
+        - name: GetObjectOwner 및 SetObjectOwner 메서드 예제(VC++)
+          href: getobjectowner-and-setobjectowner-methods-example-vc.md
+        - name: GetPermissions 및 SetPermissions 메서드 예제(VC++)
+          href: getpermissions-and-setpermissions-methods-example-vc.md
+        - name: 'Groups 및 Users Append, ChangePassword 메서드 예제(VC++)'
+          href: groups-and-users-append-changepassword-methods-example-vc.md
+        - name: Indexes Append 메서드 예제(VC++)
+          href: indexes-append-method-example-vc.md
+        - name: IndexNulls 속성 예제(VC++)
+          href: indexnulls-property-example-vc.md
+        - name: 'Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VC++)'
+          href: keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md
+        - name: Column 개체의 NumericScale 및 Precision 속성 예제(VC++)
+          href: numericscale-and-precision-properties-of-the-column-object-example-vc.md
+        - name: 'Parameters 컬렉션, Command 속성 예제(VC++)'
+          href: parameters-collection-command-property-example-vc.md
+        - name: ParentCatalog 속성 예제(VC++)
+          href: parentcatalog-property-example-vc.md
+        - name: PrimaryKey 및 Unique 속성 예제(VC++)
+          href: primarykey-and-unique-properties-example-vc.md

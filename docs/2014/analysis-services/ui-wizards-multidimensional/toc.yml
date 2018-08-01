@@ -1,0 +1,195 @@
+- name: 다차원용 UI 마법사
+  href: ui-wizards-multidimensional.md
+- name: Analysis Services 마법사(다차원)
+  href: ../analysis-services-wizards-multidimensional-data.md
+- name: 집계 디자인 마법사 F1 도움말
+  href: ../aggregation-design-wizard-f1-help.md
+  items:
+    - name: 수정할 파티션 선택(집계 디자인 마법사)
+      href: ../select-partitions-to-modify-aggregation-design-wizard.md
+    - name: 집계 사용 검토(집계 디자인 마법사)
+      href: ../review-aggregation-usage-aggregation-design-wizard.md
+    - name: 개체 수 지정(집계 디자인 마법사)
+      href: ../specify-object-counts-aggregation-design-wizard.md
+    - name: 집계 옵션 설정(집계 디자인 마법사)
+      href: ../set-aggregation-options-aggregation-design-wizard.md
+    - name: 마법사 완료(집계 디자인 마법사)
+      href: ../completing-the-wizard-aggregation-design-wizard.md
+- name: 비즈니스 인텔리전스 마법사 F1 도움말
+  href: ../business-intelligence-wizard-f1-help.md
+  items:
+    - name: 기능 선택(비즈니스 인텔리전스 마법사)
+      href: ../choose-enhancement-business-intelligence-wizard.md
+    - name: 시간 계산 선택(비즈니스 인텔리전스 마법사)
+      href: ../choose-time-calculations-business-intelligence-wizard.md
+    - name: 계산 범위 정의(비즈니스 인텔리전스 마법사)
+      href: ../define-scope-of-calculations-business-intelligence-wizard.md
+    - name: 계정 인텔리전스 정의(차원)(비즈니스 인텔리전스 마법사)
+      href: ../define-account-intelligence-dimension-business-intelligence-wizard.md
+    - name: 차원 특성 구성(비즈니스 인텔리전스 마법사)
+      href: ../configure-dimension-attributes-business-intelligence-wizard.md
+    - name: 계정 인텔리전스 정의(비즈니스 인텔리전스 마법사)
+      href: ../define-account-intelligence-business-intelligence-wizard.md
+    - name: 차원 인텔리전스 옵션 설정(비즈니스 인텔리전스 마법사)
+      href: ../set-dimension-intelligence-options-business-intelligence-wizard.md
+    - name: 차원 인텔리전스 정의(비즈니스 인텔리전스 마법사)
+      href: ../define-dimension-intelligence-business-intelligence-wizard.md
+    - name: 단항 연산자 지정(차원)(비즈니스 인텔리전스 마법사)
+      href: ../specify-a-unary-operator-dimension-business-intelligence-wizard.md
+    - name: 단항 연산자 지정(비즈니스 인텔리전스 마법사)
+      href: ../specify-a-unary-operator-business-intelligence-wizard.md
+    - name: 사용자 지정 멤버 수식 만들기(차원)(비즈니스 인텔리전스 마법사)
+      href: ../create-a-custom-member-formula-dimension-business-intelligence-wizard.md
+    - name: 사용자 지정 멤버 수식 만들기(비즈니스 인텔리전스 마법사)
+      href: ../create-a-custom-member-formula-business-intelligence-wizard.md
+    - name: 특성 순서 지정(차원)(비즈니스 인텔리전스 마법사)
+      href: ../specify-attribute-ordering-dimension-business-intelligence-wizard.md
+    - name: 특성 순서 지정(비즈니스 인텔리전스 마법사)
+      href: ../specify-attribute-ordering-business-intelligence-wizard.md
+    - name: 차원 쓰기 저장(writeback) 설정(차원)(비즈니스 인텔리전스 마법사)
+      href: ../enable-dimension-writeback-dimension-business-intelligence-wizard.md
+    - name: 차원 쓰기 저장(writeback) 설정(비즈니스 인텔리전스 마법사)
+      href: ../enable-dimension-writeback-business-intelligence-wizard.md
+    - name: 반가산적 동작 정의(비즈니스 인텔리전스 마법사)
+      href: ../define-semiadditive-behavior-business-intelligence-wizard.md
+    - name: 통화 변환 옵션 설정(비즈니스 인텔리전스 마법사)
+      href: ../set-currency-conversion-options-business-intelligence-wizard.md
+    - name: 멤버 선택(비즈니스 인텔리전스 마법사)
+      href: ../select-members-business-intelligence-wizard.md
+    - name: 변환 유형 선택(비즈니스 인텔리전스 마법사)
+      href: ../select-conversion-type-business-intelligence-wizard.md
+    - name: 현지 통화 참조 정의(비즈니스 인텔리전스 마법사)
+      href: ../define-local-currency-reference-business-intelligence-wizard.md
+    - name: 보고 통화 지정(비즈니스 인텔리전스 마법사)
+      href: ../specify-reporting-currencies-business-intelligence-wizard.md
+    - name: 통화 변환 정의(비즈니스 인텔리전스 마법사)
+      href: ../define-currency-conversion-business-intelligence-wizard.md
+    - name: 열 선택 대화 상자(비즈니스 인텔리전스 마법사)
+      href: ../select-a-column-dialog-box-business-intelligence-wizard.md
+    - name: 마법사 완료(비즈니스 인텔리전스 마법사)
+      href: ../completing-the-wizard-business-intelligence-wizard.md
+- name: 큐브 마법사 F1 도움말
+  href: ../cube-wizard-f1-help.md
+  items:
+    - name: 생성 방법 선택(큐브 마법사)
+      href: ../select-creation-method-cube-wizard.md
+    - name: 데이터 원본 뷰 선택(큐브 마법사)
+      href: ../select-a-data-source-view-cube-wizard.md
+    - name: 측정값 그룹 테이블 선택(큐브 마법사)
+      href: ../select-measure-group-tables-cube-wizard.md
+    - name: 새 측정값 정의(큐브 마법사)
+      href: ../define-new-measures-cube-wizard.md
+    - name: 측정값 선택(큐브 마법사)
+      href: ../select-measures-cube-wizard.md
+    - name: 기존 차원 선택(큐브 마법사)
+      href: ../select-existing-dimensions-cube-wizard.md
+    - name: 새 차원 선택(큐브 마법사)
+      href: ../select-new-dimensions-cube-wizard.md
+    - name: 누락 차원 키 선택(큐브 마법사)
+      href: ../select-missing-dimension-keys-cube-wizard.md
+    - name: 마법사 완료(큐브 마법사)
+      href: ../completing-the-wizard-cube-wizard.md
+- name: 데이터 원본 마법사 F1 도움말
+  href: ../data-source-wizard-f1-help-analysis-services.md
+  items:
+    - name: 연결 정의 방법 선택(데이터 원본 마법사)
+      href: ../select-how-to-define-the-connection-data-source-wizard-analysis-services.md
+    - name: 가장 정보
+      href: ../impersonation-information.md
+    - name: 기존 개체의 데이터 원본(데이터 원본 마법사)
+      href: ../data-sources-from-existing-objects-data-source-wizard-analysis-services.md
+    - name: 마법사 완료
+      href: ../completing-the-wizard-data-source-wizard-analysis-services.md
+- name: 데이터 원본 뷰 마법사 F1 도움말
+  href: ../data-source-view-wizard-f1-help-analysis-services.md
+  items:
+    - name: 데이터 원본 선택(데이터 원본 뷰 마법사)
+      href: ../select-a-data-source-data-source-view-wizard-analysis-services.md
+    - name: 고급 데이터 원본 뷰 옵션 대화 상자(데이터 원본 뷰 마법사)
+      href: ../advanced-data-source-view-options-data-source-view-wizard-analysis-services.md
+    - name: 이름 일치(데이터 원본 뷰 마법사)
+      href: ../name-matching-data-source-view-wizard-analysis-services.md
+    - name: 테이블 및 뷰 선택(데이터 원본 뷰 마법사)
+      href: ../select-tables-and-views-data-source-view-wizard-analysis-services.md
+    - name: 마법사 완료(데이터 원본 뷰 마법사)
+      href: ../completing-the-wizard-data-source-view-wizard-analysis-services.md
+- name: 차원 마법사 F1 도움말
+  href: ../dimension-wizard-f1-help.md
+  items:
+    - name: 생성 방법 선택(차원 마법사)
+      href: ../select-creation-method-dimension-wizard.md
+    - name: 기간 정의(데이터 원본)(차원 마법사)
+      href: ../define-time-periods-data-source-dimension-wizard.md
+    - name: 기간 정의(차원 마법사)
+      href: ../define-time-periods-dimension-wizard.md
+    - name: 달력 선택(차원 마법사)
+      href: ../select-calendars-dimension-wizard.md
+    - name: 원본 정보 지정(차원 마법사)
+      href: ../specify-source-information-dimension-wizard.md
+    - name: 관련 테이블 선택(차원 마법사)
+      href: ../select-related-tables-dimension-wizard.md
+    - name: 차원 특성 선택(차원 마법사)
+      href: ../select-dimension-attributes-dimension-wizard.md
+    - name: 차원 유형 지정(차원 마법사)
+      href: ../specify-dimension-type-dimension-wizard.md
+    - name: 차원 키 및 유형 지정(차원 마법사)
+      href: ../specify-dimension-key-and-type-dimension-wizard.md
+    - name: 계정 인텔리전스 정의(차원 마법사)
+      href: ../define-account-intelligence-dimension-wizard.md
+    - name: 마법사 완료(차원 마법사)
+      href: ../completing-the-wizard-dimension-wizard.md
+- name: Analysis Services 데이터베이스 가져오기 마법사 F1 도움말
+  href: ../import-analysis-services-database-wizard-f1-help.md
+  items:
+    - name: 원본 데이터베이스(Analysis Services 데이터베이스 가져오기 마법사)
+      href: ../source-database-import-analysis-services-database-wizard.md
+    - name: 마법사 완료(Analysis Services 데이터베이스 가져오기 마법사)
+      href: ../completing-the-wizard-import-analysis-services-database-wizard.md
+- name: 연결된 개체 마법사 F1 도움말
+  href: ../linked-object-wizard-f1-help.md
+  items:
+    - name: 데이터 원본 선택(연결된 개체 마법사)
+      href: ../select-a-data-source-linked-object-wizard.md
+    - name: 개체 선택(연결된 개체 마법사)
+      href: ../select-objects-linked-object-wizard.md
+    - name: 마법사 완료(연결된 개체 마법사)
+      href: ../completing-the-wizard-linked-object-wizard.md
+- name: 파티션 마법사 F1 도움말
+  href: ../partition-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: 원본 정보 지정(파티션 마법사)
+      href: ../specify-source-information-partition-wizard.md
+    - name: 행 제한(파티션 마법사)
+      href: ../restrict-rows-partition-wizard.md
+    - name: 처리 및 저장소 위치(파티션 마법사)
+      href: ../processing-and-storage-locations-partition-wizard.md
+    - name: 마법사 완료(파티션 마법사)
+      href: ../completing-the-wizard-partition-wizard.md
+- name: 스키마 생성 마법사 F1 도움말
+  href: ../schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: 대상 지정(스키마 생성 마법사)
+      href: ../specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md
+    - name: 주제 영역 데이터베이스 스키마 옵션(스키마 생성 마법사)
+      href: ../subject-area-database-schema-options-analysis-services-multidimensional-data.md
+    - name: 명명 규칙 지정(스키마 생성 마법사)
+      href: ../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md
+    - name: 마법사 완료(스키마 생성 마법사)
+      href: ../complete-schema-generation-wizard-analysis-services-multidimensional-data.md
+- name: 사용 빈도 기반 최적화 마법사 F1 도움말
+  href: ../usage-based-optimization-wizard-f1-help.md
+  items:
+    - name: 수정할 파티션 선택(사용 빈도 기반 최적화 마법사)
+      href: ../select-partitions-to-modify-usage-based-optimization-wizard.md
+    - name: 쿼리 조건 지정(사용 빈도 기반 최적화 마법사)
+      href: ../specify-query-criteria-usage-based-optimization-wizard.md
+    - name: 최적화될 쿼리 확인(사용 빈도 기반 최적화 마법사)
+      href: ../review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md
+    - name: 집계 사용법 검토(사용 빈도 기반 최적화 마법사)
+      href: ../review-aggregation-usage-usage-based-optimiation-wizard.md
+    - name: 개체 수 지정(사용 빈도 기반 최적화 마법사)
+      href: ../specify-object-counts-usage-based-optimization-wizard.md
+    - name: 집계 옵션 설정(사용 빈도 기반 최적화 마법사)
+      href: ../set-aggregation-options-usage-based-optimization-wizard.md
+    - name: 마법사 완료(사용 빈도 기반 최적화 마법사)
+      href: ../completing-the-wizard-usage-based-optimization-wizard.md

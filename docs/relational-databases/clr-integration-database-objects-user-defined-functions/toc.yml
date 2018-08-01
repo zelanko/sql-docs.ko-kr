@@ -1,0 +1,12 @@
+- name: CLR 사용자 정의 함수
+  href: clr-user-defined-functions.md
+- name: CLR 스칼라 반환 함수
+  href: clr-scalar-valued-functions.md
+- name: CLR 테이블 반환 함수
+  href: clr-table-valued-functions.md
+- name: CLR 사용자 정의 집계 - 함수 호출
+  href: clr-user-defined-aggregate-invoking-functions.md
+- name: CLR 사용자 정의 집계 - 요구 사항
+  href: clr-user-defined-aggregates-requirements.md
+- name: CLR 사용자 정의 집계
+  href: clr-user-defined-aggregates.md

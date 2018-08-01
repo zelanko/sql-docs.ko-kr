@@ -1,0 +1,26 @@
+- name: SQLXML 4.0 .NET Framework 지원 - 관리되는 클래스
+  href: sqlxml-4-0-net-framework-support-managed-classes.md
+- name: .NET 환경에서 SQLXML 기능 액세스
+  href: accessing-sqlxml-functionality-in-the-net-environment.md
+- name: XSL 변환 적용(SQLXML 관리되는 클래스)
+  href: applying-an-xsl-transformation-sqlxml-managed-classes.md
+- name: SQL 쿼리 실행(SQLXML 관리되는 클래스)
+  href: executing-sql-queries-sqlxml-managed-classes.md
+- name: ExecuteXMLReader 메서드를 사용하여 SQL 쿼리 실행
+  href: executing-sql-queries-by-using-the-executexmlreader-method.md
+- name: CommandStream 속성을 사용하여 템플릿 파일 실행
+  href: executing-template-files-by-using-the-commandstream-property.md
+- name: CommandText 속성을 사용하여 템플릿 파일 실행
+  href: executing-template-files-by-using-the-commandtext-property.md
+- name: XPath 쿼리 실행(SQLXML 관리되는 클래스)
+  href: executing-xpath-queries-sqlxml-managed-classes.md
+- name: 네임스페이스가 포함된 XPath 쿼리 실행(SQLXML 관리되는 클래스)
+  href: executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md
+- name: 클라이언트 쪽에서 XML 처리(SQLXML 관리되는 클래스)
+  href: processing-xml-on-the-client-side-sqlxml-managed-classes.md
+- name: SQLXML 관리되는 클래스 - SqlXmlAdapter 개체
+  href: sqlxml-managed-classes-sqlxmladapter-object.md
+- name: SQLXML 관리되는 클래스 - SqlXmlCommand 개체
+  href: sqlxml-managed-classes-sqlxmlcommand-object.md
+- name: SQLXML 관리되는 클래스 - SqlXmlParameter 개체
+  href: sqlxml-managed-classes-sqlxmlparameter-object.md

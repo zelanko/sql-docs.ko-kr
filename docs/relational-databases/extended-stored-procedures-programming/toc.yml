@@ -1,0 +1,20 @@
+- name: 데이터베이스 엔진 확장 저장 프로시저 프로그래밍
+  href: database-engine-extended-stored-procedures-programming.md
+- name: SQL Server에 확장 저장 프로시저 추가
+  href: adding-an-extended-stored-procedure-to-sql-server.md
+- name: 확장 저장 프로시저 만들기
+  href: creating-extended-stored-procedures.md
+- name: 확장 저장 프로시저의 실행 특징
+  href: execution-characteristics-of-extended-stored-procedures.md
+- name: 확장 저장 프로시저 작동 원리
+  href: how-extended-stored-procedures-work.md
+- name: SQL Server에 설치된 확장 저장 프로시저 쿼리
+  href: querying-extended-stored-procedures-installed-in-sql-server.md
+- name: SQL Server에서 확장 저장 프로시저 제거
+  href: removing-an-extended-stored-procedure-from-sql-server.md
+- name: 서버로 결과 집합 보내기(확장 저장 프로시저 API)
+  href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+- name: 유니코드 데이터 및 서버 코드 페이지
+  href: unicode-data-and-server-code-pages.md
+- name: 확장 저장 프로시저 DLL 언로드
+  href: unloading-an-extended-stored-procedure-dll.md

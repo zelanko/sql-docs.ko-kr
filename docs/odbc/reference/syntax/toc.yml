@@ -1,0 +1,260 @@
+- name: ODBC 참조
+  href: odbc-reference.md
+- name: 함수 요약
+  href: function-summary.md
+  items:
+    - name: 설치 관리자 DLL 함수 요약
+      href: installer-dll-function-summary.md
+    - name: ODBC 함수 요약
+      href: odbc-function-summary.md
+    - name: ODBC SPI(서비스 공급자 인터페이스) 요약
+      href: odbc-service-provider-interface-summary.md
+    - name: 설정 DLL 함수 요약
+      href: setup-dll-function-summary.md
+    - name: 변환 DLL 함수 요약
+      href: translation-dll-function-summary.md
+- name: ODBC API 참조
+  href: odbc-api-reference.md
+  items:
+    - name: SQLAllocConnect 함수
+      href: sqlallocconnect-function.md
+    - name: SQLAllocEnv 함수
+      href: sqlallocenv-function.md
+    - name: SQLAllocHandle 함수
+      href: sqlallochandle-function.md
+    - name: SQLAllocStmt 함수
+      href: sqlallocstmt-function.md
+    - name: SQLBindCol 함수
+      href: sqlbindcol-function.md
+    - name: SQLBindParameter 함수
+      href: sqlbindparameter-function.md
+    - name: SQLBrowseConnect 함수
+      href: sqlbrowseconnect-function.md
+    - name: SQLBulkOperations 함수
+      href: sqlbulkoperations-function.md
+    - name: SQLCancel 함수
+      href: sqlcancel-function.md
+    - name: SQLCancelHandle 함수
+      href: sqlcancelhandle-function.md
+    - name: SQLCloseCursor 함수
+      href: sqlclosecursor-function.md
+    - name: SQLColAttribute 함수(SQLColAttribute Function)
+      href: sqlcolattribute-function.md
+    - name: SQLColAttributes 함수
+      href: sqlcolattributes-function.md
+    - name: SQLColumnPrivileges 함수(SQLColumnPrivileges Function)
+      href: sqlcolumnprivileges-function.md
+    - name: SQLColumns 함수
+      href: sqlcolumns-function.md
+    - name: SQLCompleteAsync 함수
+      href: sqlcompleteasync-function.md
+    - name: SQLConnect 함수
+      href: sqlconnect-function.md
+    - name: SQLCopyDesc 함수
+      href: sqlcopydesc-function.md
+    - name: SQLDataSources 함수
+      href: sqldatasources-function.md
+    - name: SQLDescribeCol 함수
+      href: sqldescribecol-function.md
+    - name: SQLDescribeParam 함수(SQLDescribeParam Function)
+      href: sqldescribeparam-function.md
+    - name: SQLDisconnect 함수
+      href: sqldisconnect-function.md
+    - name: SQLDriverConnect 함수(SQLDriverConnect Function)
+      href: sqldriverconnect-function.md
+    - name: SQLDrivers 함수
+      href: sqldrivers-function.md
+    - name: SQLEndTran 함수(SQLEndTran Function)
+      href: sqlendtran-function.md
+    - name: SQLError 함수
+      href: sqlerror-function.md
+    - name: SQLExecDirect 함수
+      href: sqlexecdirect-function.md
+    - name: SQLExecute 함수
+      href: sqlexecute-function.md
+    - name: SQLExtendedFetch 함수
+      href: sqlextendedfetch-function.md
+    - name: SQLFetch 함수
+      href: sqlfetch-function.md
+    - name: SQLFetchScroll 함수(SQLFetchScroll Function)
+      href: sqlfetchscroll-function.md
+    - name: SQLForeignKeys 함수
+      href: sqlforeignkeys-function.md
+    - name: SQLFreeConnect 함수
+      href: sqlfreeconnect-function.md
+    - name: SQLFreeEnv 함수
+      href: sqlfreeenv-function.md
+    - name: SQLFreeHandle 함수
+      href: sqlfreehandle-function.md
+    - name: SQLFreeStmt 함수
+      href: sqlfreestmt-function.md
+    - name: SQLGetConnectAttr 함수(SQLGetConnectAttr Function)
+      href: sqlgetconnectattr-function.md
+    - name: SQLGetConnectOption 함수
+      href: sqlgetconnectoption-function.md
+    - name: SQLGetCursorName 함수(SQLGetCursorName Function)
+      href: sqlgetcursorname-function.md
+    - name: SQLGetData 함수(SQLGetData Function)
+      href: sqlgetdata-function.md
+    - name: SQLGetDescField 함수(SQLGetDescField Function)
+      href: sqlgetdescfield-function.md
+    - name: SQLGetDescRec 함수
+      href: sqlgetdescrec-function.md
+    - name: SQLGetDiagField 함수(SQLGetDiagField Function)
+      href: sqlgetdiagfield-function.md
+    - name: SQLGetDiagRec 함수
+      href: sqlgetdiagrec-function.md
+    - name: SQLGetEnvAttr 함수
+      href: sqlgetenvattr-function.md
+    - name: SQLGetFunctions 함수
+      href: sqlgetfunctions-function.md
+    - name: SQLGetInfo 함수
+      href: sqlgetinfo-function.md
+    - name: SQLGetStmtAttr 함수
+      href: sqlgetstmtattr-function.md
+    - name: SQLGetStmtOption 함수
+      href: sqlgetstmtoption-function.md
+    - name: SQLGetTypeInfo 함수(SQLGetTypeInfo Function)
+      href: sqlgettypeinfo-function.md
+    - name: SQLMoreResults 함수
+      href: sqlmoreresults-function.md
+    - name: SQLNativeSql 함수(SQLNativeSql Function)
+      href: sqlnativesql-function.md
+    - name: SQLNumParams 함수
+      href: sqlnumparams-function.md
+    - name: SQLNumResultCols 함수
+      href: sqlnumresultcols-function.md
+    - name: SQLParamData 함수
+      href: sqlparamdata-function.md
+    - name: SQLParamOptions 함수
+      href: sqlparamoptions-function.md
+    - name: SQLPrepare 함수
+      href: sqlprepare-function.md
+    - name: SQLPrimaryKeys 함수
+      href: sqlprimarykeys-function.md
+    - name: SQLProcedureColumns 함수(SQLProcedureColumns Function)
+      href: sqlprocedurecolumns-function.md
+    - name: SQLProcedures 함수
+      href: sqlprocedures-function.md
+    - name: SQLPutData 함수
+      href: sqlputdata-function.md
+    - name: SQLRowCount 함수(SQLRowCount Function)
+      href: sqlrowcount-function.md
+    - name: SQLSetConnectAttr 함수
+      href: sqlsetconnectattr-function.md
+    - name: SQLSetConnectOption 함수
+      href: sqlsetconnectoption-function.md
+    - name: SQLSetCursorName 함수
+      href: sqlsetcursorname-function.md
+    - name: SQLSetDescField 함수
+      href: sqlsetdescfield-function.md
+    - name: SQLSetDescRec 함수
+      href: sqlsetdescrec-function.md
+    - name: SQLSetEnvAttr 함수
+      href: sqlsetenvattr-function.md
+    - name: SQLSetParam 함수
+      href: sqlsetparam-function.md
+    - name: SQLSetPos 함수
+      href: sqlsetpos-function.md
+    - name: SQLSetScrollOptions 함수
+      href: sqlsetscrolloptions-function.md
+    - name: SQLSetStmtAttr 함수
+      href: sqlsetstmtattr-function.md
+    - name: SQLSetStmtOption 함수
+      href: sqlsetstmtoption-function.md
+    - name: SQLSpecialColumns 함수
+      href: sqlspecialcolumns-function.md
+    - name: SQLStatistics 함수
+      href: sqlstatistics-function.md
+    - name: SQLTablePrivileges 함수
+      href: sqltableprivileges-function.md
+    - name: SQLTables 함수
+      href: sqltables-function.md
+    - name: SQLTransact 함수
+      href: sqltransact-function.md
+- name: 설정 DLL API 참조
+  href: setup-dll-api-reference.md
+  items:
+    - name: ConfigDriver 함수
+      href: configdriver-function.md
+    - name: ConfigDSN 함수
+      href: configdsn-function.md
+    - name: ConfigTranslator 함수
+      href: configtranslator-function.md
+- name: 설치 관리자 DLL API 참조 함수
+  href: installer-dll-api-reference-function.md
+  items:
+    - name: SQLConfigDataSource 함수(SQLConfigDataSource Function)
+      href: sqlconfigdatasource-function.md
+    - name: SQLConfigDriver 함수
+      href: sqlconfigdriver-function.md
+    - name: SQLCreateDataSource 함수
+      href: sqlcreatedatasource-function.md
+    - name: SQLGetConfigMode 함수
+      href: sqlgetconfigmode-function.md
+    - name: SQLGetInstalledDrivers 함수
+      href: sqlgetinstalleddrivers-function.md
+    - name: SQLGetPrivateProfileString 함수
+      href: sqlgetprivateprofilestring-function.md
+    - name: SQLGetTranslator 함수
+      href: sqlgettranslator-function.md
+    - name: SQLInstallDriverEx 함수
+      href: sqlinstalldriverex-function.md
+    - name: SQLInstallDriverManager 함수
+      href: sqlinstalldrivermanager-function.md
+    - name: SQLInstallerError 함수
+      href: sqlinstallererror-function.md
+    - name: SQLInstallTranslator 함수
+      href: sqlinstalltranslator-function.md
+    - name: SQLInstallTranslatorEx 함수
+      href: sqlinstalltranslatorex-function.md
+    - name: SQLManageDataSources
+      href: sqlmanagedatasources.md
+    - name: SQLPostInstallerError 함수
+      href: sqlpostinstallererror-function.md
+    - name: SQLReadFileDSN 함수
+      href: sqlreadfiledsn-function.md
+    - name: SQLRemoveDefaultDataSource 함수
+      href: sqlremovedefaultdatasource-function.md
+    - name: SQLRemoveDriver 함수
+      href: sqlremovedriver-function.md
+    - name: SQLRemoveDriverManager 함수
+      href: sqlremovedrivermanager-function.md
+    - name: SQLRemoveDSNFromIni 함수
+      href: sqlremovedsnfromini-function.md
+    - name: SQLRemoveTranslator 함수
+      href: sqlremovetranslator-function.md
+    - name: SQLSetConfigMode 함수
+      href: sqlsetconfigmode-function.md
+    - name: SQLValidDSN 함수
+      href: sqlvaliddsn-function.md
+    - name: SQLWriteDSNToIni 함수
+      href: sqlwritedsntoini-function.md
+    - name: SQLWriteFileDSN 함수
+      href: sqlwritefiledsn-function.md
+    - name: SQLWritePrivateProfileString 함수
+      href: sqlwriteprivateprofilestring-function.md
+- name: 변환 DLL API 참조
+  href: translation-dll-api-reference.md
+  items:
+    - name: SQLDataSourceToDriver 함수
+      href: sqldatasourcetodriver-function.md
+    - name: SQLDriverToDataSource 함수
+      href: sqldrivertodatasource-function.md
+- name: ODBC SPI(서비스 공급자 인터페이스) 참조
+  href: odbc-service-provider-interface-spi-reference.md
+  items:
+    - name: SQLCleanupConnectionPoolID 함수
+      href: sqlcleanupconnectionpoolid-function.md
+    - name: SQLGetPoolID 함수
+      href: sqlgetpoolid-function.md
+    - name: SQLPoolConnect Function
+      href: sqlpoolconnect-function.md
+    - name: SQLRateConnection 함수
+      href: sqlrateconnection-function.md
+    - name: SQLSetConnectAttrForDbcInfo 함수
+      href: sqlsetconnectattrfordbcinfo-function.md
+    - name: SQLSetConnectInfo 함수
+      href: sqlsetconnectinfo-function.md
+    - name: SQLSetDriverConnectInfo 함수
+      href: installation-and-configuration-wwi-oltp.md

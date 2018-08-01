@@ -1,0 +1,10 @@
+- name: SQL Server 2014의 새로운 기능
+  href: what-s-new-in-sql-server-2016.md
+- name: 고가용성 솔루션 +
+  href: failover-clusters/high-availability-solutions-sql-server.md
+- name: SQL Server 2014의 버전별 계산 용량 제한
+  href: compute-capacity-limits-by-edition-of-sql-server.md
+- name: 버전 및 구성 요소
+  href: editions-and-components-of-sql-server-2016.md
+- name: 최대 용량 사양
+  href: maximum-capacity-specifications-for-sql-server.md

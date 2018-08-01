@@ -1,0 +1,16 @@
+- name: Microsoft ODBC(Open Database Connectivity)
+  href: microsoft-open-database-connectivity-odbc.md
+- name: 새로운 또는 업데이트된 아티클
+  href: new-updated-odbc.md
+- name: Microsoft ODBC 드라이버 +
+  href: ../odbc/microsoft/microsoft-supplied-odbc-drivers.md
+- name: ODBC 관리 +
+  href: ../odbc/admin/odbc-data-source-administrator.md
+- name: ODBC 참조 +
+  href: ../odbc/reference/introduction-to-odbc.md
+- name: ODBC 테스트
+  href: odbc-test.md
+- name: ODBCconf.exe
+  href: odbcconf-exe.md
+- name: ODBC 용어 설명
+  href: odbc-glossary.md

@@ -1,0 +1,22 @@
+- name: CLR 사용자 정의 형식
+  href: clr-user-defined-types.md
+- name: 사용자 정의 형식 액세스 - UDT 데이터 검색
+  href: accessing-user-defined-types-retrieving-udt-data.md
+- name: 사용자 정의 형식 액세스 - DataAdapters로 UDT 열 업데이트
+  href: accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
+- name: ADO.NET의 사용자 정의 형식 액세스
+  href: accessing-user-defined-types-in-ado-net.md
+- name: 사용자 정의 형식 만들기 - 코딩
+  href: creating-user-defined-types-coding.md
+- name: 사용자 정의 형식 만들기 - 요구 사항
+  href: creating-user-defined-types-requirements.md
+- name: 사용자 정의 형식 만들기
+  href: creating-user-defined-types.md
+- name: SQL Server의 사용자 정의 형식 등록
+  href: registering-user-defined-types-in-sql-server.md
+- name: 사용자 정의 형식 작업 - UDT 테이블 및 열 정의
+  href: working-with-user-defined-types-defining-udt-tables-and-columns.md
+- name: 사용자 정의 형식 작업 - UDT 데이터 조작
+  href: working-with-user-defined-types-manipulating-udt-data.md
+- name: SQL 서버의 사용자 정의 형식 작업
+  href: working-with-user-defined-types-in-sql-server.md

@@ -1,0 +1,407 @@
+- name: 데이터 흐름
+  href: data-flow.md
+- name: 원본 길잡이
+  href: source-assistant.md
+  items:
+    - name: 원본 길잡이를 사용하여 원본 추가
+      href: ../add-a-source-using-source-assistant.md
+    - name: 새 원본 추가 대화 상자
+      href: ../add-new-source-dialog-box.md
+- name: 대상 길잡이
+  href: destination-assistant.md
+  items:
+    - name: 대상 길잡이를 사용하여 대상 추가
+      href: ../add-a-destination-using-destination-assistant.md
+    - name: 새 대상 추가 대화 상자
+      href: ../add-new-destination-dialog-box.md
+- name: ADO.NET 원본
+  href: ado-net-source.md
+  items:
+    - name: ADO NET 원본 편집기(연결 관리자 페이지)
+      href: ../ado-net-source-editor-connection-manager-page.md
+    - name: ADO NET 원본 편집기(열 페이지)
+      href: ../ado-net-source-editor-columns-page.md
+    - name: ADO NET 원본 편집기(오류 출력 페이지)
+      href: ../ado-net-source-editor-error-output-page.md
+- name: ADO.NET 대상
+  href: ado-net-destination.md
+  items:
+    - name: ADO NET 대상 편집기(연결 관리자 페이지)
+      href: ../ado-net-destination-editor-connection-manager-page.md
+    - name: ADO NET 대상 편집기(매핑 페이지)
+      href: ../ado-net-destination-editor-mappings-page.md
+    - name: ADO NET 대상 편집기(오류 출력 페이지)
+      href: ../ado-net-destination-editor-error-output-page.md
+- name: ADO.NET 연결 관리자
+  href: ../connection-manager/ado-net-connection-manager.md
+  items:
+    - name: ADO.NET 연결 관리자 구성
+      href: ../configure-ado-net-connection-manager.md
+- name: ADO.NET 사용자 지정 속성
+  href: ado-net-custom-properties.md
+- name: ADO 연결 관리자
+  href: ../connection-manager/ado-connection-manager.md
+- name: CDC 흐름 구성 요소
+  href: cdc-flow-components.md
+  items:
+    - name: CDC 원본
+      href: cdc-source.md
+      items:
+        - name: CDC 원본 편집기(연결 관리자 페이지)
+          href: ../cdc-source-editor-connection-manager-page.md
+        - name: CDC 원본 편집기(열 페이지)
+          href: ../cdc-source-editor-columns-page.md
+        - name: CDC 원본 편집기(오류 출력 페이지)
+          href: ../cdc-source-editor-error-output-page.md
+        - name: CDC 원본 사용자 지정 속성
+          href: cdc-source-custom-properties.md
+        - name: CDC 원본을 사용하여 변경 데이터 추출
+          href: extract-change-data-using-the-cdc-source.md
+    - name: CDC 분할자
+      href: cdc-splitter.md
+    - name: 변경 유형에 따라 CDC 스트림 전송
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: 상태 변수 정의
+      href: define-a-state-variable.md
+- name: Excel 원본
+  href: excel-source.md
+  items:
+    - name: Excel 원본 편집기(연결 관리자 페이지)
+      href: ../excel-source-editor-connection-manager-page.md
+    - name: Excel 원본 편집기(열 페이지)
+      href: ../excel-source-editor-columns-page.md
+    - name: Excel 원본 편집기(오류 출력 페이지)
+      href: ../excel-source-editor-error-output-page.md
+- name: Excel 대상
+  href: excel-destination.md
+  items:
+    - name: Excel 대상 편집기(연결 관리자 페이지)
+      href: ../excel-destination-editor-connection-manager-page.md
+    - name: Excel 대상 편집기(매핑 페이지)
+      href: ../excel-destination-editor-mappings-page.md
+    - name: Excel 대상 편집기(오류 출력 페이지)
+      href: ../excel-destination-editor-error-output-page.md
+- name: Excel 연결 관리자
+  href: ../connection-manager/excel-connection-manager.md
+  items:
+    - name: Excel 연결 관리자 편집기
+      href: ../excel-connection-manager-editor.md
+- name: Excel 사용자 지정 속성
+  href: excel-custom-properties.md
+- name: 파일 연결 관리자
+  href: ../connection-manager/file-connection-manager.md
+  items:
+    - name: 파일 연결 관리자 편집기
+      href: ../file-connection-manager-editor.md
+    - name: 파일 연결 관리자 추가 대화 상자 UI 참조
+      href: ../connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+    - name: 열 유형 제안 대화 상자 UI 참조
+      href: ../connection-manager/suggest-column-types-dialog-box-ui-reference.md
+- name: 플랫 파일 원본
+  href: flat-file-source.md
+  items:
+    - name: 플랫 파일 원본 편집기(연결 관리자 페이지)
+      href: ../flat-file-source-editor-connection-manager-page.md
+    - name: 플랫 파일 원본 편집기(열 페이지)
+      href: ../flat-file-source-editor-columns-page.md
+    - name: 플랫 파일 원본 편집기(오류 출력 페이지)
+      href: ../flat-file-source-editor-error-output-page.md
+- name: 플랫 파일 대상
+  href: flat-file-destination.md
+  items:
+    - name: 플랫 파일 대상 편집기(연결 관리자 페이지)
+      href: ../flat-file-destination-editor-connection-manager-page.md
+    - name: 플랫 파일 대상 편집기(매핑 페이지)
+      href: ../flat-file-destination-editor-mappings-page.md
+- name: Flat File Connection Manager
+  href: ../connection-manager/flat-file-connection-manager.md
+  items:
+    - name: 플랫 파일 연결 관리자 편집기(미리 보기 페이지)
+      href: ../flat-file-connection-manager-editor-preview-page.md
+    - name: 플랫 파일 연결 관리자 편집기(고급 페이지)
+      href: ../flat-file-connection-manager-editor-advanced-page.md
+    - name: 플랫 파일 연결 관리자 편집기(열 페이지)
+      href: ../flat-file-connection-manager-editor-columns-page.md
+    - name: 플랫 파일 연결 관리자 편집기(일반 페이지)
+      href: ../flat-file-connection-manager-editor-general-page.md
+- name: 다중 플랫 파일 연결 관리자
+  href: ../connection-manager/multiple-flat-files-connection-manager.md
+  items:
+    - name: 다중 플랫 파일 연결 관리자 편집기(일반 페이지)
+      href: ../multiple-flat-files-connection-manager-editor-general-page.md
+    - name: 다중 플랫 파일 연결 관리자 편집기(열 페이지)
+      href: ../multiple-flat-files-connection-manager-editor-columns-page.md
+    - name: 다중 플랫 파일 연결 관리자 편집기(고급 페이지)
+      href: ../multiple-flat-files-connection-manager-editor-advanced-page.md
+    - name: 다중 플랫 파일 연결 관리자 편집기(미리 보기 페이지)
+      href: ../multiple-flat-files-connection-manager-editor-preview-page.md
+- name: 플랫 파일 사용자 지정 속성
+  href: flat-file-custom-properties.md
+- name: ODBC 흐름 구성 요소
+  href: odbc-flow-components.md
+  items:
+    - name: ODBC 대상
+      href: odbc-destination.md
+      items:
+        - name: ODBC 대상 편집기(오류 출력 페이지)
+          href: ../odbc-destination-editor-error-output-page.md
+        - name: ODBC 대상 편집기(매핑 페이지)
+          href: ../odbc-destination-editor-mappings-page.md
+        - name: ODBC 대상 편집기(연결 관리자 페이지)
+          href: ../odbc-destination-editor-connection-manager-page.md
+        - name: ODBC 대상을 사용하여 데이터 로드
+          href: load-data-by-using-the-odbc-destination.md
+        - name: ODBC Destination Custom Properties
+          href: odbc-destination-custom-properties.md
+    - name: ODBC 원본
+      href: odbc-source.md
+      items:
+        - name: ODBC 원본 편집기(오류 출력 페이지)
+          href: ../odbc-source-editor-error-output-page.md
+        - name: ODBC 원본 편집기(열 페이지)
+          href: ../odbc-source-editor-columns-page.md
+        - name: ODBC 원본 편집기(연결 관리자 페이지)
+          href: ../odbc-source-editor-connection-manager-page.md
+        - name: ODBC 원본을 사용하여 데이터 추출
+          href: extract-data-by-using-the-odbc-source.md
+        - name: ODBC Source Custom Properties
+          href: odbc-source-custom-properties.md
+- name: ODBC 연결 관리자
+  href: ../connection-manager/odbc-connection-manager.md
+  items:
+    - name: ODBC 연결 관리자 UI 참조
+      href: ../odbc-connection-manager-ui-reference.md
+- name: OLE DB 원본
+  href: ole-db-source.md
+  items:
+    - name: OLE DB 원본 편집기(연결 관리자 페이지)
+      href: ../ole-db-source-editor-connection-manager-page.md
+    - name: OLE DB 원본 편집기(열 페이지)
+      href: ../ole-db-source-editor-columns-page.md
+    - name: OLE DB 원본 편집기(오류 출력 페이지)
+      href: ../ole-db-source-editor-error-output-page.md
+    - name: OLE DB 원본을 사용하여 데이터 추출
+      href: extract-data-by-using-the-ole-db-source.md
+- name: OLE DB 대상
+  href: ole-db-destination.md
+  items:
+    - name: OLE DB 대상 편집기(연결 관리자 페이지)
+      href: ../ole-db-destination-editor-connection-manager-page.md
+    - name: OLE DB 대상 편집기(매핑 페이지)
+      href: ../ole-db-destination-editor-mappings-page.md
+    - name: OLE DB 대상 편집기(오류 출력 페이지)
+      href: ../ole-db-destination-editor-error-output-page.md
+    - name: OLE DB 대상을 사용하여 데이터 로드
+      href: load-data-by-using-the-ole-db-destination.md
+- name: OLE DB 연결 관리자
+  href: ../connection-manager/ole-db-connection-manager.md
+  items:
+    - name: OLE DB 연결 관리자 구성
+      href: ../configure-ole-db-connection-manager.md
+- name: OLE DB 사용자 지정 속성
+  href: ole-db-custom-properties.md
+- name: 원시 파일 원본
+  href: raw-file-source.md
+  items:
+    - name: 원시 파일 원본 편집기(연결 관리자 페이지)
+      href: ../raw-file-source-editor-connection-manager-page.md
+    - name: 원시 파일 원본 편집기(열 페이지)
+      href: ../raw-file-source-editor-columns-page.md
+- name: Raw File Destination
+  href: raw-file-destination.md
+  items:
+    - name: 원시 파일 대상 편집기(연결 관리자 페이지)
+      href: ../raw-file-destination-editor-connection-manager-page.md
+    - name: 원시 파일 대상 편집기(열 페이지)
+      href: ../raw-file-destination-editor-columns-page.md
+- name: 원시 파일 사용자 지정 속성
+  href: raw-file-custom-properties.md
+- name: 데이터 마이닝 모델 학습 대상
+  href: data-mining-model-training-destination.md
+  items:
+    - name: 데이터 마이닝 모델 학습 편집기(연결 탭)
+      href: ../data-mining-model-training-editor-connection-tab.md
+    - name: 데이터 마이닝 모델 학습 편집기(열 탭)
+      href: ../data-mining-model-training-editor-columns-tab.md
+    - name: 데이터 마이닝 모델 학습 대상 사용자 지정 속성
+      href: data-mining-model-training-destination-custom-properties.md
+- name: DataReader 대상
+  href: datareader-destination.md
+  items:
+    - name: DataReader 대상 사용자 지정 속성
+      href: datareader-destination-custom-properties.md
+- name: 차원 처리 대상
+  href: dimension-processing-destination.md
+  items:
+    - name: 차원 처리 대상 편집기(연결 관리자 페이지)
+      href: ../dimension-processing-destination-editor-connection-manager-page.md
+    - name: 차원 처리 대상 편집기(매핑 페이지)
+      href: ../dimension-processing-destination-editor-mappings-page.md
+    - name: 차원 처리 대상 편집기(고급 페이지)
+      href: ../dimension-processing-destination-editor-advanced-page.md
+    - name: 차원 처리 대상 사용자 지정 속성
+      href: dimension-processing-destination-custom-properies.md
+- name: 파티션 처리 대상
+  href: partition-processing-destination.md
+  items:
+    - name: 파티션 처리 대상 편집기(연결 관리자 페이지)
+      href: ../partition-processing-destination-editor-connection-manager-page.md
+    - name: 파티션 처리 대상 편집기(매핑 페이지)
+      href: ../partition-processing-destination-editor-mappings-page.md
+    - name: 파티션 처리 대상 편집기(고급 페이지)
+      href: ../partition-processing-destination-editor-advanced-page.md
+    - name: 파티션 처리 대상 사용자 지정 속성
+      href: partition-processing-destination-custom-properties.md
+- name: 레코드 집합 대상
+  href: recordset-destination.md
+  items:
+    - name: 레코드 집합 대상 사용
+      href: use-a-recordset-destination.md
+    - name: 레코드 집합 대상 사용자 지정 속성
+      href: recordset-destination-custom-properties.md
+- name: SQL Server Compact Edition 대상
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: SQL Server Compact Edition 대상 사용자 지정 속성
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server Compact Edition 연결 관리자
+  href: ../connection-manager/sql-server-compact-edition-connection-manager.md
+  items:
+    - name: SQL Server Compact Edition 연결 관리자 편집기(연결 페이지)
+      href: ../sql-server-compact-edition-connection-manager-editor-connection-page.md
+    - name: SQL Server Compact Edition 연결 관리자 편집기(모든 페이지)
+      href: ../sql-server-compact-edition-connection-manager-editor-all-page.md
+- name: SQL Server 대상
+  href: sql-server-destination.md
+  items:
+    - name: SQL 대상 편집기(연결 관리자 페이지)
+      href: ../sql-destination-editor-connection-manager-page.md
+    - name: SQL 대상 편집기(매핑 페이지)
+      href: ../sql-destination-editor-mappings-page.md
+    - name: SQL 대상 편집기(고급 페이지)
+      href: ../sql-destination-editor-advanced-page.md
+    - name: SQL Server 대상을 사용하여 데이터 대량 로드
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: SQL Server 대상 사용자 지정 속성
+      href: sql-server-destination-custom-properties.md
+- name: XML 원본
+  href: xml-source.md
+  items:
+    - name: XML 원본 편집기(연결 관리자 페이지)
+      href: ../xml-source-editor-connection-manager-page.md
+    - name: XML 원본 편집기(열 페이지)
+      href: ../xml-source-editor-columns-page.md
+    - name: XML 원본 편집기(오류 출력 페이지)
+      href: ../xml-source-editor-error-output-page.md
+    - name: XML 원본을 사용하여 데이터 추출
+      href: extract-data-by-using-the-xml-source.md
+    - name: XML 원본 사용자 지정 속성
+      href: xml-source-custom-properties.md
+- name: Integration Services 변환 +
+  href: transformations/integration-services-transformations.md
+- name: Integration Services 경로
+  href: integration-services-paths.md
+  items:
+    - name: 데이터 흐름 경로 편집기를 사용하여 경로 메타데이터 보기
+      href: ../view-path-metadata-in-the-data-flow-path-editor.md
+      items:
+        - name: 데이터 흐름 경로 편집기(일반 페이지)
+          href: ../data-flow-path-editor-general-page.md
+        - name: 데이터 흐름 경로 편집기(메타데이터 페이지)
+          href: ../data-flow-path-editor-metadata-page.md
+        - name: 데이터 흐름 경로 편집기(데이터 뷰어 페이지)
+          href: ../data-flow-path-editor-data-viewers-page.md
+    - name: 데이터 흐름 경로 편집기를 사용하여 경로의 속성 설정
+      href: ../set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md
+    - name: 경로에 구성 요소 연결
+      href: ../connect-components-with-paths.md
+    - name: 경로 속성
+      href: ../path-properties.md
+- name: 데이터 흐름의 데이터
+  href: data-in-data-flows.md
+  items:
+    - name: Integration Services 데이터 형식
+      href: integration-services-data-types.md
+    - name: 데이터 구문 분석
+      href: parsing-data.md
+      items:
+        - name: Fast Parse
+          href: ../fast-parse.md
+          items:
+            - name: 숫자 데이터 형식
+              href: ../numeric-data-formats.md
+            - name: 날짜 및 시간 형식
+              href: ../date-and-time-formats.md
+            - name: 빠른 구문 분석 설정
+              href: ../set-fast-parse.md
+        - name: Standard Parse
+          href: ../standard-parse.md
+    - name: 문자열 데이터 비교
+      href: comparing-string-data.md
+- name: 데이터 오류 처리
+  href: error-handling-in-data.md
+  items:
+    - name: 오류 출력 구성
+      href: ../configure-error-output.md
+- name: 공용 속성
+  href: ../common-properties.md
+  items:
+    - name: 데이터 흐름 구성 요소의 속성 설정
+      href: set-the-properties-of-a-data-flow-component.md
+- name: 데이터 흐름 탭
+  href: ../data-flow-tab.md
+- name: 데이터 흐름 태스크
+  href: ../control-flow/data-flow-task.md
+- name: 솔루션 탐색기
+  href: ../connection-manager/data-sources.md
+- name: 데이터 뷰어
+  href: data-viewer.md
+  items:
+    - name: 데이터 뷰어 구성(일반 탭)
+      href: ../configure-data-viewer-general-tab.md
+    - name: 데이터 뷰어 구성(세로 막대형 차트 탭)
+      href: ../configure-data-viewer-column-chart-tab.md
+    - name: 데이터 뷰어 구성(표 탭)
+      href: ../configure-data-viewer-grid-tab.md
+    - name: 데이터 뷰어 구성(히스토그램 탭)
+      href: ../configure-data-viewer-histogram-tab.md
+    - name: 데이터 뷰어 구성(산점도 탭)
+      href: ../configure-data-viewer-scatter-plot-tab.md
+- name: 데이터 흐름에서 구성 요소 추가 또는 삭제
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: 데이터 흐름의 구성 요소 연결
+  href: connect-components-in-a-data-flow.md
+- name: 열 참조 확인 편집기
+  href: resolve-column-reference-editor.md
+- name: 데이터 흐름 성능 기능
+  href: data-flow-performance-features.md
+- name: OData 연결 관리자
+  href: ../connection-manager/odata-connection-manager.md
+  items:
+    - name: OData 연결 관리자 편집기
+      href: ../odata-connection-manager-editor.md
+- name: OData 원본
+  href: odata-source.md
+  items:
+    - name: OData 원본 구성 요소 설치 및 제거
+      href: ../install-and-uninstall-odata-source-component.md
+    - name: '자습서: OData 원본 사용'
+      href: tutorial-using-the-odata-source.md
+    - name: 런타임에 OData 원본 쿼리 수정
+      href: modify-odata-source-query-at-runtime.md
+    - name: OData 원본 편집기(연결 페이지)
+      href: ../odata-source-editor-connection-page.md
+    - name: OData 원본 편집기(열 페이지)
+      href: ../odata-source-editor-columns-page.md
+    - name: OData 원본 편집기(오류 출력 페이지)
+      href: ../odata-source-editor-error-output-page.md
+    - name: OData 원본 속성
+      href: odata-source-properties.md
+- name: Azure Blob 원본
+  href: azure-blob-source.md
+- name: Azure Blob 대상
+  href: azure-blob-destination.md
+- name: Azure Data Lake Store 원본
+  href: ../azure-data-lake-store-source.md
+- name: Azure Data Lake Store 대상
+  href: ../azure-data-lake-store-destination.md

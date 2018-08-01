@@ -1,0 +1,33 @@
+- name: 개요
+  href: install-analysis-services.md
+- name: 파워 피벗 모드에서 Analysis Services 설치
+  href: install-analysis-services-in-power-pivot-mode.md
+  items:
+    - name: SharePoint용 파워 피벗 설치 확인
+      href: verify-a-power-pivot-for-sharepoint-installation.md
+    - name: SharePoint 2016용 파워 피벗의 최소 권한 구성 예제
+      href: power-pivot-minimum-privilege-example-sharepoint-2016.md
+    - name: SharePoint 2013용 파워 피벗의 최소 권한 구성 예
+      href: power-pivot-minimum-privilege-example-sharepoint-2013.md
+    - name: SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)
+      href: install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md
+    - name: SharePoint용 파워 피벗 추가 기능 설치 또는 제거(SharePoint 2013)
+      href: install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+    - name: 파워 피벗 구성 및 솔루션 배포(SharePoint 2016)
+      href: configure-power-pivot-and-deploy-solutions-sharepoint-2016.md
+    - name: 파워 피벗 구성 및 솔루션 배포(SharePoint 2013)
+      href: configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+    - name: SharePoint 2013으로 파워 피벗 마이그레이션
+      href: migrate-power-pivot-to-sharepoint-2013.md
+    - name: 통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
+      href: upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+    - name: Analysis Services 및 KCD(Kerberos 제한 위임) 구성
+      href: configure-analysis-services-and-kerberos-constrained-delegation-kcd.md
+    - name: '검사 목록: PowerShell을 사용하여 SharePoint용 PowerPivot 확인'
+      href: checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+    - name: SharePoint 2016에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포
+      href: deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md
+    - name: 다층 계층 SharePoint 2016 팜에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포
+      href: deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md
+- name: '클라이언트 라이브러리(AMO, ADOMD.NET, MSOLAP) 설치'
+  href: ../data-providers-used-for-analysis-services-connections.md

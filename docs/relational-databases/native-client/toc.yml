@@ -1,0 +1,20 @@
+- name: SQL Server Native Client 프로그래밍
+  href: sql-server-native-client-programming.md
+- name: 기능 +
+  href: ../../relational-databases/native-client/features/sql-server-native-client-features.md
+- name: 응용 프로그램 +
+  href: ../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
+- name: OLE DB +
+  href: ../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md
+- name: ODBC +
+  href: ../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md
+- name: SQL Server Native Client 추가 정보 찾기
+  href: finding-more-sql-server-native-client-information.md
+- name: SQL Server Native Client 오류 MSSQLSERVER_50000
+  href: sql-server-native-client-error-mssqlserver-50000.md
+- name: 'SQL Server Native Client '
+  href: sql-server-native-client.md
+- name: SQL Server Native Client의 시스템 요구 사항
+  href: system-requirements-for-sql-server-native-client.md
+- name: SQL Server Native Client를 사용하는 경우
+  href: when-to-use-sql-server-native-client.md

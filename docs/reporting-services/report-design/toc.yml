@@ -1,0 +1,490 @@
+- name: 보고서 계획
+  href: planning-a-report-report-builder.md
+- name: 보고서 디자인 팁
+  href: report-design-tips-report-builder-and-ssrs.md
+- name: 보고서 제작 개념
+  href: report-authoring-concepts-report-builder-and-ssrs.md
+  items:
+    - name: '보고서, 보고서 파트 및 보고서 정의'
+      href: reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+    - name: 데이터 영역 및 지도
+      href: data-regions-and-maps-report-builder-and-ssrs.md
+    - name: 보고서 매개 변수 개념
+      href: report-parameters-concepts-report-builder-and-ssrs.md
+- name: '테이블, 행렬 및 목록'
+  href: tables-matrices-and-lists-report-builder-and-ssrs.md
+  items:
+    - name: 테이블
+      href: tables-report-builder-and-ssrs.md
+    - name: 행렬 만들기
+      href: create-a-matrix-report-builder-and-ssrs.md
+    - name: 목록을 사용하여 송장 및 양식 만들기
+      href: create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
+    - name: 테이블릭스 데이터 영역
+      href: tablix-data-region-report-builder-and-ssrs.md
+      items:
+        - name: 테이블릭스 데이터 영역
+          href: tablix-data-region-areas-report-builder-and-ssrs.md
+        - name: '테이블릭스 데이터 영역 셀, 행 및 열'
+          href: tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
+    - name: 테이블릭스 데이터 영역에 표시하기 위한 데이터 준비
+      href: preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: 테이블릭스 데이터 영역에 데이터 추가
+      href: adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: 테이블릭스 데이터 영역의 유연성 살펴보기
+      href: exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: 보고서 페이지에서 테이블릭스 데이터 영역 표시 제어
+      href: controlling-the-tablix-data-region-display-on-a-report-page.md
+    - name: 행 및 열 머리글 제어
+      href: controlling-row-and-column-headings-report-builder-and-ssrs.md
+    - name: 그룹 이해
+      href: understanding-groups-report-builder-and-ssrs.md
+    - name: 재귀 계층 구조 그룹 생성
+      href: creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
+    - name: 세부 정보 그룹 추가
+      href: add-a-details-group-report-builder-and-ssrs.md
+    - name: 그룹 또는 테이블릭스 데이터 영역에 합계 추가
+      href: add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
+    - name: 셀 내 항목 변경
+      href: change-an-item-within-a-cell-report-builder-and-ssrs.md
+    - name: 행 높이 또는 열 너비 변경
+      href: change-row-height-or-column-width-report-builder-and-ssrs.md
+    - name: 열 삽입 또는 삭제
+      href: insert-or-delete-a-column-report-builder-and-ssrs.md
+    - name: 행 삽입 또는 삭제
+      href: insert-or-delete-a-row-report-builder-and-ssrs.md
+    - name: 데이터 영역의 셀 병합
+      href: merge-cells-in-a-data-region-report-builder-and-ssrs.md
+    - name: 재귀 계층 구조 그룹 만들기
+      href: create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
+    - name: 데이터 영역에서 그룹 추가 또는 삭제
+      href: add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
+    - name: 그룹과 함께 머리글 및 바닥글 표시
+      href: display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
+    - name: 단계별 보고서 만들기
+      href: create-a-stepped-report-report-builder-and-ssrs.md
+    - name: '테이블, 행렬 또는 목록 추가, 이동 또는 삭제'
+      href: add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+- name: 보고서 파트
+  href: report-parts-report-builder-and-ssrs.md
+  items:
+    - name: 보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS)
+      href: publish-and-republish-report-parts-report-builder-and-ssrs.md
+    - name: 보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
+      href: browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
+- name: 차트
+  href: charts-report-builder-and-ssrs.md
+  items:
+    - name: 보고서에 차트 추가(보고서 작성기 및 SSRS)
+      href: add-a-chart-to-a-report-report-builder-and-ssrs.md
+    - name: 차트 종류(보고서 작성기 및 SSRS)
+      href: chart-types-report-builder-and-ssrs.md
+      items:
+        - name: 차트 종류 변경(보고서 작성기 및 SSRS)
+          href: change-a-chart-type-report-builder-and-ssrs.md
+        - name: 영역형 차트(보고서 작성기 및 SSRS)
+          href: area-charts-report-builder-and-ssrs.md
+        - name: 가로 막대형 차트(보고서 작성기 및 SSRS)
+          href: bar-charts-report-builder-and-ssrs.md
+        - name: 세로 막대형 차트(보고서 작성기 및 SSRS)
+          href: column-charts-report-builder-and-ssrs.md
+        - name: 꺾은선형 차트(보고서 작성기 및 SSRS)
+          href: line-charts-report-builder-and-ssrs.md
+        - name: 원형 차트(보고서 작성기 및 SSRS)
+          href: pie-charts-report-builder-and-ssrs.md
+        - name: 극좌표형 차트(보고서 작성기 및 SSRS)
+          href: polar-charts-report-builder-and-ssrs.md
+        - name: 범위형 차트(보고서 작성기 및 SSRS)
+          href: range-charts-report-builder-and-ssrs.md
+        - name: 분산형 차트(보고서 작성기 및 SSRS)
+          href: scatter-charts-report-builder-and-ssrs.md
+        - name: 셰이프 차트(보고서 작성기 및 SSRS)
+          href: shape-charts-report-builder-and-ssrs.md
+        - name: 주식형 차트(보고서 작성기 및 SSRS)
+          href: stock-charts-report-builder-and-ssrs.md
+        - name: Reporting Services의 트리 맵 및 선버스트 차트
+          href: tree-map-and-sunburst-charts-in-reporting-services.md
+    - name: 차트 서식 지정(보고서 작성기 및 SSRS)
+      href: formatting-a-chart-report-builder-and-ssrs.md
+      items:
+        - name: 차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
+          href: formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: 여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)
+              href: specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
+            - name: 색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
+              href: define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
+            - name: 줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS)
+              href: highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
+        - name: 차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
+          href: formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: 축 레이블의 서식을 날짜 또는 통화로 지정(보고서 작성기 및 SSRS)
+              href: format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
+            - name: 차트의 레이블 위치 지정(보고서 작성기 및 SSRS)
+              href: position-labels-in-a-chart-report-builder-and-ssrs.md
+            - name: 축 간격 지정(보고서 작성기 및 SSRS)
+              href: specify-an-axis-interval-report-builder-and-ssrs.md
+            - name: 차트에서 여백 추가 또는 제거(보고서 작성기 및 SSRS)
+              href: add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
+            - name: 로그 눈금 간격 지정(보고서 작성기 및 SSRS)
+              href: specify-a-logarithmic-scale-report-builder-and-ssrs.md
+        - name: 차트 범례 - 서식 지정
+          href: chart-legend-formatting-report-builder.md
+        - name: 차트 범례 - 항목 숨기기
+          href: chart-legend-hide-items-report-builder.md
+        - name: 차트 범례 - 항목 텍스트 변경
+          href: chart-legend-change-item-text-report-builder.md
+        - name: 차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
+          href: formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: 계열에 도구 설명 표시(보고서 작성기 및 SSRS)
+              href: show-tooltips-on-a-series-report-builder-and-ssrs.md
+            - name: 원형 차트 외부에 데이터 요소 레이블 표시(보고서 작성기 및 SSRS)
+              href: display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
+            - name: 원형 차트에서 백분율 값 표시(보고서 작성기 및 SSRS)
+              href: display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
+        - name: '차트 효과 - 3D, 3D 가장자리 및 기타'
+          href: chart-effects-3d-bevel-and-other-report-builder.md
+        - name: 차트 효과 - 3D 효과 추가
+          href: chart-effects-add-3d-effects-report-builder.md
+        - name: '차트 효과 - 3D 가장자리, 볼록 또는 질감 추가'
+          href: chart-effects-add-bevel-emboss-or-texture-report-builder.md
+        - name: 차트에 테두리 프레임 추가(보고서 작성기 및 SSRS)
+          href: add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
+        - name: 원형 차트를 원형의 위쪽에서 시작(보고서 작성기 및 SSRS)
+          href: start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
+    - name: 차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)
+      href: empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
+      items:
+        - name: 차트에 빈 요소 추가(보고서 작성기 및 SSRS)
+          href: add-empty-points-to-a-chart-report-builder-and-ssrs.md
+    - name: 차트에 데이터 범위가 여러 개 있는 계열 표시(보고서 작성기 및 SSRS)
+      href: displaying-a-series-with-multiple-data-ranges-on-a-chart.md
+      items:
+        - name: 차트에 배율 구분선 추가(보고서 작성기 및 SSRS)
+          href: add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
+    - name: 차트의 여러 계열(보고서 작성기 및 SSRS)
+      href: multiple-series-on-a-chart-report-builder-and-ssrs.md
+      items:
+        - name: 계열에 대한 차트 영역 지정(보고서 작성기 및 SSRS)
+          href: specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
+        - name: 보조 축에 데이터 표시(보고서 작성기 및 SSRS)
+          href: plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
+    - name: 동일한 데이터 집합에 여러 데이터 영역 연결(보고서 작성기 및 SSRS)
+      href: linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
+      items:
+        - name: 행렬 및 차트에 같은 데이터 표시
+          href: display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
+    - name: 차트에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS)
+      href: add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
+    - name: 차트에 이동 평균 추가(보고서 작성기 및 SSRS)
+      href: add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
+    - name: 원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
+      href: collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
+    - name: 차트 문제 해결(보고서 작성기 및 SSRS)
+      href: troubleshoot-charts-report-builder-and-ssrs.md
+- name: 스파크라인 및 데이터 막대
+  href: sparklines-and-data-bars-report-builder-and-ssrs.md
+  items:
+    - name: 스파크라인 및 데이터 막대 추가(보고서 작성기 및 SSRS)
+      href: add-sparklines-and-data-bars-report-builder-and-ssrs.md
+    - name: 테이블 또는 행렬에서 차트의 데이터 정렬(보고서 작성기 및 SSRS)
+      href: align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
+- name: 계기
+  href: gauges-report-builder-and-ssrs.md
+  items:
+    - name: 계기의 눈금 서식 지정
+      href: formatting-scales-on-a-gauge-report-builder-and-ssrs.md
+    - name: 계기의 포인터 서식 지정
+      href: formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
+    - name: 계기에서 범위 서식 지정
+      href: formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
+    - name: 보고서에 계기 추가
+      href: add-a-gauge-to-a-report-report-builder-and-ssrs.md
+    - name: 계기의 최소값 또는 최대값 설정
+      href: set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
+- name: 표시기
+  href: indicators-report-builder-and-ssrs.md
+  items:
+    - name: 표시기 추가 또는 삭제
+      href: add-or-delete-an-indicator-report-builder-and-ssrs.md
+    - name: 표시기 아이콘 및 표시기 집합 변경
+      href: change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
+    - name: 단위 설정 및 구성
+      href: set-and-configure-measurement-units-report-builder-and-ssrs.md
+    - name: 동기화 범위 설정
+      href: set-synchronization-scope-report-builder-and-ssrs.md
+    - name: 식을 사용하여 표시기 크기 지정
+      href: specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
+    - name: 계기 창에 표시기 및 계기 포함
+      href: include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
+- name: 맵
+  href: maps-report-builder-and-ssrs.md
+  items:
+    - name: 지도 보고서 계획
+      href: plan-a-map-report-report-builder-and-ssrs.md
+    - name: 지도 마법사 및 지도 계층 마법사
+      href: map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
+    - name: 지도 또는 지도 계층의 데이터 및 표시 사용자 지정
+      href: customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
+    - name: '규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경'
+      href: vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
+    - name: '지도 또는 지도 계층 추가, 변경 또는 삭제'
+      href: add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
+    - name: '지도 범례, 색 눈금 및 관련 규칙 변경'
+      href: change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
+    - name: 지도에 사용자 지정 위치 추가
+      href: add-custom-locations-to-a-map-report-builder-and-ssrs.md
+    - name: '보고서 문제 해결: 지도 보고서'
+      href: troubleshoot-reports-map-reports-report-builder-and-ssrs.md
+- name: '이미지, 입력란, 사각형 및 선'
+  href: images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+  items:
+    - name: 입력란(보고서 작성기 및 SSRS)
+      href: text-boxes-report-builder-and-ssrs.md
+      items:
+        - name: '입력란 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)'
+          href: add-move-or-delete-a-text-box-report-builder-and-ssrs.md
+        - name: 입력란 방향 설정(보고서 작성기 및 SSRS)
+          href: set-text-box-orientation-report-builder-and-ssrs.md
+        - name: 입력란을 늘리거나 줄이도록 허용(보고서 작성기 및 SSRS)
+          href: allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
+    - name: 사각형 및 선(보고서 작성기 및 SSRS)
+      href: rectangles-and-lines-report-builder-and-ssrs.md
+      items:
+        - name: 사각형 또는 컨테이너 추가(보고서 작성기 및 SSRS)
+          href: add-a-rectangle-or-container-report-builder-and-ssrs.md
+        - name: 선 추가 및 수정(보고서 작성기 및 SSRS)
+          href: add-and-modify-a-line-report-builder-and-ssrs.md
+        - name: 보고서에 테두리 추가(보고서 작성기 및 SSRS)
+          href: add-a-border-to-a-report-report-builder-and-ssrs.md
+    - name: 이미지(보고서 작성기 및 SSRS)
+      href: images-report-builder-and-ssrs.md
+      items:
+        - name: 외부 이미지 추가(보고서 작성기 및 SSRS)
+          href: add-an-external-image-report-builder-and-ssrs.md
+        - name: 보고서에 이미지 포함(보고서 작성기 및 SSRS)
+          href: embed-an-image-in-a-report-report-builder-and-ssrs.md
+        - name: 배경 이미지 추가(보고서 작성기 및 SSRS)
+          href: add-a-background-image-report-builder-and-ssrs.md
+        - name: 데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS)
+          href: add-a-data-bound-image-report-builder-and-ssrs.md
+- name: 보고서 항목 서식 지정
+  href: formatting-report-items-report-builder-and-ssrs.md
+  items:
+    - name: 텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
+      href: formatting-text-and-placeholders-report-builder-and-ssrs.md
+      items:
+        - name: 입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS)
+          href: format-text-in-a-text-box-report-builder-and-ssrs.md
+    - name: 보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
+      href: importing-html-into-a-report-report-builder-and-ssrs.md
+      items:
+        - name: 보고서에 HTML 추가(보고서 작성기 및 SSRS)
+          href: add-html-into-a-report-report-builder-and-ssrs.md
+    - name: 숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
+      href: formatting-numbers-and-dates-report-builder-and-ssrs.md
+    - name: '선, 색 및 이미지 서식 지정(보고서 작성기 및 SSRS)'
+      href: formatting-lines-colors-and-images-report-builder-and-ssrs.md
+    - name: 보고서 또는 입력란에 대한 로캘 설정
+      href: set-the-locale-for-a-report-or-text-box-reporting-services.md
+- name: 보고서 매개 변수
+  href: report-parameters-report-builder-and-report-designer.md
+  items:
+    - name: '보고서 매개 변수 추가, 변경 또는 삭제'
+      href: add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
+    - name: '보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제'
+      href: add-change-or-delete-available-values-for-a-report-parameter.md
+    - name: '보고서 매개 변수의 기본값 추가, 변경 또는 삭제'
+      href: add-change-or-delete-default-values-for-a-report-parameter.md
+    - name: 보고서 매개 변수의 순서 변경
+      href: change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
+    - name: 보고서에 연계 매개 변수 추가
+      href: add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
+    - name: 보고서에 다중 값 매개 변수 추가
+      href: add-a-multi-value-parameter-to-a-report.md
+    - name: 게시된 보고서에 매개 변수 설정
+      href: set-parameters-on-a-published-report-sharepoint-integrated-mode.md
+    - name: 보고서에 매개 변수 창 사용자 지정
+      href: customize-the-parameters-pane-in-a-report-report-builder.md
+- name: '데이터 필터링, 그룹화 및 정렬'
+  href: filter-group-and-sort-data-report-builder-and-ssrs.md
+  items:
+    - name: 그룹 식 예
+      href: group-expression-examples-report-builder-and-ssrs.md
+    - name: 필터 수식 예
+      href: filter-equation-examples-report-builder-and-ssrs.md
+    - name: '데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가'
+      href: add-dataset-filters-data-region-filters-and-group-filters.md
+    - name: 필터 추가
+      href: add-a-filter-report-builder-and-ssrs.md
+    - name: 데이터 영역의 데이터 정렬
+      href: sort-data-in-a-data-region-report-builder-and-ssrs.md
+    - name: 일반적으로 사용되는 필터
+      href: commonly-used-filters-report-builder-and-ssrs.md
+    - name: 그룹화 창
+      href: grouping-pane-report-builder.md
+- name: '드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역'
+  href: drillthrough-drilldown-subreports-and-nested-data-regions.md
+  items:
+    - name: 드릴스루 보고서(보고서 작성기 및 SSRS)
+      href: drillthrough-reports-report-builder-and-ssrs.md
+      items:
+        - name: 보고서에 드릴스루 동작 추가(보고서 작성기 및 SSRS)
+          href: add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
+    - name: 하위 보고서(보고서 작성기 및 SSRS)
+      href: subreports-report-builder-and-ssrs.md
+      items:
+        - name: 하위 보고서 및 매개 변수 추가(보고서 작성기 및 SSRS)
+          href: add-a-subreport-and-parameters-report-builder-and-ssrs.md
+    - name: 드릴다운 동작(보고서 작성기 및 SSRS)
+      href: drilldown-action-report-builder-and-ssrs.md
+      items:
+        - name: 항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
+          href: add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
+    - name: 중첩된 데이터 영역(보고서 작성기 및 SSRS)
+      href: nested-data-regions-report-builder-and-ssrs.md
+    - name: 외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
+      href: specifying-paths-to-external-items-report-builder-and-ssrs.md
+- name: 식
+  href: expressions-report-builder-and-ssrs.md
+  items:
+    - name: 식 추가
+      href: add-an-expression-report-builder-and-ssrs.md
+    - name: 식 예
+      href: expression-examples-report-builder-and-ssrs.md
+    - name: 보고서에 사용되는 식
+      href: expression-uses-in-reports-report-builder-and-ssrs.md
+    - name: '합계, 집계 및 기본 제공 컬렉션의 식 범위'
+      href: expression-scope-for-totals-aggregates-and-built-in-collections.md
+    - name: 보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조
+      href: custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
+      items:
+        - name: 보고서에 어셈블리 참조 추가
+          href: add-an-assembly-reference-to-a-report-ssrs.md
+        - name: 보고서에 코드 추가
+          href: add-code-to-a-report-ssrs.md
+    - name: 식 참조
+      href: expression-reference-report-builder-and-ssrs.md
+      items:
+        - name: 보고서 작성기 함수 - 집계 함수 참조
+          href: report-builder-functions-aggregate-functions-reference.md
+          items:
+            - name: 보고서 작성기 함수 - 집계 함수
+              href: report-builder-functions-aggregate-function.md
+            - name: 보고서 작성기 함수 - Avg 함수
+              href: report-builder-functions-avg-function.md
+            - name: 보고서 작성기 함수 - Count 함수
+              href: report-builder-functions-count-function.md
+            - name: 보고서 작성기 함수 - CountDistinct 함수
+              href: report-builder-functions-countdistinct-function.md
+            - name: 보고서 작성기 함수 - CountRows 함수
+              href: report-builder-functions-countrows-function.md
+            - name: 보고서 작성기 함수 - First 함수
+              href: report-builder-functions-first-function.md
+            - name: 보고서 작성기 함수 - InScope 함수
+              href: report-builder-functions-inscope-function.md
+            - name: 보고서 작성기 함수 - Last 함수
+              href: report-builder-functions-last-function.md
+            - name: 보고서 작성기 함수 - Level 함수
+              href: report-builder-functions-level-function.md
+            - name: 보고서 작성기 함수 - Lookup 함수
+              href: report-builder-functions-lookup-function.md
+            - name: 보고서 작성기 함수 - LookupSet 함수
+              href: report-builder-functions-lookupset-function.md
+            - name: 보고서 작성기 함수 - Max 함수
+              href: report-builder-functions-max-function.md
+            - name: 보고서 작성기 함수 - Min 함수
+              href: report-builder-functions-min-function.md
+            - name: 보고서 작성기 함수 - Multilookup 함수
+              href: report-builder-functions-multilookup-function.md
+            - name: 보고서 작성기 함수 - Previous 함수
+              href: report-builder-functions-previous-function.md
+            - name: 보고서 작성기 함수 - RowNumber 함수
+              href: report-builder-functions-rownumber-function.md
+            - name: 보고서 작성기 함수 - RunningValue 함수
+              href: report-builder-functions-runningvalue-function.md
+            - name: 보고서 작성기 함수 - StDev 함수
+              href: report-builder-functions-stdev-function.md
+            - name: 보고서 작성기 함수 - StDevP 함수
+              href: report-builder-functions-stdevp-function.md
+            - name: 보고서 작성기 함수 - Sum 함수
+              href: report-builder-functions-sum-function.md
+            - name: 보고서 작성기 함수 - Union 함수
+              href: report-builder-functions-union-function.md
+            - name: 보고서 작성기 함수 - Var 함수
+              href: report-builder-functions-var-function.md
+            - name: 보고서 작성기 함수 - VarP 함수
+              href: report-builder-functions-varp-function.md
+        - name: 식의 데이터 형식
+          href: data-types-in-expressions-report-builder-and-ssrs.md
+        - name: 식의 상수
+          href: constants-in-expressions-report-builder-and-ssrs.md
+        - name: 식의 연산자
+          href: operators-in-expressions-report-builder-and-ssrs.md
+        - name: 식의 기본 제공 컬렉션
+          href: built-in-collections-in-expressions-report-builder.md
+          items:
+            - name: 기본 제공 컬렉션 - Globals 및 Users 참조
+              href: built-in-collections-built-in-globals-and-users-references-report-builder.md
+            - name: 기본 제공 컬렉션 - 매개 변수 컬렉션 참조
+              href: built-in-collections-parameters-collection-references-report-builder.md
+            - name: 기본 제공 컬렉션 - 데이터 집합 필드 컬렉션 참조
+              href: built-in-collections-dataset-fields-collection-references-report-builder.md
+            - name: 기본 제공 컬렉션 - DataSources 및 DataSets 참조
+              href: built-in-collections-datasources-and-datasets-references-report-builder.md
+            - name: 기본 제공 컬렉션 - 보고서 및 그룹 변수 참조
+              href: built-in-collections-report-and-group-variables-references-report-builder.md
+            - name: 기본 제공 컬렉션 - ReportItems 컬렉션 참조
+              href: built-in-collections-reportitems-collection-references-report-builder.md
+        - name: 보고서 모델 쿼리의 수식
+          href: formulas-in-report-model-queries-report-builder-and-ssrs.md
+- name: '대화형 정렬, 문서 구조 및 링크'
+  href: interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+  items:
+    - name: 대화형 정렬(보고서 작성기 및 SSRS)
+      href: interactive-sort-report-builder-and-ssrs.md
+      items:
+        - name: 테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
+          href: add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+    - name: URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
+      href: add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+    - name: 보고서에 책갈피 추가(보고서 작성기 및 SSRS)
+      href: add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+    - name: 문서 구조 만들기(보고서 작성기 및 SSRS)
+      href: create-a-document-map-report-builder-and-ssrs.md
+- name: 페이지 레이아웃 및 렌더링
+  href: page-layout-and-rendering-report-builder-and-ssrs.md
+  items:
+    - name: 렌더링 동작
+      href: rendering-behaviors-report-builder-and-ssrs.md
+      items:
+        - name: 데이터 영역 렌더링
+          href: rendering-data-regions-report-builder-and-ssrs.md
+        - name: 보고서 항목 렌더링
+          href: rendering-report-items-report-builder-and-ssrs.md
+        - name: 데이터 렌더링
+          href: rendering-data-report-builder-and-ssrs.md
+    - name: Reporting Services의 페이지 매김
+      href: pagination-in-reporting-services-report-builder-and-ssrs.md
+    - name: 페이지 머리글 및 바닥글
+      href: page-headers-and-footers-report-builder-and-ssrs.md
+    - name: '페이지 나누기, 머리글, 열 및 행 제어'
+      href: controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+    - name: 페이지 나누기 추가
+      href: add-a-page-break-report-builder-and-ssrs.md
+    - name: 여러 페이지에 행 및 열 머리글 표시
+      href: display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+    - name: 페이지 머리글/바닥글 추가 또는 제거
+      href: add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+    - name: 보고서를 스크롤할 때 머리글 계속 표시
+      href: keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+    - name: 페이지 번호 또는 기타 보고서 속성 표시
+      href: display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+    - name: 첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기
+      href: hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+- name: 보고서 디자이너의 보고서 파트
+  href: report-parts-in-report-designer-ssrs.md
+- name: 보고서 파트 관리
+  href: managing-report-parts.md

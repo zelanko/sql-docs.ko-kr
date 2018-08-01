@@ -1,0 +1,247 @@
+- name: Tools
+  href: reporting-services-tools.md
+- name: '자습서: Reporting Services 도구 찾기 및 시작 방법'
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+- name: SQL Server Data Tools의 Reporting Services
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+    - name: 보고서 디자이너로 보고서 디자인
+      href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+      items:
+        - name: 보고서 프로젝트에 새 보고서 또는 기존 보고서 추가
+          href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+        - name: Microsoft Access에서 보고서 가져오기
+          href: ../import-reports-from-microsoft-access-reporting-services.md
+          items:
+            - name: 지원되는 Access 보고서 기능
+              href: ../supported-access-report-features-ssrs.md
+        - name: 보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구
+          href: ../report-data/query-design-tools-ssrs.md
+    - name: SQL Server Data Tools의 배포 및 버전 지원
+      href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+    - name: SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
+      href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+    - name: 배포 속성 설정
+      href: set-deployment-properties-reporting-services.md
+    - name: 보고서 디자이너에서 보고서 데이터 창 도킹
+      href: dock-the-report-data-pane-in-report-designer-ssrs.md
+    - name: 보고서 마법사 도움말
+      href: ../report-wizard-help.md
+      items:
+        - name: 보고서 마법사 시작
+          href: ../welcome-to-the-report-wizard.md
+        - name: 데이터 원본 선택
+          href: ../select-the-data-source.md
+        - name: 쿼리 디자인
+          href: ../design-the-query.md
+        - name: 쿼리 작성기
+          href: ../query-builder-report-wizard.md
+        - name: 보고서 유형 선택
+          href: ../select-the-report-type.md
+        - name: 테이블 디자인
+          href: ../design-the-table-report-wizard.md
+        - name: 행렬 디자인
+          href: ../design-the-matrix.md
+        - name: 테이블 레이아웃 선택
+          href: ../choose-the-table-layout.md
+        - name: 테이블 스타일 선택 또는 행렬 스타일 선택
+          href: ../choose-the-table-style-or-choose-the-matrix-style.md
+        - name: 배포 위치 선택
+          href: ../choose-the-deployment-location.md
+        - name: 보고서 마법사 완료
+          href: ../complete-the-report-wizard.md
+    - name: 보고서 디자이너 F1 도움말
+      href: report-designer-f1-help.md
+      items:
+        - name: 문서 개요
+          href: document-outline.md
+        - name: 디자인 뷰
+          href: design-view.md
+        - name: 미리 보기 뷰
+          href: preview-view.md
+        - name: 그룹화 창
+          href: grouping-pane.md
+        - name: 프로젝트 속성 페이지 대화 상자
+          href: project-property-pages-dialog-box.md
+        - name: 참조 추가 대화 상자
+          href: ../add-reference-dialog-box.md
+        - name: 열 표시 유형 대화 상자
+          href: ../column-visibility-dialog-box.md
+        - name: 그룹 삭제 대화 상자
+          href: ../delete-group-dialog-box.md
+        - name: 열 삭제 대화 상자
+          href: ../delete-columns-dialog-box.md
+        - name: 행 삭제 대화 상자
+          href: ../delete-rows-dialog-box.md
+        - name: Reporting Services 로그인 대화 상자(SSRS)
+          href: reporting-services-login-dialog-box-ssrs.md
+        - name: 행 표시 유형 대화 상자
+          href: ../row-visibility-dialog-box.md
+- name: SQL Server Management Studio의 Reporting Services
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+    - name: 보고서 서버 속성 설정
+      href: set-report-server-properties-management-studio.md
+    - name: 항목 삭제
+      href: delete-an-item-management-studio.md
+    - name: Management Studio에서 보고서 서버에 연결
+      href: connect-to-a-report-server-in-management-studio.md
+    - name: Management Studio의 보고서 서버 F1 도움말
+      href: report-server-in-management-studio-f1-help.md
+      items:
+        - name: 보고서 서버 작업 취소
+          href: cancel-report-server-jobs-management-studio.md
+        - name: 카탈로그 항목 삭제
+          href: delete-catalog-items-management-studio.md
+        - name: 작업 속성
+          href: job-properties-management-studio.md
+        - name: 새 공유 일정
+          href: new-shared-schedule-management-studio.md
+        - name: 새 시스템 역할
+          href: new-system-role-management-studio.md
+        - name: 새 사용자 역할
+          href: new-user-role-management-studio.md
+        - name: 일정 속성(일반 페이지)
+          href: schedule-properties-general-page.md
+        - name: 일정 속성(보고서 페이지)
+          href: schedule-properties-reports-page.md
+        - name: 서버 속성(일반 페이지)
+          href: report-server-properties-general-page.md
+        - name: 서버 속성(실행 페이지)
+          href: server-properties-execution-page.md
+        - name: 서버 속성(기록 페이지)
+          href: server-properties-history-page.md
+        - name: 서버 속성(로깅 페이지)
+          href: server-properties-logging-page.md
+        - name: 서버 속성(보안 페이지)
+          href: server-properties-security-page-reporting-services.md
+        - name: 서버 속성(고급 페이지)
+          href: server-properties-advanced-page-reporting-services.md
+        - name: 시스템 역할 속성
+          href: system-role-properties-management-studio.md
+        - name: 사용자 역할 속성
+          href: user-role-properties-management-studio.md
+- name: 보고서 작성기
+  href: report-builder-authoring-environment-ssrs.md
+- name: 보고서 관리자(SSRS 기본 모드)
+  href: ../report-manager-ssrs-native-mode.md
+  items:
+    - name: 보고서 관리자 F1 도움말
+      href: ../report-manager-f1-help.md
+      items:
+        - name: 캐시 새로 고침 옵션
+          href: ../cache-refresh-options-report-manager.md
+        - name: '캐싱 페이지, 공유 데이터 집합'
+          href: ../caching-page-shared-datasets-report-manager.md
+        - name: 링크 선택 페이지
+          href: ../choose-link-page-report-manager.md
+        - name: 항목 위치 선택 페이지
+          href: ../choose-item-location-page-report-manager.md
+        - name: 클릭 광고 보고서 페이지
+          href: ../clickthrough-reports-page-report-manager.md
+        - name: 내용 페이지
+          href: ../contents-page-report-manager.md
+        - name: 데이터 기반 구독 만들기 페이지
+          href: ../create-data-driven-subscription-page-report-manager.md
+        - name: 데이터 원본 선택 페이지
+          href: ../data-source-selection-page-report-manager.md
+        - name: 데이터 원본 속성 페이지
+          href: ../data-sources-properties-page-report-manager.md
+        - name: 종속 항목 페이지
+          href: ../dependent-items-page-report-manager.md
+        - name: 오류 페이지
+          href: ../error-page-report-manager.md
+        - name: 실행 속성 페이지
+          href: ../processing-options-properties-page-report-manager.md
+        - name: '일반 속성 페이지, 폴더'
+          href: ../general-properties-page-folders-report-manager.md
+        - name: '일반 속성 페이지, 모델'
+          href: ../general-properties-page-models-report-manager.md
+        - name: '일반 속성 페이지, 보고서 파트'
+          href: ../general-properties-page-report-parts-report-manager.md
+        - name: '일반 속성 페이지, 보고서'
+          href: ../general-properties-page-reports-report-manager.md
+        - name: '일반 속성 페이지, 리소스'
+          href: ../general-properties-page-resources-report-manager.md
+        - name: '일반 속성 페이지, 공유 데이터 원본'
+          href: ../general-properties-page-shared-data-sources-report-manager.md
+        - name: '일반 속성 페이지, 공유 데이터 집합'
+          href: ../general-properties-page-shared-datasets-report-manager.md
+        - name: 스냅숏 옵션 속성 페이지
+          href: ../snapshot-options-properties-page-report-manager.md
+        - name: 모델 항목 보안 페이지
+          href: ../model-item-security-page-report-manager.md
+        - name: 항목 이동 페이지
+          href: ../move-items-page-report-manager.md
+        - name: 내 구독 페이지
+          href: ../my-subscriptions-page-report-manager.md
+        - name: 새 데이터 원본 페이지
+          href: ../new-data-source-page-report-manager.md
+        - name: 새 폴더 페이지
+          href: ../new-folder-page-report-manager.md
+        - name: 링크된 새 보고서 페이지
+          href: ../new-linked-report-page-report-manager.md
+        - name: 새 모델 페이지
+          href: ../new-model-page-report-manager.md
+        - name: '새 역할 할당: 역할 할당 편집 페이지'
+          href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
+        - name: '새 일정: 일정 편집 페이지'
+          href: ../new-schedule-edit-schedule-page-report-manager.md
+        - name: 새 구독 또는 구독 편집 페이지
+          href: ../new-subscription-or-edit-subscription-page-report-manager.md
+        - name: '새 시스템 역할 할당: 시스템 역할 할당 편집 페이지'
+          href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
+        - name: 매개 변수 속성 페이지
+          href: ../parameters-properties-page-report-manager.md
+        - name: 보고서 기록 페이지
+          href: ../report-history-page-report-manager.md
+        - name: 검색 페이지
+          href: ../search-page-report-manager.md
+        - name: 보안 페이지(사이트 설정)
+          href: ../security-page-site-settings-report-manager.md
+        - name: '보안 속성 페이지, 항목'
+          href: ../security-properties-page-items-report-manager.md
+        - name: 일정 페이지
+          href: ../schedules-page-report-manager.md
+        - name: 공유 데이터 집합 선택 페이지(보고서 관리자)
+          href: ../shared-dataset-selection-page-report-manager.md
+        - name: 사이트 설정 페이지(보고서 관리자)
+          href: ../site-settings-page-report-manager.md
+        - name: 구독 페이지
+          href: ../subscriptions-page-report-manager.md
+        - name: 파일 업로드 페이지
+          href: ../upload-file-page-report-manager.md
+        - name: '보기 페이지, 보고서'
+          href: ../view-page-reports-report-manager.md
+        - name: '보기 페이지, 리소스'
+          href: ../view-page-resources-report-manager.md
+    - name: 보고서 관리자를 사용하여 모델 만들기
+      href: ../create-a-model-using-report-manager.md
+    - name: 보고서를 클릭 광고 보고서로 모델에 연결
+      href: ../link-a-report-to-a-model-as-a-clickthrough-report.md
+    - name: HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정
+      href: ../customize-style-sheets-for-html-viewer-and-report-manager.md
+- name: Reporting Services를 사용한 스크립팅 및 PowerShell
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+    - name: rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
+      href: script-with-the-rs-exe-utility-and-the-web-service.md
+    - name: Reporting Services 스크립트 파일 형식 지정
+      href: format-a-reporting-services-script-file.md
+    - name: Reporting Services 스크립트 파일 실행
+      href: run-a-reporting-services-script-file.md
+    - name: 배포 및 관리 태스크 스크립팅
+      href: script-deployment-and-administrative-tasks.md
+    - name: 보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe
+      href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+    - name: Reporting Services WMI 공급자 액세스
+      href: access-the-reporting-services-wmi-provider.md
+- name: 보고서 서버 명령 프롬프트 유틸리티
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+    - name: rskeymgmt 유틸리티
+      href: rskeymgmt-utility-ssrs.md
+    - name: rsconfig 유틸리티
+      href: rsconfig-utility-ssrs.md
+    - name: RS.exe 유틸리티(SSRS)
+      href: rs-exe-utility-ssrs.md

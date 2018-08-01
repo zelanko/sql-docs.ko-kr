@@ -1,0 +1,84 @@
+- name: 개요
+  href: sql-server-encryption.md
+- name: 암호화 계층
+  href: encryption-hierarchy.md
+- name: 암호화 알고리즘 선택
+  href: choose-an-encryption-algorithm.md
+- name: 투명한 데이터 암호화
+  href: transparent-data-encryption.md
+  items:
+    - name: 다른 SQL Server로 TDE 보호 데이터베이스 이동
+      href: move-a-tde-protected-database-to-another-sql-server.md
+    - name: EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정
+      href: enable-tde-on-sql-server-using-ekm.md
+- name: Azure SQL을 사용하는 TDE
+  href: transparent-data-encryption-azure-sql.md
+  items:
+    - name: BYOK(Bring Your Own Key)를 사용하는 TDE
+      href: transparent-data-encryption-byok-azure-sql.md
+    - name: BYOK를 사용하여 TDE 구성
+      href: transparent-data-encryption-byok-azure-sql-configure.md
+    - name: TDE BYOK 키 순환
+      href: transparent-data-encryption-byok-azure-sql-key-rotation.md
+    - name: TDE 보호기 제거
+      href: transparent-data-encryption-byok-azure-sql-remove-tde-protector.md
+- name: SQL Server 및 데이터베이스 암호화 키
+  href: sql-server-and-database-encryption-keys-database-engine.md
+  items:
+    - name: 인스턴스에서 해당 인스턴스를 위해 생성되는 SMK(
+      href: service-master-key.md
+    - name: EKM(확장 가능 키 관리)
+      href: extensible-key-management-ekm.md
+    - name: Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리
+      href: extensible-key-management-using-azure-key-vault-sql-server.md
+      items:
+        - name: Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계
+          href: setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+        - name: SQL 암호화 기능을 통해 SQL Server 커넥터 사용
+          href: use-sql-server-connector-with-sql-encryption-features.md
+        - name: 'SQL Server 커넥터, 부록'
+          href: sql-server-connector-maintenance-troubleshooting.md
+    - name: 서비스 마스터 키 백업
+      href: back-up-the-service-master-key.md
+    - name: 서비스 마스터 키 복원
+      href: restore-the-service-master-key.md
+    - name: 데이터베이스 마스터 키 만들기
+      href: create-a-database-master-key.md
+    - name: 데이터베이스 마스터 키 백업
+      href: back-up-a-database-master-key.md
+    - name: 데이터베이스 마스터 키 복원
+      href: restore-a-database-master-key.md
+    - name: 두 서버에서 동일한 대칭 키 만들기
+      href: create-identical-symmetric-keys-on-two-servers.md
+    - name: 데이터 열 암호화
+      href: encrypt-a-column-of-data.md
+- name: 항상 암호화
+  href: always-encrypted-database-engine.md
+  items:
+    - name: 상시 암호화 마법사
+      href: always-encrypted-wizard.md
+    - name: 상시 암호화를 위한 키 관리 개요
+      href: overview-of-key-management-for-always-encrypted.md
+      items:
+        - name: 열 마스터 키 만들기 및 저장(상시 암호화)
+          href: create-and-store-column-master-keys-always-encrypted.md
+    - name: SQL Server Management Studio를 사용하여 상시 암호화 구성
+      href: configure-always-encrypted-using-sql-server-management-studio.md
+    - name: PowerShell을 사용하여 상시 암호화 구성
+      href: configure-always-encrypted-using-powershell.md
+      items:
+        - name: PowerShell을 사용하여 상시 암호화 키 구성
+          href: configure-always-encrypted-keys-using-powershell.md
+        - name: PowerShell을 사용하여 상시 암호화 키 순환
+          href: rotate-always-encrypted-keys-using-powershell.md
+        - name: PowerShell을 사용하여 열 암호화 구성
+          href: configure-column-encryption-using-powershell.md
+    - name: 상시 암호화(클라이언트 개발)
+      href: always-encrypted-client-development.md
+      items:
+        - name: .NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 응용 프로그램 개발
+          href: develop-using-always-encrypted-with-net-framework-data-provider.md
+    - name: 상시 암호화되는 암호화
+      href: always-encrypted-cryptography.md
+    - name: 상시 암호화로 보호되는 중요한 데이터 마이그레이션
+      href: migrate-sensitive-data-protected-by-always-encrypted.md

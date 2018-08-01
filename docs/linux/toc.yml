@@ -1,0 +1,221 @@
+- name: Linux의 SQL Server 정보
+  href: sql-server-linux-overview.md
+- name: 개요
+  items:
+    - name: 릴리스 정보
+      href: sql-server-linux-release-notes.md
+    - name: 새로운 기능
+      href: sql-server-linux-whats-new.md
+    - name: 새로운 또는 업데이트된 아티클
+      href: new-updated-linux.md
+    - name: 버전 및 지원되는 기능
+      href: sql-server-linux-editions-and-components-2017.md
+    - name: FAQ
+      href: sql-server-linux-faq.md
+- name: 빠른 시작
+  items:
+    - name: 설치 및 연결 - Red Hat
+      href: quickstart-install-connect-red-hat.md
+    - name: 설치 및 연결 - SUSE
+      href: quickstart-install-connect-suse.md
+    - name: 설치 및 연결 - Ubuntu
+      href: quickstart-install-connect-ubuntu.md
+    - name: 실행 및 연결 - Docker
+      href: quickstart-install-connect-docker.md
+    - name: Azure에서 SQL VM 프로비전
+      href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json
+    - name: 실행 및 연결 - 클라우드
+      href: quickstart-install-connect-clouds.md
+- name: 자습서
+  items:
+    - name: 1_Windows에서 마이그레이션
+      href: sql-server-linux-migrate-restore-database.md
+    - name: 2_Oracle에서 마이그레이션
+      href: ../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json
+    - name: 3_Docker에서 마이그레이션
+      href: tutorial-restore-backup-in-sql-server-container.md
+    - name: 4_작업 만들기
+      href: sql-server-linux-run-sql-server-agent-job.md
+    - name: 5_AD 인증 설정
+      href: sql-server-linux-active-directory-authentication.md
+    - name: 6_장애 조치(Failover) 클러스터 인스턴스 만들기
+      href: sql-server-linux-shared-disk-cluster-configure.md
+      items:
+        - name: iSCSI
+          href: sql-server-linux-shared-disk-cluster-configure-iscsi.md
+        - name: NFS
+          href: sql-server-linux-shared-disk-cluster-configure-nfs.md
+        - name: SMB
+          href: sql-server-linux-shared-disk-cluster-configure-smb.md
+    - name: 7_Pacemaker 클러스터 배포
+      href: sql-server-linux-deploy-pacemaker-cluster.md
+    - name: 8_가용성 그룹 생성 및 구성
+      href: sql-server-linux-create-availability-group.md
+    - name: 9_고가용성을 위해 Kubernetes에서 구성
+      href: tutorial-sql-server-containers-kubernetes.md
+- name: 개념
+  items:
+    - name: Install
+      items:
+        - name: SQL Server 설치
+          href: sql-server-linux-setup.md
+        - name: SQL Server 도구 설치
+          href: sql-server-linux-setup-tools.md
+        - name: SQL Server 에이전트 설치
+          href: sql-server-linux-setup-sql-agent.md
+        - name: SQL Server 전체 텍스트 검색 설치
+          href: sql-server-linux-setup-full-text-search.md
+        - name: SQL Server Integration Services 설치
+          href: sql-server-linux-setup-ssis.md
+        - name: 리포지토리 구성
+          href: sql-server-linux-change-repo.md
+    - name: 구성
+      items:
+        - name: mssql-conf를 사용하여 구성
+          href: sql-server-linux-configure-mssql-conf.md
+        - name: 환경 변수
+          href: sql-server-linux-configure-environment-variables.md
+        - name: Docker 컨테이너 구성
+          href: sql-server-linux-configure-docker.md
+        - name: 고객 의견
+          href: sql-server-linux-customer-feedback.md
+    - name: 개발
+      href: sql-server-linux-develop-overview.md
+      items:
+        - name: 연결 라이브러리
+          href: sql-server-linux-develop-connectivity-libraries.md
+        - name: Visual Studio Code 사용
+          href: sql-server-linux-develop-use-vscode.md
+        - name: SSDT 사용
+          href: sql-server-linux-develop-use-ssdt.md
+    - name: 관리
+      href: sql-server-linux-management-overview.md
+      items:
+        - name: SSMS를 사용하여 관리
+          href: sql-server-linux-manage-ssms.md
+        - name: PowerShell을 사용하여 관리
+          href: sql-server-linux-manage-powershell.md
+        - name: 로그 전달 사용
+          href: sql-server-linux-use-log-shipping.md
+        - name: DB 메일 및 이메일 알림 사용
+          href: sql-server-linux-db-mail-sql-agent.md
+    - name: 마이그레이션
+      href: sql-server-linux-migrate-overview.md
+      items:
+        - name: Windows에서 BACPAC 내보내기 및 가져오기
+          href: sql-server-linux-migrate-ssms.md
+        - name: SQL Server Migration Assistant를 사용하여 마이그레이션
+          href: sql-server-linux-migrate-ssma.md
+        - name: bcp를 사용하여 대량 복사
+          href: sql-server-linux-migrate-bcp.md
+    - name: '추출, 변환, 로드'
+      href: sql-server-linux-migrate-ssis.md
+      items:
+        - name: 제한 사항 및 알려진 문제
+          href: sql-server-linux-ssis-known-issues.md
+        - name: SSIS 구성
+          href: sql-server-linux-configure-ssis.md
+        - name: SSIS 패키지 예약
+          href: sql-server-linux-schedule-ssis-packages.md
+    - name: 비즈니스 연속성 구성
+      href: sql-server-linux-business-continuity-dr.md
+      items:
+        - name: 가용성 기본 사항
+          href: sql-server-linux-ha-basics.md
+        - name: Backup 및 Restore 메서드
+          href: sql-server-linux-backup-and-restore-database.md
+          items:
+            - name: 가상 장치 인터페이스 - Linux
+              href: sql-server-linux-backup-vdi-specification.md
+        - name: 장애 조치(Failover) 클러스터 인스턴스
+          href: sql-server-linux-shared-disk-cluster-concepts.md
+          items:
+            - name: RHEL(Red Hat Enterprise Linux)
+              items:
+                - name: 구성(HA 추가 기능)
+                  href: sql-server-linux-shared-disk-cluster-red-hat-7-configure.md
+                - name: 운영(HA 추가 기능)
+                  href: sql-server-linux-shared-disk-cluster-red-hat-7-operate.md
+            - name: SLES(SUSE Linux Enterprise Server)
+              items:
+                - name: 구성(HA 추가 기능)
+                  href: sql-server-linux-shared-disk-cluster-sles-configure.md
+        - name: 가용성 그룹
+          href: sql-server-linux-availability-group-overview.md
+          items:
+            - name: 고가용성을 위해 만들기
+              href: sql-server-linux-availability-group-ha.md
+              items:
+                - name: AG 구성
+                  href: sql-server-linux-availability-group-configure-ha.md
+                - name: RHEL에서 구성
+                  href: sql-server-linux-availability-group-cluster-rhel.md
+                - name: SLES에서 구성
+                  href: sql-server-linux-availability-group-cluster-sles.md
+                - name: Ubuntu에서 구성
+                  href: sql-server-linux-availability-group-cluster-ubuntu.md
+                - name: '장애 조치 '
+                  href: sql-server-linux-availability-group-failover-ha.md
+                - name: 운영
+                  href: sql-server-linux-availability-group-operate-ha.md
+                - name: 가용성을 위해 다중 서브넷 구성
+                  href: sql-server-linux-configure-multiple-subnet.md
+            - name: 읽기 확장 전용으로 만들기
+              items:
+                - name: AG 구성
+                  href: sql-server-linux-availability-group-configure-rs.md
+            - name: 플랫폼 간 구성(Windows 및 Linux)
+              href: sql-server-linux-availability-group-cross-platform.md
+    - name: 보안
+      href: sql-server-linux-security-overview.md
+      items:
+        - name: 보안 기능 시작
+          href: sql-server-linux-security-get-started.md
+        - name: Active Directory 인증
+          href: sql-server-linux-active-directory-auth-overview.md
+        - name: 연결 암호화
+          href: sql-server-linux-encrypted-connections.md
+    - name: 성능
+      items:
+        - name: 최선의 구현 방법
+          href: sql-server-linux-performance-best-practices.md
+        - name: 성능 기능 시작
+          href: sql-server-linux-performance-get-started.md
+- name: 샘플
+  items:
+    - name: 무인 설치
+      items:
+        - name: RHEL(Red Hat Enterprise Linux)
+          href: sample-unattended-install-redhat.md
+        - name: SLES(SUSE Linux Enterprise Server)
+          href: sample-unattended-install-suse.md
+        - name: Ubuntu
+          href: sample-unattended-install-ubuntu.md
+- name: 리소스
+  items:
+    - name: 문제 해결
+      href: sql-server-linux-troubleshooting-guide.md
+    - name: 라이선스 사용 방법
+      href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
+    - name: SQL Server 설명서
+      href: ../sql-server/sql-server-technical-documentation.md
+    - name: 파트너
+      items:
+        - name: 모니터링
+          href: ../sql-server/partner-monitor-sql-server.md
+        - name: 고가용성 및 재해 복구
+          href: ../sql-server/partner-hadr-sql-server.md
+        - name: 관리
+          href: ../sql-server/partner-management-sql-server.md
+        - name: 개발
+          href: ../sql-server/partner-dev-sql-server.md
+    - name: DBA Stack Exchange
+      href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
+    - name: Stack Overflow
+      href: 'http://stackoverflow.com/questions/tagged/sql-server'
+    - name: MSDN 포럼
+      href: 'https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver'
+    - name: 사용자 의견 보내기
+      href: 'https://feedback.azure.com/forums/908035-sql-server'
+    - name: Reddit
+      href: 'https://www.reddit.com/r/SQLServer'

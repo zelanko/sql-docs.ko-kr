@@ -1,0 +1,101 @@
+- name: MDX를 사용하여 데이터 액세스
+  href: multidimensional-model-data-access-analysis-services-multidimensional-data.md
+- name: MDX를 사용하여 다차원 데이터 쿼리
+  href: querying-multidimensional-data-with-mdx.md
+- name: MDX의 주요 개념
+  href: key-concepts-in-mdx-analysis-services.md
+  items:
+    - name: AUTOEXIST
+      href: autoexists.md
+    - name: 계산 컨텍스트
+      href: calculation-context.md
+    - name: 하위 SELECT 및 하위 큐브의 계산 멤버
+      href: calculated-members-in-subselects-and-subcubes.md
+    - name: 큐브 공간
+      href: cube-space.md
+    - name: 쿼리의 하위 SELECT
+      href: subselects-in-queries.md
+    - name: 튜플
+      href: tuples.md
+    - name: 보이는 값 합계 및 보이지 않는 값 합계
+      href: visual-totals-and-non-visual-totals.md
+    - name: '멤버, 튜플 및 집합 작업(MDX)'
+      href: working-with-members-tuples-and-sets-mdx.md
+- name: MDX 쿼리 기본 사항
+  href: mdx-query-fundamentals-analysis-services.md
+  items:
+    - name: MDX 쿼리 - 기본 쿼리
+      href: mdx-query-the-basic-query.md
+    - name: MDX 쿼리 - EXISTING 키워드
+      href: mdx-query-existing-keyword.md
+    - name: MDX 쿼리 및 Slicer 축 - 쿼리 제한
+      href: mdx-query-and-slicer-axes-restricting-the-query.md
+    - name: MDX 쿼리 및 Slicer 축 - 쿼리 축의 내용 지정
+      href: mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+    - name: MDX 쿼리 및 Slicer 축 - Slicer 축의 내용 지정
+      href: mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+    - name: MDX 쿼리 및 Slicer 축 - 간단한 예에서 축 사용
+      href: mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+    - name: 쿼리에 큐브 컨텍스트 설정
+      href: establishing-cube-context-in-a-query-mdx.md
+    - name: MDX로 하위 큐브 작성
+      href: building-subcubes-in-mdx-mdx.md
+    - name: MDX 명명된 집합 - 빌드
+      href: mdx-named-sets-building-named-sets.md
+    - name: MDX 명명된 집합 - 쿼리 범위 집합 만들기
+      href: mdx-named-sets-creating-query-scoped-named-sets.md
+    - name: MDX 명명된 집합 - 세션 범위 집합 만들기
+      href: mdx-named-sets-creating-session-scoped-named-sets.md
+    - name: MDX 계산 멤버 - 계산 멤버 작성
+      href: mdx-calculated-members-building-calculated-members.md
+    - name: MDX 계산 멤버 - 쿼리 범위
+      href: mdx-calculated-members-query-scoped-calculated-members.md
+    - name: MDX 계산 멤버 - 세션 범위
+      href: mdx-calculated-members-session-scoped-calculated-members.md
+    - name: MDX 셀 계산 - 빌드
+      href: mdx-cell-calculations-build-cell-calculations.md
+    - name: MDX 셀 계산 - 쿼리 범위
+      href: mdx-cell-calculations-query-scoped-cell-calculations.md
+    - name: MDX 셀 계산 - 세션 범위
+      href: mdx-cell-calculations-session-scoped-calculated-cells.md
+    - name: MDX 빌드 측정값
+      href: mdx-building-measures.md
+    - name: MDX 멤버 속성
+      href: mdx-member-properties.md
+    - name: MDX 멤버 속성 - 내장
+      href: mdx-member-properties-intrinsic-member-properties.md
+    - name: MDX 멤버 속성 - 사용자 정의
+      href: mdx-member-properties-user-defined-member-properties.md
+    - name: MDX 셀 속성 - 사용
+      href: mdx-cell-properties-using-cell-properties.md
+    - name: MDX 셀 속성 - FORMAT_STRING 콘텐츠
+      href: mdx-cell-properties-format-string-contents.md
+    - name: MDX 셀 속성 - FORE_COLOR 및 BACK_COLOR 콘텐츠
+      href: mdx-cell-properties-fore-color-and-back-color-contents.md
+    - name: MDX 셀 속성 - FORMATTED_VALUE
+      href: mdx-cell-properties-formatted-value-property.md
+    - name: MDX 데이터 조작
+      href: mdx-data-manipulation-manipulating-data.md
+    - name: MDX 데이터 조작 - DRILLTHROUGH를 사용하여 원본 데이터 검색
+      href: mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+    - name: MDX 데이터 조작 - RollupChildren 함수
+      href: mdx-data-manipulation-rollupchildren-function.md
+    - name: MDX 데이터 조작 - 패스 및 계산 순서 이해
+      href: mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+    - name: MDX 데이터 수정
+      href: mdx-data-modification-modifying-data.md
+    - name: MDX 데이터 수정 - 큐브 쓰기 저장(Writeback) 사용
+      href: mdx-data-modification-using-cube-writebacks.md
+    - name: 변수 및 매개 변수 사용
+      href: using-variables-and-parameters-mdx.md
+- name: MDX 스크립팅 기본 사항
+  href: mdx-scripting-fundamentals-analysis-services.md
+  items:
+    - name: 기본 MDX 스크립트
+      href: the-basic-mdx-script-mdx.md
+    - name: 범위 및 컨텍스트 관리
+      href: managing-scope-and-context-mdx.md
+    - name: 오류 처리
+      href: error-handling-mdx.md
+    - name: 지원되는 MDX
+      href: supported-mdx-mdx.md

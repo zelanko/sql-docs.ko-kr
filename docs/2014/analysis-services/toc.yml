@@ -1,0 +1,484 @@
+- name: Analysis Services
+  href: analysis-services.md
+  items:
+    - name: What's New
+      href: what-s-new-in-analysis-services.md
+    - name: Analysis Services 이전 버전과의 호환성
+      href: analysis-services-backward-compatibility.md
+    - name: Analysis Services에서 사용되지 않는 기능
+      href: deprecated-analysis-services-features-in-sql-server-2014.md
+    - name: Analysis Services에서 지원되지 않는 기능
+      href: discontinued-analysis-services-functionality-in-sql-server-2014.md
+    - name: Analysis Services의 새로운 변경
+      href: breaking-changes-to-analysis-services-features-in-sql-server-2014.md
+    - name: Analysis Services의 동작 변경 내용
+      href: behavior-changes-to-analysis-services-features-in-sql-server-2014.md
+- name: Analysis Services 기능 및 태스크
+  href: analysis-services-features-and-tasks.md
+  items:
+    - name: 테이블 형식 및 다차원 솔루션 비교
+      href: comparing-tabular-and-multidimensional-solutions-ssas.md
+    - name: 도구 및 응용 프로그램
+      href: tools-and-applications-used-in-analysis-services.md
+- name: 인스턴스 관리
+  href: instances/analysis-services-instance-management.md
+  items:
+    - name: 설치 후 구성
+      href: instances/post-install-configuration-analysis-services.md
+      items:
+        - name: Windows 방화벽 구성
+          href: instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
+        - name: 서비스 계정 구성
+          href: instances/configure-service-accounts-analysis-services.md
+        - name: 관리자 권한 부여
+          href: instances/grant-server-admin-rights-to-an-analysis-services-instance.md
+        - name: 기본적으로 해제되어 있는 기능
+          href: instances/features-off-by-default-analysis-services.md
+        - name: SSMS의 서버 그룹
+          href: instances/register-an-analysis-services-instance-in-a-server-group.md
+        - name: 서버 모드 확인
+          href: instances/determine-the-server-mode-of-an-analysis-services-instance.md
+        - name: Analysis Services 인스턴스 이름 바꾸기
+          href: instances/rename-an-analysis-services-instance.md
+    - name: Analysis Services에 연결
+      href: instances/connect-to-analysis-services.md
+      items:
+        - name: 클라이언트 응용 프로그램에서 연결
+          href: instances/connect-from-client-applications-analysis-services.md
+        - name: '연결 문자열 속성 '
+          href: instances/connection-string-properties-analysis-services.md
+        - name: 인증 방법
+          href: instances/authentication-methodologies-supported-by-analysis-services.md
+        - name: Kerberos 인증
+          href: instances/configure-analysis-services-for-kerberos-constrained-delegation.md
+        - name: SPN 등록
+          href: instances/spn-registration-for-an-analysis-services-instance.md
+        - name: HTTP 액세스
+          href: instances/configure-http-access-to-analysis-services-on-iis-8-0.md
+        - name: 데이터 공급자
+          href: instances/data-providers-used-for-analysis-services-connections.md
+        - name: 사용자 및 세션 연결 끊기
+          href: instances/disconnect-users-and-sessions-on-analysis-services-server.md
+    - name: 서버 속성 구성
+      href: server-properties/server-properties-in-analysis-services.md
+      items:
+        - name: 데이터 마이닝 속성
+          href: server-properties/data-mining-properties.md
+        - name: 기능 속성
+          href: server-properties/feature-properties.md
+        - name: FileStore 속성
+          href: server-properties/filestore-properties.md
+        - name: 일반 속성
+          href: server-properties/general-properties.md
+        - name: 잠금 관리자 속성
+          href: server-properties/lock-manager-properties.md
+        - name: 로그 속성
+          href: server-properties/log-properties.md
+        - name: 메모리 속성
+          href: server-properties/memory-properties.md
+        - name: 네트워크 속성
+          href: server-properties/network-properties.md
+        - name: OLAP 속성
+          href: server-properties/olap-properties.md
+        - name: 보안 속성
+          href: server-properties/security-properties.md
+        - name: 스레드 풀 속성
+          href: server-properties/thread-pool-properties.md
+- name: Analysis Services 인스턴스 모니터
+  href: instances/monitor-an-analysis-services-instance.md
+  items:
+    - name: Analysis Services 추적 이벤트
+      href: trace-events/analysis-services-trace-events.md
+      items:
+        - name: Command Events 이벤트 범주
+          href: trace-events/command-events-event-category.md
+          items:
+            - name: Command Events 데이터 열
+              href: trace-events/command-events-data-columns.md
+        - name: Discover Events 이벤트 범주
+          href: trace-events/discover-events-event-category.md
+          items:
+            - name: Discover Events 데이터 열
+              href: trace-events/discover-events-data-columns.md
+        - name: Discover Server State 이벤트 범주
+          href: trace-events/discover-server-state-event-category.md
+          items:
+            - name: Discover Server State Events 데이터 열
+              href: trace-events/discover-server-state-events-data-columns.md
+        - name: Errors and Warnings 이벤트 범주
+          href: trace-events/errors-and-warnings-event-category.md
+          items:
+            - name: Errors and Warnings 데이터 열
+              href: trace-events/errors-and-warnings-events-data-columns.md
+        - name: File Load and Save 이벤트 범주
+          href: trace-events/file-load-and-save-event-category.md
+          items:
+            - name: File Load and Save 데이터 열
+              href: trace-events/file-load-and-save-data-columns.md
+        - name: 잠금 이벤트 범주
+          href: trace-events/lock-events-category.md
+          items:
+            - name: Lock 이벤트 데이터 열
+              href: trace-events/lock-events-data-columns.md
+        - name: Notification Events 이벤트 범주
+          href: trace-events/notification-events-event-category.md
+          items:
+            - name: Notification Events 데이터 열
+              href: trace-events/notification-events-data-columns.md
+        - name: Progress Reports 이벤트 범주
+          href: trace-events/progress-reports-event-category.md
+          items:
+            - name: Progress Reports 데이터 열
+              href: trace-events/progress-reports-data-columns.md
+        - name: Queries Events 범주
+          href: trace-events/queries-events-category.md
+          items:
+            - name: Queries Events 데이터 열
+              href: trace-events/queries-events-data-columns.md
+        - name: Query Processing 이벤트 범주
+          href: trace-events/query-processing-events-category.md
+          items:
+            - name: Query Processing 이벤트 데이터 열
+              href: trace-events/query-processing-events-data-columns.md
+        - name: Security Audit 이벤트 범주
+          href: trace-events/security-audit-event-category.md
+          items:
+            - name: Security Audit 데이터 열
+              href: trace-events/security-audit-data-columns.md
+        - name: Session Events 이벤트 범주
+          href: trace-events/session-events-event-category.md
+          items:
+            - name: Session Events 데이터 열
+              href: trace-events/session-events-data-columns.md
+    - name: Use SQL Server Profiler to Monitor Analysis Services
+      href: instances/use-sql-server-profiler-to-monitor-analysis-services.md
+      items:
+        - name: SQL Server 프로파일러를 사용한 Analysis Services 모니터링 소개
+          href: instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+        - name: 재생에 대한 프로파일러 추적 만들기(Analysis Services)
+          href: instances/create-profiler-traces-for-replay-analysis-services.md
+    - name: SQL Server 확장 이벤트(XEvent)를 사용하여 Analysis Services 모니터링
+      href: instances/monitor-analysis-services-with-sql-server-extended-events.md
+    - name: DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
+      href: instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+- name: 성능 카운터
+  href: instances/performance-counters-ssas.md
+- name: Analysis Services 캐시 지우기
+  href: instances/clear-the-analysis-services-caches.md
+- name: 스크립트 관리 태스크
+  href: script-administrative-tasks-in-analysis-services.md
+  items:
+    - name: Management Studio에서 스크립트 만들기
+      href: instances/create-analysis-services-scripts-in-management-studio.md
+    - name: SQL Server Management Studio에서 Analysis Services 템플릿 사용
+      href: instances/use-analysis-services-templates-in-sql-server-management-studio.md
+    - name: Management Studio의 Analysis Services 스크립트 프로젝트 사용
+      href: instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
+      href: instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: Analysis Services의 스크립팅
+      href: analysis-services-powershell.md
+    - name: SSIS를 사용하여 관리 태스크 자동화
+      href: instances/automate-analysis-services-administrative-tasks-with-ssis.md
+- name: 세계화 시나리오
+  href: globalization-scenarios-for-analysis-services-multiidimensional.md
+  items:
+    - name: '언어 및 데이터 정렬 '
+      href: languages-and-collations-analysis-services.md
+    - name: Translations
+      href: translations-analysis-services.md
+    - name: '통화 변환 '
+      href: currency-conversions-analysis-services.md
+    - name: 팁과 모범 사례
+      href: globalization-tips-and-best-practices-analysis-services.md
+- name: Analysis Services의 로깅
+  href: instances/log-operations-in-analysis-services.md
+- name: 테이블 형식 모델링 +
+  href: tabular-models/tabular-models-ssas.md
+- name: 다차원 모델링 +
+  href: multidimensional-models/multidimensional-models-ssas.md
+- name: 데이터 마이닝 +
+  href: data-mining/data-mining-ssas.md
+- name: SharePoint용 PowerPivot
+  href: power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+  items:
+    - name: 중앙 관리에서 PowerPivot 서버 관리 및 구성
+      href: power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
+    - name: PowerPivot 솔루션 배포
+      href: power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
+    - name: PowerPivot 서비스 응용 프로그램 만들기 및 구성
+      href: power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
+    - name: SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결
+      href: power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+    - name: 사이트 모음에 대해 PowerPivot 기능 통합 활성화
+      href: power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
+    - name: MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가
+      href: power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+    - name: PowerPivot 사이트에 대한 신뢰할 수 있는 위치 만들기
+      href: power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+    - name: PowerPivot 서비스 계정 구성
+      href: power-pivot-sharepoint/configure-power-pivot-service-accounts.md
+    - name: SharePoint 로그 파일 구성 및 보기
+      href: power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
+    - name: 디스크 공간 사용 구성
+      href: power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
+    - name: 최대 파일 업로드 크기 구성
+      href: power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+    - name: 구성 설정 참조
+      href: power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
+    - name: PowerPivot for SharePoint 서버 시작 또는 중지
+      href: power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
+    - name: Windows PowerShell을 사용하여 PowerPivot 구성
+      href: power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
+    - name: PowerPivot Configuration Tools
+      href: power-pivot-sharepoint/power-pivot-configuration-tools.md
+      items:
+        - name: SharePoint 2013용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
+          href: power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
+        - name: SharePoint 2010용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
+          href: configure-repair-powerpivot-sharepoint-2010.md
+    - name: PowerPivot Availability and Disaster Recovery (SQL Server 2014)
+      href: power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
+    - name: PowerPivot 인증 및 권한 부여
+      href: power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
+    - name: 상태 규칙 - 구성
+      href: power-pivot-sharepoint/configure-power-pivot-health-rules.md
+    - name: 상태 규칙 참조
+      href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
+    - name: PowerPivot 관리 대시보드 및 사용 데이터
+      href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
+    - name: PowerPivot 사용 데이터 컬렉션
+      href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
+      items:
+        - name: 사용 현황 데이터 수집 구성(SharePoint용 PowerPivot)
+          href: power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+    - name: PowerPivot 갤러리 만들기 및 사용자 지정
+      href: power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
+      items:
+        - name: PowerPivot 갤러리 사용
+          href: power-pivot-sharepoint/use-power-pivot-gallery.md
+        - name: PowerPivot 갤러리 삭제
+          href: power-pivot-sharepoint/delete-power-pivot-gallery.md
+    - name: PowerPivot 데이터 액세스
+      href: power-pivot-sharepoint/power-pivot-data-access.md
+    - name: PowerPivot 데이터 새로 고침
+      href: power-pivot-sharepoint/power-pivot-data-refresh.md
+      items:
+        - name: PowerPivot 데이터 새로 고침 기록 보기
+          href: power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
+        - name: PowerPivot Data Refresh with SharePoint 2013
+          href: power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
+        - name: 데이터 새로 고침 예약 및 Windows 인증을 지원하지 않는 데이터 원본(SharePoint용 PowerPivot)
+          href: power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
+        - name: SharePoint 2010에서 PowerPivot 데이터 새로 고침
+          href: powerpivot-data-refresh-with-sharepoint-2010.md
+        - name: SharePoint 2010에서 데이터 새로 고침
+          href: schedule-a-data-refresh-powerpivot-for-sharepoint.md
+        - name: 전용 데이터 새로 고침 또는 쿼리만 처리 구성
+          href: configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md
+        - name: PowerPivot 데이터 새로 고침을 위한 저장된 자격 증명 구성
+          href: configure-stored-credentials-data-refresh-powerpivot-sharepoint.md
+        - name: PowerPivot 무인 데이터 새로 고침 계정 구성
+          href: configure-unattended-data-refresh-account-powerpivot-sharepoint.md
+    - name: PowerPivot 데이터 피드
+      href: power-pivot-sharepoint/power-pivot-data-feeds.md
+      items:
+        - name: 데이터 피드 라이브러리 만들기 또는 사용자 지정
+          href: power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+        - name: PowerPivot 데이터 피드 사용
+          href: power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
+        - name: PowerPivot 데이터 피드 라이브러리 삭제
+          href: power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
+        - name: 데이터 피드 라이브러리에서 PowerPivot 데이터 피드 공유
+          href: power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: PowerPivot BI 의미 체계 모델 연결(.bism)
+      href: power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
+      items:
+        - name: 라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가
+          href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
+        - name: PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
+          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+        - name: 테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
+          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+        - name: Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용
+          href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+- name: 기술 참조
+  href: powershell/technical-reference-ssas.md
+- name: 오류 및 이벤트 참조(SharePoint용 PowerPivot)
+  href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
+  items:
+    - name: 외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
+      href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
+    - name: '''Microsoft.Data.Services'' 파일 또는 어셈블리를 로드할 수 없습니다.'
+      href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
+    - name: '''Microsoft.AnalysisServices.SharePoint.Integration'' 파일 또는 어셈블리를 로드할 수 없습니다.'
+      href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
+    - name: 통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다.
+      href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
+    - name: 데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
+      href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
+    - name: '메모, 도형 또는 기타 개체 기능은 브라우저에서 지원되지 않으며 표시되지 않거나 부분적으로만 표시될 수 있습니다.'
+      href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
+    - name: 통합 문서가 저장된 신뢰할 수 있는 위치에서 외부 데이터 연결을 허용하지 않습니다.
+      href: power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
+    - name: 이 통합 문서에는 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함되어 있습니다.
+      href: power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+    - name: 통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다.
+      href: power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
+- name: 사용자 인터페이스 참조
+  href: user-interface-reference-analysis-services.md
+  items:
+    - name: 다차원용 UI 마법사 +
+      href: ui-wizards-multidimensional/ui-wizards-multidimensional.md
+    - name: 다차원 분석을 위한 UI 디자이너 및 대화 상자 +
+      href: ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional.md
+    - name: 테이블 형식 분석을 위한 UI 디자이너 및 대화 상자 +
+      href: ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular.md
+    - name: 데이터 마이닝 분석을 위한 UI 디자이너 및 대화 상자 +
+      href: ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining.md
+    - name: 데이터 마이닝 분석을 위한 UI 마법사 +
+      href: ui-wizards-data-mining/ui-wizards-data-mining.md
+- name: Analysis Services 자습서
+  href: analysis-services-tutorials-ssas.md
+  items:
+    - name: 테이블 형식 모델링(Adventure Works 자습서)
+      href: tabular-modeling-adventure-works-tutorial.md
+      items:
+        - name: '1단원: 새 테이블 형식 모델 프로젝트를 만들기'
+          href: lesson-1-create-a-new-tabular-model-project.md
+        - name: '2단원: 데이터 추가'
+          href: lesson-2-add-data.md
+        - name: '3단원: 열 이름 바꾸기'
+          href: rename-columns.md
+        - name: '4단원: 날짜 테이블로 표시'
+          href: lesson-3-mark-as-date-table.md
+        - name: '5단원: 관계 만들기'
+          href: lesson-4-create-relationships.md
+        - name: '6단원: 계산 열 만들기'
+          href: lesson-5-create-calculated-columns.md
+        - name: '7단원: 측정값 만들기'
+          href: lesson-6-create-measures.md
+        - name: '8단원: 핵심 성과 지표 만들기'
+          href: lesson-7-create-key-performance-indicators.md
+        - name: '9단원: 큐브 뷰 만들기'
+          href: lesson-8-create-perspectives.md
+        - name: '10단원: 계층 만들기'
+          href: lesson-9-create-hierarchies.md
+        - name: '11단원: 파티션 만들기'
+          href: lesson-10-create-partitions.md
+        - name: '12단원: 역할 만들기'
+          href: lesson-11-create-roles.md
+        - name: '13단원: Excel에서 분석'
+          href: lesson-12-analyze-in-excel.md
+        - name: '14단원: 배포'
+          href: lesson-13-deploy.md
+        - name: 추가 단원
+          href: ../tutorials/supplemental-lessons.md
+          items:
+            - name: 행 필터를 사용하여 동적 보안 구현
+              href: ../tutorials/implement-dynamic-security-by-using-row-filters.md
+            - name: Power View 보고서의 보고 속성 구성
+              href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+    - name: 다차원 모델링(Adventure Works 자습서)
+      href: multidimensional-modeling-adventure-works-tutorial.md
+      items:
+        - name: Analysis Services Tutorial 시나리오
+          href: analysis-services-tutorial-scenario.md
+        - name: Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
+          href: install-sample-data-and-projects.md
+        - name: '1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의'
+          href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
+          items:
+            - name: Analysis Services 프로젝트 만들기
+              href: lesson-1-1-creating-an-analysis-services-project.md
+            - name: 데이터 원본 정의
+              href: lesson-1-2-defining-a-data-source.md
+            - name: 데이터 원본 뷰 정의
+              href: lesson-1-3-defining-a-data-source-view.md
+            - name: 기본 테이블 이름 수정
+              href: lesson-1-4-modifying-default-table-names.md
+        - name: '2단원: 큐브 정의 및 배포'
+          href: lesson-2-defining-and-deploying-a-cube.md
+          items:
+            - name: 차원 정의
+              href: lesson-2-1-defining-a-dimension.md
+            - name: 큐브 정의
+              href: lesson-2-2-defining-a-cube.md
+            - name: 차원에 특성 추가
+              href: lesson-2-3-adding-attributes-to-dimensions.md
+            - name: 큐브 및 차원 속성 검토
+              href: lesson-2-4-reviewing-cube-and-dimension-properties.md
+            - name: Analysis Services 프로젝트 배포
+              href: lesson-2-5-deploying-an-analysis-services-project.md
+            - name: 큐브 찾아보기
+              href: lesson-2-6-browsing-the-cube.md
+        - name: '3단원: 측정값, 특성 및 계층 수정'
+          href: lesson-3-modifying-measures-attributes-and-hierarchies.md
+          items:
+            - name: 측정값 수정
+              href: lesson-3-1-modifying-measures.md
+            - name: Customer 차원 수정
+              href: lesson-3-2-modifying-the-customer-dimension.md
+            - name: Product 차원 수정
+              href: lesson-3-3-modifying-the-product-dimension.md
+            - name: Date 차원 수정
+              href: lesson-3-4-modifying-the-date-dimension.md
+            - name: 배포된 큐브 찾아보기
+              href: lesson-3-5-browsing-the-deployed-cube.md
+        - name: '4단원: 고급 특성 및 차원 속성 정의'
+          href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
+          items:
+            - name: Analysis Services Tutorial 프로젝트의 수정된 버전 사용
+              href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+            - name: 부모-자식 계층의 부모 특성 속성 정의
+              href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+            - name: 자동으로 특성 멤버 그룹화
+              href: lesson-4-3-automatically-grouping-attribute-members.md
+            - name: 특성 계층 숨기기 및 비활성화
+              href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+            - name: 보조 특성을 기준으로 특성 멤버 정렬
+              href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+            - name: 사용자 정의 계층의 특성 간 특성 관계 지정
+              href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+            - name: 알 수 없는 멤버 및 Null 처리 속성 정의
+              href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+        - name: '5단원: 차원과 측정값 그룹의 관계 정의'
+          href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+          items:
+            - name: 참조 관계 정의
+              href: lesson-5-1-defining-a-referenced-relationship.md
+            - name: 팩트 관계 정의
+              href: lesson-5-2-defining-a-fact-relationship.md
+            - name: 다 대 다 관계 정의
+              href: lesson-5-3-defining-a-many-to-many-relationship.md
+            - name: 측정값 그룹의 차원 세분성 정의
+              href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+        - name: '6단원: 계산 정의'
+          href: lesson-6-defining-calculations.md
+          items:
+            - name: 계산 멤버 정의
+              href: lesson-6-1-defining-calculated-members.md
+            - name: 명명된 집합 정의
+              href: lesson-6-2-defining-named-sets.md
+        - name: '7단원: KPI(핵심 성과 지표) 정의'
+          href: lesson-7-defining-key-performance-indicators-kpis.md
+          items:
+            - name: KPI 정의 및 찾아보기
+              href: lesson-7-1-defining-and-browsing-kpis.md
+        - name: '8단원: 동작 정의'
+          href: lesson-8-defining-actions.md
+          items:
+            - name: 드릴스루 동작 정의 및 사용
+              href: lesson-8-1-defining-and-using-a-drillthrough-action.md
+        - name: '9단원: 큐브 뷰 및 번역 정의'
+          href: lesson-9-defining-perspectives-and-translations.md
+          items:
+            - name: 큐브 뷰 정의 및 찾아보기
+              href: lesson-9-1-defining-and-browsing-perspectives.md
+            - name: 번역 정의 및 찾아보기
+              href: lesson-9-2-defining-and-browsing-translations.md
+        - name: '10단원: 관리자 역할 정의'
+          href: lesson-10-defining-administrative-roles.md
+          items:
+            - name: 데이터베이스 처리 권한 부여
+              href: lesson-10-granting-process-database-permissions.md

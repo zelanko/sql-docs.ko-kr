@@ -1,0 +1,45 @@
+- name: 데이터 마이닝 분석을 위한 UI 마법사
+  href: ui-wizards-data-mining.md
+- name: 데이터 마이닝 마법사
+  href: ../data-mining-wizards.md
+- name: 데이터 마이닝 마법사 F1 도움말
+  href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
+  items:
+    - name: 정의 방법 선택(데이터 마이닝 마법사)
+      href: ../select-the-definition-method-data-mining-wizard.md
+    - name: 데이터 마이닝 구조 만들기(데이터 마이닝 마법사)
+      href: ../create-the-data-mining-structure-data-mining-wizard.md
+    - name: 데이터 원본 뷰 선택(데이터 마이닝 마법사)
+      href: ../select-data-source-view-data-mining-wizard.md
+    - name: 데이터 원본 뷰 찾아보기(데이터 마이닝 마법사)
+      href: ../browse-data-source-view-data-mining-wizard.md
+    - name: 테이블 유형 지정(데이터 마이닝 마법사)
+      href: ../specify-table-types-data-mining-wizard.md
+    - name: 학습 데이터 지정(데이터 마이닝 마법사)
+      href: ../specify-the-training-data-data-mining-wizard.md
+    - name: 열 내용 및 데이터 형식 지정(데이터 마이닝 마법사)
+      href: ../specify-column-content-and-data-type-data-mining-wizard.md
+    - name: 테스트 집합 만들기
+      href: ../create-testing-set-data-mining-wizard.md
+    - name: 관련 열 제안(데이터 마이닝 마법사)
+      href: ../suggest-related-columns-data-mining-wizard.md
+    - name: 원본 큐브 차원 선택(데이터 마이닝 마법사)
+      href: ../select-the-source-cube-dimension-data-mining-wizard.md
+    - name: 사례 키 선택(데이터 마이닝 마법사)
+      href: ../select-the-case-key-data-mining-wizard.md
+    - name: 사례 수준 열 선택(데이터 마이닝 마법사)
+      href: ../select-case-level-columns-data-mining-wizard.md
+    - name: 마이닝 모델 열 사용법 지정(데이터 마이닝 마법사)
+      href: ../specify-mining-model-column-usage-data-mining-wizard.md
+    - name: 측정값 그룹 차원 선택(새 중첩 테이블 추가 마법사)
+      href: ../select-a-measure-group-dimension-add-new-nested-table-wizard.md
+    - name: 중첩 테이블 키 선택(새 중첩 테이블 추가 마법사)
+      href: ../select-nested-table-key-add-new-nested-table-wizard.md
+    - name: 중첩 테이블 열 선택(새 중첩 테이블 추가 마법사)
+      href: ../select-nested-table-columns-add-new-nested-table-wizard.md
+    - name: 열 콘텐츠 및 데이터 형식 지정(데이터 마이닝 마법사)
+      href: ../specify-the-column-s-content-and-data-type-data-mining-wizard.md
+    - name: 원본 큐브 조각화(데이터 마이닝 마법사)
+      href: ../slice-source-cube-data-mining-wizard.md
+    - name: 마법사 완료(데이터 마이닝 마법사)
+      href: ../completing-the-wizard-data-mining-wizard.md

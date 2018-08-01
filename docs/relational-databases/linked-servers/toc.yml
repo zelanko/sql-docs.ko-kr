@@ -1,0 +1,4 @@
+- name: 개요
+  href: linked-servers-database-engine.md
+- name: 연결된 서버 만들기
+  href: create-linked-servers-sql-server-database-engine.md

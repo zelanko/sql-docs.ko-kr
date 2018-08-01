@@ -1,0 +1,177 @@
+- name: ADO MD 개체 모델
+  href: ado-md-object-model.md
+- name: ADO MD 개체
+  href: ado-md-objects.md
+  items:
+    - name: Catalog 개체(ADO MD)
+      href: catalog-object-ado-md.md
+      items:
+        - name: 'Catalog 개체 속성, 메서드 및 이벤트(ADO MD)'
+          href: catalog-object-properties-methods-and-events-ado-md.md
+    - name: Member 개체(ADO MD)
+      href: member-object-ado-md.md
+      items:
+        - name: 'Member 개체 속성, 메서드 및 이벤트'
+          href: member-object-properties-methods-and-events.md
+    - name: Cellset 개체(ADO MD)
+      href: cellset-object-ado-md.md
+      items:
+        - name: 'Cellset 개체 속성, 메서드 및 이벤트'
+          href: cellset-object-properties-methods-and-events.md
+    - name: Axis 개체(ADO MD)
+      href: axis-object-ado-md.md
+      items:
+        - name: 'Axis 개체 속성, 메서드 및 이벤트'
+          href: axis-object-properties-methods-and-events.md
+    - name: Dimension 개체(ADO MD)
+      href: dimension-object-ado-md.md
+      items:
+        - name: 'Dimension 개체 속성, 메서드 및 이벤트'
+          href: dimension-object-properties-methods-and-events.md
+    - name: Level 개체(ADO MD)
+      href: level-object-ado-md.md
+      items:
+        - name: 'Level 개체 속성, 메서드 및 이벤트'
+          href: level-object-properties-methods-and-events.md
+    - name: Cell 개체(ADO MD)
+      href: cell-object-ado-md.md
+      items:
+        - name: 'Cell 개체 속성, 메서드 및 이벤트'
+          href: cell-object-properties-methods-and-events.md
+    - name: Position 개체(ADO MD)
+      href: position-object-ado-md.md
+      items:
+        - name: 'Position 개체 속성, 메서드 및 이벤트'
+          href: position-object-properties-methods-and-events.md
+    - name: CubeDef 개체(ADO MD)
+      href: cubedef-object-ado-md.md
+      items:
+        - name: 'CubeDef 개체 속성, 메서드 및 이벤트'
+          href: cubedef-object-properties-methods-and-events.md
+    - name: Hierarchy 개체(ADO MD)
+      href: hierarchy-object-ado-md.md
+      items:
+        - name: 'Hierarchy 개체 속성, 메서드 및 이벤트'
+          href: hierarchy-object-properties-methods-and-events.md
+- name: ADO MD 컬렉션
+  href: ado-md-collections.md
+  items:
+    - name: Axes 컬렉션(ADO MD)
+      href: axes-collection-ado-md.md
+      items:
+        - name: 'Axes 컬렉션 속성, 메서드 및 이벤트'
+          href: axes-collection-properties-methods-and-events.md
+    - name: CubeDefs 컬렉션(ADO MD)
+      href: cubedefs-collection-ado-md.md
+      items:
+        - name: 'CubeDefs 컬렉션 속성, 메서드 및 이벤트'
+          href: cubedefs-collection-properties-methods-and-events.md
+    - name: Dimensions 컬렉션(ADO MD)
+      href: dimensions-collection-ado-md.md
+      items:
+        - name: 'Dimensions 컬렉션 속성, 메서드 및 이벤트'
+          href: dimensions-collection-properties-methods-and-events.md
+    - name: Hierarchies 컬렉션(ADO MD)
+      href: hierarchies-collection-ado-md.md
+      items:
+        - name: 'Hierarchies 컬렉션 속성, 메서드 및 이벤트'
+          href: hierarchies-collection-properties-methods-and-events.md
+    - name: Levels 컬렉션(ADO MD)
+      href: levels-collection-ado-md.md
+      items:
+        - name: 'Levels 컬렉션 속성, 메서드 및 이벤트'
+          href: levels-collection-properties-methods-and-events.md
+    - name: Members 컬렉션(ADO MD)
+      href: members-collection-ado-md.md
+      items:
+        - name: 'Members 컬렉션 속성, 메서드 및 이벤트'
+          href: members-collection-properties-methods-and-events.md
+    - name: Positions 컬렉션(ADO MD)
+      href: positions-collection-ado-md.md
+      items:
+        - name: 'Positions 컬렉션 속성, 메서드 및 이벤트'
+          href: positions-collection-properties-methods-and-events.md
+- name: ADO MD 속성
+  href: ado-md-properties.md
+  items:
+    - name: ActiveConnection 속성(ADO MD)
+      href: activeconnection-property-ado-md.md
+    - name: Caption 속성(ADO MD)
+      href: caption-property-ado-md.md
+    - name: ChildCount 속성(ADO MD)
+      href: childcount-property-ado-md.md
+    - name: Children 속성(ADO MD)
+      href: children-property-ado-md.md
+    - name: Depth 속성(ADO MD)
+      href: depth-property-ado-md.md
+    - name: Description 속성(ADO MD)
+      href: description-property-ado-md.md
+    - name: DimensionCount 속성(ADO MD)
+      href: dimensioncount-property-ado-md.md
+    - name: DrilledDown 속성(ADO MD)
+      href: drilleddown-property-ado-md.md
+    - name: FilterAxis 속성(ADO MD)
+      href: filteraxis-property-ado-md.md
+    - name: FormattedValue 속성(ADO MD)
+      href: formattedvalue-property-ado-md.md
+    - name: Item 속성(ADO MD Cellset)
+      href: item-property-ado-md-cellset.md
+    - name: LevelDepth 속성(ADO MD)
+      href: leveldepth-property-ado-md.md
+    - name: LevelName 속성(ADO MD)
+      href: levelname-property-ado-md.md
+    - name: Name 속성(ADO MD)
+      href: name-property-ado-md.md
+    - name: Ordinal 속성(ADO MD Cell)
+      href: ordinal-property-ado-md-cell.md
+    - name: Ordinal 속성(ADO MD Position)
+      href: ordinal-property-ado-md-position.md
+    - name: Parent 속성(ADO MD)
+      href: parent-property-ado-md.md
+    - name: ParentSameAsPrev 속성(ADO MD)
+      href: parentsameasprev-property-ado-md.md
+    - name: Source 속성(ADO MD)
+      href: source-property-ado-md.md
+    - name: State 속성(ADO MD)
+      href: state-property-ado-md.md
+    - name: Type 속성(ADO MD)
+      href: type-property-ado-md.md
+    - name: UniqueName 속성(ADO MD)
+      href: uniquename-property-ado-md.md
+    - name: Value 속성(ADO MD)
+      href: value-property-ado-md.md
+- name: ADO MD 메서드
+  href: ado-md-methods.md
+  items:
+    - name: Close 메서드(ADO MD)
+      href: close-method-ado-md.md
+    - name: GetSchemaObject 메서드(ADO MD)
+      href: getschemaobject-method-ado-md.md
+    - name: Open 메서드(ADO MD)
+      href: open-method-ado-md.md
+- name: ADO MD 열거 상수
+  href: ado-md-enumerated-constants.md
+  items:
+    - name: MemberTypeEnum
+      href: membertypeenum.md
+    - name: SchemaObjectTypeEnum
+      href: schemaobjecttypeenum.md
+- name: ADO MD 코드 예제
+  href: ado-md-code-examples.md
+  items:
+    - name: Visual Basic의 ADO MD코드 예제
+      href: ado-md-code-examples-in-visual-basic.md
+      items:
+        - name: Cellset 예제(VB)
+          href: cellset-example-vb.md
+        - name: Catalog 예제(VB)
+          href: catalog-example-vb.md
+    - name: 'Visual Basic의 ADO MD코드 예제, 스크립팅 버전'
+      href: ado-md-code-examples-in-visual-basic-scripting-edition.md
+      items:
+        - name: Axis 예제(VBScript)
+          href: axis-example-vbscript.md
+        - name: Members 예제(VBScript)
+          href: members-example-vbscript.md
+        - name: CubeDef 예제(VBScript)
+          href: cubedef-example-vbscript.md

@@ -1,0 +1,240 @@
+- name: 테이블 형식 모델링
+  href: tabular-models-ssas.md
+- name: 테이블 형식 모델 솔루션
+  href: ../tabular-model-solutions-ssas-tabular.md
+- name: 테이블 형식 모델 디자이너
+  href: ../tabular-model-designer-ssas-tabular.md
+- name: 작업 영역 데이터베이스
+  href: workspace-database-ssas-tabular.md
+- name: 호환성 수준
+  href: compatibility-level-for-tabular-models-in-analysis-services.md
+- name: 테이블 형식 모델 프로젝트
+  href: tabular-model-projects-ssas-tabular.md
+  items:
+    - name: 테이블 형식 모델 프로젝트 새로 만들기
+      href: create-a-new-tabular-model-project-analysis-services.md
+    - name: Analysis Services에서 가져오기
+      href: import-from-analysis-services-ssas-tabular.md
+    - name: PowerPivot에서 가져오기
+      href: import-from-power-pivot-ssas-tabular.md
+- name: 속성
+  href: properties-ssas-tabular.md
+  items:
+    - name: 파워 뷰 보고 속성
+      href: power-view-reporting-properties-ssas-tabular.md
+      items:
+        - name: 파워 뷰 보고서의 기본 필드 집합 구성
+          href: power-view-configure-default-field-set-for-reports.md
+        - name: 파워 뷰 보고서의 테이블 동작 속성 구성
+          href: power-view-configure-table-behavior-properties-for-reports.md
+    - name: 프로젝트 속성
+      href: project-properties-ssas-tabular.md
+    - name: 모델 속성
+      href: model-properties-ssas-tabular.md
+    - name: 테이블 속성
+      href: table-properties-ssas-tabular.md
+    - name: 열 속성
+      href: column-properties-ssas-tabular.md
+    - name: 기본 데이터 모델링 및 배포 속성 구성
+      href: configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+- name: 솔루션 탐색기
+  href: ../data-sources-ssas-tabular.md
+  items:
+    - name: 지원되는 데이터 원본
+      href: data-sources-supported-ssas-tabular.md
+    - name: 지원되는 데이터 형식
+      href: data-types-supported-ssas-tabular.md
+    - name: 가장
+      href: impersonation-ssas-tabular.md
+    - name: 데이터 가져오기
+      href: ../import-data-ssas-tabular.md
+      items:
+        - name: 관계형 데이터 원본에서 가져오기
+          href: ../import-from-a-relational-data-source-ssas-tabular.md
+        - name: 다차원 데이터 원본에서 가져오기
+          href: ../import-from-a-multidimensional-data-source-ssas-tabular.md
+        - name: 데이터 피드에서 데이터 가져오기
+          href: ../import-from-a-data-feed-ssas-tabular.md
+        - name: 텍스트 파일에서 가져오기
+          href: ../import-from-a-text-file-ssas-tabular.md
+        - name: 데이터 복사 및 붙여넣기
+          href: ../copy-and-paste-data-ssas-tabular.md
+    - name: 데이터 처리
+      href: ../process-data-ssas-tabular.md
+      items:
+        - name: 수동으로 데이터 처리
+          href: ../manually-process-data-ssas-tabular.md
+        - name: 데이터 처리 문제 해결
+          href: ../troubleshoot-process-data-ssas-tabular.md
+    - name: 기존 데이터 원본 연결 편집
+      href: ../edit-an-existing-data-source-connection-ssas-tabular.md
+- name: DirectQuery 모드
+  href: directquery-mode-ssas-tabular.md
+  items:
+    - name: 파티션 및 DirectQuery 모드
+      href: define-partitions-in-directquery-models-ssas-tabular.md
+    - name: DirectQuery 디자인 모드를 사용하도록 설정
+      href: enable-directquery-mode-in-ssdt.md
+    - name: DirectQuery 파티션 변경
+      href: ../change-the-directquery-partition-ssas-tabular.md
+    - name: DirectQuery의 기본 연결 방법 설정 또는 변경
+      href: ../set-or-change-the-preferred-connection-method-for-directquery.md
+    - name: DirectQuery 배포 시나리오
+      href: ../directquery-deployment-scenarios-ssas-tabular.md
+    - name: DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
+      href: ../dax-formula-compatibility-in-directquery-mode-ssas-2014.md
+- name: 테이블 및 열
+  href: tables-and-columns-ssas-tabular.md
+  items:
+    - name: 테이블에 열 추가
+      href: add-columns-to-a-table-ssas-tabular.md
+    - name: 열 삭제
+      href: delete-a-column-ssas-tabular.md
+    - name: '테이블, 열 또는 행 필터 매핑 변경'
+      href: change-table-column-or-row-filter-mappings-ssas-tabular.md
+    - name: 시간 인텔리전스에 사용할 날짜 테이블로 표시 지정(SSAS 테이블 형식)
+      href: specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+    - name: 테이블 추가
+      href: add-a-table-ssas-tabular.md
+    - name: 테이블 삭제
+      href: delete-a-table-ssas-tabular.md
+    - name: 테이블 또는 열 이름 바꾸기
+      href: rename-a-table-or-column-ssas-tabular.md
+    - name: 열 데이터 형식 설정
+      href: set-the-data-type-of-a-column-ssas-tabular.md
+    - name: 열 숨기기 또는 고정
+      href: hide-or-freeze-columns-ssas-tabular.md
+    - name: 계산 열
+      href: ssas-calculated-columns.md
+      items:
+        - name: 계산 열 만들기
+          href: ssas-calculated-columns-create-a-calculated-column.md
+    - name: 데이터 필터링 및 정렬
+      href: ../filter-and-sort-data-ssas-tabular.md
+      items:
+        - name: 테이블의 데이터 정렬
+          href: sort-data-in-a-table-ssas-tabular.md
+        - name: 테이블의 데이터 필터링
+          href: filter-data-in-a-table-ssas-tabular.md
+- name: 관계
+  href: relationships-ssas-tabular.md
+  items:
+    - name: 두 테이블 간에 관계 만들기
+      href: create-a-relationship-between-two-tables-ssas-tabular.md
+    - name: 관계 삭제
+      href: delete-relationships-ssas-tabular.md
+- name: 새 명명된 집합
+  href: calculations-ssas-tabular.md
+  items:
+    - name: 테이블 형식 모델의 DAX 이해
+      href: understanding-dax-in-tabular-models-ssas-tabular.md
+- name: 측정값 그룹
+  href: measures-ssas-tabular.md
+  items:
+    - name: 측정값 만들기 및 관리
+      href: create-and-manage-measures-ssas-tabular.md
+- name: KPI
+  href: kpis-ssas-tabular.md
+  items:
+    - name: KPI 만들기 및 관리
+      href: create-and-manage-kpis-ssas-tabular.md
+- name: 계층 구조
+  href: hierarchies-ssas-tabular.md
+  items:
+    - name: 계층 만들기 및 관리
+      href: create-and-manage-hierarchies-ssas-tabular.md
+- name: 파티션
+  href: partitions-ssas-tabular.md
+  items:
+    - name: 작업 영역 데이터베이스에서 파티션 만들기 및 관리
+      href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+    - name: 작업 영역 데이터베이스에서 파티션 처리
+      href: process-partitions-in-the-workspace-databse-ssas-tabular.md
+- name: 큐브 뷰
+  href: perspectives-ssas-tabular.md
+  items:
+    - name: 큐브 뷰 만들기 및 관리
+      href: create-and-manage-perspectives-ssas-tabular.md
+- name: 역할
+  href: roles-ssas-tabular.md
+  items:
+    - name: 역할 만들기 및 관리
+      href: create-and-manage-roles-ssas-tabular.md
+- name: 도구 모음
+  href: analyze-in-excel-ssas-tabular.md
+  items:
+    - name: Excel에서 테이블 형식 모델 분석
+      href: analyze-a-tabular-model-in-excel-ssas-tabular.md
+- name: 테이블 형식 모델 솔루션 배포
+  href: tabular-model-solution-deployment-ssas-tabular.md
+  items:
+    - name: SQL Server Data Tools에서 배포
+      href: deploy-from-sql-server-data-tools-ssas-tabular.md
+    - name: 배포 마법사를 사용하여 모델 솔루션 배포
+      href: ../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
+      items:
+        - name: Analysis Services 배포 마법사 실행
+          href: ../multidimensional-models/running-the-analysis-services-deployment-wizard.md
+        - name: 배포 스크립트를 만드는 데 사용하는 입력 파일 이해
+          href: ../multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
+    - name: 설치 대상 지정
+      href: ../multidimensional-models/deployment-script-files-specifying-the-installation-target.md
+    - name: 파티션 및 역할 배포 옵션 지정
+      href: ../multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
+    - name: 솔루션 배포를 위한 구성 설정 지정
+      href: ../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
+    - name: 처리 옵션 지정
+      href: ../multidimensional-models/deployment-script-files-specifying-processing-options.md
+      items:
+        - name: Analysis Services 배포 스크립트 이해
+          href: ../multidimensional-models/understanding-the-analysis-services-deployment-script.md
+    - name: 배포 유틸리티를 사용하여 모델 솔루션 배포
+      href: ../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
+    - name: XMLA를 사용하여 모델 솔루션 배포
+      href: ../multidimensional-models/deploy-model-solutions-using-xmla.md
+- name: 테이블 형식 모델의 문자열 저장소 및 데이터 정렬
+  href: string-storage-and-collation-in-tabular-models.md
+- name: '데이터베이스, 테이블 또는 파티션 처리'
+  href: process-database-table-or-partition-analysis-services.md
+- name: 테이블 형식 모델 역할
+  href: tabular-model-roles-ssas-tabular.md
+  items:
+    - name: SSMS를 사용하여 역할 관리
+      href: manage-roles-by-using-ssms-ssas-tabular.md
+- name: 테이블 형식 모델 파티션
+  href: tabular-model-partitions-ssas-tabular.md
+  items:
+    - name: 테이블 형식 모델 파티션 만들기 및 관리
+      href: create-and-manage-tabular-model-partitions-ssas-tabular.md
+    - name: 테이블 형식 모델 파티션 처리
+      href: process-tabular-model-partitions-ssas-tabular.md
+- name: 테이블 형식 model 데이터베이스
+  href: tabular-model-databases-ssas-tabular.md
+  items:
+    - name: 테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성
+      href: enable-directquery-mode-in-ssms.md
+    - name: 테이블 형식 모델 데이터베이스에 연결
+      href: connect-to-a-tabular-model-database-ssas.md
+    - name: PowerPivot에서 복원
+      href: restore-from-power-pivot.md
+    - name: Analysis Services 데이터베이스 이동
+      href: ../multidimensional-models/move-an-analysis-services-database.md
+    - name: Analysis Services 데이터베이스 동기화
+      href: ../multidimensional-models/synchronize-analysis-services-databases.md
+    - name: ReadOnly 및 ReadWrite 모드 전환
+      href: ../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+    - name: Analysis Services 데이터베이스 수정 또는 삭제
+      href: ../multidimensional-models/modify-or-delete-an-analysis-services-database.md
+    - name: Analysis Services 데이터베이스 문서화 및 스크립트
+      href: ../multidimensional-models/document-and-script-an-analysis-services-database.md
+    - name: Analysis Services 데이터베이스 백업 및 복원
+      href: ../multidimensional-models/backup-and-restore-of-analysis-services-databases.md
+      items:
+        - name: 백업 옵션
+          href: ../multidimensional-models/backup-options.md
+        - name: 복원 옵션
+          href: ../multidimensional-models/restore-options.md
+    - name: Analysis Services 데이터베이스 연결 및 분리
+      href: ../multidimensional-models/attach-and-detach-analysis-services-databases.md
+- name: 테이블 형식 모델 데이터 액세스
+  href: tabular-model-data-access.md

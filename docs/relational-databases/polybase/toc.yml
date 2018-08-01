@@ -1,0 +1,21 @@
+- name: 개요
+  href: polybase-guide.md
+- name: 시작
+  href: get-started-with-polybase.md
+- name: 기능 요약
+  href: polybase-versioned-feature-summary.md
+- name: 확장 그룹
+  href: polybase-scale-out-groups.md
+- name: 설치
+  href: polybase-installation.md
+- name: Configuration
+  href: polybase-configuration.md
+- name: T-SQL 개체
+  href: polybase-t-sql-objects.md
+- name: 쿼리
+  href: polybase-queries.md
+- name: 문제 해결
+  href: polybase-troubleshooting.md
+  items:
+    - name: PolyBase Kerberos 연결 문제 해결
+      href: polybase-troubleshoot-connectivity.md

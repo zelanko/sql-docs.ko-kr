@@ -1,0 +1,34 @@
+- name: OLE DB 방법 도움말 항목
+  href: ole-db-how-to-topics.md
+- name: 결과 +
+  href: ../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
+- name: Filestream +
+  href: ../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md
+- name: IRowsetFastLoad를 통한 데이터 대량 복사(OLE DB)
+  href: bulk-copy-data-using-irowsetfastload-ole-db.md
+- name: SQL Server 인증 사용자 암호 변경(OLE DB)
+  href: change-a-sql-server-authentication-user-password-ole-db.md
+- name: 열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB)
+  href: display-column-and-catalog-metadata-for-sparse-columns-ole-db.md
+- name: OLE DB 데이터 원본 열거(OLE DB)
+  href: enumerate-ole-db-data-sources-ole-db.md
+- name: 'IRow::GetColumns를 사용하여 열 인출(OLE DB)'
+  href: fetch-columns-using-irow-getcolumns-ole-db.md
+- name: 'IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출'
+  href: fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md
+- name: 통합 Kerberos 인증(OLE DB)
+  href: integrated-kerberos-authentication-ole-db.md
+- name: FAST_FORWARD 커서 가져오기
+  href: obtain-a-fast-forward-cursor.md
+- name: 책갈피를 사용하여 행 검색(OLE DB)
+  href: retrieve-rows-using-bookmarks-ole-db.md
+- name: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기(OLE DB)
+  href: send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md
+- name: 대형 데이터 설정(OLE DB)
+  href: set-large-data-ole-db.md
+- name: 향상된 날짜 및 시간 기능 사용(OLE DB)
+  href: use-enhanced-date-and-time-features-ole-db.md
+- name: 큰 CLR UDT 사용(OLE DB)
+  href: use-large-clr-udts-ole-db.md
+- name: 테이블 반환 매개 변수 사용(OLE DB)
+  href: use-table-valued-parameters-ole-db.md

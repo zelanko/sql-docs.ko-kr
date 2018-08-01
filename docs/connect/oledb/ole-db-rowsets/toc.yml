@@ -1,0 +1,30 @@
+- name: 행 집합
+  href: rowsets.md
+- name: 책갈피
+  href: bookmarks.md
+- name: IOpenRowset을 사용하여 행 집합 만들기
+  href: creating-a-rowset-with-iopenrowset.md
+- name: 'ICommand::Execute를 사용하여 행 집합 만들기'
+  href: creating-rowsets-with-icommand-execute.md
+- name: IRow를 사용하여 단일 행 인출
+  href: fetching-a-single-row-with-irow.md
+- name: 'IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출'
+  href: fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
+- name: 'IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출'
+  href: fetching-blob-data-using-irow-open-and-isequentialstream.md
+- name: 행 페치 - 다음 페치 위치
+  href: fetching-rows-next-fetch-position.md
+- name: 행 인출
+  href: fetching-rows.md
+- name: 행 집합 속성 및 동작
+  href: rowset-properties-and-behaviors.md
+- name: 행 집합 및 SQL Server 커서
+  href: rowsets-and-sql-server-cursors.md
+- name: 행 집합의 데이터 업데이트 - 행 다시 동기화
+  href: updating-data-in-rowsets-resynchronizing-rows.md
+- name: 행 집합의 데이터 업데이트
+  href: updating-data-in-rowsets.md
+- name: SQL Server 커서의 데이터 업데이트
+  href: updating-data-in-sql-server-cursors.md
+- name: 'IRow::GetColumns 사용'
+  href: using-irow-getcolumns.md

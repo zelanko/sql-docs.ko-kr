@@ -1,0 +1,10 @@
+- name: Microsoft ADO(ActiveX Data Objects)
+  href: microsoft-activex-data-objects-ado.md
+- name: 새로운 또는 업데이트된 아티클
+  href: new-updated-ado.md
+- name: ADO 개발 가이드 +
+  href: ./guide/ado-programmer-s-guide.md
+- name: ADO 참조 +
+  href: ./reference/ado-glossary.md
+- name: ADO 용어 설명
+  href: ado-glossary.md

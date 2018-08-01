@@ -1,0 +1,371 @@
+- name: Visual Database Tools
+  href: visual-database-tools.md
+- name: 데이터베이스 다이어그램 디자인(Visual Database Tools)
+  href: design-database-diagrams-visual-database-tools.md
+  items:
+    - name: 데이터베이스 다이어그램 소유권 이해(Visual Database Tools)
+      href: understand-database-diagram-ownership-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools)
+      href: navigate-in-database-diagram-designer-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)
+      href: set-up-database-diagram-designer-visual-database-tools.md
+    - name: 이전 버전에서 데이터베이스 다이어그램 업그레이드(Visual Database Tools)
+      href: upgrade-database-diagrams-from-previous-editions-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 디자이너 열기(Visual Database Tools)
+      href: open-database-diagram-designer-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 작업(Visual Database Tools)
+      href: work-with-database-diagrams-visual-database-tools.md
+    - name: 새 데이터베이스 다이어그램 만들기(Visual Database Tools)
+      href: create-a-new-database-diagram-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 저장(Visual Database Tools)
+      href: save-database-diagrams-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 열기(Visual Database Tools)
+      href: open-database-diagrams-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 삭제(Visual Database Tools)
+      href: delete-a-database-diagram-visual-database-tools.md
+    - name: 데이터베이스 다이어그램 이름 바꾸기(Visual Database Tools)
+      href: rename-a-database-diagram-visual-database-tools.md
+    - name: 다이어그램 변경 내용 취소(Visual Database Tools)
+      href: discard-changes-made-to-diagrams-visual-database-tools.md
+    - name: 수정된 데이터베이스와 데이터베이스 다이어그램 일치(Visual Database Tools)
+      href: reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md
+    - name: 다이어그램 속성 표시(Visual Database Tools)
+      href: show-diagram-properties-visual-database-tools.md
+    - name: 데이터베이스 다이어그램의 이미지를 클립보드로 복사(Visual Database Tools)
+      href: copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
+    - name: 데이터베이스 다이어그램에서 테이블 작업(Visual Database Tools)
+      href: work-with-tables-in-database-diagram-visual-database-tools.md
+    - name: 다이어그램에 테이블 추가(Visual Database Tools)
+      href: add-tables-to-diagrams-visual-database-tools.md
+    - name: 다이어그램에 관련 테이블 추가(Visual Database Tools)
+      href: add-related-tables-to-diagrams-visual-database-tools.md
+    - name: 다이어그램에서 선택한 테이블 저장(Visual Database Tools)
+      href: save-selected-tables-on-a-diagram-visual-database-tools.md
+    - name: 한 데이터베이스 다이어그램에서 다른 다이어그램으로 테이블 복사(Visual Database Tools)
+      href: copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
+    - name: 데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
+      href: remove-tables-from-database-diagrams-visual-database-tools.md
+    - name: 다이어그램에서 테이블 간의 관계 만들기(Visual Database Tools)
+      href: create-relationships-between-tables-on-a-diagram-visual-database-tools.md
+    - name: 다 대 다 관계 매핑(Visual Database Tools)
+      href: map-many-to-many-relationships-visual-database-tools.md
+    - name: 반사 관계 그리기(Visual Database Tools)
+      href: draw-reflexive-relationships-visual-database-tools.md
+    - name: 다이어그램 레이아웃 작업(Visual Database Tools)
+      href: work-with-diagram-layout-visual-database-tools.md
+    - name: 다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
+      href: customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
+    - name: 다이어그램에 텍스트 주석 추가(Visual Database Tools)
+      href: add-text-annotations-to-diagrams-visual-database-tools.md
+    - name: 다이어그램에서 선택한 테이블 크기 자동 조정(Visual Database Tools)
+      href: autosize-selected-tables-in-diagrams-visual-database-tools.md
+    - name: 다이어그램에서 테이블 정렬(Visual Database Tools)
+      href: arrange-tables-in-diagrams-visual-database-tools.md
+    - name: '다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)'
+      href: change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md
+    - name: '연습: 데이터베이스 다이어그램 추가 및 변경'
+      href: walkthrough-adding-and-changing-a-database-diagram.md
+    - name: Visual Database Tools 디자이너(Visual Database Tools)
+      href: visual-database-tool-designers.md
+    - name: 다중 사용자 환경(Visual Database Tools)
+      href: multiuser-environments-visual-database-tools.md
+      items:
+        - name: 사용 권한 및 Visual Database Tools(Visual Database Tools)
+          href: permissions-and-visual-database-tools-visual-database-tools.md
+        - name: 여러 사용자가 변경한 내용 조정(Visual Database Tools)
+          href: reconcile-changes-made-by-multiple-users-visual-database-tools.md
+        - name: 데이터베이스의 단계적 개발 문제(Visual Database Tools)
+          href: issues-of-database-evolution-visual-database-tools.md
+        - name: '개발, 테스트 및 프로덕션 데이터베이스(Visual Database Tools)'
+          href: development-test-and-production-databases-visual-database-tools.md
+- name: 테이블 디자인(Visual Database Tools)
+  href: design-tables-visual-database-tools.md
+  items:
+    - name: 테이블 디자이너 열기(Visual Database Tools)
+      href: ../../database-engine/open-table-designer-visual-database-tools.md
+    - name: 테이블 디자이너에서 작업 내용 저장(Visual Database Tools)
+      href: ../../database-engine/save-your-work-in-table-designer-visual-database-tools.md
+- name: 쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
+  href: design-queries-and-views-how-to-topics-visual-database-tools.md
+  items:
+    - name: 쿼리 및 뷰 디자이너 열기(Visual Database Tools)
+      href: open-the-query-and-view-designer-visual-database-tools.md
+    - name: 쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
+      href: navigate-in-the-query-and-view-designer-visual-database-tools.md
+    - name: 쿼리 및 뷰 디자이너 도구(Visual Database Tools)
+      href: query-and-view-designer-tools-visual-database-tools.md
+    - name: 쿼리 및 뷰 디자이너 창 표시(Visual Database Tools)
+      href: display-query-and-view-designer-panes-visual-database-tools.md
+    - name: 다이어그램 창(Visual Database Tools)
+      href: diagram-pane-visual-database-tools.md
+    - name: 조건 창(Visual Database Tools)
+      href: criteria-pane-visual-database-tools.md
+    - name: SQL Visual Database Tools)
+      href: sql-pane-visual-database-tools.md
+    - name: 결과 창(Visual Database Tools)
+      href: results-pane-visual-database-tools.md
+    - name: SQL 편집기(Visual Database Tools)
+      href: sql-editor-visual-database-tools.md
+    - name: 쿼리 형식(Visual Database Tools)
+      href: types-of-queries-visual-database-tools.md
+    - name: 지원되는 쿼리 형식(Visual Database Tools)
+      href: supported-query-types-visual-database-tools.md
+    - name: 전체 텍스트 검색 쿼리 만들기(Visual Database Tools)
+      href: create-full-text-search-queries-visual-database-tools.md
+    - name: 결과 삽입 쿼리 만들기(Visual Database Tools)
+      href: create-insert-results-queries-visual-database-tools.md
+    - name: 값 삽입 쿼리 만들기(Visual Database Tools)
+      href: create-insert-values-queries-visual-database-tools.md
+    - name: 테이블 만들기 쿼리 만들기(Visual Database Tools)
+      href: create-make-table-queries-visual-database-tools.md
+    - name: 삭제 쿼리 만들기(Visual Database Tools)
+      href: create-delete-queries-visual-database-tools.md
+    - name: 통합 쿼리 만들기(Visual Database Tools)
+      href: create-union-queries-visual-database-tools.md
+    - name: 업데이트 쿼리 만들기(Visual Database Tools)
+      href: create-update-queries-visual-database-tools.md
+    - name: 결과 창에서 데이터 작업(Visual Database Tools)
+      href: work-with-data-in-the-results-pane-visual-database-tools.md
+    - name: 결과 업데이트 규칙(Visual Database Tools)
+      href: rules-for-updating-results-visual-database-tools.md
+    - name: 결과 창에서 새 행 추가(Visual Database Tools)
+      href: add-new-rows-in-the-results-pane-visual-database-tools.md
+    - name: 결과 창에서 행 편집(Visual Database Tools)
+      href: edit-rows-in-the-results-pane-visual-database-tools.md
+    - name: 결과 창에서 행 삭제(Visual Database Tools)
+      href: delete-rows-in-the-results-pane-visual-database-tools.md
+    - name: 쿼리 결과 정렬 및 그룹화(Visual Database Tools)
+      href: sort-and-group-query-results-visual-database-tools.md
+      items:
+        - name: 행 정렬(Visual Database Tools)
+          href: sort-rows-visual-database-tools.md
+        - name: 행 그룹 축소(Visual Database Tools)
+          href: collapse-groups-of-rows-visual-database-tools.md
+        - name: ORDER BY를 사용하여 정렬(Visual Database Tools)
+          href: sort-with-order-by-visual-database-tools.md
+        - name: 오름차순 또는 내림차순으로 정렬(Visual Database Tools)
+          href: sort-in-ascending-or-descending-order-visual-database-tools.md
+        - name: 쿼리에서 여러 열 정렬(Visual Database Tools)
+          href: sort-multiple-columns-in-queries-visual-database-tools.md
+        - name: 쿼리 결과 행 그룹화(Visual Database Tools)
+          href: group-rows-in-query-results-visual-database-tools.md
+        - name: 그룹 조건 지정(Visual Database Tools)
+          href: specify-conditions-for-groups-visual-database-tools.md
+        - name: 출력 열 다시 정렬(Visual Database Tools)
+          href: reorder-output-columns-visual-database-tools.md
+    - name: 쿼리 결과 요약(Visual Database Tools)
+      href: summarize-query-results-visual-database-tools.md
+      items:
+        - name: 집계 쿼리에서 열 작업(Visual Database Tools)
+          href: work-with-columns-in-aggregate-queries-visual-database-tools.md
+        - name: 테이블의 행 계산(Visual Database Tools)
+          href: count-rows-in-a-table-visual-database-tools.md
+        - name: 테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
+          href: summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md
+        - name: 사용자 지정 식을 사용하여 값 요약 또는 집계(Visual Database Tools)
+          href: summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md
+    - name: 쿼리 결과 지우기(Visual Database Tools)
+      href: clear-query-results-visual-database-tools.md
+    - name: 쿼리 결과 인쇄(Visual Database Tools)
+      href: print-query-results-visual-database-tools.md
+    - name: 쿼리 결과 복사(Visual Database Tools)
+      href: copy-query-results-visual-database-tools.md
+    - name: 쿼리 결과에서 열 제거(Visual Database Tools)
+      href: remove-columns-from-query-results-visual-database-tools.md
+    - name: 쿼리 관련 기본 작업 수행(Visual Database Tools)
+      href: perform-basic-operations-with-queries-visual-database-tools.md
+    - name: 쿼리 만들기(Visual Database Tools)
+      href: create-queries-visual-database-tools.md
+    - name: 쿼리 열기(Visual Database Tools)
+      href: open-queries-visual-database-tools.md
+    - name: 쿼리 실행(Visual Database Tools)
+      href: run-queries-visual-database-tools.md
+    - name: 쿼리 중지(Visual Database Tools)
+      href: stop-a-query-visual-database-tools.md
+    - name: 쿼리 저장(Visual Database Tools)
+      href: save-queries-visual-database-tools.md
+    - name: 쿼리 확인(Visual Database Tools)
+      href: verify-queries-visual-database-tools.md
+    - name: 쿼리 수정(Visual Database Tools)
+      href: modify-queries-visual-database-tools.md
+    - name: 쿼리 삭제(Visual Database Tools)
+      href: delete-queries-visual-database-tools.md
+    - name: 쿼리 복사(Visual Database Tools)
+      href: copy-queries-visual-database-tools.md
+    - name: 쿼리 이름 바꾸기(Visual Database Tools)
+      href: rename-queries-visual-database-tools.md
+    - name: 쿼리 변경 내용 취소(Visual Database Tools)
+      href: discard-changes-made-to-queries-visual-database-tools.md
+    - name: 쿼리에 테이블 추가(Visual Database Tools)
+      href: add-tables-to-queries-visual-database-tools.md
+    - name: 쿼리에 파생 테이블 추가(Visual Database Tools)
+      href: add-derived-tables-to-queries-visual-database-tools.md
+    - name: 쿼리에서 테이블 제거(Visual Database Tools)
+      href: remove-tables-from-queries-visual-database-tools.md
+    - name: 쿼리에 열 추가(Visual Database Tools)
+      href: add-columns-to-queries-visual-database-tools.md
+    - name: 쿼리에서 열 제거(Visual Database Tools)
+      href: remove-columns-from-queries-visual-database-tools.md
+    - name: 열 별칭 만들기(Visual Database Tools)
+      href: create-column-aliases-visual-database-tools.md
+    - name: 테이블 별칭 만들기(Visual Database Tools)
+      href: create-table-aliases-visual-database-tools.md
+    - name: 쿼리 속성 표시(Visual Database Tools)
+      href: show-query-properties-visual-database-tools.md
+    - name: 테이블 외의 항목을 사용하여 쿼리 만들기(Visual Database Tools)
+      href: create-queries-using-something-besides-a-table-visual-database-tools.md
+    - name: 다이어그램 창에 열 이름 표시(Visual Database Tools)
+      href: show-column-names-in-the-diagram-pane-visual-database-tools.md
+    - name: 쿼리 및 뷰 디자이너에 국가별 데이터 사용(Visual Database Tools)
+      href: use-the-query-and-view-designer-with-international-data-visual-database-tools.md
+    - name: 검색 조건 지정(Visual Database Tools)
+      href: specify-search-criteria-visual-database-tools.md
+    - name: 검색 값 입력 규칙(Visual Database Tools)
+      href: rules-for-entering-search-values-visual-database-tools.md
+    - name: 조건 창의 검색 조건 결합 규칙(Visual Database Tools)
+      href: conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md
+    - name: 검색 조건 지정(Visual Database Tools)
+      href: specify-search-conditions-visual-database-tools.md
+    - name: 한 열에 여러 검색 조건 지정(Visual Database Tools)
+      href: specify-multiple-search-conditions-for-one-column-visual-database-tools.md
+    - name: 여러 열에 여러 검색 조건 지정(Visual Database Tools)
+      href: specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
+    - name: 쿼리에 TOP 절 지정(Visual Database Tools)
+      href: specify-the-top-clause-in-queries-visual-database-tools.md
+    - name: 동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
+      href: use-having-and-where-clauses-in-the-same-query-visual-database-tools.md
+    - name: 값이 일치하지 않는 행 선택(Visual Database Tools)
+      href: select-rows-that-do-not-match-a-value-visual-database-tools.md
+    - name: 행 포함 또는 제외(Visual Database Tools)
+      href: include-or-exclude-rows-visual-database-tools.md
+    - name: 중복 행 제외(Visual Database Tools)
+      href: exclude-duplicate-rows-visual-database-tools.md
+    - name: AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
+      href: combine-conditions-when-and-has-precedence-visual-database-tools.md
+    - name: OR에 우선 순위가 있는 조건 조합(Visual Database Tools)
+      href: combine-conditions-when-or-has-precedence-visual-database-tools.md
+    - name: 하위 쿼리 만들기(Visual Database Tools)
+      href: create-subqueries-visual-database-tools.md
+    - name: 조인을 사용한 쿼리(Visual Database Tools)
+      href: query-with-joins-visual-database-tools.md
+    - name: 조인 연산자 수정(Visual Database Tools)
+      href: modify-join-operators-visual-database-tools.md
+    - name: 쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
+      href: how-the-query-and-view-designer-represents-joins-visual-database-tools.md
+    - name: 테이블 자동 조인(Visual Database Tools)
+      href: join-tables-automatically-visual-database-tools.md
+    - name: 테이블 수동 조인(Visual Database Tools)
+      href: join-tables-manually-visual-database-tools.md
+    - name: 여러 열에 대해 테이블 조인(Visual Database Tools)
+      href: join-tables-on-multiple-columns-visual-database-tools.md
+    - name: 외부 조인 만들기(Visual Database Tools)
+      href: create-outer-joins-visual-database-tools.md
+    - name: 조인 제거(Visual Database Tools)
+      href: remove-joins-visual-database-tools.md
+    - name: 자체 조인 자동으로 만들기(Visual Database Tools)
+      href: create-self-joins-automatically-visual-database-tools.md
+    - name: 수동으로 자체 조인 만들기(Visual Database Tools)
+      href: create-self-joins-manually-visual-database-tools.md
+    - name: 조인 속성 보기(Visual Database Tools)
+      href: view-join-properties-visual-database-tools.md
+    - name: 매개 변수를 사용하여 쿼리(Visual Database Tools)
+      href: query-with-parameters-visual-database-tools.md
+    - name: 매개 변수 쿼리(Visual Database Tools)
+      href: parameter-queries-visual-database-tools.md
+    - name: 명명되지 않은 매개 변수를 사용하여 쿼리 만들기(Visual Database Tools)
+      href: create-queries-with-unnamed-parameters-visual-database-tools.md
+- name: Visual Database Tools F1 도움말
+  href: visual-database-tools-f1-help.md
+  items:
+    - name: 저장(허용되지 않음) 대화 상자
+      href: save-not-permitted-dialog-box.md
+    - name: 이미 존재하는 개체
+      href: object-already-exists.md
+    - name: 테이블 추가 대화 상자(데이터베이스 디자이너)(Visual Database Tools)
+      href: add-table-dialog-box-database-designer-visual-database-tools.md
+    - name: 테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)
+      href: add-table-dialog-box-query-and-view-designers-visual-database-tools.md
+    - name: CHECK 제약 조건 대화 상자(Visual Database Tools)
+      href: check-constraint-dialog-box-visual-database-tools.md
+    - name: CHECK 제약 조건 식 대화 상자(Visual Database Tools)
+      href: check-constraint-expression-dialog-box-visual-database-tools.md
+    - name: 이름 선택 대화 상자(Visual Database Tools)
+      href: choose-name-dialog-box-visual-database-tools.md
+    - name: 결과 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
+      href: choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
+    - name: 값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
+      href: choose-target-table-for-insert-values-dialog-box-visual-database-tools.md
+    - name: 데이터 정렬 대화 상자(Visual Database Tools)
+      href: collation-dialog-box-visual-database-tools.md
+    - name: 색 대화 상자(Visual Database Tools)
+      href: color-dialog-box-visual-database-tools.md
+    - name: 열 목록 대화 상자(Visual Database Tools)
+      href: column-list-dialog-box-visual-database-tools.md
+    - name: 열 속성(Visual Database Tools)
+      href: column-properties-visual-database-tools.md
+    - name: 열 선택 대화 상자(Visual Database Tools)
+      href: column-selection-dialog-box-visual-database-tools.md
+    - name: 데이터베이스 변경 감지 대화 상자(Visual Database Tools)
+      href: database-changes-detected-dialog-box-visual-database-tools.md
+    - name: 데이터 형식 변경 필요 대화 상자(Visual Database Tools)
+      href: data-type-change-required-dialog-box-visual-database-tools.md
+    - name: 테이블 삭제 대화 상자(Visual Database Tools)
+      href: delete-table-dialog-box-visual-database-tools.md
+    - name: 설명 속성 대화 상자(Visual Database Tools)
+      href: description-property-dialog-box-visual-database-tools.md
+    - name: 전체 텍스트 인덱스 열 대화 상자(Visual Database Tools)
+      href: full-text-index-columns-dialog-box-visual-database-tools.md
+    - name: 전체 텍스트 인덱스 대화 상자(Visual Database Tools)
+      href: full-text-index-dialog-box-visual-database-tools.md
+    - name: 줄 이동 대화 상자
+      href: go-to-line-dialog-box.md
+    - name: 인덱스 및 키 대화 상자(Visual Database Tools)
+      href: indexes-keys-dialog-box-visual-database-tools.md
+    - name: 인덱스 열 대화 상자(Visual Database Tools)
+      href: index-columns-dialog-box-visual-database-tools.md
+    - name: 조인 대화 상자(Visual Database Tools)
+      href: join-dialog-box-visual-database-tools.md
+    - name: 위치 대화 상자(Visual Database Tools)
+      href: location-dialog-box-visual-database-tools.md
+    - name: 테이블 만들기 대화 상자(Visual Database Tools)
+      href: make-table-dialog-box-visual-database-tools.md
+    - name: 파일 열기 대화 상자
+      href: open-file-dialog-box.md
+    - name: 분할 열 목록 대화 상자(Visual Database Tools)
+      href: partition-column-list-dialog-box-visual-database-tools.md
+    - name: 사후 저장 알림 대화 상자(Visual Database Tools)
+      href: post-save-notifications-dialog-box-visual-database-tools.md
+    - name: 인쇄 대화 상자
+      href: print-dialog-box.md
+    - name: 페이지 설정 대화 상자
+      href: page-setup-dialog-box.md
+    - name: 쿼리 정의 다름 대화 상자(Visual Database Tools)
+      href: query-definitions-differ-dialog-box-visual-database-tools.md
+    - name: 쿼리 매개 변수 대화 상자(Visual Database Tools)
+      href: query-parameters-dialog-box-visual-database-tools.md
+    - name: 쿼리 속성(Visual Database Tools)
+      href: query-properties-visual-database-tools.md
+    - name: 변경 스크립트 저장 대화 상자(Visual Database Tools)
+      href: save-change-script-dialog-box-visual-database-tools.md
+    - name: 저장 대화 상자(Visual Database Tools)
+      href: save-dialog-box-visual-database-tools.md
+    - name: 공간 인덱스 대화 상자(Visual Database Tools)
+      href: spatial-indexes-dialog-box-visual-database-tools.md
+    - name: SQL 주석 대화 상자(Visual Database Tools)
+      href: sql-comment-dialog-box-visual-database-tools.md
+    - name: SQL 구문 오류 발생 대화 상자(Visual Database Tools)
+      href: sql-syntax-errors-encountered-dialog-box-visual-database-tools.md
+    - name: 테이블 및 열 대화 상자(Visual Database Tools)
+      href: tables-and-columns-dialog-box-visual-database-tools.md
+    - name: 테이블 속성(Visual Database Tools)
+      href: table-properties-visual-database-tools.md
+    - name: 테이블 반환 개체(열) 속성(Visual Database Tools)
+      href: table-valued-object-column-properties-visual-database-tools.md
+    - name: 테이블 반환 개체 속성(Visual Database Tools)
+      href: table-valued-object-properties-visual-database-tools.md
+    - name: 테이블 업데이트 대화 상자(Visual Database Tools)
+      href: update-table-dialog-box-visual-database-tools.md
+    - name: 유효성 검사 경고 대화 상자(Visual Database Tools)
+      href: validation-warnings-dialog-box-visual-database-tools.md
+    - name: XML 인덱스 대화 상자(Visual Database Tools)
+      href: xml-indexes-dialog-box-visual-database-tools.md

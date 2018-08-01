@@ -1,0 +1,24 @@
+- name: 연결 표현(테이블 형식)
+  href: connection-representation-tabular.md
+- name: 데이터베이스 표현(테이블 형식)
+  href: database-representation-tabular.md
+- name: 큐브 뷰 표현(테이블 형식)
+  href: perspective-representation-tabular.md
+- name: 테이블 형식 모델 쿼리
+  href: querying-a-tabular-model.md
+- name: 관계 표현(테이블 형식)
+  href: relationship-representation-tabular.md
+- name: 테이블 - 계산 열 표현
+  href: tables-calculated-column-representation.md
+- name: 테이블 - 계산 측정값 표현
+  href: tables-calculated-measure-representation.md
+- name: 테이블 - 계층 표현
+  href: tables-hierarchy-representation.md
+- name: 테이블 - KPI(핵심 성과 지표) 표현
+  href: tables-key-performance-indicator-representation.md
+- name: 테이블 - 파티션 표현
+  href: tables-partition-representation.md
+- name: 테이블 표현(테이블 형식)
+  href: tables-representation-tabular.md
+- name: 1050~1103 수준에서 테이블 형식 개체 모델 이해
+  href: understanding-tabular-object-model-at-levels-1050-through-1103.md

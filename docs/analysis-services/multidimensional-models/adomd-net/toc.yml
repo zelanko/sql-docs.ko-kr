@@ -1,0 +1,8 @@
+- name: ADOMD.NET를 사용하여 개발
+  href: developing-with-adomd-net.md
+- name: ADOMD .NET 클라이언트 +
+  href: ../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality.md
+- name: ADOMD .NET 서버 +
+  href: ../../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
+- name: ADOMD.NET 재배포
+  href: redistributing-adomd-net.md

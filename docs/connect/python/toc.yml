@@ -1,0 +1,6 @@
+- name: SQL Server용 Python 드라이버
+  href: python-driver-for-sql-server.md
+- name: pymssql +
+  href: ../../connect/python/pymssql/python-sql-driver-pymssql.md
+- name: pyodbc +
+  href: ../../connect/python/pyodbc/python-sql-driver-pyodbc.md

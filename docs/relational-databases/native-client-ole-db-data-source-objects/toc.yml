@@ -1,0 +1,14 @@
+- name: 데이터 원본 개체(OLE DB)
+  href: data-source-objects-ole-db.md
+- name: 데이터 원본 정보 속성
+  href: data-source-information-properties.md
+- name: 데이터 원본 속성(OLE DB)
+  href: data-source-properties-ole-db.md
+- name: 초기화 및 권한 부여 속성
+  href: initialization-and-authorization-properties.md
+- name: 지속형 데이터 원본 개체
+  href: persisted-data-source-objects.md
+- name: 세션 속성 - SQL Server Native Client OLE DB 공급자
+  href: session-properties-sql-server-native-client-ole-db-provider.md
+- name: 세션
+  href: sessions.md

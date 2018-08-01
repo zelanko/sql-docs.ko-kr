@@ -1,0 +1,122 @@
+- name: 데이터 마이닝 분석을 위한 UI 디자이너 및 대화 상자
+  href: ui-designers-dialog-boxes-data-mining.md
+- name: 데이터 마이닝 디자이너 및 대화 상자
+  href: ../data-mining-designers-and-dialog-boxes.md
+  items:
+    - name: 데이터 마이닝 모델 디자이너
+      href: ../data-mining-model-designer-analysis-services-data-mining.md
+    - name: 마이닝 구조 뷰(데이터 마이닝 모델 디자이너)
+      href: ../mining-structure-view-data-mining-model-designer.md
+    - name: 새 마이닝 모델 대화 상자(마이닝 구조 뷰)
+      href: ../new-mining-model-dialog-box-mining-structure-view.md
+    - name: 열 선택 대화 상자(마이닝 구조 뷰)
+      href: ../select-a-column-dialog-box-mining-structure-view.md
+    - name: 중첩 테이블 키 열 선택 대화 상자(마이닝 구조 뷰)
+      href: ../select-a-nested-table-key-column-dialog-box-mining-structure-view.md
+    - name: 데이터 마이닝 차원 만들기 대화 상자
+      href: ../create-data-mining-dimension-dialog.md
+    - name: 마이닝 모델 뷰(데이터 마이닝 모델 디자이너)
+      href: ../mining-models-view-data-mining-model-designer.md
+    - name: 알고리즘 매개 변수 대화 상자(마이닝 모델 뷰)
+      href: ../algorithm-parameters-dialog-box-mining-models-view.md
+    - name: 데이터 집합 필터/모델 필터 대화 상자
+      href: ../data-set-filter-or-model-filter-dialog-box.md
+      items:
+        - name: 필터 대화 상자(마이닝 정확도 차트)
+          href: ../filter-dialog-box-mining-accuracy-chart.md
+- name: 마이닝 모델 뷰어
+  href: ../mining-model-viewers-data-mining-model-designer.md
+  items:
+    - name: 특성 특징 탭
+      href: ../attribute-characteristics-tab-mining-model-viewer.md
+    - name: 특성 판별 탭
+      href: ../attribute-discrimination-tab-mining-model-viewer.md
+    - name: 특성 프로필 탭
+      href: ../attribute-profiles-tab-mining-model-viewer.md
+    - name: 차트 탭(시계열 뷰어)
+      href: ../chart-tab-mining-model-viewers.md
+    - name: 클러스터 특징 탭
+      href: ../cluster-characteristics-tab-mining-model-viewer.md
+    - name: 클러스터 다이어그램 탭
+      href: ../cluster-diagram-tab-mining-model-viewer.md
+    - name: 클러스터 판별 탭
+      href: ../cluster-discrimination-tab-mining-model-viewer.md
+    - name: 클러스터 프로필 탭
+      href: ../cluster-profiles-tab-mining-model-viewer.md
+    - name: 의사 결정 트리 탭
+      href: ../decision-tree-tab-mining-model-viewer.md
+    - name: 종속성 네트워크 탭
+      href: ../dependency-network-tab-mining-model-viewer.md
+    - name: 드릴스루 대화 상자
+      href: ../drill-through-dialog-box-mining-model-viewer.md
+    - name: 노드 찾기 대화 상자
+      href: ../find-node-dialog-box-mining-model-viewer.md
+    - name: 일반 콘텐츠 트리 뷰어
+      href: ../microsoft-generic-content-tree-viewer-data-mining.md
+    - name: 항목 집합 탭
+      href: ../itemsets-tab-mining-model-viewer.md
+    - name: 마이닝 범례 대화 상자
+      href: ../mining-legend-dialog-box-mining-model-viewer.md
+    - name: 신경망 탭
+      href: ../neural-network-mining-model-viewer.md
+    - name: 규칙 탭
+      href: ../rules-tab-mining-model-viewer.md
+    - name: 시퀀스 클러스터링 클러스터 다이어그램 탭
+      href: ../sequence-clustering-cluster-diagram-tab-mining-model-viewer.md
+    - name: 시퀀스 클러스터링 클러스터 프로필 탭
+      href: ../sequence-clustering-cluster-profiles-tab-mining-model-viewer.md
+    - name: 시퀀스 클러스터링 클러스터 특징 탭
+      href: ../sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md
+    - name: 시퀀스 클러스터링 클러스터 판별 탭
+      href: ../sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md
+    - name: 시퀀스 클러스터링 클러스터 전환 탭
+      href: ../sequence-clustering-cluster-transition-tab-mining-model-viewer.md
+    - name: 모델 탭(시계열 뷰어)
+      href: ../model-tab-mining-model-viewers.md
+- name: 마이닝 정확도 차트 디자이너(데이터 마이닝)
+  href: ../mining-accuracy-chart-designer-data-mining.md
+  items:
+    - name: 입력 선택 탭
+      href: ../input-selection-tab-mining-accuracy-chart-view.md
+    - name: 리프트 차트 탭
+      href: ../lift-chart-tab-mining-accuracy-chart-view.md
+    - name: 분류 행렬 탭
+      href: ../classification-matrix-tab-mining-accuracy-chart-view.md
+    - name: 교차 유효성 검사 탭
+      href: ../cross-validation-tab-mining-accuracy-chart-view.md
+    - name: 수익 차트 설정 대화 상자(마이닝 정확도 차트 뷰)
+      href: ../profit-chart-settings-dialog-box-mining-accuracy-chart-view.md
+    - name: 열 매핑 지정 대화 상자(마이닝 정확도 차트)
+      href: ../specify-column-mapping-dialog-box-mining-accuracy-chart.md
+    - name: 마이닝 구조 선택 대화 상자(마이닝 정확도 차트 뷰)
+      href: ../select-mining-structure-dialog-box-mining-accuracy-chart-view.md
+    - name: 테이블 선택 대화 상자(마이닝 정확도 차트 뷰)
+      href: ../select-table-dialog-box-mining-accuracy-chart-view.md
+    - name: 매핑 수정 대화 상자(마이닝 정확도 차트)
+      href: ../modify-mapping-dialog-box-mining-accuracy-chart.md
+    - name: 중첩 조인 지정 대화 상자(마이닝 정확도 차트 뷰)
+      href: ../specify-nested-join-dialog-box-mining-accuracy-chart-view.md
+- name: 예측 쿼리 작성기
+  href: ../prediction-query-builder-data-mining.md
+  items:
+    - name: 디자인 창
+      href: ../design-pane-mining-model-prediction-view.md
+    - name: 쿼리 창
+      href: ../query-pane-mining-model-prediction-view.md
+    - name: 결과 창
+      href: ../result-pane-mining-model-prediction-view.md
+    - name: 마이닝 모델 선택 대화 상자
+      href: ../select-mining-model-dialog-box-mining-model-prediction-view.md
+    - name: 데이터 마이닝 쿼리 결과 저장 대화 상자
+      href: ../save-data-mining-query-result-dialog-box-mining-model-prediction-view.md
+- name: 마이닝 구조 속성 대화 상자
+  href: ../mining-structure-properties-dialog-analysis-services-data-mining.md
+  items:
+    - name: 일반(마이닝 구조 대화 상자)
+      href: ../general-mining-structure-dialog-box-analysis-services-data-mining.md
+    - name: 오류 구성(마이닝 구조 대화 상자)
+      href: ../error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md
+- name: 마이닝 모델 속성 대화 상자
+  href: ../mining-model-properties-dialog-box-analysis-services-data-mining.md
+- name: DMX 쿼리 편집기
+  href: ../dmx-query-editor-analysis-services-data-mining.md

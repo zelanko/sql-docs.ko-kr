@@ -1,0 +1,10 @@
+- name: 특정 형식의 스크립트 구성 요소 개발
+  href: developing-specific-types-of-script-components.md
+- name: 스크립트 구성 요소를 사용하여 원본 만들기
+  href: creating-a-source-with-the-script-component.md
+- name: 스크립트 구성 요소를 사용하여 동기 변환 만들기
+  href: creating-a-synchronous-transformation-with-the-script-component.md
+- name: 스크립트 구성 요소를 사용하여 비동기 변환 만들기
+  href: creating-an-asynchronous-transformation-with-the-script-component.md
+- name: 스크립트 구성 요소를 사용하여 대상 만들기
+  href: creating-a-destination-with-the-script-component.md

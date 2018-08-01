@@ -1,0 +1,18 @@
+- name: SQL Server용 Microsoft OLE DB 드라이버
+  href: oledb-driver-for-sql-server.md
+- name: 기능 +
+  href: ../oledb/features/oledb-driver-for-sql-server-features.md
+- name: 응용 프로그램 +
+  href: ../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
+- name: OLE DB 프로그래밍 +
+  href: ../oledb/ole-db/oledb-driver-for-sql-server-programming.md
+- name: SQL Server용 Microsoft OLE DB 드라이버에 대한 릴리스 정보
+  href: release-notes-for-oledb-driver-for-sql-server.md
+- name: SQL Server용 Microsoft OLE DB 드라이버 다운로드
+  href: download-oledb-driver-for-sql-server.md
+- name: SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기
+  href: finding-more-oledb-driver-for-sql-server-information.md
+- name: SQL Server용 OLE DB 드라이버의 시스템 요구 사항
+  href: system-requirements-for-oledb-driver-for-sql-server.md
+- name: SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
+  href: when-to-use-oledb-driver-for-sql-server.md

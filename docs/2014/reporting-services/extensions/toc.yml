@@ -1,0 +1,88 @@
+- name: Reporting Services 확장 프로그램
+  href: reporting-services-extensions.md
+  items:
+    - name: 확장 프로그램에 대한 보안 고려 사항
+      href: security-considerations-for-extensions.md
+    - name: 데이터 처리 확장 프로그램 구현
+      href: data-processing/implementing-a-data-processing-extension.md
+    - name: 데이터 처리 확장 프로그램 개요
+      href: data-processing/data-processing-extensions-overview.md
+    - name: 데이터 처리 확장 프로그램 구현 준비
+      href: data-processing/preparing-to-implement-a-data-processing-extension.md
+    - name: 데이터 처리 확장 프로그램 라이브러리 만들기
+      href: data-processing/creating-a-data-processing-extension-library.md
+    - name: 데이터 처리 확장 프로그램에 대한 Connection 클래스 구현
+      href: data-processing/implementing-a-connection-class-for-a-data-processing-extension.md
+    - name: 데이터 처리 확장 프로그램에 대한 Command 클래스 구현
+      href: data-processing/implementing-a-command-class-for-a-data-processing-extension.md
+    - name: 데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
+      href: data-processing/implementing-a-datareader-class-for-a-data-processing-extension.md
+    - name: Reporting Services에서 외부 데이터 집합 사용
+      href: data-processing/using-an-external-dataset-with-reporting-services.md
+    - name: 데이터 처리 확장 프로그램 배포
+      href: data-processing/deploying-a-data-processing-extension.md
+      items:
+        - name: '방법: 보고서 서버에 데이터 처리 확장 프로그램 배포'
+          href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
+        - name: '방법: 보고서 디자이너에 데이터 처리 확장 프로그램 배포'
+          href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
+    - name: 데이터 처리 확장 프로그램 코드 디버깅
+      href: data-processing/debugging-data-processing-extension-code.md
+    - name: 데이터 처리 확장 프로그램 제거
+      href: data-processing/removing-a-data-processing-extension.md
+    - name: 배달 확장 프로그램 구현
+      href: delivery-extension/implementing-a-delivery-extension.md
+    - name: 배달 확장 프로그램 개요
+      href: delivery-extension/delivery-extensions-overview.md
+    - name: 배달 확장 프로그램 구현 준비
+      href: delivery-extension/preparing-to-implement-a-delivery-extension.md
+    - name: 배달 확장 프로그램 라이브러리 만들기
+      href: delivery-extension/creating-a-delivery-extension-library.md
+    - name: 배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현
+      href: delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+    - name: 배달 확장 프로그램에 대해 Notification 클래스 사용
+      href: delivery-extension/using-a-notification-class-for-a-delivery-extension.md
+    - name: 배달 확장 프로그램에 대해 Setting 클래스 사용
+      href: delivery-extension/using-the-setting-class-for-a-delivery-extension.md
+    - name: 배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용
+      href: delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
+    - name: 배달 확장 프로그램에 대해 Report 클래스 사용
+      href: delivery-extension/using-the-report-class-for-a-delivery-extension.md
+    - name: 배달 확장 프로그램에 대해 RenderedOutputFile 클래스 사용
+      href: delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md
+    - name: 배달 확장 프로그램에 대한 ISubscriptionBaseUIUserControl 인터페이스 구현
+      href: delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md
+    - name: 배달 확장 프로그램 배포
+      href: delivery-extension/deploying-a-delivery-extension.md
+    - name: 배달 확장 프로그램 코드 디버깅
+      href: delivery-extension/debugging-delivery-extension-code.md
+    - name: 배달 확장 프로그램 제거
+      href: delivery-extension/removing-a-delivery-extension.md
+    - name: 렌더링 확장 프로그램 구현
+      href: rendering-extension/implementing-a-rendering-extension.md
+    - name: 렌더링 확장 프로그램 개요
+      href: rendering-extension/rendering-extensions-overview.md
+    - name: IRenderingExtension 인터페이스 구현
+      href: rendering-extension/implementing-the-irenderingextension-interface.md
+    - name: 렌더링 확장 프로그램 배포
+      href: rendering-extension/deploying-a-rendering-extension.md
+    - name: 렌더링 확장 프로그램 제거
+      href: rendering-extension/removing-a-rendering-extension.md
+    - name: 보안 확장 프로그램 구현
+      href: security-extension/implementing-a-security-extension.md
+    - name: 보안 확장 프로그램 개요
+      href: security-extension/security-extensions-overview.md
+    - name: Reporting Services의 인증
+      href: security-extension/authentication-in-reporting-services.md
+    - name: Reporting Services의 권한 부여
+      href: security-extension/authorization-in-reporting-services.md
+    - name: Reporting Services 확장 프로그램 라이브러리
+      href: reporting-services-extension-library.md
+    - name: 안전한 개발
+      href: secure-development/secure-development-reporting-services.md
+    - name: Reporting Services의 코드 액세스 보안
+      href: secure-development/code-access-security-in-reporting-services.md
+    - name: 보안 정책 이해
+      href: secure-development/understanding-security-policies.md
+    - name: Reporting Services 보안 정책 파일 사용
+      href: secure-development/using-reporting-services-security-policy-files.md

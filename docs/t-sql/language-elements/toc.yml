@@ -1,0 +1,235 @@
+- name: 개요
+  href: language-elements-transact-sql.md
+- name: '--(주석)'
+  href: comment-transact-sql.md
+- name: 슬래시 별(블록 주석)
+  href: slash-star-comment-transact-sql.md
+- name: CREATE DIAGNOSTICS SESSION
+  href: create-diagnostics-session-transact-sql.md
+- name: NULL 및 UNKNOWN
+  href: null-and-unknown-transact-sql.md
+- name: USE
+  href: use-transact-sql.md
+- name: 백슬래시(줄 연속)
+  href: sql-server-utilities-statements-backslash.md
+- name: GO
+  href: sql-server-utilities-statements-go.md
+- name: 흐름 제어
+  href: control-of-flow.md
+  items:
+    - name: BEGIN...END
+      href: begin-end-transact-sql.md
+    - name: BREAK
+      href: break-transact-sql.md
+    - name: CONTINUE
+      href: continue-transact-sql.md
+    - name: ELSE(IF...ELSE)
+      href: else-if-else-transact-sql.md
+    - name: END(BEGIN...END)
+      href: end-begin-end-transact-sql.md
+    - name: GOTO
+      href: goto-transact-sql.md
+    - name: IF...ELSE
+      href: if-else-transact-sql.md
+    - name: RETURN
+      href: return-transact-sql.md
+    - name: THROW
+      href: throw-transact-sql.md
+    - name: TRY...CATCH
+      href: try-catch-transact-sql.md
+    - name: WAITFOR
+      href: waitfor-transact-sql.md
+    - name: WHILE
+      href: while-transact-sql.md
+- name: 커서
+  href: cursors-transact-sql.md
+  items:
+    - name: CLOSE
+      href: close-transact-sql.md
+    - name: DEALLOCATE
+      href: deallocate-transact-sql.md
+    - name: DECLARE CURSOR
+      href: declare-cursor-transact-sql.md
+    - name: FETCH
+      href: fetch-transact-sql.md
+    - name: OPEN
+      href: open-transact-sql.md
+- name: 식
+  href: expressions-transact-sql.md
+  items:
+    - name: CASE
+      href: case-transact-sql.md
+    - name: COALESCE
+      href: coalesce-transact-sql.md
+    - name: NULLIF
+      href: nullif-transact-sql.md
+- name: 연산자
+  href: operators-transact-sql.md
+  items:
+    - name: 단항 - 긍정
+      href: unary-operators-positive.md
+    - name: 단항 - 부정
+      href: unary-operators-negative.md
+    - name: 집합 - EXCEPT 및 INTERSECT
+      href: set-operators-except-and-intersect-transact-sql.md
+    - name: 집합 - UNION
+      href: set-operators-union-transact-sql.md
+    - name: 산술
+      href: arithmetic-operators-transact-sql.md
+      items:
+        - name: + (더하기)
+          href: add-transact-sql.md
+        - name: +=(더하기 대입)
+          href: add-equals-transact-sql.md
+        - name: '- (빼기)'
+          href: subtract-transact-sql.md
+        - name: '-=(빼기 대입)'
+          href: subtract-equals-transact-sql.md
+        - name: '* (곱하기)'
+          href: multiply-transact-sql.md
+        - name: '*=(곱하기 대입)'
+          href: multiply-equals-transact-sql.md
+        - name: /(나누기)
+          href: divide-transact-sql.md
+        - name: /=(나누기 대입)
+          href: divide-equals-transact-sql.md
+        - name: '% 모듈러스'
+          href: modulo-transact-sql.md
+        - name: '%=모듈러스 대입'
+          href: modulo-equals-transact-sql.md
+    - name: =(할당)
+      href: assignment-operator-transact-sql.md
+    - name: 비트 단위
+      href: bitwise-operators-transact-sql.md
+      items:
+        - name: '&(비트 AND)'
+          href: bitwise-and-transact-sql.md
+        - name: '&=(비트 AND 대입)'
+          href: bitwise-and-equals-transact-sql.md
+        - name: '|(비트 OR)'
+          href: bitwise-or-transact-sql.md
+        - name: '|=(비트 OR 대입)'
+          href: bitwise-or-equals-transact-sql.md
+        - name: ^(배타적 비트 OR)
+          href: bitwise-exclusive-or-transact-sql.md
+        - name: ^=(배타적 비트 OR 대입)
+          href: bitwise-exclusive-or-equals-transact-sql.md
+        - name: ~ (비트 NOT)
+          href: bitwise-not-transact-sql.md
+    - name: 비교
+      href: comparison-operators-transact-sql.md
+      items:
+        - name: = (같음)
+          href: equals-transact-sql.md
+        - name: '> (보다 큼)'
+          href: greater-than-transact-sql.md
+        - name: <(보다 작음)
+          href: less-than-transact-sql.md
+        - name: '>=(크거나 같음)'
+          href: greater-than-or-equal-to-transact-sql.md
+        - name: <=(작거나 같음)
+          href: less-than-or-equal-to-transact-sql.md
+        - name: <>(같지 않음)
+          href: not-equal-to-transact-sql-traditional.md
+        - name: '!<(보다 작지 않음)'
+          href: not-less-than-transact-sql.md
+        - name: '!= (같지 않음)'
+          href: not-equal-to-transact-sql-exclamation.md
+        - name: '!>(보다 크지 않음)'
+          href: not-greater-than-transact-sql.md
+    - name: 복합
+      href: compound-operators-transact-sql.md
+    - name: 논리
+      href: logical-operators-transact-sql.md
+      items:
+        - name: ALL
+          href: all-transact-sql.md
+        - name: AND
+          href: and-transact-sql.md
+        - name: ANY
+          href: any-transact-sql.md
+        - name: BETWEEN
+          href: between-transact-sql.md
+        - name: EXISTS
+          href: exists-transact-sql.md
+        - name: IN
+          href: in-transact-sql.md
+        - name: LIKE
+          href: like-transact-sql.md
+        - name: NOT
+          href: not-transact-sql.md
+        - name: 또는
+          href: or-transact-sql.md
+        - name: SOME | ANY
+          href: some-any-transact-sql.md
+    - name: '::(범위 결정)'
+      href: scope-resolution-operator-transact-sql.md
+    - name: String
+      href: string-operators-transact-sql.md
+      items:
+        - name: + (문자열 연결)
+          href: string-concatenation-transact-sql.md
+        - name: +=(문자열 연결 대입)
+          href: string-concatenation-equal-transact-sql.md
+        - name: '%(와일드카드 - 하나 이상의 문자 일치)'
+          href: percent-character-wildcard-character-s-to-match-transact-sql.md
+        - name: '[ ](와일드카드 - 하나 이상의 문자 일치)'
+          href: wildcard-character-s-to-match-transact-sql.md
+        - name: '[^](와일드카드 - 하나 이상의 문자 일치 안 함)'
+          href: wildcard-character-s-not-to-match-transact-sql.md
+        - name: _(와일드카드 - 한 문자 일치)
+          href: wildcard-match-one-character-transact-sql.md
+    - name: 연산자 우선 순위
+      href: operator-precedence-transact-sql.md
+- name: 의
+  href: transactions-transact-sql.md
+  items:
+    - name: 의
+      href: transactions-sql-data-warehouse.md
+    - name: 트랜잭션 격리 수준
+      href: transaction-isolation-levels.md
+    - name: BEGIN DISTRIBUTED TRANSACTION
+      href: begin-distributed-transaction-transact-sql.md
+    - name: BEGIN TRANSACTION
+      href: begin-transaction-transact-sql.md
+    - name: COMMIT TRANSACTION
+      href: commit-transaction-transact-sql.md
+    - name: COMMIT WORK
+      href: commit-work-transact-sql.md
+    - name: ROLLBACK TRANSACTION
+      href: rollback-transaction-transact-sql.md
+    - name: ROLLBACK WORK
+      href: rollback-work-transact-sql.md
+    - name: SAVE TRANSACTION
+      href: save-transaction-transact-sql.md
+- name: 변수
+  href: variables-transact-sql.md
+  items:
+    - name: SET @local_variable
+      href: set-local-variable-transact-sql.md
+    - name: SELECT @local_variable
+      href: select-local-variable-transact-sql.md
+    - name: DECLARE @local_variable
+      href: declare-local-variable-transact-sql.md
+- name: CREATE 문을 실행하기 전에
+  href: execute-transact-sql.md
+- name: PRINT
+  href: print-transact-sql.md
+- name: RAISERROR
+  href: raiserror-transact-sql.md
+- name: CHECKPOINT
+  href: checkpoint-transact-sql.md
+- name: KILL
+  href: kill-transact-sql.md
+- name: KILL QUERY NOTIFICATION SUBSCRIPTION
+  href: kill-query-notification-subscription-transact-sql.md
+- name: KILL STATS JOB
+  href: kill-stats-job-transact-sql.md
+- name: RECONFIGURE
+  href: reconfigure-transact-sql.md
+- name: SHUTDOWN
+  href: shutdown-transact-sql.md
+- name: 예약 키워드
+  href: reserved-keywords-transact-sql.md
+- name: 구문 표기 규칙
+  href: transact-sql-syntax-conventions-transact-sql.md

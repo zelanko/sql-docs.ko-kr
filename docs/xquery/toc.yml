@@ -1,0 +1,156 @@
+- name: 개요
+  href: xquery-language-reference-sql-server.md
+- name: 새로운 또는 업데이트된 아티클
+  href: new-updated-xquery.md
+- name: 모듈 및 프롤로그 - XQuery 프롤로그
+  href: modules-and-prologs-xquery-prolog.md
+- name: XQuery 기초
+  href: xquery-basics.md
+  items:
+    - name: 형식 시스템 - 시퀀스 형식 일치
+      href: type-system-sequence-type-matching.md
+    - name: 시퀀스 및 QName(XQuery)
+      href: sequence-and-qnames-xquery.md
+    - name: 식 컨텍스트 및 쿼리 평가(XQuery)
+      href: expression-context-and-query-evaluation-xquery.md
+    - name: 원자화(XQuery)
+      href: atomization-xquery.md
+    - name: 유효한 부울 값(XQuery)
+      href: effective-boolean-value-xquery.md
+    - name: 유형 시스템(XQuery)
+      href: type-system-xquery.md
+    - name: 오류 처리(XQuery)
+      href: error-handling-xquery.md
+    - name: XQuery의 주석
+      href: comments-in-xquery.md
+    - name: XQuery 및 정적 형식 지정
+      href: xquery-and-static-typing.md
+- name: XQuery 식
+  href: xquery-expressions.md
+  items:
+    - name: 경로 식 - 축 지정
+      href: path-expressions-specifying-axis.md
+    - name: 경로 식 - 노드 테스트 지정
+      href: path-expressions-specifying-node-test.md
+    - name: 경로 식 - 조건자 지정
+      href: path-expressions-specifying-predicates.md
+    - name: 경로 식 - 축약형 구문 사용
+      href: path-expressions-using-abbreviated-syntax.md
+    - name: 기본 식(XQuery)
+      href: primary-expressions-xquery.md
+    - name: 경로 식(XQuery)
+      href: path-expressions-xquery.md
+    - name: 시퀀스 식(XQuery)
+      href: sequence-expressions-xquery.md
+    - name: 산술 식(XQuery)
+      href: arithmetic-expressions-xquery.md
+    - name: 비교 식(XQuery)
+      href: comparison-expressions-xquery.md
+    - name: 논리 식(XQuery)
+      href: logical-expressions-xquery.md
+    - name: XML 생성(XQuery)
+      href: xml-construction-xquery.md
+    - name: FLWOR 문 및 반복(XQuery)
+      href: flwor-statement-and-iteration-xquery.md
+    - name: 순차 식 및 비순차 식(XQuery)
+      href: ordered-and-unordered-expressions-xquery.md
+    - name: 조건 식(XQuery)
+      href: conditional-expressions-xquery.md
+    - name: 정량화된 식(XQuery)
+      href: quantified-expressions-xquery.md
+    - name: SequenceType 식(XQuery)
+      href: sequencetype-expressions-xquery.md
+    - name: 식 유효성 검사(XQuery)
+      href: validate-expressions-xquery.md
+- name: 모듈 및 프롤로그(XQuery)
+  href: modules-and-prologs-xquery.md
+- name: XQuery의 캐스트 규칙
+  href: type-casting-rules-in-xquery.md
+- name: xml 데이터 형식에 대한 XQuery 함수
+  href: xquery-functions-against-the-xml-data-type.md
+  items:
+    - name: QNames 관련 함수 - expanded-QName
+      href: functions-related-to-qnames-expanded-qname.md
+    - name: QNames 관련 함수 - local-name-from-QName
+      href: functions-related-to-qnames-local-name-from-qname.md
+    - name: QNames 관련 함수 - namespace-uri-from-QName
+      href: functions-related-to-qnames-namespace-uri-from-qname.md
+    - name: 집계 함수 - count
+      href: aggregate-functions-count.md
+    - name: 집계 함수 - min
+      href: aggregate-functions-min.md
+    - name: 집계 함수 - max
+      href: aggregate-functions-max.md
+    - name: 집계 함수 - avg
+      href: aggregate-functions-avg.md
+    - name: 집계 함수 - sum
+      href: aggregate-functions-sum.md
+    - name: 시퀀스 함수 - empty
+      href: functions-on-sequences-empty.md
+    - name: 시퀀스 함수 - distinct-values
+      href: functions-on-sequences-distinct-values.md
+    - name: 시퀀스 함수 - id
+      href: functions-on-sequences-id.md
+    - name: 노드 함수 - number
+      href: functions-on-nodes-number.md
+    - name: 노드 함수 - local-name
+      href: functions-on-nodes-local-name.md
+    - name: 노드 함수 - namespace-uri
+      href: functions-on-nodes-namespace-uri.md
+    - name: 문자열 값 함수 - concat
+      href: functions-on-string-values-concat.md
+    - name: 문자열 값 함수 - contains
+      href: functions-on-string-values-contains.md
+    - name: 문자열 값 함수 - substring
+      href: functions-on-string-values-substring.md
+    - name: 문자열 값 함수 - string-length
+      href: functions-on-string-values-string-length.md
+    - name: 문자열 값 함수 - lower-case
+      href: functions-on-string-values-lower-case.md
+    - name: 문자열 값 함수 - upper-case
+      href: functions-on-string-values-upper-case.md
+    - name: 숫자 값 함수 - ceiling
+      href: numeric-values-functions-ceiling.md
+    - name: 숫자 값 함수 - floor
+      href: numeric-values-functions-floor.md
+    - name: 숫자 값 함수 - round
+      href: numeric-values-functions-round.md
+    - name: 'XQuery 확장 함수 - sql:column()'
+      href: xquery-extension-functions-sql-column.md
+    - name: 'XQuery 확장 함수 - sql:variable()'
+      href: xquery-extension-functions-sql-variable.md
+    - name: 데이터 접근자 함수 - string(XQuery)
+      href: data-accessor-functions-string-xquery.md
+    - name: 데이터 접근자 함수 - data(XQuery)
+      href: data-accessor-functions-data-xquery.md
+    - name: 컨텍스트 함수 - last(XQuery)
+      href: context-functions-last-xquery.md
+    - name: 컨텍스트 함수 - position(XQuery)
+      href: context-functions-position-xquery.md
+    - name: 부울 생성자 함수 - true(XQuery)
+      href: boolean-constructor-functions-true-xquery.md
+    - name: 부울 생성자 함수 - false(XQuery)
+      href: boolean-constructor-functions-false-xquery.md
+    - name: 부울 값 함수 - not 함수
+      href: functions-on-boolean-values-not-function.md
+    - name: 데이터 접근자 함수
+      href: data-accessor-functions.md
+    - name: 생성자 함수(XQuery)
+      href: constructor-functions-xquery.md
+- name: xml 데이터 형식에 대한 XQuery 연산자
+  href: xquery-operators-against-the-xml-data-type.md
+- name: xml 데이터 형식에 대한 추가 예제 XQuery
+  href: additional-sample-xqueries-against-the-xml-data-type.md
+  items:
+    - name: 일반 XQuery 사용 사례
+      href: general-xquery-use-cases.md
+    - name: 계층 포함 XQuery
+      href: xqueries-involving-hierarchy.md
+    - name: 정렬 포함 XQuery
+      href: xqueries-involving-order.md
+    - name: 관계형 데이터에 대한 XQuery 처리
+      href: xqueries-handling-relational-data.md
+    - name: XQuery에서 문자열 검색
+      href: string-search-in-xquery.md
+    - name: XQuery의 네임스페이스 처리
+      href: handling-namespaces-in-xquery.md

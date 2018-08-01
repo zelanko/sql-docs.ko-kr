@@ -1,0 +1,83 @@
+- name: SSMS란?
+  href: sql-server-management-studio-ssms.md
+- name: SSMS 다운로드
+  href: download-sql-server-management-studio-ssms.md
+  items:
+    - name: SSMS 변경 로그 및 이전 릴리스
+      href: sql-server-management-studio-changelog-ssms.md
+    - name: 릴리스 정보
+      href: 'download-sql-server-management-studio-ssms.md#release-notes'
+    - name: 영어 이외의 SSMS 설치
+      href: install-other-languages.md
+    - name: 새로운 또는 업데이트된 아티클
+      href: new-updated-ssms.md
+- name: SQL Server PowerShell 모듈 설치
+  href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
+- name: SQL Server 에이전트 +
+  href: ../ssms/agent/sql-server-agent.md
+- name: F1 도움말 +
+  href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+- name: 메뉴 도움말 +
+  href: ../ssms/menu-help/sql-server-management-studio-menu-help.md
+- name: 개체 탐색기 +
+  href: ../ssms/object/object-explorer.md
+- name: 솔루션 탐색기 +
+  href: ../ssms/solution/solution-explorer.md
+- name: 템플릿 +
+  href: ../ssms/template/template-explorer.md
+- name: Visual Database Tools +
+  href: ../ssms/visual-db-tools/visual-database-tools.md
+- name: 서버 등록 +
+  href: ../ssms/register-servers/register-servers.md
+- name: 자습서 +
+  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+- name: BI용 SSMS 소개
+  href: introduction-to-sql-server-management-studio-for-business-intelligence.md
+- name: 메뉴 및 바로 가기 키 사용자 지정
+  href: customize-menus-and-shortcut-keys.md
+- name: SSMS의 도구 창
+  href: tool-windows-in-sql-server-management-studio.md
+- name: SSMS를 사용하여 데이터베이스 프로젝트 빌드
+  href: build-database-projects-by-using-sql-server-management-studio.md
+- name: SSMS Windows 관리 이해
+  href: understand-sql-server-management-studio-windows-management.md
+- name: 외부 도구 대화 상자
+  href: external-tools-dialog-box.md
+- name: 인수 대화 상자
+  href: arguments-dialog-box.md
+- name: SSMS로 서버 관리
+  href: administer-servers-with-sql-server-management-studio.md
+- name: 사용 조건
+  href: sql-server-management-studio-license-terms.md
+- name: WMI를 구성하여 SQL Server 도구에 서버 상태 표시
+  href: configure-wmi-to-show-server-status-in-sql-server-tools.md
+- name: SSMS 환경
+  href: the-sql-server-management-studio-environment.md
+- name: SSMS의 속성 페이지
+  href: property-pages-in-sql-server-management-studio.md
+- name: SSMS의 속성 창
+  href: properties-window-management-studio.md
+- name: SSMS의 출력 창
+  href: output-window.md
+- name: 대화 상자 정보
+  href: about-dialog-box.md
+- name: SSMS 웹 브라우저
+  href: sql-server-management-studio-web-browser.md
+- name: 일반 사용자 인터페이스 요소
+  href: general-user-interface-elements.md
+- name: SSMS의 사용자 지원
+  href: user-assistance-in-sql-server-management-studio.md
+- name: Arguments for External Tools
+  href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
+- name: 외부 도구를 도구 메뉴에 추가
+  href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+- name: 로그인 감사 구성
+  href: configure-login-auditing-sql-server-management-studio.md
+- name: 도구 상자 사용
+  href: use-the-toolbox.md
+- name: Ssms 유틸리티
+  href: ssms-utility.md
+- name: SSMS 바로 가기 키
+  href: sql-server-management-studio-keyboard-shortcuts.md
+- name: 익명 사용 현황 데이터
+  href: sql-server-management-studio-telemetry-ssms.md

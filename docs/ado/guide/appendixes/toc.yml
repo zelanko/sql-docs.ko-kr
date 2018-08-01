@@ -1,0 +1,69 @@
+- name: '부록 A: 공급자'
+  href: appendix-a-providers.md
+  items:
+    - name: OLE DB의 Microsoft 커서 서비스
+      href: microsoft-cursor-service-for-ole-db-ado-service-component.md
+    - name: OLE DB 지속성 공급자
+      href: microsoft-ole-db-persistence-provider-ado-service-provider.md
+    - name: Active Directory 서비스용 OLE DB 공급자
+      href: microsoft-ole-db-provider-for-microsoft-active-directory-service.md
+    - name: 인터넷 게시용 OLE DB 공급자
+      href: microsoft-ole-db-provider-for-internet-publishing.md
+    - name: Jet용 OLE DB 공급자
+      href: microsoft-ole-db-provider-for-microsoft-jet.md
+    - name: Microsoft 인덱싱 서비스 OLE DB 공급자
+      href: microsoft-ole-db-provider-for-microsoft-indexing-service.md
+    - name: ODBC용 OLE DB 공급자
+      href: microsoft-ole-db-provider-for-odbc.md
+    - name: Oracle용 OLE DB 공급자
+      href: microsoft-ole-db-provider-for-oracle.md
+    - name: OLE DB Provider for SQL Server
+      href: microsoft-ole-db-provider-for-sql-server.md
+    - name: OLE DB 원격 공급자
+      href: microsoft-ole-db-remoting-provider-ado-service-provider.md
+    - name: OLE DB 단순 공급자
+      href: microsoft-ole-db-simple-provider.md
+    - name: OLE DB의 Microsoft 데이터 셰이핑 서비스
+      href: microsoft-data-shaping-service-for-ole-db-ado-service-provider.md
+- name: '부록 B: ADO 오류'
+  href: appendix-b-ado-errors.md
+  items:
+    - name: ADO 오류 코드
+      href: ado-error-codes.md
+    - name: DataControl 오류 코드
+      href: datacontrol-error-codes.md
+    - name: Internet Explorer 오류 코드
+      href: internet-explorer-error-codes.md
+    - name: 인터넷 정보 서비스 오류 코드
+      href: internet-information-services-error-codes.md
+- name: '부록 C: ADO를 사용한 프로그래밍'
+  href: appendix-c-programming-with-ado.md
+  items:
+    - name: ADO Java 클래스 래퍼
+      href: ado-java-class-wrappers.md
+    - name: Microsoft Visual Basic에서 ADO 사용
+      href: using-ado-with-microsoft-visual-basic.md
+    - name: Java용 Microsoft SDK 사용
+      href: using-the-microsoft-sdk-for-java.md
+    - name: 스크립트 언어로 ADO 사용
+      href: using-ado-with-scripting-languages.md
+      items:
+        - name: VBScript ADO 프로그래밍
+          href: vbscript-ado-programming.md
+        - name: JScript ADO 프로그래밍
+          href: jscript-ado-programming.md
+    - name: Microsoft Visual C++으로 ADO 사용
+      href: using-ado-with-microsoft-visual-c.md
+      items:
+        - name: Visual C++ ADO 프로그래밍
+          href: visual-c-ado-programming.md
+        - name: Visual C++ 확장 예제
+          href: visual-c-extensions-example.md
+        - name: ADO용 Visual C++ 확장
+          href: visual-c-extensions-for-ado.md
+        - name: Visual C++ 확장 헤더
+          href: visual-c-extensions-header.md
+        - name: Visual C++ 확장 사용
+          href: using-visual-c-extensions.md
+- name: '부록 D: ADO 샘플'
+  href: appendix-d-ado-samples.md

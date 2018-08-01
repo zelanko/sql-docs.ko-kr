@@ -1,0 +1,84 @@
+- name: SQL Server 설치
+  href: installation-for-sql-server.md
+- name: SQL Server 업그레이드
+  href: upgrade-sql-server.md
+  items:
+    - name: 지원되는 버전 업그레이드 - SQL Server 2017
+      href: supported-version-and-edition-upgrades-2017.md
+    - name: 지원되는 버전 업그레이드 - SQL Server 2016
+      href: supported-version-and-edition-upgrades.md
+    - name: Data Migration Assistant를 실행하여 업그레이드 준비
+      href: prepare-for-upgrade-by-running-data-migration-assistant.md
+    - name: SQL Server 2005에서 업그레이드하나요?
+      href: are-you-upgrading-from-sql-server-2005.md
+    - name: Analysis Services 업그레이드
+      href: upgrade-analysis-services.md
+    - name: 데이터베이스 엔진 업그레이드
+      href: upgrade-database-engine.md
+      items:
+        - name: 데이터베이스 엔진 업그레이드 방법 선택
+          href: choose-a-database-engine-upgrade-method.md
+        - name: Plan and Test the Database Engine Upgrade Plan
+          href: plan-and-test-the-database-engine-upgrade-plan.md
+        - name: 데이터베이스 엔진 업그레이드 완료
+          href: complete-the-database-engine-upgrade.md
+          items:
+            - name: 데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용
+              href: change-the-database-compatibility-mode-and-use-the-query-store.md
+    - name: Data Quality Services 업그레이드
+      href: upgrade-data-quality-services.md
+    - name: MDS(Master Data Services) 업그레이드
+      href: upgrade-master-data-services.md
+    - name: SharePoint용 Power Pivot 업그레이드
+      href: upgrade-power-pivot-for-sharepoint.md
+    - name: 복제된 데이터베이스 업그레이드
+      href: upgrade-replicated-databases.md
+    - name: SQL Server 관리 도구 업그레이드
+      href: upgrade-sql-server-management-tools.md
+    - name: 설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
+      href: upgrade-sql-server-using-the-installation-wizard-setup.md
+    - name: 다른 SQL Server 버전으로 업그레이드(설치 프로그램)
+      href: upgrade-to-a-different-edition-of-sql-server-setup.md
+- name: SQL Server 설치
+  href: install-sql-server.md
+  items:
+    - name: SQL Server 데이터베이스 엔진 설치
+      href: install-sql-server-database-engine.md
+    - name: SQL Server 복제 설치
+      href: install-sql-server-replication.md
+    - name: SQL Server PowerShell 설치
+      href: install-sql-server-powershell.md
+    - name: SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션
+      href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+    - name: SysPrep을 사용하여 SQL Server 설치 시 고려 사항
+      href: considerations-for-installing-sql-server-using-sysprep.md
+    - name: 시스템 구성 검사기의 검사 매개 변수
+      href: check-parameters-for-the-system-configuration-checker.md
+    - name: Server Core 설치 시 SQL Server 구성
+      href: configure-sql-server-on-a-server-core-installation.md
+    - name: Server Core에 SQL Server 설치
+      href: install-sql-server-on-server-core.md
+    - name: 설치 마법사에서 SQL Server 설치(설치 프로그램)
+      href: install-sql-server-from-the-installation-wizard-setup.md
+    - name: '방법: 명령 프롬프트에서 SQL Server 2008 R2 설치'
+      href: install-sql-server-from-the-command-prompt.md
+    - name: 구성 파일을 사용하여 SQL Server 설치
+      href: install-sql-server-using-a-configuration-file.md
+    - name: SysPrep을 사용하여 SQL Server 설치
+      href: install-sql-server-using-sysprep.md
+    - name: SQL Server 인스턴스에 기능 추가(설치 프로그램)
+      href: add-features-to-an-instance-of-sql-server-setup.md
+    - name: 실패한 SQL Server 설치 복구
+      href: repair-a-failed-sql-server-installation.md
+    - name: SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기
+      href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+    - name: SQL Server 서비스 업데이트 설치
+      href: install-sql-server-servicing-updates.md
+    - name: SQL Server 설치 로그 파일 보기 및 읽기
+      href: view-and-read-sql-server-setup-log-files.md
+    - name: SQL Server 설치 유효성 검사
+      href: validate-a-sql-server-installation.md
+    - name: 명령 프롬프트에서 업데이트 설치
+      href: installing-updates-from-the-command-prompt.md
+- name: SQL Server 사용 피드백 모음에 대한 로컬 감사
+  href: local-audit-for-sql-server-usage-feedback-collection.md

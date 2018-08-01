@@ -1,0 +1,24 @@
+- name: 개요
+  href: transactional-replication.md
+- name: 트랜잭션 복제에 대한 게시 유형
+  href: publication-types-for-transactional-replication.md
+  items:
+    - name: 트랜잭션 복제를 위한 업데이트 가능 구독
+      href: updatable-subscriptions-for-transactional-replication.md
+    - name: 업데이트할 수 있는 구독 - 지연 업데이트 충돌 해결
+      href: updatable-subscriptions-queued-updating-conflict-resolution.md
+    - name: 피어 투 피어 - 트랜잭션 복제
+      href: peer-to-peer-transactional-replication.md
+    - name: 피어 투 피어 - 복제에서 충돌 검색
+      href: peer-to-peer-conflict-detection-in-peer-to-peer-replication.md
+    - name: 양방향 트랜잭션 복제
+      href: bidirectional-transactional-replication.md
+- name: 트랜잭션 복제를 위한 아티클 옵션
+  href: article-options-for-transactional-replication.md
+  items:
+    - name: 트랜잭션 아티클 - 변경 내용을 전파하는 방법 지정
+      href: transactional-articles-specify-how-changes-are-propagated.md
+    - name: 트랜잭션 아티클 - 스키마 변경 반영을 위해 다시 생성
+      href: transactional-articles-regenerate-to-reflect-schema-changes.md
+    - name: 트랜잭션 복제에서 저장 프로시저 실행 게시
+      href: publishing-stored-procedure-execution-in-transactional-replication.md

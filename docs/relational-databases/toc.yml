@@ -1,0 +1,209 @@
+- name: 개요
+  href: database-features.md
+- name: 새로운 또는 업데이트된 아티클
+  href: new-updated-relational-databases.md
+- name: SQL Server 지침
+  href: sql-server-guides.md
+  items:
+    - name: Always On 가용성 그룹 문제 해결 및 모니터링 가이드
+    - name: 인덱스 아키텍처 및 디자인
+      href: sql-server-index-design-guide.md
+    - name: 메모리 관리 아키텍처
+      href: memory-management-architecture-guide.md
+      items:
+        - name: 페이지 읽기
+          href: reading-pages.md
+        - name: 페이지 쓰기
+          href: writing-pages.md
+    - name: 페이지 및 익스텐트 아키텍처
+      href: pages-and-extents-architecture-guide.md
+    - name: 마이그레이션 후 유효성 검사 및 최적화
+      href: post-migration-validation-and-optimization-guide.md
+    - name: 성능
+      href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+    - name: 쿼리 처리 아키텍처
+      href: query-processing-architecture-guide.md
+    - name: 스레드 및 태스크 아키텍처
+      href: thread-and-task-architecture-guide.md
+    - name: 트랜잭션 로그 아키텍처 및 관리 가이드
+      href: sql-server-transaction-log-architecture-and-management-guide.md
+    - name: 트랜잭션 잠금 및 행 버전 관리 지침
+      href: sql-server-transaction-locking-and-row-versioning-guide.md
+    - name: 삭제할 레코드 정리 프로세스
+      href: ghost-record-cleanup-process-guide.md
+- name: Backup 및 Restore 메서드
+  href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
+- name: Blob
+  href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
+- name: 데이터 정렬
+  href: ../relational-databases/collations/collation-and-unicode-support.md
+- name: 구성 관리자
+  href: sql-server-configuration-manager.md
+- name: 커서
+  href: cursors.md
+- name: 데이터 수집
+  href: ../relational-databases/data-collection/data-collection.md
+- name: 데이터 압축
+  href: ../relational-databases/data-compression/data-compression.md
+- name: 데이터 계층 응용 프로그램
+  href: ../relational-databases/data-tier-applications/data-tier-applications.md
+- name: 데이터베이스 메일
+  href: ../relational-databases/database-mail/database-mail.md
+- name: 데이터베이스
+  href: ../relational-databases/databases/databases.md
+- name: 클라이언트 개발
+  items:
+    - name: CLR 통합
+      href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
+    - name: 확장 저장 프로시저 프로그래밍
+      href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
+    - name: 확장 저장 프로시저 참조
+      href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+    - name: Express Localdb 오류 메시지
+      href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
+    - name: Express Localdb 인스턴스 API
+      href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
+    - name: Native Client
+      href: ../relational-databases/native-client/sql-server-native-client-programming.md
+    - name: SMO(Server 관리 개체)
+      href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+    - name: SQLXML
+      href: ../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
+    - name: WMI(Windows Management Instrumentation) 공급자
+      items:
+        - name: WMI 공급자 구성
+          href: ../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md
+        - name: WMI 공급자 구성 클래스
+          href: ../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
+        - name: WMI 공급자 서버 이벤트
+          href: ../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+- name: 오류 및 이벤트
+  href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
+- name: 이벤트 클래스
+  href: ../relational-databases/event-classes/sql-server-event-class-reference.md
+- name: 확장 이벤트
+  href: ../relational-databases/extended-events/extended-events.md
+- name: 그래프
+  href: ../relational-databases/graphs/sql-graph-overview.md
+- name: 계층적 데이터
+  href: hierarchical-data-sql-server.md
+- name: 가져오기 및 내보내기
+  href: ../relational-databases/import-export/overview-import-export.md
+- name: 메모리 내 OLTP
+  href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+- name: 인덱스
+  href: ../relational-databases/indexes/indexes.md
+- name: JSON
+  href: ../relational-databases/json/json-data-sql-server.md
+- name: 연결된 서버
+  href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+- name: 유지 관리 계획
+  href: ../relational-databases/maintenance-plans/maintenance-plans.md
+- name: 관리
+  href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
+  items:
+    - name: 데이터베이스 수명 주기 관리
+      href: database-lifecycle-management.md
+    - name: 중앙 관리 서버를 사용하여 여러 서버 관리
+      href: administer-multiple-servers-using-central-management-servers.md
+- name: 조인
+  href: ../relational-databases/performance/joins.md
+- name: 파티션
+  href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+- name: 정책 기반 관리
+  href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+- name: PolyBase
+  href: ../relational-databases/polybase/polybase-guide.md
+- name: 복제
+  href: ../relational-databases/replication/sql-server-replication.md
+- name: 관리
+  href: ../relational-databases/resource-governor/resource-governor.md
+- name: 스크립팅
+  href: ../relational-databases/scripting/database-engine-scripting.md
+- name: 검색
+  href: ../relational-databases/search/full-text-search.md
+- name: 보안
+  href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: 시퀀스 번호
+  href: ../relational-databases/sequence-numbers/sequence-numbers.md
+- name: Service Broker
+  href: ../relational-databases/service-broker/event-notifications.md
+- name: 실행 계획 연산자
+  href: showplan-logical-and-physical-operators-reference.md
+- name: 공간
+  href: ../relational-databases/spatial/spatial-data-sql-server.md
+- name: SQL 추적
+  href: ../relational-databases/sql-trace/sql-trace.md
+- name: 통계
+  href: ../relational-databases/statistics/statistics.md
+- name: 저장 프로시저
+  href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+- name: 하위 쿼리
+  href: ../relational-databases/performance/subqueries.md
+- name: 동의어
+  href: ../relational-databases/synonyms/synonyms-database-engine.md
+- name: 시스템 카탈로그 뷰
+  href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
+- name: 시스템 호환성 뷰
+  href: ../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md
+- name: 시스템 동적 관리 뷰
+  href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+- name: 시스템 함수
+  href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
+- name: 시스템 정보 스키마 뷰
+  href: ../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
+- name: 시스템 저장 프로시저
+  href: ../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
+- name: 시스템 테이블
+  href: ../relational-databases/system-tables/system-tables-transact-sql.md
+- name: 시스템 뷰
+  href: ../relational-databases/system-views/replication-views-transact-sql.md
+- name: 테이블
+  href: ../relational-databases/tables/tables.md
+- name: 변경 내용 추적
+  href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+- name: 트리거
+  href: ../relational-databases/triggers/logon-triggers.md
+- name: 사용자 정의 함수
+  href: ../relational-databases/user-defined-functions/user-defined-functions.md
+- name: 뷰
+  href: ../relational-databases/views/views.md
+- name: xml
+  href: ../relational-databases/xml/xml-data-sql-server.md
+- name: 자습서
+  href: database-engine-tutorials.md
+  items:
+    - name: 데이터베이스 엔진 시작
+      href: tutorial-getting-started-with-the-database-engine.md
+      items:
+        - name: '1단원: 데이터베이스 엔진에 연결'
+          href: lesson-1-connecting-to-the-database-engine.md
+        - name: '2단원: 다른 컴퓨터에서 연결'
+          href: lesson-2-connecting-from-another-computer.md
+    - name: Azure Blob Storage Service로 SQL Server 백업 및 복원
+      href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
+    - name: 인증서로 저장 프로시저 서명
+      href: tutorial-signing-stored-procedures-with-a-certificate.md
+    - name: 소유권 체인 및 컨텍스트 전환
+      href: tutorial-ownership-chains-and-context-switching.md
+    - name: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용
+      href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+      items:
+        - name: '1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기'
+          href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
+        - name: '2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기'
+          href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
+        - name: '3단원: URL에 데이터베이스 백업'
+          href: lesson-3-database-backup-to-url.md
+        - name: '4단원: URL에서 가상 머신으로 데이터베이스 복원'
+          href: lesson-4-restore-database-to-virtual-machine-from-url.md
+        - name: '5단원: 파일-스냅숏 백업을 사용하여 데이터베이스 백업'
+          href: lesson-5-backup-database-using-file-snapshot-backup.md
+        - name: '6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성'
+          href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md
+        - name: '7단원: 데이터베이스를 특정 시점으로 복원'
+          href: lesson-7-restore-a-database-to-a-point-in-time.md
+        - name: '8단원: 로그 백업에서 새 데이터베이스로 복원'
+          href: lesson-8-restore-as-new-database-from-log-backup.md
+        - name: '9단원: 백업 세트 및 파일-스냅숏 백업 관리'
+          href: lesson-9-manage-backup-sets-and-file-snapshot-backups.md

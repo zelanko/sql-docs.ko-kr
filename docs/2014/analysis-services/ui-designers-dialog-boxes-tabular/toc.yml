@@ -1,0 +1,90 @@
+- name: 테이블 형식 분석을 위한 UI 디자이너 및 대화 상자
+  href: ui-designers-dialog-boxes-tabular.md
+- name: Analysis Services 디자이너 및 대화 상자(테이블 형식)
+  href: ../analysis-services-designers-and-dialog-boxes-tabular.md
+- name: 대화 상자 참조
+  href: ../dialog-boxes-reference-ssas.md
+  items:
+    - name: 열 너비 대화 상자
+      href: ../column-width-dialog-box-ssas.md
+    - name: 날짜 테이블로 표시 대화 상자
+      href: ../mark-as-date-table-dialog-box-ssas.md
+    - name: 테이블 속성 편집 대화 상자
+      href: ../edit-table-properties-dialog-box-ssas.md
+    - name: 이동 대화 상자
+      href: ../go-to-dialog-box-ssas.md
+    - name: 함수 삽입 대화 상자
+      href: ../insert-function-dialog-box-ssas.md
+    - name: 테이블 이동 대화 상자
+      href: ../move-table-dialog-box-ssas.md
+- name: 테이블 가져오기 마법사
+  href: ../table-import-wizard-reference-ssas.md
+  items:
+    - name: 고급 설정
+      href: ../advanced-settings-ssas.md
+    - name: Analysis Services MDX 쿼리 디자이너
+      href: ../analysis-services-mdx-query-designer-ssas.md
+    - name: 데이터를 가져오는 방법 선택
+      href: ../choose-how-to-import-the-data-ssas.md
+    - name: 보고서 또는 데이터 피드에 연결
+      href: ../connect-to-a-report-or-data-feed-ssas.md
+    - name: 데이터 원본에 연결
+      href: ../connect-to-a-data-source-ssas.md
+    - name: DB2 데이터베이스에 연결
+      href: ../connect-to-a-db2-database-ssas.md
+    - name: 플랫 파일에 연결
+      href: ../connect-to-a-flat-file-ssas.md
+    - name: Microsoft Access 데이터베이스에 연결
+      href: ../connect-to-a-microsoft-access-database-ssas.md
+    - name: Microsoft Excel 파일에 연결
+      href: ../connect-to-a-microsoft-excel-file-ssas.md
+    - name: Azure SQL Database에 연결
+      href: ../connect-to-an-azure-sql-database-ssas.md
+    - name: Microsoft SQL Server 데이터베이스에 연결
+      href: ../connect-to-a-microsoft-sql-server-database-ssas.md
+    - name: Microsoft SQL Server 병렬 데이터 웨어하우스에 연결
+      href: ../connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md
+    - name: Microsoft SQL Server Analysis Services에 연결
+      href: ../connect-to-microsoft-sql-server-analysis-services-ssas.md
+    - name: Informix 데이터베이스에 연결
+      href: ../connect-to-an-informix-database-ssas.md
+    - name: Oracle 데이터베이스에 연결
+      href: ../connect-to-an-oracle-database-ssas.md
+    - name: Sybase 데이터베이스에 연결
+      href: ../connect-to-a-sybase-database-ssas.md
+    - name: Teradata 데이터베이스에 연결
+      href: ../connect-to-a-teradata-database-ssas.md
+    - name: 데이터 원본 자격 증명
+      href: ../data-source-credentials-ssas.md
+    - name: 세부 정보
+      href: ../details-ssas.md
+    - name: 필터 세부 정보
+      href: ../filter-details-ssas.md
+    - name: 가장 정보 대화 상자
+      href: ../impersonation-information-dialog-box-table-import-wizard.md
+    - name: 가져오기
+      href: ../importing-ssas.md
+    - name: 가져오기 요약
+      href: ../import-summary-ssas.md
+    - name: 선택한 테이블 미리 보기
+      href: ../preview-selected-table-ssas.md
+    - name: 관계형 쿼리 디자이너
+      href: ../relational-query-designer-ssas.md
+    - name: 테이블 및 뷰 선택
+      href: ../select-tables-and-views-ssas.md
+    - name: 테이블 및 뷰 선택(데이터 피드)
+      href: ../select-tables-and-views-data-feeds-ssas.md
+    - name: 고급 속성 설정
+      href: ../set-advanced-properties-ssas.md
+    - name: 연결 문자열 지정
+      href: ../specify-a-connection-string-ssas.md
+    - name: SQL 또는 MDX 쿼리 지정
+      href: ../specify-a-sql-or-mdx-query-ssas.md
+- name: 연결 속성 대화 상자(SSAS - 테이블 형식)
+  href: ../connection-properties-dialog-box-ssas-tabular.md
+- name: 데이터베이스 속성 대화 상자(SSAS - 테이블 형식)
+  href: ../database-properties-dialog-box-ssas-tabular.md
+- name: 테이블 속성 대화 상자(SSAS - 테이블 형식)
+  href: ../table-properties-dialog-box-ssas-tabular.md
+- name: 행 필터(역할 디자이너)(테이블 형식 모델)
+  href: ../row-filters-role-designer-tabular-model.md

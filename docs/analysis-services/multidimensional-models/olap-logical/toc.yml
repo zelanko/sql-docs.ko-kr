@@ -1,0 +1,14 @@
+- name: 데이터베이스 개체(Analysis Services - 다차원 데이터)
+  href: database-objects-analysis-services-multidimensional-data.md
+- name: 차원 개체
+  href: ../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+- name: 큐브 개체 +
+  href: ../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+- name: 논리 아키텍처 개요(Analysis Services - 다차원 데이터)
+  href: logical-architecture-overview-analysis-services-multidimensional-data.md
+- name: 보안 역할(Analysis Services - 다차원 데이터)
+  href: security-roles-analysis-services-multidimensional-data.md
+- name: 서버 개체(Analysis Services - 다차원 데이터)
+  href: server-objects-analysis-services-multidimensional-data.md
+- name: Microsoft OLAP 논리 아키텍처 이해
+  href: understanding-microsoft-olap-logical-architecture.md

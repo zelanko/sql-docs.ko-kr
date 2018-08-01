@@ -1,0 +1,10 @@
+- name: 보고서 서버 웹 서비스
+  href: report-server-web-service.md
+- name: SOAP API 액세스
+  href: accessing-the-soap-api.md
+- name: The Role of SOAP in Reporting Services
+  href: the-role-of-soap-in-reporting-services.md
+- name: 보고서 서버 웹 서비스 메서드 +
+  href: ./methods/report-server-web-service-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service%2fmethods%2ftoc.json
+- name: 웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드 +
+  href: ./net-framework/building-applications-using-the-web-service-and-the-net-framework.md?toc=%2fsql%2freporting-services%2freport-server-web-service%2fnet-framework%2ftoc.json

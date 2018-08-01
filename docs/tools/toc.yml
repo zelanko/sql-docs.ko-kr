@@ -1,0 +1,59 @@
+- name: SQL Server 도구 및 유틸리티 개요
+  href: ../tools/overview-sql-tools.md
+- name: 새로운 또는 업데이트된 아티클
+  href: new-updated-tools.md
+- name: SQL Operations Studio(미리 보기)
+  href: ../sql-operations-studio/what-is.md
+- name: SSMS(SQL Server Management Studio)
+  href: ../ssms/download-sql-server-management-studio-ssms.md
+- name: SQL  Server  Data  Tools(SSDT)
+  href: ../ssdt/download-sql-server-data-tools-ssdt.md
+- name: mssql-cli(명령줄 쿼리 도구)
+  href: mssql-cli.md
+- name: 구성 관리자
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: mssql-conf(Linux)
+  href: ../linux/sql-server-linux-configure-mssql-conf.md
+- name: Distributed Replay
+  href: ../tools/distributed-replay/install-distributed-replay-overview.md
+- name: 데이터베이스 엔진 튜닝 관리자(DTA)
+  href: ../tools/dta/dta-utility.md
+- name: SQL Server 프로파일러
+  href: ../tools/sql-server-profiler/sql-server-profiler.md
+- name: Service Broker(ssbdiagnose)
+  href: ../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
+- name: 명령 프롬프트 유틸리티
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+    - name: 대량 복사 유틸리티(BCP)
+      href: bcp-utility.md
+    - name: SqlLocalDB 유틸리티
+      href: sqllocaldb-utility.md
+    - name: osql 유틸리티
+      href: osql-utility.md
+    - name: 프로파일러 유틸리티
+      href: profiler-utility.md
+    - name: sqlagent90 응용 프로그램
+      href: sqlagent90-application.md
+    - name: sqlcmd Utility
+      href: sqlcmd-utility.md
+    - name: SQLdiag Utility
+      href: sqldiag-utility.md
+    - name: sqlmaint 유틸리티
+      href: sqlmaint-utility.md
+    - name: sqllogship 응용 프로그램
+      href: sqllogship-application.md
+    - name: sqlps 유틸리티
+      href: sqlps-utility.md
+    - name: sqlservr 응용 프로그램
+      href: sqlservr-application.md
+    - name: tablediff 유틸리티
+      href: tablediff-utility.md
+- name: sqlpackage
+  items:
+    - name: sqlpackage 설치
+      href: sqlpackage-download.md
+    - name: 릴리스 정보
+      href: sqlpackage-release-notes.md
+    - name: sqlpackage ref
+      href: sqlpackage.md

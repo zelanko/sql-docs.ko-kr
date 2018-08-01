@@ -1,0 +1,834 @@
+- name: ADO 코드 예제
+  href: ado-code-examples.md
+- name: Type 속성(ADO 스트림)
+  href: type-property-ado-stream.md
+- name: Prepared 속성 예제(VC++)
+  href: prepared-property-example-vc.md
+- name: ObjectProxy(ADO - WFC 구문)
+  href: objectproxy-ado-wfc-syntax.md
+- name: 'Connection 개체 속성, 메서드, 이벤트'
+  href: connection-object-properties-methods-and-events.md
+- name: RecordTypeEnum
+  href: recordtypeenum.md
+- name: MoveRecordOptionsEnum
+  href: moverecordoptionsenum.md
+- name: Refresh 메서드 예제(VB)
+  href: refresh-method-example-vb.md
+- name: CompareBookmarks 메서드 예제(VB)
+  href: comparebookmarks-method-example-vb.md
+- name: SeekEnum
+  href: seekenum.md
+- name: ADCPROP_ASYNCTHREADPRIORITY_ENUM
+  href: adcprop-asyncthreadpriority-enum.md
+- name: 연결 개체(ADO)
+  href: connection-object-ado.md
+- name: 레코드 집합 개체(ADO)
+  href: recordset-object-ado.md
+- name: 'Execute, Requery, Clear 예제(VB)'
+  href: execute-requery-and-clear-methods-example-vb.md
+- name: Save 메서드
+  href: save-method.md
+- name: '시작, 커밋, 롤백 - TransComplete'
+  href: begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md
+- name: EventStatusEnum
+  href: eventstatusenum.md
+- name: PersistFormatEnum
+  href: persistformatenum.md
+- name: AddNew 메서드 예제(JScript)
+  href: addnew-method-example-jscript.md
+- name: CancelUpdate 메서드(ADO)
+  href: cancelupdate-method-ado.md
+- name: Number 속성(ADO)
+  href: number-property-ado.md
+- name: Append 메서드(ADO)
+  href: append-method-ado.md
+- name: Execute 메서드(ADO 명령)
+  href: execute-method-ado-command.md
+- name: CommandStream 속성(ADO)
+  href: commandstream-property-ado.md
+- name: Open 및 Close 메서드 예제(VC++)
+  href: open-and-close-methods-example-vc.md
+- name: IsolationLevel 속성
+  href: isolationlevel-property.md
+- name: 'ActiveConnection, CommandText, CommandTimeout(JScript)'
+  href: activeconnection-commandtext-timeout-type-size-example-jscript.md
+- name: Filter 및 RecordCount 속성 예제(VB)
+  href: filter-and-recordcount-properties-example-vb.md
+- name: XactAttributeEnum
+  href: xactattributeenum.md
+- name: Size 속성(ADO 매개 변수)
+  href: size-property-ado-parameter.md
+- name: PositionEnum
+  href: positionenum.md
+- name: 스트림(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: stream-visual-c-syntax-index-with-sharpimport.md
+- name: PageSize 속성(ADO)
+  href: pagesize-property-ado.md
+- name: Charset 속성(ADO)
+  href: charset-property-ado.md
+- name: Prepared 속성 예제(VB)
+  href: prepared-property-example-vb.md
+- name: Status 속성 예제(레코드 집합)(VB)
+  href: status-property-example-recordset-vb.md
+- name: Item 속성(ADO)
+  href: item-property-ado.md
+- name: Source 속성 예제(VC++)
+  href: source-property-example-vc.md
+- name: CacheSize 속성 예제(VC++)
+  href: cachesize-property-example-vc.md
+- name: Cancel 메서드(ADO)
+  href: cancel-method-ado.md
+- name: FieldStatusEnum
+  href: fieldstatusenum.md
+- name: Parameter 개체
+  href: parameter-object.md
+- name: ADCPROP_AUTORECALC_ENUM
+  href: adcprop-autorecalc-enum.md
+- name: 스트림(Visual C++ 구문에 대한 ADO)
+  href: stream-ado-for-visual-c-syntax.md
+- name: Save 및 Open 메서드 예제(VB)
+  href: save-and-open-methods-example-vb.md
+- name: AbsolutePage 속성(ADO)
+  href: absolutepage-property-ado.md
+- name: WillExecute 이벤트(ADO)
+  href: willexecute-event-ado.md
+- name: ConnectionEvents(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: connectionevents-visual-c-syntax-index-with-sharpimport.md
+- name: AddNew 메서드 예제(VBScript)
+  href: addnew-method-example-vbscript.md
+- name: CancelBatch 메서드(ADO)
+  href: cancelbatch-method-ado.md
+- name: 레코드 개체(ADO)
+  href: record-object-ado.md
+- name: Version 속성(ADO)
+  href: version-property-ado.md
+- name: 'ActiveConnection, CommandText, CommandTimeout(VB)'
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md
+- name: 'Record 개체 속성, 메서드 및 이벤트'
+  href: record-object-properties-methods-and-events.md
+- name: Position 속성(ADO)
+  href: position-property-ado.md
+- name: Count 속성(ADO)
+  href: count-property-ado.md
+- name: WillConnect 이벤트(ADO)
+  href: willconnect-event-ado.md
+- name: Provider 및 DefaultDatabase 속성 예제(VC++)
+  href: provider-and-defaultdatabase-properties-example-vc.md
+- name: Requery 메서드
+  href: requery-method.md
+- name: ADO 동적 속성
+  href: ado-dynamic-properties.md
+- name: WillChangeRecordset 및 RecordsetChangeComplete 이벤트(ADO)
+  href: willchangerecordset-and-recordsetchangecomplete-events-ado.md
+- name: Direction 속성
+  href: direction-property.md
+- name: 'BeginTrans, CommitTrans 및 RollbackTrans 메서드(ADO)'
+  href: begintrans-committrans-and-rollbacktrans-methods-ado.md
+- name: AddNew 메서드 예제(VB)
+  href: addnew-method-example-vb.md
+- name: ResyncEnum
+  href: resyncenum.md
+- name: Resync 메서드 예제(VC++)
+  href: resync-method-example-vc.md
+- name: GetRows 메서드 예제(JScript)
+  href: getrows-method-example-jscript.md
+- name: LockTypeEnum
+  href: locktypeenum.md
+- name: Open 메서드(ADO 스트림)
+  href: open-method-ado-stream.md
+- name: '고유 테이블, 고유 스키마, 고유 카탈로그)'
+  href: unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md
+- name: ADO 개체 및 인터페이스
+  href: ado-objects-and-interfaces.md
+- name: CompareBookmarks 메서드(ADO)
+  href: comparebookmarks-method-ado.md
+- name: COM용 Visual C++ 구문 인덱스에 대한 ADO
+  href: ado-for-visual-c-syntax-index-for-com.md
+- name: 매개 변수(ADO - WFC 구문)
+  href: parameter-ado-wfc-syntax.md
+- name: Name 속성(ADO)
+  href: name-property-ado.md
+- name: StreamReadEnum
+  href: streamreadenum.md
+- name: 명령(Visual C++ 구문에 대한 ADO)
+  href: command-ado-for-visual-c-syntax.md
+- name: 'Error 개체 속성, 메서드 및 이벤트'
+  href: error-object-properties-methods-and-events.md
+- name: 명령(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: command-visual-c-syntax-index-with-sharpimport.md
+- name: Update 및 CancelUpdate 메서드 예제(VC++)
+  href: update-and-cancelupdate-methods-example-vc.md
+- name: WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
+  href: willchangerecord-and-recordchangecomplete-events-ado.md
+- name: 연결(Visual C++ 구문에 대한 ADO)
+  href: connection-ado-for-visual-c-syntax.md
+- name: Optimize 속성 예제(VC++)
+  href: optimize-property-example-vc.md
+- name: put_OLEDBCommand 메서드
+  href: put-oledbcommand-method.md
+- name: CommandType 속성(ADO)
+  href: commandtype-property-ado.md
+- name: ADO 열거 상수
+  href: ado-enumerated-constants.md
+- name: 'ConnectionString, ConnectionTimeout 예제(VC++)'
+  href: connectionstring-connectiontimeout-and-state-properties-example-vc.md
+- name: ParameterDirectionEnum
+  href: parameterdirectionenum.md
+- name: AppendChunk 메서드(ADO)
+  href: appendchunk-method-ado.md
+- name: CommandTimeout 속성(ADO)
+  href: commandtimeout-property-ado.md
+- name: OriginalValue 및 UnderlyingValue 예제(VC++)
+  href: originalvalue-and-underlyingvalue-properties-example-vc.md
+- name: Prompt 속성-동적(ADO)
+  href: prompt-property-dynamic-ado.md
+- name: 레코드(Visual C++ 구문에 대한 ADO)
+  href: record-ado-for-visual-c-syntax.md
+- name: AbsolutePosition 및 CursorLocation 예제(VB)
+  href: absoluteposition-and-cursorlocation-properties-example-vb.md
+- name: DeleteRecord 및 MoveRecord 예제(VB)
+  href: deleterecord-and-moverecord-methods-example-vb.md
+- name: AppendChunk 및 GetChunk 예제(VB)
+  href: appendchunk-and-getchunk-methods-example-vb.md
+- name: AbsolutePosition 및 CursorLocation 예제(JScript)
+  href: absoluteposition-and-cursorlocation-properties-example-jscript.md
+- name: ActualSize 및 DefinedSize 예제(VB)
+  href: actualsize-and-definedsize-properties-example-vb.md
+- name: ConnectOptionEnum
+  href: connectoptionenum.md
+- name: ADO API 참조
+  href: ado-api-reference.md
+- name: ReadText 메서드
+  href: readtext-method.md
+- name: FieldEnum
+  href: fieldenum.md
+- name: ActiveCommand 속성 예제(JScript)
+  href: activecommand-property-example-jscript.md
+- name: StreamWriteEnum
+  href: streamwriteenum.md
+- name: 'BOF, EOF 및 책갈피 예제(VC++)'
+  href: bof-eof-and-bookmark-properties-example-vc.md
+- name: 레코드 집합(ADO - WFC 구문)
+  href: recordset-ado-wfc-syntax.md
+- name: UpdateBatch 및 CancelBatch 메서드 예제(VC++)
+  href: updatebatch-and-cancelbatch-methods-example-vc.md
+- name: ADCPROP_UPDATERESYNC_ENUM
+  href: adcprop-updateresync-enum.md
+- name: CompareEnum
+  href: compareenum.md
+- name: Find 메서드 예제(VB)
+  href: find-method-example-vb.md
+- name: 레코드(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: record-visual-c-syntax-index-with-sharpimport.md
+- name: CopyRecord 메서드(ADO)
+  href: copyrecord-method-ado.md
+- name: NativeError 속성(ADO)
+  href: nativeerror-property-ado.md
+- name: Filter 및 RecordCount 예제(VC++)
+  href: filter-and-recordcount-properties-example-vc.md
+- name: RecordsetEvents(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: recordsetevents-visual-c-syntax-index-with-sharpimport.md
+- name: StayInSync 속성 예제(VB)
+  href: stayinsync-property-example-vb.md
+- name: 'BOF, EOF 및 책갈피 속성 예제(VB)'
+  href: bof-eof-and-bookmark-properties-example-vb.md
+- name: CursorType 속성(ADO)
+  href: cursortype-property-ado.md
+- name: PageCount 속성(ADO)
+  href: pagecount-property-ado.md
+- name: ADO 컬렉션
+  href: ado-collections.md
+- name: Append 및 CreateParameter 예제(VC++)
+  href: append-and-createparameter-methods-example-vc.md
+- name: CopyTo 메서드(ADO)
+  href: copyto-method-ado.md
+- name: Item 속성 예제(VB)
+  href: item-property-example-vb.md
+- name: GetChildren 메서드(ADO)
+  href: getchildren-method-ado.md
+- name: 'CursorType, LockType,Edit Mode 예제(VC++)'
+  href: cursortype-locktype-and-editmode-properties-example-vc.md
+- name: 속성 개체(ADO)
+  href: property-object-ado.md
+- name: FilterGroupEnum
+  href: filtergroupenum.md
+- name: LoadFromFile 메서드(ADO)
+  href: loadfromfile-method-ado.md
+- name: NextRecordset 메서드 예제(VB)
+  href: nextrecordset-method-example-vb.md
+- name: Field 개체
+  href: field-object.md
+- name: 레코드 집합(Visual C++ 구문에 대한 ADO)
+  href: recordset-ado-for-visual-c-syntax.md
+- name: MaxRecords 속성 예제(VC++)
+  href: maxrecords-property-example-vc.md
+- name: Visual C++의 ADO 코드 예제
+  href: ado-code-examples-in-visual-c.md
+- name: MarshalOptions 속성 예제(VB)
+  href: marshaloptions-property-example-vb.md
+- name: GetRowsOptionEnum
+  href: getrowsoptionenum.md
+- name: Find 메서드 예제(JScript)
+  href: find-method-example-jscript.md
+- name: 'Execute, Requery, Clear 예제(VC++)'
+  href: execute-requery-and-clear-methods-example-vc.md
+- name: IDSOShapeExtensions 인터페이스
+  href: idsoshapeextensions-interface.md
+- name: Clone 메서드(ADO)
+  href: clone-method-ado.md
+- name: Type 속성 예제(필드)(VB)
+  href: type-property-example-field-vb.md
+- name: Attributes 속성(ADO)
+  href: attributes-property-ado.md
+- name: CursorLocationEnum
+  href: cursorlocationenum.md
+- name: Resync 메서드 예제(VB)
+  href: resync-method-example-vb.md
+- name: Open 메서드(ADO 레코드)
+  href: open-method-ado-record.md
+- name: NextRecordset 메서드(ADO)
+  href: nextrecordset-method-ado.md
+- name: 'BeginTrans, CommitTrans 및 RollbackTrans 예제(VB)'
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vb.md
+- name: AddNew 메서드(ADO)
+  href: addnew-method-ado.md
+- name: 'MoveFirst, MoveLast, MoveNext, MovePrevious 메서드(ADO)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-ado.md
+- name: Type 속성 예제(속성)(VC++)
+  href: type-property-example-property-vc.md
+- name: Optimize 속성-동적(ADO)
+  href: optimize-property-dynamic-ado.md
+- name: Size 속성(ADO 스트림)
+  href: size-property-ado-stream.md
+- name: MarshalOptions 속성 예제(VC++)
+  href: marshaloptions-property-example-vc.md
+- name: ADO 메서드
+  href: ado-methods.md
+- name: FetchComplete 이벤트(ADO)
+  href: fetchcomplete-event-ado.md
+- name: CacheSize 속성 예제(VB)
+  href: cachesize-property-example-vb.md
+- name: 오류(ADO - WFC 구문)
+  href: error-ado-wfc-syntax.md
+- name: EditMode 속성
+  href: editmode-property.md
+- name: Error 개체
+  href: error-object.md
+- name: ADO - WFC 구문 인덱스
+  href: ado-wfc-syntax-index.md
+- name: Source 속성(ADO 레코드 집합)
+  href: source-property-ado-recordset.md
+- name: 명령 개체(ADO)
+  href: command-object-ado.md
+- name: GetRows 메서드 예제(VB)
+  href: getrows-method-example-vb.md
+- name: State 속성 예제(VB)
+  href: state-property-example-vb.md
+- name: RowPosition 속성(ADO)
+  href: rowposition-property-ado.md
+- name: AddNew 메서드 예제(VC++)
+  href: addnew-method-example-vc.md
+- name: NumericScale 및 Precision 예제(VB)
+  href: numericscale-and-precision-properties-example-vb.md
+- name: 'Stream 개체 속성, 메서드, 이벤트'
+  href: stream-object-properties-methods-and-events.md
+- name: Stat 메서드
+  href: stat-method.md
+- name: LockType 속성(ADO)
+  href: locktype-property-ado.md
+- name: PropertyAttributesEnum
+  href: propertyattributesenum.md
+- name: CreateParameter 메서드(ADO)
+  href: createparameter-method-ado.md
+- name: 데이터스페이스(ADO - WFC 구문)
+  href: dataspace-ado-wfc-syntax.md
+- name: ErrorValueEnum
+  href: errorvalueenum.md
+- name: Flush 메서드(ADO)
+  href: flush-method-ado.md
+- name: ADOStreamConstruction 인터페이스
+  href: adostreamconstruction-interface.md
+- name: IsolationLevel 및 모드 예제(VC++)
+  href: isolationlevel-and-mode-properties-example-vc.md
+- name: GetString 메서드(ADO)
+  href: getstring-method-ado.md
+- name: 'MoveFirst, MoveLast, MoveNext 예제(VBScript)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md
+- name: 필드(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: field-visual-c-syntax-index-with-sharpimport.md
+- name: RecordOpenOptionsEnum
+  href: recordopenoptionsenum.md
+- name: IsolationLevelEnum
+  href: isolationlevelenum.md
+- name: 연결(ADO - WFC 구문)
+  href: connection-ado-wfc-syntax.md
+- name: Status 속성(ADO 필드)
+  href: status-property-ado-field.md
+- name: 'Fields 컬렉션 속성, 메서드, 이벤트'
+  href: fields-collection-properties-methods-and-events.md
+- name: NextRecordset 메서드 예제(VC++)
+  href: nextrecordset-method-example-vc.md
+- name: Chapter 속성(ADO)
+  href: chapter-property-ado.md
+- name: SaveToFile 메서드
+  href: savetofile-method.md
+- name: Type 속성(ADO)
+  href: type-property-ado.md
+- name: Update Resync 속성 - 동적(ADO)
+  href: update-resync-property-dynamic-ado.md
+- name: ConnectionTimeout 속성(ADO)
+  href: connectiontimeout-property-ado.md
+- name: StreamOpenOptionsEnum
+  href: streamopenoptionsenum.md
+- name: OpenSchema 메서드
+  href: openschema-method.md
+- name: Read 메서드
+  href: read-method.md
+- name: RecordCount 속성(ADO)
+  href: recordcount-property-ado.md
+- name: ActiveCommand 속성 예제(VC++)
+  href: activecommand-property-example-vc.md
+- name: SearchDirectionEnum
+  href: searchdirectionenum.md
+- name: ADO 동적 속성 인덱스
+  href: ado-dynamic-property-index.md
+- name: 속성(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: property-visual-c-syntax-index-with-sharpimport.md
+- name: Mode 속성(ADO)
+  href: mode-property-ado.md
+- name: Filter 속성
+  href: filter-property.md
+- name: 'MoveFirst, MoveLast, MoveNext, MovePrevious 예제(VC++)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md
+- name: ParameterAttributesEnum
+  href: parameterattributesenum.md
+- name: Cancel 메서드 예제(VC++)
+  href: cancel-method-example-vc.md
+- name: 필드(ADO - WFC 구문)
+  href: field-ado-wfc-syntax.md
+- name: EventReasonEnum
+  href: eventreasonenum.md
+- name: Rowset 속성(ADO)
+  href: rowset-property-ado.md
+- name: Delete 메서드 예제(VC++)
+  href: delete-method-example-vc.md
+- name: Source 속성 예제(VB)
+  href: source-property-example-vb.md
+- name: Fields 컬렉션(ADO)
+  href: fields-collection-ado.md
+- name: Clone 메서드 예제(VC++)
+  href: clone-method-example-vc.md
+- name: WriteText 메서드
+  href: writetext-method.md
+- name: AbsolutePosition 속성(ADO)
+  href: absoluteposition-property-ado.md
+- name: RecordType 속성(ADO)
+  href: recordtype-property-ado.md
+- name: ADO 코드 예제 VBScript
+  href: ado-code-examples-vbscript.md
+- name: Delete 메서드 예제(VBScript)
+  href: delete-method-example-vbscript.md
+- name: EOS 및 LineSeparator 속성 예제(VB)
+  href: eos-and-lineseparator-properties-and-skipline-method-example-vb.md
+- name: 매개 변수(Visual C++ 구문에 대한 ADO)
+  href: parameter-ado-for-visual-c-syntax.md
+- name: Resync 메서드
+  href: resync-method.md
+- name: ActualSize 속성(ADO)
+  href: actualsize-property-ado.md
+- name: Version 속성 예제(VB)
+  href: version-property-example-vb.md
+- name: SetEOS 메서드
+  href: seteos-method.md
+- name: OpenSchema 메서드 예제(VC++)
+  href: openschema-method-example-vc.md
+- name: FieldAttributeEnum
+  href: fieldattributeenum.md
+- name: OriginalValue 속성(ADO)
+  href: originalvalue-property-ado.md
+- name: Supports 메서드 예제(VC++)
+  href: supports-method-example-vc.md
+- name: RecordCreateOptionsEnum
+  href: recordcreateoptionsenum.md
+- name: MoveRecord 메서드(ADO)
+  href: moverecord-method-ado.md
+- name: 매개 변수(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: parameter-visual-c-syntax-index-with-sharpimport.md
+- name: Update 메서드
+  href: update-method.md
+- name: 컬렉션(Visual C++ 구문에 대한 ADO)
+  href: collections-ado-for-visual-c-syntax.md
+- name: 'Read, ReadText, Write, WriteText 메서드 예제(VB)'
+  href: read-readtext-write-and-writetext-methods-example-vb.md
+- name: Reshape Name 속성-동적(ADO)
+  href: reshape-name-property-dynamic-ado.md
+- name: ExecuteOptionEnum
+  href: executeoptionenum.md
+- name: Filter 및 RecordCount 예제(JScript)
+  href: filter-and-recordcount-properties-example-jscript.md
+- name: Provider 및 DefaultDatabase 예제(VB)
+  href: provider-and-defaultdatabase-properties-example-vb.md
+- name: Open 및 Close 메서드 예제(VBScript)
+  href: open-and-close-methods-example-vbscript.md
+- name: Open 메서드(ADO 연결)
+  href: open-method-ado-connection.md
+- name: Optimize 속성 예제(VB)
+  href: optimize-property-example-vb.md
+- name: ParentURL 속성(ADO)
+  href: parenturl-property-ado.md
+- name: Clone 메서드 예제(VB)
+  href: clone-method-example-vb.md
+- name: 'Parameters 컬렉션 속성, 이벤트'
+  href: parameters-collection-properties-methods-and-events.md
+- name: MaxRecords 속성 예제(VB)
+  href: maxrecords-property-example-vb.md
+- name: ExecuteComplete 이벤트(ADO)
+  href: executecomplete-event-ado.md
+- name: 'CopyRecord, CopyTo 및 SaveToFile 예제(VB)'
+  href: copyrecord-copyto-and-savetofile-methods-example-vb.md
+- name: 'Errors 컬렉션 속성, 메서드, 이벤트'
+  href: errors-collection-properties-methods-and-events.md
+- name: ParentRow 속성(ADO)
+  href: parentrow-property-ado.md
+- name: 'Description, HelpContext, HelpFile, NativeError 예제(VB)'
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vb.md
+- name: Cancel 메서드 예제(VB)
+  href: cancel-method-example-vb.md
+- name: 'AbsolutePage, PageCount, PageSize 예제(VB)'
+  href: absolutepage-pagecount-and-pagesize-properties-example-vb.md
+- name: GetDataProviderDSO 메서드
+  href: getdataproviderdso-method.md
+- name: Find 메서드 예제(VC++)
+  href: find-method-example-vc.md
+- name: SaveOptionsEnum
+  href: saveoptionsenum.md
+- name: 가져오기가 포함된 Visual C++ 구문 인덱스용 ADO
+  href: ado-for-visual-c-syntax-index-with-sharpimport.md
+- name: Sort 속성 예제(VC++)
+  href: sort-property-example-vc.md
+- name: EOS 속성
+  href: eos-property.md
+- name: Seek 메서드 및 인덱스 속성 예제(VC++)
+  href: seek-method-and-index-property-example-vc.md
+- name: ConnectComplete 및 Disconnect 이벤트(ADO)
+  href: connectcomplete-and-disconnect-events-ado.md
+- name: Move 메서드 예제(VB)
+  href: move-method-example-vb.md
+- name: NumericScale 및 Precision 속성 예제(VC++)
+  href: numericscale-and-precision-properties-example-vc.md
+- name: BookmarkEnum
+  href: bookmarkenum.md
+- name: Find 메서드(ADO)
+  href: find-method-ado.md
+- name: Update 및 CancelUpdate 메서드 예제(VB)
+  href: update-and-cancelupdate-methods-example-vb.md
+- name: Count 속성 예제(VC++)
+  href: count-property-example-vc.md
+- name: 'Parameter 개체 속성, 메서드'
+  href: parameter-object-properties-methods-and-events.md
+- name: 'Description, HelpContext, HelpFile 예제(VC++)'
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vc.md
+- name: ActiveConnection 속성(ADO)
+  href: activeconnection-property-ado.md
+- name: ADORecordConstruction 인터페이스
+  href: adorecordconstruction-interface.md
+- name: AppendChunk 및 GetChunk 메서드 예제(VC++)
+  href: appendchunk-and-getchunk-methods-example-vc.md
+- name: 'Execute, Requery, Clear 예제(JScript)'
+  href: execute-requery-and-clear-methods-example-jscript.md
+- name: RecordStatusEnum
+  href: recordstatusenum.md
+- name: StayInSync 속성
+  href: stayinsync-property.md
+- name: Resync Command 속성-동적(ADO)
+  href: resync-command-property-dynamic-ado.md
+- name: CursorOptionEnum
+  href: cursoroptionenum.md
+- name: 'ConnectionString, ConnectionTimeout 예제(VB)'
+  href: connectionstring-connectiontimeout-and-state-properties-example-vb.md
+- name: CommandText 속성(ADO)
+  href: commandtext-property-ado.md
+- name: GetString 메서드 예제(VC++)
+  href: getstring-method-example-vc.md
+- name: Description 속성
+  href: description-property.md
+- name: CommandTypeEnum
+  href: commandtypeenum.md
+- name: ADO 개체 모델
+  href: ado-object-model.md
+- name: 'BeginTrans, CommitTrans 및 RollbackTrans(VC++)'
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vc.md
+- name: Stream 속성
+  href: stream-property.md
+- name: CacheSize 속성(ADO)
+  href: cachesize-property-ado.md
+- name: Parameters 컬렉션(ADO)
+  href: parameters-collection-ado.md
+- name: AbsolutePosition 및 CursorLocation 예제(VC++)
+  href: absoluteposition-and-cursorlocation-properties-example-vc.md
+- name: Value 속성(ADO)
+  href: value-property-ado.md
+- name: Bookmark 속성(ADO)
+  href: bookmark-property-ado.md
+- name: EndOfRecordset 이벤트(ADO)
+  href: endofrecordset-event-ado.md
+- name: Append 및 CreateParameter 메서드 예제(VB)
+  href: append-and-createparameter-methods-example-vb.md
+- name: InfoMessage 이벤트(ADO)
+  href: infomessage-event-ado.md
+- name: EditModeEnum
+  href: editmodeenum.md
+- name: OpenSchema 메서드 예제(VB)
+  href: openschema-method-example-vb.md
+- name: Type 속성 예제(필드)(VC++)
+  href: type-property-example-field-vc.md
+- name: 'Recordset 개체 속성, 메서드, 이벤트'
+  href: recordset-object-properties-methods-and-events.md
+- name: NamedParameters 속성(ADO)
+  href: namedparameters-property-ado.md
+- name: DefaultDatabase 속성
+  href: defaultdatabase-property.md
+- name: Status 속성(ADO 레코드 집합)
+  href: status-property-ado-recordset.md
+- name: UpdateBatch 및 CancelBatch 예제(VB)
+  href: updatebatch-and-cancelbatch-methods-example-vb.md
+- name: Source 속성(ADO 오류)
+  href: source-property-ado-error.md
+- name: MarshalOptionsEnum
+  href: marshaloptionsenum.md
+- name: DefinedSize 속성
+  href: definedsize-property.md
+- name: WillChangeField 및 FieldChangeComplete 이벤트(ADO)
+  href: willchangefield-and-fieldchangecomplete-events-ado.md
+- name: Refresh 메서드 예제(VC++)
+  href: refresh-method-example-vc.md
+- name: Close 메서드(ADO)
+  href: close-method-ado.md
+- name: ConnectionString 속성(ADO)
+  href: connectionstring-property-ado.md
+- name: 'Execute, Requery, Clear 예제(VBScript)'
+  href: execute-requery-and-clear-methods-example-vbscript.md
+- name: StayInSync 속성 예제(VC++)
+  href: stayinsync-property-example-vc.md
+- name: 명령(ADO - WFC 구문)
+  href: command-ado-wfc-syntax.md
+- name: CursorLocation 속성(ADO)
+  href: cursorlocation-property-ado.md
+- name: MarshalOptions 속성(ADO)
+  href: marshaloptions-property-ado.md
+- name: 'AbsolutePage, PageCount, PageSize 예제(VC++)'
+  href: absolutepage-pagecount-and-pagesize-properties-example-vc.md
+- name: ConnectModeEnum
+  href: connectmodeenum.md
+- name: Append 및 CreateParameter 예제(JScript)
+  href: append-and-createparameter-methods-example-jscript.md
+- name: 컬렉션(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: collections-visual-c-syntax-index-with-sharpimport.md
+- name: 'BOF, EOF 속성(ADO)'
+  href: bof-eof-properties-ado.md
+- name: Clone 메서드 예제(VBScript)
+  href: clone-method-example-vbscript.md
+- name: Sort 속성
+  href: sort-property.md
+- name: CacheSize 속성 예제(JScript)
+  href: cachesize-property-example-jscript.md
+- name: Count 속성 예제(VB)
+  href: count-property-example-vb.md
+- name: ADCPROP_UPDATECRITERIA_ENUM
+  href: adcprop-updatecriteria-enum.md
+- name: IsolationLevel 및 모드 PExample(VB)
+  href: isolationlevel-and-mode-properties-example-vb.md
+- name: Seek 메서드 및 인덱스 예제(VB)
+  href: seek-method-and-index-property-example-vb.md
+- name: Save 및 Open 예제(VC++)
+  href: save-and-open-methods-example-vc.md
+- name: Dialect 속성
+  href: dialect-property.md
+- name: ObjectStateEnum
+  href: objectstateenum.md
+- name: Open 메서드(ADO 레코드 집합)
+  href: open-method-ado-recordset.md
+- name: 'MoveFirst, MoveLast, MoveNext 예제(VB)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md
+- name: ConvertToString 메서드 예제(VB)
+  href: converttostring-method-example-vb.md
+- name: FetchProgress 및(ADO)
+  href: fetchprogress-event-ado.md
+- name: DataSource 속성(ADO)
+  href: datasource-property-ado.md
+- name: CopyRecordOptionsEnum
+  href: copyrecordoptionsenum.md
+- name: Type 속성 예제(속성)(VB)
+  href: type-property-example-property-vb.md
+- name: CreateRecordset 메서드 예제(VB)
+  href: createrecordset-method-example-vb.md
+- name: Attributes 및 Name 예제(VC++)
+  href: attributes-and-name-properties-example-vc.md
+- name: 'AbsolutePage, PageCount, PageSize 예제(JScript)'
+  href: absolutepage-pagecount-and-pagesize-properties-example-jscript.md
+- name: Value 속성 예제(VB)
+  href: value-property-example-vb.md
+- name: 'CursorType, LockType, EditMode 예제(VB)'
+  href: cursortype-locktype-and-editmode-properties-example-vb.md
+- name: DataMember 속성
+  href: datamember-property.md
+- name: DataTypeEnum
+  href: datatypeenum.md
+- name: Source 속성(ADO 레코드)
+  href: source-property-ado-record.md
+- name: 'HelpContext, HelpFile 속성'
+  href: helpcontext-helpfile-properties.md
+- name: Value 속성 예제(VC++)
+  href: value-property-example-vc.md
+- name: Move 메서드 예제(VBScript)
+  href: move-method-example-vbscript.md
+- name: NumericScale 속성(ADO)
+  href: numericscale-property-ado.md
+- name: Supports 메서드
+  href: supports-method.md
+- name: ADO 이벤트 모델 예제(VC++)
+  href: ado-events-model-example-vc.md
+- name: Errors 컬렉션(ADO)
+  href: errors-collection-ado.md
+- name: StringFormatEnum
+  href: stringformatenum.md
+- name: DeleteRecord 메서드(ADO)
+  href: deleterecord-method-ado.md
+- name: Delete 메서드(ADO 필드 컬렉션)
+  href: delete-method-ado-fields-collection.md
+- name: Attributes 및 Name 속성 예제(VB)
+  href: attributes-and-name-properties-example-vb.md
+- name: CompareBookmarks 메서드 예제(VC++)
+  href: comparebookmarks-method-example-vc.md
+- name: Version 속성 예제(VC++)
+  href: version-property-example-vc.md
+- name: UpdateBatch 메서드
+  href: updatebatch-method.md
+- name: get_OLEDBCommand 메서드
+  href: get-oledbcommand-method.md
+- name: ActiveCommand 속성 예제(VB)
+  href: activecommand-property-example-vb.md
+- name: ActualSize 및 DefinedSize 속성 예제(JScript)
+  href: actualsize-and-definedsize-properties-example-jscript.md
+- name: Microsoft JScript의 ADO 코드 예제
+  href: ado-code-examples-in-microsoft-jscript.md
+- name: StreamTypeEnum
+  href: streamtypeenum.md
+- name: 'Property 개체 속성, 메서드'
+  href: property-object-properties-methods-and-events.md
+- name: SchemaEnum
+  href: schemaenum.md
+- name: ConnectPromptEnum
+  href: connectpromptenum.md
+- name: Row 속성(ADO)
+  href: row-property-ado.md
+- name: MaxRecords 속성(ADO)
+  href: maxrecords-property-ado.md
+- name: Precision 속성(ADO)
+  href: precision-property-ado.md
+- name: 오류(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: error-visual-c-syntax-index-with-sharpimport.md
+- name: Delete 메서드(ADO 레코드 집합)
+  href: delete-method-ado-recordset.md
+- name: 'Field 개체 속성, 메서드 이벤트'
+  href: field-object-properties-methods-and-events.md
+- name: Properties 컬렉션(ADO)
+  href: properties-collection-ado.md
+- name: Index 속성
+  href: index-property.md
+- name: 오류(Visual C++ 구문에 대한 ADO)
+  href: error-ado-for-visual-c-syntax.md
+- name: State 속성 예제(VC++)
+  href: state-property-example-vc.md
+- name: AffectEnum
+  href: affectenum.md
+- name: WillMove 및 MoveComplete 이벤트(ADO)
+  href: willmove-and-movecomplete-events-ado.md
+- name: Status 속성 예제(VC++)
+  href: status-property-example-vc.md
+- name: OriginalValue 및 UnderlyingValue 예제(VB)
+  href: originalvalue-and-underlyingvalue-properties-example-vb.md
+- name: Delete 메서드(ADO 매개 변수 컬렉션)
+  href: delete-method-ado-parameters-collection.md
+- name: GetString 메서드 예제(VB)
+  href: getstring-method-example-vb.md
+- name: GetRows 메서드(ADO)
+  href: getrows-method-ado.md
+- name: Move 메서드(ADO)
+  href: move-method-ado.md
+- name: Supports 메서드 예제(VB)
+  href: supports-method-example-vb.md
+- name: Open 및 Close 메서드 예제(VB)
+  href: open-and-close-methods-example-vb.md
+- name: Seek 메서드
+  href: seek-method.md
+- name: 준비된 속성(ADO)
+  href: prepared-property-ado.md
+- name: Visual Basic의 ADO 코드 예제
+  href: ado-code-examples-in-visual-basic.md
+- name: Provider 속성(ADO)
+  href: provider-property-ado.md
+- name: Move 메서드 예제(VC++)
+  href: move-method-example-vc.md
+- name: ADO 이벤트
+  href: ado-events.md
+- name: 'ActiveConnection, CommandText 예제(VC++)'
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md
+- name: Delete 메서드 예제(VB)
+  href: delete-method-example-vb.md
+- name: State 속성(ADO)
+  href: state-property-ado.md
+- name: LineSeparator 속성(ADO)
+  href: lineseparator-property-ado.md
+- name: ADO 속성
+  href: ado-properties.md
+- name: SkipLine 메서드
+  href: skipline-method.md
+- name: Clear 메서드(ADO)
+  href: clear-method-ado.md
+- name: GetRows 메서드 예제(VC++)
+  href: getrows-method-example-vc.md
+- name: CursorTypeEnum
+  href: cursortypeenum.md
+- name: 레코드 집합(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: recordset-visual-c-syntax-index-with-sharpimport.md
+- name: Status 속성 예제(필드)(VB)
+  href: status-property-example-field-vb.md
+- name: Sort 속성 예제(VB)
+  href: sort-property-example-vb.md
+- name: GetChunk 메서드(ADO)
+  href: getchunk-method-ado.md
+- name: ActiveCommand 속성(ADO)
+  href: activecommand-property-ado.md
+- name: ADO 구문 인덱스
+  href: ado-syntax-indexes.md
+- name: SQLState 속성
+  href: sqlstate-property.md
+- name: Refresh 메서드(ADO)
+  href: refresh-method-ado.md
+- name: ADORecordsetConstruction 인터페이스
+  href: adorecordsetconstruction-interface.md
+- name: 컬렉션(ADO - WFC 구문)
+  href: collections-ado-wfc-syntax.md
+- name: ActualSize 및 DefinedSize 예제(VC++)
+  href: actualsize-and-definedsize-properties-example-vc.md
+- name: Item 속성 예제(VC++)
+  href: item-property-example-vc.md
+- name: 스트림 개체(ADO)
+  href: stream-object-ado.md
+- name: 필드(Visual C++ 구문에 대한 ADO)
+  href: field-ado-for-visual-c-syntax.md
+- name: LineSeparatorsEnum
+  href: lineseparatorsenum.md
+- name: 연결(가져오기가 포함된 Visual C++ 구문 인덱스)
+  href: connection-visual-c-syntax-index-with-sharpimport.md
+- name: 'Properties 컬렉션 속성, 메서드, 이벤트'
+  href: properties-collection-properties-methods-and-events.md
+- name: Execute 메서드(ADO 연결)
+  href: execute-method-ado-connection.md
+- name: 'Command 개체 속성, 메서드, 이벤트'
+  href: command-object-properties-methods-and-events.md
+- name: Write 메서드
+  href: write-method.md
+- name: UnderlyingValue 속성
+  href: underlyingvalue-property.md

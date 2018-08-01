@@ -1,0 +1,168 @@
+- name: Integration Services(SSIS) 식
+  href: integration-services-ssis-expressions.md
+- name: 패키지에서 속성 식 사용
+  href: use-property-expressions-in-packages.md
+  items:
+    - name: 속성 식의 열거 상수
+      href: enumerated-constants-in-property-expressions.md
+    - name: 식을 사용하여 설정할 수 있는 데이터 흐름 속성
+      href: ../data-flow-properties-that-can-be-set-by-using-expressions.md
+    - name: 속성 식 추가 또는 변경
+      href: add-or-change-a-property-expression.md
+      items:
+        - name: 식 페이지
+          href: expressions-page.md
+        - name: 속성 식 편집기
+          href: property-expressions-editor.md
+- name: 데이터 흐름 구성 요소에서 식 사용
+  href: ../use-an-expression-in-a-data-flow-component.md
+- name: 식 작성기
+  href: expression-builder.md
+- name: 식 태스크
+  href: ../control-flow/expression-task.md
+- name: 구문(SSIS)
+  href: syntax-ssis.md
+- name: 식에서의 Integration Services 데이터 형식
+  href: integration-services-data-types-in-expressions.md
+- name: 데이터 잘림(SSIS)
+  href: data-truncation-ssis.md
+- name: 문자열 패딩(SSIS)
+  href: string-padding-ssis.md
+- name: 리터럴(SSIS)
+  href: numeric-string-and-boolean-literals.md
+- name: 식별자(SSIS)
+  href: identifiers-ssis.md
+- name: 고급 Integration Services 식의 예
+  href: examples-of-advanced-integration-services-expressions.md
+- name: 연산자(SSIS 식)
+  href: operators-ssis-expression.md
+  items:
+    - name: 연산자 우선 순위 및 계산 방향
+      href: operator-precedence-and-associativity.md
+    - name: 캐스트(SSIS 식)
+      href: cast-ssis-expression.md
+    - name: ()(괄호)(SSIS 식)
+      href: parentheses-ssis-expression.md
+    - name: + (더하기)(SSIS)
+      href: add-ssis.md
+    - name: + (연결)(SSIS 식)
+      href: concatenate-ssis-expression.md
+    - name: '- (빼기)(SSIS 식)'
+      href: subtract-ssis-expression.md
+    - name: '- (부정)(SSIS 식)'
+      href: negate-ssis-expression.md
+    - name: '* (곱하기)(SSIS 식)'
+      href: multiply-ssis-expression.md
+    - name: Divide (SSIS Expression)
+      href: divide-ssis-expression.md
+    - name: (모듈로)(SSIS 식)
+      href: modulo-ssis-expression.md
+    - name: '||(논리적 OR)(SSIS 식)'
+      href: logical-or-ssis-expression.md
+    - name: '&&(논리적 AND)(SSIS 식)'
+      href: logical-and-ssis-expression.md
+    - name: '! (논리적 Not)(SSIS 식)'
+      href: logical-not-ssis-expression.md
+    - name: '|(포괄적 비트 OR)(SSIS 식)'
+      href: bitwise-inclusive-or-ssis-expression.md
+    - name: ^(배타적 비트 OR)(SSIS 식)
+      href: bitwise-exclusive-or-ssis-expression.md
+    - name: '&(비트 AND)(SSIS 식)'
+      href: bitwise-and-ssis-expression.md
+    - name: ~(비트 Not)(SSIS 식)
+      href: bitwise-not-ssis-expression.md
+    - name: ==(같음)(SSIS 식)
+      href: equal-ssis-expression.md
+    - name: '!=(같지 않음)(SSIS 식)'
+      href: unequal-ssis-expression.md
+    - name: '> (보다 큼)(SSIS 식)'
+      href: greater-than-ssis-expression.md
+    - name: <(보다 작음)(SSIS 식)
+      href: less-than-ssis-expression.md
+    - name: '>=(크거나 같음)(SSIS 식)'
+      href: greater-than-or-equal-to-ssis-expression.md
+    - name: <=(작거나 같음)(SSIS 식)
+      href: less-than-or-equal-to-ssis-expression.md
+    - name: '? : (조건부)(SSIS 식)'
+      href: conditional-ssis-expression.md
+- name: 함수(SSIS 식)
+  href: functions-ssis-expression.md
+  items:
+    - name: ABS(SSIS 식)
+      href: abs-ssis-expression.md
+    - name: CEILING(SSIS 식)
+      href: ceiling-ssis-expression.md
+    - name: CODEPOINT(SSIS 식)
+      href: codepoint-ssis-expression.md
+    - name: DATEADD(SSIS 식)
+      href: dateadd-ssis-expression.md
+    - name: DATEDIFF(SSIS 식)
+      href: datediff-ssis-expression.md
+    - name: DATEPART(SSIS 식)
+      href: datepart-ssis-expression.md
+    - name: DAY(SSIS 식)
+      href: day-ssis-expression.md
+    - name: EXP(SSIS 식)
+      href: exp-ssis-expression.md
+    - name: FINDSTRING(SSIS 식)
+      href: findstring-ssis-expression.md
+    - name: FLOOR(SSIS 식)
+      href: floor-ssis-expression.md
+    - name: GETDATE(SSIS 식)
+      href: getdate-ssis-expression.md
+    - name: GETUTCDATE(SSIS 식)
+      href: getutcdate-ssis-expression.md
+    - name: HEX(SSIS 식)
+      href: hex-ssis-expression.md
+    - name: ISNULL(SSIS 식)
+      href: isnull-ssis-expression.md
+    - name: LEFT(SSIS 식)
+      href: left-ssis-expression.md
+    - name: LEN(SSIS 식)
+      href: len-ssis-expression.md
+    - name: LN(SSIS 식)
+      href: ln-ssis-expression.md
+    - name: LOG(SSIS 식)
+      href: log-ssis-expression.md
+    - name: LOWER(SSIS 식)
+      href: lower-ssis-expression.md
+    - name: LTRIM(SSIS 식)
+      href: ltrim-ssis-expression.md
+    - name: MONTH(SSIS 식)
+      href: month-ssis-expression.md
+    - name: NULL(SSIS 식)
+      href: null-ssis-expression.md
+    - name: POWER(SSIS 식)
+      href: power-ssis-expression.md
+    - name: REPLACE(SSIS 식)
+      href: replace-ssis-expression.md
+    - name: REPLACENULL(SSIS 식)
+      href: replacenull-ssis-expression.md
+    - name: REPLICATE(SSIS 식)
+      href: replicate-ssis-expression.md
+    - name: REVERSE(SSIS 식)
+      href: reverse-ssis-expression.md
+    - name: RIGHT(SSIS 식)
+      href: right-ssis-expression.md
+    - name: ROUND(SSIS 식)
+      href: round-ssis-expression.md
+    - name: RTRIM(SSIS 식)
+      href: rtrim-ssis-expression.md
+    - name: SIGN(SSIS 식)
+      href: sign-ssis-expression.md
+    - name: SQRT(SSIS 식)
+      href: sqrt-ssis-expression.md
+    - name: SQUARE(SSIS 식)
+      href: square-ssis-expression.md
+    - name: SUBSTRING(SSIS 식)
+      href: substring-ssis-expression.md
+    - name: TOKEN(SSIS 식)
+      href: token-ssis-expression.md
+    - name: TOKENCOUNT(SSIS 식)
+      href: tokencount-ssis-expression.md
+    - name: TRIM(SSIS 식)
+      href: trim-ssis-expression.md
+    - name: UPPER(SSIS 식)
+      href: upper-ssis-expression.md
+    - name: YEAR(SSIS 식)
+      href: year-ssis-expression.md

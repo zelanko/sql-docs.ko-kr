@@ -1,0 +1,12 @@
+- name: ADO 용어 설명
+  href: ado-glossary.md
+- name: ADO-API +
+  href: ../../ado/reference/ado-api/ado-code-examples.md
+- name: ADO-MD-API +
+  href: ../../ado/reference/ado-md-api/ado-md-object-model.md
+- name: ADOX-API +
+  href: ../../ado/reference/adox-api/adox-object-model.md
+- name: RDS-API +
+  href: ../../ado/reference/rds-api/rds-api-reference.md
+- name: ADO 프로그래머 참조
+  href: ado-programmer-s-reference.md

@@ -1,0 +1,38 @@
+- name: CLR(공용 언어 런타임) 통합 프로그래밍 개요
+  href: common-language-runtime-clr-integration-programming-concepts.md
+- name: 데이터베이스 개체 +
+  href: ../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
+- name: 데이터 액세스 +
+  href: ../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md
+- name: 보안 +
+  href: ../../relational-databases/clr-integration/security/clr-integration-code-access-security.md
+- name: 어셈블리 +
+  href: ../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
+- name: 어셈블리 - 디자인
+  href: assemblies-designing.md
+- name: 어셈블리 - 정보 가져오기
+  href: assemblies-getting-information.md
+- name: 어셈블리 - 구현
+  href: assemblies-implementing.md
+- name: 어셈블리 - 속성
+  href: assemblies-properties.md
+- name: 어셈블리(데이터베이스 엔진)
+  href: assemblies-database-engine.md
+- name: CLR 통합 - 사용
+  href: clr-integration-enabling.md
+- name: CLR 통합 - 개요
+  href: clr-integration-overview.md
+- name: CLR 통합 - 새로운 기능
+  href: clr-integration-what-s-new.md
+- name: CLR 통합 아키텍처 - 성능
+  href: clr-integration-architecture-performance.md
+- name: CLR 통합 아키텍처 - CLR 호스팅 환경
+  href: clr-integration-architecture-clr-hosted-environment.md
+- name: 공용 언어 런타임 통합 개요
+  href: common-language-runtime-integration-overview.md
+- name: CLR 데이터베이스 개체 디버깅
+  href: debugging-clr-database-objects.md
+- name: CLR 데이터베이스 개체 배포
+  href: deploying-clr-database-objects.md
+- name: 관리되는 데이터베이스 개체 모니터링 및 문제 해결
+  href: monitoring-and-troubleshooting-managed-database-objects.md

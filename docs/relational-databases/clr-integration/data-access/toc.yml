@@ -1,0 +1,14 @@
+- name: CLR 데이터베이스 개체에서 데이터 액세스
+  href: data-access-from-clr-database-objects.md
+- name: In Process ADO.NET +
+  href: ../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md
+- name: 데이터 액세스 트랜잭션 +
+  href: ../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md
+- name: 컨텍스트 연결
+  href: context-connection.md
+- name: 컨텍스트 연결 및 일반 연결 - 제한 사항
+  href: context-connections-and-regular-connections-restrictions.md
+- name: 컨텍스트 연결 및 일반 연결
+  href: context-connections-vs-regular-connections.md
+- name: 연결에 대한 가장 및 자격 증명
+  href: impersonation-and-credentials-for-connections.md

@@ -1,0 +1,136 @@
+- name: Oracle용 SSMA 설치(OracleToSQL)
+  href: installing-ssma-for-oracle-oracletosql.md
+- name: Oracle용 SSMA 시작(OracleToSQL)
+  href: getting-started-with-ssma-for-oracle-oracletosql.md
+- name: Oracle HR 스키마를 SQL Server로 변환
+  href: sql-server-linux-convert-from-oracle.md
+- name: 법적 고지 사항(Oracle용 SSMA)
+  href: legal-notice-ssma-for-oracle.md
+- name: Oracle용 SSMA 클라이언트 설치(OracleToSQL)
+  href: installing-ssma-for-oracle-client-oracletosql.md
+- name: Oracle용 SSMA의 새로운 기능(OracleToSQL)
+  href: what-s-new-in-ssma-for-oracle-oracletosql.md
+- name: SSMA의 새로운 GUI 기능(OracleToSQL)
+  href: new-gui-features-in-ssma-for-oracle-oracletosql.md
+- name: 프로젝트 설정(마이그레이션)(OracleToSQL)
+  href: project-settings-migration-oracletosql.md
+- name: 테스트 사례 실행(OracleToSQL)
+  href: running-test-cases-oracletosql.md
+- name: 메뉴 명령 및 기타 바로 가기 키(Oracle To SQL)
+  href: menu-commands-and-other-shortcut-keys-oracle-to-sql.md
+- name: 테스트 리포지토리 사용(OracleToSQL)
+  href: using-test-repositories-oracletosql.md
+- name: 변수 값 파일 만들기(OracleToSQL)
+  href: creating-variable-value-files-oracletosql.md
+- name: 마이그레이션된 데이터베이스 개체 테스트(OracleToSQL)
+  href: testing-migrated-database-objects-oracletosql.md
+- name: SSMA 프로젝트 작업(OracleToSQL)
+  href: working-with-ssma-projects-oracletosql.md
+- name: Oracle 데이터베이스에 연결(OracleToSQL)
+  href: connecting-to-oracle-database-oracletosql.md
+- name: Oracle 데이터를 SQL Server로 마이그레이션(OracleToSQL)
+  href: migrating-oracle-data-into-sql-server-oracletosql.md
+- name: 프로젝트 설정(동기화)(OracleToSQL)
+  href: project-settings-synchronization-oracletosql.md
+- name: Oracle 스키마 변환(OracleToSQL)
+  href: converting-oracle-schemas-oracletosql.md
+- name: 데이터 마이그레이션 보고서(OracleToSQL)
+  href: data-migration-report-oracletosql.md
+- name: 보고서 생성(OracleToSQL)
+  href: generating-reports-oracletosql.md
+- name: 고급 개체 선택(OracleToSQL)
+  href: advanced-object-selection-oracletosql.md
+- name: 샘플 콘솔 스크립트 파일 작업(OracleToSQL)
+  href: working-with-the-sample-console-script-files-oracletosql.md
+- name: SSMA 콘솔의 명령줄 옵션(OracleToSQL)
+  href: command-line-options-in-ssma-console-oracletosql.md
+- name: 바로 가기 키(Oracle To SQL)
+  href: shortcut-keys-oracle-to-sql.md
+- name: 프로젝트 설정(변환)(OracleToSQL)
+  href: project-settings-conversion-oracletosql.md
+- name: 변환된 데이터베이스 개체를 SQL Server로 로드(OracleToSQL)
+  href: loading-converted-database-objects-into-sql-server-oracletosql.md
+- name: 전역 설정(편집기)(OracleToSQL)
+  href: global-settings-editor-oracletosql.md
+- name: 프로젝트 옵션 설정(OracleToSQL)
+  href: setting-project-options-oracletosql.md
+- name: 백업 관리(OracleToSQL)
+  href: managing-backups-oracletosql.md
+- name: 메타데이터 저장(OracleToSQL)
+  href: save-metadata-oracletosql.md
+- name: 호출 순서 사용자 지정(OracleToSQL)
+  href: customizing-calls-order-oracletosql.md
+- name: 프로젝트 설정(GUI)(OracleToSQL)
+  href: project-settings-gui-oracletosql.md
+- name: 프로젝트 설정(시스템 개체 로드)(OracleToSQL)
+  href: project-settings-loading-system-objects-oracletosql.md
+- name: 데이터 마이그레이션 설정(OracleToSQL)
+  href: data-migration-settings-oracletosql.md
+- name: 테스트 사례 보고서 보기(OracleToSQL)
+  href: viewing-test-case-reports-oracletosql.md
+- name: 암호 관리(OracleToSQL)
+  href: managing-passwords-oracletosql.md
+- name: Oracle용 SSMA 구성 요소 제거(OracleToSQL)
+  href: removing-ssma-for-oracle-components-oracletosql.md
+- name: SQL Server Migration Assistant(OracleToSQL)
+  href: sql-server-migration-assistant-for-oracle-oracletosql.md
+- name: 데이터베이스에서 새로 고침(OracleToSQL)
+  href: refresh-from-database-oracletosql.md
+- name: SSMA 콘솔 실행(OracleToSQL)
+  href: executing-the-ssma-console-oracletosql.md
+- name: 형식 매핑 편집(OracleToSQL)
+  href: edit-type-mapping-oracletosql.md
+- name: Oracle용 SSMA 콘솔 시작(OracleToSQL)
+  href: getting-started-with-ssma-for-oracle-console-oracletosql.md
+- name: 스크립트 파일 만들기(OracleToSQL)
+  href: creating-script-files-oracletosql.md
+- name: 영향을 받는 개체 선택 및 구성(OracleToSQL)
+  href: selecting-and-configuring-affected-objects-oracletosql.md
+- name: SQL Server에 연결(OracleToSQL)
+  href: connect-to-sql-server-oracletosql.md
+- name: Oracle용 SSMA 콘솔 작업(OracleToSQL)
+  href: working-with-ssma-for-oracle-console-oracletosql.md
+- name: 변환을 위해 Oracle 스키마 평가(OracleToSQL)
+  href: assessing-oracle-schemas-for-conversion-oracletosql.md
+- name: 프로젝트 설정(형식 매핑)(OracleToSQL)
+  href: project-settings-type-mapping-oracletosql.md
+- name: 전역 설정(테스터)(OracleToSQL)
+  href: global-settings-tester-oracletosql.md
+- name: 테스트 사례 초기화(OracleToSQL)
+  href: initializing-test-cases-oracletosql.md
+- name: 전역 설정(OracleToSQL)
+  href: global-settings-dialogs-oracletosql.md
+- name: 전역 설정(출력 창)(OracleToSQL)
+  href: global-settings-output-window-oracletosql.md
+- name: SQL Server에 SSMA 구성 요소 설치(OracleToSQL)
+  href: installing-ssma-components-on-sql-server-oracletosql.md
+- name: 테스트 사례 준비 완료(OracleToSQL)
+  href: finishing-test-case-preparation-oracletosql.md
+- name: 테스트할 개체 선택 및 구성(OracleToSQL)
+  href: selecting-and-configuring-objects-to-test-oracletosql.md
+- name: Oracle에 연결(OracleToSQL)
+  href: connect-to-oracle-oracletosql.md
+- name: 테스트 사례 만들기(OracleToSQL)
+  href: creating-test-cases-oracletosql.md
+- name: 문제 해결(OracleToSQL)
+  href: troubleshooting-oracletosql.md
+- name: Oracle 데이터베이스를 SQL Server로 마이그레이션(OracleToSQL)
+  href: migrating-oracle-databases-to-sql-server-oracletosql.md
+- name: SQL Server에 연결(OracleToSQL)
+  href: connecting-to-sql-server-oracletosql.md
+- name: 평가 보고서(OracleToSQL)
+  href: assessment-report-oracletosql.md
+- name: 새 프로젝트(OracleToSQL)
+  href: new-project-oracletosql.md
+- name: 사용자 인터페이스 참조(OracleToSQL)
+  href: user-interface-reference-oracletosql.md
+- name: 전역 설정(로깅)(OracleToSQL)
+  href: global-settings-logging-oracletosql.md
+- name: Oracle 스키마를 SQL Server 스키마에 매핑(OracleToSQL)
+  href: mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
+- name: Oracle 및 SQL Server 데이터 형식 매핑(OracleToSQL)
+  href: mapping-oracle-and-sql-server-data-types-oracletosql.md
+- name: 서버 연결 파일 만들기(OracleToSQL)
+  href: creating-the-server-connection-files-oracletosql.md
+- name: 부록 - 1(OracleToSQL)
+  href: appendix-1-oracletosql.md

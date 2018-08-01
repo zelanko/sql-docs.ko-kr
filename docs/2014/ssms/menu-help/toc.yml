@@ -1,0 +1,45 @@
+- name: SQL Server Management Studio 메뉴 도움말
+  href: sql-server-management-studio-menu-help.md
+- name: 연결 프로그램(새 파일)
+  href: open-with-new-file.md
+- name: 다른 이름으로 저장
+  href: save-as.md
+- name: 변경 내용 저장
+  href: save-changes.md
+- name: 저장 고급 옵션
+  href: advanced-save-options.md
+- name: 검색 폴더 선택 대화 상자(Visual Studio)
+  href: choose-search-folders-dialog-box-visual-studio.md
+- name: 도구 상자 항목 선택(유지 관리 태스크 페이지)
+  href: choose-toolbox-items-maintenance-tasks-page.md
+- name: 외부 도구
+  href: external-tools.md
+- name: 사용자 지정(도구 모음 페이지)
+  href: customize-toolbars-page.md
+- name: 사용자 지정(명령 페이지)
+  href: customize-commands-page.md
+- name: 옵션 대화 상자 F1 도움말
+  href: options-dialog-boxes-f1-help.md
+  items:
+    - name: 옵션(환경-일반 페이지)
+      href: options-environment-general-page.md
+    - name: '옵션(환경: 글꼴 및 색 페이지)'
+      href: options-environment-fonts-and-colors-page.md
+    - name: Options (Environment/Keyboard Page)
+      href: options-environment-keyboard-page.md
+    - name: 옵션(환경/도움말/일반 페이지)
+      href: options-environment-help-general-page.md
+    - name: Options (Environment/Help/Online Page)
+      href: options-environment-help-online-page.md
+    - name: 옵션(디자이너/테이블 및 데이터베이스 디자이너 페이지)
+      href: options-designers-table-and-database-designers-page.md
+    - name: 옵션(디자이너/유지 관리 계획 페이지)
+      href: options-designers-maintenance-plans-page.md
+    - name: 옵션(디자이너/Analysis Services 디자이너/일반)
+      href: options-designers-analysis-services-designers-general.md
+- name: 창 대화 상자(Microsoft Document Explorer 도움말)
+  href: windows-dialog-box-microsoft-document-explorer-help.md
+- name: SQL Server Management Studio 정보
+  href: about-sql-server-management-studio.md
+- name: 속성 창 F1 도움말(Management Studio)
+  href: properties-window-f1-help-management-studio.md

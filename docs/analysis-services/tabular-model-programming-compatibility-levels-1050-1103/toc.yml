@@ -1,0 +1,14 @@
+- name: 호환성 수준 1050~1103에 대한 테이블 형식 모델 프로그래밍
+  href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+- name: 표현 +
+  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+- name: CSDL(개념 스키마 정의 언어) +
+  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
+- name: 비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
+  href: csdl-annotations-for-business-intelligence-csdlbi.md
+- name: 보고서 디자인의 CSDLBI 특성
+  href: csdlbi-attributes-for-report-design.md
+- name: CSDLBI 개념
+  href: csdlbi-concepts.md
+- name: IMDEmbeddedData 인터페이스
+  href: imdembeddeddata-interface.md

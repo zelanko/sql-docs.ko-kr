@@ -1,0 +1,32 @@
+- name: 개요)
+  href: xml-transact-sql.md
+- name: xml_schema_namespace
+  href: xml-schema-namespace.md
+- name: WITH XMLNAMESPACES
+  href: with-xmlnamespaces.md
+- name: XML DML(XML 데이터 수정 언어)
+  href: xml-data-modification-language-xml-dml.md
+  items:
+    - name: insert(XML DML)
+      href: insert-xml-dml.md
+    - name: delete(XML DML)
+      href: delete-xml-dml.md
+    - name: replace value of(XML DML)
+      href: replace-value-of-xml-dml.md
+- name: xml 데이터 형식 메서드
+  href: xml-data-type-methods.md
+  items:
+    - name: query() 메서드(xml 데이터 형식)
+      href: query-method-xml-data-type.md
+    - name: value() 메서드(xml 데이터 형식)
+      href: value-method-xml-data-type.md
+    - name: exist() 메서드(xml 데이터 형식)
+      href: exist-method-xml-data-type.md
+    - name: modify() 메서드(xml 데이터 형식)
+      href: modify-method-xml-data-type.md
+    - name: nodes() 메서드(xml 데이터 형식)
+      href: nodes-method-xml-data-type.md
+    - name: XML 데이터 내 관계형 데이터 바인딩
+      href: binding-relational-data-inside-xml-data.md
+    - name: xml 데이터 형식 메서드를 사용하기 위한 지침
+      href: guidelines-for-using-xml-data-type-methods.md

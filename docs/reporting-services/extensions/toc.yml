@@ -1,0 +1,16 @@
+- name: Reporting Services 확장 프로그램 라이브러리
+  href: reporting-services-extension-library.md
+- name: 데이터 처리 +
+  href: ../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md
+- name: 배달 확장 프로그램 +
+  href: ../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md
+- name: 렌더링 확장 프로그램 +
+  href: ../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md
+- name: 보안 확장 프로그램 +
+  href: ../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md
+- name: 안전한 개발 +
+  href: ../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md
+- name: Reporting Services 확장 프로그램
+  href: reporting-services-extensions.md
+- name: 확장 프로그램에 대한 보안 고려 사항
+  href: security-considerations-for-extensions.md

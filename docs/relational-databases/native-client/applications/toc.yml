@@ -1,0 +1,22 @@
+- name: SQL Server Native Client를 사용하여 응용 프로그램 빌드
+  href: building-applications-with-sql-server-native-client.md
+- name: SQL Server Native Client의 구성 요소
+  href: components-of-sql-server-native-client.md
+- name: SQL Server Native Client를 사용하여 Microsoft Azure SQL Database에 연결
+  href: connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
+- name: dbmslpcn.dll 공유 메모리의 ConnectionValidSharedMemory 함수
+  href: connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
+- name: SQL Server Native Client 설치
+  href: installing-sql-server-native-client.md
+- name: SQL Server Native Client에 대한 지원 정책
+  href: support-policies-for-sql-server-native-client.md
+- name: SQL Server 2005 Native Client에서 응용 프로그램 업데이트
+  href: updating-an-application-from-sql-server-2005-native-client.md
+- name: MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트
+  href: updating-an-application-to-sql-server-native-client-from-mdac.md
+- name: SQL Server Native Client와 함께 ADO 사용
+  href: using-ado-with-sql-server-native-client.md
+- name: SQL Server Native Client에서 연결 문자열 키워드 사용
+  href: using-connection-string-keywords-with-sql-server-native-client.md
+- name: SQL Server Native Client 헤더 및 라이브러리 파일 사용
+  href: using-the-sql-server-native-client-header-and-library-files.md

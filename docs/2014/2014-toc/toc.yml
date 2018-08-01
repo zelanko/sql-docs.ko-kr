@@ -1,0 +1,58 @@
+- name: SQL Server 2014용 온라인 설명서
+  href: books-online-for-sql-server-2014.md
+- name: Analysis Services +
+  href: ../analysis-services/analysis-services.md
+- name: Data Quality Services +
+  href: ../data-quality-services/data-quality-services.md
+- name: 데이터베이스 엔진 +
+  href: ../database-engine/sql-server-database-engine-overview.md
+- name: 시작(SQL Server 2014) +
+  href: ../getting-started/getting-started-sql-server-2014.md
+- name: Integration Services +
+  href: ../integration-services/sql-server-integration-services.md
+- name: Master Data Services +
+  href: ../master-data-services/master-data-services.md
+- name: SQL Server용 PowerShell +
+  href: ../powershell/sql-server-powershell.md
+- name: 관계형 데이터베이스 기능 +
+  href: ../relational-databases/database-features.md
+- name: Reporting Services +
+  href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: SQL Server 2014 자습서 +
+  href: ../tutorials/tutorials-for-sql-server-2014.md
+- name: 용어 설명
+  href: glossary.md
+- name: SQL Server 2014의 새로운 기능 +
+  href: ../sql-server/what-s-new-in-sql-server-2016.md
+- name: SQL Server 2014 개발자 참조
+  href: developer-reference-for-sql-server-2014.md
+  items:
+    - name: 개발자 가이드(Analysis Services) +
+      href: ../analysis-services/dev-guide/analysis-services-dev-guide.md
+    - name: 개발자 가이드(Integration Services) +
+      href: ../integration-services/integration-services-developer-documentation.md
+    - name: 개발자 가이드(Master Data Services) +
+      href: ../master-data-services/develop/master-data-services-developer-documentation.md
+    - name: 개발자 가이드(관계형 데이터베이스 엔진) +
+      href: ../relational-databases/database-engine-developer-documentation.md
+    - name: 개발자 가이드(복제) +
+      href: ../relational-databases/replication/concepts/replication-developer-documentation.md
+    - name: 개발자 가이드(Reporting Services) +
+      href: ../reporting-services/reporting-services-developer-documentation.md
+- name: SQL Server 2014 설치 +
+  href: ../database-engine/install-windows/installation-for-sql-server.md
+  items:
+    - name: 업그레이드 관리자 +
+      href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
+    - name: 설정 및 서비스 설치 +
+      href: ../sql-server/install/setup-and-servicing-installation.md
+- name: Configuration Manager 도움말 +
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: 인덱스 디자인 가이드
+  href: sql-server-index-design-guide.md
+- name: 트랜잭션 잠금 및 행 버전 관리 지침
+  href: sql-server-transaction-locking-and-row-versioning-guide.md
+- name: 트랜잭션 로그 아키텍처 및 관리
+  href: sql-server-transaction-log-architecture-and-management.md
+- name: '사례 연구: 확장성과 성능을 위해 Microsoft Dynamics ERP와 SQL Server 2014 Replication을 사용하여 엔터프라이즈 에코시스템 구축'
+  href: case-study-building-an-enterprise-ecosystem.md

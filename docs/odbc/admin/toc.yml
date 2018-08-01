@@ -1,0 +1,12 @@
+- name: ODBC 데이터 원본 관리자
+  href: odbc-data-source-administrator.md
+- name: 드라이버 보기
+  href: viewing-drivers.md
+- name: 데이터 원본 관리
+  href: managing-data-sources.md
+- name: 추적 옵션 설정
+  href: setting-tracing-options.md
+- name: 드라이버 및 데이터 원본 정보
+  href: about-drivers-and-data-sources.md
+- name: ODBC 연결 풀링 옵션 설정
+  href: setting-odbc-connection-pooling-options.md

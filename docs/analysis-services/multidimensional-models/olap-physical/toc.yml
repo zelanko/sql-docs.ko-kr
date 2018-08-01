@@ -1,0 +1,16 @@
+- name: Analysis Services 배포의 클라이언트 아키텍처 요구 사항
+  href: client-architecture-requirements-for-analysis-services-development.md
+- name: Analysis Services의 데이터 형식
+  href: data-types-in-analysis-services.md
+- name: 로컬 큐브(Analysis Services - 다차원 데이터)
+  href: local-cubes-analysis-services-multidimensional-data.md
+- name: 최대 용량 사양(Analysis Services)
+  href: maximum-capacity-specifications-analysis-services.md
+- name: 개체 명명 규칙(Analysis Services)
+  href: object-naming-rules-analysis-services.md
+- name: OLAP 엔진 서버 구성 요소
+  href: olap-engine-server-components.md
+- name: Microsoft OLAP 아키텍처 이해
+  href: understanding-microsoft-olap-architecture.md
+- name: Microsoft OLAP 물리적 아키텍처 이해
+  href: understanding-microsoft-olap-physical-architecture.md

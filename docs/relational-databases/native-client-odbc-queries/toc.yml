@@ -1,0 +1,16 @@
+- name: 쿼리 실행(ODBC)
+  href: executing-queries-odbc.md
+- name: 문 실행 +
+  href: ../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md
+- name: 문 핸들 할당
+  href: allocating-a-statement-handle.md
+- name: SQL 문 생성(ODBC)
+  href: constructing-an-sql-statement-odbc.md
+- name: 쿼리에 대한 SQL 문 생성
+  href: constructing-sql-statements-for-cursors.md
+- name: 문 핸들 해제
+  href: freeing-a-statement-handle.md
+- name: 문 매개 변수 사용 - 매개 변수 바인딩
+  href: using-statement-parameters-binding-parameters.md
+- name: 문 매개 변수 사용
+  href: using-statement-parameters.md

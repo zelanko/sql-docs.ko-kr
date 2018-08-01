@@ -1,0 +1,65 @@
+- name: 개요
+  href: master-data-services-add-in-for-microsoft-excel.md
+- name: Connections
+  href: connections-mds-add-in-for-excel.md
+  items:
+    - name: MDS 저장소에 연결
+      href: connect-to-an-mds-repository-mds-add-in-for-excel.md
+- name: 'Overview: Exporting Data to Excel (MDS Add-in for Excel)'
+  href: overview-exporting-data-to-excel-mds-add-in-for-excel.md
+  items:
+    - name: 내보내기 전에 데이터 필터링
+      href: filter-data-before-exporting-mds-add-in-for-excel.md
+    - name: Export Data to Excel from Master Data Services
+      href: export-data-to-excel-from-master-data-services.md
+    - name: 필터 대화 상자
+      href: filter-dialog-box-mds-add-in-for-excel.md
+    - name: 열 순서 바꾸기
+      href: reorder-columns-mds-add-in-for-excel.md
+- name: 바로 가기 쿼리 파일
+  href: shortcut-query-files-mds-add-in-for-excel.md
+  items:
+    - name: 바로 가기 쿼리 파일 저장
+      href: save-a-shortcut-query-file-mds-add-in-for-excel.md
+    - name: 바로 가기 쿼리 파일을 전자 메일로 보내기
+      href: email-a-shortcut-query-file-mds-add-in-for-excel.md
+- name: 데이터 새로 고침
+  href: refreshing-data-mds-add-in-for-excel.md
+- name: '개요: Excel에서 데이터 가져오기(Excel용 MDS 추가 기능)'
+  href: overview-importing-data-from-excel-mds-add-in-for-excel.md
+  items:
+    - name: Excel에서 Master Data Services로 데이터 가져오기
+      href: import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md
+    - name: 행 삭제
+      href: delete-a-row-mds-add-in-for-excel.md
+    - name: 멤버에 대한 모든 주석 또는 트랜잭션 보기
+      href: view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md
+    - name: 데이터 결합
+      href: combine-data-mds-add-in-for-excel.md
+    - name: 병합 충돌
+      href: merge-conflicts-mds-add-in-for-excel.md
+    - name: 변경 집합 및 승인
+      href: change-sets-and-approval-mds-add-in-for-excel.md
+- name: 데이터 유효성 검사
+  href: validating-data-mds-add-in-for-excel.md
+  items:
+    - name: 비즈니스 규칙 적용
+      href: apply-business-rules-mds-add-in-for-excel.md
+- name: 데이터 품질 일치
+  href: data-quality-matching-in-the-mds-add-in-for-excel.md
+  items:
+    - name: 유사한 데이터 일치
+      href: match-similar-data-mds-add-in-for-excel.md
+    - name: 데이터 품질 일치 열
+      href: data-quality-matching-columns-mds-add-in-for-excel.md
+- name: 모델 작성
+  href: building-a-model-mds-add-in-for-excel.md
+  items:
+    - name: 엔터티 만들기
+      href: create-an-entity-mds-add-in-for-excel.md
+    - name: 도메인 기반 특성 만들기
+      href: create-a-domain-based-attribute-mds-add-in-for-excel.md
+    - name: 특성 유형 변경
+      href: change-the-attribute-type-mds-add-in-for-excel.md
+- name: Excel용 Master Data Services 추가 기능의 속성 설정
+  href: setting-properties-for-master-data-services-add-in-for-excel.md

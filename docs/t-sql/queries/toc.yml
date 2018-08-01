@@ -1,0 +1,79 @@
+- name: 개요
+  href: queries.md
+- name: SELECT
+  href: select-transact-sql.md
+  items:
+    - name: SELECT 절
+      href: select-clause-transact-sql.md
+    - name: SELECT 예제
+      href: select-examples-transact-sql.md
+    - name: SELECT - FOR 절
+      href: select-for-clause-transact-sql.md
+    - name: SELECT - GROUP BY
+      href: select-group-by-transact-sql.md
+    - name: SELECT - HAVING
+      href: select-having-transact-sql.md
+    - name: SELECT - INTO 절
+      href: select-into-clause-transact-sql.md
+    - name: SELECT - ORDER BY 절
+      href: select-order-by-clause-transact-sql.md
+    - name: SELECT - OVER 절
+      href: select-over-clause-transact-sql.md
+- name: FROM
+  href: from-transact-sql.md
+  items:
+    - name: FROM - PIVOT 및 UNPIVOT 사용
+      href: from-using-pivot-and-unpivot.md
+- name: WHERE
+  href: where-transact-sql.md
+  items:
+    - name: MATCH
+      href: match-sql-graph.md
+- name: 힌트
+  href: hints-transact-sql.md
+  items:
+    - name: 힌트 - 조인
+      href: hints-transact-sql-join.md
+    - name: 힌트 - 쿼리
+      href: hints-transact-sql-query.md
+    - name: 힌트 - 테이블
+      href: hints-transact-sql-table.md
+- name: AT TIME ZONE
+  href: at-time-zone-transact-sql.md
+- name: '별칭 지정(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)'
+  href: aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
+- name: EXPLAIN
+  href: explain-transact-sql.md
+- name: OPTION 절
+  href: option-clause-transact-sql.md
+- name: OUTPUT Clause
+  href: output-clause-transact-sql.md
+- name: 조건자
+  href: predicates.md
+  items:
+    - name: CONTAINS
+      href: contains-transact-sql.md
+    - name: FREETEXT
+      href: freetext-transact-sql.md
+    - name: IS NULL
+      href: is-null-transact-sql.md
+- name: PREDICT
+  href: predict-transact-sql.md
+- name: READTEXT
+  href: readtext-transact-sql.md
+- name: 검색 조건
+  href: search-condition-transact-sql.md
+- name: '하위 쿼리(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)'
+  href: subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
+- name: 테이블 값 생성자
+  href: table-value-constructor-transact-sql.md
+- name: 맨 위로 이동
+  href: top-transact-sql.md
+- name: UPDATE
+  href: update-transact-sql.md
+- name: UPDATETEXT
+  href: updatetext-transact-sql.md
+- name: WITH common_table_expression
+  href: with-common-table-expression-transact-sql.md
+- name: WRITETEXT
+  href: writetext-transact-sql.md

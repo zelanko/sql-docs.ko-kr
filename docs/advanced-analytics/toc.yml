@@ -1,0 +1,321 @@
+- name: 개요
+  items:
+    - name: SQL Server Machine Learning Services란?
+      href: what-is-sql-server-machine-learning.md
+      items:
+        - name: 데이터베이스 내 분석
+          href: r/sql-server-r-services.md
+        - name: 독립 실행형 서버
+          href: r/r-server-standalone.md
+    - name: 새 기능
+      href: what-s-new-in-sql-server-machine-learning-services.md
+    - name: 버전별 기능
+      href: r/differences-in-r-features-between-editions-of-sql-server.md
+- name: Architecture
+  href: architecture-overview-machine-learning.md
+  items:
+    - name: R
+      href: r/architecture-overview-sql-server-r.md
+      items:
+        - name: R 상호 운용성
+          href: r/r-interoperability-in-sql-server.md
+        - name: R 통합을 지원하는 구성 요소
+          href: r/new-components-in-sql-server-to-support-r.md
+        - name: R에 대한 보안
+          href: r/security-overview-sql-server-r.md
+    - name: Python
+      href: python/architecture-overview-sql-server-python.md
+      items:
+        - name: Machine Learning Services의 Python
+          href: python/sql-server-python-services.md
+        - name: Python 상호 운용성
+          href: python/python-interoperability.md
+        - name: Python을 지원하는 구성 요소
+          href: python/new-components-in-sql-server-to-support-python-integration.md
+        - name: Python 보안
+          href: python/security-overview-sql-server-python-services.md
+- name: Install
+  items:
+    - name: SQL Server 2017
+      items:
+        - name: 데이터베이스 내 분석
+          href: install/sql-machine-learning-services-windows-install.md
+        - name: 독립 실행형 서버
+          href: install/sql-machine-learning-standalone-windows-install.md
+    - name: SQL Server 2016
+      items:
+        - name: R Services(In-database)
+          href: install/sql-r-services-windows-install.md
+        - name: R Server (Standalone)
+          href: install/sql-r-standalone-windows-install.md
+    - name: 미리 학습된 모델
+      href: install/sql-pretrained-models-install.md
+    - name: 명령 프롬프트 설치
+      href: install/sql-ml-component-commandline-install.md
+    - name: 오프라인 설치(인터넷 없음)
+      href: install/sql-ml-component-install-without-internet-access.md
+    - name: R 및 Python 업그레이드
+      href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+    - name: R 도구 설정
+      href: r/set-up-a-data-science-client.md
+    - name: Python 도구 설정
+      href: python/setup-python-client-tools-sql.md
+- name: 빠른 시작
+  items:
+    - name: R
+      items:
+        - name: R 및 SQL의 Hello World
+          href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+        - name: 입력 및 출력 처리
+          href: tutorials/rtsql-working-with-inputs-and-outputs.md
+        - name: 데이터 형식 및 개체 처리
+          href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+        - name: 예측 모델 만들기
+          href: tutorials/rtsql-create-a-predictive-model-r.md
+        - name: 모델에서 예측 및 그리기
+          href: tutorials/rtsql-predict-and-plot-from-model.md
+- name: 자습서
+  href: tutorials/machine-learning-services-tutorials.md
+  items:
+    - name: R
+      href: tutorials/sql-server-r-tutorials.md
+      items:
+        - name: 데이터베이스 내 분석 알아보기
+          href: tutorials/sqldev-in-database-r-for-sql-developers.md
+          items:
+            - name: 1 - 데이터 및 스크립트 가져오기
+              href: tutorials/sqldev-download-the-sample-data.md
+            - name: 2 - 환경 설정
+              href: r/sqldev-import-data-to-sql-server-using-powershell.md
+            - name: 3 - 데이터 시각화
+              href: tutorials/sqldev-explore-and-visualize-the-data.md
+            - name: 4 - 데이터 기능 만들기
+              href: tutorials/sqldev-create-data-features-using-t-sql.md
+            - name: 5 - 학습 및 SQL에 저장
+              href: r/sqldev-train-and-save-a-model-using-t-sql.md
+            - name: 6 - 결과 예측
+              href: tutorials/sqldev-operationalize-the-model.md
+        - name: 데이터 과학 종단 간 연습
+          href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+          items:
+            - name: 데이터 준비
+              href: tutorials/walkthrough-prepare-the-data.md
+            - name: SQL을 사용하여 데이터 탐색
+              href: tutorials/walkthrough-view-and-explore-the-data.md
+            - name: R을 사용하여 데이터 요약
+              href: tutorials/walkthrough-view-and-summarize-data-using-r.md
+            - name: 그래프 및 플롯 만들기
+              href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
+            - name: 데이터 기능 만들기
+              href: tutorials/walkthrough-create-data-features.md
+            - name: 모델 작성 및 저장
+              href: tutorials/walkthrough-build-and-save-the-model.md
+            - name: 모델 배포 및 사용
+              href: tutorials/walkthrough-deploy-and-use-the-model.md
+        - name: RevoScaleR 심층 분석
+          href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+          items:
+            - name: 데이터베이스 및 사용 권한 만들기
+              href: tutorials/deepdive-work-with-sql-server-data-using-r.md
+            - name: RxSqlServerData를 사용하여 데이터 개체 만들기
+              href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+            - name: 데이터 쿼리 및 수정
+              href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
+            - name: 계산 컨텍스트 정의
+              href: tutorials/deepdive-define-and-use-compute-contexts.md
+            - name: R 스크립트 만들기 및 실행
+              href: tutorials/deepdive-create-and-run-r-scripts.md
+            - name: 데이터 시각화
+              href: tutorials/deepdive-visualize-sql-server-data-using-r.md
+            - name: 모델 만들기
+              href: tutorials/deepdive-create-models.md
+            - name: 새 데이터 점수 매기기
+              href: tutorials/deepdive-score-new-data.md
+            - name: 데이터 변환
+              href: tutorials/deepdive-transform-data-using-r.md
+            - name: rxImport를 사용하여 메모리에 데이터 로드
+              href: tutorials/deepdive-load-data-into-memory-using-rximport.md
+            - name: rxDataStep을 사용하여 테이블 만들기
+              href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+            - name: rxDataStep을 사용하여 청크 분석 수행
+              href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+            - name: 로컬 계산 컨텍스트에서 데이터 분석
+              href: tutorials/deepdive-analyze-data-in-local-compute-context.md
+            - name: SQL Server와 XDF 파일 간에 데이터 이동
+              href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+            - name: 간단한 시뮬레이션 만들기
+              href: tutorials/deepdive-create-a-simple-simulation.md
+    - name: Python
+      href: tutorials/sql-server-python-tutorials.md
+      items:
+        - name: T-SQL을 사용하여 Python 실행
+          href: tutorials/run-python-using-t-sql.md
+          items:
+            - name: 저장 프로시저에서 Python 래핑
+              href: tutorials/wrap-python-in-tsql-stored-procedure.md
+            - name: SQL Server의 Python 모델에서 학습 및 점수 매기기
+              href: tutorials/train-score-using-python-in-tsql.md
+            - name: SQL Server 계산 컨텍스트에서 revoscalepy를 사용하여 모델 만들기
+              href: tutorials/use-python-revoscalepy-to-create-model.md
+        - name: 데이터베이스 내 분석 알아보기
+          href: tutorials/sqldev-in-database-python-for-sql-developers.md
+          items:
+            - name: 데이터 및 스크립트 가져오기
+              href: tutorials/sqldev-py1-download-the-sample-data.md
+            - name: 데이터 가져오기
+              href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+            - name: 데이터 탐색 및 시각화
+              href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+            - name: 데이터 기능 만들기
+              href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+            - name: 모델 학습 및 저장
+              href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+            - name: 모델 운영화
+              href: tutorials/sqldev-py6-operationalize-the-model.md
+- name: 샘플
+  href: 'https://github.com/Microsoft/sql-server-samples'
+- name: 솔루션
+  href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: 방법
+  href: r/sql-server-machine-learning-tasks.md
+  items:
+    - name: 패키지 관리
+      items:
+        - name: 기본 패키지
+          href: r/installing-and-managing-r-packages.md
+        - name: 패키지 정보 가져오기
+          href: r/determine-which-packages-are-installed-on-sql-server.md
+        - name: 새 Python 패키지 설치
+          href: python/install-additional-python-packages-on-sql-server.md
+        - name: 새 R 패키지 설치
+          href: r/install-additional-r-packages-on-sql-server.md
+          items:
+            - name: R 패키지 관리자 사용
+              href: r/use-r-package-managers-on-sql-server.md
+            - name: T-SQL 사용
+              href: r/install-r-packages-tsql.md
+            - name: RevoScaleR 사용
+              href: r/use-revoscaler-to-manage-r-packages.md
+              items:
+                - name: 원격 R 패키지 관리 사용
+                  href: r/r-package-how-to-enable-or-disable.md
+                - name: R 패키지 동기화
+                  href: r/package-install-uninstall-and-sync.md
+            - name: miniCRAN 리포지토리 만들기
+              href: r/create-a-local-package-repository-using-minicran.md
+            - name: R 패키지 사용 팁
+              href: r/packages-installed-in-user-libraries.md
+    - name: 데이터 탐색 및 모델링
+      items:
+        - name: R 라이브러리 및 데이터 형식
+          href: r/r-libraries-and-data-types.md
+        - name: Python 라이브러리 및 데이터 형식
+          href: python/python-libraries-and-data-types.md
+        - name: 네이티브 점수 매기기
+          href: sql-native-scoring.md
+        - name: 실시간 점수 매기기
+          href: real-time-scoring.md
+        - name: R을 사용한 예측 모델링
+          href: r/data-exploration-and-predictive-modeling-with-r.md
+        - name: 실시간 또는 네이티브 점수 매기기를 수행하는 방법
+          href: r/how-to-do-realtime-scoring.md
+        - name: ODBC를 사용하여 R 개체 로드
+          href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
+        - name: Machine Learning Services에서 사용하기 위해 R 코드 변환
+          href: r/converting-r-code-for-use-in-sql-server.md
+        - name: rxExecBy를 사용하여 여러 모델 만들기
+          href: r/creating-multiple-models-using-rxexecby.md
+        - name: R에서 OLAP 큐브의 데이터 사용
+          href: r/using-data-from-olap-cubes-in-r.md
+        - name: sqlrutils를 사용하여 저장 프로시저 만들기
+          href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+    - name: 성능
+      items:
+        - name: R의 성능 튜닝 - 개요
+          href: r/sql-server-r-services-performance-tuning.md
+        - name: R의 성능 튜닝 - SQL Server 구성)
+          href: r/sql-server-configuration-r-services.md
+        - name: R의 성능 튜닝 - R 및 데이터 최적화
+          href: r/r-and-data-optimization-r-services.md
+        - name: R의 성능 튜닝 - 결과
+          href: r/performance-case-study-r-services.md
+        - name: R 코드 프로파일링 함수 사용
+          href: r/using-r-code-profiling-functions.md
+    - name: 관리
+      items:
+        - name: R 구성 및 관리
+          href: r/configuration-sql-server-r-services.md
+        - name: Machine Learning Services의 고급 구성 옵션
+          href: r/configure-and-manage-advanced-analytics-extensions.md
+        - name: SQL Server의 R 런타임에 대한 보안 고려 사항
+          href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+        - name: SQL Server Machine Learning Services의 사용자 계정 풀 수정
+          href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+        - name: SQLRUserGroup을 데이터베이스 사용자로 추가
+          href: r/add-sqlrusergroup-to-database.md
+        - name: 웹 서비스를 사용하여 모델 배포 및 사용
+          href: operationalization-with-mrsdeploy.md
+        - name: 솔루션 관리 및 모니터링
+          href: r/managing-and-monitoring-r-solutions.md
+        - name: Machine Learning Services를 위한 리소스 거버넌스
+          href: r/resource-governance-for-r-services.md
+        - name: 기계 학습을 위한 리소스 풀 만들기
+          href: r/how-to-create-a-resource-pool-for-r.md
+        - name: Machine Learning Services를 위한 확장 이벤트
+          href: r/extended-events-for-sql-server-r-services.md
+        - name: PREDICT 문 모니터링에 대한 확장 이벤트
+          href: xe-event-predict-tsql.md
+        - name: Machine Learning Services용 DMV
+          href: r/dmvs-for-sql-server-r-services.md
+        - name: R 코드 프로파일링 함수 사용
+          href: r/using-r-code-profiling-functions.md
+        - name: Management Studio에서 사용자 지정 보고서를 사용하여 Machine Learning Services 모니터링
+          href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+- name: 패키지 참조
+  href: r/machine-learning-services-r-reference.md
+  items:
+    - name: SQL의 MicrosoftML
+      href: using-the-microsoftml-package.md
+    - name: SQL의 RevoScaleR
+      href: r/revoscaler-overview.md
+    - name: SQL Server 데이터에 대한 RevoScaleR 함수 목록
+      href: r/scaler-functions-for-working-with-sql-server-data.md
+    - name: SQL의 sqlrutils
+      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: SQL의 olapR
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: SQL의 revoscalepy
+      href: python/what-is-revoscalepy.md
+- name: 리소스
+  items:
+    - name: 알려진 문제
+      href: known-issues-for-sql-server-machine-learning-services.md
+    - name: 릴리스 정보
+      href: 'https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes'
+    - name: 가상 머신 설정
+      href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+    - name: 문제 해결
+      href: machine-learning-troubleshooting-faq.md
+      items:
+        - name: 데이터 수집
+          href: data-collection-ml-troubleshooting-process.md
+        - name: 설치 및 업그레이드 오류
+          href: r/upgrade-and-installation-faq-sql-server-r-services.md
+        - name: 실행 패드 및 외부 스크립트 실행 오류
+          href: common-issues-external-script-execution.md
+        - name: R 스크립팅 오류
+          href: r-script-execution-errors.md
+    - name: 블로그
+      items:
+        - name: SQL Server
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: R Server
+          href: 'https://blogs.msdn.microsoft.com/microsoftrservertigerteam/'
+        - name: Machine Learning
+          href: 'https://blogs.technet.microsoft.com/machinelearning/'
+    - name: 포럼
+      items:
+        - name: SQL Server
+          href: 'https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver'
+        - name: Machine Learning Server
+          href: 'https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR'

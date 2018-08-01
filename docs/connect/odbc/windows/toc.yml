@@ -1,0 +1,28 @@
+- name: Windows의 Microsoft ODBC Driver for SQL Server
+  href: microsoft-odbc-driver-for-sql-server-on-windows.md
+- name: Windows 기반 Microsoft ODBC Driver for SQL Server의 기능
+  href: features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
+- name: 릴리스 정보
+  href: release-notes.md
+- name: '시스템 요구 사항, 설치 및 드라이버 파일'
+  href: system-requirements-installation-and-driver-files.md
+- name: 기능 가이드
+  items:
+    - name: Windows ODBC 드라이버에서 연결 복원
+      href: connection-resiliency-in-the-windows-odbc-driver.md
+    - name: ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
+      href: driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
+- name: 비동기 실행(알림 방법) 샘플
+  href: asynchronous-execution-notification-method-sample.md
+- name: 도움말 항목
+  items:
+    - name: 데이터 원본 마법사 화면 1
+      href: dsn-wizard-1.md
+    - name: 데이터 원본 마법사 화면 2
+      href: dsn-wizard-2.md
+    - name: 데이터 원본 마법사 화면 3
+      href: dsn-wizard-3.md
+    - name: 데이터 원본 마법사 화면 4
+      href: dsn-wizard-4.md
+    - name: SQL Server 로그인 대화 상자
+      href: sql-server-login-dialog.md
