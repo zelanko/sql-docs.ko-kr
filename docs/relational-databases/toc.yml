@@ -6,6 +6,7 @@
   href: sql-server-guides.md
   items:
     - name: Always On 가용성 그룹 문제 해결 및 모니터링 가이드
+      href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
     - name: 인덱스 아키텍처 및 디자인
       href: sql-server-index-design-guide.md
     - name: 메모리 관리 아키텍처
