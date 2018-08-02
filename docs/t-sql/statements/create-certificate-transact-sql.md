@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036181"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359600"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,7 +158,7 @@ CREATE CERTIFICATE certificate_name
  인증서가 유효하게 되는 날짜입니다. 지정하지 않으면 START_DATE가 현재 날짜와 같게 설정됩니다. START_DATE는 UTC 시간이며 날짜 및 시간으로 변환이 가능한 모든 형식으로 지정할 수 있습니다.  
   
  EXPIRY_DATE ='*datetime*'  
- 인증서가 만료되는 날짜입니다. 지정하지 않으면 EXPIRY_DATE가 START_DATE의 일년 후 날짜로 설정됩니다. EXPIRY_DATE는 UTC 시간이며 날짜 및 시간으로 변환이 가능한 모든 형식으로 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker는 만료 날짜를 확인하지만 인증서가 암호화에 사용되는 경우에는 만료되지 않습니다.  
+ 인증서가 만료되는 날짜입니다. 지정하지 않으면 EXPIRY_DATE가 START_DATE의 일년 후 날짜로 설정됩니다. EXPIRY_DATE는 UTC 시간이며 날짜 및 시간으로 변환이 가능한 모든 형식으로 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker는 만료 날짜를 확인하지만 인증서를 사용하는 암호화를 통한 백업도 만료 날짜를 확인하며 만료된 인증서로 새로운 백업 생성을 허용하지 않지만 만료된 인증서로 복원은 허용합니다. 인증서가 데이터베이스 암호화 또는 Always Encrypted에 사용되는 경우에는 만료되지 않습니다.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 기능의 시작자가 인증서를 사용할 수 있게 합니다. 기본값은 ON입니다.  

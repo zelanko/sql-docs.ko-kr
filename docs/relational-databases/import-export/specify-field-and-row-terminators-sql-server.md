@@ -1,7 +1,7 @@
 ---
 title: 필드 및 행 종결자 지정(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940258"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278685"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,13 +98,21 @@ ms.locfileid: "32940258"
 -   긴 고정 길이 열. 이러한 열에 포함된 공백은 대부분의 행에서 일부만 사용합니다.  
   
      이 경우 종결자를 지정하면 저장 공간이 최소화되어 필드를 가변 길이 필드로 취급할 수 있습니다.  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>대량 내보내기에 대한 행 종결자로 `\n`지정
+
+대량 내보내기에 대한 행 종결자로 `\n`을 지정하거나 기본 행 종결자를 암묵적으로 사용하면 bcp가 행 종결자로 CRLF(캐리지 리턴-줄 바꿈) 조합을 출력합니다. LF(줄 바꿈) 문자만 행 종결자로 출력하려면(Unix 및 Linux 컴퓨터에서 일반적임) 16진수 표기법을 사용하여 LF 행 종결자를 지정하세요. 예를 들어 다음과 같이 사용할 수 있습니다.
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>예  
  이 예에서는 `AdventureWorks.HumanResources.Department` 테이블의 데이터를 문자 형식을 사용하는 `Department-c-t.txt` 데이터 파일로 대량으로 내보내며 쉼표를 필드 종결자로, 줄 바꿈 문자(\n)를 행 종결자로 사용합니다.  
   
  **bcp** 명령에는 다음 스위치가 포함됩니다.  
   
-|스위치|Description|  
+|스위치|설명|  
 |------------|-----------------|  
 |**-t**|데이터 필드가 데이터 문자로 로드되도록 지정합니다.|  
 |**-t** `,`|쉼표(,)를 필드 종결자로 지정합니다.|  
@@ -132,7 +140,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      다음 표에서 나타나는 한정자를 사용하여 서식 파일에서 필드별로 종결자를 지정하거나 전체 데이터 파일에 대해 종결자를 지정할 수 있습니다.  
   
-    |한정자|Description|  
+    |한정자|설명|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|문자 및 유니코드 문자 데이터 파일에 사용할 필드 종결자를 지정합니다.<br /><br /> 기본값은 \t(탭 문자)입니다.|  
     |ROWTERMINATOR **='***row_terminator***'**|문자 및 유니코드 문자 데이터 파일에 사용할 행 종결자를 지정합니다.<br /><br /> 기본값은 \n(줄 바꿈 문자)입니다.|  
@@ -144,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      OPENROWSET 대량 행 집합 공급자의 경우 종결자는 서식 파일에서만 지정할 수 있습니다(큰 개체 데이터 형식 이외의 형식에 필요). 문자 데이터 파일이 기본 종결자 이외의 종결자를 사용하면 이를 서식 파일에 정의해야 합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) 및 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
   
      OPENROWSET BULK 절에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)를 사용해 표시할 수 있습니다.  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>대량 가져오기에 대한 행 종결자로 `\n`지정
+대량 가져오기에 대한 행 종결자로 `\n`을 지정하거나 기본 행 종결자를 암묵적으로 사용하면 bcp 및 BULK INSERT 문에 행 종결자로 CRLF(캐리지 리턴-줄 바꿈) 조합이 필요합니다. 원본 파일에서 행 종결자로 LF(줄 바꿈) 문자만 사용하는 경우(Unix 및 Linux 컴퓨터에서 생성된 파일에서 일반적임) 16진수 표기법을 사용하여 LF 행 종결자를 지정하세요. 예를 들어 BULK INSERT 문에서 다음을 수행합니다.
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>예  
  이 섹션의 예에서는 앞의 예에서 생성한 `Department-c-t.txt` 데이터 파일의 문자 데이터를 `myDepartment` 예제 데이터베이스의 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 테이블로 대량으로 가져옵니다. 예를 실행하려면 이 테이블을 만들어야 합니다. **dbo** 스키마 아래에 이 테이블을 만들려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   

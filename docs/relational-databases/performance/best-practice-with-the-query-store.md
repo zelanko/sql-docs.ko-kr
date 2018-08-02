@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981425"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279184"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  이 항목에서는 작업에 쿼리 저장소를 사용하는 모범 사례에 대해 설명합니다.  
+  이 문서에서는 워크로드에 쿼리 저장소를 사용하는 모범 사례에 대해 설명합니다.  
   
 ##  <a name="SSMS"></a> 최신 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 작업에 대해 수집된 데이터를 사용할 뿐 아니라 쿼리 저장소를 구성하기 위해 디자인된 사용자 인터페이스 집합이 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "38981425"
 
 ##  <a name="Configure"></a> 쿼리 저장소를 작업에 맞게 조정된 상태로 유지  
  작업 및 성능 문제 해결 요구 사항을 기반으로 쿼리 저장소를 구성합니다.   
-빠른 시작을 위해서는 기본 매개 변수를 사용하는 것이 좋지만 시간이 흐름에 따라 쿼리 저장소가 동작하는 방식을 모니터링하여 구성을 그에 맞게 조정해야 합니다.  
+시작을 위해서는 기본 매개 변수를 사용하는 것이 좋지만 시간이 흐름에 따라 쿼리 저장소가 동작하는 방식을 모니터링하여 구성을 그에 맞게 조정해야 합니다.  
   
  ![query-store-properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
@@ -276,13 +276,13 @@ FROM sys.database_query_store_options;
 |최대 크기에 도달하면 관련성이 적은 쿼리를 삭제합니다.|크기 기반 정리 정책을 활성화합니다.|  
   
 ##  <a name="Parameterize"></a> 매개 변수화되지 않은 쿼리 사용 방지  
- 반드시 필요한 경우가 아니면 매개 변수화되지 않은 쿼리를 사용하는 것은 좋은 방법이 아닙니다(예: 임시 분석).  쿼리 최적화 프로그램에서 고유한 쿼리 텍스트 모두에 대해 쿼리를 컴파일하도록 강제로 캐시된 계획은 다시 사용할 수 없습니다. 이 항목에 대한 자세한 내용은 [강제 매개 변수화 사용 지침](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)을 참조하세요.  
-  또한 잠재적으로 서로 다른 쿼리 텍스트가 많고 결과적으로 셰이프가 비슷한 서로 다른 실행 계획이 많아져 쿼리 저장소가 갑자기 크기 할당량을 초과할 수도 있습니다.  
+반드시 필요한 경우가 아니면 매개 변수화되지 않은 쿼리를 사용하는 것은 좋은 방법이 아닙니다(예: 임시 분석).  쿼리 최적화 프로그램에서 고유한 쿼리 텍스트 모두에 대해 쿼리를 컴파일하도록 강제로 캐시된 계획은 다시 사용할 수 없습니다. 자세한 내용은 [강제 매개 변수화 사용 지침](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)을 참조하세요.  
+또한 잠재적으로 서로 다른 쿼리 텍스트가 많고 결과적으로 셰이프가 비슷한 서로 다른 실행 계획이 많아져 쿼리 저장소가 갑자기 크기 할당량을 초과할 수도 있습니다.  
 결과적으로 작업 성능이 최적이 아닌 상태가 되고 쿼리 저장소가 읽기 전용 모드로 전환되거나 쿼리 저장소에서 들어오는 쿼리 추적을 위해 지속적으로 데이터를 삭제할 수도 있습니다.  
   
- 다음 옵션을 고려해야 합니다.  
+다음 옵션을 고려해야 합니다.  
 
-  -   해당되는 경우 쿼리를 매개 변수화합니다. 예를 들면 저장 프로시저 또는 sp_executesql 내부로 쿼리를 래핑합니다. 이 항목에 대한 자세한 내용은 [매개 변수 및 실행 계획 재사용](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)을 참조하세요.    
+-   해당되는 경우 쿼리를 매개 변수화합니다. 예를 들면 저장 프로시저 또는 sp_executesql 내부로 쿼리를 래핑합니다. 자세한 내용은 [매개 변수 및 실행 계획 재사용](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)을 참조하세요.    
   
 -   작업에 여러 쿼리 계획이 있는 일회용 임시 배치가 많이 포함된 경우 [**임시 작업을 위해 최적화**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 옵션을 사용합니다.  
   
@@ -297,11 +297,11 @@ FROM sys.database_query_store_options;
 -   **쿼리 캡처 모드** 를 AUTO로 설정하여 리소스 사용이 작은 임시 쿼리를 자동으로 필터링하여 제외합니다.  
   
 ##  <a name="Drop"></a> 쿼리에 대해 포함하는 개체를 유지 관리할 경우 DROP 또는 CREATE 패턴 방지  
- 쿼리 저장소는 쿼리 항목을 포함하는 개체(저장 프로시저, 함수 및 트리거)에 연결합니다.  포함하는 개체를 다시 만들면 같은 쿼리 텍스트에 대해 새 쿼리 항목이 생성됩니다. 시간이 흐름에 따라 해당 쿼리에 대한 성능 통계를 추적하는 작업이 방지되고 강제 적용 메커니즘이 사용됩니다. 이 문제를 방지하려면 `ALTER <object>` 프로세스를 사용하여 가능할 때마다 포함하는 개체 정의를 변경합니다.  
+쿼리 저장소는 쿼리 항목을 포함하는 개체(저장 프로시저, 함수 및 트리거)에 연결합니다.  포함하는 개체를 다시 만들면 같은 쿼리 텍스트에 대해 새 쿼리 항목이 생성됩니다. 시간이 흐름에 따라 해당 쿼리에 대한 성능 통계를 추적하는 작업이 방지되고 강제 적용 메커니즘이 사용됩니다. 이 문제를 방지하려면 `ALTER <object>` 프로세스를 사용하여 가능할 때마다 포함하는 개체 정의를 변경합니다.  
   
 ##  <a name="CheckForced"></a> 강제 계획의 상태를 정기적으로 확인  
 
- 강제 계획은 중요한 쿼리 성능을 수정하고 쿼리를 좀 더 예측 가능하게 하는 편리한 메커니즘입니다. 그러나 계획 힌트 및 계획 가이드와 마찬가지로 강제 계획은 이후 실행에 사용됨을 보장하지는 않습니다. 일반적으로 실행 계획에서 참조하는 개체가 변경되거나 삭제되는 방식으로 데이터베이스 스키마가 변경하는 경우 강제 계획이 실패하기 시작합니다. 이 경우 실제 강제 실패 이유가 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 표시되는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리 재컴파일로 대체합니다. 다음 쿼리는 강제 계획에 대한 정보를 반환합니다.  
+강제 계획은 중요한 쿼리 성능을 수정하고 쿼리를 좀 더 예측 가능하게 하는 편리한 메커니즘입니다. 그러나 계획 힌트 및 계획 가이드와 마찬가지로 강제 계획은 이후 실행에 사용됨을 보장하지는 않습니다. 일반적으로 실행 계획에서 참조하는 개체가 변경되거나 삭제되는 방식으로 데이터베이스 스키마가 변경하는 경우 강제 계획이 실패하기 시작합니다. 이 경우 실제 강제 실패 이유가 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 표시되는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리 재컴파일로 대체합니다. 다음 쿼리는 강제 계획에 대한 정보를 반환합니다.  
   
 ```sql  
 USE [QueryStoreDB];  
@@ -314,7 +314,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- 전체 이유 목록을 보려면 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)을 참조하세요. **query_store_plan_forcing_failed** XEvent를 사용하여 문제 해결 강제 오류를 추적할 수 있습니다.  
+ 전체 이유 목록을 보려면 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)을 참조하세요. **query_store_plan_forcing_failed** XEvent를 사용하여 플랜 강제 오류를 추적하고 문제를 해결할 수 있습니다.  
   
 ##  <a name="Renaming"></a> 강제 계획이 포함된 쿼리가 있을 경우 데이터베이스 이름 변경 방지  
 
@@ -324,11 +324,14 @@ WHERE is_forced_plan = 1;
 
 ##  <a name="Recovery"></a> 중요 업무 서버에서 추적 플래그를 사용하여 재해로부터 복구 개선
  
-  전역 추적 플래그 7745 및 7752는 고가용성 및 재해 복구 시나리오 중에 쿼리 저장소의 성능을 향상하는 데 사용할 수 있습니다. 자세한 내용은 [추적 플래그](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
+전역 추적 플래그 7745 및 7752는 고가용성 및 재해 복구 시나리오 중에 쿼리 저장소의 성능을 향상하는 데 사용할 수 있습니다. 자세한 내용은 [추적 플래그](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
   
-  SQL Server를 종료하기 전에 추적 플래그 7745는 쿼리 저장소에서 데이터를 디스크에 기록하는 기본 동작을 방지할 수 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을(를) 종료하기 전에 추적 플래그 7745는 쿼리 저장소에서 데이터를 디스크에 기록하는 기본 동작을 방지할 수 있습니다.
   
-  추적 플래그 7752를 통해 쿼리 저장소를 비동기 로드할 수 있으며, 쿼리 저장소가 완전히 로드되기 전에 SQL Server에서 쿼리를 실행합니다. 기본 쿼리 저장소 동작은 쿼리 저장소가 복구되기 전에 쿼리가 실행되지 않도록 방지합니다.
+추적 플래그 7752를 통해 쿼리 저장소를 비동기 로드할 수 있으며, 쿼리 저장소가 완전히 로드되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행합니다. 기본 쿼리 저장소 동작은 쿼리 저장소가 복구되기 전에 쿼리가 실행되지 않도록 방지합니다.
+
+> [!IMPORTANT]
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 Just-In-Time 워크로드 인사이트에 대해 쿼리 저장소를 사용하는 경우, 가능하면 빨리 [KB 4340759](http://support.microsoft.com/help/4340759)의 성능 확장성 픽스를 설치하세요. 
 
 ## <a name="see-also"></a>참고 항목  
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

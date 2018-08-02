@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 089819b4d0f8c58f048158055b47ec83cd33ccac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
+ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288742"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350021"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,7 @@ ms.locfileid: "35288742"
 |**2422**|REQUEST_MAX_CPU_TIME_SEC Resource Governor 구성에 설정된 최대 시간이 초과되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 요청을 중단할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/4038419)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역|
 |**2430**|대체 잠금 클래스 정리를 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2754301)를 참조하세요.<br /><br />**범위**: 전역만| 
 |**2453**|충분한 수의 행이 변경되면 테이블 변수에서 다시 컴파일을 트리거하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2952444)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
+|**2467**|최소한의 할당된 스레드가 있는 노드를 기준으로, 대체 병렬 작업자 스레드 할당 정책을 사용합니다. 자세한 내용은 [병렬 쿼리 처리](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)를 참조하세요. 최대 작업자 스레드 수 서버 옵션 구성에 대한 내용은 [최대 작업자 스레드 수 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)을 참조하세요.<br /><br />**참고:** 쿼리 DOP(병렬 처리 수준)가 사용되는 이 대체 정책의 단일 노드에 맞춰 조정되어야 하거나, 기본 스레드 할당 정책이 대신 사용됩니다. 단일 노드의 스케줄러 수를 초과하는 DOP를 지정하는 쿼리 실행에 이 추적 플래그를 사용하는 것은 권장되지 않습니다. 단일 노드의 스케줄러 수와 같거나 그보다 적은 DOP를 지정하는 쿼리에 이 추적 플래그를 사용합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역만|
 |**2469**|분할된 columnstore 인덱스로 `INSERT INTO ... SELECT`에 대한 대체 교환을 활성화합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/3204769)를 참조하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**2528**|DBCC CHECKDB, DBCC CHECKFILEGROUP 및 DBCC CHECKTABLE에 의한 개체 병렬 확인을 해제합니다. 기본적으로 쿼리 프로세서가 자동으로 병렬 처리 수준을 결정합니다. 최대 병렬 처리 수준은 병렬 쿼리의 경우처럼 구성됩니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.<br /><br />**참고:** 일반적으로 병렬 DBCC 검사를 사용하도록 설정해야 합니다(기본값). 쿼리 프로세서에서 DBCC CHECKDB로 검사된 각 테이블에 대한 병렬 처리 또는 테이블에 대한 일괄 처리를 다시 평가하고 자동으로 조정합니다.<br /><br />일반적인 사용 시나리오는 DBCC CHECKDB가 완료되기 전에 서버 로드가 증가하므로 다른 사용자 작업과의 동시성을 높이기 위해 병렬 처리를 수동으로 줄이거나 사용하지 않도록 선택한다는 것을 시스템 관리자가 알고 있는 경우입니다. 그러나 DBCC CHECKDB에서 병렬 검사를 사용하지 않도록 설정하면 완료하는 데 시간이 오래 걸릴 수 있습니다.<br /><br />**참고:** DBCC CHECKDB가 TABLOCK 옵션을 사용하여 실행되고 병렬 처리가 사용되지 않으면 테이블이 더 오랫동안 잠길 수 있습니다.<br /><br />**참고:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2부터 MAXDOP 옵션은 명령문에 대한 sp_configure의 최대 병렬 처리 수준 구성 옵션을 재정의하는 데 사용할 수 있습니다.<br /><br />**범위**: 전역 또는 세션|
 |**2549**|각 데이터베이스 파일이 고유한 디스크 드라이브에 있다고 가정하고 DBCC CHECKDB 명령을 실행합니다. DBCC CHECKDB 명령은 모든 데이터베이스 파일에서 고유한 디스크 드라이브당 읽을 페이지의 내부 목록을 작성합니다. 이 논리는 각 파일에 대한 실제 파일 이름의 드라이브 문자에 따라 고유한 디스크 드라이브를 판별합니다.<br /><br />**참고:** 각 파일이 고유한 물리적 디스크를 기반으로 한다는 것을 알고 있지 않으면 이 추적 플래그를 사용하지 마세요.<br /><br />**참고:** 이 추적 플래그는 PHYSICAL_ONLY 옵션의 사용을 대상으로 하는 DBCC CHECKDB 명령의 성능을 향상시키지만, 일부 사용자의 경우 성능이 향상되지 않을 수도 있습니다. 이 추적 플래그는 디스크 I/O 리소스 사용을 향상시키지만 디스크 리소스의 기본 성능으로 인해 DBCC CHECKDB 명령의 전체 성능이 제한될 수 있습니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2634571)를 참조하세요.<br /><br />**범위**: 전역만| 

@@ -1,7 +1,7 @@
 ---
 title: 모바일 보고서에 매개 변수 추가 | Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 11/01/2016
+ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: mobile-reports
@@ -15,19 +15,19 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b0f444dbae81f05a28ff9cea6102d63aef317f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a854a49884c6a2f1bd93794a7854d30dc1e2d3d
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018390"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359610"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>모바일 보고서에 매개 변수 추가 | Reporting Services
 작성자와 보고서를 읽는 사람이 보고서를 필터링할 수 있도록 매개 변수가 있는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서를 작성할 수 있습니다. 매개 변수가 있는 보고서는 [원본 보고서에서 드릴스루](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)의 대상이 될 수도 있습니다. 
 
-매개 변수가 있는 모바일 보고서를 만들려면 적어도 하나의 매개 변수가 있는 공유 데이터 집합으로 시작합니다. [공유 데이터 집합에 매개 변수 만들기](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요.  
+매개 변수가 있는 모바일 보고서를 만들려면 적어도 하나의 매개 변수가 있는 공유 데이터 집합으로 시작합니다. [공유 데이터 집합에 매개 변수 만들기](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요. 모바일 보고서는 기본 매개 변수에 대해 null 값을 지원하지 않으므로, 매개 변수에 null이 아닌 기본값이 있는지 확인하세요.
 
-모바일 보고서에 매개 변수를 추가한 후 URL을 만들어 [쿼리 문자열 매개 변수가 있는 보고서를 열 수 있습니다.](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)
+모바일 보고서에 매개 변수를 추가한 후 URL을 만들어 [쿼리 문자열 매개 변수가 있는 보고서를 열 수 있습니다.](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md) 
 
 1. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 웹 포털의 위쪽 표시줄에서 **새로 만들기** > **모바일 보고서**를 선택합니다.  
   

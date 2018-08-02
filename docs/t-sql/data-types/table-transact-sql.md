@@ -1,7 +1,7 @@
 ---
 title: 테이블(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432242"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240685"
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ SELECT select_list INTO table_variable;
   
 명시적으로 **테이블** 변수에 대한 인덱스를 만들 수 없으며 **테이블** 변수에 대한 통계는 유지되지 않습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터, 테이블 정의와 함께 특정 인덱스 유형을 인라인으로 만들 수 있는 새 구문이 도입되었습니다.  이 새 구문을 사용하여 테이블 정의의 일부로 **테이블** 변수의 인덱스를 만들 수 있습니다. 경우에 따라 전체 인덱스 지원과 통계를 제공하는 임시 테이블을 대신 사용하여 성능을 향상할 수도 있습니다. 임시 테이블 및 인라인 인덱스 만들기에 대한 자세한 내용은 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.
 
-
 **테이블** 형식 선언 내의 CHECK 제약 조건, DEFAULT 값 및 계산 열은 사용자 정의 함수를 호출할 수 없습니다.
   
 **테이블** 변수 간의 할당 작업은 지원되지 않습니다.
@@ -115,6 +114,23 @@ SELECT select_list INTO table_variable;
 **테이블** 변수는 제한된 범위를 가지며 영구 데이터베이스의 일부가 아니므로 트랜잭션 롤백의 영향을 받지 않습니다.
   
 테이블 변수는 생성 후 변경할 수 없습니다.
+
+## <a name="table-variable-deferred-compilation"></a>테이블 변수 지연 컴파일
+**테이블 변수 지연 컴파일**은 테이블 변수를 참조하는 쿼리의 플랜 품질 및 전체 성능을 개선합니다. 최적화 및 초기 플랜 컴파일 중에 이 기능은 실제 테이블 변수 행 수를 기반으로 하는 카디널리티 예측을 전파합니다. 이 정확한 행 수 정보는 다운스트림 플랜 작업을 최적화하는 데 사용됩니다.
+
+> [!NOTE]
+> 테이블 변수 지연 컴파일은 Azure SQL Database의 공개 미리 보기 기능입니다.  
+
+테이블 변수 지연 컴파일을 사용하면 테이블 변수를 참조하는 문 컴파일은 문이 실제로 처음 실행될 때까지 지연됩니다. 이 지연 컴파일 동작은 임시 테이블의 동작과 동일하고, 이 변경으로 인해 원래 1행 추측 대신에 실제 카디널리티가 사용됩니다. 
+
+테이블 변수 지연 컴파일의 공개 미리 보기를 사용하도록 설정하려면 쿼리를 실행할 때 연결된 데이터베이스의 데이터베이스 호환성 수준 150을 사용하도록 설정합니다.
+
+테이블 변수 지연 컴파일은 테이블 변수의 다른 특성을 변경하지 **않습니다**. 예를 들어,이 기능은 테이블 변수에 열 통계를 추가하지 않습니다.
+
+테이블 변수 지연 컴파일은 **다시 컴파일 빈도를 늘리지 않습니다**.  대신 초기 컴파일이 발생하는 위치를 이동합니다. 결과 캐시된 플랜은 초기 지연 컴파일 테이블 변수 행 개수를 기반으로 생성됩니다. 플랜이 제거되거나 다시 컴파일될 때까지 캐시된 플랜은 연속 쿼리에서 다시 사용됩니다. 
+
+초기 플랜 컴파일에 사용되는 테이블 변수 행 개수가 고정된 행 개수 추측과 상당히 다른 일반적인 값을 나타내는 경우, 다운스트림 작업에 도움이 됩니다.  테이블 변수 행 개수가 실행 간에 크게 달라지는 경우, 이 기능으로 성능이 향상되지 않을 수 있습니다.
+
   
 ## <a name="examples"></a>예  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [테이블 반환 매개 변수 사용&#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

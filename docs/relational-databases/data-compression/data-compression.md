@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 944a0ca328ca0835601bf1cb4b75e974da6a8e7a
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001675"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240695"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
 -   보관 압축으로 columnstore 데이터를 압축하려면 **COLUMNSTORE_ARCHIVE** 데이터 압축을 사용하세요.  
 -   보관 압축을 풀려면 **COLUMNSTORE** 데이터 압축을 사용하십시오. 결과 데이터는 columnstore 압축으로 계속해서 압축됩니다.  
   
-보관 압축을 추가하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 를 사용하세요.  
+보관 압축을 추가하려면 REBUILD 옵션 및DATA COMPRESSION = COLUMNSTORE_ARCHIVE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)을 사용하세요.  
   
 #### <a name="examples"></a>예:  
 ```  
