@@ -26,7 +26,7 @@ ms.locfileid: "37306177"
   
  중복 인덱스 키는 해시 인덱스를 사용하는 경우 동일한 버킷에 해시되어 해당 버킷의 체인이 증가하도록 하기 때문에 성능을 저하시킬 수 있습니다.  
   
- 비클러스터형 해시 인덱스에 대 한 자세한 내용은 참조 하세요. [해시 인덱스](hash-indexes.md) 하 고 [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
+ 비클러스터형 해시 인덱스에 대 한 자세한 내용은 참조 하세요. [해시 인덱스](hash-indexes.md) 하 고 [메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
  메모리 최적화 테이블에서 각 해시 인덱스에 대해 한 해시 테이블이 할당됩니다. 인덱스 된에 할당 된 해시 테이블의 크기를 `BUCKET_COUNT` 의 매개 변수 [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) 또는 [CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). 버킷 수는 내부적으로 다음 2의 제곱 수로 반올림됩니다. 예를 들어, 버킷 수를 300,000개로 지정하면 실제 버킷 수가 524,288개가 됩니다.  
   
@@ -147,7 +147,7 @@ GO
   
 -   기본 키 인덱스(PK__SalesOrder…): 버킷의 36%가 비어 있으며 좋습니다. 또한 평균 체인 길이가 1이면 좋습니다. 변경할 필요 없습니다.  
   
- 메모리 최적화 해시 인덱스 문제 해결에 대 한 자세한 내용은 참조 하세요. [with Memory-Optimized Hash Indexes Troubleshooting Common Performance Problems](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)합니다.  
+ 메모리 최적화 해시 인덱스 문제 해결에 대 한 자세한 내용은 참조 하세요. [메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)합니다.  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>추가 최적화에 대한 세부 고려 사항  
  이 섹션에서는 버킷 수를 최적화하기 위한 추가 고려 사항을 설명합니다.  
