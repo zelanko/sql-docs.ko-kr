@@ -31,7 +31,7 @@ ms.locfileid: "37324633"
 > [!NOTE]  
 >  원본 구성 요소는 출력이 있고 입력이 없지만 대상 구성 요소는 입력이 있고 출력이 없습니다. 변환은 입력과 출력이 모두 있습니다.  
   
- 스크립트 구성 요소에 대한 자세한 내용은 [Script Component](data-flow/transformations/script-component.md) 및 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하십시오. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+ 스크립트 구성 요소에 대한 자세한 내용은 [Script Component](data-flow/transformations/script-component.md) 및 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하십시오. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
 ## <a name="options"></a>변수  
  **Inputs and outputs**  

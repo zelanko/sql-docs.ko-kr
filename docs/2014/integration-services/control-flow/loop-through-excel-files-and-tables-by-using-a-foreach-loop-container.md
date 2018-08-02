@@ -73,7 +73,7 @@ ms.locfileid: "37158994"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
   
-1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md)을 참조하세요.  
+1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](../add-delete-or-share-a-connection-manager-in-a-package.md)을 참조하세요.  
   
 2.  루프 반복마다 현재 테이블의 이름을 받을 문자열 변수를 만듭니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "37158994"
 6.  **스키마**값으로 테이블을 선택합니다.  
   
     > [!NOTE]  
-    >  Excel 통합 문서의 테이블 목록에는 워크시트($ 접미사를 가짐)와 명명된 범위가 모두 포함됩니다. 워크시트 또는 명명된 범위 목록만 필터링해야 하는 경우 스크립트 태스크에 이를 위한 사용자 지정 코드를 작성해야 합니다. 자세한 내용은 [Working with Excel Files with the Script Task](script-task.md)을 참조하세요.  
+    >  Excel 통합 문서의 테이블 목록에는 워크시트($ 접미사를 가짐)와 명명된 범위가 모두 포함됩니다. 워크시트 또는 명명된 범위 목록만 필터링해야 하는 경우 스크립트 태스크에 이를 위한 사용자 지정 코드를 작성해야 합니다. 자세한 내용은 [스크립트 태스크를 사용 하 여 Excel 파일 작업](script-task.md)합니다.  
   
 7.  **변수 매핑** 페이지에서 현재 테이블 이름을 포함하도록 앞에서 만든 문자열 변수에 인덱스 2를 매핑합니다.  
   

@@ -58,7 +58,7 @@ ms.locfileid: "37244313"
 ## <a name="controlling-access-data-source-properties"></a>데이터 원본 속성 액세스 제어  
  기본적으로 보고서 관리 권한을 가진 모든 사용자는 데이터 원본 유형, 연결 문자열, 자격 증명, 그리고 포함된 데이터 원본과 공유 데이터 원본 중 보고서가 연결 정보를 받을 대상을 결정하는 속성을 포함한 모든 속성을 설정할 수 있습니다. 태스크 및 권한 제어는 기본 모드 보고서 서버에서 데이터 원본 속성에 대 한 액세스에 대 한 자세한 내용은 참조 하세요. [공유 데이터 원본 항목 보안 설정](../security/secure-shared-data-source-items.md) 하 고 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)합니다.  
   
- SharePoint 라이브러리의 항목에 대한 속성을 보고 편집할 수 있는 권한은 사이트 관리자에 의해 결정됩니다. 권한은 데이터 원본 연결 속성에 대 한 액세스 제어에 대 한 자세한 내용은 [SharePoint Site and List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)합니다.  
+ SharePoint 라이브러리의 항목에 대한 속성을 보고 편집할 수 있는 권한은 사이트 관리자에 의해 결정됩니다. 권한은 데이터 원본 연결 속성에 대 한 액세스 제어에 대 한 자세한 내용은 [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)합니다.  
   
 ## <a name="how-to-work-with-data-source-properties-on-a-report-server"></a>보고서 서버에서 데이터 원본 속성을 사용하는 방법  
  다양한 도구를 사용하여 데이터 원본 속성을 만들고 수정할 수 있습니다. 다음 표에서는 접근 방법과 도구를 요약하여 설명하고 추가 지침에 대한 링크를 제공합니다.  

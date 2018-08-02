@@ -25,7 +25,7 @@ ms.locfileid: "37277459"
   
  사용되지 않는 개체는 이 목록에 포함되지 않습니다.  
   
- 의미 체계 검색을 지원하는 데이터베이스 개체 목록은 [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)를 참조하세요.  
+ 의미 체계 검색을 지원하는 데이터베이스 개체 목록은 [의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)를 참조하세요.  
   
 ##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   

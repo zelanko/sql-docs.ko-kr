@@ -28,7 +28,7 @@ ms.locfileid: "37221643"
 # <a name="script-transformation-editor-connection-managers-page"></a>스크립트 변환 편집기(연결 관리자 페이지)
   **스크립트 변환 편집기** 의 **연결 관리자** 를 사용하여 스크립트에서 사용할 연결을 지정할 수 있습니다.  
   
- 스크립트 구성 요소에 대한 자세한 내용은 [Script Component](data-flow/transformations/script-component.md) 및 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하십시오. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+ 스크립트 구성 요소에 대한 자세한 내용은 [Script Component](data-flow/transformations/script-component.md) 및 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하십시오. 스크립트 구성 요소 프로그래밍 방법은 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
 ## <a name="options"></a>변수  
  **Connection managers**  

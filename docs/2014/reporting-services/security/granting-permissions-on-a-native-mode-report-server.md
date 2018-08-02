@@ -61,7 +61,7 @@ ms.locfileid: "37260129"
   
  보고서 서버에 대한 모든 권한에는 항목 수준 및 시스템 수준 권한이 포함되므로 로컬 관리자는 다음 역할에 할당됩니다.  
   
- 사용자가 Windows Vista 또는 Windows Server 2008을 실행하는 로컬 컴퓨터에서 보고서 서버 인스턴스를 관리하려면 추가 구성이 필요합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ 사용자가 Windows Vista 또는 Windows Server 2008을 실행하는 로컬 컴퓨터에서 보고서 서버 인스턴스를 관리하려면 추가 구성이 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 ## <a name="how-permissions-are-stored"></a>사용 권한 저장 방식  
  역할 할당 및 정의는 보고서 서버 데이터베이스에 저장됩니다. 여러 개의 클라이언트 도구나 프로그래밍 인터페이스를 사용하고 있다면 모든 액세스에는 보고서 서버 인스턴스에 대해 전체적으로 정의된 권한이 필요합니다. 스케일 아웃 배포에 다중 보고서 서버를 구성하는 경우 한 인스턴스에 정의하는 역할 할당은 공유 데이터베이스에 저장되어 동일한 스케일 아웃 배포에 있는 다른 모든 인스턴스에 사용됩니다. 역할 할당은 보안을 설정하는 항목과 함께 저장되므로 사용자가 정의한 권한을 잃지 않고도 데이터베이스를 다른 보고서 서버 인스턴스로 이동할 수 있습니다.  

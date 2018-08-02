@@ -48,7 +48,7 @@ ms.locfileid: "37295233"
   
  이 그림에는 행이 포함된 세 개의 버킷이 있습니다. 맨 위에서 두 번째 버킷에는 세 개의 빨간색 행이 포함됩니다. 네 번째 버킷에는 하나의 파란색 행이 포함됩니다. 맨 아래 버킷에는 두 개의 녹색 행이 포함됩니다. 이러한 행은 동일한 행의 서로 다른 버전일 수 있습니다.  
   
- 메모리 최적화 테이블의 인덱스에 대한 자세한 내용은 [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
+ 메모리 최적화 테이블의 인덱스에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 액세스에 최적화된 테이블의 인덱스](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
