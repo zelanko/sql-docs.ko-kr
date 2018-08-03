@@ -38,7 +38,7 @@ ms.locfileid: "37264319"
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 보고서 서버 웹 서비스 SOAP 메서드를 호출하여 데이터베이스 간에 데이터를 복사하는 Visual Basic 스크립트를 작성합니다. **RS.exe** 유틸리티를 사용하여 이 스크립트를 실행합니다. Rs.exe는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다.  
   
-    -   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)입니다. 이 항목에서는 CodePlex에서 다운로드할 수 있는 예제 스크립트를 사용하는 방법에 대해 설명합니다.  
+    -   [보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 이 항목에서는 CodePlex에서 다운로드할 수 있는 예제 스크립트를 사용하는 방법에 대해 설명합니다.  
   
     -   CodePlex의 예제 rss 스크립트, [한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션하는 Reporting Services RS.exe 스크립트](http://azuresql.codeplex.com/releases/view/115207)  
   

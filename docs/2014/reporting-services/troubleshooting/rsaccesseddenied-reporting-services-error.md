@@ -49,7 +49,7 @@ ms.locfileid: "37275959"
 ## <a name="user-action"></a>사용자 동작  
  보고서 서버 내용 및 작업에 액세스하는 사용 권한은 역할 할당을 통해 부여됩니다. 새로 설치하는 경우 로컬 관리자만 보고서 서버에 액세스할 수 있습니다. 다른 사용자에게 액세스 권한을 부여하려면 로컬 관리자는 도메인 사용자나 그룹 계정을 지정하는 역할 할당, 사용자가 수행할 수 있는 태스크를 정의하는 하나 이상의 역할 그리고 범위(일반적으로 홈 폴더나 보고서 서버 폴더 계층의 루트 노드)를 만들어야 합니다. 보고서 관리자를 사용하여 역할 할당을 만들 수 있습니다. 자세한 내용을 보려면 SQL Server 온라인 설명서에서 "역할 할당"을 검색하세요.  
   
- 또한 이 오류는 보고서 서버의 로컬 관리로 인해서도 발생합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ 또한 이 오류는 보고서 서버의 로컬 관리로 인해서도 발생합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [역할 할당](../security/role-assignments.md)   
