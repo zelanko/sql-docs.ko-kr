@@ -1,7 +1,7 @@
 ---
-title: 매개 변수가 없는 저장된 프로시저를 사용 하 여 | Microsoft Docs
+title: 매개 변수가 없는 저장 프로시저 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7db021b9d3fdf875c2c6074159b56d8e6cb0fd14
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 157d6f1b3948dbe697afc5af018b197ede9fec9b
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992925"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279134"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>매개 변수가 없는 저장 프로시저 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37992925"
   
  이에 대한 예로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음 저장 프로시저를 만듭니다.  
   
-```  
+```sql
 CREATE PROCEDURE GetContactFormalNames   
 AS  
 BEGIN  
@@ -48,22 +48,16 @@ END
   
  다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 사용하여 GetContactFormalNames 저장 프로시저를 호출합니다.  
   
-```  
-public static void executeSprocNoParams(Connection con) {  
-   try {  
-      Statement stmt = con.createStatement();  
-      ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
-  
-      while (rs.next()) {  
-         System.out.println(rs.getString("FormalName"));  
-      }  
-      rs.close();  
-      stmt.close();  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-}  
+```java  
+public static void executeSprocNoParams(Connection con) throws SQLException {  
+    try(Statement stmt = con.createStatement();) {  
+
+        ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
+        while (rs.next()) {  
+            System.out.println(rs.getString("FormalName"));  
+        }  
+    }  
+}
 ```  
   
 ## <a name="see-also"></a>참고 항목  

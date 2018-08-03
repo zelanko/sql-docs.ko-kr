@@ -1,7 +1,7 @@
 ---
 title: XA 트랜잭션 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040611"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278604"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,13 +43,13 @@ ms.locfileid: "38040611"
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>XA 트랜잭션 사용과 관련된 지침 및 제한 사항  
  다음은 밀접하게 결합된 트랜잭션에 적용되는 추가 지침입니다.  
   
--   XA 트랜잭션을 MS DTC(Microsoft Distributed Transaction Coordinator)와 함께 사용할 경우 MS DTC의 현재 버전이 밀접하게 결합된 XA 분기 동작을 지원하지 않습니다. 예를 들어 MS DTC에는 XID(XA 분기 트랜잭션 ID)와 MS DTC 트랜잭션 ID 간에 일 대 일 매핑이 있으며 느슨하게 연결된 XA 분기에서 수행되는 작업이 다른 작업과 격리됩니다.  
+-   XA 트랜잭션을 MS DTC(Distributed Transaction Coordinator)와 함께 사용할 경우 MS DTC의 현재 버전이 밀접하게 결합된 XA 분기 동작을 지원하지 않습니다. 예를 들어 MS DTC에는 XID(XA 분기 트랜잭션 ID)와 MS DTC 트랜잭션 ID 간에 일 대 일 매핑이 있으며 느슨하게 연결된 XA 분기에서 수행되는 작업이 다른 작업과 격리됩니다.  
   
      [MSDTC 및 밀접하게 결합된 트랜잭션](http://support.microsoft.com/kb/938653)에서 제공하는 핫픽스는 같은 GTRID(전역 트랜잭션 ID)를 사용하는 여러 개의 XA 분기가 한 개의 MS DTC 트랜잭션 ID에 매핑되는 밀접하게 결합된 XA 분기를 지원합니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]와 같은 리소스 관리자에서 다른 XA 분기의 변경 내용을 확인할 수 있습니다.  
   
 -   [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 플래그를 사용하면 BQUAL(XA 분기 트랜잭션 ID)은 다르지만 GTRID(전역 트랜잭션 ID) 및 FormatID(형식 ID)를 갖는 밀접하게 결합된 XA 트랜잭션을 응용 프로그램에서 사용할 수 있습니다. 이 기능을 사용 하기 위해 설정 해야 합니다 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 메서드의 플래그 매개 변수:  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38040611"
   
 1.  분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 컴퓨터의 LOG 디렉터리를 엽니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "ERRORLOG" 파일을 선택하여 엽니다. "ERRORLOG" 파일에서 "Using 'SQLJDBC_XA.dll' version ..." 구를 검색합니다.  
   
-2.  분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 컴퓨터의 Binn 디렉터리를 엽니다. sqljdbc_xa.dll 어셈블리를 선택합니다.  
+2.  분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 컴퓨터의 Binn 디렉터리를 엽니다. Sqljdbc_xa.dll 어셈블리를 선택 합니다.  
   
     -   Windows Vista 이상의 경우 sqljdbc_xa.dll을 마우스 오른쪽 단추로 클릭한 다음 속성을 선택합니다. 그런 다음, **세부 정보** 탭을 클릭합니다. **파일 버전** 필드에는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 설치되어 있는 sqljdbc_xa.dll 버전이 표시됩니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38040611"
 ###  <a name="BKMK_ServerSide"></a> 준비되지 않은 트랜잭션의 자동 롤백에 대해 서버 쪽 제한 시간 설정을 구성합니다.  
   
 > [!WARNING]  
->  이 서버 쪽 옵션은 SQL Server용 Microsoft JDBC Driver 4.2 이상의 새로운 기능입니다. 업데이트된 동작을 가져오려면 서버의 sqljdbc_xa.dll이 업데이트되어야 합니다. 클라이언트 쪽 제한 시간 설정에 대한 자세한 내용은 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)을 참조하세요.  
+>  이 서버 쪽 옵션은 SQL Server용 Microsoft JDBC Driver 4.2 이상의 새로운 기능입니다. 업데이트된 동작을 가져오려면 서버의 sqljdbc_xa.dll이 업데이트되어야 합니다. 클라이언트 쪽 시간 제한 설정에 대한 자세한 내용은 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)을 참조하세요.  
   
  분산 트랜잭션의 제한 시간 동작을 제어하는 두 가지 레지스트리 설정(DWORD 값)이 있습니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "38040611"
 > [!NOTE]  
 >  64 비트 컴퓨터에서 실행 중인 32 비트 SQL Server에 대 한 레지스트리 설정을 만들어야 다음 키 아래: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL server\mssql.\<버전 >. < instance_name > \ XATimeout  
   
- 제한 시간 값은 트랜잭션이 시작되고 제한 시간이 만료되는 경우 SQL Server에 의해 롤백될 때 각 트랜잭션에 대해 설정됩니다. 제한 시간을 이러한 레지스트리 설정 및 사용자가 XAResource.setTransactionTimeout()을 통해 지정한 설정에 따라 결정됩니다. 이러한 제한 시간 값이 해석되는 방식에 대한 몇 가지 예제는 다음과 같습니다.  
+ 시간 제한 값은 트랜잭션이 시작될 때 각 트랜잭션에 대해 설정되며, 시간 제한이 만료되면 SQL Server에서 트랜잭션을 롤백합니다. 제한 시간을 이러한 레지스트리 설정 및 사용자가 XAResource.setTransactionTimeout()을 통해 지정한 설정에 따라 결정됩니다. 이러한 제한 시간 값이 해석되는 방식에 대한 몇 가지 예제는 다음과 같습니다.  
   
 -   XADefaultTimeout = 0, XAMaxTimeout = 0  
   
@@ -128,11 +128,11 @@ ms.locfileid: "38040611"
   
 -   XADefaultTimeout = 60, XAMaxTimeout = 0  
   
-     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 60초가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 해당 제한 시간 값이 사용됩니다. 최대 제한 시간 값 없음이 적용됩니다.  
+     클라이언트에서 시간 제한을 지정하지 않는 경우 모든 트랜잭션의 시간 제한이 60초가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 해당 제한 시간 값이 사용됩니다. 최대 제한 시간 값 없음이 적용됩니다.  
   
 -   XADefaultTimeout = 30, XAMaxTimeout = 60  
   
-     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 30초가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 60초(최대값)보다 작은 경우에 한해 클라이언트의 제한 시간이 사용됩니다.  
+     클라이언트에서 시간 제한을 지정하지 않는 경우 모든 트랜잭션의 시간 제한이 30초가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 60초(최대값)보다 작은 경우에 한해 클라이언트의 제한 시간이 사용됩니다.  
   
 -   XADefaultTimeout = 0, XAMaxTimeout = 30  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040611"
 ### <a name="configuring-the-user-defined-roles"></a>사용자 정의 역할 구성  
  특정 사용자에게 JDBC 드라이버를 통해 분산 트랜잭션에 참여할 권한을 부여하려면 해당 사용자를 SqlJDBCXAUser 역할에 추가합니다. 예를 들어 다음과 같은 [!INCLUDE[tsql](../../includes/tsql_md.md)] 코드를 사용하여 이름이 'shelby'(SQL 표준 로그인 사용자 이름)인 사용자를 SqlJDBCXAUser 역할에 추가합니다.  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -161,11 +161,11 @@ GO
 EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
 ```  
   
- SQL 사용자 정의 역할은 데이터베이스별로 정의합니다. 보안을 위해 고유한 역할을 만들려면 각 데이터베이스마다 역할을 정의하고 각 데이터베이스의 방식대로 사용자를 추가해야 합니다. SqlJDBCXAUser 역할은 master에 상주하는 SQL JDBC 확장 저장 프로시저에 대한 액세스 권한을 부여하는 데 사용되므로 master 데이터베이스에서만 정의할 수 있습니다. 먼저 개별 사용자에게 master에 대한 액세스 권한을 부여한 다음 master 데이터베이스에 로그인된 상태에서 SqlJDBCXAUser 역할에 대한 액세스 권한을 부여해야 합니다.  
+ SQL 사용자 정의 역할은 데이터베이스별로 정의합니다. 보안을 위해 고유한 역할을 만들려면 각 데이터베이스마다 역할을 정의하고 각 데이터베이스의 방식대로 사용자를 추가해야 합니다. SqlJDBCXAUser 역할은 master에 상주하는 SQL JDBC 확장 저장 프로시저에 대한 액세스 권한을 부여하는 데 사용되므로 master 데이터베이스에서만 정의할 수 있습니다. 먼저 개별 사용자에게 master에 대한 액세스 권한을 부여한 다음, master 데이터베이스에 로그인된 상태에서 SqlJDBCXAUser 역할에 대한 액세스 권한을 부여해야 합니다.  
   
 ## <a name="example"></a>예제  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  

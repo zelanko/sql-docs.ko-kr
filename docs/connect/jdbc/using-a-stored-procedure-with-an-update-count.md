@@ -1,7 +1,7 @@
 ---
 title: 업데이트 횟수가 있는 저장 프로시저 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: b840cc9b6b8492af0cffa71986d747ac59b7dd57
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040821"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278924"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>업데이트 횟수가 있는 저장 프로시저 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스의 데이터를 수정하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다. SQLServerCallableStatement 클래스를 사용하면 데이터베이스에 포함된 데이터를 수정하고 영향을 받은 행 수(업데이트 횟수라고도 함)를 반환하는 저장 프로시저를 호출할 수 있습니다.  
+  저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스의 데이터를 수정하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다. SQLServerCallableStatement 클래스를 사용하면 데이터베이스에 있는 데이터를 수정하고 영향을 받은 행 수(업데이트 횟수라고도 함)를 반환하는 저장 프로시저를 호출할 수 있습니다.  
   
  SQLServerCallableStatement 클래스를 사용하여 저장 프로시저에 대한 호출을 설정한 후에는 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 또는 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드를 사용하여 저장 프로시저를 호출할 수 있습니다. executeUpdate 메서드는 저장 프로시저에 의해 영향을 받은 행 수가 포함된 **int** 값을 반환하지만 execute 메서드는 그렇지 않습니다. execute 메서드를 사용하여 영향을 받은 행 수를 가져오려면 저장 프로시저를 실행한 후 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 메서드를 호출합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "38040821"
   
  이에 대한 예로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음 테이블 및 저장 프로시저를 만들고 예제 데이터도 삽입합니다.  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 지원 매트릭스 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,47 +13,48 @@ caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 9aae3c88e1460304cf4b2bea7dbc529f31393bde
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 3ee34b40af4f72b32286067e5853c673f62ad240
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307922"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268771"
 ---
-# <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 지원 매트릭스 용 Microsoft PHP 드라이버
+# <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server Support Matrix 용 Microsoft PHP 드라이버
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-  이 페이지는 SQL Server 용 Microsoft PHP 드라이버에 대 한 지원 매트릭스 및 지원 기간 정책을 포함합니다.
+  이 페이지에는 Microsoft PHP Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책이 포함되어 있습니다.
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Microsoft PHP 드라이버 지원 수명 주기 매트릭스 및 정책
- MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주기와 관련해서 투명하고 예측 가능한 정보를 제공합니다. PHP 드라이버 버전 3.x에서 4.x 및 5.x 요소로 드라이버 릴리스 날짜 로부터 5 년을 포함 합니다. 일반 지원에 정의 되는 [Microsoft 지원 수명 주기 웹 사이트](https://support.microsoft.com/lifecycle)합니다.
+ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주기와 관련해서 투명하고 예측 가능한 정보를 제공합니다. PHP 드라이버 버전 3.x, 4.x 및 5.x가 일반 지원 드라이버 릴리스 날짜 로부터 5 년 동안. 일반 지원은 [Microsoft 지원 수명 주기 웹 사이트](https://support.microsoft.com/lifecycle)에 정의되어 있습니다.
 
- 확장 및 사용자 지정 지원 옵션은 Microsoft PHP 드라이버에 사용할 수 없습니다.
+ 확장 및 사용자 지정 지원 옵션은 Microsoft PHP Driver에는 사용할 수 없습니다.
 
- 다음 Microsoft PHP Driver는 지정 된 지원 종료 날짜까지 지원 됩니다.
+ 다음 Microsoft PHP Driver는 지정된 지원 종료 날짜까지 지원됩니다.
 
-|드라이버 이름|드라이버 패키지 버전|기본 지원의 끝|
+|드라이버 이름|드라이버 패키지 버전|일반 지원 종료|
 |-|-|-|
+|SQL Server 용 Microsoft PHP 드라이버 5.3|5.3|2023 년 7 월 20,|
 |SQL Server 용 Microsoft PHP 드라이버 5.2|5.2|2023 년 2 월 9,|
-|SQL Server 용 Microsoft PHP 드라이버 4.3|4.3|2022 년 7 월 6|
+|SQL Server 용 Microsoft PHP 드라이버 4.3|4.3|2022 년 7 월 6,|
 |SQL Server 용 Microsoft PHP 드라이버 4.0|4.0|2021 년 7 월 11|
-|SQL Server 용 Microsoft PHP 드라이버 3.2|3.2|2020 년 3 월 9,|
-|SQL Server 용 Microsoft PHP 드라이버 3.1|3.1|2019년 12월 12일|
+|Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 년 3 월 9|
+|Microsoft PHP Drivers 3.1 for SQL Server|3.1|2019년 12월 12일|
 
- 다음 Microsoft PHP Driver 이상 지원 되지 않습니다.
+ 다음 Microsoft PHP Driver는 더 이상 지원되지 않습니다.
 
-|드라이버 이름|드라이버 패키지 버전|기본 지원의 끝|
+|드라이버 이름|드라이버 패키지 버전|일반 지원 종료|
 |-|-|-|
 |SQL Server 용 Microsoft PHP 드라이버 3.0|3.0|2017년 3월 6일|
 |SQL Server 용 Microsoft PHP 드라이버 2.0|2.0|2015 년 8 월 10 일|
-|SQL Server 용 Microsoft PHP 드라이버 1.0|1.0|2014 년 4 월 28 일|
+|SQL Server 용 Microsoft PHP 드라이버 1.0|1.0|2014년 4월 28일|
 
-## <a name="sql-server-version-certified-compatibility"></a>호환성을 인증 하는 SQL Server 버전
- 다음 표에서 테스트 되 고 해당 드라이버 버전 호환으로 인증 하는 SQL Server 버전을 나열 합니다. 이전 버전과 호환성 이전 드라이버 버전을 유지 하기 위해 노력 있지만 최신 지원된 드라이버만 테스트 하 고 SQL Server 릴리스될 때마다 새로운 SQL Server 버전으로 인증 합니다.
+## <a name="sql-server-version-certified-compatibility"></a>SQL Server 버전 호환성 인증
+ 다음 매트릭스는 테스트 되었으며와 호환 된다고 해당 드라이버 버전을 사용 하 여 인증 하는 SQL Server 버전을 나열 합니다. 이전 드라이버 버전에서는 이전 버전과 호환성을 유지 하기 위해 노력 하지만 최신 지원 되는 드라이버만 테스트 하 고 SQL Server가 릴리스되면 새 SQL Server 버전을 사용 하 여 인증 합니다.
 
-|PHP for SQL Server 드라이버 버전&#8594;<br />&#8595;SQL Server 버전|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595; SQL Server 버전|5.3 및 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
-|관리 되는 azure SQL 인스턴스<br/> (확장 비공개 미리 보기)|Y|Y| | | | | |
+|Azure SQL 관리되는 인스턴스<br/> (확장 된 비공개 미리 보기)|Y|Y| | | | | |
 |Azure SQL 데이터 웨어하우스|Y|Y| | | | | |
 |SQL Server 2017   |Y|Y| | | | | |
 |SQL Server 2016   |Y|Y|Y| | | | |
@@ -63,23 +64,23 @@ ms.locfileid: "35307922"
 |SQL Server 2008   | | |Y|Y|Y|Y|Y|
 
 ## <a name="php-version-support"></a>PHP 버전 지원
- 다음 버전의 PHP 나열 된 버전의 Microsoft PHP 드라이버 지원 됩니다.
+ 다음 버전의 PHP는 Microsoft PHP 드라이버의 나열 된 버전을 사용 하 여 지원 됩니다.
 
-|PHP for SQL Server 드라이버 버전&#8594;<br />&#8595;PHP 버전|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595; PHP 버전|5.3 및 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
-|7.2|Windows에서 7.2.1+<br/>다른 플랫폼에서 7.2.0+| | | | | | |
+|7.2|Windows 기반 7.2.1+<br/>다른 플랫폼에서 7.2.0+| | | | | | |
 |7.1|7.1.0+ |7.1.0+ |       |        |        |        |        |
 |7.0|7.0.0+ |7.0.0+ |7.0.0+ |        |        |        |        |
-|5.6|       |       |       |5.6.4+  |        |        |        |
-|5.5|       |       |       |5.5.16+ |5.5.16+ |        |        |
+|5.6|       |       |       |5.6.4 +  |        |        |        |
+|5.5|       |       |       |5.5.16 + |5.5.16 + |        |        |
 |5.4|       |       |       |5.4.32  |5.4.32  |5.4.32  |        |
 |5.3|       |       |       |        |        |5.3.0   |5.3.0   |
 |5.2|       |       |       |        |        |        |5.2.4<br />5.2.13|
 
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
- 다음 Windows 운영 체제 버전은 나열 된 버전의 Microsoft PHP 드라이버 지원 됩니다.
+ Microsoft PHP 드라이버의 나열 된 버전을 사용 하 여 다음 Windows 운영 체제 버전이 지원 됩니다.
 
-|PHP for SQL Server 드라이버 버전&#8594;<br />&#8595;운영 체제|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595; 운영 체제|5.3 및 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
 |Windows Server 2016                 |Y  |Y  |   |   |   |   |   |
 |Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |   |   |
@@ -96,22 +97,24 @@ ms.locfileid: "35307922"
 |Windows Vista SP2                   |   |   |Y  |Y  |Y  |Y  |Y  |
 |Windows XP SP3                      |   |   |   |   |   |   |Y  |
 
- 나열 된 버전의 Microsoft PHP 드라이버를 사용 하는 다음 Linux 및 Mac 운영 체제 버전 (64 비트 전용)가 지원 됩니다.
+ 다음 Linux 및 Mac 운영 체제 버전 (64 비트만 해당)는 Microsoft PHP 드라이버의 나열 된 버전을 사용 하 여 지원 됩니다.
 
-|PHP for SQL Server 드라이버 버전&#8594;<br />&#8595;운영 체제|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|Ubuntu 17.10 (64 비트)               |Y  |   |   |   |   |   |   |
-|Ubuntu 16.04 (64 비트)               |Y  |Y  |Y  |   |   |   |   |
-|Ubuntu 15.10 (64 비트)               |   |Y  |   |   |   |   |   |
-|Ubuntu 15.04 (64 비트)               |   |   |Y  |   |   |   |   |
-|Debian 9 (64 비트)                   |Y  |   |   |   |   |   |   |
-|Debian 8 (64 비트)                   |Y  |Y  |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64 비트) |Y  |Y  |Y  |   |   |   |   |
-|엔터프라이즈 Suse Linux (64 비트) 12   |Y  |   |   |   |   |   |   |
-|macOS 시에라 (64 비트)               |Y  |Y  |   |   |   |   |   |
-|macOS El Capitan (64 비트)           |Y  |Y  |   |   |   |   |   |
+|SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595; 운영 체제|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|--|---|---|---|---|---|---|---|---|
+|Ubuntu 18.04 (64 비트)               |Y  |   |   |   |   |   |   |   |
+|Ubuntu 17.10 (64 비트)               |Y  |Y  |   |   |   |   |   |   |
+|Ubuntu 16.04 (64 비트)               |Y  |Y  |Y  |Y  |   |   |   |   |
+|Ubuntu 15.10 (64 비트)               |   |   |Y  |   |   |   |   |   |
+|Ubuntu 15.04 (64 비트)               |   |   |   |Y  |   |   |   |   |
+|Debian 9 (64 비트)                   |Y  |Y  |   |   |   |   |   |   |
+|Debian 8 (64 비트)                   |Y  |Y  |Y  |   |   |   |   |   |
+|Red Hat Enterprise Linux 7(64비트) |Y  |Y  |Y  |Y  |   |   |   |   |
+|Suse Enterprise Linux 12 (64 비트)   |Y  |Y  |   |   |   |   |   |   |
+|macOS High Sierra (64 비트)          |Y  |   |   |   |   |   |   |   |
+|macOS Sierra (64 비트)               |Y  |Y  |Y  |   |   |   |   |   |
+|macOS El Capitan (64 비트)           |Y  |Y  |Y  |   |   |   |   |   |
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [릴리스 정보](../../connect/php/release-notes-for-the-php-sql-driver.md)
 
 [지원 리소스](../../connect/php/support-resources-for-the-php-sql-driver.md)

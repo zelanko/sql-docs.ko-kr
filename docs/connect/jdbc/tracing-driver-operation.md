@@ -1,7 +1,7 @@
 ---
 title: 드라이버 작업 추적 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991975"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279264"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37991975"
  다음 섹션에서는 로깅 수준 및 로깅 가능한 범주를 설명하고 응용 프로그램에서 추적 기능을 활성화하는 방법에 대한 정보를 제공합니다.  
   
 ## <a name="logging-levels"></a>로깅 수준  
- 작성되는 모든 로그 메시지에는 연관된 로깅 수준이 있습니다. 로깅 수준은 로그 메시지의 중요도를 결정하며 java.util.logging의 **Level** 클래스에 의해 정의됩니다. 한 수준에서 로깅을 설정하면 상위 수준의 로깅도 모두 설정됩니다. 이 섹션에서는 공용 로깅 범주 및 내부 로깅 범주의 로깅 수준에 대해 설명합니다. 로깅 범주에 대한 자세한 내용은 이 항목의 로깅 범주 섹션을 참조하십시오.  
+ 작성되는 모든 로그 메시지에는 연관된 로깅 수준이 있습니다. 로깅 수준은 로그 메시지의 중요도를 결정하며 java.util.logging의 **Level** 클래스에 의해 정의됩니다. 한 수준에서 로깅을 설정하면 상위 수준의 로깅도 모두 설정됩니다. 이 섹션에서는 공용 로깅 범주 및 내부 로깅 범주의 로깅 수준에 대해 설명합니다. 로깅 범주에 대한 자세한 내용은 이 문서의 로깅 범주 섹션을 참조하세요.  
   
  다음 표에서는 공용 로깅 범주에 대해 사용할 수 있는 각 로깅 수준에 대해 설명합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "37991975"
 |TDS.DATA|드라이버와 SQL 서버 간 TDS 프로토콜 수준 대화를 포함하는 메시지를 로깅합니다. 주고받는 각 TDS 패킷의 자세한 내용이 ASCII 및 16진수로 로깅됩니다. 로그인 자격 증명(사용자 이름 및 암호)은 로깅되지 않습니다. 다른 모든 데이터는 로깅됩니다.<br /><br /> 이 범주는 매우 자세한 메시지를 작성하기 때문에 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Channel|이 범주는 SQL 서버와의 TCP 통신 채널의 동작을 추적합니다. 로깅된 메시지는 소켓을 열고 닫는 동작과 읽고 쓰는 동작을 포함합니다. 또한 SQL 서버와의 SSL(Secure Sockets Layer) 연결 설정과 관련된 메시지를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINE, FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Writer|이 범주는 TDS 채널에 대한 쓰기 동작을 추적합니다. 내용이 아닌, 쓰기 길이만 추적됩니다. 또한 이 범주에서는 문의 실행을 취소하기 위해 주의 신호가 서버로 전송되는 경우의 문제를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
-|TDS.Reader|FINEST 수준에서 이 범주는 TDS 채널의 특정 읽기 동작을 추적합니다. FINEST 수준에서는 추적이 매우 자세할 수 있습니다. WARNING 및 SEVERE 수준에서 이 범주는 드라이버가 연결을 닫기 전 SQL 서버에서 잘못된 TDS 프로토콜을 수신하는 경우 추적을 수행합니다.<br /><br /> 이 범주는 로깅 수준을 FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
+|TDS.Reader|FINEST 수준에서 이 범주는 TDS 채널의 특정 읽기 동작을 추적합니다. FINEST 수준에서는 추적이 자세할 수 있습니다. WARNING 및 SEVERE 수준에서 이 범주는 드라이버가 연결을 닫기 전 SQL 서버에서 잘못된 TDS 프로토콜을 수신하는 경우 추적을 수행합니다.<br /><br /> 이 범주는 로깅 수준을 FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Command|이 범주는 낮은 수준의 상태 전환 및 [!INCLUDE[tsql](../../includes/tsql_md.md)] 문 실행, ResultSet 커서 인출, 커밋 등 TDS 명령 실행과 관련된 기타 정보를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.TOKEN|이 범주는 TDS 패킷 내의 토큰만 로깅하며 TDS.DATA 범주보다 정보가 덜 자세합니다. 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.<br /><br /> FINEST 수준에서 이 범주는 응답에서 처리되는 TDS 토큰을 추적합니다. SEVERE 수준에서 이 범주는 잘못된 TDS 토큰이 발견되는 경우 추적을 수행합니다.|  
 |SQLServerDatabaseMetaData|[SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991975"
 ## <a name="enabling-tracing-programmatically"></a>프로그래밍 방식으로 추적 활성화  
  Logger 개체를 만들고 로깅할 범주를 지시하여 프로그래밍 방식으로 추적을 활성화할 수 있습니다. 예를 들어 다음 코드에서는 SQL 문의 로깅을 활성화하는 방법을 보여 줍니다.  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  코드에서 로깅을 해제하려면 다음을 사용합니다.  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  사용 가능한 모든 범주를 로깅하려면 다음을 사용합니다,  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  특정 범주를 로깅하지 않으려면 다음을 사용합니다.  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

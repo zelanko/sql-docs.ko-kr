@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대 한 릴리스 정보 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,18 +14,18 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ec71defcba0a6f122d3c3ff9a098e163f07079c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 730c569e74dfafc48e7dcb5efb560022a0bbe54d
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38021130"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279154"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 드라이버에 대한 릴리스 정보
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.4의 업데이트
-SQL Server 용 Microsoft JDBC Driver 6.4 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.4 패키지에 포함 된 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 6.4 패키지에서 mssql-jdbc-6.4.0.jre8.jar 파일은 Java 8 사용 하 여 사용할 것이 좋습니다. 
+SQL Server 용 Microsoft JDBC Driver 6.4 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.4 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 6.4 패키지에서 mssql-jdbc-6.4.0.jre8.jar 파일은 Java 8 사용 하 여 사용할 것이 좋습니다. 
 
 **JDK 9 지원**  
   
@@ -33,7 +33,7 @@ JDK 8.0 및 7.0 외에도 JDK(Java Development Kit) 버전 9.0을 지원합니�
   
 **JDBC 4.3 준수**  
   
-4.1 및 4.2 외에도 Java Database Connectivity API 4.3 사양을 지원합니다. JDBC 4.3 API 메서드 추가 되었지만 아직 구현 되지 않았습니다. 자세한 내용은 참조 하십시오 [JDBC 드라이버의 JDBC 4.3 준수](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)합니다.
+4.1 및 4.2 외에도 Java Database Connectivity API 4.3 사양을 지원합니다. JDBC 4.3 API 메서드 추가 되었지만 아직 구현 되지 않았습니다. 자세한 내용은 [JDBC Driver의 JDBC 4.3 준수](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)를 참조하세요.
  
 **새 연결 속성을 추가 합니다: sslProtocol**
 
@@ -56,14 +56,14 @@ JDK 8.0 및 7.0 외에도 JDK(Java Development Kit) 버전 9.0을 지원합니�
 JDBC 드라이버는 이제 SQL Server를 사용 하 여 사용할 sql_variant 데이터 형식이 지원 합니다. Sql_variant 제한 아래 테이블 반환 매개 변수 (TVP) 사용 하 여 BulkCopy 등의 기능을 사용 하 여 지원 됩니다.
 
 1. 날짜 값에 대 한: sql_variant 열에 저장 하는 datetime/smalldatetime/날짜 값이 포함 된 테이블을 채우기 위한 TVP를 사용할 때 결과 집합에서 getDateTime()/getSmallDateTime()/getDate() 메서드를 호출 작동 하지 않습니다 하 고 다음 예외를 throw 합니다.
-    ```
+    ```java
     java.lang.String cannot be cast to java.sql.Timestamp
     ```
     해결 방법: "getString()" 또는 "getObject()" 메서드를 대신 사용합니다.
 
 2. null 값에 대한 SQL VARIANT로 TVP 사용
 
-TVP에 열 형식이 sql_variant 인을 사용 하 여 삽입 NULL 값이 현재 지원 되지 TVP를 사용 하 여 테이블을 채우고 sql_variant 열 형식으로 NULL 값을 전송 하는, 하는 경우 예외가 발생 합니다.
+TVP를 사용 하 여 테이블을 채우고 sql_variant 열 형식으로 NULL 값을 전송 하는, 하는 경우 TVP에 열 형식이 sql_variant 인을 사용 하 여 삽입 NULL 값이 현재 지원 되지 예외가 발생할 수 있습니다.
 
 **준비 된 문을 구현 메타 데이터 캐싱**
 
@@ -75,10 +75,10 @@ JDBC 드라이버 성능 향상을 위한 준비 된 문 메타 데이터 캐싱
 
 **업데이트 된 ADAL4J 버전 1.4.0**
 
-JDBC 드라이버 버전 1.4.0 azure-activedirectory-라이브러리-에-java (ADAL4J) 해당 maven 종속성을 업데이트 했습니다. 종속성에 대 한 자세한 내용은 참조 [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+JDBC 드라이버 버전 1.4.0 azure-activedirectory-라이브러리-에-java (ADAL4J) 해당 maven 종속성을 업데이트 했습니다. 종속성에 대한 자세한 내용은 [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)를 참조하세요.
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.2의 업데이트
-SQL Server 용 Microsoft JDBC Driver 6.2 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.0 패키지에 포함 된 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어, 6.2 패키지에서 mssql-jdbc-6.2.1.jre8.jar 파일은 Java 8 사용 하 여 사용할 것이 좋습니다. 
+SQL Server 용 Microsoft JDBC Driver 6.2 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.0 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어, 6.2 패키지에서 mssql-jdbc-6.2.1.jre8.jar 파일은 Java 8 사용 하 여 사용할 것이 좋습니다. 
 
 > [!NOTE]  
 >  2017 년 6 월 29 일에 릴리스된 JDBC 6.2 RTW 메타 데이터 캐싱 개선 문제가 발견 되었습니다. 향상 된 롤백되고 새 jar (버전 6.2.1)에서 2017 년 7 월 17 일에 발표 된 합니다 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), 및 [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)합니다. 6.2.1 사용 하 여 프로젝트를 업데이트 하십시오 jar을 릴리스 합니다. 참조 하십시오 [릴리스](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 대 한 자세한 내용은 합니다.
@@ -95,7 +95,7 @@ JDBC 드라이버에서 Jvm federal 및 규정 준수를 충족 하기 위해 FI
 
 JDBC 드라이버는 이제에 대 한 지원이 있습니다. 
 * 여기서 Kerberos 구성을 수정할 수 없거나 새 토큰 또는 키를 검색할 수 없습니다 응용 프로그램에 대 한 사용자/암호 메서드. 이 메서드는만 Kerberos 인증을 허용 하는 SQL Server 인증에 사용할 수 있습니다. 
-* Kerberos 통합 인증을 사용 하 여 명시적으로 서버 SPN을 설정 하지 않고 상호 영역 인증 합니다. 드라이버는 이제 자동으로 계산 영역 제공 되지 않은 경우에 합니다.
+* Kerberos 통합 인증을 사용 하 여 명시적으로 서버 SPN을 설정 하지 않고 상호 영역 인증 합니다. 드라이버는 이제 자동으로 계산 영역 답변이 제공 하는 경우에 합니다.
 * Kerberos 제한 위임을 허용 하 여 데이터 원본을 통해 GSS 자격 증명 개체와 사용자 자격 증명을 가장합니다. 이 가장 된 자격 증명 Kerberos 연결에 사용 됩니다. 
 
 **추가 된 시간 제한**
@@ -106,20 +106,20 @@ JDBC 드라이버는 이제 구성 가능한 시간을 변경할 수 있습니�
 
 ## <a name="updates-in-microsoft-jdbc-driver-61-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.1의 업데이트
 
-SQL Server 용 Microsoft JDBC Driver 6.1 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 이 초기 오픈 소스 버전의 JDBC 드라이버 및 Java 버전 호환성에 해당 하는 mssql-jdbc-6.1.0.jre8.jar mssql-jdbc-6.1.0.jre7.jar 파일을 포함 합니다. 
+SQL Server 용 Microsoft JDBC Driver 6.1 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 이 JDBC 드라이버의 최초 오픈 소스 릴리스 하며 Java 버전 호환성에 해당 하는 mssql-jdbc-6.1.0.jre8.jar mssql-jdbc-6.1.0.jre7.jar 파일을 포함 합니다. 
 
 ## <a name="updates-in-microsoft-jdbc-driver-60-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.0의 업데이트
 
-SQL Server 용 Microsoft JDBC Driver 6.0 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.0 패키지에 포함 된 jar JDBC API 버전을 사용 하 여 호환성에 따라 이름이 지정 됩니다. 예를 들어, sqljdbc42.jar 6.0 패키지에서 파일이 JDBC API 4.2 규격을 준수 합니다. 마찬가지로, sqljdbc41.jar 파일 API 용 JDBC 4.1 준수 됩니다.
+SQL Server 용 Microsoft JDBC Driver 6.0 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. Jar 6.0 패키지에는 JDBC API 버전을 사용 하 여 호환성에 따라 이름이 지정 됩니다. 예를 들어, sqljdbc42.jar 6.0 패키지에서 파일이 JDBC API 4.2 규격을 준수 합니다. 마찬가지로, sqljdbc41.jar 파일 API 용 JDBC 4.1 준수 됩니다.
 
 오른쪽 sqljdbc42.jar 또는 sqljdbc41.jar을 보장 하려면 다음 코드 줄을 실행 합니다. 출력은 하는 경우 "드라이버 버전: 6.0.7507.100", JDBC 드라이버 6.0 패키지 있습니다.
-```
+```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```  
  **항상 암호화**  
   
- SQL Server 인스턴스에서 중요한 데이터가 결코 일반 텍스트로 표시되지 않도록 하는 새로운 보안 기능인 SQL Server 2016의 최근에 출시된 상시 암호화 기능을 지원합니다. 항상 암호화는 SQL Server에서 일반 텍스트 값이 아니라 암호화된 데이터만 처리하도록 응용 프로그램의 데이터를 투명하게 암호화하여 작동합니다. SQL 인스턴스 또는 호스트 머신이 손상된 경우에도 공격자가 얻을 수 있는 것은 중요한 데이터의 암호 텍스트뿐입니다. 자세한 내용은 [상시 암호화와 JDBC Driver 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.  
+ SQL Server 인스턴스에서 중요한 데이터가 결코 일반 텍스트로 표시되지 않도록 하는 새로운 보안 기능인 SQL Server 2016의 최근에 출시된 상시 암호화 기능을 지원합니다. 항상 암호화는 SQL Server에서 일반 텍스트 값이 아니라 암호화된 데이터만 처리하도록 응용 프로그램의 데이터를 투명하게 암호화하여 작동합니다. SQL 인스턴스 또는 호스트 머신이 손상된 경우에도 공격자가 얻을 수 있는 것은 중요한 데이터의 암호 텍스트뿐입니다. 자세한 내용은 [Always Encrypted와 JDBC Driver 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.  
   
  **IDN(다국어 도메인 이름)**  
   
@@ -135,17 +135,17 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  **테이블 반환 매개 변수**  
   
- 테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 응용 프로그램에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 다음 작동할 수 있는에서 TRANSACT-SQL을 사용 하 여 테이블 변수에 저장 됩니다. 자세한 내용은 참조 하십시오 [Using Table-Valued 매개 변수](../../connect/jdbc/using-table-valued-parameters.md)합니다.  
+ 테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 응용 프로그램에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 다음 작동할 수 있는에서 TRANSACT-SQL을 사용 하 여 테이블 변수에 저장 됩니다. 자세한 내용은 참조 하세요 [Using Table-Valued 매개 변수](../../connect/jdbc/using-table-valued-parameters.md)합니다.  
   
  **AlwaysOn AG(가용성 그룹)**  
   
  드라이버는 이제 AlwaysOn 가용성 그룹에 대 한 투명 한 연결을 지원합니다. 또한 서버 인프라의 현재 AlwaysOn 토폴로지를 신속히 검색하여 현재 활성 서버에 투명하게 연결됩니다.  
   
 ## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>SQL Server용 Microsoft JDBC Driver 4.2 이상의 업데이트  
-SQL Server 용 Microsoft JDBC Driver 4.2는 JDBC 사양 4.1 및 4.2 완벽 하 게 호환 됩니다. 4.2 패키지에 포함 된 jar JDBC API 버전을 사용 하 여 호환성에 따라 이름이 지정 됩니다. 예를 들어, sqljdbc42.jar 4.2 패키지에서 파일이 JDBC API 4.2 규격을 준수 합니다. 마찬가지로, sqljdbc41.jar 파일 API 용 JDBC 4.1 준수 됩니다.
+SQL Server 용 Microsoft JDBC Driver 4.2는 JDBC 사양 4.1 및 4.2 완벽 하 게 호환 됩니다. 4.2 패키지의 jar JDBC API 버전을 사용 하 여 호환성에 따라 이름이 지정 됩니다. 예를 들어, sqljdbc42.jar 4.2 패키지에서 파일이 JDBC API 4.2 규격을 준수 합니다. 마찬가지로, sqljdbc41.jar 파일 API 용 JDBC 4.1 준수 됩니다.
 
 오른쪽 sqljdbc42.jar 또는 sqljdbc41.jar을 보장 하려면 다음 코드 줄을 실행 합니다. 출력은 하는 경우 "드라이버 버전: 4.2.6420.100", JDBC Driver 4.2 패키지를 포함 합니다.
-```
+```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
@@ -155,15 +155,15 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  **JDBC 4.1 및 4.2 준수**  
   
- 4.0 외에도 Java Database Connectivity API 4.1 및 4.2 사양을 지원합니다. 자세한 내용은 참조 하십시오 [JDBC 드라이버의 JDBC 4.1 준수](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) 하 고 [JDBC 드라이버의 JDBC 4.2 준수](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)합니다.  
+ 4.0 외에도 Java Database Connectivity API 4.1 및 4.2 사양을 지원합니다. 자세한 내용은 참조 하세요 [JDBC 드라이버의 JDBC 4.1 준수](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) 하 고 [JDBC 드라이버의 JDBC 4.2 준수](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)합니다.  
   
  **대량 복사**  
   
- 대량 복사 기능은 SQL Server 데이터베이스의 테이블이나 뷰에 많은 양의 데이터를 신속하게 복사하는 데 사용됩니다. 자세한 내용은 참조 하십시오 [JDBC 드라이버를 사용 하 여 대량 복사를 사용 하 여](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)입니다.  
+ 대량 복사 기능은 SQL Server 데이터베이스의 테이블이나 뷰에 많은 양의 데이터를 신속하게 복사하는 데 사용됩니다. 자세한 내용은 [JDBC Driver에서 대량 복사 사용](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)을 참조하세요.  
   
  **XA 트랜잭션 롤백 옵션**  
   
- 준비되지 않은 트랜잭션의 기존 자동 롤백에 대해 새로운 제한 시간 옵션이 추가되었습니다. 세부 정보를 참조 하세요. [XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)합니다.  
+ 준비되지 않은 트랜잭션의 기존 자동 롤백에 대해 새로운 제한 시간 옵션이 추가되었습니다. 자세한 내용은 참조 하세요 [XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)합니다.  
   
  **새 Kerberos 보안 주체 연결 속성**  
   
@@ -176,7 +176,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
 ## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>JDBC Driver 6.4, 6.0, 4.2 및 4.1 응용 프로그램에서 Itanium이 지원되지 않음  
   
- SQL Server 응용 프로그램용 Microsoft JDBC Driver 6.4, 6.0, 4.2 및 4.1은 Itanium 컴퓨터에서 실행되도록 지원되지 않습니다.  
+ SQL Server 응용 프로그램용 Microsoft JDBC Driver 6.4, 6.0, 4.2 및 4.1은 Itanium 컴퓨터에서 실행할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

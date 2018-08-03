@@ -1,7 +1,7 @@
 ---
 title: 격리 수준 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 270ccbea5a7c12e8f7188cc4ad125e346a3eddd1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039163"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278655"
 ---
 # <a name="understanding-isolation-levels"></a>격리 수준 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,19 +59,19 @@ ms.locfileid: "38039163"
   
  트랜잭션 격리 수준을 설정하는 데 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 메서드를 사용할 수 있습니다. 이 메서드는 다음과 같은 연결 상수 중 하나를 기반으로 하는 **int** 값을 인수로 사용합니다.  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 새 스냅숏 격리 수준을 사용하려면 다음과 같은 SQLServerConnection 상수 중 하나를 사용합니다.  
   
-```  
+```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```  
   
  또는 다음을 사용하십시오.  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   
