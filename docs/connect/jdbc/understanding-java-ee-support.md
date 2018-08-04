@@ -1,7 +1,7 @@
 ---
 title: Java EE 지원 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,27 +14,27 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb626e0f956d057b27f8a469d51dea67df428742
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5d5cc306a407e818a79d67cfc4c4340e1a9c2b22
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851728"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278864"
 ---
 # <a name="understanding-java-ee-support"></a>Java EE 지원 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  다음 섹션에서는 문서 방법을 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Java Platform, Enterprise Edition (Java EE) 및 JDBC 3.0 선택적 API 기능에 대 한 지원을 제공 합니다. 도움말 시스템에서 제공하는 원본 코드 예제는 이러한 기능을 살펴보는 데 유용합니다.  
+  다음 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 Java Platform, Enterprise Edition(Java EE) 및 JDBC 3.0 선택적 API 기능을 지원하는 방식에 대해 설명합니다. 도움말 시스템에서 제공하는 원본 코드 예제는 이러한 기능을 살펴보는 데 유용합니다.  
   
  먼저 Java 환경(JDK, JRE)에 javax.sql 패키지가 포함되어 있는지 확인하십시오. 이 패키지는 선택적 API를 사용하는 JDBC 응용 프로그램에 필요합니다. JDK 1.5 이상 버전에는 이미 이 패키지가 포함되어 있으므로 별도로 설치할 필요가 없습니다.  
   
 ## <a name="driver-name"></a>드라이버 이름  
- 드라이버 클래스 이름은 **com.microsoft.sqlserver.jdbc.SQLServerDriver**합니다. JDBC Driver 4.1에 대 한, 6.0 및 4.2, sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에 드라이버가 포함 됩니다. JDBC 드라이버 6.2에 대 한 드라이버 mssql-jdbc-6.2.1.jre7.jar 또는 mssql-jdbc-6.2.1.jre8.jar에 포함 되어 있습니다. JDBC 드라이버 6.4에 대 한 드라이버 mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar 또는 mssql-jdbc-6.4.0.jre9.jar에 포함 됩니다.
+ 드라이버 클래스 이름은 **com.microsoft.sqlserver.jdbc.SQLServerDriver**입니다. JDBC 드라이버 4.1, 4.2 및 6.0의 경우 드라이버는 sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에 포함되어 있습니다. JDBC Driver 6.2에 대 한 드라이버 mssql-jdbc-6.2.1.jre7.jar 또는 mssql-jdbc-6.2.1.jre8.jar에 포함 됩니다. JDBC Driver 6.4에 대 한 드라이버 mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar 또는 mssql-jdbc-6.4.0.jre9.jar에 포함 됩니다.
   
- 클래스 이름은 JDBC DriverManager 클래스를 사용 하 여 드라이버를 로드할 때마다 사용 됩니다. 또한 드라이버 구성에 드라이버 클래스 이름을 지정해야 하는 경우에도 항상 사용됩니다. 예를 들어 Java EE 응용 프로그램 서버에서 데이터 원본을 구성하려면 드라이버 클래스 이름을 입력해야 할 수도 있습니다.  
+ 클래스 이름은 JDBC DriverManager 클래스를 사용하여 드라이버를 로드할 때마다 사용됩니다. 또한 드라이버 구성에 드라이버 클래스 이름을 지정해야 하는 경우에도 항상 사용됩니다. 예를 들어 Java EE 응용 프로그램 서버 내에서 데이터 원본을 구성하려면 드라이버 클래스 이름을 입력해야 할 수 있습니다.  
   
-## <a name="data-sources"></a>데이터 원본  
- JDBC 드라이버는 Java EE/JDBC 3.0 데이터 원본을 지원합니다. JDBC 드라이버 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스에 의해 구현 됩니다 **com.microsoft.sqlserver.jdbc.SQLServerXADataSource**합니다.  
+## <a name="data-sources"></a>솔루션 탐색기  
+ JDBC 드라이버는 Java EE/JDBC 3.0 데이터 원본을 지원합니다. JDBC 드라이버 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스는 **com.microsoft.sqlserver.jdbc.SQLServerXADataSource**에 의해 구현됩니다.  
   
 ### <a name="datasource-names"></a>데이터 원본 이름  
  데이터 원본을 사용하여 데이터베이스 연결을 만들 수 있습니다. 다음 표에서는 JDBC 드라이버에 사용할 수 있는 데이터 원본에 대해 설명합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "32851728"
   
  다음은 데이터 원본을 사용하여 응용 프로그램이 연결되는 방법을 보여 줍니다.  
   
-```  
+```java
 initialize JNDI ..  
 Context ctx = new InitialContext(System.getProperties());  
 ...  
@@ -64,9 +64,9 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```  
   
- 데이터 원본 속성에 대 한 자세한 내용은 참조 [데이터 원본 속성을 설정](../../connect/jdbc/setting-the-data-source-properties.md)합니다.  
+ 데이터 원본 속성에 대 한 자세한 내용은 참조 하세요. [데이터 원본 속성 설정](../../connect/jdbc/setting-the-data-source-properties.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

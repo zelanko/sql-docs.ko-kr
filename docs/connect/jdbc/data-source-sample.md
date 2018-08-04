@@ -1,7 +1,7 @@
 ---
 title: 데이터 원본 샘플 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,88 +14,77 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aaa5427b90c46dc908e4b2dd7ba3c4eab51c01e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f43f757ce9d6ea8e16f400c71e4e7f3321a6bd4b
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830248"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278784"
 ---
 # <a name="data-source-sample"></a>데이터 원본 샘플
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에 연결 하는 방법을 보여 줍니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 원본 개체를 사용 하 여 데이터베이스입니다. 데이터를 검색 하는 방법을 보여 줍니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 저장된 프로시저를 사용 하 여 데이터베이스입니다.  
+  이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 데이터 원본 개체를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결하는 방법을 보여 줍니다. 또한 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서 데이터를 검색하는 방법도 보여 줍니다.  
   
- 이 샘플의 코드 파일 이름은 connectDS.java이며 다음과 같은 위치에 있습니다.  
+ 이 샘플의 코드 파일 이름은 ConnectDS.java이며 다음과 같은 위치에 있습니다.  
   
  \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \samples\connections  
   
 ## <a name="requirements"></a>요구 사항  
- 이 샘플 응용 프로그램을 실행하려면 sqljdbc.jar 파일 또는 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc.jar 또는 sqljdbc4.jar에 대한 항목이 없으면 샘플 응용 프로그램에서 일반적인 "클래스를 찾을 수 없습니다." 예외가 발생합니다. 에 대 한 액세스를 해야 합니다는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스. 클래스 경로 설정 하는 방법에 대 한 자세한 내용은 참조 [JDBC 드라이버를 사용 하 여](../../connect/jdbc/using-the-jdbc-driver.md)합니다.  
+ 이 샘플 응용 프로그램을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 또한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다. 클래스 경로 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버를 사용 하 여](../../connect/jdbc/using-the-jdbc-driver.md)입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sqljdbc.jar 및 sqljdbc4.jar 클래스 라이브러리 파일을 기본 Java Runtime Environment (JRE) 설정에 따라 사용 수를 제공 합니다. JAR 파일 선택에 대 한 자세한 내용은 참조 하십시오. [JDBC 드라이버에 대 한 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)합니다.  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 기본 설정된 JRE(Java Runtime Environment)에 따라 사용할 수 있는 mssql-jdbc 클래스 라이브러리 파일을 제공합니다. JAR 파일을 선택 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제의 샘플 코드의 setter 메서드를 사용 하 여 다양 한 연결 속성을 설정는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체를 차례로 호출은 [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 의 메서드는 반환할 SQLServerDataSource 개체는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.  
+ 다음 예제의 샘플 코드에서는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체의 setter 메서드를 사용하여 다양한 연결 속성을 설정한 다음, SQLServerDataSource 개체의 [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 메서드를 호출하여 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 반환합니다.  
   
- 예제 코드에서는 사용 하는 다음으로 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 만들 SQLServerConnection 개체의 메서드는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체, 한 다음은 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 저장된 프로시저를 실행 하는 메서드 호출 됩니다.  
+ 그런 다음, SQLServerConnection 개체의 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 사용하여 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체를 만든 후, [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 메서드를 호출하여 저장 프로시저를 실행합니다.  
   
- 마지막으로,이 샘플에서는 사용 된 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) executeQuery 메서드는 저장된 프로시저에서 반환 된 결과 반복 하에서 반환 된 개체입니다.  
+ 마지막으로 executeQuery 메서드에서 반환된 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 사용하여 저장 프로시저가 반환한 결과를 반복합니다.  
   
 ```java
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.*;  
-  
-public class connectDS {  
-  
-   public static void main(String[] args) {  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      CallableStatement cstmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.   
-         SQLServerDataSource ds = new SQLServerDataSource();  
-         ds.setUser("UserName");  
-         ds.setPassword("*****");  
-         ds.setServerName("localhost");  
-         ds.setPortNumber(1433);   
-         ds.setDatabaseName("AdventureWorks");  
-         con = ds.getConnection();  
-  
-         // Execute a stored procedure that returns some data.  
-         cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");  
-         cstmt.setInt(1, 50);  
-         rs = cstmt.executeQuery();  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println("EMPLOYEE: " + rs.getString("LastName") +   
-               ", " + rs.getString("FirstName"));  
-            System.out.println("MANAGER: " + rs.getString("ManagerLastName") +   
-               ", " + rs.getString("ManagerFirstName"));  
-            System.out.println();  
-         }  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (cstmt != null) try { cstmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-         System.exit(1);  
-      }  
-   }  
-}  
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class ConnectDS {
+
+    public static void main(String[] args) {
+
+        // Create datasource.
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setUser("<user>");
+        ds.setPassword("<password>");
+        ds.setServerName("<server>");
+        ds.setPortNumber(<port>);
+        ds.setDatabaseName("AdventureWorks");
+
+        try (Connection con = ds.getConnection(); 
+                CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {
+            // Execute a stored procedure that returns some data.
+            cstmt.setInt(1, 50);
+            ResultSet rs = cstmt.executeQuery();
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println("EMPLOYEE: " + rs.getString("LastName") + ", " + rs.getString("FirstName"));
+                System.out.println("MANAGER: " + rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));
+                System.out.println();
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 연결 및 검색](../../connect/jdbc/connecting-and-retrieving-data.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 일괄 처리 작업 수행 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,37 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55470e4246256f2dfce11464ab8aafb9c9e7873c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831868"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279018"
 ---
 # <a name="performing-batch-operations"></a>일괄 작업 수행
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  여러 번 업데이트할 때 성능을 향상 시키기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 라고도 하는 일괄 처리 작업의 단일 단위로 여러 업데이트를 전송 하는 기능을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스를 여러 번 업데이트할 때 성능을 향상시키기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 여러 업데이트를 하나의 작업으로 전송하는 기능을 지원하며, 이를 일괄 처리(batch)라고 합니다.  
   
- [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 모두 사용 일괄 처리 업데이트를 제출할 수 있습니다. [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 메서드는 명령을 추가 하는 데 사용 됩니다. [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 메서드 명령 목록을 지우는 데 사용 됩니다. [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 메서드는 처리할 모든 명령을 전송 하는 데 사용 됩니다. 단순 업데이트 횟수를 반환하는 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문만 일괄 처리의 일부로 실행할 수 있습니다.  
+ [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스는 모두 일괄 처리 업데이트를 전송하는 데 사용할 수 있습니다. [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 메서드는 명령을 추가하는 데 사용됩니다. [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 메서드는 명령 목록을 지우는 데 사용됩니다. [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 메서드는 처리할 모든 명령을 전송하는 데 사용됩니다. 단순 업데이트 횟수를 반환하는 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문만 일괄 처리의 일부로 실행할 수 있습니다.  
   
- ExecuteBatch 메서드 배열을 반환 **int** 각 명령의 업데이트 횟수에 해당 하는 값입니다. 명령 중 하나가 실패 하면는 BatchUpdateException throw 되지 않으며 업데이트 횟수 배열을 검색 BatchUpdateException 클래스의 getUpdateCounts 메서드를 사용 해야 합니다. 명령 하나가 실패하더라도 드라이버는 계속해서 나머지 명령을 처리합니다. 그러나 명령에 구문 오류가 있으면 일괄 처리에 있는 문이 실패합니다.  
+ executeBatch 메서드는 각 명령의 업데이트 횟수에 해당하는 **int** 값 배열을 반환합니다. 명령 중 하나가 실패 하면는 BatchUpdateException throw 되지 않으며 업데이트 횟수 배열을 검색 BatchUpdateException 클래스의 getUpdateCounts 메서드를 사용 해야 합니다. 명령 하나가 실패하더라도 드라이버는 계속해서 나머지 명령을 처리합니다. 그러나 명령에 구문 오류가 있으면 일괄 처리에 있는 문이 실패합니다.  
   
 > [!NOTE]  
->  업데이트 횟수를 사용 해야 하는 경우에 SET NOCOUNT ON 문을 먼저 발급할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이렇게 하면 네트워크 트래픽이 감소하고 응용 프로그램의 성능도 향상됩니다.  
+>  업데이트 횟수를 사용할 필요가 없다면 SET NOCOUNT ON 문을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]로 먼저 발급할 수 있습니다. 이렇게 하면 네트워크 트래픽이 감소하고 응용 프로그램의 성능도 향상됩니다.  
   
- 예를 들어에 다음 테이블을 만듭니다는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스.  
+ 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음과 같은 테이블을 만듭니다.  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   
     Col3 int);  
 ```  
   
- 다음 예에서는 열린 연결에에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] addBatch 메서드는 실행 될 문을 작성 하는 데 되며 데이터베이스에 일괄 처리를 제출 하려면 executeBatch 메서드는 예제 데이터베이스 함수에 전달 됩니다.  
+ 다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하며, addBatch 메서드를 사용하여 실행할 명령문을 만들고, executeBatch 메서드를 호출하여 일괄 처리를 데이터베이스로 전송합니다.  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  
@@ -60,7 +60,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

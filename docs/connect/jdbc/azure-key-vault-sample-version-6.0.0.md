@@ -1,5 +1,5 @@
 ---
-title: Azure 키 자격 증명 모음에 샘플 버전 6.0.0 | Microsoft Docs
+title: Azure Key Vault 샘플 버전 6.0.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530d952126de09c46fffe7537e91be443f1bd4da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7526276da62ea6f251944eca7b7ce4b1a03c2f6
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828599"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278934"
 ---
-# <a name="azure-key-vault-sample-version-600"></a>Azure 주요 자격 증명 모음 샘플 버전 6.0.0
+# <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault 샘플 버전 6.0.0
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  <a name="sample-application-using-azure-key-vault-feature"></a>Azure 키 자격 증명 모음 기능을 사용 하 여 샘플 응용 프로그램
-이 응용 프로그램은 JDBC 드라이버 6.0.0 및 Azure-Keyvault (버전 0.9.7) Adal4j 사용 하 여 실행 가능한 (1.3.0 버전) 및 패키지의 종속성입니다.  기본 종속성 설명 된 대로 이러한 라이브러리 프로젝트의 pom 파일에 추가 하 여 해결할 수 있습니다 [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+##  <a name="sample-application-using-azure-key-vault-feature"></a>Azure Key Vault 기능을 사용 하 여 샘플 응용 프로그램
+이 응용 프로그램은 JDBC 드라이버 6.0.0 및 Azure-Keyvault (버전 0.9.7) Adal4j 사용 하 여 실행 가능한 (버전 1.3.0) 및 해당 종속성입니다.  기본 종속성 설명 된 대로 프로젝트의 pom 파일에 이러한 라이브러리를 추가 하 여 해결할 수 있습니다 [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
-```xml
+```java
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -285,5 +285,5 @@ public class AE_AKV_Maven {
 
 ```
 
-## <a name="see-also"></a>관련 항목:  
- [Azure 주요 자격 증명 모음 샘플 버전 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+## <a name="see-also"></a>참고 항목  
+ [Azure Key Vault 샘플 버전 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

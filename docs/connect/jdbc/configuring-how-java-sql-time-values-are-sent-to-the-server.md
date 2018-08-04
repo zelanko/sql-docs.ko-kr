@@ -1,7 +1,7 @@
 ---
-title: Java.sql.Time 값이 서버에 전송 방법 구성 | Microsoft Docs
+title: java.sql.Time 값을 서버에 보내는 방식 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,23 +14,23 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e2e91550767715616599c2720c99b864363a185
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6a52f214b0383a8cabe04bd8c10b7c9ecdef2b21
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831968"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278724"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time 값을 서버에 보내는 방식 구성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Java.sql.Time 개체 또는 java.sql.Types.TIME JDBC 형식을 사용 하 여 매개 변수를 설정 하는 경우 java.sql.Time 값을 서버에 보내는 방식을 구성할 수 있습니다. 으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **시간** 형식 또는 **datetime** 유형입니다.  
+  java.sql.Time 개체 또는 java.sql.Types.TIME JDBC 형식을 사용하여 매개 변수를 설정하는 경우 java.sql.Time 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **time** 형식 또는 **datetime** 형식으로 서버에 보내는 방식을 구성할 수 있습니다.  
   
  이 시나리오는 다음 메서드 중 하나를 사용할 때 적용됩니다.  
   
--   [SQLServerCallableStatement.registerOutParameter (int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int.md)  
+-   [SQLServerCallableStatement.registerOutParameter(int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int.md)  
   
--   [SQLServerCallableStatement.registerOutParameter (int, int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)  
+-   [SQLServerCallableStatement.registerOutParameter(int, int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)  
   
 -   [SQLServerCallableStatement.setTime](../../connect/jdbc/reference/settime-method-sqlservercallablestatement.md)  
   
@@ -40,32 +40,32 @@ ms.locfileid: "32831968"
   
 -   [SQLServerPreparedStatement.setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)  
   
- 사용 하 여 java.sql.Time 값을 보내는 방식을 구성할 수는 **sendTimeAsDatetime** 연결 속성입니다. 자세한 내용은 참조 [연결 속성을 설정할](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+ **sendTimeAsDatetime** 연결 속성을 사용하여 java.sql.Time 값을 보내는 방식을 구성할 수 있습니다. 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
   
- 값을 프로그래밍 방식으로 수정할 수 있습니다는 **sendTimeAsDatetime** 연결 속성에 [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)합니다.  
+ [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)을 사용하여 **sendTimeAsDatetime** 연결 속성의 값을 프로그래밍 방식으로 수정할 수 있습니다.  
   
- 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 지원 하지 않습니다는 **시간** 데이터 형식이 있으므로 일반적으로 java.sql.Time을 사용 하 여 응용 프로그램 저장 java.sql.Time 값을 **datetime** 또는 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
+ 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 지원 하지 않습니다는 **시간** 데이터 형식, 일반적으로 java.sql.Time을 사용 하 여 응용 프로그램 저장 java.sql.Time 값으로 **datetime** 또는**smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
   
- 사용 하려는 경우는 **datetime** 및 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 설정 해야 java.sql.Time 값을 작업할 때의 데이터 형식에는 **sendTimeAsDatetime** 연결 속성을 **true**합니다. 사용 하려는 경우는 **시간** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식의 경우 java.sql.Time 값을 사용으로 설정 해야는 **sendTimeAsDatetime** 연결 속성을 **false**.  
+ 사용 하려는 경우는 **날짜/시간** 하 고 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 설정 해야 java.sql.Time 값을 사용 하 여 작업 하는 경우 데이터 형식에는 **sendTimeAsDatetime** 연결 속성을 **true**합니다. 사용 하려는 경우는 **시간** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식의 경우 설정 해야 java.sql.Time 값을 사용 합니다 **sendTimeAsDatetime** 연결 속성을 **false**.  
   
- 때 데이터 형식이 매개 변수에 java.sql.Time 값을 보내는 저장할 수도 기본 날짜가 날짜도 java.sql.Time 값을 보내는 하는 여부에 따라 다른는 수는 **datetime** (1/1/1970) 또는 **시간** (1/1/1900) 값입니다. 데이터를 보낼 때의 데이터 변환에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 참조 [를 사용 하 여 날짜 및 시간 데이터](http://go.microsoft.com/fwlink/?LinkID=145211)합니다.  
+ 날짜도 저장할 수 있는 데이터 형식의 매개 변수에 java.sql.Time 값을 보낼 시 java.sql.Time 값을 **datetime**(1/1/1970) 값으로 보내는지 아니면 **time**(1/1/1900) 값으로 보내는지에 따라 기본 날짜가 달라지므로 주의해야 합니다. 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]로 보낼 때의 데이터 변환에 대한 자세한 내용은 [날짜 및 시간 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=145211)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0에서는 **sendTimeAsDatetime** 은 기본적으로 true입니다. 이후 릴리스에서 **sendTimeAsDatetime** 연결 속성이 기본적으로 false로 설정할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0 **sendTimeAsDatetime** 은 기본적으로 true입니다. 후속 릴리스에서는 **sendTimeAsDatetime** 연결 속성이 기본적으로 false로 설정될 수 있습니다.  
   
- 응용 프로그램의 기본값에 관계 없이 예상 대로 작동 합니다. 계속 하려면는 **sendTimeAsDatetime** 연결 속성을 할 수 있습니다.  
+ 응용 프로그램이 **sendTimeAsDatetime** 연결 속성의 기본값에 관계없이 계속해서 예상대로 작동하도록 하려면 다음과 같이 하면 됩니다.  
   
--   작업할 경우 java.sql.Time을 사용 하 여는 **시간** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
+-   **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식을 사용하여 작업할 경우 java.sql.Time을 사용합니다.  
   
--   작업할 경우 java.sql.Timestamp를 사용 하 여는 **datetime**, **smalldatetime**, 및 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
+-   작업할 경우 java.sql.Timestamp를 사용 합니다 **날짜/시간**를 **smalldatetime**, 및 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
   
-Note 암호화 된 열에 시간 형식으로 날짜/시간 변환 지원 하지 않으므로 해당 sendTimeAsDatetime 암호화 된 열에 대해 false 이어야 합니다. SQL Server 용 Microsoft JDBC Driver 6.0부터, SQLServerConnection 클래스에 set/get sendTimeAsDatetime 속성의 값을 다음 두 가지 메서드가 있습니다.
+암호화 된 열에는 시간에서 날짜/시간 변환을 지원 하지 않습니다 SendTimeAsDatetime 암호화 된 열에 대해 false 이어야 합니다. SQL Server 용 Microsoft JDBC Driver 6.0부터 SQLServerConnection 클래스에 다음 두 가지 방법 sendTimeAsDatetime 속성의 값을 설정 및 가져오기
 
-```
+```java
   public boolean getSendTimeAsDatetime()
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
