@@ -103,6 +103,8 @@
           href: basic-data-types-sample.md
         - name: SQLXML 데이터 형식 샘플
           href: sqlxml-data-type-sample.md
+        - name: 공간 데이터 형식 샘플
+          href: spatial-data-types-sample.md
     - name: 결과 집합 사용
       href: working-with-result-sets.md
       items:
@@ -121,6 +123,8 @@
           href: reading-large-data-with-stored-procedures-sample.md
         - name: 큰 데이터 업데이트 샘플
           href: updating-large-data-sample.md
+    - name: 데이터 검색 및 분류 샘플
+      href: data-discovery-classification-sample.md
 - name: JDBC SQL 드라이버에 대한 준수 및 법적 고지
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
           href: using-parameter-metadata.md
         - name: 기본 데이터 형식 사용
           href: using-basic-data-types.md
+        - name: 공간 데이터 형식 사용
+          href: use-spatial-datatypes.md
         - name: 트랜잭션 이해
           href: understanding-transactions.md
         - name: 연결 사용
@@ -241,6 +247,8 @@
           href: wrappers-and-interfaces.md
         - name: JDBC 드라이버에서 대량 복사 사용
           href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: 일괄 삽입 작업에 대량 복사 API 사용
+          href: use-bulk-copy-api-batch-insert-operation.md
         - name: 출력 매개 변수가 있는 저장 프로시저 사용
           href: using-a-stored-procedure-with-output-parameters.md
         - name: 일괄 작업 수행
@@ -257,3 +265,5 @@
           href: azure-key-vault-sample-version-6.0.0.md
         - name: Azure Key Vault 샘플 버전 6.2.2
           href: azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault 샘플 버전 7.0.0
+          href: azure-key-vault-sample-version-7-0-0.md
