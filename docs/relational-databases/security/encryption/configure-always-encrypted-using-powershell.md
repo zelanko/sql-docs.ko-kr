@@ -12,13 +12,13 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b665fb4704f9b49fab8c3c326a55006d8fdceba7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d31770150e4b9d119c59e8f76ff9fc7563ad1e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289599"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537783"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

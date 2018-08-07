@@ -18,13 +18,13 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 766f76f075cf132cc5b4413de4e109972b306fcc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 66dece8786f71c0b55707f7a165c7ff81439b8f9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924378"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543273"
 ---
 # <a name="database-object-extended-properties-page"></a>데이터베이스 개체(확장 속성 페이지)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

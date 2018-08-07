@@ -18,13 +18,13 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d0930c0edee89ed0657c7da176fe0c1e6d3a6ac4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5aa8029462fdbe0fdf2aec1fbbbc648aca1c5b58
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182379"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534673"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "33182379"
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 인스턴스의 전체 텍스트 속성 및 관련 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 보여 줍니다.  
   
-|속성|Description|함수|  
+|속성|설명|함수|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|전체 텍스트 구성 요소가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 설치되어 있는지 여부를 나타냅니다.|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

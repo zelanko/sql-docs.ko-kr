@@ -19,19 +19,19 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0a87403ce74d29fd1a967e4eb0775a70f7d10ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 318d2ee649a083023485ee3eed3507aeb643cfe3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940568"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543655"
 ---
 # <a name="non-xml-format-files-sql-server"></a>비 XML 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 *비 XML 서식 파일* 및 *XML 서식 파일*의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [이점](#Benefits)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32940568"
   
 -   [비 XML 서식 파일의 예](#Examples)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> 비 XML 서식 파일의 이점  
   
@@ -63,14 +63,14 @@ ms.locfileid: "32940568"
   
  **버전** 및 **열 개수** 필드는 한 번만 생성해야 합니다. 다음 표에서는 해당 의미에 대해 설명합니다.  
   
-|서식 파일 필드|Description|  
+|서식 파일 필드|설명|  
 |------------------------|-----------------|  
 |버전 옵션|**bcp** 유틸리티의 버전 번호:<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 버전 번호는 **bcp**를 위한 것이며 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 인식하지 않습니다.<br /><br /> <br /><br /> 참고: 서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**에서 생성된 버전 12.0 서식 파일을 읽을 수 없습니다.|  
 |열 개수|데이터 파일의 필드 개수. 이 개수는 모든 행에서 같아야 합니다.|  
   
  다른 서식 파일 필드에서는 대량으로 가져오거나 내보낸 데이터 필드에 대해 설명합니다. 각 데이터 필드를 사용하려면 서식 파일에 있는 별도의 행이 필요합니다. 모든 서식 파일 행에는 다음 표에 설명되어 있는 서식 파일 필드에 대한 값이 포함되어 있습니다.  
   
-|서식 파일 필드|Description|  
+|서식 파일 필드|설명|  
 |------------------------|-----------------|  
 |**호스트 파일 필드 순서**|데이터 파일에서 각 필드의 위치를 나타내는 번호. 예를 들어 행의 첫 번째 필드 번호는 1입니다.|  
 |**호스트 파일 데이터 형식**|데이터 파일의 특정 필드에 저장되는 데이터 형식 표시. ASCII 데이터 파일에는 SQLCHAR을, 네이티브 형식의 데이터 파일에는 기본 데이터 형식을 사용합니다. 자세한 내용은 [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.|  

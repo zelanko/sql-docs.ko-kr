@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239373"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541723"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,11 +92,11 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|아니요|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|아니요|예|
-|스레드 스택 메모리|아니요|아니요|
-|Windows에서 직접 할당|아니요|아니요|
+|단일 페이지 할당|사용자 계정 컨트롤|예, "임의 크기" 페이지 할당에 통합됨|
+|다중 페이지 할당|아니오|예, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|아니오|사용자 계정 컨트롤|
+|스레드 스택 메모리|아니오|아니오|
+|Windows에서 직접 할당|아니오|아니오|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 ***Total Server Memory(KB)*** 값이 이미 max server memory에 지정된 ***Target Server Memory(KB)*** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
@@ -119,11 +119,11 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|아니요|아니요, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|예|예|
-|스레드 스택 메모리|예|예|
-|Windows에서 직접 할당|예|예|
+|단일 페이지 할당|아니오|아니요, "임의 크기" 페이지 할당에 통합됨|
+|다중 페이지 할당|사용자 계정 컨트롤|아니요, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|사용자 계정 컨트롤|사용자 계정 컨트롤|
+|스레드 스택 메모리|사용자 계정 컨트롤|사용자 계정 컨트롤|
+|Windows에서 직접 할당|사용자 계정 컨트롤|사용자 계정 컨트롤|
 
 ## <a name="dynamic-memory-management"></a> 동적 메모리 관리
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 메모리 관리 동작은 시스템에 메모리가 부족해지지 않도록 필요한 만큼 메모리를 확보하는 것입니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 Microsoft Windows의 메모리 알림 API를 사용하여 이 작업을 수행합니다.

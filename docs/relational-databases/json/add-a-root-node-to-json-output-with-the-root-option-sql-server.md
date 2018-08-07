@@ -14,13 +14,13 @@ ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 508a1a7b92d68c8d39d05521ed62c20e175a6ca1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1026dce8d7e997c9b66520f099faf55e3772ba82
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001572"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541863"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

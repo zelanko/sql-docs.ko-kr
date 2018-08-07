@@ -27,13 +27,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85b77156f36133bd862923b703ce36cb22f74788
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108785"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535194"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

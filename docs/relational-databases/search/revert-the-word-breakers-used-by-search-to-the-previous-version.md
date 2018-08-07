@@ -15,13 +15,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f09da24682c65d737e03685f936f85de62b6e2e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a6d1b5ad744de6973b7a4cfcbfa41863a0c47f20
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182509"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537843"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "33182509"
 |인도네시아어|ind|1057|  
 |아이슬란드어|isl|1039|  
 |이탈리아어|ita|1040|  
-|카나다어|kan|1099|  
+|칸나다어|kan|1099|  
 |리투아니아어|lth|1063|  
 |라트비아어|lvi|1062|  
 |말라얄람어|mal|1100|  
@@ -219,8 +219,8 @@ ms.locfileid: "33182509"
 |---------------|------------------|-------------|  
 |이전 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|현재 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|InclusionThresholdSetting|  
-|현재 파일 이름|MSWB7.dll|InclusionThresholdSetting|  
+|현재 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|없음|  
+|현재 파일 이름|MSWB7.dll|없음|  
   
  **독일어(deu), LCID 1031**  
   
@@ -237,8 +237,8 @@ ms.locfileid: "33182509"
 |---------------|------------------|-------------|  
 |이전 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|현재 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|InclusionThresholdSetting|  
-|현재 파일 이름|MsWb70011.dll|InclusionThresholdSetting|  
+|현재 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|없음|  
+|현재 파일 이름|MsWb70011.dll|없음|  
   
  **네덜란드어(nld), LCID 1043**  
   
@@ -353,8 +353,8 @@ ms.locfileid: "33182509"
 |---------------|------------------|-------------|  
 |이전 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |이전 파일 이름|Thawbrkr.dll|Thawbrkr.dll|  
-|현재 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|InclusionThresholdSetting|  
-|현재 파일 이름|MsWb7001e.dll|InclusionThresholdSetting|  
+|현재 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|없음|  
+|현재 파일 이름|MsWb7001e.dll|없음|  
   
  **중국어 번체(zh-hk), LCID 3076**  
   

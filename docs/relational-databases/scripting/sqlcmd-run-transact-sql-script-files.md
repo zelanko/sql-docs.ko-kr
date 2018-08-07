@@ -15,13 +15,13 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee3e53e4d6cfeba2e1cedf2a2c6e3a5500f0e633
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6b8cab4203d32a5219c50eafba404348dec133be
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333844"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535583"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Transact-SQL 스크립트 파일 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

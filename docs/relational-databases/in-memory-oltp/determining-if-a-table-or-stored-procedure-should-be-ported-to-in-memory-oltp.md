@@ -18,13 +18,13 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa4614d050266fc80dbc629c7e7f25a2c6e5bfb8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f70f37f761ccfeccb75663e06666e6b2b5c0549b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330604"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535613"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

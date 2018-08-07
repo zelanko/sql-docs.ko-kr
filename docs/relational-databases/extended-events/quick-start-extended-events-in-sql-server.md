@@ -14,13 +14,13 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2af8f48646f0cb99ffd2bd5bf6ac734dcaeecf52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941348"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534913"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -427,7 +427,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 다음 표에서는 확장 이벤트에 사용된 용어를 나열하고 그 의미를 설명합니다.
 
 
-| 용어 | Description |
+| 용어 | 설명 |
 | :--- | :---------- |
 | 이벤트 세션 | 하나 이상의 이벤트와 동작 및 대상 등 지원되는 항목에 대한 구성입니다. CREATE EVENT SESSION 문은 각 이벤트 세션을 생성합니다. 이벤트 세션이 원하는 대로 시작 및 중지되도록 변경할 수 있습니다. <br/> <br/> 이벤트 세션을 *세션*이라고 하는 경우도 있으며 컨텍스트상 구분이 필요한 경우에는 *이벤트 세션*이라고 합니다. <br/> <br/> 이벤트 세션에 대한 자세한 내용은 [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)을 참조하세요. |
 | 이벤트 | 활성 이벤트 세션에서 감시하는 시스템의 특정 항목입니다. <br/> <br/> 예를 들어 *sql_statement_completed* 이벤트는 지정한 T-SQL 문이 완료되는 시점을 나타냅니다. 이벤트는 지속 시간 및 기타 데이터를 보고할 수 있습니다. |

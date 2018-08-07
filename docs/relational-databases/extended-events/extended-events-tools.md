@@ -17,13 +17,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 445ee6ce61017507756006fdc2f2b22359b2ec0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d20946e721e4bff7c231466af55ac0c01a4140e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938888"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541483"
 ---
 # <a name="extended-events-tools"></a>확장 이벤트 도구
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "32938888"
 ## <a name="ddl-statements"></a>DDL 문  
  다음 DDL 문을 사용하여 확장 이벤트 세션을 생성, 변경 및 삭제할 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)|이벤트 원본, 이벤트 세션 대상 및 이벤트 세션 매개 변수를 식별하는 확장 이벤트 세션 개체를 만듭니다.|  
 |[ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|이벤트 세션을 시작 또는 중지하거나 이벤트 세션 구성을 변경합니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "32938888"
 ## <a name="catalog-views"></a>카탈로그 뷰  
  다음 카탈로그 뷰를 사용하여 이벤트 세션을 만들 때 함께 생성된 메타데이터를 가져올 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[sys.server_event_sessions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|이벤트 세션 정의를 모두 나열합니다.|  
 |[sys.server_event_session_actions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|이벤트 세션의 각 이벤트의 동작에 대해 한 행을 반환합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "32938888"
 > [!NOTE]  
 >  세션이 시작되기 전에는 이러한 뷰에 세션 데이터가 포함되지 않습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|세션 발송자 풀에 대한 정보를 반환합니다.|  
 |[sys.dm_xe_objects&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|이벤트 패키지에 의해 표시되는 각 개체에 대해 한 행을 반환합니다.|  
@@ -84,7 +84,7 @@ ms.locfileid: "32938888"
 ## <a name="system-tables"></a>시스템 테이블  
  다음 시스템 테이블을 사용하여 SQL 추적 이벤트 클래스 및 열에 해당하는 확장 이벤트 항목에 대한 정보를 가져올 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[trace_xe_event_map&#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|SQL 추적 이벤트 클래스에 매핑된 Extended Events 이벤트마다 하나의 행을 포함합니다.|  
 |[trace_xe_action_map&#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|SQL 추적 열 ID에 매핑된 Extended Events 동작마다 하나의 행을 포함합니다.|  

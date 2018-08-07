@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432392"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539033"
 ---
 # <a name="ddl-triggers"></a>DDL 트리거
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432392"
 >  DDL 트리거를 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인합니다. 예를 들어 CREATE TYPE 문과 **sp_addtype** 저장 프로시저는 모두 CREATE_TYPE 이벤트에서 생성되는 DDL 트리거를 발생시킵니다.  
   
 ## <a name="types-of-ddl-triggers"></a>DDL 트리거 유형  
- Transact-SQL DDL 트리거  
+ ### <a name="transact-sql-ddl-trigger"></a>Transact-SQL DDL 트리거  
  서버 범위 또는 데이터베이스 범위 이벤트에 대한 응답으로 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하는 특수 유형의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 예를 들어 ALTER SERVER CONFIGURATION과 같은 문을 실행하거나 DROP TABLE을 사용하여 테이블을 삭제하면 DDL 트리거가 실행될 수 있습니다.  
   
- CLR DDL 트리거  
+ ### <a name="clr-ddl-trigger"></a>CLR DDL 트리거  
  CLR 트리거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 실행하는 대신 .NET Framework에서 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업로드되는 어셈블리 멤버인 관리 코드로 작성된 하나 이상의 메서드를 실행합니다.  
   
  DDL 트리거를 시작하는 DDL 문이 실행된 후에만 DDL 트리거가 시작됩니다. DDL 트리거는 INSTEAD OF 트리거로 사용될 수 없습니다. DDL 트리거는 로컬 또는 전역 임시 테이블과 저장 프로시저에 영향을 주는 이벤트에 대한 응답으로 실행되지 않습니다.  

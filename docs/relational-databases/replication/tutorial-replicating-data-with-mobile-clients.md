@@ -19,13 +19,13 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4627eeb473ba1b2075ea4de12b0b5770e4f44447
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d1b1eacaf8af4864977a3cf5c1e4d1e684007d63
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983095"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540143"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

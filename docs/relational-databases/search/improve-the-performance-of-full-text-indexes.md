@@ -22,13 +22,13 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5c8427cc756a3aa4635e97288cec3aa2e6fb8e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 55938d1a17e4a6f1d2e6321b74340fde24814df9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182119"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537703"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ GO
   
      다음 표에서는 몇 가지 흥미로운 대기 유형을 설명합니다.  
   
-    |대기 유형|Description|가능한 해결 방법|  
+    |대기 유형|설명|가능한 해결 방법|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH(_EX 또는 _UP)|IO 병목 상태를 나타내며, 이 경우 일반적으로 평균 디스크 큐 길이가 깁니다.|전체 텍스트 인덱스를 다른 디스크의 다른 파일 그룹으로 이동하면 IO 병목 상태가 줄어들 수 있습니다.|  
     |PAGELATCH_EX(또는 _UP)|동일한 데이터베이스 파일에 쓰기를 시도하고 있는 스레드 간에 경합이 많이 발생하고 있음을 나타냅니다.|전체 텍스트 인덱스가 상주하는 파일 그룹에 파일을 추가하면 이러한 경합을 완화할 수 있습니다.|  

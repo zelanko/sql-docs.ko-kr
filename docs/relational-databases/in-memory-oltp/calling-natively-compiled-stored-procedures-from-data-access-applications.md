@@ -15,13 +15,13 @@ caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c293bba3ec50c22e62dad87b114766cf87b8fa73
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa4afb1e73b573caf7fa905f7bd7e1c0d8eaddbd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330104"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535423"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -15,13 +15,13 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bfadebf95d2a347d9d448de0d4884b05755fe57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1de0aaf79fe6cf850a2715de24fcd39e6322a3a1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323313"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544363"
 ---
 # <a name="rename-a-stored-procedure"></a>저장 프로시저 이름 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

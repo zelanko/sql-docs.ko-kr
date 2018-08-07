@@ -22,13 +22,13 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ca03e5c6dce2c99417e86167613ea8bbfd6b3b84
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1e18aab73d2a6ec8d01e2df444771f04f7420d1b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989125"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550763"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

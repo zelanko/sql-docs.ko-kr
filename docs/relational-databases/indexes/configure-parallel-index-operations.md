@@ -20,13 +20,13 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2d1a1463b751bcd820419db24c978ed08d7e463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c674869b9c478bd5accf85f74106aba6a33dcaa9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939408"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534783"
 ---
 # <a name="configure-parallel-index-operations"></a>병렬 인덱스 작업 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ ms.locfileid: "32939408"
   
 -   MAXDOP 인덱스 옵션을 지정한 쿼리에 대해서만 max degree of parallelism 구성 옵션이 무시됩니다. 다음 표에서는 최대 병렬 처리 수준 구성 옵션 및 MAXDOP 인덱스 옵션에 지정할 수 있는 유효한 정수 값을 보여 줍니다.  
   
-    |값|Description|  
+    |값|설명|  
     |-----------|-----------------|  
     |0|서버가 현재 시스템 작업에 따라 사용되는 CPU의 수를 결정하도록 지정합니다. 이 값은 기본값이며 권장 설정입니다.|  
-    |1|병렬 계획이 생성되지 않습니다. 작업이 직렬로 실행됩니다.|  
+    |@shouldalert|병렬 계획이 생성되지 않습니다. 작업이 직렬로 실행됩니다.|  
     |2-64|지정된 값으로 프로세서 수를 제한합니다. 현재 작업에 따라 지정된 것보다 적은 수의 프로세서가 사용될 수도 있습니다. 사용 가능한 CPU 수보다 더 큰 수를 지정하면 사용 가능한 실제 CPU 수가 사용됩니다.|  
   
 -   다음은 병렬 인덱스 실행 및 MAXDOP 인덱스 옵션이 적용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  

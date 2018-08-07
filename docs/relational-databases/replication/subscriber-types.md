@@ -17,13 +17,13 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc484521597c462c625bb5d3a0bbcfa51f1f42e4
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 37ab88cf1a7416926b6248b164e824ccbe27ed97
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359255"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545193"
 ---
 # <a name="subscriber-types"></a>구독자 유형
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37359255"
   
  게시 스냅숏을 만든 후 **게시 속성** 대화 상자의 **일반** 페이지에서 게시 호환성 수준을 높여 제한을 강화할 수 있습니다. 호환성 수준은 낮출 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  이 게시가 지원해야 하는 각 구독자 유형을 선택합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

@@ -19,19 +19,19 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3307fe5867ef8d379689e0f51766451f99dc3de
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 79ae6a8d6d39fe7a5281ca1b429ca35b9e9ee27c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349825"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543023"
 ---
 # <a name="subscribers"></a>게시자 속성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   선택한 게시에 대한 구독을 받을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지정합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **구독자**  
  표에서 확인란을 선택하여 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본을 **게시** 페이지에서 선택한 게시에 대한 구독자로 설정할 수 있습니다. 구독자가 나열되어 있지 않은 경우 **구독자 추가** 또는 **SQL Server 구독자 추가**를 클릭합니다.  
   

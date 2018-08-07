@@ -20,13 +20,13 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146e820ae4afb149a8fea8e6672b8526a29fdc73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: cbc2024ce5df6cf88d72ed539c8999f3b054020f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939818"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539023"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

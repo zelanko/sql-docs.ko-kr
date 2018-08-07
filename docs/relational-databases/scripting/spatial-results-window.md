@@ -13,13 +13,13 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 917a5c76c8b76aa4cd8c56173386d707a001f7ff
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d7563efb7d43e1d122fe193d1ececd8723294cc6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333924"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540343"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34333924"
 > [!NOTE]  
 >  **공간 데이터 결과** 창은 결과가 **결과** 창에 표 형식으로 반환되는 경우에만 사용할 수 있습니다. 결과가 텍스트로 반환되도록 지정한 경우에는 이 창을 사용할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **공간 열 선택**  
  쿼리 결과의 공간 열 중에서 보려는 공간 열을 지정합니다. 열은 한 번에 하나씩만 선택할 수 있습니다.  
   

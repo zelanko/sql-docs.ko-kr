@@ -14,13 +14,13 @@ ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 57c111ecbd9766b267554a6de41637685f79f2db
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fe7689c8c78c4f314a0068ba44b8770d8cfd0368
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407422"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535163"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server에서 JSON으로 일반적인 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -18,13 +18,13 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90f15cbee03a155745366ed1a29d101752406ae3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7b5b297687860debe57d0624b9498678e86108f5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940498"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535373"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "32940498"
 |[네이티브 형식의 명령 옵션](#command_options)|
 |[예제 테스트 조건](#etc)<br /><br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)|
 |[예](#examples)<br />&emsp;&#9679;&emsp;[bcp 및 원시 형식을 사용하여 데이터 내보내기](#bcp_native_export)<br />&emsp;&#9679;&emsp;[bcp 및 원시 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_native_import)<br />&emsp;&#9679;&emsp;[bcp 및 원시 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 원시 형식 사용](#bulk_native)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 BULK INSERT 및 원시 형식 사용하기](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 OPENROWSET 및 원시 형식 사용하기](#openrowset_native_fmt)|
-|[관련 태스크](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
+|[관련 작업](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 ## 제한 사항<a name="restrictions"></a>  
 데이터를 네이티브 형식으로 가져오려면 다음 사항을 확인하십시오.  
@@ -91,7 +91,7 @@ ms.locfileid: "32940498"
 
 원시 형식에 대해 지원되는 명령 옵션은 다음과 같습니다.  
 
-|Command|옵션|Description|  
+|Command|옵션|설명|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|bcp 유틸리티가 원시 데이터 형식을 사용하도록 합니다.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|데이터의 네이티브 또는 와이드 네이티브 데이터 형식을 사용합니다. 서식 파일로 데이터 형식을 지정하면 DATAFILETYPE은 필요하지 않습니다.|  

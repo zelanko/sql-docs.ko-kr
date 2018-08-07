@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d29f3e4d1571d7c825bbf2eef01487a2e8da788b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3de4699b5fc522b5d3fe5b097d8217fd6314afda
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332504"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537383"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,10 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
   
 나중에 메모리 내 OLTP의 성능 향상 데모를 제공하는 다음 문서를 참조하는 것이 좋습니다.  
   
-- [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
-- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)(메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
+- 
+  [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
+- 
+  [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
   
   
   
@@ -508,5 +510,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
     
 메모리 내 OLTP를 사용하여 얻을 수 있는 성능 향상을 보여 주는 코드를 제공하는 문서는 다음과 같습니다.  
   
-- [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
-- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)(메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
+- 
+  [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
+- 
+  [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  

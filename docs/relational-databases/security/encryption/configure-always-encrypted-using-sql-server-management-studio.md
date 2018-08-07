@@ -18,13 +18,13 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b72dca20aaa566f8bb6630931fc656ee6231182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180450"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543073"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   매개 변수화를 사용하지 않으면 형식 변환을 포함하여 전체 쿼리가 SQL Server/Azure SQL Database 내에서 처리됩니다. 매개 변수화를 사용하면 일부 형식 변환이 SQL Server Management Studio 내의 .NET Framework에서 수행됩니다. .NET Framework 형식 시스템과 SQL Server 형식 시스템 간의 차이(예: float와 같은 일부 형식의 정밀도 차이)로 인해 매개 변수화를 사용하여 실행된 쿼리는 매개 변수화를 사용하지 않고 실행된 쿼리와 다른 결과를 생성할 수 있습니다. 
 
-#### <a name="permissions"></a>사용 권한      
+#### <a name="permissions"></a>Permissions      
 
 암호 텍스트 데이터를 검색하는 쿼리를 포함하여 암호화된 열에 대해 쿼리를 실행하려면 데이터베이스에서 `VIEW ANY COLUMN MASTER KEY DEFINITION` 및 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 권한이 있어야 합니다.   
 위 권한 외에도 쿼리 결과의 암호를 해독하거나 쿼리 매개 변수(Transact-SQL 변수를 매개 변수화하여 생성된)를 암호화하려면 대상 열을 보호하는 열 마스터 키에 대한 액세스 권한도 필요합니다.   
@@ -259,7 +259,7 @@ SQL Server Management Studio에서 데이터베이스에 열 마스터 키에 �
 
 SQL Server Management Studio에서 새 열 암호화 키를 생성한 다음 데이터베이스에서 선택한 열 마스터 키에 대한 메타데이터를 검색합니다. 그런 다음 SQL Server Management Studio는 열 마스터 키 메타데이터를 사용하여 열 마스터 키가 포함된 키 저장소에 연결하고 열 암호화 키를 암호화합니다. 마지막으로, 새 열 암호화 키에 대한 메타데이터가 데이터베이스에 생성됩니다. 대화 상자에서 이 작업을 위해 [CREATE COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문을 생성하고 실행합니다.
 
-### <a name="permissions"></a>사용 권한
+### <a name="permissions"></a>Permissions
 
 대화 상자에서 열 암호화 키 메타데이터를 만들고 열 마스터 키 메타데이터에 액세스하려면 데이터베이스에서 *ALTER ANY ENCRYPTION MASTER KEY* 및 *VIEW ANY COLUMN MASTER KEY DEFINITION* 권한이 있어야 합니다.
 키 저장소에 액세스하고 열 마스터 키를 사용하려면 키 저장소 또는/및 키에 대한 사용 권한이 필요할 수 있습니다.
@@ -334,7 +334,7 @@ SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](.
 > [!NOTE]
 > 순환 후에 이전 열 마스터 키를 영구적으로 삭제하지 않는 것이 좋습니다. 대신, 이전 열 마스터 키를 현재 키 저장소에 유지하거나 다른 안전한 장소에 보관해야 합니다. 백업 파일에서 새 열 마스터 키가 구성되기 전의 시점으로 데이터베이스를 복원하는 경우 데이터에 액세스하려면 이전 키가 필요합니다.
 
-### <a name="permissions"></a>사용 권한
+### <a name="permissions"></a>Permissions
 
 열 마스터 키를 순환하려면 다음과 같은 데이터베이스 사용 권한이 있어야 합니다.
 
@@ -369,7 +369,7 @@ SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](.
 7.  **요약** 페이지에서 선택한 옵션을 검토하고 **마침** 을 클릭합니다. 완료되면 마법사를 닫습니다.
 8.  **개체 탐색기**를 사용하여 **보안/상시 암호화 키/열 암호화 키** 폴더로 이동한 다음 데이터베이스에서 제거할 이전 열 암호화 키를 찾습니다. 키를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.
 
-### <a name="permissions"></a>사용 권한
+### <a name="permissions"></a>Permissions
 
 열 암호화 키를 순환하려면 다음과 같은 데이터베이스 권한이 있어야 합니다. **ALTER ANY COLUMN MASTER KEY** – 자동 생성된 새 열 암호화 키를 사용하는 경우에 필요합니다(새 열 마스터 키와 새 메타데이터도 생성됨).
 **ALTER ANY COLUMN ENCRYPTION KEY** – 새 열 암호화 키에 대한 메타데이터를 추가하는 데 필요합니다.
@@ -402,7 +402,7 @@ DACPAC를 사용하여 데이터베이스를 업그레이드하고 DACPAC 또는
 > [!NOTE]
 > 데이터베이스 또는 DACPAC의 열에 대해 구성된 열 마스터 키가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 로그인하라는 메시지가 표시됩니다(로그인하지 않은 경우).
 
-### <a name="permissions"></a>사용 권한
+### <a name="permissions"></a>Permissions
 
 DACPAC 또는 대상 데이터베이스에서 상시 암호화가 설정된 경우 DAC 업그레이드 작업을 수행하려면 DACPAC의 스키마와 대상 데이터베이스 스키마 간의 차이에 따라 아래 사용 권한 중 일부 또는 모두가 필요할 수 있습니다.
 
@@ -425,7 +425,7 @@ BACPAC를 데이터베이스로 가져올 때 BACPAC의 암호화된 데이터�
 원본 데이터베이스(내보낸 데이터베이스)에 저장된 암호화된 데이터를 수정하거나 검색하도록 구성된 응용 프로그램이 있는 경우 두 데이터베이스의 키가 동일하기 때문에 응용 프로그램이 대상 데이터베이스의 암호화된 데이터를 쿼리할 수 있도록 특별히 수행해야 하는 작업은 없습니다.
 
 
-### <a name="permissions"></a>사용 권한
+### <a name="permissions"></a>Permissions
 
 원본 데이터베이스에 대한 *ALTER ANY COLUMN MASTER KEY* 및 *ALTER ANY COLUMN ENCRYPTION KEY* 권한이 필요합니다. 대상 데이터베이스에 대한 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*및 *VIEW ANY COLUMN ENCRYPTION* 권한이 필요합니다.
 
@@ -448,7 +448,7 @@ BACPAC를 데이터베이스로 가져올 때 BACPAC의 암호화된 데이터�
 |암호를 해독하지 않고 암호화된 데이터를 이동합니다.<br><br>**참고:** 마이그레이션 전에 암호화된 열이 포함된 대상 테이블이 있어야 합니다.| 데이터 공급자/드라이버: *임의*<br>열 암호화 설정 = 사용 안 함<br><br>(.Net Framework Data Provider for SqlServer 및 .NET Framework 4.6 이상을 사용하는 경우)| 데이터 공급자/드라이버: *임의*<br>열 암호화 설정 = 사용 안 함<br><br>(.Net Framework Data Provider for SqlServer 및 .NET Framework 4.6 이상을 사용하는 경우)<br><br>사용자에 대해 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS가 ON으로 설정되어 있어야 합니다.<br><br>자세한 내용은 [상시 암호화로 보호되는 중요한 데이터 마이그레이션](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)을 참조하세요.
 
 
-### <a name="permissions"></a>사용 권한
+### <a name="permissions"></a>Permissions
 
 데이터 원본에 저장된 데이터를 **암호화** 또는 **암호 해독** 하려면 원본 데이터베이스에 대한 *VIEW ANY COLUMN MASTER KEY DEFINITION* 및 *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* 권한이 있어야 합니다.
 

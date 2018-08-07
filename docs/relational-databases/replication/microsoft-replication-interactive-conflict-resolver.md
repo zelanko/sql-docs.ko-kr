@@ -17,13 +17,13 @@ caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd81e034d1ad9dc9253a22a5410406cf5e16186b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2fc976ae4f0956ceeabb46583ae3df1ee1f9e855
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360082"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537713"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft 복제 상호 충돌 해결 프로그램
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37360082"
 > [!NOTE]  
 >  논리적 레코드와 관련된 충돌은 대화형 해결 프로그램에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **열 이름**  
  테이블에 있는 모든 열의 이름입니다. 하나 이상의 열에 충돌하는 데이터가 있을 수 있습니다. 충돌하는 열에 상관없이 적용되는 전체 행이 무시되는 전체 행을 덮어씁니다.  
   

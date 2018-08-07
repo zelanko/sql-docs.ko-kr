@@ -15,13 +15,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 34b5c0e77ec4caa54fcbd21f15bb518a758e193e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 50e4249226273fc7c5f51363597f1d4099ad6865
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330764"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539993"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 사용자 정의 스칼라 함수
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ END
   
  STATISTICS XML은 고유하게 컴파일된 사용자 정의 스칼라 함수에서 지원되지 않습니다. STATISTICS XML이 활성화된 상태에서 사용자 정의 함수를 참조하는 쿼리를 실행하는 경우 사용자 정의 함수에 대한 부분 없이 XML 콘텐츠가 반환됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  고유하게 컴파일된 저장 프로시저에서와 같이, 고유하게 컴파일된 사용자 정의 스칼라 함수에서 참조되는 개체 권한은 함수가 생성될 때 확인됩니다. 가장된 사용자가 올바른 권한을 가지고 있지 않은 경우 CREATE FUNCTION이 실패합니다. 권한이 변경되어 가장된 사용자가 올바른 권한을 더 이상 갖지 못하는 경우 이후의 사용자 정의 함수 실행이 실패합니다.  
   
  고유하게 컴파일된 저장 프로시저에서 고유하게 컴파일된 사용자 정의 스칼라 함수를 사용하는 경우 외부 프로시저가 생성될 때 사용자 정의 함수 실행 권한이 확인됩니다. 외부 프로시저에 의해 가장된 사용자가 사용자 정의 함수에 대한 EXEC 권한을 가지고 있지 않으면 저장 프로시저 생성이 실패합니다. 사용 권한이 변경되어 사용자가 EXEC 권한을 더 이상 갖지 않으면 외부 프로시저 실행이 실패합니다.  

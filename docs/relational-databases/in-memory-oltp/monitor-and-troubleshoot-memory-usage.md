@@ -15,13 +15,13 @@ caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 920d8cc65152a7306d4ca10c260e28eadaf37c94
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 691568c34e2b3ef02782ee2aec8c9e29e5830860
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332484"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537433"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,8 @@ ms.locfileid: "34332484"
   
 ## <a name="sections-in-this-topic"></a>이 항목의 단원  
   
--   [메모리 최적화 테이블이 포함된 샘플 데이터베이스 만들기](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
+-   
+            [메모리 최적화 테이블이 포함된 샘플 데이터베이스 만들기](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
 -   [메모리 사용 모니터링](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
   
@@ -39,11 +40,14 @@ ms.locfileid: "34332484"
   
     -   [DMVs 사용](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
   
--   [메모리 최적화 개체에서 사용하는 메모리 관리](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
+-   
+            [메모리 최적화 개체에서 사용하는 메모리 관리](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
   
 -   [메모리 문제 해결](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> 메모리 최적화 테이블이 포함된 샘플 데이터베이스 만들기  
+##  
+            <a name="bkmk_CreateDB">
+            </a> 메모리 최적화 테이블이 포함된 샘플 데이터베이스 만들기  
  메모리 최적화 테이블이 있는 데이터베이스를 이미 만든 경우에는 이 섹션을 건너뛸 수 있습니다.  
   
  다음 단계에서는 이 항목의 나머지 부분에서 사용할 수 있는 메모리 최적화 테이블이 3개 있는 데이터베이스를 만듭니다. 이 예제에서는 데이터베이스를 리소스 풀에 매핑하여 메모리 최적화 테이블에서 가져올 수 있는 메모리의 양을 제어할 수 있습니다.  
@@ -252,7 +256,7 @@ memory_object_address pages_ in_bytes bytes_used type
  자세한 내용은 [sys.dm_os_memory_objects(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)를 참조하세요.  
   
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>인스턴스 전반의 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에서 사용하는 메모리  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진 및 메모리 액세스에 최적화된 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진 및 메모리 최적화 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.  
   
 ```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  

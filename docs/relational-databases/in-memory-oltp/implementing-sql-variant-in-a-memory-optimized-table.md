@@ -15,13 +15,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0f5e3f0ea24919009e0a7b42946e2431a7e95df
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c1af9c44fcb3ab25715aa9d76d1aa106034f1b27
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326844"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535433"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

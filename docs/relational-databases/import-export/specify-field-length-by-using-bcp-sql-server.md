@@ -21,13 +21,13 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bda4afe1b3c6b64ea1609412be66de03fa6329e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3014dc84d9d5d54a79536ffa010529dc373e00f9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940148"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535553"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp를 사용하여 필드 길이 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "32940148"
 |**nvarchar**|열에 정의된 길이의 2배|  
 |**텍스트**|0|  
 |**ntext**|0|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**binary**|열에 정의된 길이의 2배에 1을 더한 값|  
 |**varbinary**|열에 정의된 길이의 2배에 1을 더한 값|  
 |**image**|0|  
@@ -104,7 +104,7 @@ ms.locfileid: "32940148"
   
 |데이터 형식|기본 길이(문자)|  
 |---------------|-----------------------------------|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**binary**|열에 정의된 길이|  
 |**varbinary**|열에 정의된 길이|  
 |**image**|0|  
@@ -115,7 +115,7 @@ ms.locfileid: "32940148"
 |**int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
-|**tinyint**|1|  
+|**tinyint**|@shouldalert|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  

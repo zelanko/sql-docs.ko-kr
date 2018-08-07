@@ -15,13 +15,13 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a7393dfd780eb62aa6dff5ca70d89f297dc6952
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: acf0e826c624d1b9c85095ff6ac2eabe0397a847
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332404"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541873"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,8 +58,8 @@ ms.locfileid: "34332404"
 
 |데이터베이스|허용함|설명|  
 |---------------|-------------|-----------------|  
-| 사용자 데이터베이스, **모델** 및 **msdb**. | 아니요 | 대부분의 경우 데이터베이스 간 쿼리 및 트랜잭션은 지원되지 *않습니다*.<br /><br />메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저를 사용하는 쿼리는 다른 데이터베이스에 액세스할 수 없습니다. 이 제한 사항은 쿼리뿐 아니라 트랜잭션에도 적용됩니다.<br /><br />예외적으로 시스템 데이터베이스인 **tempdb** 및 **master**에는 액세스할 수 있습니다. 단, **master** 데이터베이스는 읽기 전용으로만 액세스할 수 있습니다. |
-| **리소스** 데이터베이스, **tempdb** | 예 | 메모리 내 OLTP 개체와 관련된 트랜잭션에서는 **리소스** 및 **tempdb** 시스템 데이터베이스를 추가 제한 없이 사용할 수 있습니다.
+| 사용자 데이터베이스, **모델** 및 **msdb**. | 아니오 | 대부분의 경우 데이터베이스 간 쿼리 및 트랜잭션은 지원되지 *않습니다*.<br /><br />메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저를 사용하는 쿼리는 다른 데이터베이스에 액세스할 수 없습니다. 이 제한 사항은 쿼리뿐 아니라 트랜잭션에도 적용됩니다.<br /><br />예외적으로 시스템 데이터베이스인 **tempdb** 및 **master**에는 액세스할 수 있습니다. 단, **master** 데이터베이스는 읽기 전용으로만 액세스할 수 있습니다. |
+| **리소스** 데이터베이스, **tempdb** | 사용자 계정 컨트롤 | 메모리 내 OLTP 개체와 관련된 트랜잭션에서는 **리소스** 및 **tempdb** 시스템 데이터베이스를 추가 제한 없이 사용할 수 있습니다.
 
 
 ## <a name="scenarios-not-supported"></a>지원되지 않는 시나리오  
