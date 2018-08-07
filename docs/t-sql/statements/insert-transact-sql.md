@@ -35,13 +35,13 @@ caps.latest.revision: 136
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e28bd156151f090a7c8ed3568eba4a72b7aab750
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2a0170141b065c900280f75b82e58fb2de1eddcf
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791724"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455977"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -408,7 +408,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
   
  OPENROWSET(BULK…)을 사용할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장을 처리하는 방식을 이해하는 것이 중요합니다. 자세한 내용은 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;를 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)의 "보안 고려 사항"을 참조하세요.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  대상 테이블에 대해 INSERT 권한이 필요합니다.  
   
  **sysadmin** 고정 서버 역할, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 INSERT 권한이 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  

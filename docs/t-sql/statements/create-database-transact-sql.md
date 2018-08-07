@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fb69ad94c2759a4f3bc55409212d9aedad2096f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792271"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456197"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -501,7 +501,7 @@ CREATE DATABASE database_snapshot_name
 ## <a name="viewing-database-information"></a>데이터베이스 정보 보기  
  카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CREATE DATABASE, CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 필요합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디스크 사용을 제어하기 위해 일반적으로 데이터베이스를 만들 수 있는 사용 권한은 일부 로그인 계정으로 제한됩니다.  
@@ -1079,7 +1079,7 @@ CATALOG_COLLATION 인수는 데이터베이스를 생성하는 동안에만 사�
   
  자세한 내용은 [Transact-SQL을 사용하여 Azure SQL 데이터베이스의 복사본 만들기](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 데이터베이스를 만들려면 로그인은 다음 중 하나여야 합니다. 
   
 - 서버 수준 보안 주체 로그인  
@@ -1210,7 +1210,7 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
    > [!TIP]
    > 해결 방법으로 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi)를 `CREATE DATABASE` 뒤에 사용하여 데이터베이스 옵션을 설정하고 파일을 추가합니다.  
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 데이터베이스를 만들려면 로그인은 다음 중 하나여야 합니다. 
   
 - 서버 수준 보안 주체 로그인  
@@ -1291,7 +1291,7 @@ SERVICE_OBJECTIVE
 
 SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변경할 수 없습니다. 자세한 내용은 [Azure SQL Database의 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 필요한 권한  
   
 -   프로비전 프로세스에 의해 생성된 서버 수준 보안 주체 로그인 또는  
@@ -1385,7 +1385,7 @@ WITH (
   
  AUTOGROW가 OFF인 경우 *log_size*를 초과한 개별 계산 노드에서 로그 크기를 증가시키는 모든 작업에 대해서 사용자에게 오류가 반환됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  master 데이터베이스에서 **CREATE ANY DATABASE** 권한 또는 **sysadmin** 고정 서버 역할에서 멤버자격이 필요합니다.  
   
  다음 예에서는 데이터베이스 사용자 Fay에게 데이터베이스를 만들 수 있는 권한을 제공합니다.  

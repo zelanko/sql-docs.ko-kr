@@ -27,13 +27,13 @@ caps.latest.revision: 60
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f81a0363ef180ed781ee7c325640985e8d20bc2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3e23c8eff134160d7c55035738cad9a091bc460c
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789724"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454367"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,7 +133,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>사용 중단 고지 사항  
  스키마 이름을 지정하지 않는 CREATE SCHEMA 문은 이전 버전과의 호환성을 위해 현재 지원됩니다. 이 문은 데이터베이스 내부에 실제로 스키마를 만들지는 않지만 테이블과 뷰를 만들고 사용 권한을 부여합니다. 스키마가 생성되지 않기 때문에 보안 주체에게는 이러한 이전 형식의 CREATE SCHEMA를 실행하는 데 CREATE SCHEMA 권한이 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음번 릴리스에서는 이 기능이 제거될 예정입니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 CREATE SCHEMA 권한이 필요합니다.  
   
  CREATE SCHEMA 문 내에서 지정한 개체를 만들려면 사용자에게 해당 CREATE 권한이 있어야 합니다.  

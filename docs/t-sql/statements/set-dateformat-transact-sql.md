@@ -30,13 +30,13 @@ caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca46e422a05d7d3d2990bc0dfd5db421b9418b75
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7d0114bb98134b86b92bae634f2746abce163279
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791184"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456647"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET DATEFORMAT { format | @format_var }
   
  SET DATEFORMAT은 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)의 암시적 날짜 형식 설정보다 우선 적용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

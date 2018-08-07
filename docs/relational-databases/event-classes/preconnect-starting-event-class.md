@@ -15,13 +15,13 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7652c3b8e57a066f6353a85b09480729fb2a7e05
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8e7ebac1a39218aaa8aa962bba8fb038a5694d62
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328254"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532943"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "34328254"
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|215|27|아니요|  
-|SPID|**int**|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.|12|예|  
-|EventSubClass|**int**|사용자 정의 분류자 함수의 경우 1입니다.|21|예|  
-|StartTime|**datetime**|사용자 정의 분류자 함수가 시작되는 시간입니다.|14|예|  
-|ObjectID|**int**|사용자 정의 분류자 개체의 ID입니다.|22|예|  
-|ObjectName|**nvarchar(256)**|분류자 사용자 정의 함수의 두 부분으로 이루어진 이름입니다(예: dbo.classifier).|34|예|  
+|EventClass|**int**|215|27|아니오|  
+|SPID|**int**|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.|12|사용자 계정 컨트롤|  
+|EventSubClass|**int**|사용자 정의 분류자 함수의 경우 1입니다.|21|사용자 계정 컨트롤|  
+|StartTime|**datetime**|사용자 정의 분류자 함수가 시작되는 시간입니다.|14|사용자 계정 컨트롤|  
+|ObjectID|**int**|사용자 정의 분류자 개체의 ID입니다.|22|사용자 계정 컨트롤|  
+|ObjectName|**nvarchar(256)**|분류자 사용자 정의 함수의 두 부분으로 이루어진 이름입니다(예: dbo.classifier).|34|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   

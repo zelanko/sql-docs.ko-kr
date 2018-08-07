@@ -16,13 +16,13 @@ caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac96fc19852fa45b972308fc48b55687f0885ea6
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 1a69bac2eb9cbbb90949be501891fd873684ea36
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37934875"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509013"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 복제 구성(SQL Server)
 

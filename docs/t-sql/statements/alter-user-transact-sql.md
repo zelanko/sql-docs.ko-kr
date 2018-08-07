@@ -28,13 +28,13 @@ caps.latest.revision: 75
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c818f027da13852b57d87eec057e2d535086f760
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4247fe42571152c3d05434d5e910500c65cd7d10
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942879"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454567"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -193,7 +193,7 @@ ALTER USER userName
 > [!NOTE]  
 >  **ALTER ANY USER** 권한이 있는 사용자는 모든 사용자의 기본 스키마를 변경할 수 있습니다. 스키마가 변경된 사용자는 자신도 모르는 사이 잘못된 테이블에서 데이터를 선택하거나 잘못된 스키마의 코드를 실행할 수 있습니다.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  사용자의 이름을 변경하려면 **ALTER ANY USER** 권한이 필요합니다.  
   
  사용자의 대상 로그인을 변경하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  

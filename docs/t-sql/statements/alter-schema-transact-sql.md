@@ -25,13 +25,13 @@ caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8979188c8de78dd1ac4b78ed3dc15f6d07fdcbf4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 829c5cf6774b2745c621d87b36c9aa78229fde3d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790314"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459687"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ ALTER SCHEMA schema_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  한 스키마에서 다른 스키마로 보안 개체를 이동하려면 현재 사용자에게 보안 개체(스키마가 아님)에 대한 CONTROL 권한과 대상 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
  보안 개체에 EXECUTE AS OWNER 사양이 있고 소유자가 SCHEMA OWNER로 설정된 경우에는 사용자가 대상 스키마의 소유자에 대한 IMPERSONATE 권한도 가져야 합니다.  

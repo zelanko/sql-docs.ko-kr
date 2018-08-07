@@ -15,13 +15,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73a61baa09c40042ad027f784531ce7989280419
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 028695e89f6958eef454e57723a3f1832d6aec2f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332564"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533803"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,27 +31,27 @@ ms.locfileid: "34332564"
   
 |데이터 열|형식|설명|열 번호|필터 가능|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
-|**ClientProcessID**|**int**|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
-|**DatabaseID**|**int**|USE *database* 문에서 지정된 데이터베이스의 ID입니다. 실행된 USE *database*문이 없는 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. **DB_ID** 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Conversation** 의 경우 항상 **124**입니다.|27|아니요|  
-|**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
-|**EventSubClass**|**nvarchar**|이벤트 하위 클래스의 유형입니다. 각 이벤트 클래스에 대한 자세한 정보를 제공합니다.|21|예|  
-|**GUID**|**uniqueidentifier**|대화 상자의 대화 ID입니다. 이 식별자는 메시지의 일부로 전송되며 양쪽 대화 상대 간에 공유합니다.|54|아니요|  
-|**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 **HOST_NAME** 함수를 사용합니다.|8|예|  
-|**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|아니요|  
-|**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
-|**MethodName**|**nvarchar**|대화가 속한 대화 그룹입니다.|47|아니요|  
-|**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
-|**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|예|  
-|**ObjectName**|**nvarchar**|대화 상자의 대화 핸들입니다.|34|아니요|  
-|**Priority**|**int**|대화의 우선 순위 수준입니다.|5|예|  
-|**RoleName**|**nvarchar**|대화 핸들의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|아니요|  
-|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
-|**Severity**|**int**|이 이벤트에서 오류를 보고하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 심각도입니다.|29|아니요|  
-|**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
-|**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
-|**TextData**|**ntext**|대화의 현재 상태입니다. 다음 값 중 하나가 될 수 있습니다.|1|예|  
+|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|사용자 계정 컨트롤|  
+|**ClientProcessID**|**int**|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
+|**DatabaseID**|**int**|USE *database* 문에서 지정된 데이터베이스의 ID입니다. 실행된 USE *database*문이 없는 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. **DB_ID** 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
+|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Conversation** 의 경우 항상 **124**입니다.|27|아니오|  
+|**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|아니오|  
+|**EventSubClass**|**nvarchar**|이벤트 하위 클래스의 유형입니다. 각 이벤트 클래스에 대한 자세한 정보를 제공합니다.|21|사용자 계정 컨트롤|  
+|**GUID**|**uniqueidentifier**|대화 상자의 대화 ID입니다. 이 식별자는 메시지의 일부로 전송되며 양쪽 대화 상대 간에 공유합니다.|54|아니오|  
+|**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 **HOST_NAME** 함수를 사용합니다.|8|사용자 계정 컨트롤|  
+|**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|아니오|  
+|**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|사용자 계정 컨트롤|  
+|**MethodName**|**nvarchar**|대화가 속한 대화 그룹입니다.|47|아니오|  
+|**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|사용자 계정 컨트롤|  
+|**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|사용자 계정 컨트롤|  
+|**ObjectName**|**nvarchar**|대화 상자의 대화 핸들입니다.|34|아니오|  
+|**Priority**|**int**|대화의 우선 순위 수준입니다.|5|사용자 계정 컨트롤|  
+|**RoleName**|**nvarchar**|대화 핸들의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|아니오|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니오|  
+|**Severity**|**int**|이 이벤트에서 오류를 보고하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 심각도입니다.|29|아니오|  
+|**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|사용자 계정 컨트롤|  
+|**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|대화의 현재 상태입니다. 다음 값 중 하나가 될 수 있습니다.|@shouldalert|사용자 계정 컨트롤|  
 |||**SO**. 아웃바운드가 시작되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이 대화에 대해 BEGIN CONVERSATION을 처리했지만 메시지가 전송되지 않았습니다.|||  
 |||**SI**. 인바운드가 시작되었습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 다른 인스턴스에서 현재 인스턴스와 새 대화를 시작했지만 현재 인스턴스가 첫 번째 메시지를 완전히 받지 못했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 순서가 잘못된 메시지를 받는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 대화를 이 상태로 만들 수 있습니다. 그러나 대화에 대해 받은 첫 번째 전송에 첫 번째 메시지가 모두 포함된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 대화를 CO 상태로 만들 수 있습니다.|||  
 |||**CO**. 대화 중입니다. 대화가 설정되고 대화의 양쪽 모두 메시지를 보낼 수 있습니다. 일반 서비스에 대한 통신의 대부분은 대화가 이 상태일 때 수행됩니다.|||  
@@ -59,13 +59,13 @@ ms.locfileid: "34332564"
 |||**DO**. 아웃바운드 연결이 끊어졌습니다. 로컬 대화 상대가 END CONVERSATION을 실행했습니다. 원격 대화 상대가 END CONVERSATION을 승인할 때까지 대화는 이 상태로 유지됩니다. 응용 프로그램에서 대화 메시지를 보내거나 받을 수 없습니다. 원격 대화 상대가 END CONVERSATION을 승인하면 대화가 CD(닫힘) 상태로 전환됩니다.|||  
 |||**ER**. 오류입니다. 이 끝점에서 오류가 발생했습니다. 오류, 심각도 및 상태 열은 발생한 특정 오류에 대한 정보를 포함합니다.|||  
 |||**CD**. 종료되었습니다. 대화 끝점은 더 이상 사용되지 않습니다.|||  
-|**Transaction ID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니요|  
+|**Transaction ID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니오|  
   
  다음 표에서는 이 이벤트 클래스에 대한 하위 클래스 값을 나열합니다.  
   
 |ID|하위 클래스|설명|  
 |--------|--------------|-----------------|  
-|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **이 SEND 문을 실행할 때** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이벤트를 생성합니다.|  
+|@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **이 SEND 문을 실행할 때** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이벤트를 생성합니다.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **이 WITH ERROR 절이 포함되지 않은 END CONVERSATION 문을 실행할 때** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이벤트를 생성합니다.|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **이 WITH ERROR 절이 포함된 END CONVERSATION 문을 실행할 때** END CONVERSATION WITH ERROR [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이벤트를 생성합니다.|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **가 오류 메시지를 만들 때마다** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] 이벤트를 생성합니다. 예를 들어 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 에서 대화에 대한 메시지를 성공적으로 라우팅하지 못하는 경우 Broker는 대화에 대해 오류 메시지를 만들고 이 이벤트를 생성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 응용 프로그램이 오류로 인해 대화를 종료하는 경우 이 이벤트를 생성하지 않습니다.|  

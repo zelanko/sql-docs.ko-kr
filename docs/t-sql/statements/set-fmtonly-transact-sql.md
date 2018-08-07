@@ -25,13 +25,13 @@ caps.latest.revision: 48
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93ae9787488d9f2a7df3b0a8516b265706f4c4fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: aae5981553ebe1044697be3d60496dee43559afe
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784464"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456927"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ SET FMTONLY { ON | OFF }
   
  SET FMTONLY 옵션은 실행 시나 런타임에 설정되며 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

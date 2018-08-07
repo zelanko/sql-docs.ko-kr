@@ -30,13 +30,13 @@ caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1209d7cc2bf7270922fa271d7f63984d50fb775
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3d86b859ed9f5688485ed796b742607ec737a592
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785394"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458367"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +110,7 @@ DATEPART ( datepart , date )
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
 |**week, wk, ww**|45|  
-|**weekday, dw**|1|  
+|**weekday, dw**|@shouldalert|  
 |**hour, hh**|12|  
 |**minute, n**|15|  
 |**second, ss, s**|32|  
@@ -142,12 +142,12 @@ SET DATEFIRST 7 -- (일요일)
   
 |SET DATEFIRST<br /><br /> 인수(argument)|week<br /><br /> 반환|weekday<br /><br /> 반환|  
 |---|---|---|
-|1|16|6|  
+|@shouldalert|16|6|  
 |2|17|5|  
 |3|17|4|  
 |4|17|3|  
 |5|17|2|  
-|6|17|1|  
+|6|17|@shouldalert|  
 |7|16|7|  
   
 ## <a name="year-month-and-day-datepart-arguments"></a>year, month 및 day datepart 인수  
@@ -162,12 +162,12 @@ ISO 8601에는 주 번호 매기기 시스템인 ISO 주-일 시스템이 포함
   
 |시작 요일|연도의 첫째 주에 포함되는 항목|주가 두 번 할당됨|사용|  
 |---|---|---|---|
-|일요일|1월 1일<br /><br /> 첫 번째 토요일<br /><br /> 한 해의 1-7일|예|United States|  
-|월요일|1월 1일<br /><br /> 첫 번째 일요일<br /><br /> 한 해의 1-7일|예|대부분의 유럽, 영국|  
-|월요일|1월 4일,<br /><br /> 첫 번째 목요일<br /><br /> 한 해의 4-7일|아니요|ISO 8601, 노르웨이 및 스웨덴|  
-|월요일|1월 7일,<br /><br /> 첫 번째 월요일<br /><br /> 한 해의 7일|아니요||  
-|수요일|1월 1일<br /><br /> 첫 번째 화요일<br /><br /> 한 해의 1-7일|예||  
-|토요일|1월 1일<br /><br /> 첫 번째 금요일<br /><br /> 한 해의 1-7일|예||  
+|일요일|1월 1일<br /><br /> 첫 번째 토요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤|United States|  
+|월요일|1월 1일<br /><br /> 첫 번째 일요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤|대부분의 유럽, 영국|  
+|월요일|1월 4일,<br /><br /> 첫 번째 목요일<br /><br /> 한 해의 4-7일|아니오|ISO 8601, 노르웨이 및 스웨덴|  
+|월요일|1월 7일,<br /><br /> 첫 번째 월요일<br /><br /> 한 해의 7일|아니오||  
+|수요일|1월 1일<br /><br /> 첫 번째 화요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤||  
+|토요일|1월 1일<br /><br /> 첫 번째 금요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART`는 **TZoffset**(**tz**) 값을 분 수(부호 있음)로 반환합니다. 이 명령문은 310분의 표준 시간대 오프셋을 반환합니다.

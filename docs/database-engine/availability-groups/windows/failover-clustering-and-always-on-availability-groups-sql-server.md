@@ -20,13 +20,13 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f681d05c05d54762da3ba49206befa5ddfe0bd52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 5065bda0d38d08c71ca85288c407ecac36271963
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769359"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509082"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
 
@@ -71,11 +71,11 @@ ms.locfileid: "34769359"
   
 ||FCI 내의 노드|가용성 그룹 내의 복제본|  
 |-|-------------------------|-------------------------------------------|  
-|**WSFC 클러스터 사용**|예|예|  
+|**WSFC 클러스터 사용**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
 |**보호 수준**|인스턴스|데이터베이스|  
 |**저장소 유형**|Shared|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 저장소를 공유하지 않는 반면 FCI가 호스팅하는 복제본은 해당 FCI가 요구하는 대로 공유 저장소 솔루션을 사용합니다. 저장소 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
 |**저장소 솔루션**|직접 연결됨, SAN, 탑재 지점, SMB|노드 유형에 따라 다름|  
-|**읽기 가능한 보조 복제본**|아니요*|예|  
+|**읽기 가능한 보조 복제본**|아니요*|사용자 계정 컨트롤|  
 |**적용할 수 있는 장애 조치(Failover) 정책 설정**|WSFC 쿼럼<br /><br /> FCI별<br /><br /> 가용성 그룹 설정**|WSFC 쿼럼<br /><br /> 가용성 그룹 설정|  
 |**장애 조치(Failover)가 실행된 리소스**|서버, 인스턴스 및 데이터베이스|데이터베이스만|  
   

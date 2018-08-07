@@ -32,13 +32,13 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 88d7db92ac5ff2ebd47c28b27974da934a68a188
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 36277d0c22e37e1598deb0e52fa0aa1b98328873
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248015"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460027"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +102,7 @@ SELECT INTO는 기본 파일 그룹에 새 테이블을 만든 후 쿼리의 결
 ## <a name="logging-behavior"></a>로깅 동작  
  `SELECT...INTO`에 대한 로깅의 양은 데이터베이스에 적용되는 복구 모델에 따라 다릅니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. 최소 로깅으로 `SELECT...INTO` 문을 사용하면 테이블을 만든 다음, INSERT 문을 사용하여 해당 테이블을 채우는 것보다 더 효율적일 수 있습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  대상 데이터베이스에서 CREATE TABLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -40,13 +40,13 @@ caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ed57c531d18a06fd75c825ad57139865ef07308
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7319776010a860a514e1894318500e22595719cc
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783944"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455127"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -350,7 +350,7 @@ FROM Tn;
   
 -   뷰를 사용하여 수행된 업데이트의 복제는 서로 다른 두 데이터베이스에서 테이블이 복제될 때와 동일합니다. 서로 다른 복제 에이전트에서 테이블을 제공하며 업데이트 순서는 보장되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

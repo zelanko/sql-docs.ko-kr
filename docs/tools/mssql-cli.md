@@ -13,13 +13,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf49d6676b64386985a8af46676bab4e9c9c134d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b18c60535f352a7ad2f0ae7b31a3a207a2414498
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037477"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454687"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>SQL Server 용 mssql cli 명령줄 쿼리 도구
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

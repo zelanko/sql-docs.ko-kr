@@ -29,13 +29,13 @@ caps.latest.revision: 105
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0fb9483e518da120f83d635dc3acc8de02435557
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ea7f32441e2536cac2a2c2b33ca2635e767cbba6
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787814"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454817"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,7 +206,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
   
- 1  
+ @shouldalert  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -217,7 +217,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  다음 중 한 가지 권한이 필요합니다.  
   
 -   ALTER TABLE  

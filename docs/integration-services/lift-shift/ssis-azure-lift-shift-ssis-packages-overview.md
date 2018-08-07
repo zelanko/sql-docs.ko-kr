@@ -12,15 +12,15 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 3864a5ac0f4bb1ebd87ab54a0b949ec80b636bc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304393"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482664"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
-이제 SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Azure 클라우드로 이동할 수 있습니다. SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용하여 SQL Database 관리되는 인스턴스(미리 보기) 또는 Azure SQL Database의 SSIS 카탈로그(SSISDB)에서 SSIS 프로젝트와 패키지를 배포, 실행 및 관리합니다.
+이제 SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Azure 클라우드로 이동할 수 있습니다. SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용하여 SQL Database Managed Instance(미리 보기) 또는 Azure SQL Database의 SSIS 카탈로그(SSISDB)에서 SSIS 프로젝트와 패키지를 배포, 실행 및 관리합니다.
 
 ## <a name="benefits"></a>이점
 온-프레미스 SSIS 워크로드를 Azure로 이동하면 다음과 같은 잠재적 이점이 있습니다.
@@ -36,7 +36,7 @@ ms.locfileid: "37304393"
 | 위치 | 저장소 | 런타임 | 확장성 |
 |---|---|---|---|
 | 온-프레미스 | SQL Server | SQL Server에서 호스팅하는 SSIS 런타임 | SSIS Scale Out(SQL Server 2017 이상)<br/><br/>사용자 지정 솔루션(이전 버전의 SQL Server) |
-| Azure | SQL Database 또는 SQL Database 관리되는 인스턴스(미리 보기)에서 | Azure Data Factory의 구성 요소인 Azure SSIS Integration Runtime | Azure-SSIS Integration Runtime의 옵션 크기 조정 |
+| Azure | SQL Database 또는 SQL Database Managed Instance(미리 보기)에서 | Azure Data Factory의 구성 요소인 Azure SSIS Integration Runtime | Azure-SSIS Integration Runtime의 옵션 크기 조정 |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Azure에서 SSIS 프로비전
@@ -75,7 +75,7 @@ SSDT가 설치된 Visual Studio 또는 SSDT에서 온-프레미스 **패키지�
 
 SQL Database 인스턴스를 프로비전하여 SSISDB를 호스팅하면 SSIS용 Azure Feature Pack 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 다양한 **Azure** 데이터 원본 및 **Excel 및 Access** 파일에 대한 연결을 제공합니다.
 
-추가 구성 요소를 설치할 수도 있습니다. 예를 들어 기본적으로 설치되지 않은 드라이버를 설치할 수 있습니다. 자세한 내용은 [Azure SSIS Integration Runtime에 대한 사용자 지정 설치](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
+추가 구성 요소를 설치할 수도 있습니다. 예를 들어 기본적으로 설치되지 않은 드라이버를 설치할 수 있습니다. 자세한 내용은 [Azure SSIS Integration Runtime에 대한 사용자 지정 설치](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
 
 Enterprise Edition 라이선스가 있는 경우 추가 구성 요소를 사용할 수 있습니다. 자세한 내용은 [Azure-SSIS Integration Runtime용 Enterprise Edition 프로비전](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition)을 참조하세요.
 

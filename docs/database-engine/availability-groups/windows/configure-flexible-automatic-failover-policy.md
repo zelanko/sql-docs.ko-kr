@@ -17,13 +17,13 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7980cc5f02b5766ef30e06440cb6dfa30fdc5560
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: e693f27ef976afcc9fcb86ace9c16c114af90c70
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768719"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509202"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>유연한 자동 장애 조치 정책 구성
 
@@ -66,7 +66,7 @@ ms.locfileid: "34768719"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|태스크|사용 권한|  
+|태스크|Permissions|  
 |----------|-----------------|  
 |새로운 가용성 그룹에 대해 유연한 장애 조치(failover) 정책을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |기존 가용성 그룹의 정책을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
@@ -91,7 +91,7 @@ ms.locfileid: "34768719"
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 값|Level|자동 장애 조치가 시작되는 경우|  
         |------------------------------|-----------|-------------------------------------------|  
-        |1|1|서버 작동 중지 시. 장애 조치나 재시작으로 인해 SQL Server 서비스가 중지된 경우|  
+        |@shouldalert|1|서버 작동 중지 시. 장애 조치나 재시작으로 인해 SQL Server 서비스가 중지된 경우|  
         |2|2|서버 응답 없음 발생 시. 낮은 값의 조건이 모두 충족되거나, SQL Server 서비스가 클러스터에 연결되었지만 상태 확인 제한 시간 임계값을 초과했거나, 현재 주 복제본이 오류 상태인 경우|  
         |3|3|중대 서버 오류 발생 시. 낮은 값의 조건이 모두 충족되거나 내부 중대 서버 오류가 발생한 경우<br /><br /> 이 값은 기본 수준입니다.|  
         |4|4|일반 서버 오류 발생 시. 낮은 값의 조건이 모두 충족되거나 일반 서버 오류가 발생한 경우|  

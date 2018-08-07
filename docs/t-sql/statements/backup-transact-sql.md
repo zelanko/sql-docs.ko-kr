@@ -49,13 +49,13 @@ caps.latest.revision: 275
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7775dbaa4a8c28d9e7124b94c73f3b87c9e68838
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: badb439efd08c82e11ae9868f96fcb3db27d65cb
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984825"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458937"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -233,7 +233,7 @@ TO \<backup_device> [ **,**...*n* ] 함께 제공되는 [백업 장치](../../re
   
  { *logical_device_name* | **@***logical_device_name_var* } **적용 대상:** SQL Server, 데이터베이스를 백업할 백업 장치의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@* logical_device_name_var *)로 제공한 경우 백업 장치 이름은 문자열 상수(@* logical_device_name_var***=** 논리적 백업 장치 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **적용 대상:** 디스크, 테이프 및 URL, SQL Server에 적용합니다. URL만 SQL Database 관리되는 인스턴스에 적용하며, 디스크 파일이나 테이프 장치 또는 Windows Azure Blob 스토리지 서비스를 지정합니다. URL 형식은 Windows Azure 저장소 서비스로 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요. 
+ { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **적용 대상:** 디스크, 테이프 및 URL, SQL Server에 적용합니다. URL만 SQL Database Managed Instance에 적용하며, 디스크 파일이나 테이프 장치 또는 Windows Azure Blob 스토리지 서비스를 지정합니다. URL 형식은 Windows Azure 저장소 서비스로 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요. 
 
 > [!NOTE] 
 > NUL 디스크 장치는 전송된 모든 정보를 버리고 테스트용으로만 사용해야 합니다. 프로덕션용이 아닙니다.
@@ -241,7 +241,8 @@ TO \<backup_device> [ **,**...*n* ] 함께 제공되는 [백업 장치](../../re
 > [!IMPORTANT]  
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는 URL로 백업할 때 단일 장치로만 백업할 수 있습니다. URL로 백업할 때 여러 장치에 백업하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지를 사용해야 하고 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
-**URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2) 및 SQL Database 관리되는 인스턴스.  
+
+  **URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2) 및 SQL Database Managed Instance.  
   
  BACKUP 문에 지정되기 전에는 디스크 장치가 없어도 됩니다. 물리적 장치가 존재하고 BACKUP 문에서 INIT 옵션이 지정되지 않은 경우에는 백업이 장치에 추가됩니다.  
  
@@ -277,7 +278,8 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 절에 지정된 각각의 백업 
  백업 작업에 사용할 옵션을 지정합니다.  
   
  CREDENTIAL  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2) 및 SQL Database 관리되는 인스턴스.  
+
+  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2) 및 SQL Database Managed Instance.  
  Windows Azure Blob 저장소 서비스로 백업을 만들 때에만 사용됩니다.  
   
  FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).
@@ -316,7 +318,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 절에 지정된 각각의 백업 
 > [!NOTE]  
 > 복원 작업에 백업 세트를 지정하려면 `FILE = <backup_set_file_number>` 옵션을 사용합니다. 백업 세트를 지정하는 방법에 대한 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.
   
- COPY_ONLY **적용 대상:** SQL Server 및 SQL Database 관리되는 인스턴스, 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 *복사 전용 백업*임을 지정합니다. 복사 전용 백업은 정기적으로 예약되어 수행되는 기존 백업과는 별개로 생성됩니다. 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다.  
+ COPY_ONLY **적용 대상:** SQL Server 및 SQL Database Managed Instance, 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 *복사 전용 백업*임을 지정합니다. 복사 전용 백업은 정기적으로 예약되어 수행되는 기존 백업과는 별개로 생성됩니다. 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다.  
   
  복사 전용 백업은 온라인 파일을 복원하기 전에 로그를 백업하는 것과 같은 특별한 목적을 위해 백업을 수행할 때 사용됩니다. 일반적으로 복사 전용 로그 백업은 한 번만 사용된 후 삭제됩니다.  
   
@@ -719,8 +721,8 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 백업 작업이 파일 관리 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업이 설정한 잠금 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
 
-## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database 관리되는 인스턴스의 제한 사항
-SQL Database 관리되는 인스턴스는 데이터베이스를 스트라이프가 최대 32개인 백업으로 백업할 수 있습니다. 이는 백업 압축을 사용하는 경우 최대 4TB의 데이터베이스에 충분합니다.
+## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database Managed Instance의 제한 사항
+SQL Database Managed Instance는 데이터베이스를 스트라이프가 최대 32개인 백업으로 백업할 수 있습니다. 이는 백업 압축을 사용하는 경우 최대 4TB의 데이터베이스에 충분합니다.
 
 최대 백업 스트라이프 크기는 195GB(최대 blob 크기)입니다. 개별 스트라이프 크기를 줄이고 이 제한 내로 유지하려면 백업 명령에서 스트라이프 수를 늘립니다.
 

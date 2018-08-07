@@ -25,13 +25,13 @@ caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6996881c2b41e41a5442ad88888f08e6f7bef498
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ae2e2d80e499b65b116a46a572f2cfe1c47fdf33
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791854"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454807"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ CLOSE MASTER KEY
 ## <a name="remarks"></a>Remarks  
  이 문은 OPEN MASTER KEY로 수행한 작업을 반대로 수행합니다. CLOSE MASTER KEY는 OPEN MASTER KEY 문을 사용하여 현재 세션에서 데이터베이스 마스터 키를 연 경우에만 성공합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용 권한이 필요 없습니다.  
   
 ## <a name="examples"></a>예  

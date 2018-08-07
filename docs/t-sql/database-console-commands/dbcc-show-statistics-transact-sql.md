@@ -36,13 +36,13 @@ caps.latest.revision: 75
 author: uc-msft
 ms.author: umajay
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ef8ab735511e5885fde7c3e5a218a75bc6f41fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 45f0e42f637f452b12ff32a0b2f580c3c87e9bd3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262633"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454637"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 STAT_HEADER를 지정한 경우 결과 집합에 반환되는 열을 설명합니다.
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |속성|통계 개체의 이름입니다.|  
 |업데이트|통계가 마지막으로 업데이트된 날짜와 시간입니다. [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 함수를 사용하여 이 정보를 검색할 수도 있습니다. 자세한 내용은 이 페이지의 [주의](#Remarks) 섹션을 참조하세요.|  
@@ -114,7 +114,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 다음 표에서는 DENSITY_VECTOR를 지정한 경우 결과 집합에 반환되는 열을 설명합니다.
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |모든 밀도|밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 고유 값 목록 (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7)입니다. 접두사 (A, B)를 사용하면 동일한 열 값은 이러한 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)를 가집니다.|  
 |평균 길이|열 접두사의 열 값 목록을 저장하기 위한 평균 길이(바이트)입니다. 예를 들어 목록 (3, 5, 6)의 각 값에 4바이트가 필요한 경우 길이는 12바이트입니다.|  
@@ -122,7 +122,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 다음 표에서는 HISTOGRAM 옵션을 지정한 경우 결과 집합에 반환된 열을 설명합니다.
   
-|열 이름|Description|  
+|열 이름|설명|  
 |---|---|
 |RANGE_HI_KEY|히스토그램 단계의 상한 열 값입니다. 열 값은 키 값이라고도 합니다.|  
 |RANGE_ROWS|상한을 제외한 히스토그램 단계 내에 열 값이 있는 예상 행 수입니다.|  

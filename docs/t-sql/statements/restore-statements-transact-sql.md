@@ -43,13 +43,13 @@ caps.latest.revision: 248
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8e5980fea20deb2dc1e1c684cb8d354136182007
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7cc19f197ca0af1c03f16d4e381a75dcf947cbc7
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38048601"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456567"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -338,7 +338,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  가용성 데이터베이스를 복원하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 데이터베이스를 복원한 다음 데이터베이스를 가용성 그룹에 추가합니다.  
 
-## <a name="general-remarks---sql-database-managed-instance"></a>일반적인 주의 사항 - SQL Database 관리되는 인스턴스
+## <a name="general-remarks---sql-database-managed-instance"></a>일반적인 주의 사항 - SQL Database Managed Instance
 
 비동기 복원의 경우 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함). 
 
@@ -351,7 +351,7 @@ Note: URL is the format used to specify the location and the file name for the W
 - 메모리에 최적화된 파일 그룹이 추가되고 원본 .bak 파일에 없는 경우 XTP를 호출합니다. 모든 기존 메모리에 최적화된 파일 그룹은 XTP로 이름이 변경됩니다.
 - SINGLE_USER 및 RESTRICTED_USER 옵션은 MULTI_USER로 변환됩니다.
 
-## <a name="limitations---sql-database-managed-instance"></a>제한 사항 - SQL Database 관리되는 인스턴스
+## <a name="limitations---sql-database-managed-instance"></a>제한 사항 - SQL Database Managed Instance
 다음과 같은 제한이 적용됩니다.
 
 - 여러 백업 세트를 포함하는 .BAK 파일은 복원할 수 없습니다.

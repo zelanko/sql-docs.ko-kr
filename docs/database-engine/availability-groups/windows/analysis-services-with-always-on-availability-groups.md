@@ -13,13 +13,13 @@ caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6874419218be60b58b11a2a3009b1eb8577e000a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 6f2642ece9de3e8a90a5ef18604bf287c46ce545
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769109"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509092"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
 

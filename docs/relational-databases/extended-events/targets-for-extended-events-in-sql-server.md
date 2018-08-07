@@ -14,13 +14,13 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff8bbd4060e6aa309c3e98f52c04fe88b76721fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941068"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533823"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동
 이 ETW 대상은 수신되는 데이터를 *동기적으로* 처리하는 반면 대부분 대상은 *비동기적으로*처리합니다.
 
 > [!NOTE]
-> Azure SQL Database는 ETW 대상을 지원하지 않습니다. Azure SQL Database 관리되는 인스턴스도 지원하지 않습니다.
+> Azure SQL Database는 ETW 대상을 지원하지 않습니다. Azure SQL Database Managed Instance도 지원하지 않습니다.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -159,7 +159,7 @@ CREATE EVENT SESSION [event_counter_1]
 > [!NOTE]
 > Azure SQL Database는 **event_file** 대상을 지원하지만 출력에 대한 Azure Storage의 blob을 사용하는 경우에만 해당합니다. SQL Database는 로컬 하드 드라이브의 파일에 이벤트 출력을 저장할 수 없습니다.
 >
-> SQL Database(및 SQL Database 관리되는 인스턴스)에 대한 **event_file** 코드 예제의 경우 [SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)를 참조하세요.
+> SQL Database(및 SQL Database Managed Instance)에 대한 **event_file** 코드 예제의 경우 [SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)를 참조하세요.
 
 ::: moniker-end
 

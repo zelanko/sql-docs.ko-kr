@@ -40,13 +40,13 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8507904e98c032d9ab57b9bb51ae486f68c805c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3e10bf2f229be4c164c1e8459f5646e009208602
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788654"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455857"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -105,7 +105,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 > [!IMPORTANT]  
 >  동일한 일괄 처리에서 동일한 테이블에 대해 DROP TABLE과 CREATE TABLE을 실행할 수는 없습니다. 이를 실행하면 예기치 않은 오류가 발생할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  테이블이 속한 스키마에 대한 ALTER 권한, 테이블에 대한 CONTROL 권한 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

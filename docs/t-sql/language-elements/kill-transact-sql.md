@@ -37,13 +37,13 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b40c02d7118b1d844263b1c298f256b74d95fea
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5ede9b032da51d0155797aef1340250654645dfa
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255575"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459167"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +124,7 @@ JOIN sys.dm_exec_connections AS conn
   
  같은 KILL *session ID*|*UOW* 문을 WITH STATUSONLY 옵션 없이 반복하면 동일한 상태 보고를 가져올 수 있지만 이 방법은 사용하지 않는 것이 좋습니다. KILL *session ID* 문이 실행되기 전에 롤백이 완료되고 세션 ID가 새 태스크에 다시 할당된 경우 KILL 문을 반복하면 새 프로세스를 종료할 수 있습니다. WITH STATUSONLY를 지정하면 이런 경우가 발생하는 것을 방지할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** ALTER ANY CONNECTION 권한이 필요합니다. ALTER ANY CONNECTION은 sysadmin 또는 processadmin 고정 서버 역할의 멤버에 포함되어 있습니다.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** KILL DATABASE CONNECTION 권한이 필요합니다. 서버 수준 보안 주체 로그인에 KILL DATABASE CONNECTION이 있습니다.  

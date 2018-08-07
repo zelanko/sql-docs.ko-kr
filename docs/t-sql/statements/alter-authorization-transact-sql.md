@@ -29,13 +29,13 @@ caps.latest.revision: 84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1d1ff4bfeb848cf4f668d7e48a3cd3b574052ecc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 741f76e47b883ce9aa95b27c473052a78fa42967
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786214"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457507"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,7 +282,7 @@ SELECT IS_MEMBER ('db_owner');
 반환 값 1은 사용자가 역할의 멤버라는 것을 나타냅니다.  
    
     
-## <a name="permissions"></a>사용 권한    
+## <a name="permissions"></a>Permissions    
  엔터티에 대한 TAKE OWNERSHIP 권한이 필요합니다. 새 소유자가 이 문을 실행하는 사용자가 아니면 1) 새 소유자가 사용자이거나 로그인인 경우 새 소유자에 대한 IMPERSONATE 권한, 2) 새 소유자가 역할인 경우 역할의 멤버 자격이나 역할에 대한 ALTER 권한 또는 3) 새 소유자가 응용 프로그램 역할인 경우 응용 프로그램 역할에 대한 ALTER 권한도 필요합니다.    
     
 ## <a name="examples"></a>예    

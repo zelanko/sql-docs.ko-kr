@@ -21,13 +21,13 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9961be2758ba85deefa53b1d376ce688317f1f55
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 25b0d6501dc1327b1f7cb20e9b1d2cfa15162ef5
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257665"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457517"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -191,7 +191,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. 이는 SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되도록 보장되지 않기 때문입니다. 자세한 내용은 [이 KB 문서](http://support.microsoft.com/kb/287515)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@***local_variable*을 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
