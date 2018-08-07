@@ -18,13 +18,13 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ecc827d1b784ad81907443c42f80d69b6f7f05f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7305d11cfa471f7885684cefabd0817ceb86ef03
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940730"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564677"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "32940730"
 |[유니코드 문자 형식의 명령 옵션](#command_options)|
 |[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)|
 |[예](#examples)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 문자 형식을 사용하여 데이터 내보내기](#bcp_widechar_export)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 문자 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_widechar_import)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 문자 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기](#bcp_widechar_import_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 유니코드 문자 형식 사용](#bulk_widechar)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 BULK INSERT 및 유니코드 문자 형식 사용하기](#bulk_widechar_fmt)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 OPENROWSET 및 유니코드 문자 형식 사용하기](#openrowset_widechar_fmt)|
-|[관련 태스크](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
+|[관련 작업](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
  
 ## 유니코드 문자 형식 사용 시 고려 사항<a name="considerations"></a>
 유니코드 문자 형식을 사용할 때 다음 사항을 고려하세요.  
@@ -87,7 +87,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
   
 다음 명령 옵션에서 유니코드 문자 형식을 사용할 수 있습니다.  
   
-|Command|옵션|Description|  
+|Command|옵션|설명|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|유니코드 문자 형식을 사용합니다.|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|대량으로 데이터를 가져올 때 유니코드 문자 형식을 사용합니다.|  

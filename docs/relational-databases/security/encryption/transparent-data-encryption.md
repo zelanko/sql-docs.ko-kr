@@ -22,13 +22,13 @@ caps.latest.revision: 75
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a247da19c7b4f546cb2503f4be4478b1912373c3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0392a841a28df19105154521f9e93952f56c2bfe
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699934"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564577"
 ---
 # <a name="transparent-data-encryption-tde"></a>투명한 데이터 암호화
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,7 +133,7 @@ GO
 |[sys.certificates&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|데이터베이스의 인증서를 보여 주는 카탈로그 뷰입니다.|  
 |[sys.dm_database_encryption_keys&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)|데이터베이스에 사용된 암호화 키 및 데이터베이스 암호화의 상태에 대한 정보를 보여 주는 동적 관리 뷰입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  위에 표시된 표에서 설명한 것처럼 TDE의 기능 및 명령에는 각각의 사용 권한 요구 사항이 있습니다.  
   
  TDE와 관련된 메타데이터를 보려면 인증서에 대한 VIEW DEFINITION 권한이 필요합니다.  

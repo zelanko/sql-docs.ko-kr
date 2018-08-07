@@ -14,13 +14,13 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4b49040b94f04625a027ec07a490117aebed278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941388"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564727"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,6 +97,7 @@ columnstore 인덱스는 rowstore 인덱스보다 10배 더 뛰어난 데이터 
   
 *   별도 데이터 웨어하우스가 필요하지 않습니다. 일반적으로 회사는 rowstore 테이블에서 트랜잭션을 실행하고 별도의 데이터 웨어하우스에 데이터를 로드하여 분석을 실행합니다. 많은 워크로드에서 트랜잭션 테이블에 비클러스터형 columnstore 인덱스를 만들어 로드 프로세스 및 별도의 데이터 웨어하우스를 제거할 수 있습니다.
 
+  
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]은 이 시나리오의 성능을 향상시킬 수 있는 몇 가지 전략을 제공합니다. OLTP 응용 프로그램을 변경하지 않고도 비클러스터형 columnstore 인덱스를 사용할 수 있으므로 매우 쉽게 체험할 수 있습니다. 
 
 처리 리소스를 더 추가하려면 읽기 가능한 보조 복제본에서 분석을 실행할 수 있습니다. 읽기 가능한 보조 복제본 사용으로 트랜잭션 워크로드 및 분석 워크로드의 처리를 구분합니다. 

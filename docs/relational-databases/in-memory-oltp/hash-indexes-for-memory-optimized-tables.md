@@ -15,13 +15,13 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: caff40911c06bcf57ae1eb39f042de12b8157405
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0524bcc2c289307e6285ffbee8dac2e6b49047d7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331724"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565867"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>메모리 최적화 테이블의 해시 인덱스 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -196,7 +196,7 @@ go
 | :-------- | ---------------: | ---------------: |  
 | IX_OrderSequence | 8 | 26 |  
 | ix_StatusCode | 65536 | 65536 |  
-| PK_SalesOrd_B14003... | 1 | 8 |  
+| PK_SalesOrd_B14003... | @shouldalert | 8 |  
   
 3개의 해시 인덱스에 대한 위의 결과 테이블을 해석해 보겠습니다.  
   
