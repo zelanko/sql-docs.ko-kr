@@ -19,13 +19,13 @@ caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa8adef85d2b1eb0513763174446837f41f158dd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e5ebbec5b812be6fe5c74d2035f19c2d1c0cdd9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697484"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546633"
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ PASSWORD = '<some strong password>';
 ```  
 항상 데이터베이스 마스터 키를 백업하세요. 데이터베이스 마스터 키에 대한 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)를 참조하세요.
 
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>간단한 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
+#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>인증자를 포함하는 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -123,7 +123,7 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>인증자를 포함하는 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
+#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>간단한 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

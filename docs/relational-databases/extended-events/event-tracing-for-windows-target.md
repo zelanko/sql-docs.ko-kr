@@ -18,13 +18,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f3471f30347decd4a6a7f882aed43c8d1325107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c3f447e5c0ffa192262e26ade592d1e9c23fc741
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939788"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561013"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "32939788"
   
  다음 표에서는 ETW 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용된 값|Description|  
+|옵션|허용된 값|설명|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션 이름입니다. 기본적으로 이 이름은 XE_DEFAULT_ETW_SESSION입니다.|  
 |default_etw_session_logfile_path|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일에 대한 경로입니다. 기본적으로 이 경로는 %TEMP%\ XEEtw.etl입니다.|  

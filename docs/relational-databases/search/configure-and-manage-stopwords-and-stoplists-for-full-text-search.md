@@ -22,13 +22,13 @@ caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f76976b1dbb89027db6bb194b124f9813768398
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 64d4572f3b2612bb4b10210adbe8f8edb301572c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182129"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553283"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "33182129"
   
 |Word|위치|  
 |----------|--------------|  
-|Instructions|1|  
+|Instructions|@shouldalert|  
 |are|2|  
 |applicable|3|  
 |및|4|  

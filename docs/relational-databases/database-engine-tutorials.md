@@ -15,13 +15,13 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c5e486ef0801742323dbb62236e4410fa8f074c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3b483a3b73fbcd3867b9d14d1a31032688e6fdb8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924608"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557223"
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

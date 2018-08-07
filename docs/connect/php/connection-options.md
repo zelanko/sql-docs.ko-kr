@@ -1,7 +1,7 @@
 ---
 title: 연결 옵션 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174940"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367645"
 ---
 # <a name="connection-options"></a>연결 옵션
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "39174940"
 |TraceFile|String|추적 데이터에 사용되는 파일에 대한 경로를 지정합니다.|설정된 값이 없습니다.|  
 |TraceOn|추적을 사용하도록 설정하려면 1 또는 **true** 입니다.<br /><br />추적을 사용하지 않도록 설정하려면 0 또는 **false** 입니다.|설정되는 연결에 대해 ODBC 추적이 사용하도록 설정되는지(1 또는 **true**) 사용하지 않도록 설정되는지(0 또는 **false**) 지정합니다.|**false**(0)|  
 |TransactionIsolation|SQLSRV 드라이버는 다음 값을 사용합니다.<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV 드라이버는 다음 값을 사용 합니다.<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|트랜잭션 격리 수준을 지정합니다.<br /><br />트랜잭션 격리에 대한 자세한 내용은 SQL Server 설명서에서 [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.|SQLSRV_TXN_READ_COMMITTED<br /><br />로 구분하거나 여러<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|TransparentNetworkIPResolution|**사용** 또는 **사용 안 함**|호스트 이름으로 연결 된 첫 번째 호스트 이름의 IP 응답 하지 않는 되며 여러 Ip를 확인 하는 경우 연결 시퀀스에 영향을 줍니다.<br /><br />다른 연결 시퀀스를 제공 하는 MultiSubnetFailover와 상호 작용 합니다. 자세한 내용은 [Transparent Network IP Resolution를 사용 하 여](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)입니다.|설정|
+|TransparentNetworkIPResolution|**사용** 또는 **사용 안 함**|호스트 이름으로 연결 된 첫 번째 호스트 이름의 IP 응답 하지 않는 되며 여러 Ip를 확인 하는 경우 연결 시퀀스에 영향을 줍니다.<br /><br />다른 연결 시퀀스를 제공 하는 MultiSubnetFailover와 상호 작용 합니다. 자세한 내용은 [Transparent Network IP Resolution](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) 하거나 [Transparent Network IP Resolution를 사용 하 여](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)입니다.|설정|
 |TrustServerCertificate|인증서를 신뢰하려면 1 또는 **true** 입니다.<br /><br />인증서를 신뢰하지 않으려면 0 또는 **false** 입니다.|클라이언트가 자체 서명된 서버 인증서를 신뢰해야 하는지(1 또는 **true**) 또는 거부해야 하는지(0 또는 **false**) 여부를 지정합니다.|**false**(0)|  
 |UID<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|String|SQL Server 인증<sup>4</sup>과 연결할 때 사용할 사용자 ID를 지정합니다.|설정된 값이 없습니다.|  
 |WSID|String|추적용 컴퓨터의 이름을 지정합니다.|설정된 값이 없습니다.|  
@@ -69,7 +69,7 @@ ms.locfileid: "39174940"
 
 4. 연결할 *UID* 와 *PWD* 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인증과 연결될 때 둘 다 설정되어야 합니다.  
 
-지원되는 많은 키가 ODBC 연결 문자열 특성입니다. ODBC 연결 문자열에 대한 정보는 [SQL Native Client에서 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
+지원되는 많은 키가 ODBC 연결 문자열 특성입니다. ODBC 연결 문자열에 대한 정보는 [SQL Native Client에서 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  

@@ -16,13 +16,13 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 328468c781bd0061b12bc2e29817da7801dd45c3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e3a839006c560f486e55214db4f73095dc3c4402
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983295"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562017"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

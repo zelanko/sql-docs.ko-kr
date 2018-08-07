@@ -15,13 +15,13 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cf20b73d37c436e739151329cb490c56ea5f7d36
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 92fe756a2bcc258ba59c3622b525e043fa77cfb2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332554"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553033"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34332554"
   
  이 샘플에 대한 설명서는 다음과 같이 구성되어 있습니다.  
   
--   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
+-   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#필수 조건)   
   
 -   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
@@ -648,8 +648,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
+|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
   
  보시다시피 대부분의 공간이 미리 만들어진 데이터 및 델타 파일에서 사용됩니다. SQL Server는 논리적 프로세서당 하나의 (데이터, 델타) 파일 쌍을 미리 만들었습니다. 또한 데이터 파일의 크기는 128MB로, 델타 파일의 크기는 8MB로 미리 지정되므로 이러한 파일에 더욱 효율적으로 데이터를 삽입할 수 있습니다.  
   
@@ -694,8 +694,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
+|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
   
  검사점이 닫힐 때 사용할 준비가 된 미리 만들어진 파일 쌍이 16개 있습니다.  
   

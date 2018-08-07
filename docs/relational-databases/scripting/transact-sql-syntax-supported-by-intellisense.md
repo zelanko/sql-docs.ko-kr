@@ -18,13 +18,13 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f5050b0def51df6ded38aa69c9eb8d45f2ccd70
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54872b5c44962f4011ae4b7e4238304fd1dfb228
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334644"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545223"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,17 +52,17 @@ ms.locfileid: "34334644"
   
 |Transact-SQL 문|지원되는 구문|예외|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|*execute_statement* 절을 제외한 모든 구문|InclusionThresholdSetting|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|InclusionThresholdSetting|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|*execute_statement* 절을 제외한 모든 구문|없음|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|모든 구문|없음|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|모든 구문|없음|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|모든 구문|없음|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|모든 구문|없음|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|없음|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|모든 구문|없음|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|모든 구문|없음|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|모든 구문|EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|모든 구문|EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|모든 구문|없음|  
   
 ## <a name="intellisense-in-supported-statements"></a>지원되는 문의 IntelliSense  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 지원되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 중 하나에서 사용되는 경우 다음 구문 요소를 지원합니다.  

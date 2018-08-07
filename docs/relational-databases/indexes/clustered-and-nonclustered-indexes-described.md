@@ -17,13 +17,13 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5469eabd93c8d3124b7e6f6de3484006df47b0d0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 430377402c841f890dab08c63f1a32e99664cfd5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983325"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552183"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

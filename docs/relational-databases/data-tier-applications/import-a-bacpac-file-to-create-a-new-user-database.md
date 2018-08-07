@@ -32,13 +32,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fc8a3a20efb5ac5c9741e71342f005a3984888b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1ece4cfc83ce8abf9eede88183bcca9c04816391
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930978"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558463"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "32930978"
 2.  내보내기 파일의 데이터에서 대량 복사본 가져오기  
   
 ## <a name="sql-server-utility"></a>SQL Server 유틸리티  
- DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
+ DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. 그러면 DAC가 **** 유틸리티 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **배포된 데이터 계층 응용 프로그램** 노드에 표시되고 **** 세부 정보 페이지에 보고됩니다.  
   
 ## <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 가져오기 중에 만들어진 데이터베이스에는 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다. 단, 데이터베이스 데이터 정렬 및 호환성 수준은 DAC 내보내기 파일에 정의된 값으로 설정됩니다. DAC 내보내기 파일은 원본 데이터베이스의 값을 사용합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "32930978"
 ## <a name="security"></a>보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC 내보내기 파일에 저장됩니다. 파일을 가져오면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>데이터 계층 응용 프로그램 가져오기 마법사 사용  

@@ -18,13 +18,13 @@ caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a2d98af4cf1b9fa152f445b4aea74fa0f34c4527
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a030b74b36095892c6a623077fcd9ab41215dd72
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970682"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558713"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32970682"
   
  이 페이지는 개체 탐색기에서 **시퀀스** 를 마우스 오른쪽 단추로 클릭한 다음 **새 시퀀스**를 클릭하거나 기존 시퀀스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하는 두 가지 방법으로 액세스할 수 있습니다. 기존 시퀀스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 경우에는 옵션을 편집할 수 없습니다. 시퀀스 옵션을 변경하려면 [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 문을 사용하거나 시퀀스 개체를 삭제한 후 다시 만듭니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **시퀀스 이름**  
  시퀀스 이름을 입력합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "32970682"
   
  CREATE SEQUENCE 옵션에 대한 자세한 내용은 [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  SCHEMA에 대한 **CREATE SEQUENCE**, **ALTER**또는 **CONTROL** 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

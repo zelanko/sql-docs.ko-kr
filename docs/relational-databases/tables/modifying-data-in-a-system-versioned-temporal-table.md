@@ -14,13 +14,13 @@ caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3df5a6e48c644c43082508805d28eb38624e6f0e
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 71bf5b58d4791eca52f778c38955df30c36e967a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038110"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560163"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 데이터 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -14,13 +14,13 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44f5b03dca9d6c1ba852ac90d3a3949894dbc0a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243613"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546643"
 ---
 # <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

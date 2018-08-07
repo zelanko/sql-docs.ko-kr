@@ -17,13 +17,13 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85947c35a9c58726d7f65a2d166f060845205d3f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4d762bff773708051d415f3e3fa288e175a62aea
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334284"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555823"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 디버거 - 간략한 조사식 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34334284"
   
 -   식을 마우스 오른쪽 단추로 클릭하고 **값 편집**을 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **식 목록**  
  현재 선택한 식을 표시합니다. 드롭다운 목록에는 표시하도록 선택할 수 있는 식 집합이 있습니다. 목록에 있는 식은 현재 **호출 스택** 창에서 선택한 스택 프레임 범위에서 사용할 수 있는 식입니다. 다른 식을 표시하려면 식을 입력하거나 목록에서 선택합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 변수, 매개 변수 및 @@ 기호로 시작하는 시스템 함수를 지원합니다.  
   

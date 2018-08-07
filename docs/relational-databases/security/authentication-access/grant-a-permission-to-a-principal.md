@@ -16,13 +16,13 @@ caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 599420f613d022470856bdb7d874aa0d3d3fcb66
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 71064127c5c8a2709365c7afab1b6b6d4517c3b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109665"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549933"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>보안 주체에게 사용 권한 부여
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

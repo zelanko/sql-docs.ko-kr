@@ -15,13 +15,13 @@ caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9dcf5385a0c4b44194b6f256366ea006a1fc7341
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978614"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546363"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>기본 프로시저의 Atomic 블록
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

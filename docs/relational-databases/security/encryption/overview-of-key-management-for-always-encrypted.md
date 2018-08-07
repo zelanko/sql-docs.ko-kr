@@ -14,13 +14,13 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d74c09810770711108ae0889dfc80e17b2dfec4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5910cb1d25c5c74f5f7ee0be807d23c86ede5f07
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972668"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544793"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>상시 암호화를 위한 키 관리 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

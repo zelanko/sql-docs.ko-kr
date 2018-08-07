@@ -14,13 +14,13 @@ ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fde1a861cf0891786114a5368afac4f8d74704a5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ec8e8eab83362f10fdcaec93dd63c272e03e6108
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412112"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538563"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>명시적 스키마와 함께 JSON 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

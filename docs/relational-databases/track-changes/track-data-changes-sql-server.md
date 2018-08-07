@@ -25,13 +25,13 @@ caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 53c05afb9651f14f3d917d0d74e0b42f8cfdc056
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2250ed27de30f400a665eaf14e5d992ac0e84da
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708881"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559563"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "34708881"
 |기능|변경 데이터 캡처|변경 내용 추적|  
 |-------------|-------------------------|---------------------|  
 |**추적된 변경 내용**|||  
-|DML 변경|예|예|  
+|DML 변경|사용자 계정 컨트롤|사용자 계정 컨트롤|  
 |**추적된 정보**|||  
-|기록 데이터|예|아니요|  
-|열 변경 여부|예|예|  
-|DML 유형|예|예|  
+|기록 데이터|사용자 계정 컨트롤|아니오|  
+|열 변경 여부|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|DML 유형|사용자 계정 컨트롤|사용자 계정 컨트롤|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  변경 데이터 캡처는 DML 변경이 적용되었다는 사실과 변경된 실제 데이터 모두를 캡처하여 사용자 테이블에 대한 기록 변경 정보를 제공합니다. 트랜잭션 로그를 읽고 시스템에 대한 영향이 적은 비동기 프로세스를 사용하여 변경을 캡처합니다.  
@@ -94,11 +94,11 @@ ms.locfileid: "34708881"
   
 |열 유형|변경 테이블에 변경 내용이 캡처되는지 여부|제한 사항|  
 |--------------------|---------------------------------------|-----------------|  
-|스파스 열|예|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
-|계산 열|아니요|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
-|XML|예|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
-|timestamp|예|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
-|BLOB 데이터 형식|예|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  
+|스파스 열|사용자 계정 컨트롤|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
+|계산 열|아니오|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
+|XML|사용자 계정 컨트롤|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
+|timestamp|사용자 계정 컨트롤|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
+|BLOB 데이터 형식|사용자 계정 컨트롤|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>변경 데이터 캡처 및 기타 SQL Server 기능  
  이 섹션에서는 다음 기능으로 변경 데이터 캡처와 상호 작용하는 방법에 대해 설명합니다.  

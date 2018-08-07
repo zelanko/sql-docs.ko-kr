@@ -21,13 +21,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b3a231d37ef959882a9d16b7b4bccdfab21308cc
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fdd0df25763bec9f5bd2be7d1a36d260f6728605
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108105"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557823"
 ---
 # <a name="system-databases"></a>시스템 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

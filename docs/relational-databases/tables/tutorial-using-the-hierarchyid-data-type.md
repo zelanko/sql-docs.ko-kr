@@ -19,13 +19,13 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 817cb3a1693ddd7852d4ca143eb1b15326e8ad0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c271e0400448b9493be5a4e5e91bebcc36fb7a31
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006570"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550293"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>자습서: hierarchyid 데이터 형식 사용
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

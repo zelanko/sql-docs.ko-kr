@@ -25,13 +25,13 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 24ac34c991401a8fb7a2687befb894d1e175a668
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2b124b63c09edd0de871ca297b67563dcce45ca6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923968"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557773"
 ---
 # <a name="estimate-the-size-of-a-database"></a>데이터베이스 크기 예측
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "32923968"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[테이블 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-table.md)|테이블 및 연결된 인덱스에 데이터를 저장하는 데 필요한 공간을 예측하는 단계와 필요한 계산을 설명합니다.|  
 |[힙 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-heap.md)|힙에 데이터를 저장하는 데 필요한 공간을 예측하는 단계와 필요한 계산을 설명합니다. 힙은 클러스터형 인덱스가 없는 테이블입니다.|  

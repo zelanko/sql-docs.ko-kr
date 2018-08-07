@@ -18,13 +18,13 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 994dbd67b155d791cc7d4ee25dc8525c471a5f11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e5594aca0122edbe3e591cf9f5840a0847b60a24
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940539"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554693"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "32940539"
 |[문자 형식의 명령 옵션](#command_options)|
 |[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)<br />|
 |[예](#examples)<br />&emsp;&#9679;&emsp;[bcp 및 문자 형식을 사용하여 데이터 내보내기](#bcp_char_export)<br />&emsp;&#9679;&emsp;[bcp 및 문자 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_char_import)<br />&emsp;&#9679;&emsp;[bcp 및 문자 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기](#bcp_char_import_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 문자 형식 사용](#bulk_char)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 BULK INSERT 및 문자 형식 사용하기](#bulk_char_fmt)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 OPENROWSET 및 문자 형식 사용하기](#openrowset_char_fmt)|
-|[관련 태스크](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
+|[관련 작업](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 
   
@@ -68,7 +68,7 @@ ms.locfileid: "32940539"
   
 문자 형식에 대해 지원되는 명령 옵션은 다음과 같습니다.  
   
-|Command|옵션|Description|  
+|Command|옵션|설명|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|bcp 유틸리티가 문자 데이터를 사용하도록 합니다.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|데이터를 대량 가져올 때 문자 형식을 사용합니다.|  

@@ -19,13 +19,13 @@ caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f42360e4a0b3a23a7e39d390b711870e855129b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c099319c79b8bb31fcacdab20b6c590726cf3877
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956078"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561583"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,9 +107,9 @@ ms.locfileid: "32956078"
 
 |현재 익스텐트의 사용 | GAM 비트 설정 | SGAM 비트 설정 |
 |---------|----------|------| 
-|비어 있음, 사용 중이지 않음 |1 |0 |
+|비어 있음, 사용 중이지 않음 |@shouldalert |0 |
 |단일 익스텐트 또는 완전 혼합 익스텐트 |0 |0 |
-|빈 페이지가 있는 혼합 익스텐트 |0 |1 |
+|빈 페이지가 있는 혼합 익스텐트 |0 |@shouldalert |
  
 이러한 복잡함 때문에 단순한 익스텐트 관리 알고리즘의 필요성이 부각되었습니다. 
 -   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 단일 익스텐트를 할당하기 위해 1비트에 해당하는 GAM을 검색하고 이를 0으로 설정합니다. 

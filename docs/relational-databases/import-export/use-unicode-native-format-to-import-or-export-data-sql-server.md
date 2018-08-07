@@ -18,13 +18,13 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d384ba04beface0d9d784fc3073722208d281095
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f2f0f79a6bd68c362382144b5f3185df9540678d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941249"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557003"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "32941249"
 |[유니코드 네이티브 형식의 명령 옵션](#command_options)|
 |[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)|
 |[예](#examples)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 원시 형식을 사용하여 데이터 내보내기](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 원시 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 원시 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 유니코드 원시 형식 사용](#bulk_widenative)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 BULK INSERT 및 유니코드 원시 형식 사용하기](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 OPENROWSET 및 유니코드 원시 형식 사용하기](#openrowset_widenative_fmt)|
-|[관련 태스크](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
+|[관련 작업](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
 ## 유니코드 네이티브 형식의 명령 옵션<a name="command_options"></a>  
 [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)를 사용하여 테이블로 유니코드 문자 형식 데이터를 가져올 수 있습니다.  [bcp](../../tools/bcp-utility.md) 명령 또는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문의 경우 문에서 데이터 형식을 지정할 수 있습니다.  [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
   
 유니코드 원시 형식에 대해 지원되는 명령 옵션은 다음과 같습니다.  
   
-|Command|옵션|Description|  
+|Command|옵션|설명|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|**bcp** 유틸리티가 유니코드 원시 형식을 사용하게 합니다. 즉, 모든 비문자 데이터에 네이티브(데이터베이스) 데이터 형식을 사용하고 모든 문자(**char**, **nchar**, **varchar**, **nvarchar**, **text**, 및 **ntext**) 데이터에 유니코드 문자 데이터 형식을 사용합니다.|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|데이터를 대량으로 가져올 때 유니코드 원시 형식을 사용합니다.|  

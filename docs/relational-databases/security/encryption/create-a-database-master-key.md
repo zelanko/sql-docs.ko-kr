@@ -16,13 +16,13 @@ caps.latest.revision: 16
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a28b906ad9dbb5f7fd21063ff01780585712a7d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5bbe3581cc89b6f2c3fef0d6390c5c64cffc19da
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703794"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552023"
 ---
 # <a name="create-a-database-master-key"></a>데이터베이스 마스터 키 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

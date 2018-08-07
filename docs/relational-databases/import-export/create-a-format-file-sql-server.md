@@ -17,13 +17,13 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b49b51f61faf046f5145267c7fa6d45deecc53f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1be1252c3504ae6c09530253b539d09577391023
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941048"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540953"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "32941048"
   
  **bcp** 명령에는 다음 한정자가 포함됩니다.  
   
-|한정자|Description|  
+|한정자|설명|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|비 XML 서식 파일을 지정합니다.|  
 |**-n**|네이티브 데이터 형식을 지정합니다.|  
@@ -98,7 +98,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** 명령에는 다음 한정자가 포함됩니다.  
   
-|한정자|Description|  
+|한정자|설명|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|비 XML 서식 파일을 지정합니다.|  
 |**-c**|문자 데이터를 지정합니다.|  
@@ -197,7 +197,7 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
   
  **bcp** 명령에는 다음 한정자가 포함됩니다.  
   
-|한정자|Description|  
+|한정자|설명|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|XML 서식 파일을 지정합니다.|  
 |**-c**|문자 데이터를 지정합니다.|  
@@ -237,7 +237,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** 명령에는 다음 한정자가 포함됩니다.  
   
-|한정자|Description|  
+|한정자|설명|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|XML 서식 파일을 지정합니다.|  
 |**-n**|네이티브 데이터 형식을 지정합니다.|  

@@ -23,13 +23,13 @@ caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f33f3d2a3bba860e943bac52f00912fcde3478cb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4a1dcdf67235e5652cb3bbd03e0d8272799d983a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106939"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546973"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

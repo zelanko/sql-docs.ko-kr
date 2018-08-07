@@ -17,13 +17,13 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5dfdc3c08bd548530e4ba2deb50871808efc00f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 878305fd74046f538465ad7ca48f2f22178a304c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706861"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554793"
 ---
 # <a name="extended-events"></a>확장 이벤트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

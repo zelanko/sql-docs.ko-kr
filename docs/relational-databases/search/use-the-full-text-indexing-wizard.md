@@ -28,13 +28,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f176dec2a4eca0cc313bd010729b5ba267ce6323
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bb0ca07aceed13e3da687716d8ccb02c17558bf6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182089"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549023"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "33182089"
      전체 텍스트 인덱스를 만들 파일 그룹을 지정합니다.  
   
      5. 값 선택:  
-      |값|Description|  
+      |값|설명|  
       |-----------|-----------------|
       |**<default>**| 테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할된 경우 기본 파일 그룹이 사용됩니다.|
       |**PRIMARY**|새 전체 텍스트 인덱스에 주 파일 그룹을 사용하려면 선택합니다.|
@@ -117,7 +117,7 @@ ms.locfileid: "33182089"
   
      다음 값 중 하나를 선택합니다.  
   
-   |값|Description|  
+   |값|설명|  
     |-----------|-----------------|  
     |**<system>**|새 전체 텍스트 인덱스에 시스템 중지 목록을 사용하려면 선택합니다. 이것이 기본값입니다.|  
     |**<off>**|새 전체 텍스트 인덱스에 중지 목록을 사용하지 않으려면 선택합니다.|  

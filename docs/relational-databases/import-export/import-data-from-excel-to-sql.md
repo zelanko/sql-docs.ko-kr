@@ -14,13 +14,13 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d4bbe4268e60408f5c362c2e68121a4f89b1d82f
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b7418258c6b79e5cbc9f8af254fb849e06140b33
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137922"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561113"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ SSIS 패키지를 작성하는 방법을 알아보려면 [ETL 패키지를 만�
 ## <a name="openrowset"></a>OPENROWSET 및 연결된 서버
 
 > [!NOTE]
-> Azure에서는 OPENROWSET 및 OPENDATASOURCE 함수가 SQL Database 관리되는 인스턴스(미리 보기)에 지원됩니다.
+> Azure에서는 OPENROWSET 및 OPENDATASOURCE 함수가 SQL Database Managed Instance(미리 보기)에 지원됩니다.
 
 > [!NOTE]
 > Excel 데이터 원본에 연결하는 ACE 공급자(이전의 Jet 공급자)는 대화형 클라이언트 쪽 사용을 위한 것입니다. 자동화 프로세스 또는 병렬로 실행되는 프로세스에서 특히 서버의 ACE 공급자를 사용하는 경우 예기치 않은 결과가 발생할 수 있습니다.

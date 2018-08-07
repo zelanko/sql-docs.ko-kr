@@ -18,13 +18,13 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0a6e8816746eba64bc1c6673cc81fd819494a38d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 89e30a9e76c9a9d786999572c436bf26ddbd79fe
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431912"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557303"
 ---
 # <a name="specify-first-and-last-triggers"></a>첫 번째 및 마지막 트리거 지정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

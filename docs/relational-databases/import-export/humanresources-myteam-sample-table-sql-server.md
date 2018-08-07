@@ -19,13 +19,13 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee6230a7aac8dc4913a3d954fcae617787d8e9ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f17780948794783ae4506d07e970a2e04aa9b445
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935515"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550063"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 예제 테이블(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32935515"
   
  **myTeam** 테이블에는 다음 열이 있습니다.  
   
-|Column|데이터 형식|Null 허용 여부|Description|  
+|Column|데이터 형식|Null 허용 여부|설명|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Null이 아님|행의 기본 키. 팀 멤버의 직원 ID|  
 |**이름**|**nvarchar(50)**|Null이 아님|팀 멤버의 이름|  

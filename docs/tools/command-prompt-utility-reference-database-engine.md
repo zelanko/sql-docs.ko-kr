@@ -22,13 +22,13 @@ caps.latest.revision: 90
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9922b38639507cbff5a0383c7711c0ebc70e1eef
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a4e86354c152ada20e183d7734bbf6d04bad2bcd
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055331"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457307"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

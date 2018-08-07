@@ -30,13 +30,13 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4136ea1d123ce96a9a10de1dab8cfe6377bd4231
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 47d7bec624955627f8c486827b9515da7d56ecf6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695754"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560973"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

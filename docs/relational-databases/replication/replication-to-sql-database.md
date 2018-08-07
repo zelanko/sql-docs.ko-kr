@@ -18,13 +18,13 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 72e865b61830c66046aa583f61b9bb4b41484ced
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085135"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548473"
 ---
 # <a name="replication-to-sql-database"></a>SQL Database에 복제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,8 @@ ms.locfileid: "39085135"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 구성될 수 있습니다.  
  
  ### <a name="supported-configurations"></a>**지원되는 구성:**  
- -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은(는) 온프레미스로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스이거나 클라우드의 Azure 가상 머신에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스일 수 있습니다. 자세한 내용은 [Azure 가상 컴퓨터의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하십시오.  
+ -  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은(는) 온프레미스로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스이거나 클라우드의 Azure 가상 머신에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스일 수 있습니다. 자세한 내용은 [Azure 가상 컴퓨터의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하십시오.  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 은(는) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 푸시 구독자여야 합니다.  
  -  배포 데이터베이스 및 복제 에이전트는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 위치할 수 없습니다.  
  - 스냅숏 및 단방향 트랜잭션 복제만 지원됩니다. 피어 투 피어 트랜잭션 복제 및 병합 복제는 지원되지 않습니다.
@@ -68,7 +69,8 @@ ms.locfileid: "39085135"
    
  - 사용자는 기존 Azure 구독 및 기존 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12를 가져야 합니다.  
    
- - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 단일 게시는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (온프레미스 및 Azure 가상 머신에서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 모두를 지원합니다.  
+ - 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 단일 게시는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](온프레미스 및 Azure 가상 머신에서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 모두를 지원합니다.  
    
  - 복제 관리, 모니터링 및 문제 해결은 온프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수행되어야 합니다.  
    

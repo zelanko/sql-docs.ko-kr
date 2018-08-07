@@ -19,13 +19,13 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dd8931bcc3fdaaa489d0a190c5ce1f6210e5f64
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d55aea5d50d9ea434aabb392d0c6b53573c0199e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088656"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559573"
 ---
 # <a name="replication-with-sql-database-managed-instance"></a>SQL Database Managed Instance를 사용한 복제
 
@@ -37,13 +37,15 @@ Azure SQL Database Managed Instance(미리 보기)는 트랜잭션 복제를 지
 
 일반적으로 게시자와 배포자가 둘 다 클라우드 또는 온-프레미스에 있어야 합니다. 다음 구성이 지원됩니다.
 
-- **관리되는 인스턴스에 로컬 배포자가 있는 게시자**
+- 
+  **관리되는 인스턴스에 로컬 배포자가 있는 게시자**
 
    ![Replication-with-azure-sql-db-single-managed-instance-publisher-distributor](./media/replication-with-sql-database-managed-instance/01-single-instance-asdbmi-pubdist.png)
 
    게시자 및 배포자 데이터베이스가 하나의 관리되는 인스턴스에서 구성됩니다.
 
-- **관리되는 인스턴스에 원격 배포자가 있는 게시자**
+- 
+  **관리되는 인스턴스에 원격 배포자가 있는 게시자**
 
    ![Replication-with-azure-sql-db-separate-managed-instances-publisher-distributor](./media/replication-with-sql-database-managed-instance/02-separate-instances-asdbmi-pubdist.png)
 
@@ -53,7 +55,8 @@ Azure SQL Database Managed Instance(미리 보기)는 트랜잭션 복제를 지
 
   - 두 관리되는 인스턴스는 모두 동일한 위치에 있습니다.
 
-- **관리되는 인스턴스에 구독자가 있는 온-프레미스의 게시자 및 배포자**
+- 
+  **관리되는 인스턴스에 구독자가 있는 온-프레미스의 게시자 및 배포자**
 
    ![Replication-from-on-premises-to-azure-sql-db-subscriber](./media/replication-with-sql-database-managed-instance/03-azure-sql-db-subscriber.png)
 

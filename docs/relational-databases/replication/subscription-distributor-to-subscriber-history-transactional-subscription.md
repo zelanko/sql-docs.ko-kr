@@ -17,19 +17,19 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d6c1b27aa40de5a5fbf4ad6cb09802cfaa1a56f8
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7a6baf502f8599950931b3c81586099cf607223b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359455"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545043"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(트랜잭션 구독)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **배포자에서 구독자로의 연결 기록** 탭은 상태, 기록, 정보 메시지, 모든 오류 메시지 등 배포 에이전트에 대한 자세한 정보를 표시합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **보기** 메뉴에서 보려는 배포 에이전트 세션을 선택한 다음 **배포 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션의 동작**표에 이 세션에 대한 자세한 정보가 표시됩니다. 선택한 세션이 오류로 인해 종료될 경우 **선택한 세션에 대한 오류 정보 또는 메시지** 라는 텍스트 영역 또한 표시됩니다.  
   
  **보기**  

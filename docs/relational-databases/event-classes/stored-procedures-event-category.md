@@ -17,13 +17,13 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e155df20d6345e8b3bbc34566ba702f464cd196e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6c7ebc1e71a47095960709d7625a620c4f8770e4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328954"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551593"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -15,19 +15,19 @@ ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4b6f015628df05d339a57009c7514fb2e3a23f1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1c18dddb572fe37baa2b9c817982796d42635c14
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332993"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555363"
 ---
 # <a name="stored-procedure-properties-general-page"></a>저장 프로시저 속성(일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   저장 프로시저에 대한 정보를 표시합니다. 모든 정보는 읽기 전용입니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **데이터베이스 백업**  
  이 저장 프로시저를 포함하는 데이터베이스의 이름입니다.  
   

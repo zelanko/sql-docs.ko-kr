@@ -18,24 +18,24 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fd7caf84e26b0fa077a21a99026ac3df0a30800f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 100d418d3e8ed1521c22d643ea3513546d69c550
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936448"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553323"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 문자 데이터 형식 또는 네이티브 이진 데이터 형식으로 데이터를 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 다른 응용 프로그램(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) 또는 다른 데이터베이스 서버(예: Oracle 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 간에 데이터를 이동할 때 문자 형식을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 간에 데이터를 전송할 때만 네이티브 형식을 사용할 수 있습니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [대량 내보내기 또는 가져오기를 위한 데이터 형식](#ComponentsAndConcepts)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="ComponentsAndConcepts"></a> 대량 내보내기 또는 가져오기를 위한 데이터 형식  
  다음 표에서는 데이터 표시 방식 및 작업의 원본 또는 대상에 따라 일반적으로 적절히 사용할 수 있는 데이터 형식을 보여 줍니다.  
@@ -43,11 +43,11 @@ ms.locfileid: "32936448"
 |연산|네이티브|유니코드 네이티브|문자|유니코드 문자|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |확장 또는 DBCS(더블바이트 문자 집합) 문자가 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다. 서식 파일을 사용하지 않는 한 테이블을 동일하게 정의해야 합니다.|예*|—|—|—|  
-|**sql_variant** 열의 경우 문자 또는 유니코드 형식과는 달리 원시 데이터 형식이 각 **sql_variant** 값에 대해 메타데이터를 보존하기 때문에 원시 데이터 형식을 사용하는 것이 가장 좋습니다.|예|—|—|—|  
-|확장 또는 DBCS 문자가 들어 있는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다.|—|예|—|—|  
-|다른 프로그램으로 생성된 텍스트 파일에서 데이터를 대량으로 가져옵니다.|—|—|예|—|  
-|다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보냅니다.|—|—|예|—|  
-|유니코드 데이터가 들어 있으나 확장 또는 DBCS 문자는 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전달합니다.|—|—|—|예|  
+|**sql_variant** 열의 경우 문자 또는 유니코드 형식과는 달리 원시 데이터 형식이 각 **sql_variant** 값에 대해 메타데이터를 보존하기 때문에 원시 데이터 형식을 사용하는 것이 가장 좋습니다.|사용자 계정 컨트롤|—|—|—|  
+|확장 또는 DBCS 문자가 들어 있는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다.|—|사용자 계정 컨트롤|—|—|  
+|다른 프로그램으로 생성된 텍스트 파일에서 데이터를 대량으로 가져옵니다.|—|—|사용자 계정 컨트롤|—|  
+|다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보냅니다.|—|—|사용자 계정 컨트롤|—|  
+|유니코드 데이터가 들어 있으나 확장 또는 DBCS 문자는 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전달합니다.|—|—|—|사용자 계정 컨트롤|  
   
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp **를 사용하는 경우**에서 데이터를 대량으로 내보내는 가장 빠른 방법입니다.  
   

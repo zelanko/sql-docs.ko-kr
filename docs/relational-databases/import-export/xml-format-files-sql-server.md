@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae7ce7fbf55cffbc069eb7afcc15eebbb6833f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941408"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563537"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "32941408"
   
 -   [예제 XML 형식 파일](#SampleXmlFFs)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 -   [관련 내용](#RelatedContent)  
   
@@ -257,7 +257,7 @@ ms.locfileid: "32941408"
   
  필드는 다음 특성을 사용하여 대상 테이블의 열에 매핑됩니다.  
   
-|COLUMN 특성|Description|선택 /<br /><br /> 필수|  
+|COLUMN 특성|설명|선택 /<br /><br /> 필수|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="***fieldID***"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> \<COLUMN SOURCE **="***fieldID***"**/>는 \<FIELD ID **="***fieldID***"**/>에 매핑됩니다.|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  

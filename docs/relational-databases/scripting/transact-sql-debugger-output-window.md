@@ -18,13 +18,13 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b32b218e69b8b46e0071379cdc99d30e569d34d8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a7cd8f187ffb41c93353156e1430d08505dd2b70
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333284"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546713"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 디버거 - 출력 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34333284"
   
 -   **보기** 메뉴에서 **다른 창**을 클릭한 다음 **출력**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **출력 창 목록**  
  확인할 출력 창 목록을 표시합니다. **출력** 창을 사용하여 사용자에게 정보를 전달하는 각 도구에 따라 여러 정보 창을 사용할 수 있습니다.  
   

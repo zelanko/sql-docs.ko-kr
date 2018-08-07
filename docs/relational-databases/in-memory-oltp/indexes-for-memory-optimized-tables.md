@@ -15,13 +15,13 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b2ce7ce7e891e0750f80637c3ebc42176167834
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: aee77102736555249afa814d21cb0359b8a8e044
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329574"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563407"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -205,11 +205,11 @@ WHERE col1 = 'dn';
   
 | 연산 | 메모리 액세스에 최적화됨, <br/> 해시 | 메모리 액세스에 최적화됨, <br/> 비클러스터형 | 디스크 기반, <br/> (비)클러스터형 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 색인 검색은 모든 테이블 행을 검색합니다. | 예 | 예 | 예 |  
-| 같음 조건자(=)에서 인덱스 검색 | 예 <br/> (전체 키는 필수) | 예  | 예 |  
-| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 아니요 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | 예 |  
-| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 예 | 예 |  
-| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 아니요 | 예 |  
+| 색인 검색은 모든 테이블 행을 검색합니다. | 사용자 계정 컨트롤 | 예 | 사용자 계정 컨트롤 |  
+| 같음 조건자(=)에서 인덱스 검색 | 사용자 계정 컨트롤 <br/> (전체 키는 필수) | 사용자 계정 컨트롤  | 사용자 계정 컨트롤 |  
+| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 아니오 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | 사용자 계정 컨트롤 |  
+| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 예 | 사용자 계정 컨트롤 |  
+| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 아니오 | 사용자 계정 컨트롤 |  
 
 <sup>1</sup> 메모리 최적화 비클러스터형 인덱스의 경우 인덱스 검색을 수행하는 데 전체 키가 필요하지 않습니다.  
 

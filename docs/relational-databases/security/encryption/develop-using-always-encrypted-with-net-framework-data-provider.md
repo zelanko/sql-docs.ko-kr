@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973828"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538143"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ cmd.ExecuteNonQuery();
 .NET Framework Data Provider for SQL Server에는 다음 열 마스터 키 저장소 공급자가 기본 제공되며 특정 공급자 이름이 미리 등록되어 있습니다(공급자 조회에 사용).
 
 
-| 클래스 | Description | 공급자 (조회) 이름 |
+| 클래스 | 설명 | 공급자 (조회) 이름 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 클래스| Windows 인증서 저장소에 대한 공급자입니다. | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**참고:** 이 공급자는 .NET Framework 4.6.1 이상 버전에서 사용할 수 있습니다. |[Microsoft 암호화 API: 차세대(CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 장치입니다.  | MSSQL_CNG_STORE|
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|속성|Description|도입된 .NET 버전
+|속성|설명|도입된 .NET 버전
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 인증서 저장소에 대한 키 저장소 공급자입니다.|  4.6
 |[SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft 암호화 API: 차세대(CNG)에 대한 키 저장소 공급자입니다.|  4.6.1

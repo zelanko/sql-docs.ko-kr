@@ -18,13 +18,13 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 163ea15a1293ce128725bdbb3d20baa4129fdb80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332228"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558883"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,10 +82,10 @@ ms.locfileid: "37332228"
 
 |태스크|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|예|예|아니요|
-|데이터베이스에 키 메타데이터 만들기|예|예|예|
-|암호화된 열이 있는 새 테이블 만들기|예|예|예|
-|선택한 데이터베이스 열에 있는 기존 데이터 암호화|예|예|아니요|
+|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|사용자 계정 컨트롤|예|아니오|
+|데이터베이스에 키 메타데이터 만들기|사용자 계정 컨트롤|예|사용자 계정 컨트롤|
+|암호화된 열이 있는 새 테이블 만들기|사용자 계정 컨트롤|예|사용자 계정 컨트롤|
+|선택한 데이터베이스 열에 있는 기존 데이터 암호화|사용자 계정 컨트롤|예|아니오|
 
 > [!NOTE]
 > 데이터베이스를 호스트하는 컴퓨터와 다른 컴퓨터의 보안 환경에서 키 프로비저닝 또는 데이터 암호화 도구를 실행해야 합니다. 그러지 않으면 중요한 데이터나 키가 서버 환경에 누출되어 상시 암호화 사용의 이점이 줄어듭니다.  

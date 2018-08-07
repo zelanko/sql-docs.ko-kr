@@ -19,19 +19,19 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 31014184a8af767789bb75e9c13ab2087650a303
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 59ddddc48ae8780cc2cb4ab3da070c96e389ae31
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354885"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552613"
 ---
 # <a name="validate-subscriptions"></a>구독 유효성 검사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **구독 유효성 검사** 대화 상자를 사용하여 각 구독에 대한 배포 에이전트가 다음에 실행될 때 트랜잭션 게시에 대한 구독의 유효성을 검사할지 지정할 수 있습니다. 유효성 검사 결과는 복제 모니터에 표시됩니다. 자세한 내용은 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **모든 SQL Server 구독 유효성 검사**  
  이 게시에 대한 모든 SQL Server 구독 데이터의 유효성을 검사하려면 선택합니다.  
   

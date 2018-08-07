@@ -15,13 +15,13 @@ ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 80b74aac62cb1c6b22a906f30e4829d54b6c4faa
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: afd8c52603dcc768cd90a20ddb9df33d2492c8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423812"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562907"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ ORDER BY LastName
 |**$**|NULL 또는 오류|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL 또는 오류|  
 |**$.b**|NULL 또는 오류|[1,2]|  
-|**$.b[0]**|1|NULL 또는 오류|  
+|**$.b[0]**|@shouldalert|NULL 또는 오류|  
 |**$.c**|hi|NULL 또는 오류|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>AdventureWorks 예제 데이터베이스로 JSON_VALUE 및 JSON_QUERY 테스트  

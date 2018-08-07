@@ -17,13 +17,13 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f342a9c7a90a3eb125bc87deacb272b109f82bdb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3732064c16563b0da4f0564a1db9edb0dc221e61
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013020"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547573"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

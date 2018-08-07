@@ -13,13 +13,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3462eb53657d873d1c2e2ce57a09dad99ff4b253
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c6733d4b668e607a2b975b5861110df0c196d9ef
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334744"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553903"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34334744"
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  고유한 코드 페이지를 사용하는 다른 사이트의 사용자와 파일을 공유하는 경우에는 파일을 읽을 때 오류가 발생하지 않도록 적절한 유니코드 코드 페이지로 파일을 저장해야 합니다. 또한 UNIX나 Macintosh용으로 파일을 저장할 경우에는 적절한 문서 형식으로 파일을 저장해야 합니다. **파일** 메뉴의 **저장**단추 옆에 있는 아래쪽 화살표에서 **다른 이름으로 저장** , **인코딩하여 저장** 을 클릭한 다음 **줄 끝** 에서 **Unix** 또는 **Macintosh**를 선택합니다.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  코드 편집기에서 수행하는 작업에는 로그인하는 데 사용된 인증 계정에 부여된 사용 권한이 적용됩니다. 예를 들어 Windows 인증을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 열 경우 Windows 로그인 계정에 액세스 권한이 없는 개체를 참조하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 없습니다.  
   
 ## <a name="how-to-open-editors"></a>방법: 편집기 열기  

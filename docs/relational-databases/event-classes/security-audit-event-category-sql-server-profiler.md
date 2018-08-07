@@ -17,13 +17,13 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f99a32daae5f79517fe0fdca82ac8ee9dd7e04e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a97e5d470a8c705e7187924e0249a40b562f3245
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329004"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550303"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 이벤트 범주(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
