@@ -28,13 +28,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8d0468175a620162ae59f49085fa9c5bb2c6600
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bc0926f7d6b4a19b22265f85f60651002bc22a76
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787824"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451217"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,7 +80,7 @@ SET DATEFIRST 7 ;
   
  SET DATEFIRST를 지정해도 DATEDIFF에는 영향을 주지 않습니다. DATEDIFF는 항상 일요일을 한 주의 첫 날로 사용하여 결정적 함수가 되도록 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

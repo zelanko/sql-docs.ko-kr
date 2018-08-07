@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_query | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -21,12 +21,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4ecf98769f064c6d25b1aa466d8e4fe27f5ab5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 45a25840023772d835fd2bbfbadf2977bfa90107
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979965"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415522"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -192,6 +192,63 @@ sqlsrv_close($conn);
 ?>
 ```
 
+## <a name="example"></a>예제
+이 코드 샘플에는 테이블을 만드는 방법을 보여 줍니다 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 형식과 삽입 된 데이터를 인출 합니다.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$options = array("Database"=>$dbName, "UID"=>$uid, "PWD"=>$pwd);
+$conn = sqlsrv_connect($server, $options);
+if($conn === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$tableName = 'testTable';
+$query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "SELECT * FROM $tableName";
+$stmt = sqlsrv_query($conn, $query);
+
+if(sqlsrv_fetch($stmt) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$col1 = sqlsrv_get_field($stmt, 0);
+echo "First field:  $col1 \n";
+
+$col2 = sqlsrv_get_field($stmt, 1);
+echo "Second field:  $col2 \n";
+
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+
+?>
+```
+
+예상된 된 출력은 다음과 같습니다.
+
+```
+First field:  1
+Second field:  test_data
+```
 
 ## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  

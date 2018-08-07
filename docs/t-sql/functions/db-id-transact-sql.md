@@ -26,13 +26,13 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b445816ec9d088138d17c103f39f1471ce16c57c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 725dcf0f543b61c9b143ad6c4cc56ae5289ef800
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786814"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451087"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ DB_ID ( [ 'database_name' ] )
 ## <a name="remarks"></a>Remarks
 `DB_ID`는 Azure SQL Database에서 현재 데이터베이스의 데이터베이스 식별자를 반환하는 데만 사용할 수 있습니다. 지정된 데이터베이스 이름이 현재 데이터베이스가 아닌 경우 NULL이 반환됩니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 `DB_ID`의 호출자가 특정 비**마스터** 또는 비**tempdb** 데이터베이스를 소유하지 않는 경우 최소한 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 서버 수준 사용 권한이 해당 `DB_ID` 행을 확인하는 데 필요합니다. **마스터** 데이터베이스의 경우 `DB_ID`는 최소한 `CREATE DATABASE` 사용 권한이 필요합니다. 호출자가 연결하는 데이터베이스는 항상 **sys.databases**에 나타납니다.
   
 > [!IMPORTANT]  

@@ -28,13 +28,13 @@ caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: df0f8d8aaf0302d6d854a5fa1a5b0c1eee9e9aef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e72eb9b870a0525739f657432a3cddbf17ac438f
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790894"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451297"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>대형 테이블 잘라내기  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 삭제할 모든 익스텐트에 대한 동시 잠금이 없는 한 128개를 초과하는 익스텐트를 갖고 있는 테이블을 삭제하거나 잘라내는 기능이 추가되었습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  최소한 *table_name*에 대한 ALTER 권한이 필요합니다. TRUNCATE TABLE 권한은 테이블 소유자, sysadmin 고정 서버 역할 멤버 및 db_owner 및 db_ddladmin 고정 데이터베이스 역할의 기본 권한이며 위임할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 TRUNCATE TABLE 문을 통합한 뒤 EXECUTE AS 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
   
 ## <a name="examples"></a>예  

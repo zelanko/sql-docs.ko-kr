@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216813"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39400786"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
   이 자습서에서는 마법사를 사용하여 원형 차트를 만든 다음 차트를 어떤 식으로 수정할 수 있는지 보여 주기 위해 차트를 조금 수정합니다. 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 결과가 같습니다. 즉, 아래 그림의 원형 차트와 동일한 원형 차트가 만들어집니다.  
   
- ! ["내 첫 번째 원형 차트" 실행에서 보기] (.. /media/rs-my1stpierunview.gif "my First Pie Chart" 실행에서 "보기")  
+ ! ["내 첫 번째 원형 차트" 실행에서 보기] (.. /media/rs-my1stpierunview.gif "my First Pie Chart" 실행에서 보기 ")  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  XML 데이터나 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스 권한이 있어야 합니다. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 ClickOnce 버전 또는 독립 실행형 버전을 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다. 자세한 내용은 [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)합니다.  

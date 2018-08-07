@@ -14,13 +14,13 @@ ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 30f82893d316b187db8e187cf7aeac0be91ee697
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2e33ccc90d728599abedd299d62e85f15ae13c52
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049211"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451727"
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL 및 UNKNOWN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]

@@ -30,13 +30,13 @@ caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c47be98fa9a09b3abfdf6faa14146695182a0c4c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0046c563fdf979b3d2ce00f1e4ccac74eb133507
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064331"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452327"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -88,7 +88,7 @@ WHERE database_id = DB_ID()
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 라우팅 테이블에 경로를 유지하는 시간(초)을 지정합니다. 수명이 다되어 경로가 만료되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 대화를 위한 경로를 선택할 때 더 이상 해당 경로를 고려하지 않습니다. 이 절을 생략하면 *route_lifetime*은 NULL이고 경로는 만료되지 않습니다.  
   
  ADDRESS **=‘***next_hop_address***’**  
-SQL Database 관리되는 인스턴스의 경우 `ADDRESS`는 로컬이어야 합니다. 
+SQL Database Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다. 
 
 이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   

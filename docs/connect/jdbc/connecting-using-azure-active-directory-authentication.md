@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278844"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452647"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > 포함 된 사용자 데이터베이스 존재 해야 합니다 및 포함된 된 데이터베이스 사용자를 나타내는 지정 된 Azure AD 사용자 또는 그룹을 지정 된 Azure AD 사용자에 속하는, 데이터베이스에 존재 해야 하며 (제외: Azure Active Directory CONNECT 권한이 있어야 합니다. 서버 관리자 또는 그룹)
 
-
 ## <a name="connecting-using-access-token"></a>액세스 토큰을 사용 하 여 연결
-응용 프로그램/서비스는 Azure Active Directory에서 액세스 토큰을 검색 하 고는 사용 하 여 SQL Azure 데이터베이스에 연결할 수 있습니다. 해당 accessToken을 다시 설정 DriverManager 클래스의 getconnection () 메서드의 속성 매개 변수를 사용 하 여 note 합니다. 연결 문자열에 사용할 수 없습니다.
- 
+응용 프로그램/서비스는 Azure Active Directory에서 액세스 토큰을 검색 하 고는 사용 하 여 SQL Azure 데이터베이스에 연결할 수 있습니다.
+
+> [!NOTE] 
+> **accessToken** DriverManager 클래스의 getconnection () 메서드의 속성 매개 변수를 사용 하 여 설정할 수만 있습니다. 연결 문자열에 사용할 수 없습니다.
+
 아래 예제에서는 액세스 토큰 기반 인증을 사용 하 여 Azure SQL Database에 연결 하는 간단한 Java 응용 프로그램을 포함 합니다. 을 빌드하고 예제를 실행 하기 전에 다음 단계를 수행 합니다.
 1.  서비스에 대 한 Azure Active Directory에서 응용 프로그램 계정을 만듭니다.
     1. Azure Portal에 로그인합니다.

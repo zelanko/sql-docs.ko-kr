@@ -28,13 +28,13 @@ caps.latest.revision: 26
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42870015b8afe775b0067452c6472c231aacae9f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b68782b74dfd0410343ea70bc557115f572d4166
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788034"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453017"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SET LOCK_TIMEOUT timeout_period
   
  CREATE DATABASE, ALTER DATABASE 및 DROP DATABASE 문은 SET LOCK_TIMEOUT 설정을 인식하지 못합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

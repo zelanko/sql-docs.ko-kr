@@ -26,13 +26,13 @@ caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f15371a7a42617f0b53cc259ba64e82d6d901b8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ee15a2f700f160f45427091a580daeb115aad4ca
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790624"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453157"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ DROP VIEW [ schema_name . ] view_name
   
  뷰의 텍스트 보기에 대한 자세한 내용은 [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  보기에 대한 **CONTROL** 권한, 뷰가 포함된 스키마에 대한 **ALTER** 권한 또는 **db_ddladmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

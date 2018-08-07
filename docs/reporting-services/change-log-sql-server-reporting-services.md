@@ -1,7 +1,7 @@
 ---
 title: SQL Server Reporting Services(2017 이상)의 변경 로그 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 04/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: reporting-services
@@ -13,12 +13,13 @@ ms.topic: article
 author: casualoak
 ms.author: edugonz
 manager: kfile
-ms.openlocfilehash: ee37f4445a02925c0017f67d3f25056b047a1f05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cab026c9ccad3bfb91416311071e957767c41352
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968655"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400829"
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>SQL Server Reporting Services의 변경 로그
 

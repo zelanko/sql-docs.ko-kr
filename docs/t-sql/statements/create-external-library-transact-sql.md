@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 036eed38abd86f07115f2bac08a4c7640b1f2e62
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 23f57dcabfa354d68aef8aafa7a27a1ae1960bd6
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980152"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452167"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 

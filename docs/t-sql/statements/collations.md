@@ -22,13 +22,13 @@ caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f83f32c9afb33da154c94d1b8194e37bc04fdc6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 955019c517fb4659423320d86c3cf8909f82f3ff
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783805"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453067"
 ---
 # <a name="collations"></a>데이터 정렬
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +106,7 @@ FROM fn_helpcollations();
 -   데이터베이스를 복원하거나 연결할 때 데이터베이스의 기본 데이터 정렬과 데이터베이스 내의 모든 **char**, **varchar** 및 **text** 열 또는 매개 변수의 데이터 정렬은 반드시 운영 체제에서 지원되는 것이어야 합니다.  
   
 > [!NOTE]
-> Azure SQL Database 관리되는 인스턴스 서버 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이며 변경될 수 없습니다.
+> Azure SQL Database Managed Instance 서버 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이며 변경될 수 없습니다.
 
 > [!NOTE]
 > **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.  
