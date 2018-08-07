@@ -30,13 +30,13 @@ caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b8859b2cc7aed93f941756400caa387061034b6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d788da4f619feebd27919d8a34ec81de4a923f4
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784274"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452707"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -139,7 +139,7 @@ ASYMMETRIC KEY *asym_key_name*
 - 액세스를 허용하려면 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md)가 로그인 형식과 일치해야 합니다.
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 - 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
 - **CREDENTIAL** 옵션을 사용하는 경우에는 서버에 대한 **ALTER ANY CREDENTIAL** 권한도 필요합니다. 
   
@@ -261,7 +261,8 @@ CREATE LOGIN login_name
 ```  
 
 > [!IMPORTANT]  
-> [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 이 T-SQL 기능은 특정 동작이 변경되었습니다. 모든 T-SQL 동작 변경에 대한 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)을 참조하세요.
+> 
+  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 이 T-SQL 기능은 특정 동작이 변경되었습니다. 모든 T-SQL 동작 변경에 대한 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)을 참조하세요.
   
 ## <a name="arguments"></a>인수  
 *login_name*  
@@ -297,7 +298,7 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
   
  SQL Database 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)를 참조하세요. 
  
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 
 프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
 
@@ -402,7 +403,7 @@ SQL Data Warehouse에서 연결을 인증하는 데 필요한 로그인 데이�
   
  SQL Data Warehouse 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)를 참조하세요. 
  
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 
 프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
 
@@ -513,7 +514,7 @@ WINDOWS
 - 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다. 
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
   
 ## <a name="after-creating-a-login"></a>로그인을 만든 후  

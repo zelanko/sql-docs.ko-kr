@@ -30,13 +30,13 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5460e080b23470fd13f9c1e83f20b7ed58f01ac5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 71669ee3070b4282fa95cd08451929ca54c5e66a
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785140"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457577"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +70,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 |반환 값|설명|  
 |------------------|-----------------|  
 |0|현재 사용자가 *그룹* 또는 *역할*의 멤버가 아닙니다.|  
-|1|현재 사용자가 *그룹* 또는 *역할*의 멤버입니다.|  
+|@shouldalert|현재 사용자가 *그룹* 또는 *역할*의 멤버입니다.|  
 |NULL|*그룹* 또는 *역할*이 유효하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 응용 프로그램 역할을 사용하는 로그인에서 쿼리하는 경우 Windows 그룹에 대해 NULL을 반환합니다.|  
   
  IS_MEMBER는 Windows에서 만든 액세스 토큰을 검사하여 Windows 그룹 멤버를 결정합니다. 액세스 토큰은 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 후에 변경된 그룹 멤버 변경 내용을 반영하지 않습니다. Windows 그룹 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램 역할에서 쿼리할 수 없습니다.  
