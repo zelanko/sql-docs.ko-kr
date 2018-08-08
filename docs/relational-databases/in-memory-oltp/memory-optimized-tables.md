@@ -15,13 +15,13 @@ caps.latest.revision: 66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b10dd1c3cf08e1144b2e9e7b39bb4b568f335f6
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 736d951c3f2436498fe8094c691f80eee1e07471
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327566"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547823"
 ---
 # <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

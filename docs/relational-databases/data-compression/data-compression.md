@@ -26,13 +26,13 @@ caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944a0ca328ca0835601bf1cb4b75e974da6a8e7a
-ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa6ec3e233d732474e1da02511a8ae9b6de546c1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39240695"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560263"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
