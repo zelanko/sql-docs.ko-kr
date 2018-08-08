@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 시스템 요구 사항 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 306c7bcd764ed70f23c51667580fb9f8e79f0e65
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978725"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454057"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,6 +30,8 @@ ms.locfileid: "37978725"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment 요구 사항  
+ SQL Server용 Microsoft JDBC Driver 7.0부터는 Sun JDK(Java SE Development Kit) 10.0 및 JRE(Java Runtime Environment) 10.0이 지원됩니다.
+
  SQL Server용 Microsoft JDBC Driver 6.4부터는 Sun JDK(Java SE Development Kit) 9.0 및 JRE(Java Runtime Environment) 9.0이 지원됩니다.
 
  SQL Server용 Microsoft JDBC Driver 4.2부터 Sun JDK(Java SE Development Kit) 8.0 및 JRE(Java Runtime Environment) 8.0이 지원됩니다. JDBC 4.1 및 4.2 API를 포함하도록 JDBC(Java Database Connectivity) 사양 API에 대한 지원이 확장되었습니다.  
@@ -39,6 +41,30 @@ ms.locfileid: "37978725"
  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서는 JDBC 4.0 API를 포함하도록 JDBC(Java Database Connectivity) 사양 API에 대한 지원이 확장되었습니다. JDBC 4.0 API는 Sun Java SE Development Kit(API) JDK 6.0 및 Java Runtime Environment(JRE) 6.0에 새로 추가되었습니다. JDBC 4.0은 JDBC 3.0 API를 포함합니다.  
   
  Windows 및 UNIX 운영 체제에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 배포하는 경우 각각 설치 패키지 *sqljdbc_\<version>_enu.exe* 및 *sqljdbc_\<version>_enu.tar.gz*를 사용해야 합니다. JDBC 드라이버를 배포 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버 배포](../../connect/jdbc/deploying-the-jdbc-driver.md) 항목입니다.  
+  
+**SQL Server용 Microsoft JDBC Driver 7.0**  
+
+  JDBC 드라이버 7.0 각 설치 패키지에 대 한 두 개의 JAR 클래스 라이브러리가: **mssql-jdbc-7.0.0.jre8.jar**, 및 **mssql-jdbc-7.0.0.jre10.jar**합니다.
+
+  JDBC Driver 7.0은 모든 주요 Sun 동등 Java 가상 머신에서 사용 가능하고 지원되지만 Sun JRE 8.0 및 10.0에 대해서만 테스트되었습니다.
+  
+  다음에는 SQL Server용 Microsoft JDBC Driver 7.0에 포함된 2개의 JAR 파일에서 제공하는 지원이 요약되어 있습니다.  
+  
+  |JAR|JDBC 버전 규격|권장 Java 버전|설명|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 7.0의 새로운 기능 포함: JDK 10 지원, JDBC 4.2 사양, 공간 데이터 형식 지원, cancelQueryTimeout 연결 속성, 메서드 경계 요청, useBulkCopyForBatchInsert 연결 속성을 데이터 업데이트 된 기본 호환성 수준 검색 및 분류 정보를 u t F-8 기능 확장 및 CityHash 지원 합니다. |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|JRE(Java Runtime Environment) 10.0이 필요합니다. JRE 9.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 7.0의 새로운 기능 포함: JDK 10 지원, JDBC 4.2 사양, 공간 데이터 형식 지원, cancelQueryTimeout 연결 속성, 메서드 경계 요청, useBulkCopyForBatchInsert 연결 속성을 데이터 업데이트 된 기본 호환성 수준 검색 및 분류 정보를 u t F-8 기능 확장 및 CityHash 지원 합니다. |    
+
+
+  JDBC 드라이버 7.0 Maven 중앙 리포지토리에서 사용할 수 있는 이기도 하며 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다. XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.0.0.jre10</version>
+</dependency>
+```      
   
 **SQL Server용 Microsoft JDBC Driver 6.4:**  
 
@@ -64,6 +90,7 @@ ms.locfileid: "37978725"
     <version>6.4.0.jre9</version>
 </dependency>
 ```    
+
 **SQL Server용 Microsoft JDBC Driver 6.2:**  
   
   JDBC Driver 6.2 각 설치 패키지에 대 한 두 개의 JAR 클래스 라이브러리가: **mssql-jdbc-6.2.1.jre7.jar**, 및 **mssql-jdbc-6.2.1.jre8.jar**합니다. 

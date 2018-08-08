@@ -1,7 +1,7 @@
 ---
 title: 데이터 연결 및 검색 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 049b3cbc3a5ddebd30aa111f7c3bd62d46360f43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6171d4f25efff9f3a09da21bf0ffafefb66cee4
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828864"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453137"
 ---
 # <a name="connecting-and-retrieving-data"></a>데이터 연결 및 검색
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  사용 하 여 작업할 때는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 대 한 연결을 설정 하기 위한 두 가지 기본 방법을 사용 하는 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다. 연결 URL에 연결 속성을 설정 하 고 다음 반환할 DriverManager 클래스의 getConnection 메서드를 호출 하는 하나는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하는 경우 두 가지 기본 방법을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결을 설정할 수 있습니다. 그 중 하나가 연결 URL에 연결 속성을 설정한 다음 DriverManager 클래스의 getConnection 메서드를 호출하여 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 반환하는 것입니다.  
   
 > [!NOTE]  
->  JDBC 드라이버에서 지 원하는 연결 속성 목록은 참조 [연결 속성을 설정할](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+> JDBC 드라이버에서 지 원하는 연결 속성 목록은 참조 하세요 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
   
- 두 번째 방법은 연결 속성의 setter 메서드를 사용 하 여 설정 된 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스, 한 다음 호출에서 [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 는 SQLServerConnection을 반환 하는 메서드 개체입니다.  
+두 번째 방법은 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 setter 메서드를 사용하여 연결 속성을 설정한 다음 [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 메서드를 호출하여 SQLServerConnection 개체를 반환하는 것입니다.  
   
- 이 섹션의 항목에 연결할 수 있는 다양 한 방법에 설명는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 있으며 기술을 보여 줍니다 서로 다른 데이터를 검색 합니다.  
+이 섹션의 항목에서는 이와 같이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결할 수 있는 서로 다른 방법을 설명하고, 데이터 검색에 대한 기술 차이를 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
-|-----------|-----------------|  
-|[연결 URL 샘플](../../connect/jdbc/connection-url-sample.md)|연결 URL에 연결 하는 데 사용 하는 방법을 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 다음 SQL 문을 사용 하 여 데이터를 검색 합니다.|  
-|[데이터 원본 샘플](../../connect/jdbc/data-source-sample.md)|데이터 원본을 사용하여 SQL Server에 연결한 후 저장 프로시저를 사용하여 데이터를 검색하는 방법을 설명합니다.|  
+| 항목                                                                | 설명                                                                                                                                                   |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [연결 URL 샘플](../../connect/jdbc/connection-url-sample.md) | 연결 URL을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 연결한 후 SQL 문을 사용하여 데이터를 검색하는 방법을 설명합니다. |
+| [데이터 원본 샘플](../../connect/jdbc/data-source-sample.md)       | 데이터 원본을 사용하여 SQL Server에 연결한 후 저장 프로시저를 사용하여 데이터를 검색하는 방법을 설명합니다.                                                 |
   
-## <a name="see-also"></a>관련 항목:  
- [샘플 JDBC 드라이버 응용 프로그램](../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a>참고 항목
+
+[샘플 JDBC 드라이버 응용 프로그램](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
