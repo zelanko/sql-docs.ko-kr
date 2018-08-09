@@ -20,5 +20,7 @@
       href: using-azure-active-directory.md
     - name: 투명 네트워크 IP 확인 사용
       href: using-transparent-network-ip-resolution.md
+    - name: 데이터 분류
+      href: data-classification.md
 - name: 버그 수정
   href: bug-fixes.md
