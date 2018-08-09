@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988757"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367665"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>자습서: SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결하고 몇 가지 기본 T-SQL(Transact-SQL) 명령을 실행하는 방법을 설명합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
@@ -184,5 +184,11 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
     > [!NOTE]
     > 이 작업에서는 개체 탐색기에 연결된 서버가 아닌 쿼리 창이 연결된 서버만 변경합니다. 
 
+## <a name="next-steps"></a>다음 단계
+다음 아티클에서는 SQL Server Managment Studio 내에서 다양한 개체를 스크립팅하는 방법을 설명합니다. 
+
+자세히 알아보려면 다음 문서로 이동합니다.
+> [!div class="nextstepaction"]
+> [다음 단계](scripting-ssms.md)
 
 

@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대해 Always Encrypted API 참조 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1b720a607b702e93643d70b40a5e6ab036f2f56
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 1b305c9e42f1eb7dffec8bd00204723a142a6b2e
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279254"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582169"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 드라이버에 대해 Always Encrypted API 참조
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,8 +96,8 @@ ms.locfileid: "39279254"
   
 |속성|설명|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey(String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|열 암호화 키의 지정된 암호화 값을 암호 해독합니다. 암호화된 값은 지정된 열 키 IDmaster 키를 사용하고 지정된 알고리즘을 사용하여 암호화해야 합니다. <br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) decryptColumnEncryptionKey|  
-|public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)|지정 된 열 마스터 키를 사용 하 고 지정된 된 알고리즘을 사용 하 여 열 암호화 키를 암호화 합니다. <br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) encryptColumnEncryptionKey|  
+| public byte[] decryptColumnEncryptionKey(String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) | Decryptes 암호화 된 열 암호화 키 (CEK). 이 암호 해독 마스터 키 경로 지정 된 비대칭 키를 사용 하는 RSA 암호화 알고리즘을 사용 하 여 수행 됩니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) decryptColumnEncryptionKey |  
+| public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey) | 지정된 된 알고리즘에 지정 된 열 마스터 키를 부여 하 여 열 암호화 키를 암호화 합니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) encryptColumnEncryptionKey |  
 |public void setName (문자열 이름)|이 키 저장소 공급자의 이름을 설정합니다.|
 |public String getName()|이 키 저장소 공급자의 이름을 가져옵니다.|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "39279254"
   
 |속성|설명|  
 |----------|-----------------|  
-|public void registerOutParameter (int 된, sqlType int, int 정밀도, int 확장)<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> public void registerOutParameter (문자열 parameterName, sqlType int, int 정밀도, int 확장)<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />public void setBigDecimal (문자열 parameterName, BigDecimal bd, 정밀도 int, int 확장)<br /><br /> public void setTime (문자열 parameterName, java.sql.Time t, int 소수 자릿수)<br /><br /> public void setTimestamp (문자열 parameterName, t java.sql.Timestamp, int 소수 자릿수)<br /><br /> public void setDateTimeOffset (문자열 parameterName, microsoft.sql.DateTimeOffset t, int 소수 자릿수)<br/><br/>공용 최종 void setObject (sCol 문자열, 개체 x, int targetSqlType int 크기 조정 정수 전체 자릿수)|필요한 전체 자릿수 및 소수 자릿수 정보가 특정 데이터 형식에 대 한 Always Encrypted를 지원 하기 위해 정밀도 또는 배율 인수를 사용 하 여 이러한 메서드 오버 로드 됩니다.|  
+|public void registerOutParameter(int parameterIndex, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />public void setBigDecimal (문자열 parameterName, BigDecimal bd, 정밀도 int, int 확장)<br /><br /> public void setTime (문자열 parameterName, java.sql.Time t, int 소수 자릿수)<br /><br /> public void setTimestamp (문자열 parameterName, t java.sql.Timestamp, int 소수 자릿수)<br /><br /> public void setDateTimeOffset (문자열 parameterName, microsoft.sql.DateTimeOffset t, int 소수 자릿수)<br/><br/>공용 최종 void setObject (sCol 문자열, 개체 x, int targetSqlType int 크기 조정 정수 전체 자릿수)|필요한 전체 자릿수 및 소수 자릿수 정보가 특정 데이터 형식에 대 한 Always Encrypted를 지원 하기 위해 정밀도 또는 배율 인수를 사용 하 여 이러한 메서드 오버 로드 됩니다.|  
 |public void setDateTime (문자열 parameterName, java.sql.Timestamp x)<br /><br /> public void setSmallDateTime (문자열 parameterName, java.sql.Timestamp x)<br /><br /> public void setUniqueIdentifier (parameterName 문자열, 문자열 guid)<br /><br /> public void setMoney (문자열 parameterName, BigDecimal bd)<br /><br /> public void setSmallMoney (문자열 parameterName, BigDecimal bd)<br/><br/>공용 타임 스탬프 getDateTime (int 인덱스)<br/><br/>공용 타임 스탬프 getDateTime (문자열 sCol)<br/><br/>공용 타임 스탬프 getDateTime (int 인덱스, 달력 cal)<br/><br/>공용 타임 스탬프 getSmallDateTime (int 인덱스)<br/><br/>공용 타임 스탬프 getSmallDateTime (문자열 sCol)<br/><br/>공용 타임 스탬프 getSmallDateTime (int 인덱스, 달력 cal)<br/><br/>공용 타임 스탬프 getSmallDateTime (문자열 이름, 일정 cal)<br/><br/>공용 BigDecimal getMoney (int 인덱스)<br/><br/>공용 BigDecimal getMoney (문자열 sCol)<br/><br/>공용 BigDecimal getSmallMoney (int 인덱스)<br/><br/>공용 BigDecimal getSmallMoney (문자열 sCol)|이러한 메서드는 데이터 형식 money, smallmoney, uniqueidentifier, datetime 및 smalldatetime에 대 한 Always Encrypted를 지원 하기 위해 추가 됩니다. <br/><br/>암호화 된 datetime2 열에 매개 변수 값을 전송 하는 것에 대 한 기존 setTimestamp() 메서드를 사용 하는 참고 합니다. 암호화 된 datetime 및 smalldatetime 열에 대 한 각각의 새 메서드 setDateTime() 및 setSmallDateTime() 사용 합니다.|  
 |public void setObject (문자열 parameterName, 개체 o, n int, int m, 부울 forceEncrypt)<br /><br /> public void setObject (문자열 parameterName, 개체 obj, SQLType jdbcType, int 크기 조정, 부울 forceEncrypt)<br /><br /> public void setDate (문자열 parameterName, x, 달력 c java.sql.Date 부울 forceEncrypt)<br /><br /> public void setTime (문자열 parameterName, java.sql.Time t, int 크기 조정, 부울 forceEncrypt)<br /><br /> public void setTime (문자열 parameterName, x, 달력 c java.sql.Time 부울 forceEncrypt)<br /><br /> public void setDateTime (문자열 parameterName, x, 부울 forceEncrypt java.sql.Timestamp)<br /><br /> public void setDateTimeOffset (문자열 parameterName, microsoft.sql.DateTimeOffset t, int 확장, 부울 forceEncrypt)<br /><br /> public void setSmallDateTime (문자열 parameterName, x, 부울 forceEncrypt java.sql.Timestamp)<br /><br /> public void setTimestamp (문자열 parameterName, t java.sql.Timestamp, int 확장, 부울 forceEncrypt)<br /><br /> public void setTimestamp (문자열 parameterName, x, 부울 forceEncrypt java.sql.Timestamp)<br /><br /> public void setUniqueIdentifier (문자열 parameterName, guid 문자열, 부울 forceEncrypt)<br /><br /> public void setBytes (parameterName 문자열, byte b, 부울 forceEncrypt)<br /><br /> public void setByte (parameterName 문자열, 바이트 b, 부울 forceEncrypt)<br /><br /> public void setString (문자열 parameterName, string, boolean forceEncrypt)<br /><br /> 공용 최종 void setNString (parameterName 문자열, 문자열 값, 부울 forceEncrypt)<br /><br /> public void setMoney (문자열 parameterName, BigDecimal bd, 부울 forceEncrypt)<br /><br /> public void setSmallMoney (문자열 parameterName, BigDecimal bd, 부울 forceEncrypt)<br /><br /> public void setBigDecimal (문자열 parameterName, BigDecimal bd, 전체 자릿수 int, int 확장, 부울 forceEncrypt)<br /><br /> public void setDouble (문자열 parameterName double d, 부울 forceEncrypt)<br /><br /> public void setFloat (문자열 parameterName, f float, boolean forceEncrypt)<br /><br /> public void setInt (parameterName 문자열, int i, 부울 forceEncrypt)<br /><br /> public void setLong (문자열 parameterName, 장기 l, 부울 forceEncrypt)<br /><br /> public void setShort (문자열 parameterName, 단기 s, 부울 forceEncrypt)<br /><br /> public void setBoolean (parameterNames 문자열, 부울 b, 부울 forceEncrypt)<br/><br/>public void setTimeStamp (문자열 sCol, x, 달력 c java.sql.Timestamp 부울 forceEncrypt)|지정된 매개 변수를 지정된 java 값으로 설정합니다.<br /><br /> 부울 forceEncrypt 설정 되어 있으면 true, 쿼리를 매개 변수는 경우에 설정 지정 열 암호화 되 고 연결 또는 문이 상시 암호화 사용 합니다.<br /><br /> 부울 forceEncrypt가 false로 설정 하는 경우 드라이버 매개 변수에 대해 암호화를 강제 하지 않습니다.|
  

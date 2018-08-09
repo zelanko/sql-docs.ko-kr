@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: dcc08dfd4c4759f834a7371dd700c32c69c8de24
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350021"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536163"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "39350021"
 |**8048**|NUMA 분할 메모리 개체를 CPU 분할로 변환합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2809338)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8048 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|  
 |**8075**|64비트 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 페이지 할당 오류가 발생하면 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) 조각화가 감소합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/3074434)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8075 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
 |**8079**|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에서 하드웨어 레이아웃을 조사하고 NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 Soft-NUMA를 자동으로 구성할 수 있도록 허용합니다. 자동 Soft-NUMA 동작은 하이퍼스레드(HT/논리 프로세서)를 인식합니다. 추가 노드를 분할하고 만드는 경우 수신기 수, 크기 조정, 네트워크 및 암호화 기능을 늘려서 백그라운드 처리의 크기를 조정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8079 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만| 
-|**8207**|트랜잭션 복제에 대한 단일 업데이트를 설정할 수 있습니다. 구독자에 대한 업데이트는 DELETE 및 INSERT 쌍으로 복제할 수 있습니다. 이렇게 하면 UPDATE 트리거 실행과 같은 비즈니스 규칙이 충족되지 않을 수 있습니다. 8207 추적 플래그를 사용하면 단일 행(싱글톤 업데이트)에만 영향을 주는 고유 열에 대한 업데이트가 DELETE 또는 INSERT 쌍이 아닌 UPDATE로 복제됩니다. 업데이트가 unique 제약 조건이 있는 열에 영향을 주거나 업데이트가 여러 행에 영향을 주는 경우에도 업데이트는 여전히 DELETE 또는 INSERT 쌍으로 복제됩니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/302341)를 참조하세요.<br /><br />**범위**: 전역만|
+|**8207**|트랜잭션 복제 및 CDC에 대한 싱글톤 업데이트를 설정할 수 있습니다. 구독자에 대한 업데이트는 DELETE 및 INSERT 쌍으로 복제할 수 있습니다. 이렇게 하면 UPDATE 트리거 실행과 같은 비즈니스 규칙이 충족되지 않을 수 있습니다. 8207 추적 플래그를 사용하면 단일 행(싱글톤 업데이트)에만 영향을 주는 고유 열에 대한 업데이트가 DELETE 또는 INSERT 쌍이 아닌 UPDATE로 복제됩니다. 업데이트가 unique 제약 조건이 있는 열에 영향을 주거나 업데이트가 여러 행에 영향을 주는 경우에도 업데이트는 여전히 DELETE 또는 INSERT 쌍으로 복제됩니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/302341)를 참조하세요.<br /><br />**범위**: 전역만|
 |**8721**|통계 자동 업데이트를 실행할 때 오류 로그에 보고합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/195565)를 참조하세요.<br /><br />**범위**: 전역만|
 |**8744**|중첩 루프 연산자에 대해 프리페치를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**참고:** 이 추적 플래그를 잘못 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 중첩 루프 연산자가 포함된 계획을 실행할 때 추가 물리적 읽기가 발생할 수 있습니다.<br /><br />**범위**: 전역 및 세션|
 |**9024**|전역 로그 풀 메모리 개체를 NUMA 노드 분할 메모리 개체로 변환합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2809338)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1부터 이 동작은 엔진에서 제어되며, 9024 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|

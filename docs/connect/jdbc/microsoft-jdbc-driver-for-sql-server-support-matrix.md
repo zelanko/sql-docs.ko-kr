@@ -1,7 +1,7 @@
 ---
-title: Microsoft JDBC Driver for SQL Server 지원 매트릭스 | Microsoft Docs
+title: SQL Server용 Microsoft JDBC Driver 지원 매트릭스 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1aceb8c6c7077236d8bf7dcf4794a894adc16030
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d0b19f437021f3a2398ac1a0dc694c4c52259621
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832808"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456407"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 지원 매트릭스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,23 +27,24 @@ ms.locfileid: "32832808"
   이 페이지에는 Microsoft JDBC Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책이 포함되어 있습니다.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver 지원 수명 주기 매트릭스 및 정책  
- MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주기와 관련해서 투명하고 예측 가능한 정보를 제공합니다. JDBC 드라이버 버전 3.0에서 4.x 및 6.x 5 년 동안 일반 지원을 드라이버에서 릴리스 날짜를 포함 합니다. 일반 지원은 Microsoft 지원 수명 주기 웹 사이트에 정의되어 있습니다.  
+ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주기와 관련해서 투명하고 예측 가능한 정보를 제공합니다. JDBC Driver 버전 3.0, 4.x, 6.x 및 7.x는 드라이버 릴리스 날짜로부터 5년 동안 일반 지원을 제공합니다. 일반 지원은 Microsoft 지원 수명 주기 웹 사이트에 정의되어 있습니다.  
   
  확장 및 사용자 지정 지원 옵션은 Microsoft JDBC Driver에는 사용할 수 없습니다.  
     
  다음 Microsoft JDBC Driver는 지정된 지원 종료 날짜까지 지원됩니다.  
   
-|드라이버 이름|드라이버 패키지 버전|적용 가능한 JAR(s)|기본 지원의 끝|
+|드라이버 이름|드라이버 패키지 버전|해당 JAR(s)|일반 지원 종료|
 |-|-|-|-|  
-|SQL Server용 Microsoft JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 년 1 월 22|    
-|SQL Server용 Microsoft JDBC Driver 6.2|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 년 6 월 30,|    
+|SQL Server용 Microsoft JDBC Driver 7.0|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 년 7 월 31,|  
+|SQL Server용 Microsoft JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 년 2 월 27,|    
+|SQL Server용 Microsoft JDBC Driver 6.2|6.2|mssql-jdbc-포함 되어 있습니다<br> mssql-6.2.2.jre7.jar|2022 년 6 월 30,|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 년 7 월 14,|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020년 8월 24일|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|2019년 12월 12일|  
   
  다음 Microsoft JDBC Driver는 더 이상 지원되지 않습니다.  
  
-|드라이버 이름|드라이버 패키지 버전|기본 지원의 끝|  
+|드라이버 이름|드라이버 패키지 버전|일반 지원 종료|  
 |-|-|-|
 |SQL Server용 Microsoft JDBC Driver 4.0|4.0|2017년 3월 6일|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|2015년 4월 23일|  
@@ -55,7 +56,7 @@ ms.locfileid: "32832808"
   
 ## <a name="sql-version-compatibility"></a>SQL 버전 호환성  
   
-|드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 인스턴스 (확장 비공개 미리 보기) 관리|  
+|드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 데이터베이스|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 관리 인스턴스 (비공개 미리 보기 확장)|  
 |-|-|-|-|-|-|-|-|-|-|
 |6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
@@ -71,21 +72,22 @@ ms.locfileid: "32832808"
 |1.0|N|N|N|N|N|N|N|N|N|  
 |2000|N|N|N|N|N|N|N|N|N|  
   
- <sup>1</sup>Microsoft SQL Server JDBC 드라이버 버전 3.0은 하위 수준 클라이언트로 SQL Server 2012에 연결할 수 있습니다.  
+ <sup>1</sup>Microsoft SQL Server JDBC Driver 버전 3.0은 하위 수준 클라이언트로 SQL Server 2012에 연결될 수 있습니다.  
   
- <sup>2</sup>Azure SQL 데이터베이스에 대 한 지원은 3.0 드라이버에 핫픽스로 도입 되었습니다. Azure SQL 데이터베이스 고객은 사용 가능한 최신 드라이버 버전을 사용하는 것이 좋습니다.  
+ <sup>2</sup>Azure SQL Database에 대한 지원은 3.0 드라이버에서 핫픽스로 도입되었습니다. Azure SQL 데이터베이스 고객은 사용 가능한 최신 드라이버 버전을 사용하는 것이 좋습니다.  
   
- <sup>3</sup>Microsoft SQL Server JDBC 드라이버 버전 2.0 및 Microsoft SQL Server 2005 JDBC 드라이버 버전 1.2는 하위 수준 클라이언트로 SQL Server 2008에 연결할 수 있습니다. 하위 수준 변환이 허용되는 경우 응용 프로그램은 쿼리를 실행하고 시간, 날짜, datetime2, datetimeoffset 및 FILESTREAM 등 새로운 SQL Server 2008 데이터 형식을 업데이트할 수 있습니다. JDBC Driver와 함께 이러한 새로운 데이터 형식을 사용하는 방법에 대한 자세한 내용은  [JDBC Driver를 사용하여 SQL Server 2008 날짜/시간 데이터 형식 작업](http://go.microsoft.com/fwlink/?LinkId=145198) 및  [JDBC Driver를 사용하 여 SQL Server 2008 FileStream 작업](http://go.microsoft.com/fwlink/?LinkId=145199)을 참조하세요. 이러한 새 데이터 형식의 하위 수준 호환성에 대한 자세한 내용은 SQL Server 온라인 설명서의  [날짜 및 시간 데이터 사용](http://go.microsoft.com/fwlink/?LinkId=145211)및  [FILESTREAM 지원](http://go.microsoft.com/fwlink/?LinkId=145212) 항목을 참조하세요.  
+ <sup>3</sup>Microsoft SQL Server JDBC Driver 버전 2.0 및 Microsoft SQL Server 2005 JDBC Driver 버전 1.2는 하위 수준 클라이언트로 SQL Server 2008에 연결될 수 있습니다. 하위 수준 변환이 허용되는 경우 응용 프로그램은 쿼리를 실행하고 시간, 날짜, datetime2, datetimeoffset 및 FILESTREAM 등 새로운 SQL Server 2008 데이터 형식을 업데이트할 수 있습니다. JDBC Driver와 함께 이러한 새로운 데이터 형식을 사용하는 방법에 대한 자세한 내용은  [JDBC Driver를 사용하여 SQL Server 2008 날짜/시간 데이터 형식 작업](http://go.microsoft.com/fwlink/?LinkId=145198) 및  [JDBC Driver를 사용하 여 SQL Server 2008 FileStream 작업](http://go.microsoft.com/fwlink/?LinkId=145199)을 참조하세요. 이러한 새 데이터 형식의 하위 수준 호환성에 대한 자세한 내용은 SQL Server 온라인 설명서의  [날짜 및 시간 데이터 사용](http://go.microsoft.com/fwlink/?LinkId=145211)및  [FILESTREAM 지원](http://go.microsoft.com/fwlink/?LinkId=145212) 항목을 참조하세요.  
   
- <sup>4</sup>Microsoft JDBC Driver와 병렬 데이터 웨어하우스 간의 연결에 대 한 지원에서에서 처음 도입 Microsoft JDBC Driver 4.0 SQL Server 및 Microsoft SQL Server 2008 R2 병렬 데이터 웨어하우스 어플라이언스 업데이트 3에 대 한 합니다.  
+ <sup>4</sup>Microsoft JDBC Driver와 병렬 데이터 웨어하우스 간의 연결 지원은 SQL Server용 Microsoft JDBC Driver 4.0 및 Microsoft SQL Server 2008 R2 병렬 데이터 웨어하우스 어플라이언스 업데이트 3에 최초로 도입되었습니다.  
   
- <sup>5</sup>Microsoft SQL Server JDBC 드라이버 버전 3.0은 하위 수준 클라이언트로 SQL Server 2014로 연결할 수 있습니다.  
+ <sup>5</sup>Microsoft SQL Server JDBC Driver 버전 3.0은 하위 수준 클라이언트로 SQL Server 2014에 연결될 수 있습니다.  
   
 ## <a name="java-and-jdbc-specification-support"></a>Java 및 JDBC 사양 지원  
   
 |JDBC 드라이버 버전|JRE 버전|JDBC API 버전| 
 |-|-|-|  
-|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (부분적으로)|  
+|7.0|1.8, 10|4.2, 4.3 (부분적)|  
+|6.4|1.7, 1.8, 9|4.2, 4.1, 4.3 (부분적)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

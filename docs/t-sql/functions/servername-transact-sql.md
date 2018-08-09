@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787364"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582189"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787364"
 |--------------|------------------------|  
 |기본 인스턴스|'*servername*'|  
 |명명된 인스턴스|'*servername*\\*instancename*'|  
-|장애 조치(failover) 클러스터형 인스턴스 - 기본 인스턴스|'*virtualservername*'|  
-|장애 조치(failover) 클러스터형 인스턴스 - 명명된 인스턴스|'*virtualservername*\\*instancename*'|  
+|장애 조치(Failover) 클러스터 인스턴스 - 기본 인스턴스|'*network_name_for_fci_in_wsfc*'|  
+|장애 조치(Failover) 클러스터 인스턴스 - 명명된 인스턴스|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  @@SERVERNAME 함수와 SERVERPROPERTY 함수의 SERVERNAME 속성이 비슷한 형식의 문자열을 반환하더라도 정보는 다를 수 있습니다. SERVERNAME 속성은 컴퓨터의 네트워크 이름 변경을 자동으로 보고합니다.  
   

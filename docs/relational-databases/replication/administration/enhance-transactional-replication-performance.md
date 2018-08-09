@@ -1,5 +1,5 @@
 ---
-title: 트랜잭션 복제 성능 향상 | Microsoft Docs
+title: 트랜잭션 복제 성능 향상 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356055"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482684"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ ms.locfileid: "37356055"
 
 구독 스트림 구현에 대한 자세한 내용은 [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)(SQL 복제 subscriptionStream 설정 살펴보기)을 참조하세요.
   
+### <a name="blocking-monitor-thread"></a>차단 모니터 스레드
+
+배포 에이전트는 세션 간에 차단을 검색하는 차단 모니터 스레드를 유지 관리합니다. 차단 모니터 스레드가 세션 간의 차단을 검색하면 배포 에이전트는 하나의 세션을 이전에 적용할 수 없는 명령의 현재 일괄 처리를 다시 적용하는 데 사용하도록 전환합니다.
+
+차단 모니터 스레드는 배포 에이전트 세션 간에 차단을 검색할 수 있습니다. 그러나 차단 모니터 스레드는 다음과 같은 상황에서 차단을 검색할 수 없습니다.
+- 차단이 발생하는 세션 중 하나가 배포 에이전트 세션이 아닌 경우
+- 세션 교착 상태로 인해 배포 에이전트의 작업을 중단하는 경우
+
+이 경우에 배포 에이전트는 해당 명령이 실행되는 즉시 모든 세션을 함께 커밋하도록 조정합니다. 다음 조건이 true인 경우 세션 간에 교착 상태가 발생합니다.
+
+- 배포 에이전트 세션과 배포 에이전트 세션이 아닌 세션 간에 차단이 발생합니다.
+- 배포 에이전트가 모든 세션을 함께 커밋하도록 조정하기 전에 모든 세션이 해당 명령 실행을 완료하기를 기다리고 있었습니다.
+
+예를 들어 *SubscriptionStreams* 매개 변수를 8로 구성했습니다. 10 세션부터 17 세션까지는 배포 에이전트 세션입니다. 18 세션은 배포 에이전트 세션이 아닙니다. 10 세션이 18 세션에 의해 차단되고 18 세션이 11 세션에 의해 차단되었습니다. 또한 10 세션 및 11 세션은 함께 커밋해야 합니다. 그러나 배포 에이전트는 차단 때문에 10 세션 및 11 세션을 함께 커밋할 수 없습니다. 따라서 배포 에이전트는 10 세션 및 11 세션이 해당 명령의 실행을 완료할 때까지 이러한 8개의 세션을 함께 커밋하도록 조정할 수 없습니다.
+
+이 예제에서는 해당 명령을 실행하는 세션이 없는 상태가 발생합니다. **QueryTimeout** 속성에서 지정된 시간에 도달하면 배포 에이전트는 모든 세션을 취소합니다.
+
+> [!Note]
+> 기본적으로 **QueryTimeout** 속성 값은 5분입니다.
+
+이 쿼리 시간 제한 동안 배포 에이전트 성능 카운터에서 다음과 같은 추세를 확인할 수 있습니다. 
+
+- **Dist: Delivered Cmds/sec** 성능 카운터 값은 항상 0입니다.
+- **Dist: Delivered Trans/sec** 성능 카운터 값은 항상 0입니다.
+- **Dist: Delivery Latency** 성능 카운터는 스레드 교착 상태가 해결될 때까지 값이 증가한다고 보고합니다.
+
+Microsoft SQL Server 온라인 설명서의 "복제 배포 에이전트" 항목에는 *SubscriptionStreams* 매개 변수에 대해 다음과 같은 설명이 포함됩니다. "연결 중 하나가 실행 또는 커밋에 실패하는 경우 모든 연결이 현재 일괄 처리를 중단하고, 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다."
+
+배포 에이전트는 하나의 세션을 사용하여 적용될 수 없는 일괄 처리를 다시 시도합니다. 배포 에이전트가 성공적으로 일괄 처리를 적용한 후에 다시 시작하지 않고 여러 세션을 사용하여 다시 시작됩니다.
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - 배포 에이전트에 대해 **-CommitBatchSize** 매개 변수의 값을 늘립니다.  
   

@@ -27,13 +27,13 @@ caps.latest.revision: 45
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9609e8361e53a6d535c8d1cb0dc753a0542cfbb9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d14a95638b567c548e11646c8d2acdc834054cba
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787314"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459957"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  OFF이면 앞의 T-SQL 문은 보이지 않는 BEGIN TRANSACTION 및 보이지 않는 COMMIT TRANSACTION 문으로 제한됩니다. OFF이면 트랜잭션 모드가 자동 커밋(*autocommit*)이라고 합니다. T-SQL 코드가 BEGIN TRANSACTION을 눈에 보이게 발급하면 트랜잭션 모드가 명시적(*explicit*)이라고 합니다.  
   
- 다음은 명확한 이해가 필요한 몇 가지 요점입니다.  
+ 명확한 이해가 필요한 몇 가지는 다음과 같습니다.  
   
 -   트랜잭션 모드가 암시적일 때 @@trancount > 0이면 보이지 않는 BEGIN TRANSACTION이 발급되지 않습니다. 하지만 명시적인 BEGIN TRANSACTION 문은 @@TRANCOUNT를 여전히 증가시킵니다.  
   

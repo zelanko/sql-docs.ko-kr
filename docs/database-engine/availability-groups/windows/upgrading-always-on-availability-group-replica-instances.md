@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f269692489e852e60cb30172738d8ff89ec95f53
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9ed204382cf962e82fc6418a57343909515afaca
+ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770081"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496712"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
   
 6.  PRIMARY1 업그레이드 또는 업데이트  
   
-## <a name="upgrade-update-sql-server-instances-with-multiple-ags"></a>여러 AG가 있는 SQL Server 인스턴스 업그레이드/업데이트  
+## <a name="upgrade-or-update-sql-server-instances-with-multiple-ags"></a>여러 AG가 있는 SQL Server 인스턴스 업그레이드 또는 업데이트  
  별도의 서버 노드(활성/비활성 구성)에서 주 복제본이 있는 여러 AG를 실행 중인 경우 프로세스 중에 고가용성을 유지하기 위해 업그레이드 경로에 더 많은 장애 조치(failover) 단계가 포함됩니다. 다음 표와 같이 3개의 서버 노드에서 3개의 AG를 실행하고 모든 복제본이 동기 커밋 모드에서 실행 중이라고 가정합니다.  
   
 |AG|Node1|Node2|Node3|  
@@ -171,6 +171,63 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
   
 > [!NOTE]  
 >  대부분의 경우에서 롤링 업그레이드가 완료된 후 원래 주 복제본에 대한 장애 복구가 수행됩니다. 
+
+## <a name="rolling-upgrade-of-a-distributed-availability-group"></a>분산 가용성 그룹의 롤링 업그레이드
+분산 가용성 그룹의 롤링 업그레이드를 수행하려면 먼저 모든 보조 복제본을 업그레이드합니다. 다음으로, 전달자를 장애 조치하고 두 번째 가용성 그룹의 마지막 남은 인스턴스를 업그레이드합니다. 다른 모든 복제본을 업그레이드하면 글로벌 주 복제본을 장애 조치하고, 첫 번째 가용성 그룹의 마지막 남은 인스턴스를 업그레이드합니다. 아래 단계에서 자세한 다이어그램이 제공됩니다. 
+
+ 특정 구현에 따라 업그레이드 경로가 달라질 수 있으며 클라이언트 응용 프로그램에 발생하는 작동 중지 시간도 달라질 수 있습니다.  
+  
+> [!NOTE]  
+>  대부분의 경우에서 롤링 업그레이드가 완료된 후에 원래 주 복제본에 대한 장애 복구가 수행됩니다. 
+
+### <a name="general-steps-to-upgrade-a-distributed-availability-group"></a>분산 가용성 그룹을 업그레이드하는 일반적인 단계
+1. 시스템 데이터베이스와 가용성 그룹에 참여한 데이터베이스를 포함한 모든 데이터베이스를 백업합니다. 
+2. 두 번째 가용성 그룹(다운스트림)의 모든 보조 복제본을 업그레이드하고 다시 시작합니다. 
+3. 첫 번째 가용성 그룹(업스트림)의 모든 보조 복제본을 업그레이드하고 다시 시작합니다. 
+4. 보조 가용성 그룹의 업그레이드된 보조 복제본에 주 전달자를 장애 조치합니다.
+5. 데이터 동기화가 될 때까지 기다립니다. 데이터베이스는 모든 동기-커밋 복제본에서 동기화된 것으로 표시되어야 하고 글로벌 주 복제본은 전달자와 동기화되어야 합니다.  
+6. 보조 가용성 그룹의 마지막 남은 인스턴스를 업그레이드하고 다시 시작합니다. 
+7. 첫 번째 가용성 그룹의 업그레이드된 보조 복제본에 글로벌 주 복제본을 장애 조치합니다.  
+8. 주 가용성 그룹의 마지막 남은 인스턴스를 업그레이드합니다.
+9. 새로 업그레이드된 서버를 다시 시작합니다. 
+10. (선택 사항) 두 가용성 그룹을 다시 원래 주 복제본에 장애 복구합니다.  
+
+>[!IMPORTANT]
+>- 모든 단계 간의 동기화를 확인합니다. 다음 단계를 계속하기 전에 동기-커밋 복제본이 가용성 그룹 내에서 동기화되고 분산된 AG에서 전달자와 글로벌 주 복제본이 동기화되었는지를 확인합니다. 
+>- **권장 사항**: 동기화를 확인할 때마다 SQL Server Management Studio에서 데이터베이스 노드 및 분산된 AG 노드를 모두 새로 고칩니다. 모든 항목이 동기화된 후에 각 복제본의 상태 스크린샷을 저장합니다. 그러면 수행 중인 단계를 추적하고, 다음 단계 전에 모든 항목이 제대로 작동한다는 증명을 제공하고, 문제가 발생하는 경우 문제를 해결하는 데 도움이 됩니다. 
+
+
+### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>분산 가용성 그룹의 롤링 업그레이드에 대한 다이어그램 예제
+
+| 가용성 그룹 | 주 복제본 | 보조 복제본|
+| :------ | :----------------------------- |  :------ |
+| AG1 | NODE1\SQLAG | NODE2\SQLAG|
+| AG2 | NODE3\SQLAG | NODE4\SQLAG|
+| Distributedag| AG1(글로벌) | AG2(전달자) |
+| &nbsp; | &nbsp; | &nbsp; |
+
+![분산된 AG에 대한 예제 다이어그램](media/upgrading-always-on-availability-group-replica-instances/rolling-upgrade-dag-diagram.png)
+
+
+이 다이어그램에서 인스턴스를 업그레이드하는 단계: 
+
+1. 시스템 데이터베이스와 가용성 그룹에 참여한 데이터베이스를 포함한 모든 데이터베이스를 백업합니다. 
+2. NODE4\SQLAG(AG2의 보조)를 업그레이드하고 서버를 다시 시작합니다. 
+3. NODE2\SQLAG(AG1의 보조)를 업그레이드하고 서버를 다시 시작합니다. 
+4. AG2를 NODE3\SQLAG에서 NODE4\SQLAG로 장애 조치합니다. 
+5. NODE3\SQLAG를 업그레이드하고 서버를 다시 시작합니다. 
+6. AG1을 NODE1\SQLAG에서 NODE2\SQLAG로 장애 조치합니다. 
+7. NODE1\SQLAG를 업그레이드하고 서버를 다시 시작합니다. 
+8. (선택 사항) 원래 주 복제본으로 장애 복구합니다.
+    1. AG2를 NODE4\SQLAG에서 NODE3\SQLAG로 다시 장애 조치합니다.  
+    2. AG1을 NODE2\SQLAG에서 NODE1\SQLAG로 다시 장애 조치합니다. 
+
+세 번째 복제본이 각 가용성 그룹에 존재하는 경우 NODE3\SQLAG 및 NODE1\SQLAG 전에 업그레이드할 수 있습니다. 
+
+>[!IMPORTANT]
+>- 모든 단계 간의 동기화를 확인합니다. 다음 단계를 계속하기 전에 동기-커밋 복제본이 가용성 그룹 내에서 동기화되고 분산된 AG에서 전달자와 글로벌 주 복제본이 동기화되었는지를 확인합니다. 
+>- 권장 사항: 동기화를 확인할 때마다 SQL Server Management Studio에서 데이터베이스 노드 및 분산된 AG 노드를 모두 새로 고칩니다. 모든 항목을 동기화하는 경우 스크린샷을 찍어 저장합니다. 그러면 수행 중인 단계를 추적하고, 다음 단계 전에 모든 항목이 제대로 작동한다는 증명을 제공하고, 문제가 발생하는 경우 문제를 해결하는 데 도움이 됩니다. 
+
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>변경 데이터 캡처 또는 복제를 위한 특별한 단계
 

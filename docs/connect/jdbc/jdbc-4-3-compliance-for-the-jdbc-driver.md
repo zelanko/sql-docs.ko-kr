@@ -14,27 +14,25 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f529c88044444f3fb6e428b6c69f5a5cf5917251
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 44ec3198bfb6f9898406688df2544dd2e243294b
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278914"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459487"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.3 준수
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-    
 > [!NOTE]  
->  SQL Server용 Microsoft JDBC Driver 6.4 이전 버전은 JDBC(Java Database Connectivity) API 4.2 사양을 준수합니다. 6.4 릴리스 이전 버전에는 이 섹션이 적용되지 않습니다.  
-  
- 버전 6.4, SQL Server 용 Microsoft JDBC Driver는 JAVA 10과 호환 되지만 JDBC API 4.3 사양을 완벽 하 게 준수 하지 않는. 드라이버는 구현 되지 않은 메서드에 대 한 SQLFeatureNotSupportedException을 throw합니다. 
- 
- 다음과 같은 JDBC 4.3 API 메서드는 SQL Server 용 Microsoft JDBC Driver 6.4에 구현 됩니다.
- 
-  **SQLServerConnection 클래스**  
-  
-|새 메서드|설명|중요한 구현|  
+> SQL Server용 Microsoft JDBC Driver 6.4 이전 버전은 JDBC(Java Database Connectivity) API 4.2 사양만을 준수합니다. 6.4 릴리스 포함 이전 버전에는 이 섹션이 적용되지 않습니다.
+
+버전 6.4, SQL Server 용 Microsoft JDBC Driver는 JAVA 9 호환 않으며 `SQLFeatureNotSupportedException` 메서드를 구현 하는 새로운 JDBC 4.3 Api에 대 한 합니다.
+
+Microsoft JDBC 드라이버 7.0 SQL Server 릴리스를 사용 하 여 드라이버는 이제 JAVA 10 호환 및 지원 아래 설명한 Api. 드라이버 throw `SQLFeatureNotSupportedException` JDBC 4.3 사양에서 구현 되지 않은 다른 방법에 대 한 합니다.
+
+|새 API|설명|중요한 구현|  
 |-----------------|-----------------|-------------------------------|  
-|void beginrequest)|이 연결에서 요청을 작업 하는 독립적인 단위를 시작 하는 드라이버에 대 한 힌트입니다. 자세한 내용은 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)을 참조하세요.|공용 API 메서드를 통해 수정할 수 있는 연결 필드의 값을 저장: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`를 `sendTimeAsDatetime`를 `statementPoolingCacheSize`, `disableStatementPooling`를 `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall `, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert `.|
-|void endRequest()|작업에서 독립적인 단위는 요청이 완료 되었음을 드라이버에 대 한 힌트입니다. 자세한 내용은 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--)을 참조하세요.|작업 단위 중에 생성 되는 문을 닫히고 열려 있는 모든 트랜잭션을 롤백합니다. 메서드는 또한 위에 나열 된 연결 필드에 변경 내용이 되돌립니다.|
+|void java.sql.connection.beginRequest()|이 연결에서 요청을 작업 하는 독립적인 단위를 시작 하는 드라이버에 대 한 힌트입니다. 자세한 내용은 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)을 참조하세요.|공용 API 메서드를 통해 수정할 수 있는 연결 필드의 값을 저장: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`를 `sendTimeAsDatetime`를 `statementPoolingCacheSize`, `disableStatementPooling`를 `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall `, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert `.|
+|void java.sql.connection.endRequest()|작업에서 독립적인 단위는 요청이 완료 되었음을 드라이버에 대 한 힌트입니다. 자세한 내용은 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--)을 참조하세요.|작업 단위 중에 생성 되는 문을 닫히고 열려 있는 모든 트랜잭션을 롤백합니다. 메서드는 또한 위에 나열 된 연결 필드에 변경 내용이 되돌립니다.|

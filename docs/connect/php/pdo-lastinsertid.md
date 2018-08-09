@@ -1,7 +1,7 @@
 ---
 title: PDO::lastInsertId | Microsoft Docs
 ms.custom: ''
-ms.date: 01/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c2dac32798ff7d6df6adc1e37133518507edc056
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983375"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367725"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,17 +48,16 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 테이블 이름이 제공 되는 버전 4.3을 후 경우 `lastInsertId` 빈 문자열을 반환 합니다.
 시퀀스는 SQL Server 2012에만 지원 됩니다.
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예제
   
-```  
+```
 <?php
 $server = "myserver";
 $databaseName = "mydatabase";
 $uid = "myusername";
 $pwd = "mypasword";
 
-try{
-    $database = "tempdb";
+try {
     $conn = new PDO("sqlsrv:Server=$server;Database=$databaseName", $uid, $pwd);
     
     // One sequence, two tables
@@ -75,9 +74,9 @@ try{
     $sql = "CREATE SEQUENCE $sequenceName AS INTEGER START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE 100 CYCLE";
     $stmt = $conn->query($sql);
 
-    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 20 )");
-    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 40 )");
-    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 60 )");
+    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 20)");
+    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 40)");
+    $ret = $conn->exec("INSERT INTO $tableName1 VALUES( NEXT VALUE FOR $sequenceName, 60)");
     $ret = $conn->exec("INSERT INTO $tableName2 VALUES( '20' )");
     
     // return the last sequence number if sequence name is provided
@@ -132,17 +131,29 @@ try{
     $stmt = $conn->query("DROP TABLE $tableName");
     $stmt = $conn->query("DROP SEQUENCE $sequence1");
     $stmt = $conn->query("DROP SEQUENCE $sequence2");
-    $stmt = null;
     
-    $conn = null;
-}
-    catch (Exception $e){
+    unset($stmt);
+    unset($conn);
+} catch (Exception $e) {
     echo "Exception $e\n";
 }
-   
+
 ?>
-```  
-  
+```
+
+예상 출력은 다음과 같습니다.
+
+```
+Last sequence number = 3
+Last inserted ID     = 1
+Last inserted ID when a table name is supplied =
+
+Last sequence number of sequence1    = 3
+Last sequence number of sequenceNeg1 = 198
+Last sequence number when a table name is supplied = 
+
+```
+
 ## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
