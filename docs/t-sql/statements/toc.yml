@@ -142,8 +142,6 @@
       href: backup-transact-sql.md
     - name: BACKUP CERTIFICATE
       href: backup-certificate-transact-sql.md
-    - name: BACKUP DATABASE(병렬 데이터웨어 하우스)
-      href: backup-database-parallel-data-warehouse.md
     - name: BACKUP MASTER KEY
       href: backup-master-key-transact-sql.md
     - name: BACKUP SERVICE MASTER KEY
@@ -152,8 +150,6 @@
       href: restore-statements-transact-sql.md
     - name: RESTORE 문
       href: restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md
-    - name: RESTORE DATABASE(병렬 데이터 웨어하우스)
-      href: restore-database-parallel-data-warehouse.md
     - name: RESTORE 인수
       href: restore-statements-arguments-transact-sql.md
     - name: RESTORE FILELISTONLY

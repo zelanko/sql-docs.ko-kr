@@ -85,21 +85,7 @@
   items:
     - name: '1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색'
       href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-      items:
-        - name: 1-1단원 - 데이터베이스 엔진 튜닝 관리자 시작
-          href: lesson-1-1-launching-database-engine-tuning-advisor.md
-        - name: 1-2단원 - 도구 옵션 및 레이아웃 설정
-          href: lesson-1-2-setting-tool-options-and-layout.md
-- name: '2단원: 데이터베이스 엔진 튜닝 관리자 사용'
-  href: lesson-2-using-database-engine-tuning-advisor.md
-  items:
-    - name: 1-1단원 - 작업 튜닝
-      href: lesson-1-1-tuning-a-workload.md
-    - name: 1-2단원 - 튜닝 권장 사항 보기
-      href: lesson-1-2-viewing-tuning-recommendations.md
-    - name: 1-3단원 - 튜닝 보고서 보기
-      href: lesson-1-3-viewing-tuning-reports.md
+    - name: '2단원: 데이터베이스 엔진 튜닝 관리자 사용'
+      href: lesson-2-using-database-engine-tuning-advisor.md
     - name: '3단원: dta 명령 프롬프트 유틸리티 사용'
       href: lesson-3-using-the-dta-command-prompt-utility.md
-    - name: 3-1단원 - dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝
-      href: lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md
