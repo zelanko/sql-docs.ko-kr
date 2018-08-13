@@ -1,1 +1,0 @@
-![다운로드](../ssdt/media/download.png)[.Net 드라이버 다운로드](http://www.microsoft.com/net/download/)
