@@ -22,13 +22,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ebd317abcd9fec6ee6e116c0bbacc63bf547be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9f415c295a45e2505bfa30afb34b76dba1d423c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240633"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555103"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,39 +58,39 @@ sp_addextendedproperty
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @name ] = {'*property_name*'을 (를)  
- 추가할 속성의 이름입니다. *property_name* 은 **sysname** NULL 일 수 없습니다. 또한 이름은 영숫자가 아닌 문자열 또는 공백 및 이진 값을 포함할 수 있습니다.  
+ [ @name ] = {'*property_name*'}  
+ 추가할 속성의 이름입니다. *property_name* 됩니다 **sysname** NULL 일 수 없습니다. 또한 이름은 영숫자가 아닌 문자열 또는 공백 및 이진 값을 포함할 수 있습니다.  
   
- [ @value=] {'*값*'을 (를)  
- 속성과 연결할 값입니다. *값* 은 **sql_variant**, 기본값은 NULL입니다. *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
+ [ @value=] {'*값*'}  
+ 속성과 연결할 값입니다. *값* 됩니다 **sql_variant**, 기본값은 NULL입니다. *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
   
- [ @level0type=] {'*level0_object_type*'을 (를)  
- 수준 0 개체의 유형입니다. *level0_object_type* 은 **varchar (128)**, 기본값은 NULL입니다.  
+ [ @level0type=] {'*level0_object_type*'}  
+ 수준 0 개체의 유형입니다. *level0_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다.  
   
  유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE 및 NULL입니다.  
   
 > [!IMPORTANT]  
 >  수준 1 유형 개체의 확정 속성에서 USER를 수준 0 유형으로 지정하는 기능은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 대신 SCHEMA를 수준 0 유형으로 사용합니다. 예를 들어 테이블에 확장 속성을 정의할 때 사용자 이름 대신 테이블의 스키마를 지정합니다. TYPE을 수준 0 유형으로 지정하는 기능은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
   
- [ @level0name=] {'*level0_object_name*'을 (를)  
- 지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 은 **sysname** 기본값은 NULL입니다.  
+ [ @level0name=] {'*level0_object_name*'}  
+ 지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 됩니다 **sysname** 이며 기본값은 NULL입니다.  
   
- [ @level1type=] {'*level1_object_type*'을 (를)  
- 수준 1 개체의 유형입니다. *level1_object_type* 은 **varchar (128)**, 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.  
+ [ @level1type=] {'*level1_object_type*'}  
+ 수준 1 개체의 유형입니다. *level1_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.  
   
- [ @level1name=] {'*level1_object_name*'을 (를)  
- 지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 은 **sysname**, 기본값은 NULL입니다.  
+ [ @level1name=] {'*level1_object_name*'}  
+ 지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ @level2type=] {'*level2_object_type*'을 (를)  
- 수준 2 개체의 유형입니다. *level2_object_type* 은 **varchar (128)**, 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
+ [ @level2type=] {'*level2_object_type*'}  
+ 수준 2 개체의 유형입니다. *level2_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
- [ @level2name=] {'*level2_object_name*'을 (를)  
- 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 은 **sysname**, 기본값은 NULL입니다.  
+ [ @level2name=] {'*level2_object_name*'}  
+ 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  확장 속성을 지정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 개체는 세 수준(0, 1, 2)으로 분류됩니다. 수준 0은 최고 수준이며 데이터베이스 범위에 포함된 개체로 정의됩니다. 수준 1 개체는 스키마나 USER 범위에 포함되어 있고 수준 2 개체는 수준 1 개체에 포함되어 있습니다. 모든 수준의 개체에 대해 확장 속성을 정의할 수 있습니다.  
   
  한 수준에 있는 개체를 참조할 때는 해당 개체를 소유하거나 포함하는 더 높은 수준의 개체 이름을 지정해야 합니다. 예를 들어 확장 속성을 테이블 열(수준 2)에 추가할 때 열을 포함하는 테이블 이름(수준 1)과 테이블을 포함하는 스키마(수준 0)도 지정해야 합니다.  
@@ -99,16 +99,16 @@ sp_addextendedproperty
   
  확장 속성은 시스템 개체, 사용자 정의 데이터베이스 범위 밖의 개체 또는 인수에 유효한 입력으로 나열되지 않은 개체에 대해 허용되지 않습니다.  
   
- 메모리 액세스에 최적화 된 테이블에 확장된 속성이 허용 되지 않습니다.  
+ 메모리 최적화 테이블에 확장된 속성이 허용 되지 않습니다.  
   
 ## <a name="replicating-extended-properties"></a>확장 속성 복제  
- 확장 속성은 게시자와 구독자 간의 초기 동기화 수행 시에만 복제됩니다. 초기 동기화 후에 확장 속성을 추가하거나 수정하면 변경 내용이 복제되지 않습니다. 데이터베이스 개체를 복제 하는 방법에 대 한 자세한 내용은 참조 [게시 데이터 및 데이터베이스 개체](../../relational-databases/replication/publish/publish-data-and-database-objects.md)합니다.  
+ 확장 속성은 게시자와 구독자 간의 초기 동기화 수행 시에만 복제됩니다. 초기 동기화 후에 확장 속성을 추가하거나 수정하면 변경 내용이 복제되지 않습니다. 데이터베이스 개체를 복제 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)합니다.  
   
 ## <a name="schema-vs-user"></a>SCHEMA와  사용자  
- 확장 속성을 데이터베이스 개체에 적용할 때 USER를 수준 0 유형으로 지정하는 것은 이름 확인에 혼동을 일으킬 수 있으므로 사용하지 않는 것이 좋습니다. 예를 들어 사용자 Mary가 두 개의 스키마(Mary 및 MySchema)를 소유하고 있고 두 스키마 모두 MyTable이라는 테이블을 포함하고 있다고 가정합니다. Mary MyTable 테이블에 확장된 속성을 추가 하 고 지정  **@level0type = N'USER'**,  **@level0name = Mary**, 적용 되는지 확장된 속성이 어느 테이블에 분명 하지 않습니다. 이전 버전과의 호환성을 유지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 속성을 Mary라는 스키마에 포함된 테이블에 적용합니다.  
+ 확장 속성을 데이터베이스 개체에 적용할 때 USER를 수준 0 유형으로 지정하는 것은 이름 확인에 혼동을 일으킬 수 있으므로 사용하지 않는 것이 좋습니다. 예를 들어 사용자 Mary가 두 개의 스키마(Mary 및 MySchema)를 소유하고 있고 두 스키마 모두 MyTable이라는 테이블을 포함하고 있다고 가정합니다. Mary MyTable 테이블에 확장된 속성을 추가 하 고 지정  **@level0type = N'USER'** 하십시오  **@level0name = Mary**, 적용 되는지 확장된 속성이 어느 테이블에 명확 하지 않습니다. 이전 버전과의 호환성을 유지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 속성을 Mary라는 스키마에 포함된 테이블에 적용합니다.  
   
-## <a name="permissions"></a>Permissions  
- Db_owner 및 db_ddladmin 고정 데이터베이스 역할의 구성원 예외가 발생 하 여 모든 개체에 확장된 속성을 추가할 수 있습니다: db_ddladmin은 데이터베이스 자체 또는 사용자나 역할에 속성을 추가할 수 없습니다.  
+## <a name="permissions"></a>사용 권한  
+ Db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 다음 예외를 사용 하 여 모든 개체에 확장된 속성을 추가할 수 있습니다: db_ddladmin은 데이터베이스 자체 또는 사용자나 역할에 속성을 추가할 수 없습니다.  
   
  사용자는 자신이 소유하거나 ALTER 또는 CONTROL 권한이 있는 개체에 확장 속성을 추가할 수 있습니다.  
   
@@ -241,8 +241,8 @@ EXEC sys.sp_addextendedproperty
 @level0name = N'CustomApp';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  

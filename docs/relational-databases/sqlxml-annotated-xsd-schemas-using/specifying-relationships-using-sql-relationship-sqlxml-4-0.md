@@ -1,5 +1,5 @@
 ---
-title: '관계를 사용 하 여 s q l: (SQLXML 4.0)를 지정 합니다. | Microsoft Docs'
+title: '관계를 사용 하 여 sql (SQLXML 4.0): relationship 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -33,21 +33,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5d9846c90dc6b95d83c3e647aaee1f388cd0ea86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2360ba541640eaf1fce8e681b42aea783a517171
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973858"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538153"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 계층적으로 중첩될 수 있으며 요소 간에 ID, IDREF 또는 IDREFS 관계가 지정될 수 있습니다.  
   
- 예를 들어 XSD 스키마에에서는  **\<고객 >** 요소에 포함 되어  **\<순서 >** 자식 요소입니다. 스키마가 AdventureWorks 데이터베이스에 매핑될 때는  **\<고객 >** 요소는 Sales.Customer 테이블에 매핑됩니다 및  **\<순서 >** 요소가 매핑되는 Sales.SalesOrderHeader 테이블입니다. 이러한 기본 테이블인 Sales.Customer와 Sales.SalesOrderHeader는 고객 주문과 관련하여 서로 관련되어 있습니다. Sales.SalesOrderHeader 테이블의 CustomerID는 Sales.Customer 테이블의 CustomerID 기본 키를 참조하는 외래 키입니다. 사용 하 여 매핑 스키마 요소 간에 이러한 관계를 설정할 수는 **sql: relationship** 주석입니다.  
+ 예를 들어, XSD 스키마에서에서는  **\<고객 >** 요소에 포함 되어  **\<순서 >** 자식 요소입니다. 스키마는 AdventureWorks 데이터베이스에 매핑된 경우 합니다  **\<고객 >** 요소는 Sales.Customer 테이블에 매핑합니다 및  **\<순서 >** 요소가 매핑되는 Sales.SalesOrderHeader 테이블입니다. 이러한 기본 테이블인 Sales.Customer와 Sales.SalesOrderHeader는 고객 주문과 관련하여 서로 관련되어 있습니다. Sales.SalesOrderHeader 테이블의 CustomerID는 Sales.Customer 테이블의 CustomerID 기본 키를 참조하는 외래 키입니다. 사용 하 여 매핑 스키마 요소 간에 이러한 관계를 설정할 수는 **sql: relationship** 주석입니다.  
   
- 주석이 추가 된 XSD 스키마에서는 **sql: relationship** 주석은 기본 키 및 요소가 매핑되는 기본 테이블 간의 외래 키 관계를 기반으로 스키마 요소를 계층적으로 중첩 하는 데 사용 됩니다. 지정 하는 **sql: relationship** 주석을 다음을 지정 해야 합니다.  
+ 주석이 추가 된 XSD 스키마에는 **sql: relationship** 주석은 기본 키 및 요소가 매핑되는 기본 테이블 간의 외래 키 관계를 기준으로 스키마 요소를 계층적으로 중첩 하는 데 사용 됩니다. 지정 하는 **sql: relationship** 주석을 다음 식별 해야 합니다.  
   
 -   부모 테이블(Sales.Customer)과 자식 테이블(Sales.SalesOrderHeader).  
   
@@ -55,13 +55,13 @@ ms.locfileid: "32973858"
   
  이 정보는 적절한 계층을 생성하는 데 사용됩니다.  
   
- 테이블 이름과 필요한 조인 정보를 제공 하려면 다음과 같은 특성에 지정 된 된 **sql: relationship** 주석입니다. 이러한 특성은에 유효는  **\<sql: relationship >** 요소:  
+ 다음과 같은 특성에 지정 된 테이블 이름과 필요한 조인 정보를 제공 하는 **sql: relationship** 주석입니다. 이러한 특성은만 유효 합니다  **\<sql: relationship >** 요소:  
   
  **이름**  
  관계의 고유한 이름을 지정합니다.  
   
  **Parent**  
- 부모 관계(테이블)를 지정합니다. 이 특성은 옵션입니다. 특성이 지정되지 않으면 문서의 자식 계층에 있는 정보에서 부모 테이블 이름을 가져옵니다. 스키마는 동일를 사용 하는 두 명의 부모-자식 계층 구조를 지정 하는 경우  **\<sql: relationship >** 다른 부모 요소를 지정 하지 않으면 부모 특성에 있지만  **\<sql: 관계 >** 합니다. 이 정보는 스키마의 계층에서 가져옵니다.  
+ 부모 관계(테이블)를 지정합니다. 이 특성은 옵션입니다. 특성이 지정되지 않으면 문서의 자식 계층에 있는 정보에서 부모 테이블 이름을 가져옵니다. 스키마를 사용한 것과 동일한 두 명의 부모-자식 계층 구조를 지정 하는 경우  **\<sql: relationship >** 다른 부모 요소를 지정 하지 않으면 부모 특성에 있지만  **\<sql: 관계 >** 합니다. 이 정보는 스키마의 계층에서 가져옵니다.  
   
  **parent-key**  
  부모의 부모 키를 지정합니다. 부모 키가 여러 열로 구성된 경우 값은 사이에 공백을 두고 지정합니다. 여러 열로 구성된 키에 대해 지정된 값과 해당 자식 키에 지정된 값 간에는 위치 매핑이 있습니다.  
@@ -72,22 +72,22 @@ ms.locfileid: "32973858"
  **child-key**  
  부모의 부모 키를 참조하는 자식의 자식 키를 지정합니다. 자식 키가 여러 특성(열)으로 구성된 경우 자식 키 값은 사이에 공백을 두고 지정합니다. 여러 열로 구성된 키에 대해 지정된 값과 해당 부모 키에 지정된 값 간에는 위치 매핑이 있습니다.  
   
- **역 수**  
- 이 특성에 지정 된  **\<sql: relationship >** updategram에서 사용 됩니다. 자세한 내용은 참조 [sql: inverse Attribute on sql: relationship 지정](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)합니다.  
+ **역**  
+ 이 특성에 지정 된  **\<sql: relationship >** updategram에서 사용 됩니다. 자세한 내용은 [sql: relationship에 sql: inverse 특성 지정](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)합니다.  
   
- **sql:-필드** 있는 자식 요소를 포함 하는 요소에 주석을 지정 해야는  **\<sql: relationship >** 요소와 자식 간에 정의 하 고 수행 하는 부모 요소에 지정 된 테이블의 기본 키를 제공 하지 않습니다. 스키마 지정 하지 않는 경우에  **\<sql: relationship >** 를 지정 해야 합니다 **sql:-필드** 를 적절 한 계층을 생성 합니다. 자세한 내용은 참조 [sql:를 사용 하 여 키 열 식별-필드](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)합니다.  
+ 합니다 **sql:-필드** 주석이 있는 자식 요소를 포함 하는 요소에 지정 해야 합니다는  **\<sql: relationship >** 요소와 자식 간에 정의 및 수행 하는 부모 요소에 지정 된 테이블의 기본 키를 제공 하지 않습니다. 스키마를 지정 하지 않는 경우에  **\<sql: relationship >** 를 지정 해야 합니다 **sql:-필드** 적절 한 계층을 생성 합니다. 자세한 내용은 [sql:를 사용 하 여 Identifying Key Columns-필드](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)합니다.  
   
- 올바른 중첩 결과에서 생성 하는 것이 좋습니다 **sql:-필드** 모든 스키마에 지정 됩니다.  
+ 결과에서 올바른 중첩을 생성 하는 것이 좋습니다 **sql:-필드** 모든 스키마에서 지정 됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>1. 요소에 sql:relationship 주석 지정  
- 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어  **\<고객 >** 및  **\<순서 >** 요소입니다. **\<순서 >** 의 자식 요소는  **\<고객 >** 요소입니다.  
+ 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어 있습니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다. **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다.  
   
- 스키마에는 **sql: relationship** 에 주석을 지정는  **\<순서 >** 자식 요소입니다. 에 정의 된 관계 자체는  **\<xsd:appinfo >** 요소입니다.  
+ 스키마에는 **sql: relationship** 주석은에 지정 됩니다는  **\<순서 >** 자식 요소입니다. 에 정의 된 관계 자체를  **\<xsd: appinfo >** 요소입니다.  
   
- **\<관계 >** 요소는 Sales.Customer 테이블의 CustomerID 기본 키를 참조 하는 외래 키로 Sales.SalesOrderHeader 테이블의 CustomerID를 식별 합니다. 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >** 요소입니다.  
+ 합니다  **\<관계 >** 요소는 Sales.Customer 테이블의 CustomerID 기본 키를 가리키는 외래 키로 Sales.SalesOrderHeader 테이블의 CustomerID를 식별 합니다. 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >** 요소입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -176,7 +176,7 @@ ms.locfileid: "32973858"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -203,11 +203,11 @@ ms.locfileid: "32973858"
 ...  
 ```  
   
- Sales.SalesOrderHeader 테이블의 각 주문에 대해 XML 문서 하나에  **\<순서 >** 요소입니다. 각 및  **\<순서 >** 요소에는 목록이  **\<제품 >** 자식 요소, 순서에서 요청 된 각 제품에 대 한 합니다.  
+ 하나는 XML 문서에는 Sales.SalesOrderHeader 테이블의 각 주문에 대 한  **\<순서 >** 요소입니다. 및 각  **\<순서 >** 요소에는 목록이  **\<제품 >** 자식 요소를 순서 대로 요청 된 각 제품에 대 한 합니다.  
   
  이 계층 구조를 생성 하는 XSD 스키마를 지정 하려면 두 개의 관계를 지정 해야 합니다: OrderOD와 ODProduct 합니다. OrderOD 관계는 Sales.SalesOrderHeader와 Sales.SalesOrderDetail 테이블 간의 부모-자식 관계를 지정합니다. ODProduct 관계는 Sales.SalesOrderDetail와 Production.Product 테이블 간의 관계를 지정합니다.  
   
- 다음 스키마에는 **msdata: relationship** 주석에는  **\<제품 >** 두 값을 지정 하는 요소: OrderOD와 ODProduct 합니다. 이 두 값이 지정되는 순서가 중요합니다.  
+ 다음 스키마에는 **msdata: relationship** 주석은  **\<제품 >** 두 값을 지정 하는 요소: OrderOD와 ODProduct 합니다. 이 두 값이 지정되는 순서가 중요합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -245,7 +245,7 @@ ms.locfileid: "32973858"
 </xsd:schema>  
 ```  
   
- 명명된 관계를 지정하는 대신 익명 관계를 지정할 수 있습니다. 이 경우의 전체 내용  **\<주석 >**...  **\</annotation >**, 두 개의 관계를 설명 하는의 자식 요소로 나타낼  **\<제품 >** 합니다.  
+ 명명된 관계를 지정하는 대신 익명 관계를 지정할 수 있습니다. 이 경우 전체 내용의  **\<주석 >**...  **\</annotation >**, 두 개의 관계를 설명 하는의 자식 요소로 나타낼  **\<제품 >** 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -305,7 +305,7 @@ ms.locfileid: "32973858"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "32973858"
 ```  
   
 ### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>3. 특성에 관계 주석 지정  
- 이 예의 스키마를 포함 한 \<고객 > 인 요소는 \<CustomerID > 자식 요소 및 IDREFS 형식의 OrderIDList 특성과 합니다. \<고객 > 요소는 AdventureWorks 데이터베이스의 Sales.Customer 테이블에 매핑됩니다. 기본적으로이 매핑의 범위를 모든 자식 요소에 적용 하거나 하지 않는 한 특성 **sql: relation** 은에 지정 된 자식 요소 또는 특성에 두 가지 경우 적절 한 기본 키/외래 키 관계 여야 합니다 사용 하 여 정의 된 \<관계 > 요소입니다. 자식 요소 또는 특성을 사용 하 여 다른 테이블을 지정 하 고는 **관계** 주석을 지정 해야 합니다는 **관계** 주석입니다.  
+ 이 예의 스키마에 포함 되어는 \<고객 > 요소를 \<CustomerID > 자식 요소 및 IDREFS 형식의 OrderIDList 특성입니다. \<고객 > 요소는 AdventureWorks 데이터베이스의 Sales.Customer 테이블에 매핑됩니다. 기본적으로이 매핑의 범위는 모든 자식 요소에 적용 하거나 하지 않는 한 특성 **sql: relation** 된 자식 요소 또는 특성에 경우에 적절 한 기본 키/외래 키 관계 여야 합니다 사용 하 여 정의 된 \<관계 > 요소입니다. 자식 요소 또는 특성을 사용 하 여 다른 테이블을 지정 하 고는 **관계** 주석을 지정 해야 합니다는 **관계** 주석입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -376,7 +376,7 @@ ms.locfileid: "32973858"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -389,11 +389,11 @@ ms.locfileid: "32973858"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>4. 여러 요소에 대해 sql:relationship 지정  
- 이 예에서는 주석이 추가 된 XSD 스키마 포함는  **\<고객 >**,  **\<순서 >**, 및  **\<OrderDetail >** 요소입니다.  
+ 이 예제에서 주석이 추가 된 XSD 스키마를 포함 합니다  **\<고객 >** 합니다  **\<순서 >**, 및  **\<OrderDetail >** 요소입니다.  
   
- **\<순서 >** 의 자식 요소는  **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 되어는  **\<순서 >** 자식 요소로 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
+ **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 된  **\<순서 >** 자식 요소 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
   
- **\<순서 >** 요소에 포함 됩니다는  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 되어  **\<OrderDetail >** 자식 요소에 따라서 주문에 속하는 주문 정보를 자식 요소로 표시 **\<순서 >** 요소입니다.  
+ 합니다  **\<순서 >** 요소를 포함 합니다  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 됩니다  **\<OrderDetail >** 자식 요소를 주문에 속하는 주문 정보는 자식 요소로 표시 되도록 **\<순서 >** 요소입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -466,7 +466,7 @@ ms.locfileid: "32973858"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -489,15 +489,15 @@ ms.locfileid: "32973858"
 </ROOT>  
 ```  
   
-### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>5. 지정 하는 \<sql: relationship > parent 특성 없이  
- 이 예제에서는 지정 하는  **\<sql: relationship >** 없이 **부모** 특성 합니다. 예를 들어 다음과 같은 직원 테이블을 가정해 보십시오.  
+### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>5. 지정 된 \<sql: relationship > parent 특성 없이  
+ 이 예제를 지정 하는  **\<sql: relationship >** 없이 **부모** 특성입니다. 예를 들어 다음과 같은 직원 테이블을 가정해 보십시오.  
   
 ```  
 Emp1(SalesPersonID, FirstName, LastName, ReportsTo)  
 Emp2(SalesPersonID, FirstName, LastName, ReportsTo)  
 ```  
   
- 다음 XML 뷰에  **\<e m p 1 >** 및  **\<e m p 2 >** Sales.Emp1 및 Sales.Emp2 테이블 매핑 요소가:  
+ 다음 XML 뷰에 합니다  **\<Emp1 >** 하 고  **\<Emp2 >** Sales.Emp1 및 Sales.Emp2 테이블 매핑 요소:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -531,7 +531,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 스키마에서 모두는  **\<e m p 1 >** 요소 및  **\<e m p 2 >** 요소는 형식이 **EmpType**합니다. 형식 **EmpType** 설명는  **\<순서 >** 자식 요소 및 해당  **\<sql: relationship >** 합니다. 이 경우에 식별할 수 있는 단일 부모가 없는  **\<sql: relationship >** 를 사용 하 여는 **부모** 특성입니다. 이 상황에서 지정 하지 않으면는 **부모** 특성  **\<sql: relationship >**; **부모** 에서 특성 정보를 가져옵니다는 스키마의 계층입니다.  
+ 스키마에서 모두를  **\<Emp1 >** 요소와  **\<Emp2 >** 형식의 요소는 **EmpType**합니다. 형식 **EmpType** 설명는  **\<순서 >** 자식 요소와 해당  **\<sql: relationship >** 합니다. 이 경우에 식별할 수 있는 단일 부모가 없는  **\<sql: relationship >** 사용 하 여 합니다 **부모** 특성입니다. 이 상황에서 지정 하지 않으면 합니다 **부모** 특성  **\<sql: relationship >**; **부모** 에서 특성 정보를 가져옵니다는 스키마의 계층입니다.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   
@@ -567,7 +567,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 3.  위 스키마 코드를 복사한 후 텍스트 파일에 붙여넣습니다. 파일을 relationship-noparent.xml로 저장합니다.  
   
-4.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. relationship-noparent.xml을 저장한 디렉터리에 파일을 relationship-noparentT.xml로 저장합니다. 템플릿의 쿼리에서 모든 선택 된 \<e m p 1 > 요소 (따라서 부모는 e m p 1).  
+4.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. relationship-noparent.xml을 저장한 디렉터리에 파일을 relationship-noparentT.xml로 저장합니다. 템플릿의 쿼리에서 모든 선택 된 \<Emp1 > 요소 (따라서 부모는 Emp1).  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -585,7 +585,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 5.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  다음은 결과 집합의 일부입니다.  
   

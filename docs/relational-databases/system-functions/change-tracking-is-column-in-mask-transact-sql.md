@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact SQL) | Microsoft Docs
+title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00c55659ddc52fb5e6299b82be8102d526bd9e43
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6f44cd13dbabc10aa228892f9ce927e746c4aff5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229463"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547513"
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>인수  
  *column_id*  
- 확인 중인 열의 ID입니다. 열 ID를 사용 하 여 가져올 수는 [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) 함수입니다.  
+ 확인 중인 열의 ID입니다. 열 ID를 사용 하 여 가져올 수 있습니다 합니다 [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) 함수입니다.  
   
  *change_columns*  
- 이진 데이터의 SYS_CHANGE_COLUMNS 열입니다는 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 데이터입니다.  
+ 이진 데이터의 SYS_CHANGE_COLUMNS 열에는 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 데이터입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **bit**  
@@ -60,14 +60,14 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 |반환 값|Description|  
 |------------------|-----------------|  
-|0|지정된 된 열에 없는 *change_columns* 목록입니다.|  
-|1.|지정 된 열에이 *change_columns* 목록입니다.|  
+|0|지정된 된 열에 없는 경우는 *change_columns* 목록입니다.|  
+|@shouldalert|지정된 된 열에는 *change_columns* 목록입니다.|  
   
-## <a name="remarks"></a>주의  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK 유효성을 검사 하는 검사를 수행 하지 않습니다는 *column_id* 값 이나 하는 *change_columns* 에서 테이블을 얻는 데 사용 된 매개 변수는  *column_id* 을 받았습니다.  
+## <a name="remarks"></a>Remarks  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK 유효성을 검사 하는 검사를 수행 하지 않습니다 합니다 *column_id* 값 또는 합니다 *change_columns* 매개 변수는 테이블에서 가져온는  *column_id* 가져온 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `Salary` 테이블의 `Employees` 열이 업데이트되었는지 여부를 확인합니다. `COLUMNPROPERTY` 의 열 ID를 반환 하는 함수는 `Salary` 열입니다. `@change_columns` 지역 변수는 CHANGETABLE을 데이터 원본으로 사용하여 쿼리의 결과에 설정되어야 합니다.  
+ 다음 예에서는 `Salary` 테이블의 `Employees` 열이 업데이트되었는지 여부를 확인합니다. 합니다 `COLUMNPROPERTY` 의 열 ID를 반환 하는 함수는 `Salary` 열입니다. `@change_columns` 지역 변수는 CHANGETABLE을 데이터 원본으로 사용하여 쿼리의 결과에 설정되어야 합니다.  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
@@ -75,7 +75,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
     ,@change_columns);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  

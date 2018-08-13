@@ -1,5 +1,5 @@
 ---
-title: 'Sql: hide를 사용 하 여 요소 및 특성 숨기기 | Microsoft Docs'
+title: Sql:hide를 사용 하 여 요소 및 특성을 숨기기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -29,27 +29,27 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a6b58b7503e066c8d36e178b82f9048be7cd235f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2e7f9df3211f2af5e063757b9c76c5eb9dc2ccf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969566"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544293"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide를 사용하여 요소 및 특성 숨기기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XSD 스키마에 대해 XPath 쿼리를 실행하면 결과 XML 문서에는 스키마에 지정된 요소와 특성이 포함됩니다. 몇 가지 요소와 특성에서에서 숨길 수 스키마를 사용 하 여 지정할 수는 **sql: hide** 주석입니다. 이는 쿼리의 선택 조건에 스키마의 특정 요소나 특성이 필요하지만 생성되는 XML 문서에는 해당 요소나 특성이 포함되지 않게 하려는 경우에 유용합니다.  
+  XSD 스키마에 대해 XPath 쿼리를 실행하면 결과 XML 문서에는 스키마에 지정된 요소와 특성이 포함됩니다. 일부 요소와 특성이 수 숨겨져 있음을 스키마에서를 사용 하 여 지정할 수 있는 **sql:hide** 주석. 이는 쿼리의 선택 조건에 스키마의 특정 요소나 특성이 필요하지만 생성되는 XML 문서에는 해당 요소나 특성이 포함되지 않게 하려는 경우에 유용합니다.  
   
- **sql: hide** 주석은 부울 값 (0 = false, 1 = true). 허용되는 값은 0, 1, true 및 false입니다.  
+ **sql:hide** 는 부울 값을 사용 하는 주석 (0 = false, 1 = true). 허용되는 값은 0, 1, true 및 false입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>1. 특성에 sql:hide 지정  
- 이 예에서 XSD 스키마 구성는  **\<Person.Contact >** 요소 **ContactID**, **FirstName**, 및 **LastName** 특성입니다.  
+ 이루어져 있으며이 예에서 XSD 스키마는  **\<Person.Contact >** 요소를 사용 하 여 **ContactID**, **이름**, 및 **성** 속성입니다.  
   
- **\<Person.Contact >** 요소는 복합 유형 및, 따라서 (기본 매핑) 같은 이름의 테이블에 매핑됩니다. 모든 특성을  **\<Person.Contact >** 요소는 단순 유형 및 AdventureWorks 데이터베이스에서 Person.Contacttable에 같은 이름의 열에 매핑됩니다. 스키마에는 **sql: hide** 에 주석을 지정는 **ContactID** 특성입니다. 이 스키마에 대해 XPath 쿼리는 지정 된 **ContactID** XML 문서에 반환 되지 않습니다.  
+ **\<Person.Contact >** 요소는 복합 형식이 고, 따라서 (기본 매핑) 같은 이름의 테이블에 매핑됩니다. 모든 특성의  **\<Person.Contact >** 요소는 단순 형식 및 AdventureWorks 데이터베이스에서 Person.Contacttable에 동일한 이름의 열에 매핑됩니다. 스키마에는 **sql:hide** 주석에서 지정 되는 **ContactID** 특성. 이 스키마에 대해 XPath 쿼리를 지정 하면 **ContactID** XML 문서에 반환 되지 않습니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -86,7 +86,7 @@ ms.locfileid: "32969566"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "32969566"
 </ROOT>  
 ```  
   
- 때 **sql: hide** 요소에 지정 된 요소 및 특성이 나 자식 요소가 생성 되는 XML 문서에 표시 되지 않습니다. 같습니다. 다른 XSD 스키마는 **sql: hide** 에 지정 된  **\<OD >** 요소:  
+ 때 **sql:hide** 요소에 지정 된 생성 되는 XML 문서에 요소와 해당 특성 또는 자식 요소가 표시 되지 않습니다. 다른 XSD 스키마는 다음과 같습니다 **sql:hide** 에 지정 된  **\<OD >** 요소.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -151,7 +151,7 @@ ms.locfileid: "32969566"
 </xsd:schema>  
 ```  
   
- 때 한 XPath 쿼리 (예를 들어 `/Customers[@CID="1"]`) 생성 되는 XML 문서는이 스키마에 대해 지정 되는  **\<OD >** 요소와이 부분 결과에 표시 된 것 처럼 해당 자식 요소:  
+ 때 XPath 쿼리 (예를 들어 `/Customers[@CID="1"]`) 지정이 스키마에 대해 생성 되는 XML 문서에 포함 되어 있지 않습니다는  **\<OD >** 요소와 그 자식,이 부분 결과에 표시 된 대로:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

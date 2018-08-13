@@ -27,15 +27,15 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b5153c59e1f803231ab80692579bb09b56a5ef32
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001245"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555863"
 ---
-# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑
+# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped를 사용하여 XML 문서에서 스키마 요소 제외
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않는 및 xml에서에 나타나지 않는 XSD 스키마에서 요소를 만들 하려는 경우 지정할 수 있습니다 합니다 **sql: 매핑된** 주석입니다.  
   

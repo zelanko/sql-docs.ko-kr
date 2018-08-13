@@ -1,5 +1,5 @@
 ---
-title: sp_helplanguage (Transact SQL) | Microsoft Docs
+title: sp_helplanguage (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260436"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560633"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>인수  
  [  **@language=** ] **'***언어***'**  
- 정보를 표시할 대체 언어의 이름입니다. *언어* 은 **sysname**, 기본값은 NULL입니다. 경우 *언어* 가 지정 하면 지정된 된 언어에 대 한 정보가 반환 됩니다. 언어를 지정 하지 않으면 경우에서 모든 언어에 대 한 정보는 **sys.syslanguages** 호환성 보기 반환 됩니다.  
+ 정보를 표시할 대체 언어의 이름입니다. *언어* 됩니다 **sysname**, 기본값은 NULL입니다. 경우 *언어* 를 지정 하면 지정된 된 언어에 대 한 정보가 반환 됩니다. 언어를 지정 하지 않으면 모든 언어에 대 한 정보는 **sys.syslanguages** 호환성 보기로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -58,17 +58,17 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|언어 ID입니다.|  
 |**dateformat**|**nchar(3)**|날짜의 형식입니다.|  
-|**datefirst**|**tinyint**|첫 번째 요일: 1은 월요일, 화요일, 7은 일요일까지에 대 한 2입니다.|  
+|**datefirst**|**tinyint**|첫 번째 요일: 1은 월요일, 화요일, 7은 일요일까지 2입니다.|  
 |**업그레이드**|**int**|이 언어에 대한 최신 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.|  
 |**name**|**sysname**|언어 이름입니다.|  
 |**alias**|**sysname**|언어의 대체 이름입니다.|  
-|**월**|**nvarchar(372)**|월 이름입니다.|  
+|**개월**|**nvarchar(372)**|월 이름입니다.|  
 |**shortmonths**|**nvarchar(132)**|월의 짧은 이름입니다.|  
 |**days**|**nvarchar(217)**|요일 이름입니다.|  
 |**lcid**|**int**|언어의 Windows 로캘 ID입니다.|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지 그룹 ID입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -87,8 +87,8 @@ sp_helplanguage French;
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

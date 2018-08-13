@@ -1,5 +1,5 @@
 ---
-title: sp_helprole (Transact SQL) | Microsoft Docs
+title: sp_helprole (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd4ea621669688065075a3ff3894bbce369a54a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d457eaf25531790df63d4128a3d77d4ed30fb9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250277"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538403"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>인수  
  [  **@rolename =** ] **'***역할***'**  
- 현재 데이터베이스에 있는 역할의 이름입니다. *역할* 은 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에 존재 해야 합니다. 경우 *역할* 은 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보가 반환 됩니다.  
+ 현재 데이터베이스에 있는 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에 존재 해야 합니다. 하는 경우 *역할* 은 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,12 +57,12 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**RoleId**|**smallint**|ID **RoleName**합니다.|  
-|**IsAppRole**|**int**|0 = **RoleName** 은 응용 프로그램 역할이 아닙니다.<br /><br /> 1 = **RoleName** 응용 프로그램 역할입니다.|  
+|**IsAppRole**|**int**|0 = **RoleName** 는 응용 프로그램 역할이 아닙니다.<br /><br /> 1 = **RoleName** 응용 프로그램 역할입니다.|  
   
-## <a name="remarks"></a>주의  
- 역할에 연결 된 권한을 보려면를 사용 하 여 **sp_helprotect**합니다. 데이터베이스 역할의 멤버를 보려면 사용 하 여 **sp_helprolemember**합니다.  
+## <a name="remarks"></a>Remarks  
+ 역할에 연결 된 사용 권한을 보려면 사용 하 여 **sp_helprotect**합니다. 데이터베이스 역할의 멤버를 보려면 사용 하 여 **sp_helprolemember**합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -72,7 +72,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 EXEC sp_helprole  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)   

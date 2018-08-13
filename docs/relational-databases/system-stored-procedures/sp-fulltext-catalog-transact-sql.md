@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_catalog (TRANSACT-SQL) | Microsoft Docs
+title: sp_fulltext_catalog (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fccb384317102ef2818a49ef09c5faeb0fc42eb1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7bd63fff2c2c395648a1ac8a61903db007cafc96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047251"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559773"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
  합니다 **start_full** 작업에서 전체 텍스트 데이터의 전체 스냅숏을 만드는 데 사용 됩니다 *fulltext_catalog_name*합니다. 합니다 **start_incremental** 작업은 데이터베이스에서 변경된 된 행만 다시 인덱스를 사용 합니다. 증분 채우기는 테이블 형식의 열에 있는 경우에 적용할 수 있습니다 **타임 스탬프**합니다. 전체 텍스트 카탈로그에 테이블 형식의 열이 없으면 **타임 스탬프**, 테이블은 full 채우기를 수행 합니다.  

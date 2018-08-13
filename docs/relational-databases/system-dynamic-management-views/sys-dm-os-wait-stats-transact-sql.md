@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_wait_stats (Transact SQL) | Microsoft Docs
+title: sys.dm_os_wait_stats (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
@@ -23,38 +23,38 @@ caps.latest.revision: 111
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e2ae34c5ffd67712e925d8dda26dbc79680e3520
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1e4d6fc33210c17740a655b6348cad03905412c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467949"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565767"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-실행 중인 스레드로 인해 발생한 모든 대기에 대한 정보를 반환합니다. 이 집계 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 성능 문제뿐 아니라 특정 쿼리 및 일괄 처리와 관련된 성능 문제도 진단할 수 있습니다. [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 세션에서 비슷한 정보를 제공 합니다.  
+실행 중인 스레드로 인해 발생한 모든 대기에 대한 정보를 반환합니다. 이 집계 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 성능 문제뿐 아니라 특정 쿼리 및 일괄 처리와 관련된 성능 문제도 진단할 수 있습니다. [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 세션에서와 비슷한 정보를 제공 합니다.  
   
 > [!NOTE] 
-> 이 메서드를 호출 하려면 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, 이름을 사용 하 여 **sys.dm_pdw_nodes_os_wait_stats**합니다.  
+> 이를 호출 하 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 하거나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 에 이름을 사용 하 여 **sys.dm_pdw_nodes_os_wait_stats**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 참조 [대기 유형](#WaitTypes)이 항목의 뒷부분에 나오는 합니다.|  
+|wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 [대기 유형](#WaitTypes)이 항목의 뒷부분에 나오는.|  
 |waiting_tasks_count|**bigint**|이 대기 유형의 대기 수입니다. 이 카운터는 각 대기가 시작될 때 증가합니다.|  
 |wait_time_ms|**bigint**|이 대기 유형의 총 대기 시간(밀리초)입니다. 이 시간은 signal_wait_time_ms를 포함합니다.|  
 |max_wait_time_ms|**bigint**|이 대기 유형의 최대 대기 시간입니다.|  
 |signal_wait_time_ms|**bigint**|대기 스레드가 신호를 받은 시간과 실행을 시작한 시간 사이의 차이입니다.|  
 |pdw_node_id|**int**|이 배포에 있는 노드에 대 한 식별자입니다. <br/> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
 ##  <a name="WaitTypes"></a> 대기 유형  
- **리소스 대기** 리소스 대기 자가 다른 작업 자가 사용 되 고 있거나 아직 제공 되지 않습니다에 사용할 수 없는 리소스에 대 한 액세스를 요청 하는 경우에 발생 합니다. 리소스 대기의 예로는 잠금, 래치, 네트워크 및 디스크 I/O 대기가 있습니다. 잠금 및 래치 대기는 동기화 개체에 대한 대기입니다.  
+ **리소스 대기** 리소스 대기를 작업자 리소스를 다른 작업 자가 사용 되는 또는 아직 사용할 수 없습니다 때문에 사용할 수 없는 리소스에 대 한 액세스를 요청 하는 경우에 발생 합니다. 리소스 대기의 예로는 잠금, 래치, 네트워크 및 디스크 I/O 대기가 있습니다. 잠금 및 래치 대기는 동기화 개체에 대한 대기입니다.  
   
 **큐 대기**  
  큐 대기는 작업자가 유휴 상태로 작업이 할당될 때까지 대기하는 경우에 발생합니다. 큐 대기는 교착 상태 모니터 및 삭제된 레코드 정리 작업 같은 시스템 백그라운드 태스크에서 가장 많이 발생합니다. 이러한 태스크는 작업 큐에 작업 요청이 배치될 때까지 대기합니다. 큐에 새 패킷이 배치되지 않았어도 큐 대기가 정기적으로 활성화될 수 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "34467949"
   
  스레드가 더 이상 대기하지 않더라도 즉시 스레드 실행을 시작하지는 않습니다. 그와 같은 스레드가 실행 가능한 작업자 큐의 첫 번째 항목이고 퀀텀이 스케줄러에서 실행될 때까지 대기해야 하기 때문입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 시간 카운터는 **bigint** 값 및 많지 않기 같이 카운터가 쉽게 롤오버의 이전 버전에서의 해당 카운터 만큼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 시간 카운터 **bigint** 값 및 많지 않기 카운터가 롤오버 되기 쉽습니다 이전 버전의 동등한 카운터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
  쿼리 실행 중에 특정 유형의 대기 시간이 쿼리 내의 병목 또는 대기 지점을 나타낼 수 있습니다. 마찬가지로 높은 대기 시간이나 서버 전체의 대기 횟수가 서버 인스턴스 내의 쿼리 상호 작용에서 병목 또는 핫 스폿을 나타낼 수 있습니다. 예를 들어 잠금 대기는 쿼리의 데이터 경합을, 페이지 IO 래치 대기는 느린 IO 응답 시간을, 페이지 래치 업데이트 대기는 잘못된 파일 레이아웃을 나타냅니다.  
   
@@ -111,7 +111,7 @@ GO
 |AUDIT_ON_DEMAND_TARGET_LOCK |감사와 관련된 확장 이벤트 대상의 단일 초기화를 위한 잠금을 기다리는 경우에 발생합니다.| 
 |AUDIT_XE_SESSION_MGR |감사와 관련된 확장 이벤트 세션의 시작 및 중지를 동기화하는 데 사용되는 잠금을 기다리는 경우에 발생합니다.| 
 |BACKUP |태스크가 백업 처리의 일부로 차단되는 경우에 발생합니다.| 
-|BACKUP_OPERATOR |태스크가 테이프 탑재를 대기하는 경우에 발생합니다. 테이프 상태를 보려면 sys.dm_io_backup_tapes를 쿼리 합니다. 탑재 작업이 보류된 상태가 아니라면 이 대기 유형이 테이프 드라이브의 하드웨어 문제를 나타낼 수 있습니다.| 
+|BACKUP_OPERATOR |태스크가 테이프 탑재를 대기하는 경우에 발생합니다. 테이프 상태를 확인 하려면 sys.dm_io_backup_tapes를 쿼리 합니다. 탑재 작업이 보류된 상태가 아니라면 이 대기 유형이 테이프 드라이브의 하드웨어 문제를 나타낼 수 있습니다.| 
 |BACKUPBUFFER |백업 태스크가 데이터를 기다리거나 데이터를 저장할 버퍼를 기다리는 경우에 발생합니다. 이 유형은 태스크가 테이프 탑재를 기다리는 경우 외에는 일반적이지 않습니다.| 
 |BACKUPIO |백업 태스크가 데이터를 기다리거나 데이터를 저장할 버퍼를 기다리는 경우에 발생합니다. 이 유형은 태스크가 테이프 탑재를 기다리는 경우 외에는 일반적이지 않습니다.| 
 |BACKUPTHREAD |태스크가 백업 작업이 완료될 때까지 대기하는 경우에 발생합니다. 대기 시간은 몇 분에서 몇 시간까지 걸릴 수 있습니다. 대기 중인 태스크가 I/O 프로세스에 위치하면 문제가 있는 것이 아닙니다.| 
@@ -124,24 +124,24 @@ GO
 |BPSORT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_CONNECTION_RECEIVE_TASK |연결 끝점에서 메시지를 받기 위한 액세스를 대기하는 경우에 발생합니다. 끝점에 대한 수신 액세스는 직렬화됩니다.| 
 |BROKER_DISPATCHER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BROKER_ENDPOINT_STATE_MUTEX |Service Broker 연결 끝점의 상태를 액세스 하는 충돌이 있을 때 발생 합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.| 
+|BROKER_ENDPOINT_STATE_MUTEX |Service Broker 연결 끝점의 상태에 액세스 하려는 경합이 있을 때 발생 합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.| 
 |BROKER_EVENTHANDLER |태스크가 대기 하는 Service broker 주 이벤트 처리기에서 때 발생 합니다. 매우 짧게 발생해야 합니다.| 
 |BROKER_FORWARDER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_INIT |각 활성 데이터베이스에서 Service Broker를 초기화할 때 발생 합니다. 자주 발생하면 안 됩니다.| 
-|BROKER_MASTERSTART |태스크가 대기 하는 시작 하는 Service Broker의 기본 이벤트 처리기에 대 한 경우 발생 합니다. 매우 짧게 발생해야 합니다.| 
-|BROKER_RECEIVE_WAITFOR |RECEIVE WAITFOR가 대기 중인 경우에 발생합니다. 이 메시지가 큐에 받을 준비가 중 하나 또는 잠금 경합이 인해 큐에서 메시지를 받지 못하도록 의미할 수 있습니다.| 
+|BROKER_MASTERSTART |작업을 시작 하려면 Service Broker 주 이벤트 처리기를 대기할 때 발생 합니다. 매우 짧게 발생해야 합니다.| 
+|BROKER_RECEIVE_WAITFOR |RECEIVE WAITFOR가 대기 중인 경우에 발생합니다. 이 메시지가 큐에 받을 준비가 또는 잠금 경합이 큐에서 메시지 수신을 방지는 것일 수 있습니다.| 
 |BROKER_REGISTERALLENDPOINTS |Service Broker 연결 끝점을 초기화 하는 동안 발생합니다. 매우 짧게 발생해야 합니다.| 
 |BROKER_SERVICE |대상 서비스와 연결 된 Service Broker 대상 목록이 업데이트 되거나 우선 순위가 다시 매겨지는 경우 발생 합니다.| 
-|BROKER_SHUTDOWN |Service Broker의 계획된 된 종료 있을 때 발생 합니다. 가능하면 매우 짧게 발생해야 합니다.| 
+|BROKER_SHUTDOWN |Service Broker의 계획 된 종료를 때 발생 합니다. 가능하면 매우 짧게 발생해야 합니다.| 
 |BROKER_START |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_TASK_SHUTDOWN |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_TASK_STOP |Service Broker 큐 태스크 처리기가 태스크를 종료 하려고 할 때 발생 합니다. 상태 검사가 직렬화되고 먼저 실행 상태에 있어야 합니다.| 
 |BROKER_TASK_SUBMIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BROKER_TO_FLUSH |Service Broker 지연 flusher 플러시는 메모리 내 전송 개체 작업 테이블을 때 발생 합니다.| 
+|BROKER_TO_FLUSH |Service Broker 지연 flusher 플러시 메모리 내 전송 개체 작업 테이블을 때 발생 합니다.| 
 |BROKER_TRANSMISSION_OBJECT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_TRANSMISSION_TABLE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_TRANSMISSION_WORK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BROKER_TRANSMITTER |Service Broker 전송 기가 작업 기다리고 있을 때 발생 합니다.| 
+|BROKER_TRANSMITTER |Service Broker 전송 기가 작업을 대기할 때 발생 합니다.| 
 |BUILTIN_HASHKEY_MUTEX |내부 데이터 구조를 초기화하는 동안 인스턴스 시작 후 발생할 수 있습니다. 데이터 구조가 초기화되면 되풀이되지 않습니다.| 
 |CHANGE_TRACKING_WAITFORCHANGES |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |CHECK_PRINT_RECORD |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
@@ -171,8 +171,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |COUNTRECOVERYMGR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |CREATE_DATINISERVICE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|CXCONSUMER |병렬 쿼리 계획에서 소비자 스레드 행 보낼 공급자 스레드를 대기할 때 발생 합니다. 이 병렬 쿼리 실행의 정상적인 일부입니다. <br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |병렬 쿼리 계획 생성 하 고 행을 사용 하는 경우 및 쿼리 프로세서 교환 반복기를 동기화 할 때 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.<br /> **참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET 쿼리 프로세서 교환 반복기를 동기화 하 고 제작 및 소비자 스레드에 대 한 행만 참조 합니다. 소비자 스레드는 CXCONSUMER 대기 유형의에서 개별적으로 추적 됩니다.| 
+|CXCONSUMER |병렬 쿼리 계획을 사용 하 여 행을 보낼 생산자 스레드와 소비자 스레드가 대기 하는 경우 발생 합니다. 이 병렬 쿼리 실행의 정상적인 일부입니다. <br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |병렬 쿼리 계획을 사용 하 여 생성 하 고 행을 사용 하는 경우 및 쿼리 프로세서 교환 반복기를 동기화 할 때 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.<br /> **참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET 쿼리 프로세서 교환 반복기를 동기화 및 소비자 스레드는 행을 생성 하는 데만 참조 합니다. 소비자 스레드는 CXCONSUMER 대기 형식에 개별적으로 추적 됩니다.| 
 |CXROWSET_SYNC |병렬 범위 검색 중에 발생합니다.| 
 |DAC_INIT |관리자 전용 연결이 초기화되는 동안 발생합니다.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -184,14 +184,14 @@ GO
 |DBMIRRORING_CMD |태스크가 로그 레코드가 디스크로 플러시될 때까지 대기하는 경우에 발생합니다. 이 대기 상태는 오랜 시간 동안 유지됩니다.| 
 |DBSEEDING_FLOWCONTROL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DBSEEDING_OPERATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|DEADLOCK_ENUM_MUTEX |SQL Server가 동시에 여러 개의 교착 상태 검색을 실행 하지 않았는지 확인 하십시오 교착 상태 모니터와 sys.dm_os_waiting_tasks 때 발생 합니다.| 
+|DEADLOCK_ENUM_MUTEX |교착 상태 모니터와 sys.dm_os_waiting_tasks가 SQL Server가 동시에 여러 개의 교착 상태 검색을 실행 하지 않도록 하려고 하는 경우 발생 합니다.| 
 |DEADLOCK_TASK_SEARCH |이 리소스의 대기 시간이 길면 서버가 sys.dm_os_waiting_tasks 위에서 쿼리를 실행하고 있으며 이러한 쿼리가 교착 상태 모니터의 교착 상태 검색을 차단하고 있음을 나타냅니다. 이 대기 유형은 교착 상태 모니터에만 사용됩니다. sys.dm_os_waiting_tasks 위의 쿼리는 DEADLOCK_ENUM_MUTEX를 사용합니다.| 
 |DEBUG |TRANSACT-SQL 및 CLR 내부 동기화에 대 한 디버깅 중에 발생 합니다.| 
 |DIRECTLOGCONSUMER_LIST |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DIRTY_PAGE_POLL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DIRTY_PAGE_SYNC |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DIRTY_PAGE_TABLE_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|DISABLE_VERSIONING |SQL Server의 가장 오래 된 활성 트랜잭션의 타임 스탬프가 상태 변경이 시작 될 때의 타임 스탬프 보다 이후 중인지 확인 하기 위해 버전 트랜잭션 관리자를 폴링할 때 발생 합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅숏 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용 하 여 SQL Server 버전 관리를 해제 하는 경우에 사용 됩니다.| 
+|DISABLE_VERSIONING |SQL Server 버전 트랜잭션 관리자 가장 오래 된 활성 트랜잭션의 타임 스탬프 상태 변경 시작 될 때의 타임 스탬프 보다 이후 인지를 폴링할 때 발생 합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅숏 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용 하 여 SQL Server 버전 관리를 해제 하는 경우에 사용 됩니다.| 
 |DISKIO_SUSPEND |외부 백업이 활성 상태일 때 태스크가 파일에 액세스하려고 대기하는 경우에 발생합니다. 대기 중인 모든 사용자 프로세스에 대해 보고됩니다. 사용자 프로세스당 값이 5보다 크면 외부 백업을 완료하는 데 걸리는 시간이 너무 긴 것일 수 있습니다.| 
 |DISPATCHER_PRIORITY_QUEUE_SEMAPHORE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DISPATCHER_QUEUE_SEMAPHORE |디스패처 풀의 스레드가 처리할 추가 작업을 기다리는 경우에 발생합니다. 이 대기 유형의 대기 시간은 디스패처가 유휴 상태일 때 증가됩니다.| 
@@ -199,11 +199,11 @@ GO
 |DPT_ENTRY_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DROP_DATABASE_TIMER_TASK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DROPTEMP |이전 시도가 실패한 경우 임시 개체 삭제를 다시 시도하기 전에 발생합니다. 삭제 시도가 실패할 때마다 대기 시간이 기하급수적으로 증가합니다.| 
-|DTC |태스크가 상태 전환 관리에 사용되는 이벤트를 기다리는 경우에 발생합니다. SQL Server에서 MS DTC 서비스 수 없게 되었다는 알림을 받은 후에 Microsoft Distributed Transaction Coordinator (MS DTC) 트랜잭션의 복구가 발생할 때이 상태 제어 합니다.| 
+|DTC |태스크가 상태 전환 관리에 사용되는 이벤트를 기다리는 경우에 발생합니다. SQL Server MS DTC 서비스를 사용할 수 있는지 알림을 받으면 Microsoft Distributed Transaction Coordinator (MS DTC) 트랜잭션의 복구가 발생할 때이 상태 제어 합니다.| 
 |DTC_ABORT_REQUEST |MS DTC 작업자 세션이 MS DTC 트랜잭션의 소유권을 획득하려고 대기하는 경우에 MS DTC 작업자 세션에서 발생합니다. MS DTC가 트랜잭션의 소유권을 획득한 후에는 세션이 트랜잭션을 롤백할 수 있습니다. 일반적으로 세션은 트랜잭션을 사용하고 있는 다른 세션을 기다립니다.| 
 |DTC_RESOLVE |복구 태스크가 트랜잭션의 결과물을 쿼리할 수 있도록 데이터베이스 간 트랜잭션에서 master 데이터베이스를 대기하는 경우에 발생합니다.| 
 |DTC_STATE |태스크가 내부 MS DTC 전역 상태 개체의 변경을 방지하는 이벤트를 기다리는 경우에 발생합니다. 이 상태는 매우 짧은 시간 동안 유지되어야 합니다.| 
-|DTC_TMDOWN_REQUEST |SQL Server MS DTC 서비스가 사용할 수 없다는 알림을 받을 때 MS DTC 작업자 세션에서 발생 합니다. 먼저 작업자는 MS DTC 복구 프로세스가 시작될 때까지 기다렸다가 작업자가 작업하고 있는 분산 트랜잭션의 결과물을 획득하기 위해 대기합니다. 이것은 MS DTC 서비스와의 연결이 다시 설정될 때까지 계속될 수 있습니다.| 
+|DTC_TMDOWN_REQUEST |SQL Server에서 MS DTC 서비스를 사용할 수 없는 알림을 수신 하는 경우 MS DTC 작업자 세션에서 발생 합니다. 먼저 작업자는 MS DTC 복구 프로세스가 시작될 때까지 기다렸다가 작업자가 작업하고 있는 분산 트랜잭션의 결과물을 획득하기 위해 대기합니다. 이것은 MS DTC 서비스와의 연결이 다시 설정될 때까지 계속될 수 있습니다.| 
 |DTC_WAITFOR_OUTCOME |복구 태스크가 MS DTC가 활성화되어 준비된 트랜잭션을 해결할 수 있을 때까지 대기하는 경우에 발생합니다.| 
 |DTCNEW_ENLIST |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DTCNEW_PREPARE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -216,15 +216,15 @@ GO
 |DUMPTRIGGER |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |EC |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |EE_PMOLOCK |문 실행 중 특정 유형의 메모리 할당을 동기화하는 경우에 발생합니다.| 
-|EE_SPECPROC_MAP_INIT |내부 프로시저 해시 테이블 생성을 동기화하는 경우에 발생합니다. 이 대기만 SQL Server 인스턴스가 시작 된 후 해시 테이블에 처음 액세스 하는 동안 발생할 수 있습니다.| 
+|EE_SPECPROC_MAP_INIT |내부 프로시저 해시 테이블 생성을 동기화하는 경우에 발생합니다. 이 대기만 SQL Server 인스턴스가 시작 된 후 해시 테이블의 초기 액세스 하는 동안 발생할 수 있습니다.| 
 |ENABLE_EMPTY_VERSIONING |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|ENABLE_VERSIONING |SQL Server 데이터베이스를 스냅숏 격리 허용 상태로 전환할 준비가 되었다고 선언 하기 전에 완료 하도록이 데이터베이스의 모든 업데이트 트랜잭션이 대기할 때 발생 합니다. 이 상태는 ALTER DATABASE 문을 사용 하 여 스냅숏 격리를 설정 하는 SQL Server 때 사용 됩니다.| 
+|ENABLE_VERSIONING |SQL Server 데이터베이스를 스냅숏 격리 허용 상태로 전환할 준비가 선언 하기 전에 완료 하도록이 데이터베이스의 모든 업데이트 트랜잭션이 대기할 때 발생 합니다. 이 상태는 SQL Server는 ALTER DATABASE 문을 사용 하 여 스냅숏 격리를 활성화 하는 경우에 사용 됩니다.| 
 |ERROR_REPORTING_MANAGER |여러 개의 동시 오류 로그 초기화를 동기화하는 경우에 발생합니다.| 
 |EXCHANGE |병렬 쿼리 중 쿼리 프로세서 교환 반복기에서 동기화 중에 발생합니다.| 
 |EXECSYNC |병렬 쿼리 중 쿼리 프로세서 교환 반복기와 관련되지 않은 영역에서 동기화 중에 발생합니다. 이러한 영역의 예에는 비트맵, LOB(Large Binary Object) 및 스풀 반복기가 있습니다. LOB는 이 대기 상태를 자주 사용할 수 있습니다.| 
 |EXECUTION_PIPE_EVENT_INTERNAL |연결 컨텍스트를 통해 전송되는 일괄 처리 실행의 제작자 부분과 소비자 부분 동기화 중에 발생합니다.| 
 |EXTERNAL_RG_UPDATE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|EXTERNAL_SCRIPT_NETWORK_IO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|EXTERNAL_SCRIPT_NETWORK_IO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해.| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |EXTERNAL_SCRIPT_SHUTDOWN |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |EXTERNAL_WAIT_ON_LAUNCHER, |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -263,7 +263,7 @@ GO
 |FILESTREAM_FILE_OBJECT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |FILESTREAM_WORKITEM_QUEUE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |FILETABLE_SHUTDOWN |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|FOREIGN_REDO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|FOREIGN_REDO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해.| 
 |FORWARDER_TRANSITION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |FS_FC_RWLOCK |다음 중 하나를 수행하기 위해 FILESTREAM 가비지 수집기가 대기하는 경우에 발생합니다.| 
 |FS_GARBAGE_COLLECTOR_SHUTDOWN |FILESTREAM 가비지 수집기가 정리 태스크 완료를 기다리는 경우에 발생합니다.| 
@@ -294,49 +294,49 @@ GO
 |GLOBAL_TRAN_CREATE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |GLOBAL_TRAN_UCS_SESSION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |GUARDIAN |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|HADR_AG_MUTEX |Always On DDL 문 또는 Windows Server 장애 조치 클러스터링 명령이 가용성 그룹의 구성에 대 한 단독 읽기/쓰기 액세스를 기다리는 경우 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_AR_CRITICAL_SECTION_ENTRY |Always On DDL 문 또는 Windows Server 장애 조치 클러스터링 명령이 연결된 된 가용성 그룹의 로컬 복제본의 런타임 상태에 대 한 단독 읽기/쓰기 액세스를 기다리는 경우 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_AR_MANAGER_MUTEX |가용성 복제본 셧다운이 시작될 때까지 기다리고 있거나 가용성 복제본 시작이 종료될 때까지 기다리는 경우에 발생합니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_AG_MUTEX |Always On DDL 문 또는 Windows Server 장애 조치 클러스터링 명령이 가용성 그룹의 구성에 대 한 단독 읽기/쓰기 액세스를 대기할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_AR_CRITICAL_SECTION_ENTRY |Always On DDL 문 또는 Windows Server 장애 조치 클러스터링 명령이 연결된 된 가용성 그룹의 로컬 복제본의 런타임 상태에 대 한 단독 읽기/쓰기 액세스를 대기할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_AR_MANAGER_MUTEX |가용성 복제본 셧다운이 시작될 때까지 기다리고 있거나 가용성 복제본 시작이 종료될 때까지 기다리는 경우에 발생합니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_AR_UNLOAD_COMPLETED |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |상태 변경 또는 구성 변경 등의 가용성 복제본 이벤트에 대한 게시자가 이벤트 구독자 목록에 대한 단독 읽기/쓰기 액세스를 기다리고 있습니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_BACKUP_BULK_LOCK |Always On 주 데이터베이스는 보조 데이터베이스에서 백업 요청을 수신 하 고 배경에 대 한 대기 스레드를 획득 하거나 BulkOp 잠금 해제에 대 한 요청을 처리 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_BACKUP_QUEUE |Always On 주 데이터베이스의 백업 백그라운드 스레드가 보조 데이터베이스에서 새 작업 요청에 대 한 대기 중입니다. (일반적으로 발생 주 데이터베이스 BulkOp 로그의 상태를 유지 하 고 주 데이터베이스에 잠금을 해제할 수 있는지를 나타내기 위해 보조 데이터베이스에 대 한 대기)., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_CLUSAPI_CALL |SQL Server 스레드가 Windows Server 장애 조치 클러스터링 Api를 호출 하려면 (SQL Server에서 예약 된) 비선점형 모드에서 (운영 체제에서 예약 된) 선점형 모드로 전환 되기를 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_COMPRESSED_CACHE_SYNC |여러 보조 데이터베이스에 전송 된 로그 블록의 중복 압축을 방지 하는 데 사용 되는 압축 된 로그 블록의 캐시에 대 한 액세스를 기다리는 중입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |상태 변경 또는 구성 변경 등의 가용성 복제본 이벤트에 대한 게시자가 이벤트 구독자 목록에 대한 단독 읽기/쓰기 액세스를 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_BACKUP_BULK_LOCK |Always On 주 데이터베이스는 보조 데이터베이스에서 백업 요청을 수신 하 고 배경에 대 한 대기 스레드를 획득 하거나 BulkOp 잠금 해제에 요청을 처리 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_BACKUP_QUEUE |Always On 주 데이터베이스의 백업 백그라운드 스레드가 보조 데이터베이스에서 새 작업 요청을 기다리고 있습니다. (일반적으로이 경우 주 데이터베이스 BulkOp 로그를 보유 하 고 주 데이터베이스 잠금을 해제할 수 있는지를 나타내기 위해 보조 데이터베이스에 대 한 대기)., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_CLUSAPI_CALL |SQL Server 스레드가 Windows Server 장애 조치 클러스터링 Api를 호출 하기 위해 선점형 모드로 (운영 체제에서 예약 된) (SQL Server에서 예약 된) 비선점형 모드에서 전환 되기를 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_COMPRESSED_CACHE_SYNC |여러 보조 데이터베이스에 전송 된 로그 블록의 중복 압축을 방지 하는 데 사용 되는 압축 된 로그 블록 캐시에 대 한 액세스를 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_CONNECTIVITY_INFO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DATABASE_FLOW_CONTROL |대기 중인 메시지의 최대 수에 도달했을 때 파트너에게 메시지가 전송될 때까지 기다립니다. 로그 검색이 네트워크 전송보다 빠르게 실행 되고 있음을 나타냅니다. 네트워크 전송이 예상 보다 느린 경우에 이런 동기화 문제가 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DATABASE_VERSIONING_STATE |Always On 보조 데이터베이스의 버전 관리 상태 변경 시 발생합니다. 이 대기는 내부 데이터 구조 이며 일반적으로 데이터 액세스에 직접적인 영향을 주지와 정도로 매우 짧습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DATABASE_FLOW_CONTROL |대기 중인 메시지의 최대 수에 도달했을 때 파트너에게 메시지가 전송될 때까지 기다립니다. 로그 검색이 네트워크 전송보다 빠르게 실행 되고 있음을 나타냅니다. 네트워크 전송이 예상 보다 오래 걸릴 경우에이 문제가., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DATABASE_VERSIONING_STATE |Always On 보조 데이터베이스의 버전 관리 상태 변경 시 발생합니다. 이 대기는 내부 데이터 구조 이며 일반적으로 데이터 액세스에 직접적인 영향을 주지를 사용 하 여 매우 짧습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_DATABASE_WAIT_FOR_RECOVERY |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DATABASE_WAIT_FOR_RESTART |데이터베이스를 Always On 가용성 그룹 제어에서 다시 시작 될 때까지 기다리고 있습니다. 정상 조건에서 하지 고객 문제 때문에 이것이 시점에 대기가 예상 여기., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING |Always on 가용성 그룹 커밋 또는 롤백 진행 중이 던 읽기 작업에 대 한 보조 복제본이 활성화 될 때 모든 트랜잭션의 기다리는 동안 행 버전 관리에서 차단 된 읽기 가능한 보조 데이터베이스에 있는 개체에 대 한 쿼리 합니다. 이 대기 유형을 스냅숏 격리에서 쿼리를 실행 하기 전에 사용할 수 있는 행 버전을 사용 하면., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DB_COMMAND |대화 메시지 (여기에 항상 대화 메시지 인프라를 사용 하는 다른 쪽의 명시적 응답이 필요)에 대 한 응답을 기다리는 중입니다. 다양 한 메시지 유형 수가이 대기 유형을 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DB_OP_COMPLETION_SYNC |대화 메시지 (여기에 항상 대화 메시지 인프라를 사용 하는 다른 쪽의 명시적 응답이 필요)에 대 한 응답을 기다리는 중입니다. 다양 한 메시지 유형 수가이 대기 유형을 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DB_OP_START_SYNC |Always On DDL 문 또는 Windows Server 장애 조치 클러스터링 명령이 가용성 데이터베이스 및 해당 런타임 상태에 대 한 직렬화 된 액세스에 대 한 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DBR_SUBSCRIBER |상태 변경 또는 구성 변경 등의 가용성 복제본 이벤트에 대한 게시자가 가용성 데이터베이스에 해당하는 이벤트 구독자의 런타임 상태에 대한 단독 읽기/쓰기 액세스를 기다리고 있습니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DBR_SUBSCRIBER_FILTER_LIST |상태 변경 또는 구성 변경 등의 가용성 복제본 이벤트에 대한 게시자가 가용성 데이터베이스에 해당하는 이벤트 구독자 목록에 대한 단독 읽기/쓰기 액세스를 기다리고 있습니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DATABASE_WAIT_FOR_RESTART |데이터베이스가 Always On 가용성 그룹 제어에서 다시 시작 될 때까지 기다리고 있습니다. 정상 조건에서는이 아니므로 고객 문제를 여기서 시점에 대기가 예상., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING |읽기 가능한 보조 데이터베이스에서 Always On 가용성 그룹 커밋 또는 롤백 진행 중이 던 읽기 워크 로드에 대 한 보조 복제본이 활성화 될 때 모든 트랜잭션의 대기 하는 동안 행 버전 관리에서 차단 되는 개체에 대 한 쿼리 합니다. 이 대기 유형을 사용 하면 행 버전을 스냅숏 격리에서 쿼리를 실행 하기 전에 사용할 수 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DB_COMMAND |대화형 메시지 (Always On 대화 메시지 인프라를 사용 하 여, 다른 쪽의 명시적 응답이 필요 함)에 대 한 응답을 기다리는 중입니다. 다양 한 다른 메시지 유형은이 대기 유형을 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DB_OP_COMPLETION_SYNC |대화형 메시지 (Always On 대화 메시지 인프라를 사용 하 여, 다른 쪽의 명시적 응답이 필요 함)에 대 한 응답을 기다리는 중입니다. 다양 한 다른 메시지 유형은이 대기 유형을 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DB_OP_START_SYNC |Always On DDL 문 또는 Windows Server 장애 조치 클러스터링 명령이 가용성 데이터베이스 및 해당 런타임 상태에 대 한 직렬화 된 액세스에 대 한 기다리고., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DBR_SUBSCRIBER |상태 변경 또는 구성 변경 등의 가용성 복제본 이벤트에 대한 게시자가 가용성 데이터베이스에 해당하는 이벤트 구독자의 런타임 상태에 대한 단독 읽기/쓰기 액세스를 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DBR_SUBSCRIBER_FILTER_LIST |상태 변경 또는 구성 변경 등의 가용성 복제본 이벤트에 대한 게시자가 가용성 데이터베이스에 해당하는 이벤트 구독자 목록에 대한 단독 읽기/쓰기 액세스를 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_DBSEEDING |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_DBSEEDING_LIST |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_DBSTATECHANGE_SYNC |데이터베이스 복제본의 내부 상태를 업데이트 하기 위한 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_DBSTATECHANGE_SYNC |데이터베이스 복제본의 내부 상태를 업데이트 하는 것에 대 한 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_FABRIC_CALLBACK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_FILESTREAM_BLOCK_FLUSH |항상 FILESTREAM 전송 관리자가 로그 블록의 처리가 완료 될 때까지 기다립니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_FILESTREAM_FILE_CLOSE |항상 FILESTREAM 전송 관리자가 다음 FILESTREAM 파일이 처리 되 고 해당 핸들이 닫힐 때까지 기다립니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_FILESTREAM_FILE_REQUEST |Always On 보조 복제본이 주 복제본이 모든 요청 된 FILESTREAM 전송 기다리고 실행 취소 하는 동안 파일., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_FILESTREAM_IOMGR |항상 FILESTREAM 전송 관리자를 시작 또는 종료 하는 동안 FILESTREAM 항상에 I/O 관리자를 보호 하는 R/W 잠금을 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_FILESTREAM_IOMGR_IOCOMPLETION |FILESTREAM 항상에 I/O 관리자가 I/O 완료 될 때까지 기다립니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_FILESTREAM_MANAGER |항상 FILESTREAM 전송 관리자를 시작 또는 종료 하는 동안에 항상 FILESTREAM 전송 관리자를 보호 하는 R/W 잠금을 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_FILESTREAM_IOMGR |항상 FILESTREAM 전송 관리자를 시작 또는 종료 하는 동안 FILESTREAM 항상에서 I/O 관리자를 보호 하는 R/W 잠금을 기다리고., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_FILESTREAM_IOMGR_IOCOMPLETION |FILESTREAM 항상에서 I/O 관리자가 I/O 완료 될 때까지 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_FILESTREAM_MANAGER |항상 FILESTREAM 전송 관리자를 시작 또는 종료 중에 항상 FILESTREAM 전송 관리자를 보호 하는 R/W 잠금을 기다리고., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_FILESTREAM_PREPROC |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_GROUP_COMMIT |트랜잭션 커밋 처리가 단일 로그 블록에 여러 커밋 로그 레코드를 넣을 수 있도록 그룹 커밋이 허용될 때까지 기다리고 있습니다. 이 대기는 로그 I/O를 최적화 하는 필요한 조건, 캡처 및 송신 작업., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_LOGCAPTURE_SYNC |검색을 만들거나 삭제할 때 로그 캡처 또는 적용 개체와 관련된 동시성 제어입니다. 이 예상 되는 대기 상태 또는 연결 상태를 변경 하는 파트너입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_LOGCAPTURE_WAIT |로그 레코드를 사용할 수 있을 때까지 기다립니다. 연결을 통해 새 레코드가 생성될 때까지 또는 캐시에 없는 로그를 읽을 때 I/O가 완료될 때까지 기다리는 경우에 발생할 수 있습니다. 로그 검색을 로그의 끝을 따라 잡으면 또는 디스크에서 읽는 경우 예상 되는 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_LOGPROGRESS_SYNC |데이터베이스 복제본의 로그 진행률 상태를 업데이트할 때의 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_NOTIFICATION_DEQUEUE |Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 다음 알림을 기다리고 있습니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_NOTIFICATION_WORKER_EXCLUSIVE_ACCESS |Windows Server 장애 조치 클러스터링 알림을 처리 하는 백그라운드 작업의 런타임 상태에 대 한 직렬화 된 액세스에 대 한 Always On 가용성 복제본 관리자 대기 중입니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_NOTIFICATION_WORKER_STARTUP_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 시작될 때까지 기다리고 있습니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 종료될 때까지 기다리고 있습니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_PARTNER_SYNC |파트너 목록에서 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_READ_ALL_NETWORKS |WSFC 네트워크 목록에 대한 읽기 또는 쓰기 액세스를 얻기 위해 기다립니다. 내부적으로만 사용됩니다. 참고: 동적 관리 뷰 (예: sys.dm_hadr_cluster_networks)에 사용 되는 WSFC 네트워크 목록을 저장 하는 엔진 또는 네트워크 정보를 WSFC를 참조 하는 문은 항상에 TRANSACT-SQL 유효성을 검사 하 합니다. 이 목록은 엔진 시작 시 업데이트 됩니다, WSFC 관련 알림 및 내부에 항상 다시 시작 (예를 들어 손실 및 WSFC 쿼럼의 다시 얻은). 해당 목록에서 업데이트가 진행 중일 때는 일반적으로 태스크가 차단됩니다. , <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_RECOVERY_WAIT_FOR_CONNECTION |복구를 실행하기 전에 보조 데이터베이스가 주 데이터베이스에 연결될 때까지 기다립니다. 이 예상된 대기 주에 대 한 연결이 느린 경우을 늘릴 수 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |데이터베이스 복구가 보조 데이터베이스에서 주 데이터베이스와의 공통 로그 지점으로 다시 설정하기 위해 되돌리기 및 초기화 단계를 완료할 때까지 기다립니다. 장애 조치 후 예상 되는 대기입니다. 실행 취소 하면 Windows 시스템 모니터 (perfmon.exe) 및 동적 관리 뷰를 통해 진행률을 추적할 수 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_LOGCAPTURE_SYNC |검색을 만들거나 삭제할 때 로그 캡처 또는 적용 개체와 관련된 동시성 제어입니다. 이 경우 예상 되는 대기 상태 또는 연결 상태를 변경 하는 파트너., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_LOGCAPTURE_WAIT |로그 레코드를 사용할 수 있을 때까지 기다립니다. 연결을 통해 새 레코드가 생성될 때까지 또는 캐시에 없는 로그를 읽을 때 I/O가 완료될 때까지 기다리는 경우에 발생할 수 있습니다. 로그 검색을 로그의 끝에 잡힐 이거나 디스크에서 읽는 경우 예상 되는 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_LOGPROGRESS_SYNC |데이터베이스 복제본의 로그 진행률 상태를 업데이트 하는 경우 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_NOTIFICATION_DEQUEUE |Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 다음 알림을 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_NOTIFICATION_WORKER_EXCLUSIVE_ACCESS |Always On 가용성 복제본 관리자가 Windows Server 장애 조치 클러스터링 알림을 처리 하는 백그라운드 작업의 런타임 상태에 대 한 직렬화 된 액세스를 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_NOTIFICATION_WORKER_STARTUP_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 시작될 때까지 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 종료될 때까지 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_PARTNER_SYNC |파트너 목록에 대 한 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_READ_ALL_NETWORKS |WSFC 네트워크 목록에 대한 읽기 또는 쓰기 액세스를 얻기 위해 기다립니다. 내부적으로만 사용됩니다. 참고: 엔진이 동적 관리 뷰 (예: sys.dm_hadr_cluster_networks)에 사용 되는 WSFC 네트워크 목록을 유지 하거나 유효성을 검사할 항상에서 TRANSACT-SQL WSFC를 참조 하는 문이 네트워크 정보. 이 목록은 엔진 시작 시 업데이트 되 면 WSFC 관련 알림 및 내부 Alwayson 다시 시작 (예를 들어, 손실 및 WSFC 쿼럼을 다시 얻기). 해당 목록에서 업데이트가 진행 중일 때는 일반적으로 태스크가 차단됩니다. , <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_RECOVERY_WAIT_FOR_CONNECTION |복구를 실행하기 전에 보조 데이터베이스가 주 데이터베이스에 연결될 때까지 기다립니다. 이 주 복제본에 대 한 연결이 느린 경우 길게 할 수는 예상 되는 대기,., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |데이터베이스 복구가 보조 데이터베이스에서 주 데이터베이스와의 공통 로그 지점으로 다시 설정하기 위해 되돌리기 및 초기화 단계를 완료할 때까지 기다립니다. 장애 조치 후 예상 되는 대기입니다. 실행 취소 Windows 시스템 모니터 (perfmon.exe) 및 동적 관리 뷰를 통해 진행률을 추적할 수 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_REPLICAINFO_SYNC |현재 복제본 상태를 업데이트 하는 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_SEEDING_CANCELLATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_SEEDING_FILE_LIST |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -344,20 +344,20 @@ GO
 |HADR_SEEDING_SYNC_COMPLETION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_SEEDING_TIMEOUT_TASK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_SEEDING_WAIT_FOR_COMPLETION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_SYNC_COMMIT |동기화된 보조 데이터베이스에 대한 트랜잭션 커밋 처리를 통해 로그가 확정될 때까지 기다립니다. 이 대기는 트랜잭션 지연 성능 카운터에 의해서도 반영됩니다. 이 대기 유형은 사용할 동기화에 대 한 가용성 그룹 및 보내기, 쓰기 및 보조 데이터베이스에 대 한 로그 인정 하는 시간을 나타냅니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_SYNCHRONIZING_THROTTLE |트랜잭션 커밋 처리 시 동기화 중인 보조 데이터베이스를 동기화된 상태로 전환하기 위해 주 로그 끝을 따라잡을 수 있도록 허용될 때까지 기다립니다. 이 예상 되는 대기 보조 데이터베이스는 빠른 경우., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_TDS_LISTENER_SYNC |내부 Alwayson 시스템 또는 WSFC 클러스터가 수신기 시작 되거나 중지를 요청 합니다. 이 요청의 처리는 항상 비동기이며 중복 요청을 제거하는 메커니즘이 있습니다. 또한 구성 변경으로 인해 이 프로세스가 일시 중단 되는 순간이 있습니다. 이 수신기 동기화 메커니즘과 관련된 모든 대기는 이 대기 유형을 사용합니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_TDS_LISTENER_SYNC_PROCESSING |시작 하거나 anavailability 그룹 수신기를 중지 해야 하는 항상에 TRANSACT-SQL 문의 끝에 사용 됩니다. 시작/중지 작업은 비동기적으로 수행 하 고, 이후 사용자 스레드 알려져 있는 수신기의 상황이 될 때까지이 대기 유형을 사용 하 여 차단 됩니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_SYNC_COMMIT |동기화된 보조 데이터베이스에 대한 트랜잭션 커밋 처리를 통해 로그가 확정될 때까지 기다립니다. 이 대기는 트랜잭션 지연 성능 카운터에 의해서도 반영됩니다. 가용성 그룹 및 전송, 쓰기 및 보조 데이터베이스에 로그를 확인 하려면 시간을 나타냅니다.이 대기 유형은 동기화를 예상 됩니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_SYNCHRONIZING_THROTTLE |트랜잭션 커밋 처리 시 동기화 중인 보조 데이터베이스를 동기화된 상태로 전환하기 위해 주 로그 끝을 따라잡을 수 있도록 허용될 때까지 기다립니다. 보조 데이터베이스는 캐치 업 하는 경우 예상 되는 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_TDS_LISTENER_SYNC |내부 Alwayson 시스템 또는 WSFC 클러스터는 수신기의 시작 또는 중지를 요청 합니다. 이 요청의 처리는 항상 비동기이며 중복 요청을 제거하는 메커니즘이 있습니다. 또한 구성 변경으로 인해 이 프로세스가 일시 중단 되는 순간이 있습니다. 이 수신기 동기화 메커니즘과 관련된 모든 대기는 이 대기 유형을 사용합니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_TDS_LISTENER_SYNC_PROCESSING |시작 하거나 anavailability 그룹 수신기를 중지 해야 하는 항상에서 TRANSACT-SQL 문의 끝에 사용 합니다. 시작/중지 작업이 비동기적으로 완료 된 후 사용자 스레드 수신기의 상황이 알려지지 될 때까지이 대기 유형을 사용 하 여 차단 됩니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_TIMER_TASK |타이머 태스크 개체에 대한 잠금을 가져올 때까지 기다리며, 작업이 수행되는 시간 사이의 실제 대기에도 사용됩니다. 예를 들어 10 초 마다 하나의 실행 후 실행 되는 작업에 대 한 Always On 가용성 그룹 약 10 초는 작업 일정을 변경 하려면 잠시 기다린 후 대기가 여기 포함 됩니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_TRANSPORT_DBRLIST |전송 계층의 데이터베이스 복제본 목록에 대한 액세스를 기다립니다. 에 대 한 액세스 권한을 부여 하는 spinlock에 사용 되는., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_TRANSPORT_FLOW_CONTROL |처리 중인 승인 되지 않은 Always On 메시지의 수를 out 위로 가져갈 때 대기 플로 제어 임계값입니다. (데이터베이스에 데이터베이스에 기반)에 없는 가용성 복제본-기준입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_TIMER_TASK |타이머 태스크 개체에 대한 잠금을 가져올 때까지 기다리며, 작업이 수행되는 시간 사이의 실제 대기에도 사용됩니다. 예를 들어, 하나의 실행 후 10 초 마다 실행 되는 작업에 대 한 Always On 가용성 그룹에 대 한 10 초 동안 기다리면 작업을 다시 예약 하 하 고 여기에 포함 되어 대기 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_TRANSPORT_DBRLIST |전송 계층의 데이터베이스 복제본 목록에 대한 액세스를 기다립니다. 액세스 권한을 부여 하는 spinlock에 사용 되는., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_TRANSPORT_FLOW_CONTROL |처리 중인 승인 되지 않은 Always On 메시지의 수를을 위로 가져갈 때 대기 플로 제어 임계값입니다. (데이터베이스-기준)에 없는 가용성 복제본-기준입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_TRANSPORT_SESSION |Always On 가용성 그룹을 변경 하거나 기본 전송 상태에 액세스 하는 동안 대기 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_WORK_POOL |Always On 가용성 그룹 백그라운드 작업 (task) 개체의 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_WORK_QUEUE |Always On 가용성 그룹 백그라운드 작업자 스레드 새 작업이 할당 될 때까지 대기 합니다. 이 예상 되는 대기 자가 있는지 준비는 정상 상태인 새 작업을 대기 하는 경우., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_WORK_POOL |Always On 가용성 그룹 백그라운드 작업 태스크 개체의 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_WORK_QUEUE |Always On 가용성 그룹 백그라운드 작업자 스레드 대기 할당할 새 작업입니다. 준비 작업 자가 정상 상태가 새 작업을 대기 하는 경우 예상 되는 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_XRF_STACK_ACCESS |에 액세스 (조회, 추가 및 삭제)는 Always On 가용성 데이터베이스에 대 한 확장 된 복구 분기 지점 스택에., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HCCO_CACHE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HK_RESTORE_FILEMAP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -375,7 +375,7 @@ GO
 |INSTANCE_LOG_RATE_GOVERNOR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |INTERNAL_TESTING |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |IO_AUDIT_MUTEX |추적 이벤트 버퍼 동기화 중에 발생합니다.| 
-|IO_COMPLETION |I/O 작업이 완료될 때까지 대기하는 동안 발생합니다. 이 대기 유형은 일반적으로 비데이터 페이지 I/O를 나타냅니다. 데이터 페이지 I/O 완료 대기 PAGEIOLATCH로 표시\_ \* 될 때까지 대기 합니다.| 
+|IO_COMPLETION |I/O 작업이 완료될 때까지 대기하는 동안 발생합니다. 이 대기 유형은 일반적으로 비데이터 페이지 I/O를 나타냅니다. 데이터 페이지 I/O 완료 대기 표시 PAGEIOLATCH\_ \* 될 때까지 대기 합니다.| 
 |IO_QUEUE_LIMIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |IO_RETRY |리소스 부족으로 인해 읽기 또는 쓰기와 같은 디스크 I/O 작업이 실패하여 다시 시도되는 경우에 발생합니다.| 
 |IOAFF_RANGE_QUEUE |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
@@ -383,76 +383,76 @@ GO
 |KTM_ENLISTMENT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |KTM_RECOVERY_MANAGER |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |KTM_RECOVERY_RESOLUTION |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|LATCH_DT |DT(삭제) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록이\_ \* 대기는 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
-|LATCH_EX |EX(배타) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록이\_ \* 대기는 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
-|LATCH_KP |KP(유지) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록이\_ \* 대기는 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_DT |DT(삭제) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록을\_ \* 대기 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_EX |EX(배타) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록을\_ \* 대기 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_KP |KP(유지) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록을\_ \* 대기 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LATCH_NL |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|LATCH_SH |SH(공유) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록이\_ \* 대기는 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
-|LATCH_UP |UP(업데이트) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록이\_ \* 대기는 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_SH |SH(공유) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록을\_ \* 대기 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
+|LATCH_UP |UP(업데이트) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. 래치 목록을\_ \* 대기 sys.dm_os_latch_stats에서 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.| 
 |LAZYWRITER_SLEEP |지연 기록기 태스크가 일시 중지되는 경우에 발생합니다. 대기 중인 백그라운드 태스크에서 사용한 시간을 측정한 것입니다. 사용자 대기를 찾을 때 이 상태는 고려하지 마세요.| 
 |LCK_M_BU |태스크가 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_BU_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_BU_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_BU_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_BU_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_IS |태스크가 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_IS_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_IS_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_IS_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_IS_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_IU |태스크가 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_IU_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_IU_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_IU_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_IU_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_IX |태스크가 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_IX_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_IX_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_IX_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_IX_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RIn_NL |태스크가 현재 키 값의 NULL 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다.| 
-|LCK_M_RIn_NL_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 NULL 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RIn_NL_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 NULL 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_NL_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 NULL 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_NL_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 NULL 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RIn_S |태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RIn_S_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 공유 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RIn_S_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 공유 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_S_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 공유 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_S_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 공유 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RIn_U |태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RIn_U_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 중입니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RIn_U_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 중입니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_U_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 중입니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_U_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 중입니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RIn_X |태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RIn_X_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 배타 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RIn_X_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 배타 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_X_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 배타 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RIn_X_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 배타 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RS_S |태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RS_S_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 공유 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RS_S_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 공유 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RS_S_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 공유 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RS_S_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 공유 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RS_U |태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RS_U_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RS_U_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RS_U_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RS_U_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RX_S |태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RX_S_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 공유 잠금 및 현재 키와 이전 키 간의 중단 블로커 잠금이 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RX_S_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 공유 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위 잠금이 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RX_S_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 공유 잠금 및 현재 키와 이전 키 간의 중단 블로커 잠금이 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RX_S_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 공유 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위 잠금이 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RX_U |태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RX_U_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RX_U_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RX_U_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RX_U_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 업데이트 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_RX_X |태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_RX_X_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 배타 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_RX_X_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 배타 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RX_X_ABORT_BLOCKERS |태스크가 현재 키 값의 중단 블로커가 포함된 배타 잠금 및 현재 키와 이전 키 간의 중단 블로커가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_RX_X_LOW_PRIORITY |태스크가 현재 키 값의 낮은 우선 순위가 포함된 배타 잠금 및 현재 키와 이전 키 간의 낮은 우선 순위가 포함된 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_S |태스크가 공유 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_S_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_S_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_S_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_S_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_SCH_M |태스크가 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_SCH_M_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_SCH_M_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SCH_M_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SCH_M_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_SCH_S |태스크가 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_SCH_S_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_SCH_S_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SCH_S_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SCH_S_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_SIU |태스크가 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_SIU_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_SIU_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SIU_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SIU_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_SIX |태스크가 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_SIX_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_SIX_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SIX_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_SIX_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_U |태스크가 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_U_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_U_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_U_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_U_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_UIX |태스크가 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_UIX_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_UIX_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_UIX_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_UIX_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LCK_M_X |태스크가 배타 잠금을 획득하려고 대기하는 경우에 발생합니다.| 
-|LCK_M_X_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LCK_M_X_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. (에 관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션입니다.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_X_ABORT_BLOCKERS |태스크가 중단 블로커가 포함된 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|LCK_M_X_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LOG_POOL_SCAN |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LOG_RATE_GOVERNOR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LOGBUFFER |태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 장치가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.| 
@@ -482,7 +482,7 @@ GO
 |MSQL_DQ |분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 응용 프로그램 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.| 
 |MSQL_XACT_MGR_MUTEX |태스크가 세션 트랜잭션 관리자의 소유권을 획득하여 세션 수준 트랜잭션 작업을 수행하려고 대기하는 경우에 발생합니다.| 
 |MSQL_XACT_MUTEX |트랜잭션 사용 동기화 중에 발생합니다. 요청에서 트랜잭션을 사용하려면 먼저 뮤텍스를 획득해야 합니다.| 
-|MSQL_XP |태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. SQL Server는이 대기 상태를 사용 하 여 잠재적 MARS 응용 프로그램 교착 상태를 검색 합니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.| 
+|MSQL_XP |태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. 이 대기 상태를 사용 하 여 잠재적 MARS 응용 프로그램 교착 상태를 검색할 SQL Server입니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.| 
 |MSSEARCH |전체 텍스트 검색 호출 중에 발생합니다. 이 대기는 전체 텍스트 작업이 완료될 때 끝나며 경합이 아니라 전체 텍스트 작업 기간을 나타냅니다.| 
 |NET_WAITFOR_PACKET |네트워크 읽기 중 연결이 네트워크 패킷을 대기하는 경우에 발생합니다.| 
 |NETWORKSXMLMGRLOAD |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -575,7 +575,7 @@ GO
 |PREEMPTIVE_FSAOLEDB_STARTTRANSACTION |TBD| 
 |PREEMPTIVE_FSRECOVER_UNCONDITIONALUNDO |TBD| 
 |PREEMPTIVE_GETRMINFO |TBD| 
-|PREEMPTIVE_HADR_LEASE_MECHANISM |CSS 진단에 대 한 일정 always On 가용성 그룹 임대 관리자., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PREEMPTIVE_HADR_LEASE_MECHANISM |예약 CSS 진단에 대 한 always On 가용성 그룹 임대 관리자., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PREEMPTIVE_HTTP_EVENT_WAIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PREEMPTIVE_HTTP_REQUEST |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PREEMPTIVE_LOCKMONITOR |TBD| 
@@ -720,22 +720,22 @@ GO
 |PWAIT_EVENT_SESSION_INIT_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_FABRIC_REPLICA_CONTROLLER_DATA_LOSS |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_HADR_ACTION_COMPLETED |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC |백그라운드 작업 (폴링)를 통해 수신 하는 백그라운드 태스크의 종료 부분이 끝났으면 기다리고 있을 때 발생 합니다. Windows Server 장애 조치 클러스터링 알림을., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_HADR_CLUSTER_INTEGRATION |추가, 바꾸기 및/또는 제거 작업이 Alwayson 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 가져올 기다리고 있습니다. 내부 전용 <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC |백그라운드 태스크가 대기 하는 (폴링)을 통해 받는 백그라운드 태스크가 종료에 대 한 경우 Windows Server 장애 조치 클러스터링 알림을., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PWAIT_HADR_CLUSTER_INTEGRATION |추가, 바꾸기 및/또는 제거는 항상 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 가져올 작업을 기다리고 있습니다. 내부 전용 <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_HADR_FAILOVER_COMPLETED |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_HADR_JOIN |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_HADR_OFFLINE_COMPLETED |오프 라인으로 Windows Server 장애 조치 클러스터링 개체를 삭제 하기 전에 대상 가용성 그룹에 대 한 Always On 가용성 그룹 삭제 작업이 대기 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_HADR_ONLINE_COMPLETED |Always On 만들기 또는 가용성 그룹 장애 조치 작업이 대상 가용성 그룹이 온라인 상태가 될 때까지 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_HADR_POST_ONLINE_COMPLETED |Always On 가용성 그룹 삭제 작업이 이전 명령의 일부로 예약 된 백그라운드 태스크가 종료 될 때까지 기다리고 있습니다. 예를 들어 가용성 데이터베이스를 주 역할로 전환 중인 백그라운드 작업이 있을 수 있습니다. DROP AVAILABILITY GROUP DDL이 백그라운드 태스크가 종료 경합 상태를 방지 하기 위해 대기 해야 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PWAIT_HADR_OFFLINE_COMPLETED |Windows Server 장애 조치 클러스터링 개체를 제거 하기 전에 오프 라인으로 전환 하는 대상 가용성 그룹 대기 하는 Always On 가용성 그룹 삭제 작업이., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PWAIT_HADR_ONLINE_COMPLETED |Always On을 만들거나가 온라인 대상 가용성 그룹에 대 한 가용성 그룹 장애 조치 작업을 기다리고 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PWAIT_HADR_POST_ONLINE_COMPLETED |Always On 가용성 그룹 삭제 작업이 이전 명령의 일부로 예약 된 백그라운드 태스크가 종료 대기 중입니다. 예를 들어 가용성 데이터베이스를 주 역할로 전환 중인 백그라운드 작업이 있을 수 있습니다. DROP AVAILABILITY GROUP DDL이 백그라운드 태스크가 종료 경합을 방지 하기 위해 대기 해야 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_HADR_SERVER_READY_CONNECTIONS |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_HADR_WORKITEM_COMPLETED |비동기 작업 태스크가 완료될 때까지 기다리는 스레드에 의한 내부 대기입니다. 이 예상 되는 대기 이며 CSS를 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_HADRSIM |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_LOG_CONSOLIDATION_IO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_LOG_CONSOLIDATION_POLL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_MD_LOGIN_STATS |로그인 통계에 대 한 메타 데이터의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PWAIT_MD_LOGIN_STATS |로그인 상태에서 메타 데이터의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_MD_RELATION_CACHE |테이블 또는 인덱스에서 메타 데이터의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_MD_SERVER_CACHE |연결 된 서버에서 메타 데이터의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_MD_UPGRADE_CONFIG |업그레이드 서버 수준 구성의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|PWAIT_MD_UPGRADE_CONFIG |서버 차원 구성 업그레이드의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_QRY_BPMEMORY |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -777,7 +777,7 @@ GO
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |쿼리 알림의 트랜잭션 상태 동기화 중에 발생합니다.| 
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX |쿼리 알림 관리자의 내부 동기화 중에 발생합니다.| 
 |QUERY_NOTIFICATION_UNITTEST_MUTEX |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|QUERY_OPTIMIZER_PRINT_MUTEX |쿼리 최적화 프로그램의 진단 출력 생성 동기화 중에 발생합니다. 이 대기 유형은 진단 설정이 Microsoft 기술 지원 서비스의 지시 대로 설정 된 경우에 발생 합니다.| 
+|QUERY_OPTIMIZER_PRINT_MUTEX |쿼리 최적화 프로그램의 진단 출력 생성 동기화 중에 발생합니다. 이 대기 유형은 진단 설정이 Microsoft 제품 지원 담당자의 지시 대로 설정 된 경우에 발생 합니다.| 
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QUERY_TRACEOUT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |RBIO_WAIT_VLF |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -791,7 +791,7 @@ GO
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REPL_CACHE_ACCESS |복제 아티클 캐시 동기화 중에 발생합니다. 이 대기 중에는 복제 로그 판독기가 정지되고 게시된 테이블에 대한 DDL(데이터 정의 언어) 문이 차단됩니다.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |복제 스키마 버전 정보 동기화 중에 발생합니다. 복제된 개체에 대해 DDL 문을 실행하고 로그 판독기가 DDL 발생을 기반으로 버전이 지정된 스키마를 작성하거나 사용할 때 이 상태가 됩니다. 많은 게시 된 데이터베이스에 트랜잭션 복제와 함께 단일 게시자가 있고 게시 된 데이터베이스는 매우 활발 하는 경우이 대기 유형의 경합을 볼 수 있습니다.| 
+|REPL_SCHEMA_ACCESS |복제 스키마 버전 정보 동기화 중에 발생합니다. 복제된 개체에 대해 DDL 문을 실행하고 로그 판독기가 DDL 발생을 기반으로 버전이 지정된 스키마를 작성하거나 사용할 때 이 상태가 됩니다. 트랜잭션 복제를 사용 하 여 단일 게시자에서 게시 된 여러 데이터베이스가 있고 게시 된 데이터베이스는 매우 활발 하는 경우이 대기 유형은에서 경합을 볼 수 있습니다.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -829,7 +829,7 @@ GO
 |SEMPLAT_DSI_BUILD |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SEQUENCE_GENERATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SEQUENTIAL_GUID |새 순차적 GUID를 가져오는 동안 발생합니다.| 
-|SERVER_IDLE_CHECK |리소스 모니터를 켜는 또는 유휴로 SQL Server 인스턴스를 선언 하려고 하는 경우 SQL Server 인스턴스 유휴 상태 동기화 중에 발생 합니다.| 
+|SERVER_IDLE_CHECK |리소스 모니터는 유휴로 SQL Server 인스턴스를 선언 하는 동안 또는 절전 모드 해제 하려고 하는 경우 SQL Server 인스턴스 유휴 상태 동기화 중에 발생 합니다.| 
 |SERVER_RECONFIGURE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SESSION_WAIT_STATS_CHILDREN |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SHARED_DELTASTORE_CREATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -851,7 +851,7 @@ GO
 |SLO_UPDATE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SMSYNC |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SNI_CONN_DUP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|SNI_CRITICAL_SECTION |SQL Server 네트워킹 구성 요소의 내부 동기화 중에 발생 합니다.| 
+|SNI_CRITICAL_SECTION |SQL Server 네트워킹 구성 요소 내에서 내부 동기화 중에 발생 합니다.| 
 |SNI_HTTP_WAITFOR_0_DISCON |처리 중인 HTTP 연결이 종료 될 때까지 기다리는 동안 SQL Server 종료 하는 동안 발생 합니다.| 
 |SNI_LISTENER_ACCESS |NUMA(비균일 메모리 액세스) 노드의 상태 변경 업데이트 작업을 대기하는 동안 발생합니다. 상태 변경에 대한 액세스는 직렬화됩니다.| 
 |SNI_TASK_COMPLETION |NUMA 노드 상태 변경 동안 모든 태스크가 완료될 때까지 대기하는 중에 발생합니다.| 
@@ -865,19 +865,19 @@ GO
 |SOS_MEMORY_TOPLEVELBLOCKALLOCATOR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SOS_MEMORY_USAGE_ADJUSTMENT |메모리 사용량이 풀 사이에서 조절될 경우 발생합니다.| 
 |SOS_OBJECT_STORE_DESTROY_MUTEX |풀에서 개체를 삭제하는 경우 메모리 풀의 내부 동기화 중에 발생합니다.| 
-|SOS_PHYS_PAGE_CACHE |스레드가 물리적 페이지를 할당하거나 물리적 페이지를 운영 체제에 반환하기 전에 확보해야 하는 뮤텍스를 획득하기 위해 대기하는 시간을 고려합니다. 이 형식에 대 한 대기는 SQL Server 인스턴스에서 AWE 메모리를 사용 하는 경우에 나타납니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|SOS_PHYS_PAGE_CACHE |스레드가 물리적 페이지를 할당하거나 물리적 페이지를 운영 체제에 반환하기 전에 확보해야 하는 뮤텍스를 획득하기 위해 대기하는 시간을 고려합니다. 이 유형의 대기는 SQL Server 인스턴스에서 AWE 메모리를 사용 하는 경우에 나타납니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SOS_PROCESS_AFFINITY_MUTEX |프로세스 선호도 설정에 대한 액세스 동기화 중에 발생합니다.| 
 |SOS_RESERVEDMEMBLOCKLIST |SQL Server 메모리 관리자의 내부 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 만 합니다. |  
 |SOS_SCHEDULER_YIELD |다른 작업이 실행될 수 있도록 태스크가 자발적으로 스케줄러를 양보하는 경우에 발생합니다. 이 대기 중에 태스크는 해당 퀀텀이 갱신될 때까지 대기합니다.| 
 |SOS_SMALL_PAGE_ALLOC |일부 메모리 개체에 의해 관리되는 메모리의 할당 및 해제 중에 발생합니다.| 
 |SOS_STACKSTORE_INIT_MUTEX |내부 저장소 초기화 동기화 중에 발생합니다.| 
-|SOS_SYNC_TASK_ENQUEUE_EVENT |태스크가 동기 방식으로 시작되는 경우에 발생합니다. SQL Server에서 대부분의 작업은 비동기 방식 제어를 반환 하는 시작에 작업 요청이 작업 큐에 배치 된 후에 즉시 시작 됩니다.| 
+|SOS_SYNC_TASK_ENQUEUE_EVENT |태스크가 동기 방식으로 시작되는 경우에 발생합니다. SQL Server에서 대부분의 작업은 제어 반환 하는 시작으로 작업 요청이 작업 큐에 배치 된 후에 즉시는 비동기 방식으로 시작 됩니다.| 
 |SOS_VIRTUALMEMORY_LOW |메모리 할당이 리소스 관리자가 가상 메모리를 해제할 때까지 대기하는 경우에 발생합니다.| 
-|SOSHOST_EVENT |CLR과 같은 호스팅된 구성 요소가 SQL Server 이벤트 동기화 개체를 대기 하는 경우 발생 합니다.| 
+|SOSHOST_EVENT |CLR과 같은 호스팅된 구성 요소가 SQL Server 이벤트 동기화 개체에서 대기 하는 경우 발생 합니다.| 
 |SOSHOST_INTERNAL |CLR과 같은 호스팅된 구성 요소에 사용되는 메모리 관리자 콜백 동기화 중에 발생합니다.| 
-|SOSHOST_MUTEX |CLR과 같은 호스팅된 구성 요소가 SQL Server 뮤텍스 동기화 개체를 대기 하는 경우 발생 합니다.| 
-|SOSHOST_RWLOCK |CLR과 같은 호스팅된 구성 요소가 SQL Server 읽기 / 쓰기 동기화 개체를 대기 하는 경우 발생 합니다.| 
-|SOSHOST_SEMAPHORE |CLR과 같은 호스팅된 구성 요소가 SQL Server 세마포 동기화 개체를 대기 하는 경우 발생 합니다.| 
+|SOSHOST_MUTEX |CLR과 같은 호스팅된 구성 요소가 SQL Server 뮤텍스 동기화 개체에서 대기 하는 경우 발생 합니다.| 
+|SOSHOST_RWLOCK |CLR과 같은 호스팅된 구성 요소가 SQL Server 읽기 / 쓰기 동기화 개체에서 대기 하는 경우 발생 합니다.| 
+|SOSHOST_SEMAPHORE |CLR과 같은 호스팅된 구성 요소가 SQL Server 세마포 동기화 개체에서 대기 하는 경우 발생 합니다.| 
 |SOSHOST_SLEEP |일반 이벤트가 발생할 때까지 대기하는 동안 호스팅된 태스크가 중지되는 경우에 발생합니다. 호스팅된 태스크는 CLR과 같은 호스팅된 구성 요소에 사용됩니다.| 
 |SOSHOST_TRACELOCK |추적 스트림에 대한 액세스 동기화 중에 발생합니다.| 
 |SOSHOST_WAITFORDONE |CLR과 같은 호스팅된 구성 요소가 태스크가 완료될 때까지 대기하는 경우에 발생합니다.| 
@@ -940,16 +940,16 @@ GO
 |WAIT_XTP_ASYNC_TX_COMPLETION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_CKPT_CLOSE |검사점이 완료 될 때까지 기다리는 경우 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_CKPT_ENABLED |검사점 작성은 대기 하는 사용 되지 않는 검사점을 사용 하도록 설정 하는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|WAIT_XTP_CKPT_ENABLED |검사점 사용 안 함, 및에 대 한 대기 중인 검사점을 사용할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_CKPT_STATE_LOCK |검사점 상태 확인을 동기화 할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_COMPILE_WAIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.| 
-|WAIT_XTP_GUEST |데이터베이스의 메모리 할당자에서 메모리 부족 알림 수신을 중지할 할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_HOST_WAIT |대기 데이터베이스 엔진에 의해 트리거되는 및 호스트에서 구현 하는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|WAIT_XTP_GUEST |데이터베이스 메모리 할당자는 메모리 부족 알림 수신을 중지할 수 할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|WAIT_XTP_HOST_WAIT |대기 데이터베이스 엔진에 의해 트리거되는 호스트에서 구현 된 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_OFFLINE_CKPT_LOG_IO |오프 라인 검사점 대기는 로그 IO 완료를 읽을 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_OFFLINE_CKPT_NEW_LOG |새 로그 레코드를 검색에 대 한 오프 라인 검사점 대기 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_PROCEDURE_ENTRY |삭제 프로시저 대기에 대 한 모든 현재 실행 프로시저가 완료 될 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_RECOVERY |데이터베이스 복구 완료 하는 메모리 액세스에 최적화 된 개체의 복구를 위해 대기 하는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|WAIT_XTP_OFFLINE_CKPT_LOG_IO |오프 라인 검사점 로그 읽기 IO 완료를 기다리는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|WAIT_XTP_OFFLINE_CKPT_NEW_LOG |새 로그 레코드를 검색에 대 한 오프 라인 검사점 기다리는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|WAIT_XTP_PROCEDURE_ENTRY |저장 프로시저를 모든 현재 실행 프로시저가 완료를 대기할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|WAIT_XTP_RECOVERY |데이터베이스 복구를 완료 하려면 메모리 최적화 개체의 복구를 위해 기다리는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_TASK_SHUTDOWN |메모리 내 oltp 네트워크 읽기가 완료 될 때까지 기다리는 경우 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -1010,10 +1010,10 @@ GO
 |XTP_PREEMPTIVE_TASK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |XTP_TRUNCATION_LSN |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |XTPPROC_CACHE_ACCESS |모든 고유 하 게 컴파일된 저장된 프로시저 캐시 개체에 액세스할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|XTPPROC_PARTITIONED_STACK_CREATE |지정된 된 프로시저에 대 한 저장된 프로시저 캐시 구조 (단일 스레드로 수행 되어야 합니다) 컴파일된-NUMA 노드를 고유 하 게 할당 하는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|
+|XTPPROC_PARTITIONED_STACK_CREATE |지정 된 프로시저에 대 한 저장된 프로시저 캐시 구조 (단일 스레드로 수행 되어야 합니다) 컴파일될-NUMA 노드를 고유 하 게 할당할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|
 
   
- 다음과 같은 Xevent를 파티션에 관련 된 **스위치** 및 온라인 인덱스 다시 작성 합니다. 구문에 대 한 정보를 참조 하십시오. [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) 및 [ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)합니다.  
+ 다음과 같은 Xevent 파티션 관련이 **스위치** 및 온라인 인덱스 다시 작성 합니다. 구문에 대 한 자세한 내용은 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) 하 고 [ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   
@@ -1021,13 +1021,13 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- 잠금 호환성 표를 참조 하십시오. [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.  
+ 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
     
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   
 

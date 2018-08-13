@@ -22,13 +22,13 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b6c759bd422ae815a284ae2cd14bc8b1861281ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1731c00431723da6187c2791c2758a3d957641d2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995610"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563087"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_fulltext_table
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
  기존 전체 텍스트 인덱스는 다음 전체 채우기; 일까 지 진행에서 됩니다 특정 테이블에 대 한 전체 텍스트 인덱스를 비활성화 되 면 그러나이 인덱스 하므로 사용 되지 않습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비활성화 된 테이블에 대 한 쿼리를 차단 합니다.  

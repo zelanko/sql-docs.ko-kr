@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referenced_entities (Transact SQL) | Microsoft Docs
+title: sys.dm_sql_referenced_entities (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 11/09/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a5eef60da505ab939908c22ce47311dfb5f070ea
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9dff46e117f5c75162e7fd8e0f717a0e72829714
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467699"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541683"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지정된 참조 엔터티 정의에서 이름별로 참조되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환합니다. 한 사용자 정의 엔터티를 호출할 때 두 엔터티 간의 종속성이 생성 됩니다는 *참조 된 엔터티가*, 라는 다른 사용자 정의 엔터티의 영구 SQL 식에 이름별으로 나타나는 *참조 엔터티* . 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지정된 참조 엔터티 정의에서 이름별로 참조되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환합니다. 하나의 사용자 정의 엔터티가 호출 될 때 두 엔터티 간의 종속성이 만들어집니다.는 *엔터티를 참조*, 라는 다른 사용자 정의 엔터티의 영구 SQL 식에서 이름별으로 표시 된 *엔터티를 참조 하* . 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
   
  이러한 동적 관리 함수를 사용하면 지정된 참조 엔터티에 의해 참조되는 다음과 같은 엔터티 유형을 보고할 수 있습니다.  
   
@@ -69,27 +69,27 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *schema_name*합니다. ] *referencing_entity_name*  
- 참조 엔터티의 이름입니다. *schema_name* 은 참조 클래스가 개체인 경우 필요 합니다.  
+ [ *schema_name*. ] *referencing_entity_name*  
+ 참조 엔터티의 이름입니다. *schema_name* 는 참조 클래스 개체를 경우에 필요 합니다.  
   
- *schema_name.referencing_entity_name* 은 **nvarchar (517)** 합니다.  
+ *schema_name.referencing_entity_name* 는 **nvarchar(517)**.  
   
- *< Referencing_class >* :: = {개체 | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *< Referencing_class >* :: = {개체 | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER을 (를)  
  지정된 참조 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- *< referencing_class >* 은 **nvarchar (60)** 합니다.  
+ *< referencing_class >* 는 **nvarchar(60)**.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|참조 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. Null을 허용하지 않습니다.|  
-|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하십시오. [TRANSACT-SQL 구문 표기 규칙 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.<br /><br /> 네 부분으로 된 이름 지정 없이 엔터티가 참조된 비스키마 바운드 종속성의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
-|referenced_database_name|**sysname**|참조된 엔터티의 데이터베이스 이름입니다.<br /><br /> 이 열은 세 부분 또는 네 부분으로 된 올바른 이름을 지정하여 생성되는 데이터베이스 간 또는 서버 간 참조에 대해 채워집니다.<br /><br /> 한 부분 또는 두 부분으로 된 이름을 사용하여 지정된 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
+|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하세요 [TRANSACT-SQL 구문 표기 규칙 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.<br /><br /> 네 부분으로 된 이름 지정 없이 엔터티가 참조된 비스키마 바운드 종속성의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분으로 구성을 사용 하 여 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
+|referenced_database_name|**sysname**|참조된 엔터티의 데이터베이스 이름입니다.<br /><br /> 이 열은 세 부분 또는 네 부분으로 된 올바른 이름을 지정하여 생성되는 데이터베이스 간 또는 서버 간 참조에 대해 채워집니다.<br /><br /> 한 부분 또는 두 부분으로 된 이름을 사용하여 지정된 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분으로 구성을 사용 하 여 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
 |referenced_schema_name|**sysname**|참조된 엔터티가 속한 스키마입니다.<br /><br /> 스키마 이름 지정 없이 엔터티가 참조되는 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
 |referenced_entity_name|**sysname**|참조된 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
 |referenced_minor_name|**sysname**|참조된 엔터티가 열인 경우 열 이름이며 그렇지 않은 경우 NULL입니다. 예를 들어 참조된 엔터티 자체를 나열하는 행에서 referenced_minor_name은 NULL입니다.<br /><br /> 열이 참조 엔터티에서 이름으로 식별되거나 부모 엔터티가 SELECT * 문에 사용된 경우 참조된 엔터티는 열입니다.|  
-|referenced_id|**int**|참조된 엔터티의 ID입니다. referenced_minor_id가 0이 아닌 경우 referenced_id는 열이 정의된 엔터티입니다.<br /><br /> 서버 간 참조의 경우 항상 NULL입니다.<br /><br /> 데이터베이스 간 참조의 경우 데이터베이스가 오프라인 상태이거나 엔터티를 바인딩할 수 없어 ID를 확인할 수 없으면 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비 스키마 바운드 참조에 대 한 이름 확인은 호출자에 종속 하는 경우 또는 데이터베이스에 참조 된 엔터티가 존재 하지 않을 경우에 ID 확인할 수 없습니다.  후자의 경우 is_caller_dependent는 1로 설정 됩니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
+|referenced_id|**int**|참조된 엔터티의 ID입니다. referenced_minor_id가 0이 아닌 경우 referenced_id는 열이 정의된 엔터티입니다.<br /><br /> 서버 간 참조의 경우 항상 NULL입니다.<br /><br /> 데이터베이스 간 참조의 경우 데이터베이스가 오프라인 상태이거나 엔터티를 바인딩할 수 없어 ID를 확인할 수 없으면 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비 스키마 바운드 참조의 경우 참조 된 엔터티는 이름 확인이 호출자에 종속 되는 경우 또는 데이터베이스에 존재 하지 않을 경우 ID 확인할 수 없습니다.  후자의 경우 is_caller_dependent은 1로 설정 됩니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
 |referenced_minor_id|**int**|참조된 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. 예를 들어 참조된 엔터티 자체를 나열하는 행에서 referenced_minor_is는 0입니다.<br /><br /> 비스키마 바운드 참조의 경우 모든 참조된 엔터티를 바인딩할 수 있는 경우에만 열 종속성이 보고됩니다. 바인딩할 수 없는 참조된 엔터티가 있는 경우 열 수준 종속성이 보고되지 않으며 referenced_minor_id는 0입니다. 예 4를 참조하십시오.|  
 |referenced_class|**tinyint**|참조된 엔터티의 클래스입니다.<br /><br /> 1 = 개체 또는 열<br /><br /> 6 = 형식<br /><br /> 10 = XML 스키마 컬렉션<br /><br /> 21 = 파티션 함수|  
 |referenced_class_desc|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
@@ -99,8 +99,8 @@ sys.dm_sql_referenced_entities (
 |is_updated|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 또는 열이 수정됩니다.|  
 |is_select_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체가 SELECT * 절에서 사용됩니다(개체 수준만 해당).|  
 |is_all_columns_found|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체에 대한 모든 열 종속성을 찾을 수 있습니다.<br /><br /> 0 = 개체에 대한 열 종속성을 찾을 수 없습니다.|
-|is_insert_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 (개체 수준만 해당) 열 목록 없이 INSERT 문에 사용 됩니다.|  
-|is_incomplete|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 개체 또는 열 바인딩 오류 개이고 완전 하지 않습니다.|
+|is_insert_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 (개체 수준에만 해당) 열 목록 없이 INSERT 문에서 사용 됩니다.|  
+|is_incomplete|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 개체 또는 열에 바인딩 오류가 잘못 되었습니다.|
   
 ## <a name="exceptions"></a>예외  
  다음과 같은 경우 빈 결과 집합을 반환합니다.  
@@ -117,35 +117,35 @@ sys.dm_sql_referenced_entities (
   
  열 종속성을 확인할 수 없으면 오류 2020을 반환합니다. 이 오류가 발생해도 쿼리는 개체 수준 종속성을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조하는 엔터티를 반환할 수 있습니다.  
   
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|테이블|예*|예|  
-|보기|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니요|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|Table|예*|사용자 계정 컨트롤|  
+|보기|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|CLR 저장 프로시저|아니오|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|CLR 사용자 정의 함수|아니오|사용자 계정 컨트롤|  
+|CLR 트리거(DML 및 DDL)|아니오|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|사용자 계정 컨트롤|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|사용자 계정 컨트롤|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|사용자 계정 컨트롤|아니오|  
+|확장 저장 프로시저|아니오|사용자 계정 컨트롤|  
+|큐|아니오|사용자 계정 컨트롤|  
+|동의어|아니오|사용자 계정 컨트롤|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니오|사용자 계정 컨트롤|  
+|XML 스키마 컬렉션|아니오|사용자 계정 컨트롤|  
+|파티션 함수|아니오|사용자 계정 컨트롤|  
   
- \* 한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
+ \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  sys.dm_sql_referenced_entities에 대한 SELECT 권한 및 참조 엔터티에 대한 VIEW DEFINITION 권한이 필요합니다. 기본적으로 SELECT 권한은 public에 부여됩니다. 참조 엔터티가 데이터 수준 DDL 트리거인 경우 데이터베이스에 대한 ALTER DATABASE DDL TRIGGER 권한 또는 데이터베이스에 대한 VIEW DEFINITION 권한이 필요합니다. 참조 엔터티가 서버 수준 DDL 트리거인 경우 서버에 대한 VIEW ANY DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -269,7 +269,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>6. 개체 또는 열 사용법 반환  
- 다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 프로시저는 열을 업데이트 `NationalIDNumber`, `BirthDate,``MaritalStatus`, 및 `Gender` 의 `Employee` 테이블 기반으로 지정 된 `BusinessEntityID` 값입니다. 다른 저장 프로시저인 `upsLogError`는 실행 오류를 캡처하는 TRY…CATCH 블록에 정의되어 있습니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
+ 다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 절차는 열을 업데이트 `NationalIDNumber`, `BirthDate,``MaritalStatus`, 및 `Gender` 의 `Employee` 테이블 기준으로 지정 된 `BusinessEntityID` 값입니다. 다른 저장 프로시저인 `upsLogError`는 실행 오류를 캡처하는 TRY…CATCH 블록에 정의되어 있습니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -293,7 +293,7 @@ FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalIn
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_sql_referencing_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

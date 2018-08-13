@@ -20,13 +20,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 248e8e523e5ad261c261c1eb47d6cc0f64ee58fa
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 95e1b7b3d92c74b7e2a57fc311cd7ccb407fa4fc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412171"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551033"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,13 +75,13 @@ ms.locfileid: "37412171"
 |DBPROP_BOOKMARKS 또는 DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 순차적이며 정방향으로만 스크롤하거나 인출할 수 있습니다. 상대적인 행 위치 지정은 지원됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.|  
 |DBPROP_OWNUPDATEDELETE, DBPROP_OWNINSERT 또는 DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 어느 방향으로든 스크롤하거나 인출할 수 있습니다. 상대적인 행 위치 지정은 지원됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 어느 방향으로든 스크롤하거나 인출할 수 있습니다. 상대적인 행 위치 지정은 지원됩니다. 참조된 열에 인덱스가 있으면 명령 텍스트에 ORDER BY 절이 포함될 수 있습니다.<br /><br /> 행 집합에 책갈피가 포함되어 있으면 DBPROP_OTHERINSERT는 VARIANT_TRUE일 수 없습니다. 이 표시 유형 속성과 책갈피를 사용하여 행 집합을 만들려고 하면 오류가 발생합니다.|  
-|DBPROP_IRowsetLocate 또는 DBPROP_IRowsetScroll|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 어느 방향으로든 스크롤하거나 인출할 수 있습니다. 책갈피와 절대 위치 지정 된 **IRowsetLocate** 인터페이스 행 집합에서 지원 됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.<br /><br /> DBPROP_IRowsetLocate 및 DBPROP_IRowsetScroll은 행 집합에 책갈피가 필요합니다. VARIANT_TRUE로 설정된 DBPROP_OTHERINSERT와 책갈피를 사용하여 행 집합을 만들려고 하면 오류가 발생합니다.|  
+|DBPROP_IRowsetLocate 또는 DBPROP_IRowsetScroll|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 어느 방향으로든 스크롤하거나 인출할 수 있습니다. **IRowsetLocate** 인터페이스를 통한 책갈피 및 절대 위치 지정이 행 집합에서 지원됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.<br /><br /> DBPROP_IRowsetLocate 및 DBPROP_IRowsetScroll은 행 집합에 책갈피가 필요합니다. VARIANT_TRUE로 설정된 DBPROP_OTHERINSERT와 책갈피를 사용하여 행 집합을 만들려고 하면 오류가 발생합니다.|  
 |DBPROP_IRowsetChange 또는 DBPROP_IRowsetUpdate|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 있습니다. 행 집합은 순차적이며 정방향으로만 스크롤하거나 인출할 수 있습니다. 상대적인 행 위치 지정은 지원됩니다. 업데이트 가능한 커서를 지원하는 모든 명령은 이러한 인터페이스를 지원할 수 있습니다.|  
-|DBPROP_IRowsetLocate 또는 DBPROP_IRowsetScroll 및 DBPROP_IRowsetChange 또는 DBPROP_IRowsetUpdate|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 있습니다. 행 집합은 어느 방향으로든 스크롤하거나 인출할 수 있습니다. 책갈피와 절대 위치 지정 **IRowsetLocate** 행 집합에서 지원 됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.|  
+|DBPROP_IRowsetLocate 또는 DBPROP_IRowsetScroll 및 DBPROP_IRowsetChange 또는 DBPROP_IRowsetUpdate|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 있습니다. 행 집합은 어느 방향으로든 스크롤하거나 인출할 수 있습니다. **IRowsetLocate**를 통한 책갈피 및 절대 위치 지정이 행 집합에서 지원됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 정방향 스크롤만 지원합니다. 상대적인 행 위치 지정은 지원됩니다. 참조된 열에 인덱스가 있으면 명령 텍스트에 ORDER BY 절이 포함될 수 있습니다.<br /><br /> DBPROP_IMMOBILEROWS는 다른 세션의 명령이나 다른 사용자에 의해 삽입된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행을 표시할 수 있는 행 집합에서만 사용할 수 있습니다. DBPROP_OTHERINSERT가 VARIANT_TRUE일 수 없는 행 집합에서 속성이 VARIANT_FALSE로 설정된 행 집합을 열려고 하면 오류가 발생합니다.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 정방향 스크롤만 지원합니다. 상대적인 행 위치 지정은 지원됩니다. 다른 속성으로 제한되지 않은 경우 명령 텍스트에 ORDER BY 절이 포함될 수 있습니다.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 서버 커서에서 지원 되는 Native Client OLE DB 공급자 행 집합을 쉽게 만들 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 테이블 또는 뷰를 사용 하 여 합니다 **iopenrowset:: Openrowset** 메서드. 필요한 행 집합을 전달 속성 설정, 테이블 또는 뷰의 이름으로 지정 된 *rgPropertySets* 매개 변수입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 서버 커서에서 지원 되는 Native Client OLE DB 공급자 행 집합을 쉽게 만들 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 테이블 또는 뷰를 사용 하 여 합니다 **iopenrowset:: Openrowset** 메서드. *rgPropertySets* 매개 변수에 필요한 행 집합 속성 세트를 전달하여 이름으로 테이블이나 뷰를 지정합니다.  
   
  행 집합이 서버 커서에서 지원되도록 소비자가 요구하는 경우 행 집합을 만드는 명령 텍스트가 제한됩니다. 구체적으로, 명령 텍스트는 단일 행 집합 결과를 반환하는 단일 SELECT 문이나 단일 행 집합 결과를 반환하는 단일 SELECT 문을 구현하는 저장 프로시저로 제한됩니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "37412171"
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 커서 블록 크기  
  경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서가 지원를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합 행의 요소 수가 핸들의 배열 매개 변수에 **irowset:: Getnextrows** 또는 **irowsetlocate:: Getrowsat**  메서드 커서 블록 크기를 정의 합니다. 배열의 핸들로 표시된 행이 커서 블록의 멤버입니다.  
   
- 책갈피를 지 원하는 행 집합을 사용 하 여 검색 된 행 핸들이 합니다 **irowsetlocate:: Getrowsbybookmark** 메서드 커서 블록의 멤버를 정의 합니다.  
+ 책갈피를 지원하는 행 집합의 경우 **IRowsetLocate::GetRowsByBookmark** 메서드를 사용하여 검색된 행 핸들이 커서 블록의 멤버를 정의합니다.  
   
  행 집합을 채우고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서 블록을 형성하는 데 사용된 메서드에 관계없이 커서 블록은 행 집합에 대해 다음 행 인출 메서드를 실행할 때까지 활성화되어 있습니다.  
   

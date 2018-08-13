@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137892"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400646"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -25,7 +25,7 @@ ms.locfileid: "37137892"
 APS 2016은 AU7로 업그레이드 하는 필수 구성 요소입니다. 다음은 AP AU7의 새로운 기능:
 
 ### <a name="auto-create-and-auto-update-statistics"></a>자동 생성 및 자동 업데이트 통계
-AP AU7 만들고 기본적으로 통계를 자동으로 업데이트 합니다. 관리자 수의 새 기능 스위치 메뉴 항목을 사용 하는 데 통계 설정을 업데이트 하는 [Configuration Manager](appliance-configuration.md#CMTasks)합니다. 합니다 [기능 스위치가](appliance-feature-switch.md) auto-create, 자동 업데이트 및 통계의 비동기 업데이트 동작을 제어 합니다. 사용 하 여 통계 설정을 업데이트할 수도 있습니다는 [ALTER DATABASE (병렬 데이터 웨어하우스)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) 문입니다.
+AP AU7 만들고 기본적으로 통계를 자동으로 업데이트 합니다. 관리자 수의 새 기능 스위치 메뉴 항목을 사용 하는 데 통계 설정을 업데이트 하는 [Configuration Manager](appliance-configuration.md#CMTasks)합니다. 합니다 [기능 스위치가](appliance-feature-switch.md) auto-create, 자동 업데이트 및 통계의 비동기 업데이트 동작을 제어 합니다. 사용 하 여 통계 설정을 업데이트할 수도 있습니다는 [ALTER DATABASE (병렬 데이터 웨어하우스)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 문입니다.
 
 ### <a name="t-sql"></a>T-SQL
 선택 @var 이제 지원 됩니다. 자세한 내용은 [지역 변수 선택]을 참조 하세요. (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 

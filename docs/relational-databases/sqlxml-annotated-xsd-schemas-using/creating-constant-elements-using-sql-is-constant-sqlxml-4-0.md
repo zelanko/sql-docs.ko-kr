@@ -1,5 +1,5 @@
 ---
-title: Sql 사용 하 여 상수 요소 만들기:은 상수 (SQLXML 4.0) | Microsoft Docs
+title: Sql 사용 하 여 상수 요소 만들기:은 상수가 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,33 +23,33 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81ee34607d198e88eee397b9c9f254f2133d1b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8bf343e639eb17b370729f22e45385ebfd53d7b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969388"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538433"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  상수 요소를 지정 하려면-는 데이터베이스 테이블 또는 열에 매핑되지 않는 XSD 스키마에서 요소, 즉-사용할 수 있습니다는 **sql:은 상수** 주석입니다. 이 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다. **sql:은 상수** 주석은 특성이 없는 요소에 지정할 수 있습니다. 값이 true(또는 1)인 요소에 이 주석을 지정하면 해당 요소는 데이터베이스에 매핑되지 않지만 XML 문서에 계속 표시됩니다.  
+  상수 요소를 지정 하려면-, 즉 데이터베이스 테이블 또는 열에 매핑되지 않는 XSD 스키마의 요소-사용할 수는 **sql:은 상수** 주석. 이 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다. 합니다 **sql:은 상수** 주석은 특성이 없는 요소에 지정할 수 있습니다. 값이 true(또는 1)인 요소에 이 주석을 지정하면 해당 요소는 데이터베이스에 매핑되지 않지만 XML 문서에 계속 표시됩니다.  
   
- **sql:은 상수** 주석에 사용할 수 있습니다.  
+ 합니다 **sql:은 상수** 주석을 사용할 수 있습니다.  
   
 -   XML 문서에 최상위 요소 추가. XML 문서에는 단일 최상위 요소(root 요소)가 필요합니다.  
   
--   와 같은 컨테이너 요소 만들기는  **\<Orders >** 모든 주문을 래핑하는 요소입니다.  
+-   와 같은 컨테이너 요소 만들기를  **\<주문 >** 모든 주문을 래핑하는 요소입니다.  
   
- **sql:은 상수** 에 주석을 추가할 수는  **\<complexType >** 요소입니다.  
+ **sql:은 상수** 주석을 추가할 수는  **\<complexType >** 요소입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>1. 컨테이너 요소를 추가하는 sql:is-constant 지정  
- 이 주석이 추가 된 XSD 스키마  **\<CustomerOrders >** 지정 하 여 상수 요소로 정의 됩니다는 **sql:은 상수** 1의 값을 가진 특성입니다. 따라서  **\<CustomerOrders >** 는 데이터베이스 테이블 또는 열에 매핑되지 않습니다. 이 상수 요소는  **\<순서 >** 자식 요소입니다.  
+ 이 주석이 추가 된 XSD 스키마  **\<CustomerOrders >** 지정 하 여 상수 요소로 정의 됩니다 합니다 **sql:은 상수** 특성 값이 1 인 합니다. 따라서  **\<CustomerOrders >** 데이터베이스 테이블 또는 열에 매핑되어 있지 않습니다. 이 상수 요소 구성 합니다  **\<순서 >** 자식 요소입니다.  
   
- 하지만  **\<CustomerOrders >** 에 매핑되지 않고 모든 데이터베이스 테이블 또는 열을 포함 하는 컨테이너 요소를 결과 XML에 표시 된  **\<순서 >** 자식 요소입니다.  
+ 하지만  **\<CustomerOrders >** 에 매핑되지 않는 경우 데이터베이스 테이블 또는 열을 포함 하는 컨테이너 요소를 결과 XML에 계속 표시 되는  **\<순서 >** 자식 요소입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -111,7 +111,7 @@ ms.locfileid: "32969388"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  다음은 결과 집합의 일부입니다.  
   

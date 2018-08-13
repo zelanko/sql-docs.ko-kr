@@ -1,5 +1,5 @@
 ---
-title: sp_helpconstraint (Transact SQL) | Microsoft Docs
+title: sp_helpconstraint (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db7c4131c564dad86abe569862b364fbcc6c7288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d2b4e51dc08ba897145d689d5ea6a918e3e7afb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242260"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559453"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@objname=** ] **'***테이블***'**  
- 제약 조건의 정보가 반환될 대상 테이블입니다. 지정된 테이블은 반드시 현재 데이터베이스에 대해 로컬이어야 합니다. *테이블* 은 **nvarchar(776)**, 기본값은 없습니다.  
+ [  **@objname=** ] **'***표***'**  
+ 제약 조건의 정보가 반환될 대상 테이블입니다. 지정된 테이블은 반드시 현재 데이터베이스에 대해 로컬이어야 합니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
  [  **@nomsg=**] **'***no_message***'**  
- 테이블 이름을 출력하는 선택적 매개 변수입니다. *no_message* 은 **varchar(5)**, 기본값은 **msg**합니다. **nomsg** 인쇄를 표시 하지 않습니다.  
+ 테이블 이름을 출력하는 선택적 매개 변수입니다. *no_message* 는 **varchar(5)**, 기본값은 **메시지**. **nomsg** 인쇄 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- **sp_helpconstraint** 기본 키에 참여 한 경우 내림차순으로 인덱싱된 열이 표시 됩니다. 내림차순으로 인덱싱된 열은 이름 다음에 빼기 기호(-)를 포함한 상태로 결과 집합에 나열됩니다. 기본값에 따라 오름차순으로 인덱싱된 열은 이름만 나열됩니다.  
+ **sp_helpconstraint** 표시 내림차순으로 인덱싱된 열은 기본 키에 참여 하는 것입니다. 내림차순으로 인덱싱된 열은 이름 다음에 빼기 기호(-)를 포함한 상태로 결과 집합에 나열됩니다. 기본값에 따라 오름차순으로 인덱싱된 열은 이름만 나열됩니다.  
   
-## <a name="remarks"></a>주의  
- 실행 **sp_help * * * 테이블* 지정된 된 테이블에 대 한 모든 정보를 보고 합니다. 제약 조건 정보만 보려면 **sp_helpconstraint**합니다.  
+## <a name="remarks"></a>Remarks  
+ 실행 **sp_help * * * 표* 지정된 된 테이블에 대 한 모든 정보를 보고 합니다. 사용 하 여 해당 제약 조건 정보를 보려면 **sp_helpconstraint**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -73,14 +73,14 @@ GO
 EXEC sp_helpconstraint 'Production.Product';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.key_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys.check_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys.default_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys.key_constraints &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys.check_constraints &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys.default_constraints &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

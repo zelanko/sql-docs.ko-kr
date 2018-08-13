@@ -1,5 +1,5 @@
 ---
-title: 축 (SQLXML 4.0)를 지정 합니다. | Microsoft Docs
+title: 축 지정 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -25,22 +25,22 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8659d8187042b0c40d2890e5a4feaf367efc7203
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 09c2ddbbe478672c610ed33c4c5efd55ddf0ad57
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968228"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551223"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>축 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
--   축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. 지원 되는 다음 축은: **자식**  
+-   축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. 다음 축이 지원 됩니다: **자식**  
   
      컨텍스트 노드의 자식을 포함합니다.  
   
-     다음 XPath 식 (위치 경로) 모든 현재 컨텍스트 노드에서 선택 된  **\<고객 >** 자식을:  
+     모든 현재 컨텍스트 노드에서 다음 XPath 식 (위치 경로)를 선택 합니다  **\<고객 >** 자식:  
   
     ```  
     child::Customer  
@@ -52,7 +52,7 @@ ms.locfileid: "32968228"
   
      컨텍스트 노드의 부모를 포함합니다.  
   
-     다음 XPath 식은 모든 선택은  **\<고객 >** 의 부모는  **\<순서 >** 자식을:  
+     다음 XPath 식은 모두 선택 합니다  **\<고객 >** 부모의 합니다  **\<순서 >** 자식:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -64,7 +64,7 @@ ms.locfileid: "32968228"
   
      컨텍스트 노드의 특성을 포함합니다.  
   
-     다음 XPath 식은 선택은 **CustomerID** 컨텍스트 노드의 특성:  
+     다음 XPath 식을 선택 합니다 **CustomerID** 컨텍스트 노드의 특성:  
   
     ```  
     attribute::CustomerID  
@@ -74,7 +74,7 @@ ms.locfileid: "32968228"
   
      컨텍스트 노드 자신을 포함합니다.  
   
-     이 경우 다음 XPath 식은 현재 노드를 선택는  **\<순서 >** 노드:  
+     다음 XPath 식은 경우 현재 노드를 선택 합니다  **\<순서 >** 노드:  
   
     ```  
     self::Order  

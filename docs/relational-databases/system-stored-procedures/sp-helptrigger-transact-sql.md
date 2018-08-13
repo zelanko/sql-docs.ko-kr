@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (Transact SQL) | Microsoft Docs
+title: sp_helptrigger (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255091"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566237"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_helptrigger [ @tabname = ] 'table'
   
 ## <a name="arguments"></a>인수  
  [  **@tabname=** ] **'***테이블***'**  
- 트리거 정보를 반환할 현재 데이터베이스의 테이블 이름입니다. *테이블* 은 **nvarchar(776)**, 기본값은 없습니다.  
+ 트리거 정보를 반환할 현재 데이터베이스의 테이블 이름입니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
  [ **@triggertype=** ] **'***type***'**  
- 정보를 반환할 DML 트리거의 유형입니다. *형식* 은 **char(6)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+ 정보를 반환할 DML 트리거의 유형입니다. *형식* 됩니다 **char(6)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**DELETE**|DELETE 트리거 정보를 반환합니다.|  
 |**INSERT**|INSERT 트리거 정보를 반환합니다.|  
@@ -75,8 +75,8 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1=INSTEAD OF 트리거입니다.<br /><br /> 0=INSTEAD OF 트리거가 아닙니다.|  
 |**trigger_schema**|**sysname**|트리거가 속한 스키마의 이름입니다.|  
   
-## <a name="permissions"></a>Permissions  
- 필요한 [메타 데이터 표시 유형 구성은](../../relational-databases/security/metadata-visibility-configuration.md) 테이블에 대 한 합니다.  
+## <a name="permissions"></a>사용 권한  
+ 필요 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) 테이블에 대 한 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `sp_helptrigger`를 실행하여 `Person.Person` 테이블의 트리거에 대한 정보를 출력합니다.  
@@ -87,8 +87,8 @@ GO
 EXEC sp_helptrigger 'Person.Person';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

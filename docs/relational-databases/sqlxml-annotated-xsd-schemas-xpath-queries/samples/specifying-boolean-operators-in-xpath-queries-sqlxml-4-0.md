@@ -1,5 +1,5 @@
 ---
-title: XPath 쿼리 (SQLXML 4.0)에 부울 연산자 지정 | Microsoft Docs
+title: (SQLXML 4.0) XPath 쿼리에 부울 연산자 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,38 +21,38 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c3f061db3f431f87c5f2a214776558c3f6d69a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3b284681edd3caa26028a159a7b4cf024aa08cb4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971458"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563717"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  다음 예에서는 XPath 쿼리에 부울 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하십시오. [XPath 예제 & #40;에 대 한 샘플 주석이 추가 된 XSD 스키마 SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  다음 예에서는 XPath 쿼리에 부울 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>1. OR 부울 연산자 지정  
- 이 XPath 쿼리에서 반환 된  **\<고객 >** 인 컨텍스트 노드의 요소 자식을 **CustomerID** 특성 값이 13 또는 31:  
+ 이 XPath 쿼리에서 반환 합니다  **\<고객 >** 인 컨텍스트 노드의 요소 자식을 합니다 **CustomerID** 특성 13 또는 31 값:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- 바로 가기는 **특성** 축 (@)를 지정할 수 때문이 **자식** 축 기본값 이므로 생략할 수 있습니다:  
+ 바로 가기는 **특성** 축 (@)를 지정할 수 있습니다 이므로 합니다 **자식** 축은 기본값을 생략할 수 있습니다:  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 조건자에서 `attribute` 는 축이고와 `CustomerID` 는 노드 테스트 (TRUE 이면 **CustomerID** 는  **\<특성 >** 노드를 때문에  **\<특성 >** 노드는에 대 한 주 노드는 **특성** 축). 조건자 필터는  **\<고객 >** 요소 및 조건자에 지정 된 조건을 만족 하는 항목만 반환 합니다.  
+ 조건자에서 `attribute` 는 축이고 및 `CustomerID` 는 노드 테스트 (TRUE 이면 **CustomerID** 되는  **\<특성 >** 노드를 때문에  **\<특성 >** 노드는 주 노드는 **특성** 축). 조건자 필터를  **\<고객 >** 요소 및 조건자에 지정 된 조건을 만족 하는 항목만 반환 합니다.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(BooleanOperatorsA.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "32971458"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 템플릿 실행의 결과 집합입니다.  
   

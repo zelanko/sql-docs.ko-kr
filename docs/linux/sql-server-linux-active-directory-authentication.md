@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7bc0a49035eeddfa014c39b9011fef85d98ce4cf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084355"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400706"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증 자습서:
 
@@ -206,6 +206,9 @@ AD 인증을 구성 하기 전에 해야 합니다.
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
+   > [!NOTE]
+   > Spn은 도메인이 큰 경우에 도메인을 통해 전파 되는 데 몇 분 정도 걸릴 수 있습니다. 오류를 수신 하는 경우 "kvno: 서버 데이터베이스에 없는 Kerberos MSSQLSvc에 대 한 자격 증명을 가져오는 동안 /\*\*\<호스트 컴퓨터의 정규화 된 도메인 이름\>\*\*:\* \* \<tcp 포트\>\*\*\@CONTOSO.COM ", 몇 분 정도 기다렸다가 다시 시도 하십시오.
+
 2. 사용 하 여 keytab 파일을 만듭니다 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 이전 단계에서 만든 AD 사용자에 대 한 합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
 
    ```bash
@@ -223,18 +226,54 @@ AD 인증을 구성 하기 전에 해야 합니다.
    > [!NOTE]
    > Ktutil 도구 암호의 유효성을 검사 하지 않습니다 이므로 올바르게 입력 해야 합니다.
 
-3. 이에 대 한 액세스를 사용 하 여 누구나 `keytab` 파일 가장할 수 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도메인에서 그러므로 이러한 파일에 대 한 액세스를 제한는 유일한는 `mssql` 계정에 대 한 읽기 액세스:
+3. 컴퓨터 계정을 사용 하 여 키에 추가할  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 합니다. (UPN) 컴퓨터 계정에 있으면 `/etc/krb5.keytab` 형태로 "\<hostname\>$\@\<realm.com\>" (예: sqlhost$\@CONTOSO.COM). 이러한 항목에서 복사 됩니다 `/etc/krb5.keytab` 에 `mssql.keytab`입니다.
+
+   ```bash
+   sudo ktutil
+
+   # Read all entries from /etc/krb5.keytab
+   ktutil: rkt /etc/krb5.keytab
+
+   # List all entries
+   ktutil: list
+
+   # Delete all entries by their slot number which are not the UPN one at a
+   # time.
+   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
+   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
+   # 1's entry is deleted)
+   ktutil: delent <slot num>
+   ktutil: delent <slot num>
+   ...
+
+   # List all entries to ensure only UPN entries are left
+   ktutil: list
+
+   # When only UPN entries are left, append these values to mssql.keytab
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
+   quit
+   ```
+
+4. 이에 대 한 액세스를 사용 하 여 누구나 `keytab` 파일 가장할 수 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도메인에서 그러므로 이러한 파일에 대 한 액세스를 제한는 유일한는 `mssql` 계정에 대 한 읽기 액세스:
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. 구성할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이 사용 하도록 `keytab` Kerberos 인증에 대 한 파일:
+5. 구성할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이 사용 하도록 `keytab` Kerberos 인증에 대 한 파일:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
    sudo systemctl restart mssql-server
+   ```
+
+6. 선택 사항: 성능 향상을 위해 도메인 컨트롤러에 대 한 UDP 연결 사용 하지 않도록 설정 합니다. 대부분의 경우에서 UDP 연결에 항상 실패 구성 옵션을 설정할 수 있는 도메인 컨트롤러에 연결할 때 `/etc/krb5.conf` 건너뛸 UDP 호출 합니다. 편집 `/etc/krb5.conf` 다음 옵션을 설정 합니다.
+
+   ```/etc/krb5.conf
+   [libdefaults]
+   udp_preference_limit=0
    ```
 
 ## <a id="createsqllogins"></a> TRANSACT-SQL에서 AD 기반 로그인 만들기
@@ -280,7 +319,7 @@ AD 인증을 사용 하는 클라이언트에 대 한 특정 연결 문자열 �
   * JDBC: [Kerberos를 사용 하 여 통합 인증을 SQL Server 연결](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [통합된 인증을 사용 하 여](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [연결 문자열 구문](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-  
+ 
 ## <a name="next-steps"></a>다음 단계
 
 이 자습서에서는 Linux의 SQL Server를 사용 하 여 Active Directory 인증을 설정 하는 방법을 단계별로 안내 합니다. 방법을 배웠습니다에:

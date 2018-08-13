@@ -1,5 +1,5 @@
 ---
-title: Parameter and Result Metadata | Microsoft Docs
+title: Parameter and Result Metadata | Microsoft 문서
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de1c9e3a1f0969cfe3e17f08c3e5242f73e27909
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5882a69303215a7b5419dd628eb07994746f6849
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423422"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565067"
 ---
-# <a name="metadata---parameter-and-result"></a>메타 데이터-매개 변수 및 결과
+# <a name="metadata---parameter-and-result"></a>메타데이터 - 매개 변수 및 결과
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

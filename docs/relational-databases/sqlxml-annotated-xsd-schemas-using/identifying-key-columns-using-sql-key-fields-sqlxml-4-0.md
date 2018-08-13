@@ -26,36 +26,36 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e75779626c8769c609fa27f97b44562d3e9a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971328"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535563"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. 지정 하는 **sql:-필드** 주석은의 적절 한 계층이 생성 됩니다.  
+  XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. 지정 하는 **sql:-필드** 주석 방법이 적절 한 계층이 생성 되도록 보장 합니다.  
   
 > [!NOTE]  
->  올바른 중첩을 보장 하려면 것이 좋습니다 지정 하는 **sql:-필드** 테이블에 매핑되는 요소에 대 한 합니다. 기본 결과 집합의 순서가 생성되는 XML에 중요합니다. 경우 **sql:-필드** 을 지정 하지 않으면 생성 된 XML 제대로 구성할 수 있습니다.  
+>  올바른 중첩을 얻으려면 것이 좋습니다 지정 하는 **sql:-필드** 테이블에 매핑되는 요소에 대 한 합니다. 기본 결과 집합의 순서가 생성되는 XML에 중요합니다. 하는 경우 **sql:-필드** 지정 하지 않으면 생성 된 XML 제대로 구성 되지 않았습니다.  
   
- 값 **sql:-필드** 관계의 행을 고유 하 게 식별 하는 열을 식별 합니다. 행을 고유하게 식별하는 데 둘 이상의 열이 필요한 경우 열 값이 공백으로 구분됩니다.  
+ 변수의 **sql:-필드** 관계의 행을 고유 하 게 식별 하는 열을 식별 합니다. 행을 고유하게 식별하는 데 둘 이상의 열이 필요한 경우 열 값이 공백으로 구분됩니다.  
   
- 사용 해야 합니다는 **sql:-필드** 주석 요소에 포함 하는 경우는  **\<sql: relationship >** 하는 요소와 자식 요소 간에 정의 되었지만 기본 키를 제공 하지 않습니다 부모 요소에 지정 된 테이블입니다.  
+ 사용 해야 합니다 **sql:-필드** 주석 요소를 포함 하는 경우를  **\<sql: relationship >** 요소와 자식 요소 간에 정의 되었지만 기본 키를 제공 하지는 부모 요소에 지정 된 테이블입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>1. 에 올바른 중첩 생성 될 때 \<sql: relationship > 충분 한 정보를 제공 하지 않습니다  
- 이 예에서는 where **sql:-필드** 지정 해야 합니다.  
+ 이 예제에서는 위치를 보여 줍니다 **sql:-필드** 지정 해야 합니다.  
   
- 다음과 같은 스키마를 살펴 보십시오. 간의 계층을 지정 하는 스키마는  **\<순서 >** 및  **\<고객 >** 요소가 들어는  **\<순서 >** 요소는 부모 및  **\<고객 >** 는 자식 요소입니다.  
+ 다음과 같은 스키마를 살펴 보십시오. 스키마 간의 계층을 지정 합니다  **\<순서 >** 하 고  **\<고객 >** 요소가  **\<순서 >** 요소는 부모와  **\<고객 >** 는 자식 요소입니다.  
   
- **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. 에 제공 된 정보  **\<sql: relationship >** 부모 테이블 (Sales.SalesOrderHeader)의 행을 고유 하 게 식별 하는 부족 합니다. 따라서 없이 **sql:-필드** 주석을 생성 되는 계층은 정확 합니다.  
+ 합니다  **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. 내용을  **\<sql: relationship >** 부모 테이블 (Sales.SalesOrderHeader)의 행을 고유 하 게 식별 하는 부족 합니다. 따라서 없이 합니다 **sql:-필드** 주석을 생성 되는 계층 구조는 정확 하 게 합니다.  
   
- 와 **sql:-필드** 에 지정 된  **\<순서 >** 주석은 부모 (Sales.SalesOrderHeader 테이블)의 행을 고유 하 게 식별 하 고 해당 자식 요소 아래에 표시는 부모입니다.  
+ 사용 하 여 **sql:-필드** 에서 지정한  **\<순서 >**, 부모 (Sales.SalesOrderHeader 테이블)에 있는 행을 고유 하 게 식별 하는 주석 및 해당 자식 요소가 아래에 나타납니다 해당 부모입니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "32971328"
   
 1.  위 스키마 코드를 복사한 후 텍스트 파일에 붙여넣습니다. 파일을 KeyFields1.xml로 저장합니다.  
   
-2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields1.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields1T.xml로 파일을 저장합니다. 모든 템플릿의 XPath 쿼리에서 반환 된  **\<순서 >** 3 보다 작은 CustomerID 사용 하 여 요소입니다.  
+2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields1.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields1T.xml로 파일을 저장합니다. 템플릿의 XPath 쿼리에서 모두 반환 합니다  **\<순서 >** 3 보다 작은 CustomerID 사용 하 여 요소입니다.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -112,7 +112,7 @@ ms.locfileid: "32971328"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  다음은 결과 집합의 일부입니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "32971328"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>2. sql:key-fields를 지정하여 결과에서 올바른 중첩 생성  
- 다음 스키마에는 사용 하 여 지정 된 계층이  **\<sql: relationship >** 합니다. 스키마 지정 해야는 **sql:-필드** HumanResources.Employee 테이블의 직원을 고유 하 게 식별 하는 주석입니다.  
+ 다음 스키마에는 사용 하 여 지정 된 계층이 없습니다  **\<sql: relationship >** 합니다. 스키마를 지정 해야 합니다 **sql:-필드** HumanResources.Employee 테이블에 있는 직원을 고유 하 게 식별 하는 주석입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -159,7 +159,7 @@ ms.locfileid: "32971328"
   
 1.  위 스키마 코드를 복사한 후 텍스트 파일에 붙여넣습니다. 파일을 KeyFields2.xml로 저장합니다.  
   
-2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields2.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields2T.xml로 파일을 저장합니다. 모든 템플릿의 XPath 쿼리에서 반환 된  **\<HumanResources.Employee >** 요소:  
+2.  다음 템플릿을 복사한 후 텍스트 파일에 붙여넣습니다. KeyFields2.xml을 저장한 디렉터리와 같은 디렉터리에 KeyFields2T.xml로 파일을 저장합니다. 템플릿의 XPath 쿼리에서 모두 반환 합니다  **\<HumanResources.Employee >** 요소:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -177,7 +177,7 @@ ms.locfileid: "32971328"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  다음은 결과입니다.  
   

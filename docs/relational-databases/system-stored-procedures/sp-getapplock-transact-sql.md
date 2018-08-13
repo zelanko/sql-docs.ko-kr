@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261672"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555683"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,38 +52,38 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>인수  
  [ @Resource=] '*resource_name*'  
- 잠금 리소스를 식별하는 이름을 지정하는 문자열입니다. 응용 프로그램은 리소스 이름이 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 은 **nvarchar (255)** 이며 기본값은 없습니다. 리소스 문자열 보다 긴 경우 **nvarchar (255)** 로 잘립니다 **nvarchar (255)** 합니다.  
+ 잠금 리소스를 식별하는 이름을 지정하는 문자열입니다. 응용 프로그램은 리소스 이름이 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 됩니다 **nvarchar(255)** 기본값은 없습니다. 리소스 문자열 보다 길면 **nvarchar(255)** 를 잘립니다 **nvarchar(255)** 합니다.  
   
- *resource_name* 은 이진 비교 되어 있으므로 현재 데이터베이스의 데이터 정렬 설정에 관계 없이 대/소문자를 구분 합니다.  
+ *resource_name* 은 이진 비교 되어 있으므로 현재 데이터베이스의 데이터 정렬 설정과 관계 없이 대/소문자를 구분 합니다.  
   
 > [!NOTE]  
 >  응용 프로그램 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
  [ @LockMode=] '*lock_mode*'  
- 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값 중 하나일 수 있습니다: **Shared**, **업데이트**, **IntentShared**, **IntentExclusive**, 또는 **단독** .  
+ 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값 중 하나일 수 있습니다: **공유**, **업데이트**, **IntentShared**, **IntentExclusive**, 또는 **전용** .  
   
  [ @LockOwner=] '*lock_owner*'  
- 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값은 **트랜잭션**, 만든 사람 기본값 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
+ 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값이 **트랜잭션**, 기본 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
   
  [ @LockTimeout=] '*값*'  
- 잠금 제한 시간 값(밀리초)입니다. 기본값은에서 반환 된 값과 같으면@LOCK_TIMEOUT합니다. 즉시 허가할 수 없는 잠금 요청이 대기하지 않고 오류를 반환하도록 하려면 0을 지정하세요.  
+ 잠금 제한 시간 값(밀리초)입니다. 기본값은 반환한 값과 동일 하 게@LOCK_TIMEOUT합니다. 즉시 허가할 수 없는 잠금 요청이 대기하지 않고 오류를 반환하도록 하려면 0을 지정하세요.  
   
- [ @DbPrincipal=] '*데이터베이스 _ 보안 주체*'  
- 데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수의 호출자의 멤버 여야 합니다. *데이터베이스 _ 보안 주체*, dbo 또는 db_owner 고정 데이터베이스 역할은 함수를 성공적으로 호출 합니다. 기본값은 public입니다.  
+ [ @DbPrincipal=] '*database_principal*'  
+ 데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수의 호출자의 멤버 여야 합니다 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할을 성공적으로 함수를 호출 합니다. 기본값은 public입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  \>= 0 (성공) 또는 < 0 (실패)  
   
-|Value|결과|  
+|값|결과|  
 |-----------|------------|  
 |0|동기식으로 잠금을 허가하는 데 성공했습니다.|  
-|1.|호환되지 않는 다른 잠금이 해제되기를 기다린 다음 성공적으로 잠금을 허가하였습니다.|  
+|@shouldalert|호환되지 않는 다른 잠금이 해제되기를 기다린 다음 성공적으로 잠금을 허가하였습니다.|  
 |-1|잠금 요청이 시간을 초과하였습니다.|  
 |-2|잠금 요청이 취소되었습니다.|  
 |-3|잠금 요청이 교착 상태에서 처리되지 않았습니다.|  
 |-999|매개 변수 유효성 검사 또는 다른 호출에서 오류가 발생하였음을 나타냅니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  리소스에 설정된 잠금은 현재 트랜잭션 또는 현재 세션과 연관됩니다. 현재 트랜잭션과 연관된 잠금은 트랜잭션이 커밋되거나 롤백될 때 해제됩니다. 세션과 연관된 잠금은 세션이 로그 아웃될 때 해제됩니다. 서버가 종료되면 모든 잠금이 해제됩니다.  
   
  sp_getapplock에서 만든 잠금 리소스는 세션에 대한 현재 데이터베이스에서 만들어집니다. 각 잠금 리소스는 다음을 조합한 값으로 식별됩니다.  
@@ -141,7 +141,7 @@ GO
   
  sys.dm_tran_locks 동적 관리 뷰나 sp_lock 시스템 저장 프로시저를 사용하여 잠금 정보를 검사하거나 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 잠금을 모니터링할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -168,9 +168,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [APPLOCK_MODE &#40;Transact SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;Transact SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [APPLOCK_MODE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;TRANSACT-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

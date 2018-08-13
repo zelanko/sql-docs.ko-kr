@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Microsoft Docs
+title: SQLColumns | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f56b3e1b80687692293998b0b7b12daf9af7a330
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5e2febda8a84ca1d8479b0139947683f70a23658
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416062"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562887"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 합니다 *CatalogName*, *TableName*, 또는 *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
+  **SQLColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 합니다 *CatalogName*, *TableName*, 또는 *ColumnName* 매개 변수입니다. **SQLFetch** 잘못 된 값은이 매개 변수에서 사용 하는 경우 SQL_NO_DATA를 반환 합니다.  
   
 > [!NOTE]  
 >  큰 값 형식의 경우 모든 길이 매개 변수는 SQL_SS_LENGTH_UNLIMITED 값으로 반환됩니다.  
@@ -86,8 +86,8 @@ ms.locfileid: "37416062"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
-|SS_IS_COLUMN_SET|**Smallint**|열이를 **column_set** 열 이면 SQL_TRUE 고, 그렇지 않으면 SQL_FALSE입니다.|  
+|SS_IS_SPARSE|**smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
+|SS_IS_COLUMN_SET|**smallint**|열이를 **column_set** 열 이면 SQL_TRUE 고, 그렇지 않으면 SQL_FALSE입니다.|  
   
  ODBC 사양에 따라 SS_IS_SPARSE 및 SS_IS_COLUMN_SET 표시에 추가 된 모든 드라이버별 열 앞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 보다 이전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], 그리고 ODBC 자체에서 지정한 모든 열 뒤 합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_helpstats (Transact SQL) | Microsoft Docs
+title: sp_helpstats (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251639"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547563"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33251639"
   지정된 테이블의 열과 인덱스에 대한 통계 정보를 반환합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 통계에 대 한 정보, 쿼리는 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 및 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 카탈로그 뷰.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 통계에 대 한 정보를 쿼리 합니다 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 하 고 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 카탈로그 뷰.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ sp_helpstats[ @objname = ] 'object_name'
   
 ## <a name="arguments"></a>인수  
  [  **@objname=**] **'***object_name***'**  
- 통계 정보를 제공할 테이블을 지정합니다. *object_name* 은 **nvarchar(520)** 이며 null 일 수 없습니다. 한 부분 또는 두 부분으로 이루어진 이름을 지정할 수 있습니다.  
+ 통계 정보를 제공할 테이블을 지정합니다. *object_name* 됩니다 **nvarchar(520)** 이며 null 일 수 없습니다. 한 부분 또는 두 부분으로 이루어진 이름을 지정할 수 있습니다.  
   
  [  **@results=**] **'***값***'**  
- 제공할 정보의 범위를 지정합니다. 유효한 항목은 **모든** 및 **STATS**합니다. **모든** 모든 인덱스 및 하며 생성 된 통계가 있는 열에 대 한 통계를 나열 합니다. **STATS** 인덱스와 연관 되지 않은 통계만 나열 합니다. *값* 은 **nvarchar (5)** 기본값은 STATS입니다.  
+ 제공할 정보의 범위를 지정합니다. 유효한 항목은 **모든** 하 고 **STATS**합니다. **모든** 모든 인덱스와도 하며 작성 된 통계가 있는 열에 대 한 통계를 나열 합니다. **통계** 인덱스와 연결 되지 않은 통계만 나열 합니다. *값* 됩니다 **nvarchar(5)** 이며 기본값은 STATS입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,10 +66,10 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_name**|통계의 이름입니다. 반환 **sysname** 이며 null 일 수 없습니다.|  
 |**statistics_keys**|통계가 기반을 두고 있는 키입니다. 반환 **nvarchar(2078)** 이며 null 일 수 없습니다.|  
   
-## <a name="remarks"></a>주의  
- 특정 인덱스 또는 통계에 대한 자세한 통계 정보를 표시하려면 DBCC SHOW_STATISTICS를 사용합니다. 자세한 내용은 참조 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 및 [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 특정 인덱스 또는 통계에 대한 자세한 통계 정보를 표시하려면 DBCC SHOW_STATISTICS를 사용합니다. 자세한 내용은 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 하 고 [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -105,8 +105,8 @@ EXEC sp_helpstats
   
  `PK_Customer_CustomerID        CustomerID`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

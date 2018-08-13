@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepartition (Transact SQL) | Microsoft Docs
+title: sp_dropmergepartition (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 890a265b51b5048f135401ac6e80fc7066bc5c24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1ca741c2fa97266d7237aabad000a2fd0c803cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990348"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539563"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,24 +49,24 @@ sp_dropmergepartition [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication**] = **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@suser_sname**=] **'***suser_sname***'**  
- 값이 고 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 함수 구독자에서 파티션 정의 하는 데 사용 합니다. *suser_sname* 은 **sysname**, 기본값은 없습니다.  
+ 값인 합니다 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 함수 구독자에서 파티션 정의에 사용 합니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@host_name** =] **'***host_name***'**  
- 값이 고 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수 구독자에서 파티션 정의 하는 데 사용 합니다. *host_name* 은 **sysname**, 기본값은 없습니다.  
+ 값인 합니다 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수 구독자에서 파티션 정의에 사용 합니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergepartition** 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_dropmergepartition**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_dropmergepartition**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  
   
   

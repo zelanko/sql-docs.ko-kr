@@ -22,13 +22,13 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b9e5b528afe048052b3709886a85d7ab6b853777
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 78504222e9dbe50b29868eb935f4948772d8e204
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005833"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533703"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -81,7 +81,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |값|Description|  
 |-----------|-----------------|  
 |0|때 *@objname* null 이거나 지정 하지 않으면 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합에는 기본 동작입니다.|  
-|1|때 *@objname* = null 이거나 지정 되지 않은 단일 결과 집합 반환 됩니다.|  
+|@shouldalert|때 *@objname* = null 이거나 지정 되지 않은 단일 결과 집합 반환 됩니다.|  
   
  *oneresultset* 됩니다 **비트**, 기본값은 **0**합니다.  
 
