@@ -43,7 +43,7 @@ ms.locfileid: "37320693"
 |[분할 &#40;SSIS 식&#41;](divide-ssis-expression.md)|첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.|  
 |[&#40;Modulo&#41; &#40;SSIS 식&#41;](modulo-ssis-expression.md)|첫 번째 숫자 식을 두 번째 식으로 나눈 다음 나머지의 정수 부분을 제공합니다.|  
 |[&#124;&#124;&#40;논리적 OR&#41; &#40;SSIS 식&#41;](logical-or-ssis-expression.md)|논리적 OR 연산을 수행합니다.|  
-|[& & &#40;논리적 AND&#41; &#40;SSIS 식&#41;](logical-and-ssis-expression.md)|논리적 AND 연산을 수행합니다.|  
+|[&& &#40;논리적 AND&#41; &#40;SSIS 식&#41;](logical-and-ssis-expression.md)|논리적 AND 연산을 수행합니다.|  
 |[! &#40;논리적 Not&#41; &#40;SSIS 식&#41;](logical-not-ssis-expression.md)|부울 피연산자를 부정합니다.|  
 |[&#124;&#40;포괄적 비트 OR&#41; &#40;SSIS 식&#41;](bitwise-inclusive-or-ssis-expression.md)|두 정수 값의 비트 OR 연산을 수행합니다.|  
 |[^ &#40;비트 배타적 OR&#41; &#40;SSIS 식&#41;](bitwise-exclusive-or-ssis-expression.md)|두 정수 값의 배타적 비트 OR 연산을 수행합니다.|  
