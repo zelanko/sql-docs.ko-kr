@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc012a7b05f2387756e25bfb86c93896d3f94190
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258625"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536663"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,29 +50,29 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="arguments"></a>인수  
  [ @pktable_name=] '*pktable_name*'  
- 카탈로그 정보를 반환하는 데 사용하는 기본 키가 있는 테이블 이름입니다. *pktable_name* 은 **sysname**, 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 이 매개 변수 또는 *fktable_name* 매개 변수 또는 둘 다 제공 해야 합니다.  
+ 카탈로그 정보를 반환하는 데 사용하는 기본 키가 있는 테이블 이름입니다. *pktable_name* 됩니다 **sysname**, 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 이 매개 변수 또는 *fktable_name* 매개 변수 또는 둘 다 제공 해야 합니다.  
   
  [ @pktable_owner=] '*pktable_owner*'  
- 카탈로그 정보를 반환 하는 데 사용 (기본 키)가 있는 테이블의 소유자 이름이입니다. *pktable_owner* 은 **sysname**, 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 경우 *pktable_owner* 을 지정 하지 않으면 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
+ 카탈로그 정보를 반환 하는 데 사용 된 기본 키가 있는 테이블의 소유자 이름이입니다. *pktable_owner* 됩니다 **sysname**, 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 하는 경우 *pktable_owner* 지정 하지 않으면 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. 경우 *pktable_owner* 지정 하지 않으면 현재 사용자가 지정 된 테이블을 소유 하지 및 *pktable_name*, 프로시저가 지정 된 테이블을 찾습니다 *pktable_name* 데이터베이스 소유자가 소유 합니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. 하는 경우 *pktable_owner* 지정 하지 않으면 현재 사용자 지정 된 테이블을 소유 하지 않는 한 *pktable_name*, 프로시저는 지정 된 테이블을 *pktable_name* 데이터베이스 소유자가 소유 합니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
   
  [ @pktable_qualifier =] '*pktable_qualifier*'  
- 기본 키가 있는 테이블 한정자의 이름입니다. *pktable_qualifier* 는 sysname 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대 한 세 부분으로 구성 된 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 기본 키가 있는 테이블 한정자의 이름입니다. *pktable_qualifier* 는 sysname 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [ @fktable_name=] '*fktable_name*'  
  카탈로그 정보를 반환하는 데 사용되는 외래 키가 있는 테이블 이름입니다. *fktable_name* 는 sysname 이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 이 매개 변수 또는 *pktable_name* 매개 변수 또는 둘 다 제공 해야 합니다.  
   
  [ @fktable_owner =] '*fktable_owner*'  
- 카탈로그 정보를 반환하는 데 사용되는 외래 키가 있는 테이블 이름입니다. *fktable_owner* 은 **sysname**, 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 경우 *fktable_owner* 을 지정 하지 않으면 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
+ 카탈로그 정보를 반환하는 데 사용되는 외래 키가 있는 테이블 이름입니다. *fktable_owner* 됩니다 **sysname**, 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 하는 경우 *fktable_owner* 지정 하지 않으면 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. 경우 *fktable_owner* 지정 하지 않으면 현재 사용자가 지정 된 테이블을 소유 하지 및 *fktable_name*, 프로시저가 지정 된 테이블을 찾습니다 *fktable_name* 데이터베이스 소유자가 소유 합니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. 하는 경우 *fktable_owner* 지정 하지 않으면 현재 사용자 지정 된 테이블을 소유 하지 않는 한 *fktable_name*, 프로시저는 지정 된 테이블을 *fktable_name* 데이터베이스 소유자가 소유 합니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
   
  [ @fktable_qualifier=] '*fktable_qualifier*'  
- 외래 키가 있는 테이블 한정자의 이름입니다. *fktable_qualifier* 은 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 외래 키가 있는 테이블 한정자의 이름입니다. *fktable_qualifier* 됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -94,7 +94,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  반환 된 결과 FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME 및 KEY_SEQ로 정렬 됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  외래 키를 사용할 수 없는 테이블을 포함하는 응용 프로그램 코딩은 다음과 같은 방법으로 구현됩니다.  
   
 -   테이블에 관한 작업을 하는 동안 제약 조건 확인(ALTER TABLE NOCHECK 또는 CREATE TABLE NOT FOR REPLICATION)을 일시적으로 사용하지 못하게 한 다음 나중에 다시 사용할 수 있도록 합니다.  
@@ -103,9 +103,9 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 기본 키 테이블 이름은 제공되고 외래 키 테이블 이름이 NULL인 경우 sp_fkeys는 외래 키를 포함한 모든 테이블을 지정된 테이블로 반환합니다. 외래 키 테이블 이름은 제공되고 기본 키 테이블 이름이 NULL인 경우 sp_fkeys는 외래 키 테이블의 외래 키에 기본 키/외래 키 관계로 연관된 모든 테이블을 반환합니다.  
   
-Sp_fkeys 저장 프로시저는 ODBC의 SQLForeignKeys과 같습니다.  
+Sp_fkeys 저장 프로시저는 ODBC의 SQLForeignKeys와 동일합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  필요한 `SELECT` 스키마에 대 한 권한이 있습니다.  
   
 ## <a name="examples"></a>예  
@@ -125,8 +125,8 @@ EXEC sp_fkeys @pktable_name = N'Department'
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [카탈로그 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [카탈로그 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 통계 생성 및 업데이트 | Microsoft Docs
+title: 작성 및 통계 업데이트 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d702cbc2d9e1bdd970fbdee03e042ea9a9277629
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9a21f2eeead9d139ecce6a06a3182daf251fd069
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020061"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543743"
 ---
 # <a name="creating-and-updating-statistics"></a>통계 생성 및 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

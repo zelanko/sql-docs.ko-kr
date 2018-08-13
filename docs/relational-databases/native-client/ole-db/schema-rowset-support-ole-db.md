@@ -1,5 +1,5 @@
 ---
-title: 스키마 행 집합 지원 (OLE DB) | Microsoft Docs
+title: 스키마 행 집합 지원 (OLE DB) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,30 +21,30 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ba5667f1e6b04c23feba38590c459f6656c5036
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8b3942e7dd2fbf7cafa2467f1d8728d09267dfef
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414352"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543823"
 ---
 # <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서는 연결된 된 서버에서 스키마 정보를 반환을 처리할 때 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 분산 쿼리 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 처리할 때 또한 네이티브 클라이언트 OLE DB 공급자는 연결 된 서버에서 스키마 정보를 반환 지원 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 분산 쿼리 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 동의어를 지원하기는 하지만 동의어의 메타데이터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 반환하지 않습니다.  
   
- 다음 표에 스키마 행 집합 목록 및에서 지원 되는 제한 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다.  
+ 다음 테이블에서 지원 되는 제한 열 및 스키마 행 집합 목록에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자입니다.  
   
 |스키마 행 집합|제한 열|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 다음의 추가 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 관련됩니다.<br /><br /> COLUMN_LCID. 데이터 정렬의 로캘 ID입니다. COLUMN_LCID는 Windows LCID 값과 같습니다.<br /><br /> COLUMN_COMPFLAGS. 데이터 정렬에 지원되는 비교를 정의합니다. 데이터 형식은 DBPROB_FINDCOMPAREOPS와 같습니다.<br /><br /> COLUMN_SORTID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬에 대 한 스타일을 정렬 합니다.<br /><br /> COLUMN_TDSCOLLATION. 열에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬입니다.<br /><br /> IS_COMPUTED. 열이 계산 열이면 VARIANT_TRUE이고, 그렇지 않으면 VARIANT_FALSE입니다.|  
+|DBSCHEMA_COLUMNS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 다음의 추가 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 관련됩니다.<br /><br /> COLUMN_LCID. 데이터 정렬의 로캘 ID입니다. COLUMN_LCID는 Windows LCID 값과 같습니다.<br /><br /> COLUMN_COMPFLAGS. 데이터 정렬에 지원되는 비교를 정의합니다. 데이터 형식은 DBPROB_FINDCOMPAREOPS와 같습니다.<br /><br /> COLUMN_SORTID. 데이터 정렬에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 정렬 스타일입니다.<br /><br /> COLUMN_TDSCOLLATION. 열에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬입니다.<br /><br /> IS_COMPUTED. 열이 계산 열이면 VARIANT_TRUE이고, 그렇지 않으면 VARIANT_FALSE입니다.|  
 |DBSCHEMA_FOREIGN_KEYS|모든 제한 사항이 지원됩니다.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|제한 사항 1, 2, 3 및 5가 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  

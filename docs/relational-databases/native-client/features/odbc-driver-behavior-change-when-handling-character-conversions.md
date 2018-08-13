@@ -12,13 +12,13 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 752c824b77da90c80620387cbdf2d42aa626367c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 104d08a50ba1521bca090fbcd741b432fbf3eb12
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408178"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532863"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|**SQLFetch** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> **SQLMoreResults** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> 나머지 데이터가 변환되지 않았기 때문에 길이는 (-4) SQL_NO_TOTAL를 나타냅니다.<br /><br /> 원래 버퍼는 63바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>CHAR 및 WCHAR 변환 수행  
- ph x="1" /&gt; Native Client ODBC 드라이버는 CHAR 및 WCHAR 변환을 수행하는 여러 가지 방법을 제공합니다. 논리는 BLOB 조작(varchar(max), nvarchar(max), …)과 비슷합니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버는 CHAR 및 WCHAR 변환을 수행하는 여러 가지 방법을 제공합니다. 논리는 BLOB 조작(varchar(max), nvarchar(max), …)과 비슷합니다.  
   
 -   데이터를 저장 하거나와 바인딩하는 경우 지정된 된 버퍼에 잘립니다 **SQLBindCol** 하거나 **SQLBindParameter**합니다.  
   

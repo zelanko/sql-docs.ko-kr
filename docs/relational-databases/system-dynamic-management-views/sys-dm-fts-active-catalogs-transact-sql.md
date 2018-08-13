@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_active_catalogs (Transact SQL) | Microsoft Docs
+title: sys.dm_fts_active_catalogs (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 564f66e6207ebc79b7545a77af8da8f156faf673
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e54673cbbb85d359184a8a745f3f48d8456d2f53
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463989"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544203"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34463989"
   서버에서 일부 채우기 작업이 진행 중인 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
   
 > [!NOTE]  
->  이후 버전에서 다음 열이 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description 및 worker_count 합니다. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 응용 프로그램은 수정하십시오.  
+>  다음 열의 이후 버전에서 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description, 및 worker_count. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 응용 프로그램은 수정하십시오.  
   
  
 |열 이름|데이터 형식|Description|  
@@ -59,13 +59,13 @@ ms.locfileid: "34463989"
 |**row_count_in_thousands**|**int**|이 전체 텍스트 카탈로그의 모든 전체 텍스트 인덱스에 있을 것으로 예상된 행 수(천 단위)입니다.|  
 |**is_importing**|**bit**|전체 텍스트 카탈로그를 가져올 것인지 여부를 나타냅니다.<br /><br /> 1 = 카탈로그를 가져옵니다.<br /><br /> 2 = 카탈로그를 가져오지 않습니다.|  
   
-## <a name="remarks"></a>주의  
- Is_importing 열부터 였습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]합니다.  
+## <a name="remarks"></a>Remarks  
+ Is_importing 열에 새로 만들어진 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
    
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "이 동적 관리 뷰의 유효 조인")  
@@ -95,8 +95,8 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  
- [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

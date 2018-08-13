@@ -1,5 +1,5 @@
 ---
-title: sys.assembly_types (TRANSACT-SQL) | Microsoft Docs
+title: sys.assembly_types (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d519c57b76e45a297598b6821658c640e8e97989
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0ac45516d08452652d76be3f56fa1220e713490e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998185"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540903"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  CLR 어셈블리에 의해 정의되는 각 사용자 정의 형식당 한 개의 행을 포함합니다. 다음 **sys.assembly_types** 상속 된 열 목록에 나타납니다 (참조 [sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 한 후 **rule_object_id**.  
+  CLR 어셈블리에 의해 정의되는 각 사용자 정의 형식당 한 개의 행을 포함합니다. 다음 **sys.assembly_types** 상속 된 열 목록에 나타납니다 (참조 [sys.types &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 후 **rule_object_id**.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

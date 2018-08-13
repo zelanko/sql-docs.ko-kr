@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c3158def05148941105867f24205b199e6c6dba
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 9c4d9cc92bb9571bbda48f40f74b38bf8d918991
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023556"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532929"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server 기능과 WideWorldImportersDW 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 WideWorldImportersDW는 다양 한 데이터 웨어하우징 및 분석에 적합 한 SQL Server의 주요 기능을 보여 주도록 설계 되었습니다. 다음은 SQL Server 기능 및 기능을 WideWorldImportersDW의 사용 방법에 대 한 설명을의 목록입니다.
 
 ## <a name="polybase"></a>PolyBase

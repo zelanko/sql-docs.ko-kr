@@ -1,5 +1,5 @@
 ---
-title: SQL server 인스턴스에 연결할 | Microsoft Docs
+title: SQL Server 인스턴스에 연결 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b1e22218bc0d30bcb06b5d170c2403e4e5785e0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1f86a85b9a1fd7065716a21474475a650bb6620f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058861"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544183"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>SQL Server 인스턴스에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  프로그래밍의 첫 번째 단계는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) 응용 프로그램의 인스턴스를 만드는 것을 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스에 연결을 설정 하 고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+  첫 번째 프로그래밍 단계는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 개체 (SMO) 응용 프로그램의 인스턴스를 만드는 것은 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스에 연결을 설정 하 고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  다음과 같은 세 가지 방법으로 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스를 만들고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정할 수 있습니다. 첫 번째는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체 변수를 사용하여 연결 정보를 제공하는 것입니다. 두 번째는 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 속성을 명시적으로 설정하여 연결 정보를 제공하는 것입니다. 세 번째는 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 생성자에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 전달하는 것입니다. 
   
- **ServerConnection 개체 사용**  
+ **ServerConnection 개체를 사용 하 여**  
   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체 변수를 사용할 경우 연결 정보를 다시 사용할 수 있다는 장점이 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 변수를 선언합니다. 그런 다음 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 선언하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름 및 인증 모드와 같은 연결 정보를 사용하여 속성을 설정합니다. 그리고 나서 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체 변수를 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 생성자에 매개 변수로 전달합니다. 다른 서버 개체 간에는 연결을 동시에 공유하지 않는 것이 좋습니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 메서드를 사용하여 기존 연결 문자열의 복사본을 가져옵니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "38058861"
   
  또는 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 변수를 선언하고 기본 생성자를 호출할 수 있습니다. 이 경우 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체가 모든 기본 연결 설정을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 연결합니다.  
   
- **Server 개체 생성자에 SQL Server 인스턴스 이름 제공**  
+ **서버 개체 생성자에서 SQL Server 인스턴스 이름을 제공합니다.**  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 변수를 선언하고 생성자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름을 문자열 매개 변수로 전달합니다. <xref:Microsoft.SqlServer.Management.Smo.Server> 개체가 기본 연결 설정을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와의 연결을 설정합니다.  
   
@@ -104,7 +104,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic .NET에서 Windows 인증을 사용하여 SQL Server 원격 인스턴스에 연결  
  Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결할 경우에는 인증 유형을 지정할 필요가 없습니다. Windows 인증이 기본값입니다.  
   
- 이 예제 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 의 원격 인스턴스에 연결 하는.NET 코드 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 인증을 사용 하 여 합니다. 문자열 변수의 *strServer* 원격 인스턴스의 이름을 포함 합니다.  
+ 이 예제는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 의 원격 인스턴스에 연결 하는.NET 코드 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 인증을 사용 하 여. 문자열 변수 *strServer* 원격 인스턴스의 이름을 포함 합니다.  
   
 ```VBNET   
 'Connect to a remote instance of SQL Server.
@@ -119,7 +119,7 @@ Console.WriteLine(srv.Information.Version)
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-c"></a>Visual C#에서 Windows 인증을 사용하여 SQL Server 원격 인스턴스에 연결  
  Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결할 경우에는 인증 유형을 지정할 필요가 없습니다. Windows 인증이 기본값입니다.  
   
- 다음 예는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 원격 인스턴스에 연결하는 Visual C# .NET 코드입니다. 문자열 변수의 *strServer* 원격 인스턴스의 이름을 포함 합니다.  
+ 다음 예는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 원격 인스턴스에 연결하는 Visual C# .NET 코드입니다. 문자열 변수 *strServer* 원격 인스턴스의 이름을 포함 합니다.  
   
 ```csharp  
 {   
@@ -136,7 +136,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Visual Basic에서 SQL Server 인증을 사용하여 SQL Server 인스턴스에 연결  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결할 경우에는 인증 유형을 지정해야 합니다. 다음 예에서는 연결 정보를 다시 사용할 수 있도록 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체 변수를 선언하는 다른 방법을 보여 줍니다.  
   
- 예제는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 원격으로 연결 하는 방법을 보여 주는.NET 코드 및 *vPassword* 로그온 및 암호를 포함 합니다.  
+ 예제는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 리모컨에 연결 하는 방법을 보여 주는.NET 코드 및 *vPassword* 로그온 및 암호를 포함 합니다.  
   
 ```VBNET  
 ' compile with:   
@@ -184,7 +184,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Visual C#에서 SQL Server 인증을 사용하여 SQL Server 인스턴스에 연결  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결할 경우에는 인증 유형을 지정해야 합니다. 다음 예에서는 연결 정보를 다시 사용할 수 있도록 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체 변수를 선언하는 다른 방법을 보여 줍니다.  
   
- 예제는 원격으로 연결 하는 방법을 보여 주는 Visual C#.NET 코드 및 *vPassword* 로그온 및 암호를 포함 합니다.  
+ 예제는 리모컨에 연결 하는 방법을 보여 주는 Visual C#.NET 코드 및 *vPassword* 로그온 및 암호를 포함 합니다.  
   
 ```csharp  
 // compile with:   

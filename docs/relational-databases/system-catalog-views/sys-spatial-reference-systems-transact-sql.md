@@ -1,5 +1,5 @@
 ---
-title: sys.spatial_reference_systems (Transact SQL) | Microsoft Docs
+title: sys.spatial_reference_systems (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: acdf8059c75ac6bec1bdd45fc7e1d348331a7e90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f1cb77a5da692f17a790d2eb5ffca6f82a939449
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219924"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538293"
 ---
 # <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "33219924"
 |-----------------|---------------|-----------------|  
 |spatial_reference_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 SRID입니다.|  
 |authority_name|**nvarchar(128)**|SRID의 인증 기관입니다.|  
-|authorized_spatial_reference_id|**int**|SRID의 인증 기관에서 제공한 **authority_name**합니다.|  
+|authorized_spatial_reference_id|**int**|에 명명 된 기관에 의해 지정 된 SRID **authority_name**합니다.|  
 |well_known_text|**nvarchar(4000)**|SRID의 WKT 표현입니다.|  
 |unit_of_measure|**nvarchar(128)**|측정 단위 이름입니다.|  
 |unit_conversion_factor|**float**|미터 단위의 측정 단위 길이입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
   

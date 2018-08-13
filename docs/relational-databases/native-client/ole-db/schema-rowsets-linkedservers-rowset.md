@@ -18,19 +18,19 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 975008ce3de833315ea9319e85880d7789517028
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2db65b2c936143c2f1f4987ac6ba79482e7b06b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421042"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539673"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>스키마 행 집합-LINKEDSERVERS 행 집합
+# <a name="schema-rowsets---linkedservers-rowset"></a>스키마 행 집합 - LINKEDSERVERS 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  합니다 **LINKEDSERVERS** 행 집합에 참여할 수 있는 조직 데이터 원본을 열거 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리 합니다.  
+  **LINKEDSERVERS** 행 집합은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리에 참여할 수 있는 조직 데이터 원본을 열거합니다.  
   
  **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "37421042"
  행 집합은 SRV_NAME을 기준으로 정렬되며 SRV_NAME에서 하나의 제한이 지원됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [스키마 행 집합 지원 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+ [스키마 행 집합 지원&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
   

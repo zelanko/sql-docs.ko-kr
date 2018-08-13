@@ -20,13 +20,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: cc1f388b7ec6687fe64a4bad39d8d2c878221505
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e1ac7e1d94dbe8c4f69493eb9e6d27d99a76831a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999645"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538853"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>그래프 데이터베이스를 만들고 일부 패턴 일치 T-SQL을 사용 하 여 쿼리를 실행 합니다.
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

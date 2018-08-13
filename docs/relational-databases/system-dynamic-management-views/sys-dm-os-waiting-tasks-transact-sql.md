@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_waiting_tasks (Transact SQL) | Microsoft Docs
+title: sys.dm_os_waiting_tasks (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467409"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540763"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34467409"
   특정 리소스에서 대기 중인 태스크의 대기 큐에 대한 정보를 반환합니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_waiting_tasks**합니다.  
+>  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_waiting_tasks**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "34467409"
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="resourcedescription-column"></a>resource_description 열  
- Resource_description 열은 다음 값에 있습니다.  
+ Resource_description 열 다음의 가능한 값에 있습니다.  
   
  **스레드 풀 리소스 소유자:**  
   
@@ -86,27 +86,27 @@ ms.locfileid: "34467409"
   
      **\<형식 관련 설명 > 일 수 있습니다.**  
   
-    -   Database: databaselock subresource =\<databaselock subresource > dbid =\<->  
+    -   Database: databaselock subresource =\<databaselock subresource > dbid =\<db id >  
   
-    -   File: filelock fileid =\<파일-i d > subresource =\<filelock subresource > dbid =\<->  
+    -   File: filelock fileid =\<파일-i d > subresource =\<filelock subresource > dbid =\<db id >  
   
-    -   Object: objectlock lockPartition =\<잠금 파티션 id > objid =\<obj-i d > subresource =\<objectlock subresource > dbid =\<->  
+    -   개체: objectlock lockPartition =\<잠금 파티션 id > objid =\<obj-i d > subresource =\<objectlock subresource > dbid =\<db id >  
   
-    -   Page: pagelock fileid =\<파일-i d > pageid =\<페이지-i d > dbid =\<db-i d > subresource =\<pagelock subresource >  
+    -   Page: pagelock fileid =\<파일-i d > pageid =\<페이지 id > dbid =\<db-i d > subresource =\<pagelock subresource >  
   
-    -   Key: keylock hobtid =\<hobt-i d > dbid =\<->  
+    -   Key: keylock hobtid =\<hobt id > dbid =\<db id >  
   
-    -   Extent: extentlock fileid =\<파일-i d > pageid =\<페이지-i d > dbid =\<->  
+    -   Extent: extentlock fileid =\<파일-i d > pageid =\<페이지-i d > dbid =\<db id >  
   
-    -   RID: ridlock fileid =\<파일-i d > pageid =\<페이지-i d > dbid =\<->  
+    -   RID: ridlock fileid =\<파일-i d > pageid =\<페이지-i d > dbid =\<db id >  
   
-    -   Application: applicationlock 해시 =\<해시 > databasePrincipalId =\<역할-i d > dbid =\<->  
+    -   Application: applicationlock 해시 =\<해시 > databasePrincipalId =\<역할-i d > dbid =\<db id >  
   
-    -   메타 데이터: metadatalock subresource =\<metadata > classid =\<metadatalock 설명 > dbid =\<->  
+    -   메타 데이터: metadatalock subresource =\<메타 데이터 subresource > classid =\<metadatalock 설명 > dbid =\<db id >  
   
-    -   Hobt: hobtlock hobtid =\<hobt-i d > subresource =\<hobt subresource > dbid =\<->  
+    -   HOBT: hobtlock hobtid =\<hobt-i d > subresource =\<hobt subresource > dbid =\<db id >  
   
-    -   Allocation_unit: allocunitlock hobtid =\<hobt-i d > subresource =\<alloc--i > dbid =\<->  
+    -   Allocation_unit: allocunitlock hobtid =\<hobt-i d > subresource =\<alloc-단위-subresource > dbid =\<db id >  
   
      **\<모드 > 일 수 있습니다.**  
   
@@ -138,20 +138,20 @@ ms.locfileid: "34467409"
   
 -   \<래치 클래스 > (\<래치 주소 >)  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
  
 ## <a name="example"></a>예제
-이 예제에서는 차단된 세션을 식별 합니다.  실행 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 쿼리할 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.
+이 예제에서는 차단된 세션을 식별 합니다.  실행 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
-## <a name="see-also"></a>관련 항목:  
-  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

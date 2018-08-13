@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저를 실행 합니다. | Microsoft Docs
+title: 저장된 프로시저를 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 179068eed7b131a237176e94974f39daa8685b33
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c77c4cf350a94e908622283754779bead2fbc834
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415652"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541333"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "37415652"
   
      확장 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 제공되지 않는 C 및 C++ 기능을 사용할 수 있습니다.  
   
-     저장된 프로시저를 호출 하는 방법의 예제를 참조 하세요 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)합니다.  
+     저장된 프로시저를 호출 하는 방법에 대 한 예제를 보려면 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

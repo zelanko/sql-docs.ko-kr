@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_file_space_usage (Transact SQL) | Microsoft Docs
+title: sys.dm_db_file_space_usage (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 456c6bd1a7b83012d2791ec8340f98a06413b09f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 138a47886921bc1947edcdf068c06aaa5a6dc977
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465719"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535183"
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,30 +37,30 @@ ms.locfileid: "34465719"
   데이터베이스의 각 파일에 대한 공간 사용량 정보를 반환합니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_db_file_space_usage**합니다.  
+>  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_db_file_space_usage**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|데이터베이스 ID입니다.|  
-|file_id|**smallint**|파일의 ID입니다.<br /><br /> file_id에 file_id 매핑됩니다 [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 및의 fileid에 [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)합니다.|  
+|file_id|**smallint**|파일의 ID입니다.<br /><br /> file_id에서 file_id 매핑됩니다 [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 하에서 fileid [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)합니다.|  
 |filegroup_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 파일 그룹 ID입니다.|  
 |total_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 파일의 총 페이지 수입니다.|  
 |allocated_extent_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 파일에서 할당된 익스텐트에 있는 총 페이지 수입니다.|  
 |unallocated_extent_page_count|**bigint**|파일에서 할당되지 않은 익스텐트에 있는 총 페이지 수입니다.<br /><br /> 할당된 익스텐트에서 사용되지 않은 페이지는 포함되지 않습니다.|  
-|version_store_reserved_page_count|**bigint**|버전 저장소에 대해 할당된 단일 익스텐트에 있는 총 페이지 수입니다. 버전 저장소 페이지는 혼합 익스텐트에서 할당되지 않습니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> 자세한 내용은 참조 [sys.dm_tran_version_store & #40; Transact SQL & #41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
-|user_object_reserved_page_count|**bigint**|데이터베이스에서 사용자 개체에 대해 단일 익스텐트에서 할당된 총 페이지 수입니다. 할당된 익스텐트에서 사용되지 않은 페이지도 포함됩니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> Total_pages 열을 사용할 수 있습니다는 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 카탈로그 뷰를 사용자 개체에 각 할당 단위의 예약 된 페이지 수를 반환 합니다. 하지만 total_pages 열에는 IAM 페이지가 포함됩니다.|  
+|version_store_reserved_page_count|**bigint**|버전 저장소에 대해 할당된 단일 익스텐트에 있는 총 페이지 수입니다. 버전 저장소 페이지는 혼합 익스텐트에서 할당되지 않습니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> 자세한 내용은 [sys.dm_tran_version_store&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)를 참조하세요.|  
+|user_object_reserved_page_count|**bigint**|데이터베이스에서 사용자 개체에 대해 단일 익스텐트에서 할당된 총 페이지 수입니다. 할당된 익스텐트에서 사용되지 않은 페이지도 포함됩니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> Total_pages 열을 사용할 수는 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 카탈로그 뷰를 사용자 개체의 각 할당 단위의 예약 된 페이지 수를 반환 합니다. 하지만 total_pages 열에는 IAM 페이지가 포함됩니다.|  
 |internal_object_reserved_page_count|**bigint**|파일에서 내부 개체에 대해 할당된 단일 익스텐트의 총 페이지 수입니다. 할당된 익스텐트에서 사용되지 않은 페이지도 포함됩니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> 각 내부 개체의 페이지 수를 반환하는 카탈로그 뷰나 동적 관리 개체는 없습니다.|  
 |mixed_extent_page_count|**bigint**|파일에서 할당된 혼합 익스텐트의 할당된 페이지와 할당되지 않은 페이지의 총 수입니다. 혼합 익스텐트에는 여러 다른 개체에 할당된 페이지가 포함됩니다. 이 값에는 파일에 있는 모든 IAM 페이지가 포함됩니다.|
-|modified_extent_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />마지막 전체 데이터베이스 백업 이후 파일의 익스텐트를 할당 하는 총 페이지에서 수정할 수 있습니다. 수정 된 페이지 수를 차등 백업이 필요한 경우 결정할 마지막 전체 백업 이후 데이터베이스의 차등 변경의 양을 추적 데 사용할 수 있습니다.|
+|modified_extent_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />마지막 전체 데이터베이스 백업 이후에 파일의 익스텐트를 할당 하는 수정 페이지의 총 수입니다. 차등 백업이 필요한 경우를 결정 하려면 마지막 전체 백업 이후 데이터베이스의 차등 변경 양을 추적 하는 수정 된 페이지 수를 사용할 수 있습니다.|
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
-|distribution_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 분포에 관련 된 고유 숫자 id입니다.|  
+|distribution_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 배포와 관련 된 고유 숫자 id입니다.|  
   
-## <a name="remarks"></a>주의  
- 페이지 수는 항상 익스텐트 수준에 대한 값입니다. 따라서 페이지 수는 항상 8의 배수입니다. GAM(Global Allocation Map) 및 SGAM(Shared Global Allocation Map) 할당 페이지를 포함하는 익스텐트는 할당된 단일 익스텐트로, 앞서 설명된 페이지 수에 포함되지 않습니다. 페이지 및 익스텐트에 대 한 자세한 내용은 참조 하십시오. [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md)합니다. 
+## <a name="remarks"></a>Remarks  
+ 페이지 수는 항상 익스텐트 수준에 대한 값입니다. 따라서 페이지 수는 항상 8의 배수입니다. GAM(Global Allocation Map) 및 SGAM(Shared Global Allocation Map) 할당 페이지를 포함하는 익스텐트는 할당된 단일 익스텐트로, 앞서 설명된 페이지 수에 포함되지 않습니다. 페이지 및 익스텐트에 대 한 자세한 내용은 참조 하세요. [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md)합니다. 
   
- 현재 버전 저장소의 콘텐츠는 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)합니다. 버전 저장소 페이지는 전역 리소스이기 때문에 세션 및 태스크 수준이 아닌 파일 수준에서 추적됩니다. 세션에서 버전을 생성할 수 있지만 버전은 세션 종료 시 제거할 수 없습니다. 버전 저장소를 정리할 때는 특정 버전에 대한 액세스가 필요한 가장 오래 실행 중인 트랜잭션을 고려해야 합니다. elapsed_time_seconds 열을 확인 하 여 버전 저장소 정리와 관련 하 여 가장 오래 실행 중인 트랜잭션을 검색할 수 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)합니다.  
+ 현재 버전 저장소의 콘텐츠가 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)합니다. 버전 저장소 페이지는 전역 리소스이기 때문에 세션 및 태스크 수준이 아닌 파일 수준에서 추적됩니다. 세션에서 버전을 생성할 수 있지만 버전은 세션 종료 시 제거할 수 없습니다. 버전 저장소를 정리할 때는 특정 버전에 대한 액세스가 필요한 가장 오래 실행 중인 트랜잭션을 고려해야 합니다. elapsed_time_seconds 열을 확인 하 여 버전 저장소 정리와 관련 된 가장 오래 실행 중인 트랜잭션을 검색할 수 있습니다 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)합니다.  
   
- mixed_extent_page_count 열이 빈번하게 변경되면 SGAM 페이지가 자주 사용되는 것일 수 있습니다. 이 경우 대기 리소스가 SGAM 페이지인 PAGELATCH_UP 대기를 많이 볼 수 있습니다. 자세한 내용은 참조 [sys.dm_os_waiting_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), 및 [sys.dm_os_latch_ stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)합니다.  
+ mixed_extent_page_count 열이 빈번하게 변경되면 SGAM 페이지가 자주 사용되는 것일 수 있습니다. 이 경우 대기 리소스가 SGAM 페이지인 PAGELATCH_UP 대기를 많이 볼 수 있습니다. 자세한 내용은 [sys.dm_os_waiting_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)를 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), 및 [sys.dm_os_latch_ 통계 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)합니다.  
   
 ## <a name="user-objects"></a>사용자 개체  
  사용자 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
@@ -92,15 +92,15 @@ ms.locfileid: "34465719"
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|일 대 일|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
 ## <a name="examples"></a>예  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>tempdb의 빈 공간 확인  
- 다음 쿼리 (mb) 사용할 수 있는 모든 파일에서 사용 가능한 페이지 및 총 사용 가능 공간의 총 수를 반환 **tempdb**합니다.  
+ 다음 쿼리는 총 사용 가능한 페이지 및 사용 가능한 총 공간 (mb) 사용할 수 있는 모든 파일에서 반환 **tempdb**합니다.  
   
 ```sql
 USE tempdb;  
@@ -121,8 +121,8 @@ SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
 FROM sys.dm_db_file_space_usage;
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_db_task_space_usage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

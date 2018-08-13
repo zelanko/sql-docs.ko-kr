@@ -21,13 +21,13 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1d0ba930c37d5e2c83093a9aeb6aad835439a8b4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6847fed39c558f6e44a386ebcb4ee63163361923
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410262"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535993"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37410262"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대 한 데이터 원본 이라는 용어를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. 첫 번째 태스크는 공급자의 데이터 원본 개체의 인스턴스를 만들지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 소비자입니다.  
   
- 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. 에 대 한 CLSID를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 C/c + + GUID clsid_sqlncli10 이며 (SQLNCLI_CLSID 올바른로 확인 되는 기호를 참조 하는 sqlncli.h 파일에 progid). Clsid가 있으면 소비자에서 사용 하 여 OLE **CoCreateInstance** 데이터 원본 개체의 인스턴스를 제조 하는 함수입니다.  
+ 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. 에 대 한 CLSID를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 C/c + + GUID clsid_sqlncli10 이며 (SQLNCLI_CLSID 올바른로 확인 되는 기호를 참조 하는 sqlncli.h 파일에 progid). CLSID가 있으면 소비자는 OLE **CoCreateInstance** 함수를 사용하여 데이터 원본 개체의 인스턴스를 만듭니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 in-process 서버는 합니다. 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 개체는 실행 컨텍스트를 나타내기 위해 CLSCTX_INPROC_SERVER 매크로 사용 하 여 생성 됩니다.  
   
@@ -78,11 +78,11 @@ else
   
  인스턴스의 성공적으로 만들어지면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 데이터 원본 개체를 데이터 원본 초기화 하 고 세션을 만들어 여는 소비자 응용 프로그램을 계속할 수 있습니다. OLE DB 세션은 데이터 액세스 및 조작을 가능하게 하는 인터페이스를 제공합니다.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 지정 된 인스턴스에 처음 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성공적인 데이터 원본 초기화의 일부로. 연결 되거나 모든 데이터 원본 초기화 인터페이스에 대 한 참조를 유지 관리 됩니다으로 유지 됩니다는 **idbinitialize:: Uninitialize** 메서드가 호출 됩니다.  
+ 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 지정 된 인스턴스에 처음 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성공적인 데이터 원본 초기화의 일부로. 이 연결은 데이터 원본 초기화 인터페이스에 대한 참조가 유지되는 동안이나 **IDBInitialize::Uninitialize** 메서드가 호출될 때까지 유지됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [데이터 원본 속성 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [데이터 원본 속성&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [데이터 원본 정보 속성](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   

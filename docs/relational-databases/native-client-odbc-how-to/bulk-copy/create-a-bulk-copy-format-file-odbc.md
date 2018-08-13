@@ -1,5 +1,5 @@
 ---
-title: 대량 복사 서식 파일 (ODBC) 만들기 | Microsoft Docs
+title: (ODBC) 대량 복사 서식 파일 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a5639e1f9a18ab50b92526a578c0cd07c0b1bbf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e3b6d81acd05d45c08ced9eea678303b85c8e345
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421162"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542653"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>대량 복사 서식 파일 만들기(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "37421162"
   
 3.  SQL Server에 연결합니다.  
   
-4.  호출 [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 다음 정보를 설정 하려면:  
+4.  호출 [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 다음과 같은 정보를 설정할 수 있습니다.  
   
     -   대량 복사를 수행할 원본 또는 대상 테이블/뷰의 이름을 지정합니다.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "37421162"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을: 테이블 또는 뷰에서 파일로 DB_OUT입니다.  
+    -   복사 방향: 테이블 또는 뷰의 DB_OUT 파일.  
   
-5.  호출 [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 열 개수를 설정 합니다.  
+5.  호출 [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 의 열 수를 설정 합니다.  
   
-6.  호출 [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 각 열의 데이터 파일의 해당 특성을 정의 합니다.  
+6.  호출 [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 기능을 지정 하면 데이터 파일의 각 열에 대 한.  
   
-7.  호출 [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 대량 복사 작업에서 만들려는 데이터 파일을 설명 하는 서식 파일을 만들려고 합니다.  
+7.  호출 [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 대량 복사 작업으로 만들 데이터 파일을 설명 하는 서식 파일을 만들 수 있습니다.  
   
-8.  호출 [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 대량 복사 작업을 실행 합니다.  
+8.  호출 [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 대량 복사 작업을 실행할 수 있습니다.  
   
  이러한 방식으로 실행된 대량 복사 작업은 대량 복사된 데이터가 들어 있는 데이터 파일과 데이터 파일의 레이아웃을 설명하는 서식 파일을 모두 만듭니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_fields (Azure SQL Database) | Microsoft Docs
+title: sys.database_event_session_fields (SQL Azure 데이터베이스) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 56378ff6f8fd3f83a4cdf38148372b504e485e46
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981855"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544213"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
+# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이벤트 및 대상에 명시적으로 설정된 각 사용자 지정 가능 열에 대해 한 행을 반환합니다.  

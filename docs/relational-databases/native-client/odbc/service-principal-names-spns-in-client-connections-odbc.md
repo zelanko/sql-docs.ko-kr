@@ -1,5 +1,5 @@
 ---
-title: 클라이언트 연결 (ODBC)의 서비스 주체 이름 (Spn) | Microsoft Docs
+title: 서비스 사용자 이름 (Spn) 클라이언트 연결 (ODBC)에 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f3322d0805491b7fea8efdda2f1905aa4e35ac8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6e3085f669a673ddcbff401a880111f843ce100e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427852"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541353"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>클라이언트 연결(ODBC)의 SPN(서비스 사용자 이름)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  이 항목에서는 클라이언트 응용 프로그램의 SPN(서비스 사용자 이름)을 지원하는 ODBC 특성 및 함수에 대해 설명합니다. 클라이언트 응용 프로그램의 Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) 하 고 [상호 Kerberos 인증 가져오기](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
+  이 항목에서는 클라이언트 응용 프로그램의 SPN(서비스 사용자 이름)을 지원하는 ODBC 특성 및 함수에 대해 설명합니다. 클라이언트 응용 프로그램의 Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결에 대 한 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) 및 [상호 Kerberos 인증 가져오기](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## <a name="connection-string-keywords"></a>연결 문자열 키워드  
  클라이언트 응용 프로그램은 다음 연결 문자열 키워드를 사용하여 SPN을 지정할 수 있습니다.  

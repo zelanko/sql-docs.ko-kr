@@ -19,19 +19,19 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80629d81a9212801e65e272f5790b0cc57a11103
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2f1e1f961dd9ece3d69044e00dd9183920af0ba4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428742"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535503"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)**, 및 xml 데이터 형식을 Blob (binary large object ). 합니다 **읽기** 메서드를 **ISequentialStream** 소비자 관리 가능한 청크로 많은 데이터를 검색할 수 있습니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)**, 및 xml 데이터 형식을 Blob (binary large object ). **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
   
  이 기능을 보여 주는 샘플을 참조 하세요 [큰 데이터 집합 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "37428742"
   
 ## <a name="storage-object-limitations"></a>저장소 개체 제한 사항  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 열려 있는 저장소 개체를 지원할 수 있습니다. 둘 이상의 저장소 개체를 열려고 시도 (하나 이상에 대 한 참조를 가져오려고 **ISequentialStream** 인터페이스 포인터) DBSTATUS_E_CANTCREATE가 반환 됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 열려 있는 저장소 개체를 지원할 수 있습니다. 저장소 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
   
 -   에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 DBPROP_BLOCKINGSTORAGEOBJECTS 읽기 전용 속성의 기본값은 VARIANT_TRUE입니다. 이는 저장소 개체가 활성화되면 저장소 개체에 있는 메서드를 제외한 일부 메서드가 E_UNEXPECTED 오류와 함께 실패한다는 것을 의미합니다.  
   

@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107141"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400916"
 ---
 # <a name="configure-auto-statistics"></a>자동 통계 다시 계산 구성
 
@@ -45,7 +45,7 @@ AP AU7로 업그레이드 한 후 자동 통계 기능을 기본적으로 설정
 기능 스위치 값을 변경 AP에 서비스를 다시 시작을 해야 합니다.
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>데이터베이스에서 자동 통계 설정 변경
-자동 통계 다시 계산을 시스템 관리자가 사용 하는 경우 사용할 수 [ALTER DATABASE (병렬 데이터 웨어하우스)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) 데이터베이스에서 통계 설정을 변경할 수 있습니다. 자동 통계 기능 스위치를 시스템 관리자가 사용 하는 경우 AU7로 업그레이드 한 후에 만들어진 새 데이터베이스는 자동 통계 사용 하도록 설정 해야 합니다. AU7로 업그레이드 하기 전에 있던 모든 데이터베이스에는 자동 통계 사용 하지 않도록 설정 합니다. 다음 예제에서는 기존 데이터베이스 myPDW에 대 한 자동 통계.
+자동 통계 다시 계산을 시스템 관리자가 사용 하는 경우 사용할 수 [ALTER DATABASE (병렬 데이터 웨어하우스)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 데이터베이스에서 통계 설정을 변경할 수 있습니다. 자동 통계 기능 스위치를 시스템 관리자가 사용 하는 경우 AU7로 업그레이드 한 후에 만들어진 새 데이터베이스는 자동 통계 사용 하도록 설정 해야 합니다. AU7로 업그레이드 하기 전에 있던 모든 데이터베이스에는 자동 통계 사용 하지 않도록 설정 합니다. 다음 예제에서는 기존 데이터베이스 myPDW에 대 한 자동 통계.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON

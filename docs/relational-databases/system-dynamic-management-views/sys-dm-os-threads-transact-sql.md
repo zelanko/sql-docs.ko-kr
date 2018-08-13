@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_threads (Transact SQL) | Microsoft Docs
+title: sys.dm_os_threads (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee180232114e311cf40a53d2e33f23acba7a0cd0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2109830ba21d60fa67eb33b1b1e5e8b5cb14a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468619"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543213"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34468619"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행되고 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제 스레드를 목록으로 반환합니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_threads**합니다.  
+>  이 메서드를 호출 하 여 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_threads**.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "34468619"
 |stack_end_address|**varbinary(8)**|이 스레드에 대한 최하위 스택 주소의 메모리 주소입니다.|  
 |stack_bytes_committed|**int**|스택에서 커밋된 바이트 수입니다.|  
 |stack_bytes_used|**int**|스레드에서 사용하고 있는 바이트 수입니다.|  
-|affinity|**bigint**|이 스레드가 실행되고 있는 CPU 마스크입니다. 이 구성 된 값에 따라 다릅니다는 **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** 문. 소프트 선호도의 경우 스케줄러와 다를 수 있습니다.|  
+|affinity|**bigint**|이 스레드가 실행되고 있는 CPU 마스크입니다. 구성 값에는 **변경 서버 구성 프로세스 선호도 설정** 문. 소프트 선호도의 경우 스케줄러와 다를 수 있습니다.|  
 |Priority|**int**|이 스레드의 우선 순위 값입니다.|  
 |로캘|**int**|스레드의 캐시된 로캘 LCID입니다.|  
 |토큰|**varbinary(8)**|스레드의 캐시된 가장 토큰 핸들입니다.|  
@@ -62,25 +62,25 @@ ms.locfileid: "34468619"
 |fiber_data|**varbinary(8)**|스레드에서 실행 중인 현재의 Win32 파이버입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 경량 풀링이 구성된 경우에만 적용됩니다.|  
 |thread_handle|**varbinary(8)**|내부적으로만 사용됩니다.|  
 |event_handle|**varbinary(8)**|내부적으로만 사용됩니다.|  
-|scheduler_address|**varbinary(8)**|이 스레드와 연관된 스케줄러의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)합니다.|  
-|worker_address|**varbinary(8)**|이 스레드에 바인딩된 작업자의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)합니다.|  
+|scheduler_address|**varbinary(8)**|이 스레드와 연관된 스케줄러의 메모리 주소입니다. 자세한 내용은 [sys.dm_os_schedulers &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|worker_address|**varbinary(8)**|이 스레드에 바인딩된 작업자의 메모리 주소입니다. 자세한 내용은 [sys.dm_os_workers &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8)**|내부 파이버 컨텍스트 주소입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 경량 풀링이 구성된 경우에만 적용됩니다.|  
 |self_address|**varbinary(8)**|내부 일관성 포인터입니다.|  
 |processor_group|**smallint**|**적용 대상**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 프로세서 그룹 ID입니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
 ## <a name="examples"></a>예  
- 시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스레드를 시작한 다음 작업자를 해당 스레드에 연결합니다. 그러나 확장 저장 프로시저와 같은 외부 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 스레드를 시작할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 스레드를 제어하지 않습니다. sys.dm_os_threads에서 리소스를 사용 하는 rogue 스레드에 대 한 정보를 제공할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스입니다.  
+ 시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스레드를 시작한 다음 작업자를 해당 스레드에 연결합니다. 그러나 확장 저장 프로시저와 같은 외부 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 스레드를 시작할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 스레드를 제어하지 않습니다. sys.dm_os_threads 불량 스레드 리소스를 사용 하는 방법에 대 한 정보를 제공할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 과정.  
   
  다음 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시작하지 않은 스레드를 실행하는 작업자와 실행 소요 시간을 확인하는 데 사용됩니다.  
   
 > [!NOTE]  
->  간단하게 다음 쿼리에서는 `*` 문에 별표(`SELECT`)를 사용합니다. 특히 카탈로그 뷰, 동적 관리 뷰 및 시스템 테이블 반환 함수에 대해서는 별표(*)를 사용하지 않아야 합니다. 향후 업그레이드 및 릴리스에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열을 추가 하 고 이러한 뷰 및 함수를 열의 순서를 변경할 수 있습니다. 그렇게 되면 특정 열 순서 및 열 수를 예상하는 응용 프로그램에서 오류가 발생할 수 있습니다.  
+>  간단하게 다음 쿼리에서는 `*` 문에 별표(`SELECT`)를 사용합니다. 특히 카탈로그 뷰, 동적 관리 뷰 및 시스템 테이블 반환 함수에 대해서는 별표(*)를 사용하지 않아야 합니다. 향후 업그레이드 및 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있습니다 열을 추가 하 고 이러한 뷰와 함수 열 순서를 변경 합니다. 그렇게 되면 특정 열 순서 및 열 수를 예상하는 응용 프로그램에서 오류가 발생할 수 있습니다.  
   
 ```  
 SELECT *  
@@ -88,9 +88,9 @@ SELECT *
   WHERE started_by_sqlservr = 0;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
-  [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+  [sys.dm_os_workers &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

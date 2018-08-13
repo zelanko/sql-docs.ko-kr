@@ -1,5 +1,5 @@
 ---
-title: XPath 쿼리 (SQLXMLOLEDB 공급자)를 포함 하는 템플릿 실행 | Microsoft Docs
+title: XPath 쿼리 (SQLXMLOLEDB 공급자)를 포함 하는 템플릿 실행 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 005df507a2c48356ee72506530fb7c552fa43b97
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d508b641c7b3c8a8082e6c7e41bf43d5b5e917fb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544403"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

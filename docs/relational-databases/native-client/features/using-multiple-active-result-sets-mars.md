@@ -20,19 +20,19 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f96c6eec4f56d50d210ecac63014c166f37ac4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 929229de6e30c9a9a5da0a50db69d4718070eaaa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428982"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536423"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>MARS(Multiple Active Result Sets) 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 에 액세스 하는 응용 프로그램에서 여러 활성 결과 집합 (MARS)에 대 한 지원 도입 된 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 응용 프로그램이 연결에 대한 다중 활성 문을 유지할 수 없었습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용할 경우 응용 프로그램에서 한 일괄 작업의 모든 결과 집합을 처리하거나 취소해야만 해당 연결에서 다른 일괄 작업을 실행할 수 있었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 응용 프로그램에서 연결당 둘 이상의 보류 중인 요청을 유지할 수 있도록 하는 새로운 연결 특성이 도입되었습니다. 즉, 연결당 둘 이상의 활성 기본 결과 집합을 유지할 수 있게 되었습니다.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 액세스하는 응용 프로그램에서 MARS(Multiple Active Result Sets)를 지원합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 응용 프로그램이 연결에 대한 다중 활성 문을 유지할 수 없었습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용할 경우 응용 프로그램에서 한 일괄 작업의 모든 결과 집합을 처리하거나 취소해야만 해당 연결에서 다른 일괄 작업을 실행할 수 있었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 응용 프로그램에서 연결당 둘 이상의 보류 중인 요청을 유지할 수 있도록 하는 새로운 연결 특성이 도입되었습니다. 즉, 연결당 둘 이상의 활성 기본 결과 집합을 유지할 수 있게 되었습니다.  
   
  MARS는 다음과 같은 새로운 기능을 사용하여 응용 프로그램 디자인을 단순화합니다.  
   
@@ -101,7 +101,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
 -   즉시 실패 하므로 사용자 트랜잭션에서 DDL 작업이 허용 되지 않습니다.  
   
- **MARS 및 고유 하 게 컴파일된 저장된 프로시저**  
+ **MARS 및 고유하게 컴파일된 저장 프로시저**  
   
  고유 하 게 컴파일된 저장된 프로시저 MARS가 활성화 된 연결에서 실행할 수 있으며 점을 발견 되는 경우에 다른 문으로 실행을 양보 수 있습니다. Yield 지점 SELECT 문에서 다른 문으로 실행을 제공할 수 있는 고유 하 게 컴파일된 저장된 프로시저 내에서 유일한 문 필요 합니다. SELECT 문을 생성 하지는 프로시저에 없는 다른 문이 먼저 완료 될 때까지 실행 됩니다.  
   
@@ -113,10 +113,10 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  **MARS 및 columnstore 인덱스**  
   
- SQL Server (2016부터 시작)는 columnstore 인덱스를 사용 하 여 MARS를 지원 합니다. SQL Server 2014는 MARS를 사용하여 columnstore 인덱스가 있는 테이블에 대한 읽기 전용 연결을 합니다.    그러나 SQL Server 2014는 columnstore 인덱스가 있는 테이블에서 DML(동시 데이터 조작 언어) 작업에 대해서는 MARS를 지원하지 않습니다. 이 문제가 발생 하면 SQL Server는 연결을 종료 하 고 트랜잭션이 중단 됩니다.   SQL Server 2012에 읽기 전용으로 columnstore 인덱스 및 MARS에 적용 되지 않습니다.  
+ SQL Server (2016부터 시작)는 columnstore 인덱스를 사용 하 여 MARS를 지원 합니다. SQL Server 2014는 MARS를 사용하여 columnstore 인덱스가 있는 테이블에 대한 읽기 전용 연결을 합니다.    그러나 SQL Server 2014는 columnstore 인덱스가 있는 테이블에서 DML(동시 데이터 조작 언어) 작업에 대해서는 MARS를 지원하지 않습니다. 이 경우 SQL Server는 연결을 종료하고 트랜잭션을 중단합니다.   SQL Server 2012에 읽기 전용으로 columnstore 인덱스 및 MARS에 적용 되지 않습니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBPROPSET_SQLSERVERDBINIT 속성 집합에 구현 된 SSPROP_INIT_MARSCONNECTION 데이터 원본 초기화 속성의 추가 통해 MARS를 지원 합니다. 또한 새 연결 문자열 키워드인 **MarsConn**추가 되었습니다. 받아들이는지 **true** 하거나 **false** ; 값 **false** 가 기본값입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBPROPSET_SQLSERVERDBINIT 속성 집합에 구현 된 SSPROP_INIT_MARSCONNECTION 데이터 원본 초기화 속성의 추가 통해 MARS를 지원 합니다. 이와 함께 새 연결 문자열 키워드인 **MarsConn**이 추가되었습니다. 받아들이는지 **true** 하거나 **false** ; 값 **false** 가 기본값입니다.  
   
  데이터 원본 속성 DBPROP_MULTIPLECONNECTIONS의 기본값은 VARIANT_TRUE입니다. 이것은 공급자가 다중 동시 명령 및 행 집합 개체를 지원하기 위해 다중 연결을 생성한다는 의미입니다. MARS가 설정 된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 있으므로 MULTIPLE_CONNECTIONS가 기본적으로 VARIANT_FALSE로 설정 되므로 Native Client에서 단일 연결을 여러 명령 및 행 집합 개체 지원할 수 있습니다.  
   

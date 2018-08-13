@@ -1,5 +1,5 @@
 ---
-title: ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행 | Microsoft Docs
+title: ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리를 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a219162953134810976461ba682359193246ad8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7b36b2ae8fa2f1f9753df928d5cbb6f505ab7266
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053761"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541393"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader 메서드를 사용하여 SQL 쿼리 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  ExecuteToStream 메서드를 사용 하는 대신 명령을 실행 하 여 SqlXmlCommand 개체의 ExecuteXmlReader 메서드를 사용할 수 있습니다. 이 메서드는 결과 (이 예제에서 요소 또는 특성 이름과 값 인쇄)의 추가 처리를 위해 사용할 수 있는 XmlReader 개체를 반환 합니다.  
+  ExecuteToStream 메서드를 사용 하는 대신 명령을 실행 하는 ExecuteXmlReader 메서드가 SqlXmlCommand 개체의 사용할 수 있습니다. 이 메서드는 결과 (이 예제에서 요소 또는 특성 이름과 값 인쇄)의 추가 처리를 위해 사용할 수 있는 XmlReader 개체를 반환 합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

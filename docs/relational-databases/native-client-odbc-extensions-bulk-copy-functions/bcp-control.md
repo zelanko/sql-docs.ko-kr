@@ -21,13 +21,13 @@ caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8524e9655bef6c48548ecd35e2fa4ce1e2bfbcc8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc0284c717322f1c1b1713af186f72cb8cfefe1b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429912"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544973"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ RETCODE bcp_control (
   
  호출 하는 경우에 시퀀스 오류가 발생 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` 호출한 후 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` 및 bcp_writefmt 합니다.  
   
- 자세한 내용은 [메타 데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)합니다.  
+ 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
  BCPFILECP  
  *iValue* 데이터 파일에 대 한 코드 페이지 번호를 포함 합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.  

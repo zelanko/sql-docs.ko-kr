@@ -17,13 +17,13 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12c021047650a7bfe24df6d354fa5fc545f2bfe5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 439066cd1b1d738cbfda01213646aafce6553e44
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416912"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541103"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "37416912"
  [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)  
  설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 향상된 된 FILESTREAM 기능에 대 한 네이티브 클라이언트 지원 합니다.  
   
- [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [클라이언트 연결의 서비스 사용자 이름&#40;SPN&#41; 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  모든 프로토콜에서 상호 인증을 지원하기 위해 SPN(서비스 사용자 이름)이 어떻게 확장되었는지 설명합니다.  
   
  [SQL Server Native Client의 스파스 열 지원](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  
@@ -93,7 +93,7 @@ ms.locfileid: "37416912"
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 도입된 동작 변경 사항에 대해 설명합니다. 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공 하는 경우는 **wchar** 종결 문자는 서로게이트 쌍의 상위 서로게이트 코드 포인트를 전과 경우 버퍼에 기록 된 문자 다음 **wchar** 문자가 하위 서로게이트 코드 포인트에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 상위 서로게이트 코드 포인트인 버퍼에 추가 되지 않습니다.  
   
  [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- 고가용성, 재해 복구에 추가 기능을 활용 하려면 응용 프로그램을 구성할 수 있습니다 하는 방법에 대해 설명 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]합니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 고가용성의 재해 복구 기능을 활용하도록 응용 프로그램을 구성할 수 있는 방법을 설명합니다.  
   
  [확장 이벤트 로그의 진단 정보 액세스](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 향상된 기능과, 링 버퍼 및 XEvents 로그의 진단 정보에 액세스하는 데 사용되는 데이터 추적 기능에 대해 설명합니다.  

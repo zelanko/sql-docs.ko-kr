@@ -16,13 +16,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80b5776826790bf9026df5d25965c4116367b974
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b0cd923904b13e9cb63b72010e89d4079b966e22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419632"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539183"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,13 +65,13 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |**S_OK**|메서드가 성공했습니다.|  
-|**E_FAIL**|ISQLServerErrorInfo 인터페이스를 사용 하 여 자세한 정보에 대 한 공급자 관련 오류가 발생 합니다.|  
+|**E_FAIL**|공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 ISQLServerErrorInfo 인터페이스를 사용하세요.|  
 |**E_UNEXPECTED**|예기치 않은 메서드가 호출되었습니다. 예를 들어 합니다 **IBCPSession2::BCPInit** IBCPSession2::BCPSetBulkMode를 호출 하기 전에 메서드가 호출 되지 않았습니다.|  
 |**E_INVALIDARG**|잘못된 인수입니다.|  
 |**E_OUTOFMEMORY**|메모리 부족 오류가 발생했습니다.|  
   
 ## <a name="remarks"></a>Remarks  
- IBCPSession2::BCPSetBulkMode 대량 쿼리 또는 테이블에서 복사를 사용할 수 있습니다. 호출 호출 하기 전에 해야 IBCPSession2::BCPSetBulkMode 대량 쿼리 문 복사 하 되 때 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` 쿼리 문을 지정 합니다.  
+ IBCPSession2::BCPSetBulkMode 대량 쿼리 또는 테이블에서 복사를 사용할 수 있습니다. 쿼리 문을 대량 복사하는 데 사용되는 IBCPSession2::BCPSetBulkMode는 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`를 호출하여 쿼리 문을 지정하기 전에 호출해야 합니다.  
   
  단일 명령 텍스트에서 RPC 호출 구문을 일괄 처리 쿼리 구문(예:`{rpc func};SELECT * from Tbl`)과 결합하지 마십시오.  이렇게 하면 오류를 반환 하 고 메타 데이터를 검색할 수 없도록 하려면 icommandprepare:: Prepare 합니다. 단일 명령 텍스트에서 저장 프로시저 실행 및 일괄 처리 쿼리를 결합해야 할 경우 ODBC CALL 구문(예:`{call func}; SELECT * from Tbl`)을 사용합니다.  
   
@@ -88,7 +88,7 @@ HRESULT BCPSetBulkMode (
   
  Ibcpsession:: Bcpcontrol 사용 하 여 호출할 수 없습니다 **BCP_OPTION_TEXTFILE** 및 IBCPSession2::BCPSetBulkMode 합니다.  
   
- Ibcpsession:: Bcpcolfmt, ibcpsession:: Bcpcontrol, 및 ibcpsession:: Bcpreadfmt를 포함 하는 함수 호출의 시퀀스를 사용 하 여 IBCPSession2::BCPSetBulkMode를 호출 하려고 하면 함수 호출 중 하나는 시퀀스 오류 실패를 반환 합니다. 오류를 해결 하려는 경우 설정을 다시 설정 하 고 다시 시작 하려면 ibcpsession:: Bcpinit를 호출 합니다.  
+ Ibcpsession:: Bcpcolfmt, ibcpsession:: Bcpcontrol, 및 ibcpsession:: Bcpreadfmt를 포함 하는 함수 호출의 시퀀스를 사용 하 여 IBCPSession2::BCPSetBulkMode를 호출 하려고 하면 함수 호출 중 하나는 시퀀스 오류 실패를 반환 합니다. 이러한 오류를 해결하도록 선택하는 경우 IBCPSession::BCPInit를 호출하여 설정을 재설정하고 다시 시작합니다.  
   
  함수 시퀀스 오류가 발생 하는 함수 호출의 몇 가지 예는 다음과 같습니다.  
   

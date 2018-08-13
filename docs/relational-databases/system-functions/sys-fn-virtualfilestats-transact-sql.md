@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualfilestats (Transact SQL) | Microsoft Docs
+title: sys.fn_virtualfilestats (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 396eee771ece7036906d1ef8e09cc69c1ab2c1da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 897c50ffd93d3d01f04b0f2c87497b3f2e3142b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238271"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542893"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  로그 파일을 포함하여 데이터베이스 파일의 I/O 통계를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 정보를 확인할 수도 [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 동적 관리 뷰.  
+  로그 파일을 포함하여 데이터베이스 파일의 I/O 통계를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 정보는에서 구할 수도 [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 동적 관리 뷰.  
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
  데이터베이스의 ID입니다. *database_id*는 **int**이며 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다.  
   
  *file_id* | NULL  
- 파일 ID입니다. *file_id* 은 **int**, 기본값은 없습니다. 데이터베이스의 모든 파일에 대한 정보를 반환하려면 NULL을 지정하십시오.  
+ 파일 ID입니다. *file_id* 는 **int**, 기본값은 없음입니다. 데이터베이스의 모든 파일에 대한 정보를 반환하려면 NULL을 지정하십시오.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -60,21 +60,21 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|데이터베이스 ID입니다.|  
 |**FileId**|**smallint**|파일의 ID입니다.|  
-|**TimeStamp**|**bigint**|데이터를 사용한 시점의 데이터베이스 타임스탬프입니다. **int** 이전 버전의 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]합니다. |  
+|**TimeStamp**|**bigint**|데이터를 사용한 시점의 데이터베이스 타임스탬프입니다. **int** 이전 버전의 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |**NumberReads**|**bigint**|파일에 대해 읽기가 실행된 횟수입니다.|  
 |**BytesRead**|**bigint**|파일에 대해 실행된 읽기의 바이트 수입니다.|  
 |**IoStallReadMS**|**bigint**|사용자가 파일에 대한 읽기 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
 |**NumberWrites**|**bigint**|파일에 대해 쓰기가 실행된 횟수입니다.|  
 |**BytesWritten**|**bigint**|파일에 대해 실행된 쓰기의 바이트 수입니다.|  
 |**IoStallWriteMS**|**bigint**|사용자가 파일에 대한 쓰기 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
-|**IoStallMS**|**bigint**|총 **IoStallReadMS** 및 **IoStallWriteMS**합니다.|  
+|**IoStallMS**|**bigint**|합계 **IoStallReadMS** 및 **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|파일 핸들의 값입니다.|  
-|**BytesOnDisk**|**bigint**|디스크에 있는 파일의 실제 크기(바이트)입니다.<br /><br /> 데이터베이스 파일에 대해 동일한 값으로 이것이 **크기** 에 **sys.database_files**, 하지만 페이지가 아닌 바이트 단위로 표시 됩니다.<br /><br /> 데이터베이스 스냅숏 스파스 파일의 경우 이 값은 운영 체제에서 파일에 사용 중인 공간입니다.|  
+|**BytesOnDisk**|**bigint**|디스크에 있는 파일의 실제 크기(바이트)입니다.<br /><br /> 이것은 같은 값으로 데이터베이스 파일에 대 한 **크기** 에서 **sys.database_files**, 페이지 대신 바이트 단위로 하지만.<br /><br /> 데이터베이스 스냅숏 스파스 파일의 경우 이 값은 운영 체제에서 파일에 사용 중인 공간입니다.|  
   
-## <a name="remarks"></a>주의  
- **fn_virtualfilestats** 는 I/o의 총 수와 같은 통계 정보를 제공 하는 테이블 반환 함수는 파일에 수행 하는 시스템입니다. 이 함수는 사용자가 파일에 읽기/쓰기를 수행할 때 대기해야 하는 시간의 길이를 추적하는 데 사용됩니다. I/O 작업이 빈번하게 이루어지는 파일을 식별하는 데 사용되기도 합니다.  
+## <a name="remarks"></a>Remarks  
+ **fn_virtualfilestats** 파일에서 수행 된 I/o의 총 수 등의 통계 정보를 제공 하는 테이블 반환 함수는 시스템입니다. 이 함수는 사용자가 파일에 읽기/쓰기를 수행할 때 대기해야 하는 시간의 길이를 추적하는 데 사용됩니다. I/O 작업이 빈번하게 이루어지는 파일을 식별하는 데 사용되기도 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -106,8 +106,8 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DB_ID &#40;Transact SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [DB_ID &#40;SQL 트랜잭션&#41;](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX&#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

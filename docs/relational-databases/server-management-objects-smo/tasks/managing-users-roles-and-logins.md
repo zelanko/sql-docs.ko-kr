@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a803aa9d6443c8aa62d7ebca7d7ac5bd3abf990e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 88a4f4dde19dacc2dd5f28c0e3e0e67d49d23f76
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061811"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532473"
 ---
 # <a name="managing-users-roles-and-logins"></a>사용자, 역할 및 로그인 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

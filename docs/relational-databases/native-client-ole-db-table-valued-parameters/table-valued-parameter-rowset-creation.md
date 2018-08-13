@@ -16,13 +16,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6932538ac699d4a8c1e0dbb5d2cbef93a29511df
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 097b3e5c09a243952e0fd0562d54a73a4f00c561
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432362"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535333"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>테이블 반환 매개 변수 행 집합 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "37432362"
 ## <a name="static-scenario"></a>정적 시나리오  
  형식 정보를 알 경우 소비자 ITableDefinitionWithConstraints::CreateTableWithConstraints을 사용 하 여 테이블 반환 매개 변수에 해당 하는 테이블 반환 매개 변수 행 집합 개체를 인스턴스화합니다.  
   
- 합니다 *guid* 필드 (*pTableID* 매개 변수)는 특별 한 GUID (CLSID_ROWSET_TVP)를 포함 합니다. 합니다 *pwszName* 멤버는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름을 포함 합니다. 합니다 *eKind* 필드는 DBKIND_GUID_NAME로 설정 됩니다. 이 이름은 문이 임시 SQL일 때 필요하며 문이 프로시저 호출일 때는 선택 사항입니다.  
+ 합니다 *guid* 필드 (*pTableID* 매개 변수)는 특별 한 GUID (CLSID_ROWSET_TVP)를 포함 합니다. *pwszName* 멤버에는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름이 포함되어 있습니다. *eKind* 필드는 DBKIND_GUID_NAME으로 설정됩니다. 이 이름은 문이 임시 SQL일 때 필요하며 문이 프로시저 호출일 때는 선택 사항입니다.  
   
  집계에 대 한 소비자 전달 합니다 *pUnkOuter* controlling IUnknown 사용 하 여 매개 변수입니다.  
   
  테이블 반환 매개 변수 행 집합 개체 속성은 읽기 전용 이므로 소비자 모든 속성을 설정 하려면 필요 하지 않습니다 *rgPropertySets*합니다.  
   
- 에 대 한 합니다 *rgPropertySets* DBCOLUMNDESC 구조의 각 소비자는 멤버는 각 열에 대 한 추가 속성을 지정할 수 있습니다. 이러한 속성은 DBPROPSET_SQLSERVERCOLUMN 속성 집합에 속하며 각 열에 대해 계산된 설정과 기본 설정을 지정할 수 있도록 해 줍니다. 또한 Null 허용 여부나 ID 같은 기존 열 속성도 지원합니다.  
+ 각 DBCOLUMNDESC 구조의 *rgPropertySets* 멤버에 대해 소비자는 각 열의 추가 속성을 지정할 수 있습니다. 이러한 속성은 DBPROPSET_SQLSERVERCOLUMN 속성 집합에 속하며 각 열에 대해 계산된 설정과 기본 설정을 지정할 수 있도록 해 줍니다. 또한 Null 허용 여부나 ID 같은 기존 열 속성도 지원합니다.  
   
- 소비자는 테이블 반환 매개 변수 행 집합 개체에서 해당 정보를 검색할 irowsetinfo:: Getproperties를 사용 합니다.  
+ 소비자는 테이블 반환 매개 변수 행 집합 개체에서 해당 정보를 검색하기 위해 IRowsetInfo::GetProperties를 사용합니다.  
   
  계산 열, null, 고유에 대 한 정보를 검색 하 고 각 열의 상태를 업데이트 하려면 소비자 icolumnsrowset:: Getcolumnsrowset 또는 icolumnsinfo:: Getcolumninfo를 사용 합니다. 이러한 메서드는 각 테이블 반환 매개 변수 행 집합 열에 대해 자세한 정보를 제공합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "37432362"
  합니다 *pTableID* 하 고 *pUnkOuter* 정적 시나리오와 같이 매개 변수를 설정 해야 합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음 서버에서 형식 정보 (열 정보 및 제약 조건)을 가져옵니다 및 통해 테이블 반환 매개 변수 행 집합 개체를 반환 합니다 *ppRowset* 매개 변수입니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [테이블 반환 매개 변수&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

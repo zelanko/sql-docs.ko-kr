@@ -19,13 +19,13 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c4dce3d855aeccf96ce255a7cbd9903040b774b2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4cf70e0bd0115eee465b54c58c43740795406f16
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419352"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537063"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "37419352"
 > [!NOTE]  
 >  큰 값 데이터 형식은 1-8KB의 최대 크기를 가질 수 있거나 무제한으로 지정될 수 있습니다.  
   
- 이전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 등의 데이터 형식은 **텍스트**를 **ntext** 하 고 **이미지** 이러한 길이 도달할 수 있습니다. **max** 지정자 **varchar**를 **nvarchar** 및 **varbinary** 인해 이러한 데이터 형식은 중복입니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 및 ODBC 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  OLE  DB  공급자의 DBCOLUMNFLAGS_ISLONG  플래그와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  ODBC  드라이버의 SQL_LONGVARCHAR는 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
+ 이전에는 **text**, **ntext** 및 **image**와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **max** 지정자 **varchar**를 **nvarchar** 및 **varbinary** 인해 이러한 데이터 형식은 중복입니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 및 ODBC 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  OLE  DB  공급자의 DBCOLUMNFLAGS_ISLONG  플래그와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native  Client  ODBC  드라이버의 SQL_LONGVARCHAR는 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
   
 > [!NOTE]  
->  지정할 수도 있습니다 **varchar (max)** 하십시오 **nvarchar (max)**, 및 **varbinary (max)** 데이터 형식을 저장 프로시저, 함수 입력 및 출력 매개 변수 형식으로 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수입니다.  
+>  저장 프로시저, 함수 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 지정할 수도 있습니다.  
   
 > [!NOTE]  
 >  데이터를 복제 하는 경우 구성 해야 할 수는 [max text repl size 서버 구성 옵션](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) -1입니다.  
@@ -47,13 +47,13 @@ ms.locfileid: "37419352"
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
  합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **varchar (max)** 를 **varbinary (max)**, 및 **nvarchar (max)** DBTYPE_STR, DBTYPE_BYTES, 형식 및 DBTYPE_WSTR 각각.  
   
- 데이터 형식 **varchar (max)** 를 **varbinary (max)**, 및 **nvarchar (max)** 열에는 **max** 크기가 무제한으로 설정 됩니다 열 데이터 형식을 반환 하는 인터페이스 및 핵심 OLE DB 스키마 행 집합을 통해 ISLONG으로 표시 됩니다.  
+ **max** 크기가 무제한으로 설정된 열의 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
   
- 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로 바인딩 수 있도록 변경 되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정 하는 경우 설정 *pObject* null 이면 공급자가 반환 하는 **ISequentialStream** 소비자 스트리밍할 수 있도록 인터페이스를 소비자 **varchar ( max)** 하십시오 **nvarchar (max)**, 또는 **varbinary (max)** 출력 변수에서 데이터를 합니다.  
+ 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
   
- 스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 응용 프로그램이 다음 결과 호출 하 여 집합으로 이동 하려고 **imultipleresults:: Getresult** 모든 반환 된 출력 매개 변수 값을 사용 하지 않고 DB_E_OBJECTOPEN이 반환 됩니다.  
+ 스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 응용 프로그램이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
   
- 스트리밍을 지원 하기 위해는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 순차적으로 액세스 하는 가변 길이 매개 변수가 필요 합니다. 즉, DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정 해야 한다고 때마다 **varchar (max)** 하십시오 **nvarchchar(max)**, 또는  **varbinary (max)** 열 또는 출력 매개 변수는 DBTYPE_IUNKNOWN에 바인딩됩니다. 에 대 한 호출 **irowset:: Getdata** 이 액세스 순서 제한을 준수 하지 않는다고 판단 하는 경우 DBSTATUS_E_UNAVAILABLE 못합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
+ 스트리밍을 지원 하기 위해는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 순차적으로 액세스 하는 가변 길이 매개 변수가 필요 합니다. 즉, **varchar(max)**, **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자도 저장된 프로시저를 DBTYPE_IUNKNOWN으로 노출 되는 반환 값으로 큰 값 형식을 반환 하는 위치 하는 시나리오를 용이 하 게 큰 값 데이터 형식에 대해 DBTYPE_IUNKNOWN으로 바인딩 출력 매개 변수를 지원 클라이언트입니다.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "37419352"
   
 -   2000에 대 한 예를 들어 되는 정의 된 최대 크기는 **varchar (** 2000 **)** 열 또는  
   
--   값 "무제한"의 경우에 한 **varchar (max)** 열 같음 ~ 0입니다. 이 값은 DBCOLUMN_COLUMNSIZE 메타데이터 속성에 대해 설정됩니다.  
+-   값 "무제한". **varchar(max)** 열의 경우 0과 같습니다. 이 값은 DBCOLUMN_COLUMNSIZE 메타데이터 속성에 대해 설정됩니다.  
   
- 에 표준 변환 규칙이 적용 됩니다는 **varchar (max)** 모든 변환은 유효한 열을 **varchar (** 2000 **)** 열에 대 한 유효한 수도 **varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 하 고 **varbinary (max)** 열입니다.  
+ 표준 변환 규칙이 **varchar(max)** 열에 적용되므로 **varchar(** 2000 **)** 열에 유효한 모든 변환은 **varchar(max)** 열에도 유효합니다. **nvarchar(max)** 및 **varbinary(max)** 열의 경우도 마찬가지입니다.  
   
  큰 값 형식을 검색할 때 가장 효과적인 방법은 DBTYPE_IUNKNOWN으로 바인딩하고 행 집합 속성 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS로 설정하는 것입니다. 이렇게 하면 다음 예와 같이 값이 중간 버퍼링 없이 네트워크에서 직접 스트리밍됩니다.  
   
@@ -704,7 +704,7 @@ _ExitProcessResultSet:
   
 -   값 "무제한"의 경우에 한 **varchar (max)** 열에는 0과 같습니다.  
   
- 에 표준 변환 규칙이 적용을 **varchar (max)** 모든 변환은 유효한 열을 **varchar (** 2000 **)** 열을 적합도됩니다**varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 하 고 **varbinary (max)** 열입니다.  
+ 에 표준 변환 규칙이 적용을 **varchar (max)** 모든 변환은 유효한 열을 **varchar (** 2000 **)** 열을 적합도됩니다**varchar (max)** 열입니다. **nvarchar(max)** 및 **varbinary(max)** 열의 경우도 마찬가지입니다.  
   
  다음은 큰 값 데이터 형식 작업을 위해 향상된 ODBC  API  함수 목록입니다.  
   

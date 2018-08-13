@@ -1,5 +1,5 @@
 ---
-title: .NET 환경에서 SQLXML 대량 로드를 사용 하 여 | Microsoft Docs
+title: .NET 환경에서 SQLXML 대량 로드를 사용 하 여 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 270abbb40bdf6081b7409cf76a97925a1cd2b3d2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 67ce0f1aac25fa35abccc62b7a11542d1134f0d6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053741"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544513"
 ---
-# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0.NET Framework 지원-대량 로드 사용
+# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 지원 - 대량 로드 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 .NET 환경에서 XML 대량 로드 기능을 사용하는 방법에 대해 설명합니다. XML 대량 로드에 대 한 자세한 내용은 [XML 데이터의 대량 로드 수행 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: bcp_setbulkmode | Microsoft Docs
+title: bcp_setbulkmode | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f60428506e4581cbb04bee8522748aba38d2716b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0b114ef8b2e52b060f30c5537fb9dc83ffb136d4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432712"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541843"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

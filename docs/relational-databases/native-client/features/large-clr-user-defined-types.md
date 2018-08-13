@@ -13,13 +13,13 @@ ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d008d4976f72ca4b2c802ffa5df4c1d1702f02e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0e8c84adbd2aa8b9e44df4745373e42bd2806061
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415432"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539393"
 ---
 # <a name="large-clr-user-defined-types"></a>큰 CLR 사용자 정의 형식
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37415432"
 ## <a name="use-cases"></a>사용 사례  
  ODBC의 경우 UDT 값을 실행 시 데이터 매개 변수로 조각으로 나누어 보낼 수 있는 기능이 큰 UDT에 대한 지원에 포함되었습니다. SQLPutData를 사용 하 여 이렇게 합니다.  
   
- 큰 Udt에 대 한 OLE DB 지원에 대 한 ISequentialStream 바인딩을 사용 하 여 스트림 UDT 값을 서버에는 기능을 포함 합니다.  
+ OLE DB의 경우 ISequentialStream 바인딩을 통해 UDT 값을 서버로 스트리밍하거나 서버에서 스트리밍하는 기능이 큰 UDT에 대한 지원에 포함되었습니다.  
   
  8,000바이트보다 작거나 같은 UDT는 SQL Server 2005에서와 동일하게 처리됩니다. OLE db의 ISequentialStream 바인딩을 사용 하 여 작은 Udt를 계속 스트리밍할 수 있습니다.  
   

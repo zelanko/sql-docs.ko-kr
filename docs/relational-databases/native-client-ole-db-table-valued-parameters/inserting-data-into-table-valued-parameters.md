@@ -16,25 +16,25 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da365c8b6e087f75c15cd406bfffcb3512f728b6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 14ad378ab6d4f80cf416e78ab8cd9bc89b62a32c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408024"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532693"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>테이블 반환 매개 변수에 데이터 삽입
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 테이블 반환 매개 변수 행에 대 한 데이터를 지정 하는 두 가지 모델을 지원 합니다: 밀어넣기 모델과 끌어오기 모델입니다. 끌어오기 모델을 보여 주는 샘플은 사용할 수 있습니다. 참조 [SQL Server 데이터 프로그래밍 예제](http://msftdpprodsamples.codeplex.com/)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 테이블 반환 매개 변수 행에 대 한 데이터를 지정 하는 두 가지 모델을 지원 합니다: 밀어넣기 모델과 끌어오기 모델입니다. 끌어오기 모델을 보여 주는 예제를 사용할 수 있습니다. [SQL Server 데이터 프로그래밍 예제](http://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
 > [!NOTE]  
 >  테이블 반환 매개 변수 열은 모든 행에 기본값이 아닌 값이 있거나 모든 행에 기본값이 있어야 합니다. 일부 행에만 기본값이 있으면 안 됩니다. 따라서 테이블 반환 매개 변수 바인딩에서 테이블 반환 매개 변수 행 집합 열 데이터에는 DBSTATUS_S_ISNULL 및 DBSTATUS_S_OK 상태 값만 사용할 수 있습니다. DBSTATUS_S_DEFAULT를 사용하면 오류가 발생하며 바인딩 상태 값은 DBSTATUS_E_BADSTATUS로 설정됩니다.  
   
 ## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>밀어넣기 모델(모든 테이블 반환 매개 변수 데이터를 메모리에 로드)  
- 밀어넣기 모델 매개 변수 집합 (즉, DBPARAMS 매개 변수 icommand:: Execute)를 사용 하는 것과 비슷합니다. 밀어넣기 모델 테이블 반환 매개 변수 행 집합 개체는 IRowset 인터페이스를 구현 하는 사용자 지정되지 없이 사용 하는 경우에 사용 됩니다. 밀어넣기 모델은 테이블 반환 매개 변수 행 집합의 행 수가 적어 응용 프로그램에 과도한 메모리 부담을 주지 않는 경우에만 사용하는 것이 좋습니다. 이 모델은 현재 일반적인 OLE DB 응용 프로그램에서 흔히 사용되는 기능 이외의 기능은 소비자 응용 프로그램에 요구하지 않기 때문에 끌어오기 모델보다 간단합니다.  
+ 밀어넣기 모델은 매개 변수 집합(ICommand::Execute의 DBPARAMS 매개 변수)을 사용하는 것과 비슷합니다. 테이블 반환 매개 변수 행 집합 개체가 IRowset 인터페이스의 사용자 지정된 구현 없이 사용되는 경우에만 밀어넣기 모델이 사용됩니다. 밀어넣기 모델은 테이블 반환 매개 변수 행 집합의 행 수가 적어 응용 프로그램에 과도한 메모리 부담을 주지 않는 경우에만 사용하는 것이 좋습니다. 이 모델은 현재 일반적인 OLE DB 응용 프로그램에서 흔히 사용되는 기능 이외의 기능은 소비자 응용 프로그램에 요구하지 않기 때문에 끌어오기 모델보다 간단합니다.  
   
  소비자는 명령을 실행하기 전에 모든 테이블 반환 매개 변수 데이터를 공급자에게 제공해야 합니다. 데이터를 제공하기 위해 소비자는 각 테이블 반환 매개 변수의 테이블 반환 매개 변수 행 집합 개체를 채웁니다. 테이블 반환 매개 변수 행 집합 개체는 행 집합 삽입, 설정 및 삭제 작업을 제공하며, 소비자는 이를 사용하여 테이블 반환 매개 변수 데이터를 조작합니다. 공급자는 실행 시에 이 테이블 반환 매개 변수 행 집합 개체에서 데이터를 인출합니다.  
   
@@ -69,16 +69,16 @@ ms.locfileid: "37408024"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 소비자 행 집합 개체에서 한 번에 하나 이상의 행을 읽어 테이블 반환 매개 변수의 스트리밍 동작을 지원합니다. 예를 들어 사용자의 테이블 반환 매개 변수 행 집합 데이터가 메모리가 아닌 디스크에 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 해당 데이터를 요구하는 경우 사용자가 디스크에서 데이터를 읽는 기능을 구현할 수 있습니다.  
   
- 소비자는 해당 데이터 형식을 통신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 테이블 반환 매개 변수 행 집합 개체에서 iaccessor:: Createaccessor를 사용 하 여 합니다. 공급자는 소비자 버퍼에서 데이터를 읽을 때 최소한 하나의 접근자 핸들을 통해 쓰기 가능하고 기본 열이 아닌 모든 열을 사용할 수 있는지 확인하고, 해당 핸들을 사용하여 열 데이터를 읽습니다. 모호성을 피하기 위해에 테이블 반환 매개 변수 행 집합 열과 바인딩이 한 일 대응을 없어야 합니다. 동일한 열에 대한 중복 바인딩은 오류를 일으킵니다. 각 접근자 것으로 예상 되는 또한 합니다 *iOrdinal* 순서로 DBBindings의 멤버입니다. 행당 접근자 수로 irowset:: Getdata 호출 되 고 순서로 호출의 순서에 따라 달라 집니다 *iOrdinal* 더 낮은 값에서 값입니다.  
+ 소비자는 해당 데이터 형식을 통신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 테이블 반환 매개 변수 행 집합 개체에서 iaccessor:: Createaccessor를 사용 하 여 합니다. 공급자는 소비자 버퍼에서 데이터를 읽을 때 최소한 하나의 접근자 핸들을 통해 쓰기 가능하고 기본 열이 아닌 모든 열을 사용할 수 있는지 확인하고, 해당 핸들을 사용하여 열 데이터를 읽습니다. 모호성을 피하려면 테이블 반환 매개 변수 행 집합 열과 바인딩이 일 대 일로 대응해야 합니다. 동일한 열에 대한 중복 바인딩은 오류를 일으킵니다. 각 접근자 것으로 예상 되는 또한 합니다 *iOrdinal* 순서로 DBBindings의 멤버입니다. IRowset::GetData는 행당 접근자 수만큼 호출되며 *iOrdinal* 값을 기반으로 낮은 값에서 높은 값 순서로 호출됩니다.  
   
- 공급자는 테이블 반환 매개 변수 행 집합 개체에 의해 제공되는 인터페이스의 대부분을 구현해야 합니다. 소비자는 최소한의 인터페이스 (IRowset)를 사용 하 여 행 집합 개체를 구현 합니다. 무계획적인 집계로 인해 남은 필수 행 집합 개체 인터페이스는 테이블 반환 매개 변수 행 집합 개체에 의해 구현됩니다.  
+ 공급자는 테이블 반환 매개 변수 행 집합 개체에 의해 제공되는 인터페이스의 대부분을 구현해야 합니다. 소비자는 최소한의 인터페이스(IRowset)로 행 집합 개체를 구현합니다. 무계획적인 집계로 인해 남은 필수 행 집합 개체 인터페이스는 테이블 반환 매개 변수 행 집합 개체에 의해 구현됩니다.  
   
  OLE DB 공급자에 대해 가져온 행 집합 개체를 비롯한 다른 모든 행 집합 개체의 경우 소비자가 제공한 행 집합은 OLE DB 사양에 지정된 대로 모든 필수 행 집합 개체 인터페이스를 구현해야 합니다.  
   
  실행 시점에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 행 집합 개체를 호출하여 행을 인출하고 열 데이터를 읽습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [테이블 반환 매개 변수&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

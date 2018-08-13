@@ -1,5 +1,5 @@
 ---
-title: 다중 스레드 응용 프로그램 | Microsoft Docs
+title: 다중 스레드 응용 프로그램 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d557b9195e14f4546d8b003f52bebdb7f0c2065b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1752f8ceb437c0c5d896f6080f8800e114192d73
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419502"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544723"
 ---
-# <a name="creating-a-driver-application---multithreaded-applications"></a>드라이버 응용 프로그램-다중 스레드 응용 프로그램 만들기
+# <a name="creating-a-driver-application---multithreaded-applications"></a>드라이버 응용 프로그램 만들기 - 다중 스레드 응용 프로그램
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

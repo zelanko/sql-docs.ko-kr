@@ -19,13 +19,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6ee9528f9f1a85b0d23d6a5b3de23f50a63a85cf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015679"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540863"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 그래프 처리
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 실행 시 데이터 열 (ODBC)를 사용 하 여 | Microsoft Docs
+title: 실행 시 데이터 열 (ODBC)을 사용 하 여 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 44cef9b4cbb31d595d5ba5ce373be77ec9bb44a3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: de5ab482d9976c676f3edb46dd9d4320eb6fd75c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428692"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542593"
 ---
-# <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>사용 하 여 데이터 실행 시 열 text 및 image 열 관리
+# <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 열 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

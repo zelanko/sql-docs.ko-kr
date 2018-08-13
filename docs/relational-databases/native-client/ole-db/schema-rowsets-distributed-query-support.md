@@ -1,5 +1,5 @@
 ---
-title: 스키마 행 집합에서 분산 쿼리 지원 | Microsoft Docs
+title: 분산 된 스키마 행 집합의 쿼리 지원 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4787efa0905f0a54d70cf02af19328af13f70e6c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 21977b0a770cc3904aa352bb4a450699eca7c5a3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420992"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543953"
 ---
-# <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합-분산된 쿼리 지원
+# <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합 - 분산 쿼리 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리에서 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 **IDBSchemaRowset** 인터페이스 연결 된 서버에서 메타 데이터를 반환 합니다.  
+  지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 **IDBSchemaRowset** 연결 된 서버의 메타 데이터를 반환 하는 인터페이스.  
   
- DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 스키마 행 집합 출력을 카탈로그 별로 제한 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결 된 서버 및 카탈로그 이름이 포함 된 두 부분으로 이루어진 이름을 인식 합니다. 아래 표의 스키마 행 집합을 지정 하는 두 부분으로 구성 된 카탈로그 이름을 *linked_server ***.*** 카탈로그* 명명 된 연결 된 서버에 적용 가능한 카탈로그로 출력이 제한 합니다.  
+ DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 카탈로그에서 스키마 행 집합의 출력을 제한 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자에 연결 된 서버와 카탈로그 이름을 포함 하는 두 부분 이름을 인식 합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성된 카탈로그 이름을 *linked_server ***.*** catalog*로 지정하면 명명된 연결된 서버에 적용 가능한 카탈로그로 출력이 제한됩니다.  
   
 |스키마 행 집합|카탈로그 제한|  
 |-------------------|-------------------------|  
@@ -50,12 +50,12 @@ ms.locfileid: "37420992"
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  연결된 된 서버에서 모든 카탈로그 스키마 행 집합을 제한 하는 구문을 사용 하 여 *linked_server* (여기서 마침표 구분 기호는 이름 사양에 포함). 이 구문은 카탈로그 이름 제한에 NULL을 지정하는 것과 같으며 연결된 서버가 카탈로그를 지원하지 않는 데이터 원본을 나타내는 경우에도 사용됩니다.  
+>  스키마 행 집합을 연결된 서버의 모든 카탈로그로 제한하려면 구문 *linked_server*(여기서 마침표 구분 기호가 이름 사양에 포함됨)를 사용합니다. 이 구문은 카탈로그 이름 제한에 NULL을 지정하는 것과 같으며 연결된 서버가 카탈로그를 지원하지 않는 데이터 원본을 나타내는 경우에도 사용됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 정의 스키마 행 집합 LINKEDSERVERS를 연결 된 서버로 등록 된 OLE DB 데이터 원본 목록을 반환 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자는 LINKEDSERVERS를 연결 된 서버로 등록 된 OLE DB 데이터 원본 목록을 반환 합니다. 스키마 행 집합을 정의 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [스키마 행 집합 지원 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [스키마 행 집합 지원&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 행 집합 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

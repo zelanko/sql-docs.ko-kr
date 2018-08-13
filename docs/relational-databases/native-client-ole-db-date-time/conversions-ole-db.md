@@ -1,5 +1,5 @@
 ---
-title: 바인딩 및 변환 (OLE DB) | Microsoft Docs
+title: 바인딩 및 변환 (OLE DB) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,27 +19,27 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db9b2366a2bee749e9f23ee0dd91227a3b832647
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9102c41f51a23438cc1761dd12e3357dd304bb67
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945648"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542143"
 ---
-# <a name="conversions-ole-db"></a>변환 (OLE DB)
+# <a name="conversions-ole-db"></a>변환(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 섹션에서는 간을 변환 하는 방법을 설명 **datetime** 및 **datetimeoffset** 값입니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
+  이 섹션에서는 간에 변환 하는 방법 설명 **날짜/시간** 하 고 **datetimeoffset** 값입니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
   
  OLE DB에서 날짜와 시간에 대한 리터럴 및 문자열 형식은 일반적으로 ISO를 따르며 클라이언트 로캘에 종속되지 않습니다. 한 가지 예외는 OLE Automation이 표준인 DBTYPE_DATE이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 클라이언트와의 사이에 데이터가 전송되는 경우에만 형식을 변환하기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 응용 프로그램에 의해 강제로 DBTYPE_DATE와 문자열 형식 사이를 변환하는 경우는 없습니다. 이러한 경우를 제외하면 문자열에는 다음과 같은 형식이 사용됩니다. 여기서 대괄호 안의 텍스트는 선택적 요소를 나타냅니다.  
   
--   형식은 **datetime** 및 **datetimeoffset** 문자열:  
+-   형식은 **날짜/시간** 하 고 **datetimeoffset** 문자열:  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
--   형식은 **시간** 문자열:  
+-   **시간** 문자열의 형식은 다음과 같습니다.  
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
@@ -50,7 +50,7 @@ ms.locfileid: "32945648"
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 SQLOLEDB에서는 OLE 변환을 구현했으며 이 경우 표준 변환은 실패했습니다. 그 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 이상에서 수행하는 변환 중 일부는 OLE DB 사양과 다릅니다.  
   
- 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은의 "데이터 형식:: 문자열 및 리터럴" 섹션을 참조 하십시오. [OLE DB 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)합니다.  
+ 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은의 "데이터 형식:: 문자열 및 리터럴" 섹션을 참조 하세요 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)합니다.  
   
  일반적인 변환 규칙은 다음과 같습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "32945648"
  [서버에서 클라이언트로 수행되는 변환](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB를 사용하여 작성된 클라이언트 응용 프로그램 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -27,28 +27,28 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c058236cf8a9c106c622c65d3bde244004531270
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f52b1445523d13996f596dfa723d033cd3bde9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178689"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541463"
 ---
 # <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  사용 하 여 만든 열 암호화 키 (Cek)에 대 한 정보를 반환 된 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문. 각 행은 CEK를 나타냅니다.  
+  사용 하 여 만든 열 암호화 키 (Cek)에 대 한 정보를 반환 합니다 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문입니다. 각 행 CEK를 나타냅니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK의 이름입니다.|  
 |**column_encryption_key_id**|**int**|CEK의 ID입니다.|  
-|**create_date**|**datetime**|CEK 만들어진 날짜입니다.|  
+|**create_date**|**datetime**|CEK를 만든 날짜입니다.|  
 |**modify_date**|**datetime**|CEK를 마지막으로 수정한 날짜입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 필요는 **VIEW ANY COLUMN ENCRYPTION KEY** 권한.  
+ 필요 하면 **모든 열 암호화 키 보기** 권한.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   

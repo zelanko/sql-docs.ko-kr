@@ -1,5 +1,5 @@
 ---
-title: sp_recompile (TRANSACT-SQL) | Microsoft Docs
+title: sp_recompile (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246141"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544643"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>인수  
  [ @objname=] '*개체*'  
- 현재 데이터베이스에 있는 저장 프로시저, 트리거, 테이블, 뷰 또는 사용자 정의 함수의 정규화된 이름 또는 정규화되지 않은 이름입니다. *개체* 은 **nvarchar(776)**, 기본값은 없습니다. 경우 *개체* 는 저장된 프로시저, 트리거 또는 사용자 정의 함수, 저장된 프로시저, 트리거의 이름 또는 함수에서 다음에 실행할 때 다시 컴파일될 됩니다. 경우 *개체* 다음에 실행 되는 테이블 또는 뷰를 참조 하는 사용자 정의 함수는 다시 컴파일할 수 또는 테이블이 나 뷰의 모든 저장된 프로시저, 트리거의 이름입니다.  
+ 현재 데이터베이스에 있는 저장 프로시저, 트리거, 테이블, 뷰 또는 사용자 정의 함수의 정규화된 이름 또는 정규화되지 않은 이름입니다. *개체* 됩니다 **nvarchar(776)**, 기본값은 없습니다. 하는 경우 *개체* 함수를 실행 하는 다음에 다시 또는 저장 프로시저, 트리거 또는 사용자 정의 함수, 저장된 프로시저, 트리거 이름입니다. 하는 경우 *개체* 테이블 또는 뷰를 참조 하는 사용자 정의 함수를 실행 하는 다음에 다시 또는 테이블이 나 뷰의 모든 저장된 프로시저, 트리거 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_recompile은 현재 데이터베이스에서만 개체를 찾습니다.  
   
  저장 프로시저 또는 트리거 및 사용자 정의 함수에 사용되는 쿼리는 컴파일되는 경우에만 최적화됩니다. 데이터베이스에 통계에 영향을 주는 인덱스 또는 다른 변경 내용이 생기면 데이터베이스, 컴파일된 저장 프로시저, 트리거 및 사용자 정의 함수가 효율성을 잃을 수도 있습니다. 테이블에서 사용되는 저장 프로시저 및 트리거를 다시 컴파일하면 쿼리를 다시 최적화할 수 있습니다.  
@@ -59,7 +59,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 저장 프로시저, 트리거 및 사용자 정의 함수를 다시 컴파일하는 편이 좋은 경우 그렇게 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정된 개체에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -72,7 +72,7 @@ EXEC sp_recompile N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

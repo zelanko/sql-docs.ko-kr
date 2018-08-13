@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 90b98b23bff869b0fbf0498669d389a7d834a84d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426225"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539683"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,15 +71,15 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|모두|**datetime**|  
 |**SQLBITN**|모두|**bit-null**|  
 |**SQLBIT**|모두|**bit**|  
-|**SQLBIGCHAR**|아니요|**char**|  
-|**SQLCHARACTER**|아니요|**char**|  
-|**SQLBIGVARCHAR**|아니요|**varchar**|  
-|**SQLVARCHAR**|아니요|**varchar**|  
+|**SQLBIGCHAR**|아니오|**char**|  
+|**SQLCHARACTER**|아니오|**char**|  
+|**SQLBIGVARCHAR**|아니오|**varchar**|  
+|**SQLVARCHAR**|아니오|**varchar**|  
 |**SQLTEXT**|모두|**text**|  
-|**SQLBIGBINARY**|아니요|**binary**|  
-|**SQLBINARY**|아니요|**이진**|  
-|**SQLBIGVARBINARY**|아니요|**Varbinary**|  
-|**SQLVARBINARY**|아니요|**Varbinary**|  
+|**SQLBIGBINARY**|아니오|**binary**|  
+|**SQLBINARY**|아니오|**이진**|  
+|**SQLBIGVARBINARY**|아니오|**Varbinary**|  
+|**SQLVARBINARY**|아니오|**Varbinary**|  
 |**SQLIMAGE**|모두|**이미지**|  
 |**SQLINTN**|모두|**int-null**|  
 |**SQLDATETIMN**|모두|**datetime-null**|  
@@ -91,26 +91,26 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|모두|**Min**|  
 |**SQLAOPMAX**|모두|**Max**|  
 |**SQLDATETIM4**|모두|**smalldatetime**|  
-|**SQLMONEY4**|모두|**Smallmoney**|  
+|**SQLMONEY4**|모두|**smallmoney**|  
 |**SQLFLT4**|모두|**실제**|  
 |**SQLUNIQUEID**|모두|**uniqueidentifier**|  
-|**SQLNCHAR**|아니요|**Nchar**|  
-|**SQLNVARCHAR**|아니요|**Nvarchar**|  
-|**SQLNTEXT**|모두|**Ntext**|  
+|**SQLNCHAR**|아니오|**Nchar**|  
+|**SQLNVARCHAR**|아니오|**Nvarchar**|  
+|**SQLNTEXT**|모두|**ntext**|  
 |**SQLVARIANT**|모두|**sql_variant**|  
 |**SQLINT8**|모두|**Bigint**|  
-|**SQLCHARACTER**|예|**varchar(max)**|  
-|**SQLBIGCHAR**|예|**varchar(max)**|  
-|**SQLBIGVARCHAR**|예|**varchar(max)**|  
-|**SQLVARCHAR**|예|**varchar(max)**|  
-|**SQLBINARY**|예|**varbinary(max)**|  
-|**SQLBIGBINARY**|예|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|예|**varbinary(max)**|  
-|**SQLVARBINARY**|예|**varbinary(max)**|  
-|**SQLNCHAR**|예|**nvarchar(max)**|  
-|**SQLNVARCHAR**|예|**nvarchar(max)**|  
-|**SQLXML**|예|**Xml**|  
-|**SQLUDT**|모두|**Udt**|  
+|**SQLCHARACTER**|사용자 계정 컨트롤|**varchar(max)**|  
+|**SQLBIGCHAR**|사용자 계정 컨트롤|**varchar(max)**|  
+|**SQLBIGVARCHAR**|사용자 계정 컨트롤|**varchar(max)**|  
+|**SQLVARCHAR**|사용자 계정 컨트롤|**varchar(max)**|  
+|**SQLBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
+|**SQLBIGBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
+|**SQLVARBINARY**|사용자 계정 컨트롤|**varbinary(max)**|  
+|**SQLNCHAR**|사용자 계정 컨트롤|**nvarchar(max)**|  
+|**SQLNVARCHAR**|사용자 계정 컨트롤|**nvarchar(max)**|  
+|**SQLXML**|사용자 계정 컨트롤|**Xml**|  
+|**SQLUDT**|모두|**udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
  날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  

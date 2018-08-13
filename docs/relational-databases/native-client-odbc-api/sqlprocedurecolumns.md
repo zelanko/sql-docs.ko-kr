@@ -1,5 +1,5 @@
 ---
-title: SQLProcedureColumns | Microsoft Docs
+title: SQLProcedureColumns | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,25 +17,25 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b30247476b357c94bfdf2d672214fc3a730bcfc4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 10f643dd1803cfd41ab132e3fdf1dabadcc87afb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407492"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542623"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLProcedureColumns** 모든 반환 값 특성을 보고 하는 하나의 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저입니다.  
+  **SQLProcedureColumns** 모든 반환 값 특성을 보고 한 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를.  
   
- **SQLProcedureColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 *CatalogName*를 *SchemaName*를 *ProcName*, 또는  *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
+ **SQLProcedureColumns** 값에 대 한 존재 여부 SQL_SUCCESS 반환 *카탈로그 이름*, *SchemaName*, *ProcName*, 또는 * ColumnName* 매개 변수입니다. **SQLFetch** 잘못 된 값은이 매개 변수에서 사용 하는 경우 SQL_NO_DATA를 반환 합니다.  
   
- **SQLProcedureColumns** 는 정적 서버 커서에 대해 실행할 수 있습니다. 실행 하려고 **SQLProcedureColumns** 업데이트 가능한 (동적 또는 키 집합) 커서에서 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  
+ **SQLProcedureColumns** 정적 서버 커서에서 실행할 수 있습니다. 실행 하려고 **SQLProcedureColumns** (동적 또는 키 집합) 업데이트 가능한 커서에서 커서 유형이 변경 되었음을 나타내는 SQL_SUCCESS_WITH_INFO를 반환 합니다.  
   
- 다음 표에서 결과 집합을 처리 하도록 확장 된 방법에서 반환 된 열을 나열 합니다 **udt** 및 **xml** 데이터 형식을 통해는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버:  
+ 다음 표에서 결과 집합을 처리 하기 위해 확장 된 방법에 의해 반환 되는 열은 **udt** 및 **xml** 데이터 형식을 통해의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버:  
   
 |열 이름|Description|  
 |-----------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "37407492"
 |SS_XML_SCHEMACOLLECTION_NAME|XML 스키마 컬렉션의 이름을 반환합니다. 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns와 테이블 반환 매개 변수  
- SQLProcedureColumns는 CLR 사용자 정의 형식으로 유사한 방식으로 테이블 반환 매개 변수를 처리합니다. 테이블 반환 매개 변수에 대해 반환되는 행의 열은 다음과 같은 값을 갖습니다.  
+ CLR 사용자 정의 형식에도 유사한 방법으로 테이블 반환 매개 변수를 처리 하는 SQLProcedureColumns. 테이블 반환 매개 변수에 대해 반환되는 행의 열은 다음과 같은 값을 갖습니다.  
   
 |열 이름|설명/값|  
 |-----------------|------------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "37407492"
  자세한 내용은 참조 하세요. [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLProcedureColumns 지원  
- **SQLProcedureColumns** 큰 CLR 사용자 정의 형식 (Udt)를 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
+ **SQLProcedureColumns** 큰 CLR 사용자 정의 형식 (Udt)을 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLProcedureColumns 함수](http://go.microsoft.com/fwlink/?LinkId=59363)   

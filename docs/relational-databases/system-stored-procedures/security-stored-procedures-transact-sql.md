@@ -1,5 +1,5 @@
 ---
-title: 보안 저장 프로시저 (Transact SQL) | Microsoft Docs
+title: 보안 저장 프로시저 (거래 SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ae3eb8d4d0c88f4065f82536cc3a6b00bb51fb0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d4d0ec605c9cc1df08384cc8c2a95aa3cec25587
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239743"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541793"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>보안 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 시스템 보안을 관리 하는 데 사용 되는 프로시저를 저장 합니다. 이러한 저장된 프로시저 중 일부는 사용 되지 않지만 이전 버전과 호환성을 지원 하기 위해 사용할 수 있도록 계속 합니다. 사용되지 않는 프로시저에 대한 항목에는 대신 사용 가능한 프로시저가 나와 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 시스템 저장 프로시저 보안을 관리 하는 데 사용 되는. 이러한 저장된 프로시저 중 일부는 사용 되지 않지만 이전 버전과 호환성을 지원 하기 위해 사용할 수 있습니다. 사용되지 않는 프로시저에 대한 항목에는 대신 사용 가능한 프로시저가 나와 있습니다.  
 
 |||  
 |-|-|  
@@ -72,7 +72,7 @@ ms.locfileid: "33239743"
 
  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 커서 행 집합 크기 | Microsoft Docs
+title: 커서 행 집합 크기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d03701d162e38ba0bd06c82cb3a29a00d87ed0c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4e812938bdb8f38008f61bd43339dc694564fdf9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408692"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541633"
 ---
 # <a name="cursor-rowset-size"></a>커서 행 집합 크기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  ODBC 커서는 한 번에 한 행씩만 인출하도록 제한되지 않습니다. 각 호출에서 여러 행을 검색할 수 있습니다 **SQLFetch** 하거나 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)합니다. Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 클라이언트/서버 데이터베이스 작업을 할 때는 한 번에 여러 행을 인출하는 것이 효율적입니다. 인출 시 반환 된 행 수가 행 집합 크기 라고 하며의 SQL_ATTR_ROW_ARRAY_SIZE를 사용 하 여 지정 된 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)합니다.  
+  ODBC 커서는 한 번에 한 행씩만 인출하도록 제한되지 않습니다. 호출할 때마다 여러 행을 검색할 수 있습니다 **SQLFetch** 또는 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 클라이언트/서버 데이터베이스 작업을 할 때는 한 번에 여러 행을 인출하는 것이 효율적입니다. Fetch에서 반환 된 행 수가 행 집합 크기 라고 하 고의 SQL_ATTR_ROW_ARRAY_SIZE를 사용 하 여 지정 된 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
 ```  
 SQLUINTEGER uwRowsize;  
@@ -49,11 +49,11 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      행의 모든 열에 대한 데이터와 표시기가 포함된 구조를 사용하여 배열이 작성됩니다. 배열의 구조 수는 행 집합 크기와 같습니다.  
   
- 열 단위 또는 행 단위 바인딩을 사용 하는 경우, 각 호출 **SQLFetch** 하거나 **SQLFetchScroll** 바인딩된 배열이 검색 된 행 집합의 데이터로 채웁니다.  
+ 열 단위 또는 행 단위 바인딩을 사용 하는 경우, 각 호출에 **SQLFetch** 또는 **SQLFetchScroll** 에서 검색 된 행 집합 데이터 바인딩된 배열을 채웁니다.  
   
- [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) 블록 커서에서 열 데이터 검색을 사용할 수도 있습니다. 때문에 **SQLGetData** 한 번에 하나의 행을 작동 **SQLSetPos** 호출 하기 전에 현재 행으로 행 집합의 특정 행을 설정 하려면 호출 해야 **SQLGetData**합니다.  
+ [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) 블록 커서에서 데이터 열을 검색 하는 데 사용할 수도 있습니다. 때문에 **SQLGetData** 한 번에 한 행씩 작업 **SQLSetPos** 호출 호출 하기 전에 현재 행을 행 집합의 특정 행을 설정 하 여 **SQLGetData**.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 행 집합을 사용 하 여 전체 결과 집합을 신속 하 게 검색 하는 최적화를 제공 합니다. 이 최적화를 사용 하려면 커서 특성을 기본값으로 설정 (읽기 전용, 정방향 전용 행 집합 크기 = 1) 시 **SQLExecDirect** 하거나 **SQLExecute** 라고 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 기본 결과 집합을 설정 합니다. 스크롤 없이 결과를 클라이언트로 전송하는 경우 이 방법이 서버 커서보다 더 효율적입니다. 문이 실행된 후 행 집합 크기를 늘리고 열 단위 또는 행 단위 바인딩을 사용합니다. 그러면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 클라이언트에 결과 행을 효율적으로 전송할를 사용 하는 동안는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 클라이언트의 네트워크 버퍼에서 행을 지속적으로 끌어옵니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합을 사용 하 여 전체 결과 집합을 빠르게 검색 하 여 최적화를 제공 하는 네이티브 클라이언트 ODBC 드라이버. 이 최적화를 사용 하려면 커서 특성을 기본값으로 설정 (읽기 전용, 전진 전용 행 집합 크기 = 1) 당시 **SQLExecDirect** 또는 **SQLExecute** 라고 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버는 기본 결과 집합을 설정 합니다. 스크롤 없이 결과를 클라이언트로 전송하는 경우 이 방법이 서버 커서보다 더 효율적입니다. 문이 실행된 후 행 집합 크기를 늘리고 열 단위 또는 행 단위 바인딩을 사용합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 결과 행을 효율적으로 클라이언트에 전송 하는 기본 결과 집합 사용 동안은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버 클라이언트의 네트워크 버퍼에서 행을 계속 가져오고.  
   
 ## <a name="see-also"></a>관련 항목  
  [커서 속성](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

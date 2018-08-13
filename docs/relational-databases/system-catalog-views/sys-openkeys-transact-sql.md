@@ -1,5 +1,5 @@
 ---
-title: sys.openkeys (Transact SQL) | Microsoft Docs
+title: (거래 SQL) sys.openkeys | Microsoft 문서
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ae65fbb1eaf69788917982aedb63ffedbc9d7a71
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebc2e379d82c1b8a4e0406fd82900b7f21297123
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179919"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543133"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "33179919"
 |**opened_date**|**datetime**|키가 열린 날짜와 시간입니다.|  
 |**상태**|**int**|키가 메타데이터에서 유효한 경우 1을 반환합니다. 키가 메타데이터에 없으면 0을 반환합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   

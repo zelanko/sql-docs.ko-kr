@@ -1,5 +1,5 @@
 ---
-title: 커서 사용 방법 도움말 항목 (ODBC) | Microsoft Docs
+title: 커서의 사용 방법 항목 (ODBC)을 사용 하 여 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a6058ba73a57438eb2ec67aacae8de932ca29
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ba681361f279bbf9144f00aaa139de41faf14c36
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412062"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541523"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>커서 사용 방법 도움말 항목(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "37412062"
   
 -   [커서를 사용 하 여 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [행 집합 바인딩 사용 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [행 집합 바인딩을 사용 하 여 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [인출할 행 집합 및 업데이트 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [페치 및 업데이트할 행 집합 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [ODBC 방법 도움말 항목](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

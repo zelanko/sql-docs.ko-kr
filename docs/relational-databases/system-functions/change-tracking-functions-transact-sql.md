@@ -1,5 +1,5 @@
 ---
-title: 변경 내용 추적 함수 (Transact SQL) | Microsoft Docs
+title: 변경 내용 추적 함수 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c478d4ca59db55cefe5e13444fd81ea7bf64dbea
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f3629879f9ec1629d91db2e018149cf7225cd5ab
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33227269"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544463"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>변경 내용 추적 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33227269"
 |--------------|-----------------|  
 |[CHANGETABLE (CHANGES)](../../relational-databases/system-functions/changetable-transact-sql.md)|지정된 버전 이후에 발생한 모든 변경 내용에 대한 추적 정보를 테이블에 반환합니다.|  
 |[CHANGETABLE (버전)](../../relational-databases/system-functions/changetable-transact-sql.md)|지정된 행에 대한 최신 변경 내용 추적 정보를 반환합니다.|  
-|[CHANGE_TRACKING_MIN_VALID_VERSION()](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|변경 내용 추적 정보가 지정된 된 테이블에서 사용 하는 경우를 가져오는 데 사용할 유효한 최소 버전을 반환 된 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 함수입니다.|  
+|[CHANGE_TRACKING_MIN_VALID_VERSION()](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|변경 내용 추적 정보가 지정된 된 테이블에서 사용 하는 경우 가져오는 데 사용할 유효한 최소 버전을 반환 합니다 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 함수입니다.|  
 |[CHANGE_TRACKING_CURRENT_VERSION](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)|마지막으로 커밋된 트랜잭션과 연관된 버전을 가져옵니다. 이 버전을 사용하여 다음 번에 CHANGETABLE을 사용하여 변경 내용을 열거할 수 있습니다.|  
 |[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|CHANGETABLE(CHANGES …) 함수에서 반환된 SYS_CHANGE_COLUMNS 값을 해석합니다.|  
 |[WITH CHANGE_TRACKING_CONTEXT](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)|응용 프로그램이 데이터를 변경할 경우 주관자 ID와 같은 변경 컨텍스트의 사양을 설정합니다.|  

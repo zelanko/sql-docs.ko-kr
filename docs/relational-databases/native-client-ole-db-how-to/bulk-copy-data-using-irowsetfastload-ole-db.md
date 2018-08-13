@@ -19,13 +19,13 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 684ef570f471e4e580ac1c720e30022da3e1293f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 11c891207168ba6b65277f8e3b572e00c7f7c1b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408632"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541713"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad를 통한 데이터 대량 복사(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37408632"
   
  소비자는 SQLOLEDB 공급자별 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정하여 대량 복사가 필요하다는 것을 SQLOLEDB에 알립니다. 데이터 원본의 속성 집합을 사용하여 소비자는 SQLOLEDB 세션을 만듭니다. 새 세션에 대 한 소비자 액세스 허용 **IRowsetFastLoad**합니다.  
   
- 전체 예제는 사용을 보여 주는 **IRowsetFastLoad** 레코드 테이블에 대량 복사에 대 한 합니다. 이 샘플에서는 10 개의 레코드를 테이블에 추가 됩니다 **IRFLTable**합니다. 테이블을 만들어야 **IRFLTable** 데이터베이스에 있습니다.  
+ **IRowsetFastLoad**를 사용하여 레코드를 테이블에 대량 복사하는 방법을 보여 주는 전체 예제가 있습니다. 이 예제에서는 10개의 레코드를 **IRFLTable** 테이블에 추가합니다. 이를 위해 데이터베이스에 **IRFLTable** 테이블을 만들어야 합니다.  
   
  이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "37408632"
   
 1.  데이터 원본에 대한 연결을 설정합니다.  
   
-2.  SQLOLEDB 공급자별 데이터 원본 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정합니다. 이 속성을 VARIANT_TRUE로 설정 하면 새로 만들어진된 세션을 소비자 대 한 액세스 허용 **IRowsetFastLoad**합니다.  
+2.  SQLOLEDB 공급자별 데이터 원본 속성 SSPROP_ENABLEFASTLOAD를 VARIANT_TRUE로 설정합니다. 이 속성을 VARIANT_TRUE로 설정하면 새로 생성되는 세션에서 소비자가 **IRowsetFastLoad**에 액세스할 수 있습니다.  
   
 3.  요청 하는 세션을 만들 합니다 **IOpenRowset** 인터페이스입니다.  
   
-4.  호출 **iopenrowset:: Openrowset** (데이터의 대량 복사 작업을 사용 하 여 복사할) 테이블의 모든 행이 포함 된 행 집합을 합니다.  
+4.  **IOpenRowset::OpenRowset**을 호출하여 대량 복사 작업을 통해 데이터를 복사할 테이블의 모든 행이 포함된 행 집합을 엽니다.  
   
 5.  필요한 바인딩을 수행 하 고 사용 하 여 접근자를 만듭니다 **iaccessor:: Createaccessor**합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "37408632"
   
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 테이블을 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을 변경 L"(local)에서" L"(local)를\\\name", 여기서 name은 명명된 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 테이블을 삭제합니다.  
   

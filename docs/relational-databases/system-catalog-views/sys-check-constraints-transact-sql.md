@@ -1,5 +1,5 @@
 ---
-title: sys.check_constraints (Transact SQL) | Microsoft Docs
+title: sys.check_constraints (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d223f9ffea455c995890bbac9758d7a24d71f67
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 00eb70eb52bad5466a466395b4e30bfc91a224e9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180299"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533183"
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  CHECK 제약 조건으로는 각 개체에 대 한 행을 포함 **sys.objects.type** = 'C'입니다.  
+  CHECK 제약 된 각 개체에 대 한 행을 포함 **sys.objects.type** = 'C'입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
+|**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |**is_disabled**|**bit**|CHECK 제약 조건이 비활성화되었습니다.|  
 |**is_not_for_replication**|**bit**|CHECK 제약 조건이 NOT FOR REPLICATION 옵션으로 생성되었습니다.|  
 |**is_not_trusted**|**bit**|시스템에서 모든 행에 대해 CHECK 제약 조건을 확인하지는 않았습니다.|  
@@ -48,10 +48,10 @@ ms.locfileid: "33180299"
 |**uses_database_collation**|**bit**|1 = 제약 조건 정의는 정확한 평가를 위해 데이터베이스의 기본 데이터 정렬에 의존합니다. 그렇지 않으면 0입니다. 이러한 종속성으로 인해 데이터베이스의 기본 데이터 정렬을 바꿀 수 없습니다.|  
 |**is_system_named**|**bit**|1 = 시스템에서 이름을 생성했습니다.<br /><br /> 0 = 사용자가 제공한 이름입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

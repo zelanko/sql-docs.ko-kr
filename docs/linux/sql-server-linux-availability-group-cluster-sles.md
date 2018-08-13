@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c589d08832e08399d54ca9612fc1468a6b1f3baf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95c9c2b9bdbcbfb6573688ad220ab504dc89e337
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084825"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415512"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
 
@@ -215,7 +215,7 @@ crm configure property cluster-recheck-interval=2min
 
 Pacemaker 클러스터 속성에 대 한 자세한 내용은 참조 하세요. [클러스터 리소스가 구성](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)합니다.
 
-# <a name="configure-fencing-stonith"></a>펜싱 (STONITH) 구성
+## <a name="configure-fencing-stonith"></a>펜싱 (STONITH) 구성
 Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 지원 되는 클러스터 설치를 구성 하는 펜싱 장치에 필요 합니다. Cluster resource manager는 노드 또는 노드 리소스의 상태를 확인할 수 없습니다, 하는 경우 펜스를 알려진된 상태로 클러스터를 다시 표시 하려면 사용 됩니다.
 
 리소스 수준 펜싱 주로 리소스를 구성 하 여 중단 시간 동안 데이터 손상이 없는지 있는지 확인 합니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 된 블록 장치 Distributed) DRBD를 사용 하 여 통신 링크 중단 합니다.
@@ -237,6 +237,16 @@ sudo crm configure property stonith-enabled=true
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>SQL Server에 대 한 클러스터 리소스를 구성 합니다.
 
 참조 [SLES 관리 Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+
+## <a name="enable-pacemaker"></a>Pacemaker를 사용 하도록 설정
+
+자동으로 시작 되도록 Pacemaker를 사용 하도록 설정 합니다.
+
+클러스터의 모든 노드에서 다음 명령을 실행 합니다.
+
+```bash
+systemctl enable pacemaker
+```
 
 ### <a name="create-availability-group-resource"></a>가용성 그룹 리소스 만들기
 

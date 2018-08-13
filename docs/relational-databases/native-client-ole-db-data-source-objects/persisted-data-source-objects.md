@@ -18,13 +18,13 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0f7e7437486c601bfc04a3ad7a173d0d42b19b37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419392"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537233"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37419392"
 ## <a name="examples"></a>예  
  **A. 데이터 원본 초기화 지속:**  
   
- 이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 데이터베이스 이름과 서버 이름에서 수신 되는 *pLocation* 하 고 *pDatasource* 함수의 매개 변수입니다.  
+ 이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 서버 이름과 데이터베이스 이름은 함수의 *pLocation* 및 *pDatasource* 매개 변수로 받습니다.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -144,7 +144,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. 지속형된 데이터 원본 초기화를 사용 합니다.**  
+ **B. 지속형 데이터 원본 초기화 사용:**  
   
  이 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공하는 추가 초기화 속성이 있는 지속형 데이터 원본 개체를 사용합니다.  
   
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- 합니다 **ipersistfile:: Save** 전이나 호출한 후에 메서드를 호출할 수 있습니다 **idbinitialize:: Initialize**합니다. 성공적인 반환 후에 메서드를 호출 **idbinitialize:: Initialize** 유효한 데이터 원본 지정이 지속 되도록 합니다.  
+ **IDBInitialize::Initialize**를 호출하기 전이나 호출한 후에 **IPersistFile::Save** 메서드를 호출할 수 있습니다. **IDBInitialize::Initialize**가 성공적으로 반환된 후에 이 메서드를 호출하면 유효한 데이터 원본 지정이 지속됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

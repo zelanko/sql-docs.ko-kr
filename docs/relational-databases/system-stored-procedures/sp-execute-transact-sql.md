@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a156b1670a1e697104503c7a887ac3482642b9ae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041171"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540823"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ sp_execute handle OUTPUT
  추가 매개 변수의 사용을 나타냅니다. *bound_param* 프로시저에 대 한 추가 매개 변수를 나타내려면 모든 데이터 형식의 입력된 값에 대해 호출 하는 필수 매개 변수입니다.  
   
 > [!NOTE]  
->  *bound_param* sp_prepare로 만들어진 선언과 일치 해야 합니다*params* 값 및 형태로 제공 될 수 있습니다  *@name = value* 하거나 *값*합니다.  
+>  *bound_param* sp_prepare로 만들어진 선언과 일치 해야 합니다*params* 값 및 형태로 제공 될 수 있습니다 * @name = value* 하거나 *값*합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

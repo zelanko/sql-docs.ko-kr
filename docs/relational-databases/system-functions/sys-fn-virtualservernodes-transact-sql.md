@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualservernodes (TRANSACT-SQL) | Microsoft Docs
+title: sys.fn_virtualservernodes (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4073c1668ef43e7d303a3e534d16763d33939e45
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bc722b0b2b240ee72f2899cbebc7076549b4df0b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042791"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542053"
 ---
 # <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38042791"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 실행할 수 있는 장애 조치(Failover) 클러스터형 인스턴스 노드의 목록을 반환합니다. 이 정보는 장애 조치 클러스터링 환경에서 유용하게 사용됩니다.  
   
 > [!IMPORTANT]  
->  이렇게 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 시스템 기능은 이전 버전과 호환성을 위해 포함 됩니다. 사용 하는 것이 좋습니다 [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 대신 합니다.  
+>  이렇게 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 시스템 기능은 이전 버전과 호환성을 위해 포함 됩니다. 사용 하는 것이 좋습니다 [sys.dm_os_cluster_nodes &#40;Transact SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 대신.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +53,9 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>반환된 테이블  
- 현재 서버가 클러스터형 서버인 **fn_virtualservernodes** 이 장애 조치 클러스터형 인스턴스 노드의 목록을 반환 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정의한 합니다.  
+ 현재 서버가 클러스터 된 서버인 경우 **fn_virtualservernodes** 이 장애 조치 클러스터 인스턴스 노드의 목록을 반환 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 정의 되어 있습니다.  
   
- 현재 서버 인스턴스가 클러스터형된 서버가 아닌 경우 **fn_virtualservernodes** 빈 행 집합을 반환 합니다.  
+ 현재 서버 인스턴스가 클러스터 된 서버의 경우 **fn_virtualservernodes** 는 빈 행 집합을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대해 VIEW SERVER STATE 권한이 있어야 합니다.  
@@ -78,7 +78,7 @@ SELECT * FROM fn_virtualservernodes();
  SS3-CLUSN2  
   
 ## <a name="see-also"></a>관련 항목  
- [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
+ [sys.dm_os_cluster_nodes &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys.fn_servershareddrives &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   
   

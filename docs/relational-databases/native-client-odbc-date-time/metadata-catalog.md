@@ -1,5 +1,5 @@
 ---
-title: 카탈로그 메타 데이터 | Microsoft Docs
+title: 메타 데이터 카탈로그 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 457f25d5429eccf2c253bb6b39fbae40b43d100a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: da3616dfea8d45a82731d81ab62c98c2ac99a7f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543003"
 ---
-# <a name="metadata---catalog"></a>메타 데이터-카탈로그
+# <a name="metadata---catalog"></a>메타데이터 - 카탈로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  반환 된 열 메타 데이터에 설명 **SQLColumns** 하 고 **SQLProcedureColumns**, 데이터 형식에서 반환 된 메타 데이터 **SQLGetTypeInfo**합니다.  
+  이 항목에서 반환 된 열 메타 데이터를 설명 **SQLColumns** 및 **SQLProcedureColumns**, 장소와 데이터 형식을 메타 데이터에서 반환 된 **SQLGetTypeInfo**.  
   
 ## <a name="remarks"></a>Remarks  
- 다음 열 값에서 날짜/시간 형식에 대해 반환 됩니다 **SQLColumns** 하 고 **SQLProcedureColumns**합니다.  
+ 다음과 같은 열 값으로 날짜/시간 형식에 대 한 반환 됩니다 **SQLColumns** 및 **SQLProcedureColumns**.  
   
 |매개 변수 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "37420382"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 다음 열 값에서 날짜/시간 형식에 대해 반환 됩니다 **SQLGetTypeInfo**:  
+ 다음과 같은 열 값으로 날짜/시간 형식에 대 한 반환 됩니다 **SQLGetTypeInfo**.  
   
 |매개 변수 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  

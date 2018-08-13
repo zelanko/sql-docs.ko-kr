@@ -25,13 +25,13 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0c49687aa278b41b48e2bd8fc2e46b8963b98b82
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 473f33e087b2d8fe4e54e793ed10ab2690c6ca47
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415482"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539483"
 ---
 # <a name="return-codes"></a>반환 코드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37415482"
 
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 응용 프로그램 개발자가 의도한 것이 아닐 수 있습니다.  
   
- OLE DB 반환 코드에 대 한 자세한 내용은 참조 하세요. [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)합니다.  
+ OLE DB 반환 코드에 대한 자세한 내용은 [반환 코드(OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)를 참조하십시오.  
   
  경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수가 S_OK를 성공 하는 함수를 반환 합니다.  
   

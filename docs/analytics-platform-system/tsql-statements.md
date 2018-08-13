@@ -1,5 +1,5 @@
 ---
-title: T-SQL 문을-병렬 데이터 웨어하우스 | Microsoft Docs
+title: T-SQL 문-병렬 데이터 웨어하우스 | Microsoft Docs
 description: T-SQL 문에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW)입니다.
 author: mzaman1
 manager: craigg
@@ -9,24 +9,24 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538893"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400766"
 ---
-# <a name="t-sql-statements-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-SQL 문
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse의 T-SQL 문
 TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
 
-## <a name="data-definition-language-ddl-statements"></a>데이터 정의 언어 (DDL) 문
-* [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+## <a name="data-definition-language-ddl-statements"></a>DDL (데이터 정의 언어) 문이
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [스키마 변경](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [COLUMNSTORE 인덱스 만들기](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [데이터베이스 만들기](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [만들 데이터베이스 범위 자격 증명](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [외부 데이터 원본 만들기](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [외부 파일 형식 만들기](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -37,16 +37,16 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [스키마 만들기](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
-* [TABLE AS SELECT 만들기](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 * [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
-* [외부 데이터 원본 삭제](../t-sql/statements/drop-external-data-source-transact-sql.md)
-* [외부 파일 형식 삭제](../t-sql/statements/drop-external-file-format-transact-sql.md)
-* [외부 테이블을 삭제](../t-sql/statements/drop-external-table-transact-sql.md)
+* [DROP EXTERNAL DATA SOURCE](../t-sql/statements/drop-external-data-source-transact-sql.md)
+* [DROP EXTERNAL FILE FORMAT](../t-sql/statements/drop-external-file-format-transact-sql.md)
+* [DROP EXTERNAL TABLE](../t-sql/statements/drop-external-table-transact-sql.md)
 * [DROP  INDEX](../t-sql/statements/drop-index-transact-sql.md)
 * [DROP PROCEDURE](../t-sql/statements/drop-procedure-transact-sql.md)
 * [통계 삭제](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
-* [스키마를 삭제](../t-sql/statements/drop-schema-transact-sql.md)
+* [스키마 삭제](../t-sql/statements/drop-schema-transact-sql.md)
 * [DROP VIEW](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
@@ -85,9 +85,9 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [하위 쿼리](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>보안 문
-* 사용 권한: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [해지](../t-sql/statements/revoke-transact-sql.md)
+* 사용 권한: [권한 부여](../t-sql/statements/grant-transact-sql.md)를 [DENY](../t-sql/statements/deny-transact-sql.md), [취소](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
-* [ALTER_CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
+* [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
 * [ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
@@ -96,13 +96,13 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [인증서 만들기](../t-sql/statements/create-certificate-transact-sql.md)
-* [데이터베이스 암호화 키 만들기](../t-sql/statements/create-database-encryption-key-transact-sql.md)
+* [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
 * [로그인 만들기](../t-sql/statements/create-login-transact-sql.md)
 * [마스터 키 만들기](../t-sql/statements/create-master-key-transact-sql.md)
 * [역할 만들기](../t-sql/statements/create-role-transact-sql.md)
 * [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)
 * [인증서 삭제](../t-sql/statements/drop-certificate-transact-sql.md)
-* [데이터베이스 암호화 키 삭제](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+* [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
 * [역할 삭제](../t-sql/statements/drop-role-transact-sql.md)
@@ -110,7 +110,7 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
 ## <a name="next-steps"></a>다음 단계
-자세한 참조 정보를 참조 하십시오. [T-SQL 언어 요소](tsql-language-elements.md) 및 [T-SQL 시스템 뷰](tsql-system-views.md)합니다.
+자세한 참조 정보를 참조 하세요. [T-SQL 언어 요소](tsql-language-elements.md) 하 고 [T-SQL 시스템 뷰](tsql-system-views.md)합니다.
 
 <!--Image references-->
 

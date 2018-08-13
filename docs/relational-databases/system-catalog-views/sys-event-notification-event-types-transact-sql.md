@@ -1,5 +1,5 @@
 ---
-title: sys.event_notification_event_types (Transact SQL) | Microsoft Docs
+title: sys.event_notification_event_types (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8399316e6342929214cd4ff8a387444f71d9438
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1964856fb7a0a2233c8a7fd4721a7186dcf36d7c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177929"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533393"
 ---
 # <a name="syseventnotificationeventtypes-transact-sql"></a>sys.event_notification_event_types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "33177929"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|이벤트 알림을 실행하는 이벤트 또는 이벤트 그룹의 유형입니다.|  
-|**type_name**|**nvarchar(128)**|이벤트 또는 이벤트 그룹의 이름으로 FOR 절에 지정할 수 있습니다는 [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md) 문.|  
+|**type_name**|**nvarchar(128)**|이벤트 또는 이벤트 그룹의 이름으로 FOR 절에 지정할 수 있습니다는 [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md) 문입니다.|  
 |**parent_type**|**int**|이벤트 또는 이벤트 그룹의 부모인 이벤트 그룹의 유형입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
