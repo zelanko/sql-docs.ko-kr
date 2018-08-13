@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_outstanding_batches (Transact SQL) | Microsoft Docs
+title: sys.dm_fts_outstanding_batches (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb67cfc9ae23c9779efdfccb436157b9a14349f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2c214242445ed6769b44f060cb563db1296006c1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464819"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547543"
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ ms.locfileid: "34464819"
 |doc_failed|**bigint**|일괄 처리에서 실패한 문서의 수입니다.|  
 |batch_timestamp|**timestamp**|일괄 처리 생성 시 얻은 타임스탬프 값입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
   
 ## <a name="examples"></a>예  
  다음 예에서는 서버 인스턴스에 있는 각 테이블에 대해 현재 처리되고 있는 일괄 처리 수를 구합니다.  
@@ -66,8 +66,8 @@ SELECT database_id, table_id, COUNT(*) AS batch_count FROM sys.dm_fts_outstandin
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+## <a name="see-also"></a>관련 항목  
+ [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   
   

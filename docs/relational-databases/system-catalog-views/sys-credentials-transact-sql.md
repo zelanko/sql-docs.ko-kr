@@ -24,13 +24,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac0d1322be8e6c65d066c9de20d9a117b08f981a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d94a60edd7dac48b8510a112fe7cbfe1e5ad40ec
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031361"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560603"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "38031361"
 |target_id|**int**|자격 증명을 매핑할 개체의 ID입니다. 기존의 일반적인 자격 증명에 대해서는 0을 반환하며 암호화 공급자에 매핑된 자격 증명에 대해서는 0이 아닌 다른 값을 반환합니다. 외부 키 관리 공급자에 대 한 자세한 내용은 참조 하십시오 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)합니다.|  
 
 ## <a name="remarks"></a>Remarks  
-데이터베이스 수준 자격 증명을 참조 하세요 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)합니다.
+데이터베이스 수준의 자격 증명을 참조 하십시오. [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
   
 ## <a name="permissions"></a>사용 권한  
  필요 `VIEW ANY DEFINITION` 권한 또는 `ALTER ANY CREDENTIAL` 권한. 또한 보안 주체 거부 되지 않아야 `VIEW ANY DEFINITION` 권한.  

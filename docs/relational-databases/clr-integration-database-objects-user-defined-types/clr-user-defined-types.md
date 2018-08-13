@@ -35,16 +35,16 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7d78c002d25d5804230ce53be05d809489d26b77
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353985"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008875"
 ---
 # <a name="clr-user-defined-types"></a>CLR 사용자 정의 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 .NET Framework CLR(공용 언어 런타임)에서 만든 어셈블리에 대해 프로그래밍되는 데이터베이스 개체를 만들 수 있습니다. CLR에서 제공하는 풍부한 프로그래밍 모델을 활용할 수 있는 데이터베이스 개체에는 트리거, 저장 프로시저, 함수, 집계 함수 및 형식이 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .NET Framework CLR (공용 언어 런타임)에 만들어진 어셈블리에 대해 프로그래밍 되는 데이터베이스 개체를 만들 수가 있습니다. CLR에서 제공하는 풍부한 프로그래밍 모델을 활용할 수 있는 데이터베이스 개체에는 트리거, 저장 프로시저, 함수, 집계 함수 및 형식이 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR 코드 실행 기능은 기본적으로 OFF로 설정되어 있습니다. CLR을 사용 하 여 사용할 수는 **sp_configure** 시스템 저장 프로시저입니다.  

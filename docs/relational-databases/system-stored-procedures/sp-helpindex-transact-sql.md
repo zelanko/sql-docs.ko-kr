@@ -1,5 +1,5 @@
 ---
-title: sp_helpindex (Transact SQL) | Microsoft Docs
+title: sp_helpindex (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6560726bb583d823ad0cf0b36310eb68691705f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547623"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="arguments"></a>인수  
  [ **@objname=** ] **'***name***'**  
- 사용자 정의 테이블이나 뷰의 정식 이름 또는 정식이 아닌 이름입니다. 정규화된 테이블 또는 뷰 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *이름* 은 **nvarchar(776)**, 기본값은 없습니다.  
+ 사용자 정의 테이블이나 뷰의 정식 이름 또는 정식이 아닌 이름입니다. 정규화된 테이블 또는 뷰 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *이름* 는 **nvarchar(776)**, 기본값은 없음입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -61,12 +61,12 @@ sp_helpindex [ @objname = ] 'name'
   
  내림차순으로 인덱스가 만들어진 열은 이름 옆에 빼기 표시(-)를 한 상태로 결과 집합에 나열됩니다. 기본값인 오름차순으로 인덱스가 만들어진 열은 이름만 나열됩니다.  
   
-## <a name="remarks"></a>주의  
- UPDATE STATISTICS의 NORECOMPUTE 옵션을 사용 하 여 인덱스 설정 될 경우에 해당 정보에 포함 됩니다는 **index_description** 열입니다.  
+## <a name="remarks"></a>Remarks  
+ UPDATE STATISTICS의 NORECOMPUTE 옵션을 사용 하 여 인덱스를 설정한 경우에 해당 정보에 포함 됩니다는 **index_description** 열입니다.  
   
- **sp_helpindex** ; 정렬 가능한 인덱스 열만 표시 따라서 XML 인덱스 또는 공간 인덱스에 대 한 정보를 표시 하지 않습니다.  
+ **sp_helpindex** 는 정렬 가능한 인덱스 열만 표시 되므로, XML 인덱스 또는 공간 인덱스에 대 한 정보를 표시 하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -79,8 +79,8 @@ EXEC sp_helpindex N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

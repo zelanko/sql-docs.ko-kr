@@ -1,5 +1,5 @@
 ---
-title: CommandText 속성을 사용 하 여 템플릿 파일 실행 | Microsoft Docs
+title: CommandText 속성을 사용 하 여 템플릿 파일 실행 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5a6079aa56a74b85eddb9b9fa1135be008015cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619500"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563987"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 예제는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정 하는 방법을 보여 줍니다. SQL 또는 XPath 쿼리를 CommandText 값으로 지정 하는 대신 파일 이름을 값으로 지정할 수 있습니다. 다음 예제에서에서는 CommandType 속성이 SqlXmlCommandType.TemplateFile로 지정 됩니다.  
+  이 예제는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정할 수 있습니다 하는 방법을 보여 줍니다. CommandText 값으로 SQL 또는 XPath 쿼리를 지정 하지 않고 값으로 파일 이름을 지정할 수 있습니다. 다음 예제에서는 CommandType 속성 SqlXmlCommandType.TemplateFile로 지정 됩니다.  
   
  예제 응용 프로그램에서 이 템플릿을 실행합니다.  
   
@@ -98,7 +98,7 @@ class Test
   
 5.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
   
- 서식 파일에는 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호로 시작 해야 합니다 (@); 예를 들어 p.Name= "\@ContactID", 여기서 p는 SqlXmlParameter 개체입니다.  
+ 템플릿에 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호로 시작 해야 합니다 (@); 예를 들어 p.Name= "\@ContactID", 여기서 p는 SqlXmlParameter 개체입니다.  
   
  다음은 하나의 매개 변수를 사용하는 업데이트된 템플릿입니다.  
   

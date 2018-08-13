@@ -1,5 +1,5 @@
 ---
-title: SQLXML 관리 되는 클래스 | Microsoft Docs
+title: SQLXML 관리 되는 클래스 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,15 +27,15 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 13212c73e4f12ed83e6677a8c819b3306eab3118
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f08ed74301dad857bb5ea7c5f7d47f4966b2804c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046161"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549783"
 ---
-# <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0.NET Framework 지원-관리 되는 클래스
+# <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 .NET Framework 지원 - 관리되는 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에서 XML 데이터에 액세스하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경으로 데이터를 가져와서 처리한 후 업데이트를 다시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 보내는 응용 프로그램을 작성하는 데 사용할 수 있는 기능을 지원합니다. 
   

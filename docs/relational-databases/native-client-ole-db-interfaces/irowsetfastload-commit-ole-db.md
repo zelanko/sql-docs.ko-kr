@@ -1,5 +1,5 @@
 ---
-title: 'Irowsetfastload:: Commit (OLE DB) | Microsoft Docs'
+title: IRowsetFastLoad::Commit (OLE DB) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c20cc56a1976d58d73d8eb022b9ccbaf01855240
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e9dc0f4443b87558972b3f2d4c7f64ddafe33bdd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419302"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560993"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  일괄 삽입되는 행의 끝을 표시하고 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 씁니다. 샘플을 보려면 [IRowsetFastLoad를 통한 복사본 데이터 대량 &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 하 고 [BLOB 데이터를 SQL SERVER를 사용 하 여 IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 보내기 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  일괄 삽입되는 행의 끝을 표시하고 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 씁니다. 샘플 [대량 복사 데이터를 사용 하 여 IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 및 [보낼 BLOB 데이터를 SQL SERVER IROWSETFASTLOAD를 사용 하 여 및 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,16 +53,16 @@ HRESULT Commit(
  공급자 관련 오류가 발생했습니다. 오류 정보에서 공급자 관련 오류 텍스트를 검색하십시오.  
   
  E_UNEXPECTED  
- 이전에 의해 무효화 된 대량 복사 행 집합에서 메서드를 호출한 합니다 **irowsetfastload:: Commit** 메서드.  
+ 이전에 **IRowsetFastLoad::Commit** 메서드에 의해 무효화된 대량 복사 행 집합에서 메서드가 호출되었습니다.  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지연 업데이트 모드 행 집합으로 Native Client OLE DB 공급자 대량 복사 행 집합 동작입니다. 삽입 된 행으로 행 집합을 통해 행 데이터를 삽입 하는 사용자, 보류 중인 삽입 된 행 집합을 지원 하기 위해 동일한 방식으로 처리 됩니다 **IRowsetUpdate**합니다.  
+ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 대량 복사 행 집합은 지연 업데이트 모드 행 집합으로 작동 합니다. 사용자가 행 집합을 통해 행 데이터를 삽입하면 삽입된 행은 **IRowsetUpdate**를 지원하는 행 집합에서 보류 중인 삽입과 같은 방법으로 처리됩니다.  
   
- 소비자를 호출 해야 합니다는 **커밋** 삽입 된 행을 작성 하는 대량 복사 행 집합의 메서드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 방식으로 테이블의 **irowsetupdate:: Update** 메서드는 보류 중인 행을 전송 하는 데는 SQL Server의 인스턴스입니다.  
+ **IRowsetUpdate::Update** 메서드를 사용하여 보류 중인 행을 SQL Server 인스턴스로 전송하는 것과 같은 방법으로 소비자는 대량 복사 행 집합에 대해 **Commit** 메서드를 호출하여 삽입된 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 써야 합니다.  
   
- 소비자 호출 하지 않고 대량 복사 행 집합에 대 한 참조를 해제 하는 경우는 **커밋** 메서드를 삽입된 한 모든 쓴 적이 없는 행이 손실 됩니다.  
+ 소비자가 **Commit** 메서드를 호출하지 않고 대량 복사 행 집합에 대한 참조를 해제하면 기존에 쓰지 않은 삽입된 행이 모두 손실됩니다.  
   
- 소비자를 호출 하 여 삽입 된 행 일괄 처리 수를 **커밋** 메서드를 *fDone* 인수가 FALSE로 설정 합니다. 때 *fDone*가 TRUE로 설정 하면 행 집합이 무효화 됩니다. 잘못 된 대량 복사 행 집합을 지원 합니다 **ISupportErrorInfo** 인터페이스와 **irowsetfastload:: Release** 메서드.  
+ 소비자는 *fDone* 인수를 FALSE로 설정하고 **Commit** 메서드를 호출하여 삽입된 행을 일괄 처리할 수 있습니다. *fDone*을 TRUE로 설정하면 행 집합이 무효화됩니다. 무효화된 대량 복사 행 집합에는 **ISupportErrorInfo** 인터페이스 및 **IRowsetFastLoad::Release** 메서드만 지원됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  

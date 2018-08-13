@@ -23,13 +23,13 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe3a9ff4070761807066ac6f1e2c9ed752bb1db0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8127ca4f6f09a106d010fa1f65432799efa6e403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425602"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565777"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|쿼리 알림이 활성 상태로 유지되는 시간(초)입니다.<br /><br /> 기본값은 432000초(5일)입니다. 최소값은 1초이고 최대값은 2^31-1초입니다.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|알림의 메시지 메시지입니다. 사용자가 정의하며 미리 정의된 형식은 없습니다.<br /><br /> 기본값은 빈 문자열입니다. 1-2000자를 사용하여 메시지를 지정할 수 있습니다.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|쿼리 알림 옵션입니다. 포함 된 문자열로 지정 됩니다 *이름을*=*값* 구문입니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다.<br /><br /> 기본값은 빈 문자열입니다.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|쿼리 알림 옵션입니다. *이름*=*값* 구문을 사용하여 문자열에 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다.<br /><br /> 기본값은 빈 문자열입니다.|  
   
  구독 알림은 문이 사용자 트랜잭션 또는 자동 커밋에서 실행되었는지 여부나 문이 실행된 트랜잭션이 커밋 또는 롤백되었는지 여부에 관계없이 항상 커밋됩니다. 서버 알림은 잘못된 알림 조건, 즉 기본 데이터 또는 스키마 변경이나 제한 시간에 도달한 경우 중 더 빠른 시간에 발생합니다. 알림 등록은 발생하는 즉시 삭제됩니다. 따라서 알림을 받을 때 응용 프로그램에서 추가 업데이트를 가져오려는 경우 다시 구독해야 합니다.  
   
@@ -93,7 +93,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- 선택할 * RECEIVE, 큐에서 항목을 삭제 하지 않습니다 \* FROM에서입니다. 큐가 비어 있으면 서버 스레드가 중지됩니다. 호출 시 큐 항목이 있으면 해당 항목이 즉시 반환되고, 그렇지 않으면 큐 항목이 만들어질 때까지 호출이 대기합니다.  
+ SELECT *는 큐에서 항목을 삭제하지 않지만 RECEIVE \* FROM은 삭제합니다. 큐가 비어 있으면 서버 스레드가 중지됩니다. 호출 시 큐 항목이 있으면 해당 항목이 즉시 반환되고, 그렇지 않으면 큐 항목이 만들어질 때까지 호출이 대기합니다.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -101,7 +101,7 @@ RECEIVE * FROM MyQueue
   
  이 문은 큐가 비어 있을 경우 즉시 빈 결과 집합을 반환하고, 그렇지 않으면 모든 큐 알림을 반환합니다.  
   
- SSPROP_QP_NOTIFICATION_MSGTEXT 및 SSPROP_QP_NOTIFICATION_OPTIONS가 NULL이 아니고 비어 있지도 않으면 명령을 실행할 때마다 위에 정의된 3개의 속성이 포함된 쿼리 알림 TDS 헤더가 서버로 전달됩니다. 둘 중 하나가 Null이나 비어 있으면 헤더가 전달되지 않고 DB_E_ERRORSOCCURRED(또는 속성이 모두 옵션으로 표시된 경우 DB_S_ERRORSOCCURRED)가 발생하며, 상태 값이 DBPROPSTATUS_BADVALUE로 설정됩니다. 유효성 검사는 실행/준비 시 수행됩니다. 에 대 한 연결에 대 한 쿼리 알림 속성이 설정 된 경우 있으면 DB_S_ERRORSOCCURED가 발생 하는 마찬가지로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다. 이 경우 상태 값은 DBPROPSTATUS_NOTSUPPORTED입니다.  
+ SSPROP_QP_NOTIFICATION_MSGTEXT 및 SSPROP_QP_NOTIFICATION_OPTIONS가 NULL이 아니고 비어 있지도 않으면 명령을 실행할 때마다 위에 정의된 3개의 속성이 포함된 쿼리 알림 TDS 헤더가 서버로 전달됩니다. 둘 중 하나가 Null이나 비어 있으면 헤더가 전달되지 않고 DB_E_ERRORSOCCURRED(또는 속성이 모두 옵션으로 표시된 경우 DB_S_ERRORSOCCURRED)가 발생하며, 상태 값이 DBPROPSTATUS_BADVALUE로 설정됩니다. 유효성 검사는 실행/준비 시 수행됩니다. 마찬가지로, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 연결에 대해 쿼리 알림 속성이 설정되어 있으면 DB_S_ERRORSOCCURED가 발생합니다. 이 경우 상태 값은 DBPROPSTATUS_NOTSUPPORTED입니다.  
   
  구독을 시작한다고 해서 반드시 후속 메시지가 성공적으로 배달되는 것은 아닙니다. 또한 지정된 서비스 이름의 유효성이 검사되지 않습니다.  
   

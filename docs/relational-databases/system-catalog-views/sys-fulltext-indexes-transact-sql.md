@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_indexes (Transact SQL) | Microsoft Docs
+title: sys.fulltext_indexes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3d70bde5e89591257b185bbe52b8d9b1b8ec00a2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 34c97569e3cbb13dd5e66c56db685d16db5c0115
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182319"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548683"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ ms.locfileid: "33182319"
 |**crawl_start_date**|**datetime**|현재 또는 마지막 탐색의 시작 날짜와 시간입니다.<br /><br /> NULL = 없음|  
 |**crawl_end_date**|**datetime**|현재 또는 마지막 탐색의 종료 날짜와 시간입니다.<br /><br /> NULL = 없음|  
 |**incremental_timestamp**|**binary(8)**|다음 증분 탐색에 사용할 타임스탬프 값입니다.<br /><br /> NULL = 없음|  
-|**stoplist_id**|**int**|ID는 [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 이 전체 텍스트 인덱스와 연결 된 합니다.|  
+|**stoplist_id**|**int**|ID를 [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 이 전체 텍스트 인덱스와 연결 합니다.|  
 |**data_space_id**|**int**|이 전체 텍스트 인덱스가 있는 파일 그룹입니다.|  
-|**property_list_id**|**int**|이 전체 텍스트 인덱스와 연결된 검색 속성 목록의 ID입니다. NULL은 전체 텍스트 인덱스와 연결된 검색 속성 목록이 없음을 나타냅니다. 이 검색 속성 목록에 대 한 자세한 정보를 가져오려면는 [sys.registered_search_property_lists &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 카탈로그 뷰에 있습니다.|  
+|**property_list_id**|**int**|이 전체 텍스트 인덱스와 연결된 검색 속성 목록의 ID입니다. NULL은 전체 텍스트 인덱스와 연결된 검색 속성 목록이 없음을 나타냅니다. 이 검색 속성 목록에 대 한 자세한 정보를 가져오려면 합니다 [sys.registered_search_property_lists &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 카탈로그 뷰.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks2012` 테이블에서 전체 텍스트 인덱스를 사용합니다. 이 예에서는 전체 텍스트 인덱스에서 사용하는 중지 목록 ID, 테이블의 개체 ID 및 검색 속성 목록 ID를 반환합니다.  
   
 > [!NOTE]  
->  이 전체 텍스트 인덱스를 만드는 코드 예제에서는의 "예" 섹션을 참조 하십시오. [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)합니다.  
+>  이 전체 텍스트 인덱스를 만드는 코드 예제에서는의 "예" 섹션을 참조 하세요 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -73,14 +73,14 @@ SELECT object_id, property_list_id, stoplist_id FROM sys.fulltext_indexes
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.fulltext_index_fragments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
  [sys.fulltext_index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [sys.fulltext_index_catalog_usages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT index& #40; Transact SQL & #41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

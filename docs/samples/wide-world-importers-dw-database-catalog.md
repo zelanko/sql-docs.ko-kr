@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de537c60f8adf2d4860e236421dd0457871ea025
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984805"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556953"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 데이터베이스 카탈로그
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 스키마, 테이블 및 WideWorldImportersDW 데이터베이스의 저장된 프로시저에 대해 설명 합니다. 
 
 WideWorldImportersDW 데이터베이스 데이터 웨어하우징 및 분석 처리에 사용 됩니다. 판매 및 구매 하는 방법에 대 한 트랜잭션 데이터 WideWorldImporters 데이터베이스에서 생성 되 고 사용 하 여 WideWorldImportersDW 데이터베이스 로드를 **일일 ETL 프로세스**합니다.

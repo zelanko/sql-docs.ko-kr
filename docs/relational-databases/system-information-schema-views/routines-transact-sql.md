@@ -1,5 +1,5 @@
 ---
-title: 루틴 (Transact SQL) | Microsoft Docs
+title: 루틴 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240603"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548893"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "33240603"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|카탈로그의 특정 이름입니다. 이 이름은 ROUTINE_CATALOG와 동일합니다.|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|스키마의 특정 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|스키마의 특정 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|카탈로그의 특정 이름입니다. 이 이름은 ROUTINE_NAME과 동일합니다.|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|함수의 카탈로그 이름입니다.|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|이 함수를 포함하는 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|이 함수를 포함하는 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|함수의 이름입니다.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|저장 프로시저의 경우에는 PROCEDURE를, 함수의 경우에는 FUNCTION을 반환합니다.|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
@@ -56,8 +56,8 @@ ms.locfileid: "33240603"
 |UDT_SCHEMA|**nvarchar(** 128 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |UDT_NAME|**nvarchar(** 128 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |DATA_TYPE|**nvarchar(** 128 **)**|함수 반환 값의 데이터 형식입니다. 반환 **테이블** 경우 테이블 반환 함수입니다.|  
-|CHARACTER_MAXIMUM_LENGTH|**int**|반환 형식이 문자 형식인 경우 최대 길이를 문자 단위로 표시한 것입니다.<br /><br /> 에 대 한-1 **xml** 및 큰 값 형식의 데이터입니다.|  
-|CHARACTER_OCTET_LENGTH|**int**|반환 형식이 문자 형식인 경우 최대 길이를 바이트 단위로 표시한 것입니다.<br /><br /> 에 대 한-1 **xml** 및 큰 값 형식의 데이터입니다.|  
+|CHARACTER_MAXIMUM_LENGTH|**int**|반환 형식이 문자 형식인 경우 최대 길이를 문자 단위로 표시한 것입니다.<br /><br /> -1 **xml** 및 큰 값 형식의 데이터입니다.|  
+|CHARACTER_OCTET_LENGTH|**int**|반환 형식이 문자 형식인 경우 최대 길이를 바이트 단위로 표시한 것입니다.<br /><br /> -1 **xml** 및 큰 값 형식의 데이터입니다.|  
 |COLLATION_CATALOG|**nvarchar(** 128 **)**|항상 NULL을 반환합니다.|  
 |COLLATION_SCHEMA|**nvarchar(** 128 **)**|항상 NULL을 반환합니다.|  
 |COLLATION_NAME|**nvarchar(** 128 **)**|반환 값의 데이터 정렬 이름입니다. 문자 형식이 아닌 경우에는 NULL을 반환합니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "33240603"
 |NUMERIC_PRECISION|**smallint**|반환 값의 숫자 전체 자릿수입니다. 숫자 형식이 아닌 경우에는 NULL을 반환합니다.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|반환 값의 숫자 전체 자릿수 기수입니다. 문자 형식이 아닌 경우에는 NULL을 반환합니다.|  
 |NUMERIC_SCALE|**smallint**|반환 값의 소수 자릿수입니다. 문자 형식이 아닌 경우에는 NULL을 반환합니다.|  
-|DATETIME_PRECISION|**smallint**|형식의 반환 값이 초 소수 부분 자릿수 **datetime**합니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
+|DATETIME_PRECISION|**smallint**|반환 값 형식인 경우 초의 소수 부분 자릿수 **날짜/시간**합니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |INTERVAL_PRECISION|**smallint**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |TYPE_UDT_CATALOG|**nvarchar(** 128 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
@@ -79,7 +79,7 @@ ms.locfileid: "33240603"
 |MAXIMUM_CARDINALITY|**bigint**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우에는 SQL을, 외부에서 작성된 함수의 경우에는 EXTERNAL을 반환합니다.<br /><br /> 함수는 항상 SQL이 됩니다.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|함수 또는 저장 프로시저가 암호화되지 않은 경우 함수 또는 저장 프로시저의 정의 텍스트 중 처음 4000자를 반환합니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.<br /><br /> 완전 한 정의 얻었는지 확인, 쿼리는 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 함수 또는 definition 열에는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|함수 또는 저장 프로시저가 암호화되지 않은 경우 함수 또는 저장 프로시저의 정의 텍스트 중 처음 4000자를 반환합니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.<br /><br /> 전체 정의 얻었는지 확인, 쿼리를 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 함수 또는 definition 열을 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰.|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  
@@ -94,9 +94,9 @@ ms.locfileid: "33240603"
 |CREATED|**datetime**|루틴이 만들어진 시간입니다.|  
 |LAST_ALTERED|**datetime**|함수를 마지막으로 수정한 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [정보 스키마 뷰 &#40;Transact SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [정보 스키마 뷰 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.procedures&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   

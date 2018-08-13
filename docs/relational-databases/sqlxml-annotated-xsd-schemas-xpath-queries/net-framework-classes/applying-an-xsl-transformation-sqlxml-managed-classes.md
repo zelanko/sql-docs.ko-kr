@@ -1,5 +1,5 @@
 ---
-title: XSL 변환 적용 (SQLXML 관리 되는 클래스) | Microsoft Docs
+title: XSL 변환 적용 (SQLXML 관리 되는 클래스) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 951c8d315fa4ff72d16acb0873117af4b7857196
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7830cf637f83100d13d27bc84d991fa7484a37a4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972135"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548403"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 변환 적용(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -17,15 +17,15 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b20e21597cff194297160a549b08d6d745fbedc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ea1b277300ec232a3b71abc01f6b02872983906
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947458"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555733"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>메타 데이터-날짜 및 시간과 스키마 행 집합
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>메타데이터 - 날짜 및 시간과 스키마 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -36,11 +36,11 @@ ms.locfileid: "32947458"
   
 |열 유형|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|지우기|0|  
-|time|DBTYPE_DBTIME2|Set|0..7|  
+|날짜|DBTYPE_DBDATE|지우기|0|  
+|Time|DBTYPE_DBTIME2|Set|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|지우기|0|  
-|datetime|DBTYPE_DBTIMESTAMP|지우기|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|DATETIME|DBTYPE_DBTIMESTAMP|지우기|3|  
+|Datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  COLUMN_FLAGS에서 날짜/시간 형식에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "32947458"
   
  새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE은 응용 프로그램에서 DATA_TYPE이 DBTYPE_DBTIMESTAMP인 열의 서버 유형을 확인할 수 있도록 COLUMN_FLAGS에 제공됩니다. 서버 유형을 확인하려면 DATETIME_PRECISION도 사용해야 합니다.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE은만에 연결 된 경우 유효는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버입니다. 하위 수준 서버에 연결된 경우에는 DBCOLUMNFLAGS_SS_ISFIXEDSCALE이 정의되지 않습니다.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우에만 유효합니다. 하위 수준 서버에 연결된 경우에는 DBCOLUMNFLAGS_SS_ISFIXEDSCALE이 정의되지 않습니다.  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 행 집합  
  DATA_TYPE에는 COLUMNS 스키마 행 집합과 동일한 값이 포함되고 TYPE_NAME에는 서버 유형이 포함됩니다.  
@@ -73,9 +73,9 @@ ms.locfileid: "32947458"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> 열|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> Column|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -87,7 +87,7 @@ ms.locfileid: "32947458"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -99,7 +99,7 @@ ms.locfileid: "32947458"
   
  OLE DB는 numeric 및 decimal 형식의 MINIMUM_SCALE 및 MAXIMUM_SCALE만 정의하므로 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 time, datetime2 및 datetimeoffset에 이러한 열을 사용하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메타 데이터 &#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

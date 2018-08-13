@@ -1,5 +1,5 @@
 ---
-title: sys.database_files (Transact SQL) | Microsoft Docs
+title: sys.database_files (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: ''
@@ -24,13 +24,13 @@ caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465a9f57e7787e992f61ec548bdfb8cabdada848
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f50b9b9da7eb904222ef307355e86c91a093db5b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181699"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550313"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "33181699"
 |**type_desc**|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되었거나 에서 생성된 전체 텍스트 카탈로그의 파일을 포함함)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전의 전체 텍스트 카탈로그)|  
 |**data_space_id**|**int**|값은 0 이상일 수 있습니다. 값 0은 데이터베이스 로그 파일을 나타내고 0보다 큰 값은 이 데이터 파일이 저장되는 파일 그룹의 ID를 나타냅니다.|  
 |**name**|**sysname**|데이터베이스에서 파일의 논리적 이름입니다.|  
-|**physical_name**|**nvarchar(260)**|운영 체제 파일 이름입니다. 데이터베이스가 AlwaysOn으로 호스트 되는 경우 [읽기 가능한 보조 복제본](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** 주 복제본 데이터베이스의 파일 위치를 나타냅니다. 읽기 가능한 보조 데이터베이스의 올바른 파일 위치에 대 한 쿼리 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)합니다.|  
-|**상태**|**tinyint**|파일 상태입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|**physical_name**|**nvarchar(260)**|운영 체제 파일 이름입니다. AlwaysOn에 의해 데이터베이스가 호스팅되면 [읽기 가능한 보조 복제본](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)하십시오 **physical_name** 주 복제본 데이터베이스의 파일 위치를 나타냅니다. 읽기 가능한 보조 데이터베이스의 올바른 파일 위치에 대해 쿼리할 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)합니다.|  
+|**state**|**tinyint**|파일 상태입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|파일 상태에 대한 설명입니다.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 자세한 내용은 [파일 상태](../../relational-databases/databases/file-states.md)를 참조하세요.|  
-|**size**|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다.<br /><br /> 0 = 해당 사항 없음<br /><br /> 데이터베이스 스냅숏의 경우 size는 스냅숏이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너 크기는 현재 사용 된 컨테이너의 크기를 반영 합니다.|  
-|**max_size**|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> Max_size는 FILESTREAM 파일 그룹 컨테이너에 대 한 컨테이너의 최대 크기를 반영 합니다.<br /><br /> 참고 무제한 로그 파일 크기와 업그레이드 된 데이터베이스에 로그 파일의 최대 크기에 대 한-1을 보고 합니다.|  
+|**size**|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다.<br /><br /> 0 = 해당 사항 없음<br /><br /> 데이터베이스 스냅숏의 경우 size는 스냅숏이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너에 대 한 크기는 현재 사용 된 컨테이너의 크기를 반영 합니다.|  
+|**max_size**|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> Max_size는 FILESTREAM 파일 그룹 컨테이너에 대 한 컨테이너의 최대 크기를 반영합니다.<br /><br /> 참고는 무제한 로그 파일 크기를 사용 하 여 업그레이드 된 데이터베이스에 로그 파일의 최대 크기에 대 한-1를 보고 합니다.|  
 |**growth**|**int**|0 = 파일 크기가 고정되어 증가하지 않습니다.<br /><br /> >0 = 파일이 자동으로 증가합니다.<br /><br /> is_percent_growth = 0인 경우 증분은 8KB 페이지 단위로 표시되며 64KB 단위로 반올림됩니다.<br /><br /> is_percent_growth = 1이면 증분은 정수 백분율로 표시됩니다.|  
 |**is_media_read_only**|**bit**|1 = 파일이 읽기 전용 미디어에 있습니다.<br /><br /> 0 = 파일이 읽기/쓰기 미디어에 있습니다.|  
 |**is_read_only**|**bit**|1 = 파일이 읽기 전용으로 표시되어 있습니다.<br /><br /> 0 = 파일이 읽기/쓰기로 표시되어 있습니다.|  
@@ -72,11 +72,11 @@ ms.locfileid: "33181699"
 > [!NOTE]  
 >  대형 인덱스를 삭제하거나 다시 작성할 때 또는 대형 테이블을 삭제하거나 자를 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 트랜잭션이 커밋될 때까지 실제 페이지 할당 해제 및 관련 잠금을 연기합니다. 삭제 작업이 지연되어도 할당된 공간이 즉시 해제되지는 않습니다. 따라서 대형 인덱스를 삭제하거나 잘라낸 직후 sys.database_files에서 반환한 값은 실제 사용할 수 있는 디스크 공간과 다를 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
 
 ## <a name="examples"></a>예  
-다음 문은 이름, 파일 크기 및 각 데이터베이스 파일에 대 한 빈 공간의 크기를 반환합니다.
+다음 문은 각 데이터베이스 파일에 대 한 빈 공간의 양과 이름, 파일 크기를 반환합니다.
 
 ```
 SELECT name, size/128.0 FileSizeInMB,
@@ -84,14 +84,14 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-사용 하는 경우 자세한 내용은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 참조 [Azure SQL 데이터베이스 v 12에서 데이터베이스 크기 결정](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) SQL 고객 자문 팀 블로그.
+사용 하는 경우에 자세한 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]를 참조 하세요 [Azure SQL Database V12에서 데이터베이스 크기 결정](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) SQL 고객 자문 팀 블로그.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [파일 상태](../../relational-databases/databases/file-states.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)   
- [sys.data_spaces & #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

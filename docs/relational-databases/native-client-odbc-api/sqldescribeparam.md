@@ -17,13 +17,13 @@ caps.latest.revision: 61
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27c2eb207f6f69ab838a5530cab6d23de5f1de63
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a5ade60cacb69251dd0f47d9c9bdcc249bc6900d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432583"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546273"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37432583"
 
   SQL 문의 매개 변수를 설명 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 작성 하 고 실행을 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQLDescribeParam 준비 된 ODBC 문 핸들에서 호출 되 면 SELECT 문의 합니다. 결과 집합의 메타데이터에 따라 준비된 문의 매개 변수 특징이 결정됩니다. SQLDescribeParam은 SQLExecute 또는 SQLExecDirect를 반환할 수 있는 오류 코드를 반환할 수 있습니다.  
   
- 부터 데이터베이스 엔진의 개선 사항 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLDescribeParam 예상된 결과 대 한 보다 정확한 설명의 얻을를 허용 합니다. 이전 버전의 SQLDescribeParam 반환한 값에서 다를 수 있습니다 이러한 보다 정확한 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타 데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)합니다.  
+ 부터 데이터베이스 엔진의 개선 사항 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLDescribeParam 예상된 결과 대 한 보다 정확한 설명의 얻을를 허용 합니다. 이전 버전의 SQLDescribeParam 반환한 값에서 다를 수 있습니다 이러한 보다 정확한 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
  새로운 기능 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]하십시오 *ParameterSizePtr* 이제에 정의 된 열 또는 식의 해당 매개 변수 표식 문자 크기에 대 한 정의 사용 하 여 정렬 되는 값을 반환 합니다 [ODBC 사양](http://go.microsoft.com/fwlink/?LinkId=207044)합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client *ParameterSizePtr* 의 해당 값이 될 수 없습니다 **SQL_DESC_OCTET_LENGTH** 형식에 제공 된 관련이 없는 열 크기 값 형식에 대 한 SQLBindParameter, 하는 값은 무시 됩니다 (**SQL_INTEGER**예를 들어).  
   

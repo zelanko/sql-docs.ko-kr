@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수 구성 열의 설명자 필드 | Microsoft Docs
+title: 테이블 반환 매개 변수 구성 열의 설명자 필드 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b6be7a245b15061b5186f15ad070d0fc91924383
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a01ff79ef9a504d0be900b4089c844d3a407a0de
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429552"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562657"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>테이블 반환 매개 변수 구성 열의 설명자 필드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

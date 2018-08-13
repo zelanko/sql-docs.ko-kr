@@ -1,5 +1,5 @@
 ---
-title: ADO를 사용 하 여 SQLXML 4.0을 실행 하려면 쿼리 | Microsoft Docs
+title: ADO를 사용 하 여 SQLXML 4.0 실행할 쿼리 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ba44ff764f9adf8cc6b27f5ad298d8ebb5ad2c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e79153cfafd08484b18f88c70efeab24ff9e5b00
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031371"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561593"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,14 +119,14 @@ ms.locfileid: "38031371"
   
 1.  다음과 같이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 설치되어 있는지 확인합니다.  
   
-    1.  **시작** 메뉴에서 **설정**를 클릭 하 고 **제어판**합니다.  
+    1.  **시작** 메뉴에서 **설정**, 다음을 클릭 하 고 **컨트롤 패널**.  
   
-    2.  제어판을 열고 **프로그램 추가 / 제거**  
+    2.  제어판에서 열고 **프로그램 추가 / 제거**  
   
-    3.  현재 설치 된 프로그램 목록에 있는지를 확인 **Microsoft SQL Server Native Client** 목록에 나타납니다.  
+    3.  현재 설치 된 프로그램 목록에서 확인 하는 **Microsoft SQL Server Native Client** 목록에 나타납니다.  
   
         > [!NOTE]  
-        >  설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 참조 하세요 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)합니다.  
+        >  설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 참조 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 2.  클라이언트 컴퓨터에 대해 설치된 MDAC 버전이 2.6 이상인지 확인합니다. MDAC 버전 정보를 확인해야 하는 경우 Microsoft 웹 사이트(www.microsoft.com)에서 무료 다운로드로 제공되는 MDAC Component Checker 도구를 사용할 수 있습니다. 자세한 내용을 보려면 Microsoft 웹 사이트에서 "MDAC Component Checker"를 검색하십시오.  
   

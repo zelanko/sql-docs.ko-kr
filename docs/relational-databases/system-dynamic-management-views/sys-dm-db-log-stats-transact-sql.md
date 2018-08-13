@@ -22,13 +22,13 @@ caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 84852653f9825420fc024e754e3ac377900d48ec
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278954"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551613"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]

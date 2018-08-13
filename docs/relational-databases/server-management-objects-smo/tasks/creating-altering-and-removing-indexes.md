@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 인덱스를 제거 합니다. | Microsoft Docs
+title: 만들기, 변경, 및 인덱스 제거 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c376209c269456614e133b5e2726620835fb6888
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 382f5750bbb10271579455f3e430b26e7afdf44d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049741"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560253"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>인덱스 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -192,7 +192,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Visual Basic에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 MySampleCollection에서 XML 스키마 컬렉션 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 XML 스키마 컬렉션에서 만들어진 MySampleCollection 라는 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -255,7 +255,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Visual C#에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 MySampleCollection에서 XML 스키마 컬렉션 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 XML 스키마 컬렉션에서 만들어진 MySampleCollection 라는 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -318,7 +318,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>PowerShell에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 MySampleCollection에서 XML 스키마 컬렉션 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 XML 스키마 컬렉션에서 만들어진 MySampleCollection 라는 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

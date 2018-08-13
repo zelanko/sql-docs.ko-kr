@@ -1,9 +1,9 @@
 ---
 title: Linux의 SQL Server에 대 한 연결 암호화 | Microsoft Docs
 description: 이 문서에서는 Linux의 SQL Server 연결 암호화를 설명 합니다.
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085035"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009035"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 연결 암호화
 
@@ -32,7 +32,7 @@ ms.locfileid: "39085035"
 - 현재 시스템 시간을 인증서의 속성에 유효 기간 전에 인증서의 속성에서 올바른 이후 여야 합니다.
 - 인증서는 서버 인증용이어야 합니다. 서버 인증 (1.3.6.1.5.5.7.3.1)을 지정 하려면 인증서의 확장 된 키 사용 속성이 필요 합니다.
 - KeySpec AT_KEYEXCHANGE 옵션을 사용 하 여 인증서를 만들어야 합니다. 일반적으로 인증서의 키 용도 속성 (KEY_USAGE)에 키 암호화 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)도 포함 됩니다.
-- 인증서의 Subject 속성의 CN (일반 이름)가 동일한 지 호스트 이름이 나 서버 컴퓨터의 정규화 된 도메인 이름 (FQDN)으로 표시 해야 합니다. 참고: 와일드 카드 인증서 지원 됩니다. 
+- 인증서의 Subject 속성의 CN (일반 이름)가 동일한 지 호스트 이름이 나 서버 컴퓨터의 정규화 된 도메인 이름 (FQDN)으로 표시 해야 합니다. 참고: 와일드 카드 인증서 지원 됩니다.
 
 ## <a name="overview"></a>개요
 TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호화 하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 올바르게 구성 하는 경우 TLS 개인 정보 및 클라이언트와 서버 간의 통신에 대 한 데이터 무결성을 제공 합니다.  시작 하는 서버나 클라이언트 시작 TLS 연결 일 수 있습니다. 

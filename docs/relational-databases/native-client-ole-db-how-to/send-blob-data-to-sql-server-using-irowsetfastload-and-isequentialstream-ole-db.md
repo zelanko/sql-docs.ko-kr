@@ -14,13 +14,13 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79c3c2b21c16d1a761ad184ca01cb06b6e1680cb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f61611c52ee952f2c2559136ce845c355ff01d66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413992"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555353"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "37413992"
   
  기본적으로 이 예제는 인라인 바인딩을 사용하여 다양한 길이의 BLOB 데이터를 행별로 보내기 위해 IRowsetFastLoad를 사용하는 방법을 보여 줍니다. 인라인 BLOB 데이터는 가용 메모리를 초과해서는 안 됩니다. 이 방법은 BLOB 데이터가 수 MB 이하일 때 추가적인 스트림 오버헤드가 없기 때문에 최상으로 수행됩니다. 수 MB 이상의 데이터인 경우, 특히 하나의 블록으로 사용할 수 없는 데이터인 경우 스트리밍이 더 나은 성능을 제공합니다.  
   
- #define USE_ISEQSTREAM 주석 처리를 제거한 경우 원본 코드에서 이 예제는 ISequentialStream을 사용합니다. 스트림 구현은 예제에서 정의 되 고 MAX_BLOB 변경 하면 크기 BLOB 데이터를 보낼 수 있습니다. 따라서 스트림 데이터는 메모리 크기에 맞거나 하나의 블록 크기일 필요가 없습니다. IRowsetFastLoad::InsertRow를 사용하여 이 공급자를 호출합니다. IRowsetFastLoad::InsertRow를 사용하는 포인터를 스트림에서 읽을 수 있는 데이터의 양과 함께 데이터 버퍼(rgBinding.obValue 오프셋)에 있는 스트림 구현으로 전달합니다. 일부 공급자는 바인딩이 발생할 때 데이터의 길이를 반드시 알 필요가 없습니다. 이런 경우 바인딩에서 길이가 생략될 수 있습니다.  
+ #define USE_ISEQSTREAM 주석 처리를 제거한 경우 원본 코드에서 이 예제는 ISequentialStream을 사용합니다. 스트림 구현은 예제에 정의되어 있으며 MAX_BLOB만 변경하면 크기에 관계 없이 BLOB 데이터를 보낼 수 있습니다. 따라서 스트림 데이터는 메모리 크기에 맞거나 하나의 블록 크기일 필요가 없습니다. IRowsetFastLoad::InsertRow를 사용하여 이 공급자를 호출합니다. IRowsetFastLoad::InsertRow를 사용하는 포인터를 스트림에서 읽을 수 있는 데이터의 양과 함께 데이터 버퍼(rgBinding.obValue 오프셋)에 있는 스트림 구현으로 전달합니다. 일부 공급자는 바인딩이 발생할 때 데이터의 길이를 반드시 알 필요가 없습니다. 이런 경우 바인딩에서 길이가 생략될 수 있습니다.  
   
  이 예제는 공급자에 데이터를 쓰는 데 공급자의 스트림 인터페이스를 사용하지 않습니다. 대신 공급자가 데이터를 읽는 데 소모하는 스트림 개체로 포인터를 전달합니다. 일반적으로 Microsoft 공급자(SQLOLEDB 및 SQLNCLI)는 모든 데이터가 처리될 때까지 개체에서 1024바이트 청크 형식으로 데이터를 읽습니다. SQLOLEDB나 SQLNCLI 모두 소비자가 공급자의 스트림 개체에 데이터를 쓰도록 허용하기 위한 일체의 구현을 갖고 있지 않습니다. 공급자의 스트림 개체를 통해서 보낼 수 있는 데이터는 길이가 0인 데이터뿐입니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "37413992"
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 테이블을 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을 변경 L"(local)에서" L"(local)를\\\name", 여기서 name은 명명된 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 테이블을 삭제합니다.  
   

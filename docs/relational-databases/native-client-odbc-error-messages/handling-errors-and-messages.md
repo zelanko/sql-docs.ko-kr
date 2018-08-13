@@ -1,5 +1,5 @@
 ---
-title: 오류 및 메시지 처리 | Microsoft Docs
+title: 오류 및 메시지 처리 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c70fab6988fd095df645bfc467f4d66941a9839d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 997c94b83d45636d0fa99b1270b8a43f0c6e7bc5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431312"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546383"
 ---
 # <a name="handling-errors-and-messages"></a>오류 및 메시지 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37431312"
   
  원래 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 API 인 C 언어용 Db-library 허용 콜백 오류 처리를 설치할 응용 프로그램 및 해당 반환 오류 또는 메시지가 메시지 처리 함수입니다. PRINT, RAISERROR, DBCC 및 SET과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 결과를 결과 집합이 아닌 DB-Library 메시지 처리기 함수로 반환합니다. 그러나 ODBC API에는 이러한 콜백 기능이 없습니다. 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 다시 보낸 메시지를 검색 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ODBC 반환 코드를 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 설정 하 고 메시지를 하나 이상의 진단 레코드를 반환 합니다. 따라서 ODBC 응용 프로그램을 신중 하 게 테스트 해야 이러한 반환 코드 및 호출에 대 한 **SQLGetDiagRec** 메시지 데이터를 검색 합니다.  
   
- 오류 추적에 대 한 정보를 참조 하세요 [데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=125805)합니다. 에 추가 하는 오류 추적 향상 기능에 대 한 자세한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 참조 하세요 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
+ 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 오류 추적에 추가 된 향상 된 기능에 대 한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 참조 하십시오 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

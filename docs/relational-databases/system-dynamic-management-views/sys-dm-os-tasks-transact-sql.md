@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_tasks (Transact SQL) | Microsoft Docs
+title: sys.dm_os_tasks (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b800dc110baa7279edb2ce788befb433b7afd77a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 213dc89ebc9bbd398813440e1c965bbce2fb8c28
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467419"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548703"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,34 +37,34 @@ ms.locfileid: "34467419"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 활성 상태인 각 태스크에 대해 하나의 행을 반환합니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_tasks**합니다.  
+>  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_tasks**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|개체의 메모리 주소입니다.|  
-|**task_state**|**nvarchar(60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드를 기다리고 있습니다.<br /><br /> RUNNABLE: 가능 하지만 퀀텀 수신 대기 합니다.<br /><br /> 실행 중: 현재 스케줄러에서 실행 합니다.<br /><br /> 일시 중단 됨: 작업 자가 있지만 이벤트를 대기 합니다.<br /><br /> 완료: 완료 합니다.<br /><br /> SPINLOOP: spinlock에 걸려 있습니다.|  
+|**task_state**|**nvarchar(60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드를 기다리고 있습니다.<br /><br /> RUNNABLE:, 실행 가능 하지만 퀀텀 수신 대기 합니다.<br /><br /> 실행 중: 현재 스케줄러에서 실행 합니다.<br /><br /> 일시 중단 됨: 작업 자가 있지만 이벤트 대기 합니다.<br /><br /> 완료: 완료 합니다.<br /><br /> SPINLOOP: spinlock에 걸려 있습니다.|  
 |**context_switches_count**|**int**|이 태스크로 완료된 스케줄러 컨텍스트 전환 수입니다.|  
 |**pending_io_count**|**int**|이 태스크로 수행된 실제 I/O 수입니다.|  
 |**pending_io_byte_count**|**bigint**|이 태스크로 수행된 I/O의 총 바이트 수입니다.|  
 |**pending_io_byte_average**|**int**|이 태스크로 수행된 I/O의 평균 바이트 수입니다.|  
-|**scheduler_id**|**int**|부모 스케줄러의 ID이며 이 태스크의 스케줄러 정보에 대한 핸들입니다. 자세한 내용은 참조 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)합니다.|  
+|**scheduler_id**|**int**|부모 스케줄러의 ID이며 이 태스크의 스케줄러 정보에 대한 핸들입니다. 자세한 내용은 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)합니다.|  
 |**session_id**|**smallint**|태스크와 연결된 세션의 ID입니다.|  
 |**exec_context_id**|**int**|태스크와 연결된 실행 컨텍스트 ID입니다.|  
-|**request_id**|**int**|태스크 요청 ID입니다. 자세한 내용은 참조 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)합니다.|  
-|**worker_address**|**varbinary(8)**|태스크를 실행하고 있는 작업자의 메모리 주소입니다.<br /><br /> NULL = 작업자가 실행할 수 있을 때까지 태스크가 기다리고 있거나 방금 작업 실행이 완료되었습니다.<br /><br /> 자세한 내용은 참조 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)합니다.|  
-|**host_address**|**varbinary(8)**|호스트의 메모리 주소입니다.<br /><br /> 0 = 호스팅이 태스크 만들기에 사용되지 않았습니다. 이 값은 이 태스크를 만드는 데 사용된 호스트를 식별하는 데 유용합니다.<br /><br /> 자세한 내용은 참조 [sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)합니다.|  
+|**request_id**|**int**|태스크 요청 ID입니다. 자세한 내용은 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)합니다.|  
+|**worker_address**|**varbinary(8)**|태스크를 실행하고 있는 작업자의 메모리 주소입니다.<br /><br /> NULL = 작업자가 실행할 수 있을 때까지 태스크가 기다리고 있거나 방금 작업 실행이 완료되었습니다.<br /><br /> 자세한 내용은 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)합니다.|  
+|**host_address**|**varbinary(8)**|호스트의 메모리 주소입니다.<br /><br /> 0 = 호스팅이 태스크 만들기에 사용되지 않았습니다. 이 값은 이 태스크를 만드는 데 사용된 호스트를 식별하는 데 유용합니다.<br /><br /> 자세한 내용은 [sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)합니다.|  
 |**parent_task_address**|**varbinary(8)**|개체의 부모인 태스크의 메모리 주소입니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
 ## <a name="examples"></a>예  
   
 ### <a name="a-monitoring-parallel-requests"></a>1. 병렬 요청 모니터링  
- 동시에 실행 되는 요청에 대 한 여러 행의 동일한 조합에 대해 표시 됩니다 (\<**session_id**>, \< **request_id**>). 다음 쿼리를 사용 하 여 찾을 수는 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 모든 활성 요청에 대 한 합니다.  
+ 병렬로 실행 되는 요청에 대 한 여러 행의 동일한 조합 표시 됩니다 (\<**session_id**>를 \< **request_id**>). 찾으려면 다음 쿼리를 사용 합니다 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 모든 활성 요청에 대 한 합니다.  
   
 > [!NOTE]  
 >  A **request_id** 는 세션 내에서 고유 합니다.  
@@ -100,8 +100,8 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
-  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

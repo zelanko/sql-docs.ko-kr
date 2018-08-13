@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (Transact SQL) | Microsoft Docs
+title: sys.dm_tran_version_store (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de332c09b586b1c3a7feba4097a940ba9f29a83
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467629"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561923"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **sys.dm_tran_version_store** 되었습니다 전체 버전 저장소를 쿼리하며 버전 저장소가 매우 클 수 있으므로 실행할 경우 비효율적입니다.  
+  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **sys.dm_tran_version_store** 를 실행 하는 전체 버전 저장소를 쿼리 버전 저장소는 매우 커질 수 있기 때문에 비효율적입니다.  
   
  각 버전 레코드는 일부 추적/상태 정보와 함께 이진 데이터로 저장됩니다. 데이터베이스 테이블의 레코드와 마찬가지로 버전 저장소 레코드도 8192바이트 페이지로 저장됩니다. 레코드가 8192바이트를 초과하면 두 개의 레코드로 분할됩니다.  
   
- 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 사용 하 여 **sys.dm_tran_version_store** 버전 저장소에 있는 이진 형태로 행의 이전 버전을 찾을 수 있습니다.  
+ 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 사용 하 여 **sys.dm_tran_version_store** 버전 저장소에 있는 행의 이전 버전의 이진 표현을 찾을 수 있습니다.  
   
   
 ## <a name="syntax"></a>구문  
@@ -62,10 +62,10 @@ sys.dm_tran_version_store
 |**record_length_second_part_in_bytes**|**smallint**|버전 레코드에서 두 번째 부분의 길이(바이트)입니다.|  
 |**record_image_second_part**|**varbinary(8000)**|버전 레코드에서 두 번째 부분의 이진 이미지입니다.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
   
 ## <a name="examples"></a>예  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  
@@ -135,7 +135,7 @@ record_length_second_part_in_bytes record_image_second_part
   
  출력은 XSN-57이 한 테이블에서 행 버전 3개를 만들었으며 XSN-58이 다른 테이블에서 행 버전 하나를 만들었음을 보여 줍니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

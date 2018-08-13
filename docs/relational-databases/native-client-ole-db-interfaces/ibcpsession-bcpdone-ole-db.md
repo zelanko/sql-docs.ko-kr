@@ -19,13 +19,13 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d3fb5a42eaeb722c0abcb0ae3d3a964532009bc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421502"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555043"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 에 없는 다른 작업을 호출할 수는 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 호출한 후 인터페이스를 **BCPDone** 메서드. 호출 하는 것만 가능 합니다 [ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 새 대량 복사 작업을 시작 하는 방법입니다. 이 호출과 유사 합니다 [irowsetfastload:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 메서드.  
+ **BCPDone** 메서드를 호출한 후에는 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 인터페이스에 대해 다른 작업을 호출할 수 없습니다. [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하여 새 대량 복사 작업을 시작하는 것만 가능합니다. 이 동작은 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 메서드를 호출하는 것과 유사합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP를 사용하여 이 데이터를 테이블에 다시 추가할 수 있습니다. 예를 들어 다음 명령을 사용할 수 있습니다.  
   
- **bcp 마스터... outfile.dat-n-T-S에서 fltest** *서버*  
+ **bcp master..fltest in outfile.dat -n -T -S** *서버*  
   
  이 예제를 컴파일할 때 sqlncli11.lib를 지정해야 합니다.  
   

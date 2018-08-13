@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referencing_entities (Transact SQL) | Microsoft Docs
+title: sys.dm_sql_referencing_entities (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b78b7d54b5065496b587b6493e986b263d8919fd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467769"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548953"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  이름별로 다른 사용자 정의 엔터티를 참조하는 현재 데이터베이스의 각 엔터티에 대해 한 개의 행을 반환합니다. 한 엔터티의 호출 될 때 두 엔터티 간의 종속성 만들어집니다는 *엔터티를 참조*, 라는 다른 엔터티의 영구 SQL 식에 이름별으로 나타나는 *참조 엔터티*합니다. 예를 들어 UDT(사용자 정의 형식)가 참조 엔터티로 지정된 경우 이 함수는 정의에서 이름별로 해당 유형을 참조하는 각 사용자 정의 엔터티를 반환합니다. 지정된 엔터티를 참조하는 다른 데이터베이스의 엔터티는 반환하지 않습니다. 이 함수는 master 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조 엔터티로 반환해야 합니다.  
+  이름별로 다른 사용자 정의 엔터티를 참조하는 현재 데이터베이스의 각 엔터티에 대해 한 개의 행을 반환합니다. 하나의 엔터티만 호출 될 때 두 엔터티 간의 종속성이 만들어집니다 합니다 *엔터티를 참조*, 라는 다른 엔터티의 영구 SQL 식에서 이름별으로 나타날를 *참조 엔터티*합니다. 예를 들어 UDT(사용자 정의 형식)가 참조 엔터티로 지정된 경우 이 함수는 정의에서 이름별로 해당 유형을 참조하는 각 사용자 정의 엔터티를 반환합니다. 지정된 엔터티를 참조하는 다른 데이터베이스의 엔터티는 반환하지 않습니다. 이 함수는 master 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조 엔터티로 반환해야 합니다.  
   
  이 동적 관리 함수를 사용하면 지정된 엔터티를 참조하는 현재 데이터베이스에 있는 다음과 같은 엔터티 유형을 보고할 수 있습니다.  
   
@@ -67,14 +67,14 @@ sys.dm_sql_referencing_entities (
  *schema_name.referenced*_*entity_name*  
  참조된 엔터티의 이름입니다.  
   
- *schema_name* 참조 된 클래스가 PARTITION_FUNCTION 일 경우 제외 하 고 필요 합니다.  
+ *schema_name* 제외 하 고 참조 된 클래스가 PARTITION_FUNCTION 때 필요 합니다.  
   
- *schema_name.referenced_entity_name* 은 **nvarchar (517)** 합니다.  
+ *schema_name.referenced_entity_name* 됩니다 **nvarchar(517)** 합니다.  
   
  *< Referenced_class >* :: = {개체 | 형식 | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  참조된 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- *< referenced_class >* 은 **nvarchar**(60)입니다.  
+ *< referenced_class >* 됩니다 **nvarchar**(60).  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -100,33 +100,33 @@ sys.dm_sql_referencing_entities (
   
  해당 참조된 엔터티가 번호가 매겨진 저장 프로시저인 경우 오류를 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|테이블|예*|예|  
-|보기|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니요|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|Table|예*|사용자 계정 컨트롤|  
+|보기|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|CLR 저장 프로시저|아니오|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|CLR 사용자 정의 함수|아니오|사용자 계정 컨트롤|  
+|CLR 트리거(DML 및 DDL)|아니오|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|사용자 계정 컨트롤|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|사용자 계정 컨트롤|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|사용자 계정 컨트롤|아니오|  
+|확장 저장 프로시저|아니오|사용자 계정 컨트롤|  
+|큐|아니오|사용자 계정 컨트롤|  
+|동의어|아니오|사용자 계정 컨트롤|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니오|사용자 계정 컨트롤|  
+|XML 스키마 컬렉션|아니오|사용자 계정 컨트롤|  
+|파티션 함수|아니오|사용자 계정 컨트롤|  
   
- \* 한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
+ \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -158,7 +158,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>2. 지정된 유형을 참조하는 엔터티 반환  
- 다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. `dbo.Flag` 형식에 있는 여러 열의 정의에 또한는 `HumanResources.Employee` 테이블; 그러나 형식 정의 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건을 테이블에 없기 때문에 행을 반환 하지는 에대한`HumanResources.Employee`테이블입니다.  
+ 다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. 합니다 `dbo.Flag` 형식에서 여러 열의 정의에 사용 되는 `HumanResources.Employee` 테이블; 있지만 형식 정의 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건을 테이블에 없기 때문에 아무 행도 반환 합니다 에대한`HumanResources.Employee`테이블입니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -178,7 +178,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

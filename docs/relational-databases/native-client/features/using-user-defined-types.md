@@ -23,27 +23,27 @@ ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eef3d47ae77c8686ce09eb77665e64de53a229ce
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bd99bdb2ec793558ecb39a73c819f10b57e3803e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424802"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551213"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 UDT(사용자 정의 형식)가 도입되었습니다. Udt 개체 및 사용자 지정 데이터 구조에 데이터를 저장할 수 있으므로 SQL 형식 시스템이 확장을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스입니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 .NET CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. 여기에 Microsoft Visual C#<sup>®</sup> 및 Visual Basic<sup>®</sup> .NET. 데이터는 .NET 클래스 또는 구조체의 필드와 속성으로 노출되며 동작은 클래스 또는 구조체의 메서드로 정의됩니다.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 UDT(사용자 정의 형식)가 도입되었습니다. UDT는 개체와 사용자 지정 데이터 구조를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 SQL 유형 시스템을 확장합니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 .NET CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. 이러한 언어에는 Microsoft Visual C#<sup>®</sup> 및 Visual Basic<sup>®</sup> .NET 등이 있습니다. 데이터는 .NET 클래스 또는 구조체의 필드와 속성으로 노출되며 동작은 클래스 또는 구조체의 메서드로 정의됩니다.  
   
- UDT의 변수 테이블의 열 정의로 사용할 수는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리 또는의 인수로 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수 또는 저장된 프로시저입니다.  
+ UDT를 테이블의 열 정의, [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리의 변수 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수나 저장 프로시저의 인수로 사용할 수 있습니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 Udt를 개체로 관리할 수 있도록 하는 메타 데이터 정보를 사용 하 여 이진 형식의 형태로 Udt를 지원 합니다. UDT 열은 DBTYPE_UDT로 노출 되 고 해당 메타 데이터는 핵심 OLE DB 인터페이스를 통해 노출 **IColumnRowset**, 및 새로운 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 Udt를 개체로 관리할 수 있도록 하는 메타 데이터 정보를 사용 하 여 이진 형식의 형태로 Udt를 지원 합니다. UDT 열은 DBTYPE_UDT로 노출되고 해당 메타데이터는 핵심 OLE DB 인터페이스인 **IColumnRowset**와 새로운 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스를 통해 노출됩니다.  
   
 > [!NOTE]  
->  합니다 **irowsetfind:: Findnextrow** UDT 데이터 형식과 메서드가 작동 하지 않습니다. UDT가 검색 열 유형으로 사용되는 경우 DB_E_BADCOMPAREOP가 반환됩니다.  
+>  **IRowsetFind::FindNextRow** 메서드는 UDT 데이터 형식과 함께 사용할 수 없습니다. UDT가 검색 열 유형으로 사용되는 경우 DB_E_BADCOMPAREOP가 반환됩니다.  
   
 ### <a name="data-bindings-and-coercions"></a>데이터 바인딩 및 강제 변환  
  다음 표에서는 표의 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT와 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다. UDT 열을 통해 노출 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DBTYPE_UDT로 Native Client OLE DB 공급자입니다. 적절한 스키마의 행 집합을 통해 메타데이터를 얻을 수 있으므로 사용자 정의 형식을 개체로 관리할 수 있습니다.  
@@ -56,31 +56,31 @@ ms.locfileid: "37424802"
 |DBTYPE_BSTR|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_STR|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4,6</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|지원되지 않음|해당 없음<sup>2</sup>|지원되지 않음|해당 없음<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|지원 되는<sup>6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원 되는<sup>6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
   
- <sup>1</sup>DBTYPE_UDT로 지정 하는 보다 다른 서버 유형이 **icommandwithparameters:: Setparameterinfo** 고 접근자 유형이 DBTYPE_UDT에 문이 실행 될 때 오류가 발생 (DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
+ <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
  <sup>2</sup>이 항목의 범위를 벗어납니다.  
   
- <sup>3</sup> 16 진수 문자열에서 이진 데이터로 데이터 변환이 발생 합니다.  
+ <sup>3</sup> 16진수 문자열에서 이진 데이터로의 데이터 변환이 발생합니다.  
   
- <sup>4</sup> 이진 데이터가 16 진수 문자열로의 데이터 변환이 발생 합니다.  
+ <sup>4</sup> 이진 데이터에서 16진수 문자열로의 데이터 변환이 발생합니다.  
   
- <sup>5</sup>접근자 생성 시간 또는 인출 시간에 오류는 DB_E_ERRORSOCCURRED이 고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 유효성 검사에서 발생할 수 있습니다.  
+ <sup>5</sup>접근자 생성 시간 또는 인출 시간에 유효성 검사가 발생할 수 있습니다. 오류는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정된 바인딩 상태, DB_E_ERRORSOCCURRED입니다.  
   
- <sup>6</sup>by_ref가 사용 될 수 있습니다.  
+ <sup>6</sup>BY_REF가 사용될 수 있습니다.  
   
  DBTYPE_NULL 및 DBTYPE_EMPTY는 입력 매개 변수에 대해서는 바인딩할 수 있지만 출력 매개 변수나 결과에 대해서는 바인딩할 수 없습니다. 입력 매개 변수에 대해 바인딩할 경우 상태를 DBSTATUS_S_ISNULL 또는 DBSTATUS_S_DEFAULT로 설정해야 합니다.  
   
  DBTYPE_UDT를 DBTYPE_EMPTY와 DBTYPE_NULL로 변환할 수 있지만 DBTYPE_NULL 및 DBTYPE_EMPTY는 DBTYPE_UDT로 변환할 수 없습니다. 이는 DBTYPE_BYTES와 일치합니다.  
   
 > [!NOTE]  
->  새 인터페이스는 Udt 매개 변수로 처리 **ISSCommandWithParameters**에서 상속한 **ICommandWithParameters**합니다. 응용 프로그램은 이 인터페이스를 사용하여 UDT 매개 변수에 대해 적어도 DBPROPSET_SQLSERVERPARAMETER 속성 집합의 SSPROP_PARAM_UDT_NAME을 설정해야 합니다. 이렇게 하지 않으면 **icommand:: Execute** 가 DB_E_ERRORSOCCURRED를 반환 합니다. 이 인터페이스와 속성 집합에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+>  새 인터페이스는 UDT를 매개 변수인 **ISSCommandWithParameters**로 처리하는 데 사용됩니다. 이 매개 변수는 **ICommandWithParameters**에서 상속됩니다. 응용 프로그램은 이 인터페이스를 사용하여 UDT 매개 변수에 대해 적어도 DBPROPSET_SQLSERVERPARAMETER 속성 집합의 SSPROP_PARAM_UDT_NAME을 설정해야 합니다. 이 설정을 수행하지 않으면 **ICommand::Execute**가 DB_E_ERRORSOCCURRED를 반환합니다. 이 인터페이스와 속성 집합에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
- 해당 데이터를 보관 하기에 충분 하지 않은 열에는 사용자 정의 형식을 삽입 하는 경우 **icommand:: Execute** DB_E_ERRORSOCCURRED 상태와 함께 S_OK를 반환 합니다.  
+ 사용자 정의 형식이 크기가 작아 해당 형식의 모든 데이터를 유지할 수 없는 열에 삽입되는 경우 **ICommand::Execute**는 DB_E_ERRORSOCCURRED 상태와 함께 S_OK를 반환합니다.  
   
- OLE DB 핵심 서비스에서 제공 하는 데이터 변환 (**IDataConvert**) DBTYPE_UDT에 적용 되지 않습니다. 다른 바인딩은 지원되지 않습니다.  
+ OLE DB 핵심 서비스(**IDataConvert**)에서 제공하는 데이터 변환은 DBTYPE_UDT에는 적용되지 않습니다. 다른 바인딩은 지원되지 않습니다.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 행 집합의 추가 내용 및 변경 내용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 새 값을 추가 하거나 많은 핵심 OLE DB 스키마 행 집합을 변경 합니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "37424802"
   
  ADO는 설명 열의 해당 항목을 사용하여 이러한 속성을 참조합니다.  
   
- SSPROP_COL_UDTNAME은 필수입니다. SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME은 옵션입니다. 속성은 지정한 경우 올바르게 **DB_E_ERRORSINCOMMAND** 반환 됩니다.  
+ SSPROP_COL_UDTNAME은 필수입니다. SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME은 옵션입니다. 이러한 속성 중 하나가 잘못 지정되면 **DB_E_ERRORSINCOMMAND**가 반환됩니다.  
   
  SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME이 모두 지정되지 않은 경우 테이블과 동일한 데이터베이스와 스키마에서 UDT를 정의해야 합니다.  
   
@@ -177,10 +177,10 @@ ms.locfileid: "37424802"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 새 값을 추가 하거나 많은 핵심 OLE DB 인터페이스를 변경 합니다.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 인터페이스  
- OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 추가 포함 하 여 변경 사항을 구현 합니다 **ISSCommandWithParameters** 인터페이스입니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스에서 상속 **ICommandWithParameters**합니다. 상속 하는 세 가지 메서드 외에도 **ICommandWithParameters**; **GetParameterInfo**하십시오 **MapParameterNames**, 및 **SetParameterInfo**; **ISSCommandWithParameters** 를 제공 합니다 **GetParameterProperties** 하 고 **SetParameterProperties** 서버 관련 처리 하는 데 사용 되는 메서드 데이터 형식입니다.  
+ OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 추가 포함 하 여 변경 사항을 구현 합니다 **ISSCommandWithParameters** 인터페이스입니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters**에서 상속됩니다. 상속 하는 세 가지 메서드 외에도 **ICommandWithParameters**; **GetParameterInfo**하십시오 **MapParameterNames**, 및 **SetParameterInfo**; **ISSCommandWithParameters** 를 제공 합니다 **GetParameterProperties** 하 고 **SetParameterProperties** 서버 관련 처리 하는 데 사용 되는 메서드 데이터 형식입니다.  
   
 > [!NOTE]  
->  합니다 **ISSCommandWithParameters** 인터페이스도 활용는 새로운 SSPARAMPROPS 구조입니다.  
+>  또한 **ISSCommandWithParameters** 인터페이스는 새로운 SSPARAMPROPS 구조를 사용합니다.  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 인터페이스  
  외에 합니다 **ISSCommandWithParameters** 인터페이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 호출에서 반환 된 행 집합에 새 값을 추가 합니다 **icolumnsrowset:: Getcolumnrowset** 메서드 다음을 포함합니다.  

@@ -1,5 +1,5 @@
 ---
-title: OLE DB 속성 정보 | Microsoft Docs
+title: OLE DB 속성 정보 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81a928d788c3461a6f24baa46906d5af40a4e7ba
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 135d1584c528d31a42ade65e2025f52c70cc5ac7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432642"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565667"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB 속성 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "37432642"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [속성 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [속성(OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

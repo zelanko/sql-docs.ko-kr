@@ -22,15 +22,15 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d565a025f61d3ca604cba02a5d7c35e395217ff2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050151"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561543"
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>주석 해석-sql: 매핑
+# <a name="annotation-interpretation---sqlmapped"></a>주석 해석 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 대량 로드 프로세스를 **sql: 매핑된** 예상 대로 XSD 스키마에서 주석-즉, 매핑 스키마 지정 하는 경우 **sql: 매핑된 = "false"** 임의의 요소 또는 특성에 대 한 XML 대량 로드 하지 않습니다 해당 열에 연결 된 데이터를 저장 하려고 시도 합니다.  
   

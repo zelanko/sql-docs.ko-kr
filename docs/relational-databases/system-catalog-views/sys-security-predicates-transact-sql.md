@@ -1,5 +1,5 @@
 ---
-title: sys.security_predicates (TRANSACT-SQL) | Microsoft Docs
+title: sys.security_predicates (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -28,13 +28,13 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 539ca48e5c55485a5a4b3fdecb3044c1feae6826
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1576ed5332f0cae14b3c263e3bfd72eacc26a956
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993855"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559413"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

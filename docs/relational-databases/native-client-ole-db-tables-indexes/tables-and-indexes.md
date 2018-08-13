@@ -22,13 +22,13 @@ ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c41d37163d0b85f6e8941ef00b47aeb34e0fafe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7cde7eba934d9af12fe198c50cf4a6fd166d0713
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429522"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553093"
 ---
 # <a name="tables-and-indexes"></a>테이블 및 인덱스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37429522"
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> 기본값: Null<br /><br /> 설명:이 속성에만 사용 됩니다 **ITableDefinition**합니다. 이 속성에 지정 된 문자열을 만들 때 사용 되는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 문을 만들 때 사용됩니다.|  
+|SSPROP_COL_COLLATIONNAME|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> 기본값: Null<br /><br /> 설명: 이 속성은 **ITableDefinition**에서만 사용됩니다. 이 속성에 지정된 문자열은 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)을 생성할 때 사용됨<br /><br /> 문을 만들 때 사용됩니다.|  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

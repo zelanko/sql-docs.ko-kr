@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_stacks (Transact SQL) | Microsoft Docs
+title: sys.dm_os_stacks (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5870f8b45d507a7f5eeffdee3ac46c1db2e669f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa139af60be9f2f6ef3584352ce76ba19caa4894
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465779"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563137"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ ms.locfileid: "34465779"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|이 스택 할당의 고유한 주소입니다. Null을 허용하지 않습니다.|  
-|**frame_index**|**int**|각 줄 함수를 나타냅니다. 특정 작업에 대해 프레임 인덱스로 오름차순 정렬 될 때 호출 **stack_address**, 전체 호출 스택을 반환 합니다. Null을 허용하지 않습니다.|  
+|**frame_index**|**int**|각 줄이 함수를 나타내는 특정 프레임 인덱스로 오름차순으로 정렬 될 경우 호출 하 **stack_address**, 전체 호출 스택을 반환 합니다. Null을 허용하지 않습니다.|  
 |**frame_address**|**varbinary(8)**|함수 호출 주소입니다. Null을 허용하지 않습니다.|  
   
-## <a name="remarks"></a>주의  
- **sys.dm_os_stacks** 는 기호 서버와 다른 구성 요소 정보를 올바르게 표시 하려면 서버에 있어야 합니다.  
+## <a name="remarks"></a>Remarks  
+ **sys.dm_os_stacks** 기호 서버 및 기타 구성 요소 정보를 올바르게 표시 하려면 서버에 설치 되어 있어야 합니다.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
 
-## <a name="see-also"></a>관련 항목:  
-  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

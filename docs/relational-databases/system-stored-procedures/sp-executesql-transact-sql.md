@@ -1,5 +1,5 @@
 ---
-title: sp_executesql (TRANSACT-SQL) | Microsoft Docs
+title: sp_executesql (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38c0cd9d348e78a10be4917172c149750da8a657
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 17dda137d5d3230c5e1ff7270f4af5583fa13fd0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083795"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559373"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,14 +55,14 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>인수  
  [ \@stmt =] *문*  
- 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. \@stmt은 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하면이 접두사로 추가 해야 합니다는 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 문자 상수 **'sp_who'** 아닙니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버의 문자열의 크기는 최대 크기인 2GB로 제한 됩니다 **nvarchar (max)** 합니다.  
+ 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. \@stmt은 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하면이 접두사로 추가 해야 합니다는 **N**합니다. 예를 들어, 유니코드 상수 **N 'sp_who'** 유효 하지만 문자 상수 **'sp_who'** 않습니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버의 문자열의 크기는 최대 크기인 2GB로 제한 됩니다 **nvarchar (max)** 합니다.  
   
 > [!NOTE]  
 >  \@stmt 매개 변수는 변수 이름과 동일한 형식의 예를 들어를 포함할 수 있습니다. `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  에 포함 된 각 매개 변수에 \@stmt는 둘 다에 해당 하는 항목이 있어야 합니다 \@params 매개 변수 정의 목록과 매개 변수 값 목록입니다.  
   
- [ \@params =] N'\@*parameter_name * * data_type* [,... *n* ] '  
+ [ \@매개 변수 =] N'\@*parameter_name * * data_type* [,... *n* ] '  
  에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열 \@stmt 합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 에 지정 된 모든 매개 변수에 \@stmtmust 정의 \@매개 변수입니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 \@stmt 매개 변수는 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
  [ \@param1 =] '*value1*'  
@@ -81,9 +81,9 @@ sp_executesql [ @stmt = ] statement
  작성된 모든 SQL 문에서 SQL 문자열로 결과 집합을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 항목 앞부분에서의 "구문" 섹션에 설명 된 대로 sp_executesql 매개 변수를 특정 순서로 입력 되어야 합니다. 매개 변수 순서가 잘못되면 오류 메시지가 나타납니다.  
+ 이 항목의 앞부분에 나오는 "구문" 섹션에서 설명한 대로 특정 순서에 따라 sp_executesql 매개 변수를 입력 되어야 합니다. 매개 변수 순서가 잘못되면 오류 메시지가 나타납니다.  
   
- sp_executesql은 일괄 처리, 이름의 범위 및 데이터베이스 컨텍스트 면에서 EXECUTE와 동작이 동일합니다. 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리는 sp_executesql \@stmt 매개 변수는 sp_executesql 문이 실행 될 때까지 컴파일되지 않습니다. 내용을 \@stmt는 컴파일되고 sp_executesql 이라는 일괄 처리의 실행 계획과 별도로 실행 계획으로 실행 합니다. sp_executesql 일괄 처리는 sp_executesql을 호출하는 일괄 처리에서 선언된 변수를 참조할 수 없습니다. sp_executesql 일괄 처리의 로컬 커서 또는 변수는 sp_executesql을 호출하는 일괄 처리에 노출되지 않습니다. 데이터베이스 컨텍스트의 변경 내용은 sp_executesql 문이 종료될 때까지만 지속됩니다.  
+ sp_executesql은 일괄 처리, 이름의 범위 및 데이터베이스 컨텍스트 면에서 EXECUTE와 동작이 동일합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리는 sp_executesql에서 \@stmt 매개 변수는 sp_executesql 문이 실행 될 때까지 컴파일되지 않습니다. 내용을 \@stmt 다음 컴파일되고 sp_executesql 호출한 일괄 처리 실행 계획에서 별도 실행 계획을 실행 합니다. sp_executesql 일괄 처리는 sp_executesql을 호출하는 일괄 처리에서 선언된 변수를 참조할 수 없습니다. sp_executesql 일괄 처리의 로컬 커서 또는 변수는 sp_executesql을 호출하는 일괄 처리에 노출되지 않습니다. 데이터베이스 컨텍스트의 변경 내용은 sp_executesql 문이 종료될 때까지만 지속됩니다.  
   
  문에 대한 매개 변수 값의 변경 내용이 변형뿐인 경우 저장 프로시저 대신 sp_executesql을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 여러 번 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 자체는 달라지지 않고 매개 변수 값만 달라지므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 처음 실행할 때 생성되는 실행 계획을 다시 사용합니다.  
   
@@ -254,7 +254,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- 추가 예제를 보려면 [sp_executesql (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms188001.aspx)합니다.  
+ 자세한 예제를 보려면 [sp_executesql (Transact SQL)](http://msdn.microsoft.com/library/ms188001.aspx).  
   
 ## <a name="see-also"></a>관련 항목  
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

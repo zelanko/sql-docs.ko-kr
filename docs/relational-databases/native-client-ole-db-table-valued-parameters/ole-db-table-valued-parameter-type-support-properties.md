@@ -1,5 +1,5 @@
 ---
-title: OLE DB 테이블 반환 매개 변수 형식 지원 (속성) | Microsoft Docs
+title: OLE DB 테이블 반환 매개 변수 형식 지원(속성) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a9fcc417d490838f322a884bb5c414d44625088
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b56c59bd6a12c01cb16101b42d7b5a51ea8ad4da
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431252"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556433"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37431252"
   이 항목에서는 테이블 반환 매개 변수 행 집합 개체와 연관된 OLE DB 속성 및 속성 집합에 대한 정보를 제공합니다.  
   
 ## <a name="properties"></a>속성  
- 다음은 테이블 반환 매개 변수 행 집합 개체에서 IRowsetInfo::GetPropeties 메서드를 통해 노출 하는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 설정 하려고 iopenrowset:: Openrowset 또는 ITableDefinitionWithConstraints::CreateTableWithConstraints를 통해 속성의 기본이 아닌 값으로 메서드는 오류가 발생 하며 개체가 만들어질 수 있습니다.  
+ 다음은 테이블 반환 매개 변수 행 집합 개체에 대한 IRowsetInfo::GetPropeties 메서드를 통해 표시되는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 설정 하려고 iopenrowset:: Openrowset 또는 ITableDefinitionWithConstraints::CreateTableWithConstraints를 통해 속성의 기본이 아닌 값으로 메서드는 오류가 발생 하며 개체가 만들어질 수 있습니다.  
   
  테이블 반환 매개 변수 행 집합 개체에 구현되지 않은 속성은 다음 목록에 없습니다. 전체 속성 목록을 보려면 Windows Data Access Components의 OLE DB 설명서를 참조하십시오.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "37431252"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 테이블 반환 매개 변수 행 집합 개체에 책갈피가 허용 되지 않습니다.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 테이블 반환 매개 변수 행 집합 개체에 책갈피가 허용되지 않습니다.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -52,7 +52,7 @@ ms.locfileid: "37431252"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 반환 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체의 수명 동안 유지 하기 위해 필요 합니다.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 반환 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열이 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체가 사용되는 동안 열을 유지해야 합니다.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -86,7 +86,7 @@ ms.locfileid: "37431252"
   
 |속성 ID|속성 값|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 형식: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정 하면, 열이 계산된 열 임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
+|SSPROP_COL_COMPUTED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 형식: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
  이러한 속성은 ISSCommandWithParamters::GetParameterProperties에 대 한 호출에서 테이블 반환 매개 변수 형식 정보를 검색 하는 동안 읽히고 소비자 및 테이블 반환 매개 변수에 대 한 특정 속성을 설정 하는 동안 소비자가 설정 isscommandwithparameters:: Setparameterproperties를 통해.  
@@ -95,14 +95,14 @@ ms.locfileid: "37431252"
   
 |속성 ID|속성 값|  
 |-----------------|--------------------|  
-|SSPROP_PARAM_TYPE_TYPENAME|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자가 테이블 반환 매개 변수 형식의 이름을 가져오거나 설정 하려면이 속성을 사용 합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.<br /><br /> 이 속성은 필요한 경우 테이블 반환 매개 변수의 테이블 형식 이름을 제공하기 위해 지정할 수 있습니다(ODBC 호출 구문 명령의 경우). 매개 변수가 있는 임시 SQL 쿼리에는 이 속성을 반드시 지정해야 합니다.|  
-|SSPROP_PARAM_TYPE_SCHEMANAME|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자가 테이블 반환 매개 변수 형식 스키마 이름을 가져오거나 설정 하려면이 속성을 사용 합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.|  
-|SSPROP_PARAM_TYPE_CATALOGNAME|R/w: 읽기 전용<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 테이블 반환 매개 변수 형식 카탈로그 이름을 가져오려면이 속성을 사용 합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다. 이 속성을 설정하면 오류가 발생합니다. 사용자 정의 테이블 형식은 해당 형식을 사용하는 테이블 반환 매개 변수와 같은 데이터베이스에 있어야 합니다.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 소비자가이 속성을 사용 지정 행 집합의 열 집합으로 간주 됩니다. 이러한 열에 대해서는 값이 전송되지 않습니다. 공급자가 소비자 행 집합 개체에서 데이터를 인출하는 동안 이러한 열에 대해서는 바인딩이 필요하지 않습니다.<br /><br /> 배열의 각 요소는 행 집합 개체에서 열의 순서를 나타내는 서수여야 합니다. 잘못된 서수를 지정하면 명령 실행 시 오류가 발생합니다.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명:이 속성은 데 소비자가 서버 정렬에 대 한 힌트를 제공 합니다. 열 데이터의 순서입니다. 공급자는 소비자가 지정된 사양을 따른다고 가정하고 어떠한 유효성 검사도 수행하지 않습니다. 서버에서는 이 속성을 사용하여 최적화를 수행합니다.<br /><br /> 각 열에 대한 열 순서 정보는 배열에서 한 쌍의 요소로 나타납니다. 이 쌍의 첫 번째 요소는 열 번호이고 두 번째 요소는 오름차순의 경우 1이고 내림차순의 경우 2입니다.|  
+|SSPROP_PARAM_TYPE_TYPENAME|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.<br /><br /> 이 속성은 필요한 경우 테이블 반환 매개 변수의 테이블 형식 이름을 제공하기 위해 지정할 수 있습니다(ODBC 호출 구문 명령의 경우). 매개 변수가 있는 임시 SQL 쿼리에는 이 속성을 반드시 지정해야 합니다.|  
+|SSPROP_PARAM_TYPE_SCHEMANAME|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식의 스키마 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.|  
+|SSPROP_PARAM_TYPE_CATALOGNAME|R/w: 읽기 전용<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자는 이 속성을 사용하여 테이블 반환 매개 변수 형식 카탈로그 이름을 가져오거나 설정합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다. 이 속성을 설정하면 오류가 발생합니다. 사용자 정의 테이블 형식은 해당 형식을 사용하는 테이블 반환 매개 변수와 같은 데이터베이스에 있어야 합니다.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 소비자는 이 속성을 사용하여 행 집합에서 기본값으로 취급할 열 집합을 지정할 수 있습니다. 이러한 열에 대해서는 값이 전송되지 않습니다. 공급자가 소비자 행 집합 개체에서 데이터를 인출하는 동안 이러한 열에 대해서는 바인딩이 필요하지 않습니다.<br /><br /> 배열의 각 요소는 행 집합 개체에서 열의 순서를 나타내는 서수여야 합니다. 잘못된 서수를 지정하면 명령 실행 시 오류가 발생합니다.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 이 속성은 소비자가 열 데이터의 정렬 순서를 나타내는 힌트를 서버에 제공하는 데 사용합니다. 공급자는 소비자가 지정된 사양을 따른다고 가정하고 어떠한 유효성 검사도 수행하지 않습니다. 서버에서는 이 속성을 사용하여 최적화를 수행합니다.<br /><br /> 각 열에 대한 열 순서 정보는 배열에서 한 쌍의 요소로 나타납니다. 이 쌍의 첫 번째 요소는 열 번호이고 두 번째 요소는 오름차순의 경우 1이고 내림차순의 경우 2입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [OLE DB 테이블 반환 매개 변수 형식 지원](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 커서에 대 한 SQL 문 생성 | Microsoft Docs
+title: 커서에 대 한 SQL 문 생성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fc247de8bfc69a1851f8c1bf820a9076cf562ad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a2c9d73ec7599c9b1b969eb57d21beb1947355d2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416952"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561093"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "37416952"
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|1|  
+|SQL_ATTR_ROW_ARRAY_SIZE|@shouldalert|  
   
  SQL 문을 실행할 때 이러한 옵션을 기본값으로 설정 된 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 결과 집합을 구현 하는 서버 커서를 사용 하지 않습니다; 대신 기본 결과 집합을 사용 합니다. 이러한 옵션 중 하나는 SQL 문을 실행할 때 해당 기본값에서 변경 되는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 결과 집합을 구현 하는 서버 커서를 사용 하려고 합니다.  
   

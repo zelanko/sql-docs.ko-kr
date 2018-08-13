@@ -20,13 +20,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 097108b394f327e425a312d23957cc4db101e248
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 77ef7fc28b2da4b05e8b88c1ea5e9ad64a43971d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032311"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547613"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>주석이 추가된 XDR 스키마(SQLXML 4.0에서는 더 이상 사용되지 않음)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_xp_cmdshell_proxy_account (Transact SQL) | Microsoft Docs
+title: sp_xp_cmdshell_proxy_account (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18c960fdf3d70c82684d493fd498a57ed357bb4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 48a92be607ea1d57740587840cb854299443b285
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251970"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560563"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  에 대 한 프록시 자격 증명을 만든 **xp_cmdshell**합니다.  
+  에 대 한 프록시 자격 증명을 만들고 **xp_cmdshell**.  
   
 > [!NOTE]  
->  **xp_cmdshell** 기본적으로 비활성화 되어 있습니다. 사용할 수 있도록 **xp_cmdshell**, 참조 [xp_cmdshell 서버 구성 옵션](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)합니다.  
+>  **xp_cmdshell** 기본적으로 비활성화 되어 있습니다. 사용할 수 있도록 **xp_cmdshell**를 참조 하십시오 [xp_cmdshell 서버 구성 옵션](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,12 +61,12 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- 프록시 자격 증명 이름은 **# # xp_cmdshell_proxy_account # #** 합니다.  
+## <a name="remarks"></a>Remarks  
+ 프록시 자격 증명을 호출 됩니다 **xp_cmdshell_proxy_account # # #**.  
   
  NULL 옵션을 사용 하 여 실행 될 때 **sp_xp_cmdshell_proxy_account** 프록시 자격 증명을 삭제 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -87,8 +87,8 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [xp_cmdshell &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [xp_cmdshell &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

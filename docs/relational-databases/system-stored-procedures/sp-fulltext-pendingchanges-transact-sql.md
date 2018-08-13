@@ -22,13 +22,13 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a6defefbc225d2f8301977d5826c74597eefb2c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5519ade9d6ea17377304034e076d96e20af57409
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244124"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558103"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,20 +57,20 @@ sp_fulltext_pendingchanges table_id
 |**상태**|**int**|0 = 행이 전체 텍스트 인덱스에서 제거됩니다.<br /><br /> 1 = 행이 전체 텍스트 인덱싱됩니다.<br /><br /> 2 = 행이 최신 상태입니다.<br /><br /> -1 = 행이 과도기적(일괄 처리되었지만 커밋되지는 않음) 상태 또는 오류 상태에 있습니다.|  
 |**DocState**|**tinyint**|내부 문서 ID(DocId) 맵 상태 열의 원시 덤프입니다.|  
   
- <sup>* 키는 데이터 형식이 기본 테이블의 전체 텍스트 키 열의 데이터 형식과 동일 합니다.</sup>  
+ <sup>* 키에 대 한 데이터 형식이 기본 테이블의 전체 텍스트 키 열의 데이터 형식으로 동일 합니다.</sup>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  처리할 변경 내용이 없으면 빈 행 집합이 반환됩니다.  
   
- 전체 텍스트 검색 쿼리는 행을 반환 하지 않습니다는 **상태** 값이 0입니다. 이는 이러한 행이 기본 테이블에서 삭제되었고 전체 텍스트 인덱스에서도 삭제 대기 중이기 때문입니다.  
+ 전체 텍스트 검색 쿼리 사용 하 여 행을 반환 하지는 **상태** 값이 0입니다. 이는 이러한 행이 기본 테이블에서 삭제되었고 전체 텍스트 인덱스에서도 삭제 대기 중이기 때문입니다.  
   
  특정 테이블에 대해 보류 중인 변경 내용이 얼마나 되는지 확인하려면 OBJECTPROPERTYEX 함수의 **TableFullTextPendingChanges** 속성을 사용하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
- [전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [전체 텍스트 검색과 의미 체계 검색 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   
   

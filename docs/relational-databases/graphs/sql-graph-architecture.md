@@ -19,13 +19,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7cfba1fc79e44bb28a433c3b31fe5f4236037d6e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 49a0d942fd4d738b31d71d44fc74392469d047c2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051511"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546403"
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 
 |열 값  |Description  |
 |---   |---   |
-|1  |GRAPH_ID  |
+|@shouldalert  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
 |3  |GRAPH_FROM_ID  |
 |4  |GRAPH_FROM_OBJ_ID  |
@@ -105,19 +105,19 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 노드 테이블의 암시적 열  
 |열 이름    |데이터 형식  |is_hidden  |설명  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |내부 graph_id 열  |
+|graph_id_\<hex_string> |bigint |@shouldalert  |내부 graph_id 열  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |외부 노드 id 열  |
 
 Edge 테이블에 암시적 열  
 |열 이름    |데이터 형식  |is_hidden  |설명  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |내부 graph_id 열  |
+|graph_id_\<hex_string> |bigint |@shouldalert  |내부 graph_id 열  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |외부 가장자리 id 열  |
-|from_obj_id_\<hex_string>  |INT    |1  |내부 노드 개체 id  |
-|from_id_\<hex_string>  |bigint |1  |노드 graph_id에서 내부  |
+|from_obj_id_\<hex_string>  |INT    |@shouldalert  |내부 노드 개체 id  |
+|from_id_\<hex_string>  |bigint |@shouldalert  |노드 graph_id에서 내부  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |외부에서 노드 id  |
-|to_obj_id_\<hex_string>    |INT    |1  |내부 개체의 노드 id  |
-|to_id_\<hex_string>    |bigint |1  |노드 graph_id의 내부  |
+|to_obj_id_\<hex_string>    |INT    |@shouldalert  |내부 개체의 노드 id  |
+|to_id_\<hex_string>    |bigint |@shouldalert  |노드 graph_id의 내부  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |외부의 노드 id  |
  
 ### <a name="system-functions"></a>시스템 함수
@@ -163,7 +163,7 @@ Edge 테이블에 암시적 열
 
 
 
-## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진된 문제  
+## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진 문제  
 이 릴리스에서 노드와 지 테이블에 특정 제한이 있습니다.
 * 로컬 또는 전역 임시 테이블에는 노드 또는 지 테이블 일 수 없습니다.
 * 노드 또는 지 테이블로 테이블 형식 및 테이블 변수를 선언할 수 없습니다. 

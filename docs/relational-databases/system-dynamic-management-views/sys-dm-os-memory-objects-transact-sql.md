@@ -23,13 +23,13 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2cfed528dcbc58e4abed89ae1b76d0532d6bf6f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b746df94b0b7c36802663ca22c6b49107f10db18
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467729"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558433"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,23 +51,23 @@ ms.locfileid: "34467729"
 |**max_pages_allocated_count**|**int**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 메모리 개체에서 할당한 최대 페이지 수입니다. Null을 허용하지 않습니다.|  
 |**page_size_in_bytes**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 개체에서 할당한 페이지의 크기(바이트)입니다. Null을 허용하지 않습니다.|  
 |**max_pages_in_bytes**|**bigint**|이 메모리 개체에서 사용한 최대 메모리 양입니다. Null을 허용하지 않습니다.|  
-|**page_allocator_address**|**varbinary(8)**|페이지 할당자의 메모리 주소입니다. Null을 허용하지 않습니다. 자세한 내용은 참조 [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)합니다.|  
+|**page_allocator_address**|**varbinary(8)**|페이지 할당자의 메모리 주소입니다. Null을 허용하지 않습니다. 자세한 내용은 [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)합니다.|  
 |**creation_stack_address**|**varbinary(8)**|내부적으로만 사용됩니다. Null을 허용합니다.|  
 |**sequence_num**|**int**|내부적으로만 사용됩니다. Null을 허용합니다.|  
-|**partition_type**|**int**|파티션 유형:<br /><br /> 0-시스템이 메모리 내 개체<br /><br /> 1-이러한 시스템이 메모리 개체를 현재 분할 되지<br /><br /> 2-NUMA 노드에 의해 분할 이러한 시스템이 메모리 개체입니다. 단일 NUMA 노드에 있는 환경에서 1로 같습니다.<br /><br /> 3-CPU에 의해 분할 되는 이러한 시스템이 메모리 개체입니다.|  
-|**contention_factor**|**real**|이 메모리 개체에서 발생 하지 0 경합을 지정 하는 값입니다. 값은 지정된 된 수의 메모리 할당에는 기간 동안 반사 경합 적용 된 될 때마다 업데이트 됩니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.|  
-|**waiting_tasks_count**|**bigint**|이 메모리 개체에 대 한 대기 수입니다. 이 메모리 개체에서 할당 된 메모리 될 때마다이 카운터가 증가 합니다. 증가값이 현재이 메모리 개체에 대 한 액세스를 기다리는 태스크 수입니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다. 정확성을 보장 하지 않고 최선의 노력 값입니다.|  
-|**exclusive_access_count**|**bigint**|이 메모리 개체가 독점적으로 액세스 빈도 지정 합니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.  정확성을 보장 하지 않고 최선의 노력 값입니다.|  
+|**partition_type**|**int**|파티션 유형:<br /><br /> 0-분할 되지 않은 메모리 개체<br /><br /> 1-분할 메모리 개체에서 현재 분할 되지 않은<br /><br /> 2-분할 메모리 개체로, NUMA 노드 별 분할 합니다. 단일 NUMA 노드를 사용 하 여 환경에서 1로 같습니다.<br /><br /> 3-CPU 별로 분할할 분할 메모리 개체입니다.|  
+|**contention_factor**|**real**|경합 없이 0을 사용 하 여이 메모리 개체에 대해 경합을 지정 하는 값입니다. 값은 지정된 된 개수의 메모리 할당에는 해당 기간 동안 변경 경합 내용이 될 때마다 업데이트 됩니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.|  
+|**waiting_tasks_count**|**bigint**|이 메모리 개체에 대 한 대기 수입니다. 이 메모리 개체에서 할당 된 메모리 때마다이 카운터가 증가 합니다. 증가값이 메모리 개체에 대 한 액세스에 대 한 현재 대기 중인 태스크 수입니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다. 이 정확성을 보장 하지 않고 최선의 노력을 합니다.|  
+|**exclusive_access_count**|**bigint**|이 메모리 개체에 단독으로 액세스 빈도 지정 합니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.  이 정확성을 보장 하지 않고 최선의 노력을 합니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
- **partition_type**, **contention_factor**, **waiting_tasks_count**, 및 **exclusive_access_count** 에서 아직 구현 되지 않은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+ **partition_type**, **contention_factor**를 **waiting_tasks_count**, 및 **exclusive_access_count** 에서 아직 구현 되지 않은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  메모리 개체는 힙으로, 메모리 클럭보다 세분화된 할당 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 메모리 클럭 대신 메모리 개체를 사용합니다. 메모리 개체는 메모리 클럭의 페이지 할당자 인터페이스를 사용하여 페이지를 할당합니다. 메모리 개체는 가상 또는 공유 메모리 인터페이스를 사용하지 않습니다. 구성 요소는 할당 패턴에 따라 여러 다른 유형의 메모리 개체를 만들어 임의의 크기를 가진 영역을 할당할 수 있습니다.  
   
  메모리 개체의 일반적인 페이지 크기는 8KB입니다. 하지만 증분 메모리 개체의 페이지 크기의 범위는 512바이트에서 8KB 사이가 될 수 있습니다.  
@@ -86,8 +86,8 @@ ORDER BY 'Bytes Used' DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
-  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   

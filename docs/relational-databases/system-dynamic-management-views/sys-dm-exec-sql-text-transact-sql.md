@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sql_text (Transact SQL) | Microsoft Docs
+title: sys.dm_exec_sql_text (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21b22b837cc4e46bdd5169b0c669e7dde74c029c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5bc68b376f5524324756715497c00094eb2ed101
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465159"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557143"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  지정 된로 확인 된 일괄 처리 SQL 텍스트를 반환 *sql_handle*합니다. 이 테이블 반환 함수는 시스템 함수를 대체 **fn_get_sql**합니다.  
+  즉에 일괄 처리 sql 텍스트를 반환 합니다. 지정 된 식별 *sql_handle*합니다. 시스템 함수를 대체 하는이 테이블 반환 함수 **fn_get_sql**합니다.  
   
  
 ## <a name="syntax"></a>구문  
@@ -45,7 +45,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>인수  
 *sql_handle*  
-조회할 일괄 처리의 SQL 핸들입니다. *sql_handle* 은 **varbinary(64)** 합니다. *sql_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
+조회할 일괄 처리의 SQL 핸들입니다. *sql_handle* 됩니다 **varbinary(64)** 합니다. *sql_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-캐시되거나 현재 실행 중인 일괄 처리에 대한 쿼리 계획을 고유하게 식별합니다. *plan_handle* 은 **varbinary(64)** 합니다. *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
+캐시되거나 현재 실행 중인 일괄 처리에 대한 쿼리 계획을 고유하게 식별합니다. *plan_handle* 됩니다 **varbinary(64)** 합니다. *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
   
 -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -74,27 +74,27 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|데이터베이스의 ID입니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.|  
 |**objectid**|**int**|개체의 ID입니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
-|**number**|**smallint**|번호가 있는 저장 프로시저의 경우 저장 프로시저의 번호가 이 열에 반환됩니다. 자세한 내용은 참조 [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)합니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
+|**number**|**smallint**|번호가 있는 저장 프로시저의 경우 저장 프로시저의 번호가 이 열에 반환됩니다. 자세한 내용은 [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)합니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
 |**encrypted**|**bit**|1 = SQL 텍스트가 암호화됩니다.<br /><br /> 0 = SQL 텍스트가 암호화되지 않습니다.|  
 |**text**|**nvarchar(max** **)**|SQL 쿼리의 텍스트입니다.<br /><br /> 암호화된 개체의 경우 NULL입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
   
-## <a name="remarks"></a>주의  
-임시 쿼리를 SQL 핸들 server에 전송 되는 SQL 텍스트 기반의 해시 값 이며 모든 데이터베이스에서 가져온 것일 수 있습니다. 
+## <a name="remarks"></a>Remarks  
+임시 쿼리를 SQL 핸들 서버로 전송 되는 SQL 텍스트 기반의 해시 값 이며 데이터베이스에서 발생할 수 있습니다. 
 
 저장 프로시저, 트리거, 함수 등의 데이터베이스 개체용 SQL 핸들은 데이터베이스 ID, 개체 ID 및 개체 번호에서 파생됩니다. 
 
 계획 핸들에는 전체 일괄 처리의 컴파일된 계획에서 파생 된 해시 값입니다. 
 
 > [!NOTE]
-> **dbid** 에서 확인할 수 없으므로 *sql_handle* 임시 쿼리에 대 한 합니다. 확인 하려면 **dbid** 임시 쿼리를 사용 하 여 *plan_handle* 대신 합니다.
+> **dbid** 에서 확인할 수 없으므로 *sql_handle* 임시 쿼리에 대 한 합니다. 결정할 **dbid** 임시 쿼리를 사용 하 여 *plan_handle* 대신 합니다.
   
 ## <a name="examples"></a>예 
 
 ### <a name="a-conceptual-example"></a>1. 개념적 예제
-다음은 전달 설명 하기 위해 기본 예제는 **sql_handle** 직접 또는 **CROSS APPLY**합니다.
+다음은 전달 설명 하기 위해 기본 예제는 **sql_handle** 직접적으로 또는 사용 하 여 **CROSS APPLY**합니다.
   1.  활동을 만듭니다.  
 새 쿼리 창에서 다음 T-SQL을 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.   
       ```sql
@@ -107,7 +107,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
       ```
       
     2.  사용 하 여 **CROSS APPLY**합니다.  
-    sql_handle **sys.dm_exec_requests** 에 전달 될 **sys.dm_exec_sql_text** 를 사용 하 여 **CROSS APPLY**합니다. 새 쿼리 창을 열고 1 단계에서 식별 된 spid를 전달 합니다. Spid 이런 경우에이 예에서 `59`합니다.
+    sql_handle **sys.dm_exec_requests** 전달할 **sys.dm_exec_sql_text** 사용 하 여 **CROSS APPLY**합니다. 새 쿼리 창을 열고 1 단계에서 식별 된 spid를 전달 합니다. Spid가 이런 경우에이 예에서 `59`합니다.
 
         ```sql
         SELECT t.*
@@ -116,8 +116,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  전달 **sql_handle** 직접 합니다.  
-획득 된 **sql_handle** 에서 **sys.dm_exec_requests**합니다. 그런 다음 전달는 **sql_handle** 에 직접 **sys.dm_exec_sql_text**합니다. 새 쿼리 창을 열고 1 단계에서 식별 된 spid를 전달 **sys.dm_exec_requests**합니다. Spid 이런 경우에이 예에서 `59`합니다. 그런 다음 반환 된 **sql_handle** 인수로 **sys.dm_exec_sql_text**합니다.
+    2.  전달 **sql_handle** 직접.  
+획득 합니다 **sql_handle** 에서 **sys.dm_exec_requests**합니다. 그런 다음 전달 된 **sql_handle** 에 직접 **sys.dm_exec_sql_text**합니다. 새 쿼리 창을 열고 1 단계에서 식별 된 spid 전달 **sys.dm_exec_requests**합니다. Spid가 이런 경우에이 예에서 `59`합니다. 그런 다음 반환 된 **sql_handle** 인수로 **sys.dm_exec_sql_text**합니다.
 
         ```sql
         -- acquire sql_handle
@@ -174,9 +174,9 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_cursors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   

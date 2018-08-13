@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource | Microsoft Docs
+title: SQLConfigDataSource | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7560ae88c8681a68b0e3479821dc341a22268c9d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0b923835a2cf5ae693f34d749d0f03f4ebf5f7c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412504"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561883"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 지 원하는 다양 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-원본 구성 특성 문자열 데이터에 대 한 특정 키워드/값 쌍입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버를 지 원하는 다양 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-특정 키워드/값 쌍 데이터 소스 특성 문자열을 구성 합니다.  
   
- 사용할 수 있는 키워드 목록은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 참조 하세요 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)입니다.  
+ 목록에서 사용할 수 있는 키워드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버를 참조 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLConfigDataSource 함수](http://go.microsoft.com/fwlink/?LinkId=59337)   

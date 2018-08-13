@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_requests (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_exec_requests (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b8e51c1078ebe9b1fd2784a14e8c8e1575eae27
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 85c9decc6e59e3a35290081cbc0af59410c5db9d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467959"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548033"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34467959"
 |request_id|**int**|요청의 ID입니다. 세션의 컨텍스트에서 고유합니다. Null을 허용하지 않습니다.|  
 |start_time|**datetime**|요청이 도착한 타임스탬프입니다. Null을 허용하지 않습니다.|  
 |상태|**nvarchar(30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 배경<br />실행 중<br />실행 가능<br />중지 중<br />일시 중지됨<br /><br /> Null을 허용하지 않습니다.|  
-|command|**nvarchar(32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
+|command|**nvarchar(32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
 |sql_handle|**varbinary(64)**|요청에 대한 SQL 텍스트의 해시 맵입니다. Null을 허용합니다.|  
 |statement_start_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
 |statement_end_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 종료되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "34467959"
 |user_id|**int**|요청을 제출한 사용자의 ID입니다. Null을 허용하지 않습니다.|  
 |connection_id|**uniqueidentifier**|요청이 도착한 연결의 ID입니다. Null을 허용합니다.|  
 |blocking_session_id|**smallint**|요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음).<br /><br /> -2 = 분리된 분산 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -3 = 지연된 복구 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -4 = 내부 래치 상태 전환 때문에 현재 차단 래치 소유자의 세션 ID를 확인할 수 없습니다.|  
-|wait_type|**nvarchar(60)**|요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. Null을 허용합니다.<br /><br /> 대기 유형에 대 한 정보를 참조 하십시오. [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)합니다.|  
+|wait_type|**nvarchar(60)**|요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. Null을 허용합니다.<br /><br /> 대기 유형에 대 한 내용은 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)합니다.|  
 |wait_time|**int**|요청이 현재 차단된 경우 이 열은 현재 대기의 기간(밀리초)을 반환합니다. Null을 허용하지 않습니다.|  
 |last_wait_type|**nvarchar(60)**|이 요청이 이전에 차단된 경우 이 열은 마지막 대기의 유형을 반환합니다. Null을 허용하지 않습니다.|  
 |wait_resource|**nvarchar(256)**|요청이 현재 차단된 경우 이 열은 요청이 현재 대기하고 있는 리소스를 반환합니다. Null을 허용하지 않습니다.|  
@@ -96,13 +96,13 @@ ms.locfileid: "34467959"
 |query_plan_hash|**binary(8)**|쿼리 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 쿼리 실행 계획을 식별하는 데 사용됩니다. 쿼리 계획 해시를 사용하여 비슷한 실행 계획을 가진 쿼리의 누적 비용을 찾을 수 있습니다.|  
 |statement_sql_handle|**varbinary(64)**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 개별 쿼리의 SQL 핸들입니다. |  
 |statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> Sys.query_context_settings 선택적 외래 키입니다. |  
-|dop |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 쿼리의 병렬 처리 수준입니다. |  
-|parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 병렬 쿼리 하는 경우 예약 된 병렬 작업자 수입니다.  |  
+|dop |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 쿼리 병렬 처리 수준입니다. |  
+|parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 병렬 쿼리의 경우 예약 된 병렬 작업자 수입니다.  |  
 |external_script_request_id |**uniqueidentifier** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
-|is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청이 다시 시작 가능한 인덱스 작업 인지를 나타냅니다. |  
+|is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청을 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
   
-## <a name="permissions"></a>Permissions  
- 사용자에 게 있으면 `VIEW SERVER STATE` 서버 권한, 사용자는 확인할 실행 중인 모든 세션의 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 그렇지 않으면 현재 세션에만 표시 됩니다. `VIEW SERVER STATE` 부여 될 수 없지만 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 있으므로 `sys.dm_exec_requests` 은 항상 현재 연결으로 제한 합니다. 
+## <a name="permissions"></a>사용 권한  
+ 사용자에 게 `VIEW SERVER STATE` 서버의 권한이 사용자 인스턴스에서 실행 중인 모든 세션에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]고, 그렇지 않으면 사용자는 현재 세션에만 표시 됩니다. `VIEW SERVER STATE` 부여할 수 없습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 있도록 `sys.dm_exec_requests` 은 항상 현재 연결으로 제한 됩니다. 
   
 ## <a name="examples"></a>예  
   
@@ -122,14 +122,14 @@ GO
 ```  
   
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>2. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기  
- 다음 예제 쿼리에서 **sys.dm_exec_requests** 흥미로운 일괄 처리 및 복사를 찾으려면 해당 `transaction_id` 출력에서 합니다.  
+ 다음 예제에서는 쿼리 **sys.dm_exec_requests** 흥미로운 일괄 처리 및 복사를 찾으려면 해당 `transaction_id` 출력에서 합니다.  
   
 ```  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- 그런 다음 잠금 정보를 찾기 위해 사용 하 여 복사 된 `transaction_id` 시스템 함수와 함께 **sys.dm_tran_locks**합니다.  
+ 그런 다음 잠금 정보를 찾기 위해 사용 하 여 복사한 `transaction_id` 시스템 함수를 사용 하 여 **sys.dm_tran_locks**합니다.  
   
 ```  
 SELECT * FROM sys.dm_tran_locks   
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="c-finding-all-currently-blocked-requests"></a>3. 현재 차단된 모든 요청 찾기  
- 다음 예제 쿼리에서 **sys.dm_exec_requests** 차단 된 요청에 대 한 정보를 찾을 수 있습니다.  
+ 다음 예제에서는 쿼리 **sys.dm_exec_requests** 차단 된 요청에 대 한 정보를 찾을 수 있습니다.  
   
 ```  
 SELECT session_id ,status ,blocking_session_id  
@@ -150,9 +150,9 @@ WHERE status = N'suspended';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

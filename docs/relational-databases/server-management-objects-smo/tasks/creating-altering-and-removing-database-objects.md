@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 개체를 사용 하 여 작업 | Microsoft Docs
+title: 데이터베이스 개체를 사용 하 여 작업 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37b8491bc441db0a2457ea4d87e6bb372326cafb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0539009019f23555d77a6bf0656ad285f7bb0bf8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040201"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563927"
 ---
-# <a name="creating-altering-and-removing-database-objects"></a>생성, 변경 및 데이터베이스 개체를 제거 합니다.
+# <a name="creating-altering-and-removing-database-objects"></a>데이터베이스 개체 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   SMO 개체를 만드는 단계는 다음과 같습니다.  

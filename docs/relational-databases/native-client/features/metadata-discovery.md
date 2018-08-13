@@ -1,5 +1,5 @@
 ---
-title: 메타 데이터 검색 | Microsoft Docs
+title: 메타 데이터 검색 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -11,13 +11,13 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 51421229b4d5e8799e4a3995b9aed680fdaa026a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7c362f69e1491b8a031557c9e74f6ab4b19e3d5d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423432"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546243"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "37423432"
   
 -   Icommandwithparameters:: Getparameterinfo (참조 [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) 자세한)  
   
- 살펴보면 성능 향상 IBCPSession::BCPSetBulkMode를 사용 하 여 메타 데이터 형식을 지정 하는 경우  
+ 또한 IBCPSession::BCPSetBulkMode를 사용하여 메타데이터 형식을 지정하는 경우 향상된 성능을 경험할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 다음과 같은 두 개의 저장 프로시저가 추가되어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client에서 메타데이터 검색 기능이 향상되었습니다.  
   

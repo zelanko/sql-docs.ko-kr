@@ -1,203 +1,141 @@
 ---
-title: 인터넷 연결 되지 않은 기계 학습 SQL Server 구성 요소 설치 | Microsoft Docs
+title: 인터넷 액세스 없이 SQL Server machine learning 구성 요소를 설치 합니다. | Microsoft 문서
+description: 오프 라인 상태 이거나 연결이 끊긴 Machine Learning R 및 Pytyon 설치 SQL Server 인스턴스에서 격리 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/02/2018
+ms.date: 08/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a340acfbbcf19a6015e3b2745b1f6089e12d3fd
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822196"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546263"
 ---
-# <a name="install-sql-server-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 구성 요소를 학습 하는 SQL Server 컴퓨터 설치
+# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>인터넷 액세스 없이 컴퓨터에서 R 및 Python 기능을 학습 하는 SQL Server 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-기본적으로 설치 관리자가 필요한 가져오려는 Microsoft 다운로드 사이트에 연결 하 고 업데이트 된 구성 요소에 대 한 기계 학습에서 SQL Server. 방화벽 제약 때문에 이러한 사이트에서 설치 관리자를 경우, 파일을 다운로드 하 고, 오프 라인 서버에 파일을 전송 하 고, 한 다음 설치 프로그램을 실행 하는 인터넷에 연결 된 장치를 사용할 수 있습니다.
+기본적으로 설치 관리자 필수 가져오려면 Microsoft 다운로드 사이트에 연결 하 고 업데이트 된 구성 요소에 대 한 기계 학습에서 SQL Server입니다. 방화벽 제약 조건을 설치 관리자에서 이러한 사이트에 연결을 방지 하는 경우, 파일을 다운로드 하 고, 오프 라인 서버에 파일을 전송 하 고, 그런 다음 설치 프로그램을 실행 하는 인터넷에 연결 된 장치를 사용할 수 있습니다.
 
-## <a name="get-the-installation-media"></a>설치 미디어 다운로드
+데이터베이스 내 분석 데이터베이스 엔진 인스턴스 및 SQL Server의 버전에 따라 R 및 Python 통합에 대 한 추가 구성 요소 구성 됩니다. 
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
++ SQL Server 2017에는 R 및 Python 포함 됩니다. 
++ SQL Server 2016은 R 전용입니다. 
 
-> [!NOTE]  
-> 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
- 
- ###  <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항 
+격리 된 서버에서 기계 학습 및 R/Python 언어별 기능 CAB 파일을 통해 추가 됩니다. 
 
-Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 2013 런타임 이진 파일의 특정 버전과 관련된 문제를 확인했습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server를 설치하기 전에 [SQL Server 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) 의 지침에 따라 해당 컴퓨터에 VC 런타임 이진 파일에 대한 패치가 필요한지 확인하세요.  
+## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 오프 라인 설치
 
+격리 된 서버에서 SQL Server 2017 Machine Learning Services (R 및 Python)를 설치 하려면 SQL Server의 초기 릴리스를 다운로드 하 여 시작 하 고 R 및 Python에 대 한 해당 CAB 파일을 지원 합니다. 즉시 최신 누적 업데이트를 사용 하도록 서버를 업데이트 하려는 경우에 초기 릴리스를 먼저 설치 해야 합니다.
 
-## <a name="download-cab-files"></a>.Cab 파일을 다운로드
+> [!Note]
+> SQL Server 2017 서비스 팩이 없습니다. 이 초기 릴리스만 누적 업데이트를 통해 서비스와 기준선으로 사용 하도록 SQL Server의 첫 번째 릴리스입니다. 
 
-인터넷에 연결 된 서버에서 오프 라인 설치에 필요한.cab 파일을 다운로드 합니다. 설치 프로그램은 추가 기능을 설치 하려면.cab 파일을 사용 합니다.
+### <a name="1---download-2017-cabs"></a>1-2017 Cab을 다운로드 합니다.
+
+인터넷 연결 컴퓨터에서 SQL Server 2017에 대 한 초기 릴리스 및 설치 미디어에 대 한 R 및 Python 기능을 제공 CAB 파일을 다운로드 합니다. 
 
 릴리스  |다운로드 링크  |
----------|---------|
-**SQL Server 2017 초기 릴리스** |
+---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Microsoft Python 열기     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python 서버    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
-**SQL Server 2017 CU1** |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Microsoft Python 열기     |변경 없음 이전에 사용 하 여 |
-Microsoft Python 서버    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
-**SQL Server 2017 CU2** |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server      |변경 없음 이전에 사용 하 여|
-Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |변경 없음 이전에 사용 하 여|
-**SQL Server 2017 CU3** |
-Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
-Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
-**SQL Server 2017 CU4** |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
-Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
-**SQL Server 2017 CU5** |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
-Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
-**SQL Server 2017 cu6 적용** |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
-Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
-**SQL Server 2017 CU7** |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server      |변경 없음 이전에 사용 하 여|
-Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |변경 없음 이전에 사용 하 여|
 
+###  <a name="2---get-sql-server-2017-installation-media"></a>2-SQL Server 2017 설치 미디어 가져오기
 
-### <a name="bkmk_2016Installers"></a>SQL Server 2016에 대 한 다운로드
+1. 인터넷 연결 컴퓨터에 다운로드 합니다 [SQL Server 2017 설치 프로그램](https://www.microsoft.com/sql-server/sql-server-downloads)합니다. 
 
-> [!IMPORTANT]
-> 
-> SQL Server 2016 SP1 CU4 또는 CU5 s p 1을 오프 라인으로 설치할 때 SRO_3.2.2.16000_1033.cab 다운로드 합니다. 에서 다운로드 한 SRO_3.2.2.13000_1033.cab FWLINK 831785 설정 대화 상자에 표시 된 대로, 하는 경우 누적 업데이트를 설치 하기 전에 파일을 SRO_3.2.2.16000_1033.cab로 바꿉니다.
+2. 설치 프로그램을 두 번 클릭 하 고 선택 합니다 **미디어 다운로드** 설치 유형입니다. 이 옵션을 사용 하 여 설치는 설치 미디어에 포함 된 로컬.iso (또는.cab) 파일을 만듭니다.
 
-릴리스  |다운로드 링크  |
----------|---------|
-**SQL Server 2016 RTM**     |
-Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)
-Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)
-**SQL Server 2016 CU 1**     |
-Microsoft R Open     |[SRO_3.2.2.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808803)
-Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)
-**SQL Server 2016 CU 2**     |
-Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)
-Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)
-**SQL Server 2016 CU 3**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server     | 변경 없음 이전에 사용 하 여 |
-**SQL Server 2016 CU 4**     |
-Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
-Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
-**SQL Server 2016 CU 5**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server     |변경 없음 이전에 사용 하 여|
-**SQL Server 2016 CU 6**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server     |[SRS_8.0.3.14000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850316)  |
-**SQL Server 2016 CU 7**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server     |변경 없음 이전에 사용 하 여 |
-**SQL Server 2016 SP 1**     |
-Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
-Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
-**SQL Server 2016 SP 1 c u 1**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server     |변경 없음 이전에 사용 하 여|
-**SQL Server 2016 SP 1 c u 2**     |
-Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
-**SQL Server 2016 SP 1 CU3**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server     |변경 없음 이전에 사용 하 여|
-**SQL Server 2016 SP 1 CU4 및 GDR**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
-**SQL Server 2016 SP 1 CU5**     |
-Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server    |변경 없음 이전에 사용 하 여 |
+   ![다운로드 미디어 설치 유형 선택](media/offline-download-tile.png "미디어 다운로드")
 
-Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 수 있는.tar 형식으로 보관으로: [다운로드 R 서버 설치 관리자](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
+## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 오프 라인 설치
 
-### <a name = "bkmk_OtherComponents"></a>추가 필수 구성 요소
+SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 전용 CAB 파일에 대 한 제품 패키지 및 Microsoft의 오픈 소스 R 배포 각각. 이러한 버전 중 하나를 설치 하 여 시작: SP 2, SP 1 RTM입니다. 기본 설치 위치에 있으면 다음 단계로 누적 업데이트를 적용할 수 있습니다.
 
-사용자 환경에 따라 다음 필수 구성 요소에 대한 설치 관리자의 로컬 복사본을 만들어야 할 수 있습니다.
+인터넷 연결 컴퓨터에서 SQL Server 2016에서 데이터베이스 내 분석을 설치 하려면 설치 프로그램에서 사용 되는 CAB 파일을 다운로드 합니다. 
 
-구성 요소  |버전
----------|---------
-[SQL Server 2016용 Microsoft AS OLE DB 공급자](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
-[Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
-[Microsoft MPI](https://go.microsoft.com/fwlink/?linkid=834316)     | 7.1.12437.25
-[Microsoft Visual C++ 2013 재배포 가능](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
-[Microsoft Visual C++ 2015 재배포 가능](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
+### <a name="1---download-2016-cabs"></a>1-2016 Cab을 다운로드 합니다.
+
+릴리스  | Microsoft R Open | Microsoft R Server |
+---------|-----------------|---------------------|
+**SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
+**SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
+**SQL Server 2016 SP 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
+
+### <a name="2---get-sql-server-2016-installation-media"></a>2-SQL Server 2016 설치 미디어 가져오기
+
+대상 컴퓨터의 첫 번째 설치와 SQL Server 2016 RTM, SP 1 또는 SP 2를 설치할 수 있습니다. 이러한 버전 중 하나는 누적 업데이트를 사용할 수 있습니다.
+
+.Iso 파일을 가져올 수 설치 미디어를 포함 하는 것 [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)합니다. 로그인 한 다음 사용 하 여 합니다 **다운로드** 링크를 설치 하려면 SQL Server 2016 릴리스를 찾을 수 있습니다. 오프 라인 설치에 대 한 대상 컴퓨터에 복사할 수 있는.iso 파일의 형태로 시작 됩니다.
 
 ## <a name="transfer-files"></a>파일 전송
 
-압축 된 SQL Server 설치 미디어와 설치 프로그램을 설치 하는 컴퓨터에 이미 다운로드 파일을 전송 합니다.
+대상 컴퓨터에 SQL Server 설치 미디어 (.iso 또는.cab) 및 데이터베이스 내 분석 CAB 파일을 복사 합니다. 대상 컴퓨터의 동일한 폴더에 CAB 파일 및 미디어 파일 설치와 같은 배치 **다운로드** 또는 설치 사용자의 %temp * 폴더입니다.
 
-와 같은 편리한 폴더 CAB 파일을 저장할 **다운로드** 또는 설치 사용자의 임시 폴더: < 사용자 이름 > C:\Users \AppData\Local\Temp 합니다.
+다음 스크린샷은 SQL Server 2017 CAB 및 ISO 파일을 보여 줍니다. SQL Server 2016 다운로드 다르게: 2016에 대 한 설치 미디어 및 파일 수를 줄입니다 (Python 없음)에 해당 하는 파일의 이름은입니다.
 
-En_sql_server_2017.iso 파일을 편리한 폴더에 넣습니다. 두 번 클릭 **setup.exe** 설치를 시작 합니다.
+![전송할 파일 목록이](media/offline-file-list.png "파일 목록")
 
-### <a name="run-setup"></a>설치 프로그램 실행
+## <a name="run-setup"></a>설치 프로그램 실행
 
-인터넷에서 연결이 끊어진 컴퓨터에 SQL Server 설치 프로그램을 실행 하면 설치 프로그램 추가 **오프 라인 설치** 마법사 페이지를 이전 단계에서 복사 하는.cab 파일의 위치를 지정할 수 있습니다.
+인터넷에서 연결이 끊어진 컴퓨터에 SQL Server 설치 프로그램을 실행 하면 설치 프로그램에서 추가 **오프 라인 설치** 마법사 페이지를 이전 단계에서 복사한 CAB 파일의 위치를 지정할 수 있습니다.
 
-1. SQL Server 설치 마법사를 시작 합니다.
+1. 설치를 시작 하려면 설치 미디어에 액세스 하려면.iso 또는.cab 파일을 두 번 클릭 합니다. 표시 되어야 합니다 **setup.exe** 파일입니다.
 
-2. 설치 마법사는 오픈 소스 R 또는 Python 구성 요소에 대 한 라이선스 페이지가 표시 되 면 클릭 **Accept**합니다. 라이선스 계약을 사용 하면 다음 단계를 진행할 수 있습니다.
+2. 마우스 오른쪽 단추로 클릭 **setup.exe** 하 고 관리자 권한으로 실행 합니다.
 
-3. 에 **오프 라인 설치** 페이지 **설치 경로**를 앞에서 복사한.cab 파일이 있는 폴더를 지정 합니다.
+3. 설치 마법사에서 오픈 소스 R 또는 Python 구성 요소에 대 한 라이선스 페이지가 표시를 클릭 **Accept**합니다. 라이선스 약관에 동의 사용 하면 다음 단계를 진행할 수 있습니다.
 
-4. 계속 다음의 설치를 완료 하려면 화면의 지시 합니다.
+4. 에 **오프 라인 설치** 페이지에서 **설치 경로**, 앞에서 복사한 CAB 파일이 포함 된 폴더를 지정 합니다.
 
-설치가 완료 되는 서비스를 다시 시작 되 고 다음에 설명 된 대로 스크립트 실행을 사용 하도록 설정 하려면 서버를 구성 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](sql-machine-learning-services-windows-install.md) 또는 [SQL Server 설치 R Services (In-database) 2016](sql-r-services-windows-install.md)합니다.
+   ![Cab 폴더 선택 마법사 페이지](media/screenshot-sql-offline-cab-page.png "CAB 폴더")
 
-## <a name="slipstream-upgrades-for-offline-servers"></a>오프 라인 서버에 대 한 통합 설치 업그레이드
+5. 계속 다음의 설치를 완료 하려면 화면의 지시 합니다.
+
+## <a name="post-install-configuration"></a>설치 후 구성
+
+설치가 완료 되 면 서비스를 다시 시작 후 다음 스크립트 실행을 사용 하도록 설정 하려면 서버를 구성 합니다.
+
++ [외부 스크립트 실행 (SQL Server 2017)를 사용 하도록 설정](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
++ [외부 스크립트 실행 (SQL Server 2016)를 사용 하도록 설정](sql-r-services-windows-install.md#bkmk_enableFeature)
+
+SQL Server 2017의 Machine Learning Services 또는 SQL Server 2016 R Services의 오프 라인 초기 설치에는 온라인 설치와 같은 구성이 필요합니다.
+
++ [설치 확인](sql-machine-learning-services-windows-install.md#verify-installation) (SQL Server 2016에 대 한 클릭 [여기](sql-r-services-windows-install.md#verify-installation)).
++ [필요에 따라 추가 구성을](sql-machine-learning-services-windows-install.md#additional-configuration) (SQL Server 2016에 대 한 클릭 [여기](sql-r-services-windows-install.md#bkmk_FollowUp)).
+
+<a name="slipstream-upgrades"></a>
+
+## <a name="slipstream-upgrades"></a>통합 설치 업그레이드
 
 통합 설치는 실패한 인스턴스 설치에 패치나 업데이트를 적용하여 기존 문제를 해결하는 기능을 말합니다. 이 방법은 설치를 수행할 때 동시에 SQL Server가 업데이트되므로 이후에 별도로 다시 시작할 필요가 없는 장점이 있습니다.
 
-+ 서버가 인터넷에 연결되어 있지 않으면 SQL Server 설치 관리자를 다운로드하고 나서 업데이트 프로세스를 시작하기 **전에** R 구성 요소 설치 관리자의 일치하는 버전을 다운로드해야 합니다.  R 구성 요소는 SQL Server와 함께 기본적으로 포함 되지 않습니다.
+서비스 업데이트는 업데이트 된 SQL Server를 다운로드 하 여 적용 되는 서버에 인터넷 액세스가 없는 경우 설치 관리자 및 해당 버전의 언어 관련 CAB 파일입니다. 
 
-+ 기존 설치에 이러한 구성 요소를 추가 하는 경우 SQL Server 설치 프로그램의 업데이트 된 버전 및 해당 업데이트 된 버전의 추가 구성 요소를 사용 합니다. R 기능이 설치 되도록 상태임을 지정 하면 설치 관리자 구성 요소를 학습 하는 컴퓨터에 대 한 설치 관리자의 일치 하는 버전을 찾습니다.
+1. 기본 인스턴스를 시작 합니다. 통합 설치 업그레이드는 이러한 버전의 SQL Server에서 지원 됩니다.
 
-## <a name="get-help"></a>도움말 보기
+  + SQL Server 2017 초기 릴리스
+  + SQL Server 2016의 초기 릴리스
+  + SQL Server 2016 SP1
+  + SQL Server 2016 SP 2
 
-설치 또는 업그레이드로 도움이 필요 하세요? 알려진 문제와 관련 된 일반적인 질문에 대답 하십시오에 대 한 다음 문서를 참조 합니다.
+2. 지정 된 누적 업데이트에 대 한 업데이트 된 버전을의 SQL Server 설치 관리자를 가져옵니다. Machine learning (R 및 Python) 기능에 모든 업데이트가 함께 기본 데이터베이스 엔진 인스턴스의 누적 업데이트입니다.
 
-* [업그레이드 및 설치 FAQ-컴퓨터 학습 서비스](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+  + [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
+  + [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
 
-인스턴스의 설치 상태를 확인 하 고 일반적인 문제를 해결 하려면 이러한 사용자 지정 보고서를 봅니다.
+3. R 및 Python에 대 한 해당 CAB 파일을 가져옵니다. 다운로드 링크를 참조 하세요 [CAB 인스턴스를 SQL Server 데이터베이스 내 분석에 누적 업데이트에 대 한 다운로드](sql-ml-cab-downloads.md)합니다.
 
-* [SQL Server R Services에 대 한 사용자 지정 보고서](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
-R 서비스 지원 팀에서이 문서에서는 SQL Server 2016의 무인된 설치 또는 R services의 업그레이드를 수행 하는 방법을 보여 줍니다: [인터넷 액세스가 없는 컴퓨터에 R 서비스 배포](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)합니다.
-
+4. 설치 프로그램을 실행 동일한 폴더에서 모든 파일을 배치 합니다. 설치 하는 동안 업데이트 된 CAB 파일에 대 한 폴더 위치를 선택 하 라는 메시지가 표시 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-R 개발자 몇 가지 간단한 예제 차별화할 수 및 R SQL Server와 함께 작동 하는 방법에 대 한 기본 사항을 설명 합니다. 다음 단계에서는 다음 링크 참조:
+인스턴스의 설치 상태를 확인 하 고 일반적인 문제 해결, 참조 [SQL Server R Services에 대 한 사용자 지정 보고서](../r/monitor-r-services-using-custom-reports-in-management-studio.md)합니다.
 
-+ [자습서: T-SQL에서 R을 실행](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [R 개발자를 위한 자습서: 데이터베이스에서 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
-Python 개발자는이 자습서를 수행 하 여 SQL Server와 함께 Python을 사용 하는 방법을 배울 수 있습니다.
-
-+ [자습서: T-SQL에서 Python 실행](../tutorials/run-python-using-t-sql.md)
-+ [Python 개발자를 위한 자습서: 데이터베이스에서 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)
-
-실제 시나리오를 기반으로 하는 기계 학습의 예제를 보려면 참조 [자습서 학습 컴퓨터](../tutorials/machine-learning-services-tutorials.md)합니다.
+모든 알 수 없는 메시지 또는 로그 항목을 사용 하 여 도움말을 참조 하세요 [업그레이드 및 설치 FAQ-Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)합니다.
 

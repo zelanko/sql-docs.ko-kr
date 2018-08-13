@@ -1,5 +1,5 @@
 ---
-title: sys.objects (Transact SQL) | Microsoft Docs
+title: sys.objects (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: sql
@@ -26,32 +26,32 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfbf6fa606834c9582392635670b5f04fe9995a3
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 23053e11757682180c78a594632b75a466e126bb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552963"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  고유 하 게 컴파일된 스칼라 사용자 정의 함수를 포함 하는 데이터베이스 내에서 만든 각 사용자 정의 스키마 범위 개체에 대 한 행을 포함 합니다.  
+  고유 하 게 컴파일된 스칼라 사용자 정의 함수를 포함 하 여 데이터베이스 내에서 만든 각 사용자 정의 스키마 범위 개체에 대 한 행을 포함 합니다.  
   
  자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
 > [!NOTE]  
->  sys.objects는 스키마 범위가 아니기 때문에 DDL 트리거를 표시하지 않습니다. 모든 트리거, DML 및 DDL 모두 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)합니다. sys.triggers는 다양한 종류의 트리거에 대한 이름-범위 혼합 규칙을 지원합니다.  
+>  sys.objects는 스키마 범위가 아니기 때문에 DDL 트리거를 표시하지 않습니다. 모든 트리거, DML 및 DDL [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)합니다. sys.triggers는 다양한 종류의 트리거에 대한 이름-범위 혼합 규칙을 지원합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|개체 이름입니다.|  
+|NAME|**sysname**|개체 이름입니다.|  
 |object_id|**int**|개체 ID입니다. 데이터베이스 내에서 고유합니다.|  
-|principal_id|**int**|스키마 소유자와 다른 경우 개별 소유자의 ID입니다. 기본적으로 스키마에 포함된 개체는 스키마 소유자가 소유합니다. 그러나 ALTER AUTHORIZATION 문으로 대체 소유자를 지정하여 소유권을 변경할 수 있습니다.<br /><br /> 대체 개별 소유자가 없으면 NULL입니다.<br /><br /> 개체 형식이 다음 중 하나인 경우 NULL입니다.<br /><br /> C = CHECK 제약 조건<br /><br /> D = DEFAULT(제약 조건 또는 독립 실행형)<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> PK = PRIMARY KEY 제약 조건<br /><br /> R = 규칙 (이전 스타일, 독립 실행형)<br /><br /> TA = 어셈블리(CLR 통합) 트리거<br /><br /> TR = SQL 트리거<br /><br /> UQ = UNIQUE 제약 조건|  
+|principal_id|**int**|스키마 소유자와 다른 경우 개별 소유자의 ID입니다. 기본적으로 스키마에 포함된 개체는 스키마 소유자가 소유합니다. 그러나 ALTER AUTHORIZATION 문으로 대체 소유자를 지정하여 소유권을 변경할 수 있습니다.<br /><br /> 대체 개별 소유자가 없으면 NULL입니다.<br /><br /> 개체 형식이 다음 중 하나인 경우 NULL입니다.<br /><br /> C = CHECK 제약 조건<br /><br /> D = DEFAULT(제약 조건 또는 독립 실행형)<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> PK = PRIMARY KEY 제약 조건<br /><br /> R = 규칙 (이전 스타일의 독립 실행형)<br /><br /> TA = 어셈블리(CLR 통합) 트리거<br /><br /> TR = SQL 트리거<br /><br /> UQ = UNIQUE 제약 조건|  
 |schema_id|**int**|개체가 포함된 스키마의 ID입니다.<br /><br /> 스키마 범위 시스템 개체는 항상 sys 또는 INFORMATION_SCHEMA 스키마에 포함됩니다.|  
 |parent_object_id|**int**|이 개체가 속하는 개체의 ID입니다.<br /><br /> 0 = 자식 개체가 아닙니다.|  
-|유형|**char(2)**|개체 유형:<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = DEFAULT(제약 조건 또는 독립 실행형)<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = SQL 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수<br /><br /> IF = SQL 인라인 테이블 반환 함수<br /><br /> IT = 내부 테이블<br /><br /> P = SQL 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> PG = 계획 지침<br /><br /> PK = PRIMARY KEY 제약 조건<br /><br /> R = 규칙 (이전 스타일, 독립 실행형)<br /><br /> RF = 복제 필터 프로시저<br /><br /> S = 시스템 기본 테이블<br /><br /> SN = 동의어<br /><br /> SO = 시퀀스 개체<br /><br /> U = 테이블(사용자 정의)<br /><br /> V = 뷰<br /><br /> <br /><br /> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = SQL 테이블 반환 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> UQ = UNIQUE 제약 조건<br /><br /> X = 확장 저장 프로시저<br /><br /> <br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.<br /><br /> <br /><br /> ET = 외부 테이블|  
+|유형|**char(2)**|개체 유형:<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = DEFAULT(제약 조건 또는 독립 실행형)<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = SQL 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수<br /><br /> IF = SQL 인라인 테이블 반환 함수<br /><br /> IT = 내부 테이블<br /><br /> P = SQL 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> PG = 계획 지침<br /><br /> PK = PRIMARY KEY 제약 조건<br /><br /> R = 규칙 (이전 스타일의 독립 실행형)<br /><br /> RF = 복제 필터 프로시저<br /><br /> S = 시스템 기본 테이블<br /><br /> SN = 동의어<br /><br /> SO = 시퀀스 개체<br /><br /> U = 테이블(사용자 정의)<br /><br /> V = 뷰<br /><br /> <br /><br /> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = SQL 테이블 반환 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> UQ = UNIQUE 제약 조건<br /><br /> X = 확장 저장 프로시저<br /><br /> <br /><br /> **적용할**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]를 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.<br /><br /> <br /><br /> ET = 외부 테이블|  
 |type_desc|**nvarchar(60)**|개체 유형에 대한 설명:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|개체를 만든 날짜입니다.|  
 |modify_date|**datetime**|ALTER 문을 사용하여 개체를 마지막으로 수정한 날짜입니다. 개체가 테이블이나 뷰인 경우 테이블이나 뷰에서 클러스터형 인덱스가 생성되거나 변경되면 modify_date도 변경됩니다.|  
@@ -59,10 +59,10 @@ ms.locfileid: "34225381"
 |is_published|**bit**|개체가 게시됩니다.|  
 |is_schema_published|**bit**|개체의 스키마만 게시됩니다.|  
   
-## <a name="remarks"></a>주의  
- 적용할 수는 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md), [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md), 및 [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)sys.objects에 표시 된 개체에 기본 제공 함수 ().  
+## <a name="remarks"></a>Remarks  
+ 적용할 수 있습니다 합니다 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)를 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md), 및 [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)sys.objects에 표시 된 개체에 기본 제공 함수 ().  
   
- 이 뷰 라는 스키마가 같은 버전 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), 시스템 개체를 보여 주는 합니다. 호출 뷰 [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) 시스템 및 사용자 개체를 보여 주는 합니다. 세 카탈로그 뷰 모두 구조가 같습니다.  
+ 라는 동일한 스키마를 사용 하 여이 보기의 버전이 있다는 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), 시스템 개체를 보여 주는 합니다. 호출 하는 다른 뷰가 [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) 는 시스템 및 사용자 개체를 보여 줍니다. 세 카탈로그 뷰 모두 구조가 같습니다.  
   
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 XML 인덱스 또는 공간 인덱스와 같은 확장 인덱스를 sys.objects(type = IT 및 type_desc = INTERNAL_TABLE)의 내부 테이블로 간주합니다. 확장 인덱스에 대한 설명은 다음과 같습니다.  
   
@@ -72,13 +72,13 @@ ms.locfileid: "34225381"
   
 -   is_ms_shipped, is_published 및 is_schema_published 열은 0으로 설정됩니다.  
 
-**관련된 유용한 시스템 뷰**  
+**관련 된 유용한 시스템 뷰**  
 와 같은 특정 유형의 개체에 대 한 시스템 뷰를 사용 하 여 개체의 하위 집합을 볼 수 있습니다.  
 - [sys.tables](sys-tables-transact-sql.md)  
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
@@ -164,7 +164,7 @@ WHERE s.name = '<schema_name>';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.all_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   

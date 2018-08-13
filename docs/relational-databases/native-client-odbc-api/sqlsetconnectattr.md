@@ -17,13 +17,13 @@ caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58e1abe1c2c0f69abacc6279113f49f75fd0ae79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 01b8dfa06a36605fd4ef4bcb38b2bfa91fb8d538
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424122"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552543"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -174,7 +174,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  연결을 설정한 후 응용 프로그램이 사용 하 여이 특성 쿼리할 수 있습니다 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 장애 조치 파트너의 id를 확인할 수 있습니다. 주 서버에 장애 조치(failover) 파트너가 없는 경우 이 속성은 빈 문자열을 반환합니다. 이를 통해 지능형 응용 프로그램은 가장 최근에 확인된 백업 서버를 캐시할 수 있지만 이러한 응용 프로그램은 연결이 처음 설정될 때(또는 풀링된 경우 다시 설정될 때)만 정보가 업데이트되므로 장시간 연결에서는 정보가 최신 상태가 아닐 수 있음에 주의해야 합니다.  
   
- 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)합니다.  
+ 자세한 내용은 [데이터베이스 미러링 사용](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하세요.  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY를 사용하면 서버 로그인 시 액세스를 확인하는 데 Windows 인증이 사용됩니다. 드라이버의 일부로 제공 되는 사용자 식별자와 암호 값을 무시 Windows 인증을 사용 하는 경우 **SQLConnect**하십시오 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md), 또는 [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)처리 합니다.  

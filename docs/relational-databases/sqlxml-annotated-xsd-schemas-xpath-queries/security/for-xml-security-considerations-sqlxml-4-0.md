@@ -1,5 +1,5 @@
 ---
-title: FOR XML 보안 고려 사항 (SQLXML 4.0) | Microsoft Docs
+title: XML 보안 고려 사항 (SQLXML 4.0)에 대 한 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4045a40f92ba7e1b1489643ef28336c6577612a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b514e8cd796f0a351d368c7948bda5c035e77dc5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032261"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561463"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>FOR XML 보안 고려 사항(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

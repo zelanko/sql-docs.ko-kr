@@ -19,15 +19,15 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8c7072b8f36aeb00df1975c1544f73b37820153
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc3bee774d541902541894fa6a13bfab81e86a6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970773"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554373"
 ---
-# <a name="setting-properties---smo"></a>설정 속성-SMO
+# <a name="setting-properties---smo"></a>속성 설정 - SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   속성은 개체에 대한 설명 정보를 저장하는 값입니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 옵션으로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 개체의 속성입니다. 속성 컬렉션을 사용하여 직접 또는 간접적으로 속성에 액세스할 수 있습니다. 속성에 직접 액세스하는 경우 다음 구문을 사용합니다.  

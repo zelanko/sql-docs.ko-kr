@@ -20,13 +20,13 @@ ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 34c5eafbca22ba40cf1852220ab19cfad6452403
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 47caf14f73b07480ac613858ba89bb4d7b48f61c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414865"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555403"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>여러 행 집합 결과를 생성하는 명령
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

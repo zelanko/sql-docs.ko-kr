@@ -17,13 +17,13 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 18d13f5d539d00818111d5854dc29a6785b13af1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3fc87fe24a531e28647ae5b4f79f05141b8f7d39
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413922"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551343"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client의 시스템 요구 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "37413922"
 ## <a name="data-type-compatibility-for-client-versions"></a>클라이언트 버전별 데이터 형식 호환성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 아래 표에서와 같이 새 데이터 형식을 하위 클라이언트와 호환되는 이전 데이터 형식으로 매핑합니다.  
   
- OLE DB 및 ADO 응용 프로그램에서 사용할 수는 **DataTypeCompatibility** 연결 문자열 키워드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 이전 데이터 형식에서 작동 합니다. 때 **DataTypeCompatibility = 80**를 사용 하 여 OLE DB 클라이언트는 연결의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 는 TDS 버전이 아닌 (TDS) 버전을 표 형식 데이터 스트림. 이는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 아닌 서버에 의해 하위 변환이 수행된다는 의미입니다. 또한 연결에서 사용할 수 있는 기능이 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기능 집합으로 제한됩니다. 새 데이터 형식이나 기능을 사용하려고 시도하면, 잘못된 요청을 서버에 전달하는 것이 아니라 API 호출에서 최대한 일찍 시도를 감지하여 호출 응용 프로그램으로 오류를 반환합니다.  
+ OLE DB 및 ADO 응용 프로그램에서 사용할 수는 **DataTypeCompatibility** 연결 문자열 키워드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 이전 데이터 형식에서 작동 합니다. **DataTypeCompatibility=80**이면 OLE DB 클라이언트는 TDS 버전이 아닌, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] TDS(Tabular Data Stream) 버전을 사용하여 연결합니다. 이는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 아닌 서버에 의해 하위 변환이 수행된다는 의미입니다. 또한 연결에서 사용할 수 있는 기능이 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기능 집합으로 제한됩니다. 새 데이터 형식이나 기능을 사용하려고 시도하면, 잘못된 요청을 서버에 전달하는 것이 아니라 API 호출에서 최대한 일찍 시도를 감지하여 호출 응용 프로그램으로 오류를 반환합니다.  
   
  방법이 없는 **DataTypeCompatibility** ODBC에 대 한 제어 합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "37413922"
   
 |데이터 형식|SQL Server Native Client <br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 응용 프로그램에서 DataTypeCompatibility=80 설정|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<8kb =)|udt|Udt|Varbinary|  
+|CLR UDT(\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|텍스트 모드|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  

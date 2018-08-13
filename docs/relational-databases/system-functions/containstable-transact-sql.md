@@ -1,5 +1,5 @@
 ---
-title: CONTAINSTABLE (Transact SQL) | Microsoft Docs
+title: CONTAINSTABLE (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -37,20 +37,20 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1741644ab38afd4003265b659c06b4b9448e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 22cb21d78757b1d5166c2443a8cde7dd5aef0403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238530"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547603"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  특정 단어나 구와 정확히 일치하거나 비슷하게 일치하는 단어 검색, 서로 근접한 단어 검색 또는 가중치 검색에서 일치하는 항목이 포함된 열에 대해 0개 이상의 행이 있는 테이블을 반환합니다. CONTAINSTABLE에서 사용 되는 [FROM 절](../../t-sql/queries/from-transact-sql.md) 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 선택 하 고 일반 테이블 이름 처럼 참조 됩니다. 문자 기반 데이터 형식을 포함하는 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행합니다.  
+  특정 단어나 구와 정확히 일치하거나 비슷하게 일치하는 단어 검색, 서로 근접한 단어 검색 또는 가중치 검색에서 일치하는 항목이 포함된 열에 대해 0개 이상의 행이 있는 테이블을 반환합니다. CONTAINSTABLE에서 사용 되는 [FROM 절](../../t-sql/queries/from-transact-sql.md) 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문 및 일반 테이블 이름 처럼 참조 됩니다. 문자 기반 데이터 형식을 포함하는 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행합니다.  
   
- CONTAINSTABLE은 같은 유형의 일치에 유용는 [CONTAINS 조건자](../../t-sql/queries/contains-transact-sql.md) CONTAINS와 같은 검색 조건을 사용 하 고 있습니다.  
+ CONTAINSTABLE은 같은 유형의 일치에 유용 합니다 [CONTAINS 조건자](../../t-sql/queries/contains-transact-sql.md) CONTAINS와 같은 검색 조건을 사용 하 고 있습니다.  
   
  그러나 CONTAINS와 달리, CONTAINSTABLE을 사용한 쿼리는 각 행에 대해 적절한 등급 값(RANK) 및 전체 텍스트 키(KEY)를 반환합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 전체 텍스트 검색 형식에 대한 자세한 내용은 [전체 텍스트 검색이 있는 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.  
   
@@ -119,7 +119,7 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>인수  
  *table*  
- 전체 텍스트 인덱싱된 테이블 이름입니다. *테이블* 1 개, 2 개, 3 또는 네 부분으로 된 데이터베이스 개체 이름일 수 있습니다. 뷰를 쿼리할 때는 전체 텍스트 인덱싱된 기본 테이블 하나만 포함할 수 있습니다.  
+ 전체 텍스트 인덱싱된 테이블 이름입니다. *테이블* 한 부분, 2, 3 또는 네 부분으로 된 데이터베이스 개체 이름일 수 있습니다. 뷰를 쿼리할 때는 전체 텍스트 인덱싱된 기본 테이블 하나만 포함할 수 있습니다.  
   
  *테이블* 서버 이름을 지정할 수 없습니다 및 연결 된 서버에 대 한 쿼리에서 사용할 수 없습니다.  
   
@@ -130,10 +130,10 @@ CONTAINSTABLE
  여러 개의 열을 쉼표로 구분하여 지정할 수 있음을 나타냅니다. *column_list*는 괄호로 묶어야 합니다. *language_term*을 지정하지 않을 경우 *column_list*에 있는 모든 열의 언어가 같아야 합니다.  
   
  \*  
- 지정 된 모든 전체 텍스트 인덱싱에 열 *테이블* 주어진된 검색 조건에 대 한 검색을 사용 해야 합니다. *language_term*을 지정하지 않을 경우 테이블에 있는 모든 열의 언어가 같아야 합니다.  
+ 모든 전체 텍스트 인덱싱된 열에는 지정 *테이블* 된 검색 조건에 대 한 검색을 사용 해야 합니다. *language_term*을 지정하지 않을 경우 테이블에 있는 모든 열의 언어가 같아야 합니다.  
   
  LANGUAGE *language_term*  
- 리소스가 단어 분리, 형태소 분석, 동의어 사전 및 의미 없는 단어에 사용할 언어 (또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))는 쿼리의 일환으로 제거 합니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
+ 단어 분리, 형태소 분석, 동의어 사전 및 의미 없는 단어에 사용할 해당 리소스의 언어 (또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 쿼리의 일부로 제거 합니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
   
  언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 LANGUAGE** *language_term*을 지정하면 검색 확률을 높일 수 있습니다.  
   
@@ -144,15 +144,15 @@ CONTAINSTABLE
  지정된 언어가 잘못되었거나 해당 언어에 해당하는 리소스가 설치되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. 중립 언어 리소스를 사용하려면 0x0을 *language_term*으로 지정합니다.  
   
  *top_n_by_rank*  
- 만 지정 된 *n* 내림차순으로 최고 등급된 일치 항목 반환 됩니다. 정수 값을 경우에 적용 됩니다. *n*를 지정 합니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다. *top_n_by_rank* 가장 관련성이 높은 항목만 회수 하 여 쿼리 성능을 높일 수 있습니다.  
+ 지정 된 *n* 내림차순으로 최고 등급된 일치 항목 반환 됩니다. 정수 값, 경우에 적용 됩니다 *n*를 지정 합니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다. *top_n_by_rank* 가장 관련성이 높은 항목만 회수 하 여 쿼리 성능을 향상 시킬 수 있습니다.  
   
  <contains_search_condition>  
- *column_name*에서 검색할 텍스트와 일치 조건을 지정합니다. 검색 조건에 대 한 정보를 참조 하십시오. [CONTAINS &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)합니다.  
+ *column_name*에서 검색할 텍스트와 일치 조건을 지정합니다. 검색 조건에 대 한 자세한 내용은 [포함 &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  전체 텍스트 조건자와 함수는 단일 테이블에서 작동합니다. 이 사실은 FROM 조건자에 표시됩니다. 여러 테이블을 검색하려면 FROM 절에 조인된 테이블을 사용하여 두 개 이상의 테이블을 합한 결과 집합을 대상으로 검색 작업을 수행합니다.  
   
- 반환 되는 테이블에 명명 된 열 **키** 전체 텍스트 키 값이 들어 있는입니다. 전체 텍스트 인덱싱된 각 테이블에는 고유 값을 가진 열 및에 반환 된 값의 **키** 는에 지정 된 선택 조건과 일치 하는 행의 전체 텍스트 키 값이 열은 포함 검색 조건입니다. **TableFulltextKeyColumn** OBJECTPROPERTYEX 함수에서 가져온 속성의 고유 키 열이 id를 제공 합니다. 전체 텍스트 인덱스의 전체 텍스트 키와 연결 된 열의 ID를 가져오려면 **sys.fulltext_indexes**합니다. 자세한 내용은 참조 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)합니다.  
+ 반환 되는 테이블에 명명 된 열 **키** 전체 텍스트 키 값이 들어 있는입니다. 전체 텍스트 인덱싱된 각 테이블에 반환 된 값과 해당 값은 항상 고유 열에는 **키** 열은 지정 된 선택 조건과 일치 하는 행의 전체 텍스트 키 값을 검색 포함 조건입니다. 합니다 **TableFulltextKeyColumn** OBJECTPROPERTYEX 함수에서 가져온 속성을이 고유 키 열의 id를 제공 합니다. 전체 텍스트 인덱스의 전체 텍스트 키에 연결 된 열의 ID를 가져오려면 **sys.fulltext_indexes**합니다. 자세한 내용은 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)합니다.  
   
  원래 테이블에서 원하는 행을 얻으려면 CONTAINSTABLE 행과 조인을 지정합니다. 일반적인 SELECT 문의 FROM 절에서 CONTAINSTABLE을 사용한 예는 다음과 같습니다.  
   
@@ -163,19 +163,19 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- CONTAINSTABLE에서 생성 된 테이블 열이 포함 **순위**합니다. **순위** 열이 선택 조건과 일치 하는 정도 나타내는 각 행에 대해 (0에서 1000 사이) 값입니다. 이러한 등급 값은 대개 SELECT 문에서 다음과 같이 사용됩니다.  
+ CONTAINSTABLE에서 생성 된 테이블 열이 포함 **순위**합니다. 합니다 **순위** 열이 선택 조건과 일치 하는 정도 나타내는 각 행에 대해 (0에서 1000 사이) 값입니다. 이러한 등급 값은 대개 SELECT 문에서 다음과 같이 사용됩니다.  
   
 -   ORDER BY 절에서 등급 값이 가장 높은 행을 테이블의 첫 번째 행으로 반환합니다.  
   
 -   선택 목록에서 각 행에 할당된 등급 값을 봅니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  테이블이나 참조되는 테이블의 열에 대해 SELECT 권한이 있는 사용자만 실행 권한이 있습니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-simple-example"></a>1. 간단한 예  
- 다음 예제에서는 만들고 두 열로 3 군 및 해당 플래그와의 색을 나열 하는 간단한 테이블을 채웁니다. It가 만들고 전체 텍스트 카탈로그 및 테이블에 인덱스를 채웁니다. 그런 다음 **CONTAINSTABLE** 구문을 보여 줍니다. 이 예제에서는 검색 값이 여러 번을 충족 하는 순위 값이 높은 증가 방법을 보여 줍니다. 마지막 쿼리 탄자니아 녹색 및 검정색 모두 포함 하는 쿼리 된 색 중 하나만 포함 된 이탈리아 보다 더 높은 순위를 갖습니다.  
+ 다음 예제에서는 만들고 두 개의 열을 3 지방 및 해당 플래그 색의 간단한 테이블을 채웁니다. It가 만들고 전체 텍스트 카탈로그 및 테이블에 인덱스를 채웁니다. 그런 다음 **CONTAINSTABLE** 구문을 보여 줍니다. 이 예제에서는 검색 값을 여러 번 충족 될 때 순위 값을 더 높은 증가 하는 방법을 보여 줍니다. 마지막 쿼리, 탄자니아 녹색 및 검정색 모두 포함 하는 쿼리 된 색 중 하나만 포함 하는 이탈리아 보다 더 높은 순위를 있습니다.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -283,10 +283,10 @@ GO
 ```  
   
 > [!NOTE]  
->  언어 *language_term* 사용에 대 한 않아도 argumentis *top_n_by_rank 합니다.*  
+>  언어 *language_term* 사용 하 여 필요 하지 않습니다 argumentis *top_n_by_rank 합니다.*  
   
-## <a name="see-also"></a>관련 항목:  
- [순위와 검색 결과 제한](../../relational-databases/search/limit-search-results-with-rank.md)   
+## <a name="see-also"></a>관련 항목  
+ [RANK 사용 하 여 검색 결과 제한](../../relational-databases/search/limit-search-results-with-rank.md)   
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)   
  [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS&#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   

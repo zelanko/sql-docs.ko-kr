@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client Support for High Availability, 재해 복구 | Microsoft Docs
+title: SQL Server Native Client Support for High Availability, 재해 복구 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 496e105648b5153369400e47bf94a4603ea0179e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3410221e4c1162c000e83015ae76b2ebd33395e2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997285"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548203"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

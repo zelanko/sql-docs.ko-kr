@@ -1,5 +1,5 @@
 ---
-title: 다른 주석 (SQLXML 4.0) | Microsoft Docs
+title: 다른 주석 (SQLXML 4.0) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,15 +26,15 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 97db77a5dec0380d0e19163bf836379d542c8773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053977"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564787"
 ---
-# <a name="annotation-interpretation---other-annotations"></a>주석 해석-기타 주석
+# <a name="annotation-interpretation---other-annotations"></a>주석 해석 - 기타 주석
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 대량 로드는 이 섹션의 이전 항목에서 설명한 주석 외에 다음과 같은 기타 주석도 해석합니다.  
   

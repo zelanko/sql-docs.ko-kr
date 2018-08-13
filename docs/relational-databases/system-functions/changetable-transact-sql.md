@@ -1,5 +1,5 @@
 ---
-title: CHANGETABLE (Transact SQL) | Microsoft Docs
+title: CHANGETABLE (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b0062a473b403a62f2805f28f84d5e0d9651dcb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e323ec0ac7328625da6aa47f8fc48e04af82be6a
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239909"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009045"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "33239909"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```sql
 CHANGETABLE (  
     { CHANGES table , last_sync_version  
     | VERSION table , <primary_key_values> } )  
@@ -61,15 +60,15 @@ CHANGETABLE (
  *last_sync_version*  
  변경 내용을 가져올 때 호출 응용 프로그램은 변경 내용이 필요한 지점을 지정해야 합니다. last_sync_version은 이러한 지점을 지정합니다. 이 함수는 해당 버전 이후 변경된 모든 행에 대한 정보를 반환합니다. 응용 프로그램은 last_sync_version 이후 버전의 변경 내용을 쿼리하여 받습니다.  
   
- 일반적으로 변경 내용을 가져와서 전에 응용 프로그램에서 호출할 **change_tracking_current_version ()** 필요는 변경 내용이 다음으로 사용 되는 버전을 가져옵니다. 따라서 응용 프로그램은 실제 값을 해석하거나 이해할 필요가 없습니다.  
+ 일반적으로 해당 변경 내용을 가져오려면 먼저 응용 프로그램 호출 **change_tracking_current_version ()** 사용할 버전을 가져오려면 다음 시간 변경이 필요 합니다. 따라서 응용 프로그램은 실제 값을 해석하거나 이해할 필요가 없습니다.  
   
  호출 응용 프로그램에서 last_sync_version을 가져오므로 응용 프로그램은 값을 유지해야 합니다. 응용 프로그램에서 이 값을 손실하면 데이터를 다시 초기화해야 합니다.  
   
- *last_sync_version* 은 **bigint**합니다. 값은 스칼라여야 합니다. 식은 구문 오류를 야기합니다.  
+ *last_sync_version* 됩니다 **bigint**합니다. 값은 스칼라여야 합니다. 식은 구문 오류를 야기합니다.  
   
  값이 NULL이면 추적되는 모든 변경 내용이 반환됩니다.  
   
- *last_sync_version* 아닌지 너무 오래 일부 또는 모든 변경 내용 정보가 정리 수 있기 때문가 된 데이터베이스에 대해 구성 된 보존 기간에 따라 되도록 유효성을 검사 해야 합니다. 자세한 내용은 참조 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) 및 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)합니다.  
+ *last_sync_version* 아닌지 너무 오래 일부 또는 모든 변경 내용은 수 정리 된 데이터베이스에 대해 구성 된 보존 기간에 따라 있으므로 되도록 유효성을 검사 해야 합니다. 자세한 내용은 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) 하 고 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  버전 *테이블*, {< primary_key_values >}  
  지정된 행에 대한 최신 변경 내용 추적 정보를 반환합니다. 기본 키 값은 행을 식별해야 합니다. <primary_key_values>는 기본 키 열을 식별하고 값을 지정합니다. 기본 키 열 이름은 지정되는 순서에 제한을 받지 않습니다.  
@@ -81,13 +80,13 @@ CHANGETABLE (
  기본 키 열의 이름을 지정합니다. 여러 열 이름은 지정되는 순서에 제한을 받지 않습니다.  
   
  *Value*  
- 기본 키의 값입니다. 에 표시 되는 열과 같은 순서로 값을 지정 해야 여러 기본 키 열이 있는 경우는 *column_name* 목록입니다.  
+ 기본 키의 값입니다. 에 표시 되는 열과 동일한 순서로 값을 지정 해야 여러 기본 키 열이 있는 경우는 *column_name* 목록입니다.  
   
- [로] *table_alias* [(*column_alias를 사용할* [,... *n* ])]  
+ [로] *table_alias* [(*column_alias* [,... *n* ])]  
  CHANGETABLE에서 반환하는 결과의 이름을 제공합니다.  
   
  *table_alias*  
- CHANGETABLE에서 반환하는 테이블의 별칭 이름입니다. *table_alias* 필수 항목이 며은 유효한 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
+ CHANGETABLE에서 반환하는 테이블의 별칭 이름입니다. *table_alias* 필수 이며 유효한 여야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
  *column_alias*  
  CHANGETABLE에서 반환하는 열에 대한 선택적 열 별칭 또는 열 별칭의 목록입니다. 결과에 중복 이름이 있는 경우 열 이름을 사용자 지정할 수 있습니다.  
@@ -105,8 +104,8 @@ CHANGETABLE (
 |SYS_CHANGE_VERSION|**bigint**|행의 마지막 변경 내용과 연관된 버전 값입니다.|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|마지막 삽입 작업과 연관된 버전 값입니다.|  
 |SYS_CHANGE_OPERATION|**nchar(1)**|다음과 같은 변경 형식을 지정합니다.<br /><br /> **U** = 업데이트<br /><br /> **I** = 삽입<br /><br /> **D** = 삭제|  
-|SYS_CHANGE_COLUMNS|**varbinary(4100)**|last_sync_version(기준) 이후에 변경된 열을 나열합니다. 계산 열 변경 된 것으로 나열 되지 됩니다.<br /><br /> 다음 조건 중 하나가 충족되는 경우 값은 NULL입니다.<br /><br /> 열 변경 내용 추적을 사용할 수 없는 경우<br /><br /> 작업이 삽입 또는 삭제 작업인 경우<br /><br /> 모든 비기본 키 열이 단일 작업에서 업데이트된 경우. 이 이진 값을 직접 해석하면 안 됩니다. 대신, 사용, 해석 [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)합니다.|  
-|SYS_CHANGE_CONTEXT|**varbinary(128)**|사용 하 여 필요에 따라 지정할 수 있는 컨텍스트 정보를 변경는 [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) INSERT, UPDATE 또는 DELETE 문의 일부로 절.|  
+|SYS_CHANGE_COLUMNS|**varbinary(4100)**|last_sync_version(기준) 이후에 변경된 열을 나열합니다. 변경 된 것으로 계산 열에 나열 되지 됩니다.<br /><br /> 다음 조건 중 하나가 충족되는 경우 값은 NULL입니다.<br /><br /> 열 변경 내용 추적을 사용할 수 없는 경우<br /><br /> 작업이 삽입 또는 삭제 작업인 경우<br /><br /> 모든 비기본 키 열이 단일 작업에서 업데이트된 경우. 이 이진 값을 직접 해석하면 안 됩니다. 대신, 해석에 사용 하 여 [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)합니다.|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|사용 하 여 필요에 따라 지정할 수 있는 컨텍스트 정보를 변경 합니다 [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) INSERT, UPDATE 또는 DELETE 문의 일부로 절.|  
 |\<기본 키 열 값 >|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
@@ -118,17 +117,17 @@ CHANGETABLE (
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|WITH 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용하여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경합니다.|  
 |\<기본 키 열 값 >|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  CHANGETABLE 함수는 일반적으로 쿼리의 FROM 절에서 테이블인 것처럼 사용할 수 있습니다.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
- 새 행이나 수정된 행의 행 데이터를 가져오려면 기본 키 열을 사용하여 사용자 테이블에 결과 세트를 조인합니다. 이후 같은 행에 여러 변경 된 경우에 변경 된 사용자 테이블의 각 행에 대해 하나의 행만 반환 되는 *last_sync_version* 값입니다.  
+ 새 행이나 수정된 행의 행 데이터를 가져오려면 기본 키 열을 사용하여 사용자 테이블에 결과 세트를 조인합니다. 이후 같은 행에 여러 변경 내용이 있는 경우에 변경 된 사용자 테이블의 각 행에 대해 하나의 행이 반환 된 *last_sync_version* 값입니다.  
   
  기본 키 열 변경 내용은 업데이트로 표시되지 않습니다. 기본 키 값이 변경되면 이전 값의 삭제 및 새 값의 삽입으로 간주됩니다.  
   
  행을 삭제한 다음 이전 기본 키가 있는 행을 삽입하면 변경 내용이 행의 모든 열에 대한 업데이트로 표시됩니다.  
   
- SYS_CHANGE_OPERATION 및 SYS_CHANGE_COLUMNS 열에 대해 반환 되는 값은 지정 된 기준 (last_sync_version)를 기준으로 합니다. 예를 들어 버전 15에서 업데이트 작업이 버전 10에서 삽입 작업이 만들어진 경우 초기 *last_sync_version* 이 12 인는 업데이트가 보고 됩니다. 경우는 *last_sync_version* 값이 8 이면 삽입이 보고 됩니다. SYS_CHANGE_COLUMNS는 계산 열을 업데이트된 것으로 보고하지 않습니다.  
+ SYS_CHANGE_OPERATION 및 SYS_CHANGE_COLUMNS 열에 대해 반환 된 값 기준 (last_sync_version) 지정 된 경우 예를 들어 버전 10 및 버전 15에서 업데이트 작업에는 삽입 작업이 수행 된 경우 기준선 *last_sync_version* 이 12 인는 업데이트가 보고 됩니다. 경우는 *last_sync_version* 값이 8 이면 삽입이 보고 됩니다. SYS_CHANGE_COLUMNS는 계산 열을 업데이트된 것으로 보고하지 않습니다.  
   
  일반적으로 MERGE 문을 비롯하여 사용자 테이블에서 데이터를 삽입, 업데이트 또는 삭제하는 모든 작업은 추적됩니다.  
   
@@ -147,8 +146,8 @@ CHANGETABLE (
   
  보존 기간보다 긴 기간 동안, 정리 프로세스가 변경 정보를 제거하는 등의 변경된 내용이 없거나 테이블에 대해 변경 내용 추적을 설정한 이후 변경된 행이 없을 경우 SYS_CHANGE_VERSION 값은 NULL일 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 지정 된 테이블에 다음 사용 권한이 필요는 *테이블* 변경 내용 추적 정보를 가져올 값:  
+## <a name="permissions"></a>사용 권한  
+ 지정 된 테이블에 다음 권한이 필요 합니다 *테이블* 값 변경 내용 추적 정보를 가져오려면:  
   
 -   기본 키 열의 SELECT 권한  
   
@@ -215,11 +214,11 @@ WHERE
         0);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

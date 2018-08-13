@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023861"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556473"
 ---
 # <a name="automatic-tuning"></a>자동 튜닝
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 이유 정보를 포함 하는 설명 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 이 계획 변경 잠재적인 성능 저하를 인지 하는 것으로 생각 합니다.
  - 잠재적인 회귀 검색 되 면 Datetime입니다.
  - 이러한 권장 사항의 점수입니다. 
- - 검색 된 계획 회귀 된 계획을 강제로 문제를 해결 하는 계획의 ID의 ID의 ID와 같은 문제에 대 한 세부 정보 [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- 등 문제를 해결 하려면 적용할 수 있는 스크립트입니다. 세부 정보에 저장 됩니다 [JSON 형식을](../../relational-databases/json/index.md)합니다.
+ - 검색 된 계획 회귀 된 계획을 강제로 문제를 해결 하는 계획의 ID의 ID의 ID와 같은 문제에 대 한 세부 정보 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 등 문제를 해결 하려면 적용할 수 있는 스크립트입니다. 세부 정보에 저장 됩니다 [JSON 형식을](../../relational-databases/json/index.md)합니다.
 
 예상에 대 한 추가 정보와 문제를 수정 하는 스크립트를 가져오려면 다음 쿼리를 사용 하 여 얻을 수 있습니다.
 

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_population (Transact SQL) | Microsoft Docs
+title: sys.dm_fts_index_population (TRANSACT-SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d82b044186f61ff09abdf3b0a31766e03f36dbcf
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bf7a49a2b315b3fdc1f46aad79c8d4292c644095
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465469"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564737"
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34465469"
 |**is_clustered_index_scan**|**bit**|채우기에 클러스터형 인덱스에 대한 스캔이 수반되는지 여부를 나타냅니다.|  
 |**range_count**|**int**|이 채우기가 병렬 처리된 하위 범위 수입니다.|  
 |**completed_range_count**|**int**|처리가 완료된 범위 수입니다.|  
-|**outstanding_batch_count**|**int**|이 채우기에 대해 현재 처리 중인 일괄 처리 수입니다. 자세한 내용은 참조 [sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)합니다.|  
+|**outstanding_batch_count**|**int**|이 채우기에 대해 현재 처리 중인 일괄 처리 수입니다. 자세한 내용은 [sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)합니다.|  
 |**상태**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 채우기의 상태입니다. 참고: 일부 상태는 일시적입니다. 다음 중 하나일 수 있습니다.<br /><br /> 3 = 시작 중<br /><br /> 5 = 정상적으로 처리 중<br /><br /> 7 = 처리가 중지됨<br /><br /> 예를 들어 자동 병합이 진행 중일 때 이 상태가 될 수 있습니다.<br /><br /> 11 = 채우기 중단됨<br /><br /> 12 = 의미 유사 추출 처리|  
 |**status_description**|**nvarchar(120)**|채우기 상태에 대한 설명입니다.|  
 |**completion_type**|**int**|이 채우기의 완료 상태입니다.|  
@@ -58,13 +58,13 @@ ms.locfileid: "34465469"
 |**start_time**|**datetime**|채우기가 시작된 시간입니다.|  
 |**incremental_timestamp**|**timestamp**|전체 채우기의 시작 타임스탬프를 나타냅니다. 다른 모든 채우기 유형의 경우 이 값은 마지막으로 커밋된 검사점으로, 채우기의 진행 상태를 나타냅니다.|  
   
-## <a name="remarks"></a>주의  
- 전체 텍스트 인덱싱뿐 아니라 통계 의미 인덱싱을 사용하도록 설정하면 전체 텍스트 인덱싱에서 키 구의 의미 추출 및 채우기와 문서 유사 데이터의 추출이 동시에 발생합니다. 문서 유사 인덱스의 채우기는 나중에 두 번째 단계에서 발생합니다. 자세한 내용은 참조 [검색 관리 및 모니터링 의미 체계](../../relational-databases/search/manage-and-monitor-semantic-search.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 전체 텍스트 인덱싱뿐 아니라 통계 의미 인덱싱을 사용하도록 설정하면 전체 텍스트 인덱싱에서 키 구의 의미 추출 및 채우기와 문서 유사 데이터의 추출이 동시에 발생합니다. 문서 유사 인덱스의 채우기는 나중에 두 번째 단계에서 발생합니다. 자세한 내용은 [관리 및 모니터링 의미 체계 검색](../../relational-databases/search/manage-and-monitor-semantic-search.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
   
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "이 동적 관리 뷰의 유효 조인")  
@@ -77,9 +77,9 @@ ms.locfileid: "34465469"
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|다 대 일|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

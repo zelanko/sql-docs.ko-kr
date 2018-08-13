@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_catalog_usages (TRANSACT-SQL) | Microsoft Docs
+title: sys.fulltext_index_catalog_usages (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 910ff654eb90e9c4b921b2c041fd3f2189a96ae6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29770da7b5a9af753e5bf8ee5baf9f975d04fcfd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177346"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558693"
 ---
 # <a name="sysfulltextindexcatalogusages-transact-sql"></a>sys.fulltext_index_catalog_usages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "33177346"
 |**index_id**|**int**|전체 텍스트 인덱스의 ID입니다.|  
 |**fulltext_catalog_id**|**int**|전체 텍스트 카탈로그의 ID입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [데이터 공간 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)  
+ [데이터 공간 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)  
   
   

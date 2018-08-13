@@ -1,5 +1,5 @@
 ---
-title: 개요 (SMO) | Microsoft Docs
+title: 개요 (SMO) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 125c8ae22faabb7b32bb37ee1f8620dfd0cf815a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006016"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546743"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "38006016"
   
 -   SOAP 요청을 관리하기 위한 HTTP 끝점. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
   
--   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)합니다.  
+-   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 사용](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
 -   XML 스키마 컬렉션, XML 인덱스 및 XML 데이터 형식으로 XML 데이터의 유효성 검사와 저장 기능 제공. 자세한 내용은 [XML 스키마 컬렉션 &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) 하 고 [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   

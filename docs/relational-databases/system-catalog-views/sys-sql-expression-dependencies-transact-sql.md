@@ -24,13 +24,13 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc3d777c55d7591f880317bc0f9d701b0cb59ad0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0942e5946f3a81d5d5c37b3540f7d3e891baca66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982035"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558819"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -74,24 +74,24 @@ ms.locfileid: "37982035"
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|Table|예*|예|  
-|보기|예|예|  
-|필터링된 인덱스|예**|아니요|  
-|필터링된 통계|예**|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|예|예|  
-|CLR 저장 프로시저|아니요|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|Table|예*|사용자 계정 컨트롤|  
+|보기|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|필터링된 인덱스|예**|아니오|  
+|필터링된 통계|예**|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|CLR 저장 프로시저|아니오|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|CLR 사용자 정의 함수|아니오|사용자 계정 컨트롤|  
+|CLR 트리거(DML 및 DDL)|아니오|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|사용자 계정 컨트롤|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|사용자 계정 컨트롤|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|사용자 계정 컨트롤|아니오|  
+|확장 저장 프로시저|아니오|사용자 계정 컨트롤|  
+|큐|아니오|사용자 계정 컨트롤|  
+|동의어|아니오|사용자 계정 컨트롤|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니오|사용자 계정 컨트롤|  
+|XML 스키마 컬렉션|아니오|사용자 계정 컨트롤|  
+|파티션 함수|아니오|사용자 계정 컨트롤|  
   
  \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   

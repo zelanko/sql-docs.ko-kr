@@ -17,13 +17,13 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6850055d9e9b2b941086e6ed0e4364f64b8e99b3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8500699ea01f75cbf552d479001761cab5044374
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425632"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548183"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "37425632"
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
- **보안 정보** 가능 하면 Windows 인증을 사용 합니다. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 사용 하 여 암호화 해야 자격 증명을 유지 해야 합니다 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)합니다.  
+ **보안 정보** 가능 하면 Windows 인증을 사용 합니다. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [the Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>프로그램 변수에서 직접 대량 복사 함수를 사용하려면  
   

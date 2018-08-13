@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_population_ranges (Transact SQL) | Microsoft Docs
+title: sys.dm_fts_population_ranges (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 434dcf58b6c88ea473a6c8de02cb232c6563ac82
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a4626f7771a8d4d2212f93ca85ebbf8eaf5874a7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467219"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548143"
 ---
 # <a name="sysdmftspopulationranges-transact-sql"></a>sys.dm_fts_population_ranges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "34467219"
 |**processed_row_count**|**int**|이 범위에서 처리된 행 수입니다. 정방향 진행률은 일괄 처리마다 커밋하지 않고 5분마다 유지 및 계산됩니다.|  
 |**error_count**|**int**|이 범위에서 오류가 발생한 행 수입니다. 정방향 진행률은 일괄 처리마다 커밋하지 않고 5분마다 유지 및 계산됩니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
  
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-population-ranges-1.gif "이 동적 관리 뷰의 유효 조인")  
@@ -59,8 +59,8 @@ ms.locfileid: "34467219"
 |----------|--------|------------------|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|다 대 일|  
   
-## <a name="see-also"></a>관련 항목:  
-  [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+## <a name="see-also"></a>관련 항목  
+  [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

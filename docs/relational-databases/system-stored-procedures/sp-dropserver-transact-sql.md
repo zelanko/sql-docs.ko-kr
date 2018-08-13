@@ -1,5 +1,5 @@
 ---
-title: sp_dropserver (TRANSACT-SQL) | Microsoft Docs
+title: sp_dropserver (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 82f030a0f35a75bb1494035c9db8cd0ae0f002c0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: de6ca972e28636a9b6e71164dd31180bdd9f7a12
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049341"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559653"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -58,9 +58,9 @@ sp_dropserver [ @server = ] 'server'
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>Remarks  
- 실행 하는 경우 **sp_dropserver** 원격 및 연결 된 서버 로그인 항목이 연결 된 또는 복제 게시자로 구성 되는 서버에서 오류 메시지가 반환 됩니다. 서버를 제거 하는 경우 서버에 대 한 모든 원격 및 연결 된 서버 로그인을 제거 하려면 사용 합니다 **droplogins** 인수입니다.  
+ 실행 하는 경우 **sp_dropserver** 복제 게시자로 구성 되어 있는 원격 및 연결 된 서버 로그인 항목과 연결 된 서버에서 오류 메시지가 반환 됩니다. 서버를 제거 하는 경우 서버에 대 한 모든 원격 및 연결 된 서버 로그인을 제거 하려면 사용 합니다 **droplogins** 인수입니다.  
   
- **sp_dropserver** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
+ **sp_dropserver** 사용자 정의 트랜잭션 내에서 실행 될 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LINKED SERVER 권한이 필요합니다.  
@@ -74,9 +74,9 @@ sp_dropserver 'ACCOUNTS', 'droplogins';
   
 ## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_addserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

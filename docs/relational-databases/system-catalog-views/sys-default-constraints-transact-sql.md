@@ -1,5 +1,5 @@
 ---
-title: sys.default_constraints (Transact SQL) | Microsoft Docs
+title: sys.default_constraints (Transact SQL) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,23 +24,23 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9da755e03c4cbdf9390db34e167da20ad3b78a61
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 362006b22a60ab8c7e36ca7f3b8bbe513eb6c31c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239363"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561521"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  포함 하는 각 개체는 기본 정의 (CREATE DEFAULT 문 대신 CREATE TABLE 또는 ALTER TABLE 문의 일부로 생성)에 대 한 행 **sys.objects.type** = D  
+  (CREATE TABLE 또는 ALTER TABLE 문 만들 기본 문 대신의 일환으로 만들어진) 기본 정의 된 각 개체에 대 한 행을 포함 **sys.objects.type** = D  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
-|**parent_column_id**|**int**|에 있는 열의 ID **parent_object_id** 이 기본 속해 있는 합니다.|  
+|**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
+|**parent_column_id**|**int**|ID 열에 **parent_object_id** 이 기본이 속한.|  
 |**definition**|**nvarchar(max)**|이 기본값을 정의하는 SQL 식입니다.|  
 |**is_system_named**|**bit**|1 = 시스템에서 이름을 생성했습니다.<br /><br /> 0 = 사용자가 제공한 이름입니다.|  
   

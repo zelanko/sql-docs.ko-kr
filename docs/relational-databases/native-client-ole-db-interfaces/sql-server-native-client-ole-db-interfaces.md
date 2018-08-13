@@ -19,15 +19,15 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc385c19386a151625cbccf07e498f5a35b88827
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5c152794e719cd4337b54d628dae385734043668
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413582"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552153"
 ---
-# <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) 인터페이스
+# <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client(OLE DB) 인터페이스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "37413582"
   
  이렇게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 프로그래밍 참조 설명 하지 않습니다 모든 OLE DB 인터페이스 및 메서드를 사용할 때 공급자별 동작을 노출 하는 인터페이스 및 메서드만는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다.  
   
- 핵심 OLE DB 인터페이스 및 메서드에 대 한 자세한 내용은 참조 하세요. 합니다 [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232)합니다.  
+ 핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](http://go.microsoft.com/fwlink/?LinkId=45232)를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

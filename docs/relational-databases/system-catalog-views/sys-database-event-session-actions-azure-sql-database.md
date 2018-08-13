@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_actions (Azure SQL 데이터베이스) | Microsoft Docs
+title: sys.database_event_session_actions (Azure SQL Database) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,35 +17,35 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92b6aa34b8419c493f6da4dfe3b946b988899034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a5f0a70cdf6f242b36c6cf9888d2bf9d0fc37d61
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182149"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549953"
 ---
-# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL 데이터베이스)
+# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이벤트 세션의 각 이벤트의 동작에 대해 한 행을 반환합니다.  
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 및 모든 이후 버전입니다.|  
+|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 이상 모든 버전.|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |event_id|**int**|이벤트 ID입니다. 이 ID는 이벤트 세션 개체 내에서 고유합니다. Null을 허용하지 않습니다.|  
-|name|**sysname**|작업 이름입니다. Null을 허용합니다.|  
+|NAME|**sysname**|작업 이름입니다. Null을 허용합니다.|  
 |패키지|**sysname**|이벤트가 포함된 이벤트 패키지의 이름입니다. Null을 허용합니다.|  
 |module|**sysname**|이벤트가 포함된 모듈의 이름입니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
 ||||  

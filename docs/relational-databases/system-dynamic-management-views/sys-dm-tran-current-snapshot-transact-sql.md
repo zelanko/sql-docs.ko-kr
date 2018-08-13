@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_current_snapshot (Transact SQL) | Microsoft Docs
+title: sys.dm_tran_current_snapshot (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f7d32aa395ecb53ae9ccb3fd793fb661af8480b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fd2319dff2d5cc5e7f4948ba6c1994fe2407222
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467789"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562287"
 ---
 # <a name="sysdmtrancurrentsnapshot-transact-sql"></a>sys.dm_tran_current_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  현재 스냅숏 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션이 스냅숏 트랜잭션이 아니면 이 함수는 행을 반환하지 않습니다. **sys.dm_tran_current_snapshot** 비슷합니다 **sys.dm_tran_transactions_snapshot**제외 하 고 **sys.dm_tran_current_snapshot** 에 대 한 활성 트랜잭션만 반환는 현재 스냅숏 트랜잭션이 있습니다.  
+  현재 스냅숏 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션이 스냅숏 트랜잭션이 아니면 이 함수는 행을 반환하지 않습니다. **sys.dm_tran_current_snapshot** 비슷합니다 **sys.dm_tran_transactions_snapshot**점을 제외 하 고 **sys.dm_tran_current_snapshot** 에 대 한 활성 트랜잭션만 반환 합니다 현재 스냅숏 트랜잭션이 있습니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_tran_current_snapshot**합니다.  
+>  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_tran_current_snapshot**합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,10 +53,10 @@ sys.dm_tran_current_snapshot
 |**transaction_sequence_num**|**bigint**|활성 트랜잭션의 트랜잭션 시퀀스 번호입니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
 ## <a name="examples"></a>예  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  
@@ -102,7 +102,7 @@ transaction_sequence_num
   
  XSN-60의 출력에는 XSN-59에 대해 표시되는 것과 같은 트랜잭션은 물론 XSN-60이 시작될 때 활성 상태였던 XSN-59도 포함됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -24,37 +24,37 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 330b1c61e877fb71bcf94d6c8161e40c9ff5e7ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 477c4a616973ed56cfd1063411870ae78cfdd67e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182449"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545753"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  데이터베이스에 있는 각 사용 권한이나 열 예외 권한에 대해 행을 반환합니다. 열에는 해당 개체 수준 사용 권한과는 다른 모든 사용 권한에 대한 행이 있습니다. 열 사용 권한이 해당 개체 사용 권한과 동일한 경우에 대 한 행이 및 개체의 적용 된 권한입니다.  
+  데이터베이스에 있는 각 사용 권한이나 열 예외 권한에 대해 행을 반환합니다. 열에는 해당 개체 수준 사용 권한과는 다른 모든 사용 권한에 대한 행이 있습니다. 열 사용 권한, 해당 개체 사용 권한과 동일한 경우에 대 한 행 되며 개체의 적용 권한입니다.  
   
 > [!IMPORTANT]  
 >  열 수준 사용 권한은 동일한 엔터티의 개체 수준 사용 권한을 대체합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|사용 권한이 있는 클래스를 식별합니다.<br /><br /> 0 = 데이터베이스<br />1 = 개체 또는 열<br />3 = 스키마<br />4 = 데이터베이스 보안 주체<br />5 = 어셈블리- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />6 = 형식<br />10 = XML 스키마 컬렉션의 경우- <br />                      **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br />15 = 메시지 유형- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />16 = 서비스 계약- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />17 = 서비스- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />18 = 원격 서비스 바인딩- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />19 = route- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />23 = 전체 텍스트 카탈로그- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />24 = 대칭 키- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />25 인증서-= **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />26 = 비대칭 키- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|  
+|**class**|**tinyint**|사용 권한이 있는 클래스를 식별합니다.<br /><br /> 0 = 데이터베이스<br />1 = 개체 또는 열<br />3 = 스키마<br />4 = 데이터베이스 보안 주체<br />5 = 어셈블리- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />6 = 형식<br />10 = XML 스키마 컬렉션- <br />                      **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br />15 = 메시지 유형- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />16 = 서비스 계약- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />17 = Service- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />18 = 원격 서비스 바인딩- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />19 =-경로 **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />23 = 전체 텍스트 카탈로그- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />24 = 대칭 키- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />25 인증서-= **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />26 = 비대칭 키 **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|  
 |**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|사용 권한이 존재하는 항목의 ID입니다. 이는 클래스에 따라 해석됩니다. 일반적으로 **major_id** 단순히 클래스가 나타내는에 적용 되는 ID의 종류입니다. <br /><br /> 0 = 데이터베이스 자체 <br /><br /> > 0 = 사용자 개체에 개체 Id <br /><br /> \<0 = 시스템 개체에 개체 Id |  
-|**minor_id**|**int**|사용 권한이 존재하는 항목의 보조 ID입니다. 이는 클래스에 따라 해석됩니다. 대개는 **major_id** 개체의 클래스에 사용할 수 없는 하위 범주 있기 때문에 0이 됩니다. 그렇지 것은 테이블의 열 ID입니다.|  
+|**major_id**|**int**|사용 권한이 존재하는 항목의 ID입니다. 이는 클래스에 따라 해석됩니다. 일반적으로 **major_id** 단순히 클래스가 나타내는에 적용 되는 ID의 종류입니다. <br /><br /> 0 = 데이터베이스 자체 <br /><br /> > 0 사용자 개체에 대 한 개체 Id = <br /><br /> \<0 시스템 개체에 대 한 개체 Id = |  
+|**minor_id**|**int**|사용 권한이 존재하는 항목의 보조 ID입니다. 이는 클래스에 따라 해석됩니다. 종종 합니다 **major_id** 가 0 이면 개체의 클래스에 사용할 수 없는 subcategory 있기 때문입니다. 그렇지 않을 경우 테이블의 열 ID입니다.|  
 |**grantee_principal_id**|**int**|사용 권한이 부여된 데이터베이스 보안 주체 ID입니다.|  
 |**grantor_principal_id**|**int**|사용 권한 부여자의 데이터베이스 보안 주체 ID입니다.|  
 |**type**|**char(4)**|데이터베이스 사용 권한의 유형입니다. 사용 권한 유형 목록은 다음 표를 참조하세요.|  
 |**permission_name**|**nvarchar(128)**|사용 권한 이름입니다.|  
-|**상태**|**char(1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
+|**state**|**char(1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
 |**state_desc**|**nvarchar(60)**|사용 권한 상태에 대한 설명입니다.<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>데이터베이스 권한   
-사용 권한 다음 형식을 사용할 수 있습니다.
+다음 유형의 사용 권한 있을 수 있습니다.
   
 |사용 권한 유형|사용 권한 이름|보안 개체에 적용되는 항목|  
 |---------------------|---------------------|--------------------------|  
@@ -114,10 +114,10 @@ ms.locfileid: "33182449"
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|DELETE|DATABASE, OBJECT, SCHEMA|  
+|DL|Delete|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|CREATE 문을 실행하기 전에|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
-|IM|IMPERSONATE|USER|  
+|IM|IMPERSONATE|User|  
 |IN|INSERT|DATABASE, OBJECT, SCHEMA|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, SCHEMA, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
@@ -133,7 +133,7 @@ ms.locfileid: "33182449"
 |VWCT|VIEW CHANGE TRACKING|TABLE, SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 사용자는 자산의 권한을 볼 수 있습니다. 다른 사용자에 대한 사용 권한을 보려면 로그인할 때 VIEW DEFINITION, ALTER ANY USER, 또는 사용 권한이 필요합니다. 사용자 정의 역할을 보려면 ALTER ANY ROLE 또는 역할(예: 공용)의 멤버 자격이 필요합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -171,7 +171,7 @@ JOIN sys.schemas AS s
 ```  
     
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Securables](../../relational-databases/security/securables.md)   
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

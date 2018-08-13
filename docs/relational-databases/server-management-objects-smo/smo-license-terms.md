@@ -1,7 +1,7 @@
 ---
-title: SQL Server 공유 관리 개체 (SMO)-사용 조건 | Microsoft Docs
+title: SQL Server 공유 관리 개체 (SMO)-사용 조건 | Microsoft 문서
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040431"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662245"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 공유 관리 개체 (SMO) 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ ms.locfileid: "38040431"
   * 코드가 소스 코드 형태로 공개되거나 배포됩니다.
   * 다른 사용자가 코드를 수정할 권한을 가집니다.
 
-**3.    라이선스의 범위.** 본 소프트웨어는 판매되는 것이 아니라 그 사용이 허여되는 것입니다. 관련 법률에서 귀하에게 더 많은 권한을 부여하지 않는 한, Microsoft에서 명시적으로 부여하지 않은 모든 권한은 묵시적, 금반언적 또는 기타 어떠한 방식에 의해서든 Microsoft가 보유합니다. 귀하는 본 계약에서 명시적으로 허용되는 조건에 한해서만 소프트웨어를 사용할 수 있습니다. 그렇게 하는 경우 귀하는 특정 방식으로만 사용할 수 있도록 하는 소프트웨어의 모든 기술적 제한 사항을 준수해야 합니다. 다음과 같은 행위는 허용되지 않습니다.
-* 소프트웨어의 기술적 제한 사항을 위반하는 행위
-* 이러한 제한에도 불구하고 관련 법률에서 명시적으로 허용하는 경우를 제외한 소프트웨어의 리버스 엔지니어링, 디컴파일 또는 디스어셈블 작업을 수행하는 행위
-* 이러한 제한에도 불구하고 본 계약서에 명시된 것보다 또는 관련 법률에서 허용하는 것보다 더 많은 수의 소프트웨어 사본을 만드는 행위
-* 다른 사람이 복사할 수 있도록 소프트웨어를 게시하는 행위
-* 소프트웨어를 임대, 대여 또는 대부하는 행위
-* 소프트웨어나 본 계약서를 제3자에게 양도하는 행위, 또는
-* 상업용 소프트웨어 호스팅 서비스에 소프트웨어를 사용하는 행위
+
+**3. 라이선스의 범위.** 본 소프트웨어는 판매되는 것이 아니라 그 사용이 허여되는 것입니다. 관련 법률에서 귀하에게 더 많은 권한을 부여하지 않는 한, Microsoft에서 명시적으로 부여하지 않은 모든 권한은 묵시적, 금반언적 또는 기타 어떠한 방식에 의해서든 Microsoft가 보유합니다. 귀하는 본 계약에서 명시적으로 허용되는 조건에 한해서만 소프트웨어를 사용할 수 있습니다. 그렇게 하는 경우 귀하는 특정 방식으로만 사용할 수 있도록 하는 소프트웨어의 모든 기술적 제한 사항을 준수해야 합니다. 다음 중 하나를 수행 하지 않을 수 있습니다.
+
+- 소프트웨어의 모든 기술적 제한 사항을 해결 합니다.
+- 리버스 엔지니어링, 디컴파일 또는 디스어셈블할 없습니다 소프트웨어만 하는 경우 이러한 제한과 관계 없이 관련 법률에서 명시적으로 허용 합니다.
+- 본이 계약에 지정 하거나 이러한 제한과 관계 없이 관련 법률에서 허용 하는 보다 많은 소프트웨어 복사본을 확인 합니다.
+- 공유, 게시, 임대 또는 소프트웨어를 임대 또는 다른 사용자가 독립 실행형 호스팅된 솔루션으로 소프트웨어를 제공 합니다.
 
 **4.    제3자 통지.** 소프트웨어에는 소프트웨어와 함께 제공되는 ThirdPartyNotices 파일에 설명된 바와 같이 별도의 법적 고지가 있거나 타 계약에 의해 관리되는 타사 구성 요소가 포함될 수 있습니다.  이러한 구성 요소가 다른 계약의 적용을 받더라도 아래의 고지 사항과 손해에 대한 제한 및 배제는 적용됩니다.
 
@@ -106,3 +105,7 @@ ms.locfileid: "38040431"
 * 계약 위반, 보증, 보장 또는 조건의 불이행, 무과실 책임, 과실 또는 관련 법률에서 허용하는 범위 내의 기타 불법 행위 등으로 인한 청구
 
 Microsoft가 그러한 손해의 가능성에 대해 사전에 알고 있었거나 알아야만 했던 경우에도 적용됩니다. 귀하가 거주하고 있는 국가에서 부수적, 파생적 또는 기타 손해의 배제나 제한을 허용하지 않는 경우에는 위의 제한이나 배제가 적용되지 않을 수 있습니다.
+
+> [!NOTE]
+> 섹션 3은 2018 년 8 월 8 일에 업데이트 되었습니다.
+
