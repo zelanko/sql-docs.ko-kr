@@ -14,23 +14,23 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438f65ae8ec719339297b62e9bef7c347a063a1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a2320ed83c095d460aa233ac0227f37c15eca88b
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980581"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662315"
 ---
 # <a name="validating-user-input"></a>사용자 입력 유효성 검사
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  데이터에 액세스하는 응용 프로그램을 만드는 경우 모든 사용자 입력은 입증되기 전까지 악의적일 수 있다고 가정해야 합니다. 그렇지 않으면 응용 프로그램이 쉽게 공격 당할 수 있습니다. 발생할 수 있는 공격 유형 중 하나가 SQL 삽입입니다. 이 공격에서는 구문 분석 및 실행을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 인스턴스에 나중에 전달되는 문자열에 악성 코드가 추가됩니다. 이러한 공격 유형을 피하기 위해 가능한 한 매개 변수와 함께 저장 프로시저를 사용해야 하고 항상 사용자 입력의 유효성을 검사해야 합니다.  
-  
- 서버로의 반복 이동으로 인한 시간을 절약할 수 있으므로 클라이언트 코드에서 사용자 입력의 유효성 검사는 중요합니다. 또한 유효하지 않고 클라이언트측 유효성을 무시하는 입력을 catch하기 위해 서버의 저장 프로시저에 대한 매개 변수의 유효성 검사도 중요합니다.  
-  
- SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서의 "SQL 삽입"을 참조하세요. 저장 프로시저 매개 변수의 유효성 검사에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서의 "저장 프로시저([!INCLUDE[ssDE](../../includes/ssde_md.md)])"를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
-  
-  
+데이터에 액세스하는 응용 프로그램을 만드는 경우 모든 사용자 입력은 입증되기 전까지 악의적일 수 있다고 가정해야 합니다. 그렇지 않으면 응용 프로그램이 쉽게 공격 당할 수 있습니다. 발생할 수 있는 공격 유형 중 하나가 SQL 삽입입니다. 이 공격에서는 구문 분석 및 실행을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 인스턴스에 나중에 전달되는 문자열에 악성 코드가 추가됩니다. 이러한 공격 유형을 피하기 위해 가능한 한 매개 변수와 함께 저장 프로시저를 사용해야 하고 항상 사용자 입력의 유효성을 검사해야 합니다.
+
+서버로의 반복 이동으로 인한 시간을 절약할 수 있으므로 클라이언트 코드에서 사용자 입력의 유효성 검사는 중요합니다. 또한 유효하지 않고 클라이언트측 유효성을 무시하는 입력을 catch하기 위해 서버의 저장 프로시저에 대한 매개 변수의 유효성 검사도 중요합니다.
+
+SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서의 "SQL 삽입"을 참조하세요. 저장 프로시저 매개 변수의 유효성 검사에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서의 "저장 프로시저([!INCLUDE[ssDE](../../includes/ssde_md.md)])"를 참조하세요.
+
+## <a name="see-also"></a>참고 항목
+
+[JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)

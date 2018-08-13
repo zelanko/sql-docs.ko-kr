@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 0e99381224c03bf185044d57cc4b415fcfaedd3b
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+ms.openlocfilehash: 1aa3823813392c660c8e31fc517ec4b7ae2e1e29
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024229"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661875"
 ---
 # <a name="release-notes"></a>릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39024229"
 
 **추가 기능**:
 
-Azure SQL Database 및 SQL Server에 대 한 데이터 분류
+자세한 내용은 SQL Server 및 Azure SQL Database에 대 한 데이터 분류 참조 [데이터 분류](../data-classification.md)
 
 [버그 수정](../bug-fixes.md)
 

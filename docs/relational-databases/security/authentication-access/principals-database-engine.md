@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553103"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008965"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553103"
   
 ## <a name="sql-server-level-principals"></a>SQL Server 수준의 보안 주체  
   
--  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인   
--  Windows 사용자에 대한 Windows 인증 로그인  
--  Windows 그룹에 대한 Windows 인증 로그인   
--  AD 사용자에 대한 Azure Active Directory 인증 로그인
--  AD 그룹에 대한 Azure Active Directory 인증 로그인
--  서버 역할  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인   
+- Windows 사용자에 대한 Windows 인증 로그인  
+- Windows 그룹에 대한 Windows 인증 로그인   
+- AD 사용자에 대한 Azure Active Directory 인증 로그인
+- AD 그룹에 대한 Azure Active Directory 인증 로그인
+- 서버 역할  
   
- ## <a name="database-level-principals"></a>데이터베이스 수준의 보안 주체  
+## <a name="database-level-principals"></a>데이터베이스 수준의 보안 주체
   
--   데이터베이스 사용자(사용자 유형은 11가지입니다. 자세한 내용은 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.) 
--   데이터베이스 역할  
--   응용 프로그램 역할  
+- 데이터베이스 사용자(사용자 유형은 11가지입니다. 자세한 내용은 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.)
+- 데이터베이스 역할
+- 응용 프로그램 역할
   
 ## <a name="sa-login"></a>sa 로그인  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 로그인은 서버 수준의 보안 주체로서, 인스턴스를 설치하면 기본적으로 생성됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 sa의 기본 데이터베이스가 master입니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 변경되었습니다. `sa` 로그인은 `sysadmin` 고정 데이터베이스 역할의 멤버입니다. `sa` 로그인에는 서버에 대한 모든 권한이 부여되며 제한할 수 없습니다. `sa` 로그인은 삭제할 수 없지만 아무도 사용할 수 없도록 해제할 수는 있습니다.

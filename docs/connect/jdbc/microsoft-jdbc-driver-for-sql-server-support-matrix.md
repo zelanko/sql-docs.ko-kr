@@ -14,12 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0b19f437021f3a2398ac1a0dc694c4c52259621
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: cf3dece5bf18661e6f6bfa42e81c3038dd44b0c8
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456407"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661885"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 지원 매트릭스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,6 +58,7 @@ ms.locfileid: "39456407"
   
 |드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 데이터베이스|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 관리 인스턴스 (비공개 미리 보기 확장)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
 |6.1|Y|Y|Y|Y|Y|Y|Y|N|N|

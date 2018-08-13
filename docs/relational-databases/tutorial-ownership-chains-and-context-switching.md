@@ -21,12 +21,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011641"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008805"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "33011641"
 ## <a name="1-configure-the-environment"></a>1. 환경 구성  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 다음 코드를 사용하여 `AdventureWorks2012` 데이터베이스를 열고 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하여 dbo 사용자가 컨텍스트로 표시되는지 확인합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -70,7 +70,7 @@ CURRENT_USER 문에 대한 자세한 내용은 [CURRENT_USER&#40;Transact-SQL&#4
   
 다음 코드를 dbo 사용자로 사용하여 서버와 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에서 두 사용자를 만듭니다.  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -91,7 +91,7 @@ CREATE USER 문에 대한 자세한 내용은 [CREATE USER&#40;Transact-SQL&#41;
   
 다음 코드를 사용하여 `Purchasing` 스키마의 소유권을 `TestManagerUser` 계정이 가지도록 변경합니다. 이렇게 하면 해당 계정이 자신이 포함하는 개체에서 모든 DML(데이터 조작 언어) 문 액세스 권한(예: `SELECT` 및 `INSERT` 권한)을 사용할 수 있습니다. `TestManagerUser` 에게도 저장 프로시저를 만들 수 있는 권한이 부여됩니다.  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -111,7 +111,7 @@ GRANT 문에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../t-sql/s
   
 다음 코드에서 `EXECUTE AS` 문을 사용하여 컨텍스트를 `TestManagerUser` 로 변경하고 `TestEmployeeUser`에게 필요한 데이터만 표시하는 저장 프로시저를 만듭니다. 요구 사항을 만족하기 위해 저장 프로시저는 구매 주문 번호에 대해 하나의 변수를 사용하고 재무 정보를 표시하지 않으며 WHERE 절로 결과를 부분 운송을 받은 항목으로 제한합니다.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -135,7 +135,7 @@ GO
   
 현재 `TestEmployeeUser` 에게는 데이터베이스 개체에 대한 액세스 권한이 없습니다. 아직 `TestManagerUser` 컨텍스트에 있는 다음 코드는 저장 프로시저를 통해 기본 테이블 정보를 쿼리할 수 있는 권한을 사용자 계정에 부여합니다.  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -144,7 +144,7 @@ GO
   
 `Purchasing` 가 기본적으로 `TestManagerUser` 스키마에 할당되므로 스키마가 명시적으로 지정되지 않더라도 저장 프로시저는 `Purchasing` 스키마의 일부가 됩니다. 다음 코드와 같이 시스템 카탈로그 정보를 사용하여 개체를 찾을 수 있습니다.  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -157,7 +157,7 @@ GO
   
 예제의 이 섹션을 완료하면 코드가 `REVERT` 문을 사용하여 컨텍스트를 다시 dbo로 전환합니다.  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -167,7 +167,7 @@ REVERT 문에 대한 자세한 내용은 [REVERT&#40;Transact-SQL&#41;](../t-sql
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. 저장 프로시저를 통해 데이터 액세스  
 `TestEmployeeUser` 에게는 public 데이터베이스 역할에 할당된 로그인 및 권한 이외에 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스 개체에 대한 사용 권한이 없습니다. `TestEmployeeUser` 가 기본 테이블에 액세스하려고 하면 다음 코드에서 오류를 반환합니다.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -183,7 +183,7 @@ GO
   
 `TestManagerUser` 스키마 소유권으로 인해 `Purchasing` 가 마지막 섹션에서 생성된 저장 프로시저에서 참조하는 개체를 소유하므로 `TestEmployeeUser` 는 저장 프로시저를 통해 기본 테이블에 액세스할 수 있습니다. 아직 `TestEmployeeUser` 컨텍스트를 사용하는 다음 코드는 구매 주문 952를 매개 변수로 전달합니다.  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -191,7 +191,7 @@ GO
 ## <a name="4-reset-the-environment"></a>4. 환경 다시 설정  
 다음 코드는 `REVERT` 명령을 사용하여 현재 계정의 컨텍스트를 `dbo`로 되돌린 다음 환경을 다시 설정합니다.  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -215,7 +215,7 @@ GO
 > [!NOTE]  
 > 이 코드에는 `TestEmployeeUser` 가 기본 테이블에서 데이터를 선택할 수 없음을 보여 주는 두 가지 예상 오류가 포함되어 있지 않습니다.  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  
