@@ -14,12 +14,12 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1af25d246de93812aca83c490a7a11c7dc66fbdc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456397"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661795"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 
@@ -35,7 +35,7 @@ SQL Server 용 Microsoft JDBC Driver 7.0 제공 **mssql-jdbc-7.0.0.jre8.jar**, �
 
 SQL Server 용 Microsoft JDBC Driver 6.4 제공 **mssql-jdbc-6.4.0.jre7.jar**를 **mssql-jdbc-6.4.0.jre8.jar**, 및 **mssql-jdbc-6.4.0.jre9.jar** 클래스 라이브러리 파일입니다.
 
-SQL Server 용 Microsoft JDBC Driver 6.2 제공 **mssql-jdbc-6.2.1.jre7.jar**, 및 **mssql-jdbc-6.2.1.jre8.jar** 클래스 라이브러리 파일입니다.
+SQL Server 용 Microsoft JDBC Driver 6.2 제공 **mssql-6.2.2.jre7.jar**, 및 **mssql-jdbc-6.2.2.jre8.jar** 클래스 라이브러리 파일입니다.
   
 Microsoft JDBC 드라이버 6.0 및 4.2 for SQL Server 제공 **sqljdbc41.jar**, 및 **sqljdbc42.jar** 클래스 라이브러리 파일입니다.
   
@@ -49,7 +49,7 @@ Microsoft JDBC 드라이버 jar이 Java SDK의 일부가 아닌 및 사용자 �
 
 JDBC 드라이버 4.1 또는 4.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우 **sqljdbc41.jar** 하거나 **sqljdbc42.jar** 파일에서 해당 드라이버 다운로드 합니다.
 
-JDBC Driver 6.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.2.1.jre7.jar** 하거나 **mssql-jdbc-6.2.1.jre8.jar**합니다.
+JDBC Driver 6.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-6.2.2.jre7.jar** 하거나 **mssql-jdbc-6.2.2.jre8.jar**합니다.
 
 JDBC Driver 6.4를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.4.0.jre7.jar**, * * mssql-jdbc-6.4.0.jre8.jar 또는 **mssql-jdbc-6.4.0.jre9.jar**합니다.
 
@@ -62,9 +62,9 @@ JDBC 드라이버 7.0을 사용 하 여 포함 하도록 클래스 경로 설정
 합니다 **mssql-jdbc-7.0.0.jre8.jar** 또는 **mssql-jdbc-7.0.0.jre10.jar** 파일이 다음 위치에 설치 됩니다.
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre10.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
 ```
 
 다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
@@ -82,11 +82,11 @@ CLASSPATH 문에 하나만 포함 되어 있는지 [!INCLUDE[jdbcNoVersion](../.
 **mssql-jdbc-6.4.0.jre7.jar**, * * 6.4.0.jre8.jar-mssql-jdbc 또는 **mssql-jdbc-6.4.0.jre9.jar** 파일은 다음 위치에 설치 합니다.  
 
 ```bash  
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
 ```
 
 다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
@@ -101,36 +101,36 @@ CLASSPATH 문에 하나만 포함 되어 있는지 확인 [!INCLUDE[jdbcNoVersio
 
 ### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC Driver 6.2에 대 한
 
-합니다 **mssql-jdbc-6.2.1.jre7.jar** 또는 **mssql-jdbc-6.2.1.jre8.jar** 파일이 다음 위치에 설치 됩니다.
+합니다 **mssql-6.2.2.jre7.jar** 하거나 **mssql-jdbc-6.2.2.jre8.jar** 파일이 다음 위치에 설치 됩니다.
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
 ```
 
 다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
   
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
   
 다음 코드 조각은 Unix/Linux 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
   
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
-CLASSPATH 문에 하나만 포함 되어 있는지 확인 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-jdbc-6.2.1.jre7.jar 또는 mssql-jdbc-6.2.1.jre8.jar 등입니다.  
+CLASSPATH 문에 하나만 포함 되어 있는지 확인 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-6.2.2.jre7.jar 또는 mssql-jdbc-6.2.2.jre8.jar 등입니다.  
 
 ### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC 드라이버 4.1, 4.2 및 6.0
 
 sqljdbc.jar 파일, sqljdbc4.jar 파일, sqljdbc41.jar 또는 sqljdbc42.jar 파일은 다음 위치에 설치됩니다.  
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc4.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc41.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc41.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc42.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
 ```
 
 다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  

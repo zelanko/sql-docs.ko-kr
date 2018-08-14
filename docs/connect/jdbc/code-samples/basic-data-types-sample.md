@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98c351eef36810032e55941683996c007a8c39d3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: MTE75
+ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452080"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662415"
 ---
 # <a name="basic-data-types-sample"></a>기본 데이터 형식 샘플
 
@@ -29,7 +29,7 @@ ms.locfileid: "39452080"
   
 이 샘플의 코드 파일 이름은 BasicDataTypes.java이며 다음과 같은 위치에 있습니다.  
 
-```
+```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
 ```
 
