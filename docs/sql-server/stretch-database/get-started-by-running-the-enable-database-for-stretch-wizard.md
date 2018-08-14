@@ -180,7 +180,7 @@ ms.locfileid: "38049011"
   
 ##  <a name="KnownIssues"></a> 마법사 문제 해결  
  **스트레치 데이터베이스 마법사가 실패했습니다.**  
- 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
+ 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
   
 ## <a name="next-steps"></a>다음 단계  
  스트레치 데이터베이스에 추가 테이블을 사용합니다. 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  

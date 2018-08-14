@@ -47,7 +47,7 @@ ms.locfileid: "38035545"
   
  ![값을 포함하는 3개의 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
   
- 아티클 간 논리적 레코드 관계를 정의하려면 [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하십시오.  
+ 아티클 간 논리적 레코드 관계를 정의하려면 [병합 테이블 기사 간의 논리적 레코드 관계 정의](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하십시오.  
   
 ## <a name="benefits-of-logical-records"></a>논리적 레코드의 장점  
  논리적 레코드 기능에는 다음과 같은 두 가지 주요 장점이 있습니다.  
