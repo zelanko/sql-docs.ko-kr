@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38054081"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 입력 및 출력 매개 변수 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 항목에서는 SQLSRV 드라이버를 사용하여 하나의 매개 변수가 입출력 매개 변수로 정의된 저장 프로시저를 호출하는 방법 및 결과를 검색하는 방법을 보여 줍니다. 출력 또는 입출력 매개 변수를 검색할 때 반환되는 매개 변수 값에 액세스하기 전에 저장 프로시저에서 반환된 모든 결과를 사용해야 합니다.  
