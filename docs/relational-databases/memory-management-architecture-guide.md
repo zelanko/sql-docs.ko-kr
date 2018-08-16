@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541723"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008895"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "39541723"
   
 가상 메모리 체계를 사용하면 실제 메모리가 과다 커밋되어 가상 메모리와 실제 메모리의 비율이 1:1을 초과할 수 있습니다. 그 결과 실제 메모리가 다양하게 구성된 컴퓨터에서 대용량 프로그램을 실행할 수 있습니다. 그러나 모든 프로세스의 현재 평균 설정을 합한 값보다 너무 많은 가상 메모리를 사용하면 성능이 떨어질 수 있습니다. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 아키텍처
+## <a name="sql-server-memory-architecture"></a>SQL Server 메모리 아키텍처
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 메모리를 필요에 따라 동적으로 확보하고 해제합니다. 일반적으로 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 할당해야 하는 메모리의 양을 지정할 필요가 없습니다. 해당 옵션이 계속 유지되고 일부 환경에서는 필요할 경우에도 마찬가지입니다.
 

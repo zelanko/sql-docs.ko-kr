@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 52ef9494ea2c0b4aeceab2faca8c6bce3107959e
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564727"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609732"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,6 @@ columnstore 인덱스는 rowstore 인덱스보다 10배 더 뛰어난 데이터 
   
 *   별도 데이터 웨어하우스가 필요하지 않습니다. 일반적으로 회사는 rowstore 테이블에서 트랜잭션을 실행하고 별도의 데이터 웨어하우스에 데이터를 로드하여 분석을 실행합니다. 많은 워크로드에서 트랜잭션 테이블에 비클러스터형 columnstore 인덱스를 만들어 로드 프로세스 및 별도의 데이터 웨어하우스를 제거할 수 있습니다.
 
-  
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]은 이 시나리오의 성능을 향상시킬 수 있는 몇 가지 전략을 제공합니다. OLTP 응용 프로그램을 변경하지 않고도 비클러스터형 columnstore 인덱스를 사용할 수 있으므로 매우 쉽게 체험할 수 있습니다. 
 
 처리 리소스를 더 추가하려면 읽기 가능한 보조 복제본에서 분석을 실행할 수 있습니다. 읽기 가능한 보조 복제본 사용으로 트랜잭션 워크로드 및 분석 워크로드의 처리를 구분합니다. 
@@ -176,10 +175,9 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
 |태스크|참조 항목|참고|  
 |----------|----------------------|-----------|  
 |테이블을 columnstore로 만듭니다.|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 테이블을 클러스터형 columnstore 인덱스로 만들 수 있습니다. 먼저 rowstore 테이블을 만든 다음 이를 columnstore로 변환할 필요가 없습니다.|  
-|columnstore 인덱스가 포함된 메모리 테이블을 만듭니다.|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|
-            [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스가 포함된 메모리 최적화 테이블을 만들 수 있습니다. 테이블을 만든 후 ALTER TABLE ADD INDEX 구문을 사용하여 columnstore 인덱스를 추가할 수도 있습니다.|  
+|columnstore 인덱스가 포함된 메모리 테이블을 만듭니다.|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스가 포함된 메모리 최적화 테이블을 만들 수 있습니다. 테이블을 만든 후 ALTER TABLE ADD INDEX 구문을 사용하여 columnstore 인덱스를 추가할 수도 있습니다.|  
 |rowstore 테이블을 columnstore로 변환합니다.|[CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|기존 힙 또는 이진 트리를 columnstore로 변환합니다. 예제에서는 이 변환을 수행할 때 기존 인덱스 및 인덱스 이름을 처리하는 방법을 보여 줍니다.|  
-|columnstore 테이블을 rowstore로 변환합니다.|[CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|일반적으로 이 작업은 필요하지 않지만 이 변환을 수행해야 하는 경우가 있을 수 있습니다. 예제에서는 columnstore를 힙 또는 클러스터형 인덱스로 변환하는 방법을 보여 줍니다.|  
+|columnstore 테이블을 rowstore로 변환합니다.|[CREATE CLUSTERED INDEX(Transact-SQL) 또는 DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|일반적으로 이 작업은 필요하지 않지만 이 변환을 수행해야 하는 경우가 있을 수 있습니다. 예제에서는 columnstore를 힙 또는 클러스터형 인덱스로 변환하는 방법을 보여 줍니다.|  
 |Rowstore 테이블에 columnstore 인덱스를 만듭니다.|[CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Rowstore 테이블에는 하나의 columnstore 인덱스가 있을 수 있습니다.  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스에 필터링된 조건이 있을 수 있습니다. 예제에서는 기본 구문을 보여 줍니다.|  
 |운영 분석에 대한 고성능 인덱스를 만듭니다.|[실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|OLTP 쿼리에서는 B-트리 인덱스를 사용하고 분석 쿼리에서는 columnstore 인덱스를 사용하도록 상호 보완적인 columnstore 및 B-트리 인덱스를 만드는 방법을 설명합니다.|  
 |데이터 웨어하우징용 고성능 columnstore 인덱스를 만듭니다.|[Columnstore 인덱스 - 데이터 웨어하우징](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Columnstore 테이블에서 B-트리 인덱스를 사용하여 고성능 데이터 웨어하우징 쿼리를 만드는 방법을 설명합니다.|  

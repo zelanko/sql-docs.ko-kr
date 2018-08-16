@@ -18,12 +18,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29c9a2ee3c323c9689e7ece0b2b1318a7051321e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011740"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661456"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>변경 데이터 캡처 및 기타 SQL Server 기능
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,11 @@ ms.locfileid: "33011740"
   
 -   [트랜잭션 복제](#TransReplication)  
   
--   [변경 데이터 캡처가 설정된 데이터베이스 복원 또는 연결](#RestoreOrAttach)  
+-   [변경 데이터 캡처가 설정된 데이터베이스 복원 또는 연결](#RestoreOrAttach)
+
+-   [포함된 데이터베이스](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> 변경 내용 추적  
  동일한 데이터베이스에서 변경 데이터 캡처 및 [변경 내용 추적](../../relational-databases/track-changes/about-change-tracking-sql-server.md) 을 설정할 수 있습니다. 특별한 고려 사항은 필요하지 않습니다. 자세한 내용은 [변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)을 참조하세요.  
   
 ##  <a name="DatabaseMirroring"></a> 데이터베이스 미러링  
@@ -79,6 +81,9 @@ ms.locfileid: "33011740"
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 를 사용하여 복원 또는 연결된 데이터베이스에서 변경 데이터 캡처를 제거할 수 있습니다.  
+  
+##  <a name="Contained"></a> 포함된 데이터베이스  
+ 변경 데이터 캡처는 [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)에서 지원되지 않습니다.
   
 ## <a name="change-data-capture-and-always-on"></a>변경 데이터 캡처 및 Always On  
  Always On을 사용할 때는 보조 복제에서 변경 내용 열거를 수행하여 주 복제에서 디스크 부하를 줄여야 합니다.  

@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 620722d0e9f0f82f624c3385c4c524c307098333
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452137"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662335"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -58,8 +58,8 @@ Microsoft JDBC Driver 6.2는 JDBC 4.0, 4.1 및 4.2 사양을 지원 하 고 다�
 
 | JAR                       | JDBC 사양     | JDK 버전 |
 | ------------------------- | ---------------------- | ----------- |
-| mssql-jdbc-6.2.1.jre8.jar | JDBC 4.2, 4.1 및 4.0 | JDK 8.0     |
-| mssql-jdbc-6.2.1.jre7.jar | JDBC 4.1 및 4.0       | JDK 7.0     |
+| mssql-jdbc-포함 되어 있습니다 | JDBC 4.2, 4.1 및 4.0 | JDK 8.0     |
+| mssql-6.2.2.jre7.jar | JDBC 4.1 및 4.0       | JDK 7.0     |
 
 Microsoft JDBC 드라이버 6.0 및 4.2 for SQL Server는 JDBC 4.0, 4.1 및 4.2 사양을 지원 하며 다음과 같이 설치 패키지에 두 개의 JAR 클래스 라이브러리가 포함:
 

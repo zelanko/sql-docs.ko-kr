@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865368"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609672"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>특정 TCP 포트에서 수신 대기하도록 서버 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,11 @@ ms.locfileid: "32865368"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  **IP***n* **속성** 영역 상자의 **TCP 포트** 상자에서 이 IP 주소가 수신 대기할 포트 번호를 입력한 다음 **확인**을 클릭합니다.  
+4.  **IP***n* **속성** 영역 상자의 **TCP 포트** 상자에서 이 IP 주소가 수신 대기할 포트 번호를 입력한 다음 **확인**을 클릭합니다. 여러 포트를 쉼표로 구분하여 지정할 수 있습니다.
+
+    > [!NOTE] 
+    > **프로토콜** 탭의 **모두 수신** 설정이 "예"로 설정된 경우 **IPAll** 섹션의 **TCP 포트** 및 **TCP 동적 포트** 값을 사용하고 개별 **IP***n* 섹션을 전체에서 무시합니다. **모두 수신** 설정을 "아니요"로 지정하면 **IPAll** 섹션 아래에 있는 **TCP 포트** 및 **TCP 동적 포트** 설정을 무시하고, 개별 **IP***n*섹션에 있는 **TCP 포트**, **TCP 동적 포트** 및 **사용됨** 설정을 대신 사용할 수 있습니다.
+    > 각 **IP***n* 섹션에는 포트가 정의된 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 이 IP 주소를 무시하도록 하는 기본값 "아니요"를 지정한 **사용** 설정이 지정됩니다.  
   
 5.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   

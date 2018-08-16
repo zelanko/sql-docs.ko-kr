@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324437"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008905"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324437"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 대/소문자를 구분하는 데이터 정렬을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인도 대/소문자를 구분합니다.  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>SQL Server의 이름을 지정하는 형식  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름을 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 기본 인스턴스(명명되지 않은 인스턴스)인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이름 또는 컴퓨터의 IP 주소를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 명명된 인스턴스(예: SQLEXPRESS)인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이름 또는 컴퓨터의 IP 주소를 지정하고 슬래시와 인스턴스 이름을 추가합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 기본 인스턴스(명명되지 않은 인스턴스)인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이름 또는 컴퓨터의 IP 주소를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 명명된 인스턴스(예: SQLEXPRESS)인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이름 또는 컴퓨터의 IP 주소를 지정하고 슬래시와 인스턴스 이름을 추가합니다.  
   
  다음 예에서는 APPHOST라는 컴퓨터에서 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 명명된 인스턴스를 지정하는 경우 이 예에서는 SQLEXPRESS라는 인스턴스 이름을 사용합니다.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324437"
   
 |인스턴스 유형|서버 이름 항목|  
 |----------------------|-------------------------------|  
-|기본 프로토콜을 사용하여 기본 인스턴스에 연결합니다. 이 항목은 기본 인스턴스에 권장되는 항목입니다.|APPHOST|  
-|기본 프로토콜을 사용하여 명명된 인스턴스에 연결합니다. 이 항목은 기본 인스턴스에 권장되는 항목입니다.|APPHOST\SQLEXPRESS|  
+|기본 프로토콜을 사용하여 기본 인스턴스에 연결합니다.|APPHOST|  
+|기본 프로토콜을 사용하여 명명된 인스턴스에 연결합니다. |APPHOST\SQLEXPRESS|  
 |인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 마침표를 사용하여 동일한 컴퓨터의 기본 인스턴스에 연결합니다.|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
 |인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 마침표를 사용하여 동일한 컴퓨터의 명명된 인스턴스에 연결합니다.|.\SQLEXPRESS|  
 |인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 localhost를 사용하여 동일한 컴퓨터의 기본 인스턴스에 연결합니다.|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324437"
 |공유 메모리 연결을 강제 적용하여 동일한 컴퓨터의 명명된 인스턴스에 연결합니다.|lpc:APPHOST\SQLEXPRESS|  
 |IP 주소를 사용하여 TCP 주소 192.168.17.28에서 수신 대기하는 기본 인스턴스에 연결합니다.|192.168.17.28|  
 |IP 주소를 사용하여 TCP 주소 192.168.17.28에서 수신 대기하는 명명된 인스턴스에 연결합니다.|192.168.17.28\SQLEXPRESS|  
-|사용 중인 포트(이 경우 2828)를 지정하여 기본 TCP 포트에서 수신 대기하지 않는 기본 인스턴스에 연결합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 가 기본 포트(1433)에서 수신 대기하는 경우 이 항목은 필요하지 않습니다.|APPHOST,2828|  
-|지정된 TCP 포트(이 경우 2828)에서 명명된 인스턴스에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 호스트 컴퓨터에서 실행되지 않는 경우 대개 이 항목은 필요하지 않습니다.|APPHOST,2828|  
+|사용 중인 포트(이 경우 2828)를 지정하여 기본 TCP 포트에서 수신 대기하지 않는 기본 인스턴스에 연결합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 기본 포트(1433)에서 수신 대기하는 경우 포트 번호를 지정하는 작업은 필요하지 않습니다.|APPHOST,2828|  
+|지정된 TCP 포트(이 경우 2828)에서 명명된 인스턴스에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 호스트 컴퓨터에서 실행되지 않는 경우 대개 포트 번호를 지정하는 작업은 필요합니다.|APPHOST,2828|  
 |IP 주소와 사용 중인 포트(이 경우 2828)를 지정하여 기본 TCP 포트에서 수신 대기하지 않는 기본 인스턴스에 연결합니다.|192.168.17.28,2828|  
 |IP 주소와 사용 중인 포트(이 경우 2828)를 지정하여 명명된 인스턴스에 연결합니다.|192.168.17.28\SQLEXPRESS,2828|  
 |TCP 연결을 강제 적용하여 이름별로 기본 인스턴스에 연결합니다.|tcp:APPHOST|  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [로그인 만들기](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [로그인 만들기](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

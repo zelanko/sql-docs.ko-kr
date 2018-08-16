@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 610bb894ca3cf2bc974f980c6879351d70cf6bee
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137932"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609813"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
@@ -30,7 +30,7 @@ ms.locfileid: "37137932"
 
 2.  필요한 [파일](#files-you-need).
 
-3.  Excel에서 데이터를 로드할 때 제공해야 하는 연결 정보와 구성해야 하는 설정입니다.
+3.  SSIS를 사용하여 Excel 간에 데이터를 로드할 때 제공해야 하는 연결 정보 및 구성해야 하는 설정입니다.
     -   데이터 원본으로 [Excel을 지정](#specify-excel)합니다.
     -   [Excel 파일 이름 및 경로](#excel-file)를 제공합니다.
     -   [Excel 버전](#excel-version)을 선택합니다.
@@ -44,15 +44,15 @@ ms.locfileid: "37137932"
 
 ## <a name="tools"></a> 사용할 수 있는 도구
 
-다음 도구 중 하나를 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보낼 수 있습니다.
+다음 도구 중 하나를 사용하여 SSIS를 통해 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보낼 수 있습니다.
 
--   **SSIS(SQL Server Integration Services)** Excel 연결 관리자를 사용하여 Excel 원본 또는 Excel 대상을 사용하는 SSIS 패키지를 만듭니다. 이 문서에서는 SSIS 패키지를 디자인하는 방법을 설명하지 않습니다.
+-   **SSIS(SQL Server Integration Services)** Excel 연결 관리자를 사용하여 Excel 원본 또는 Excel 대상을 사용하는 SSIS 패키지를 만듭니다. 이 아티클에서는 SSIS 패키지를 만드는 방법을 설명하지 않습니다.
 
 -   SSIS에 빌드되는 **SQL Server 가져오기 및 내보내기 마법사**. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) 및 [Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
 ## <a name="files-you-need"> </a> Excel에 연결하는 데 필요한 파일 가져오기
 
-Excel에서 데이터를 가져오거나 Excel로 데이터를 내보내려면 Excel용 연결 구성 요소가 설치되어 있지 않은 경우 먼저 다운로드해야 합니다. Excel용 연결 구성 요소는 기본적으로 설치되어 있지 않습니다.
+SSIS를 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보내려면 Excel용 연결 구성 요소가 설치되어 있지 않은 경우 먼저 다운로드해야 합니다. Excel용 연결 구성 요소는 기본적으로 설치되어 있지 않습니다.
 
 [Microsoft Access 데이터베이스 엔진 2016 재배포 가능](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Excel용 연결 구성 요소를 다운로드합니다. 최신 버전 구성 요소는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.
 

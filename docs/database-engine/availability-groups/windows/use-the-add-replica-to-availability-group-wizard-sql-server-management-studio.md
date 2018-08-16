@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771119"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609682"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771119"
     |**끝점**|이 탭에서는 각 새 보조 복제본에 대한 기존 데이터베이스 미러링 끝점(있는 경우)을 확인할 수 있습니다. 이 끝점이 서버 계정에서 Windows 인증을 사용하는 서버 인스턴스에 없는 경우 마법사가 끝점을 자동으로 만들도록 시도합니다.<br /><br /> <br /><br /> 참고: 서버 인스턴스가 도메인 사용자 계정이 아닌 계정으로 실행 중인 경우 마법사를 계속하려면 먼저 서버 인스턴스를 수동으로 변경해야 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.|  
     |**백업 기본 설정**|이 탭에서는 현재 설정을 수정하려는 경우 가용성 그룹 전체에 대한 백업 기본 설정을 지정하고 개별 가용성 복제본에 대한 백업 우선 순위를 지정할 수 있습니다.|  
   
-6.  선택한 복제본이 데이터베이스 마스터 키가 있는 데이터베이스를 포함하는 경우 **암호 입력** 페이지의 데이터베이스 마스터 키에 암호를 입력합니다. **상태** 열은 데이터베이스 마스터 키가 있는 데이터베이스에 대한 **암호 필요** 를 나타냅니다. 암호를 입력한 후 **새로 고침**을 클릭합니다. 암호를 올바르게 입력하면 상태 열에 **암호 입력됨**이 표시됩니다.  
+6.  선택한 복제본이 데이터베이스 마스터 키가 있는 데이터베이스를 포함하는 경우 **암호** 열의 데이터베이스 마스터 키에 암호를 입력합니다. **상태** 열은 데이터베이스 마스터 키가 있는 데이터베이스에 대한 **암호 필요** 를 나타냅니다. **다음**은 **암호** 열에 올바른 암호를 입력할 때까지 회색으로 표시됩니다. 암호를 입력한 후 **새로 고침**을 클릭합니다. 암호를 올바르게 입력하면 상태 열에 **암호 입력됨**이 표시되고, **다음**을 사용할 수 있게 됩니다.  
   
 7.  **초기 데이터 동기화 선택** 페이지에서 새 보조 복제본을 만들고 가용성 그룹에 조인할 방법을 선택합니다. 다음 옵션 중 하나를 선택합니다.  
   

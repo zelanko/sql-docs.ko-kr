@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401495"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020647"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터를 보호하기 위해 중요한 데이터만 보호하거나 패키지의 모든 데이터를 보호하는 패키지 수준을 설정할 수 있습니다. 또한 패키지 데이터를 암호 또는 사용자 키로 암호화하거나 데이터베이스를 사용하여 암호화할 수도 있습니다. 패키지 보호 수준은 반드시 정적이지 않으며 패키지의 수명 주기 동안 변경됩니다. 즉, 개발 과정에서 설정하는 보호 수준과 배포 과정에서 설정하는 보호 수준이 서로 다른 경우가 자주 있습니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "35401495"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 보호 수준을 설정하거나 변경하려면  
   
-1.  **패키지 보호 수준 설정** 항목에서 [ProtectionLevel](#set_protection)속성에 사용할 수 있는 값을 검토하고 사용 중인 패키지에 적합한 값을 결정합니다.  
+1.  **보호 수준** 섹션에서 [ProtectionLevel](#protection-levels) 속성에 사용할 수 있는 값을 검토하고, 패키지에 적합한 값을 결정합니다.  
   
 2.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401495"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>명령 프롬프트에서 패키지 보호 수준을 설정하거나 변경하려면  
   
-1.  **패키지 보호 수준 설정** 섹션에서 [ProtectionLevel](#set_protection) 속성에 사용할 수 있는 값을 검토하고 사용 중인 패키지에 적합한 값을 결정합니다.  
+1.  **보호 수준** 섹션에서 [ProtectionLevel](#protection-levels) 속성에 사용할 수 있는 값을 검토하고, 패키지에 적합한 값을 결정합니다.  
   
 2.  **dtutil Utility** 항목에서 [Encrypt](../../integration-services/dtutil-utility.md)옵션에 대한 매핑을 검토하고 선택한 **ProtectionLevel** 속성의 값으로 사용하기에 적합한 정수를 결정합니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "35401495"
   
  패키지 보안의 요구 사항 및 옵션을 이해하려면 [보안 개요&#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)를 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **Package protection level**  
  목록에서 보호 수준을 선택합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "35401495"
 ## <a name="password_dialog"></a> 패키지 암호 대화 상자
   **패키지 암호** 대화 상자를 사용하여 암호로 암호화된 패키지에 패키지 암호를 제공할 수 있습니다. 패키지에서 **암호로 중요한 데이터 암호화**또는 **암호로 모든 데이터 암호화** 보호 수준을 사용하는 경우 암호를 제공해야 합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **암호**  
  암호를 입력합니다.  
   

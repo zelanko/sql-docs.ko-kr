@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228459"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020677"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>자습서: SSMS 사용을 위한 추가 팁과 요령
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 추가 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
@@ -189,7 +189,7 @@ ms.locfileid: "39228459"
     ![쿼리로 오류 로그 찾기](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>SQL Server에 연결할 수 없는 경우 오류 로그 위치 찾기
-SQL Server 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 있습니다. 오류 로그 위치에 대한 경로는 SQL Server 구성 관리자 내의 시작 매개 변수에서 찾을 수 있습니다. 아래 단계에 따라 SQL Server 오류 로그의 위치를 식별하는 해당 시작 매개 변수를 찾으세요. *경로는 아래 표시된 경로와 다를 수 있습니다*. 
+SQL Server 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 있습니다. 오류 로그 위치에 대한 경로는 SQL Server 구성 관리자 내의 시작 매개 변수에서 찾을 수 있습니다. 아래 단계에 따라 SQL Server 오류 로그의 위치를 식별하는 관련 시작 매개 변수를 찾습니다. *경로는 아래 표시된 경로와 다를 수 있습니다*. 
 
 1. SQL Server 구성 관리자를 엽니다. 
 2. **서비스**를 확장합니다.
@@ -210,7 +210,7 @@ SQL Server 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 
 SQL Server에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵션이 있습니다.  
 
 ### <a name="before-you-connect-to-sql-server"></a>SQL Server에 연결하기 전에
-1. 단계를 따라 [디스크의 SQL Server 오류 로그](#finding-your-error-log-if-you-cannot-connect-to-sql)를 찾습니다. 
+1. 단계를 따라 [디스크의 SQL Server 오류 로그](#finding-your-error-log-if-you-cannot-connect-to-sql)를 찾습니다. 경로는 아래 이미지의 경로와 다를 수 있습니다.
 2. 메모장에서 errorlog.log 파일을 엽니다.  
 3. *서버 이름은* 텍스트를 검색합니다.
     

@@ -38,7 +38,7 @@ ms.locfileid: "39553033"
   
  이 샘플에 대한 설명서는 다음과 같이 구성되어 있습니다.  
   
--   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#필수 조건)   
+-   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
   
 -   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   

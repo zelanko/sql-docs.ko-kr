@@ -1,7 +1,7 @@
 ---
 title: 분산 가용성 그룹(SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 02f4cc65d9dd19a30904de9f1b76091fb4723c6d
+ms.sourcegitcommit: 0cda14b1151d9bce1253d96dea038c038484f07a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400716"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39616091"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "39400716"
 
 다음 그림에서는 각각 고유한 WSFC 클러스터에 구성된 두 개의 가용성 그룹 (AG 1 및 AG 2)에 걸친 분산 가용성 그룹의 고급 수준을 보여 줍니다. 분산 가용성 그룹에는 총 4개의 복제본이 있으며, 각 가용성 그룹에는 2개의 복제본이 있습니다. 분산된 가용성이 최대 18개의 총 복제본을 가질 수 있도록 각 가용성 그룹은 복제본의 최대 수를 지원할 수 있습니다.
 
-<a name="fig1"></a>
-![분산 가용성 그룹에 대한 상위 수준 보기][1]
+
+![분산 가용성 그룹에 대한 상위 수준 보기](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
 분산 가용성 그룹에서 데이터 이동을 동기 또는 비동기로 구성할 수 있습니다. 그러나 데이터 이동은 기존 가용성 그룹에 비해 분산 가용성 그룹 내에서 약간 다릅니다. 각 가용성 그룹에는 하나의 주 복제본이 있지만 삽입, 업데이트 및 삭제를 허용할 수 있는 분산 가용성 그룹에 참여하는 데이터베이스 복사본은 하나만 있습니다. 다음 그림에서 보여 주듯이 AG 1은 주 가용성 그룹입니다. 주 복제본은 AG 1의 보조 복제본과 AG 2의 주 복제본 모두로 트랜잭션을 보냅니다. AG 2의 주 복제본은 *전달자*라고도 합니다. 전달자는 분산된 가용성 그룹의 보조 가용성 그룹에서 주 복제본입니다. 전달자는 주 가용성 그룹의 주 복제본에서 트랜잭션을 받고 자체 가용성 그룹의 보조 복제본에 전달합니다.  그런 다음 전달자는 AG 2의 주 복제본을 계속 업데이트합니다. 
 
-![분산 가용성 그룹 및 데이터 이동][2]
+![분산 가용성 그룹 및 데이터 이동](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
 AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하는 유일한 방법은 AG 1에서 분산 가용성 그룹을 수동으로 장애 조치하는 것입니다. 앞의 그림에서 AG 1에는 쓰기 가능한 데이터베이스 복사본이 있으므로, 장애 조치를 실행하면 AG 2는 삽입, 업데이트 및 삭제를 처리할 수 있는 가용성 그룹이 됩니다. 하나의 분산 가용성 그룹을 다른 그룹으로 장애 조치하는 방법에 대한 자세한 내용은 [보조 가용성 그룹으로 장애 조치]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)를 참조하세요.
 
@@ -79,7 +79,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 분산 가용성 그룹은 여러 가용성 그룹에 걸쳐 있고, 각각 고유한 기본 WSFC 클러스터에 있으며, SQL Server 전용 구조입니다.  즉, 개별 가용성 그룹을 포함하는 WSFC 클러스터에는 서로 다른 주요 버전의 Windows Server가 있을 수 있습니다. 이전 섹션에서 설명한 대로 SQL Server의 주요 버전은 동일해야 합니다. 다음 그림에서는 [첫 번째 그림](#fig1)과 매우 비슷하게 분산 가용성 그룹에 참여하는 AG 1 및 AG 2를 보여 주지만, 각 WSFC 클러스터는 서로 다른 버전의 Windows Server입니다.
 
 
-![서로 다른 버전의 Windows Server를 사용하는 WSFC 클러스터에 포함된 분산 가용성 그룹][3]
+![서로 다른 버전의 Windows Server를 사용하는 WSFC 클러스터에 포함된 분산 가용성 그룹](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
 
 개별 WSFC 클러스터와 해당 가용성 그룹은 기존 규칙을 따릅니다. 즉, 도메인에 조인되거나 조인되지 않을 수 있습니다(Windows Server 2016 이상). 서로 다른 두 가용성 그룹을 하나의 분산 가용성 그룹에 결합하는 경우 다음 네 가지 시나리오가 있습니다.
 
@@ -104,7 +104,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 기존 가용성 그룹에서는 모든 서버가 동일한 WSFC 클러스터에 속해야 하므로 여러 데이터 센터를 확장할 수 있습니다. 다음 그림에서는 데이터 흐름을 포함하여 기존 다중 사이트 가용성 그룹에 대한 아키텍처를 보여 줍니다. 모든 보조 복제본에 트랜잭션을 보내는 주 복제본이 하나만 있습니다. 이 구성은 몇 가지 방식에서 분산 가용성 그룹보다 더 작습니다. 예를 들어 Active Directory(해당하는 경우) 및 WSFC 클러스터의 쿼럼에 대한 미러링 모니터 서버와 같은 항목을 구현해야 합니다. 또한 노드 응답 변경과 같이 WSFC 클러스터의 다른 측면을 고려해야 할 수도 있습니다.
 
-![기존 다중 사이트 가용성 그룹][4]
+![기존 다중 사이트 가용성 그룹](./media/distributed-availability-group/dag-04-traditional-multi-site-ag.png)
 
 분산 가용성 그룹은 여러 데이터 센터에 걸쳐 있는 가용성 그룹에 대해 더 유연한 배포 시나리오를 제공합니다. 이전에 재해 복구와 같은 시나리오에 [로그 전달]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)과 같은 기능을 사용한 분산 가용성 그룹도 사용할 수 있습니다. 그러나 로그 전달과 달리 분산 가용성 그룹은 트랜잭션 적용을 지연할 수 없습니다. 즉, 데이터를 잘못 업데이트하거나 삭제하는 사용자의 실수가 발생하는 경우 가용성 그룹 또는 분산 가용성 그룹에서 도움을 줄 수 없습니다.
 
@@ -139,12 +139,12 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 즉, 주 복제본은 서로 다른 두 개의 분산 가용성 그룹에 참여할 수 있습니다. 다음 그림에서는 AG 1과 AG 2가 모두 분산 AG 1에 참여하고 있는 한편, AG 2와 AG 3은 분산 AG 2에 참여하고 있습니다. AG 2의 주 복제본(또는 전달자)은 분산된 AG 1의 보조 복제본과 분산된 AG 2의 주 복제본 모두입니다.
 
-![분산 가용성 그룹을 사용한 읽기 복제본 확장][5]
+![분산 가용성 그룹을 사용한 읽기 복제본 확장](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
 다음 그림에서는 서로 다른 두 가지 분산 가용성 그룹, 즉 분산 AG 1(AG 1과 AG 2로 구성)과 분산 AG 2(AG 1과 AG 3으로 구성)에 대한 주 복제본인 AG 1을 보여 줍니다.
 
 
-![분산 가용성 그룹 예제를 사용한 또 다른 읽기 복제본 확장][6]
+![분산 가용성 그룹 예제를 사용한 또 다른 읽기 복제본 확장]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
 
 
 앞의 두 예제 모두에서는 세 개의 가용성 그룹에 최대 27개의 복제본이 있을 수 있습니다. 이러한 복제본은 모두 읽기 전용 쿼리에 사용할 수 있습니다. 
@@ -157,7 +157,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>분산 가용성 그룹의 보조 가용성 그룹 초기화
 
-분산 가용성 그룹은 두 번째 가용성 그룹의 주 복제본을 초기화하는 데 사용되는 중요한 방법인 [자동 시드]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)로 설계되었습니다. 다음을 수행하면 두 번째 가용성 그룹의 주 복제본에 대한 전체 데이터베이스 복원이 가능합니다.
+분산 가용성 그룹은 두 번째 가용성 그룹의 주 복제본을 초기화하는 데 사용되는 중요한 방법인 [자동 시드](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)로 설계되었습니다. 다음을 수행하면 두 번째 가용성 그룹의 주 복제본에 대한 전체 데이터베이스 복원이 가능합니다.
 
 1. WITH NORECOVERY를 사용하여 데이터베이스 백업을 복원합니다.
 2. 필요한 경우 WITH NORECOVERY를 사용하여 적절한 트랜잭션 로그 백업을 복원합니다.
@@ -168,18 +168,18 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 * 두 번째 가용성 그룹의 주 복제본에 있는 `sys.dm_hadr_automatic_seeding`에 표시된 출력에는 "Seeding Check Message Timeout(시드 중 확인 메시지 시간 초과)"라는 이유로 `current_state`가 FAILED(실패)로 표시됩니다.
 
-* 두 번째 가용성 그룹의 주 복제본에 있는 현재 SQL Server 로그에는 시드가 작동하고 [LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)이 동기화되었다고 표시됩니다.
+* 두 번째 가용성 그룹의 주 복제본에 있는 현재 SQL Server 로그에는 시드가 작동하고 [LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)이 동기화되었다고 표시됩니다.
 
 * 첫 번째 가용성 그룹의 주 복제본에 있는 `sys.dm_hadr_automatic_seeding`에 표시된 출력에는 current_state가 COMPLETED(완료)로 표시됩니다. 
 
 * 시드에는 분산 가용성 그룹과 다른 동작도 있습니다. 두 번째 복제본에서 시드를 시작하려면 복제본에서 `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` 명령을 실행해야 합니다. 이 조건은 기본 가용성 그룹에 참여하는 모든 보조 복제본에 여전히 적용되지만, 두 번째 가용성 그룹의 주 복제본에는 이미 분산 가용성 그룹에 추가된 후 시드를 시작할 수 있는 권한이 있습니다. 
 
-### <a name="view-distributed-availability-group-information"></a>분산 가용성 그룹 정보 보기 
-    
-앞에서 설명한 대로 분산 가용성 그룹은 SQL Server 전용 구조이며 기본 WSFC 클러스터에는 표시되지 않습니다. 다음 그림에서는 각각 자체의 가용성 그룹이 있는 서로 다른 두 WSFC 클러스터(CLUSTER_A 및 CLUSTER_B)를 보여 줍니다. 여기서는 CLUSTER_A의 AG 1 및 CLUSTER_B의 AG 2에 대해서만 설명합니다. 
+## <a name="monitor-distributed-availability-group-health"></a>분산형 가용성 그룹 상태 모니터링
 
-<!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
-<a name="fig7"></a>
+분산 가용성 그룹은 SQL Server 전용 구조이며 기본 WSFC 클러스터에는 표시되지 않습니다. 다음 그림에서는 각각 자체의 가용성 그룹이 있는 서로 다른 두 WSFC 클러스터(CLUSTER_A 및 CLUSTER_B)를 보여 줍니다. 여기서는 CLUSTER_A의 AG 1 및 CLUSTER_B의 AG 2에 대해서만 설명합니다. 
+
+[PowerShell Get-ClusterGroup 명령을 통해 여러 가용성 그룹이 포함된 두 개의 WSFC 클러스터](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+
 
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
@@ -205,65 +205,203 @@ Cluster Group                   JC                    Online
 
 분산 가용성 그룹에 대한 자세한 정보는 모두 SQL Server, 특히 가용성 그룹 동적 관리 뷰에서 확인할 수 있습니다. 현재 분산 가용성 그룹에 대한 SQL Server Management Studio에 표시되는 유일한 정보는 가용성 그룹에 대한 주 복제본에서 확인할 수 있습니다. 다음 그림에서 확인할 수 있듯이 가용성 그룹 폴더의 SQL Server Management Studio에는 분산 가용성 그룹이 표시됩니다. 그림에서는 AG1이 분산 가용성 그룹이 아닌 인스턴스의 로컬 그룹인 개별 가용성 그룹에 대한 주 복제본으로 표시되었습니다.
 
-![분산 가용성 그룹의 첫 번째 WSFC 클러스터에 있는 주 복제본의 SQL Server Management Studio에서 보기][8]
+![분산 가용성 그룹의 첫 번째 WSFC 클러스터에 있는 주 복제본의 SQL Server Management Studio에서 보기](./media/distributed-availability-group/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png)
 
 
 그러나 분산 가용성 그룹을 마우스 오른쪽 단추로 클릭할 경우 사용할 수 있는 옵션이 없으며(아래 그림 참조) 확장된 가용성 데이터베이스, 가용성 그룹 수신기 및 가용성 복제본 폴더가 모두 비어 있는 것을 확인할 수 있습니다. SQL Server Management Studio 16에서는 이러한 결과가 표시되지만 SQL Server Management Studio의 이후 버전에서 변경될 수 있습니다.
 
-![작업에 사용할 수 있는 옵션이 없음][9]
+![작업에 사용할 수 있는 옵션이 없음](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
 다음 그림에 표시된 것처럼 SQL Server Management Studio의 보조 복제본에는 분산 가용성 그룹과 관련된 항목이 아무것도 표시되지 않습니다. 이러한 가용성 그룹 이름은 이전 [CLUSTER_A WSFC 클러스터](#fig7) 이미지에 표시된 역할에 매핑합니다.
 
-![보조 복제본의 SQL Server Management Studio에서 보기][10]
+![보조 복제본의 SQL Server Management Studio에서 보기](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
+
+### <a name="dmv-to-list-all-availability-replica-names"></a>모든 가용성 복제본 이름을 나열하는 DMV
 
 동적 관리 뷰를 사용하는 경우 동일한 개념이 적용됩니다. 다음 쿼리를 사용하여 모든 가용성 그룹(일반 및 분산) 및 그룹에 참여하는 노드를 확인할 수 있습니다. 이 결과는 분산 가용성 그룹에 참여하는 WSFC 클러스터 중 하나에서 주 복제본을 쿼리할 경우에만 표시됩니다. 동적 관리 뷰 `sys.availability_groups`에는 이름이 `is_distributed`인 새 열이 표시되며 가용성 그룹이 분산 가용성 그룹인 경우 해당 열의 값은 1입니다. 이 열을 보려면:
 
 ```sql
-SELECT ag.[name] as 'AG Name', 
-    ag.Is_Distributed, 
-    ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar       
-    ON  ag.group_id = ar.group_id
+-- shows replicas associated with availability groups
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.Is_Distributed, 
+   ar.replica_server_name AS [Replica Name]
+FROM sys.availability_groups AS ag 
+INNER JOIN sys.availability_replicas AS ar       
+   ON ag.group_id = ar.group_id
+GO
 ```
 
 분산 가용성 그룹에 참여하는 두 번째 WSFC 클러스터의 출력 예제가 다음 그림에 표시됩니다. SPAG1은 DENNIS와 JY라는 두 개의 복제본으로 구성되어 있습니다. 그러나 SPDistAG라는 이름의 분산 가용성 그룹에는 기존 가용성 그룹과 마찬가지로 인스턴스의 이름이 아닌 참여하는 가용성 그룹의 이름 2개(SPAG1 및 SPAG2)가 표시됩니다. 
 
-![이전 쿼리의 예제 출력][11]
+![이전 쿼리의 예제 출력](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
+
+### <a name="dmv-to-list-distribtued-ag-health"></a>분산 AG 상태를 나열하는 DMV
 
 SQL Server Management Studio에서 대시보드 및 다른 영역에 표시되는 모든 상태는 가용성 그룹 내의 로컬 동기화에만 해당됩니다. 분산 가용성 그룹의 상태를 표시하려면 동적 관리 뷰를 쿼리하세요. 다음 예제 쿼리는 이전 쿼리를 확장하고 구체화합니다.
 
 ```sql
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar
-    ON ag.group_id = ar.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars       
-    ON ar.replica_id = ars.replica_id
+-- shows sync status of distributed AG
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.is_distributed, 
+   ar.replica_server_name AS [Underlying AG], 
+   ars.role_desc AS [Role], 
+   ars.synchronization_health_desc AS [Sync Status]
+FROM  sys.availability_groups AS ag
+INNER JOIN sys.availability_replicas AS ar 
+   ON  ag.group_id = ar.group_id        
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars       
+   ON  ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
        
        
-![분산 가용성 그룹 상태][12]
+![분산 가용성 그룹 상태](./media/distributed-availability-group/dag-12-distributed-ag-status.png)
 
+### <a name="dmv-to-view-underlying-performance"></a>기본 성능을 확인하는 DMV
 
 이전 쿼리를 더 확장하기 위해 `sys.dm_hadr_database_replicas_states`를 추가하여 동적 관리 뷰를 통해 기본 성능을 확인할 수도 있습니다. 현재 동적 관리 뷰에는 보조 가용성 그룹에 대한 정보만 저장됩니다. 주 가용성 그룹에서 실행되는 다음 예제 쿼리는 아래에 표시된 샘플 출력을 생성합니다.
 
-```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs
-  INNER JOIN sys.dm_hadr_database_replica_states drs
-    ON dbs.database_id = drs.database_id
-  INNER JOIN sys.availability_groups ag
-    ON drs.group_id = ag.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars
-    ON ars.replica_id = drs.replica_id
-  INNER JOIN sys.availability_replicas ar
-    ON ar.replica_id = ars.replica_id
+```sql
+-- shows underlying performance of distributed AG
+SELECT 
+   ag.[name] AS [Distributed AG Name], 
+   ar.replica_server_name AS [Underlying AG], 
+   dbs.[name] AS [Database],
+   ars.role_desc AS [Role],
+   drs.synchronization_health_desc AS [Sync Status],
+   drs.log_send_queue_size,
+   drs.log_send_rate, 
+   drs.redo_queue_size, 
+   drs.redo_rate
+FROM sys.databases AS dbs
+INNER JOIN sys.dm_hadr_database_replica_states AS drs
+   ON dbs.database_id = drs.database_id
+INNER JOIN sys.availability_groups AS ag
+   ON drs.group_id = ag.group_id
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars
+   ON ars.replica_id = drs.replica_id
+INNER JOIN sys.availability_replicas AS ar
+   ON ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
 
-![분산 가용성 그룹에 대한 성능 정보][13]
+
+![분산 가용성 그룹에 대한 성능 정보](./media/distributed-availability-group/dag-13-performance-information-distributed-ag.png)
+
+### <a name="dmv-to-view-performance-counters-for-distributed-ag"></a>분산 AG에 대한 성능 카운터를 확인하는 DMV
+아래 쿼리는 분산 가용성 그룹과 특별히 연결된 성능 카운터를 표시합니다. 
+
+
+ ```sql
+ -- displays OS performance counters related to the distributed ag named 'distributedag'
+ SELECT * FROM sys.dm_os_performance_counters WHERE instance_name LIKE '%distributed%'
+ ```
+
+ ![DAG에 대한 OS 성능 카운터를 표시하는 DMV](./media/distributed-availability-group/dmv-os-performance-counters.png)
+
+
+ >[!NOTE]
+ >`LIKE` 필터는 분산 가용성 그룹의 이름을 포함해야 합니다. 이 예제에서 분산 가용성 그룹의 이름은 'distributedag'입니다. 분산 가용성 그룹의 이름을 반영하도록 `LIKE` 한정자를 변경합니다.  
+
+### <a name="dmv-to-display-health-of-both-ag-and-distributed-ag"></a>AG와 분산 AG의 상태를 표시하는 DMV
+아래 쿼리는 가용성 그룹과 분산 가용성 그룹의 상태에 대한 다양한 정보를 표시합니다. [Tracy Boggiano에게 감사드립니다.](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+
+ ```sql
+ -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
+ SELECT 
+    ag.name AS 'Distributed AG', 
+    ar.replica_server_name AS 'AG', 
+    dbs.name AS 'Database', 
+    ars.role_desc, 
+    drs.synchronization_health_desc, 
+    drs.log_send_queue_size, 
+    drs.log_send_rate, 
+    drs.redo_queue_size, 
+    drs.redo_rate,
+    drs.suspend_reason_desc,
+    drs.last_sent_time,
+    drs.last_received_time,
+    drs.last_hardened_time,
+    drs.last_redone_time,
+    drs.last_commit_time,
+    drs.secondary_lag_seconds
+ FROM sys.databases dbs 
+ INNER JOIN sys.dm_hadr_database_replica_states drs 
+    ON dbs.database_id = drs.database_id
+ INNER JOIN sys.availability_groups ag 
+    ON drs.group_id = ag.group_id
+ INNER JOIN sys.dm_hadr_availability_replica_states ars 
+    ON ars.replica_id = drs.replica_id
+ INNER JOIN sys.availability_replicas ar 
+    ON ar.replica_id =  ars.replica_id
+ --WHERE ag.is_distributed = 1
+ GO
+ ```
+
+![AG와 분산 AG의 상태](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
+
+### <a name="dmvs-to-view-metadata-of-distributed-ag"></a>분산 AG의 메타데이터를 보려는 DMV
+아래 쿼리는 분산 가용성 그룹을 비롯한 가용성 그룹에서 사용하는 엔드포인트 URL에 대한 정보를 표시합니다.  [David Barbarin에게 감사드립니다.](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+
+
+ ```sql
+ -- shows endpoint url and sync state for ag, and dag
+ SELECT
+    ag.name AS group_name,
+    ag.is_distributed,
+    ar.replica_server_name AS replica_name,
+    ar.endpoint_url,
+    ar.availability_mode_desc,
+    ar.failover_mode_desc,
+    ar.primary_role_allow_connections_desc AS allow_connections_primary,
+    ar.secondary_role_allow_connections_desc AS allow_connections_secondary,
+    ar.seeding_mode_desc AS seeding_mode
+ FROM sys.availability_replicas AS ar
+ JOIN sys.availability_groups AS ag
+    ON ar.group_id = ag.group_id
+ GO
+ ```
+
+
+![분산 AG에 대한 메타데이터 DMV](./media/distributed-availability-group/dmv-metadata-dag2.png)
+
+
+
+### <a name="dmv-to-show-current-state-of-seeding"></a>시드의 현재 상태를 표시하는 DMV
+아래 쿼리는 시드의 현재 상태에 대한 정보를 표시합니다. 복제본 간의 동기화 오류 문제를 해결하는 데 유용합니다. [David Barbarin에게 다시 한 번 감사드립니다.](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+ ```sql
+ -- shows current_state of seeding 
+ SELECT
+    ag.name AS aag_name,
+    ar.replica_server_name,
+    d.name AS database_name,
+    has.current_state,
+    has.failure_state_desc AS failure_state,
+    has.error_code,
+    has.performed_seeding,
+    has.start_time,
+    has.completion_time,
+    has.number_of_attempts
+ FROM sys.dm_hadr_automatic_seeding AS has
+ JOIN sys.availability_groups AS ag
+    ON ag.group_id = has.ag_id
+ JOIN sys.availability_replicas AS ar
+    ON ar.replica_id = has.ag_remote_replica_id
+ JOIN sys.databases AS d
+    ON d.group_database_id = has.ag_db_id
+ GO
+ ```
+
+
+![시드의 현재 상태](./media/distributed-availability-group/dmv-seeding.png)
+
+
 
 
 ### <a name="next-steps"></a>다음 단계 
@@ -273,20 +411,5 @@ WHERE ag.is_distributed = 1
 * [새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Transact-SQL을 사용하여 가용성 그룹 만들기](create-an-availability-group-transact-sql.md)
-
-<!--Image references-->
-[1]: ./media/dag-01-high-level-view-distributed-ag.png
-[2]: ./media/dag-02-distributed-ag-data-movement.png
-[3]: ./media/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png
-[4]: ./media/dag-04-traditional-multi-site-ag.png
-[5]: ./media/dag-05-scaling-out-reads-with-distributed-ags.png
-[6]: ./media/dag-06-another-scaling-out-reads-using-distributed-ags-example.png
-[7]: ./media/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png
-[8]: ./media/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png
-[9]: ./media/dag-09-no-options-available-action.png
-[10]: ./media/dag-10-view-ssms-secondary-replica.png
-[11]: ./media/dag-11-example-output-of-query-above.png
-[12]: ./media/dag-12-distributed-ag-status.png
-[13]: ./media/dag-13-performance-information-distributed-ag.png
 
  

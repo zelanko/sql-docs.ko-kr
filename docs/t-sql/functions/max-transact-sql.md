@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 59315b3cf34ebb7ff07a7bc4dc747e0601a5f816
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 7e3ca1e7e1f2c76a4889462b2b769d4c9e772512
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457727"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609742"
 ---
 # <a name="max-transact-sql"></a>MAX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,6 +65,8 @@ MAX ( [ ALL | DISTINCT ] expression )
   
 ## <a name="remarks"></a>Remarks  
  MAX는 Null 값을 무시합니다.  
+ 
+ 선택할 행이 없는 경우 MAX는 NULL을 반환합니다.  
   
  문자 열의 경우 MAX는 데이터 정렬 순서에 따라 가장 높은 값을 찾습니다.  
   

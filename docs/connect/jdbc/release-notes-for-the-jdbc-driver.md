@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454377"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662465"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 드라이버에 대한 릴리스 정보
 
@@ -27,7 +27,7 @@ ms.locfileid: "39454377"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 7.0의 업데이트
 
-SQL Server 용 Microsoft JDBC Driver 7.0 JDBC API 사양 4.2 완벽 하 게 호환 됩니다. 7.0 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 Java 8 사용 하 여 mssql-jdbc-7.0.0.jre8.jar 파일 7.0 패키지에서 사용할 해야 합니다.
+SQL Server 용 Microsoft JDBC Driver 7.0 JDBC API 사양 4.2 완벽 하 게 호환 됩니다. 7.0 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 10 Java를 사용 하 여 mssql-jdbc-7.0.0.jre10.jar 파일 7.0 패키지에서 사용할 해야 합니다.
 
 ### <a name="support-for-jdk-10"></a>JDK 10 지원
 
@@ -59,7 +59,7 @@ SQL Server 용 Microsoft JDBC Driver 7.0에서는 새 연결 속성을 'useBulkC
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>추가 Azure Key Vault 공급자 생성자
 
-SQL Server 용 Microsoft JDBC Driver 7.0에 대 한 다시 이전에 제거한 생성자를 소개 `SQLServerColumnEncryptionAzureKeyVaultProvider`를 통해 구현 되는 사용자 지정 메서드를 사용 하 여 허용 되는 인증 `SQLServerKeyVaultAuthenticationCallback` 액세스 토큰을 가져올 수 있습니다.
+SQL Server 용 Microsoft JDBC Driver 7.0 이전에 제거한 생성자에 대 한 다시 도입 되었습니다 `SQLServerColumnEncryptionAzureKeyVaultProvider`를 통해 구현 되는 사용자 지정 메서드를 사용 하 여 허용 되는 인증 `SQLServerKeyVaultAuthenticationCallback` 액세스 토큰을 가져올 수 있습니다.
 
 새 생성자를 정의 아래:
 
@@ -84,7 +84,7 @@ SQL Server 용 Microsoft JDBC Driver 7.0 버전 1.6.0 azure-activedirectory-라�
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.4의 업데이트
 
-SQL Server 용 Microsoft JDBC Driver 6.4 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.4 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 6.4 패키지에서 mssql-jdbc-6.4.0.jre8.jar 파일은 Java 8 사용 하 여 사용할 것이 좋습니다.
+SQL Server 용 Microsoft JDBC Driver 6.4 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.4 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 Java 8 사용 하 여 6.4 패키지에서 mssql-jdbc-6.4.0.jre8.jar 파일을 사용 해야 합니다.
 
 ### <a name="support-for-jdk-9"></a>JDK 9 지원
 
@@ -134,10 +134,14 @@ JDBC 드라이버 버전 1.4.0 azure-activedirectory-라이브러리-에-java (A
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.2의 업데이트
 
-SQL Server 용 Microsoft JDBC Driver 6.2 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.0 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어, 6.2 패키지에서 mssql-jdbc-6.2.1.jre8.jar 파일은 Java 8 사용 하 여 사용할 것이 좋습니다.
+SQL Server 용 Microsoft JDBC Driver 6.2 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.2 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어, 6.2 패키지에서 mssql-jdbc-6.2.2.jre8.jar 파일은 Java 8 사용 하 여 사용할 것이 좋습니다.
 
 > [!NOTE]  
-> 2017 년 6 월 29 일에 릴리스된 JDBC 6.2 RTW 메타 데이터 캐싱 개선 문제가 발견 되었습니다. 향상 된 롤백되고 새 jar (버전 6.2.1)에서 2017 년 7 월 17 일에 발표 된 합니다 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), 및 [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)합니다. 6.2.1 사용 하 여 프로젝트를 업데이트 하십시오 jar을 릴리스 합니다. 참조 하십시오 [릴리스](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 대 한 자세한 내용은 합니다.
+> 2017 년 6 월 29 일에 릴리스된 JDBC 6.2 RTW 메타 데이터 캐싱 개선 문제가 발견 되었습니다. 향상 된 롤백되고 새 jar (버전 6.2.1)는 2017 년 7 월 17 일에 발표 된 합니다. 
+>
+> Azure Key Vault 종속 라이브러리 버전 1.0.0로 업그레이드 하는 또 다른 개선 사항은 만들었고 새 jar (버전 6.2.2)는 2017 년 10 월 19 일에 발표 된 합니다.
+>
+> 에 JDBC Driver 6.2에 최신 업데이트를 다운로드 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460)를 [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), 및 [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)합니다. 6.2.2를 사용 하 여 프로젝트를 업데이트 하십시오 jar을 릴리스 합니다. 에 대 한 릴리스 정보를 확인 하세요 [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 하 고 [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) 대 한 자세한 내용은 합니다.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Linux 용 azure Active Directory (AAD) 지원
 

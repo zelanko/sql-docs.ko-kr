@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: MTE75
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454057"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662285"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,31 +78,30 @@ ms.locfileid: "39454057"
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|JRE(Java Runtime Environment) 9.0이 필요합니다. JRE 8.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|JRE(Java Runtime Environment) 9.0이 필요합니다. JRE 8.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |
 
+JDBC Driver 6.4 Maven 중앙 리포지토리에서 사용할 수 있는 이기도 하며 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다. XML 
 
-  JDBC Driver 6.4 Maven 중앙 리포지토리에서 사용할 수 있는 이기도 하며 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다. XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **SQL Server용 Microsoft JDBC Driver 6.2:**  
   
-  JDBC Driver 6.2 각 설치 패키지에 대 한 두 개의 JAR 클래스 라이브러리가: **mssql-jdbc-6.2.1.jre7.jar**, 및 **mssql-jdbc-6.2.1.jre8.jar**합니다. 
+  JDBC Driver 6.2에는 각 설치 패기지에 **mssql-jdbc-6.2.2.jre7.jar** 및 **mssql-jdbc-6.2.2.jre8.jar**의 두 JAR 클래스 라이브러리가 포함되어 있습니다. 
   
- JDBC Driver 6.2는 모든 주요 Sun 동등 Java 가상 머신에서 사용 가능하고 지원되지만 Sun JRE 5.0, 6.0, 7.0 및 8.0에 대해서만 테스트되었습니다. 
+ JDBC Driver 6.2는 모든 주요 Sun 동등 Java 가상 머신에서 사용 가능하고 지원되지만 Sun JRE 5.0, 6.0, 7.0 및 8.0에 대해서만 테스트되었습니다.
   
  다음에는 SQL Server용 Microsoft JDBC Driver 6.0 및 4.2에 포함된 두 개의 JAR 파일에서 제공하는 지원이 요약되어 있습니다.  
   
 |JAR|JDBC 버전 규격|권장 Java 버전|설명|  
-|---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.2.1.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.2의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |  
-|mssql-jdbc-6.2.1.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.2의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용|    
+|---------|-----------------------------|----------------------|-----------------|
+|mssql-6.2.2.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.2의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 또는 낮은 throw 예외를 사용합니다.<br /><br /> 6.2의 새로운 기능 포함: linux의 경우 사용자/암호 메서드 Kerberos 도메인 간 인증, Kerberos Constrained Delegation, 쿼리 제한 시간, 소켓 시간 제한에 대 한 SPN에서 REALM의 자동 검색에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용|    
 
   JDBC Driver 6.2 Maven 중앙 리포지토리에서 사용할 수 있는 이기도 하며 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다. XML 
   
@@ -110,7 +109,7 @@ ms.locfileid: "39454057"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 

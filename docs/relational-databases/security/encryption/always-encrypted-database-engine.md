@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558883"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662485"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ ms.locfileid: "39558883"
 
 특정 클라이언트 드라이버와 함께 상시 암호화를 사용하여 응용 프로그램을 개발하는 방법은 [상시 암호화(클라이언트 개발)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)을 참조하세요.
 
+## <a name="remarks"></a>Remarks
+
+암호 해독은 클라이언트를 통해 발생합니다. 즉, Always Encrypted를 사용하는 경우 서버 쪽에서만 발생하는 일부 작업이 작동하지 않습니다. 
+
+클라이언트에 결과 집합을 반환하지 않고 암호화된 열에서 암호화되지 않은 열로 데이터를 이동하려는 업데이트의 예제는 다음과 같습니다. 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+SSN이 Always Encryption을 사용한 암호화 열이면 위의 업데이트 문은 다음과 유사한 오류를 표시하며 실패합니다.
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+열을 성공적으로 업데이트하려면 다음을 수행합니다.
+
+1. SSN 열에서 데이터를 선택하고, 응용 프로그램에 결과 집합으로 저장합니다. 이렇게 하면 응용 프로그램(클라이언트 *드라이버*)이 열 암호를 해독할 수 있습니다.
+2. 결과 집합에서 SQL Server로 데이터를 삽입합니다. 
+
+ >[!IMPORTANT]
+ > 이 시나리오에서 대상 열이 암호화된 데이터를 허용하지 않는 일반 varchar이기 때문에 데이터는 서버에 다시 보낼 때 암호화됩니다. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>결정적 암호화 또는 임의 암호화 선택  
  데이터베이스 엔진은 암호화된 열에 저장된 일반 텍스트 데이터에 대해 작동하지 않지만 열의 암호화 유형에 따라 암호화된 데이터에 대한 일부 쿼리를 지원합니다. 상시 암호화는 임의 암호화와 결정적 암호화의 두 가지 암호화 유형을 지원합니다.  

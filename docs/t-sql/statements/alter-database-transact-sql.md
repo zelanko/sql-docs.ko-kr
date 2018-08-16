@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -28,32 +28,58 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 11a17e013933456a092f1ef3f9da9a3695271963
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452657"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008975"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
-데이터베이스를 수정합니다. 
+데이터베이스의 특정 구성 옵션을 수정합니다. 
 
-작업 중인 특정 SQL 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제를 보려면 다음 탭 중 하나를 클릭합니다.
+이 아티클에서는 원하는 SQL 제품에 대한 구문, 인수, 설명, 사용 권한 및 예제를 제공합니다.
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오. 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
-  
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
+
 ## <a name="overview"></a>개요
 
 SQL Server에서 이 문은 데이터베이스 또는 데이터베이스와 연관된 파일 및 파일 그룹을 수정합니다. 데이터베이스의 파일 및 파일 그룹 추가 또는 제거, 데이터베이스 또는 데이터베이스 내 파일 및 파일 그룹 특성 변경, 데이터베이스 데이터 정렬 변경 및 데이터베이스 옵션 설정을 수행합니다. 데이터베이스 스냅숏은 수정할 수 없습니다. 복제와 연관된 데이터베이스 옵션을 수정하려면 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 사용하세요.  
    
-ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 항목으로 구분하여 설명됩니다.  
+ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 아티클로 구분하여 설명됩니다.  
 
 ALTER DATABASE  
-현재 항목은 데이터베이스의 이름 및 데이터 정렬 변경을 위한 구문 및 관련 정보를 제공합니다.  
+현재 아티클은 데이터베이스의 이름 및 데이터 정렬 변경을 위한 구문 및 관련 정보를 제공합니다.  
   
 [ALTER DATABASE 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 데이터베이스의 파일과 파일 그룹을 추가 및 제거하고 파일과 파일 그룹의 특성을 변경하기 위한 구문 및 관련 정보를 제공합니다.  
@@ -259,17 +285,40 @@ GO
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [시스템 데이터베이스](../../relational-databases/databases/system-databases.md)  
-  
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 논리 서버](#tab/sqldbls)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th style="border: 1"><strong><em>* SQL DB<br />논리 서버 *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
 
 ## <a name="overview"></a>개요
 
 Azure SQL Database에서 이 문을 사용하여 논리 서버에서 데이터베이스를 수정합니다. 이 문을 사용하여 데이터베이스 이름을 변경하고, 데이터베이스의 버전 및 서비스 목표를 변경하고, 데이터베이스를 탄력적 풀에 연결하거나 탄력적 풀에서 제거하고, 데이터베이스 옵션을 설정하고, 데이터베이스를 지역 복제 관계의 보조로 추가 또는 제거하고, 데이터베이스 호환성 수준을 설정합니다.
 
-ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 항목으로 구분하여 설명됩니다.  
+ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 아티클로 구분하여 설명됩니다.  
 
 ALTER DATABASE  
-현재 항목은 데이터베이스의 이름 및 데이터 정렬 변경을 위한 구문 및 관련 정보를 제공합니다.  
+현재 아티클은 데이터베이스의 이름 및 데이터 정렬 변경을 위한 구문 및 관련 정보를 제공합니다.  
   
 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 ALTER DATABASE의 SET 옵션을 사용하여 데이터베이스의 특성을 변경하기 위한 구문 및 관련 정보를 제공합니다.  
@@ -363,7 +412,7 @@ ALTER DATABASE db1
 
 MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
 
-데이터베이스의 서비스 계층을 변경합니다. ‘Premiumrs’에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요.
+데이터베이스의 서비스 계층을 변경합니다. 
 
 다음 예제에서는 버전을 `premium`으로 변경합니다.
   
@@ -601,16 +650,39 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [시스템 데이터베이스](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
+>   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="overview"></a>개요
 
 Azure SQL Database Managed Instance에서 이 문을 사용하여 데이터베이스 옵션을 설정합니다.
 
-ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 항목으로 구분하여 설명됩니다.  
+ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 아티클로 구분하여 설명됩니다.  
 
 ALTER DATABASE  
-현재 항목에서는 파일 및 파일 그룹 옵션, 데이터베이스 옵션 및 데이터베이스 호환성 수준을 설정하기 위한 구문과 관련 정보를 제공합니다.  
+현재 아티클에서는 파일 및 파일 그룹 옵션, 데이터베이스 옵션 및 데이터베이스 호환성 수준을 설정하기 위한 구문과 관련 정보를 제공합니다.  
   
 [ALTER DATABASE 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 데이터베이스의 파일과 파일 그룹을 추가 및 제거하고 파일과 파일 그룹의 특성을 변경하기 위한 구문 및 관련 정보를 제공합니다.  
   
@@ -652,6 +724,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <target_recovery_time_option> 
   | <temporal_history_retention>  
 }  
+
 ```
   
 ## <a name="arguments"></a>인수  
@@ -686,13 +759,17 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
 > [!IMPORTANT]  
 >  데이터베이스의 소유자가 `dbmanager` 역할의 구성원인 경우 데이터베이스를 변경할 수 있습니다.  
   
-## <a name="examples"></a>예  
-  
-### <a name="a-what-examples-here"></a>1. 여기서 예제란 무엇인가요?
+## <a name="examples"></a>예
+다음 예제에서는 자동 튜닝을 설정하는 방법 및 관리되는 인스턴스에서 파일을 추가하는 방법을 보여줍니다.
 
 ```sql
+ALTER DATABASE WideWorldImporters
+    SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON)
+
+ALTER DATABASE WideWorldImporters
+    ADD FILE (NAME = 'data_17')
 ```
-  
+
 ## <a name="see-also"></a>관련 항목:
   
 [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
@@ -709,7 +786,30 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [시스템 데이터베이스](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-data-warehousetabsqldw"></a>[SQL Data Warehouse](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>*SQL Data<br />Warehouse *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
 
 ## <a name="overview"></a>개요
 
@@ -813,14 +913,36 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>참고 항목  
 [CREATE DATABASE(Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[참조 항목의 SQL Data Warehouse 목록](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
-  
+[참조 아티클의 SQL Data Warehouse 목록](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+ 
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL 병렬 데이터 웨어하우스](#tab/sqlpdw)
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
 
 ## <a name="overview"></a>개요
 
-복제된 테이블, 분산된 테이블 및 트랜잭션 로그인 병렬 데이터 웨어하우스의 최대 데이터베이스 크기 옵션을 수정합니다. 이 문을 사용하여 크기의 축소나 확대에 따라 데이터베이스에 대한 디스크 공간 할당을 관리합니다. 이 항목은 병렬 데이터 웨어하우스에서 데이터베이스 옵션 설정과 관련된 구문을 설명합니다.
+복제된 테이블, 분산된 테이블 및 트랜잭션 로그인 병렬 데이터 웨어하우스의 최대 데이터베이스 크기 옵션을 수정합니다. 이 문을 사용하여 크기의 축소나 확대에 따라 데이터베이스에 대한 디스크 공간 할당을 관리합니다. 이 아티클은 병렬 데이터 웨어하우스에서 데이터베이스 옵션 설정과 관련된 구문을 설명합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -868,13 +990,13 @@ SET AUTO_CREATE_STATISTICS { ON | OFF } 자동 통계 작성 옵션인 AUTO_CREA
 
 기본값은 AU7로 업그레이드한 후 생성된 새 데이터베이스에 대해 ON입니다. 기본값은 업그레이드 이전에 생성된 데이터베이스에 대해 OFF입니다. 
 
-통계에 대한 자세한 내용은 [통계](/sql/relational-databases/statistics/statistics) 참조
+통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md) 참조
 
 SET AUTO_UPDATE_STATISTICS { ON | OFF } 자동 통계 업데이트 옵션인 AUTO_UPDATE_STATISTICS가 ON으로 설정되면 쿼리 최적화 프로그램은 통계가 최신이 아닌 통계가 되는 시점을 확인한 다음, 쿼리에서 사용될 때 이를 업데이트합니다. 작업 삽입, 업데이트, 삭제 또는 병합을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.
 
 기본값은 AU7로 업그레이드한 후 생성된 새 데이터베이스에 대해 ON입니다. 기본값은 업그레이드 이전에 생성된 데이터베이스에 대해 OFF입니다. 
 
-통계에 대한 자세한 내용은 [통계](/sql/relational-databases/statistics/statistics)를 참조하세요.
+통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.
 
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 비동기 통계 업데이트 옵션인 AUTO_UPDATE_STATISTICS_ASYNC는 쿼리 최적화 프로그램이 동기 또는 비동기 통계 업데이트를 사용하는지를 결정합니다. AUTO_UPDATE_STATISTICS_ASYNC 옵션은 인덱스에 대해 작성된 통계 개체, 쿼리 조건자의 단일 열 및 CREATE STATISTICS 문으로 작성된 통계에 적용됩니다.
@@ -903,7 +1025,7 @@ REPLICATED_SIZE, DISTRIBUTED_SIZE 및 LOG_SIZE에 대한 값이 데이터베이�
 DATABASE 개체에 대한 공유 잠금을 사용합니다. 읽기 또는 쓰기를 위해 다른 사용자가 사용 중인 데이터베이스는 변경할 수 없습니다. 여기에는 해당 데이터베이스에서 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) 문을 발급한 세션이 포함됩니다.  
   
 ## <a name="performance"></a>성능  
-데이터베이스 축소는 해당 데이터베이스 내의 실제 데이터의 크기와 디스크의 조각화 양에 따라 많은 시간 및 시스템 리소스가 필요할 수 있습니다. 예를 들어 데이터베이스 축소는 여러 시간 이상이 걸릴 수 있습니다.  
+데이터베이스 축소는 해당 데이터베이스 내의 실제 데이터의 크기와 디스크의 조각화 양에 따라 많은 시간 및 시스템 리소스가 필요할 수 있습니다. 예를 들어 데이터베이스를 축소하면 여러 시간 이상이 걸릴 수 있습니다.  
   
 ## <a name="determining-encryption-progress"></a>암호화 진행률 결정  
 다음 쿼리를 사용하여 데이터베이스 TDE(투명한 데이터 암호화) 진행률을 백분율로 확인하십시오.  
@@ -1012,5 +1134,5 @@ ALTER DATABASE CustomerSales
 ## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE &#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
-  
- 
+
+::: moniker-end
