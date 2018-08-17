@@ -48,21 +48,21 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e9788b44bb2f95082914875b14a512f05d584b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 57afb99a77a80946ed650045ce40c1382fa06c3d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982065"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40184715"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 2008 R2 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 Windows 운영 체제에서 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 설치 및 실행을 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다. 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]에서는 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] Linux에 대한 지원 기능을 제공합니다. 자세한 내용은 [Linux에 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)]를 위한 하드웨어 및 소프트웨어 요구 사항](../../linux/sql-server-linux-setup.md#system)을 참조하세요. 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]에서는 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] Linux에 대한 지원 기능을 제공합니다. 자세한 내용은 [Linux에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 위한 하드웨어 및 소프트웨어 요구 사항](../../linux/sql-server-linux-setup.md#system)을 참조하세요. 
 
-> 이 문서는 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에 적용됩니다. 이전 버전의 SQL Server과 관련된 콘텐츠는 [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)을 참조하세요. 
+> 이 문서는 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에 적용됩니다. 이전 버전의 SQL Server과 관련된 콘텐츠는 [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요. 
   
 **사용해보기:**  
   

@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e93dec74b1e647fac64e7982b11e51635163193
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041101"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40184695"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -330,7 +330,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원되는 SSIS(SQL Server Integration Services) 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Integration Services 기능](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)을 참조하세요.
 
 ##  <a name="MDS"></a> Master Data Services  
- [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원되는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 Data Quality Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)을 참조하세요. 
+ [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원되는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 Data Quality Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)을 참조하세요. 
 
   
 ##  <a name="DW"></a> 데이터 웨어하우스  
@@ -347,31 +347,31 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 
 ##  <a name="SSAS"></a> Analysis Services  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요. 
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요. 
   
 ##  <a name="BIMD"></a> BI 의미 체계 모델(다차원)  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
    
 ##  <a name="BIT"></a> BI 의미 체계 모델(테이블 형식)  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 SharePoint용 Power Pivot 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원하는 SharePoint용 Power Pivot 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
 ##  <a name="DM"></a> 데이터 마이닝  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 데이터 마이닝 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원하는 데이터 마이닝 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
 ##  <a name="SSRS"></a> Reporting  Services  
   
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원되는 Reporting Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원되는 Reporting Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
 
 ##  <a name="BIC"></a> 비즈니스 인텔리전스 클라이언트  
 
-[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 비즈니스 인텔리전스 클라이언트 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 또는 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원하는 비즈니스 인텔리전스 클라이언트 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 또는 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
 ##  <a name="SLS"></a> 공간 및 위치 서비스  
   
