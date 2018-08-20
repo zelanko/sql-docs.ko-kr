@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407955"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175232"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "35407955"
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        |1|John|Doe|  
+        |@shouldalert|John|Doe|  
         |2|Jane|Doe|  
   
     4.  **SSIS 도구 상자** 에서 **데이터 흐름 디자이너** 로 **OLE DB 원본**구성 요소를 끌어 옵니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "35407955"
   
         1.  뷰를 만들 데이터베이스 스키마를 지정합니다(스키마 필드).  
   
-        2.  데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다(암호화 필드). 이 설정 및 TrustServerCertificate 설정에 대한 자세한 내용은 [유효성 검사 없이 암호화 사용](http://msdn.microsoft.com/library/ms131691.aspx) 항목을 참조하세요.  
+        2.  데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다(암호화 필드). 이 설정 및 TrustServerCertificate 설정에 대한 자세한 내용은 [유효성 검사 없이 암호화 사용](../../relational-databases/native-client/features/using-encryption-without-validation.md) 항목을 참조하세요.  
   
         3.  암호화 설정을 사용하는 경우 자체 서명된 서버 인증서를 사용할 수 있는지 여부를 지정합니다(**TrustServerCertificate** 필드).  
   
@@ -213,7 +213,7 @@ GO
   
  런타임에 뷰를 실행하면 뷰에 정의된 연결된 서버 쿼리가 쿼리에 지정된 SSIS 패키지를 시작하고 패키지 출력을 테이블 형식 결과 집합으로 받습니다.  
   
-1.  뷰를 만들기 전에 새 쿼리 창에서 다음 쿼리를 입력하고 실행합니다. OPENQUERY는 SQL Server에서 지원되는 행 집합 함수입니다. 연결된 서버에 연결된 OLE DB 공급자를 사용하여 지정된 연결된 서버에서 지정된 통과 쿼리를 실행합니다. OPENQUERY는 테이블 이름처럼 쿼리의 FROM 절에서 참조될 수 있습니다. 자세한 내용은 [MSDN 라이브러리의 OPENQUERY 설명서](http://msdn.microsoft.com/library/ms188427.aspx) 를 참조하세요.  
+1.  뷰를 만들기 전에 새 쿼리 창에서 다음 쿼리를 입력하고 실행합니다. OPENQUERY는 SQL Server에서 지원되는 행 집합 함수입니다. 연결된 서버에 연결된 OLE DB 공급자를 사용하여 지정된 연결된 서버에서 지정된 통과 쿼리를 실행합니다. OPENQUERY는 테이블 이름처럼 쿼리의 FROM 절에서 참조될 수 있습니다. 자세한 내용은 [MSDN 라이브러리의 OPENQUERY 설명서](../../t-sql/functions/openquery-transact-sql.md) 를 참조하세요.  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

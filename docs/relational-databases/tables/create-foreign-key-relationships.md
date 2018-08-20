@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e3a839006c560f486e55214db4f73095dc3c4402
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 7745ca23391f46561f7ee73cb02410be6a4dc92d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562017"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175177"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Create Foreign Key Relationships](https://msdn.microsoft.com/library/ms189049(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Create Foreign Key Relationships](create-foreign-key-relationships.md)합니다.
 
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 외래 키 관계를 만드는 방법에 대해 설명합니다. 한 테이블의 행을 다른 테이블의 행과 연결하려면 두 테이블 사이에 관계를 만듭니다.    

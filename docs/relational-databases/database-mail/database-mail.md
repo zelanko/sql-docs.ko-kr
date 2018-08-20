@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931018"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175233"
 ---
 # <a name="database-mail"></a>데이터베이스 메일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "32931018"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성하여 다음과 같은 경우에 미리 지정한 운영자에게 전자 메일을 보낼 수 있습니다.  
   
--   경고가 트리거되었을 경우. 경고를 구성하여 발생한 특정 이벤트를 알리는 전자 메일을 보낼 수 있습니다. 예를 들어 경고를 구성하여 즉각적인 동작이 필요한 특정 데이터베이스 이벤트 또는 운영 체제 상태를 운영자에게 알릴 수 있습니다. 경고 구성에 대한 자세한 내용은 [경고](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)를 참조하세요.  
+-   경고가 트리거되었을 경우. 경고를 구성하여 발생한 특정 이벤트를 알리는 전자 메일을 보낼 수 있습니다. 예를 들어 경고를 구성하여 즉각적인 동작이 필요한 특정 데이터베이스 이벤트 또는 운영 체제 상태를 운영자에게 알릴 수 있습니다. 경고 구성에 대한 자세한 내용은 [경고](../../ssms/agent/alerts.md)를 참조하세요.  
   
 -   데이터베이스 백업이나 복제 이벤트와 같이 예약된 태스크가 성공하거나 실패했을 경우. 예를 들어 처리하는 동안 오류가 발생했을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 사용하여 월말에 운영자에게 알릴 수 있습니다.  
   

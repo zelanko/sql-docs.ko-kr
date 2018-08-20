@@ -16,13 +16,14 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 8411e193bfc74913340be27db15fc192925bb364
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f45a13e8a49f7d245ea67d00f966118fd421bf45
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770759"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175193"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
 

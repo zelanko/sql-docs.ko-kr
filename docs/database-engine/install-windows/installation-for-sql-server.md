@@ -18,13 +18,14 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 781bebda84fe0d4e48414fb327e45fe837ed9356
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 228202a91e14b7735cd0fba1f6eb60dad8832a7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771539"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175256"
 ---
 # <a name="sql-server-installation"></a>SQL Server 설치
 
@@ -80,7 +81,7 @@ ms.locfileid: "34771539"
 [SharePoint와 함께 SQL Server BI 기능 설치&#40;파워 피벗 및 Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  이 섹션에서는 SharePoint 환경에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하는 방법에 대해 설명합니다. 여기에서는 SharePoint의 특정 버전 및 에디션에서 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설명하고 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 SharePoint 모드의 Reporting Services에 대한 설치 지침을 제공합니다.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 새 샘플 데이터베이스 [Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)를 설치합니다. 
+![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 새 샘플 데이터베이스 [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md)를 설치합니다. 
   
 [추가 SQL Server 예제 및 예제 데이터베이스 설치](http://sqlserversamples.codeplex.com/)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 및 예제 데이터베이스를 설치 및 구성하는 방법에 대해 설명합니다.  

@@ -20,16 +20,16 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0f728e6c4ae949573206c5a13a73879c7f7a304
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a1a257f9ba24f18426f2f328dde0a061f9bed0c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932558"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175273"
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)을 참조하세요.
+  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](database-mail-configuration-objects.md)을 참조하세요.
   
 -   **시작하기 전 주의 사항:** [필수 구성 요소](#Prerequisites), [보안](#Security)  
   

@@ -16,12 +16,12 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fcc2d8c7e3cb9b0a944619e22e5a9851bd4b179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0373eeac360886ac69e2fb61eacd82c429a6720
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867248"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175248"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32867248"
   
 -   [등록된 서버에 연결&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)  
   
--   [SQL Server Management Studio에서 SQL Server 구성 요소로 연결](http://msdn.microsoft.com/library/5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e)  
+-   [SQL Server Management Studio에서 SQL Server 구성 요소로 연결](../../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
   
 -   [sqlcmd를 사용하여 데이터베이스 엔진에 연결](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
   

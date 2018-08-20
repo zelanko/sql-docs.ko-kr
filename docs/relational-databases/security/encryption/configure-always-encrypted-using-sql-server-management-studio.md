@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543073"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175184"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](.
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>데이터베이스 또는 DACPAC에서 상시 암호화를 사용하는 경우 DAC 업그레이드 작업 수행
 
-[DAC 작업](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 은 암호화된 열을 포함하는 스키마가 있는 DACPAC 파일 및 데이터베이스에서 지원됩니다. DAC 업그레이드 작업에는 특별한 고려 사항이 적용됩니다. SSMS를 비롯한 다양한 도구에서 DAC 업그레이드 작업을 수행하는 방법은 [데이터 계층 응용 프로그램 업그레이드](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) 를 참조하세요. 
+[DAC 작업](../../data-tier-applications/data-tier-applications.md) 은 암호화된 열을 포함하는 스키마가 있는 DACPAC 파일 및 데이터베이스에서 지원됩니다. DAC 업그레이드 작업에는 특별한 고려 사항이 적용됩니다. SSMS를 비롯한 다양한 도구에서 DAC 업그레이드 작업을 수행하는 방법은 [데이터 계층 응용 프로그램 업그레이드](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) 를 참조하세요. 
 
 DACPAC를 사용하여 데이터베이스를 업그레이드하고 DACPAC 또는 대상 데이터베이스에 암호화된 열이 있는 경우 다음 조건이 모두 충족되면 업그레이드 작업에서 데이터 암호화 작업을 트리거합니다.
 - 데이터베이스에 데이터를 포함하는 열이 있습니다.
@@ -418,7 +418,7 @@ DACPAC 또는 대상 데이터베이스에서 상시 암호화가 설정된 경�
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>BACPAC를 사용하여 암호화된 열이 있는 데이터베이스 마이그레이션
 
-데이터베이스를 내보낼 때 암호화된 열에 저장된 모든 데이터가 검색되어 결과 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) (암호화된 형태)에 저장됩니다. 결과 BACPAC에는 상시 암호화 키에 대한 메타데이터도 포함됩니다.
+데이터베이스를 내보낼 때 암호화된 열에 저장된 모든 데이터가 검색되어 결과 [BACPAC](../../data-tier-applications/data-tier-applications.md) (암호화된 형태)에 저장됩니다. 결과 BACPAC에는 상시 암호화 키에 대한 메타데이터도 포함됩니다.
 
 BACPAC를 데이터베이스로 가져올 때 BACPAC의 암호화된 데이터가 데이터베이스에 로드되고 상시 암호화 키 메타데이터가 다시 생성됩니다.
 

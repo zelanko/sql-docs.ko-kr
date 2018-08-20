@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9d20946e721e4bff7c231466af55ac0c01a4140e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 63eeb5e123eb7168aa045ca695fa8adef3d39d09
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541483"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175241"
 ---
 # <a name="extended-events-tools"></a>확장 이벤트 도구
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "39541483"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자: 확장 이벤트 세션을 생성, 변경 및 관리하는 데 사용할 수 있는 강력한 도구입니다. 자세한 내용은 [확장 이벤트에 PowerShell 공급자 사용](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)을 참조하세요.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 참조하세요. 확장 이벤트 항목에 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)를 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 참조하세요. 확장 이벤트 항목에 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요.  
   
  서버에는 사용자가 만드는 세션 외에도 기본 시스템 상태 세션이 있습니다. 이 세션은 성능 문제를 해결하는 데 사용할 수 있는 시스템 데이터를 수집합니다. 자세한 내용은 [system_health 세션 사용](../../relational-databases/extended-events/use-the-system-health-session.md)을 참조하세요.  
   
