@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984095"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175363"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "38984095"
   
  공유 액세스 서명을 만드는 방법에 대한 예제는 이 항목의 뒷부분에 나오는 [공유 액세스 서명 만들기](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) 예제를 참조하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만들려면 이 항목의 뒷부분에 나오는 [자격 증명 만들기](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 예제를 참조하세요.  
   
- 자격 증명에 대한 자세한 내용은 [자격 증명](http://msdn.microsoft.com/library/ms161950.aspx)을 참조하세요.  
+ 자격 증명에 대한 자세한 내용은 [자격 증명](../security/authentication-access/credentials-database-engine.md)을 참조하세요.  
   
- 자격 증명이 사용되는 다른 예에 대한 정보는 [SQL Server 에이전트 프록시 만들기](http://msdn.microsoft.com/library/ms175834.aspx)를 참조하세요.  
+ 자격 증명이 사용되는 다른 예에 대한 정보는 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조하세요.  
   
 ###  <a name="limitations"></a> 제한 사항  
   
