@@ -78,7 +78,7 @@ ms.locfileid: "38049121"
   
 2.  **로컬 보안 그룹을 삭제합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에 대한 로컬 보안 그룹을 삭제합니다.  
   
-3.  **모든[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **서비스**를 중지합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하기 전에 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하는 것이 좋습니다. 활성 연결로 인해 제거 작업이 실패할 수 있습니다.  
+3.  **모든** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **서비스 를 중지합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하기 전에 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하는 것이 좋습니다. 활성 연결로 인해 제거 작업이 실패할 수 있습니다.  
   
 4.  **적합한 권한을 가진 계정을 사용합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 동등한 권한을 가진 계정을 사용하여 서버에 로그온합니다. 예를 들어 로컬 Administrators 그룹의 멤버 계정을 사용하여 서버에 로그온할 수 있습니다.  
   
