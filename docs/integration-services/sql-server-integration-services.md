@@ -23,16 +23,16 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1872cef23e9680cbec037b1d2170e8e3b02c8564
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: e143abb330c114a9d03e0cd7c8a40a7f422e6134
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909863"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175249"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
- > 이전 버전의 SQL Server와 관련된 내용은 [SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx)를 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 내용은 [SQL Server Integration Services](sql-server-integration-services.md)를 참조하세요.
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 엔터프라이즈 수준 데이터 통합 및 데이터 변환 솔루션을 빌드하는 데 필요한 플랫폼입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 파일을 복사 또는 다운로드하고, 데이터 웨어하우스를 로드하고, 데이터를 정리 및 마이닝하고, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체와 데이터를 관리하여 복잡한 비즈니스 문제를 해결합니다.
 

@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950498"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175201"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 에이전트, Jobs 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950498"
   
  이 표에는 **SQLAgent:Jobs** 카운터가 포함되어 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |**Active Jobs**|이 카운터는 현재 실행 중인 작업의 수를 보고합니다.|  
 |**Failed jobs**|이 카운터는 오류 발생으로 종료된 작업의 수를 보고합니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950498"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |--------------|-----------------|  
 |**_Total**|모든 작업에 대한 정보입니다.|  
 |**경고**|경고에 의해 시작된 작업의 정보입니다.|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950498"
 |**일정**|일정에 의해 시작된 작업의 정보입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [작업 구현](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [성능 개체 사용](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [작업 구현](../../ssms/agent/implement-jobs.md)   
+ [성능 개체 사용](../../ssms/agent/use-performance-objects.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
