@@ -563,7 +563,7 @@ REBUILD PARTITION = ALL
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-##  <a name="nonclustered">비클러스터형 columnstore 인덱스 사용</a>  
+##  <a name="nonclustered"></a> 비클러스터형 columnstore 인덱스 사용  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>1. Rowstore 테이블에서 columnstore 인덱스를 보조 인덱스로 만들기  
  이 예에서는 rowstore 테이블에 비클러스터형 columnstore 인덱스를 만듭니다. 이 경우 columnstore 인덱스는 하나만 만들 수 있습니다. Columnstore 인덱스는 rowstore 테이블에 데이터 복사본을 포함하고 있으므로 추가 스토리지가 필요합니다. 이 예에서는 간단한 테이블 및 클러스터형 인덱스를 만든 다음, 비클러스터형 columnstore 인덱스를 만드는 구문을 보여 줍니다.  
