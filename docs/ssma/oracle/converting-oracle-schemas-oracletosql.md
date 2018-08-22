@@ -15,18 +15,18 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a87d72a0d017be9b0f6e010d8ba5344e33469aad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982445"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395392"
 ---
-# <a name="converting-oracle-schemas-oracletosql"></a>Oracle 스키마 변환 (OracleToSQL)
-Oracle에 연결한 후에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Oracle 데이터베이스 개체를 프로젝트 설정 및 데이터 매핑 옵션을 변환할 수 있습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체입니다.  
+# <a name="converting-oracle-schemas-oracletosql"></a>Oracle 스키마 변환(OracleToSQL)
+Oracle에 연결한 후에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle 데이터베이스 개체를 프로젝트 설정 및 데이터 매핑 옵션을 변환할 수 있습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체입니다.  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
-Oracle에서 개체 정의 가져와서, 변환한 유사한 데이터베이스 개체 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 및 SSMA 메타 데이터에이 정보를 로드 합니다. 인스턴스로 정보를 로드 하지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 사용 하 여 개체 및 해당 속성을 보려면 다음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다.  
+Oracle에서 개체 정의 가져와서, 변환한 유사한 데이터베이스 개체 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 SSMA 메타 데이터에이 정보를 로드 합니다. 인스턴스로 정보를 로드 하지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 개체 및 해당 속성을 보려면 다음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기입니다.  
   
 변환 중 SSMA 출력 창에 출력 메시지 및 오류 목록 창에 오류 메시지를 인쇄합니다. 출력 및 오류 정보를 사용 하 여 Oracle 데이터베이스 또는 원하는 변환 결과 얻으려면 변환 프로세스를 수정 해야 하는지 여부를 결정 합니다.  
   
@@ -34,13 +34,13 @@ Oracle에서 개체 정의 가져와서, 변환한 유사한 데이터베이스 
 개체를 변환 하기 전에 프로젝트 변환 옵션을 검토 합니다 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 함수 및 전역 변수를 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 [프로젝트 설정 &#40;변환&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)합니다.  
   
 ## <a name="conversion-results"></a>변환 결과  
-다음 표에서 Oracle 개체가 변환 되 고 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체:  
+다음 표에서 Oracle 개체가 변환 되 고 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체:  
   
 |||  
 |-|-|  
 |Oracle 개체|결과 SQL Server 개체|  
-|함수|함수를 직접 변환할 수 있으면 [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA 함수를 만듭니다.<br /><br />일부 경우에는 저장된 프로시저에 함수를 변환 합니다. 이 경우 SSMA는 저장된 프로시저 및 저장된 프로시저를 호출 하는 함수를 만듭니다.|  
-|절차|프로시저를 직접 변환할 수 있으면 [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA 저장된 프로시저를 만듭니다.<br /><br />일부 경우에서 자치 트랜잭션을에서 저장된 프로시저를 호출 합니다. 이 경우 SSMA 두 개의 저장된 프로시저를 만듭니다: 하 고 구현 하는 호출에 사용 되는 다른 프로시저를 구현 하는 저장 프로시저입니다.|  
+|함수|함수를 직접 변환할 수 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA 함수를 만듭니다.<br /><br />일부 경우에는 저장된 프로시저에 함수를 변환 합니다. 이 경우 SSMA는 저장된 프로시저 및 저장된 프로시저를 호출 하는 함수를 만듭니다.|  
+|절차|프로시저를 직접 변환할 수 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA 저장된 프로시저를 만듭니다.<br /><br />일부 경우에서 자치 트랜잭션을에서 저장된 프로시저를 호출 합니다. 이 경우 SSMA 두 개의 저장된 프로시저를 만듭니다: 하 고 구현 하는 호출에 사용 되는 다른 프로시저를 구현 하는 저장 프로시저입니다.|  
 |패키지|SSMA는 비슷한 개체 이름으로 통합 되는 저장된 프로시저와 함수 집합을 만듭니다.|  
 |시퀀스|SSMA (SQL Server 2012 또는 SQL Server 2014) 시퀀스 개체를 만들거나 Oracle 시퀀스를 에뮬레이션 합니다.|  
 |인덱스 및 트리거와 같이 종속 개체를 사용 하 여 테이블|SSMA는 종속 개체를 사용 하 여 테이블을 만듭니다.|  
@@ -114,10 +114,10 @@ Oracle 데이터베이스 개체를 변환 하려면 먼저 변환 하려는 개
   
 -   Oracle 데이터베이스를 제거 하거나 수정 하는 문제가 있는 코드에서 개체를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하는 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [Oracle 데이터베이스에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)합니다.  
   
--   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기 및 Oracle 메타 데이터 탐색기, 개체를 로드 하기 전에 항목 옆의 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 Oracle에서 데이터를 마이그레이션.  
+-   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기 및 Oracle 메타 데이터 탐색기, 개체를 로드 하기 전에 항목 옆의 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Oracle에서 데이터를 마이그레이션.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스에서 다음 단계 [SQL Server로 변환된 된 개체를 로드](http://msdn.microsoft.com/a8ae33b2-1883-4785-922b-ea0e31c0b37a)합니다.  
+마이그레이션 프로세스에서 다음 단계 [SQL Server로 변환된 된 개체를 로드](loading-converted-database-objects-into-sql-server-oracletosql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248138"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393271"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,32 +47,32 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>인수  
  [ **@job_id=** ] *job_id*  
- 단계를 제거할 작업의 ID입니다. *job_id*은 **uniqueidentifier**, 기본값은 NULL입니다.  
+ 단계를 제거할 작업의 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
  [ **@job_name=** ] **'***job_name***'**  
- 단계를 제거할 작업의 이름입니다. *job_name*은 **sysname**, 기본값은 NULL입니다.  
+ 단계를 제거할 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하며 둘 다 지정할 수 없습니다.  
+> **참고:** 중 하나 *job_id* 하거나 *job_name* 지정 해야 하며 둘 다 지정할 수 없습니다.  
   
  [ **@step_id=** ] *step_id*  
- 제거할 단계의 ID입니다. *step_id*은 **int**, 기본값은 없습니다.  
+ 제거할 단계의 ID입니다. *step_id*됩니다 **int**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  작업 단계를 제거하면 자동으로 삭제된 단계를 참조하는 다른 작업 단계가 업데이트됩니다.  
   
- 관련 된 특정 작업 단계에 대 한 자세한 내용은 실행 **sp_help_jobstep**합니다.  
+ 특정 작업과 관련 된 단계에 대 한 자세한 내용은 실행 **sp_help_jobstep**합니다.  
   
-> **참고:** 호출 **sp_delete_jobstep** 와 *step_id* 값이 0 이면 작업에 대 한 모든 작업 단계를 삭제 합니다.  
+> **참고:** 호출 **sp_delete_jobstep** 사용 하 여를 *step_id* 값이 0 이면 작업에 대 한 모든 작업 단계를 삭제 합니다.  
   
  Microsoft SQL Server Management Studio는 작업 인프라를 만들고 관리하는 데 권장되는 방법으로 그래픽을 사용하여 쉽게 작업을 관리할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -81,9 +81,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 구성원만 **sysadmin** 다른 사용자가 소유 하는 작업 단계를 삭제할 수 있습니다.  
+ 멤버만 **sysadmin** 다른 사용자가 소유한 작업 단계를 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `1` 작업에서 작업 단계 `Weekly Sales Data Backup`을 제거합니다.  
@@ -98,8 +98,8 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [작업 보기 또는 수정](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+## <a name="see-also"></a>관련 항목  
+ [작업 보기 또는 수정](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
@@ -13,12 +13,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf868dde9f3ef6b019d06187696881509b9a568
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 93eb0a1bc48e070265b7137784c34396d0207694
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415632"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392846"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
   합니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버 (sqlncli11.dll) SQL_WCHAR *의 수행 하는 방법을 변경 (NCHAR/NVARCHAR/NVARCHAR(MAX)) 및 SQL_CHAR\* (CHAR/VARCHAR/NARCHAR(MAX)) 변환 합니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  
@@ -104,7 +104,7 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|-   **SQLFetch** 데이터가 더 이상 사용할 수를 반환 합니다.<br />-   **SQLMoreResults** 데이터가 더 이상 사용할 수를 반환 합니다.<br />가변 길이 데이터의 나머지 부분을 변환 하지 않았기 때문에 (-4) SQL_NO_TOTAL를 나타냅니다.<br />-원래 버퍼는 63 바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>CHAR 및 WCHAR 변환 수행  
- ph x="1" /&gt; Native Client ODBC 드라이버는 CHAR 및 WCHAR 변환을 수행하는 여러 가지 방법을 제공합니다. 논리는 BLOB 조작(varchar(max), nvarchar(max), …)과 비슷합니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버는 CHAR 및 WCHAR 변환을 수행하는 여러 가지 방법을 제공합니다. 논리는 BLOB 조작(varchar(max), nvarchar(max), …)과 비슷합니다.  
   
 -   데이터를 저장 하거나와 바인딩하는 경우 지정된 된 버퍼에 잘립니다 **SQLBindCol** 하거나 **SQLBindParameter**합니다.  
   

@@ -1,11 +1,11 @@
 ---
-title: SQL Server Native Client를 설치 합니다. | Microsoft Docs
+title: SQL Server Native Client를 설치 합니다. | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +24,12 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6eb3f153ad1fdbb3d7dc907d7c2cee7a2678080f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a4023294d52724e5cd132ab4a47b8b8e7f910e3a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417572"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392430"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client 설치
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0을 설치할 때 설치 됩니다 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]합니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client는 없습니다. 자세한 내용은 [What's New in SQL Server Native Client](../sql-server-native-client.md)합니다. sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. SQL Server Native Client의 최신 버전을 다운로드 하려면로 이동 [Microsoft® SQL Server® 2012 SP2 기능 팩](http://www.microsoft.com/en-us/download/details.aspx?id=43339)합니다. 이전 버전의 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 컴퓨터의 SQL Server 2012 설치도 되어 이전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0에는 이전 버전와 함께 설치 됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "37417572"
   
  설치 하는 것 외에도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 일부로 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에서 찾을 수 있는 sqlncli.msi 라는 재배포 가능 설치 프로그램은 또한는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 디스크의 다음 위치: `%CD%\Setup\`.  
   
- sqlncli.msi를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 배포할 수 있습니다. 응용 프로그램을 배포할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 설치해야 할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [a Custom Bootstrapper Package for Visual Studio 2005 제작](http://go.microsoft.com/fwlink/?LinkId=115667) 하 고 [사용자 지정 필수 구성 요소 추가](http://go.microsoft.com/fwlink/?LinkId=115668)합니다.  
+ sqlncli.msi를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 배포할 수 있습니다. 응용 프로그램을 배포할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 설치해야 할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 제작](http://go.microsoft.com/fwlink/?LinkId=115667) 및 [사용자 지정 필수 구성 요소 추가](http://go.microsoft.com/fwlink/?LinkId=115668)를 참조하십시오.  
   
  x64 및 Itanium 버전의 sqlncli.msi가 32비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 설치합니다. 응용 프로그램을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
   

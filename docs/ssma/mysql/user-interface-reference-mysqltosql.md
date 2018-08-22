@@ -16,14 +16,14 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983315"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393275"
 ---
-# <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조 (MySQLToSQL)
+# <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조(MySQLToSQL)
 이 섹션에서는 MySQL에 대 한 도움말 항목에 대 한 SQL Server Migration Assistant (SSMA)를 포함 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -39,7 +39,7 @@ ms.locfileid: "38983315"
 |[Azure SQL DB에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|사용 된 **SQL Azure 연결** 마이그레이션하려는 SQL Azure 인스턴스에 연결 하려면 대화 상자.|  
 |[변환 설정 (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|사용 된 **설정** 노드 수준 설정에 탭 합니다.|  
 |[데이터 마이그레이션 보고서 &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|결과 표시 합니다. MySQL에서 SQL Server 또는 SQL Azure 데이터 마이그레이션.|  
-|[데이터 마이그레이션 설정](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|사용 된 **데이터 마이그레이션 설정 확장** 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성 하는 탭 합니다.|  
+|[데이터 마이그레이션 설정](data-migration-settings-mysqltosql.md)|사용 된 **데이터 마이그레이션 설정 확장** 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성 하는 탭 합니다.|  
 |[형식 매핑 편집 &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|사용 된 **형식 매핑 편집** 만들거나 원본 및 대상 데이터베이스와 데이터베이스 개체 간의 데이터 형식 매핑을 수정 하려면 대화 상자.|  
 |[전역 설정 &#40;편집기&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|편집기 페이지를 사용 합니다 **전역 설정** 대화 상자를 코드 편집기 옵션을 구성할 수 있습니다.|  
 |[전역 설정 &#40;대화 상자의&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|대화 상자 페이지를 사용 합니다 **전역 설정** 대화 상자 기본 대화 상자 및 경고 설정을 구성할 수 있습니다.|  

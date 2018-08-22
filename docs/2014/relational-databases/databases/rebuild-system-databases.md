@@ -19,12 +19,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9fa625bbd9ebb661fb0ebad8b191b6075e8397
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219433"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393893"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
   [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)또는 [resource](resource-database.md) 시스템 데이터베이스의 손상 문제를 수정하거나 기본 서버 수준 데이터 정렬을 변경하려면 시스템 데이터베이스를 다시 작성해야 합니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시스템 데이터베이스를 다시 작성하는 단계별 지침을 제공합니다.  
@@ -156,7 +156,7 @@ ms.locfileid: "37219433"
 > [!WARNING]  
 >  다시 작성 합니다 `msdb` 를 사용 하 여 데이터베이스를 **instmsdb** 에 저장 된 모든 정보를 제거 하는 스크립트는 `msdb` 작업, 경고, 운영자, 유지 관리 계획, 백업 기록, 정책 기반 관리 설정 등 데이터베이스 메일, 성능 데이터 웨어하우스, 등입니다.  
   
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에이전트, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs-md.md)]를 포함하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에 연결된 서비스 및 데이터 저장소와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 응용프로그램을 모두 중지합니다.  
+1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에이전트, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs.md)]를 포함하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에 연결된 서비스 및 데이터 저장소와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 응용프로그램을 모두 중지합니다.  
   
 2.  다음 명령을 사용하여 명령줄에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작합니다. `NET START MSSQLSERVER /T3608`  
   

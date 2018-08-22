@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobhistory (Transact SQL) | Microsoft Docs
+title: sp_help_jobhistory (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e001e9e0ea0dd7dfdbe64a788db465125b04e414
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b903b6e0494e94da555750cb94a3c4cd0c0c41c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261822"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393331"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,39 +59,39 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 ## <a name="arguments"></a>인수  
  [ **@job_id=** ] *job_id*  
- 작업 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
+ 작업 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
  [ **@job_name=** ] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@step_id=** ] *step_id*  
- 단계 ID입니다. *step_id* 은 **int**, 기본값은 NULL입니다.  
+ 단계 ID입니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ **@sql_message_id=** ] *sql_message_id*  
- 작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 ID입니다. *sql_message_id* 은 **int**, 기본값은 NULL입니다.  
+ 작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 ID입니다. *sql_message_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ **@sql_severity=** ] *sql_severity*  
- 작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 심각도입니다. *sql_severity* 은 **int**, 기본값은 NULL입니다.  
+ 작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 심각도입니다. *sql_severity* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ **@start_run_date=** ] *start_run_date*  
- 작업이 시작된 날짜입니다. *start_run_date*은 **int**, 기본값은 NULL입니다. *start_run_date* 해야 합니다. 입력 YYYYMMDD, 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
+ 작업이 시작된 날짜입니다. *start_run_date*됩니다 **int**, 기본값은 NULL입니다. *start_run_date* 해야 합니다. 양식에 입력 된 yyyymmdd 형식으로 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
   
  [ **@end_run_date=** ] *end_run_date*  
- 작업이 완료된 날짜입니다. *end_run_date* 은 **int**, 기본값은 NULL입니다. *end_run_date*해야 합니다. 입력 YYYYMMDD, 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
+ 작업이 완료된 날짜입니다. *end_run_date* 됩니다 **int**, 기본값은 NULL입니다. *end_run_date*해야 합니다. 양식에 입력 된 yyyymmdd 형식으로 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
   
  [ **@start_run_time=** ] *start_run_time*  
- 작업이 시작된 시간입니다. *start_run_time* 은 **int**, 기본값은 NULL입니다. *start_run_time*해야 형식으로 입력 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 자정 SS는 두 자리 초입니다.  
+ 작업이 시작된 시간입니다. *start_run_time* 됩니다 **int**, 기본값은 NULL입니다. *start_run_time*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
   
  [ **@end_run_time=** ] *end_run_time*  
- 작업 실행이 완료된 시간입니다. *end_run_time* 은 **int**, 기본값은 NULL입니다. *end_run_time*해야 형식으로 입력 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 자정 SS는 두 자리 초입니다.  
+ 작업 실행이 완료된 시간입니다. *end_run_time* 됩니다 **int**, 기본값은 NULL입니다. *end_run_time*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
   
  [ **@minimum_run_duration=** ] *minimum_run_duration*  
- 작업 완료에 필요한 최소 시간의 길이입니다. *minimum_run_duration* 은 **int**, 기본값은 NULL입니다. *minimum_run_duration*해야 형식으로 입력 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 자정 SS는 두 자리 초입니다.  
+ 작업 완료에 필요한 최소 시간의 길이입니다. *minimum_run_duration* 됩니다 **int**, 기본값은 NULL입니다. *minimum_run_duration*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
   
  [ **@run_status=** ] *run_status*  
- 작업의 실행 상태입니다. *run_status* 은 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+ 작업의 실행 상태입니다. *run_status* 됩니다 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|실패|  
 |**1**|성공|  
@@ -101,22 +101,22 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**5**|Unknown|  
   
  [  **@minimum_retries=** ] *minimum_retries*  
- 작업 실행을 다시 시도해야 하는 최소 횟수입니다. *minimum_retries* 은 **int**, 기본값은 NULL입니다.  
+ 작업 실행을 다시 시도해야 하는 최소 횟수입니다. *minimum_retries* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ **@oldest_first=** ] *oldest_first*  
- 가장 오래된 작업에 대한 결과를 먼저 표시할지 여부입니다. *oldest_first* 은 **int**, 기본값은 **0**, 최신 작업을 먼저 표시를 합니다. **1** 가장 오래 된 작업을 먼저 표시 합니다.  
+ 가장 오래된 작업에 대한 결과를 먼저 표시할지 여부입니다. *oldest_first* 됩니다 **int**, 기본값은 **0**, 최신 작업을 먼저 표시 하는 합니다. **1** 가장 오래 된 작업을 먼저 표시 합니다.  
   
  [ **@server=** ] **'***server***'**  
- 작업이 수행된 서버의 이름입니다. *서버* 은 **nvarchar (30)**, 기본값은 NULL입니다.  
+ 작업이 수행된 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
   
  [  **@mode=** ] **'***모드***'**  
- SQL Server 결과 집합의 모든 열을 인쇄 하는 여부는 (**전체**) 또는 열에 대 한 요약입니다. *모드* 은 **varchar(7)**, 기본값은 **요약**합니다.  
+ SQL Server 결과 집합의 모든 열을 출력 하는 여부는 (**전체**) 또는 열을 요약 합니다. *모드* 됩니다 **varchar(7)**, 기본값은 **요약**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 값에 따라 실제 열 목록은 *모드*합니다. 가장 포괄적인 열 집합은 다음과 같으며이 반환 됩니다 *모드* FULL입니다.  
+ 실제 열 목록 값에 따라 달라 집니다 *모드*합니다. 가장 포괄적인 열 집합은 다음과 같으며이 반환 됩니다 *모드* FULL입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -138,10 +138,10 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|단계를 다시 시도하는 횟수입니다. 작업 기록의 경우에는 항상 0입니다.|  
 |**server**|**nvarchar(30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**로컬**).|  
   
-## <a name="remarks"></a>주의  
- **sp_help_jobhistory** 지정한 예약 된 작업의 기록 사용 하 여 보고서를 반환 합니다. 매개 변수를 지정하지 않은 경우에는 보고서에 예정된 모든 작업에 관한 기록이 포함됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_help_jobhistory** 는 지정한 예약 된 작업의 기록 사용 하 여 보고서를 반환 합니다. 매개 변수를 지정하지 않은 경우에는 보고서에 예정된 모든 작업에 관한 기록이 포함됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -150,7 +150,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 -   **SQLAgentOperatorRole**  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
  멤버는 **SQLAgentUserRole** 데이터베이스 역할에는 자신이 소유한 작업에 대 한 기록만 볼 수 있습니다.  
   
@@ -183,7 +183,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_purge_jobhistory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

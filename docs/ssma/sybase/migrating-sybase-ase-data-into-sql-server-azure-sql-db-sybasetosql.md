@@ -19,25 +19,25 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 55f9a09e9c0ce4a3b4f290c9b8b23185e09f415e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e39d74143e21d6b75a5a35a1f8dbde4f62f285f4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982335"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392196"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>마이그레이션 Sybase ASE 데이터를 SQL Server-Azure SQL DB (SybaseToSQL)
-Sybase 적응형 Server Enterprise (ASE) 데이터베이스 개체를 성공적으로 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL DB, ASE에서 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.  
+Sybase 적응형 Server Enterprise (ASE) 데이터베이스 개체를 성공적으로 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL DB, ASE에서 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
   
 > [!IMPORTANT]  
 > 서버 쪽 데이터 마이그레이션 엔진으로 사용 되는 엔진을 사용 하는 경우 데이터를 마이그레이션하기 전에 설치 해야 합니다 SSMA는 Sybase ASE 확장 팩 및 SSMA를 실행 하는 컴퓨터의 Sybase ASE 공급자에 대 한 합니다. 또한 SQL Server 에이전트 서비스를 실행 되어야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [(SybaseToSQL) SQL Server에 SSMA 구성 요소 설치](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>마이그레이션 옵션 설정  
-마이그레이션하기 전에 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB, 프로젝트 마이그레이션 옵션을 검토 합니다 **프로젝트 설정을** 대화 상자.  
+마이그레이션하기 전에 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB, 프로젝트 마이그레이션 옵션을 검토 합니다 **프로젝트 설정을** 대화 상자.  
   
 -   이 대화 상자를 사용 하 여 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 검사, null 값 처리 및 id 값 처리 등의 옵션을 설정할 수 있습니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (마이그레이션) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)합니다.  
   
-    에 대 한 자세한 **데이터 마이그레이션 설정 확장**를 참조 하세요 [데이터 마이그레이션 설정](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    에 대 한 자세한 **데이터 마이그레이션 설정 확장**를 참조 하세요 [데이터 마이그레이션 설정](data-migration-settings-sybasetosql.md)  
   
 -   **마이그레이션 엔진** 에 **프로젝트 설정을** 대화 상자의 보도 두 유형의 데이터 마이그레이션 엔진을 사용 하 여 마이그레이션 프로세스를 수행할 수 있습니다.:  
   

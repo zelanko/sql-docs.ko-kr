@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ba5192de960d24bb918e9ec751e8c27c1e9d78
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308033"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393026"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>서버에 연결(연결 속성 페이지) Reporting Services
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결하거나 [!INCLUDE[ssRS](../includes/ssrs-md.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssRS](../includes/ssrs-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결하거나 [!INCLUDE[ssRS](../includes/ssrs.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssRS](../includes/ssrs.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
 ## <a name="options"></a>변수  
  **연결 제한 시간(밀리초)**  
@@ -40,7 +40,7 @@ ms.locfileid: "37308033"
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
  **테스트**  
- [!INCLUDE[ssRS](../includes/ssrs-md.md)] 을 **등록된 서버**에 등록하는 경우 연결을 테스트하려면 클릭합니다.  
+ [!INCLUDE[ssRS](../includes/ssrs.md)] 을 **등록된 서버**에 등록하는 경우 연결을 테스트하려면 클릭합니다.  
   
  **저장**  
  **등록된 서버**에 설정을 저장합니다.  

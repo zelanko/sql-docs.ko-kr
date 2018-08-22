@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ce15c9964eb7f0fe8dfc8338aba2499043ff7e77
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411312"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392163"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 WDAC(Windows Data Access Component)(이전의 MDAC(Microsoft Data Access Component))의 기능을 제공할 뿐만 아니라 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 제공하는 다른 여러 기능도 구현합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "37411312"
  [FILESTREAM 지원](filestream-support.md)  
  설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 향상된 된 FILESTREAM 기능에 대 한 네이티브 클라이언트 지원 합니다.  
   
- [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](service-principal-name-spn-support-in-client-connections.md)  
+ [클라이언트 연결의 서비스 사용자 이름&#40;SPN&#41; 지원](service-principal-name-spn-support-in-client-connections.md)  
  모든 프로토콜에서 상호 인증을 지원하기 위해 SPN(서비스 사용자 이름)이 어떻게 확장되었는지 설명합니다.  
   
  [SQL Server Native Client의 스파스 열 지원](sparse-columns-support-in-sql-server-native-client.md)  
@@ -90,7 +90,7 @@ ms.locfileid: "37411312"
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 도입된 동작 변경 사항에 대해 설명합니다. 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공하는 경우, 종결 문자 이전에 버퍼에 작성된 `wchar` 문자가 서로게이트 쌍의 상위 서로게이트 코드 포인트인 경우 및 다음 `wchar` 문자가 하위 서로게이트 코드 포인트인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 상위 서로게이트 코드 포인트를 버퍼에 추가하지 않습니다.  
   
  [고가용성 재해 복구를 위한 SQL Server Native Client 지원](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- 고가용성, 재해 복구에 추가 기능을 활용 하려면 응용 프로그램을 구성할 수 있습니다 하는 방법에 대해 설명 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]합니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 고가용성의 재해 복구 기능을 활용하도록 응용 프로그램을 구성할 수 있는 방법을 설명합니다.  
   
  [확장 이벤트 로그의 진단 정보 액세스](accessing-diagnostic-information-in-the-extended-events-log.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 향상된 기능과, 링 버퍼 및 XEvents 로그의 진단 정보에 액세스하는 데 사용되는 데이터 추적 기능에 대해 설명합니다.  

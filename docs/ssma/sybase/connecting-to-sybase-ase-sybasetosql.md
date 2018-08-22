@@ -18,22 +18,22 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0fe501e639b5896eb0f83391e6be40b8f8961ba9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a8411cdb507b27e69f86f0d853e1c98b4d24d29a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980095"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396009"
 ---
-# <a name="connecting-to-sybase-ase-sybasetosql"></a>Sybase ASE (SybaseToSQL)에 연결
-Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 마이그레이션하려는 데이터베이스를 포함 하는 적응형 서버에 연결 해야 SQL Azure 또는 합니다. 에 연결 하면 SSMA 적응 서버의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 Sybase 메타 데이터 탐색기 창에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
+# <a name="connecting-to-sybase-ase-sybasetosql"></a>Sybase ASE에 연결(SybaseToSQL)
+Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션하려는 데이터베이스를 포함 하는 적응형 서버에 연결 해야 SQL Azure 또는 합니다. 에 연결 하면 SSMA 적응 서버의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 Sybase 메타 데이터 탐색기 창에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
   
 ASE에 대 한 연결 된 프로젝트를 닫을 때까지 활성 상태를 유지 합니다. 프로젝트를 열면 다시 연결 해야 ASE에 활성 서버에 연결 하려는 경우.  
   
 적응 서버에 대 한 메타 데이터를 자동으로 업데이트 되지 않습니다. 대신, Sybase 메타 데이터 탐색기에서 메타 데이터를 업데이트 하려는 경우 수동으로 업데이트 해야 메타 데이터를이 항목의 뒷부분에 나오는 "Sybase ASE 메타 데이터 새로 고침" 섹션에 설명 된 대로 합니다.  
   
 ## <a name="required-ase-permissions"></a>필요한 ASE 사용 권한  
-ASE에 연결 하는 데 사용 되는 계정을 하나 이상 있어야 합니다 **공개** 로 마이그레이션할 원본 데이터베이스 및 master 데이터베이스에 대 한 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 또한 마이그레이션되는 테이블에 대 한 권한을 선택 하려면 사용자 SELECT 권한이 있어야 다음 시스템 테이블에서:  
+ASE에 연결 하는 데 사용 되는 계정을 하나 이상 있어야 합니다 **공개** 로 마이그레이션할 원본 데이터베이스 및 master 데이터베이스에 대 한 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. 또한 마이그레이션되는 테이블에 대 한 권한을 선택 하려면 사용자 SELECT 권한이 있어야 다음 시스템 테이블에서:  
   
 -   [source_db].dbo.sysobjects  
   
@@ -54,7 +54,7 @@ ASE에 연결 하는 데 사용 되는 계정을 하나 이상 있어야 합니�
 -   master.dbo.sysdatabases  
   
 ## <a name="establishing-a-connection-to-ase"></a>ASE에 연결  
-적응 하는 서버에 연결할 때 SSMA는 데이터베이스 서버에서 데이터베이스 메타 데이터를 읽고 프로젝트 파일에이 메타 데이터를 추가 합니다. 개체를 변환 하는 경우이 메타 데이터 SSMA 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 구문이 데이터를 마이그레이션한 경우 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. Sybase 메타 데이터 탐색기 창에서이 메타 데이터를 찾아보고 개별 데이터베이스 개체의 속성을 검토할 수 있습니다.  
+적응 하는 서버에 연결할 때 SSMA는 데이터베이스 서버에서 데이터베이스 메타 데이터를 읽고 프로젝트 파일에이 메타 데이터를 추가 합니다. 개체를 변환 하는 경우이 메타 데이터 SSMA 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문이 데이터를 마이그레이션한 경우 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. Sybase 메타 데이터 탐색기 창에서이 메타 데이터를 찾아보고 개별 데이터베이스 개체의 속성을 검토할 수 있습니다.  
   
 > [!IMPORTANT]  
 > 데이터베이스 서버에 연결 하려고 하기 전에 데이터베이스 서버가 실행 되 고 연결을 허용할 수 있는지 확인 합니다.  
@@ -106,7 +106,7 @@ ASE에 연결 하는 데 사용 되는 계정을 하나 이상 있어야 합니�
     자세한 내용은 [Sybase에 연결 &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)합니다.  
   
 ## <a name="reconnecting-to-sybase-ase"></a>Sybase ASE에 다시 연결  
-데이터베이스 서버에 연결 된 프로젝트를 닫을 때까지 활성 상태를 유지 합니다. 프로젝트를 열면 적응 서버로 활성 연결 하려는 경우 다시 연결 해야 합니다. 메타 데이터 업데이트를 데이터베이스 개체에 로드 될 때까지 오프 라인으로 작업할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터를 마이그레이션합니다.  
+데이터베이스 서버에 연결 된 프로젝트를 닫을 때까지 활성 상태를 유지 합니다. 프로젝트를 열면 적응 서버로 활성 연결 하려는 경우 다시 연결 해야 합니다. 메타 데이터 업데이트를 데이터베이스 개체에 로드 될 때까지 오프 라인으로 작업할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터를 마이그레이션합니다.  
   
 ## <a name="refreshing-sybase-ase-metadata"></a>Sybase ASE 메타 데이터를 새로 고치는 중  
 ASE 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고쳐지지 않습니다. Sybase 메타 데이터 탐색기에서 메타 데이터는 적응 서버나 수동으로 메타 데이터를 새로 고칠는 마지막 시간에 처음 연결할 때 메타 데이터의 스냅숏입니다. 단일 데이터베이스를 단일 데이터베이스 스키마 또는 모든 데이터베이스에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  
@@ -123,7 +123,7 @@ ASE 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고쳐
   
 ## <a name="next-step"></a>다음 단계  
   
--   마이그레이션 프로세스에서 다음 단계 [SQL Server 인스턴스에 연결할](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [SQL Azure 인스턴스에 연결 합니다.](http://msdn.microsoft.com/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
+-   마이그레이션 프로세스에서 다음 단계 [SQL Server 인스턴스에 연결할](connecting-to-sql-server-sybasetosql.md) / [SQL Azure 인스턴스에 연결 합니다.](connecting-to-azure-sql-db-sybasetosql.md)  
   
 ## <a name="see-also"></a>관련 항목  
 [Sybase ASE 데이터베이스를 SQL Server-Azure SQL DB로 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

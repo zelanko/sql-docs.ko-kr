@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165714"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392656"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>태스크 12: 파생 열 변환을 추가하여 MDS에 필요한 열 추가
-  이 작업에서는 파생 열 변환을 데이터 흐름에 추가합니다. 두 개의 파생된 열을 추가한 **ImportType** 하 고 **BatchTag**를이 변환에 전달 되는 레코드입니다. MDS의 준비 테이블에 데이터를 업로드하려면 먼저 이러한 열을 추가해야 합니다. 이러한 두 열은 MDS에서 준비 테이블의 필수 열입니다. 참조 [리프 멤버 준비 테이블](http://msdn.microsoft.com/library/ee633854.aspx) 대 한 자세한 내용은 합니다.  
+  이 작업에서는 파생 열 변환을 데이터 흐름에 추가합니다. 두 개의 파생된 열을 추가한 **ImportType** 하 고 **BatchTag**를이 변환에 전달 되는 레코드입니다. MDS의 준비 테이블에 데이터를 업로드하려면 먼저 이러한 열을 추가해야 합니다. 이러한 두 열은 MDS에서 준비 테이블의 필수 열입니다. 참조 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md) 대 한 자세한 내용은 합니다.  
   
 1.  끌어서 놓기 **파생 열 변환** 에서 **일반적인** 섹션의 **SSIS 도구 상자** 에 **데이터 흐름** 탭 합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165714"
   
      ![SSIS 변수 창](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS 변수 창")  
   
-7.  형식 **ImportType** 에 대 한 합니다 **이름** 및 **2** 에 대 한 합니다 **값**합니다. MDS의 엔터티에 새 멤버를 추가하기 때문에 값을 2로 지정합니다. 이 매개 변수에 대 한 자세한 내용은 참조 하세요 [리프 멤버 준비 테이블](http://msdn.microsoft.com/library/ee633854.aspx)합니다.  
+7.  형식 **ImportType** 에 대 한 합니다 **이름** 및 **2** 에 대 한 합니다 **값**합니다. MDS의 엔터티에 새 멤버를 추가하기 때문에 값을 2로 지정합니다. 이 매개 변수에 대 한 자세한 내용은 참조 하세요 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md)합니다.  
   
 8.  클릭 **변수 추가** 도구 모음 단추를 다시 합니다.  
   

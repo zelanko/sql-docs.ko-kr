@@ -25,15 +25,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bb04765fdaceb35ec4e022e9d54254afa844610f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b648425f79446e02cdb846a04893be61f3135d60
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548983"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393686"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스 내의 모든 테이블 및 대부분의 인덱스에서 각 파티션당 행 하나를 포함합니다. Full-Text, Spatial, XML 등의 특수 인덱스 유형은 이 뷰에 포함되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 모든 테이블 및 인덱스는 명시적으로 분할되었는지 여부에 상관없이 최소한 하나의 파티션을 포함합니다.  
   

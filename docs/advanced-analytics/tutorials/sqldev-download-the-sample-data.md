@@ -1,28 +1,32 @@
 ---
-title: 1 단원 다운로드 샘플 데이터 및 스크립트에 포함 된 R (SQL Server Machine Learning) | Microsoft Docs
-description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
+title: 포함 된 R (SQL Server Machine Learning)에 대 한 NYC Taxi 데이터 및 스크립트 다운로드 | Microsoft Docs
+description: 뉴욕 시 택시 샘플 데이터를 다운로드 하 고 데이터베이스를 만들기 위한 지침입니다. 데이터는 SQL Server 저장 프로시저 및 T-SQL 함수에서 R을 포함 하는 방법을 보여 주는 SQL Server 자습서에 사용 됩니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 08/15/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: aca4450bdc152449fd30e974305d14a4ccbf77c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030381"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392632"
 ---
-# <a name="lesson-1-download-data-and-scripts"></a>1 단원: 데이터 및 스크립트 다운로드
+# <a name="load-nyc-taxi-demo-data-for-sql-server-tutorials"></a>SQL Server 자습서에 대 한 NYC 택시 데이터 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
+이 문서에서는 SQL Server에서 데이터베이스 내 분석에 대 한 R을 사용 하는 방법에 대 한 자습서에 대 한 시스템을 준비 합니다.
 
-이 단계에서는 샘플 데이터 집합 다운로드 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트이 자습서에 사용 되는 파일입니다. 데이터와 스크립트 파일은 GitHub에서 공유 됩니다 있지만 PowerShell 스크립트를 데이터 및 스크립트 파일의 로컬 디렉터리에 다운로드 합니다.
+이 연습에서는 샘플 데이터, 환경, 준비에 대 한 PowerShell 스크립트를 다운로드 하 고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 여러 자습서에 사용 되는 파일입니다. 완료 된 경우는 **NYCTaxi_Sample** 데이터베이스가 실습 데모 데이터를 제공 하 고 로컬 인스턴스에에서 사용할 수 있습니다. 
 
-## <a name="download-tutorial-files-from-github"></a>Github의 자습서 파일을 다운로드 합니다.
+## <a name="prerequisites"></a>사전 요구 사항
+
+인터넷에 연결, PowerShell 및 컴퓨터의 로컬 관리자 권한이 해야 합니다. 있어야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 도구를 개체 만들기를 확인 합니다.
+
+## <a name="download-nyc-taxi-demo-data-and-scripts-from-github"></a>NYC Taxi 데이터 및 스크립트를 Github에서 다운로드
 
 1.  Windows PowerShell 명령 콘솔을 엽니다.
   
@@ -59,11 +63,73 @@ ms.locfileid: "38030381"
     **Results:**
   
     ![PowerShell 스크립트로 다운로드한 파일 목록](media/rsql-devtut-filelist.png "PowerShell 스크립트로 다운로드한 파일 목록")
+
+## <a name="create-nyctaxisample-database"></a>NYCTaxi_Sample 데이터베이스 만들기
+
+PowerShell 스크립트를 다운로드 한 파일 중 표시 (**RunSQL_SQL_Walkthrough.ps1**)는 데이터베이스를 만들고 데이터 대량 로드 합니다. 스크립트가 수행하는 작업은 다음과 같습니다.
+
++ 아직 설치 되지 않은 경우 SQL Native Client 및 SQL 명령줄 유틸리티를 설치 합니다. 이 유틸리티는 **bcp**를 사용하여 데이터베이스에 데이터를 대량 로드하는 데 필요합니다.
+
++ 데이터베이스 및 테이블 만들기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 데이터 소스를.csv 파일 로부터 대량 삽입 합니다.
+
++ 여러 SQL 함수 및 여러 자습서에 사용 되는 저장된 프로시저를 만듭니다.
+
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>신뢰할 수 있는 Windows id를 사용 하는 스크립트를 수정 합니다.
+
+스크립트에는 기본적으로 SQL Server 데이터베이스 사용자 로그인 및 암호를 가정합니다. Db_owner Windows 사용자 계정이 있는 경우 Windows id 개체를 만드는 데 사용할 수 있습니다. 이렇게 하려면 엽니다 `RunSQL_SQL_Walkthrough.ps1` 코드 편집기에서 추가 **`-T`** bcp에 bulk insert 명령 (줄 238):
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script-to-create-objects"></a>개체를 만드는 스크립트를 실행 합니다.
+
+관리자 PowerShell 명령 프롬프트를 사용 하 여 C:\tempRSQL에서, 다음 명령을 실행 합니다.
   
-## <a name="next-lesson"></a>다음 단원
+```ps
+.\RunSQL_SQL_Walkthrough.ps1
+```
+다음 정보를 입력 하 라는 메시지가 표시 됩니다.
 
-[2 단원: PowerShell을 사용 하 여 SQL Server로 데이터를 가져오기](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- 서버 인스턴스의 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 가 설치 되었습니다. 기본 인스턴스의 경우에서 컴퓨터 이름으로 간단히이 수 있습니다.
 
-## <a name="previous-lesson"></a>이전 단원
+- 데이터베이스 이름입니다. 이 자습서에서는 스크립트 가정 `TaxiNYC_Sample`합니다.
 
-[SQL 개발자를 위한 포함 된 R 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+- 사용자 이름 및 사용자 암호입니다. 이러한 값에 대 한 SQL Server 데이터베이스 로그인을 입력 합니다. 또는 신뢰할 수 있는 Windows id를 수락 하는 스크립트를 수정한 경우 이러한 값을 비어 두려면 Enter 키를 누릅니다. Windows id 연결에 사용 됩니다.
+
+- 이전 단원에서 다운로드 한 샘플 데이터에 대 한 정규화 된 파일 이름입니다. 예: `C:\tempRSQL\nyctaxi1pct.csv`
+
+이러한 값을 제공한 후 스크립트를 즉시 실행 됩니다. 스크립트 실행의 모든 자리 표시자 이름 중는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 사용자의 입력을 사용 하도록 업데이트 됩니다.
+
+## <a name="review-database-objects"></a>데이터베이스 개체를 검토 합니다.
+   
+스크립트 실행이 완료 되 면 데이터베이스 개체의 존재를 확인 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다. 데이터베이스, 테이블, 함수 및 저장된 프로시저 표시 됩니다.
+  
+   ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
+
+> [!NOTE]
+> 데이터베이스 개체가 이미 있는 경우에는 다시 만들 수 없습니다.
+>   
+> 테이블이 이미 있는 경우 데이터가 추가되며 덮어쓰지 않습니다. 따라서 스크립트를 실행하기 전에 기존 개체를 모두 삭제해야 합니다.
+
+### <a name="objects-in-nyctaxisample-database"></a>NYCTaxi_Sample 데이터베이스의 개체
+
+다음 표에서 NYC Taxi 데모 데이터베이스에서 생성 되는 개체를 보여 줍니다. 만 한 PowerShell 스크립트를 실행 하면 되지만 (`RunSQL_SQL_Walkthrough.ps1`), 해당 스크립트에 개체를 만들 데이터베이스의 다른 SQL 스크립트를 호출 합니다. 각 개체를 만드는 데 사용 되는 스크립트에 대 한 설명에 언급 된 합니다.
+
+|**개체 이름**|**개체 유형**|**설명**|
+|----------|------------------------|---------------|
+|**TaxiNYC_Sample** | database |만들기-db-tb-업로드-data.sql 스크립트에 의해 생성 됩니다. 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo.nyctaxi_sample 테이블: 주 NYC Taxi 데이터 집합을 포함 합니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이이 테이블에 삽입 됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 고급 분석 학습 된 모델을 유지 하는 데 사용 합니다.|
+|**fnCalculateDistance** |스칼라 반환 함수(scalar-valued function) | FnCalculateDistance.sql 스크립트에 의해 생성 됩니다. 승차 및 하 차 위치 사이의 직접 거리를 계산합니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md), [학습 모델을 저장 하 고](../r/sqldev-train-and-save-a-model-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
+|**fnEngineerFeatures** |테이블 반환 함수(table-valued function) | FnEngineerFeatures.sql 스크립트에 의해 생성 됩니다. 모델 학습을 위한 새로운 데이터 기능을 만듭니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
+|**PlotHistogram** |저장 프로시저 | PlotHistogram.sql 스크립트에 의해 생성 됩니다. 변수 히스토그램을 그린에 R 함수를 호출 하 고 그림을 이진 개체로 반환 합니다. 이 저장된 프로시저는 [데이터 탐색 및 시각화](sqldev-explore-and-visualize-the-data.md)합니다.|
+|**PlotInOutputFiles** |저장 프로시저| PlotInOutputFiles.sql 스크립트에 의해 생성 됩니다. R 함수를 사용 하 여 그래픽을 만든 다음 로컬 PDF 파일로 출력을 저장 합니다. 이 저장된 프로시저는 [데이터 탐색 및 시각화](sqldev-explore-and-visualize-the-data.md)합니다.|
+|**PersistModel** |저장 프로시저 | PersistModel.sql 스크립트에 의해 생성 됩니다. Varbinary 데이터 형식으로 직렬화 된 지정된 된 테이블에 기록 하는 모델을 사용 합니다. |
+|**PredictTip**  |저장 프로시저 |PredictTip.sql 스크립트에 의해 생성 됩니다. 모델을 사용 하 여 예측을 만들려면 학습된 된 모델을 호출 합니다. 저장 프로시저는 쿼리를 입력 매개 변수로 사용하고 입력된 행에 대한 점수를 포함하는 숫자 값 열을 반환합니다. 이 저장된 프로시저는 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
+|**PredictTipSingleMode**  |저장 프로시저| PredictTipSingleMode.sql 스크립트에 의해 생성 됩니다. 모델을 사용 하 여 예측을 만들려면 학습된 된 모델을 호출 합니다. 이 저장 프로시저는 새 관찰을 개별 기능 값이 인라인 매개 변수로 전달되는 입력으로 사용하고 새 관찰의 결과를 예측하는 값을 반환합니다. 이 저장된 프로시저는 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
+|**TrainTipPredictionModel**  |저장 프로시저|TrainTipPredictionModel.sql 스크립트에 의해 생성 됩니다. R 패키지를 호출 하 여 로지스틱 회귀 모델을 학습 합니다. 모델은 tipped 열의 값을 예측하며 임의로 선택된 70%의 데이터를 사용하여 학습됩니다. 저장 프로시저의 출력은 nyc_taxi_models 테이블에 저장된 학습된 모델입니다. 이 저장된 프로시저는 [학습 모델을 저장 하 고](../r/sqldev-train-and-save-a-model-using-t-sql.md)입니다.|
+
+## <a name="next-steps"></a>다음 단계
+
+NYC Taxi 샘플 데이터 실습에 대 한 출시 되었습니다.
+
++ [SQL Server에서 R을 사용 하 여 데이터베이스 내 분석에 알아봅니다.](sqldev-in-database-r-for-sql-developers.md)

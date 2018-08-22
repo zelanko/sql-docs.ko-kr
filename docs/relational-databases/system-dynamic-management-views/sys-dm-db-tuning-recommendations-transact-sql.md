@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3f8e2957802d527a4e4845e95eedb2ea7cdcd375
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554253"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393688"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_튜닝\_권장 사항 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "39554253"
 | **valid\_since** | **datetime2** | 처음으로이 권장 사항을 생성 되었습니다. |
 | **last\_refresh** | **datetime2** | 이 권장 구성이 생성 된 마지막 시간입니다. |
 | **state** | **nvarchar(4000)** | 권장 구성의 상태를 설명 하는 JSON 문서입니다. 다음 필드는 사용할 수 있습니다.<br />-   `currentValue` -권장 사항의 현재 상태입니다.<br />-   `reason` -권장 사항이 현재 상태로 이유를 설명 하는 상수입니다.|
-| **is\_executable\_action** | **bit** | 1 = 권장 사항을 통해 데이터베이스에 대해 실행할 수 있습니다 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 스크립트입니다.<br />0 = 권장 사항을 데이터베이스에 대해 실행할 수 없습니다 (예: 정보 또는 되돌린만 권장 사항) |
+| **is\_executable\_action** | **bit** | 1 = 권장 사항을 통해 데이터베이스에 대해 실행할 수 있습니다 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 스크립트입니다.<br />0 = 권장 사항을 데이터베이스에 대해 실행할 수 없습니다 (예: 정보 또는 되돌린만 권장 사항) |
 | **is\_revertable\_action** | **bit** | 1 = 권장을 자동으로 모니터링 하 고 데이터베이스 엔진에 의해 되돌릴 수 있습니다.<br />0 = 권장을 자동으로 모니터링 하 고 되돌릴 수 없습니다. 대부분 &quot;실행&quot; 작업 됩니다 &quot;revertable&quot;합니다. |
 | **execute\_action\_start\_time** | **datetime2** | 권장 사항이 적용 되는 날짜입니다. |
 | **execute\_action\_duration** | **time** | 실행 작업의 기간입니다. |
@@ -59,7 +59,7 @@ ms.locfileid: "39554253"
 | **revert\_action\_initiated\_by** | **nvarchar(4000)** | `User` = 권장 되는 계획을 수동으로 unforced 사용자입니다. <br /> `System` = 시스템에는 자동으로 권장 사항이 되돌려집니다. |
 | **revert\_action\_initiated\_time** | **datetime2** | 권장 사항이 되돌렸습니다 날짜입니다. |
 | **score** | **int** | 값/영향 0-100에이 권장 사항에 대 한 예상 크기 (클수록 좋습니다) |
-| **details** | **nvarchar(max)** | 권장 사항에 대 한 자세한 정보가 포함 된 JSON 문서입니다. 다음 필드는 사용할 수 있습니다.<br /><br />`planForceDetails`<br />-    `queryId` -쿼리\_이전 상태로 되돌아간된 쿼리의 id입니다.<br />-    `regressedPlanId` -재발 된 계획의 plan_id 합니다.<br />-   `regressedPlanExecutionCount` -수 회귀 전에 회귀 된 계획을 사용 하 여 쿼리가 실행 될 때 검색 됩니다.<br />-    `regressedPlanAbortedCount` -재발 된 계획을 실행 하는 동안 오류가 검색 되 면된의 수입니다.<br />-    `regressedPlanCpuTimeAverage` -평균 CPU 시간을 재발이 검색 전에 재발 된 쿼리에 사용 합니다.<br />-    `regressedPlanCpuTimeStddev` -회귀 전에 재발 된 쿼리에 사용 된 CPU 시간 표준 편차 검색 됩니다.<br />-    `recommendedPlanId` -plan_id의 계획을 강제 해야 합니다.<br />-   `recommendedPlanExecutionCount`-는 재발이 검색 전에 강제 해야 하는 계획을 사용 하 여 쿼리 실행 횟수입니다.<br />-    `recommendedPlanAbortedCount` -계획을 강제로 실행 하는 동안 오류가 검색 되 면된의 수입니다.<br />-    `recommendedPlanCpuTimeAverage` -(회귀를 검색 하기 전에 계산) 강제 해야 하는 계획을 사용 하 여 실행 한 쿼리에 의해 사용 평균 CPU 시간입니다.<br />-    `recommendedPlanCpuTimeStddev` 회귀 전에 재발 된 쿼리에 사용 된 CPU 시간에 대 한 표준 편차 검색 됩니다.<br /><br />`implementationDetails`<br />-  `method` -회귀를 해결 하려면 사용 해야 하는 메서드. 값은 항상 `TSql`합니다.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 권장 되는 계획을 적용할 실행 되어야 하는 스크립트입니다. |
+| **details** | **nvarchar(max)** | 권장 사항에 대 한 자세한 정보가 포함 된 JSON 문서입니다. 다음 필드는 사용할 수 있습니다.<br /><br />`planForceDetails`<br />-    `queryId` -쿼리\_이전 상태로 되돌아간된 쿼리의 id입니다.<br />-    `regressedPlanId` -재발 된 계획의 plan_id 합니다.<br />-   `regressedPlanExecutionCount` -수 회귀 전에 회귀 된 계획을 사용 하 여 쿼리가 실행 될 때 검색 됩니다.<br />-    `regressedPlanAbortedCount` -재발 된 계획을 실행 하는 동안 오류가 검색 되 면된의 수입니다.<br />-    `regressedPlanCpuTimeAverage` -평균 CPU 시간을 재발이 검색 전에 재발 된 쿼리에 사용 합니다.<br />-    `regressedPlanCpuTimeStddev` -회귀 전에 재발 된 쿼리에 사용 된 CPU 시간 표준 편차 검색 됩니다.<br />-    `recommendedPlanId` -plan_id의 계획을 강제 해야 합니다.<br />-   `recommendedPlanExecutionCount`-는 재발이 검색 전에 강제 해야 하는 계획을 사용 하 여 쿼리 실행 횟수입니다.<br />-    `recommendedPlanAbortedCount` -계획을 강제로 실행 하는 동안 오류가 검색 되 면된의 수입니다.<br />-    `recommendedPlanCpuTimeAverage` -(회귀를 검색 하기 전에 계산) 강제 해야 하는 계획을 사용 하 여 실행 한 쿼리에 의해 사용 평균 CPU 시간입니다.<br />-    `recommendedPlanCpuTimeStddev` 회귀 전에 재발 된 쿼리에 사용 된 CPU 시간에 대 한 표준 편차 검색 됩니다.<br /><br />`implementationDetails`<br />-  `method` -회귀를 해결 하려면 사용 해야 하는 메서드. 값은 항상 `TSql`합니다.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 권장 되는 계획을 적용할 실행 되어야 하는 스크립트입니다. |
   
 ## <a name="remarks"></a>Remarks  
  반환 된 정보 `sys.dm_db_tuning_recommendations` 데이터베이스 엔진 잠재적인 쿼리 성능 저하를 식별 하 고 유지 되지 않습니다 업데이트 됩니다. 권장 사항 까지만 유지 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다시 시작 됩니다. 정기적으로 데이터베이스 관리자는 서버 재활용 후 유지 하려는 경우 튜닝 권장 구성의 백업 복사본을 확인 해야 합니다. 

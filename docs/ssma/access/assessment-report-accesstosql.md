@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a268b123663b213f3702dde24eba905e38bf1ac
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0881a10fa739b6a6539c12af6f29c78934c315a9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980006"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392363"
 ---
 # <a name="assessment-report-accesstosql"></a>평가 보고서 (AccessToSQL)
-평가 보고서 창에 데이터베이스 개체의 변환 결과 보여 줍니다. [!INCLUDE[tsql](../../includes/tsql_md.md)] 구문을 마이그레이션 프로젝트의 비용과 복잡성을 예측할 수 있습니다.  
+평가 보고서 창에 데이터베이스 개체의 변환 결과 보여 줍니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 마이그레이션 프로젝트의 비용과 복잡성을 예측할 수 있습니다.  
   
 원본 메타 데이터 탐색기에서 변환할 개체를 선택할 평가 보고서를 만들려면 **데이터베이스**를 선택한 후 **보고서 만들기**합니다. 스키마를 변환한 후 자동으로이 보고서를 표시할 수 있습니다도 합니다. 그러나 보고서 이름을 변환 보고서 됩니다. 자세한 내용은 [프로젝트 설정 (GUI) (SSMA 공통)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)합니다.  
   

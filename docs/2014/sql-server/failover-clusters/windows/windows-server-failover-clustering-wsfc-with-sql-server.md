@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd03ce75d23d7cb98a8b1fcc8181fc6fcfa9523c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187740"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392391"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
   WSFC( *Windows Server 장애 조치(failover) 클러스터링* ) 클러스터는 응용 프로그램 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "37187740"
  강제 쿼럼  
  쿼럼에 필요한 요소 중 일부만 통신 중이더라도 클러스터를 시작하는 프로세스입니다.  
   
- 참조 항목: [장애 조치(Failover) 클러스터 용어 설명](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)  
+ 참조 항목: [장애 조치(Failover) 클러스터 용어 설명](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Windows Server 장애 조치(Failover) 클러스터링 개요  
  Windows Server 장애 조치(Failover) 클러스터링은 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Microsoft Exchange 등의 호스팅된 서버 응용 프로그램의 고가용성 및 재해 복구 시나리오를 지원하는 인프라 기능을 제공합니다. 클러스터 노드 또는 서비스가 실패하면 해당 노드에 호스팅된 서비스는 *장애 조치(Failover)* 라는 프로세스를 통해 사용 가능한 다른 노드에 자동으로 전송되거나 수동으로 전송할 수 있습니다.  

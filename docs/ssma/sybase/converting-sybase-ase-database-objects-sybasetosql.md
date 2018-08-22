@@ -18,18 +18,18 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 86adf372dfd590f0cac1d8ac872501fb12ab1e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0ab4bb272f83a16cf8f5be009424499bc4e054c4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980665"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393488"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>변환 SAP ASE 데이터베이스 개체 (SybaseToSQL)
-에 연결 하려면 SAP 적응형 Server Enterprise (ASE)를 연결한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL 및 프로젝트 설정 및 데이터 매핑 옵션, SAP, 적응형 Server Enterprise (ASE) 데이터베이스 개체를 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL database 개체입니다.  
+에 연결 하려면 SAP 적응형 Server Enterprise (ASE)를 연결한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL 및 프로젝트 설정 및 데이터 매핑 옵션, SAP, 적응형 Server Enterprise (ASE) 데이터베이스 개체를 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL database 개체입니다.  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
-ASE에서 개체 정의 가져와서, 변환한 유사한 데이터베이스 개체 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체 및 SSMA 메타 데이터에이 정보를 로드 합니다. 인스턴스로 정보를 로드 하지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL입니다. 사용 하 여 개체 및 해당 속성을 보려면 다음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 메타 데이터 탐색기입니다.
+ASE에서 개체 정의 가져와서, 변환한 유사한 데이터베이스 개체 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체 및 SSMA 메타 데이터에이 정보를 로드 합니다. 인스턴스로 정보를 로드 하지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL입니다. 사용 하 여 개체 및 해당 속성을 보려면 다음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL 메타 데이터 탐색기입니다.
   
 SSMA를 변환 하는 동안 출력 메시지를 출력 창 및 오류 메시지를 인쇄 합니다 **오류 목록** 창입니다. 출력 및 오류 정보를 사용 하 여 ASE 데이터베이스 또는 원하는 변환 결과 얻으려면 변환 프로세스를 수정 해야 하는지 여부를 결정 합니다.  
   
@@ -127,7 +127,7 @@ ASE 데이터베이스 개체를 변환 하려면 먼저 변환 하려는 개체
   
 -   SAP ASE 개체를 제거 하거나 수정 하는 문제가 있는 코드를 변경할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [SAP ASE에 연결 &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)합니다.  
   
--   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL 메타 데이터 탐색기 및 Sybase 메타 데이터 탐색기, 개체를 로드 하기 전에 항목 옆의 확인란의 선택을 취소 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 및 SAP ASE에서 데이터를 마이그레이션.  
+-   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL 메타 데이터 탐색기 및 Sybase 메타 데이터 탐색기, 개체를 로드 하기 전에 항목 옆의 확인란의 선택을 취소 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL 및 SAP ASE에서 데이터를 마이그레이션.  
   
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계 [SQL Server로 변환 된 데이터베이스 개체를 로드 / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)합니다.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
@@ -14,12 +13,12 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc33caf1e45d85abdffbeb295f7d874b6bf2aea5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5ce387856b47c92947a6b779b2cbc9d82e09e67
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269385"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393091"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
   리소스 풀은 관리할 수 있는 물리적 리소스의 하위 집합을 나타냅니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 기본 리소스 풀의 리소스에 바인딩되고 이 리소스를 사용합니다. 하나 이상의 메모리 최적화 테이블에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 리소스를 사용하지 않고 다른 메모리 사용자가 메모리 최적화 테이블에 필요한 메모리를 사용하지 않게 하려면 별도의 리소스 풀을 만들어 메모리 최적화 테이블이 있는 데이터베이스의 메모리 사용을 관리해야 합니다.  

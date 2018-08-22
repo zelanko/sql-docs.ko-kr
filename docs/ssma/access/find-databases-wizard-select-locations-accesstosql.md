@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979485"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393746"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 찾기 마법사 (위치 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  
   
-데이터베이스 검색 마법사를 열려면 합니다 **파일** 메뉴에서 클릭 **찾을 데이터베이스**합니다. 이 대화 상자를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [추가 및 Access 데이터베이스 파일 제거](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+데이터베이스 검색 마법사를 열려면 합니다 **파일** 메뉴에서 클릭 **찾을 데이터베이스**합니다. 이 대화 상자를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [추가 및 Access 데이터베이스 파일 제거](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>변수  
 **찾아보기**  
@@ -65,6 +65,6 @@ SSMA는 검사의 위치를 나열 합니다. 클릭할 때 합니다 **추가**
 소유자의 전체 Windows 사용자 이름을 입력 합니다. 으로 지정 될 수 있습니다 *도메인*\\*사용자*합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[Access 데이터베이스 파일 추가 및 제거](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Access 데이터베이스 파일 추가 및 제거](adding-and-removing-access-database-files-accesstosql.md)  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

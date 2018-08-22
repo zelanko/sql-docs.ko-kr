@@ -2,7 +2,7 @@
 title: Access(AccessToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/05/2018
+ms.date: 08/14/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,32 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eabb6b1364b36a84da8acd4f70fe82f962b31081
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556593"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392843"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL)의 새로운 기능
-이 항목에서는 각 릴리스에 대 한 액세스 변경 내용을 SSMA를 나열합니다.  
+이 문서에서는 SSMA 각 릴리스에 대 한 액세스 변경 내용을 나열 합니다.  
+
+## <a name="ssma-v79"></a>SSMA v7.9
+SSMA for Access v7.9 릴리스는 다음 변경 내용을 포함 되어 있습니다.
+- 품질 및 변환 메트릭을 개선 하는 대상된 수정 되었습니다.
+- 데이터 형식 매핑 및 프로젝트 기본 설정을 변경 하려면 SSMA 명령줄에서 지원 합니다.
+- 정규화 된 서버 이름을 지정 하려면 SSMA에서 Azure SQL Database 연결 대화 상자도 변경 되었습니다. SSMA의 이전 버전에서는 Azure SQL Database 접두사 프로젝트 설정 내에서 명시적으로 언급 해야 했습니다.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
+
+## <a name="ssma-v78"></a>SSMA v 7.8
+SSMA for Access v 7.8 릴리스는 다음 변경 내용을 포함 되어 있습니다.
+- 프로젝트 설정에서 강조 표시 된 변경 형식 매핑입니다.
+- 사용자가 원격 분석을 사용 하지 않도록 설정 하는 기능을 제공 합니다.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 SSMA for Access v7.7 릴리스는 다음 변경 내용을 포함 되어 있습니다.
@@ -143,8 +160,8 @@ Access 용 SSMA의 2011 년 7 월 릴리스는 다음 변경 내용을 포함 �
 ## <a name="april-2011"></a>2011 년 4 월  
 Access 용 SSMA의 2011 년 4 월 릴리스는 다음 변경 내용을 포함 되어 있습니다.  
   
--   추가 "SSMA에 대 한 액세스"를 지 원하는 설치 가능한 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali" 및 Azure SQL입니다.  
--   연결 하는 기능을 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali"로 지정 합니다.  
+-   추가 "SSMA에 대 한 액세스"를 지 원하는 설치 가능한 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" 및 Azure SQL입니다.  
+-   연결 하는 기능을 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali"로 지정 합니다.  
 -   이전 버전과 호환성에 대 한 액세스 콘솔 버전에 대 한 추가 SSMA 지원 합니다. SSMA v5.0 이전 버전에서 만든 프로젝트를 열 수 있습니다.
 -   SSMA 제품의 이전 버전을 사용 하 여 SSMA v5.0 제품 나란히 (SxS)를 설치 하는 기능을 추가 합니다.  
   
@@ -173,10 +190,10 @@ Access 용 SSMA의 2007 년 5 월 릴리스는 다음 변경 내용을 포함 �
 ## <a name="november-2006"></a>2006 년 11 월  
 Access 용 SSMA의 2006 년 11 월 릴리스는 다음 변경 내용을 포함 되어 있습니다.  
   
--   에 대 한 액세스에서 단일 데이터베이스의 마이그레이션을 단계별로 안내 하는 새 Database Migration Wizard 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
--   새 변환, 로드를 추가 하 고 Access 데이터베이스를 변환 하는 마이그레이션 명령으로 변환된 된 개체를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 한꺼번에 합니다.  
--   향상 된 쿼리 마이그레이션입니다. 변환에는 더 쿼리 뷰를 선택 하는 이제 마이그레이션을 쿼리 합니다. 자세한 내용은 [Access 데이터베이스 개체 변환](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)합니다.  
--   테이블 및 인덱스 속성을 편집 하는 기능을 추가 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **테이블** 탭 합니다.  
+-   에 대 한 액세스에서 단일 데이터베이스의 마이그레이션을 단계별로 안내 하는 새 Database Migration Wizard 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+-   새 변환, 로드를 추가 하 고 Access 데이터베이스를 변환 하는 마이그레이션 명령으로 변환된 된 개체를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한꺼번에 합니다.  
+-   향상 된 쿼리 마이그레이션입니다. 변환에는 더 쿼리 뷰를 선택 하는 이제 마이그레이션을 쿼리 합니다. 자세한 내용은 [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)합니다.  
+-   테이블 및 인덱스 속성을 편집 하는 기능을 추가 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **테이블** 탭 합니다.  
 -   새 전역 설정을 추가 합니다.  
     -   편집기 창에서 줄 번호를 표시 하도록 선택할 수 있습니다.  
     -   SSMA 중복 개체를 바꿀 것인지 묻는 메시지를 구성 하거나 항상 하지 않았거나 전혀 스키마 변환 하는 동안 중복 된 개체를 바꿀 수 있습니다.  

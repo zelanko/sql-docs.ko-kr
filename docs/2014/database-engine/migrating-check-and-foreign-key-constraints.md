@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe1353a72ac4780356835fec88ff0d05f3d74e66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 599ee919bdd158b76790c113a83c5aa94f0c9c99
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263369"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393064"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 및 FOREIGN KEY 제약 조건 마이그레이션
   CHECK 및 FOREIGN KEY 제약 조건은 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지원되지 않습니다. 이러한 제약 조건은 주로 스키마에서 논리 데이터 무결성을 강화하는 데 사용되고 응용 프로그램의 기능 수정을 유지할 때 중요할 수 있습니다.  

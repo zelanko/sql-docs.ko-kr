@@ -17,12 +17,12 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 095c9f205a98b5ac2ecd5a40ab66448ad9e21176
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dabef37d796ca1279c1444cf6ecafce6973c86b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308873"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393463"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>SQL Server Management Studio에서 서버 관리
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 충족 하도록 설계 된 풍부한 통합 관리 클라이언트는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자의 서버 관리 요구 사항입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서는 개체 탐색기를 사용하여 관리 태스크를 수행합니다. 개체 탐색기에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 계열의 서버에 연결하여 서버에 포함된 내용을 도식적으로 찾아볼 수 있습니다. 서버는 [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 인스턴스일 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "37308873"
   
 -   서버 등록  
   
--   [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssAS](../includes/ssas-md.md)], [!INCLUDE[ssRS](../includes/ssrs-md.md)] 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)]의 인스턴스에 연결합니다.  
+-   [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssAS](../includes/ssas-md.md)], [!INCLUDE[ssRS](../includes/ssrs.md)] 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)]의 인스턴스에 연결합니다.  
   
 -   서버 속성 구성  
   

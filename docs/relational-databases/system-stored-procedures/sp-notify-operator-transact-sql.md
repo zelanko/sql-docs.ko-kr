@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (Transact SQL) | Microsoft Docs
+title: sp_notify_operator (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07c05c67f0b4e199ad096d8f2a5f12951e46178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c99d4ca8eb182f8e4873acf97aec4ca5c101ce84
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261592"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392421"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,37 +53,37 @@ sp_notify_operator
   
 ## <a name="arguments"></a>인수  
  [  **@profile_name=** ] **'***profilename***'**  
- 메시지를 보내는 데 사용할 데이터베이스 메일 프로필의 이름입니다. *profilename* 은 **nvarchar (128)** 합니다. 경우 *profilename* 를 지정 하지 않으면 기본 데이터베이스 메일 프로필이 사용 됩니다.  
+ 메시지를 보내는 데 사용할 데이터베이스 메일 프로필의 이름입니다. *profilename* 됩니다 **nvarchar (128)** 합니다. 하는 경우 *profilename* 지정 하지 않으면 기본 데이터베이스 메일 프로필이 사용 됩니다.  
   
  [ **@id=** ] *id*  
- 메시지를 받을 운영자의 식별자입니다. *id* 은 **int**, 기본값은 NULL입니다. 중 하나 *id* 또는 *이름* 지정 해야 합니다.  
+ 메시지를 받을 운영자의 식별자입니다. *id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나 *id* 하거나 *이름* 지정 해야 합니다.  
   
  [ **@name=** ] **'***name***'**  
- 메시지를 받을 운영자의 이름입니다. *이름* 은 **nvarchar (128)**, 기본값은 NULL입니다. 중 하나 *id* 또는 *이름* 지정 해야 합니다.  
+ 메시지를 받을 운영자의 이름입니다. *이름* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 중 하나 *id* 하거나 *이름* 지정 해야 합니다.  
   
-> **참고:** 메시지를 보내기 전에 운영자에 대 한 전자 메일 주소를 정의 해야 합니다.  
+> **참고:** 메시지를 받으려면 연산자에 대 한 전자 메일 주소를 정의 해야 합니다.  
   
  [ **@subject=** ] **'***subject***'**  
- 전자 메일 메시지의 제목입니다. *제목* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
+ 전자 메일 메시지의 제목입니다. *주체* 됩니다 **nvarchar(256)** 기본값은 없습니다.  
   
  [  **@body=** ] **'***메시지***'**  
- 전자 메일 메시지의 본문입니다. *메시지* 은 **nvarchar (max)** 이며 기본값은 없습니다.  
+ 전자 메일 메시지의 본문입니다. *메시지* 됩니다 **nvarchar (max)** 기본값은 없습니다.  
   
  [  **@file_attachments=** ] **'***첨부***'**  
- 전자 메일 메시지에 첨부할 파일의 이름입니다. *첨부 파일* 은 **nvarchar (512)**, 기본값은 없습니다.  
+ 전자 메일 메시지에 첨부할 파일의 이름입니다. *첨부 파일* 됩니다 **nvarchar(512)**, 기본값은 없습니다.  
   
  [ **@mail_database=** ] **'***mail_host_database***'**  
- 메일 호스트 데이터베이스의 이름을 지정합니다. *mail_host_database* 은 **nvarchar (128)** 합니다. 없는 경우 *mail_host_database* 지정는 **msdb** 데이터베이스는 기본적으로 사용 됩니다.  
+ 메일 호스트 데이터베이스의 이름을 지정합니다. *mail_host_database* 됩니다 **nvarchar (128)** 합니다. 없으면 *mail_host_database* 를 지정 합니다 **msdb** 데이터베이스는 기본적으로 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  지정한 메시지를 지정된 운영자의 전자 메일 주소로 보냅니다. 운영자의 전자 메일 주소가 설정되지 않은 경우 오류를 반환합니다.  
   
  데이터베이스 메일과 메일 호스트 데이터베이스는 운영자에게 알림을 보내기 전에 구성해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -92,7 +92,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `François Ajenstat` 데이터베이스 메일 프로필을 사용하여 운영자 `AdventureWorks Administrator`에게 알림 전자 메일을 보냅니다. 전자 메일의 제목은 `Test Notification`입니다. 전자 메일 메시지에는 "This is a test of notification via e-mail."이라는 문장이 포함되어 있습니다.  
@@ -109,8 +109,8 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [SQL Server 에이전트 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>참고자료  
+ [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  

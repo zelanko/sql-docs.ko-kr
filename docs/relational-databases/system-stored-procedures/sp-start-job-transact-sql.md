@@ -1,5 +1,5 @@
 ---
-title: sp_start_job (Transact SQL) | Microsoft Docs
+title: sp_start_job (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fb415b74bf26880c1000e1f3122b5f6b86f2e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9f640f88382653b5de1c70d1d9a22a8dbacbc283
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260799"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393537"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sp_start_job
   
 ## <a name="arguments"></a>인수  
  [ **@job_name=** ] **'***job_name***'**  
- 시작할 작업의 이름입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 시작할 작업의 이름입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@job_id=** ] *job_id*  
- 시작할 작업의 ID입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
+ 시작할 작업의 ID입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
  [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@server_name=** ] **'***server_name***'**  
- 작업을 시작할 대상 서버입니다. *server_name* 은 **nvarchar (128)**, 기본값은 NULL입니다. *server_name* 작업이 현재 대상이 되는 대상 서버 중 하나 여야 합니다.  
+ 작업을 시작할 대상 서버입니다. *server_name* 은 **nvarchar (128)**, 기본값은 NULL입니다. *server_name* 작업은 현재 대상으로 하는 대상 서버 중 하나 여야 합니다.  
   
  [ **@step_name=** ] **'***step_name***'**  
- 작업 실행을 시작할 단계의 이름입니다. 로컬 로그에만 적용됩니다. *step_name* 은 **sysname**, null 기본값  
+ 작업 실행을 시작할 단계의 이름입니다. 로컬 로그에만 적용됩니다. *step_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여  
   
  [ **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -72,12 +72,12 @@ sp_start_job
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 저장된 프로시저에는 **msdb** 데이터베이스입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -86,9 +86,9 @@ sp_start_job
   
 -   **SQLAgentOperatorRole**  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 멤버 **SQLAgentUserRole** 및 **SQLAgentReaderRole** 자신이 소유한 작업에만 시작할 수 있습니다. 멤버 **SQLAgentOperatorRole** 다른 사용자가 소유 하는 포함 하 여 모든 로컬 작업을 시작할 수 있습니다. 멤버 **sysadmin** 모든 로컬 및 다중 서버 작업을 시작할 수 있습니다.  
+ 멤버인 **SQLAgentUserRole** 하 고 **SQLAgentReaderRole** 자신이 소유한 작업만 시작할 수 있습니다. 멤버인 **SQLAgentOperatorRole** 포함 하 여 다른 사용자가 소유 하는 모든 로컬 작업을 시작할 수 있습니다. 멤버인 **sysadmin** 모든 로컬 및 다중 서버 작업을 시작할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Weekly Sales Data Backup`라는 작업을 시작합니다.  
@@ -101,7 +101,7 @@ EXEC dbo.sp_start_job N'Weekly Sales Data Backup' ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   

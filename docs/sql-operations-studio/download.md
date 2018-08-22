@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cd69a0dbc2399c4b16a656d20731e4548739505
-ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.openlocfilehash: 75879a42e7f9d176e01ae9dffb4bd931154253e3
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146823"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395611"
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (preview) 다운로드 및 설치
 
@@ -98,7 +98,7 @@ ms.locfileid: "39146823"
 
    **Debian:** 
    ```bash
-   sudo apt-get install libuwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat:** 

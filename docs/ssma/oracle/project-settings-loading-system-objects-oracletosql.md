@@ -1,5 +1,5 @@
 ---
-title: 프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL) | Microsoft Docs
+title: 프로젝트 설정 (시스템 개체 로드) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,24 +13,24 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 2417a74ff590c0eacae367bc1f048ed912b82988
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: af52d18e2978f8645bce689481f68121a164c160
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777799"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393492"
 ---
-# <a name="project-settingsloading-system-objects-oracletosql"></a>프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL)
-시스템 개체를 로드 페이지는 **프로젝트 설정** 대화 상자를 사용 하면 Oracle 시스템 개체 SSMA 변환 및 로드 지정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+# <a name="project-settingsloading-system-objects-oracletosql"></a>프로젝트 설정(시스템 개체 로드)(OracleToSQL)
+시스템 개체 로드 페이지의 **프로젝트 설정** 대화 상자는 Oracle 시스템 개체 SSMA 변환 및 로드를 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
-시스템 개체를 로드에서 제공 되는 **프로젝트 설정** 및 **기본 프로젝트 설정** 대화 상자:  
+시스템 개체 로드 창에서 사용할 수는 **프로젝트 설정** 하 고 **기본 프로젝트 설정** 대화 상자:  
   
--   에 모든 SSMA 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 설정을 보거나에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 클릭 드롭다운 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **시스템 개체를 로드**합니다.  
+-   모든 SSMA 프로젝트에 대 한 설정을 지정 하는 **도구** 메뉴에서 **기본 프로젝트 설정**, 설정을 보거나 에서변경하는데필요한는마이그레이션프로젝트형식을선택**마이그레이션 대상 버전** 클릭 드롭다운 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **시스템 개체 로드**합니다.  
   
--   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 선택 **프로젝트 설정**, 클릭 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **시스템 개체를 로드**합니다.  
+-   현재 프로젝트에 대 한 설정을 지정 하는 **도구** 메뉴에서 **프로젝트 설정**, 클릭 **일반** 왼쪽된 창 맨 아래에 클릭하고**시스템 개체 로드**합니다.  
   
 ## <a name="default-settings"></a>기본 설정  
-시스템 개체를 변환 시스템 리소스를 소모 하며 시간이 걸립니다. 성능 향상을 위해 다음 목록에 표시 된 것 처럼 SSMA에서 가장 자주 사용 되는 시스템 개체를 선택 합니다.  
+시스템 개체를 변환 하는 시스템 리소스를 소모 및 시간이 걸립니다. 성능 향상을 위해 SSMA 다음 목록에 표시 된 것 처럼 가장 자주 사용 되는 시스템 개체만 선택 합니다.  
   
 -   SYS.DBMS_OUTPUT  
   
@@ -48,5 +48,5 @@ ms.locfileid: "34777799"
   
 -   SYS입니다. DBMS_SESSION  
   
-Oracle 개체 추가 시스템 개체를 참조 하는 경우에 해당 개체를 선택 해야 합니다. Oracle 데이터베이스 개체에서 참조 되는 시스템 개체를 선택 하지 않으면 SSMA 변환 오류를 보고 합니다. 시스템 개체에 없는 경우에 발생 하는 변환 오류를 수신 하는 경우이 대화 상자에서 누락 된 개체를 선택 합니다. 그런 다음 필요에 따라 변환을 반복할 수 있습니다.  
+Oracle 개체 추가 시스템 개체를 참조 하는 경우 해당 개체를 선택 해야 합니다. Oracle 데이터베이스 개체에 의해 참조 되는 시스템 개체를 선택 하지 않으면 SSMA 변환 오류를 보고 합니다. 누락 된 시스템 개체 인해 변환 오류가 발생할 경우이 대화 상자에서 누락 된 개체를 선택 합니다. 그런 다음 필요에 따라 변환을 반복할 수 있습니다.  
   

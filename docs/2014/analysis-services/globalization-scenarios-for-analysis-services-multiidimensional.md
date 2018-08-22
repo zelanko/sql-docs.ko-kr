@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 423cc509e4b7c915ae9170350090d866d66d6165
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185400"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393527"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 다차원에 대한 세계화 시나리오
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 저장 하 고 다국어 데이터 및 테이블 형식 및 다차원 데이터 모델 모두에서 메타 데이터를 조작 합니다. 데이터 저장소는 유니코드 인코딩을 사용하는 문자 집합으로 된 유니코드(UTF-16)입니다. 데이터 모델에 ANSI 데이터를 로드하는 경우 문자는 유니코드 해당 코드 포인트를 사용하여 저장됩니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "37185400"
 |[세계화 팁과 모범 사례 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|다중 언어 데이터와 관련된 문제를 방지하는 데 도움이 될 수 있는 몇 가지 디자인과 코딩 방법을 검토합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Windows 응용 프로그램에 대 한 국제화](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Windows 응용 프로그램에 대 한 국제화](/windows/desktop/Intl/international-support)   
  [Go Global 개발자 센터](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [Windows 스토어 앱 작성 로캘 기반 적응형 디자인을 사용 하 여](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# 및 XAML을 사용 하 여 유니버설 Windows 앱 개발](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  

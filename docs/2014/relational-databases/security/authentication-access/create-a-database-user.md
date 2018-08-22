@@ -26,12 +26,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299973"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392411"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
   이 항목에서는 로그인에 매핑된 데이터베이스 사용자를 만드는 방법 설명 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]합니다. 데이터베이스 사용자는 데이터베이스 연결 시의 로그인 ID입니다. 데이터베이스 사용자는 원하는 경우 로그인과 같은 이름을 사용할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인이 이미 있다고 가정합니다. 로그인을 만드는 방법에 대 한 자세한 내용은 [로그인을 만들려면](create-a-login.md)합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "37299973"
      개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
      **줄임표(...)**  
-     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(…)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하십시오.  
+     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(…)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](../../databases/value-for-extended-property-dialog-box.md)를 참조하십시오.  
   
      **Delete**  
      선택한 확장 속성을 제거합니다.  

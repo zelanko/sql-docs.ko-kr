@@ -1,6 +1,6 @@
 ---
-title: 인터넷 액세스 없이 SQL Server machine learning 구성 요소를 설치 합니다. | Microsoft 문서
-description: 오프 라인 상태 이거나 연결이 끊긴 Machine Learning R 및 Pytyon 설치 SQL Server 인스턴스에서 격리 합니다.
+title: SQL Server 기계 학습 인터넷 액세스가 없는 R 및 Python 구성 요소를 설치 합니다. | Microsoft Docs
+description: 오프 라인 상태 이거나 연결이 끊긴 Machine Learning R 및 Python 설치 SQL Server 인스턴스에서 격리 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546263"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437653"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>인터넷 액세스 없이 컴퓨터에서 R 및 Python 기능을 학습 하는 SQL Server 컴퓨터를 설치 합니다.
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server 기계 학습의 R 및 Python 인터넷 액세스 없이 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 기본적으로 설치 관리자 필수 가져오려면 Microsoft 다운로드 사이트에 연결 하 고 업데이트 된 구성 요소에 대 한 기계 학습에서 SQL Server입니다. 방화벽 제약 조건을 설치 관리자에서 이러한 사이트에 연결을 방지 하는 경우, 파일을 다운로드 하 고, 오프 라인 서버에 파일을 전송 하 고, 그런 다음 설치 프로그램을 실행 하는 인터넷에 연결 된 장치를 사용할 수 있습니다.

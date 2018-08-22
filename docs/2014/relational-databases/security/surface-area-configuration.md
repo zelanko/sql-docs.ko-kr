@@ -20,12 +20,12 @@ caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 7032966cb0fb1975b65847ac1e6e0a6c5dc43b1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ed369dbd8cd63f7d1cb9e63adf0721fcb07e612
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172194"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392805"
 ---
 # <a name="surface-area-configuration"></a>노출 영역 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새로 설치의 기본 구성에서는 많은 기능이 활성화되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 악의적인 사용자로부터 공격 대상이 될 수 있는 기능 수를 최소화하기 위해 주요 서비스와 기능만 필요에 따라 설치하고 시작합니다. 시스템 관리자는 설치 시 이러한 기본값을 변경할 수 있으며 필요에 따라 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기능을 활성화 또는 비활성화할 수 있습니다. 또한 다른 컴퓨터에서 연결하는 경우 일부 구성 요소는 프로토콜을 구성해야만 사용할 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "37172194"
   
  `sp_configure` 저장 프로시저를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 옵션을 설정할 수도 있습니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
- **의** EnableIntegratedSecurity [!INCLUDE[ssRS](../../includes/ssrs-md.md)]속성을 변경하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 속성 설정을 사용합니다. **예약 이벤트 및 보고서 배달** 속성과 **웹 서비스 및 HTTP 액세스** 속성을 변경하려면 **RSReportServer.config** 구성 파일을 편집합니다.  
+ **의** EnableIntegratedSecurity [!INCLUDE[ssRS](../../includes/ssrs.md)]속성을 변경하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 속성 설정을 사용합니다. **예약 이벤트 및 보고서 배달** 속성과 **웹 서비스 및 HTTP 액세스** 속성을 변경하려면 **RSReportServer.config** 구성 파일을 편집합니다.  
   
 ## <a name="command-prompt-options"></a>명령 프롬프트 옵션  
  **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlet을 사용하여 노출 영역 구성 정책을 호출할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 cmdlet 사용](../../database-engine/use-the-database-engine-cmdlets.md)을 참조하세요.  

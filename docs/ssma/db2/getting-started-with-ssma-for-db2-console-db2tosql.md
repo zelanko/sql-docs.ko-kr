@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9cc2c818136b808225ba62efbd2a321c33014c4
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c74c3f21508ce08e6e540dd5c4cc84531b7c744d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980465"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392372"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>DB2 콘솔 (DB2ToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 DB2 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 도 나열 여기에 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
@@ -31,7 +31,7 @@ SSMA 콘솔 응용 프로그램을 시작 하려면 다음 단계를 사용 합�
   
 1.  로 이동 **시작** 가리킨 **프로그램도**합니다.  
   
-2.  클릭 합니다  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant DB2 명령 프롬프트에 대 한** 바로 가기.  
+2.  클릭 합니다  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant DB2 명령 프롬프트에 대 한** 바로 가기.  
   
     SSMA 콘솔 사용 메뉴 표시 및 `(/? Help)`콘솔 응용 프로그램을 시작할 수 있도록 합니다.  
   

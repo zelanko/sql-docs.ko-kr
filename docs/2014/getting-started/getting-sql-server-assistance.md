@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171164"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393065"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server 지원 받기
   [!INCLUDE[msCoName](../includes/msconame-md.md)]는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "37171164"
   
  다음 방법으로 온라인 설명서에 액세스할 수 있습니다.  
   
--   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 온라인 설명서의 복사본은 인터넷을 통해 MSDN Library 및 TechNet Library에 모두 게시됩니다. 이러한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 항목에는 다른 커뮤니티 사용자들이 게시한 추가 정보 및 코드 예제와 같은 정보가 포함됩니다. MSDN library에서 볼 수 있습니다 합니다 [SQL Server 2014 온라인](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)합니다.  
+-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 온라인 설명서의 복사본은 인터넷을 통해 MSDN Library 및 TechNet Library에 모두 게시됩니다. 이러한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 항목에는 다른 커뮤니티 사용자들이 게시한 추가 정보 및 코드 예제와 같은 정보가 포함됩니다. MSDN library에서 볼 수 있습니다 합니다 [SQL Server 2014 온라인](../2014-toc/index.md)합니다.  
   
 -   도움말 라이브러리 관리자를 사용하여 로컬 컴퓨터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 설치할 수 있습니다. 자세한 내용은 [SQL Server 제품 설명서를 제거 또는 추가](../2014-toc/books-online-for-sql-server-2014.md)합니다.  
   

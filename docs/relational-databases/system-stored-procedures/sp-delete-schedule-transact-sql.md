@@ -1,5 +1,5 @@
 ---
-title: sp_delete_schedule (Transact SQL) | Microsoft Docs
+title: sp_delete_schedule (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14fd520f5447092e5f82dc786696148f3dbe3bd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a531b3673320e3c1e521e68c511e21b7976d1af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255947"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392402"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +46,28 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 ## <a name="arguments"></a>인수  
  [ **@schedule_id=** ] *schedule_id*  
- 삭제할 일정의 ID입니다. *schedule_id* 은 **int**, 기본값은 NULL입니다.  
+ 삭제할 일정의 ID입니다. *schedule_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
-> **참고:** 어느 *schedule_id* 또는 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+> **참고:** 중 하나 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@schedule_name=** ] **'***schedule_name***'**  
- 삭제할 일정의 이름입니다. *schedule_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 삭제할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 어느 *schedule_id* 또는 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+> **참고:** 중 하나 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@force_delete** =] *force_delete*  
- 일정을 작업에 연결할 경우 프로시저의 실패 여부를 지정합니다. *Force_delete* 는 bit 이며 기본값은 **0**합니다. 때 *force_delete* 은 **0**, 일정을 작업에 연결 된 경우 저장된 프로시저가 실패 합니다. 때 *force_delete* 은 **1**, 일정을 작업에 연결 되었는지 여부에 관계 없이 일정이 삭제 됩니다.  
+ 일정을 작업에 연결할 경우 프로시저의 실패 여부를 지정합니다. *Force_delete* 는 bit 이며 기본값은 **0**합니다. 때 *force_delete* 됩니다 **0**, 일정을 작업에 연결 되어 있으면 저장된 프로시저가 실패 합니다. 때 *force_delete* 됩니다 **1**, 작업에 일정 연결 되었는지 여부에 관계 없이 일정이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- 기본적으로 작업에 연결된 일정은 삭제할 수 없습니다. 작업에 연결 하는 일정을 삭제 하려면 값을 지정 **1** 에 대 한 *force_delete*합니다. 일정을 삭제해도 현재 실행 중인 작업은 중지되지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ 기본적으로 작업에 연결된 일정은 삭제할 수 없습니다. 작업에 연결 된 일정을 삭제 하려면 값을 지정 **1** 에 대 한 *force_delete*합니다. 일정을 삭제해도 현재 실행 중인 작업은 중지되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -78,9 +78,9 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  작업 소유자는 일정 소유자가 아니어도 작업을 일정에 연결하고 일정에서 작업을 분리할 수 있습니다. 하지만 호출자가 일정 소유자가 아닌 한 분리를 통해 일정에 남은 작업이 없도록 일정을 삭제할 수 없습니다.  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 구성원만는 **sysadmin** 역할 다른 사용자가 소유 하는 작업 일정을 삭제할 수 있습니다.  
+ 멤버는 **sysadmin** 역할에는 다른 사용자가 소유한 작업 일정을 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -109,8 +109,8 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [작업 구현](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+## <a name="see-also"></a>관련 항목  
+ [작업 구현](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

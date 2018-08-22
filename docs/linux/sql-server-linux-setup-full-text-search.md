@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085845"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393712"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-다음 단계에서는 설치 [SQL Server 전체 텍스트 검색](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-서버-fts**) linux. 전체 텍스트 검색을 사용 하면 SQL Server 테이블의 문자 기반 데이터에 대 한 전체 텍스트 쿼리를 실행할 수 있습니다. 이 릴리스의 알려진된 문제에 대 한 참조를 [릴리스](sql-server-linux-release-notes.md)합니다.
+다음 단계에서는 설치 [SQL Server 전체 텍스트 검색](../relational-databases/search/full-text-search.md) (**mssql-서버-fts**) linux. 전체 텍스트 검색을 사용 하면 SQL Server 테이블의 문자 기반 데이터에 대 한 전체 텍스트 쿼리를 실행할 수 있습니다. 이 릴리스의 알려진된 문제에 대 한 참조를 [릴리스](sql-server-linux-release-notes.md)합니다.
 
 > [!NOTE]
 > 먼저 SQL Server 전체 텍스트 검색을 설치 하기 전에 [SQL Server 설치](sql-server-linux-setup.md#platforms)합니다. 키 및 설치할 때 사용 하는 리포지토리를 구성 합니다 **mssql-서버-fts** 패키지 있습니다.

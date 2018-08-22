@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
@@ -14,18 +13,18 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 78aea34abfc3621ea7ebbd50a3236c81308f128b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dad3747b1a597603f071ebdcea4d7f46b478015
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152564"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393049"
 ---
 # <a name="application-level-partitioning"></a>응용 프로그램 수준 분할
   이 샘플은 날짜 지정 전 또는 후에 내려진 명령에 따라 메모리 최적화 테이블 또는 디스크 기반 테이블에 데이터가 저장되는 응용 프로그램 수준의 파티션을 보여줍니다. 
             *hotDate* 이후의 모든 명령은 메모리 최적화 테이블에 저장되며, *hotDate* 보다 앞선 날짜의 모든 명령은 디스크 기반 테이블에 저장됩니다. 동시 트랜잭션이 많이 있는 극단적인 OLTP 작업을 가정합니다. 여러 개의 동시 트랜잭션이 *hotDate*를 변경하려고 하는 경우에도 이 비즈니스 규칙(메모리 최적화 테이블에 있는 최근 주문)을 적용해야 합니다.  
   
- 이 예제에서는 디스크 기반 테이블에 [분할된 테이블](https://msdn.microsoft.com/library/ms190787.aspx) 을 사용하지 않지만 제 3의 테이블을 사용하여 두 테이블 간의 명시적 분할 지점을 추적합니다. 분할 지점을 사용하여 새로 삽입된 데이터가 날짜에 따라 적절한 테이블에 항상 삽입되도록 할 수 있으며 데이터를 찾을 위치를 결정할 수도 있습니다. 늦게 도착하는 데이터가 여전히 적절한 테이블로 이동합니다.  
+ 이 예제에서는 디스크 기반 테이블에 [분할된 테이블](../partitions/partitioned-tables-and-indexes.md) 을 사용하지 않지만 제 3의 테이블을 사용하여 두 테이블 간의 명시적 분할 지점을 추적합니다. 분할 지점을 사용하여 새로 삽입된 데이터가 날짜에 따라 적절한 테이블에 항상 삽입되도록 할 수 있으며 데이터를 찾을 위치를 결정할 수도 있습니다. 늦게 도착하는 데이터가 여전히 적절한 테이블로 이동합니다.  
   
  분할된 테이블을 사용하는 관련 샘플은 [Application Pattern for Partitioning Memory-Optimized Tables](memory-optimized-tables.md)을(를) 참조하십시오.  
   

@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
@@ -14,12 +13,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7f86328234ab251c50ab4ac68b02bd039b653da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157074"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393513"
 ---
 # <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
   또한 (효율적인 데이터 액세스)에 대 한 메모리 최적화 테이블 및 고유 하 게 컴파일된 저장된 프로시저 (에 대 한 효율적인 쿼리 처리 및 비즈니스 논리 실행) [!INCLUDE[hek_2](../includes/hek-2-md.md)] 세 가지 개체가 도입 되었습니다: 메모리 액세스에 최적화 된 테이블 형식입니다. 메모리 최적화 테이블 형식을 사용하여 만든 테이블 변수가 메모리 최적화 테이블 변수입니다.  

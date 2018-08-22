@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
-ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
+ms.openlocfilehash: 673f1bffeea908da211cd5ff76bad9d96dabcded
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39164214"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393507"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 특정 리소스 소비 통계 작업 개체 수준에서 뿐만 아니라 SQL Server 프로세스를 관리 하는 작업 개체의 구성을 설명 하는 단일 행을 반환 합니다. 작업 개체에서 SQL Server를 실행 하지 않는 경우 빈 집합을 반환 합니다. 
 
-작업 개체는 운영 체제 수준에서 CPU, 메모리 및 IO 리소스 관리를 구현 하는 Windows 구문. 작업 개체에 대 한 자세한 내용은 참조 하세요. [작업 개체](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)합니다. 
+작업 개체는 운영 체제 수준에서 CPU, 메모리 및 IO 리소스 관리를 구현 하는 Windows 구문. 작업 개체에 대 한 자세한 내용은 참조 하세요. [작업 개체](/windows/desktop/ProcThread/job-objects)합니다. 
   
 |열|데이터 형식|Description|  
 |-------------|---------------|-----------------|  

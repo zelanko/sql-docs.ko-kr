@@ -5,7 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df1bd5838df40add7438ef8a9020ce2a753f983f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8d3e206f913d13fe4ff030bec1a6024f8d4b339b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425712"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393057"
 ---
 # <a name="using-database-mirroring"></a>데이터베이스 미러링 사용
     
@@ -35,11 +35,11 @@ ms.locfileid: "37425712"
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 데이터베이스 미러링은 데이터베이스 가용성과 데이터 중복을 높이는 솔루션입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 개발자가 코드를 작성 하거나 데이터베이스에 대해 구성 되 면 다른 조치를 취할을 하지 않아도 되므로 데이터베이스 미러링에 대 한 암시적으로 지원을 제공 합니다.  
   
- 데이터베이스 단위로 구현 되는 데이터베이스 미러링은 복사본을 유지 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로덕션 서버의 데이터베이스에 대기 합니다. 이 서버는 데이터베이스 미러링 세션의 구성 및 상태에 따라 핫 대기 서버나 웜 대기 서버가 됩니다. 핫 대기 서버는 커밋된 트랜잭션이 손실되지 않는 신속한 장애 조치(Failover)를 지원하며, 웜 대기 서버는 강제 서비스(데이터 손실 가능성이 있음)를 지원합니다.  
+ 데이터베이스 단위로 구현되는 데이터베이스 미러링은 대기 서버에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로덕션 데이터베이스의 복사본을 보관합니다. 이 서버는 데이터베이스 미러링 세션의 구성 및 상태에 따라 핫 대기 서버나 웜 대기 서버가 됩니다. 핫 대기 서버는 커밋된 트랜잭션이 손실되지 않는 신속한 장애 조치(Failover)를 지원하며, 웜 대기 서버는 강제 서비스(데이터 손실 가능성이 있음)를 지원합니다.  
   
- 프로덕션 데이터베이스 라고 합니다 *주 데이터베이스*, 대기 복사본 이라고 합니다 *미러 데이터베이스*합니다. 주 데이터베이스와 미러 데이터베이스의 별도 인스턴스에 있어야 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (서버 인스턴스) 및 가능한 경우 별도 컴퓨터에서 달라 야 합니다.  
+ 프로덕션 데이터베이스는 *주 데이터베이스*, 대기 복사본은 *미러 데이터베이스*라고 부릅니다. 주 데이터베이스 및 미러 데이터베이스는 별도의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 상주해야 하며 가능한 한 상주하는 컴퓨터도 달라야 합니다.  
   
- 호출 프로덕션 서버 인스턴스는를 *주 서버*, 호출 대기 서버 인스턴스와 통신 합니다 *미러 서버*합니다. 주 서버와 미러 서버에서 데이터베이스 미러링 파트너로 작동 *세션*합니다. 주 서버가 실패 하는 경우 미러 서버 라는 프로세스를 통해 주 데이터베이스에 해당 데이터베이스를 만들 수 *장애 조치*합니다. 예를 들어 서로 파트너 관계인 Partner_A와 Partner_B 서버가 있는데, 처음에 주 데이터베이스는 주 서버인 Partner_A에 상주하고 미러 데이터베이스는 미러 서버인 Partner_B에 상주한다고 가정합니다. Partner_A가 오프라인이 된 경우 Partner_B에 있는 데이터베이스가 장애 조치(Failover)되어 현재 주 데이터베이스가 될 수 있습니다. Partner_A가 미러링 세션에 다시 참여하면 Partner_A는 미러 서버가 되고 그 데이터베이스가 미러 데이터베이스가 됩니다.  
+ *주 서버*라고 하는 프로덕션 서버 인스턴스는 *미러 서버*라고 하는 대기 서버 인스턴스와 통신합니다. 주 서버 및 미러 서버는 데이터베이스 미러링 *세션* 내에서 서로 파트너 역할을 합니다. 주 서버가 실패하면 미러 서버가 *장애 조치(failover)* 라는 프로세스를 통해 자신의 데이터베이스를 주 데이터베이스로 만듭니다. 예를 들어 서로 파트너 관계인 Partner_A와 Partner_B 서버가 있는데, 처음에 주 데이터베이스는 주 서버인 Partner_A에 상주하고 미러 데이터베이스는 미러 서버인 Partner_B에 상주한다고 가정합니다. Partner_A가 오프라인이 된 경우 Partner_B에 있는 데이터베이스가 장애 조치(Failover)되어 현재 주 데이터베이스가 될 수 있습니다. Partner_A가 미러링 세션에 다시 참여하면 Partner_A는 미러 서버가 되고 그 데이터베이스가 미러 데이터베이스가 됩니다.  
   
  대체 데이터베이스 미러링 구성은 성능 및 데이터 안전 수준이 다르며 지원되는 장애 조치(Failover) 형태도 다릅니다. 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   

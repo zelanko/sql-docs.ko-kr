@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980645"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394164"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase 콘솔 (SybaseToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 콘솔 응용 프로그램 Sybase 용 SSMA 시작 절차를 설명 합니다. 또한 여기에 나열 된 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
@@ -52,9 +52,9 @@ SSMA 콘솔 응용 프로그램을 시작 하려면 다음 단계를 사용 합�
   
 추가 기능:  
   
-1.  [암호를 지정](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) 및 내보내기/가져오기 하에 다른 창 컴퓨터.  
+1.  [암호를 지정](managing-passwords-sybasetosql.md) 및 내보내기/가져오기 하에 다른 창 컴퓨터.  
   
-2.  [보고서를 생성할](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e) 자세한 xml을 보려면 평가/변환 및 데이터 마이그레이션에 대 한 보고서를 출력 합니다. 또한 새로 고침 및 동기화 명령에 대 한 자세한 오류 보고서를 생성할 수 있습니다.  
+2.  [보고서를 생성할](generating-reports-sybasetosql.md) 자세한 xml을 보려면 평가/변환 및 데이터 마이그레이션에 대 한 보고서를 출력 합니다. 또한 새로 고침 및 동기화 명령에 대 한 자세한 오류 보고서를 생성할 수 있습니다.  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 콘솔 출력 규칙  
 SSMA 스크립트 명령 및 옵션을 실행할 때 콘솔 프로그램 콘솔에서 사용자에 게 결과 및 메시지 (정보, 오류 등)을 표시 또는 필요한 경우 xml 출력 파일에 리디렉션합니다. 출력에는 메시지의 각 유형에 고유한 색으로 표시 됩니다. 예를 들어 흰색 텍스트 메시지가 나타냅니다 스크립트 파일 명령을입니다. 녹색에서 하나는 사용자 입력에 대 한 프롬프트 및 등을 나타냅니다.  

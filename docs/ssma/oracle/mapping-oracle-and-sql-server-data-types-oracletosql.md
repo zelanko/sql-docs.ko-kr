@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979326"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395394"
 ---
-# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>매핑 Oracle 및 SQL Server 데이터 형식 (OracleToSQL)
-Oracle 데이터베이스 형식에서 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 형식입니다. Oracle 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체에 Oracle에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기본 데이터 형식 매핑을 그대로 사용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
+# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Oracle 및 SQL Server 데이터 형식 매핑(OracleToSQL)
+Oracle 데이터베이스 형식에서 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식입니다. Oracle 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 Oracle에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기본 데이터 형식 매핑을 그대로 사용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
 SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록을 참조 하세요 [프로젝트 설정 &#40;형식 매핑&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)합니다.  
@@ -62,11 +62,11 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
         이렇게 하면 동일한 데이터 형식의 작고 큰 값 데이터 매핑을 사용자 지정할 수 있습니다.  
   
-    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
+    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
   
         일부 유형의 대상 데이터 형식의 길이 해야합니다. 필요한 경우 새 데이터 길이 입력 합니다 **바꿉니다** 상자입니다.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  데이터 형식 매핑을 수정 하려면 다음을 수행 합니다.  
   
@@ -78,9 +78,9 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
         이렇게 하면 동일한 데이터 형식의 작고 큰 값 데이터 매핑을 사용자 지정할 수 있습니다.  
   
-    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
+    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
   
-        일부 유형의 대상 데이터 형식의 길이 해야합니다. 필요한 경우 새 데이터 길이 입력 합니다 **바꿉니다** 상자에서 다음 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        일부 유형의 대상 데이터 형식의 길이 해야합니다. 필요한 경우 새 데이터 길이 입력 합니다 **바꿉니다** 상자에서 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  사용자 지정 데이터 형식 매핑을 제거 하려면 다음을 수행 합니다.  
   
@@ -91,7 +91,7 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
         상속 된 매핑을 제거할 수 없습니다. 그러나 상속된 매핑 사용자 지정 매핑을 특정 개체 또는 개체 범주에 의해 재정의 됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는가 중 하나로 [평가 보고서를 만드는](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) 또는 [SQL Server 구문에 Oracle 데이터베이스 개체를 변환](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272)합니다. 평가 보고서를 만드는 경우 Oracle 개체를 평가 하는 동안 자동으로 변환 됩니다.  
+마이그레이션 프로세스의 다음 단계는가 중 하나로 [평가 보고서를 만드는](assessing-oracle-schemas-for-conversion-oracletosql.md) 또는 [SQL Server 구문에 Oracle 데이터베이스 개체를 변환](converting-oracle-schemas-oracletosql.md)합니다. 평가 보고서를 만드는 경우 Oracle 개체를 평가 하는 동안 자동으로 변환 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

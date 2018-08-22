@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985745"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393063"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>프로젝트 설정 (형식 매핑) (AccessToSQL)
-형식 매핑 프로젝트 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 [매핑 원본 및 대상 데이터 형식](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)합니다.  
+형식 매핑 프로젝트 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 [매핑 원본 및 대상 데이터 형식](mapping-source-and-target-data-types-accesstosql.md)합니다.  
   
 형식 매핑에서 사용할 수는 **프로젝트 설정** 하 고 **기본 프로젝트 설정** 대화 상자:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "38985745"
 매핑할 Access 데이터 형식입니다.  
   
 **대상 유형**  
-대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 지정 된 Access 데이터 형식에 대 한 SQL Azure 데이터 형식입니다.  
+대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 지정 된 Access 데이터 형식에 대 한 SQL Azure 데이터 형식입니다.  
   
 다음 표에서 원본 및 대상 데이터 형식 간의 기본 매핑을 보여 줍니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "38985745"
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**long**|**int**|  
+|**Long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**메모** -Access 97|**varchar(max)**|  
@@ -80,6 +80,6 @@ ms.locfileid: "38985745"
 모든 데이터 형식 매핑을 SSMA 기본값으로 다시 설정 하려면 클릭 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[원본 및 대상 데이터 형식 매핑](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[원본 및 대상 데이터 형식 매핑](mapping-source-and-target-data-types-accesstosql.md)  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -1,7 +1,7 @@
 ---
 title: sp_rxPredict | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -17,26 +17,26 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_rxPredict procedure
-author: jeannt
-ms.author: jeannt
-manager: craigg
-ms.openlocfilehash: ede8232f36f42cc2b9758bdee8f50457ebd58dfe
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8f46403afef0e2f6cf967561a8fd24ec6409fe93
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036051"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40434863"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-저장 된 모델을 기반으로 예측 된 값을 생성 합니다.
+SQL Server 데이터베이스에 이진 형식으로 저장 된 모델을 학습 하는 컴퓨터에 따라 지정된 된 입력에 대 한 예측된 값을 생성 합니다.
 
-거의 실시간에 기계 학습 모델에서 점수 매기기를 제공 합니다. `sp_rxPredict` 저장 프로시저에 대 한 래퍼를 제공 합니다 `rxPredict` 함수 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 하 고 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). 이 C + 기록 되 고 작업을 점수 매기기에 맞게 최적화 됩니다. Python 기계 학습 모델 또는 둘 다 R을 지원 합니다.
+R 및 Python 기계 학습 모델에서 거의 실시간으로 점수 매기기를 제공 합니다. `sp_rxPredict` 저장 프로시저에 대 한 래퍼를 제공 합니다 `rxPredict` R 함수 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 및 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), 및 [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) 에서Python함수[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 하 고 [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)합니다. 이 C + 기록 되 고 작업을 점수 매기기에 맞게 최적화 됩니다.
 
-**이 항목에 적용 됩니다**:  
+**이 문서에 적용 됩니다**:  
 - SQL Server 2017  
-- Microsoft R Server로 업그레이드를 사용 하 여 SQL Server 2016 R Services  
+- SQL Server 2016 R Services [R 구성 요소를 업그레이드 합니다.](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
 
 ## <a name="syntax"></a>구문
 
@@ -69,11 +69,10 @@ sp_rxPredict  ( @model, @input )
 사용자가 필요한 `EXECUTE` 데이터베이스에 대 한 권한이 있습니다.
 
 ### <a name="supported-platforms"></a>지원 플랫폼
-
-다음 버전 중 하나가 필요합니다.  
-- SQL Server 2017 Machine Learning Services (Microsoft R Server 9.1.0 포함)  
-- Microsoft Machine Learning Server  
-- Microsoft R Server 9.1.0에 R Services 인스턴스 업그레이드를 사용 하 여 SQL Server R Services 2016 이상  
+ 
+- SQL Server 2017 Machine Learning Services (R Server 9.2 포함)  
+- SQL Server 2017 Machine Learning Server (독립 실행형) 
+- R Server 9.1.0에 R Services 인스턴스 업그레이드를 사용 하 여 SQL Server R Services 2016 이상  
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
@@ -101,5 +100,5 @@ EXEC sp_rxPredict @model = @model,
 
 `sp_rxPredict` 다음.NET 열 유형만 지원: double, float, short, ushort, long, ulong 및 문자열입니다. 실시간 점수 매기기에 사용 하기 전에 입력된 데이터에서 지원 되지 않는 형식 필터링 해야 합니다. 
 
-  해당 SQL 형식에 대 한 자세한 내용은 [SQL-CLR 형식 매핑](https://msdn.microsoft.com/library/bb386947.aspx) 하거나 [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.
+  해당 SQL 형식에 대 한 자세한 내용은 [SQL-CLR 형식 매핑](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) 하거나 [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.
 

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ef00c8493ab700976e1ede1b6d6631b6d2fe8da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312333"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393068"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
     
@@ -37,7 +36,7 @@ ms.locfileid: "37312333"
   
 -   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
   
--    [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
+-   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
 -   
             [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
@@ -757,8 +756,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
+|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
   
  보시다시피 대부분의 공간이 미리 만들어진 데이터 및 델타 파일에서 사용됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 논리적 프로세서당 하나의 (데이터, 델타) 파일 쌍을 미리 만들었습니다. 또한 데이터 파일의 크기는 128MB로, 델타 파일의 크기는 8MB로 미리 지정되므로 이러한 파일에 더욱 효율적으로 데이터를 삽입할 수 있습니다.  
   
@@ -803,8 +802,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
+|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
   
  검사점이 닫힐 때 사용할 준비가 된 미리 만들어진 파일 쌍이 16개 있습니다.  
   

@@ -1,11 +1,11 @@
 ---
-title: 확장된 이벤트 로그의 진단 정보에 액세스 | Microsoft Docs
+title: 확장 이벤트 로그의 진단 정보 액세스 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
@@ -13,12 +13,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eab7a558054b423e3a18e54ad94bc91060082aad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: beb758f6edb2e34dad108f89c7cd226c66353436
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420912"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393094"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 데이터 액세스 추적([데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=125805))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 응용 프로그램 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  

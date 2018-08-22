@@ -1,11 +1,11 @@
 ---
-title: 메타 데이터 검색 | Microsoft Docs
+title: 메타 데이터 검색 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bb0c1c7b0ff489e5addff5bb84649984b97f527
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2d26329d11885061b01e6147f145ce42a2a8855b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416262"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393274"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
   메타 데이터 검색 개선 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 허용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 응용 프로그램 쿼리 실행에서 반환 된 해당 열 또는 매개 변수 메타 데이터는 동일 하거나 메타 데이터와 호환 되도록 하기 전에 지정 된 형식 쿼리를 실행 합니다. 쿼리 실행 후 반환된 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 호환되지 않는 경우 오류가 발생합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "37416262"
   
 -   Icommandwithparameters:: Getparameterinfo (참조 [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) 자세한)  
   
- 살펴보면 성능 향상 IBCPSession::BCPSetBulkMode를 사용 하 여 메타 데이터 형식을 지정 하는 경우  
+ 또한 IBCPSession::BCPSetBulkMode를 사용하여 메타데이터 형식을 지정하는 경우 향상된 성능을 경험할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 다음과 같은 두 개의 저장 프로시저가 추가되어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client에서 메타데이터 검색 기능이 향상되었습니다.  
   

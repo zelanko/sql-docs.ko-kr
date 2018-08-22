@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a6b3b37f1265601ab63f1db370a3aa95a3420d2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 350ad710f2ff9e00d82be7fe565521becf522eb8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428852"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392630"
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "37428852"
 ### <a name="use-time-as-a-distinct-data-type"></a>고유 데이터 형식으로 Time 사용  
  OLE DB에는 정밀도가 1초인 시간(DBTYPE_DBTIME)만 포함하는 데이터 형식이 이미 있습니다. ODBC에서 이에 해당하는 형식은 SQL_TYPE_TIME(ODBC 2.0 응용 프로그램의 경우 SQL_TIME)입니다.  
   
- 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 100 나노초까지 정확한 time 데이터 형식은 소수 자릿수 초입니다. 형식을 사용 하려면이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) 및 SQL_SS_TIME2 (ODBC). 소수 자릿수 초가 없는 시간을 사용하도록 작성된 기존 응용 프로그램은 time(0) 열을 사용할 수 있습니다. 응용 프로그램에서 메타데이터로 반환된 형식을 사용하지 않는 한 기존 OLE DB DBTYPE_TIME 및 ODBC SQL_TYPE_TIME 형식과 해당 구조체는 올바로 작동해야 합니다.  
+ 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] time 데이터 형식은 100나노초까지 정확한 소수 자릿수 초를 사용합니다. 형식을 사용 하려면이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) 및 SQL_SS_TIME2 (ODBC). 소수 자릿수 초가 없는 시간을 사용하도록 작성된 기존 응용 프로그램은 time(0) 열을 사용할 수 있습니다. 응용 프로그램에서 메타데이터로 반환된 형식을 사용하지 않는 한 기존 OLE DB DBTYPE_TIME 및 ODBC SQL_TYPE_TIME 형식과 해당 구조체는 올바로 작동해야 합니다.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>확장된 초 소수 부분 자릿수의 고유 데이터 형식으로 Time 사용  
  프로세스 제어 및 제조 응용 프로그램과 같은 일부 응용 프로그램에는 정밀도가 최대 100나노초인 시간 데이터를 처리하는 기능이 필요합니다. 이를 위해 새 DBTYPE_DBTIME2(OLE DB) 및 SQL_SS_TIME2(ODBC) 형식이 추가되었습니다.  
