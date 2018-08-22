@@ -25,12 +25,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f54e23ee744f34ce3da70e1fd2a469d70b9063a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2b2ca3145c4152db92be0e55a4484c09727eaadb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983935"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396399"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL)에 연결
 Access 데이터베이스를 SQL Azure 마이그레이션하려면 SQL Azure 대상 인스턴스에 연결 해야 합니다. 에 연결 하면 SSMA는 SQL Azure 인스턴스에서 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 인스턴스의 SQL Azure 대 한 연결 해도 암호를 저장 하지 않는 정보를 저장 합니다.  
@@ -42,14 +42,14 @@ SQL Azure 인스턴스에 대 한 메타 데이터를 자동으로 동기화 되
 ## <a name="required-sql-azure-permissions"></a>SQL Azure는 데 필요한 사용 권한  
 SQL Azure 연결 하는 데 사용 되는 계정에는 작업을 수행 하는 계정에 따라 다른 권한이 필요 합니다.  
   
--   Access 개체를 변환할 [!INCLUDE[tsql](../../includes/tsql_md.md)] 구문, SQL Azure 메타 데이터를 업데이트 하거나 저장 하는 변환 된 구문을 스크립트, SQL Azure 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
+-   Access 개체를 변환할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문, SQL Azure 메타 데이터를 업데이트 하거나 저장 하는 변환 된 구문을 스크립트, SQL Azure 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
   
 -   SQL Azure 데이터베이스 개체를 로드 하려면 최소 권한 요구 사항인 자격이 합니다 **db_owner** 대상 데이터베이스의 데이터베이스 역할.  
   
 ## <a name="establishing-a-sql-azure-connection"></a>설정 된 SQL Azure 연결  
 SQL Azure 구문에 Access 데이터베이스 개체를 변환 하기 전에 Access 데이터베이스 또는 데이터베이스를 마이그레이션할 하려는 SQL Azure 인스턴스에 대 한 연결을 설정 해야 합니다.  
   
-연결 속성을 정의할 때에 데이터베이스 개체 및 데이터 마이그레이션할 수 지정 합니다. SQL Azure 연결한 후 액세스 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다. 자세한 내용은 참조 하세요. [Access 데이터베이스를 SQL Server 스키마에 매핑](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+연결 속성을 정의할 때에 데이터베이스 개체 및 데이터 마이그레이션할 수 지정 합니다. SQL Azure 연결한 후 액세스 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다. 자세한 내용은 참조 하세요. [Access 데이터베이스를 SQL Server 스키마에 매핑](mapping-source-and-target-databases-accesstosql.md)  
   
 > [!IMPORTANT]  
 > SQL Azure 연결 하려고 하기 전에 SQL Azure 인스턴스에 실행 되 고 연결을 허용할 수 있는지 확인 합니다.  
@@ -105,14 +105,14 @@ SQL Azure 다시 연결 하는 절차에 대 한 연결을 설정 하는 절차�
 ## <a name="next-step"></a>다음 단계  
 다음 단계는 마이그레이션 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   Access 스키마 및 SQL Azure 데이터베이스 및 스키마 간의 매핑을 사용자 지정을 참조 하세요 [매핑 Access 데이터베이스를 SQL Server 스키마로](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)합니다.  
+-   Access 스키마 및 SQL Azure 데이터베이스 및 스키마 간의 매핑을 사용자 지정을 참조 하세요 [매핑 Access 데이터베이스를 SQL Server 스키마로](mapping-source-and-target-databases-accesstosql.md)합니다.  
   
--   프로젝트에 대 한 구성 옵션을 사용자 지정을 참조 하세요 [프로젝트 옵션 설정](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)합니다.  
+-   프로젝트에 대 한 구성 옵션을 사용자 지정을 참조 하세요 [프로젝트 옵션 설정](setting-conversion-and-migration-options-accesstosql.md)합니다.  
   
--   원본 및 대상 데이터 형식 매핑 사용자 지정을 참조 하세요 [매핑 소스 및 대상 데이터 형식](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)합니다.  
+-   원본 및 대상 데이터 형식 매핑 사용자 지정을 참조 하세요 [매핑 소스 및 대상 데이터 형식](mapping-source-and-target-data-types-accesstosql.md)합니다.  
   
--   이러한 작업을 수행 해야 하는 경우에 SQL Azure 개체 정의에 액세스 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 하세요. [Access 데이터베이스 변환](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   이러한 작업을 수행 해야 하는 경우에 SQL Azure 개체 정의에 액세스 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 하세요. [Access 데이터베이스 변환](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>관련 항목  
-[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

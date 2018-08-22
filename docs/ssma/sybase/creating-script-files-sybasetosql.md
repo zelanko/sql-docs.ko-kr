@@ -21,14 +21,14 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979895"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396203"
 ---
-# <a name="creating-script-files-sybasetosql"></a>스크립트 파일 만들기 (SybaseToSQL)
+# <a name="creating-script-files-sybasetosql"></a>스크립트 파일 만들기(SybaseToSQL)
 첫 번째 스크립트 파일을 만들 때 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일에 필요한 경우 단계입니다.  
   
 스크립트 파일의 세 가지 섹션으로 보도 나눌 수 있습니다. 합니다.  
@@ -357,7 +357,7 @@ ms.locfileid: "38979895"
   
 예를 들어 Sybase 데이터베이스의 특정 테이블을 일반적인 데이터 마이그레이션을 수행 하는 계층 구조를 따릅니다: 데이터베이스-&gt;스키마-&gt;테이블입니다.  
   
-스크립트 파일의 모든 명령이 성공적으로 실행 되 면 SSMA 콘솔 응용 프로그램을 종료 하 고 사용자에 게 컨트롤을 반환 합니다. 스크립트 파일의 내용이 자세한 또는 작은 정적 변수 정보를 사용 하 여 포함 된 [변수 값 파일](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc) 또는 변수 값에 대 한 스크립트 파일 내에서 별도 섹션에서.  
+스크립트 파일의 모든 명령이 성공적으로 실행 되 면 SSMA 콘솔 응용 프로그램을 종료 하 고 사용자에 게 컨트롤을 반환 합니다. 스크립트 파일의 내용이 자세한 또는 작은 정적 변수 정보를 사용 하 여 포함 된 [변수 값 파일](creating-variable-value-files-sybasetosql.md) 또는 변수 값에 대 한 스크립트 파일 내에서 별도 섹션에서.  
   
 **예:**  
   

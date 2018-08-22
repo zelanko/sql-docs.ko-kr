@@ -25,18 +25,18 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d2d804734432cfd396acb017d6358310debeec1f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dc8649b028ba925e215d21ca9c7f4f52a8e69ec5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979425"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396188"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>(AccessToSQL) 변환을 위해 Access 데이터베이스 개체를 평가
-개체를 로드 하 고 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure 결정 얼마나 또는 마이그레이션의 성공 하면 되며 변환 시간 걸릴 수 있습니다. SSMA를 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 구문과 시간 마이그레이션을 수행 하는 것에 대 한 예상치입니다. 또한 SSMA 변환 실패를 야기 하는 특정 문제를 볼 수 있습니다.  
+개체를 로드 하 고 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 결정 얼마나 또는 마이그레이션의 성공 하면 되며 변환 시간 걸릴 수 있습니다. SSMA를 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문과 시간 마이그레이션을 수행 하는 것에 대 한 예상치입니다. 또한 SSMA 변환 실패를 야기 하는 특정 문제를 볼 수 있습니다.  
   
 ## <a name="creating-assessment-reports"></a>평가 보고서 만들기  
-SSMA 선택한 Access 데이터베이스 개체를 변환 평가 보고서를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 구문과 다음 결과 표시 합니다.  
+SSMA 선택한 Access 데이터베이스 개체를 변환 평가 보고서를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문과 다음 결과 표시 합니다.  
   
 **평가 보고서를 만들려면**  
   
@@ -50,7 +50,7 @@ SSMA 선택한 Access 데이터베이스 개체를 변환 평가 보고서를 �
   
     SSMA는 창의 맨 아래에서 상태 표시줄에서 진행률을 표시합니다. 출력 창 표시 인 경우 출력 창에는 메시지가 나타납니다.  
   
-평가가 완료 되 면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Access: 평가 보고서 창이 나타납니다.  
+평가가 완료 되 면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Access: 평가 보고서 창이 나타납니다.  
   
 ## <a name="using-assessment-reports"></a>평가 보고서를 사용 하 여  
 평가 보고서 창에는 세 개의 창이 있습니다: 탐색기를, 메시지 창 및 세부 정보 창.  
@@ -64,8 +64,8 @@ SSMA 선택한 Access 데이터베이스 개체를 변환 평가 보고서를 �
 평가 보고서를 다시 실행 하거나 스키마로 변환 하기 전에 오류를 해결 해야 합니다. 오류를 찾으려면 클릭 합니다 **오류** 메시지 창, 단추 및 오류가 발생 하는 개체의 목록을 보려면 각 오류를 차례로 확장 합니다. 메시지 창에서 개체를 클릭 하면 모든 오류 및 해당 개체에 대 한 경고 세부 정보 창에 나타납니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[Access 데이터베이스 개체 변환](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>관련 항목  
-[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

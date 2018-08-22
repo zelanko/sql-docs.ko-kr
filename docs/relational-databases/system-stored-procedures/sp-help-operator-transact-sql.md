@@ -1,5 +1,5 @@
 ---
-title: sp_help_operator (Transact SQL) | Microsoft Docs
+title: sp_help_operator (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258797"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394765"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_help_operator
   
 ## <a name="arguments"></a>인수  
  [ **@operator_name=** ] **'***operator_name***'**  
- 운영자 이름입니다. *operator_name* 은 **sysname**합니다. 경우 *operator_name* 은 지정 하지 않으면 모든 연산자에 대 한 정보가 반환 됩니다.  
+ 운영자 이름입니다. *operator_name* 됩니다 **sysname**합니다. 하는 경우 *operator_name* 은 지정 하지 않으면 모든 연산자에 대 한 정보 반환 됩니다.  
   
  [ **@operator_id=** ] *operator_id*  
- 정보를 요청한 운영자의 ID입니다. *operator_id*은 **int**, 기본값은 NULL입니다.  
+ 정보를 요청한 운영자의 ID입니다. *operator_id*됩니다 **int**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  어느 *operator_id* 또는 *operator_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+>  어느 *operator_id* 하거나 *operator_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -78,16 +78,16 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|운영자가 토요일에 호출기로 알림을 받을 수 있는 기간의 종료 시간입니다.|  
 |**sunday_pager_start_time**|**int**|운영자가 일요일에 호출기로 알림을 받을 수 있는 기간의 시작 시간입니다.|  
 |**sunday_pager_end_time**|**int**|운영자가 일요일에 호출기로 알림을 받을 수 있는 기간의 종료 시간입니다.|  
-|**pager_days**|**tinyint**|비트 마스크 (**1** = 일요일, **64** = 토요일)의 일-요일을 나타내는 운영자가 호출기로 알림을 받을 수 있습니다.|  
+|**pager_days**|**tinyint**|비트 마스크 (**1** 일요일 = **64** = 토요일)의 일-요일을 나타내는 경우 운영자가 호출기로 알림을 받을 수 있습니다.|  
 |**netsend_address**|**nvarchar(100)**|네트워크 팝업 알림에 필요한 운영자 주소입니다.|  
 |**last_netsend_date**|**int**|운영자가 마지막으로 네트워크 팝업으로 알림을 받은 날짜입니다.|  
 |**last_netsend_time**|**int**|운영자가 마지막으로 네트워크 팝업으로 알림을 받은 시간입니다.|  
 |**category_name**|**sysname**|해당 운영자가 속한 운영자 범주의 이름입니다.|  
   
-## <a name="remarks"></a>주의  
- **sp_help_operator** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_help_operator** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `François Ajenstat`라는 운영자에 관한 정보를 보고합니다.  
@@ -110,7 +110,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

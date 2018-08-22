@@ -13,19 +13,19 @@ caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155424"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395988"
 ---
 # SQL Server 인덱스 디자인 가이드
   데이터베이스 응용 프로그램 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 응용 프로그램 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 SQL Server 인덱스 디자인 가이드에서는 응용 프로그램 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 정보와 최선의 구현 방법을 제공합니다.  
   
 **적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 를 통해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명이 없는 한 합니다.  
   
- 이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](http://msdn.microsoft.com/library/ms175049.aspx)을 참조하십시오.  
+ 이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](../relational-databases/indexes/indexes.md)을 참조하십시오.  
   
 ##  <a name="Top"></a> 이 가이드의  
  [인덱스 디자인 기본 사항](#Basics)  
@@ -171,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  이 쿼리에 대한 다음 실행 계획은 쿼리 최적화 프로그램에서 SORT 연산자를 사용하여 ORDER BY 절로 지정된 순서로 결과 집합을 반환했음을 보여 줍니다.  
   
- ![실행 계획 연산자를 사용 하는 정렬을 보여 줍니다. ] (media/indexsort1.gif "실행 계획 연산자를 사용 하는 정렬 보여줍니다.")  
+ ![실행 계획 연산자를 사용 하는 정렬을 보여 줍니다. ](media/indexsort1.gif "실행 계획 연산자를 사용 하는 정렬 보여줍니다.")  
   
  쿼리의 ORDER BY 절에 있는 것과 일치하는 키 열로 인덱스가 생성되는 경우 쿼리 계획에서 SORT 연산자를 제거하여 쿼리 계획의 효율성을 향상시킬 수 있습니다.  
   

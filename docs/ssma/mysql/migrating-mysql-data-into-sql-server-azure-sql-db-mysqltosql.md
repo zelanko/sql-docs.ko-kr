@@ -19,25 +19,25 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6143733af6824518b8a54ed856844c5e01702d0a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4651ec2de2680d9c1c855f352768228e1835f22b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985215"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395596"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>마이그레이션 MySQL 데이터를 SQL Server-Azure SQL DB (MySQLToSQL)
-사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure MySQL에서 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
+사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure MySQL에서 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.  
   
 > [!IMPORTANT]  
-> 엔진이 사용 중인 된 경우 서버 쪽 데이터 마이그레이션 엔진으로, 그런 다음 마이그레이션을 수행 하기 전에 데이터를 MySQL 확장 팩 및 SSMA를 실행 하는 컴퓨터에서 MySQL 공급자 용 SSMA를 설치 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스 실행 해야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [(MySQL to SQL) SQL Server에 SSMA 구성 요소 설치](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> 엔진이 사용 중인 된 경우 서버 쪽 데이터 마이그레이션 엔진으로, 그런 다음 마이그레이션을 수행 하기 전에 데이터를 MySQL 확장 팩 및 SSMA를 실행 하는 컴퓨터에서 MySQL 공급자 용 SSMA를 설치 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 실행 해야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [(MySQL to SQL) SQL Server에 SSMA 구성 요소 설치](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>마이그레이션 옵션 설정  
-마이그레이션하기 전에 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 프로젝트 마이그레이션 옵션을 검토 합니다 **프로젝트 설정을** 대화 상자.  
+마이그레이션하기 전에 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 프로젝트 마이그레이션 옵션을 검토 합니다 **프로젝트 설정을** 대화 상자.  
   
 -   이 대화 상자를 사용 하 여 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 검사, null 값 처리 및 id 값 처리 등의 옵션을 설정할 수 있습니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (마이그레이션)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)합니다.  
   
-    에 대 한 자세한 **데이터 마이그레이션 설정 확장**를 참조 하세요 [데이터 마이그레이션 설정](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    에 대 한 자세한 **데이터 마이그레이션 설정 확장**를 참조 하세요 [데이터 마이그레이션 설정](data-migration-settings-mysqltosql.md)  
   
 -   합니다 **마이그레이션 엔진** 에 **프로젝트 설정을** 대화 상자에서 두 가지 유형의 데이터 마이그레이션 엔진을 사용 하 여 마이그레이션 프로세스를 수행할 수 있습니다:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "38985215"
 > **클라이언트 쪽 데이터 마이그레이션** 옵션은 SQL Azure 사용할 수 있습니다.  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>SQL Server 또는 SQL Azure 데이터 마이그레이션  
-마이그레이션에 대 한 MySQL 테이블에서 행의 데이터를 이동 하는 대량 로드 작업을 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 테이블에서 트랜잭션. 행 수가 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 각 트랜잭션에서 프로젝트 설정에서 구성 됩니다.  
+마이그레이션에 대 한 MySQL 테이블에서 행의 데이터를 이동 하는 대량 로드 작업을 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 테이블에서 트랜잭션. 행 수가 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 각 트랜잭션에서 프로젝트 설정에서 구성 됩니다.  
   
 마이그레이션 메시지를 보려면 출력 창 표시 되는지 확인 합니다. 이 고, 그렇지 합니다 **뷰** 메뉴에서 **출력**합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "38985215"
   
         1.  SSMA MySQL 확장 팩에 대 한 SQL Server 인스턴스에 설치 됩니다.  
   
-        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스가 SQL Server 인스턴스에서 실행 되 고  
+        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 SQL Server 인스턴스에서 실행 되 고  
   
     -   수행 하는 데 **서버 쪽 데이터 마이그레이션**를 선택 합니다 **서버 쪽 데이터 마이그레이션 엔진** 옵션를 **프로젝트 설정** 대화 상자.  
   

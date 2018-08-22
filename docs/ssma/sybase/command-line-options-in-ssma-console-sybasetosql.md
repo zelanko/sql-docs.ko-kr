@@ -18,14 +18,14 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982345"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392660"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 콘솔 (SybaseToSQL)의 명령줄 옵션
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 콘솔의 명령줄 옵션(SybaseToSQL)
 Microsoft는 강력한 실행 하 고 SSMA 작업을 제어 하는 명령줄 옵션 집합을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 콘솔의 명령줄 옵션  
@@ -128,7 +128,7 @@ Microsoft는 강력한 실행 하 고 SSMA 작업을 제어 하는 명령줄 옵
 ### <a name="secure-password-option-psecurepassword"></a>보안 암호 옵션:-p/securepassword  
 이 옵션에는 서버 연결에 대 한 암호화 된 암호를 나타냅니다. 다른 모든 옵션에서 다른: 마이그레이션 프로젝트에 사용 되는 서버 연결에 대 한 암호 암호화를 관리할 수 있습니다 하지만 옵션은 모든 스크립트 실행 아니고 모든 마이그레이션 관련 작업에 도움이 됩니다.  
   
-명령줄 매개 변수로 옵션 또는 암호를 입력할 수 없습니다. 그렇지 않으면 오류가 발생합니다. 자세한 내용은 참조는 [관리 암호](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) 섹션입니다.  
+명령줄 매개 변수로 옵션 또는 암호를 입력할 수 없습니다. 그렇지 않으면 오류가 발생합니다. 자세한 내용은 참조는 [관리 암호](managing-passwords-sybasetosql.md) 섹션입니다.  
   
 다음 하위 옵션에 대 한 지 `–p/securepassword`:  
   

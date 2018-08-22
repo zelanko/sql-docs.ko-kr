@@ -13,14 +13,14 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 15a0727397346451e07f85556bd183df35d13796
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9dd11d93fe40e65836f778191c025daba5a76d0d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983335"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392665"
 ---
-# <a name="data-migration-settings-oracletosql"></a>데이터 마이그레이션 설정 (OracleToSQL)
+# <a name="data-migration-settings-oracletosql"></a>데이터 마이그레이션 설정(OracleToSQL)
   
 ## <a name="data-migration-settings"></a>데이터 마이그레이션 설정  
 **데이터 마이그레이션 설정** 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.  
@@ -56,5 +56,5 @@ ms.locfileid: "38983335"
 -   **취소:** 클릭 **취소** 전에 변경 내용이 적용 되 고 있는 설정을 복원 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[SQL Server Oracle 데이터 마이그레이션](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[SQL Server Oracle 데이터 마이그레이션](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

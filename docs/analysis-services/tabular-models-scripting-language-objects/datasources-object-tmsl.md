@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981335"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393953"
 ---
-# <a name="datasources-object-tmsl"></a>DataSources 개체 (TMSL)
+# <a name="datasources-object-tmsl"></a>DataSources 개체(TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   모델 또는 DirectQuery 모드를 통해 통과 쿼리를 통해 데이터를 추가 하는 가져오기 중 모델에 의해 사용 되는 데이터 원본에 대 한 연결을 정의 합니다.  DirectQuery 모드의 모델 하나만 **DataSource** 개체입니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "38981335"
  DataSource의 형식입니다. 현재는 유일한 유효 값에는 공급자 (1)-일반적인 연결 문자열입니다.  
   
  connectionString  
- 최소 서버 및 데이터베이스를 지정 하지만, 데이터 공급자나 사용자 계정과 같은 외부 RDBMS에서 지 원하는 다른 속성을 포함할 수도 있는 연결 문자열입니다. 이 값은 필수 사항입니다. 참조 [SqlConnectionStringBuilder 클래스](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) SQL Server에 대 한 세부 정보에 대 한 데이터베이스 연결 문자열 속성입니다.  
+ 최소 서버 및 데이터베이스를 지정 하지만, 데이터 공급자나 사용자 계정과 같은 외부 RDBMS에서 지 원하는 다른 속성을 포함할 수도 있는 연결 문자열입니다. 이 값은 필수 사항입니다. 참조 [SqlConnectionStringBuilder 클래스](/dotnet/framework/data/adonet/connection-string-syntax) SQL Server에 대 한 세부 정보에 대 한 데이터베이스 연결 문자열 속성입니다.  
   
  impersonationMode  
  Analysis Services 쿼리를 요청 하는 사용자의 id를 가장 해야 하는지 여부를 지정 합니다. 이 속성은 가장에 사용할 자격 증명을 지정 하는 숫자 값입니다. 열거 값은 다음과 같습니다.  

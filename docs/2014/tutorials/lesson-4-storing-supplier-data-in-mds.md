@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180950"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394995"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>4단원: MDS에 공급자 데이터 저장
   MDS(Master Data Services)는 마스터 데이터 관리를 위한 SQL Server 솔루션입니다. MDM(마스터 데이터 관리)은 조직에서 비트랜잭션 데이터 목록을 검색 및 정의하기 위해 수행하는 작업을 의미합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "37180950"
   
  모델은 하나 이상의 엔터티를 포함할 수 있습니다. 각 엔터티에는 특성(열)과 멤버(행)가 있습니다. 각 행에는 마스터 데이터가 포함됩니다. 이 단원에서는 Supplier 및 State라는 두 개의 엔터티가 포함된 Suppliers라는 모델을 만듭니다. Supplier 엔터티는 다음 특성을 갖습니다. Code, Name, Contact First Name, Contact Last Name, Contact Email Address, Address Line, City, State, Zip 및 Country. 일반적으로 특성에 대한 자세한 내용은 [특성(Master Data Services)](http://msdn.microsoft.com/library/ee633745.aspx) 을 참조하십시오. Code 및 Name 특성은 Cleansed and Matched Suppliers Excel 파일에서 SupplierID 및 Supplier Name 열에 해당합니다.  
   
- 도메인 기반 특성은 다른 엔터티의 멤버로 값이 채워지는 특성입니다. 도메인 기반 특성은 사용자가 유효하지 않은 특성 값을 입력하는 것을 방지합니다. 특성 값은 다른 엔터티로 채워진 드롭다운 목록에서만 선택할 수 있습니다. 이 자습서에서 Supplier 엔터티의 State 특성은 State 엔터티의 값이 포함된 도메인 기반 특성입니다. Supplier 엔터티의 State 특성 값은 State 엔터티의 값 중 하나로만 변경할 수 있습니다. 자세한 내용은 [도메인 기반 특성](http://msdn.microsoft.com/library/ff487058.aspx) 을 참조하십시오.  
+ 도메인 기반 특성은 다른 엔터티의 멤버로 값이 채워지는 특성입니다. 도메인 기반 특성은 사용자가 유효하지 않은 특성 값을 입력하는 것을 방지합니다. 특성 값은 다른 엔터티로 채워진 드롭다운 목록에서만 선택할 수 있습니다. 이 자습서에서 Supplier 엔터티의 State 특성은 State 엔터티의 값이 포함된 도메인 기반 특성입니다. Supplier 엔터티의 State 특성 값은 State 엔터티의 값 중 하나로만 변경할 수 있습니다. 자세한 내용은 [도메인 기반 특성](../master-data-services/domain-based-attributes-master-data-services.md) 을 참조하십시오.  
   
- MDS에서 파생 계층은 모델의 도메인 기반 특성 관계로부터 파생됩니다. 이 자습서에서는 Supplier 엔터티와 State 엔터티 사이의 파생 계층을 만듭니다. 파생 계층을 만든 후에는 마스터 데이터 관리자의 브라우저에 지역 목록이 표시됩니다. 목록에서 한 지역을 클릭하면 오른쪽 창에 해당 지역의 공급자가 표시됩니다. 이 관계를 기반으로 나중에 파생 계층을 만듭니다. 자세한 내용은 [파생 계층](http://msdn.microsoft.com/library/ee633747.aspx) 을 참조하십시오.  
+ MDS에서 파생 계층은 모델의 도메인 기반 특성 관계로부터 파생됩니다. 이 자습서에서는 Supplier 엔터티와 State 엔터티 사이의 파생 계층을 만듭니다. 파생 계층을 만든 후에는 마스터 데이터 관리자의 브라우저에 지역 목록이 표시됩니다. 목록에서 한 지역을 클릭하면 오른쪽 창에 해당 지역의 공급자가 표시됩니다. 이 관계를 기반으로 나중에 파생 계층을 만듭니다. 자세한 내용은 [파생 계층](../master-data-services/derived-hierarchies-master-data-services.md) 을 참조하십시오.  
   
  이전 단원에서는 DQS에서 기술 자료를 작성하고 이를 사용해서 공급자 데이터를 정리 및 일치시키고, 결과를 Cleansed and Matched Supplier Data.xls 파일에 저장했습니다. 이 단원에서는 정리 및 일치된 데이터를 MDS에 업로드합니다. DQS는 데이터(메타데이터)에 대한 지식만 포함하지만 MDS는 데이터 자체(마스터 집합)를 저장합니다. 예를 들어 다음과 같이 사용할 수 있습니다. DQS에는 일부 공급자에 대한 지식이 포함될 수 있지만 MDS에서는 회사에서 사용되는 공급자만 유지 관리됩니다.  
   

@@ -18,14 +18,14 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5606acac52bae2a97d0be1f6844970e81c051376
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2323c7c53571285d0e34365783b8b8d501de10c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982246"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395377"
 ---
-# <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 콘솔 (OracleToSQL)의 명령줄 옵션
+# <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 콘솔의 명령줄 옵션(OracleToSQL)
 Microsoft를 실행 하 고 SSMA 작업을 제어 하려면 강력한 명령줄 옵션을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 콘솔의 명령줄 옵션  
@@ -128,7 +128,7 @@ Microsoft를 실행 하 고 SSMA 작업을 제어 하려면 강력한 명령줄 
 ### <a name="secure-password-option-psecurepassword"></a>보안 암호 옵션:-p/securepassword  
 이 옵션에는 서버 연결에 대 한 암호화 된 암호를 나타냅니다. 다른 모든 옵션에서 다른: 마이그레이션 프로젝트에 사용 되는 서버 연결에 대 한 암호 암호화를 관리할 수 있습니다 하지만 옵션은 모든 스크립트 실행 아니고 모든 마이그레이션 관련 작업에 도움이 됩니다.  
   
-명령줄 매개 변수로 옵션 또는 암호를 입력할 수 없습니다. 그렇지 않으면 오류가 발생합니다. 자세한 내용은 참조는 [관리 암호](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) 섹션입니다.  
+명령줄 매개 변수로 옵션 또는 암호를 입력할 수 없습니다. 그렇지 않으면 오류가 발생합니다. 자세한 내용은 참조는 [관리 암호](managing-passwords-oracletosql.md) 섹션입니다.  
   
 다음 하위 옵션에 대 한 지 `–p/securepassword`:  
   

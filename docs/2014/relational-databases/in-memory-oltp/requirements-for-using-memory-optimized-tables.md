@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -16,12 +15,12 @@ caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f4b47ee3a3f4274ca94175060f10722fa45b6693
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190393"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394996"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
   이외에 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), 다음은 메모리 내 OLTP를 사용 하기 위한 요구 사항:  
@@ -56,7 +55,7 @@ ms.locfileid: "37190393"
   
 -   삭제하려는 행의 범위에 영향을 주는 동시 삽입 또는 업데이트 작업이 있는 상태에서 큰 행 일괄 처리를 삭제하려고 하면 삭제가 실패합니다. 문제를 해결하려면 삭제하기 전에 삽입 또는 업데이트 작업을 중지합니다. 또는 트랜잭션을 더 작은 트랜잭션으로 구성할 수 있습니다. 그러면 동시 작업에 의해 트랜잭션이 중단될 가능성이 더 낮아집니다. 모든 쓰기 작업과 마찬가지로 메모리 최적화 테이블을 다시 시도 논리를 사용 하 여 ([Retry Logic for Transactions on Memory-Optimized Tables에 대 한 지침](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
--   메모리 최적화 테이블로 하나 이상의 데이터베이스를 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 즉시 파일 초기화([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 SE_MANAGE_VOLUME_NAME 사용자 권한 부여)를 사용하도록 설정해야 합니다. 즉시 파일 초기화를 사용하지 않을 경우 메모리 최적화 저장소 파일(데이터 및 델타 파일)이 생성될 때 초기화되므로 작업 성능이 저하될 수 있습니다. 즉시 파일 초기화에 대한 자세한 내용은 [데이터베이스 파일 초기화](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx)를 참조하세요. 즉시 파일 초기화를 사용하도록 설정하는 방법은 [즉시 파일 초기화를 사용하도록 설정하는 방법과 이유](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)를 참조하세요.  
+-   메모리 최적화 테이블로 하나 이상의 데이터베이스를 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 즉시 파일 초기화([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 SE_MANAGE_VOLUME_NAME 사용자 권한 부여)를 사용하도록 설정해야 합니다. 즉시 파일 초기화를 사용하지 않을 경우 메모리 최적화 저장소 파일(데이터 및 델타 파일)이 생성될 때 초기화되므로 작업 성능이 저하될 수 있습니다. 즉시 파일 초기화에 대한 자세한 내용은 [데이터베이스 파일 초기화](../databases/database-instant-file-initialization.md)를 참조하세요. 즉시 파일 초기화를 사용하도록 설정하는 방법은 [즉시 파일 초기화를 사용하도록 설정하는 방법과 이유](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)를 참조하세요.  
   
 ## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
  어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견을 제출 하세요 [ sqlfeedback@microsoft.com ](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page)합니다.  

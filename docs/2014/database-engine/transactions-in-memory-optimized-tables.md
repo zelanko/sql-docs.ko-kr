@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
@@ -14,12 +13,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158874"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394977"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
   디스크 기반 테이블의 행 버전 관리(SNAPSHOT 격리 또는 READ_COMMITTED_SNAPSHOT 사용)는 낙관적 동시성 제어의 형태를 사용합니다. 판독기와 기록기는 서로를 차단하지 않습니다. 메모리 최적화 테이블을 사용하면 기록기는 기록기를 차단하지 않습니다. 디스크 기반 테이블에서 행 버전 관리를 사용하면 한 트랜잭션은 행을 잠그며 이 행을 업데이트하려고 하는 동시 트랜잭션은 차단됩니다. 메모리 최적화 테이블을 사용할 때는 잠금 기능이 없습니다. 대신 두 트랜잭션이 같은 행을 업데이트하려고 하는 경우 쓰기/쓰기 충돌이 발생하게 됩니다(오류 41302).  
@@ -74,7 +73,7 @@ ms.locfileid: "37158874"
 ### <a name="transaction-lifetime"></a>트랜잭션 수명  
  이전 테이블에서 언급한 오류는 트랜잭션 중 여러 지점에서 발생할 수 있습니다. 다음 그림은 메모리 최적화 테이블에 액세스하는 트랜잭션의 단계를 보여줍니다.  
   
- ![트랜잭션의 수명입니다. ] (../../2014/database-engine/media/hekaton-transactions.gif "는 트랜잭션의 수명입니다.")  
+ ![트랜잭션의 수명입니다. ](../../2014/database-engine/media/hekaton-transactions.gif "는 트랜잭션의 수명입니다.")  
 메모리 최적화 테이블에 액세스하는 트랜잭션의 수명입니다.  
   
 #### <a name="regular-processing"></a>일반 처리  

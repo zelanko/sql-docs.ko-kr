@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (Transact SQL) | Microsoft Docs
+title: sp_add_jobserver (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262317"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396605"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +46,25 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>인수  
  [ **@job_id =** ] *job_id*  
- 작업 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
+ 작업 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
  [ **@job_name =** ] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@server_name =** ] **'***server***'**  
- 작업의 대상 서버 이름입니다. *서버* 은 **nvarchar (30)**, N'(LOCAL) 기본값 '. *서버* 일 수 있습니다 **(LOCAL)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
+ 작업의 대상 서버 이름입니다. *서버* 됩니다 **nvarchar(30)**, (local)의 기본값을 사용 하 여 '. *서버* 일 수 있습니다 **(로컬)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
- **@automatic_post** 에 있는 **sp_add_jobserver**, 되지만 인수에서 표시 되지 않으면 합니다. **@automatic_post** 내부 용도로 예약 되어 있습니다.  
+ **@automatic_post** 에 존재 **sp_add_jobserver**, 인수 아래 나열 되지 않으면 있지만. **@automatic_post** 내부 용도로 예약 되어 있습니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
@@ -77,9 +77,9 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_add_jobserver** 여러 서버를 포함 하는 작업에 대 한 합니다.  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_add_jobserver** 여러 서버를 포함 하는 작업에 대 한 합니다.  
   
 ## <a name="examples"></a>예  
   

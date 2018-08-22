@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
@@ -14,12 +13,12 @@ caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c89d7c7baf7422ba3bc6a457509ea7e8ac37a001
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd605179f7eb15783c90fa9bc3c72d08d16764c3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331729"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395998"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
   고유하게 컴파일된 저장 프로시저는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍 기능 및 쿼리 노출 영역을 구현하지 않습니다. 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 고유하게 컴파일된 저장 프로시저 내에서 사용할 수 없습니다. 자세한 내용은 [Natively Compiled Stored Procedures에서 지원 되는 구문](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md)합니다.  
@@ -61,7 +60,7 @@ go
 |------------|-----------------|  
 |`SCHEMABINDING`|고유하게 컴파일된 저장 프로시저는 참조하는 개체의 스키마에 바인딩되어야 합니다. 이는 프로시저에서 참조하는 테이블을 삭제할 수 없음을 의미합니다. 프로시저에서 참조 하는 테이블의 스키마 이름 및 와일드 카드를 포함 해야 합니다 (\*) 쿼리에서 허용 되지 않습니다. `SCHEMABINDING` 이 버전의 고유 하 게 컴파일된 저장된 프로시저에 대해서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.|  
 |`EXECUTE AS`|고유하게 컴파일된 저장 프로시저는 기본 실행 컨텍스트인 `EXECUTE AS CALLER`를 지원하지 않습니다. 따라서 실행 컨텍스트를 지정해야 합니다. 옵션 `EXECUTE AS OWNER`하십시오 `EXECUTE AS` *사용자*, 및 `EXECUTE AS SELF` 지원 됩니다.|  
-|`BEGIN ATOMIC`|고유하게 컴파일된 저장 프로시저의 본문은 단 하나의 ATOMIC 블록으로 구성되어야 합니다. ATOMIC 블록은 저장 프로시저의 원자성 실행을 보장합니다. 프로시저가 활성 트랜잭션의 컨텍스트 외부에서 호출되면 새 트랜잭션을 시작하며 ATOMIC 블록의 끝에서 커밋합니다. 고유하게 컴파일된 저장 프로시저의 ATOMIC 블록에는 다음과 같은 두 가지 필수 옵션이 있습니다.<br /><br /> `TRANSACTION ISOLATION LEVEL`을 참조하세요. 참조 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 격리 수준을 지원 합니다.<br /><br /> `LANGUAGE`을 참조하세요. 저장 프로시저의 언어는 사용 가능한 언어 또는 언어 별칭 중 하나로 설정되어야 합니다.|  
+|`BEGIN ATOMIC`|고유하게 컴파일된 저장 프로시저의 본문은 단 하나의 ATOMIC 블록으로 구성되어야 합니다. ATOMIC 블록은 저장 프로시저의 원자성 실행을 보장합니다. 프로시저가 활성 트랜잭션의 컨텍스트 외부에서 호출되면 새 트랜잭션을 시작하며 ATOMIC 블록의 끝에서 커밋합니다. 고유하게 컴파일된 저장 프로시저의 ATOMIC 블록에는 다음과 같은 두 가지 필수 옵션이 있습니다.<br /><br /> `TRANSACTION ISOLATION LEVEL` 을 참조하세요. 참조 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 격리 수준을 지원 합니다.<br /><br /> `LANGUAGE` 을 참조하세요. 저장 프로시저의 언어는 사용 가능한 언어 또는 언어 별칭 중 하나로 설정되어야 합니다.|  
   
  `EXECUTE AS` 및 Windows 로그인과 관련하여 `EXECUTE AS`를 통해 수행된 가장 때문에 오류가 발생할 수 있습니다. 사용자 계정이 Windows 인증을 사용하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 사용되는 서비스 계정과 Windows 로그인의 도메인 간에는 완전 신뢰 관계가 있어야 합니다. 저장 프로시저를 고유 하 게 컴파일된 만들 때 다음 오류 메시지가 반환 됩니다 완전 신뢰가 없는 경우: 15404, 메시지를 가져올 수 없습니다 Windows NT 그룹/사용자에 대 한 정보 'username', 오류 코드 0x5.  
   

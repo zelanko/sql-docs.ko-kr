@@ -5,8 +5,7 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
@@ -14,12 +13,12 @@ caps.latest.revision: 65
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6427878b5c032e0560859ab7ba68af8d06fb40e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9aebdc8978cf552057610c2fdea05c59d6921fc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276549"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396199"
 ---
 # <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블
   

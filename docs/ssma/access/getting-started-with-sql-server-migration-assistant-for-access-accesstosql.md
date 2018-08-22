@@ -1,5 +1,5 @@
 ---
-title: SQL Server Migration Assistant for Access 시작 | Microsoft Docs
+title: 액세스에 대 한 SQL Server Migration Assistant를 사용 하 여 시작 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -25,118 +25,118 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 2c9195abaee31950fae9d26eb64f01d38ffa0447
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 853386a30ade7c9833e9a6057cd2aa1084427094
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773969"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395184"
 ---
-# <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) 시작
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 액세스를 위해을 사용 하면 Access 데이터베이스 개체를 신속 하 게 변환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 개체에 결과 개체의 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB에 대 한 액세스에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 합니다. 하는 경우 필요에 따라 연결할 수도 있습니다 액세스 테이블을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 와 기존 Access 프런트 엔드 응용 프로그램을 사용 하도록 계속할 수 있도록 Azure SQL DB 테이블 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.  
+# <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL)를 사용 하 여 시작
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스를 사용 하면 Access 데이터베이스 개체를 신속 하 게 변환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 개체에 결과 개체를 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB에 대 한 액세스에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. 필요에 따라 연결할 수 있습니다도 테이블에 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL DB를 사용 하 여 기존 액세스 프런트 엔드 응용 프로그램을 사용 하 여 계속할 수 있도록 테이블 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
   
-이 항목 설치 프로세스를 소개 하 고 SSMA 사용자 인터페이스에 설명 하는 데 도움이 됩니다.  
+이 항목에서는 설치 프로세스를 소개 하 고 SSMA 사용자 인터페이스에 익숙해질 수 있도록 합니다.  
   
-## <a name="installing-ssma"></a>SSMA를 설치합니다.  
-SSMA를 사용 하려면 먼저 설치 해야 SSMA 클라이언트 프로그램 마이그레이션할 데이터베이스 모두에 액세스할 수 있는 컴퓨터와의 대상 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. 설치 지침을 참조 하십시오. [설치 SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)합니다.  
+## <a name="installing-ssma"></a>SSMA 설치  
+SSMA를 사용 하려면 먼저 설치 해야 SSMA 클라이언트 프로그램에서 마이그레이션할 데이터베이스 모두에 액세스할 수 있는 컴퓨터에 대상 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. 설치 지침은 [설치 SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)합니다.  
   
-SSMA를 시작 하려면 **시작**, 가리킨 **모든 프로그램**, 가리킨 **SQL Server Migration Assistant for Access**를 선택한 후 **SQL Server Migration Assistant for Access**합니다.  
+SSMA를 시작 하려면 **시작**, 가리킨 **모든 프로그램**를 가리킨 **SQL Server Migration Assistant for Access**를 선택한 후 **SQL Server 마이그레이션 Assistant for Access**합니다.  
   
 ## <a name="using-ssma"></a>SSMA를 사용 하 여  
-SSMA를 설치한 후로 Access 데이터베이스를 마이그레이션하는 도구를 사용 하기 전에 SSMA 사용자 인터페이스에 익숙해질 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. SSMA 사용자 인터페이스를 다음 다이어그램에 표시 되는 메타 데이터 탐색기, 메타 데이터, 도구 모음, 출력 창 및 오류 목록 창이 포함 하 여:  
+SSMA를 설치한 후에 익숙해질 SSMA 사용자 인터페이스 도구를 사용 하 여 Access 데이터베이스를 마이그레이션 전에 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. SSMA 사용자 인터페이스는 다음 다이어그램에 나와 메타 데이터 탐색기, 메타 데이터, 도구 모음, 출력 창 및 오류 목록 창이 포함:  
   
 ![Access 그래픽 사용자 인터페이스용 SSMA](../../ssma/access/media/ssmaforaccessgui.gif "Access 그래픽 사용자 인터페이스용 SSMA")  
   
-마이그레이션 시작 하 고 새 프로젝트를 만들고 다음 Access 데이터베이스 액세스 메타 데이터 탐색기에 추가 합니다. 개체와 같은 작업을 수행 하는 액세스 메타 데이터 탐색기에서 마우스 오른쪽 단추로 클릭 한 다음 있습니다.
-- Access 데이터베이스 개체를의 인벤토리 내보내기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.
-- 변환이 평가 하는 보고서를 만드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.
-- 에 대 한 액세스 스키마 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 스키마입니다.
+마이그레이션을 시작 하려면 새 프로젝트를 만들 추가한 다음 Access 데이터베이스 액세스 메타 데이터 탐색기로 합니다. 개체와 같은 작업을 수행 하는 액세스 메타 데이터 탐색기에서 마우스 오른쪽 단추로 클릭 한 다음 있습니다.
+- Access 데이터베이스 개체를의 인벤토리 내보내기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.
+- 변환이 평가 하는 보고서 작성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.
+- 에 대 한 액세스 스키마 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 스키마입니다.
 
-도구 모음과 메뉴를 사용 하 여 이러한 작업을 수행할 수도 있습니다.  
+또한 도구 모음 및 메뉴를 사용 하 여 이러한 작업을 수행할 수 있습니다.  
   
-인스턴스에 연결 해야 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 계층 구조 라는 연결 완료 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. 액세스 스키마를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스키마에서 이러한 변환 된 스키마를 선택할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기 다음으로 스키마를 로드 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+인스턴스에 연결 해야 합니다도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 계층을 성공적으로 연결 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 나타나는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기입니다. 액세스 스키마를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마에서 변환 된 스키마를 선택할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 스키마 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
-Azure SQL DB에서 마이그레이션 새 프로젝트 대화 상자에서 드롭다운에을 선택한 경우에 Azure SQL DB에 연결 해야 합니다. Azure SQL DB 데이터베이스의 계층 구조는 연결 완료 후 Azure SQL DB 메타 데이터 탐색기에 나타납니다. Azure SQL DB 메타 데이터 탐색기에서 변환 된 해당 스키마를 선택 하 고 다음으로 스키마를 로드할 수 Azure SQL DB 스키마에 액세스 스키마를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+Azure SQL DB 마이그레이션에서 새 프로젝트 대화 상자에서 드롭다운을 선택한 경우에 Azure SQL DB에 연결 해야 합니다. 성공적으로 연결 되 면 Azure SQL DB 데이터베이스의 계층 구조는 Azure SQL DB 메타 데이터 탐색기에 표시 됩니다. Azure SQL DB 메타 데이터 탐색기에서 변환 된 스키마를 선택 하 고 다음 스키마를 로드할 수 Access 스키마를 Azure SQL DB 스키마로 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
-으로 변환 된 스키마를 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 있고 Azure SQL DB 액세스 메타 데이터 탐색기로 돌아갑니다에 Access 데이터베이스에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 데이터베이스. 하는 경우 필요에 따라 연결할 수도 있습니다 액세스 테이블을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 테이블입니다.  
+변환 된 스키마를 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있고 Azure SQL DB 액세스 메타 데이터 탐색기로 반환에 Access 데이터베이스에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 데이터베이스입니다. 필요에 따라 연결할 수 있습니다도 액세스 테이블을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 테이블입니다.  
   
-이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.  
+이러한 작업 및 수행 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.  
   
--   [Access 데이터베이스 마이그레이션을 준비](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+-   [Access 데이터베이스 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
   
--   [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+-   [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
--   [SQL Server에 대 한 액세스 응용 프로그램 연결](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
+-   [SQL Server에 대 한 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   
-다음 섹션에서는 SSMA 사용자 인터페이스의 기능을 설명 합니다.  
+다음 섹션에서는 SSMA 사용자 인터페이스의 기능에 설명 합니다.  
   
 ### <a name="metadata-explorers"></a>메타 데이터 탐색기  
-SSMA 포함 찾아 Access에서 작업을 수행 하는 데 사용할 수 있는 두 명의 메타 데이터 탐색기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 데이터베이스.  
+SSMA을 찾아서 액세스 작업을 수행 합니다. 사용할 수 있는 두 명의 메타 데이터 탐색기를 포함 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 데이터베이스입니다.  
   
 #### <a name="access-metadata-explorer"></a>메타 데이터 탐색기에 액세스  
-액세스 메타 데이터 탐색기는 프로젝트에 추가 된 Access 데이터베이스에 대 한 정보를 표시 합니다. Access 데이터베이스에 추가 하면 SSMA는 Access 메타 데이터 탐색기에서 사용할 수 있는 메타 데이터는 해당 데이터베이스에 대 한 메타 데이터를 검색 합니다.  
+액세스 메타 데이터 탐색기는 프로젝트에 추가 된 Access 데이터베이스에 대 한 정보를 표시 합니다. Access 데이터베이스에 추가 하면 SSMA 액세스 메타 데이터 탐색기에서 사용할 수 있는 메타 데이터는 해당 데이터베이스에 대 한 메타 데이터를 검색 합니다.  
   
-다음 태스크를 수행할 액세스 메타 데이터 탐색기를 사용할 수 있습니다.  
+다음 작업을 수행할 액세스 메타 데이터 탐색기를 사용할 수 있습니다.  
   
--   각 Access 데이터베이스의 테이블을 탐색 합니다.  
+-   각 액세스 데이터베이스의 테이블을 찾습니다.  
   
--   변환에 대 한 개체를 선택 하 고 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문입니다. 자세한 내용은 참조 [Access 데이터베이스 개체가 변환](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)합니다.  
+-   변환에 대 한 개체를 선택 하 고 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문입니다. 자세한 내용은 [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)합니다.  
   
--   데이터 마이그레이션에 대 한 개체를 선택 하 고 해당 개체에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 자세한 내용은 참조 [액세스 데이터를 SQL Server로 마이그레이션](http://msdn.microsoft.com/f3b18af7-1af0-499d-a00d-a0af94895625)합니다.  
+-   데이터 마이그레이션에 대 한 개체를 선택 하 고 해당 개체에서 데이터를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Access 데이터를 SQL Server를 마이그레이션](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)합니다.  
   
--   에 연결 하 고 액세스 연결을 해제 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 테이블입니다.  
+-   연결 및 액세스 연결 해제 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다.  
   
 #### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server 또는 Azure SQL DB 메타 데이터 탐색기  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 대 한 정보를 표시 하는 Azure SQL DB 메타 데이터 탐색기 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. 인스턴스로 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB, SSMA 해당 인스턴스에 대 한 메타 데이터를 검색 하 고 프로젝트 파일에 저장 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대 한 정보를 표시 하는 Azure SQL DB 메타 데이터 탐색기 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. 인스턴스에 연결 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB, SSMA 해당 인스턴스에 대 한 메타 데이터를 검색 하 고 프로젝트 파일에 저장 합니다.  
   
-변환 된 Access 데이터베이스 개체를 선택 하 고 로드 하는 SQL Server 또는 Azure SQL DB 메타 데이터 탐색기를 사용할 수 있습니다 (동기화)의 인스턴스로 해당 개체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.  
+변환 된 Access 데이터베이스 개체를 선택 하 고 로드 하는 SQL Server 또는 Azure SQL DB 메타 데이터 탐색기를 사용할 수 있습니다 (동기화)의 인스턴스로 해당 개체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
   
-자세한 내용은 참조 [를 SQL Server로 변환 된 데이터베이스 개체를 로드](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)합니다.  
+자세한 내용은 [SQL Server로 변환 된 데이터베이스 개체 로드](loading-converted-database-objects-into-sql-server-accesstosql.md)합니다.  
   
 ### <a name="metadata"></a>메타데이터  
-각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭이 있습니다. 예를 들어 액세스 메타 데이터 탐색기에서 테이블을 선택 하는 경우 4 개의 탭 표시: **테이블**, **유형 매핑**, **속성**, 및 **데이터**합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기에서 세 가지 탭이 표시: **테이블**, **SQL**, 및 **데이터**합니다.  
+각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 액세스 메타 데이터 탐색기에서 테이블을 선택 하면 4 개의 탭이 표시: **테이블**를 **형식 매핑**하십시오 **속성**, 및 **데이터** . 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 세 개의 탭 표시: **테이블**를 **SQL**, 및 **데이터**입니다.  
   
-대부분의 설정은 메타 데이터는 읽기 전용입니다. 그러나 다음과 같은 메타 데이터를 변경할 수 있습니다.  
+대부분의 메타 데이터 설정에는 읽기 전용입니다. 그러나 다음과 같은 메타 데이터를 변경할 수 있습니다.  
   
--   액세스 메타 데이터 탐색기에 형식 매핑을 변경할 수 있습니다. 보고서를 만들거나 스키마를 변환 하기 전에 이러한 변경 해야 합니다.  
+-   액세스 메타 데이터 탐색기에서 형식 매핑을 변경할 수 있습니다. 보고서를 만들거나 스키마로 변환 하기 전에 이러한 변경을 수행 해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기에서 테이블 및 인덱스 속성을 변경할 수 있습니다는 **테이블** 탭 합니다. 스키마를 로드 하기 전에 이러한 변경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 자세한 내용은 참조 [Access 데이터베이스 개체가 변환](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기에서 테이블 및 인덱스 속성을 변경할 수 있습니다 합니다 **테이블** 탭 합니다. 스키마를 로드 하기 전에 이러한 변경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)합니다.  
   
 ### <a name="toolbars"></a>도구 모음  
 SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이션 도구 모음입니다.  
   
 #### <a name="the-project-toolbar"></a>프로젝트 도구 모음  
-프로젝트 도구 모음 프로젝트 작업 Access 데이터베이스 파일을 추가 하 고, 연결에 대 한 단추가 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. 이 단추에 명령을 유사는 **파일** 메뉴.  
+프로젝트 도구 모음 단추가 프로젝트로 작업 하 고, Access 데이터베이스 파일을 추가 및 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. 이러한 단추는 명령에서 유사 합니다 **파일** 메뉴.  
   
 #### <a name="the-migration-toolbar"></a>마이그레이션 도구 모음  
 마이그레이션 도구 모음에는 다음 명령도 포함 됩니다.  
   
 |단추|기능|  
 |----------|------------|  
-|**변환, 로드 및 마이그레이션**|Access 데이터베이스 변환, 변환된 된 개체에 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 한꺼번에 합니다.|  
-|**보고서 만들기**|선택한 Access 스키마를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 구문 다음 얼마나 성공적인 변환 작업이 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 액세스 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
-|**스키마 변환**|선택한 Access 스키마를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 스키마입니다.<br /><br />이 명령은 액세스 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
-|**데이터 마이그레이션**|Access 데이터베이스에서 데이터를 마이그레이션하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. 이 명령을 실행 하기 전에 액세스 스키마를 변환 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 스키마가 개체를 로드 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.<br /><br />이 명령은 액세스 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
-|**중지**|개체를 쓰는 등 현재 프로세스를 중단 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 구문이 있습니다.|  
+|**변환, 로드 및 마이그레이션**|Access 데이터베이스를 변환, 변환된 된 개체에 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 및 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 한 번에 모든 Azure SQL DB입니다.|  
+|**보고서 만들기**|선택한 액세스 스키마를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 구문을 다음 얼마나 성공적인 변환 된 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 액세스 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
+|**스키마 변환**|선택한 액세스 스키마를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 스키마입니다.<br /><br />이 명령은 액세스 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
+|**데이터 마이그레이션**|Access 데이터베이스에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. 이 명령은 실행 하기 전에 액세스 스키마를 변환 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 스키마 개체를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.<br /><br />이 명령은 액세스 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
+|**중지**|개체의 변환과 같은 현재 프로세스가 중지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 구문입니다.|  
   
 ### <a name="menus"></a>메뉴  
-SSMA 메뉴가 포함 되어 있습니다.  
+SSMA는 다음과 같은 메뉴가 포함 되어 있습니다.  
   
 |메뉴|Description|  
 |--------|---------------|  
-|**최근에 사용한 파일**|마이그레이션 마법사, 프로젝트, 작업 및 추가 하 고, Access 데이터베이스 파일을 제거 하 고, 연결에 대 한 명령을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.|  
-|**편집**|검색 및 텍스트를 복사 하는 등의 세부 정보 페이지에서 작업 하기 위한 명령이 포함 되어 [!INCLUDE[tsql](../../includes/tsql_md.md)] SQL 세부 정보 창에서. 열려는 **관리 책갈피** 대화 상자에서 편집 메뉴에서 관리 하는 책갈피를 클릭 합니다. 대화 상자에서 기존 책갈피의 목록이 표시 됩니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
-|**보기**|포함 된 **동기화 메타 데이터 탐색기** 명령입니다. 이 액세스 메타 데이터 탐색기 간에 개체를 동기화 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 메타 데이터 탐색기입니다. 표시 하거나 숨기려면 명령도 포함는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 를 사용할 수 있는 레이아웃을 사용 하 여 관리 합니다.|  
+|**최근에 사용한 파일**|마이그레이션 마법사, 프로젝트, 작업 및 추가 하 고, Access 데이터베이스 파일을 제거 하 고, 연결할 명령을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.|  
+|**편집**|찾기 및 텍스트 세부 정보 페이지를 복사 하는 등의 작업에 대 한 명령을 포함 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL 세부 정보 창에서. 열려는 합니다 **책갈피 관리** 대화 상자에서 편집 메뉴에서 관리 하는 책갈피를 클릭 합니다. 대화 상자에서 기존 책갈피 목록으로 표시 됩니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
+|**보기**|포함 된 **메타 데이터 탐색기 동기화** 명령입니다. 그러면 액세스 메타 데이터 탐색기 간에 개체를 동기화 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 메타 데이터 탐색기입니다. 표시 하거나 숨기려면 명령도 포함 됩니다는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 레이아웃을 사용 하 여 관리 합니다.|  
 |**Tools**|보고서 만들기, 데이터 내보내기, 개체 및 데이터 마이그레이션, 테이블을 연결 하는 명령을 포함 하 고 대화 상자 프로젝트 설정과 전역에 대 한 액세스를 제공 합니다.|  
-|**도움말**|SSMA 있도록 및에 대 한 액세스를 제공는 **에 대 한** 대화 상자.|  
+|**도움말**|SSMA 데 및에 대 한 액세스를 제공 합니다 **에 대 한** 대화 상자.|  
   
-### <a name="output-pane-and-error-list-pane"></a>출력 창 및 오류 목록 창  
-**보기** 메뉴는 출력 창 및 오류 목록 창 표시 유형을 전환 하려면 명령을 제공 합니다.  
+### <a name="output-pane-and-error-list-pane"></a>출력 창과 오류 목록 창  
+합니다 **보기** 메뉴는 출력 창과 오류 목록 창 표시 유형을 전환 하려면 명령을 제공 합니다.  
   
--   출력 창 개체 변환, 개체 동기화 및 데이터 마이그레이션 중 SSMA에서 상태 메시지를 표시 합니다.  
+-   출력 창 개체 변환과 개체 동기화 데이터 마이그레이션 중 SSMA에서 상태 메시지를 보여 줍니다.  
   
--   오류 목록 창에 정렬할 수 있는 목록의 오류, 경고 및 정보 메시지를 표시 합니다.  
+-   오류 목록 창을 정렬할 수 있는 목록에서 오류, 경고 및 정보 메시지를 보여 줍니다.  
   
 ## <a name="see-also"></a>참고자료  
-[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
