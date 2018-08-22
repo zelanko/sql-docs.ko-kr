@@ -1,49 +1,40 @@
+items:
 - name: 시작
   href: sql-server-technical-documentation.md
 - name: 개요
   items:
-    - name: SQL Server 2016의 새로운 기능
-      href: what-s-new-in-sql-server-2016.md
-    - name: SQL Server 2017의 새로운 기능
-      href: what-s-new-in-sql-server-2017.md
-    - name: SQL Server 2016의 버전 및 지원하는 기능
-      href: editions-and-components-of-sql-server-2016.md
-    - name: SQL Server 2017의 버전과 지원하는 기능
-      href: editions-and-components-of-sql-server-2017.md
-    - name: SQL Server의 최대 용량 사양
-      href: maximum-capacity-specifications-for-sql-server.md
-    - name: Compute Capacity Limits by Edition of SQL Server
-      href: compute-capacity-limits-by-edition-of-sql-server.md
-    - name: 사용자 환경 개선 프로그램
-      href: customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: SQL Server를 구성하여 Microsoft에 피드백 보내기
-      href: sql-server-customer-feedback.md
-    - name: 파트너
-      items:
-        - name: 모니터링
-          href: partner-monitor-sql-server.md
-        - name: 고가용성 및 재해 복구
-          href: partner-hadr-sql-server.md
-        - name: 관리
-          href: partner-management-sql-server.md
-        - name: 개발
-          href: partner-dev-sql-server.md
+  - name: SQL Server 2016의 새로운 기능
+    href: what-s-new-in-sql-server-2016.md
+  - name: SQL Server 2017의 새로운 기능
+    href: what-s-new-in-sql-server-2017.md
+  - name: SQL Server 2016의 버전 및 지원하는 기능
+    href: editions-and-components-of-sql-server-2016.md
+  - name: SQL Server 2017의 버전과 지원하는 기능
+    href: editions-and-components-of-sql-server-2017.md
+  - name: SQL Server의 최대 용량 사양
+    href: maximum-capacity-specifications-for-sql-server.md
+  - name: Compute Capacity Limits by Edition of SQL Server
+    href: compute-capacity-limits-by-edition-of-sql-server.md
+  - name: 사용자 환경 개선 프로그램
+    href: customer-experience-improvement-program-for-sql-server-data-tools.md
+  - name: SQL Server를 구성하여 Microsoft에 피드백 보내기
+    href: sql-server-customer-feedback.md
 - name: 새로운 또는 업데이트된 아티클
   href: new-updated-sql-server.md
 - name: 릴리스 정보
   items:
-    - name: SQL Server 2017 참고
-      href: sql-server-2017-release-notes.md
-    - name: SQL Server 2016 참고
-      href: sql-server-2016-release-notes.md
-    - name: SQL Server 2014 참고
-      href: sql-server-2014-release-notes.md
-    - name: SQL Server 2012 서비스 팩 릴리스 정보
-      href: sql-server-2012-sp4-release-notes.md
-    - name: SQL Server 2012 참고
-      href: sql-server-2012-release-notes.md
-    - name: SQL Server 2008 R2 SP2 참고
-      href: sql-server-2008-r2-sp2-release-notes.md
+  - name: SQL Server 2017 참고
+    href: sql-server-2017-release-notes.md
+  - name: SQL Server 2016 참고
+    href: sql-server-2016-release-notes.md
+  - name: SQL Server 2014 참고
+    href: sql-server-2014-release-notes.md
+  - name: SQL Server 2012 서비스 팩 릴리스 정보
+    href: sql-server-2012-sp4-release-notes.md
+  - name: SQL Server 2012 참고
+    href: sql-server-2012-release-notes.md
+  - name: SQL Server 2008 R2 SP2 참고
+    href: sql-server-2008-r2-sp2-release-notes.md
 - name: Linux의 SQL Server
   href: ../linux/sql-server-linux-overview.md
 - name: Analysis Services
@@ -76,35 +67,51 @@
   href: ../tools/overview-sql-tools.md
 - name: 리소스
   items:
-    - name: 블로그
-      items:
-        - name: SQL Server
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server 데이터베이스 엔진
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 보안
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: 배우기
-      items:
-        - name: Microsoft Virtual Academy
-          href: 'https://mva.microsoft.com/product-training/sql-server#!lang=1033'
-        - name: Channel 9의 SQL
-          href: 'https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year'
-    - name: 피드백 및 도움말
-      items:
-        - name: SQL 설명서에 참여하세요!
-          href: sql-server-docs-contribute.md
-        - name: UserVoice - SQL Server 개선 제안
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: DBA Stack Exchange
-          href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow
-          href: 'http://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 포럼
-          href: 'https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver'
-        - name: Reddit
-          href: 'https://www.reddit.com/r/SQLServer'
-    - name: 도움말 뷰어에서의 로컬 콘텐츠
-      href: sql-server-help-installation.md
+  - name: 블로그
+    items:
+    - name: SQL Server
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: SQL Server 데이터베이스 엔진
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+    - name: SQL Server 보안
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+    - name: SQL Server Data Tools
+      href: https://blogs.msdn.microsoft.com/ssdt/
+  - name: 배우기
+    items:
+    - name: Microsoft Virtual Academy
+      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+    - name: Channel 9의 SQL
+      href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
+  - name: 피드백 및 도움말
+    items:
+    - name: SQL 설명서에 참여하세요!
+      href: sql-server-docs-contribute.md
+    - name: UserVoice - SQL Server 개선 제안
+      href: https://feedback.azure.com/forums/908035-sql-server
+    - name: DBA Stack Exchange
+      href: https://dba.stackexchange.com/questions/tagged/sql-server
+    - name: Stack Overflow
+      href: http://stackoverflow.com/questions/tagged/sql-server
+    - name: MSDN 포럼
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
+    - name: Reddit
+      href: https://www.reddit.com/r/SQLServer
+  - name: 파트너
+    items:
+    - name: 모니터링
+      href: partner-monitor-sql-server.md
+    - name: 고가용성 및 재해 복구
+      href: partner-hadr-sql-server.md
+    - name: 관리
+      href: partner-management-sql-server.md
+    - name: 개발
+      href: partner-dev-sql-server.md
+  - name: 도움말 뷰어에서의 로컬 콘텐츠
+    href: sql-server-help-installation.md
+ms.openlocfilehash: 0d29421fad73e4a36283ad042c5e467abb7a8a75
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40427393"

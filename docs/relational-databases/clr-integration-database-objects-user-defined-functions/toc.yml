@@ -1,12 +1,21 @@
+items:
 - name: CLR 사용자 정의 함수
   href: clr-user-defined-functions.md
-- name: CLR 스칼라 반환 함수
-  href: clr-scalar-valued-functions.md
-- name: CLR 테이블 반환 함수
-  href: clr-table-valued-functions.md
-- name: CLR 사용자 정의 집계 - 함수 호출
-  href: clr-user-defined-aggregate-invoking-functions.md
-- name: CLR 사용자 정의 집계 - 요구 사항
-  href: clr-user-defined-aggregates-requirements.md
-- name: CLR 사용자 정의 집계
-  href: clr-user-defined-aggregates.md
+  items:
+  - name: CLR 스칼라 반환 함수
+    href: clr-scalar-valued-functions.md
+  - name: CLR 테이블 반환 함수
+    href: clr-table-valued-functions.md
+  - name: CLR 사용자 정의 집계
+    href: clr-user-defined-aggregates.md
+    items:
+    - name: CLR 사용자 정의 집계 - 요구 사항
+      href: clr-user-defined-aggregates-requirements.md
+    - name: CLR 사용자 정의 집계 - 함수 호출
+      href: clr-user-defined-aggregate-invoking-functions.md
+ms.openlocfilehash: ae796e9a7d5725f7ff115760bd89f2b28d91c7b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40427307"

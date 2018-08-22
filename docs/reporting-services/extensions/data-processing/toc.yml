@@ -1,3 +1,4 @@
+items:
 - name: 데이터 처리 확장 프로그램 라이브러리 만들기
   href: creating-a-data-processing-extension-library.md
 - name: 데이터 처리 확장 프로그램 개요
@@ -20,7 +21,11 @@
   href: implementing-a-datareader-class-for-a-data-processing-extension.md
 - name: 데이터 처리 확장 프로그램 구현 준비
   href: preparing-to-implement-a-data-processing-extension.md
-- name: 데이터 처리 확장 프로그램 제거
-  href: removing-a-data-processing-extension.md
 - name: Reporting Services에서 외부 데이터 집합 사용
   href: using-an-external-dataset-with-reporting-services.md
+ms.openlocfilehash: e1b61ca6a9f921b65466ada897b820aefb678aba
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427344"
