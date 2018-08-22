@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
@@ -14,12 +13,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b92439b6ce1edd974d184ac910a65716dec812b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6ab50676145c7a7e68976448c6a89b2dceadb45
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180385"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396173"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>데이터 및 델타 파일 쌍에 대한 병합 모니터링 및 문제 해결
   메모리 내 OLTP는 병합 정책을 사용하여 인접한 데이터 및 델타 파일 쌍을 자동으로 병합합니다. 병합 작업은 해제할 수 없습니다.  

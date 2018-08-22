@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264879"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393928"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
   이 항목에서는 Windows Azure Blob 저장소 서비스를 백업 대상으로 사용하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
@@ -86,9 +86,9 @@ ms.locfileid: "37264879"
   
  만드는 방법에 대 한 단계별 지침은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 참조 하세요 [자격 증명 만들기](#credential) 이 항목의 뒷부분에 나오는 예제입니다.  
   
- 자격 증명에 대한 자세한 내용은 [자격 증명](http://msdn.microsoft.com/en-us/library/ms161950.aspx)을 참조하십시오.  
+ 자격 증명에 대한 자세한 내용은 [자격 증명](../security/authentication-access/credentials-database-engine.md)을 참조하세요.  
   
- 자격 증명이 사용되는 다른 예에 대한 정보는 [SQL Server 에이전트 프록시 만들기](http://msdn.microsoft.com/library/ms175834.aspx)를 참조하세요.  
+ 자격 증명을 사용 하는 다른 예제에서 정보를 참조 하세요 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)합니다.  
   
 ###  <a name="limitations"></a> 제한 사항  
   
@@ -282,7 +282,7 @@ ms.locfileid: "37264879"
 ###  <a name="credential"></a> 자격 증명 만들기  
  다음 예에서는 Windows Azure 저장소 인증 정보를 저장하는 자격 증명을 만듭니다.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -327,7 +327,7 @@ ms.locfileid: "37264879"
 ###  <a name="complete"></a> 전체 데이터베이스 백업  
  다음 예에서는 Windows Azure Blob 저장소 서비스에 AdventureWorks2012 데이터베이스를 백업합니다.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -385,7 +385,7 @@ ms.locfileid: "37264879"
 ###  <a name="databaselog"></a> 데이터베이스 및 로그 백업  
  다음 예에서는 기본적으로 단순 복구 모델을 사용하는 AdventureWorks2012 예제 데이터베이스를 백업하고 로그 백업을 지원하기 위해 전체 복구 모델을 사용하도록 AdventureWorks2012 데이터베이스를 수정합니다. 마지막으로 Windows Azure Blob에 대한 전체 데이터베이스 백업을 만들고 업데이트 작업 기간이 경과된 후 로그를 백업합니다. 이 예에서는 날짜/시간 스탬프를 포함한 백업 파일 이름을 만듭니다.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -496,7 +496,7 @@ ms.locfileid: "37264879"
 ###  <a name="filebackup"></a> 주 파일 그룹의 전체 파일 백업 만들기  
  다음 예에서는 PRIMARY 파일 그룹의 전체 파일 백업을 만듭니다.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -563,7 +563,7 @@ ms.locfileid: "37264879"
 ###  <a name="differential"></a> 주 파일 그룹의 차등 파일 백업 만들기  
  다음 예에서는 PRIMARY 파일 그룹의 차등 파일 백업을 만듭니다.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -635,7 +635,7 @@ ms.locfileid: "37264879"
 ###  <a name="restoredbwithmove"></a> 데이터베이스를 복원 및 파일 이동  
  전체 데이터베이스 백업을 복원하고 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 디렉터리로 복원한 데이터베이스를 이동하려면 다음 단계를 수행합니다.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -752,7 +752,7 @@ ms.locfileid: "37264879"
 ###  <a name="PITR"></a> STOPAT를 사용하여 지정 시간으로 복원  
  다음 예에서는 지정 시간의 상태로 데이터베이스를 복원하고 복원 작업을 보여 줍니다.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
