@@ -25,15 +25,15 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a6c94a1335c8ee20aa7f42e179cd924b6661f55
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980675"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395764"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access 인벤토리 (AccessToSQL) 내보내기
-Access 데이터베이스를 여러 개 있고 깨달음을로 마이그레이션하려면 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트의 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 검토 하 고 데이터베이스 및 마이그레이션하려면 해당 데이터베이스 내의 개체가 결정 인벤토리 메타 데이터를 쿼리할 수 있습니다. 이 인벤토리 사용 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  
+Access 데이터베이스를 여러 개 있고 깨달음을로 마이그레이션하려면 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 프로젝트의 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 검토 하 고 데이터베이스 및 마이그레이션하려면 해당 데이터베이스 내의 개체가 결정 인벤토리 메타 데이터를 쿼리할 수 있습니다. 이 인벤토리 사용 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  
   
 -   큰 데이터베이스의 경우 이란?  
   
@@ -48,15 +48,15 @@ Access 데이터베이스를 여러 개 있고 깨달음을로 마이그레이�
 이러한 질문에 대답 하는 데 사용 되는 쿼리 예제는이 항목의 끝에서 제공 됩니다.  
   
 ## <a name="exported-metadata"></a>내보낸된 메타 데이터  
-SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리, 보고서, forms, 매크로 및 모듈에 대 한 메타 데이터를 내보냅니다. 각 항목의 이러한 범주에 대 한 메타 데이터를 별도 테이블에 내보냅니다. 이러한 테이블의 스키마를 참조 하세요 [Access 인벤토리 스키마](http://msdn.microsoft.com/fdd3cff2-4d62-4395-8acf-71ea8f17f524)합니다.  
+SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리, 보고서, forms, 매크로 및 모듈에 대 한 메타 데이터를 내보냅니다. 각 항목의 이러한 범주에 대 한 메타 데이터를 별도 테이블에 내보냅니다. 이러한 테이블의 스키마를 참조 하세요 [Access 인벤토리 스키마](access-inventory-schemas-accesstosql.md)합니다.  
   
 ## <a name="exporting-inventory-data"></a>인벤토리 데이터 내보내기  
-Access 인벤토리 내보내기 있습니다 먼저 또는 SSMA 프로젝트를 만듭니다 열고 분석 하려는 Access 데이터베이스를 추가 합니다. 지정 된 해당 데이터베이스에 대 한 메타 데이터를 내보낼 SSMA 프로젝트에 데이터베이스를 추가한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 및 스키마입니다. 필요한 경우 SSMA 메타 데이터를 저장 하는 테이블을 만듭니다. SSMA는 Access 데이터베이스에 대 한 메타 데이터 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.  
+Access 인벤토리 내보내기 있습니다 먼저 또는 SSMA 프로젝트를 만듭니다 열고 분석 하려는 Access 데이터베이스를 추가 합니다. 지정 된 해당 데이터베이스에 대 한 메타 데이터를 내보낼 SSMA 프로젝트에 데이터베이스를 추가한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 및 스키마입니다. 필요한 경우 SSMA 메타 데이터를 저장 하는 테이블을 만듭니다. SSMA는 Access 데이터베이스에 대 한 메타 데이터 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
   
 > [!NOTE]  
-> Access 데이터베이스를 여러 파일로 분할할 수 있습니다: 테이블 및 쿼리, 폼, 보고서, 매크로, 모듈 및 바로 가기 키를 포함 하는 프런트 엔드 데이터베이스를 포함 하는 백 엔드 데이터베이스입니다. 분할 데이터베이스를 마이그레이션할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA에 프런트 엔드 데이터베이스를 추가 합니다.  
+> Access 데이터베이스를 여러 파일로 분할할 수 있습니다: 테이블 및 쿼리, 폼, 보고서, 매크로, 모듈 및 바로 가기 키를 포함 하는 프런트 엔드 데이터베이스를 포함 하는 백 엔드 데이터베이스입니다. 분할 데이터베이스를 마이그레이션할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA에 프런트 엔드 데이터베이스를 추가 합니다.  
   
-다음 지침 프로젝트 만들기, 프로젝트에 데이터베이스 추가, 연결 하는 방법에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 인벤토리 데이터를 저장 하십시오.  
+다음 지침 프로젝트 만들기, 프로젝트에 데이터베이스 추가, 연결 하는 방법에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 인벤토리 데이터를 저장 하십시오.  
   
 **프로젝트를 만들려면**  
   
@@ -72,7 +72,7 @@ Access 인벤토리 내보내기 있습니다 먼저 또는 SSMA 프로젝트를
   
 5.  에 **마이그레이션** 콤보 상자를 마이그레이션하고, 클릭 하려는 대상 버전을 선택 합니다 **확인**합니다.  
   
-프로젝트를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [Creating and Managing Projects](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)합니다.  
+프로젝트를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)합니다.  
   
 **찾아 데이터베이스를 추가 합니다.**  
   
@@ -101,13 +101,13 @@ Access 인벤토리 내보내기 있습니다 먼저 또는 SSMA 프로젝트를
   
 8.  확인 페이지에서 클릭 **완료**합니다.  
   
-데이터베이스 프로젝트를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [Access 데이터베이스 파일 제거 및 추가](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)합니다.  
+데이터베이스 프로젝트를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [Access 데이터베이스 파일 제거 및 추가](adding-and-removing-access-database-files-accesstosql.md)합니다.  
   
 **SQL Server에 연결 하려면**  
   
 1.  에 **파일** 메뉴에서 **SQL Server에 연결**합니다.  
   
-2.  연결 대화 상자에서 이름을 입력 하거나 선택 된 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+2.  연결 대화 상자에서 이름을 입력 하거나 선택 된 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
     -   로컬 컴퓨터의 기본 인스턴스에 연결 하는 경우 입력할 수 있습니다 **localhost** 또는 점 (**.**).  
   
@@ -117,11 +117,11 @@ Access 인벤토리 내보내기 있습니다 먼저 또는 SSMA 프로젝트를
   
 3.  에 **데이터베이스** 상자에서 내보낸된 메타 데이터에 대 한 대상 데이터베이스의 이름을 입력 합니다.  
   
-4.  경우 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 사용 되는 포트 번호를 입력, 기본이 아닌 포트에서 연결을 허용 하도록 구성 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 연결 합니다 **서버 포트** 상자입니다. 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 기본 포트 번호는 1433입니다. 명명 된 인스턴스의 경우 SSMA에서 포트 번호 가져오기를 시도 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser 서비스입니다.  
+4.  경우 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용 되는 포트 번호를 입력, 기본이 아닌 포트에서 연결을 허용 하도록 구성 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 합니다 **서버 포트** 상자입니다. 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 기본 포트 번호는 1433입니다. 명명 된 인스턴스의 경우 SSMA에서 포트 번호 가져오기를 시도 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스입니다.  
   
-5.  에 **인증** 드롭 다운 메뉴에서 연결에 사용할 인증 유형입니다. 현재 Windows 계정을 사용 하려면 선택 **Windows 인증**합니다. 사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로그인을 선택 **SQL Server 인증**, 사용자 이름 및 암호를 제공 합니다.  
+5.  에 **인증** 드롭 다운 메뉴에서 연결에 사용할 인증 유형입니다. 현재 Windows 계정을 사용 하려면 선택 **Windows 인증**합니다. 사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 선택 **SQL Server 인증**, 사용자 이름 및 암호를 제공 합니다.  
   
-연결에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 참조 하세요 [SQL Server에 연결 &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)합니다.  
+연결에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server에 연결 &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)합니다.  
   
 **인벤토리 정보를 내보내려면**  
   
@@ -138,11 +138,11 @@ Access 인벤토리 내보내기 있습니다 먼저 또는 SSMA 프로젝트를
 메타 데이터를 내보낼 때마다 SSMA 인벤토리 데이터를 추가 합니다. 인벤토리의 기존 데이터를 업데이트 하거나 삭제 합니다.  
   
 ## <a name="querying-the-exported-metadata"></a>내보낸된 메타 데이터를 쿼리합니다.  
-Access 데이터베이스에 대 한 메타 데이터를 내보낸 후에 메타 데이터를 쿼리할 수 있습니다. 다음 지침에 쿼리 편집기 창을 사용 하 여 설명 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 쿼리를 실행할 수 있습니다.  
+Access 데이터베이스에 대 한 메타 데이터를 내보낸 후에 메타 데이터를 쿼리할 수 있습니다. 다음 지침에 쿼리 편집기 창을 사용 하 여 설명 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리를 실행할 수 있습니다.  
   
 **쿼리 메타 데이터**  
   
-1.  **시작** 메뉴에서 **모든 프로그램**를 가리키고 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005** 또는 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008**나 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012**를 클릭 하 고 **SQL Server Management Studio**합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**를 가리키고 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** 또는 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008**나 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**를 클릭 하 고 **SQL Server Management Studio**합니다.  
   
 2.  에 **서버에 연결** 대화 상자에서 설정을 확인 하 고 클릭 **Connect**합니다.  
   
@@ -153,7 +153,7 @@ Access 데이터베이스에 대 한 메타 데이터를 내보낸 후에 메타
 5.  쿼리를 실행 하려면 F5 키를 누릅니다.  
   
 ## <a name="query-examples"></a>쿼리 예제  
-사용 하 여 다음 쿼리를 실행 하기 전에 실행할지 *database_name* 쿼리 내보낸된 메타 데이터를 포함 하는 데이터베이스에 대해 실행 되 고 있는지 확인 하는 쿼리. 예를 들어 MyAccessMetadata 라는 데이터베이스에 메타 데이터를 내보낸 경우 추가할 때 다음 부분에는 [!INCLUDE[tsql](../../includes/tsql_md.md)] 코드:  
+사용 하 여 다음 쿼리를 실행 하기 전에 실행할지 *database_name* 쿼리 내보낸된 메타 데이터를 포함 하는 데이터베이스에 대해 실행 되 고 있는지 확인 하는 쿼리. 예를 들어 MyAccessMetadata 라는 데이터베이스에 메타 데이터를 내보낸 경우 추가할 때 다음 부분에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드:  
   
 ```  
 USE MyAccessMetadata;  
@@ -220,7 +220,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>데이터베이스에 개인 정보가 있습니까?  
-Access 데이터베이스는 중요 한 정보나 개인 정보를 포함할 수 있습니다. 이러한 데이터베이스를 이동 하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 보안 기능을 활용할 수 있습니다. 중요 한 데이터가 포함 된 열 특정 이름, 또는를 특정 문자를 포함 하는 경우에 해당 정보를 포함 하는 모든 열을 찾으려면 쿼리를 사용할 수 있습니다. 예를 들어, "급여" 문자열이 포함 된 모든 열을 찾을 수 있습니다.  쿼리는 다음 데이터베이스 이름, 테이블 이름과 열 이름을 반환합니다.  
+Access 데이터베이스는 중요 한 정보나 개인 정보를 포함할 수 있습니다. 이러한 데이터베이스를 이동 하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 기능을 활용할 수 있습니다. 중요 한 데이터가 포함 된 열 특정 이름, 또는를 특정 문자를 포함 하는 경우에 해당 정보를 포함 하는 모든 열을 찾으려면 쿼리를 사용할 수 있습니다. 예를 들어, "급여" 문자열이 포함 된 모든 열을 찾을 수 있습니다.  쿼리는 다음 데이터베이스 이름, 테이블 이름과 열 이름을 반환합니다.  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -234,5 +234,5 @@ WHERE ColumnName LIKE '%salary%';
 열 이름을 모르는 경우에 모든 열을 반환 하는 쿼리를 작성할 수 있습니다. 이렇게 하려면 이전 쿼리에서 WHERE 절을 제거 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[Access 데이터베이스 마이그레이션 준비](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[Access 데이터베이스 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
   

@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216593"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395324"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>업그레이드 관리자 실행(사용자 인터페이스)
   업그레이드를 계획하는 동안 업그레이드 관리자를 실행하여 로컬 또는 원격 구성 요소를 분석할 수 있습니다. 업그레이드 관리자는 분석되는 각 구성 요소와 인스턴스에 대한 보고서를 생성합니다.  
   
 > [!IMPORTANT]  
->  업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 원격 인스턴스를 분석하지 않습니다. [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 인스턴스를 분석하려면 [!INCLUDE[ssRS](../../includes/ssrs-md.md)]가 설치된 컴퓨터에 업그레이드 관리자를 설치해야 합니다.  
+>  업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 원격 인스턴스를 분석하지 않습니다. [!INCLUDE[ssRS](../../includes/ssrs.md)] 인스턴스를 분석하려면 [!INCLUDE[ssRS](../../includes/ssrs.md)]가 설치된 컴퓨터에 업그레이드 관리자를 설치해야 합니다.  
 >   
 >  분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해야 Integration Services를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 동일한 컴퓨터에 설치 합니다.  
   

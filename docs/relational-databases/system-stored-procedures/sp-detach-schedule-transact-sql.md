@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (Transact SQL) | Microsoft Docs
+title: sp_detach_schedule (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df165b840d0785fb87e7e5abeffc72ca660317cf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 708dea0c3ba2c3abc9ca0827caa9f5c548c56902
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245134"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396590"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,33 @@ sp_detach_schedule
   
 ## <a name="arguments"></a>인수  
  [ **@job_id=** ] *job_id*  
- 일정을 제거할 작업의 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
+ 일정을 제거할 작업의 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
  [ **@job_name=** ] **'***job_name***'**  
- 일정을 제거할 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 일정을 제거할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@schedule_id=** ] *schedule_id*  
- 작업에서 제거할 일정의 ID입니다. *schedule_id* 은 **int**, 기본값은 NULL입니다.  
+ 작업에서 제거할 일정의 ID입니다. *schedule_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ **@schedule_name=** ] **'***schedule_name***'**  
- 작업을 제거할 일정의 이름입니다. *schedule_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 작업을 제거할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  어느 *schedule_id* 또는 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+>  어느 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- 사용하지 않는 작업 일정을 삭제할지 여부를 지정합니다. *delete_unused_schedule* 은 **비트**, 기본값은 **0**를 의미 하는 모든 일정 유지 되는 참조 하는 작업이 없는 경우에 합니다. 경우 설정 **1**, 참조 하는 작업이 없는 경우 사용 하지 않는 작업 일정이 삭제 됩니다.  
+ 사용하지 않는 작업 일정을 삭제할지 여부를 지정합니다. *delete_unused_schedule* 됩니다 **비트**, 기본값은 **0**, 즉, 모든 일정이 유지 되는 참조 하는 작업이 없는 경우에 합니다. 경우로 **1**를 사용 하지 않는 작업 일정을 참조 하는 작업이 없는 경우 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -85,9 +85,9 @@ sp_detach_schedule
   
  작업 소유자는 일정 소유자가 아니어도 작업을 일정에 연결하고 일정에서 작업을 분리할 수 있습니다. 하지만 호출자가 일정 소유자가 아닌 한 분리를 통해 일정에 남은 작업이 없도록 일정을 삭제할 수 없습니다.  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 일정을 소유하는지 여부를 확인합니다. 구성원만는 **sysadmin** 고정된 서버 역할에서 다른 사용자가 소유한 작업 일정을 분리할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 일정을 소유하는지 여부를 확인합니다. 멤버는 **sysadmin** 고정된 서버 역할에서 다른 사용자가 소유한 작업 일정을 분리할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `'NightlyJobs'` 일정과 `'BackupDatabase'` 작업 간 연결을 제거합니다.  
@@ -102,7 +102,7 @@ EXEC dbo.sp_detach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  

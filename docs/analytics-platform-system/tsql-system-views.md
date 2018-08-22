@@ -1,6 +1,6 @@
 ---
 title: 시스템 뷰-분석 플랫폼 시스템 병렬 데이터 웨어하우스 | Microsoft Docs
-description: 시스템 뷰에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
+description: 시스템 보기에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 35cf9252b43fd4ec52b81cd02fa1e7e777bdbe93
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539613"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395771"
 ---
-# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>분석 플랫폼 시스템 병렬 데이터 웨어하우스에 대 한 시스템 뷰
-시스템 뷰에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
+# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>분석 플랫폼 시스템 Parallel Data Warehouse에 대 한 시스템 뷰
+시스템 보기에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
 
 ## <a name="parallel-data-warehouse-catalog-views"></a>병렬 데이터 웨어하우스 카탈로그 뷰
 * [sys.pdw_column_distribution_properties](http://msdn.microsoft.com/library/mt204022.aspx)
@@ -58,7 +58,7 @@ ms.locfileid: "31539613"
 * [sys.dm_pdw_waits](http://msdn.microsoft.com/library/mt203909.aspx)
 
 ## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 적용할 SQL Server Dmv
-다음 Dmv는 병렬 데이터 웨어하우스를 적용할 수 있지만에 연결 하 여 실행 해야 합니다는 **마스터** 데이터베이스입니다.
+다음 Dmv는 병렬 데이터 웨어하우스를 적용할 수 있지만 연결 하 여 실행 해야 합니다는 **마스터** 데이터베이스입니다.
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
 * [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
@@ -131,16 +131,16 @@ ms.locfileid: "31539613"
 * [sys.views](http://msdn.microsoft.com/library/ms190334.aspx)
 
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 사용할 수 있는 SQL Server Dmv
-병렬 데이터 웨어하우스는 다양 한 SQL Server 동적 관리 뷰 (Dmv)를 노출합니다. 병렬 데이터 웨어하우스에서 쿼리 하는 경우 이러한 보기는 배포에서 실행 중인 SQL Server 데이터베이스의 상태를 보고 됩니다.
+병렬 데이터 웨어하우스를 다양 한 SQL Server 동적 관리 뷰 (Dmv)를 노출합니다. 병렬 데이터 웨어하우스에서 쿼리할 때 이러한 보기는 배포판에서 실행 되는 SQL Server 데이터베이스의 상태를 보고 합니다.
 
-이러한 DMV의 각 pdw_node_id 라는 특정 열을 있습니다. 이의 계산 노드에 대 한 식별자입니다. 
+각이 DMV에 pdw_node_id 라는 특정 열을 있습니다. 이 계산 노드에 대 한 식별자입니다. 
 
 > [!NOTE]
-> 이러한 뷰를 사용 하려면 다음 표에 나와 있는 것 처럼 'pdw_nodes_', 이름에 삽입 합니다.
+> 이러한 뷰를 사용 하려면 다음 표에 나와 있는 것 처럼 'pdw_nodes_' 이름에 삽입 합니다.
 > 
 > 
 
-| 병렬 데이터 웨어하우스에서 DMV 이름 | SQL Server T-SQL 항목 링크 |
+| Parallel Data Warehouse의 DMV 이름 | SQL Server T-SQL 항목 링크 |
 |:--- |:--- |
 | sys.dm_pdw_nodes_db_file_space_usage |[sys.dm_db_file_space_usage](http://msdn.microsoft.com/library/ms174412.aspx) |
 | sys.dm_pdw_nodes_db_index_usage_stats |[sys.dm_db_index_usage_stats](http://msdn.microsoft.com/library/ms188755.aspx) |
@@ -163,7 +163,7 @@ ms.locfileid: "31539613"
 | sys.dm_pdw_nodes_os_child_instances |[sys.dm_os_child_instances](http://msdn.microsoft.com/library/ms165698.aspx) |
 | sys.dm_pdw_nodes_os_cluster_nodes |[sys.dm_os_cluster_nodes](http://msdn.microsoft.com/library/ms187341.aspx) |
 | sys.dm_pdw_nodes_os_dispatcher_pools |[sys.dm_os_dispatcher_pools](http://msdn.microsoft.com/library/bb630336.aspx) |
-| sys.dm_pdw_nodes_os_dispatchers |Transact SQL 설명서를 사용할 수 없는 경우 |
+| sys.dm_pdw_nodes_os_dispatchers |TRANSACT-SQL 문서를 사용할 수 없는 경우 |
 | sys.dm_pdw_nodes_os_hosts |[sys.dm_os_hosts](http://msdn.microsoft.com/library/ms187800.aspx) |
 | sys.dm_pdw_nodes_os_latch_stats |[sys.dm_os_latch_stats](http://msdn.microsoft.com/library/ms175066.aspx) |
 | sys.dm_pdw_nodes_os_memory_brokers |[sys.dm_os_memory_brokers](http://msdn.microsoft.com/library/bb522548.aspx) |
@@ -172,7 +172,7 @@ ms.locfileid: "31539613"
 | sys.dm_pdw_nodes_os_memory_cache_entries |[sys.dm_os_memory_cache_entries](http://msdn.microsoft.com/library/ms189488.aspx) |
 | sys.dm_pdw_nodes_os_memory_cache_hash_tables |[sys.dm_os_memory_cache_hash_tables](http://msdn.microsoft.com/library/ms182388.aspx) |
 | sys.dm_pdw_nodes_os_memory_clerks |[sys.dm_os_memory_clerks](http://msdn.microsoft.com/library/ms175019.aspx) |
-| sys.dm_pdw_nodes_os_memory_node_access_stats |Transact SQL 설명서를 사용할 수 없는 경우 |
+| sys.dm_pdw_nodes_os_memory_node_access_stats |TRANSACT-SQL 문서를 사용할 수 없는 경우 |
 | sys.dm_pdw_nodes_os_memory_nodes |[sys.dm_os_memory_nodes](http://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_memory_objects |[sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) |
 | sys.dm_pdw_nodes_os_memory_pools |[sys.dm_os_memory_pools](http://msdn.microsoft.com/library/ms175022.aspx) |
@@ -180,7 +180,7 @@ ms.locfileid: "31539613"
 | sys.dm_pdw_nodes_os_performance_counters |[sys.dm_os_performance_counters](http://msdn.microsoft.com/library/ms187743.aspx) |
 | sys.dm_pdw_nodes_os_process_memory |[sys.dm_os_process_memory](http://msdn.microsoft.com/library/bb510747.aspx) |
 | sys.dm_pdw_nodes_os_schedulers |[sys.dm_os_schedulers](http://msdn.microsoft.com/library/ms177526.aspx) |
-| sys.dm_pdw_nodes_os_spinlock_stats |Transact SQL 설명서를 사용할 수 없는 경우 |
+| sys.dm_pdw_nodes_os_spinlock_stats |TRANSACT-SQL 문서를 사용할 수 없는 경우 |
 | sys.dm_pdw_nodes_os_sys_info |[sys.dm_os_sys_info](http://msdn.microsoft.com/library/ms175048.aspx) |
 | sys.dm_pdw_nodes_os_sys_memory |[sys.dm_os_memory_nodes](http://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_tasks |[sys.dm_os_tasks](http://msdn.microsoft.com/library/ms174963.aspx) |
@@ -201,7 +201,7 @@ ms.locfileid: "31539613"
 | sys.dm_pdw_nodes_tran_session_transactions |[sys.dm_tran_session_transactions](http://msdn.microsoft.com/library/ms188739.aspx) |
 | sys.dm_pdw_nodes_tran_top_version_generators |[sys.dm_tran_top_version_generators](http://msdn.microsoft.com/library/ms188778.aspx) |
 
-## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>SQL Server 2016 PolyBase 사용할 수 있는 Dmv에서 병렬 데이터 웨어하우스
+## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>에서 SQL Server 2016 PolyBase Dmv 사용할 수 있는 병렬 데이터 웨어하우스
 * [sys.dm_exec_compute_node_errors](http://msdn.microsoft.com/library/mt146380.aspx)
 * [sys.dm_exec_compute_node_status](http://msdn.microsoft.com/library/mt146382.aspx)
 * [sys.dm_exec_compute_nodes](../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
@@ -213,19 +213,19 @@ ms.locfileid: "31539613"
 * [sys.dm_exec_external_operations](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
-## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA 뷰
-* [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
-* [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
-* [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)
+## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA 보기
+* [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
+* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](http://msdn.microsoft.com/library/ms186224.aspx)
+* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
+* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>다음 단계
-자세한 참조 정보를 참조 하십시오. [T-SQL 언어 요소](tsql-language-elements.md) 및 [T-SQL 문을](tsql-statements.md)합니다.
+자세한 참조 정보를 참조 하세요. [T-SQL 언어 요소](tsql-language-elements.md) 하 고 [T-SQL 문을](tsql-statements.md)합니다.
 
 <!--Image references-->
 

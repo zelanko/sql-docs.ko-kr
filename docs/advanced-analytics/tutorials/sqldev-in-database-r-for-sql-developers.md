@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c7296c46bb6312d66c07c0bb63c9e97c37ec1db
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082435"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394521"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>자습서: SQL Server에서 R을 사용 하 여 데이터베이스 내 분석에 알아봅니다
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,17 +32,15 @@ SQL 프로그래머를 위한이 자습서에서는 실습을 빌드하고 배�
 
 그러나 솔루션을 만든 후에는 익숙한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에 쉽게 배포할 수 있습니다.
 
-- [1 단원: 샘플 데이터 및 스크립트 다운로드](../tutorials/sqldev-download-the-sample-data.md)
+- [1 단원: NYC Taxi 데이터 설정](../tutorials/sqldev-download-the-sample-data.md)
 
-- [2 단원: 자습서 환경 설정](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [2 단원: 탐색 하 고 저장된 프로시저에서 R 함수를 호출 하 여 데이터 모양 및 분포를 시각화](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [탐색 하 고 저장된 프로시저에서 R 함수를 호출 하 여 데이터 모양 및 분포를 시각화 하는 3 단원:](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [단원 4: T-SQL 함수에서 R을 사용 하 여 데이터 기능 만들기](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [3 단원: T-SQL 함수에서 R을 사용 하 여 데이터 기능 만들기](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
-- [5 단원: 학습 및 함수 및 저장된 프로시저를 사용 하 여 R 모델 저장](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [4 단원: 학습 및 함수 및 저장된 프로시저를 사용 하 여 R 모델 저장](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [6 단원: 래핑 R 코드 운영 화를 위한 저장된 프로시저에서](../tutorials/sqldev-operationalize-the-model.md)합니다. 
+- [5 단원: 래핑 R 코드 운영 화를 위한 저장된 프로시저에서](../tutorials/sqldev-operationalize-the-model.md)합니다. 
   모델을 데이터베이스에 저장한 후 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 예측을 위해 모델을 호출합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항

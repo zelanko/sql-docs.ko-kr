@@ -16,18 +16,18 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d6c63b66a52f0fbc6a676a2143299b7ee5b13208
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3eb32a285ceca0ab080216f0d7e9dd387d0949da
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395346"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 스키마 (DB2ToSQL) 변환
-DB2를 연결한 후에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트 설정 및 데이터 매핑 옵션을 DB2 데이터베이스 개체를 변환할 수 있습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체입니다.  
+DB2를 연결한 후에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 프로젝트 설정 및 데이터 매핑 옵션을 DB2 데이터베이스 개체를 변환할 수 있습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체입니다.  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
-DB2에서 개체 정의 데이터베이스 개체 변환, 유사한로 변환한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 및 SSMA 메타 데이터에이 정보를 로드 합니다. 인스턴스로 정보를 로드 하지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 사용 하 여 개체 및 해당 속성을 보려면 다음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다.  
+DB2에서 개체 정의 데이터베이스 개체 변환, 유사한로 변환한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 SSMA 메타 데이터에이 정보를 로드 합니다. 인스턴스로 정보를 로드 하지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 개체 및 해당 속성을 보려면 다음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기입니다.  
   
 변환 중 SSMA 출력 창에 출력 메시지 및 오류 목록 창에 오류 메시지를 인쇄합니다. 출력 및 오류 정보를 사용 하 여 DB2 데이터베이스 또는 원하는 변환 결과 얻으려면 변환 프로세스를 수정 해야 하는지 여부를 결정 합니다.  
   
@@ -35,7 +35,7 @@ DB2에서 개체 정의 데이터베이스 개체 변환, 유사한로 변환한
 개체를 변환 하기 전에 프로젝트 변환 옵션을 검토 합니다 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 함수 및 전역 변수를 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 [프로젝트 설정 &#40;변환&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)합니다.  
   
 ## <a name="conversion-results"></a>변환 결과  
-다음 표에서 DB2 개체가 변환 되 고 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체:  
+다음 표에서 DB2 개체가 변환 되 고 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체:  
   
 |DB2 개체|결과 SQL Server 개체|  
 |-----------|----------------------------|  
@@ -150,7 +150,7 @@ DB2 데이터베이스 개체를 변환 하려면 먼저 변환 하려는 개체
   
 -   DB2 데이터베이스를 제거 하거나 수정 하는 문제가 있는 코드에서 개체를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하는 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)합니다.  
   
--   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기 및 DB2 메타 데이터 탐색기, 개체를 로드 하기 전에 항목 옆의 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 DB2에서 데이터를 마이그레이션.  
+-   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기 및 DB2 메타 데이터 탐색기, 개체를 로드 하기 전에 항목 옆의 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 DB2에서 데이터를 마이그레이션.  
   
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스에서 다음 단계 [SQL Server로 변환된 된 개체를 로드](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)합니다.  

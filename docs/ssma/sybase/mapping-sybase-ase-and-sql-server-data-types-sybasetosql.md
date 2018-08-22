@@ -19,15 +19,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9efd87a25802bd5610393beb4de0728807ea827d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985325"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394971"
 ---
-# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE 및 SQL Server 데이터 형식 (SybaseToSQL) 매핑
-Sybase 적응형 Server Enterprise (ASE) 데이터베이스 형식에서 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 형식입니다. ASE 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 ASE에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 기본 데이터 형식 매핑을 그대로 사용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
+# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE 및 SQL Server 데이터 형식 매핑(SybaseToSQL)
+Sybase 적응형 Server Enterprise (ASE) 데이터베이스 형식에서 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 형식입니다. ASE 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 ASE에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. 기본 데이터 형식 매핑을 그대로 사용 하거나 다음 섹션에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
 SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록을 참조 하세요 [프로젝트 설정 &#40;형식 매핑&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)합니다.  
@@ -66,7 +66,7 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
         이렇게 하면 동일한 데이터 형식의 작고 큰 값 데이터 매핑을 사용자 지정할 수 있습니다.  
   
-    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터 형식입니다.  
+    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터 형식입니다.  
   
         일부 유형의 대상 데이터 형식의 길이 해야합니다. 필요한 경우 새 데이터 길이 입력 합니다 **바꿉니다** 상자입니다.  
   
@@ -82,7 +82,7 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
         이렇게 하면 동일한 데이터 형식의 작고 큰 값 데이터 매핑을 사용자 지정할 수 있습니다.  
   
-    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터 형식입니다.  
+    4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터 형식입니다.  
   
         일부 유형의 대상 데이터 형식의 길이 해야합니다. 필요한 경우 새 데이터 길이 입력 합니다 **바꿉니다** 상자를 선택한 다음 클릭 **확인**합니다.  
   
@@ -95,7 +95,7 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
         상속 된 매핑을 제거할 수 없습니다. 그러나 상속된 매핑 사용자 지정 매핑을 특정 개체 또는 개체 범주에 의해 재정의 됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는가 중 하나로 [평가 보고서를 만드는](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) 또는 [변환 Sybase ASE 데이터베이스 개체를 SQL Server 또는 SQL Azure 구문](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)합니다. 평가 보고서를 만드는 경우 Sybase ASE 개체를 평가 하는 동안 자동으로 변환 됩니다.  
+마이그레이션 프로세스의 다음 단계는가 중 하나로 [평가 보고서를 만드는](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) 또는 [변환 Sybase ASE 데이터베이스 개체를 SQL Server 또는 SQL Azure 구문](converting-sybase-ase-database-objects-sybasetosql.md)합니다. 평가 보고서를 만드는 경우 Sybase ASE 개체를 평가 하는 동안 자동으로 변환 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
 [Sybase ASE 데이터베이스를 SQL Server-Azure SQL DB로 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

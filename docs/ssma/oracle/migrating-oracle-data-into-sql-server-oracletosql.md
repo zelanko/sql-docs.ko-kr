@@ -16,21 +16,21 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 48d4393a2858b31d6bc4f0c85875c83506dae2ce
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3e076317b902c053ed51059712dd7752e8ce78a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983405"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395765"
 ---
-# <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>마이그레이션 Oracle 데이터를 SQL Server (OracleToSQL)
-사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Oracle에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+# <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Oracle 데이터를 SQL Server로 마이그레이션(OracleToSQL)
+사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 > [!IMPORTANT]  
 > 서버 쪽 데이터 마이그레이션 엔진으로 사용 되는 엔진을 사용 하는 경우, 데이터를 마이그레이션하려면 먼저 설치 해야 합니다 SSMA Oracle 확장 팩 및 SSMA를 실행 하는 컴퓨터의 Oracle 공급자에 대 한 합니다. 또한 SQL Server 에이전트 서비스를 실행 되어야 합니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [서버 구성 설치 (OracleToSQL)](http://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
   
 ## <a name="setting-migration-options"></a>마이그레이션 옵션 설정  
-마이그레이션하기 전에 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 프로젝트 마이그레이션 옵션을 검토 합니다 **프로젝트 설정을** 대화 상자.  
+마이그레이션하기 전에 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 프로젝트 마이그레이션 옵션을 검토 합니다 **프로젝트 설정을** 대화 상자.  
   
 -   이 대화 상자를 사용 하 여 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 검사, null 값 처리 및 id 값 처리 등의 옵션을 설정할 수 있습니다. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (마이그레이션) (OracleToSQL)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)합니다.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "38983405"
   
 **서버 쪽 데이터 마이그레이션:**  
   
--   서버 쪽 데이터 마이그레이션 중에 엔진은 대상 데이터베이스에 상주합니다. 확장 팩을 통해 설치 됩니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [SQL Server의 서버 구성 요소 설치](http://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
+-   서버 쪽 데이터 마이그레이션 중에 엔진은 대상 데이터베이스에 상주합니다. 확장 팩을 통해 설치 됩니다. 확장 팩을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [SQL Server의 서버 구성 요소 설치](installing-ssma-components-on-sql-server-oracletosql.md)  
   
 -   서버 쪽에서 마이그레이션을 시작 하려면 선택 합니다 **서버 쪽 데이터 마이그레이션 엔진** 옵션을 **프로젝트 설정** 대화 상자.  
   
 ## <a name="migrating-data-to-sql-server"></a>SQL Server로 데이터 마이그레이션  
-마이그레이션 데이터를 Oracle 테이블에서 행의 데이터를 이동 하는 대량 로드 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 트랜잭션에서 테이블입니다. 행 수가 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 각 트랜잭션에서 프로젝트 설정에서 구성 됩니다.  
+마이그레이션 데이터를 Oracle 테이블에서 행의 데이터를 이동 하는 대량 로드 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 테이블입니다. 행 수가 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 각 트랜잭션에서 프로젝트 설정에서 구성 됩니다.  
   
 마이그레이션 메시지를 보려면 출력 창 표시 되는지 확인 합니다. 이 고, 그렇지 합니다 **뷰** 메뉴에서 **출력**합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "38983405"
   
     -   Oracle 공급자 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   
-    -   변환된 된 개체와 동기화 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.  
+    -   변환된 된 개체와 동기화 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
   
 2.  Oracle 메타 데이터 탐색기에서 마이그레이션할 데이터가 포함 된 개체를 선택 합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "38983405"
   
     -   서버 쪽 데이터 마이그레이션을 수행 하기 전에 다음을 확인 합니다.  
   
-        1.  확장 팩 Oracle 용 SSMA의 인스턴스에 설치 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]입니다.  
+        1.  확장 팩 Oracle 용 SSMA의 인스턴스에 설치 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.  
   
         2.  SQL Server 인스턴스에서 SQL Server 에이전트 서비스 실행 중입니다.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "38983405"
 4.  마우스 오른쪽 단추로 클릭 **스키마** Oracle 메타 데이터 탐색기에서를 클릭 한 다음 **데이터 마이그레이션**합니다. 개별 개체 또는 개체의 범주에 대 한 데이터를 마이그레이션할 수도 있습니다: 개체 또는 해당 부모 폴더를 마우스 오른쪽 단추로 클릭 선택 된 **데이터 마이그레이션** 옵션입니다.  
   
     > [!NOTE]  
-    > 인스턴스에서 확장 팩 Oracle 용 SSMA 설치 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 경우 **서버 쪽 데이터 마이그레이션 엔진** 을 선택한 경우 데이터베이스에서 대상 데이터베이스로 데이터를 마이그레이션하는 동안 다음 오류가 발생 합니다. ' SQL Server에 SSMA 데이터 마이그레이션 구성 요소를 찾을 수 없습니다, 가능한 서버 쪽 데이터 마이그레이션 설정 되지 않습니다. 확장 팩 올바르게 설치 되어 있는지를 확인 하세요. '. 클릭 **취소** 데이터 마이그레이션이 종료 합니다.  
+    > 인스턴스에서 확장 팩 Oracle 용 SSMA 설치 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 경우 **서버 쪽 데이터 마이그레이션 엔진** 을 선택한 경우 데이터베이스에서 대상 데이터베이스로 데이터를 마이그레이션하는 동안 다음 오류가 발생 합니다. ' SQL Server에 SSMA 데이터 마이그레이션 구성 요소를 찾을 수 없습니다, 가능한 서버 쪽 데이터 마이그레이션 설정 되지 않습니다. 확장 팩 올바르게 설치 되어 있는지를 확인 하세요. '. 클릭 **취소** 데이터 마이그레이션이 종료 합니다.  
   
 5.  에 **Connect to Oracle** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **Connect**합니다. Oracle에 연결 하는 방법에 대 한 자세한 내용은 참조 하세요. [Oracle에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    대상 데이터베이스에 연결 하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 연결 자격 증명을 입력 합니다 **SQL Server에 연결** 대화 상자를 클릭 **Connect**합니다. 에 연결 하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 참조 하세요 [SQL Server에 연결](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    대상 데이터베이스에 연결 하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결 자격 증명을 입력 합니다 **SQL Server에 연결** 대화 상자를 클릭 **Connect**합니다. 에 연결 하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server에 연결](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
     메시지에 표시 됩니다는 **출력** 창입니다. 마이그레이션이 완료 되 면 합니다 **데이터 마이그레이션 보고서** 나타납니다. 모든 데이터 마이그레이션하지 않은 경우 오류를 포함 하는 행을 클릭 한 다음 클릭 **세부 정보**합니다. 보고서를 사용 하 여 완료 되 면 **닫기**합니다. 데이터 마이그레이션 보고서에 대 한 자세한 내용은 참조 하세요. [데이터 마이그레이션 보고서 (SSMA 공통)](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   

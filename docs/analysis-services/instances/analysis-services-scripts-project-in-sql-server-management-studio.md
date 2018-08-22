@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8ee5d2958b6ba7f180472e4d91ce389159e0438
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 10f8427f5cc5124afc0f6c3b7845993af099e6e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034971"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395097"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio의 Analysis Services 스크립트 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "38034971"
 4.  프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **기존 항목** 을 선택하여 프로젝트에 대한 메모를 포함하는 텍스트 파일과 같은 기타 파일을 솔루션 탐색기에 있는 Analysis Server 스크립트 프로젝트의 **기타** 폴더에 추가합니다. 이러한 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 무시됩니다.  
   
 ## <a name="file-types"></a>파일 유형  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션은 솔루션에 포함시킨 프로젝트에 따라 그리고 해당 솔루션의 각 프로젝트에 포함시킨 항목에 따라 여러 파일 형식을 포함할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 솔루션 파일 유형에 대한 자세한 내용은 [솔루션 및 프로젝트 관리 파일](http://msdn.microsoft.com/library/e19d2859-0b97-4727-ac27-c4c226d86b2f)을 참조하세요. 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션의 각 프로젝트에 대한 파일은 솔루션 폴더에 저장되며 각 프로젝트에 대해 별도의 폴더에 저장됩니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션은 솔루션에 포함시킨 프로젝트에 따라 그리고 해당 솔루션의 각 프로젝트에 포함시킨 항목에 따라 여러 파일 형식을 포함할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 솔루션 파일 유형에 대한 자세한 내용은 [솔루션 및 프로젝트 관리 파일](../../ssms/solution/files-that-manage-solutions-and-projects.md)을 참조하세요. 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션의 각 프로젝트에 대한 파일은 솔루션 폴더에 저장되며 각 프로젝트에 대해 별도의 폴더에 저장됩니다.  
   
  분석 서버 스크립트 프로젝트에 대한 프로젝트 폴더는 다음 표에 나열된 파일 유형을 포함할 수 있습니다.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050604"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396380"
 ---
 # <a name="thread-pool-properties"></a>스레드 풀 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -272,9 +272,9 @@ ms.locfileid: "38050604"
 >  속성 설정 방법은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [프로세스 및 스레드 정보](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [다중 프로세서](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [프로세서 그룹](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [프로세스 및 스레드 정보](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [다중 프로세서](/windows/desktop/ProcThread/multiple-processors)   
+ [프로세서 그룹](/windows/desktop/ProcThread/processor-groups)   
  [SQL Server 2012에서에서 analysis Services 스레드 풀 변경](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 구성 설정 (Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [프로세서가 64 개를 초과 하는 시스템 지원](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

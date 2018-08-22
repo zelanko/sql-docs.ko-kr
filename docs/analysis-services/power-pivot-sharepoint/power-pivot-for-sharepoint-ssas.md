@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc21ce644416c93367552e6ba19ac8aca9e0f48e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023640"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395323"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>SharePoint용 파워 피벗(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "34023640"
  이 데이터의 서버 호스팅에는 SharePoint, Excel 서비스 및 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치가 필요합니다. 데이터는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 로드되며 여기서 서버가 Excel 2010 통합 문서용으로 제공하거나 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 가 Excel 2013 및 2016 통합 문서용으로 제공하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침 기능을 사용하여 예약된 간격으로 데이터를 새로 고칠 수 있습니다.  
   
 ## <a name="power-pivot-for-sharepoint-2016"></a>SharePoint 2016용 Power Pivot  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 데이터 모델 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 뷰 보고서를 포함하는 Excel 통합 문서의 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] SharePoint 2016 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용을 지원합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 지원 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 모델을 포함 하는 Excel 통합 문서의 SharePoint 2016 및 Office Online Server 사용 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 보고서.  
   
- Excel에는 브라우저에서 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 통합 문서와 상호 작용할 수 있도록 데이터 모델 기능이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 내에 포함되어 있습니다. SharePoint 2016용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능을 팜에 배포하지 않아도 됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모드에서 설치하고 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)]과 함께 서버를 등록해야만 합니다.  
+ Office Online Server 내에서 Excel에는 상호 작용할 수 있도록 데이터 모델 기능이 포함 되어 있습니다.는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 브라우저에서 통합 문서. SharePoint 2016용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능을 팜에 배포하지 않아도 됩니다. 설치 해야는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모드 및 Office Online Server를 사용 하 여 서버를 등록 합니다.  
   
  SharePoint 2016용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능을 배포하면 추가 기능 및 SharePoint 팜의 기능을 사용할 수 있습니다. 추가 기능에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 새로 고침 예약이 있습니다.  
   
- ![SSAS Power Pivot 모드 3 서버 및 Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot 모드 3 서버 및 Office Online Server")  
+ ![SSAS Power Office Online Server 사용 하 여 피벗 모드 3 서버](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Office Online Server 사용 하 여 피벗 모드 3 서버")  
   
 ## <a name="power-pivot-for-sharepoint-2013"></a>SharePoint 2013용 Power Pivot  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 데이터 모델 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 뷰 보고서를 포함하는 Excel 통합 문서의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2013 Excel Services 사용을 지원합니다.  
@@ -82,8 +82,8 @@ ms.locfileid: "34023640"
   
  [SQL Server 2016 비즈니스 인텔리전스에 대한 예제 라이선스 토폴로지 및 비용](http://msdn.microsoft.com/library/682b8711-407a-48d1-9807-415d4c24dad6)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Power Pivot 계획 및 배포](http://go.microsoft.com/fwlink/?linkID=220972)   
- [SharePoint 용 파워 피벗에 대 한 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [SharePoint 용 파워 피벗 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

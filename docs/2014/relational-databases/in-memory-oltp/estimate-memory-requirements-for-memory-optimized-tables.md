@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
@@ -14,12 +13,12 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04a293e7377a92e36b96678859a132869b04fb4f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207103"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396377"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 새 테이블을 만들든, 기존 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하든 간에 충분한 메모리로 서버를 프로비전할 수 있도록 각 테이블에 필요한 메모리를 적절히 예측하는 것이 중요합니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  

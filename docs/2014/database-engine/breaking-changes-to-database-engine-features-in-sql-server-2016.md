@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254755"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394339"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 데이터베이스 엔진 기능의 주요 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 응용 프로그램, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "37254755"
 |sp_setapprole 및 sp_unsetapprole|현재 `OUTPUT`에 대한 쿠키 `sp_setapprole` 매개 변수는 정확한 최대 길이인 `varbinary(8000)`로 정의되어 있습니다. 그러나 현재 구현은 `varbinary(50)`합니다. 응용 프로그램은 계속해서 `varbinary(8000)`를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 응용 프로그램이 제대로 작동할 수 있도록 해야 합니다. 자세한 내용은 [sp_setapprole&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)을 참조하세요.|  
 |EXECUTE AS|현재 EXECUTE AS에 대한 쿠키 OUTPUT 매개 변수는 정확한 최대 길이인 `varbinary(8000)`로 정의되어 있습니다. 그러나 현재 구현은 `varbinary(100)`합니다. 응용 프로그램은 계속해서 `varbinary(8000)`를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 응용 프로그램이 제대로 작동할 수 있도록 해야 합니다. 자세한 내용은 [EXECUTE AS&#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql)를 참조하세요.|  
 |sys.fn_get_audit_file 함수|사용자 정의 감사 이벤트를 지원할 수 있도록 두 개의 열(**user_defined_event_id** 및 **user_defined_information**)이 추가되었습니다. 이름으로 열을 선택하지 않는 응용 프로그램에서는 예상보다 많은 열이 반환될 수 있습니다. 이름으로 열을 선택하거나, 이러한 추가 열을 허용하도록 응용 프로그램을 조정해야 합니다.|  
-|WITHIN 예약 키워드|WITHIN은 이제 예약 키워드입니다. 따라서 이름이 'within'인 개체 또는 열에 대한 참조는 실패합니다. 개체 또는 열의 이름을 바꾸거나 대괄호 또는 따옴표를 사용하여 이름을 구분합니다.  예를 들면 `SELECT * FROM [within]`과 같습니다.|  
+|WITHIN 예약 키워드|WITHIN은 이제 예약 키워드입니다. 따라서 이름이 'within'인 개체 또는 열에 대한 참조는 실패합니다. 개체 또는 열의 이름을 바꾸거나 대괄호 또는 따옴표를 사용하여 이름을 구분합니다.  `SELECT * FROM [within]`) 을 입력합니다.|  
 |`time` 또는 `datetime2` 형식의 계산 열에 대한 CAST 및 CONVERT 연산|이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `time` 및 `datetime2` 데이터 형식 중 하나가 계산 열 식에서 사용되는 경우를 제외하고 이러한 데이터 형식에 대한 CAST 및 CONVERT 연산의 기본 스타일이 121입니다. 계산 열의 경우 기본 스타일은 0입니다. 이 동작은 자동 매개 변수화와 관련된 쿼리에서 이러한 연산이 만들어지고 사용될 때 또는 제약 조건 정의에 사용될 때 계산 열에 영향을 줍니다.<br /><br /> 호환성 수준 110에서 `time` 및 `datetime2` 데이터 형식의 CAST 및 CONVERT 연산에 대한 기본 스타일은 항상 121입니다. 쿼리에 이전 동작이 적용되는 경우 110보다 낮은 호환성 수준을 사용하거나, 해당 쿼리에서 스타일 0을 명시적으로 지정해야 합니다.<br /><br /> 데이터베이스를 호환성 수준 110으로 업그레이드할 경우 디스크에 저장된 사용자 데이터는 변경되지 않습니다. 수동으로 이 데이터를 적절하게 수정해야 합니다. 예를 들어 SELECT INTO를 사용하여 위에서 설명한 계산 열 식이 포함된 원본에서 테이블을 만든 경우 계산 열 정의 자체가 아니라 스타일 0을 사용하는 데이터가 저장됩니다. 스타일 121과 일치하도록 이 데이터를 수동으로 업데이트해야 합니다.|  
 |ALTER TABLE|ALTER TABLE 문에는 두 부분(schema.object)으로 구성된 테이블 이름만 허용됩니다. 이제 다음 형식을 사용 하 여 테이블 이름을 지정 하는 컴파일 시 오류 117 실패 합니다.<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 이전 버전에서는 server.database.schema.table 형식을 지정할 경우 오류 4902가 반환되었습니다. 그러나 .database.schema.table 또는 ..schema.table 형식을 지정하면 작업이 성공했습니다. 이 문제를 해결하려면 네 부분으로 구성된 접두사를 사용하지 않아야 합니다.|  
 |메타데이터 찾아보기|이제 FOR BROWSE 또는 SET NO_BROWSETABLE ON을 사용하여 뷰를 쿼리하면 기본 개체의 메타데이터가 아니라 뷰의 메타데이터가 반환됩니다. 현재 이 동작은 메타데이터를 찾아보는 다른 방법과 일치합니다.|  
@@ -161,7 +161,7 @@ ms.locfileid: "37254755"
 -   비교 연산자 및 **order by** 절. 비교 연산자에는 +, \<, >, \<=, > =, `eq`를 `lt`를 `gt`를 `le`, 및 `ge`합니다.  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>시스템 프로시저에 대한 분산 쿼리 호출  
- `OPENQUERY`를 통한 일부 시스템 프로시저에 대한 분산 쿼리 호출은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 서버에서 다른 서버로 호출될 경우 실패합니다. 이는 [!INCLUDE[ssDE](../includes/ssde-md.md)]이 프로시저에 대한 메타데이터를 검색할 수 없는 경우에 발생합니다. `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`)을 입력합니다.  
+ `OPENQUERY`를 통한 일부 시스템 프로시저에 대한 분산 쿼리 호출은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 서버에서 다른 서버로 호출될 경우 실패합니다. 이는 [!INCLUDE[ssDE](../includes/ssde-md.md)]이 프로시저에 대한 메타데이터를 검색할 수 없는 경우에 발생합니다. `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`) 을 입력합니다.  
   
 #### <a name="isolation-level-and-spresetconnection"></a>격리 수준 및 sp_reset_connection  
  연결의 격리 수준은 클라이언트 드라이버에 의해 다음과 같은 방식으로 처리됩니다.  
@@ -266,7 +266,7 @@ ms.locfileid: "37254755"
 ||짧은 이름에 대해 인증서 발급<br /><br /> -이 옵션은 모든 응용 프로그램에 대 한 작동합니다.|  
   
 ##  <a name="Yukon"></a> SQL Server 2005의에서 주요 변경 내용  
- 에 도입 된 주요 변경 목록은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]를 참조 하세요 [SQL Server 2005 데이터베이스 엔진 기능의 주요 변경 내용](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx)합니다.  
+ 에 도입 된 주요 변경 목록은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]를 참조 하세요 [SQL Server 2005 데이터베이스 엔진 기능의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014에서에서 사용 되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-2016.md)   

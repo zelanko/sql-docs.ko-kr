@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobsteplog (Transact SQL) | Microsoft Docs
+title: sp_delete_jobsteplog (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2d4284f32030339a5c60e211b911c5e7cd783b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3875cb5805478013ec5ddd6944174a522028b02d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257330"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395105"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  이 인수로 지정되는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 제거합니다. 이 저장된 프로시저를 사용 하 여 유지 관리 하는 **sysjobstepslogs** 테이블에 **msdb** 데이터베이스입니다.  
+  이 인수로 지정되는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 제거합니다. 유지 하기 위해이 저장된 프로시저를 사용 합니다 **sysjobstepslogs** 테이블에 **msdb** 데이터베이스입니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -49,39 +49,39 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>인수  
  [ **@job_id =**] **'***job_id***'**  
- 제거할 작업 단계 로그가 포함된 작업의 ID입니다. *job_id* 은 **int**, 기본값은 NULL입니다.  
+ 제거할 작업 단계 로그가 포함된 작업의 ID입니다. *job_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+> **참고:** 중 하나 *job_id* 하거나 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@step_id =**] *step_id*  
- 작업 단계 로그를 삭제할 작업 단계의 ID입니다. 하지 않으면 작업의 모든 작업 단계 로그가 삭제 됩니다 하지 않은 경우 **@older_than** 또는 **@larger_than** 지정 됩니다. *step_id* 은 **int**, 기본값은 NULL입니다.  
+ 작업 단계 로그를 삭제할 작업 단계의 ID입니다. 하지 않으면 작업의 모든 작업 단계 로그가 삭제 됩니다 하지 않은 경우 **@older_than** 하거나 **@larger_than** 지정 됩니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ **@step_name =**] **'***step_name***'**  
- 작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 어느 *step_id* 또는 *step_name* 지정할 수 있습니다 하지만 둘 다 지정할 수 없습니다.  
+> **참고:** 중 하나 *step_id* 하거나 *step_name* 지정할 수 있습니다. 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@older_than =**] **'***date***'**  
- 유지할 가장 오래된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 은 **datetime**, 기본값은 NULL입니다. 둘 다 **@older_than** 및 **@larger_than** 지정할 수 있습니다.  
+ 유지할 가장 오래된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 됩니다 **datetime**, 기본값은 NULL입니다. 둘 다 **@older_than** 하 고 **@larger_than** 지정할 수 있습니다.  
   
  [ **@larger_than =**] **'***size_in_bytes***'**  
- 유지할 가장 큰 작업 단계 로그의 크기(바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. 둘 다 **@larger_than** 및 **@older_than** 지정할 수 있습니다.  
+ 유지할 가장 큰 작업 단계 로그의 크기(바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. 둘 다 **@larger_than** 하 고 **@older_than** 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_delete_jobsteplog** 에 **msdb** 데이터베이스입니다.  
   
- 하는 경우를 제외 하 고 인수 없이 **@job_id** 또는 **@job_name** 지정 된 경우 지정된 된 작업에 대 한 모든 작업 단계 로그가 삭제 됩니다.  
+ 제외 하 고 인수가 없는 경우 **@job_id** 하거나 **@job_name** 지정 된 경우 지정된 된 된 작업에 대 한 모든 작업 단계 로그가 삭제 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -90,9 +90,9 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+ 이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 구성원만 **sysadmin** 다른 사용자가 소유 하는 작업 단계 로그를 삭제할 수 있습니다.  
+ 멤버만 **sysadmin** 다른 사용자가 소유한 작업 단계 로그를 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -135,8 +135,8 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_help_jobsteplog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [SQL Server 에이전트 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

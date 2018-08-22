@@ -16,31 +16,31 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e52b852722d21abc8ab2acca3c6cfa375154627c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4149818ab672ff82e7299837a016834113cf0ac3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775159"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395958"
 ---
 # <a name="new-project-db2tosql"></a>새 프로젝트 (DB2ToSQL)
-사용 하 여는 **새 프로젝트** 대화 상자를 새 SSMA 프로젝트를 만듭니다. 에 액세스 하려면는 **새 프로젝트** 대화 상자의 **파일** 메뉴를 클릭 하 여 **새 프로젝트**합니다.  
+사용 된 **새 프로젝트** 대화 상자의 새 SSMA 프로젝트를 만듭니다. 액세스 하는 **새 프로젝트** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **새 프로젝트**.  
   
 ## <a name="options"></a>변수  
 **이름**  
-프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명을 추가 합니다.  
+프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명이 추가 됩니다.  
   
 **위치**  
 입력 하거나 폴더 또는 프로젝트를 저장할 네트워크 위치를 찾습니다.  
   
 **로 마이그레이션**  
-목록 아래쪽부터 대상 데이터베이스 버전 중 하나를 선택 합니다.  
+대상 데이터베이스 버전인 목록 아래 중 하나를 선택 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   Azure SQL DB  
   

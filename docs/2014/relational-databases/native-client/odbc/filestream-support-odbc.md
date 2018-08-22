@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f45ccb411eeaafb072b7e2832f5628068431f9cc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8621e56093a07582a0f92bd578ac3bca6e67d988
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410312"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394144"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원](../features/filestream-support.md)합니다. FILESTREAM에 대 한 ODB 지원을 설명 하는 샘플을 보려면 [송신 및 수신 데이터 증분 방식으로 FILESTREAM을 사용 하 여 &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)합니다.  

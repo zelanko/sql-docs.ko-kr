@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189840"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394914"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
   이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치의 중앙 구성 요소인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버의 개요입니다. 인증, 데이터 처리, 렌더링 및 배달 작업을 처리하는 특수 용도의 확장 프로그램 모음과 처리 엔진 쌍으로 구성됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나의 배포 모드에서 실행됩니다. 기능 비교는 [SharePoint와 기본 모드의 기능 비교](#bkmk_featuresupport) 섹션을 참조하세요.  
@@ -89,23 +89,23 @@ ms.locfileid: "37189840"
   
 ##  <a name="bkmk_featuresupport"></a> SharePoint와 기본 모드의 기능 비교  
   
-|기능 또는 구성 요소|기본 모드| SharePoint 모드 |  
+|기능 또는 구성 요소|기본 모드|SharePoint 모드 |  
 |--------------------------|-----------------|---------------------|  
-|**URL 주소 지정**|예|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 응용 프로그램이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)를 참조하세요.|  
-|**사용자 지정 보안 확장 프로그램**|예|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 사용자 지정 보안 확장 프로그램을 배포 하거나 보고서 서버에서 사용 될 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
-|**구성 관리자**|예|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
-|**보고서 관리자**|예|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 응용 프로그램 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
-|**링크된 보고서**|예|아니요.|  
-|**내 보고서**|예|아니요|  
-|**내 구독** 및 일괄 처리 방법|예|아니요|  
-|**데이터 경고**|아니요|예|  
-|**파워 뷰**|아니요|예<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
-|**.RDL 보고서**|예|예<br /><br /> .RDL 보고서는 기본 모드 또는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행될 수 있습니다.|  
-|**.RDLX 보고서**|아니요|예<br /><br /> 파워 뷰 .RDLX 보고서는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서만 실행될 수 있습니다.|  
-|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|아니요|예|  
-|**인터넷 연결 배포를 위한 AAM 영역**|아니요|예|  
-|**SharePoint 백업 및 복구**|아니요|예|  
-|**ULS 로그 지원**|아니요|예|  
+|**URL 주소 지정**|사용자 계정 컨트롤|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 응용 프로그램이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)를 참조하세요.|  
+|**사용자 지정 보안 확장 프로그램**|사용자 계정 컨트롤|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 사용자 지정 보안 확장 프로그램을 배포 하거나 보고서 서버에서 사용 될 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
+|**구성 관리자**|사용자 계정 컨트롤|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
+|**보고서 관리자**|사용자 계정 컨트롤|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 응용 프로그램 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
+|**링크된 보고서**|사용자 계정 컨트롤|아니요.|  
+|**내 보고서**|사용자 계정 컨트롤|아니오|  
+|**내 구독** 및 일괄 처리 방법|사용자 계정 컨트롤|아니오|  
+|**데이터 경고**|아니오|사용자 계정 컨트롤|  
+|**파워 뷰**|아니오|사용자 계정 컨트롤<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**.RDL 보고서**|사용자 계정 컨트롤|사용자 계정 컨트롤<br /><br /> .RDL 보고서는 기본 모드 또는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행될 수 있습니다.|  
+|**.RDLX 보고서**|아니오|사용자 계정 컨트롤<br /><br /> 파워 뷰 .RDLX 보고서는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서만 실행될 수 있습니다.|  
+|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|아니오|사용자 계정 컨트롤|  
+|**인터넷 연결 배포를 위한 AAM 영역**|아니오|사용자 계정 컨트롤|  
+|**SharePoint 백업 및 복구**|아니오|사용자 계정 컨트롤|  
+|**ULS 로그 지원**|아니오|사용자 계정 컨트롤|  
   
 ##  <a name="bkmk_nativemode"></a> 기본 모드  
  기본 모드에서 보고서 서버는 보고서 및 보고서 모델에 대한 모든 확인, 관리, 처리 및 배달 기능을 제공하는 독립 실행형 응용 프로그램 서버입니다. 이 모드는 보고서 서버 인스턴스의 기본 모드입니다. 설치 중 구성된 기본 모드 보고서 서버를 설치하거나 설치가 완료된 후 보고서 서버를 기본 모드 작업용으로 구성할 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "37189840"
  타사 개발자들은 보고서 서버의 처리 기능을 대체 또는 확장하기 위한 확장 프로그램을 추가로 만들 수 있습니다. 응용 프로그램 개발자가 사용할 수 있는 프로그래밍 인터페이스에 대한 자세한 내용은 [기술 참조](../../2014/reporting-services/technical-reference-ssrs.md)를 참조하세요.  
   
 ###  <a name="bkmk_nativewithwebparts"></a> 기본 모드와 SharePoint 웹 파트  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 인스턴스의 설치 및 등록할 수 있는 두 가지 웹 파트를 제공 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 이상 또는 [!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 이상. SharePoint 사이트에서 이러한 웹 파트를 사용하여 기본 모드에서 실행되는 보고서 서버에서 저장 및 처리되는 보고서를 찾고 확인할 수 있습니다. 이러한 웹 파트는 이전 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]릴리스에서 도입되었습니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 인스턴스의 설치 및 등록할 수 있는 두 가지 웹 파트를 제공 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 이상 또는 SharePoint Portal Server 2003 이상. SharePoint 사이트에서 이러한 웹 파트를 사용하여 기본 모드에서 실행되는 보고서 서버에서 저장 및 처리되는 보고서를 찾고 확인할 수 있습니다. 이러한 웹 파트는 이전 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]릴리스에서 도입되었습니다.  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint 모드  
  SharePoint 모드에서는 보고서 서버가 SharePoint 서버 팜 내에서 실행되어야 합니다. 보고서 서버 처리, 렌더링 및 관리 기능을 실행 하는 SharePoint 응용 프로그램 서버에서 표시 됩니다는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스 및 하나 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. SharePoint 사이트는 보고서 서버 내용 및 작업에 대한 프런트 엔드 액세스를 제공합니다.  

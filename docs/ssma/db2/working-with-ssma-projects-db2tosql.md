@@ -16,28 +16,28 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ea3cf916d256e070ee7e0bdd20de81f3f4464e12
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7f10a1fa9faf04e8f819acd7966f6ca6d03c57b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980555"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395540"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA 프로젝트 (DB2ToSQL) 작업
-DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  
+DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  
   
--   메타 데이터를 마이그레이션하려는 DB2 데이터베이스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+-   메타 데이터를 마이그레이션하려는 DB2 데이터베이스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
--   대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 마이그레이션된 개체 및 데이터를 수신 하는 합니다.  
+-   대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터를 수신 하는 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 연결 정보입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보입니다.  
   
 -   프로젝트 설정입니다.  
   
-프로젝트를 열 때 DB2에서 연결이 끊어지도록 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기능을 사용 하면 오프 라인으로 작업할 수 있습니다. 에 다시 연결 하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 참조 하세요 [SQL Server에 연결 &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)합니다.  
+프로젝트를 열 때 DB2에서 연결이 끊어지도록 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기능을 사용 하면 오프 라인으로 작업할 수 있습니다. 에 다시 연결 하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server에 연결 &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)합니다.  
   
 ## <a name="reviewing-default-project-settings"></a>기본 프로젝트 설정을 검토합니다.  
-SSMA 변환 및 데이터베이스 개체를 로드, 데이터 마이그레이션 및 DB2와 함께 SSMA를 동기화에 대 한 몇 가지 설정을 포함 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]입니다. 기본 설정은 많은 사용자에 게 적합 합니다. 그러나 새 SSMA 프로젝트를 만들기 전에 설정을 검토 해야 합니다. 를 하려는 경우에 모든 새 프로젝트에 사용할 기본 설정을 변경할 수 있습니다.  
+SSMA 변환 및 데이터베이스 개체를 로드, 데이터 마이그레이션 및 DB2와 함께 SSMA를 동기화에 대 한 몇 가지 설정을 포함 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. 기본 설정은 많은 사용자에 게 적합 합니다. 그러나 새 SSMA 프로젝트를 만들기 전에 설정을 검토 해야 합니다. 를 하려는 경우에 모든 새 프로젝트에 사용할 기본 설정을 변경할 수 있습니다.  
   
 **기본 프로젝트 설정을 검토 하려면**  
   
@@ -55,14 +55,14 @@ SSMA 변환 및 데이터베이스 개체를 로드, 데이터 마이그레이�
   
     -   시스템 개체 설정에 대 한 정보를 참조 하세요 [프로젝트 설정&#40;시스템 개체 로드&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)합니다.  
   
-    -   동기화에 대 한 설정에 대 한 자세한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 참조 하세요 [프로젝트 설정&#40;동기화&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+    -   동기화에 대 한 설정에 대 한 자세한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [프로젝트 설정&#40;동기화&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
     -   GUI 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)합니다.  
   
     -   데이터 형식 매핑 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)합니다.  
   
 ## <a name="creating-new-projects"></a>새 프로젝트 만들기  
-DB2 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트를 먼저 만들어야 합니다.  
+DB2 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 프로젝트를 먼저 만들어야 합니다.  
   
 **프로젝트를 만들려면**  
   
@@ -74,13 +74,13 @@ DB2 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[
   
 3.  에 **위치** 상자, 입력 또는 프로젝트에 대 한 폴더를 선택 하 고 클릭 **확인**합니다.  
   
-4.  에 **마이그레이션에** 드롭다운, 대상의 버전을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 마이그레이션에 사용 합니다. 사용 가능한 옵션은 다음과 같습니다.  
+4.  에 **마이그레이션에** 드롭다운, 대상의 버전을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션에 사용 합니다. 사용 가능한 옵션은 다음과 같습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -107,7 +107,7 @@ DB2 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[
         SSMA는 DB2 스키마를 구문 분석 하 고 프로젝트 파일에 메타 데이터를 저장 합니다.  
   
 ## <a name="opening-projects"></a>열린 프로젝트  
-DB2에서 끊어진 프로젝트를 열면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기능을 사용 하면 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 데이터를 마이그레이션하려면 DB2에 연결 해야 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]입니다.  
+DB2에서 끊어진 프로젝트를 열면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기능을 사용 하면 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 데이터를 마이그레이션하려면 DB2에 연결 해야 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.  
   
 **프로젝트를 열려면**  
   
@@ -119,7 +119,7 @@ DB2에서 끊어진 프로젝트를 열면 [!INCLUDE[ssNoVersion](../../includes
   
 2.  DB2로 다시 연결 합니다 **파일** 메뉴에서 클릭 **DB2에 다시 연결**합니다.  
   
-3.  에 다시 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 **파일** 메뉴에서 클릭 **SQL Server에 다시 연결**합니다.  
+3.  에 다시 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 **파일** 메뉴에서 클릭 **SQL Server에 다시 연결**합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스에서 다음 단계 [DB2 데이터베이스에 연결할](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)합니다.  

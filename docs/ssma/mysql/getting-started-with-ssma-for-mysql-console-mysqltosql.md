@@ -19,14 +19,14 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8f33769bee5c8d6d9e134eb9dd5dcf8549d651cb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5ec1b7d62e3e765ee43624f0e97aef60c91309ee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983085"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396161"
 ---
-# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>MySQL 콘솔 (MySQLToSQL) 용 SSMA 시작
+# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>MySQL용 SSMA 콘솔 시작(MySQLToSQL)
 이 섹션에서는 시작 하 고 MySQL 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 도 나열 여기에 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
   
 ## <a name="launching-ssma-console"></a>SSMA 콘솔 시작  
@@ -51,9 +51,9 @@ SSMA 콘솔 응용 프로그램을 시작 하려면 다음 단계를 사용 합�
   
 추가 기능:  
   
-1.  [암호 보안](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e) 다른 창 컴퓨터 가져오기 / 내보내기 하 고  
+1.  [암호 보안](managing-passwords-mysqltosql.md) 다른 창 컴퓨터 가져오기 / 내보내기 하 고  
   
-2.  [보고서를 생성할](http://msdn.microsoft.com/1c0202e8-546d-4cb3-a37f-1d2e35d53839) 자세한 xml을 보려면 평가 /conversion 및 데이터 마이그레이션에 대 한 보고서를 출력 합니다. 새로 고침 및 동기화 명령에 대 한 자세한 오류 보고서를 생성할 수도 있습니다.  
+2.  [보고서를 생성할](generating-reports-mysqltosql.md) 자세한 xml을 보려면 평가 /conversion 및 데이터 마이그레이션에 대 한 보고서를 출력 합니다. 새로 고침 및 동기화 명령에 대 한 자세한 오류 보고서를 생성할 수도 있습니다.  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 콘솔 출력 규칙  
 SSMA 스크립트 명령 및 옵션을 실행할 때 콘솔 프로그램 콘솔에서 사용자에 게 결과 및 메시지 (정보, 오류 등)을 표시 또는 필요한 경우 xml 출력 파일에 리디렉션합니다. 출력에는 메시지의 각 유형에 고유한 색으로 표시 됩니다. 예를 들어 흰색 텍스트 메시지가 나타냅니다 스크립트 파일 명령을입니다. 녹색에서 하나는 사용자 입력에 대 한 프롬프트 및 등을 나타냅니다.  
@@ -72,5 +72,5 @@ SSMA 스크립트 명령 및 옵션을 실행할 때 콘솔 프로그램 콘솔�
 |녹청|시작을 완료 하 고 작업의 결과|  
   
 ## <a name="see-also"></a>관련 항목  
-[MySQL 용 SSMA 설치](http://msdn.microsoft.com/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
+[MySQL 용 SSMA 설치](installing-ssma-for-mysql-mysqltosql.md)  
   

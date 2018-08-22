@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01d689554375e17b96ecbda1b10851cb5d7de94c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310473"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395778"
 ---
 # <a name="cross-container-transactions"></a>크로스 컨테이너 트랜잭션
   크로스 컨테이너 트랜잭션은 메모리 최적화 테이블에서 고유하게 컴파일된 저장 프로시저 또는 작업에 대한 호출을 포함하는 암시적이거나 명시적인 사용자 트랜잭션입니다.  

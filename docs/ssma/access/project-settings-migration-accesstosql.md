@@ -19,76 +19,76 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8ee97b6e47a51a8ed2e8b69c0f4044d8e583e949
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 10346770784c94fe18357b5717e60f7e3f88a8c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774479"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394932"
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
-마이그레이션 프로젝트 설정으로 데이터가 마이그레이션되는 방식을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
+마이그레이션 프로젝트 설정을 통해로 데이터가 마이그레이션되는 방식을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.  
   
-마이그레이션 창도에서 사용할 수는 **프로젝트 설정** 및 **기본 프로젝트 설정** 대화 상자.  
+마이그레이션 창에서 사용할 수는 **프로젝트 설정** 하 고 **기본 프로젝트 설정** 대화 상자.  
   
--   사용 하 여는 **프로젝트 설정** 현재 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 마이그레이션 설정에 액세스 하려면는 **도구** 메뉴 선택 **프로젝트 설정**, 클릭 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
+-   사용 된 **프로젝트 설정** 현재 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 마이그레이션 설정에 액세스 하려면 합니다 **도구** 메뉴에서 **프로젝트 설정**, 클릭 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에  **마이그레이션**합니다.  
   
--   사용 하 여 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 마이그레이션 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 라는 프로젝트 형식을 선택 **마이그레이션 대상 버전** 콤보 상자 설정에 액세스를 클릭 합니다. 원하는는 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
+-   사용 된 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 마이그레이션 설정에 액세스 하려면 합니다 **도구** 메뉴에서 **기본 프로젝트 설정**, 프로젝트 형식을 선택 **마이그레이션 대상 버전** 는 콤보 상자 있습니다 설정에 액세스 하려면 클릭 **일반적인** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
   
 ## <a name="options"></a>변수  
 **CHECK 제약 조건**  
-테이블에 데이터를 추가할 때 SSMA 제약 조건을 확인 해야 하는지 여부를 지정 합니다.  
+SSMA 데이터 테이블에 추가할 때 제약 조건을 확인 해야 하는지 지정 합니다.  
   
 -   **기본 모드**: False  
   
--   **최적 모드**: True  
+-   **낙관적 모드**: True  
   
 -   **전체 모드**: False  
   
 **트리거 실행**  
-데이터를 추가 하면 SSMA 삽입 트리거를 발생 시켜야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 테이블입니다.  
+데이터를 추가할 때 SSMA 삽입 트리거를 실행 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다.  
   
 -   **기본 모드**: False  
   
--   **최적 모드**: True  
+-   **낙관적 모드**: True  
   
 -   **전체 모드**: False  
   
 **ID 유지**  
-데이터를 추가 하면 SSMA 액세스 id 값을 유지할지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이 값이 False [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] id 값을 할당 합니다.  
+데이터를 추가할 때 SSMA 액세스 id 값을 유지할지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 값이 False 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] id 값을 할당 합니다.  
   
 -   **기본 모드**: True  
   
--   **최적 모드**: True  
+-   **낙관적 모드**: True  
   
 -   **전체 모드**: False  
   
 **Null 유지**  
-데이터를 추가 하면 SSMA 원본 데이터에 null 값을 유지할지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 지정 된 기본값에 관계 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+데이터를 추가할 때 SSMA 원본 데이터의 null 값을 유지할지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 지정 된 기본값에 관계 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 -   **기본 모드**: True  
   
--   **최적 모드**: False  
+-   **낙관적 모드**: False  
   
 -   **전체 모드**: True  
   
 **테이블 잠금**  
-SSMA 데이터 마이그레이션 중에 테이블에 데이터를 추가할 때 테이블 잠금 여부를 지정 합니다. 값이 False 이면 SSMA 행 잠금을 사용 합니다.  
+데이터 마이그레이션 중 데이터 테이블에 추가할 때 SSMA 테이블 잠금 여부를 지정 합니다. 값이 False 이면 SSMA는 행 잠금을 사용 합니다.  
   
 -   **기본 모드**: True  
   
--   **최적 모드**: True  
+-   **낙관적 모드**: True  
   
 -   **전체 모드**: True  
   
 **지원 되지 않는 날짜를 대체 합니다.**  
-SSMA 이전 가장 빠른 버전의 액세스 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 날짜 (1753 01 년 1 월).  
+SSMA 이전 가장 이전 버전의 액세스 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 날짜 (1753 01 년 1 월).  
   
--   현재 날짜 값을 유지 하기 위해 선택 **아무 작업도 수행 하지**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 열에는 1753 년 1 월 1 일 이전의 날짜를 수락 하지 않습니다. 오래 된 날짜를 사용 하 여 문자 값을 날짜/시간 값을 변환 해야 합니다.  
+-   현재 날짜 값을 유지 하려면 선택 **아무 작업도 수행**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1753 년 1 월 1 일 이전의 날짜를 datetime 열에서 허용 하지 않습니다. 이전 날짜를 사용 하 여 문자 값을 datetime 값 변환 해야 합니다.  
   
--   1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 선택 **NULL로 대체**합니다.  
+-   1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 **NULL 바꿉니다**합니다.  
   
--   1753 년 1 월 1 일 이전 날짜는 지원 되는 날짜를 바꾸려면 선택 **지원 되는 날짜에 가장 가까운 바꿉니다**합니다. 가장 가까운 기본적으로이 값을 선택 하는 경우 지원 되는 날짜는 1753 년 1 월 1 일으로 선택 됩니다.  
+-   지원 되는 날짜가 1753 년 1 월 1 일 이전의 날짜를 바꾸려면 선택 **지원 되는 날짜에 가까운 바꿉니다**합니다. 가장 가까운 기본적으로이 값을 선택 하는 경우 지원 되는 날짜는 1753 년 1 월 01로 선택 됩니다.  
   
 **일괄 처리 크기**  
 데이터 마이그레이션 중에 사용 되는 일괄 처리 크기입니다. 각 일괄 처리 후 트랜잭션이 기록 됩니다. 기본적으로 모든 스키마에 대 한 일괄 처리 크기는 10000입니다.  

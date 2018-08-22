@@ -56,12 +56,12 @@ caps.latest.revision: 182
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd8ff6568129137f4e2167e514732a3b9af7ea8d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239889"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395528"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스는 Windows를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 인증을 관리하는 프로세스 또는 프로세스 집합을 나타냅니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다.  
@@ -184,7 +184,7 @@ ms.locfileid: "37239889"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc) <sup>*</sup>|  
 |전체 텍스트 검색 FD 표시 아이콘|[로컬 서비스](#Local_Service)|[가상 계정](#VA_Desc)|  
@@ -201,7 +201,7 @@ ms.locfileid: "37239889"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|없음 [도메인 사용자](#Domain_User) 계정을 제공합니다.|[도메인 사용자](#Domain_User) 계정을 제공합니다.|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|없음 [도메인 사용자](#Domain_User) 계정을 제공합니다.|[도메인 사용자](#Domain_User) 계정을 제공합니다.|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)|  
 |전체 텍스트 검색 FD 표시 아이콘|[로컬 서비스](#Local_Service)|[가상 계정](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|[로컬 서비스](#Local_Service)|[로컬 서비스](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[로컬 시스템](#Local_System)|[로컬 시스템](#Local_System)|  
@@ -330,7 +330,7 @@ ms.locfileid: "37239889"
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** <sup>1</sup><br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$***ComputerName***$***PowerPivot*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금** (SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명 된 인스턴스: **NT SERVICE\\$* InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명 된 인스턴스: **NT SERVICE\\$* InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 응용 프로그램 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
 |**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **SQLServer2005SQLBrowserUser***$ComputerName*. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)|  

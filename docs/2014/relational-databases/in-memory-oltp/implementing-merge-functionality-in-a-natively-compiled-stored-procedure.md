@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 428c8102409a9f927bbb092a24d4809d1abfc0f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80dd5a9fc01d6577e67e2bed6ad0b934a6652af1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294653"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395354"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 기능 구현
   데이터베이스에 특정 행 이 이미 있는지 여부에 따라 데이터베이스에서 삽입 또는 업데이트를 수행해야 할 수 있습니다.  

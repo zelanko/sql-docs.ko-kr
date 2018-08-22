@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253985"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394544"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 방법으로 더 많은 메모리를 사용합니다. 필요 증가에 따라 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대해 설치하고 할당한 메모리의 양이 불충분해질 수 있습니다. 이 경우 메모리가 부족해질 수 있습니다. 이 항목에서는 OOM 상황에서 복구하는 방법을 설명합니다. 여러 OOM 상황을 방지하는 데 도움이 될 수 있는 지침은 [메모리 사용량 모니터링 및 문제 해결](monitor-and-troubleshoot-memory-usage.md) 을 참조하세요.  
@@ -80,7 +79,7 @@ ms.locfileid: "37253985"
 ###  <a name="bkmk_openDAC"></a> DAC(관리자 전용 연결) 열기  
  Microsoft SQL Server는 DAC(관리자 전용 연결)를 제공합니다. DAC를 사용하면 관리자는 서버가 다른 클라이언트 연결에 응답하지 않는 경우에도 실행 중인 SQL Server 데이터베이스 엔진 인스턴스에 액세스하여 서버에서 문제를 해결할 수 있습니다. DAC는 `sqlcmd` 유틸리티와 SQL Server Management Studio(SSMS)를 통해 사용할 수 있습니다.  
   
- `sqlcmd` 및 DAC 사용에 대한 지침은 [관리자 전용 연결 사용](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css)을 참조하십시오. SSMS를 통해 DAC 사용에 대한 지침은 [방법: SQL Server Management Studio에서 관리자 전용 연결 사용](http://msdn.microsoft.com/library/ms178068.aspx)을 참조하세요.  
+ `sqlcmd` 및 DAC 사용에 대한 지침은 [관리자 전용 연결 사용](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하십시오. SSMS를 통해 DAC 사용에 대한 지침은 [방법: SQL Server Management Studio에서 관리자 전용 연결 사용](http://msdn.microsoft.com/library/ms178068.aspx)을 참조하세요.  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> 수정 조치 수행  
  OOM 상태를 해결하려면 사용을 축소하여 기존 메모리를 확보하거나 더 많은 메모리를 메모리 내 테이블에 사용할 수 있게 만들어야 합니다.  

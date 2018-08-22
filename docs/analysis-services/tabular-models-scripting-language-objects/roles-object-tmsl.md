@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983875"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395567"
 ---
-# <a name="roles-object-tmsl"></a>역할 개체 (TMSL)
+# <a name="roles-object-tmsl"></a>역할 개체(TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   사용 권한의 컬렉션을 지정 하는 모델에서 역할을 정의 합니다. 역할 멤버 자격의 Windows 보안 원칙으로 구성 됩니다. 특정 개체에 대 한 액세스를 제한 하려면 역할에서 필터를 설정할 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "38983875"
                   및 관리자입니다. 참조 [역할 및 사용 권한 &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) 데이터베이스 사용 권한 정보에 대 한 합니다.  
   
  멤버  
- 멤버는 멤버 이름 및 ID, 멤버 이름은 별칭 또는 Windows 보안 주체의 이름 및 ID가 보안 식별자를 모두 구성 됩니다. 역할 정의에 모두 지정 됩니다. 참조 [SID 구성 요소](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx) 식별자에 대 한 세부 정보에 대 한 합니다.  
+ 멤버는 멤버 이름 및 ID, 멤버 이름은 별칭 또는 Windows 보안 주체의 이름 및 ID가 보안 식별자를 모두 구성 됩니다. 역할 정의에 모두 지정 됩니다. 참조 [SID 구성 요소](/windows/desktop/SecAuthZ/sid-components) 식별자에 대 한 세부 정보에 대 한 합니다.  
   
  대 한  
  테이블 사용 권한은 DAX 식을 통해 정의 된 사용 권한 포함 하는 명명 된 개체입니다. 이 속성은 선택 사항, 보안 필터를 적용 하는 데 사용 합니다.  

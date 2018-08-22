@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 54
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 377aa0cd89ad794bb9efb3744cbf62723512d12c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79dbaba00d9eb8ff0b344fb713ee6599344ec317
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148714"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395774"
 ---
 # <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures
   고유하게 컴파일된 저장 프로시저는 메모리 최적화 테이블에 액세스하는 네이티브 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 고유하게 컴파일된 저장 프로시저는 쿼리 및 비즈니스 논리가 저장 프로시저에서 효율적으로 실행되도록 해 줍니다. 네이티브 컴파일 프로세스에 대한 자세한 내용은 [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)을 참조하세요. 디스크 기반 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하는 방법에 대한 자세한 내용은 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요.  

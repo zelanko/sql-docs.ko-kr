@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 917f18c705c5cb0615cc5ac0b702f31372cf8a8a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982375"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395555"
 ---
-# <a name="running-test-cases-oracletosql"></a>테스트 사례 실행 (OracleToSQL)
-SSMA 테스터는 테스트 사례를 실행 하면 테스트를 위해 선택한 개체를 실행 하 고 확인 결과 대 한 보고서를 만듭니다. 결과 두 플랫폼 모두에서 동일한 경우 테스트에 성공 합니다. Oracle 간에 개체의 관계 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 현재 SSMA 프로젝트에 스키마 매핑 설정에 따라 결정 됩니다.  
+# <a name="running-test-cases-oracletosql"></a>테스트 사례 실행(OracleToSQL)
+SSMA 테스터는 테스트 사례를 실행 하면 테스트를 위해 선택한 개체를 실행 하 고 확인 결과 대 한 보고서를 만듭니다. 결과 두 플랫폼 모두에서 동일한 경우 테스트에 성공 합니다. Oracle 간에 개체의 관계 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 SSMA 프로젝트에 스키마 매핑 설정에 따라 결정 됩니다.  
   
 성공적인 테스트에 대 한 필요한 요구 사항은 모든 Oracle 개체 변환 되 고 대상 데이터베이스에 로드입니다. 또한 두 플랫폼 모두에서 테이블의 내용을 동기화 되도록 테이블 데이터를 마이그레이션할 수 해야 합니다.  
   
@@ -32,7 +32,7 @@ SSMA 테스터는 테스트 사례를 실행 하면 테스트를 위해 선택�
   
 2.  에 **Oracle에 연결** 대화 상자에서 연결 정보를 입력 한 다음 클릭 **Connect**합니다.  
   
-테스트가 완료 되 면 테스트 사례 보고서가 생성 됩니다. 클릭 합니다 **보고서** 보려면 단추를 [테스트 사례 보고서](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0)합니다. 테스트 (테스트 사례 보고서)의 결과에 자동으로 저장 되는 [테스트 결과 리포지토리](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) 나중에 사용할 수 있습니다.  
+테스트가 완료 되 면 테스트 사례 보고서가 생성 됩니다. 클릭 합니다 **보고서** 보려면 단추를 [테스트 사례 보고서](viewing-test-case-reports-oracletosql.md)합니다. 테스트 (테스트 사례 보고서)의 결과에 자동으로 저장 되는 [테스트 결과 리포지토리](using-test-repositories-oracletosql.md) 나중에 사용할 수 있습니다.  
   
 ## <a name="test-case-execution-steps"></a>테스트 사례 실행 단계  
   
@@ -55,14 +55,14 @@ SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대 한 
 |USER_TABLE$ NEW_ID|뷰|삽입 되거나 변경 된 행의 id입니다.|  
 |USER_TABLE$ 이전|뷰|행을 삭제 하 고 덮어쓸의 간소화 된 표현입니다.|  
   
-다음 개체에 확인 된 테이블의 스키마에 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+다음 개체에 확인 된 테이블의 스키마에 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ||||  
 |-|-|-|  
 |속성|형식|Description|  
 |USER_TABLE$Trg|트리거|확인 된 테이블의 변경 내용을 감사 하는 트리거.|  
   
-다음 개체에서 생성 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb 데이터베이스에 있습니다.  
+다음 개체에서 생성 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb 데이터베이스에 있습니다.  
   
 ||||  
 |-|-|-|  

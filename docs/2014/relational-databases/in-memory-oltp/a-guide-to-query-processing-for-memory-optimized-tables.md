@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
@@ -14,12 +13,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1dc0e7ad2e0e1d897faad46e02b4ca7dc15e0c14
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177830"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394969"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
   메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 도입합니다. 이 문서에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
@@ -101,7 +100,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
  다음 다이어그램에서는 임시 쿼리를 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 쿼리 처리 흐름을 간단히 보여줍니다.  
   
- ![SQL Server 쿼리 처리 파이프라인.] (../../database-engine/media/hekaton-query-plan-3.gif "SQL Server 쿼리 처리 파이프라인.")  
+ ![SQL Server 쿼리 처리 파이프라인.](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server 쿼리 처리 파이프라인.")  
 SQL Server 쿼리 처리 파이프라인.  
   
  시나리오 내용:  

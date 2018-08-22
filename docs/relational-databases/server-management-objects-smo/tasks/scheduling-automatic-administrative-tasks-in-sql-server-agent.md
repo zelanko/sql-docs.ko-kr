@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c1ef9667e024e15aa2d7792617637a9029f61b81
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 707213c05dcbb1ea7df4224312a331103f0c924d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552563"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396600"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -272,7 +272,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 에이전트](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
- [작업 구현](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+ [SQL Server 에이전트](../../../ssms/agent/sql-server-agent.md)   
+ [작업 구현](../../../ssms/agent/implement-jobs.md)  
   
   

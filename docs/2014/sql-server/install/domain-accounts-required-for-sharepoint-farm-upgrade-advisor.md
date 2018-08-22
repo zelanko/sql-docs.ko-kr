@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1988ea03795dd8eee6d86844560935ed44b30d3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251215"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395529"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 팜에 도메인 계정이 필요함(업그레이드 관리자)
   팜 환경용으로 구성되는 SharePoint 제품에서는 도메인 계정을 사용해야 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "37251215"
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드입니다.|  
   
 ## <a name="component"></a>구성 요소  
- [!INCLUDE[ssRS](../../includes/ssrs-md.md)]  
+ [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
 ### <a name="description"></a>Description  
  팜 환경용으로 구성되는 SharePoint 제품에서는 서비스 및 데이터베이스 연결에 도메인 계정을 사용해야 합니다. 여기에는 Reporting Services 서비스 계정으로 지정한 계정이 포함됩니다.  

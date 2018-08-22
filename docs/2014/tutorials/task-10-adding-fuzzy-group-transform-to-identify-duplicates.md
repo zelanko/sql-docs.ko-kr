@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 843d79da1d5e9aba58a80ea93ee36a68cd689916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d3e5e71bf32b031552db2a888d17fa222c9f53f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312753"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395353"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>태스크 10: 유사 항목 그룹화 변환을 추가하여 중복 항목 식별
-  이 작업에서는 유사 항목 그룹 변환을 데이터 흐름에 추가합니다. 유사 항목 그룹 변환은 원본 데이터에서 중복 항목을 식별하는 데 도움이 될 수 있습니다. 참조 [Fuzzy Grouping Transformation](http://msdn.microsoft.com/library/ms141764.aspx) 대 한 자세한 내용은 합니다.  
+  이 작업에서는 유사 항목 그룹 변환을 데이터 흐름에 추가합니다. 유사 항목 그룹 변환은 원본 데이터에서 중복 항목을 식별하는 데 도움이 될 수 있습니다. 참조 [Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) 대 한 자세한 내용은 합니다.  
   
 1.  끌어서 놓기 **유사 항목 그룹** 변환을 **기타 변환** 에 **SSIS 도구 상자** 하는 **데이터 흐름** 탭  **수정 및 수정 된 레코드 결합**합니다.  
   

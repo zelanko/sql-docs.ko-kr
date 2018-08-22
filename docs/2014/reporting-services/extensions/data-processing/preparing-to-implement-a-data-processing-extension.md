@@ -18,15 +18,15 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 49a07579db92eb50f7e5a3d1c82cdd9ce4d94cca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1eddc05cffbeb9fec926a47e4a9816b54434d48e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187990"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395934"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현 준비
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 전체 인터페이스 집합의 확장 프로그램별 구현을 제공해야 할 수도 있습니다. 또는 클라이언트가 **DataReader** 개체 형태인 결과 집합과 주로 상호 작용하고 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램을 결과 집합과 데이터 원본 사이의 연결 고리로 사용하는 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 인터페이스와 같은 하위 집합에 대한 구현에 초점을 맞추어야 할 수도 있습니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 전체 인터페이스 집합의 확장 프로그램별 구현을 제공해야 할 수도 있습니다. 또는 클라이언트가 **DataReader** 개체 형태인 결과 집합과 주로 상호 작용하고 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램을 결과 집합과 데이터 원본 사이의 연결 고리로 사용하는 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 인터페이스와 같은 하위 집합에 대한 구현에 초점을 맞추어야 할 수도 있습니다.  
   
  다음 두 가지 방법 중 하나로 데이터 처리 확장 프로그램을 구현할 수 있습니다.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "37187990"
 |인터페이스|Description|구현|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|데이터 원본의 고유 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우에는 세션이 서버에 대한 네트워크 연결과 같을 수 있습니다.|필수|  
-|IDbConnectionExtension|보안 및 인증과 관련하여 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 연결 속성을 나타냅니다.|선택 사항|  
+|IDbConnectionExtension|보안 및 인증과 관련하여 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 연결 속성을 나타냅니다.|선택 사항|  
 |IDbTransaction|로컬 트랜잭션을 나타냅니다.|필수|  
-|IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 트랜잭션 속성을 나타냅니다.|선택 사항|  
+|IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 트랜잭션 속성을 나타냅니다.|선택 사항|  
 |IDbCommand|데이터 원본에 연결되었을 때 사용되는 쿼리 또는 명령을 나타냅니다.|필수|  
 |IDbCommandAnalysis|쿼리를 분석하고 쿼리에서 사용된 매개 변수 이름 목록을 반환하기 위한 추가 명령 정보를 나타냅니다.|선택 사항|  
 |IDataParameter|명령 또는 쿼리에 전달된 매개 변수 또는 이름/값 쌍을 나타냅니다.|필수|  

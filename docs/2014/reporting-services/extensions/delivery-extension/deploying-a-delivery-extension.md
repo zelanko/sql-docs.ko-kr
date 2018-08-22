@@ -19,12 +19,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112fd1263b0dce321093a271964173e924c703d2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194887"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396337"
 ---
 # <a name="deploying-a-delivery-extension"></a>배달 확장 프로그램 배포
   배달 확장 프로그램은 XML 구성 파일 형식으로 구성 정보를 제공합니다. XML 파일은 배달 확장 프로그램에 대해 정의된 XML 스키마를 따릅니다. 배달 확장 프로그램은 구성 파일을 설정하고 수정하기 위한 인프라를 제공합니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "37194887"
     </CodeGroup>  
     ```  
   
-     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
+     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. [!INCLUDE[ssRS](../../../includes/ssrs.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>보고서 관리자에 확장 프로그램 배포  
  배달 확장 프로그램에서 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스를 구현하는 경우 배달 확장 프로그램을 보고서 관리자 구독 페이지에 사용할 수 있습니다. 구독 사용자 인터페이스를 사용할 수 있도록 하려면 확장 프로그램을 보고서 관리자에 배포해야 합니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "37194887"
     </CodeGroup>  
     ```  
   
-     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
+     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. [!INCLUDE[ssRS](../../../includes/ssrs.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
   
 ## <a name="verifying-the-deployment"></a>배포 확인  
  웹 서비스 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 메서드를 사용하여 배달 확장 프로그램이 보고서 서버에 성공적으로 배포되었는지 여부를 확인할 수 있습니다. 보고서 관리자를 열고 확장 프로그램이 구독에 대해 사용 가능한 배달 확장 프로그램 목록에 포함되어 있는지 확인할 수도 있습니다. 보고서 관리자 및 구독에 대 한 자세한 내용은 참조 하세요. [구독 및 배달 &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)합니다.  

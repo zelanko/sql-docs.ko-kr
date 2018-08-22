@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64fddcbfeee147b9588ade7ec20999ebe853edcf
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+ms.openlocfilehash: 5b098d59bfbc30d5273e46ccef24b62fcb82dbf8
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923625"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40396333"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,8 @@ AdventureWorks 링크와 설치 지침은 다운로드 합니다.
 ## <a name="creation-scripts"></a>생성 스크립트
 스크립트 아래 버전에 관계 없이 전체 AdventureWorks 데이터베이스를 만들려면 사용할 수 있습니다. 
 
-- [AdventureWorks OLTP Zip 스크립트](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-oltp-install-script.zip)
-- [AdventureWorks DW 스크립트 Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-data-warehouse-install-script.zip)
+- [AdventureWorks OLTP Zip 스크립트](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
+- [AdventureWorks DW 스크립트 Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
 ## <a name="install-to-sql-server"></a>SQL server 설치
 

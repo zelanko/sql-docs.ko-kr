@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: 26123d12c48c6c8abd51590d3f6d42c7476acd29
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102421"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395768"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux의 SQL Server 관리에 적합 한 도구 선택
 
@@ -31,7 +31,7 @@ Linux의 SQL Server 2017을 관리 하는 방법은 여러 가지가 있습니�
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-거의 모든 클라이언트 도구에서 수행할 수 있는 TRANSACT-SQL 문을 사용 하 여 수행할 수도 있습니다. SQL Server에서 제공 [동적 관리 뷰 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) SQL Server의 구성과 상태를 쿼리 하는 합니다. 이 밖에도 [TRANSACT-SQL 명령을](https://msdn.microsoft.com/library/bb510741.aspx) 데이터베이스 관리 작업에 대 한 합니다. SQL Server에 연결 하 고 예를 들어 TRANSACT-SQL 쿼리 실행을 지 원하는 클라이언트 도구에서 이러한 명령을 실행할 수 있습니다 [sqlcmd](sql-server-linux-setup-tools.md) 하거나 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
+거의 모든 클라이언트 도구에서 수행할 수 있는 TRANSACT-SQL 문을 사용 하 여 수행할 수도 있습니다. SQL Server에서 제공 [동적 관리 뷰 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) SQL Server의 구성과 상태를 쿼리 하는 합니다. 이 밖에도 [TRANSACT-SQL 명령을](../t-sql/language-reference.md) 데이터베이스 관리 작업에 대 한 합니다. SQL Server에 연결 하 고 예를 들어 TRANSACT-SQL 쿼리 실행을 지 원하는 클라이언트 도구에서 이러한 명령을 실행할 수 있습니다 [sqlcmd](sql-server-linux-setup-tools.md) 하거나 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (미리 보기)
 

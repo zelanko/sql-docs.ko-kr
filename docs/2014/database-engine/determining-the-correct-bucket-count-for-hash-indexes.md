@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
@@ -14,12 +13,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a81a446b1635359853656305f0a8a5ee8ab3218
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306177"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395554"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>해시 인덱스에 대한 올바른 버킷 수 결정
   에 대 한 값을 지정 해야 합니다 `BUCKET_COUNT` 메모리 최적화 테이블을 만들 때 매개 변수입니다. 이 항목에서는 적절한 `BUCKET_COUNT` 매개 변수 값을 결정하기 위한 권장 사항을 안내합니다. 정확한 버킷 수를 확인할 수 없으면 대신 비클러스터형 인덱스를 사용합니다.  잘못된 `BUCKET_COUNT` 값, 특히 너무 낮은 값을 사용하면 데이터베이스 복구 시간과 작업 성능에 큰 영향을 줄 수 있습니다. 버킷 수를 더 많이 추정하는 것이 좋습니다.  
@@ -137,7 +136,7 @@ GO
 |----------------|--------------------------|--------------------------|----------------------------|------------------------|------------------------|  
 |IX_Status|8|4|50|65536|65536|  
 |IX_OrderSequence|32768|13|0|8|26|  
-|PK_SalesOrd_B14003C3F8FB3364|262144|96319|36|1|8|  
+|PK_SalesOrd_B14003C3F8FB3364|262144|96319|36|@shouldalert|8|  
   
  이 테이블의 경우 3개의 해시 인덱스를 고려하세요.  
   

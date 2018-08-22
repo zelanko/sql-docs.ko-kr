@@ -25,12 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5672a062fdab79cf7a903e5dfac2d1f369bd70de
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 88b5f3c402861bb06c854cf31bc411c1e12da079
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550353"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394097"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,8 +85,8 @@ ms.locfileid: "39550353"
 |encryption_algorithm_name|**sysname**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> 암호화 알고리즘의 이름입니다.<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512만 지원 됩니다.|  
 |column_encryption_key_id|**int**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> CEK의 ID입니다.|  
 |column_encryption_key_database_name|**sysname**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]까지<br /><br /> 열 암호화 키를 열 데이터베이스와 다른 경우에 있는 데이터베이스의 이름입니다. 키 열으로 동일한 데이터베이스에 있는 경우 NULL입니다.|  
-|is_hidden|**bit**|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> 열 숨겨지는지 여부를 나타냅니다.<br /><br /> 0 = 일반, not 숨겨지지, 표시 열<br /><br /> 1 = 숨겨진된 열|  
-|is_masked|**bit**|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> 동적 데이터 마스킹 하 여 열이 마스킹 경우를 나타냅니다.<br /><br /> 0 = 일반, not 마스킹된 열<br /><br /> 1 = 열이 마스킹|  
+|is_hidden|**bit**|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> 열 숨겨지는지 여부를 나타냅니다.<br /><br /> 0 = 일반, not 숨겨지지, 표시 열<br /><br /> 1 = 숨겨진된 열|  
+|is_masked|**bit**|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> 동적 데이터 마스킹 하 여 열이 마스킹 경우를 나타냅니다.<br /><br /> 0 = 일반, not 마스킹된 열<br /><br /> 1 = 열이 마스킹|  
 
 
  

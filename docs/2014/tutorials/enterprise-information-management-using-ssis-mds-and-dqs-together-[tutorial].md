@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf4106c531dbb1f386f8c1b6745f773bbe3c0f4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189660"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395776"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]
   기업의 정보 관리에는 일반적으로 기업 내부 및 외부의 데이터를 통합하고, 데이터를 정리하고, 데이터를 비교해서 중복 항목을 제거하고, 데이터를 표준화하고, 데이터를 강화하고, 데이터에 대한 법적 및 컴플라이언스 요구 사항을 준수하고, 모든 필수 보안 설정을 사용해서 데이터를 중앙 위치에 저장하는 모든 과정이 포함됩니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "37189660"
   
  SQL Server DQS(Data Quality Services)를 사용하면 비즈니스 인텔리전스, 데이터 웨어하우스 및 트랜잭션 처리 작업을 위해 신뢰할 수 있는 정보를 제공할 수 있도록 데이터를 정리, 일치, 표준화 및 강화할 수 있습니다. 참조 [Data Quality Services 소개](http://msdn.microsoft.com/library/ff877917.aspx) DQS 및 DQS 요구를 해결 하는 방법에 대 한 비즈니스 요구에 대 한 항목입니다.  
   
- SQL Server MDS(Master Data Services)는 정보 무결성 및 데이터 일관성이 여러 응용 프로그램 간에 일관되게 유지되도록 보장하는 중앙 데이터 허브를 제공합니다. 참조 [Master Data Services 개요](http://msdn.microsoft.com/library/ff487003.aspx) 항목에 대 한 간략 한 설명은 MDS의 중요 한 기능입니다.  
+ SQL Server MDS(Master Data Services)는 정보 무결성 및 데이터 일관성이 여러 응용 프로그램 간에 일관되게 유지되도록 보장하는 중앙 데이터 허브를 제공합니다. 참조 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md) 항목에 대 한 간략 한 설명은 MDS의 중요 한 기능입니다.  
   
  참조 [EIM 기술을 사용 하 여 마스터 데이터 일치 및 정리](http://msdn.microsoft.com/library/hh403491.aspx) 포괄적인 지침을 함께 이러한 Microsoft EIM 기술을 사용 하 여 EIM 솔루션 및 조사식 구현에 대 한 백서 [Enterprise 정보 관리 (EIM): SSIS, DQS 및 MDS 한 데 모아](http://go.microsoft.com/fwlink/?LinkId=258672) EIM 시나리오의 멋진 데모 비디오.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "37189660"
   
     4.  SQL Server Data Tools  
   
-         참조 [SQL Server 2012 설치 가이드](http://msdn.microsoft.com/library/bb500469.aspx) 제품을 설치 하는 방법에 대 한 세부 정보에 대 한 합니다.  
+         참조 [SQL Server 2012 설치 가이드](../database-engine/install-windows/installation-for-sql-server.md) 제품을 설치 하는 방법에 대 한 세부 정보에 대 한 합니다.  
   
 2.  [Master Data Services 구성 관리자를 사용 하 여 MDS를 구성 합니다.](http://msdn.microsoft.com/library/ee633884.aspx)  
   

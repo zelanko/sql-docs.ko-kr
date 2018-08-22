@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556473"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396545"
 ---
 # <a name="automatic-tuning"></a>자동 튜닝
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "39556473"
 
 ## <a name="why-automatic-tuning"></a>왜 자동 튜닝?
 
-식별 중요 한 워크 로드를 모니터링 하는 클래식 데이터베이스 관리의 주요 작업 중 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 성능 향상을 위해 추가 되 고 거의 인덱스를 사용 하는 인덱스를 쿼리 합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 쿼리 및 모니터링 해야 하는 인덱스에 대 한 자세한 정보를 제공 합니다. 그러나 데이터베이스를 지속적으로 모니터링 많은 데이터베이스를 사용 하 여 처리 하는 경우에 특히 힘들고 지루한 작업입니다. 상당히 많은 데이터베이스 관리 작업을 효율적으로 수행할 수 수 있습니다. 대신 모니터링과 데이터베이스를 수동으로 조정 해야 할 모니터링의 일부를 위임 하 고 작업을 튜닝 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 자동 튜닝 기능을 사용 합니다.
+식별 중요 한 워크 로드를 모니터링 하는 클래식 데이터베이스 관리의 주요 작업 중 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 성능 향상을 위해 추가 되 고 거의 인덱스를 사용 하는 인덱스를 쿼리 합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 쿼리 및 모니터링 해야 하는 인덱스에 대 한 자세한 정보를 제공 합니다. 그러나 데이터베이스를 지속적으로 모니터링 많은 데이터베이스를 사용 하 여 처리 하는 경우에 특히 힘들고 지루한 작업입니다. 상당히 많은 데이터베이스 관리 작업을 효율적으로 수행할 수 수 있습니다. 대신 모니터링과 데이터베이스를 수동으로 조정 해야 할 모니터링의 일부를 위임 하 고 작업을 튜닝 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 자동 튜닝 기능을 사용 합니다.
 
 ### <a name="how-does-automatic-tuning-works"></a>자동 조정이 작동 하는 어떻게 합니까?
 
@@ -58,7 +58,7 @@ ms.locfileid: "39556473"
 
 ### <a name="what-is-sql-plan-choice-regression"></a>SQL 계획 선택 회귀 란?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 다른 SQL 계획 실행에 사용할 수는 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 쿼리 합니다. 쿼리 계획 통계, 인덱스 및 기타 요인에 따라 달라 집니다. 일부 실행에 사용 해야 하는 최적의 계획 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 쿼리 시간이 지남에 따라 변경 될 수 있습니다. 경우에 따라 새 계획을 이전 보다 더 나은 되지 않을 수 있으며 새 계획이 성능 저하를 발생할 수 있습니다.
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 다른 SQL 계획 실행에 사용할 수는 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 쿼리 합니다. 쿼리 계획 통계, 인덱스 및 기타 요인에 따라 달라 집니다. 일부 실행에 사용 해야 하는 최적의 계획 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 쿼리 시간이 지남에 따라 변경 될 수 있습니다. 경우에 따라 새 계획을 이전 보다 더 나은 되지 않을 수 있으며 새 계획이 성능 저하를 발생할 수 있습니다.
 
  ![SQL 계획 선택 재발](media/plan-choice-regression.png "SQL 계획 선택 재발") 
 
@@ -94,7 +94,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모든 필요한 뷰 및 성능을 모니터링 하 고 쿼리 저장소의 문제를 해결 하는 데 필요한 절차를 제공 합니다.
 
-[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]의 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 검색 하 고 잠재적 계획 선택 회귀 및에 적용 해야 하는 권장된 작업을 표시 합니다 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 문제, 재발 된 계획의 ID를 기준으로 비교에 사용 된 계획의 ID 식별된 된 쿼리 등의 세부 정보와 문제를의 중요성에 대 한 정보를 표시 하는 뷰 및 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 문제를 해결 하려면 실행 될 수 있는 문에 문제가 발생 했습니다.
+[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]의 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 검색 하 고 잠재적 계획 선택 회귀 및에 적용 해야 하는 권장된 작업을 표시 합니다 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 문제, 재발 된 계획의 ID를 기준으로 비교에 사용 된 계획의 ID 식별된 된 쿼리 등의 세부 정보와 문제를의 중요성에 대 한 정보를 표시 하는 뷰 및 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하려면 실행 될 수 있는 문에 문제가 발생 했습니다.
 
 | 유형 | description | DATETIME | score | 자세히 | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 이유 정보를 포함 하는 설명 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 이 계획 변경 잠재적인 성능 저하를 인지 하는 것으로 생각 합니다.
  - 잠재적인 회귀 검색 되 면 Datetime입니다.
  - 이러한 권장 사항의 점수입니다. 
- - 검색 된 계획 회귀 된 계획을 강제로 문제를 해결 하는 계획의 ID의 ID의 ID와 같은 문제에 대 한 세부 정보 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 등 문제를 해결 하려면 적용할 수 있는 스크립트입니다. 세부 정보에 저장 됩니다 [JSON 형식을](../../relational-databases/json/index.md)합니다.
+ - 검색 된 계획 회귀 된 계획을 강제로 문제를 해결 하는 계획의 ID의 ID의 ID와 같은 문제에 대 한 세부 정보 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 등 문제를 해결 하려면 적용할 수 있는 스크립트입니다. 세부 정보에 저장 됩니다 [JSON 형식을](../../relational-databases/json/index.md)합니다.
 
 예상에 대 한 추가 정보와 문제를 수정 하는 스크립트를 가져오려면 다음 쿼리를 사용 하 여 얻을 수 있습니다.
 

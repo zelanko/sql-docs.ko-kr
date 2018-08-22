@@ -1,5 +1,5 @@
 ---
-title: sp_purge_jobhistory (TRANSACT-SQL) | Microsoft 문서
+title: sp_purge_jobhistory (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9adf5bc1eada3a1fc2caa58db15fc4fc95ebd35b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 1807fb797b7bd3d53f83cae60c4b876fcb91b74f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564067"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394149"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ sp_purge_jobhistory
   
  멤버를 포함 한 다른 사용자 **SQLAgentUserRole** 회원과 **SQLAgentReaderRole**, 명시적으로 권한을 부여 해야 합니다 EXECUTE에 **sp_purge_jobhistory**. 이러한 사용자는 이 저장 프로시저에 대해 EXECUTE 권한을 부여 받은 다음에도 각자 소유한 작업에 대한 기록만 제거할 수 있습니다.  
   
- 합니다 **SQLAgentUserRole**를 **SQLAgentReaderRole**, 및 **SQLAgentOperatorRole** 고정된 데이터베이스 역할에는 **msdb** 데이터베이스입니다. 해당 사용 권한에 대 한 자세한 내용은 참조 하세요 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)입니다.  
+ 합니다 **SQLAgentUserRole**를 **SQLAgentReaderRole**, 및 **SQLAgentOperatorRole** 고정된 데이터베이스 역할에는 **msdb** 데이터베이스입니다. 해당 사용 권한에 대 한 자세한 내용은 참조 하세요 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)입니다.  
   
 ## <a name="examples"></a>예  
   

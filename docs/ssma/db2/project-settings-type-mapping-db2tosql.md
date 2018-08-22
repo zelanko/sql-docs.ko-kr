@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509222"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396344"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>프로젝트 설정 (형식 매핑) (DB2ToSQL)
-형식 매핑 페이지의 **프로젝트 설정** 대화 상자에는 SSMA DB2 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
+형식 매핑 페이지의 **프로젝트 설정** 대화 상자에는 SSMA DB2 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
   
 형식 매핑 페이지의 수를 **프로젝트 설정** 하 고 **기본 프로젝트 설정** 대화 상자.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "39509222"
 매핑된 DB2 데이터 형식입니다.  
   
 **대상 유형**  
-대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 지정된 된 DB2 데이터 형식에 대 한 데이터 형식입니다.  
+대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 된 DB2 데이터 형식에 대 한 데이터 형식입니다.  
   
 DB2 형식 매핑에 대 한 기본 SSMA 다음 섹션의 표를 참조 하세요.  
   
@@ -63,7 +63,7 @@ DB2 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 지
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>기본 인수 형식 및 반환 값 형식 매핑  
 다음 표에서 인수 및 반환 값에 대 한 기본 데이터 형식 매핑을 보여 줍니다.  
   
-|DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식|  
+|DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float[53]|  
@@ -119,7 +119,7 @@ DB2 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 지
 ### <a name="default-column-type-mapping"></a>기본 열 형식 매핑  
 다음 표에서 열에 대 한 기본 형식 매핑을 보여 줍니다.  
   
-|DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식|  
+|DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float[53]|  
@@ -187,7 +187,7 @@ DB2 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 지
 ### <a name="default-local-variable-type-mapping"></a>기본 로컬 변수 형식 매핑  
 다음 표에서 로컬 변수에 대 한 기본 형식 매핑을 보여 줍니다.  
   
-|DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식|  
+|DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float[53]|  

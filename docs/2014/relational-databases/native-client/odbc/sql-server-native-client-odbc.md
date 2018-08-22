@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da24388b12c83931ea2a4af9b525e5e2030f6940
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3ae0ba38664295ed32dbf425527ccdf7a48d1313
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426302"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395565"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client(ODBC)
   ODBC는 관계형 데이터베이스 또는 ISAM(Indexed Sequential Access Method) 데이터베이스의 데이터에 액세스하는 데 사용되는 API(응용 프로그래밍 인터페이스)의 표준 정의입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 통신하는 C 및 C++ 응용 프로그램을 작성하기 위한 네이티브 API 중 하나인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 통해 ODBC를 지원합니다.  
