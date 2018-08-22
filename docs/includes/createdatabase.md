@@ -4,4 +4,4 @@
  [Azure Portal을 사용하여 단 몇 분 만에 SQL Database 만들기](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)
  
  ## <a name="microsoft-sql-server"></a>Microsoft SQL Server 
- [CodePlex의 Microsoft SQL Server Database 제품 샘플](http://msftdbprodsamples.codeplex.com/)
+ [GitHub의 Microsoft SQL Server 예제](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
