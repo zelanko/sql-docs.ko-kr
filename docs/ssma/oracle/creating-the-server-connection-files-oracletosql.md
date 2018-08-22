@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776959"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394376"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>서버 연결 파일 (OracleToSQL) 만들기
-별도 서버 연결 파일 또는 스크립트 파일의 서버 섹션에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일 및 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
+# <a name="creating-the-server-connection-files-oracletosql"></a>서버 연결 파일 만들기(OracleToSQL)
+스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
   
 **예: 1**  
   
@@ -106,8 +106,8 @@ ms.locfileid: "34776959"
 ```  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에 다음 단계는 [SSMA 콘솔 실행 &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 실행](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[SSMA 콘솔 실행](executing-the-ssma-console-oracletosql.md)  
   

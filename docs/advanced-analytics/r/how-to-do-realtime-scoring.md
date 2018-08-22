@@ -2,31 +2,29 @@
 title: 실시간 점수 매기기 또는 SQL Server Machine Learning에서 네이티브 점수 매기기를 수행 하는 방법 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 265a40d01be772b36ce7e49d06aeef8d3f5d81e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085855"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40394572"
 ---
-# <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 네이티브 점수 매기기를 수행 하는 방법
+# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 네이티브 점수 매기기를 수행 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server 2017 및 SQL Server 2016에서 네이티브 점수 매기기 기능 및 실시간 점수 매기기를 실행 하는 방법에 대 한 지침 및 샘플 코드를 제공 합니다. 실시간 점수 매기기와 네이티브 점수 매기기의 목표는 작은 일괄 처리 점수 매기기 작업의 성능을 향상 시키기 위해입니다.
+이 문서에서는 SQL Server의 두 가지 방법에서 결과 예측에 대 한 R에서 작성 하는 미리 학습 된 모델을 사용 하 여 실시간을 보여 줍니다. 실시간 점수 매기기와 네이티브 점수 매기기 기계 학습 모델을 R을 설치 하지 않고도 사용할 수 있도록 설계 되었습니다. -SQL Server 데이터베이스에 저장-호환 형식으로 미리 학습 된 모델을 지정 신속 하 게 새 입력에 대 한 예측 점수를 생성 하려면 표준 데이터 액세스 기법을 사용할 수 있습니다.
 
-실시간 점수 매기기와 네이티브 점수 매기기 기계 학습 모델을 R을 설치 하지 않고도 사용할 수 있도록 설계 되었습니다. 하기만 하면 호환 형식으로 미리 학습 된 모델을 가져오고 SQL Server 데이터베이스에 저장 됩니다.
-
-## <a name="choosing-a-scoring-method"></a>점수 매기기 방법 선택
+## <a name="choose-a-scoring-method"></a>점수 매기기 방법 선택
 
 다음 옵션은 빠른 일괄 처리 예측을 위해 지원 됩니다.
 
-+ **네이티브 점수 매기기**: SQL Server 2017의 T-SQL PREDICT 함수
-+ **실시간 점수 매기기**: sp를 사용 하 여\_rxPredict SQL Server 2016 또는 SQL Server 2017에서 프로시저를 저장 합니다.
++ **네이티브 점수 매기기**: SQL Server 2017 Windows, SQL Server 2017 Linux 및 Azure SQL Database의 T-SQL PREDICT 함수입니다.
++ **실시간 점수 매기기**: sp를 사용 하 여\_rxPredict 저장 프로시저에서 SQL Server 2016 또는 SQL Server 2017 (Windows만 해당).
 
 > [!NOTE]
 > SQL Server 2017의 PREDICT 함수를 사용 하는 것이 좋습니다.
@@ -168,16 +166,16 @@ go
 > [!NOTE]
 > 열 및 값을 반환 하므로 **PREDICT** 모델 유형별로 다를 수 있습니다 사용 하 여 반환된 된 데이터의 스키마를 정의 해야 합니다는 **WITH** 절.
 
-## <a name="realtime-scoring-with-sprxpredict"></a>실시간 sp_rxPredict를 사용 하 여 점수 매기기
+## <a name="real-time-scoring-with-sprxpredict"></a>Sp_rxPredict으로 실시간 점수 매기기
 
 이 섹션에서는 설정 하는 데 필요한 단계를 설명 **실시간** 예측을 T-SQL에서 함수를 호출 하는 방법의 예제를 제공 합니다.
 
-### <a name ="bkmk_enableRtScoring"></a> 1 단계입니다. 실시간 프로시저 점수 매기기를 사용 하도록 설정
+### <a name ="bkmk_enableRtScoring"></a> 1 단계입니다. 실시간 점수 매기기 절차를 사용 하도록 설정
 
 점수 매기기에 사용 하려는 각 데이터베이스에 대해이 기능을 활성화 해야 합니다. 서버 관리자에 RevoScaleR 패키지에 포함 되어 있는 명령줄 유틸리티를 RegisterRExt.exe를 실행 해야 합니다.
 
 > [!NOTE]
-> 실시간 작동 하려면 점수 매기기에 대 한 순서 대로 SQL CLR 기능을 사용 해야 인스턴스에; 또한 데이터베이스는 신뢰할 수 있는 표시 해야 합니다. 스크립트를 실행 하는 경우 이러한 함수를 수행 됩니다. 그러나이 작업을 수행 하기 전에 추가 보안에 미치는 영향을 고려해 야!
+> 작업 실시간 채 점을 위해 순서로 SQL CLR 기능을 사용 해야 인스턴스에; 또한 데이터베이스는 신뢰할 수 있는 표시 해야 합니다. 스크립트를 실행 하는 경우 이러한 함수를 수행 됩니다. 그러나이 작업을 수행 하기 전에 추가 보안에 미치는 영향을 고려해 야!
 
 1. 관리자 권한 명령 프롬프트를 열고 RegisterRExt.exe가 있는 폴더로 이동 합니다. 기본 설치에서 경로 사용할 수 있습니다.
     
@@ -236,15 +234,17 @@ EXEC sp_rxPredict
 > 
 > 따라서 실시간 점수 매기기에 사용 하기 전에 입력된 데이터에서 지원 되지 않는 형식 필터링 해야 합니다.
 > 
-> 해당 SQL 형식에 대 한 자세한 내용은 [SQL-CLR 형식 매핑](https://msdn.microsoft.com/library/bb386947.aspx) 하거나 [CLR 매개 변수 데이터 매핑](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)합니다.
+> 해당 SQL 형식에 대 한 자세한 내용은 [SQL-CLR 형식 매핑](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) 하거나 [CLR 매개 변수 데이터 매핑](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)합니다.
 
-## <a name="disable-realtime-scoring"></a>실시간 점수 매기기를 사용 하지 않도록 설정
+## <a name="disable-real-time-scoring"></a>실시간 점수 매기기를 사용 하지 않도록 설정
 
 실시간 점수 매기기 기능을 사용 하지 않으려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 실행 합니다. `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Microsoft R Server 또는 Machine Learning Server에서 점수 매기기 실시간
+## <a name="real-time-scoring-in-other-microsoft-product"></a>다른 Microsoft 제품의 실시간 점수 매기기
 
-Machine Learning Server 분산된 실시간 웹 서비스로 게시 하는 모델에서 점수 매기기를 지원 합니다. 자세한 내용은 다음 문서를 참조하세요.
+독립 실행형 서버 또는 Microsoft Machine Learning Server 대신 SQL Server 데이터베이스 내 분석을 사용할 경우 저장된 프로시저 및 예측을 생성 하기 위한 T-SQL 함수 외에 다른 옵션입니다.
+
+독립 실행형 서버 및 Machine Learning Server 지원의 개념을 *웹 서비스* 코드 배포에 대 한 합니다. 번들로 R 또는 Python 미리 학습 된 모델을 웹 서비스로 새 데이터 입력을 평가 하려면 런타임에 호출 합니다. 자세한 내용은 다음 문서를 참조하세요.
 
 + [Machine Learning Server에 웹 서비스는 무엇입니까?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [운영 화 란?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)

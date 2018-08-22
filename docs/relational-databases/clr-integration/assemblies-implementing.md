@@ -14,14 +14,14 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353095"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395004"
 ---
-# <a name="assemblies---implementing"></a>어셈블리-구현
+# <a name="assemblies---implementing"></a>어셈블리 - 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 사용자가 데이터베이스에서 어셈블리를 구현하고 사용하는 데 도움이 되는 다음 영역에 대해 설명합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "37353095"
   
  **SQL Server Management Studio를 사용 하 여 어셈블리를 삭제 하려면**  
   
--   [개체 삭제](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [개체 삭제](../../ssms/object/delete-objects.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 어셈블리는 모두 기본적으로 실행할 수 없습니다. 사용할 수 있습니다는 **사용 하도록 설정 하는 clr** 옵션을 **sp_configure** 시스템 저장 프로시저를 사용 하지 않도록 설정 하거나에서 업로드 되는 모든 어셈블리를 실행할 수 있게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 어셈블리 실행을 해제하면 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 집계 및 사용자 정의 유형이 실행되지 않고 현재 실행 중인 경우 중지됩니다. 어셈블리 실행을 해제하더라도 어셈블리를 만들거나, 변경하거나, 삭제하는 기능은 해제되지 않습니다. 자세한 내용은 [clr enabled 서버 구성 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)합니다.  
   
