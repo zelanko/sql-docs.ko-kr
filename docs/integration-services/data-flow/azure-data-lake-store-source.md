@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store 원본 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409305"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175200"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 원본
   **Azure Data Lake Store 원본** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 Text 및 Avro입니다.
@@ -44,3 +44,7 @@ ms.locfileid: "35409305"
         파일 형식이 Text이면 **열 구분 기호 문자** 값을 지정해야 합니다. 파일의 첫 행에 열 이름을 포함하려는 경우에는 **첫 번째 데이터 행의 열 이름** 도 선택합니다.  
   
 3.  연결 정보를 지정한 다음 **열** 페이지로 전환하여 SSI 데이터 흐름에 대해 원본 열을 대상 열에 매핑합니다.   
+
+## <a name="text-qualifier"></a>텍스트 한정자
+
+**Azure Data Lake Store 원본**은 텍스트 한정자를 지원하지 않습니다. 파일을 올바르게 처리하도록 텍스트 한정자를 지정해야 하는 경우 로컬 컴퓨터에 파일을 다운로드하고 **플랫 파일 원본**을 사용하여 파일을 처리하는 것이 좋습니다. 플랫 파일 원본을 통해 텍스트 한정자를 지정할 수 있습니다. 자세한 내용은 [플랫 파일 원본](flat-file-source.md)을 참조하세요.

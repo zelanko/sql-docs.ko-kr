@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf0814bacd6c47d86f21709d24acaf2af742f0d5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bf0b1b5a0455fcc35e35614b5abbd2e350aa108e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768659"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175224"
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>기본 가용성 그룹(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34768659"
 ## <a name="configuration"></a>Configuration  
  Always On 기본 가용성 그룹은 두 개의 SQL Server 2016 Standard Edition 서버에서 만들 수 있습니다. 기본 가용성 그룹을 만드는 경우에는, 만드는 동안 두 개의 복제본을 모두 지정해야 합니다.  
   
- 기본 가용성 그룹을 만들려면 **CREATE AVAILABILITY GROUP** transact-SQL 명령을 사용하고 **WITH BASIC** 옵션을 지정합니다(기본값: **ADVANCED**). 자세한 내용은 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)을 참조하세요. 현재는 SQL Server Management Studio에서 기본 가용성 그룹을 만드는 UI가 지원되지 않습니다.  
+ 기본 가용성 그룹을 만들려면 **CREATE AVAILABILITY GROUP** transact-SQL 명령을 사용하고 **WITH BASIC** 옵션을 지정합니다(기본값: **ADVANCED**). 17.8 버전부터 SQL Server Management Studio에서 UI를 사용하여 기본 가용성 그룹을 만들 수도 있습니다. 자세한 내용은 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)을 참조하세요. 
   
 > [!NOTE]  
 >  기본 가용성 그룹에 대한 제한 사항은 **WITH BASIC** 가 지정된 경우 **CREATE AVAILABILITY GROUP** 명령에 적용됩니다. 예를 들어, 읽기 액세스를 허용하는 기본 가용성 그룹을 만들려고 하면 오류가 발생합니다. 그 밖의 제한 사항이 동일한 방식으로 적용됩니다. 자세한 내용은 이 문서의 제한 사항 섹션을 참조하십시오.  

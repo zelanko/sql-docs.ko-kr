@@ -15,12 +15,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022690"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175176"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -70,7 +70,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    
 ## <a name="shared-dataset">공유 데이터 집합 만들기</a>  
   
-기존 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 클라이언트 도구(예: [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너)를 사용하여 공유 데이터 집합을 만듭니다.  이 연습에서는 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 사용합니다. [보고서 작성기를 설치](https://msdn.microsoft.com/library/ff519551.aspx)하거나 웹 포털에서 시작합니다. 세 개의 데이터 집합, 즉 KPI 값에 대한 데이터 집합, KPI 추세에 데이터 집합 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 집합을 만듭니다.     
+기존 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 클라이언트 도구(예: [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너)를 사용하여 공유 데이터 집합을 만듭니다.  이 연습에서는 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 사용합니다. [보고서 작성기를 설치](../install-windows/install-report-builder.md)하거나 웹 포털에서 시작합니다. 세 개의 데이터 집합, 즉 KPI 값에 대한 데이터 집합, KPI 추세에 데이터 집합 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 집합을 만듭니다.     
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **페이지가 매겨진 보고서** 를 클릭하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 시작합니다.  
   

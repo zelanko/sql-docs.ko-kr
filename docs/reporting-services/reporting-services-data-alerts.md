@@ -15,12 +15,12 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0a62aafb5512562339ad387dcb1bf8f34efac09d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cd9099b3f814fd65ac0c5d54e187fcfbc9cffb86
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981215"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175185"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 
@@ -124,7 +124,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 SharePoint 모드로 설치하는 방법과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 새로 도입된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 공유 서비스 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용하기 전에 만들고 구성해야 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 자세한 내용은 MSDN Library의 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)를 참조하세요.  
   
- 이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 구성](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) 및 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
+ 이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 구성](../ssms/agent/configure-sql-server-agent.md) 및 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
  SharePoint 중앙 관리의 **구독 및 경고 프로비전** 페이지를 사용하여 SQL Server 에이전트가 실행되고 있는지 알아보고, SQL Server 에이전트에 대한 사용 권한을 부여하기 위해 실행할 사용자 지정 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 만들고 다운로드할 수 있습니다. PowerShell을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성할 수도 있습니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
@@ -252,7 +252,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
 -   ReadSentAlerts  
   
- SQL 에이전트를 사용하여 일정에 따라 저장 프로시저를 실행할 수 있습니다. 자세한 내용은 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)을 참조하세요.  
+ SQL 에이전트를 사용하여 일정에 따라 저장 프로시저를 실행할 수 있습니다. 자세한 내용은 [SQL Server Agent](../ssms/agent/sql-server-agent.md)을 참조하세요.  
   
 #### <a name="report-server-execution-log"></a>보고서 서버 실행 로그  
  보고서는 데이터 경고 정의를 작성하는 데 사용된 데이터 피드를 생성하기 위해 실행됩니다. 보고서 서버 데이터베이스의 보고서 서버 실행 로그는 보고서가 실행될 때마다 정보를 캡처합니다. 자세한 정보가 필요한 경우 데이터베이스에서 ExecutionLog2 뷰를 쿼리할 수 있습니다. 자세한 내용은 [보고서 서버 ExecutionLog 및 ExecutionLog3 뷰](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)를 참조하세요.  
