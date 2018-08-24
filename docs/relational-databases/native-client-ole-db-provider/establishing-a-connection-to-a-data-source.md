@@ -37,7 +37,7 @@ ms.locfileid: "39549793"
   
  컴퓨터에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 경우 서버 이름은 ServerName\InstanceName 형식으로 지정됩니다.  
   
- 데이터 원본 개체도 노출 합니다 **IDBInitialize** 인터페이스입니다. 호출 하 여 데이터 원본에는 연결이 설정 되는 속성을 설정한 후 합니다 **idbinitialize:: Initialize** 메서드. 예를 들어:  
+ 데이터 원본 개체도 노출 합니다 **IDBInitialize** 인터페이스입니다. 호출 하 여 데이터 원본에는 연결이 설정 되는 속성을 설정한 후 합니다 **idbinitialize::Initialize** 메서드. 예를 들어:  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
