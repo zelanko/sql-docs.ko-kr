@@ -1,61 +1,60 @@
+items:
 - name: 개요
   href: data-mining-extensions-dmx-reference.md
-- name: 새로운 또는 업데이트된 아티클
-  href: new-updated-dmx.md
 - name: DMX 문 - 데이터 정의
   href: dmx-statements-data-definition.md
   items:
-    - name: CREATE MINING STRUCTURE
-      href: create-mining-structure-dmx.md
-    - name: ALTER MINING STRUCTURE
-      href: alter-mining-structure-dmx.md
-    - name: CREATE MINING MODEL
-      href: create-mining-model-dmx.md
-    - name: DROP MINING STRUCTURE
-      href: drop-mining-structure-dmx.md
-    - name: DROP MINING MODEL
-      href: drop-mining-model-dmx.md
-    - name: EXPORT
-      href: export-dmx.md
-    - name: IMPORT
-      href: import-dmx.md
-    - name: SELECT INTO
-      href: select-into-dmx.md
+  - name: CREATE MINING STRUCTURE
+    href: create-mining-structure-dmx.md
+  - name: ALTER MINING STRUCTURE
+    href: alter-mining-structure-dmx.md
+  - name: CREATE MINING MODEL
+    href: create-mining-model-dmx.md
+  - name: DROP MINING STRUCTURE
+    href: drop-mining-structure-dmx.md
+  - name: DROP MINING MODEL
+    href: drop-mining-model-dmx.md
+  - name: EXPORT
+    href: export-dmx.md
+  - name: IMPORT
+    href: import-dmx.md
+  - name: SELECT INTO
+    href: select-into-dmx.md
 - name: DMX 문 - 데이터 조작
   href: dmx-statements-data-manipulation.md
   items:
-    - name: <source data query> - OPENQUERY
-      href: source-data-query-openquery.md
-    - name: <source data query> - OPENROWSET
-      href: source-data-query-openrowset.md
-    - name: <source data query> - SHAPE
-      href: source-data-query-shape.md
-    - name: SELECT DISTINCT FROM <model >
-      href: select-distinct-from-model-dmx.md
-    - name: SELECT FROM <model>.CONTENT
-      href: select-from-model-content-dmx.md
-    - name: SELECT FROM <model>.CASES
-      href: select-from-model-cases-dmx.md
-    - name: SELECT FROM <model>.SAMPLE_CASES
-      href: select-from-model-sample-cases-dmx.md
-    - name: SELECT FROM <model>.DIMENSION_CONTENT
-      href: select-from-model-dimension-content-dmx.md
-    - name: SELECT FROM <model> PREDICTION JOIN
-      href: select-from-model-prediction-join-dmx.md
-    - name: SELECT FROM <model>
-      href: select-from-model-dmx.md
-    - name: SELECT FROM <structure>.CASES
-      href: select-from-structure-cases.md
-    - name: Delete
-      href: delete-dmx.md
-    - name: INSERT INTO
-      href: insert-into-dmx.md
-    - name: SELECT
-      href: select-dmx.md
-    - name: <source data query>
-      href: source-data-query.md
-    - name: UPDATE
-      href: update-dmx.md
+  - name: <source data query> - OPENQUERY
+    href: source-data-query-openquery.md
+  - name: <source data query> - OPENROWSET
+    href: source-data-query-openrowset.md
+  - name: <source data query> - SHAPE
+    href: source-data-query-shape.md
+  - name: SELECT DISTINCT FROM <model >
+    href: select-distinct-from-model-dmx.md
+  - name: SELECT FROM <model>.CONTENT
+    href: select-from-model-content-dmx.md
+  - name: SELECT FROM <model>.CASES
+    href: select-from-model-cases-dmx.md
+  - name: SELECT FROM <model>.SAMPLE_CASES
+    href: select-from-model-sample-cases-dmx.md
+  - name: SELECT FROM <model>.DIMENSION_CONTENT
+    href: select-from-model-dimension-content-dmx.md
+  - name: SELECT FROM <model> PREDICTION JOIN
+    href: select-from-model-prediction-join-dmx.md
+  - name: SELECT FROM <model>
+    href: select-from-model-dmx.md
+  - name: SELECT FROM <structure>.CASES
+    href: select-from-structure-cases.md
+  - name: Delete
+    href: delete-dmx.md
+  - name: INSERT INTO
+    href: insert-into-dmx.md
+  - name: SELECT
+    href: select-dmx.md
+  - name: <source data query>
+    href: source-data-query.md
+  - name: UPDATE
+    href: update-dmx.md
 - name: DMX 예측 쿼리의 구조 및 사용법
   href: structure-and-usage-of-dmx-prediction-queries.md
 - name: DMX Select 문 이해
@@ -65,144 +64,150 @@
 - name: DMX 구문 요소
   href: data-mining-extensions-dmx-syntax-elements.md
   items:
-    - name: 연산자 - 산술
-      href: operators-arithmetic.md
-    - name: 연산자 - 비교
-      href: operators-comparison.md
-    - name: 연산자 - 논리
-      href: operators-logical.md
-    - name: 연산자 - 단항
-      href: operators-unary.md
-    - name: 식별자(DMX)
-      href: identifiers-dmx.md
-    - name: 데이터 형식(DMX)
-      href: data-types-dmx.md
-    - name: 식(DMX)
-      href: expressions-dmx.md
-    - name: 연산자(DMX)
-      href: operators-dmx.md
-    - name: 함수(DMX)
-      href: functions-dmx.md
-    - name: 주석(DMX)
-      href: comments-dmx.md
-    - name: 예약어(DMX)
-      href: reserved-keywords-dmx.md
-    - name: 내용 유형(DMX)
-      href: content-types-dmx.md
-    - name: 배포(DMX)
-      href: distributions-dmx.md
-    - name: 사용법(DMX)
-      href: usage-dmx.md
-    - name: 모델링 플래그(DMX)
-      href: modeling-flags-dmx.md
+  - name: 연산자 - 산술
+    href: operators-arithmetic.md
+  - name: 연산자 - 비교
+    href: operators-comparison.md
+  - name: 연산자 - 논리
+    href: operators-logical.md
+  - name: 연산자 - 단항
+    href: operators-unary.md
+  - name: 식별자(DMX)
+    href: identifiers-dmx.md
+  - name: 데이터 형식(DMX)
+    href: data-types-dmx.md
+  - name: 식(DMX)
+    href: expressions-dmx.md
+  - name: 연산자(DMX)
+    href: operators-dmx.md
+  - name: 함수(DMX)
+    href: functions-dmx.md
+  - name: 주석(DMX)
+    href: comments-dmx.md
+  - name: 예약어(DMX)
+    href: reserved-keywords-dmx.md
+  - name: 내용 유형(DMX)
+    href: content-types-dmx.md
+  - name: 배포(DMX)
+    href: distributions-dmx.md
+  - name: 사용법(DMX)
+    href: usage-dmx.md
+  - name: 모델링 플래그(DMX)
+    href: modeling-flags-dmx.md
 - name: DMX(Data Mining Extensions) 문
   href: data-mining-extensions-dmx-statements.md
   items:
-    - name: DMX 함수 참조
-      href: data-mining-extensions-dmx-function-reference.md
-      items:
-        - name: BottomCount
-          href: bottomcount-dmx.md
-        - name: BottomPercent
-          href: bottompercent-dmx.md
-        - name: BottomSum
-          href: bottomsum-dmx.md
-        - name: 클러스터
-          href: cluster-dmx.md
-        - name: ClusterDistance
-          href: clusterdistance-dmx.md
-        - name: ClusterProbability
-          href: clusterprobability-dmx.md
-        - name: Exists
-          href: exists-dmx.md
-        - name: IsDescendant
-          href: isdescendant-dmx.md
-        - name: IsInNode
-          href: isinnode-dmx.md
-        - name: IsTestCase
-          href: istestcase-dmx.md
-        - name: IsTrainingCase
-          href: istrainingcase-dmx.md
-        - name: Lag
-          href: lag-dmx.md
-        - name: 예측
-          href: predict-dmx.md
-        - name: PredictAdjustedProbability
-          href: predictadjustedprobability-dmx.md
-        - name: PredictAssociation
-          href: predictassociation-dmx.md
-        - name: PredictCaseLikelihood
-          href: predictcaselikelihood-dmx.md
-        - name: PredictHistogram
-          href: predicthistogram-dmx.md
-        - name: PredictNodeId
-          href: predictnodeid-dmx.md
-        - name: PredictProbability
-          href: predictprobability-dmx.md
-        - name: PredictSequence
-          href: predictsequence-dmx.md
-        - name: PredictStdev
-          href: predictstdev-dmx.md
-        - name: PredictSupport
-          href: predictsupport-dmx.md
-        - name: PredictTimeSeries
-          href: predicttimeseries-dmx.md
-        - name: PredictVariance
-          href: predictvariance-dmx.md
-        - name: RangeMax
-          href: rangemax-dmx.md
-        - name: RangeMid
-          href: rangemid-dmx.md
-        - name: RangeMin
-          href: rangemin-dmx.md
-        - name: StructureColumn
-          href: structurecolumn-dmx.md
-        - name: TopCount
-          href: topcount-dmx.md
-        - name: TopPercent
-          href: toppercent-dmx.md
-        - name: TopSum
-          href: topsum-dmx.md
-    - name: DMX 연산자 참조
-      href: data-mining-extensions-dmx-operator-reference.md
-      items:
-        - name: + (추가)
-          href: add-dmx.md
-        - name: '- (빼기)'
-          href: subtract-dmx.md
-        - name: '* (곱하기)'
-          href: multiply-dmx.md
-        - name: (나누기)(DMX)
-          href: divide-dmx.md
-        - name: <(보다 작음)
-          href: less-than-dmx.md
-        - name: '> (보다 큼)'
-          href: greater-than-dmx.md
-        - name: =(같음)
-          href: equal-to-dmx.md
-        - name: <>(같지 않음)
-          href: not-equal-to-dmx.md
-        - name: <=(작거나 같음)
-          href: less-than-or-equal-to-dmx.md
-        - name: '>=(크거나 같음)'
-          href: greater-than-or-equal-to-dmx.md
-        - name: AND
-          href: and-dmx.md
-        - name: NOT
-          href: not-dmx.md
-        - name: 또는
-          href: or-dmx.md
-        - name: + (양수)
-          href: positive-dmx.md
-        - name: '- (음수)'
-          href: negative-dmx.md
-        - name: //(주석)
-          href: double-slash-comment-dmx.md
-        - name: '--(주석)'
-          href: comment-dmx-summary.md
-        - name: / /(주석)
-          href: slash-star-comment-dmx.md
-    - name: DMX 구문 표기 규칙
-      href: data-mining-extensions-dmx-syntax-conventions.md
-    - name: DMX 자습서
-      href: dmx-tutorials-analysis-services-data-mining.md
+  - name: DMX 함수 참조
+    href: data-mining-extensions-dmx-function-reference.md
+    items:
+    - name: BottomCount
+      href: bottomcount-dmx.md
+    - name: BottomPercent
+      href: bottompercent-dmx.md
+    - name: BottomSum
+      href: bottomsum-dmx.md
+    - name: 클러스터
+      href: cluster-dmx.md
+    - name: ClusterDistance
+      href: clusterdistance-dmx.md
+    - name: ClusterProbability
+      href: clusterprobability-dmx.md
+    - name: Exists
+      href: exists-dmx.md
+    - name: IsDescendant
+      href: isdescendant-dmx.md
+    - name: IsInNode
+      href: isinnode-dmx.md
+    - name: IsTestCase
+      href: istestcase-dmx.md
+    - name: IsTrainingCase
+      href: istrainingcase-dmx.md
+    - name: Lag
+      href: lag-dmx.md
+    - name: 예측
+      href: predict-dmx.md
+    - name: PredictAdjustedProbability
+      href: predictadjustedprobability-dmx.md
+    - name: PredictAssociation
+      href: predictassociation-dmx.md
+    - name: PredictCaseLikelihood
+      href: predictcaselikelihood-dmx.md
+    - name: PredictHistogram
+      href: predicthistogram-dmx.md
+    - name: PredictNodeId
+      href: predictnodeid-dmx.md
+    - name: PredictProbability
+      href: predictprobability-dmx.md
+    - name: PredictSequence
+      href: predictsequence-dmx.md
+    - name: PredictStdev
+      href: predictstdev-dmx.md
+    - name: PredictSupport
+      href: predictsupport-dmx.md
+    - name: PredictTimeSeries
+      href: predicttimeseries-dmx.md
+    - name: PredictVariance
+      href: predictvariance-dmx.md
+    - name: RangeMax
+      href: rangemax-dmx.md
+    - name: RangeMid
+      href: rangemid-dmx.md
+    - name: RangeMin
+      href: rangemin-dmx.md
+    - name: StructureColumn
+      href: structurecolumn-dmx.md
+    - name: TopCount
+      href: topcount-dmx.md
+    - name: TopPercent
+      href: toppercent-dmx.md
+    - name: TopSum
+      href: topsum-dmx.md
+  - name: DMX 연산자 참조
+    href: data-mining-extensions-dmx-operator-reference.md
+    items:
+    - name: + (추가)
+      href: add-dmx.md
+    - name: '- (빼기)'
+      href: subtract-dmx.md
+    - name: '* (곱하기)'
+      href: multiply-dmx.md
+    - name: (나누기)(DMX)
+      href: divide-dmx.md
+    - name: <(보다 작음)
+      href: less-than-dmx.md
+    - name: '> (보다 큼)'
+      href: greater-than-dmx.md
+    - name: =(같음)
+      href: equal-to-dmx.md
+    - name: <>(같지 않음)
+      href: not-equal-to-dmx.md
+    - name: <=(작거나 같음)
+      href: less-than-or-equal-to-dmx.md
+    - name: '>=(크거나 같음)'
+      href: greater-than-or-equal-to-dmx.md
+    - name: AND
+      href: and-dmx.md
+    - name: NOT
+      href: not-dmx.md
+    - name: 또는
+      href: or-dmx.md
+    - name: + (양수)
+      href: positive-dmx.md
+    - name: '- (음수)'
+      href: negative-dmx.md
+    - name: //(주석)
+      href: double-slash-comment-dmx.md
+    - name: --(주석)
+      href: comment-dmx-summary.md
+    - name: / /(주석)
+      href: slash-star-comment-dmx.md
+  - name: DMX 구문 표기 규칙
+    href: data-mining-extensions-dmx-syntax-conventions.md
+  - name: DMX 자습서
+    href: dmx-tutorials-analysis-services-data-mining.md
+ms.openlocfilehash: 3dd0d2557ef74c7a784aeff9b505609f169df57d
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899283"

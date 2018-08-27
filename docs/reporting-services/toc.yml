@@ -1,57 +1,56 @@
+items:
 - name: SSRS(SQL Server Reporting Services)란?
   href: create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: 개요
   items:
-    - name: Reporting Services의 새로운 기능
-      href: what-s-new-in-sql-server-reporting-services-ssrs.md
-    - name: 새로운 또는 업데이트된 아티클
-      href: new-updated-reporting-services.md
-    - name: 변경 로그
-      href: change-log-sql-server-reporting-services.md
-    - name: Reporting Services 개념(SSRS)
-      href: reporting-services-concepts-ssrs.md
-    - name: Reporting Services 기능 및 태스크
-      href: reporting-services-features-and-tasks-ssrs.md
-    - name: Backward Compatibility
-      href: reporting-services-backward-compatibility.md
-      items:
-        - name: 사용되지 않는 기능
-          href: deprecated-features-in-sql-server-reporting-services-ssrs.md
-        - name: SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능
-          href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-        - name: SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용
-          href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-        - name: SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
-          href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
+  - name: Reporting Services의 새로운 기능
+    href: what-s-new-in-sql-server-reporting-services-ssrs.md
+  - name: 변경 로그
+    href: change-log-sql-server-reporting-services.md
+  - name: Reporting Services 개념(SSRS)
+    href: reporting-services-concepts-ssrs.md
+  - name: Reporting Services 기능 및 태스크
+    href: reporting-services-features-and-tasks-ssrs.md
+  - name: Backward Compatibility
+    href: reporting-services-backward-compatibility.md
+    items:
+    - name: 사용되지 않는 기능
+      href: deprecated-features-in-sql-server-reporting-services-ssrs.md
+    - name: SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능
+      href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
+    - name: SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용
+      href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
+    - name: SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
+      href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: 계획
   items:
-    - name: 분석 및 보고에 대한 Microsoft BI(Business Intelligence) 도구 선택
-      href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
-    - name: Reporting Services 및 파워 뷰 브라우저 지원
-      href: browser-support-for-reporting-services-and-power-view.md
-    - name: 보고서 디자인 및 보고서 배포 계획 | Reporting Services
-      href: plan-for-report-design-and-report-deployment-reporting-services.md
-    - name: SQL Server 2016 버전에서 지원하는 Reporting Services 기능
-      href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
+  - name: 분석 및 보고에 대한 Microsoft BI(Business Intelligence) 도구 선택
+    href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
+  - name: Reporting Services 및 파워 뷰 브라우저 지원
+    href: browser-support-for-reporting-services-and-power-view.md
+  - name: 보고서 디자인 및 보고서 배포 계획 | Reporting Services
+    href: plan-for-report-design-and-report-deployment-reporting-services.md
+  - name: SQL Server 2016 버전에서 지원하는 Reporting Services 기능
+    href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
 - name: Install
   href: ../reporting-services/install-windows/install-reporting-services.md
 - name: 웹 포털
   href: web-portal-ssrs-native-mode.md
   items:
-    - name: 웹 포털 브랜딩
-      href: branding-the-web-portal.md
-    - name: 공유 데이터 집합 작업(웹 포털)
-      href: work-with-shared-datasets-web-portal.md
-    - name: 페이지를 매긴 보고서 사용(웹 포털)
-      href: working-with-paginated-reports-web-portal.md
-    - name: 스냅숏 사용(웹 포털)
-      href: working-with-snapshots-web-portal.md
-    - name: 구독 작업(웹 포털)
-      href: working-with-subscriptions-web-portal.md
-    - name: Reporting Services에서 KPI 사용
-      href: working-with-kpis-in-reporting-services.md
-    - name: Power BI 통합을 위한 내 설정(웹 포털)
-      href: my-settings-for-power-bi-integration-web-portal.md
+  - name: 웹 포털 브랜딩
+    href: branding-the-web-portal.md
+  - name: 공유 데이터 집합 작업(웹 포털)
+    href: work-with-shared-datasets-web-portal.md
+  - name: 페이지를 매긴 보고서 사용(웹 포털)
+    href: working-with-paginated-reports-web-portal.md
+  - name: 스냅숏 사용(웹 포털)
+    href: working-with-snapshots-web-portal.md
+  - name: 구독 작업(웹 포털)
+    href: working-with-subscriptions-web-portal.md
+  - name: Reporting Services에서 KPI 사용
+    href: working-with-kpis-in-reporting-services.md
+  - name: Power BI 통합을 위한 내 설정(웹 포털)
+    href: my-settings-for-power-bi-integration-web-portal.md
 - name: 보고서 서버
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
 - name: 보고서 서버(SharePoint)
@@ -77,178 +76,184 @@
 - name: 데이터 경고(SharePoint)
   href: reporting-services-data-alerts.md
   items:
-    - name: 데이터 경고 디자이너
-      href: data-alert-designer.md
-    - name: SharePoint 사용자용 데이터 경고 관리자
-      href: data-alert-manager-for-sharepoint-users.md
-    - name: 경고 담당자를 위한 데이터 경고 관리자입니다.
-      href: data-alert-manager-for-alerting-administrators.md
-    - name: 데이터 경고 메시지
-      href: data-alert-messages.md
-    - name: 데이터 경고 디자이너에서 데이터 경고 만들기
-      href: create-a-data-alert-in-data-alert-designer.md
-    - name: 경고 디자이너에서 데이터 경고 편집
-      href: edit-a-data-alert-in-alert-designer.md
-    - name: 데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
-      href: manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
-    - name: 데이터 경고 관리자에서 내 데이터 경고 관리
-      href: manage-my-data-alerts-in-data-alert-manager.md
-    - name: 사용자 및 경고 담당자에게 권한 부여
-      href: grant-permissions-to-users-and-alerting-administrators.md
+  - name: 데이터 경고 디자이너
+    href: data-alert-designer.md
+  - name: SharePoint 사용자용 데이터 경고 관리자
+    href: data-alert-manager-for-sharepoint-users.md
+  - name: 경고 담당자를 위한 데이터 경고 관리자입니다.
+    href: data-alert-manager-for-alerting-administrators.md
+  - name: 데이터 경고 메시지
+    href: data-alert-messages.md
+  - name: 데이터 경고 디자이너에서 데이터 경고 만들기
+    href: create-a-data-alert-in-data-alert-designer.md
+  - name: 경고 디자이너에서 데이터 경고 편집
+    href: edit-a-data-alert-in-alert-designer.md
+  - name: 데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
+    href: manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
+  - name: 데이터 경고 관리자에서 내 데이터 경고 관리
+    href: manage-my-data-alerts-in-data-alert-manager.md
+  - name: 사용자 및 경고 담당자에게 권한 부여
+    href: grant-permissions-to-users-and-alerting-administrators.md
 - name: 확장 프로그램
   href: extensions-ssrs.md
   items:
-    - name: RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
-      href: customize-rendering-extension-parameters-in-rsreportserver-config.md
+  - name: RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
+    href: customize-rendering-extension-parameters-in-rsreportserver-config.md
 - name: URL 액세스
   href: url-access-ssrs.md
   items:
-    - name: URL 액세스를 사용하여 보고서 서버 항목 액세스
-      href: access-report-server-items-using-url-access.md
-    - name: URL에 보고서 매개 변수 전달
-      href: pass-a-report-parameter-within-a-url.md
-    - name: URL 액세스 매개 변수 참조
-      href: url-access-parameter-reference.md
-    - name: URL에 보고서 매개 변수 언어 설정
-      href: set-the-language-for-report-parameters-in-a-url.md
-    - name: URL에 장치 정보 설정 지정
-      href: specify-device-information-settings-in-a-url.md
-    - name: URL 액세스를 사용하여 보고서 내보내기
-      href: export-a-report-using-url-access.md
-    - name: URL 액세스를 사용하여 보고서 검색
-      href: search-a-report-using-url-access.md
-    - name: URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
-      href: render-a-report-history-snapshot-using-url-access.md
+  - name: URL 액세스를 사용하여 보고서 서버 항목 액세스
+    href: access-report-server-items-using-url-access.md
+  - name: URL에 보고서 매개 변수 전달
+    href: pass-a-report-parameter-within-a-url.md
+  - name: URL 액세스 매개 변수 참조
+    href: url-access-parameter-reference.md
+  - name: URL에 보고서 매개 변수 언어 설정
+    href: set-the-language-for-report-parameters-in-a-url.md
+  - name: URL에 장치 정보 설정 지정
+    href: specify-device-information-settings-in-a-url.md
+  - name: URL 액세스를 사용하여 보고서 내보내기
+    href: export-a-report-using-url-access.md
+  - name: URL 액세스를 사용하여 보고서 검색
+    href: search-a-report-using-url-access.md
+  - name: URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
+    href: render-a-report-history-snapshot-using-url-access.md
 - name: WMI 공급자
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
 - name: 문제 해결 +
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
 - name: 개발자
   items:
-    - name: REST API
-      href: developer/rest-api.md
-    - name: REST API 샘플
-      href: 'https://github.com/Microsoft/Reporting-Services'
-    - name: 응용 프로그램 통합
-      href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
-    - name: 보고서 서버 웹 서비스
-      href: ../reporting-services/report-server-web-service/report-server-web-service.md
-    - name: 확장 프로그램
-      href: ../reporting-services/extensions/reporting-services-extension-library.md
-    - name: 사용자 지정 보고서 항목
-      href: ../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md
-    - name: 사용자 지정 어셈블리
-      href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
+  - name: REST API
+    href: developer/rest-api.md
+  - name: REST API 샘플
+    href: https://github.com/Microsoft/Reporting-Services
+  - name: 응용 프로그램 통합
+    href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
+  - name: 보고서 서버 웹 서비스
+    href: ../reporting-services/report-server-web-service/report-server-web-service.md
+  - name: 확장 프로그램
+    href: ../reporting-services/extensions/reporting-services-extension-library.md
+  - name: 사용자 지정 보고서 항목
+    href: ../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md
+  - name: 사용자 지정 어셈블리
+    href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
 - name: 기술 참조
   href: technical-reference-ssrs.md
   items:
-    - name: 기능 참조
-      href: feature-reference-reporting-services.md
-    - name: 렌더링 확장 프로그램에 대한 장치 정보 설정
-      href: device-information-settings-for-rendering-extensions-reporting-services.md
-      items:
-        - name: ATOM 장치 정보 설정
-          href: atom-device-information-settings.md
-        - name: CSV 장치 정보 설정
-          href: csv-device-information-settings.md
-        - name: Excel 장치 정보 설정
-          href: excel-device-information-settings.md
-        - name: HTML 장치 정보 설정
-          href: html-device-information-settings.md
-        - name: 이미지 장치 정보 설정
-          href: image-device-information-settings.md
-        - name: MHTML 장치 정보 설정
-          href: mhtml-device-information-settings.md
-        - name: PDF 장치 정보 설정
-          href: pdf-device-information-settings.md
-        - name: PPTX 장치 정보 설정
-          href: pptx-device-information-settings.md
-        - name: XML 장치 정보 설정
-          href: xml-device-information-settings.md
-        - name: Word 장치 정보 설정
-          href: word-device-information-settings.md
-        - name: RGDI 장치 정보 설정
-          href: rgdi-device-information-settings.md
-    - name: HTML 뷰어 및 보고서 도구 모음
-      href: html-viewer-and-the-report-toolbar.md
+  - name: 기능 참조
+    href: feature-reference-reporting-services.md
+  - name: 렌더링 확장 프로그램에 대한 장치 정보 설정
+    href: device-information-settings-for-rendering-extensions-reporting-services.md
+    items:
+    - name: ATOM 장치 정보 설정
+      href: atom-device-information-settings.md
+    - name: CSV 장치 정보 설정
+      href: csv-device-information-settings.md
+    - name: Excel 장치 정보 설정
+      href: excel-device-information-settings.md
+    - name: HTML 장치 정보 설정
+      href: html-device-information-settings.md
+    - name: 이미지 장치 정보 설정
+      href: image-device-information-settings.md
+    - name: MHTML 장치 정보 설정
+      href: mhtml-device-information-settings.md
+    - name: PDF 장치 정보 설정
+      href: pdf-device-information-settings.md
+    - name: PPTX 장치 정보 설정
+      href: pptx-device-information-settings.md
+    - name: XML 장치 정보 설정
+      href: xml-device-information-settings.md
+    - name: Word 장치 정보 설정
+      href: word-device-information-settings.md
+    - name: RGDI 장치 정보 설정
+      href: rgdi-device-information-settings.md
+  - name: HTML 뷰어 및 보고서 도구 모음
+    href: html-viewer-and-the-report-toolbar.md
 - name: 자습서
   href: reporting-services-tutorials-ssrs.md
   items:
-    - name: 기본 테이블 보고서 만들기(SSRS 자습서)
-      href: create-a-basic-table-report-ssrs-tutorial.md
-      items:
-        - name: '1단원: 보고서 서버 프로젝트 만들기'
-          href: lesson-1-creating-a-report-server-project-reporting-services.md
-        - name: '2단원: 연결 정보 지정'
-          href: lesson-2-specifying-connection-information-reporting-services.md
-        - name: '3단원: 테이블 보고서에 대한 데이터 집합 정의'
-          href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: '4단원: 보고서에 테이블 추가'
-          href: lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 'Lesson 5: Formatting a Report'
-          href: lesson-5-formatting-a-report-reporting-services.md
-        - name: 'Lesson 6: Adding Grouping and Totals'
-          href: lesson-6-adding-grouping-and-totals-reporting-services.md
-    - name: 데이터 기반 구독 만들기(SSRS 자습서)
-      href: create-a-data-driven-subscription-ssrs-tutorial.md
-      items:
-        - name: '1단원: 샘플 구독자 데이터베이스 만들기'
-          href: lesson-1-creating-a-sample-subscriber-database.md
-        - name: 'Lesson 2: Modifying the Report Data Source Properties'
-          href: lesson-2-modifying-the-report-data-source-properties.md
-        - name: 'Lesson 3: Defining a Data-Driven Subscription'
-          href: lesson-3-defining-a-data-driven-subscription.md
-    - name: ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
-      href: create-drillthrough-rdlc-report-with-parameters-reportviewer.md
-      items:
-        - name: '1단원: 새 웹 사이트 만들기'
-          href: lesson-1-create-a-new-web-site.md
-        - name: '2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
-          href: lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-        - name: '3단원: 보고서 마법사를 사용하여 부모 보고서 디자인'
-          href: lesson-3-design-the-parent-report-using-the-report-wizard.md
-        - name: '4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
-          href: lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-        - name: '5단원: 보고서 마법사를 사용하여 자식 보고서 디자인'
-          href: lesson-5-design-the-child-report-using-the-report-wizard.md
-        - name: '6단원: 응용 프로그램에 ReportViewer 컨트롤 추가'
-          href: lesson-6-add-a-reportviewer-control-to-the-application.md
-        - name: '7단원: 부모 보고서에 드릴스루 동작 추가'
-          href: lesson-7-add-drillthrough-action-on-parent-report.md
-        - name: '8단원: 데이터 필터 만들기'
-          href: lesson-8-create-a-data-filter.md
-        - name: 'Lesson 9: Build and Run the Application'
-          href: lesson-9-build-and-run-the-application.md
-    - name: 보고서 작성기 자습서
-      href: report-builder-tutorials.md
-      items:
-        - name: 자습서의 사전 요구 사항
-          href: prerequisites-for-tutorials-report-builder.md
-        - name: 데이터에 연결하는 다른 방법(보고서 작성기)
-          href: alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: '자습서: 기본 테이블 보고서 만들기'
-          href: tutorial-creating-a-basic-table-report-report-builder.md
-        - name: '자습서: 행렬 보고서 만들기'
-          href: tutorial-creating-a-matrix-report-report-builder.md
-        - name: '자습서: 자유 형식 보고서 만들기'
-          href: tutorial-creating-a-free-form-report-report-builder.md
-        - name: '자습서: 텍스트 서식 지정(보고서 작성기)'
-          href: tutorial-format-text-report-builder.md
-        - name: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)'
-          href: tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 원형 차트 추가(보고서 작성기)'
-          href: tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 막대형 차트 추가(보고서 작성기)'
-          href: tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 스파크라인 추가(보고서 작성기)'
-          href: tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 KPI 추가'
-          href: tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: '자습서: 지도 보고서'
-          href: tutorial-map-report-report-builder.md
-        - name: '자습서: 보고서에 매개 변수 추가(보고서 작성기)'
-          href: tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: '자습서: 드릴스루 보고서 및 주 보고서 만들기'
-          href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: '자습서: 식 소개'
-          href: tutorial-introducing-expressions.md
+  - name: 기본 테이블 보고서 만들기(SSRS 자습서)
+    href: create-a-basic-table-report-ssrs-tutorial.md
+    items:
+    - name: '1단원: 보고서 서버 프로젝트 만들기'
+      href: lesson-1-creating-a-report-server-project-reporting-services.md
+    - name: '2단원: 연결 정보 지정'
+      href: lesson-2-specifying-connection-information-reporting-services.md
+    - name: '3단원: 테이블 보고서에 대한 데이터 집합 정의'
+      href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+    - name: '4단원: 보고서에 테이블 추가'
+      href: lesson-4-adding-a-table-to-the-report-reporting-services.md
+    - name: 'Lesson 5: Formatting a Report'
+      href: lesson-5-formatting-a-report-reporting-services.md
+    - name: 'Lesson 6: Adding Grouping and Totals'
+      href: lesson-6-adding-grouping-and-totals-reporting-services.md
+  - name: 데이터 기반 구독 만들기(SSRS 자습서)
+    href: create-a-data-driven-subscription-ssrs-tutorial.md
+    items:
+    - name: '1단원: 샘플 구독자 데이터베이스 만들기'
+      href: lesson-1-creating-a-sample-subscriber-database.md
+    - name: 'Lesson 2: Modifying the Report Data Source Properties'
+      href: lesson-2-modifying-the-report-data-source-properties.md
+    - name: 'Lesson 3: Defining a Data-Driven Subscription'
+      href: lesson-3-defining-a-data-driven-subscription.md
+  - name: ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
+    href: create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+    items:
+    - name: '1단원: 새 웹 사이트 만들기'
+      href: lesson-1-create-a-new-web-site.md
+    - name: '2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
+      href: lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+    - name: '3단원: 보고서 마법사를 사용하여 부모 보고서 디자인'
+      href: lesson-3-design-the-parent-report-using-the-report-wizard.md
+    - name: '4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
+      href: lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+    - name: '5단원: 보고서 마법사를 사용하여 자식 보고서 디자인'
+      href: lesson-5-design-the-child-report-using-the-report-wizard.md
+    - name: '6단원: 응용 프로그램에 ReportViewer 컨트롤 추가'
+      href: lesson-6-add-a-reportviewer-control-to-the-application.md
+    - name: '7단원: 부모 보고서에 드릴스루 동작 추가'
+      href: lesson-7-add-drillthrough-action-on-parent-report.md
+    - name: '8단원: 데이터 필터 만들기'
+      href: lesson-8-create-a-data-filter.md
+    - name: 'Lesson 9: Build and Run the Application'
+      href: lesson-9-build-and-run-the-application.md
+  - name: 보고서 작성기 자습서
+    href: report-builder-tutorials.md
+    items:
+    - name: 자습서의 사전 요구 사항
+      href: prerequisites-for-tutorials-report-builder.md
+    - name: 데이터에 연결하는 다른 방법(보고서 작성기)
+      href: alternative-ways-to-get-a-data-connection-report-builder.md
+    - name: '자습서: 기본 테이블 보고서 만들기'
+      href: tutorial-creating-a-basic-table-report-report-builder.md
+    - name: '자습서: 행렬 보고서 만들기'
+      href: tutorial-creating-a-matrix-report-report-builder.md
+    - name: '자습서: 자유 형식 보고서 만들기'
+      href: tutorial-creating-a-free-form-report-report-builder.md
+    - name: '자습서: 텍스트 서식 지정(보고서 작성기)'
+      href: tutorial-format-text-report-builder.md
+    - name: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)'
+      href: tutorial-add-a-column-chart-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 원형 차트 추가(보고서 작성기)'
+      href: tutorial-add-a-pie-chart-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 막대형 차트 추가(보고서 작성기)'
+      href: tutorial-add-a-bar-chart-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 스파크라인 추가(보고서 작성기)'
+      href: tutorial-add-a-sparkline-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 KPI 추가'
+      href: tutorial-adding-a-kpi-to-your-report-report-builder.md
+    - name: '자습서: 지도 보고서'
+      href: tutorial-map-report-report-builder.md
+    - name: '자습서: 보고서에 매개 변수 추가(보고서 작성기)'
+      href: tutorial-add-a-parameter-to-your-report-report-builder.md
+    - name: '자습서: 드릴스루 보고서 및 주 보고서 만들기'
+      href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
+    - name: '자습서: 식 소개'
+      href: tutorial-introducing-expressions.md
+ms.openlocfilehash: 3846d92e32ce762f767407c535a58ebbe2e6bd7f
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899753"

@@ -1,3 +1,4 @@
+items:
 - name: 개요
   href: sql-server-database-engine-overview.md
 - name: 새로운 기능 - SQL Server 2017
@@ -6,20 +7,18 @@
   href: whats-new-in-sql-server-2016.md
 - name: 릴리스 정보
   items:
-    - name: 이전 버전과의 호환성
-      href: sql-server-database-engine-backward-compatibility.md
-    - name: SQL Server 2017에서 사용되지 않음
-      href: deprecated-database-engine-features-in-sql-server-2017.md
-    - name: SQL Server 2016에서 사용되지 않음
-      href: deprecated-database-engine-features-in-sql-server-2016.md
-    - name: SQL Server 2016에서 지원되지 않는 기능
-      href: discontinued-database-engine-functionality-in-sql-server-2016.md
-    - name: SQL Server 2017의 주요 변경 내용
-      href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
-    - name: SQL Server 2016의 주요 변경 내용
-      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
-    - name: 새로운 또는 업데이트된 아티클
-      href: new-updated-database-engine.md
+  - name: 이전 버전과의 호환성
+    href: sql-server-database-engine-backward-compatibility.md
+  - name: SQL Server 2017에서 사용되지 않음
+    href: deprecated-database-engine-features-in-sql-server-2017.md
+  - name: SQL Server 2016에서 사용되지 않음
+    href: deprecated-database-engine-features-in-sql-server-2016.md
+  - name: SQL Server 2016에서 지원되지 않는 기능
+    href: discontinued-database-engine-functionality-in-sql-server-2016.md
+  - name: SQL Server 2017의 주요 변경 내용
+    href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
+  - name: SQL Server 2016의 주요 변경 내용
+    href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
 - name: Install
   href: ../database-engine/install-windows/installation-for-sql-server-2016.md
 - name: 구성
@@ -27,9 +26,15 @@
 - name: 고가용성
   href: sql-server-business-continuity-dr.md
   items:
-    - name: 가용성 그룹
-      href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-    - name: 데이터베이스 미러링
-      href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
-    - name: 로그 전달
-      href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+  - name: 가용성 그룹
+    href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+  - name: 데이터베이스 미러링
+    href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+  - name: 로그 전달
+    href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+ms.openlocfilehash: d062458e981895baf22659fd9541535bc30f32a9
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899436"

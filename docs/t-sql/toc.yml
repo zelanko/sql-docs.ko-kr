@@ -1,7 +1,6 @@
+items:
 - name: 개요
   href: language-reference.md
-- name: 새로운 또는 업데이트된 아티클
-  href: new-updated-t-sql.md
 - name: 데이터 형식
   href: ../t-sql/data-types/data-types-transact-sql.md
 - name: 데이터베이스 콘솔 명령
@@ -17,9 +16,15 @@
 - name: '자습서: Transact-SQL 문 작성'
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: '1단원: 데이터베이스 개체 만들기 및 쿼리'
-      href: lesson-1-creating-database-objects.md
-    - name: '2단원: 데이터베이스 개체에 대한 사용 권한 구성'
-      href: lesson-2-configuring-permissions-on-database-objects.md
-    - name: '3단원: 데이터베이스 개체 삭제'
-      href: lesson-3-deleting-database-objects.md
+  - name: '1단원: 데이터베이스 개체 만들기 및 쿼리'
+    href: lesson-1-creating-database-objects.md
+  - name: '2단원: 데이터베이스 개체에 대한 사용 권한 구성'
+    href: lesson-2-configuring-permissions-on-database-objects.md
+  - name: '3단원: 데이터베이스 개체 삭제'
+    href: lesson-3-deleting-database-objects.md
+ms.openlocfilehash: fb01b88cf3a43481d18c932755520fcda2ac48b2
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899653"

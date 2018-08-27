@@ -1,16 +1,15 @@
+items:
 - name: SSMS란?
   href: sql-server-management-studio-ssms.md
 - name: SSMS 다운로드
   href: download-sql-server-management-studio-ssms.md
   items:
-    - name: SSMS 변경 로그 및 이전 릴리스
-      href: sql-server-management-studio-changelog-ssms.md
-    - name: 릴리스 정보
-      href: 'download-sql-server-management-studio-ssms.md#release-notes'
-    - name: 영어 이외의 SSMS 설치
-      href: install-other-languages.md
-    - name: 새로운 또는 업데이트된 아티클
-      href: new-updated-ssms.md
+  - name: SSMS 변경 로그 및 이전 릴리스
+    href: sql-server-management-studio-changelog-ssms.md
+  - name: 릴리스 정보
+    href: download-sql-server-management-studio-ssms.md#release-notes
+  - name: 영어 이외의 SSMS 설치
+    href: install-other-languages.md
 - name: SQL Server PowerShell 모듈 설치
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
 - name: SQL Server 에이전트 +
@@ -81,3 +80,9 @@
   href: sql-server-management-studio-keyboard-shortcuts.md
 - name: 익명 사용 현황 데이터
   href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899692"
