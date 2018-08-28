@@ -1,5 +1,5 @@
 ---
-title: SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft Docs
+title: SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/02/2018
 ms.prod: sql
@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f08b48b48570685a8b57bfbf76fd4a473604fed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286269"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096122"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

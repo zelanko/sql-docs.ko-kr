@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 881a2a42a8140502ca0d50765339a8c1cd0194c0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558273"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43098560"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "39558273"
   
 2.  템플릿 매개 변수를 바꾸려면 **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정** 을 클릭합니다.  
   
-     템플릿을 사용하는 방법은 [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)를 참조하십시오.  
+     템플릿을 사용하는 방법은 [Template Explorer](../../ssms/template/template-explorer.md)를 참조하십시오.  
   
 3.  
             **개체 탐색기**에서 테이블은 먼저 디스크 기반 테이블에 따라 정렬된 다음, 메모리 최적화 테이블에 따라 정렬됩니다. **개체 탐색기 정보** 를 사용하여 모든 테이블을 이름순으로 정렬합니다.  
