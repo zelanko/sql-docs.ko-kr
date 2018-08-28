@@ -22,12 +22,12 @@ caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2e508497f7429f596285717978cc6c2953c9c320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4388f157aba6ae590f2bc56109b18696e98ea49
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015930"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411857"
 ---
 # <a name="implementing-a-delivery-extension"></a>배달 확장 프로그램 구현
   사용자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 통해 보고서를 만들고 게시할 수 있으며 그런 다음 보고서를 다양한 위치로 배달할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 다수의 배달 확장 프로그램이 포함되어 있으며 개발자가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 배달 기능을 더욱 확장할 수 있도록 추가 배달 확장 프로그램을 만들 수 있는 배달 API가 포함되어 있습니다.  
@@ -53,17 +53,11 @@ ms.locfileid: "33015930"
  [배달 확장 프로그램에 대해 Setting 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
  **Setting** 클래스의 특성 및 이 클래스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
   
- [배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- **IDeliveryReportServerInformation** 인터페이스의 특성 및 이 인터페이스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
-  
  [배달 확장 프로그램에 대해 Report 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
  **Report** 클래스의 특성 및 이 클래스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
   
  [배달 확장 프로그램에 대해 RenderedOutputFile 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  **RenderedOutputFile** 클래스의 특성 및 이 클래스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
-  
- [배달 확장 프로그램에 대한 ISubscriptionBaseUIUserControl 인터페이스 구현](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
- 배달 확장 프로그램 사용자 컨트롤의 특성 및 고유의 구독용 사용자 인터페이스를 구현하는 방법을 설명합니다.  
   
  [배달 확장 프로그램 배포](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
  배달 확장 프로그램을 배포하는 방법을 설명합니다.  

@@ -1,7 +1,7 @@
 ---
 title: 데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -24,12 +24,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2173ba773d10cb443c3c8b973cd64cd453ce567
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11081d98ab0f182e81a499b9222c15f3cf979141
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027370"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412657"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 집합을 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 집합 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "33027370"
 ### <a name="sorting-data-in-a-dataset-query"></a>데이터 집합 쿼리에서 데이터 정렬  
  보고서에서 데이터를 가져오기 전에 미리 정렬하려면 데이터 집합 쿼리에 정렬 순서를 추가합니다. 쿼리에서 데이터를 정렬하면 보고서 처리기가 아닌 데이터 원본에 의해 정렬 작업이 수행됩니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우에는 데이터 집합 쿼리에 ORDER BY 절을 추가할 수 있습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리인 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`는 SalesOrders 테이블에서 Sales 및 Region 열을 Sales 기준의 내림차순으로 정렬합니다. 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "ORDER BY로 행 정렬"을 참조하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우에는 데이터 집합 쿼리에 ORDER BY 절을 추가할 수 있습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리인 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`는 SalesOrders 테이블에서 Sales 및 Region 열을 Sales 기준의 내림차순으로 정렬합니다.  
   
 > [!NOTE]  
 >  쿼리에서 정렬 순서를 지정할 수 없는 데이터 원본도 있습니다.  

@@ -12,13 +12,14 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48ae5549290ab4c8701da6bd75641dfabfc02872
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a8b7e7fdc732376e58d9b7923f2889a0ebc055e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771079"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412769"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 설치
 
@@ -26,7 +27,7 @@ ms.locfileid: "34771079"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 시스템 기본값 및 런타임 입력을 기반으로 구성 파일을 생성할 수 있습니다. 구성 파일을 사용하면 동일한 구성으로 회사 전체에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 배포할 수 있습니다. 또한 Setup.exe를 실행하는 배치 파일을 만들어 수동 설치를 전사적으로 표준화할 수도 있습니다. 
  
-이 문서는 SQL Server 2016 및 SQL Server 2017에 대해 특별히 업데이트되었습니다. 이전 버전의 SQL Server의 경우 [구성 파일을 사용하여 SQL Server 2014 설치](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx)를 참조하세요.
+이 문서는 SQL Server 2016 및 SQL Server 2017에 대해 특별히 업데이트되었습니다. 이전 버전의 SQL Server의 경우 [구성 파일을 사용하여 SQL Server 2014 설치](install-sql-server-2016-using-a-configuration-file.md)를 참조하세요.
  
 구성 파일은 명령 프롬프트에서 설치할 경우에만 사용할 수 있습니다. 구성 파일을 사용할 때 매개 변수의 처리 순서는 다음과 같습니다.  
   

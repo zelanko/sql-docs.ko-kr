@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145474"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412767"
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 구현하는 역할 기반 보안 모델을 사용합니다. 이 모델을 사용하면 데이터베이스 관리자가 해당 태스크를 수행하는 데 반드시 필요한 사용 권한만 있는 보안 컨텍스트에서 다양한 데이터 수집기 태스크를 실행할 수 있습니다. 이 방법은 저장 프로시저 또는 뷰를 사용해야만 액세스할 수 있는 내부 테이블 관련 작업에도 사용됩니다. 내부 테이블에 대한 사용 권한이 부여되지 않는 대신, 해당 테이블에 액세스하는 데 사용되는 저장 프로시저 또는 뷰의 사용자에 대해 사용 권한을 확인합니다.  
   
 > [!IMPORTANT]  
->  이 보안 모델의 다른 핵심 요소는 공통적 사용 권한입니다. 공통적 사용 권한에서는 개체(예: 경고, 운영자, 작업, 일정 및 프록시)에 대해 사용 권한이 많은 역할이 사용 권한이 적은 역할의 사용 권한을 상속받습니다. 자세한 내용은 [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+>  이 보안 모델의 다른 핵심 요소는 공통적 사용 권한입니다. 공통적 사용 권한에서는 개체(예: 경고, 운영자, 작업, 일정 및 프록시)에 대해 사용 권한이 많은 역할이 사용 권한이 적은 역할의 사용 권한을 상속받습니다. 자세한 내용은 [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
  다음 섹션에서는 일반적인 데이터 컬렉션 보안을 비롯하여 데이터 수집기를 구성 및 사용하고 관리 데이터 웨어하우스 관련 태스크를 수행할 수 있도록 사용자에게 부여해야 하는 역할에 대해 설명합니다.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145474"
  **mdw_reader** 역할의 멤버는 관리 데이터 웨어하우스에 대한 읽기 권한을 갖습니다. 이 역할은 기록 데이터에 대한 액세스를 제공하여 문제 해결을 지원하기 위한 것이므로 이 역할의 멤버는 관리 데이터 웨어하우스 스키마의 다른 요소를 볼 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 에이전트 보안 구현](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

@@ -18,12 +18,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d74d77229e88e04c2d661da827b4d6183ab2d2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 070b34a724914147f87f48df00a1e5778695e3a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952538"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415881"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>정책 관리자에서 정책 실패를 알리도록 경고 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "32952538"
   
  정책 기반 관리 오류 메시지에 응답하도록 경고를 설정하려면 다음 항목을 참조하십시오.  
   
--   [운영자 만들기](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
+-   [운영자 만들기](../../ssms/agent/create-an-operator.md)  
   
--   [오류 번호를 사용하여 경고 만들기](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [오류 번호를 사용하여 경고 만들기](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [운영자에게 경고 할당](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
+-   [운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  정책이 요청 시 평가되면 사용자의 보안 컨텍스트에서 실행됩니다. 오류 로그에 작성하려면 사용자가 ALTER TRACE 권한을 가지고 있거나 sysadmin 고정 서버 역할의 멤버여야 합니다. 적은 권한의 사용자가 평가하는 정책은 이벤트 로그에 작성되지 않고 경고를 발생시키지 않습니다.  
   
  자동화된 실행 모드는 sysadmin 역할의 멤버로 실행합니다. 그러면 정책에서 오류 로그 기록 및 경고 발생을 수행할 수 있습니다.  

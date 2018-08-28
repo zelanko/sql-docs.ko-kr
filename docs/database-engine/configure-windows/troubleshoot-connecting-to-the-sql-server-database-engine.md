@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870808"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412629"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 ## <a name="testing-a-local-connection"></a>로컬 연결 테스트
 
 다른 컴퓨터에서 연결 문제를 해결하기 전에 먼저 SQL Server를 실행하는 컴퓨터에 설치된 클라이언트 응용 프로그램에서 연결할 수 있는지 테스트합니다. 이렇게 하면 방화벽 문제가 개입되지 않습니다. 이 절차에서는 SQL Server Management Studio를 사용합니다. Management Studio가 설치되어 있지 않으면 [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요. Management Studio를 설치할 수 없는 경우 데이터베이스 엔진과 함께 설치된 `sqlcmd.exe` 유틸리티를 사용하여 연결을 테스트할 수 있습니다. `sqlcmd.exe`에 대한 자세한 내용은 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 참조하세요.
-1.  SQL Server에 액세스할 수 있는 권한을 가진 로그인을 사용하여 SQL Server가 설치된 컴퓨터에 로그온합니다. 설치 중 SQL Server에 대해 하나 이상의 로그인을 SQL Server 관리자로 지정해야 합니다. 관리자를 모르는 경우 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](http://msdn.microsoft.com/library/dd207004.aspx)을 참조하세요.
+1.  SQL Server에 액세스할 수 있는 권한을 가진 로그인을 사용하여 SQL Server가 설치된 컴퓨터에 로그온합니다. 설치 중 SQL Server에 대해 하나 이상의 로그인을 SQL Server 관리자로 지정해야 합니다. 관리자를 모르는 경우 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](connect-to-sql-server-when-system-administrators-are-locked-out.md)을 참조하세요.
 2.   시작 페이지에서 **SQL Server Management Studio**를 입력하거나, 이전 버전의 Windows 시작 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**를 차례로 가리킨 다음 **SQL Server Management Studio**를 클릭합니다.
 3.  **서버에 연결** 대화 상자의 **서버** 유형 상자에서 **데이터베이스 엔진**을 선택합니다. **인증** 상자에서 **Windows 인증**을 선택합니다. **서버 이름** 상자에 다음 중 하나를 입력합니다.
 
@@ -107,7 +107,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 이 시점에서 오류가 발생하면 계속하기 전에 해결해야 합니다. 문제가 될 수 있는 여러 가지 사항이 있습니다. 로그인에 연결 권한이 없을 수 있습니다. 기본 데이터베이스가 누락되었을 수도 있습니다.
 
 >    [!NOTE] 
->    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
+>    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
 
 4.   공유 메모리를 사용하여, 연결할 수 있는 경우 TCP를 사용하여 연결을 테스트합니다. 이름 앞에 **tcp:** 를 지정하여 강제로 TCP 연결을 적용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
@@ -123,7 +123,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 ## <a name="opening-a-port-in-the-firewall"></a>방화벽에서 포트 열기
 
 몇 년 전에 Windows XP 서비스 팩 2부터 Windows 방화벽이 설정되었으며 다른 컴퓨터의 연결을 차단합니다. 다른 컴퓨터에서 TCP/IP를 사용하여 연결하려면 SQL Server 컴퓨터에서 데이터베이스 엔진이 사용하는 TCP 포트에 대한 연결을 허용하도록 방화벽을 구성해야 합니다. 앞에서 설명한 대로 기본 인스턴스는 일반적으로 TCP 포트 1433에서 수신합니다. 명명된 인스턴스가 있거나, 기본값을 변경한 경우 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP 포트는 다른 포트에서 수신할 수도 있습니다. 포트를 결정하는 정보 수집에 대한 내용은 시작 섹션을 참조하세요.  
-명명된 인스턴스 또는 TCP 포트 1433 이외의 포트에 연결하는 경우 SQL Server Browser 서비스에 대해 UDP 포트 1434도 열어야 합니다. Windows 방화벽에서 포트를 여는 방법에 대한 단계별 지침은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](https://msdn.microsoft.com/library/ms175043)을 참조하세요.
+명명된 인스턴스 또는 TCP 포트 1433 이외의 포트에 연결하는 경우 SQL Server Browser 서비스에 대해 UDP 포트 1434도 열어야 합니다. Windows 방화벽에서 포트를 여는 방법에 대한 단계별 지침은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.
 
 ## <a name="testing-the-connection"></a>연결 테스트
 

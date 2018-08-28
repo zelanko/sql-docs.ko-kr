@@ -21,21 +21,21 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f77a34196a6299e07942fc5809b80cb81955cf08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 584087ad10018a0ba6f020c55256a8cb2d7486fe
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016350"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412598"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Connection 클래스 구현
   **Connection** 개체는 데이터 연결 또는 유사한 리소스를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램 사용자의 시작 위치입니다. 데이터베이스 서버에 대한 연결을 나타내며 유사한 동작의 모든 엔터티를 **Connection**으로 표시할 수 있습니다.  
   
  **Connection** 개체를 구현하려면 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>을 구현하고 선택적으로 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>을 구현하는 클래스를 만듭니다.  
   
- 구현에서 명령을 실행하려면 먼저 연결을 설정하여 열어두어야 합니다. 구현에서 클라이언트를 위해 연결을 암시적으로 열고 닫도록 하지 말고, 클라이언트가 연결을 명시적으로 열고 닫도록 구현에서 요구하도록 해야 합니다. 연결이 이루어지면 보안 검사를 수행합니다. [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램에서 다른 클래스에 대한 기존 연결이 필요한 경우 데이터 원본 작업을 할 때 항상 보안 검사가 수행되도록 합니다.  
+ 구현에서 명령을 실행하려면 먼저 연결을 설정하여 열어두어야 합니다. 구현에서 클라이언트를 위해 연결을 암시적으로 열고 닫도록 하지 말고, 클라이언트가 연결을 명시적으로 열고 닫도록 구현에서 요구하도록 해야 합니다. 연결이 이루어지면 보안 검사를 수행합니다. [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램에서 다른 클래스에 대한 기존 연결이 필요한 경우 데이터 원본 작업을 할 때 항상 보안 검사가 수행되도록 합니다.  
   
- 필요한 연결의 속성이 연결 문자열로 나타납니다. [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램이 OLE DB에서 정의된 친숙한 이름/값 쌍 시스템을 사용하여 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> 속성을 지원하도록 하는 것이 좋습니다.  
+ 필요한 연결의 속성이 연결 문자열로 나타납니다. [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램이 OLE DB에서 정의된 친숙한 이름/값 쌍 시스템을 사용하여 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> 속성을 지원하도록 하는 것이 좋습니다.  
   
 > [!NOTE]  
 >  **Connection** 개체는 대개 확보하기 어려운 리소스이므로 이 문제를 완화하기 위해 풀링 연결이나 다른 기술을 사용할 수 있습니다.  

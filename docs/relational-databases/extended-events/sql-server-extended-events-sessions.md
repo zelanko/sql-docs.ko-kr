@@ -18,13 +18,13 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c1e43be4d82cd93a4ffe9b70d1f8ee8121ee33b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 02f609740acd25a257b5f44184480bc5db2d5285
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562127"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43077745"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "39562127"
   
  다음 그림에서는 세션 내용, 그리고 패키지와 세션 간의 관계를 보여 줍니다.  
   
- ![세션에서의 개체 공존 및 공유] (../../relational-databases/extended-events/media/xesessions.gif "Object co-existance and sharing in sessions")  
+ ![세션에서의 개체 공존 및 공유](../../relational-databases/extended-events/media/xesessions.gif "Object co-existance and sharing in sessions")  
   
  위 그림을 보면 다음과 같은 사실을 알 수 있습니다.  
   

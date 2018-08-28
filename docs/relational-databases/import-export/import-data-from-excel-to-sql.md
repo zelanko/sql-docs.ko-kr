@@ -14,13 +14,13 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b7418258c6b79e5cbc9f8af254fb849e06140b33
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561113"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083336"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Excel 파일에서 SQL Server 또는 Azure SQL Database로 데이터를 가져�
 
 -   다음 도구 중 하나를 사용하여 Excel에서 SQL로 직접 한 단계만 거쳐 데이터를 가져올 수 있습니다.
     -   [SQL Server 가져오기 및 내보내기 마법사](#wiz)
-    -   ]SQL Server Integration Services (SSIS)](#ssis)
+    -   [SSIS(SQL Server Integration Services)](#ssis)
     -   [OPENROWSET](#openrowset) 함수
 -   텍스트 파일을 가져오기 위해 Excel의 데이터를 텍스트로 내보내고 다음 도구 중 하나를 사용하여 두 단계를 거쳐 데이터를 가져올 수 있습니다.
     -   [플랫 파일 가져오기 마법사](#import-wiz)

@@ -19,12 +19,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe30b9faca81825b140259996af1fc6b0fedc2fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3da81b9f7683aec5bbbe5e2e6562128a3c66d702
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950558"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412762"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 에이전트, Statistics 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "32950558"
   
  다음 표에서는 **SQLAgent:Statistics** 카운터를 나열합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |**SQL Server Restarted**|SQL Server 에이전트가 시작된 후 Microsoft SQL Server가 SQL Server 에이전트에 의해 성공적으로 다시 시작된 횟수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [성능 개체 사용](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [성능 개체 사용](../../ssms/agent/use-performance-objects.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

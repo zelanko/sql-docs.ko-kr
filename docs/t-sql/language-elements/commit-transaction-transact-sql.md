@@ -32,16 +32,16 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 65e2a3aab16232dfefdb6429c690da2712ab4b5e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 287094d643a9ea809e8dfeee4307c80a241b351a
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453280"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104715"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   성공적인 암시적 트랜잭션이나 명시적 트랜잭션의 끝을 표시합니다. @@TRANCOUNT가 1이면 COMMIT TRANSACTION은 트랜잭션 시작 이후에 수행된 모든 데이터 수정 내용을 영구적인 데이터베이스 부분으로 만들고, 트랜잭션에서 보유한 리소스를 해제하고, @@TRANCOUNT를 0으로 감소시킵니다. @@TRANCOUNT가 1보다 크면 COMMIT TRANSACTION은 @@TRANCOUNT를 1씩 감소시키고 트랜잭션은 활성 상태로 유지됩니다.  
   
