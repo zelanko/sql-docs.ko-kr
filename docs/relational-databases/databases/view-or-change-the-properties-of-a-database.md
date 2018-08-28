@@ -21,13 +21,13 @@ caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b734936431fcf1415a7a28446639bef87eaddfda
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 04a7a42863a371bef0b47a0478b45cd7193078be
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538073"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43061392"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>데이터베이스의 속성 보기 또는 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

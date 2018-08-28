@@ -15,13 +15,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b40a78e273c4d8d06985ac2a4ea3b3bda9e94f44
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9ecac163408d024de5b9e7a7f94ee34b5aa7300e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558233"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063091"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

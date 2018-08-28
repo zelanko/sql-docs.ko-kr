@@ -16,13 +16,13 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c3945494af0533d7d4465f74edfaa6e1073a9437
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 641cb46e2fbf8a4b8191f9363a7578874aea3d94
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543893"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062552"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL 트리거에 대한 정보 가져오기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

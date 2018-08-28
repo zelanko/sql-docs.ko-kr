@@ -16,13 +16,13 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 19aad8dc362724ceb60fab62152033edd0e39e09
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d3f0a52ba7d73d6f894fd31a2498902cdb6a6713
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019522"
+ms.locfileid: "43071195"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

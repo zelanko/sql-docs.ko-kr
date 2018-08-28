@@ -22,13 +22,13 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: indexes
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 041117d288b39e79074d7cdf51b5d41a4fe63a7f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7634ef49f646d812ac770260493e41ab71c13969
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542009"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073236"
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

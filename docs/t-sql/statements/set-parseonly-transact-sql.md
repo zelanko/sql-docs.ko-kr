@@ -28,13 +28,13 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 601bab4f4fadd7fa96ea09994da5a8fb7cbdafa9
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b99bfa5c234d53f1161c022ad7a517f1a198deb0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405805"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43081656"
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

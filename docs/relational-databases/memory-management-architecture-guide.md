@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008895"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073062"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008895"
 ## <a name="windows-virtual-memory-manager"></a>Windows 가상 메모리 관리자  
 주소 공간의 커밋된 영역은 Windows 가상 메모리 관리자(VMM)에 의해 사용할 수 있는 실제 메모리에 매핑됩니다.  
   
-운영 체제별 지원되는 실제 메모리의 양에 대한 자세한 내용은 Windows 설명서 [Windows 릴리스별 메모리 제한(Memory Limits for Windows Releases)](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)을 참조하세요.  
+운영 체제별 지원되는 실제 메모리의 양에 대한 자세한 내용은 Windows 설명서 [Windows 릴리스별 메모리 제한(Memory Limits for Windows Releases)](/windows/desktop/Memory/memory-limits-for-windows-releases)을 참조하세요.  
   
 가상 메모리 체계를 사용하면 실제 메모리가 과다 커밋되어 가상 메모리와 실제 메모리의 비율이 1:1을 초과할 수 있습니다. 그 결과 실제 메모리가 다양하게 구성된 컴퓨터에서 대용량 프로그램을 실행할 수 있습니다. 그러나 모든 프로세스의 현재 평균 설정을 합한 값보다 너무 많은 가상 메모리를 사용하면 성능이 떨어질 수 있습니다. 
 

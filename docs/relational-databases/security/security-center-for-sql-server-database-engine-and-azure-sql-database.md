@@ -21,13 +21,13 @@ caps.latest.revision: 55
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 02cd230fa1ec5201d58daffeb3adcfb1c776258c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: efce93db98cf9b030ed45ce38611a5506904cadc
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559293"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43071634"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "39559293"
   
  응용 프로그램 프로그래머를 위한 추가 링크:  
   
--   [SQL Server의 응용 프로그램 보안 시나리오](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [SQL Server의 응용 프로그램 보안 시나리오](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [SQL Server에서 보안 동적 SQL 작성](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [SQL Server에서 보안 동적 SQL 작성](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [방법: ASP.NET에서 SQL 삽입 방지](https://msdn.microsoft.com/library/ff648339.aspx)  
   

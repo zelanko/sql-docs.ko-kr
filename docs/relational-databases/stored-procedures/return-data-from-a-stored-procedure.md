@@ -15,13 +15,13 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ec52d2e2c0b6c88e26472d21bbe8d9eff42397bb
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 32fe5caa0bb31a31b9a4a137047c346f66935f74
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405454"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083876"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

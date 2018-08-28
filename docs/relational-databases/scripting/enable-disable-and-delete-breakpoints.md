@@ -14,13 +14,13 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 30700be41aaf4608364945c8b3b23e8d3a1f5450
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 45634f0d2eea07065877c700a196180fb75dcffe
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553463"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063228"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>중단점 설정, 해제 및 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

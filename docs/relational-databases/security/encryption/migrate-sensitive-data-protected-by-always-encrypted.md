@@ -16,20 +16,20 @@ caps.latest.revision: 11
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2f957c9579d5474f2f8d33593ceb37e4fc9c8de3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1343e82e7d02feb2b4b9c164bf3b871999d6dffd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39551473"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43059776"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>상시 암호화로 보호되는 중요한 데이터 마이그레이션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  대량 복사 작업 중 서버에서 메타데이터 검사를 수행하지 않고 암호화된 데이터를 로드하려면 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션으로 사용자를 만듭니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 버전의 레거시 도구(예: bcp.exe) 또는 상시 암호화를 사용할 수 없는 타사 ETL(추출-변환-로드) 워크플로를 통해 사용하기 위한 것입니다. 이를 통해 사용자는 암호화된 데이터를 암호화된 열이 포함된 하나의 테이블 집합에서 암호화된 열이 있는 다른 테이블 집합(같거나 다른 데이터베이스)으로 안전하게 이동할 수 있습니다.  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>The ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션  
- [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) 와 [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) 둘 다 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션이 있습니다. ON으로 설정되어 있는 경우(기본값은 OFF) 이 옵션은 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 억제하여 사용자는 데이터를 암호 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다.  
+ [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) 와 [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) 둘 다 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션이 있습니다. ON으로 설정되어 있는 경우(기본값은 OFF) 이 옵션은 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 억제하여 사용자는 데이터를 암호 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다.  
   
 ## <a name="data-migration-scenarios"></a>데이터 마이그레이션 시나리오  
 다음 표는 몇 가지 마이그레이션 시나리오에 적합한 권장된 설정을 보여줍니다.  

@@ -19,13 +19,13 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ab84b92de5a53671a48edc4555e5221e180b08c2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e41c3c337481be0ab4b24d298ec75dbdb32b57d2
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550503"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43086135"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

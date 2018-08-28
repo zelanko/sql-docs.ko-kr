@@ -18,13 +18,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 687a869ed013dee363846dcc7266f0f43dfe457f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 309bafe3828d4d61460153b0f6eec342a55f6ee8
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39555173"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43088083"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

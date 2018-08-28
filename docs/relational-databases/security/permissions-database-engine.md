@@ -18,17 +18,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 76
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94947d264af485608aaa64f39ede2344bee509be
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f1798e29c07dbeb14d20e6e6c80df342c60222cd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540673"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066696"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -3,9 +3,6 @@ title: 동의어 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - creating synonyms
 - synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3d674148de1400d56aef101896d83ca6f78907ef
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8eeb67ec14f46836b648d84b3df143ae74a76a61
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552753"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43088804"
 ---
 # <a name="create-synonyms"></a>동의어 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -19,13 +19,13 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 79e8a69480f2fa0efbf6b7ba56432e34818c7111
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ef57329f3a4552b22049f6e86ac1f0cc20e9a1a2
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557673"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43061885"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

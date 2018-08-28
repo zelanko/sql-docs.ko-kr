@@ -16,13 +16,13 @@ ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 659915a560df8f4ca5f038dda4c9690da6ca4433
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 834e8f7c00cc4185c6d04ee88a501ced0ebdb98a
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552973"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43095297"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

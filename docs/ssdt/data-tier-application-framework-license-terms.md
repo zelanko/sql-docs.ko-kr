@@ -15,13 +15,13 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 46cbd58b5a5158bdd94029e450a7b1fb5d292c56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 888b6fefebf9137153e4e2c7589360cc918c5dae
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036560"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074222"
 ---
 # <a name="data-tier-application-framework---license-terms"></a>데이터 계층 응용 프로그램 프레임워크 - 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

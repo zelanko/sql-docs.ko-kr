@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - new stored procedures
 - stored procedures [SQL Server], creating
@@ -16,17 +16,17 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8a15d46e25641849f7cc3aab8e9b5353a0e7a526
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1c8f9b468a7ebe08c6cec4892d4429ebad4165b1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552263"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073330"
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [저장 프로시저 만들기](https://msdn.microsoft.com/library/ms345415(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [저장 프로시저 만들기](create-a-stored-procedure.md)합니다.
 
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 방법에 대해 설명합니다.  
   

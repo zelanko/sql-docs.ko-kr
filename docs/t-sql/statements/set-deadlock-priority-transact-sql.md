@@ -27,13 +27,13 @@ caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 27e97a5957393bc5ef8c8e5dd7638e7ee67f1ad5
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 07c3073061ea112113685603aae1c35bbf2d86e2
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406081"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062646"
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

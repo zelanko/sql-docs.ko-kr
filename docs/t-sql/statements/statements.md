@@ -16,16 +16,16 @@ caps.latest.revision: 7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d16ea90f6455c429e5e1efc646630eb6acf4d022
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ecd72419630de8754a46f29150be1ead79a2140f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456977"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062595"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 문
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 참조 항목에는 TRANSACT-SQL(T-SQL)와 함께 사용할 문의 범주가 요약되어 있습니다. 왼쪽 탐색 창에 나열된 모든 문을 찾을 수 있습니다.
 

@@ -26,13 +26,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f575a2217ca96e96d5b474348fa14b39fde3e10e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b72f4c87305c67a6eb7703c98914bde5750f453
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537303"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43095287"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

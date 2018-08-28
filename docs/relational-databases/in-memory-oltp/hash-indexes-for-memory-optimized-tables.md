@@ -15,13 +15,13 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0524bcc2c289307e6285ffbee8dac2e6b49047d7
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 30108d5e5444a09ff8889add5ac9fa46a13a911e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39565867"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068154"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>메모리 최적화 테이블의 해시 인덱스 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

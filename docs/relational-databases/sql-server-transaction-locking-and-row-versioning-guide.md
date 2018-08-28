@@ -21,13 +21,13 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 08b93402a40fc935269953e23825acaa56aa4213
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39563227"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068734"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -235,7 +235,7 @@ GO
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
-       SET name = 'New' WHERE ID = 5;  
+      (Id, Name) VALUES(6 ,'New');  
     COMMIT;   
     ```  
   

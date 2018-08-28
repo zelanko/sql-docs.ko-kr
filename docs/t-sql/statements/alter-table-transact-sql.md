@@ -62,13 +62,13 @@ caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b3d3f48fedf04980a8dff9acad2f381e5cbfcd0f
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405434"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083937"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

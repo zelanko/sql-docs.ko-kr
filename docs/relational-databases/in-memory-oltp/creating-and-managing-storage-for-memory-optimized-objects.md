@@ -15,13 +15,13 @@ caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3ba54b3bc7b8e4c99e53049d84e9ae89cdf3af04
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 478469891a016f4ae3bac57657e03dd28a3a2bbd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566107"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083646"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

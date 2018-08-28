@@ -19,13 +19,13 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9298b9369cd4aa40330fe639a0928dfe8e568a8
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0c6a8c839a3c8ce302ddf7e1fdf0058495f3e33b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39551243"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062781"
 ---
 # <a name="synchronize-subscriptions-replication"></a>구독 동기화(복제)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

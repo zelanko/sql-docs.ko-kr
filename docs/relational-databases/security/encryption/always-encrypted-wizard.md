@@ -18,13 +18,13 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a202d9dfb063979fbae76d6402909674bd163033
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 133881d4ca8e77684ca5ea941f80aeda21ec7621
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549703"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094642"
 ---
 # <a name="always-encrypted-wizard"></a>상시 암호화 마법사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "39549703"
  
  - 열 마스터 키를 저장할 위치를 선택합니다.  
  
-   - **Windows 인증서에 마스터 키 저장** 자세한 내용은 [인증서 저장소 사용](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **Windows 인증서에 마스터 키 저장** 자세한 내용은 [인증서 저장소 사용](/windows/desktop/SecCrypto/using-certificate-stores)  
  
    - **AKV에 마스터 키 저장** 자세한 내용은 [Azure 키 자격 증명 모음 시작하기](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)를 참조하세요.  
  

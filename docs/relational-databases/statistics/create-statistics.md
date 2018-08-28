@@ -20,13 +20,13 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23f16d05fa63c5bb775fb4f66efab6a42a7a3a55
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544433"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070846"
 ---
 # <a name="create-statistics"></a>통계 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

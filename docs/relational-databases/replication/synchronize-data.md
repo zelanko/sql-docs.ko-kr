@@ -26,13 +26,13 @@ caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c1953b04b68efb9b19eaf8b3de680815d3a849b4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fe8288e25d84abe776f4287393045f5c4f0312b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39532663"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063435"
 ---
 # <a name="synchronize-data"></a>데이터 동기화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

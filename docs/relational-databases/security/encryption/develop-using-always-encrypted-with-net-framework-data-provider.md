@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe7a86be6ae9af1e9e17cd680353a6795751841
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538143"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094122"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 이 예제에서는 Patients 테이블에 행을 삽입합니다. 다음에 유의하세요.
 - 샘플 코드에는 암호화에 대한 내용이 없습니다. .NET Framework Data Provider for SQL Server에서는 암호화된 열을 대상으로 하는 *paramSSN* 및 *paramBirthdate* 매개 변수를 자동으로 검색하고 암호화합니다. 이렇게 하면 응용 프로그램에 투명하게 암호화할 수 있습니다. 
 - 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 개체로 전달됩니다. **SqlParameter** 를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값이 쿼리 문에 포함된 리터럴로 전달된 경우 .NET Framework Data Provider for SQL Server에서 암호화된 대상 열의 값을 확인할 수 없어 값을 암호화하지 않으므로 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
-- SSN 열을 대상으로 하는 매개 변수의 데이터 형식은 ANSI(비 유니코드) 문자열이며 char/varchar SQL Server 데이터 형식에 매핑됩니다. 매개 변수 형식이 유니코드 문자열(String)로 설정되어 nchar/nvarchar에 매핑되는 경우 상시 암호화가 암호화된 nchar/nvarchar 값을 암호화된 char/varchar 값으로 변환하는 것을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [SQL Server 데이터 형식 매핑](https://msdn.microsoft.com/library/cc716729.aspx) 을 참조하세요.
+- SSN 열을 대상으로 하는 매개 변수의 데이터 형식은 ANSI(비 유니코드) 문자열이며 char/varchar SQL Server 데이터 형식에 매핑됩니다. 매개 변수 형식이 유니코드 문자열(String)로 설정되어 nchar/nvarchar에 매핑되는 경우 상시 암호화가 암호화된 nchar/nvarchar 값을 암호화된 char/varchar 값으로 변환하는 것을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [SQL Server 데이터 형식 매핑](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 을 참조하세요.
 - BirthDate 열에 삽입되는 매개 변수의 데이터 형식은 [SqlParameter.DbType 속성](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)을 사용할 때 적용되는 SQL Server 데이터 형식으로 .NET 형식을 암시적으로 매핑하지 않고 [SqlParameter.SqlDbType 속성](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)을 사용하여 명시적으로 대상 SQL Server 데이터 형식으로 설정됩니다. 기본적으로 [DateTime 구조체](https://msdn.microsoft.com/library/system.datetime.aspx) 는 SQL Server 데이터 형식 datetime에 매핑됩니다. BirthDate 열의 데이터 형식이 date이고 상시 암호화는 암호화된 datetime 값을 암호화된 date 값으로 변환하는 것을 지원하지 않으므로 기본 매핑 시 오류가 발생합니다. 
 
 ```

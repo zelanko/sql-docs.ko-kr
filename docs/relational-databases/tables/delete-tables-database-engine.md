@@ -19,13 +19,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e159f8fb19ef80b5c5d6d7a107adbd2aa226eac8
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d40ba1eeb9c8223f2e1c022d4fd772d9675cf411
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543903"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093741"
 ---
 # <a name="delete-tables-database-engine"></a>테이블 삭제(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

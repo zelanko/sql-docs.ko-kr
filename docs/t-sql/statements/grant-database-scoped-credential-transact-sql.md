@@ -24,13 +24,13 @@ caps.latest.revision: 3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 98289471b4d5d72e261dc0aa1b8149fca10bc56f
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 55c997c835200ca7ddc264000a6d821d0b0c5254
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458717"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072976"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT Database Scoped Credential Permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

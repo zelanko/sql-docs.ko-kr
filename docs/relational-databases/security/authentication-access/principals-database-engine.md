@@ -32,13 +32,13 @@ caps.latest.revision: 57
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1789d9632e593dcdcafe771b772b2fffe7beb47a
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008965"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43060066"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,13 @@ caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6b06f92184a4adc301ba29e9422f357f09394cc9
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 38963e1953e707597ec98530687904c347b49582
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546323"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073526"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

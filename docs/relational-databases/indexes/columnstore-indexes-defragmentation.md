@@ -14,13 +14,13 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b6db5cb32bcde96a49981e76817a0948c19473fc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 158ec26dfebccf96ed2bc937f6df5ba83eff7b41
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537203"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066126"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Columnstore 인덱스 - 조각 모음
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -19,13 +19,13 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d7ef2deee640f5e02908f77f8ad33042ec734814
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae6800b29753ca9e87e133e2649295fae76816fc
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405209"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070962"
 ---
 # <a name="modify-views"></a>뷰 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

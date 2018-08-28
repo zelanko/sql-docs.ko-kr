@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549833"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073744"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 특정 컴퓨터의 응용 프로그램에서 HSM을 사용할 수 있도록 하려면 CNG를 구현하는 KSP(키 저장소 공급자)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 KSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다.
 
-Windows에는 소프트웨어를 기반으로 하며 테스트 용도로 사용할 수 있는 Microsoft 소프트웨어 키 저장소 공급자(소프트웨어 기반 KSP)가 있습니다. [CNG 키 저장소 공급자](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)를 참조하세요.
+Windows에는 소프트웨어를 기반으로 하며 테스트 용도로 사용할 수 있는 Microsoft 소프트웨어 키 저장소 공급자(소프트웨어 기반 KSP)가 있습니다. [CNG 키 저장소 공급자](/windows/desktop/SecCertEnroll/cng-key-storage-providers)를 참조하세요.
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>CNG/KSP를 사용하여 키 저장소에서 열 마스터 키 만들기
 
