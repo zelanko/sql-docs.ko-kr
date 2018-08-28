@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 92628e96c825d38407ed6881fd868d6a36c05dd7
+ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39563537"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802523"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -537,7 +537,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  
-    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"  
+    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"/>  
   </RECORD>  
   <ROW>  
     <COLUMN SOURCE="1" NAME="C1" xsi:type="SQLINT" />  

@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2e826686c4b6fd42d8d5ba7755fa2d4cb8d0f3e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9c2edfdfde4bf02097e9a4470e21cbefd68aa2f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331477"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405722"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다.
@@ -69,7 +69,7 @@ ms.locfileid: "35331477"
   
 4.  **References**. Excel 파일에서 스키마 정보를 읽는 코드 예제에는 스크립트 프로젝트에는 **System.Xml** 네임스페이스에 대한 추가 참조가 필요합니다.  
   
-5.  **옵션** 대화 상자의 **일반** 페이지에 있는 **스크립트 언어** 옵션을 사용하여 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정합니다. 자세한 내용은 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)을 참조하세요.  
+5.  **옵션** 대화 상자의 **일반** 페이지에 있는 **스크립트 언어** 옵션을 사용하여 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정합니다. 자세한 내용은 [General Page](../general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
 ##  <a name="example1"></a> 예 1 설명: Excel 파일의 존재 여부 확인  
  이 예에서는 `ExcelFile` 변수에 지정된 Excel 통합 문서 파일이 존재하는지 확인한 다음 `ExcelFileExists` 변수의 부울 값을 이 결과로 설정합니다. 이 부울 값은 패키지의 워크플로에서 분기하는 데 사용할 수 있습니다.  

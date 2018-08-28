@@ -18,12 +18,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 574677284e2614f665fb1cf663d78b898dcdafe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ceeadd0f4608d241b9609bf050bc97de264e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932994"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405713"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>로그 전달 트랜잭션 로그 백업 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32932994"
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **백업 폴더의 네트워크 경로**  
  이 상자에 백업 폴더의 네트워크 공유를 입력합니다. 트랜잭션 로그 백업을 저장하는 로컬 폴더를 공유해야 로그 전달 복사 작업을 통해 해당 파일을 보조 서버에 복사할 수 있습니다. 보조 서버 인스턴스에서 복사 작업을 실행하는 데 사용할 프록시 계정에 이 네트워크 공유를 읽을 수 있는 권한을 부여해야 합니다. 기본적으로 이 계정은 보조 서버 인스턴스의 SQLServerAgent 서비스 계정이지만 관리자가 다른 프록시 계정을 선택하여 작업에 사용할 수 있습니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "32932994"
 |**백업 압축 안 함**|서버 수준 기본값에 관계없이 압축되지 않은 백업을 만들려면 클릭합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
+ [SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

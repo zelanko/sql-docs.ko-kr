@@ -14,13 +14,14 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7846c9f5cfbc15f88a1cc10f38eaa9542f6c0648
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5ef475eecf39d57e0ae27fae5e80c18d85a67ff8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050231"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405952"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 관리 도구 업그레이드
 
@@ -36,7 +37,7 @@ ms.locfileid: "38050231"
   
 ### <a name="for-all-upgrade-scenarios"></a>모든 업그레이드 시나리오  
   
-- MSX 서버를 업그레이드하기 전에 모든 TSX 서버를 업그레이드해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 MSX/TSX에 대한 자세한 내용은 [기업 내 관리 자동화](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)를 참조하세요.  
+- MSX 서버를 업그레이드하기 전에 모든 TSX 서버를 업그레이드해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 MSX/TSX에 대한 자세한 내용은 [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)를 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 구성 요소를 동시에 업그레이드해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 버전 번호는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에서 동일해야 합니다.  
   

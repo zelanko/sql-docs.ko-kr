@@ -35,12 +35,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1a8bd2df095f771866ca8cb96e25dfb1e4612b6a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ce60853b06cf09c9bb2807c8351c26255369c9a9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455407"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018963"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,19 +108,20 @@ GROUP BY {
   
 다음 문이 허용됩니다.  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 다음 문이 허용되지 않습니다.  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 열 식에 포함될 수 없는 항목은 다음과 같습니다.
 
 - SELECT 목록에 정의된 열 별칭. FROM 절에 정의된 파생 테이블에 대한 열 별칭은 사용할 수 있습니다.
@@ -135,7 +136,7 @@ GROUP BY {
 
 예를 들어 이 쿼리는 Country, Region 및 Sales에 대한 열이 포함된 Sales 테이블을 만듭니다. 네 개의 행을 삽입하고, 이러한 행 중 두 행에는 Country 및 Region에 대해 일치하는 값이 있습니다.  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -154,7 +155,7 @@ Sales 테이블에 포함된 행은 다음과 같습니다.
 
 다음 쿼리에서는 Country 및 Region을 그룹화하고, 값의 각 조합에 대한 집계 합계를 반환합니다.  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -183,7 +184,7 @@ Country 및 Region에 대한 값의 조합이 3개이므로 쿼리 결과에는 
 
 이전 예제의 테이블을 사용하면 이 코드에서 단순 GROUP BY 대신 GROUP BY ROLLUP 작업을 실행합니다.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -206,7 +207,7 @@ GROUP BY CUBE는 가능한 모든 열 조합에 대한 그룹을 만듭니다. G
 
 다음 코드에서는 이전 예제의 표를 사용하여 Country 및 Region에 대한 GROUP BY CUBE 작업을 실행합니다. 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -234,7 +235,7 @@ GROUPING SETS 옵션은 여러 GROUP BY 절을 하나의 GROUP BY 절로 결합�
 
 GROUPING SETS에 둘 이상의 요소가 있는 경우 결과는 요소의 합집합입니다. 다음 예제에서는 Country 및 Region에 대한 ROLLUP 및 CUBE 결과의 합집합을 반환합니다.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -242,15 +243,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 결과는 두 GROUP BY 문의 합집합을 반환하는 다음 쿼리와 동일합니다.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 SQL은 GROUPING SETS 목록에 대해 생성된 중복 그룹을 통합하지 않습니다. 예를 들어 `GROUP BY ( (), CUBE (Country, Region) )`에서 두 요소는 모두 총합계에 대한 행을 반환하고, 두 행이 모두 결과에 나열됩니다. 
@@ -258,7 +258,7 @@ SQL은 GROUPING SETS 목록에 대해 생성된 중복 그룹을 통합하지 �
  ### <a name="group-by-"></a>GROUP BY ()  
 총합계를 생성하는 빈 그룹을 지정합니다. 이는 GROUPING SET의 요소 중 하나로 유용합니다. 예를 들어 다음 명령문은 각 국가에 대한 총 판매액을 제공한 다음, 모든 국가에 대한 총 판매액을 제공합니다.
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -363,7 +363,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
 ### <a name="a-use-a-simple-group-by-clause"></a>1. 단순 GROUP BY 절 사용  
  다음 예에서는 `SalesOrderID` 테이블의 각 `SalesOrderDetail`에 대한 합계를 계산합니다. 이 예제에서는 AdventureWorks를 사용합니다.  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -373,7 +373,7 @@ ORDER BY SalesOrderID;
 ### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>2. 여러 테이블이 포함된 GROUP BY 절 사용  
  다음 예에서는 `City` 테이블에 조인된 `Address` 테이블에서 각 `EmployeeAddress`에 대한 직원 수를 검색합니다. 이 예제에서는 AdventureWorks를 사용합니다. 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -385,7 +385,7 @@ ORDER BY a.City;
 ### <a name="c-use-a-group-by-clause-with-an-expression"></a>3. 식이 포함된 GROUP BY 절 사용  
  다음 예에서는 `DATEPART` 함수를 사용하여 각 연도별 총 판매액을 검색합니다. `SELECT` 목록과 `GROUP BY` 절 모두에 같은 식이 있어야 합니다.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -396,7 +396,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>4. HAVING 절이 포함된 GROUP BY 절 사용  
  다음 예에서는 `HAVING` 절을 사용하여 `GROUP BY` 절에 생성된 그룹 중 결과 집합에 포함되어야 하는 그룹을 지정합니다.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -410,7 +410,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="e-basic-use-of-the-group-by-clause"></a>5. GROUP BY 절의 기본적인 사용  
  다음 예제에서는 일별 총 판매액을 모두 찾습니다. 일일 판매의 합계가 모두 포함된 하나의 행이 반환됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -420,7 +420,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### <a name="f-basic-use-of-the-distributedagg-hint"></a>6. DISTRIBUTED_AGG 힌트의 기본적인 사용  
  다음 예제에서는 집계를 수행하기 전에 DISTRIBUTED_AGG 쿼리 힌트를 사용하여 어플라이언스가 `CustomerKey` 열에 있는 테이블의 순서를 섞도록 합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -432,7 +432,7 @@ ORDER BY CustomerKey DESC;
 ### <a name="g-syntax-variations-for-group-by"></a>7. GROUP BY 구문 변형  
  선택 목록에 집계가 없는 경우 선택 목록의 각 열이 GROUP BY 목록에 포함되어야 합니다. 선택 목록의 계산 열은 GROUP BY 목록에 나열될 수 있지만 필수는 아닙니다. 다음은 구문상 유효한 SELECT 문의 예제입니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -445,7 +445,7 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>8. 여러 GROUP BY 식이 포함된 GROUP BY 사용  
  다음 예제에서는 여러 `GROUP BY` 조건을 사용하여 결과를 그룹화합니다. 각 `OrderDateKey` 그룹 내에서 `DueDateKey`로 구분할 수 있는 하위 그룹이 있는 경우 결과 집합에 대한 새 그룹화가 정의됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>9. HAVING 절과 함께 GROUP BY 절 사용  
  다음 예제에서는 `HAVING` 절을 사용하여 결과 집합에 포함되어야 하는 `GROUP BY` 절에 생성된 그룹을 지정합니다. 2004년 이후의 주문 날짜가 있는 그룹만 결과에 포함됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

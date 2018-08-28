@@ -21,12 +21,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23f57dcabfa354d68aef8aafa7a27a1ae1960bd6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9b03dd4e3e18a9e67bcdf07c867d0ddb93c19a73
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452167"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405220"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 
@@ -34,7 +34,7 @@ ms.locfileid: "39452167"
 
 R 패키지를 지정된 바이트 스트림 또는 파일 경로에서 데이터베이스에 업로드합니다.
 
-이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임(R, Python, Java 등) 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
+이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임(R, Python, Java 등) 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
 
 현재 R 언어 및 Windows 플랫폼만 지원됩니다. Python 및 Linux에 대한 지원은 후속 릴리스에서 계획되어 있습니다.
 

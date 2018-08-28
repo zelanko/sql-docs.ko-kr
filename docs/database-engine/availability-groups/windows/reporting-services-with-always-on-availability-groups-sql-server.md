@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769919"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405674"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769919"
   
 -   **SharePoint 모드:** SharePoint 서버에 이미 게시된 보고서에 대한 문서 라이브러리 내에서 SharePoint 구성 페이지를 사용합니다.  
   
--   **보고서 디자인:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new rep또는ts. 이 항목의 '보고서 디자인' 섹션 또는 추가 정보를 참조하세요.  
+-   **보고서 디자인:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new rep또는ts. 이 항목의 '보고서 디자인' 섹션 또는 추가 정보를 참조하세요.  
   
  **추가 리소스:**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769919"
  읽기 전용 보조 복제본을 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 원본으로 사용할 경우 데이터 업데이트 지연 시간이 보고서 사용자의 요구를 충족시킬 수 있는지 확인해야 합니다.  
   
 ##  <a name="bkmk_reportdesign"></a> 보고서 디자인 및 가용성 그룹  
- [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 에서 보고서를 디자인하거나 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 보고서 프로젝트를 디자인할 때 사용자는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 제공되는 새로운 연결 속성을 포함하도록 보고서 데이터 원본 연결 문자열을 구성할 수 있습니다. 새 연결 속성에 대한 지원은 사용자가 보고서를 미리 보는 위치에 따라 달라집니다.  
+ [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 에서 보고서를 디자인하거나 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 보고서 프로젝트를 디자인할 때 사용자는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 제공되는 새로운 연결 속성을 포함하도록 보고서 데이터 원본 연결 문자열을 구성할 수 있습니다. 새 연결 속성에 대한 지원은 사용자가 보고서를 미리 보는 위치에 따라 달라집니다.  
   
--   **로컬 미리 보기:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 및 support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
+-   **로컬 미리 보기:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 및 support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
   
--   **원격 또는 서버 모드 미리 보기:** 보고서를 보고서 서버에 게시한 후 또는 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]에서 미리 보기를 사용한 후 다음과 비슷한 오류가 표시되면 보고서를 미리 보려고 시도한 보고서 서버에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 .Net Framework 3.5 SP1 핫픽스가 설치되지 않았기 때문입니다.  
+-   **원격 또는 서버 모드 미리 보기:** 보고서를 보고서 서버에 게시한 후 또는 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]에서 미리 보기를 사용한 후 다음과 비슷한 오류가 표시되면 보고서를 미리 보려고 시도한 보고서 서버에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 .Net Framework 3.5 SP1 핫픽스가 설치되지 않았기 때문입니다.  
   
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   

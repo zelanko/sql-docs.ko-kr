@@ -19,12 +19,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 777204c7192a9b74f8730f47898a3fb175b5c322
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2405449dad69e386aa267f683c672533b3c02276
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145564"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405569"
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "33145564"
   
 >**중요!!** 일반적인 저장 프로시저와 달리 데이터 수집기 저장 프로시저는 정확하게 입력된 매개 변수를 사용하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. Windows 명령 프롬프트에서 **sqlcmd** 유틸리티를 사용하여 쿼리를 실행할 수 있습니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. Windows 명령 프롬프트에서 **sqlcmd** 유틸리티를 사용하여 쿼리를 실행할 수 있습니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 ### <a name="stored-procedures-and-views"></a>저장 프로시저 및 뷰  
  **데이터 수집기 작업**  
   
  다음 표에서는 데이터 수집기 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|데이터 수집기를 활성화합니다.|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|데이터 수집기를 비활성화합니다.|  
@@ -84,7 +84,7 @@ ms.locfileid: "33145564"
   
  다음 표에서는 컬렉션 집합 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|요청 시 컬렉션 집합을 실행합니다.|  
 |[sp_syscollector_start_collection_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|컬렉션 집합을 시작합니다.|  
@@ -98,7 +98,7 @@ ms.locfileid: "33145564"
   
  다음 표에서는 컬렉션 집합 항목에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|컬렉션 항목을 만듭니다.|  
 |[sp_syscollector_delete_collection_item&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|컬렉션 항목을 삭제합니다.|  
@@ -108,7 +108,7 @@ ms.locfileid: "33145564"
   
  다음 표에서는 수집기 유형 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|수집기 유형을 만듭니다.|  
 |[sp_syscollector_update_collector_type&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|수집기 유형을 업데이트합니다.|  
@@ -118,7 +118,7 @@ ms.locfileid: "33145564"
   
  다음 표에서는 구성 정보와 실행 로그 데이터를 가져오는 데 사용할 수 있는 뷰에 대해 설명합니다.  
   
-|뷰 이름|Description|  
+|뷰 이름|설명|  
 |---------------|-----------------|  
 |[syscollector_config_store&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|데이터 수집기 구성을 가져옵니다.|  
 |[syscollector_collection_items&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|컬렉션 항목 정보를 가져옵니다.|  
@@ -132,7 +132,7 @@ ms.locfileid: "33145564"
   
  다음 표에서는 관리 데이터 웨어하우스에 대한 액세스를 구성하는 데 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|관리 데이터 웨어하우스에 대한 연결 문자열에 정의된 데이터베이스 이름을 지정합니다.|  
 |[sp_syscollector_set_warehouse_instance_name&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|관리 데이터 웨어하우스에 대한 연결 문자열에 정의된 인스턴스를 지정합니다.|  
@@ -141,7 +141,7 @@ ms.locfileid: "33145564"
   
  다음 표에서는 관리 데이터 웨어하우스 구성 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|관리 데이터 웨어하우스에 컬렉션 스냅숏을 만듭니다.|  
 |[core.sp_update_data_source&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|데이터 컬렉션의 데이터 원본을 업데이트합니다.|  
@@ -153,7 +153,7 @@ ms.locfileid: "33145564"
   
  다음 표에서는 업로드 패키지에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|데이터 업로드 다시 시도 횟수를 구성합니다.|  
 |[sp_syscollector_set_cache_directory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|업로드 다시 시도 사이에 데이터를 저장할 임시 저장소를 지정합니다.|  
@@ -162,14 +162,14 @@ ms.locfileid: "33145564"
   
  다음 표에서는 데이터 컬렉션 실행 로그 작업에 사용할 수 있는 저장 프로시저에 대해 설명합니다.  
   
-|프로시저 이름|Description|  
+|프로시저 이름|설명|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|실행 로그에서 컬렉션 집합 항목을 삭제합니다.|  
   
 ### <a name="functions"></a>함수  
  다음 표에서는 실행 및 정보 추적에 사용할 수 있는 함수에 대해 설명합니다.  
   
-|함수 이름|Description|  
+|함수 이름|설명|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details&#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|특정 패키지에 대한 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 실행 로그 데이터를 가져옵니다.|  
 |[fn_syscollector_get_execution_stats&#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|컬렉션 집합 또는 패키지에 대한 실행 통계를 가져옵니다. 이 정보에는 기록된 오류가 포함됩니다.|  

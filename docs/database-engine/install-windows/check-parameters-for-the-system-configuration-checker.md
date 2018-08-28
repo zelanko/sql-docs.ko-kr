@@ -24,13 +24,14 @@ ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 374b5a6aa993957ad83f44a6561a2d63a8966b2b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6249dc33444e31f2857764a5de4a03df0c410c2c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771359"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405831"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>시스템 구성 검사기의 검사 매개 변수
 

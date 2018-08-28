@@ -1,7 +1,7 @@
 ---
 title: 기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022070"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405987"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>기본 제공 컬렉션 - 기본 제공 Globals 및 Users 참조(보고서 작성기)
   **Globals** 및 **User** 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. **Globals** 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. **User** 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "33022070"
 ### <a name="renderformat"></a>RenderFormat  
  다음 표에서는 **RenderFormat**의 멤버에 대해 설명합니다.  
   
-|멤버|형식|Description|  
+|멤버|형식|설명|  
 |------------|----------|-----------------|  
 |속성|**String**|RSReportServer 구성 파일에 등록된 렌더러 이름입니다.<br /><br /> 보고서 처리/렌더링 주기의 특정 부분에서 사용 가능합니다.|  
 |IsInteractive|**Boolean**|현재 렌더링 요청이 대화형 렌더링 형식을 사용하는지 여부입니다.|  
@@ -81,9 +81,7 @@ ms.locfileid: "33022070"
 |----------------|--------------|---------------------|  
 |**언어**|**문자열**|보고서를 실행하는 사용자의 `en-US`)을 입력합니다.|  
 |**UserID**|**String**|보고서를 실행하는 사용자의 ID입니다. Windows 인증을 사용하는 경우 이 값은 현재 사용자의 도메인 계정입니다. 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램에 의해 결정되며 이 프로그램은 Windows 인증 또는 사용자 지정 인증을 사용할 수 있습니다.|  
-  
- 보고서에서 여러 언어를 지원하는 방법에 대한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](http://go.microsoft.com/fwlink/?LinkId=120955)설명서에서 "다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항"을 참조하세요.  
-  
+ 
 ### <a name="using-locale-settings"></a>로캘 설정 사용  
  식을 사용하여 **User.Language** 값을 통해 클라이언트 컴퓨터의 로캘 설정을 참조하여 보고서가 사용자에게 표시되는 방식을 결정할 수 있습니다. 예를 들어 로캘 값에 따라 다른 쿼리 식을 사용하는 보고서를 만들 수 있습니다. 반환되는 언어에 따라 다양한 열에서 지역화된 정보를 검색하기 위해 쿼리가 변경될 수 있습니다. 또한 이 변수를 기반으로 하는 보고서나 보고서 항목의 언어 설정에 식을 사용할 수 있습니다.  
   

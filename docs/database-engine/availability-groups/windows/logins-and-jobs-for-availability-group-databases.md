@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6d704c10a90bf079b436c4923c6b21fff92319c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3f4468a43837e1f140a8fef0b7a7144eb087ec67
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770249"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405458"
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>가용성 그룹 데이터베이스에 대한 로그인 및 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ ms.locfileid: "34770249"
   
 -   [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)입니다.  
   
--   [작업 만들기](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [작업 만들기](../../../ssms/agent/create-a-job.md)  
   
 -   [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [포함된 데이터베이스](../../../relational-databases/databases/contained-databases.md)   
- [작업 만들기](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  
+ [작업 만들기](../../../ssms/agent/create-jobs.md)  
   
   

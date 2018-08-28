@@ -63,12 +63,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b3d3f48fedf04980a8dff9acad2f381e5cbfcd0f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452747"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405434"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -630,13 +630,13 @@ ADD
 > ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다. 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  시스템에서 레코드가 유효한 기간을 기록하기 위해 사용할 열의 이름을 지정합니다. ADD PERIOD FOR SYSTEM_TIME 인수의 일부로 기존 열을 지정하거나 새 열을 만들 수 있습니다. 열의 데이터 형식은 datetime2여야 하며 NOT NULL로 정의해야 합니다. 기간 열이 NULL로 정의된 경우 오류가 발생됩니다. system_start_time 및 system_end_time 열에 대해 [column_constraint&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)을 정의하고/또는 [열의 기본값을 지정](../../relational-databases/tables/specify-default-values-for-columns.md)할 수 있습니다. 아래 [시스템 버전 관리](#system_versioning) 예의 예 A에서 system_end_time 열에 기본값을 사용하는 방식을 참조하세요.  
   
  이 인수와 함께 SET SYSTEM_VERSIONING 인수를 사용할 경우 기존 테이블에서 시스템 버전 관리를 수행할 수 있습니다. 자세한 내용은 [Temporal 테이블](../../relational-databases/tables/temporal-tables.md) 및 [Azure SQL Database에서 Temporal 테이블 시작하기](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)를 참조하세요.  
   
- [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]에서는 사용자가 하나 또는 두 기간 열에 **HIDDEN** 플래그를 표시해 이러한 열을 암시적으로 숨김으로써 **SELECT \* FROM***\<table>* 이 이러한 열에 대한 값을 반환하지 않도록 할 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다.  
+ [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]에서는 사용자가 하나 또는 두 기간 열에 **HIDDEN** 플래그를 표시해 이러한 열을 암시적으로 숨김으로써 **SELECT \* FROM***\<table>* 이 이러한 열에 대한 값을 반환하지 않도록 할 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다.  
   
 DROP  
 하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건을 삭제하거나 시스템이 시스템 버전 관리에 사용할 열에 대한 사양을 삭제하도록 지정합니다.  

@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993955"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405697"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993955"
   
  **SQL Server Management Studio를 사용하여 WMI 경고를 만들려면**  
   
--   [WMI 이벤트 경고 만들기](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [WMI 이벤트 경고 만들기](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>미러된 데이터베이스에 대한 이벤트 알림의 작동 방식  
  미러된 데이터베이스를 포함하는 이벤트 알림의 데이터베이스 간 배달은 미러된 데이터베이스가 장애 조치(Failover)될 수 있으므로 정의상 원격일 수밖에 없습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 *미러된 경로*의 형태로 미러된 데이터베이스에 대해 특별한 지원을 제공합니다. 미러된 경로에는 두 개의 주소가 있습니다. 하나는 주 서버 인스턴스에 대한 주소이며 다른 하나는 미러 서버 인스턴스에 대한 주소입니다.  
@@ -214,11 +214,11 @@ ms.locfileid: "37993955"
   
 -   작업에 사용되는 로그인  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들거나 실행하려면 먼저 작업에 필요한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 대상 서버 인스턴스에 추가해야 합니다. 자세한 내용은 [SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)을 참조하세요.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들거나 실행하려면 먼저 작업에 필요한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 대상 서버 인스턴스에 추가해야 합니다. 자세한 내용은 [SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)을 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 시작 계정  
   
-     서비스 시작 계정은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. 에이전트 서비스의 컨텍스트는 작업과 실행 환경에 대한 설정에 영향을 줍니다. 계정이 작업에 필요한 네트워크 공유 등의 리소스에 액세스할 수 있어야 합니다. 서비스 시작 계정을 선택하고 수정하는 방법은 [SQL Server 에이전트 서비스의 계정 선택](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)을 참조하세요.  
+     서비스 시작 계정은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. 에이전트 서비스의 컨텍스트는 작업과 실행 환경에 대한 설정에 영향을 줍니다. 계정이 작업에 필요한 네트워크 공유 등의 리소스에 액세스할 수 있어야 합니다. 서비스 시작 계정을 선택하고 수정하는 방법은 [SQL Server 에이전트 서비스의 계정 선택](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)을 참조하세요.  
   
      서비스 시작 계정이 올바르게 작동하려면 올바른 도메인, 파일 시스템 및 레지스트리 권한을 구성해야 합니다. 서비스 계정에 대해 구성해야 하는 공유 네트워크 리소스가 작업에 필요할 수도 있습니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993955"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시는 지정된 작업 단계의 보안 컨텍스트를 정의합니다. 작업이 대상 서버 인스턴스에서 실행되려면 해당 인스턴스에서 수동으로 필요한 모든 프록시를 다시 만들어야 합니다. 자세한 내용은 [SQL Server 에이전트 프록시 만들기](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) 및 [프록시를 사용하는 다중 서버 작업 문제 해결](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280)을 참조하세요.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시는 지정된 작업 단계의 보안 컨텍스트를 정의합니다. 작업이 대상 서버 인스턴스에서 실행되려면 해당 인스턴스에서 수동으로 필요한 모든 프록시를 다시 만들어야 합니다. 자세한 내용은 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md) 및 [프록시를 사용하는 다중 서버 작업 문제 해결](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)을 참조하세요.  
   
  자세한 내용은 다음 항목을 참조하십시오.  
   
--   [작업 구현](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [작업 구현](../../ssms/agent/implement-jobs.md)  
   
 -   [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)(데이터베이스 미러링의 경우)  
   
 -   [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 경우)  
   
--   [SQL Server 에이전트 구성](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하는 경우)  
+-   [SQL Server 에이전트 구성](../../ssms/agent/configure-sql-server-agent.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하는 경우)  
   
--   [SQL Server 에이전트 보안 구현](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **기존 작업과 해당 속성을 보려면**  
   
--   [작업 활동 모니터링](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [작업 활동 모니터링](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [작업 단계 정보 보기](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [작업 단계 정보 보기](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs&#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **작업을 만들려면**  
   
--   [작업 만들기](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [작업 만들기](../../ssms/agent/create-a-job.md)  
   
--   [작업 만들기](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [작업 만들기](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>스크립트를 사용하여 작업을 다시 만드는 최상의 방법  
  먼저 간단한 작업을 스크립팅하고 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에서 작업을 다시 만든 다음 작업을 실행하여 의도한 대로 작동하는지 확인하는 것이 좋습니다. 이렇게 하면 비호환성을 확인하고 해결할 수 있습니다. 스크립팅한 작업이 새 환경에서 의도한 대로 작동하지 않을 경우 이와 동등하면서 해당 환경에서 올바르게 작동하는 작업을 만드는 것이 좋습니다.  

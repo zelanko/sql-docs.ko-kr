@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 61c92e767ae38797eb75cd9d72342507323e1e8c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535194"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405962"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "39535194"
      개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
      **줄임표(...)**  
-     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(…)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하십시오.  
+     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(…)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](../../databases/value-for-extended-property-dialog-box.md)를 참조하십시오.  
   
      **Delete**  
      선택한 확장 속성을 제거합니다.  

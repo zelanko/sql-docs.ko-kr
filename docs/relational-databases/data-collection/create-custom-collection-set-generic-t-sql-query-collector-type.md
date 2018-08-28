@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f423496dca0ce8cb3269b3b2de4d97615c78af06
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 774307434a3d005a64a64e69b3f7786c98ecbdc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145451"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405353"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>사용자 지정 컬렉션 집합 만들기 - 일반 T-SQL 쿼리 수집기 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "33145451"
   
     -   CollectorSchedule_Every_6h  
   
-     제공되는 일정 중 하나를 사용하지 않으려는 경우 새 일정을 만들어 컬렉션 집합에 대해 사용할 수 있습니다. 자세한 내용은 [일정을 만들고 작업에 연결](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)을 참조하세요.  
+     제공되는 일정 중 하나를 사용하지 않으려는 경우 새 일정을 만들어 컬렉션 집합에 대해 사용할 수 있습니다. 자세한 내용은 [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)을 참조하세요.  
   
 ### <a name="define-and-create-a-collection-item"></a>컬렉션 항목 정의 및 만들기  
   
@@ -166,7 +166,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [일정 관리](http://msdn.microsoft.com/library/f56c0736-dccc-41d2-afcf-71344aff143a)   
+ [일정 관리](../../ssms/agent/manage-schedules.md)   
  [컬렉션 집합 시작 또는 중지](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
   

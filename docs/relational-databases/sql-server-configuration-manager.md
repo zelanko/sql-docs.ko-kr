@@ -27,16 +27,16 @@ caps.latest.revision: 58
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97a03d0cbb0108a4a7cdba27dd0394446a3bb556
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b16ce62f2a955e8b8f3cede71722c746dc0601fa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983065"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405837"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 구성 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server 구성 관리자](https://msdn.microsoft.com/library/ms174212(SQL.120).aspx)를 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server 구성 관리자](sql-server-configuration-manager.md)를 참조하세요.
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 연관된 서비스를 관리하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용되는 네트워크 프로토콜을 구성하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에서 네트워크 연결 구성을 관리하기 위한 도구입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 시작 메뉴에서 사용할 수 있거나 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 표시에 추가할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 스냅인입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console(**mmc.exe**)은 **SQLServerManager\<version>.msc**(예: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 경우 **SQLServerManager13.msc**) 파일을 사용하여 구성 관리자를 엽니다. Windows가 C 드라이브에 설치되어 있는 경우 최신 4개 버전의 경로는 다음과 같습니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "38983065"
 > -   **Windows 8**:  
 >          [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **검색** 참의 **앱**에 **SQLServerManager\<version>.msc**(예: **SQLServerManager13.msc**)를 입력한 다음 **Enter** 키를 누릅니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 및 SQL Server Management Studio는 WMI(Window Management Instrumentation)를 사용하여 일부 서버 설정을 확인 및 변경합니다. WMI는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구에 의해 요청된 레지스트리 작업을 관리하는 API 호출과 상호 작용하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 스냅인 구성 요소의 선택된 SQL 서비스에 대한 향상된 제어 및 조작을 제공하기 위한 통합된 방법을 제공합니다. WMI와 관련된 사용 권한을 구성하는 방법에 대한 자세한 내용은 [WMI를 구성하여 SQL Server 도구에 서버 상태 표시](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 및 SQL Server Management Studio는 WMI(Window Management Instrumentation)를 사용하여 일부 서버 설정을 확인 및 변경합니다. WMI는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구에 의해 요청된 레지스트리 작업을 관리하는 API 호출과 상호 작용하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 스냅인 구성 요소의 선택된 SQL 서비스에 대한 향상된 제어 및 조작을 제공하기 위한 통합된 방법을 제공합니다. WMI와 관련된 사용 권한을 구성하는 방법에 대한 자세한 내용은 [WMI를 구성하여 SQL Server 도구에 서버 상태 표시](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 다른 컴퓨터에서 서비스를 시작, 중지, 일시 중지, 재개 또는 구성하려면 [다른 컴퓨터에 연결&#40;SQL Server 구성 관리자&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)을 참조하세요.  
   

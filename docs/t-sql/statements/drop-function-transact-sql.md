@@ -26,15 +26,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1654d9d81598edb09c3fafe09b808ecbabe8c812
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 4d4ac6a599ae50b7dcbf84731e3e754a1e27b6ef
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458257"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405680"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 데이터베이스에서 하나 이상의 사용자 정의 함수를 제거합니다. 사용자 정의 함수는 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)을 사용하여 만들고 [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md)을 사용하여 수정할 수 있습니다.  
   
@@ -61,7 +61,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## <a name="arguments"></a>인수  
  *IF EXISTS*    
- 이미 있는 경우에만 함수를 조건적으로 삭제합니다. [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016과 [!INCLUDE[sssds_md](../../includes/sssds_md.md)]부터 사용할 수 있습니다.
+ 이미 있는 경우에만 함수를 조건적으로 삭제합니다. [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016과 [!INCLUDE[sssds_md](../../includes/sssds-md.md)]부터 사용할 수 있습니다.
   
  *schema_name*  
  사용자 정의 함수가 속한 스키마의 이름입니다.  

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13deb284a73027321bd0bd051dce91f642078c96
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 96a8a4e87167adc8243f8f313b9801966c1c32f0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509112"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405838"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
 
@@ -29,7 +29,7 @@ ms.locfileid: "39509112"
 
 이 연습에서는 클러스터된 DTC 리소스와 SQL Server 가용성 그룹을 만들어 [SQL Server 가용성 그룹에 대한 DTC 클러스터링](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)의 요구 사항에 맞춥니다.
 
-여기에서는 PowerShell과 T-SQL(TRANSACT-SQL) 스크립트를 사용합니다.  대부분의 T-SQL 스크립트에서는 **SQLCMD 모드** 를 사용하도록 설정해야 합니다.  **SQLCMD 모드**대한 자세한 내용은 [쿼리 편집기에서 SQLCMD 스크립팅을 설정](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1)을 참조하세요.  PowerShell 모듈 **FailoverClusters** 를 가져와야 합니다.  PowerShell 모듈을 가져오는 방법에 대한 자세한 내용은 [PowerShell 모듈 가져오기](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)를 참조하세요.  이 연습은 다음 사항을 기반으로 합니다.
+여기에서는 PowerShell과 T-SQL(TRANSACT-SQL) 스크립트를 사용합니다.  대부분의 T-SQL 스크립트에서는 **SQLCMD 모드** 를 사용하도록 설정해야 합니다.  **SQLCMD 모드**대한 자세한 내용은 [쿼리 편집기에서 SQLCMD 스크립팅을 설정](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요.  PowerShell 모듈 **FailoverClusters** 를 가져와야 합니다.  PowerShell 모듈을 가져오는 방법에 대한 자세한 내용은 [PowerShell 모듈 가져오기](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)를 참조하세요.  이 연습은 다음 사항을 기반으로 합니다.
 - [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항(SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 모든 요구 사항을 충족합니다.  
 - 도메인은 `contoso.lab`입니다.
 - 사용자에게 DTC 네트워크 이름 리소스가 만들어지는 OU에 컴퓨터 만들기 개체 권한이 있습니다.

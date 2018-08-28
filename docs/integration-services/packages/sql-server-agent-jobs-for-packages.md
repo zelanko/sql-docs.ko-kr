@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405155"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405956"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "35405155"
   
 6.  작업 단계 유형에 대한 **Integration Services 패키지** 를 선택합니다.  
   
-7.  **다음 계정으로 실행** 목록에서 **SQL Server 에이전트 서비스 계정** 을 선택하거나 작업 단계에 사용될 자격 증명이 있는 프록시 계정을 선택합니다. 프록시 계정을 만드는 방법은 [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)를 참조하십시오.  
+7.  **다음 계정으로 실행** 목록에서 **SQL Server 에이전트 서비스 계정** 을 선택하거나 작업 단계에 사용될 자격 증명이 있는 프록시 계정을 선택합니다. 프록시 계정을 만드는 방법은 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조하십시오.  
   
      **SQL Server 에이전트 서비스 계정** 대신 프록시 계정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행할 때 발생할 수 있는 일반적인 문제를 해결할 수 있습니다. 이들 문제에 대한 자세한 정보는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](http://support.microsoft.com/kb/918760)를 참고하십시오.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "35405155"
   
      **패키지 원본**: SSIS 카탈로그  
   
-    |탭|변수|  
+    |탭|Options|  
     |---------|-------------|  
     |**패키지**|**Server**<br /><br /> SSISDB 카탈로그를 호스팅하는 데이터베이스 서버 인스턴스의 이름을 입력하거나 선택합니다.<br /><br /> **SSIS 카탈로그** 가 패키지 원본이면 Microsoft Windows 사용자 계정을 사용하여 서버에 로그온할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용할 수 없습니다.|  
     ||**패키지**<br /><br /> 줄임표 단추를 클릭하고 패키지를 선택합니다.<br /><br /> **개체 탐색기** 에서 **Integration Services 카탈로그**노드의 하위 폴더에 있는 패키지를 선택합니다.|  
@@ -162,7 +162,7 @@ ms.locfileid: "35405155"
   
      패키지에 설정하는 대부분의 옵션이 SQL Server, SSIS 패키지 저장소 또는 파일 시스템에 저장되며 **dtexec** 명령 프롬프트 유틸리티의 명령줄 옵션에 해당합니다. 유틸리티와 명령줄 옵션에 대한 자세한 내용은 [dtexec 유틸리티](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
-    |탭|변수|  
+    |탭|Options|  
     |---------|-------------|  
     |**패키지**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지의 탭 옵션입니다.|**Server**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 데이터베이스 서버 인스턴스의 이름을 입력하거나 선택합니다.|  
     ||**Windows 인증 사용**<br /><br /> Microsoft Windows 사용자 계정으로 서버에 로그온하려면 이 옵션을 선택합니다.|  
@@ -188,7 +188,7 @@ ms.locfileid: "35405155"
     >   
     >  변수를 포함하는 서버 환경이 **구성** 탭의 목록 상자에 선택되어 있지 않습니다.  
   
-10. 작업 단계 일정을 만들려면 **페이지 선택** 창에서 **일정** 을 클릭합니다. 일정 구성 방법에 대한 자세한 정보는 [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)을 참조하십시오.  
+10. 작업 단계 일정을 만들려면 **페이지 선택** 창에서 **일정** 을 클릭합니다. 일정 구성 방법에 대한 자세한 정보는 [Schedule a Job](../../ssms/agent/schedule-a-job.md)을 참조하십시오.  
   
     > [!TIP]  
     >  일정에 이름을 지정할 때 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정과 쉽게 구분할 수 있도록 고유하고 설명이 포함된 이름을 사용하는 것이 좋습니다.  

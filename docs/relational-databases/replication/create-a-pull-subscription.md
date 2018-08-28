@@ -21,12 +21,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3dde38b3052627ab201b77a8dfef9573469a20
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: fbecd5e6f94269b5e10efea681ae81993bf56ce4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352215"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405581"
 ---
 # <a name="create-a-pull-subscription"></a>끌어오기 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "37352215"
   
     -   **allow_pull**의 값이 **0**이면 **@property**에 **allow_pull**을, **@value**에 **true**를 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
   
-2.  구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. 이때 **@publisher** 및 **@publication**에서 사용 가능합니다. 구독 업데이트에 대한 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](https://msdn.microsoft.com/library/ms152769.aspx)을 참조하세요.   
+2.  구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. 이때 **@publisher** 및 **@publication**에서 사용 가능합니다. 구독 업데이트에 대한 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.   
   
 3.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   

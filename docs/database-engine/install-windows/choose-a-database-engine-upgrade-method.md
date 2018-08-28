@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206013"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405340"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206013"
  사용자 데이터베이스를 마이그레이션한 후에는 다양한 방법 중 하나(예: 서버 이름 변경, DNS 항목 사용, 연결 문자열 수정)를 사용하여 새 사용자가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키도록 합니다.  새 설치 방식에서는 현재 위치 업그레이드에 비해 위험과 가동 중지 시간이 줄어들며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드할 때 하드웨어와 운영 체제도 함께 손쉽게 업그레이드할 수 있습니다.  
   
 > [!NOTE]  
->  이미 HA(고가용성) 솔루션이 설치되어 있거나 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 환경이 실행 중인 경우에는 [롤링 업그레이드](#RollingUpgrade)를 진행합니다. 고가용성 솔루션이 없는 경우에는 임시로 [데이터베이스 미러링](http://msdn.microsoft.com/library/ms190941.aspx) 을 구성하여 가동 중지 시간을 더욱 최소화할 수 있습니다. 그럴 경우 이 업그레이드를 더 손쉽게 실행하거나 이 기회를 통해 영구 HA 솔루션으로 [Always On 가용성 그룹](http://msdn.microsoft.com/library/hh510260.aspx) 을 구성할 수 있습니다.  
+>  이미 HA(고가용성) 솔루션이 설치되어 있거나 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 환경이 실행 중인 경우에는 [롤링 업그레이드](#RollingUpgrade)를 진행합니다. 고가용성 솔루션이 없는 경우에는 임시로 [데이터베이스 미러링](../database-mirroring/setting-up-database-mirroring-sql-server.md) 을 구성하여 가동 중지 시간을 더욱 최소화할 수 있습니다. 그럴 경우 이 업그레이드를 더 손쉽게 실행하거나 이 기회를 통해 영구 HA 솔루션으로 [Always On 가용성 그룹](http://msdn.microsoft.com/library/hh510260.aspx) 을 구성할 수 있습니다.  
   
  예를 들어 이 방식으로 다음을 업그레이드할 수 있습니다.  
   

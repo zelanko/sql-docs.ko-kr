@@ -19,26 +19,26 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 06f2f1115fe1e4f7aaeafe69ab73a6734fe8d6fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9baa94d3f791ba8c058efe6074d561f121428fd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017810"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405679"
 ---
 # <a name="data-processing-extensions-overview"></a>데이터 처리 확장 프로그램 개요
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 집합을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합을 본떠서 만든 것입니다.  
   
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함된 데이터 처리 확장 프로그램을 나열합니다.  
   
-|데이터 처리 확장 프로그램|Description|  
+|데이터 처리 확장 프로그램|설명|  
 |-------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 데이터 처리 확장 프로그램|.NET Framework Data Provider for SQL Server를 사용하여 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 연결하고 데이터를 검색합니다.|  
 |OLE DB용 데이터 처리 확장 프로그램|.NET Framework Data Provider for OLE DB를 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 OLE DB 공급자를 가진 데이터 원본을 쿼리할 수 있습니다.|  
 |Oracle용 데이터 처리 확장 프로그램|.NET Framework Data Provider for Oracle을 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 Oracle 클라이언트 연결 소프트웨어를 통해 Oracle 데이터 원본에 액세스할 수 있습니다.|  
 |ODBC용 데이터 처리 확장 프로그램|.NET Framework Data Provider for ODBC를 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 ODBC 드라이버가 있는 임의의 데이터베이스의 데이터에 액세스할 수 있습니다.|  
   
- [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 API를 사용하여 사용자 지정 데이터 처리를 보고서 서버에 추가할 수 있습니다.  
+ [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 API를 사용하여 사용자 지정 데이터 처리를 보고서 서버에 추가할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 데이터 공급자를 기본적으로 지원합니다. 이미 완전한 데이터 공급자를 구현한 경우에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현할 필요가 없습니다. 하지만 보안 연결 자격 증명이나 서버 쪽 집계와 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 특정 기능을 포함시키려면 데이터 공급자 확장을 고려해야 합니다.  

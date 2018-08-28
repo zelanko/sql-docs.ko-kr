@@ -10,23 +10,23 @@ ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd86be05457d2596d1b17e29bd093c050bef8822
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f22fc4b12c38b751eb3559d3a94071d0692d6531
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979825"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019762"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > 이전 버전의 SQL Server와 관련된 콘텐츠는 [1단원: 데이터베이스 엔진에 연결](https://msdn.microsoft.com/library/ms345332(SQL.120).aspx)을 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [1단원: 데이터베이스 엔진에 연결](lesson-1-connecting-to-the-database-engine.md)을 참조하세요.
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]을 설치할 때 설치되는 도구는 버전 및 설치 선택 사항에 따라 달라집니다. 이 단원에서는 주 도구를 검토하고 이러한 도구에 연결하는 방법을 보여 주며 보다 많은 사용자에게 권한을 부여하는 기본 기능을 수행하는 방법을 보여 줍니다.  
 
