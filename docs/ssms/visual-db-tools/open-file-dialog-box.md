@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997925"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775052"
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37997925"
 이 대화 상자에 액세스하려면 **파일** 메뉴에서 **열기** 를 선택한 다음 **파일**을 선택합니다. 이 대화 상자는 **외부 도구** 대화 상자와 같은 다른 요소에서 파일을 열 때도 나타납니다. **파일** 메뉴에서 **열기**를 선택한 다음 **프로젝트/솔루션** 을 선택하여 **프로젝트 열기** 대화 상자를 열 수 있습니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 프로젝트나 구성 요소를 열기 전에 해당 코드를 신뢰할 수 있는지 확인하십시오. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에서 프로젝트나 구성 요소를 열면 로컬 컴퓨터의 트러스트된 프로세스에서 해당 코드가 실행될 수 있습니다.  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 프로젝트나 구성 요소를 열기 전에 해당 코드를 신뢰할 수 있는지 확인하십시오. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 프로젝트나 구성 요소를 열면 로컬 컴퓨터의 트러스트된 프로세스에서 해당 코드가 실행될 수 있습니다.  
   
 ## <a name="option"></a>옵션  
 **Look in**  

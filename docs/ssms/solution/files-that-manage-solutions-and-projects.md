@@ -23,31 +23,31 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24d05859d16542935a86d58871a9d226d0474ed6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79527171ea9daf72374bd0e3dbfd30c5379b28b9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045741"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774442"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>솔루션 및 프로젝트 관리 파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 고유한 파일 형식에 대해 설명합니다. 기본적으로 모든 솔루션과 해당 프로젝트는 \My Documents\SQL Server Management Studio Projects에서 생성됩니다.  
+ 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 고유한 파일 형식에 대해 설명합니다. 기본적으로 모든 솔루션과 해당 프로젝트는 \My Documents\SQL Server Management Studio Projects에서 생성됩니다.  
 
 
 ## <a name="management-studio-solution-files"></a>Management Studio 솔루션 파일  
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio와 다른 파일 형식을 사용합니다. 이는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 솔루션을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 또는 Visual Studio에서 열 수 없다는 것을 의미합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 솔루션 파일의 경우 솔루션 탐색기에서 파일을 관리하기 위한 그래픽 인터페이스를 표시할 수 있습니다.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio와 다른 파일 형식을 사용합니다. 이는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 또는 Visual Studio에서 열 수 없다는 것을 의미합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션 파일의 경우 솔루션 탐색기에서 파일을 관리하기 위한 그래픽 인터페이스를 표시할 수 있습니다.  
    
-|확장명|파일 유형|Description|만든 사람|  
+|확장명|파일 유형|설명|만든 사람|  
 |-------------|-------------|---------------|--------------|  
-|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 솔루션 개체|[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 프로젝트, 프로젝트 항목 및 솔루션의 디스크 위치에 대한 참조를 환경에 제공합니다.|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]|  
+|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션 개체|[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트, 프로젝트 항목 및 솔루션의 디스크 위치에 대한 참조를 환경에 제공합니다.|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
 ## <a name="management-studio-project-files"></a>Management Studio 프로젝트 파일  
-솔루션의 개체를 관리하는 솔루션 파일을 솔루션이 포함하는 것과 같은 방식으로 프로젝트는 프로젝트 파일을 포함합니다. 프로젝트에 대해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 가 만드는 프로젝트 파일의 형식은 프로젝트는 만드는 데 사용되는 템플릿에 따라 다릅니다. 다음 표에서는 각 프로젝트에 대해 작성되는 파일 유형을 설명합니다.  
+솔루션의 개체를 관리하는 솔루션 파일을 솔루션이 포함하는 것과 같은 방식으로 프로젝트는 프로젝트 파일을 포함합니다. 프로젝트에 대해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 가 만드는 프로젝트 파일의 형식은 프로젝트는 만드는 데 사용되는 템플릿에 따라 다릅니다. 다음 표에서는 각 프로젝트에 대해 작성되는 파일 유형을 설명합니다.  
    
 |확장명|프로젝트 템플릿|  
 |-------------|--------------------|  
-|.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스크립트 프로젝트|  
+|.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트|  
 |.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] 스크립트 프로젝트|  
    
 ## <a name="location-of-solution-level-files"></a>솔루션 수준 파일의 위치  

@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ac0e1dee00d57400f24a17932bddb8e6183e11b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71f2c1bce85c86a19a12fa1c00f2643d7aa2f6f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046210"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774561"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "33046210"
   
 2.  사용자 지정 보고서에 대해 데이터베이스 서버에 만든 폴더로 보고서 파일을 복사합니다.  
   
-3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 개체 탐색기의 노드를 마우스 오른쪽 단추로 클릭하고 **보고서**를 가리킨 다음 사용자 지정 보고서를 클릭합니다. **파일 열기** 대화 상자에서 사용자 지정 보고서 폴더를 찾고 보고서 파일을 선택한 다음 **열기**를 클릭합니다.  
+3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 개체 탐색기의 노드를 마우스 오른쪽 단추로 클릭하고 **보고서**를 가리킨 다음 사용자 지정 보고서를 클릭합니다. **파일 열기** 대화 상자에서 사용자 지정 보고서 폴더를 찾고 보고서 파일을 선택한 다음 **열기**를 클릭합니다.  
   
     개체 탐색기 노드에서 새 사용자 지정 보고서를 처음으로 열면 해당 노드의 바로 가기 메뉴에 있는 **사용자 지정 보고서** 의 가장 최근에 사용한 목록에 이 보고서가 추가됩니다. 표준 보고서를 처음으로 열면 이 보고서도 **사용자 지정 보고서**의 가장 최근에 사용한 목록에 표시됩니다. 사용자 지정 보고서 파일을 삭제하면 다음에 이 항목을 선택할 때 가장 최근에 사용한 목록에서 해당 항목을 삭제하라는 메시지가 표시됩니다.  
   

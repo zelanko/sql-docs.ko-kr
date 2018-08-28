@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00757208c128ef00ea58c5139b6edc8461621307
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 977188f99e56c67afca657fd881555c896c6ae03
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988645"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774949"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,5 +94,5 @@ XML 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면
 현재 인덱스에 대해 행 수준의 잠금이 허용되는지 여부를 지정합니다. 행 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[XML 인덱스 만들기](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[XML 인덱스 만들기](../../relational-databases/xml/create-xml-indexes.md)  
   

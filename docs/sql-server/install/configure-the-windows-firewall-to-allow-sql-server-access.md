@@ -26,18 +26,18 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0bad4aef18b77c53f850cbcfe2dafd5d8181ac4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060181"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774358"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
- > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx)을 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.
 
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   

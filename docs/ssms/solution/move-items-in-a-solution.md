@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c803d45b83e7fdacd51ecf43019b0877d68bea5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3a617f8ef38026621c49ad39120ce4fbad99397
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042810"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774566"
 ---
 # <a name="move-items-in-a-solution"></a>솔루션에서 항목 이동
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 솔루션 탐색기에서 쿼리와 기타 파일을 프로젝트 간에 이동할 수 있지만 연결은 이동할 수 없습니다.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 솔루션 탐색기에서 쿼리와 기타 파일을 프로젝트 간에 이동할 수 있지만 연결은 이동할 수 없습니다.  
   
 ### <a name="to-move-items-in-solution-explorer"></a>솔루션 탐색기에서 항목을 이동하려면  
   

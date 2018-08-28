@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26112fd5fa3052e6aa5f873a436aafce7430d498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76ca616057ba53fa60fb9d53bd7ff79ff2598864
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047310"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774113"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK 제약 조건 식 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ NOT (payment_method = 'credit card') OR
   
 이 SQL 구문은 다음 매개 변수로 구성되어 있습니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |-------------|---------------|  
 |constant|숫자 또는 문자 데이터 같은 리터럴 값입니다. 문자 데이터는 작은따옴표(')로 묶어야 합니다.|  
 |column_name|열을 지정합니다.|  
@@ -71,6 +71,6 @@ NOT (payment_method = 'credit card') OR
 |NOT|모든 부울 식을 부정합니다. 여기에는 LIKE, NULL, BETWEEN, IN 및 EXISTS 등과 같은 키워드가 포함될 수 있습니다.<br /><br />문 하나에 논리 연산자를 두 개 이상 사용하는 경우 NOT은 제일 먼저 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[UNIQUE 제약 조건 및 CHECK 제약 조건](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[UNIQUE 제약 조건 만들기](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[UNIQUE 제약 조건 및 CHECK 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[UNIQUE 제약 조건 만들기](../../relational-databases/tables/create-unique-constraints.md)  
   

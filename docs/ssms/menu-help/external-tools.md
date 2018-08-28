@@ -19,18 +19,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb8d0838d7945324d9fcd7cc6b03069cef5a5c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cef05798c4df7415da957b0307c4d9e7b1c8086
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043460"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774555"
 ---
 # <a name="external-tools"></a>외부 도구
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 대화 상자를 사용하여 SQL Server 구성 관리자 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에서 작업하는 동안 간편하게 다른 응용 프로그램을 실행할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 출력 창에 표시할 수도 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
+이 대화 상자를 사용하여 SQL Server 구성 관리자 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 작업하는 동안 간편하게 다른 응용 프로그램을 실행할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 출력 창에 표시할 수도 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **메뉴 내용**  
 현재 **도구** 메뉴에 추가된 항목의 제목을 나열합니다. **위로 이동** 및 **아래로 이동** 화살표를 사용하여 메뉴에 나타나는 항목의 순서를 변경할 수 있습니다. **삭제** 단추를 사용하여 메뉴에서 항목을 제거할 수 있습니다.  
   
@@ -83,5 +83,5 @@ ms.locfileid: "33043460"
 4.  **인수** 입력란에 .msc 파일의 경로(예: **"C:\WINNT\system32\SQLServerManager.msc"**)를 입력합니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 시작 **메뉴에서** 바로 가기 속성을 보고 컴퓨터에 있는 파일의 위치를 확인합니다.  
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 **메뉴에서** 바로 가기 속성을 보고 컴퓨터에 있는 파일의 위치를 확인합니다.  
   

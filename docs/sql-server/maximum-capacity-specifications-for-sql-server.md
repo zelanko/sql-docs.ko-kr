@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833381"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774010"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server의 최대 용량 사양](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx)을 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server의 최대 용량 사양](maximum-capacity-specifications-for-sql-server.md)을 참조하세요.
 
   다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 수가 지정되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36833381"
 |저장 프로시저의 원본 텍스트의 바이트 수||일괄 처리 크기 또는 250MB 미만||  
 |**varchar(max)**, **varbinary(max)**, **xml**, **text**또는 **image** 열당 바이트 수||2^31-1||  
 |**ntext** 또는 **nvarchar(max)** 열당 문자 수||2^30-1||  
-|테이블당 클러스터형 인덱스 수||1||  
+|테이블당 클러스터형 인덱스 수||@shouldalert||  
 |GROUP BY, ORDER BY의 열 수||바이트 수로만 제한||  
 |GROUP BY WITH CUBE 또는 WITH ROLLUP 문의 열 또는 식의 수||10||  
 |인덱스 키당 열 수||32|테이블에 하나 이상의 XML 인덱스가 있는 경우 XML 열이 기본 XML 인덱스의 클러스터링 키에 추가되므로 사용자 테이블의 클러스터링 키는 31개 열로 제한됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 비클러스터형 인덱스에 키가 아닌 열을 포함시켜 최대 32개의 키 열 제한을 피할 수 있습니다. 자세한 내용은 [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.|  
@@ -76,12 +76,12 @@ ms.locfileid: "36833381"
 |데이터베이스 크기||524,272TB||  
 |다음 인스턴스당 데이터베이스 수: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |데이터베이스당 파일 그룹 수||32,767||  
-|메모리 최적화 데이터의 데이터베이스당 파일 그룹 수||1||  
+|메모리 최적화 데이터의 데이터베이스당 파일 그룹 수||@shouldalert||  
 |데이터베이스당 파일 수||32,767||  
 |파일 크기(데이터)||16TB||  
 |파일 크기(로그)||2TB||  
 |데이터베이스당 메모리 최적화 데이터의 데이터 파일 수||4,096([!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 최신 버전은 엄격한 제한을 적용하지 않습니다.||  
-|메모리 최적화 데이터의 데이터 파일당 델타 파일||1||  
+|메모리 최적화 데이터의 데이터 파일당 델타 파일||@shouldalert||  
 |테이블당 외래 키 테이블 참조 수||발신 = 253, 수신 = 10,000|제한 사항에 대해서는 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요.|  
 |식별자 길이(문자 수)||128||  
 |컴퓨터당 인스턴스 수||독립 실행형 서버당 50개의 인스턴스<br /><br /> 클러스터 설치를 위한 저장 옵션으로 공유 클러스터 디스크를 사용하는 경우 장애 조치(failover) 클러스터에 25개의 인스턴스. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 클러스터 설치를 위한 스토리지 옵션으로 SMB 파일 공유 위치를 선택하는 경우 장애 조치(failover) 클러스터에 50개의 인스턴스를 지원합니다.||  
@@ -118,19 +118,19 @@ ms.locfileid: "36833381"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 총 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 수||200*|  
 |데이터 계층 응용 프로그램을 포함하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스당 사용자 데이터베이스 수||50|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 총 사용자 데이터베이스 수||1,000|  
-|데이터베이스당 파일 그룹 수||1|  
-|파일 그룹당 데이터 파일 수||1|  
-|데이터베이스당 로그 파일 수||1|  
+|데이터베이스당 파일 그룹 수||@shouldalert|  
+|파일 그룹당 데이터 파일 수||@shouldalert|  
+|데이터베이스당 로그 파일 수||@shouldalert|  
 |컴퓨터당 볼륨 수||3|  
   
- * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](https://msdn.microsoft.com/library/ee210548.aspx)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
+ * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 응용 프로그램)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
-|DAC당 데이터베이스 수||1|  
+|DAC당 데이터베이스 수||@shouldalert|  
 |DAC당 개체 수*||데이터베이스의 개체 수 또는 사용 가능한 메모리로 제한|  
   
  *제한에 포함된 개체의 유형은 사용자, 테이블, 뷰, 저장 프로시저, 사용자 정의 함수, 사용자 정의 데이터 형식, 데이터베이스 역할, 스키마 및 사용자 정의 테이블 형식입니다.  

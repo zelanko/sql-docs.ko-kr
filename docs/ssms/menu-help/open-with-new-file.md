@@ -19,18 +19,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043800"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776543"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **파일** 메뉴에서 **열기**를 클릭한 다음 **파일**을 클릭하여 하나 이상의 편집기로 문서를 열 수 있습니다. **파일 열기** 대화 상자에서 파일을 선택하고 **열기** 화살표를 클릭한 다음 **연결 프로그램**을 클릭합니다. **연결 프로그램** 대화 상자의 **열려는 프로그램을 선택하십시오.** 목록에서 원하는 프로그램을 클릭한 다음 **열기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **열려는 프로그램을 선택하십시오.**  
 선택한 파일 형식에 대해 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio에서 사용할 수 있는 편집기를 나열합니다. 표시된 목록에서 문서를 열 편집기를 선택하거나 **추가** 를 클릭하여 목록에 새 편집기를 포함합니다.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "33043800"
 프로그램을 제거하려면 프로그램을 선택한 다음 **제거**를 클릭합니다.  
   
 **기본값으로 설정**  
-선택한 파일 형식에 대해 기본 편집기와 언어 인코딩 옵션(해당되는 경우)을 지정하려면 **열려는 프로그램을 선택하십시오.** 아래의 목록에서 프로그램을 선택한 다음 **기본값으로 설정**을 클릭합니다. 다음에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에서 이 형식의 파일을 열면 해당 문서가 새 기본 편집기로 열립니다.  
+선택한 파일 형식에 대해 기본 편집기와 언어 인코딩 옵션(해당되는 경우)을 지정하려면 **열려는 프로그램을 선택하십시오.** 아래의 목록에서 프로그램을 선택한 다음 **기본값으로 설정**을 클릭합니다. 다음에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 형식의 파일을 열면 해당 문서가 새 기본 편집기로 열립니다.  
   
 > [!NOTE]  
 > **열려는 프로그램을 선택하십시오.** 아래의 프로그램 목록에서 선택한 파일 형식의 기본 편집기 이름 뒤에는 **(기본값)** 이 붙습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[파일 확장명을 코드 편집기에 연결](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

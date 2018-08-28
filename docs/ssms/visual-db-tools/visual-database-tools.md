@@ -15,16 +15,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06d284ea40dfb2650edbe78f8aa8090d00dde55d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 16ed6f9161251027440d1d22db087ca83169b9a8
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052971"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774692"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에는 [!INCLUDE[tsql](../../includes/tsql_md.md)] 쿼리, 테이블 및 다이어그램 데이터베이스 작성을 위한 비주얼 디자이너가 포함되어 있습니다.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리, 테이블 및 다이어그램 데이터베이스 작성을 위한 비주얼 디자이너가 포함되어 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
 다음 태스크를 사용하여 Visual Database Tools를 시작합니다.  

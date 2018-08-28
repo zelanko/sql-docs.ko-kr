@@ -21,16 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87ad2f292481d44c10dba92fe6e122ac71560f91
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc8b19a65fa85972915774d14315ac67ef85391b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988893"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774204"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>쿼리 결과 지우기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**쿼리 및 뷰 디자이너**에서 쿼리를 실행한 후에 결과 창을 지울 수 있습니다. 이 프로시저는 개체 탐색기에서 **뷰 열기** 또는 **테이블 열기** 옵션을 사용하여 만든 쿼리에 적용됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 쿼리 편집기에서 쿼리를 실행한 후에는 쿼리 편집기 창을 닫거나 다른 쿼리를 실행하는 경우를 제외하고 결과 창을 지울 수 없습니다.  
+**쿼리 및 뷰 디자이너**에서 쿼리를 실행한 후에 결과 창을 지울 수 있습니다. 이 프로시저는 개체 탐색기에서 **뷰 열기** 또는 **테이블 열기** 옵션을 사용하여 만든 쿼리에 적용됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 쿼리를 실행한 후에는 쿼리 편집기 창을 닫거나 다른 쿼리를 실행하는 경우를 제외하고 결과 창을 지울 수 없습니다.  
   
 > [!NOTE]  
 > 쿼리 결과를 지워도 데이터베이스에 대한 변경 내용은 실행 취소되지 않습니다. 결과 창의 작동 방식에 대한 자세한 내용은 [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)을 참조하세요.  

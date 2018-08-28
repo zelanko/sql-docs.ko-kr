@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01888485033e81c1fa625778f7bca987523af365
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2a69e8b536dcabc8500184413b19008bd6c910d0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974926"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775431"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 이 항목에서는 작업 단계 속성 대화 상자에서 작업 단계의 세부 사항을 보는 방법에 대해 설명합니다. 또한 작업 단계 출력 보기에 대한 정보도 제공합니다.  
   
@@ -70,15 +70,15 @@ ms.locfileid: "37974926"
   
 5.  **작업 단계 속성** 대화 상자의 **일반** 페이지에서 작업 단계의 유형 및 역할을 볼 수 있습니다.  
   
-6.  **고급** 페이지를 클릭하여 작업 단계가 성공 또는 실패한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 취하는 동작, 작업 단계를 시도해야 하는 횟수, 작업 단계 출력이 기록되는 위치 및 작업 단계가 실행되는 사용자를 볼 수 있습니다.  
+6.  **고급** 페이지를 클릭하여 작업 단계가 성공 또는 실패한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 취하는 동작, 작업 단계를 시도해야 하는 횟수, 작업 단계 출력이 기록되는 위치 및 작업 단계가 실행되는 사용자를 볼 수 있습니다.  
   
 #### <a name="to-view-job-step-output"></a>작업 단계 출력을 보려면  
   
 1.  **작업 단계 속성** 대화 상자에서 **고급** 페이지를 클릭합니다.  
   
-2.  연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 버전에 따라 다음과 같이 작업 단계 출력 파일 또는 테이블을 볼 수 있습니다.  
+2.  연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 다음과 같이 작업 단계 출력 파일 또는 테이블을 볼 수 있습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이상에 연결된 경우 **테이블에 기록** 을 선택해야 **보기** 를 클릭할 수 있습니다. 이 경우 작업 단계 출력은 **msdb** 데이터베이스의 **sysjobstepslogs** 테이블에 기록됩니다.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상에 연결된 경우 **테이블에 기록** 을 선택해야 **보기** 를 클릭할 수 있습니다. 이 경우 작업 단계 출력은 **msdb** 데이터베이스의 **sysjobstepslogs** 테이블에 기록됩니다.  
   
     -   작업 단계 출력이 파일에 기록되는 경우 **보기** 단추를 사용할 수 없습니다. 작업 단계 출력 파일을 보려면 메모장을 사용합니다.  
   

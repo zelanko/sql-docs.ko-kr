@@ -20,20 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 407db08417a3226b4e5b58e3c1758504ecc0ec79
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 48fb0b5800e405e5a544c4c02bf2bfb232b29075
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980855"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774826"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql_md.md)]에이전트 프록시를 삭제하는 방법에 대해 설명합니다.  
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]에이전트 프록시를 삭제하는 방법에 대해 설명합니다.  
   
 **항목 내용**  
   
@@ -53,11 +53,11 @@ ms.locfileid: "38980855"
   
 ### <a name="Restrictions"></a>제한 사항  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시 계정을 삭제할 때 프록시가 활성 작업 단계를 참조하지 않는지 확인합니다. 프록시를 참조하는 작업 단계를 확인하려면 프록시를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 후 *proxy_name***프록시 계정 속성** 대화 상자에서 **참조** 페이지를 선택합니다. 프록시를 삭제한 경우 **개체 삭제** 대화 상자에서 해당 프록시를 사용하는 모든 작업 단계를 재할당할 수 있는 옵션이 제공됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정을 삭제할 때 프록시가 활성 작업 단계를 참조하지 않는지 확인합니다. 프록시를 참조하는 작업 단계를 확인하려면 프록시를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 후 *proxy_name***프록시 계정 속성** 대화 상자에서 **참조** 페이지를 선택합니다. 프록시를 삭제한 경우 **개체 삭제** 대화 상자에서 해당 프록시를 사용하는 모든 작업 단계를 재할당할 수 있는 옵션이 제공됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다. 자격 증명에 지정된 사용자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 실행 중인 컴퓨터에 대한 "일괄 작업으로 로그온" 권한이 있어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다. 자격 증명에 지정된 사용자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터에 대한 "일괄 작업으로 로그온" 권한이 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 프록시에 대한 하위 시스템 액세스 권한을 확인하고 작업 단계가 실행될 때마다 프록시에 대한 액세스 권한을 부여합니다. 프록시에 하위 시스템에 대한 액세스 권한이 없으면 작업 단계가 실패합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 프록시에 지정된 사용자를 가장하여 작업 단계를 실행합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 프록시에 대한 하위 시스템 액세스 권한을 확인하고 작업 단계가 실행될 때마다 프록시에 대한 액세스 권한을 부여합니다. 프록시에 하위 시스템에 대한 액세스 권한이 없으면 작업 단계가 실패합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 프록시에 지정된 사용자를 가장하여 작업 단계를 실행합니다.  
   
 -   사용자의 로그인에 프록시에 대한 액세스 권한이 있거나 사용자가 프록시에 대한 액세스 권한이 있는 역할에 속하는 경우 해당 사용자는 작업 단계에서 프록시를 사용할 수 있습니다.  
   

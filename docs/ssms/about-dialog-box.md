@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba51c2cba1f2032fe6c55fc27dac7c3f5416cb8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2fe44791cc401c5f71ee3c3bd6ff09d33d45b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038780"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774458"
 ---
 # <a name="about-dialog-box"></a>정보 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-**정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  
+**정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **구성 요소 이름**  
-설치된 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 항목의 이름을 나열합니다.  
+설치된 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 항목의 이름을 나열합니다.  
   
 **버전**  
 설치된 각 구성 요소의 버전을 나열합니다.  

@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1894d3542613398d50ba0fb998439ce9b57b1af
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c1d2c0f80d80a48005821038b2cb90367fef6cdd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806978"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776413"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>새 등록된 서버 만들기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "36806978"
  중앙 관리 서버에 등록된 모든 서버에 대해 쿼리를 실행하려면 중앙 관리 서버를 확장하고 서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 **연결**을 가리켜 클릭하고 **새 쿼리**를 클릭합니다. 새 쿼리 편집기 창에서 쿼리를 실행하면 저장된 연결 정보와 사용자의 Windows 인증 컨텍스트를 사용하여 서버 그룹의 모든 서버에 대해 해당 쿼리가 실행됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개체 탐색기에서 시스템 개체 숨기기](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
+ [개체 탐색기에서 시스템 개체 숨기기](../object/hide-system-objects-in-object-explorer.md)   
  [등록된 서버 정보 내보내기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [등록된 서버 정보 가져오기&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   

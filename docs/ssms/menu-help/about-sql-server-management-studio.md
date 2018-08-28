@@ -19,20 +19,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8784beb120a0d9bdfbe9e558984ff01fa3054a59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf1609438ec0306fa6b374db2d5ed6b921121062
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040670"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776235"
 ---
 # <a name="about-sql-server-management-studio"></a>SQL Server Management Studio 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  
+이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **구성 요소 이름**  
-컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 구성 요소 및 운영 체제를 표 형태의 목록으로 표시합니다.  
+컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소 및 운영 체제를 표 형태의 목록으로 표시합니다.  
   
 -   **Microsoft SQL Server Management Studio**  
   

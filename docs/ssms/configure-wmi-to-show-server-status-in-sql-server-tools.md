@@ -18,16 +18,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f081326d98ed3a7c8a95acb4dd2071a5ec7c8101
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25ce9dc1b4b9b349a2011055cc574e83bcb92254
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040170"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774224"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent_md.md)]의 SQL Server 도구에 서버 상태를 표시하기 위해 WMI를 구성하는 방법에 대해 설명합니다. 서버에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]구성 관리자와 함께 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 의 등록된 서버와 개체 탐색기 구성 요소는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] (MSSQLSERVER) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 에이전트 서비스의 상태를 확인할 수 있습니다. 서비스의 상태를 표시하려면 사용자가 WMI 개체에 원격으로 액세스할 수 있는 권한이 있어야 합니다. 서버에는 이 사용 권한을 구성할 수 있도록 WMI가 설치되어 있어야 합니다.  
+이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 SQL Server 도구에 서버 상태를 표시하기 위해 WMI를 구성하는 방법에 대해 설명합니다. 서버에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]구성 관리자와 함께 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 등록된 서버와 개체 탐색기 구성 요소는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스의 상태를 확인할 수 있습니다. 서비스의 상태를 표시하려면 사용자가 WMI 개체에 원격으로 액세스할 수 있는 권한이 있어야 합니다. 서버에는 이 사용 권한을 구성할 수 있도록 WMI가 설치되어 있어야 합니다.  
   
 ## <a name="SSMSProcedure"></a>WMI 사용 권한을 구성하려면  
   

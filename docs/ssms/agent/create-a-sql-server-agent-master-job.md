@@ -20,20 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e5060410bb21487f93a732f9b30fc33e9e4cd98
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b572a5fe585d36f106c15ccc48e8a18215141f23
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979915"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774825"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql_md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서 마스터 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 만드는 방법을 보여 줍니다.  
+이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 마스터 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만드는 방법을 보여 줍니다.  
   
 **항목 내용**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "38979915"
 ## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Restrictions"></a>제한 사항  
-마스터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업에 대한 변경 내용은 관련된 모든 대상 서버에 전파되어야 합니다. 대상 서버는 해당 대상이 지정될 때까지 처음에 작업을 다운로드하지 않으므로 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 는 사용자가 대상 서버를 지정하기 전에 특정 작업에 대한 모든 작업 단계 및 작업 일정을 완료하도록 권장합니다. 그렇지 않으면 **sp_post_msx_operation** 저장 프로시저를 실행하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]를 사용하여 작업을 수정하여 대상 서버가 수정된 작업을 다시 다운로드하도록 수동으로 요청해야 합니다. 자세한 내용은 [sp_post_msx_operation(Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) 또는 [작업 수정](../../ssms/agent/modify-a-job.md)을 참조하세요.  
+마스터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 변경 내용은 관련된 모든 대상 서버에 전파되어야 합니다. 대상 서버는 해당 대상이 지정될 때까지 처음에 작업을 다운로드하지 않으므로 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 는 사용자가 대상 서버를 지정하기 전에 특정 작업에 대한 모든 작업 단계 및 작업 일정을 완료하도록 권장합니다. 그렇지 않으면 **sp_post_msx_operation** 저장 프로시저를 실행하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 작업을 수정하여 대상 서버가 수정된 작업을 다시 다운로드하도록 수동으로 요청해야 합니다. 자세한 내용은 [sp_post_msx_operation(Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) 또는 [작업 수정](../../ssms/agent/modify-a-job.md)을 참조하세요.  
   
 ### <a name="Security"></a>보안  
   
@@ -87,7 +87,7 @@ ms.locfileid: "38979915"
   
 7.  **경고** 페이지에서 작업에 대한 경고를 구성합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 속성 - 새 작업&#40;경고 페이지&#41;](../../ssms/agent/job-properties-new-job-alerts-page.md)을 참조하세요.  
   
-8.  **알림** 페이지에서 작업이 완료되었을 때 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 수행할 동작을 설정합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 속성 - 새 작업&#40;알림 페이지&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md)을 참조하세요.  
+8.  **알림** 페이지에서 작업이 완료되었을 때 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 수행할 동작을 설정합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 속성 - 새 작업&#40;알림 페이지&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md)을 참조하세요.  
   
 9. **대상** 페이지에서 작업의 대상 서버를 관리합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 속성 - 새 작업&#40;대상 페이지&#41;](../../ssms/agent/job-properties-new-job-targets-page.md)을 참조하세요.  
   

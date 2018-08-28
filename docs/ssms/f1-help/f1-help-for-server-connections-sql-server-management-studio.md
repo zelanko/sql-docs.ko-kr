@@ -21,16 +21,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4eac1ca30c2b83ca3086d602b58985c0436ff5eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a84882745a60e3a13c95072f1792e468d04a37cd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042630"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774087"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>서버 연결에 대한 F1 도움말(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 섹션에서는 **의** 서버에 연결 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]대화 상자에 대한 F1 도움말을 제공합니다.  
+이 섹션에서는 **의** 서버에 연결 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자에 대한 F1 도움말을 제공합니다.  
   
 [서버 찾아보기&#40;로컬 서버&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

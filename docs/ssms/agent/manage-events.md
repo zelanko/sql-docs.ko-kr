@@ -24,27 +24,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a2035ca0780e873f5d3cee8d9b649faa4f6ee8a9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981905"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774712"
 ---
 # <a name="manage-events"></a>이벤트 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달*이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  
+특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달*이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  
   
 한 대의 서버가 다른 서버 그룹에 대한 이벤트를 받을 때 이벤트를 받는 서버를 *경고 관리 서버*라고 합니다. 다중 서버 환경에서는 마스터 서버를 경고 관리 서버로 지정합니다.  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>경고 관리 서버 사용의 장점  
 경고 관리 서버를 설정하면 다음과 같은 장점이 있습니다.  
   
--   **중앙 집중식**- 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스의 이벤트를 단일 서버에서 중앙 집중식으로 제어하고 간편하게 볼 수 있습니다.  
+-   **중앙 집중식**- 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 단일 서버에서 중앙 집중식으로 제어하고 간편하게 볼 수 있습니다.  
   
 -   **확장성**- 많은 물리적 서버를 한 대의 논리적 서버에서 관리할 수 있습니다. 이 물리적 서버 그룹에 필요한 만큼 서버를 추가하거나 제거할 수 있습니다.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "38981905"
   
 -   하나의 경고 관리 서버를 많은 서버에서 공유하도록 구성하는 데 있어 네트워크 트래픽을 신중히 계획합니다. 정체되는 경우에는 특정 경고 관리 서버를 사용하는 서버의 수를 줄입니다.  
   
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에 등록된 서버는 경고 전달 서버에서 선택할 수 있는 서버 목록의 일부로 구성됩니다.  
+    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 등록된 서버는 경고 전달 서버에서 선택할 수 있는 서버 목록의 일부로 구성됩니다.  
   
--   서버별 응답이 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 로컬 인스턴스에서는 경고를 경고 관리 서버에 전달하지 않고 로컬 인스턴스에 경고를 정의합니다.  
+-   서버별 응답이 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로컬 인스턴스에서는 경고를 경고 관리 서버에 전달하지 않고 로컬 인스턴스에 경고를 정의합니다.  
   
     경고 관리 서버는 자신에게 경고를 전달하는 모든 서버를 논리적인 통합체로 간주합니다. 예를 들어 경고 관리 서버는 서버 A에서 전달된 605 이벤트와 서버 B에서 전달된 605 이벤트에 같은 방법으로 응답합니다.  
   
--   경고 시스템을 구성한 후 정기적으로 Microsoft Windows 응용 프로그램 로그에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 이벤트를 확인합니다.  
+-   경고 시스템을 구성한 후 정기적으로 Microsoft Windows 응용 프로그램 로그에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 이벤트를 확인합니다.  
   
-    경고 엔진에서 발생한 실패 내용은 "SQL Server 에이전트"라는 원본 이름으로 로컬 Windows 응용 프로그램 로그에 기록됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 정의된 전자 메일 알림을 보낼 수 없으면 이벤트가 응용 프로그램 로그에 기록됩니다.  
+    경고 엔진에서 발생한 실패 내용은 "SQL Server 에이전트"라는 원본 이름으로 로컬 Windows 응용 프로그램 로그에 기록됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정의된 전자 메일 알림을 보낼 수 없으면 이벤트가 응용 프로그램 로그에 기록됩니다.  
   
 로컬에 정의된 경고가 비활성화되고 경고를 표시하는 이벤트가 발생하는 경우 경고 전달 조건을 만족하면 그 이벤트는 경고 관리 서버로 전달됩니다. 이러한 전달을 통해 로컬 사이트에 있는 사용자의 필요에 따라 경고 관리 서버에 정의된 경고가 로컬에서도 정의되는 경우 로컬에 정의된 경고를 무시하도록 설정하거나 해제할 수 있습니다. 또한 로컬 경고에서 처리할 때라도 이벤트가 항상 전달되도록 요청할 수 있습니다.  
   

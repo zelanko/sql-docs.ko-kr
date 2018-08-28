@@ -18,18 +18,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4f8160145814a85b909c0edd41e240102fc893a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 452bd8ea4481c7ecea6e778994262c8a7bffc73f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045230"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774842"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**옵션** 대화 상자를 통해 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 여러 사용자 인터페이스 요소에 사용되는 사용자 지정 글꼴 및 색 구성표를 설정할 수 있습니다. **도구** 메뉴에서 **옵션** 을 클릭하고 **환경** 폴더를 확장한 다음 **글꼴 및 색**을 선택합니다.  
+**옵션** 대화 상자를 통해 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 사용자 인터페이스 요소에 사용되는 사용자 지정 글꼴 및 색 구성표를 설정할 수 있습니다. **도구** 메뉴에서 **옵션** 을 클릭하고 **환경** 폴더를 확장한 다음 **글꼴 및 색**을 선택합니다.  
   
-색 구성표 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 인스턴스를 열고 변경 내용이 적용될 만한 상황을 만들어 색 변경 내용을 평가할 수 있습니다.  
+색 구성표 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스를 열고 변경 내용이 적용될 만한 상황을 만들어 색 변경 내용을 평가할 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
 **설정 표시**  
@@ -37,13 +37,13 @@ ms.locfileid: "33045230"
   
 |용어|정의|  
 |--------|--------------|  
-|텍스트 편집기|텍스트 편집기에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 기본 텍스트 편집기에 표시되는 텍스트의 모양에 영향을 줍니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 외부의 텍스트 편집기에서 연 문서에는 이 설정이 적용되지 않습니다.|  
+|텍스트 편집기|텍스트 편집기에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 기본 텍스트 편집기에 표시되는 텍스트의 모양에 영향을 줍니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 외부의 텍스트 편집기에서 연 문서에는 이 설정이 적용되지 않습니다.|  
 |프린터|프린터에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 인쇄된 문서의 텍스트 모양에 영향을 줍니다.<br /><br />참고: 텍스트 편집기에 표시하는 데 사용되는 기본 글꼴과는 다른 글꼴을 인쇄 기본 글꼴로 선택할 수 있습니다. 이러한 설정은 싱글바이트 문자와 더블바이트 문자가 모두 포함되어 있는 코드를 인쇄하는 경우에 유용합니다.|  
-|[모든 텍스트 도구 창 **]**|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에 출력 창이 표시되는 도구 창의 텍스트 모양에 영향을 줍니다. 예를 들어 출력 창, 텍스트 결과 창 등이 있습니다.<br /><br />참고: [모든 텍스트 도구 창] 항목에 대한 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]인스턴스를 열어 이러한 변경 내용을 평가할 수 있습니다.|  
+|[모든 텍스트 도구 창 **]**|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 출력 창이 표시되는 도구 창의 텍스트 모양에 영향을 줍니다. 예를 들어 출력 창, 텍스트 결과 창 등이 있습니다.<br /><br />참고: [모든 텍스트 도구 창] 항목에 대한 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스를 열어 이러한 변경 내용을 평가할 수 있습니다.|  
 |찾기 결과 창|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 찾기 결과 창의 텍스트 모양에 영향을 줍니다.|  
 |출력 창|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 출력 창의 텍스트 모양에 영향을 줍니다.|  
 |표 형태 결과|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 쿼리 창의 **표 형태 결과** 영역에 표시되는 텍스트 모양에 영향을 줍니다.|  
-|실행 계획|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 [!INCLUDE[ssEW](../../includes/ssew_md.md)] 쿼리의 실행 계획에 표시되는 텍스트 모양에 영향을 줍니다.|  
+|실행 계획|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 쿼리의 실행 계획에 표시되는 텍스트 모양에 영향을 줍니다.|  
 |텍스트 결과|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 쿼리 창의 **텍스트 결과** 영역에 표시되는 텍스트 모양에 영향을 줍니다.|  
 |비즈니스 인텔리전스 디자이너|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 비즈니스 인텔리전스 디자이너 창에 표시되는 텍스트 모양에 영향을 줍니다.|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33045230"
 **표시 항목** 목록에서 선택한 항목의 사용자 지정 색을 설정하는 **색** 대화 상자를 표시합니다.  
   
 > [!NOTE]  
-> 컴퓨터 디스플레이의 색 설정에 따라 사용자 지정 색을 정의하는 기능이 제한될 수 있습니다. 예를 들어 컴퓨터가 256색을 표시하도록 설정되어 있는 경우 **색** 대화 상자에서 사용자 지정 색을 선택하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에서는 **기본 색** 중 가장 가까운 색을 기본값으로 선택하고 **색** 대화 상자에는 검정색을 표시합니다.  
+> 컴퓨터 디스플레이의 색 설정에 따라 사용자 지정 색을 정의하는 기능이 제한될 수 있습니다. 예를 들어 컴퓨터가 256색을 표시하도록 설정되어 있는 경우 **색** 대화 상자에서 사용자 지정 색을 선택하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 **기본 색** 중 가장 가까운 색을 기본값으로 선택하고 **색** 대화 상자에는 검정색을 표시합니다.  
   
 **항목 배경**  
 **표시 항목**에서 선택한 항목의 배경색을 선택할 수 있는 색상표를 제공합니다. 일부 항목은 서로 관련이 있기 때문에 표시 구성표의 일관성을 유지해야 합니다. 예를 들어 텍스트의 배경색을 변경하면 문자열과 같은 요소의 배경색도 변경됩니다.  
@@ -90,6 +90,6 @@ ms.locfileid: "33045230"
 **설정 표시** 및 **표시 항목**에서 선택한 값에 대한 글꼴 스타일, 크기 및 색 구성표 샘플을 표시합니다. 이 입력란을 사용하여 여러 서식 옵션을 적용한 결과를 미리 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[코드 편집기의 코드 색 구분](http://msdn.microsoft.com/en-us/802882dc-c997-4e3f-8a01-994bb43169ae)  
+[코드 편집기의 코드 색 구분](../../relational-databases/scripting/color-coding-in-query-editors.md)  
 [옵션(텍스트 편집기/편집기 탭 및 상태 표시줄 페이지)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
   

@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce474af9d4c5753dd6b4c064338ca7cdb22db5cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce3a1ab49b33bd8b4f4fd79f3c216a99797f3405
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054700"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774810"
 ---
 # <a name="open-a-template"></a>템플릿 열기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33054700"
   
 템플릿을 연 후 **템플릿 매개 변수 바꾸기** 대화 상자에서 템플릿 매개 변수를 원하는 값으로 바꿀 수 있습니다.  
   
-새 편집기 창에서 템플릿을 열 경우 현재 활성 연결의 자격 증명을 사용하여 창이 열립니다. 예를 들어 개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 인스턴스에 포커스가 있는 상태에서 CREATE DATABASE 템플릿을 열면 새 편집기 창은 해당 인스턴스에 대한 연결을 사용하여 열립니다. 활성 연결이 없는 경우에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에서 로그인 대화 상자가 표시됩니다.  
+새 편집기 창에서 템플릿을 열 경우 현재 활성 연결의 자격 증명을 사용하여 창이 열립니다. 예를 들어 개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 인스턴스에 포커스가 있는 상태에서 CREATE DATABASE 템플릿을 열면 새 편집기 창은 해당 인스턴스에 대한 연결을 사용하여 열립니다. 활성 연결이 없는 경우에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 로그인 대화 상자가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [템플릿 탐색기](../../ssms/template/template-explorer.md)  

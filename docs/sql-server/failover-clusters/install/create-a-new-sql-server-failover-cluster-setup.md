@@ -20,12 +20,12 @@ caps.latest.revision: 77
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0890c77c50af48ce34cdcb21cf7784ae69616a52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89eb39275b25147ca062c7b4e05ac3f4fae78967
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772039"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774000"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "34772039"
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 구성의 유효성을 검사하기 위해 선택한 기능을 기반으로 하나 이상의 규칙 집합을 실행합니다.  
   
-11. 인스턴스 구성 페이지에서 기본 인스턴스를 설치할지 명명된 인스턴스를 설치할지 지정합니다. 자세한 내용은 [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5)을 참조하세요.  
+11. 인스턴스 구성 페이지에서 기본 인스턴스를 설치할지 명명된 인스턴스를 설치할지 지정합니다. 자세한 내용은 [Instance Configuration](../../install/instance-configuration.md)을 참조하세요.  
   
      **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** – 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대한 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 장애 조치(Failover) 클러스터를 식별하는 데 사용되는 이름입니다.  
   

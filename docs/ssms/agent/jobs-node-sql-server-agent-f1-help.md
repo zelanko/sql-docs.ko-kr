@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b402cb2959dd7ad1cd0e5a004c589e4a8d81c525
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 26ca76ddd383dd1a5812ab3f1a7d4a167400f06f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030961"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775628"
 ---
 # <a name="jobs-node-sql-server-agent-f1-help"></a>작업 노드(SQL Server 에이전트 F1 도움말)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 섹션에서는 **의 개체 탐색기에 있는** 작업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]노드에 대한 F1 도움말 항목을 제공합니다.  
+이 섹션에서는 **의 개체 탐색기에 있는** 작업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에 대한 F1 도움말 항목을 제공합니다.  
   

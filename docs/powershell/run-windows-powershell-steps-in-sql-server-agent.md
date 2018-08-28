@@ -13,12 +13,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 521fac21807393cfce0bffd7f2c6219c3a07359b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ce07cf1898291221f0c33111468d3f8e7187ce6c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322454"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774964"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ SQL Server 에이전트를 사용하여 일정에 따라 SQL Server PowerShell �
 ##  <a name="PShellJob"></a> PowerShell 작업 단계 만들기  
  **PowerShell 작업 단계를 만들려면**  
   
-1.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)를 참조하세요.  
+1.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../ssms/agent/create-jobs.md)를 참조하세요.  
   
 2.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
   
@@ -64,7 +64,7 @@ SQL Server 에이전트를 사용하여 일정에 따라 SQL Server PowerShell �
 ##  <a name="CmdExecJob"></a> 명령 프롬프트 작업 단계 만들기  
  **CmdExec 작업 단계를 만들려면**  
   
-1.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)를 참조하세요.  
+1.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../ssms/agent/create-jobs.md)를 참조하세요.  
   
 2.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
   

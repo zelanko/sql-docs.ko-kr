@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981805"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776518"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
+열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
   
 > [!NOTE]  
 > 이 항목의 속성은 사전순 대신 범주별로 정렬됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "38981805"
 서버 탐색기에서 열을 선택하면 이러한 속성이 속성 창에 나타납니다.  
   
 > [!NOTE]  
-> 서버 탐색기를 사용하여 액세스할 수 있는 이러한 속성은 읽기 전용입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스의 열 속성을 편집하려면 테이블 디자이너에서 해당 열을 선택합니다. 이러한 속성은 이 항목의 뒷부분에서 설명합니다.  
+> 서버 탐색기를 사용하여 액세스할 수 있는 이러한 속성은 읽기 전용입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 열 속성을 편집하려면 테이블 디자이너에서 해당 열을 선택합니다. 이러한 속성은 이 항목의 뒷부분에서 설명합니다.  
   
 **ID 범주**  
 확장하면 **이름** 및 **데이터베이스** 속성이 표시됩니다.  
@@ -60,13 +60,13 @@ ms.locfileid: "38981805"
 선택한 열의 데이터 형식을 표시합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)을 참조하세요.  
   
 **ID 증가값**  
-ID 열의 각 후속 행에 대한 **ID 초기값** 에 추가할 증가값을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에만 적용됩니다.  
+ID 열의 각 후속 행에 대한 **ID 초기값** 에 추가할 증가값을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용됩니다.  
   
 **ID 초기값**  
-ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에만 적용됩니다.  
+ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용됩니다.  
   
 **ID**  
-선택한 열이 테이블에 대한 ID 열인지 여부를 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에만 적용됩니다.  
+선택한 열이 테이블에 대한 ID 열인지 여부를 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용됩니다.  
   
 **길이**  
 문자 기반 데이터 형식에 허용되는 문자 수를 표시합니다.  
@@ -84,7 +84,7 @@ ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합
 이러한 속성에 액세스하려면 서버 탐색기에서 열이 속하는 테이블을 마우스 오른쪽 단추로 클릭한 다음 **테이블 정의 열기**를 선택하고 테이블 디자이너에서 테이블 표의 행을 선택합니다.  
   
 > [!NOTE]  
-> 이러한 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에만 적용됩니다.  
+> 이러한 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용됩니다.  
   
 **일반 범주**  
 확장하면 **이름**, **Null 허용**, **데이터 형식**, **기본값 또는 바인딩**, **길이**, **정밀도**및 **소수 자릿수**가 표시됩니다.  
@@ -185,11 +185,11 @@ IMAGE 유형 열의 문서 유형을 정의하는 데 사용되는 열을 표시
 이 열이 다른 위치에 복제되었는지 여부를 표시합니다.  
   
 **RowGuid**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 데이터 형식이 **uniqueidentifier** 인 열에 대해서만 이 값을 **예**로 설정할 수 있습니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 데이터 형식이 **uniqueidentifier** 인 열에 대해서만 이 값을 **예**로 설정할 수 있습니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
   
 **크기**  
 열의 데이터 형식에 허용되는 크기(바이트)를 표시합니다. 예를 들어 **nchar** 데이터 형식의 경우 길이가 10(문자 수)까지 허용되며 유니코드 문자 집합의 경우에는 크기가 20까지 허용될 수 있습니다.  
   
 > [!NOTE]  
-> **varchar(max)** 데이터 형식의 길이는 각 행에 따라 다릅니다. sp_help는 **varchar(max)** 열의 길이로 (-1)을 반환합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 는 열 크기로 -1을 표시합니다.  
+> **varchar(max)** 데이터 형식의 길이는 각 행에 따라 다릅니다. sp_help는 **varchar(max)** 열의 길이로 (-1)을 반환합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
   

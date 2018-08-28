@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d03b293418329fe6eeeba532778acca45ec9c860
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063631"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774231"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38063631"
      
 -   자습서에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스 중 하나를 사용하는 경우에는 CodePlex에서 최신 버전을 다운로드하여 사용해야 합니다. 자세한 내용은 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)(SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트)을 참조하세요.    
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 자습서에서 사용할 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 통합 문서와 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 다운로드하려면 [SQL Server 2012용 파워 뷰 샘플](http://go.microsoft.com/fwlink/?LinkId=220734)로 이동합니다.  
-- [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 리포지토리에서 사용할 수 있는 새로운 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 샘플을 확인합니다. 
+- [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub 리포지토리에서 사용할 수 있는 새로운 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 샘플을 확인합니다. 
 
  
 ## <a name="current-tutorials"></a>현재 자습서  

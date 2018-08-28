@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96e5484ed59b0852f0099602b5a4e3ff359d1b6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fd70beb5892cdffae5f2223deb1eace2ca8705
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042390"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774567"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>항목이나 프로젝트 제거 또는 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 저장소에서 파일을 지우지 않고 솔루션에서 프로젝트 쿼리 및 기타 파일을 제거할 수 있습니다. 프로젝트 또는 항목이 현재 솔루션에는 유용하지 않지만 다른 솔루션에 포함하려는 경우 해당 프로젝트 또는 항목을 제거합니다.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 저장소에서 파일을 지우지 않고 솔루션에서 프로젝트 쿼리 및 기타 파일을 제거할 수 있습니다. 프로젝트 또는 항목이 현재 솔루션에는 유용하지 않지만 다른 솔루션에 포함하려는 경우 해당 프로젝트 또는 항목을 제거합니다.  
   
 ### <a name="to-remove-a-project-item"></a>프로젝트 항목을 제거하려면  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33042390"
   
 3.  확인 대화 상자에서 **확인**을 클릭하여 솔루션에서 프로젝트를 제거합니다.  
   
-프로젝트를 영구히 삭제할 수 있지만 그러기 위해서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 솔루션에서 프로젝트에 대한 참조를 먼저 제거한 다음 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Widows 탐색기를 사용하여 연결된 파일을 저장소에서 영구히 삭제해야 합니다.  
+프로젝트를 영구히 삭제할 수 있지만 그러기 위해서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션에서 프로젝트에 대한 참조를 먼저 제거한 다음 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Widows 탐색기를 사용하여 연결된 파일을 저장소에서 영구히 삭제해야 합니다.  
   
 #### <a name="to-delete-a-project"></a>프로젝트를 삭제하려면  
   

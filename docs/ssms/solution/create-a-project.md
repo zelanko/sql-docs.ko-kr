@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 617e0bb42882883a51f5da0bb22ae59eb18dae88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b9549bfce672b3ddf5c67ddb8a6a4968e87a5b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064662"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776113"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38064662"
     **템플릿** 상자에서 템플릿을 선택합니다. 선택한 프로젝트 템플릿에 대한 간략한 설명이 **템플릿** 상자 아래에 나타납니다.  
   
     **이름**  
-    만들려는 스크립트 프로젝트의 이름을 입력합니다. **위치** 필드에 표시된 위치에 프로젝트와 동일한 이름을 가진 폴더도 생성됩니다. 일부 프로젝트의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 는 원본 파일과 기타 지원 파일을 만들어 새 프로젝트 파일에 추가합니다.  
+    만들려는 스크립트 프로젝트의 이름을 입력합니다. **위치** 필드에 표시된 위치에 프로젝트와 동일한 이름을 가진 폴더도 생성됩니다. 일부 프로젝트의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 원본 파일과 기타 지원 파일을 만들어 새 프로젝트 파일에 추가합니다.  
   
     > [!NOTE]  
     > 일부 프로젝트 유형의 경우 위치를 지정하면 이름이 설정되기 때문에 **이름** 입력란을 사용할 수 없습니다. 예를 들어 웹 응용 프로그램과 웹 서비스는 웹 서버에 있으며 해당 서버에서 지정한 가상 디렉터리로부터 이름이 파생됩니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "38064662"
   
 4.  **확인**을 클릭합니다.  
   
-스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더에 대한 기본 위치는 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
+스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더에 대한 기본 위치는 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  

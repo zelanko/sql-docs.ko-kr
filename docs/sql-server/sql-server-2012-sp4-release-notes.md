@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023331"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776549"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "38023331"
 - **DBCC INPUTBUFFER를 바꾸는 새 DMF** - session_id를 매개 변수로 사용하는 새로운 동적 관리 함수 sys.dm_input_buffer를 도입하여 DBCC INPUTBUFFER를 바꿉니다.
 - **가용성 그룹의 읽기 라우팅 실패에 대한 XEvent 향상 기능** - 현재 라우팅 목록이 있지만 해당 목록의 서버가 연결에 사용할 수 없는 경우 read_only_rout_fail XEvent만이 실행됩니다. 이러한 향상 기능은 문제 해결을 지원하기 위한 추가 정보를 포함하고 XEvent를 실행하는 코드 포인트를 확장합니다. 
 - **가용성 그룹 장애 조치된 Service Broker의 향상된 처리** - 현재 가용성 그룹 데이터베이스에서 Service Broker를 사용할 때 AG 장애 조치 중에 주 복제본에서 시작된 모든 Service broker 연결이 열려 있게 됩니다. 향상 기능은 AG 장애 조치 중에 이러한 열려 있는 모든 연결을 닫습니다.
-- **자동 Soft-NUMA 분할** – SQL 2014 SP2에서 추적 플래그 8079를 서버 수준에서 사용할 때 자동 [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) 분할이 도입됩니다. 시작하는 동안 추적 플래그 8079를 사용하면 SQL Server 2014 SP2는 하드웨어 레이아웃에 대해 검사하고 시스템 보고에서 NUMA 노드당 8개 이상의 CPU를 가진 소프트 NUMA를 자동으로 구성합니다. 자동 소프트 NUMA 동작은 하이퍼스레드(HT/논리 프로세서)를 인식합니다. 추가 노드를 분할하고 생성하면 수신기 수, 크기 조정 및 네트워크와 암호화 기능을 늘려서 후순위 처리를 조정합니다. 프로덕션 환경에서 설정하기 전에 자동 소프트 NUMA를 사용하여 워크로드의 성능을 첫 번째로 테스트하는 것이 좋습니다.
+- **자동 Soft-NUMA 분할** – SQL 2014 SP2에서 추적 플래그 8079를 서버 수준에서 사용할 때 자동 [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) 분할이 도입됩니다. 시작하는 동안 추적 플래그 8079를 사용하면 SQL Server 2014 SP2는 하드웨어 레이아웃에 대해 검사하고 시스템 보고에서 NUMA 노드당 8개 이상의 CPU를 가진 소프트 NUMA를 자동으로 구성합니다. 자동 소프트 NUMA 동작은 하이퍼스레드(HT/논리 프로세서)를 인식합니다. 추가 노드를 분할하고 생성하면 수신기 수, 크기 조정 및 네트워크와 암호화 기능을 늘려서 후순위 처리를 조정합니다. 프로덕션 환경에서 설정하기 전에 자동 소프트 NUMA를 사용하여 워크로드의 성능을 첫 번째로 테스트하는 것이 좋습니다.
 
 ## <a name="service-pack-3-release-notes"></a>서비스 팩 3 릴리스 정보
 
@@ -133,7 +133,7 @@ ms.locfileid: "38023331"
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>동일한 IP 주소를 사용하는 경우 SQL Server 장애 조치(Failover) 클러스터 인스턴스의 다시 설치가 실패함  
 **문제:** SQL Server 장애 조치(Failover) 클러스터 인스턴스를 설치하는 동안 잘못된 IP 주소를 지정하는 경우 설치에 실패합니다. 실패한 인스턴스를 제거한 후 올바른 IP 주소와 동일한 인스턴스 이름을 사용하여 SQL Server 장애 조치(Failover) 클러스터 인스턴스를 다시 설치하려고 하면 설치에 실패합니다. 이 오류는 이전 설치로 인해 중복된 리소스 그룹이 남겨졌기 때문에 발생합니다.  
   
-**해결 방법:** 이 문제를 해결하려면 설치하는 동안 다른 인스턴스 이름을 사용하거나 다시 설치하기 전에 리소스 그룹을 수동으로 삭제합니다. 자세한 내용은 [SQL  Server  장애 조치(failover)  클러스터에서 노드 추가 또는 제거](http://msdn.microsoft.com/library/ms191545)를 참조하십시오. 
+**해결 방법:** 이 문제를 해결하려면 설치하는 동안 다른 인스턴스 이름을 사용하거나 다시 설치하기 전에 리소스 그룹을 수동으로 삭제합니다. 자세한 내용은 [SQL  Server  장애 조치(failover)  클러스터에서 노드 추가 또는 제거](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하십시오. 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services 및 PowerPivot  
   

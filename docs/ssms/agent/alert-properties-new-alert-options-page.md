@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7239649a96faeac6549685750f980ad6a22f4d63
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8ba401ae02acfa63dda280dacb367a02e977f4b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000615"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776523"
 ---
 # <a name="alert-properties---new-alert-options-page"></a>경고 속성 - 새 경고(옵션 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고에 대한 옵션을 확인하고 수정할 수 있습니다.  
+이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 옵션을 확인하고 수정할 수 있습니다.  
 
 ## <a name="options"></a>Options  
 **전자 메일**  
@@ -47,7 +47,7 @@ Net Send 알림에 이벤트의 오류 텍스트(있는 경우)를 포함합니�
 알림 메시지에 포함할 추가 텍스트를 입력합니다.  
   
 **응답 간격**  
-이벤트의 반복된 발생에 대한 지연 시간을 지정합니다. 일부 이벤트는 짧은 기간 동안에 자주 발생할 수 있습니다. 이 경우 이벤트가 발생했음을 알고 싶기는 하지만 모든 이벤트에 응답하고 싶지는 않을 수 있습니다. 이 옵션을 사용하여 제한 시간을 지정할 수 있습니다. 지연 시간을 지정하면 경고 이벤트에 응답한 후 이벤트 발생 여부에 관계없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 지정된 지연 시간 동안 대기한 후 다시 응답합니다.  
+이벤트의 반복된 발생에 대한 지연 시간을 지정합니다. 일부 이벤트는 짧은 기간 동안에 자주 발생할 수 있습니다. 이 경우 이벤트가 발생했음을 알고 싶기는 하지만 모든 이벤트에 응답하고 싶지는 않을 수 있습니다. 이 옵션을 사용하여 제한 시간을 지정할 수 있습니다. 지연 시간을 지정하면 경고 이벤트에 응답한 후 이벤트 발생 여부에 관계없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 지정된 지연 시간 동안 대기한 후 다시 응답합니다.  
   
 **분**  
 지연 시간을 분 단위로 지정합니다. 이벤트가 발생할 때마다 응답하려면 0분 0초를 지정합니다.  

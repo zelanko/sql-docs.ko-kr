@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979855"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775275"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>옵션 대화 상자 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 섹션에서는 **의** 도구 **메뉴에서** 옵션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  
+이 섹션에서는 **의** 도구 **메뉴에서** 옵션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  
   
 [옵션&#40;디자이너 - Analysis Services 디자이너 - 일반&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

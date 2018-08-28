@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083815"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776545"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>방법: CLR 데이터베이스 개체 작업
-Transact\-SQL 프로그래밍 언어뿐만 아니라 .NET Framework 언어를 사용하여 데이터를 검색 및 업데이트하는 데이터베이스 개체를 만들 수 있습니다. 관리 코드로 작성된 데이터베이스 개체를 SQL Server CLR(공용 언어 런타임) 데이터베이스 개체라고 합니다. SQL Server에서 호스트되는 CLR 데이터베이스 개체를 사용할 경우의 이점과 Transact\-SQL 및 CLR 중에서 선택하는 방법은 [CLR 통합의 장점](http://msdn.microsoft.com/en-us/library/ms131045.aspx) 및 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)을 참조하세요.  
+Transact\-SQL 프로그래밍 언어뿐만 아니라 .NET Framework 언어를 사용하여 데이터를 검색 및 업데이트하는 데이터베이스 개체를 만들 수 있습니다. 관리 코드로 작성된 데이터베이스 개체를 SQL Server CLR(공용 언어 런타임) 데이터베이스 개체라고 합니다. SQL Server에서 호스트되는 CLR 데이터베이스 개체를 사용할 경우의 이점과 Transact\-SQL 및 CLR 중에서 선택하는 방법은 [CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md) 및 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)을 참조하세요.  
   
 SQL Server Data Tools를 사용하는 CLR 데이터베이스 개체를 만들려면 데이터베이스 프로젝트를 만든 후 이 프로젝트에 CLR 데이터베이스 개체를 추가합니다. 이전 버전의 Visual Studio와 달리 별도의 CLR 프로젝트를 만든 후 데이터베이스 프로젝트에서 해당 프로젝트에 대한 참조를 추가할 필요가 없습니다. 데이터베이스 프로젝트를 빌드하고 게시하면 프로젝트의 CLR 개체가 동시에 자동으로 게시됩니다. 게시된 CLR 개체는 다른 데이터베이스 개체와 마찬가지 방식으로 호출하고 실행할 수 있습니다.  
   
@@ -86,7 +86,7 @@ CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세
   
 1.  **SQL Server 개체 탐색기**에서 프로젝트를 배포할 로컬 데이터베이스로 이동합니다.  
   
-2.  기본적으로 SQL Server의 CLR 통합은 해제되어 있습니다. CLR 데이터베이스 개체를 사용하려면 CLR 통합을 사용하도록 설정해야 합니다. 이렇게 하려면 sp_configure 저장 프로시저의 "clr enabled" 옵션을 사용합니다. 자세한 내용은 [clr enabled 옵션 항목](http://msdn.microsoft.com/en-us/library/ms131048.aspx)을 참조하세요.  
+2.  기본적으로 SQL Server의 CLR 통합은 해제되어 있습니다. CLR 데이터베이스 개체를 사용하려면 CLR 통합을 사용하도록 설정해야 합니다. 이렇게 하려면 sp_configure 저장 프로시저의 "clr enabled" 옵션을 사용합니다. 자세한 내용은 [clr enabled 옵션 항목](../relational-databases/clr-integration/clr-integration-enabling.md)을 참조하세요.  
   
     데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다. 쿼리 창에서 다음 코드를 붙여넣고 **쿼리 실행** 단추를 누릅니다.  
   
@@ -105,7 +105,7 @@ CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세
 5.  입력 내용을 **425 312 1222**로 변경하고 Tab 키를 눌러 이동합니다. 이번에는 입력이 허용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[CLR 통합의 장점](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md)  
 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

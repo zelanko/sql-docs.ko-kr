@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f0894a8b02d730d71684dcfb5e5a3e2861c7ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 761d807f6b2490cdd456d03f935d2293a5a7cbb3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040360"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776619"
 ---
 # <a name="general-user-interface-elements"></a>일반 사용자 인터페이스 요소
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**편집기**, **속성** 창 및 **도구 상자** 는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]의 기본 요소 중 일부입니다.  
+**편집기**, **속성** 창 및 **도구 상자** 는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 기본 요소 중 일부입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [정보 대화 상자](../ssms/about-dialog-box.md)  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 정보 및 이를 실행하는 컴퓨터에 대한 정보를 제공하는 대화 상자에 대해 설명합니다.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 정보 및 이를 실행하는 컴퓨터에 대한 정보를 제공하는 대화 상자에 대해 설명합니다.  
   
 [SQL Server Management Studio 웹 브라우저](../ssms/sql-server-management-studio-web-browser.md)  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 가 문서 창에서 웹 브라우저를 호스팅하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 가 문서 창에서 웹 브라우저를 호스팅하는 방법에 대해 설명합니다.  
   
 [외부 도구 대화 상자](../ssms/external-tools-dialog-box.md)  
-**의 일부가 아닌** 도구 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]메뉴에 도구를 추가할 수 있게 합니다.  
+**의 일부가 아닌** 도구 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]메뉴에 도구를 추가할 수 있게 합니다.  
   
 [속성 창&#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 편집기 및 디자이너에 있는 선택한 개체의 속성과 이벤트를 볼 수 있게 합니다. 또한 파일, 프로젝트 및 솔루션의 속성을 편집하고 볼 수 있게 합니다. 일부 속성을 속성 창에서 편집할 수 있습니다.  

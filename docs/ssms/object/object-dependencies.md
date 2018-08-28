@@ -17,18 +17,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7fae20ced8820f16353c8e8cc4633dda078b3a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9510075daf0ab89b2369f250071c136fde2703e9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045850"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775638"
 ---
 # <a name="object-dependencies"></a>개체 종속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 일부 데이터베이스 개체는 다른 데이터베이스 개체에 대해 종속적입니다. 예를 들어 뷰와 저장 프로시저는 뷰나 프로시저에서 반환한 데이터가 들어 있는 테이블의 존재 여부에 종속됩니다. 현재 개체의 **개체 종속성(일반 페이지)** 에는 해당 개체가 정상적으로 작동하는 데 반드시 필요한 다른 데이터베이스 개체와 선택한 개체에 종속된 개체가 모두 표시됩니다. 정의에서 다른 개체를 참조하고 시스템 카탈로그에 해당 정의가 저장되어 있으면 이 엔터티를 *참조 엔터티*라고 합니다. 다른 개체에 의해 참조되는 개체는 *참조된 엔터티*라고 합니다.  
   
-현재 개체의 **개체 종속성(고급 페이지)** 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체와 해당 개체에 종속된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 개체가 표시됩니다. 개체들은 서로 다른 서버에 저장되어 있을 수도 있습니다.  
+현재 개체의 **개체 종속성(고급 페이지)** 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체와 해당 개체에 종속된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체가 표시됩니다. 개체들은 서로 다른 서버에 저장되어 있을 수도 있습니다.  
   
 선택한 개체를 변경하거나 삭제하기 전에 개체의 종속성을 파악하려면 이 대화 상자를 사용하십시오.  
   
@@ -70,5 +70,5 @@ ms.locfileid: "33045850"
   
 -   사용할 수 없거나 확인되지 않은 엔터티  
   
-    종속성 유형을 확인할 수 없음을 나타냅니다. 이는 선택한 개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]인스턴스에 있는 경우에만 발생합니다.  
+    종속성 유형을 확인할 수 없음을 나타냅니다. 이는 선택한 개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]인스턴스에 있는 경우에만 발생합니다.  
   

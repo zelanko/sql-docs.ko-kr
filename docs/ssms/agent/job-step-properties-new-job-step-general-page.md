@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a9b661c2f4529ed3e6731dc5c38d05953ec43f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031007"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774610"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>작업 단계 속성 - 새 작업 단계(일반 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
+이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
   
-이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 확장한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기**를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입**또는 **편집**을 클릭하여 이 페이지로 이동할 수도 있습니다.  
+이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 확장한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기**를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입**또는 **편집**을 클릭하여 이 페이지로 이동할 수도 있습니다.  
   
 ## <a name="options"></a>Options  
 **단계 이름**  
@@ -70,7 +70,7 @@ ms.locfileid: "38031007"
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 스크립트 작업 단계 옵션  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 이후 버전에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에이전트에서 ActiveX 스크립팅 하위 시스템이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트에서 ActiveX 스크립팅 하위 시스템이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
   
 **VBScript**  
 작업 단계에 사용할 언어로 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition을 지정합니다.  
@@ -213,7 +213,7 @@ ms.locfileid: "38031007"
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services 패키지 실행 작업 단계 옵션  
   
 ### <a name="general-tab"></a>일반 탭  
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) 패키지가 있는 위치와 사용할 인증 모드를 지정합니다. 이 탭을 선택하면 다음 옵션을 사용할 수 있습니다.  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) 패키지가 있는 위치와 사용할 인증 모드를 지정합니다. 이 탭을 선택하면 다음 옵션을 사용할 수 있습니다.  
   
 **패키지 원본**  
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지가 저장된 위치를 지정합니다. 다음 중 하나를 선택합니다.  
@@ -228,19 +228,19 @@ ms.locfileid: "38031007"
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지가 저장된 서버 이름을 입력합니다. 이 옵션은 **패키지 원본** 에 대해 **SQL Server** 또는 **SSIS 패키지 저장소**를 지정한 경우에만 사용할 수 있습니다.  
   
 **Windows 인증 사용**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로그인 시 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 인증이 사용됩니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 인증이 사용됩니다.  
   
 **SQL Server 인증 사용**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인증이 사용됩니다. 이 인증 방법을 선택하는 경우 해당 **사용자 이름** 과 **암호**를 입력합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용됩니다. 이 인증 방법을 선택하는 경우 해당 **사용자 이름** 과 **암호**를 입력합니다.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인증은 이전 버전과의 호환성을 위해 제공됩니다. 보안 향상을 위해 가능하면 Windows 인증을 사용합니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 이전 버전과의 호환성을 위해 제공됩니다. 보안 향상을 위해 가능하면 Windows 인증을 사용합니다.  
   
 **패키지**  
 패키지 위치를 입력합니다.  
   
 > [!IMPORTANT]  
-> 암호로 보호된 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지의 경우 **구성** 탭을 클릭하여 **패키지 암호** 대화 상자에 암호를 입력합니다. 그렇지 않으면 암호로 보호된 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업이 실패합니다.  
+> 암호로 보호된 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지의 경우 **구성** 탭을 클릭하여 **패키지 암호** 대화 상자에 암호를 입력합니다. 그렇지 않으면 암호로 보호된 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 실패합니다.  
   
 ### <a name="configurations-tab"></a>구성 탭  
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지의 구성 옵션을 지정합니다. 이 탭을 선택하면 다음 옵션을 사용할 수 있습니다.  
@@ -379,6 +379,6 @@ ms.locfileid: "38031007"
   
 ## <a name="see-also"></a>참고 항목  
 [작업 단계 관리](../../ssms/agent/manage-job-steps.md)  
-[패키지에 대한 SQL Server 에이전트 작업](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[복제 에이전트 관리](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[패키지에 대한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
