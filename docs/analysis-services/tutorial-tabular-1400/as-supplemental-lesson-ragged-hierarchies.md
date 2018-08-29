@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 추가 단원: 비정형 계층 | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bc5a2164576e2e6142d8835dad6f6c114b7a9c5b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042307"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074833"
 ---
-# <a name="supplemental-lesson---ragged-hierarchies"></a>추가 단원-불규칙된 한 계층 구조
+# <a name="supplemental-lesson---ragged-hierarchies"></a>추가 단원-비정형 계층 구조
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "38042307"
   
 이 단원에 소요되는 예상 시간: **20분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 추가 단원 문서는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 작업을 수행 하기 전에 완료 해야 이전의 단원을 모두 완료 된 Adventure Works Internet Sales 샘플 모델 프로젝트가 또는 합니다. 
 
 자습서의 일부로 AW Internet Sales 프로젝트를 만든 모델에 아직 없는 경우 모든 데이터 또는 비정형된 계층입니다. 이 추가 단원을 완료 하려면 먼저 경우 몇 가지 추가 테이블을 추가 하 여 문제를 만들기, 관계, 계산된 열, 측정값 및 새 조직 계층 구조 만들기 해당 부분에는 15 분 정도 걸립니다. 그런 다음 몇 분 내에 해결 하기 위해 가져올 수도 있습니다.  
@@ -47,11 +47,11 @@ ms.locfileid: "38042307"
 
     | 표 1           | Column       | 필터 방향   | 표 2     | Column      | 활성 |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Default            | FactOnlineSales     | Date        | 예    |
-    | FactResellerSales | DueDate      | Default            | FactOnlineSales     | Date        | 아니요     |
-    | FactResellerSales | ShipDateKey  | Default            | FactOnlineSales     | Date        | 아니요     |
-    | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | 예    |
-    | FactResellerSales | EmployeeKey  | 두 테이블에 | DimEmployee | EmployeeKey | 예    |
+    | FactResellerSales | OrderDateKey | Default            | FactOnlineSales     | Date        | 사용자 계정 컨트롤    |
+    | FactResellerSales | DueDate      | Default            | FactOnlineSales     | Date        | 아니오     |
+    | FactResellerSales | ShipDateKey  | Default            | FactOnlineSales     | Date        | 아니오     |
+    | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | 사용자 계정 컨트롤    |
+    | FactResellerSales | EmployeeKey  | 두 테이블에 | DimEmployee | EmployeeKey | 사용자 계정 컨트롤    |
 
 5. 에 **DimEmployee** 테이블에서 다음 항목을 만듭니다 [계산 된 열](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 

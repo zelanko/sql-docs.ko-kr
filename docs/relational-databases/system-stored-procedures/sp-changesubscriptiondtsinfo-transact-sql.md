@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriptiondtsinfo (Transact SQL) | Microsoft Docs
+title: sp_changesubscriptiondtsinfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55c43914d883ce5f704ad6c7648d473bd38611fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffbeb38fbdde20f3fdccd9be817c1111e3f651f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990988"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034093"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,30 +49,30 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
   
 ## <a name="arguments"></a>인수  
  [  **@job_id=**] *job_id*  
- 밀어넣기 구독에 대한 배포 에이전트의 작업 ID입니다. *job_id* 은 **varbinary (16)**, 기본값은 없습니다. 배포 작업 ID를 확인 하려면 실행 **sp_helpsubscription** 또는 **sp_helppullsubscription**합니다.  
+ 밀어넣기 구독에 대한 배포 에이전트의 작업 ID입니다. *job_id* 됩니다 **varbinary(16)**, 기본값은 없습니다. 배포 작업 ID를 찾으려면 실행 **sp_helpsubscription** 하거나 **sp_helppullsubscription**합니다.  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
- DTS 패키지의 이름을 지정합니다. *dts_package_name* 는 **sysname**, 기본값은 NULL입니다. 예를 들어 라는 패키지를 지정 하려면 **DTSPub_Package**를 지정 하는 경우 `@dts_package_name = N'DTSPub_Package'`합니다.  
+ DTS 패키지의 이름을 지정합니다. *dts_package_name* 되는 **sysname**, 기본값은 NULL 사용 하 여 합니다. 예를 들어 라는 패키지를 지정 하려면 **DTSPub_Package**를 지정 하는 경우 `@dts_package_name = N'DTSPub_Package'`합니다.  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- 패키지 암호를 지정합니다. *dts_package_password* 은 **sysname** 기본값은 NULL 이며 암호 속성이 남아 있을 것 이라는 것을 지정 하는 변경 되지 않습니다.  
+ 패키지 암호를 지정합니다. *dts_package_password* 됩니다 **sysname** 기본값은 NULL 사용 하 여 변경 되지 않은 상태로 남아 있을 암호 속성이 지정 합니다.  
   
 > [!NOTE]  
 >  DTS 패키지에는 암호가 있어야 합니다.  
   
  [ **@dts_package_location**=] **'***dts_package_location***'**  
- 패키지 위치를 지정합니다. *dts_package_location* 는 **nvarchar (12)**, 기본값은 NULL이 고 지정 하는 패키지 위치 남겨둘 변경 되지 않습니다. 패키지의 위치를 변경할 수 있습니다 **배포자** 또는 **구독자**합니다.  
+ 패키지 위치를 지정합니다. *dts_package_location* 는 **nvarchar(12)**, 기본값은 NULL 사용 하 여 패키지 위치를 왼쪽 인지를 지정 하는 변경 되지 않습니다. 패키지의 위치를 변경할 수 있습니다 **배포자** 하거나 **구독자**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_changesubscriptiondtsinfo** 스냅숏 복제 및 트랜잭션 복제는 밀어넣기 구독에만 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정 서버 역할, **db_owner** 고정된 데이터베이스 역할 또는 구독의 작성자 실행할 수 **sp_changesubscriptiondtsinfo**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정 서버 역할 **db_owner** 고정된 데이터베이스 역할 또는 구독의 작성자 실행할 수 있습니다 **sp_changesubscriptiondtsinfo**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

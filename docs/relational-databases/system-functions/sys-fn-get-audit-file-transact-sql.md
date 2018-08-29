@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 229544e74b8a4c8f541c547f185bb6a954f44807
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556913"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43097802"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 감사 파일 집합에서 여러 파일을 수집 하는 단일 별표 (*)를 사용할 수 있습니다. 예를 들어:  
   
-    -   **\<경로 >\\ \* ** 수집-모든 지정된 된 위치에 파일을 감사 합니다.  
+    -   **\<경로 >\\ \***  수집-모든 지정된 된 위치에 파일을 감사 합니다.  
   
     -   **\<경로 > \LoginsAudit_{GUID}** -수집 파일에 지정한 이름 및 GUID 쌍이 있는 모든 감사 합니다.  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     이 인수를 사용 하 여 blob URL (storage 끝점 및 컨테이너 포함)을 지정 합니다. 별표 와일드 카드를 지원 하지 않으면 하는 동안이 접두사로 시작 하는 여러 파일 (blob)을 수집 하도록 전체 blob 이름) (대신 부분 파일 (blob) 이름 접두사를 사용할 수 있습니다. 예를 들어:
  
-      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> / ** -특정 데이터베이스에 대 한 모든 감사 파일 (blob)를 수집 합니다.    
+      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> /**  -특정 데이터베이스에 대 한 모든 감사 파일 (blob)를 수집 합니다.    
       
       - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>.xel** -특정 감사 파일 (blob)를 수집 합니다.
   

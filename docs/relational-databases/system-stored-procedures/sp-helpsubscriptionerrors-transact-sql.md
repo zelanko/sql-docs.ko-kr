@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscriptionerrors (Transact SQL) | Microsoft Docs
+title: sp_helpsubscriptionerrors (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d02a5a5323956bb5835d41ff3c9df6fcccf630d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870e8197a8182ab813ea8b165b46b4888f96726e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996860"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031966"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [  **@publisher=** ] **'***게시자***'**  
- 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
+ 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
+ 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@publication=** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@subscriber=** ] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 없습니다.  
+ 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db* 은 **sysname**, 기본값은 없습니다.  
+ 구독 데이터베이스의 이름입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-set"></a>결과 집합  
   
@@ -82,13 +82,13 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_helpsubscriptionerrors** 스냅숏 및 트랜잭션 복제와 함께 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helpsubscriptionerrors**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpsubscriptionerrors**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   

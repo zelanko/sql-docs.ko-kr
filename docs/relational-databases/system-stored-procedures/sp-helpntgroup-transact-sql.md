@@ -1,5 +1,5 @@
 ---
-title: sp_helpntgroup (Transact SQL) | Microsoft Docs
+title: sp_helpntgroup (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f049e76dc7d31331c0939c9d24809f8752ea9f7c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247814"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032595"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="arguments"></a>인수  
  [ **@ntname =** ] **'***name***'**  
- Windows 그룹의 이름입니다. *이름* 은 **sysname**, 기본값은 NULL입니다. *이름* 현재 데이터베이스에 액세스할 수 있는 유효한 Windows 그룹 이어야 합니다. 경우 *이름* 을 지정 하지 않으면 현재 데이터베이스에 액세스할 수 있는 모든 Windows 그룹이 출력에 포함 됩니다.  
+ Windows 그룹의 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다. *이름* 현재 데이터베이스에 대 한 액세스를 사용 하 여 유효한 Windows 그룹 이어야 합니다. 하는 경우 *이름을* 지정 하지 않으면 현재 데이터베이스에 대 한 액세스를 사용 하 여 모든 Windows 그룹이 출력에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -59,10 +59,10 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**SID**|**varbinary(85)**|보안 식별자 (SID) **NTGroupName**합니다.|  
 |**HasDbAccess**|**int**|1 = Windows 그룹이 데이터베이스에 대한 액세스 권한을 갖고 있습니다.|  
   
-## <a name="remarks"></a>주의  
- 목록을 보려면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 데이터베이스의 역할을 사용 하 여 **sp_helprole**합니다.  
+## <a name="remarks"></a>Remarks  
+ 목록을 보려면 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 현재 데이터베이스의 역할 **sp_helprole**합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -72,7 +72,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 EXEC sp_helpntgroup;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   

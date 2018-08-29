@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5eaab130612521ed99d7000745a2e811531b167f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049391"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034456"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
  실행 **sp_dropextendedproc** 에서 사용자 정의 확장된 저장된 프로시저 이름을 삭제 합니다 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰에에서 항목을 제거 하 고는 [sys.extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰에 있습니다. 이 저장된 프로시저 에서만 실행할 수 있습니다 합니다 **마스터** 데이터베이스입니다.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 187b7969d46b6ab0a85779d108a66cbe8ae2d62b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: aa2ad0da3b651660674dc1b4d5d2e82531fc547a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970455"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033305"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  사용하고 있는 ODBC의 버전입니다. *odbc_version* 됩니다 **tinyint**, 기본값은 2입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   

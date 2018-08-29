@@ -1,5 +1,5 @@
 ---
-title: sp_addtabletocontents (Transact SQL) | Microsoft Docs
+title: sp_addtabletocontents (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47400ed08fed28f8b2c6a83189cd640b9c727f9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8b3a99fc475bfe7e3ab7cddfa31f0449c81e05d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988908"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031995"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +47,26 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>인수  
  [ **@table_name=**] **'***table_name***'**  
- 테이블의 이름입니다. *table_name* 은 **sysname**, 기본값은 없습니다.  
+ 테이블의 이름입니다. *table_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@owner_name=**] **'***owner_name***'**  
- 테이블 소유자의 이름입니다. *owner_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 테이블 소유자의 이름입니다. *owner_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@filter_clause=** ] **'***filter_clause***'**  
- 새로 로드된 데이터의 어떤 행을 병합 추적 테이블에 추가해야 할지 제어하는 필터 절을 지정합니다. *filter_clause* 은 **nvarchar (4000)**, 기본값은 NULL입니다. 경우 *filter_clause* 은 **null**, 모든 대량 로드 된 행이 추가 됩니다.  
+ 새로 로드된 데이터의 어떤 행을 병합 추적 테이블에 추가해야 할지 제어하는 필터 절을 지정합니다. *filter_clause* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. 하는 경우 *filter_clause* 됩니다 **null**, 모든 대량 로드 된 행이 추가 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_addtabletocontents** 병합 복제에만 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_addtabletocontents** 병합 복제 에서만 사용 됩니다.  
   
- 행은 *table_name* 으로 참조 되는 해당 **rowguidcol** 참조는 병합 추적 테이블에 추가 됩니다. **sp_addtabletocontents** 대량으로 병합 복제를 사용 하 여 게시 된 테이블에 데이터를 복사한 후 사용 해야 합니다. 저장 프로시저는 복사된 행의 추적을 시작하며 새 행이 다음 동기화에 포함될 것인지 확인합니다.  
+ 행을 *table_name* 에서 참조 하는 **rowguidcol** 참조는 병합 추적 테이블에 추가 됩니다. **sp_addtabletocontents** 대량으로 병합 복제를 사용 하 여 게시 된 테이블에 데이터를 복사한 후 사용 해야 합니다. 저장 프로시저는 복사된 행의 추적을 시작하며 새 행이 다음 동기화에 포함될 것인지 확인합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_addtabletocontents**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addtabletocontents**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

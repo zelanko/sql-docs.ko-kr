@@ -31,16 +31,15 @@ helpviewer_keywords:
 - passwords [SQL Server], complexity
 - characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3e6ac04417e8b8d136d05f943d941c4d1177e087
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c72482740aed5f90bba4c5e8e212950943cda699
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268539"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032996"
 ---
 # <a name="password-policy"></a>암호 정책
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows 암호 정책 메커니즘을 사용할 수 있습니다. 암호 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인과 암호를 가진 포함된 데이터베이스 사용자에게 적용됩니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "37268539"
  암호 만료 정책을 사용하여 암호의 수명을 관리합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 암호 만료 정책을 강제로 적용하면 사용자에게 기존 암호를 변경할 것과 암호가 만료되어 해당 계정을 사용할 수 없게 됨을 알려 줍니다.  
   
 ## <a name="policy-enforcement"></a>정책 적용  
- 암호 정책 적용은 각 SQL Server 로그인마다 별도로 구성할 수 있습니다.  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) 을 사용하여 SQL Server 로그인의 암호 정책 옵션을 구성할 수 있습니다. 다음 규칙이 암호 정책 적용 구성에 적용됩니다.  
+ 암호 정책 적용은 각 SQL Server 로그인마다 별도로 구성할 수 있습니다. [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) 을 사용하여 SQL Server 로그인의 암호 정책 옵션을 구성할 수 있습니다. 다음 규칙이 암호 정책 적용 구성에 적용됩니다.  
   
 -   CHECK_POLICY가 ON으로 변경되면 다음 동작이 수행됩니다.  
   

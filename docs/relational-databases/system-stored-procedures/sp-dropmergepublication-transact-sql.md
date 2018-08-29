@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepublication (Transact SQL) | Microsoft Docs
+title: sp_dropmergepublication (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a360ce767a80dd9f77f35a22d92b65d3a52777c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8876bc0e1007d942bde42a9a5a2472b58f6fa1f5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990568"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030791"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 삭제할 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다. 경우 **모든**, 기존의 모든 병합 게시와 관련 된 스냅숏 에이전트 작업이 제거 됩니다. 에 대 한 특정 값을 지정 하면 *게시*, 해당 게시에만 해당 관련된 스냅숏 에이전트 작업이 삭제 됩니다.  
+ 삭제할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 기존의 모든 병합 게시와 연결 된 스냅숏 에이전트 작업 제거 됩니다. 특정 값을 지정 하는 경우 *게시*, 해당 게시 및 해당 관련된 스냅숏 에이전트 작업이 삭제 됩니다.  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
- 배포자에서 정리 태스크를 수행하지 않고 게시를 삭제하는 데 사용됩니다. *ignore_distributor* 은 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자를 다시 설치할 때도 사용됩니다.  
+ 배포자에서 정리 태스크를 수행하지 않고 게시를 삭제하는 데 사용됩니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자를 다시 설치할 때도 사용됩니다.  
   
  [  **@reserved=**] *예약*  
- 나중에 사용하도록 예약되었습니다. *예약 된* 은 **비트**, 기본값은 **0**합니다.  
+ 나중에 사용하도록 예약되었습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
   
  [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
  내부적으로만 사용됩니다.  
@@ -63,20 +63,20 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergepublication** 병합 복제에 사용 됩니다.  
   
- **sp_dropmergepublication** 재귀적으로 게시와 연결 된 모든 문서를 삭제 한 다음 게시 자체를 삭제 합니다. 게시에 구독이 한 개 이상 있는 경우에는 게시를 제거할 수 없습니다. 구독을 제거 하는 방법에 대 한 정보를 참조 하십시오. [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) 및 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)합니다.  
+ **sp_dropmergepublication** 재귀적으로 게시와 연관 된 모든 문서를 삭제 한 다음 게시 자체를 삭제 합니다. 게시에 구독이 한 개 이상 있는 경우에는 게시를 제거할 수 없습니다. 구독을 제거 하는 방법에 대 한 정보를 참조 하세요 [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) 하 고 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)합니다.  
   
- 실행 **sp_dropmergepublication** 게시를 삭제 하에서 제거 되지는 않습니다 게시 된 개체 게시 데이터베이스나 구독 데이터베이스에서 해당 개체입니다. DROP 사용 하 여 \<개체 >를 필요에 따라 이러한 개체를 수동으로 제거 합니다.  
+ 실행 **sp_dropmergepublication** 게시를 삭제 하는 게시에서 개체가 제거 되지 게시 데이터베이스나 구독 데이터베이스에서 해당 개체입니다. 사용 하 여 \<개체 > 필요한 경우 이러한 개체를 수동으로 제거 하려면.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_dropmergepublication**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_dropmergepublication**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

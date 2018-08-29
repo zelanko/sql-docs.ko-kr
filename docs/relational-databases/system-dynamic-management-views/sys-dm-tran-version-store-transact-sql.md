@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (Transact SQL) | Microsoft 문서
+title: sys.dm_tran_version_store (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4d4a8511c17fe2fb09f46c38e2a8ed4ca0c8108b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561923"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070156"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **sys.dm_tran_version_store** 를 실행 하는 전체 버전 저장소를 쿼리 버전 저장소는 매우 커질 수 있기 때문에 비효율적입니다.  
+  버전 저장소의 모든 버전 레코드를 표시하는 가상 테이블을 반환합니다. **sys.dm_tran_version_store** 전체 버전 저장소를 쿼리하며 버전 저장소가 매우 클 수 있으므로 실행 하는 비효율적입니다.  
   
  각 버전 레코드는 일부 추적/상태 정보와 함께 이진 데이터로 저장됩니다. 데이터베이스 테이블의 레코드와 마찬가지로 버전 저장소 레코드도 8192바이트 페이지로 저장됩니다. 레코드가 8192바이트를 초과하면 두 개의 레코드로 분할됩니다.  
   
- 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 사용 하 여 **sys.dm_tran_version_store** 버전 저장소에 있는 행의 이전 버전의 이진 표현을 찾을 수 있습니다.  
+ 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 사용 하 여 **sys.dm_tran_version_store** 버전 저장소에 있는 이진 표현에서 행의 이전 버전을 찾을 수 있습니다.  
   
   
 ## <a name="syntax"></a>구문  

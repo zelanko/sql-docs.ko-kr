@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor_properties (Transact SQL) | Microsoft Docs
+title: sp_helpdistributor_properties (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f839d230097300eb08c0042854ed00f3b4dd951
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e9d7ab6a6ddb7bd2be819c4a688dce87a1f5945
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994470"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032382"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_helpdistributor_properties
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_helpdistributor_properties** 모든 유형의 복제와 함께 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_helpdistributor_properties** 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할의 멤버는 **db_owner** 또는 **replmonitor** 고정된 데이터베이스 역할의 배포 데이터베이스와 사용자에 게는 이 배포자를 사용 하는 게시에 대 한 게시 액세스 목록 (PAL) 실행할 수 있는 **sp_helpdistributor_properties**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 구성원만 합니다 **sysadmin** 고정된 서버 역할의 멤버, 합니다 **db_owner** 또는 **replmonitor** 고정된 데이터베이스 역할의 사용자가 배포 데이터베이스에는 이 배포자를 사용 하는 게시에 대 한 게시 액세스 목록 (PAL) 실행할 수 있습니다 **sp_helpdistributor_properties**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

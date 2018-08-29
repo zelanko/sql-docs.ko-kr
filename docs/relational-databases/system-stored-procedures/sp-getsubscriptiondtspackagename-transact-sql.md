@@ -1,5 +1,5 @@
 ---
-title: sp_getsubscriptiondtspackagename (Transact SQL) | Microsoft Docs
+title: sp_getsubscriptiondtspackagename (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getsubscriptiondtspackagename
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 755cd58c1e67ad0136e030cc63ae5d03437b76da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d3dd962761890021c5e5af2375489b8ef2d4d7b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994270"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031386"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication**=] **'***게시***'**  
- 게시의 이름입니다. **'***게시***'** 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. **'***발행물***'** 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@subscriber=**] **'***구독자***'**  
  구독자의 이름입니다. *구독자* 는 sysname 이며 기본값은 NULL입니다.  
@@ -61,10 +61,10 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|DTS 패키지의 이름입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_getsubscriptiondtspackagename** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_getsubscriptiondtspackagename**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_getsubscriptiondtspackagename**합니다.  
   
   

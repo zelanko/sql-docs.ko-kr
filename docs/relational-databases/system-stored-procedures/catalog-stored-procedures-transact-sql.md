@@ -1,5 +1,5 @@
 ---
-title: 카탈로그 저장된 프로시저 (Transact SQL) | Microsoft Docs
+title: 카탈로그 저장된 프로시저 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], catalog
 - catalog system stored procedures [SQL Server]
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad6d9b8642f9331952dd5c779d27279e727ddfcb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: da1a487a073461f4fd1c48d2037165763a58cf27
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237350"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031676"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>카탈로그 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "33237350"
 |[sp_pkeys](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)|[sp_table_privileges](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)|  
 |[sp_server_info](../../relational-databases/system-stored-procedures/sp-server-info-transact-sql.md)|[sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

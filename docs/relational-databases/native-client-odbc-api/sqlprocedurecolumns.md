@@ -17,13 +17,13 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 10f643dd1803cfd41ab132e3fdf1dabadcc87afb
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f298b1739dcdfe97811efa74e817cabd5fb7ac5b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542623"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072268"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "39542623"
 
   **SQLProcedureColumns** 모든 반환 값 특성을 보고 한 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를.  
   
- **SQLProcedureColumns** 값에 대 한 존재 여부 SQL_SUCCESS 반환 *카탈로그 이름*, *SchemaName*, *ProcName*, 또는 * ColumnName* 매개 변수입니다. **SQLFetch** 잘못 된 값은이 매개 변수에서 사용 하는 경우 SQL_NO_DATA를 반환 합니다.  
+ **SQLProcedureColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 *CatalogName*를 *SchemaName*를 *ProcName*, 또는  *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
   
- **SQLProcedureColumns** 정적 서버 커서에서 실행할 수 있습니다. 실행 하려고 **SQLProcedureColumns** (동적 또는 키 집합) 업데이트 가능한 커서에서 커서 유형이 변경 되었음을 나타내는 SQL_SUCCESS_WITH_INFO를 반환 합니다.  
+ **SQLProcedureColumns** 정적 서버 커서에서 실행할 수 있습니다. 실행 하려고 **SQLProcedureColumns** 업데이트 가능한 (동적 또는 키 집합) 커서에서 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  
   
  다음 표에서 결과 집합을 처리 하기 위해 확장 된 방법에 의해 반환 되는 열은 **udt** 및 **xml** 데이터 형식을 통해의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버:  
   

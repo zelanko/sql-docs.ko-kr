@@ -1,5 +1,5 @@
 ---
-title: sp_dbcmptlevel (Transact SQL) | Microsoft Docs
+title: sp_dbcmptlevel (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 416842d369700f0ac7e0ecd18f84fc0b546a49f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acd4d6a2d87d97bd31b35779a9bc605dde41db04
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236852"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031946"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
 ## <a name="arguments"></a>인수  
  [  **@dbname=** ] *이름*  
- 호환성 수준을 변경할 데이터베이스의 이름입니다. 데이터베이스 이름은 식별자에 대한 규칙을 따라야 합니다. *이름* 은 **sysname**, 기본값은 NULL입니다.  
+ 호환성 수준을 변경할 데이터베이스의 이름입니다. 데이터베이스 이름은 식별자에 대한 규칙을 따라야 합니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@new_cmptlevel=** ] *버전*  
- 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. *버전* 은 **tinyint**, 기본값은 NULL입니다. 값은 다음 중 하나여야 합니다.  
+ 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. *버전* 됩니다 **tinyint**, 기본값은 NULL입니다. 값은 다음 중 하나여야 합니다.  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -68,18 +68,18 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 지정 된 매개 변수가 없는 경우 또는 경우는 *이름* 매개 변수를 지정 하지 않으면 **sp_dbcmptlevel** 에서 오류를 반환 합니다.  
+ 매개 변수 없이 지정 된 경우 또는 경우는 *이름을* 매개 변수를 지정 하지 않으면 **sp_dbcmptlevel** 오류를 반환 합니다.  
   
- 경우 *이름* 없이 지정 된 *버전*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 지정된 된 데이터베이스의 현재 호환성 수준을 표시 하는 메시지를 반환 합니다.  
+ 하는 경우 *이름을* 없이 지정 된 *버전*는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 지정한 데이터베이스의 현재 호환성 수준을 표시 하는 메시지를 반환 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  호환성 수준에 대 한 참조 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
- 데이터베이스 소유자의 멤버는 **sysadmin** 고정 서버 역할 및 **db_owner** 고정된 데이터베이스 역할 (현재 데이터베이스를 변경 하려는) 하는 경우이 프로시저를 실행할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스 소유자의 멤버는 **sysadmin** 고정 서버 역할, 및 **db_owner** 고정된 데이터베이스 역할 (현재 데이터베이스를 변경 하려는) 하는 경우이 프로시저를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [예약 키워드&#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

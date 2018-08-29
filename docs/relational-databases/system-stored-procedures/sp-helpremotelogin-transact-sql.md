@@ -1,5 +1,5 @@
 ---
-title: sp_helpremotelogin (Transact SQL) | Microsoft Docs
+title: sp_helpremotelogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60fe6f30365e63394f80b481fe155b26caa4061b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0dc7cdc8e647adf1d8ea5e4e2903509c16a2f62
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249445"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033376"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="arguments"></a>인수  
  [ @remoteserver **=** ] **'***remoteserver***'**  
- 원격 로그인 정보를 반환할 대상이 되는 원격 서버입니다. *remoteserver* 은 **sysname**, 기본값은 NULL입니다. 경우 *remoteserver* 은 지정 하지 않으면 로컬 서버에 정의 된 모든 원격 서버에 대 한 정보가 반환 됩니다.  
+ 원격 로그인 정보를 반환할 대상이 되는 원격 서버입니다. *remoteserver* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *remoteserver* 은 지정 하지 않으면 로컬 서버에 정의 된 모든 원격 서버에 대 한 정보 반환 됩니다.  
   
  [ @remotename **=** ] **'***remote_name***'**  
- 원격 서버의 특정 원격 로그인입니다. *remote_name* 은 **sysname**, 기본값은 NULL입니다. 경우 *remote_name* 를 지정 하지 않으면 모든 원격 사용자에 대 한 정보에 대해 정의 된 *remoteserver* 반환 됩니다.  
+ 원격 서버의 특정 원격 로그인입니다. *remote_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *remote_name* 지정 하지 않으면 모든 원격 사용자에 대 한 정보에 대해 정의 된 *remoteserver* 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -63,13 +63,13 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |-----------------|---------------|-----------------|  
 |서버|**sysname**|로컬 서버에서 정의된 원격 서버의 이름입니다.|  
 |local_user_name|**sysname**|서버의 원격 로그인이 매핑되는 로컬 서버의 로그인입니다.|  
-|remote_user_name|**sysname**|Local_user_name에 매핑되는 원격 서버의 로그인입니다.|  
+|remote_user_name|**sysname**|Local_user_name 매핑되는 원격 서버의 로그인입니다.|  
 |옵션|**sysname**|Trusted = 원격 서버에서 로컬 서버로 연결할 때 원격 로그인 암호를 제공할 필요가 없습니다.<br /><br /> Untrusted(또는 공백) = 원격 서버에서 로컬 서버로 연결할 때 원격 로그인 암호를 제공해야 합니다.|  
   
-## <a name="remarks"></a>주의  
- Sp_helpserver를 사용 하 여 로컬 서버에 정의 된 원격 서버의 이름을 나열 합니다.  
+## <a name="remarks"></a>Remarks  
+ 로컬 서버에 정의 된 원격 서버의 이름을 나열 하려면 sp_helpserver를 사용 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  
   
 ## <a name="examples"></a>예  
@@ -88,10 +88,10 @@ EXEC sp_helpremotelogin 'Accounts';
 EXEC sp_helpremotelogin;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver& #40; Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

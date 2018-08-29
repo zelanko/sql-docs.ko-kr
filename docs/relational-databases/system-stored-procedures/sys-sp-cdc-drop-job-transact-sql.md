@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_drop_job (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_drop_job (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c9f5df44d98e28dcd261a01002451a206f6fee5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 36ffc0bbc703489140829dea8da594927219234f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252144"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031603"
 ---
 # <a name="sysspcdcdropjob-transact-sql"></a>sys.sp_cdc_drop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>인수  
  [ @job_type **=** ] '*job_type*'  
- 제거할 작업 유형입니다. *job_type* 은 **nvarchar (20)** NULL 일 수 없습니다. 올바른 입력 값은 'capture' 및 'cleanup'입니다.  
+ 제거할 작업 유형입니다. *job_type* 됩니다 **nvarchar(20)** NULL 일 수 없습니다. 올바른 입력 값은 'capture' 및 'cleanup'입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -55,10 +54,10 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>결과 집합  
  Nones  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_cdc_drop_job 내부적으로 호출 됩니다 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -70,9 +69,9 @@ GO
 EXEC sys.sp_cdc_drop_job @job_type = N'cleanup';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)   
- [sys.sp_cdc_add_job& #40; Transact SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

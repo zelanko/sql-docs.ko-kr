@@ -1,5 +1,5 @@
 ---
-title: sp_markpendingschemachange (Transact SQL) | Microsoft Docs
+title: sp_markpendingschemachange (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3bfd0bb51e6d269b84fdb57a5a64139ce23cedc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d059d2a2a01ba7f0c4fe86fee0673adb0041ef
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994820"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032346"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,26 +49,26 @@ sp_markpendingschemachange [@publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [**@publication=** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@schemaversion=** ] *스키마 버전*  
- 보류 중인 스키마 변경 내용을 식별합니다. *schemaversion* 은 **int**의 기본값은 **0**합니다. 사용 하 여 [sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 게시에 대 한 보류 중인 스키마 변경 내용 나열 합니다.  
+ [  **@schemaversion=** ] *schemaversion*  
+ 보류 중인 스키마 변경 내용을 식별합니다. *schemaversion* 됩니다 **int**, 기본값은 **0**합니다. 사용 하 여 [sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 에 게시에 대 한 보류 중인 스키마 변경 내용을 나열 합니다.  
   
  [  **@status=** ] **'***상태***'**  
- 보류 중인 스키마 변경 내용을 건너뛸 것인지 여부입니다. *상태* 은 **nvarchar (10)** 의 기본값은 **활성**합니다. 하는 경우의 값 *상태* 은 **건너뛴**, 다음 선택한 스키마 변경 복제 되지 것입니다.  
+ 보류 중인 스키마 변경 내용을 건너뛸 것인지 여부입니다. *상태* 됩니다 **nvarchar(10)** 이며 기본값은 **활성**합니다. 경우 값 *상태* 됩니다 **건너뜁니다**, 다음 선택한 스키마 변경 복제 되지 것입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_markpendingschemachange** 병합 복제와 함께 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_markpendingschemachange** 병합 복제에 사용 됩니다.  
   
- **sp_markpendingschemachange** 저장된 프로시저는 병합 복제의 지원 가능성을 위한 하 고, 다시 초기화와 같은 다른 수정 동작으로 상황을 해결 하려면 실패 한 되거나에서 비용이 큰 경우에 사용 해야 성능 조건입니다.  
+ **sp_markpendingschemachange** 저장된 프로시저는 병합 복제의 지원 가능성을 위한 하 고 다시 초기화와 같은 다른 수정 동작으로 상황을 해결 하지 못한 또는에서 비용이 큰 경우에 사용 해야 성능 조건입니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_markpendingschemachange**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_markpendingschemachange**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

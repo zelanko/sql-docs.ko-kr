@@ -1,5 +1,5 @@
 ---
-title: sp_dropmessage (Transact SQL) | Microsoft Docs
+title: sp_dropmessage (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3bac74ff66a266fd0987dc869145c70287232c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 216f5e9ffca4865cb9a2deddbe38097099d74f9c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246918"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032986"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 지정한 사용자 정의 오류 메시지를 삭제합니다. 사용 하 여 사용자 정의 메시지를 볼 수 있습니다는 **sys.messages** 카탈로그 뷰에 있습니다.  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 지정한 사용자 정의 오류 메시지를 삭제합니다. 사용 하 여 사용자 정의 메시지를 볼 수 있습니다 합니다 **sys.messages** 카탈로그 뷰에 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,10 +46,10 @@ sp_dropmessage [ @msgnum = ] message_number
   
 ## <a name="arguments"></a>인수  
  [  **@msgnum =** ] *message_number*  
- 삭제할 메시지 번호입니다. *message_number* 메시지 번호가 50000 보다 큰 사용자 정의 메시지 여야 합니다. *message_number* 은 **int**, 기본값은 NULL입니다.  
+ 삭제할 메시지 번호입니다. *message_number* 메시지 번호가 50000 보다 커야 하는 사용자 정의 메시지 여야 합니다. *message_number* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [  **@lang =** ] **'***언어***'**  
- 삭제할 메시지의 언어입니다. 경우 **모든** 지정 된 모든 언어 버전의 *message_number* 삭제 됩니다. *언어* 은 **sysname**, 기본값은 NULL입니다.  
+ 삭제할 메시지의 언어입니다. 하는 경우 **모든** 지정 된 모든 언어 버전의 *message_number* 삭제 됩니다. *언어* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,16 +57,16 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **sysadmin** 및 **serveradmin** 고정 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **sysadmin** 하 고 **serveradmin** 고정 서버 역할입니다.  
   
-## <a name="remarks"></a>주의  
- 하지 않는 한 **모든** 에 대해 지정 된 *언어*모든 언어, 미국 메시지의 버전을 삭제 해야 미국의 영어 버전을 삭제할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 경우가 아니면 **모든** 에 대해 지정 된 *언어*모든 언어, 미국 메시지의 버전을 삭제 해야 미국의 영어 버전을 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-dropping-a-user-defined-message"></a>1. 사용자 정의 메시지 삭제  
- 다음 예에서는 숫자는 사용자 정의 메시지 삭제 `50001`에서 **sys.messages**합니다.  
+ 다음 예제에서는 수를 사용자 정의 메시지 삭제 `50001`에서 **sys.messages**합니다.  
   
 ```  
 USE master;  
@@ -137,7 +137,7 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   

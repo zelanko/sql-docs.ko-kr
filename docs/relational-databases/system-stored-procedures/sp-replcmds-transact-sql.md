@@ -1,5 +1,5 @@
 ---
-title: sp_replcmds (Transact SQL) | Microsoft Docs
+title: sp_replcmds (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3690b3eaad187b341e4ad31fae1068aa56e45b05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 614b9ec8f418461ce8b42fcad09cd8729fba94d7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001430"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033558"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33001430"
   복제용으로 표시된 트랜잭션에 대한 명령을 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!IMPORTANT]  
->  **sp_replcmds** 복제 관련 문제를 해결 하기 위해서 프로시저를 실행 해야 합니다.  
+>  합니다 **sp_replcmds** 프로시저 복제를 사용 하 여 문제 해결에 실행 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="arguments"></a>인수  
  [  **@maxtrans=**] *maxtrans*  
- 정보를 반환할 트랜잭션의 수입니다. *maxtrans* 은 **int**, 기본값은 **1**, 배포 대기 중인 다음 트랜잭션을 지정 하는 합니다.  
+ 정보를 반환할 트랜잭션의 수입니다. *maxtrans* 됩니다 **int**, 기본값은 **1**, 배포 대기 중인 다음 트랜잭션을 지정 하는 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -70,24 +70,24 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  
   
-## <a name="remarks"></a>주의  
- **sp_replcmds** 트랜잭션 복제에서 로그 판독기 프로세스에 의해 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_replcmds** 트랜잭션 복제 로그 판독기 프로세스에서 사용 됩니다.  
   
- 복제 처리를 실행 하는 첫 번째 클라이언트 **sp_replcmds** 로그 판독기로 지정된 된 데이터베이스 내에서.  
+ 복제 처리를 실행 하는 첫 번째 클라이언트가 **sp_replcmds** 로그 판독기로 지정된 된 데이터베이스 내에서.  
   
  이 프로시저는 소유자 한정 테이블에 대한 명령을 생성하거나 테이블 이름을 한정하지 않습니다(기본값). 한정된 테이블 이름을 추가할 경우 한 데이터베이스 내의 특정 사용자가 소유한 테이블에서 다른 데이터베이스 내의 같은 사용자가 소유한 테이블로 데이터를 복제할 수 있습니다.  
   
 > [!NOTE]  
 >  원본 데이터베이스의 테이블 이름은 소유자 이름에 의해 한정되므로 대상 데이터베이스의 테이블 소유자는 반드시 같은 소유자 이름을 사용해야 합니다.  
   
- 실행 하려고 시도 하는 클라이언트가 **sp_replcmds** 첫 번째 클라이언트가 연결을 끊을 때까지 동일한 데이터베이스 내 18752 오류를 수신 합니다. 첫 번째 클라이언트가 연결을 끊은 후 다른 클라이언트를 실행할 수 **sp_replcmds**, 새 로그 판독기 됩니다.  
+ 실행 하려고 하는 클라이언트가 **sp_replcmds** 첫 번째 클라이언트가 연결을 끊을 때까지 동일한 데이터베이스 내 18752 오류를 수신 합니다. 첫 번째 클라이언트가 연결을 끊은 후 다른 클라이언트를 실행할 수 **sp_replcmds**, 되며 새 로그 판독기입니다.  
   
- 경고 메시지 18759 둘 다에 추가 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 경우 Windows 응용 프로그램 로그 **sp_replcmds** 텍스트 포인터가 없기 때문에 텍스트 명령을 복제할 수 없는지 동일한 트랜잭션 내에서 검색 합니다.  
+ 경고 메시지 18759 둘 다에 추가 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 하는 경우 Windows 응용 프로그램 로그 **sp_replcmds** 텍스트 포인터가 없기 때문에 텍스트 명령을 복제할 수 없는 동일한 트랜잭션에서 검색 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_replcmds**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_replcmds**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [오류 메시지](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   

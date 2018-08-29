@@ -16,13 +16,13 @@ ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4f26ab078eb357a146103092888189ed5b2e9d56
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a8d102f981b2cb0a2f8f19e87bb5c0cd5bcc9593
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550753"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068966"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC 테이블 반환 매개 변수 API 요약
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

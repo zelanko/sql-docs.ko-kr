@@ -22,16 +22,15 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392411"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030655"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
   이 항목에서는 로그인에 매핑된 데이터베이스 사용자를 만드는 방법 설명 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]합니다. 데이터베이스 사용자는 데이터베이스 연결 시의 로그인 ID입니다. 데이터베이스 사용자는 원하는 경우 로그인과 같은 이름을 사용할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인이 이미 있다고 가정합니다. 로그인을 만드는 방법에 대 한 자세한 내용은 [로그인을 만들려면](create-a-login.md)합니다.  

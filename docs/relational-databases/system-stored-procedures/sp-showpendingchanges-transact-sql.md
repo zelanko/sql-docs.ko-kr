@@ -1,5 +1,5 @@
 ---
-title: sp_showpendingchanges (Transact SQL) | Microsoft Docs
+title: sp_showpendingchanges (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b59856ba83d3118a9246bb5cd93a8d63e7745f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229136548d40e985869bd1f01685cb0c3dad6f4f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000740"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030704"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
 ## <a name="arguments"></a>인수  
  [ @destination_server **=** ] **'***destination_server***'**  
- 복제된 변경 내용을 적용할 서버의 이름입니다. *destination_server* 은 **sysname**, 기본값은 NULL입니다.  
+ 복제된 변경 내용을 적용할 서버의 이름입니다. *destination_server* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ @publication **=** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다. 때 *게시* 지정, 결과 지정된 된 게시에만 제한 됩니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *게시* 를 지정 하면 결과 지정된 된 게시에만 제한 됩니다.  
   
  [ @article **=** ] **'***문서***'**  
- 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 NULL입니다. 때 *문서* 지정, 결과 지정 된 문서에만 제한 됩니다.  
+ 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *문서* 를 지정 하면 결과 지정 된 문서에만 제한 됩니다.  
   
  [ @show_rows **=** ] *show_rows*  
- 들어 있는지 여부를 결과 집합의 보다 구체적인 정보에 대 한 보류 중인 변경 내용을의 기본값은 **0**합니다. 값 **1** 지정, 열 is_delete 및 rowguid 결과 집합에 포함 합니다.  
+ 포함 되는지 여부를 결과 집합 보다 구체적인 정보에 대 한 보류 중인 변경 내용을 기본 값을 사용 하 여 지정 **0**합니다. 값 **1** 를 지정 하면 결과 집합 열 is_delete 및 rowguid를 포함 합니다.  
   
 ## <a name="result-set"></a>결과 집합  
   
@@ -70,29 +70,29 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_server|**sysname**|변경 내용이 복제되는 대상 서버의 이름입니다.|  
 |pub_name|**sysname**|게시의 이름입니다.|  
 |destination_db_name|**sysname**|변경 내용이 복제되는 대상 데이터베이스의 이름입니다.|  
-|is_dest_subscriber|**bit**|변경 내용이 구독자로 복제되는 중임을 나타냅니다. 값이 **1** 변경 내용이 구독자에 복제 되 고 나타냅니다. **0** 게시자에 변경 내용이 복제 되는 것을 의미 합니다.|  
+|is_dest_subscriber|**bit**|변경 내용이 구독자로 복제되는 중임을 나타냅니다. 값이 **1** 변경 내용이 구독자로 복제 되 고 나타냅니다. **0** 게시자에 변경 내용이 복제 되는지 의미 합니다.|  
 |article_name|**sysname**|변경이 시작된 테이블에 대한 아티클의 이름입니다.|  
 |pending_deletes|**int**|복제 대기 중인 삭제 수입니다.|  
 |pending_ins_and_upd|**int**|복제 대기 중인 삽입 및 업데이트 수입니다.|  
-|is_delete|**bit**|보류 중인 변경 내용의 삭제 여부를 나타냅니다. 값이 **1** 변경 delete 임을 나타냅니다. 값은 **1** 에 대 한 @show_rows합니다.|  
-|rowguid|**uniqueidentifier**|변경된 행을 식별하는 GUID입니다. 값은 **1** 에 대 한 @show_rows합니다.|  
+|is_delete|**bit**|보류 중인 변경 내용의 삭제 여부를 나타냅니다. 값이 **1** 변경 삭제 임을 나타냅니다. 값이 필요 **1** 에 대 한 @show_rows합니다.|  
+|rowguid|**uniqueidentifier**|변경된 행을 식별하는 GUID입니다. 값이 필요 **1** 에 대 한 @show_rows합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_showpendingchanges는 병합 복제에 사용됩니다.  
   
  sp_showpendingchanges는 병합 복제의 문제를 해결할 때 사용합니다.  
   
  sp_showpendingchanges의 결과는 생성 0의 행을 포함하지 않습니다.  
   
- 에 대 한 지정 된 아티클이 *문서* 에 대 한 지정 된 게시에 속하지 않은 *게시* 0 pending_deletes 및 pending_ins_and_upd에 대해 반환 됩니다.  
+ 에 대 한 지정 된 아티클이 *문서* 에 대 한 지정 된 게시에 속하지 *게시* 0 않으면 pending_deletes 및 pending_ins_and_upd에 대해 반환 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버만 sp_showpendingchanges를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

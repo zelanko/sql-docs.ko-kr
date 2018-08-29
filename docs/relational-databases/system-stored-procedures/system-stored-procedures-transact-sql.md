@@ -24,17 +24,16 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], categories
 - system stored procedures [SQL Server]
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
-caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a47e14e183796fc2c7f4fae1df23b915e965c89b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 62d20f201e4e05bd0f50ea667d9a781b4ef07742
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559683"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43071506"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>시스템 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "39559683"
 |[쿼리 저장소 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|성능을 조정 하는 데 사용 합니다.|  
 |[복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|복제를 관리합니다.|  
 |[보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|보안을 관리합니다.|  
-|[스냅숏된 백업 저장된 프로시저](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|해당 스냅샷의 모든 FILE_SNAPSHOT 백업을 삭제 하거나는 각 백업 파일의 스냅샷을 삭제 하는.|  
+|[스냅숏된 백업 저장된 프로시저](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|개별 백업 파일 스냅숏을 삭제 하거나 해당 스냅숏을 모두 함께 FILE_SNAPSHOT 백업을 삭제 하려면 사용 합니다.|  
 |[공간 인덱스 저장 프로시저](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|분석 하 고 공간 인덱스의 인덱싱 성능을 개선 하는 데 사용 합니다.|  
 |[SQL Server 에이전트 저장 프로시저](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 성능 및 작업을 모니터링하는 데 사용합니다.|  
 |[SQL Server Profiler 저장 프로시저](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 예약된 이벤트 기반 작업을 관리하는 데 사용합니다.|  
@@ -80,7 +79,7 @@ ms.locfileid: "39559683"
 ## <a name="api-system-stored-procedures"></a>API 시스템 저장 프로시저  
  ADO, OLE DB 및 ODBC 응용 프로그램에 대해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하는 사용자는 이러한 응용 프로그램이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에서 다루지 않는 시스템 저장 프로시저를 사용한다는 사실을 알 수 있습니다. 이러한 저장된 프로시저에서 사용 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 데이터베이스 API의 기능을 구현 합니다. 이러한 저장 프로시저는 사용자 요청을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달하기 위해 공급자 또는 드라이버가 사용하는 메커니즘으로 공급자 또는 드라이버에서 내부적으로만 사용하도록 되어 있습니다. 명시적으로 호출을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-기반된 응용 프로그램 지원 되지 않습니다.  
   
- Sp_createorphan 및 sp_droporphans 저장 프로시저에 ODBC 사용 하 여 **ntext**, **텍스트**, 및 **이미지** 처리.  
+ Sp_createorphan 및 sp_droporphans 저장 프로시저는 ODBC를 사용 **ntext**를 **텍스트**, 및 **이미지** 처리 합니다.  
   
  sp_reset_connection 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 트랜잭션의 원격 저장 프로시저 호출을 지원하는 데 사용됩니다. 이 저장 프로시저는 연결 풀에서 연결이 다시 사용될 때 Audit Login 및 Audit Logout 이벤트도 실행합니다.  
   

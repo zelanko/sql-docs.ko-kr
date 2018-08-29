@@ -1,5 +1,5 @@
 ---
-title: sp_refreshview (Transact SQL) | Microsoft Docs
+title: sp_refreshview (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9871a4ce62ce2916a1cd27c3ca8735de28cfa1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed5f50b9b95f2f156632fb14c2cd471ef010bcac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249435"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031481"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sp_refreshview [ @viewname = ] 'viewname'
   
 ## <a name="arguments"></a>인수  
  [  **@viewname=** ] **'***viewname***'**  
- 뷰의 이름입니다. *viewname* 은 **nvarchar**, 기본값은 없습니다. *viewname* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 뷰만 참조할 수 있습니다.  
+ 뷰의 이름입니다. *viewname* 됩니다 **nvarchar**, 기본값은 없습니다. *viewname* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 뷰만 참조할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="remarks"></a>주의  
- 보기, schemabinding으로 생성 되지 않는 경우 **sp_refreshview** 보기의 정의 영향을 주는 개체 뷰의 기반이 되며 변경 될 때만 적용 됩니다. 그렇지 않으면 뷰를 쿼리할 때 예기치 않은 결과가 발생할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Schemabinding을 사용 하 여 뷰를 만들지 않은 경우 **sp_refreshview** 뷰의 정의 영향을 주는 뷰의 기반이 개체에 변경 될 때 실행 해야 합니다. 그렇지 않으면 뷰를 쿼리할 때 예기치 않은 결과가 발생할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  뷰에 대한 ALTER 권한이 필요하고 뷰 열이 참조하는 CLR(공용 언어 런타임) 사용자 정의 형식 및 XML 스키마 컬렉션에 대한 REFERENCES 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -80,8 +80,8 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sp_refreshsqlmodule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  

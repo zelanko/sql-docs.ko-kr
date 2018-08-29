@@ -1,5 +1,5 @@
 ---
-title: sys.xml_indexes (Transact SQL) | Microsoft Docs
+title: sys.xml_indexes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_indexes catalog view
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbc15a06d6179165bd2f6f1d3c19eb24d42dfcc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9751374d0e2a259ba8ba0c2abdb38592dc40ac01
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220794"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033766"
 ---
 # <a name="sysxmlindexes-transact-sql"></a>sys.xml_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ ms.locfileid: "33220794"
 |**xml_index_type_description**|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> PRIMARY_XML<br /><br /> 보조 XML 인덱스<br /><br /> 선택적 XML 인덱스<br /><br /> 보조 선택적 XML 인덱스|  
 |**path_id**|**int**|보조 선택적 XML 인덱스를 제외한 모든 XML 인덱스의 경우 NULL입니다.<br /><br /> 보조 선택적 XML 인덱스의 경우 해당 인덱스가 작성된 승격 경로의 ID입니다. 이 값은 sys.selective_xml_index_paths 시스템 뷰의 path_id와 같은 값입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [개체 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [개체 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

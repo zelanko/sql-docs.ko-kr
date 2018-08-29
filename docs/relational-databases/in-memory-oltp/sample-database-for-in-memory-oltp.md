@@ -456,9 +456,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 샘플의 메모리 및 디스크 공간 사용률  
  아래에서는 예제 데이터베이스의 메모리 및 디스크 공간 사용률 측면에서 기대하는 것에 대해 설명합니다. 또한 논리적 코어가 16개인 테스트 서버에서 관찰한 결과도 보여 줍니다.  
   
-###  
-            <a name="Memoryutilizationforthememory-optimizedtables">
-            </a> 메모리 최적화 테이블의 메모리 사용률  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 메모리 최적화 테이블의 메모리 사용률  
   
 #### <a name="overall-utilization-of-the-database"></a>데이터베이스의 전체 사용률  
  다음 쿼리를 사용하여 시스템에서 메모리 내 OLTP의 총 메모리 사용률을 얻을 수 있습니다.  

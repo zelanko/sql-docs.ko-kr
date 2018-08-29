@@ -1,5 +1,5 @@
 ---
-title: sp_enumcustomresolvers (Transact SQL) | Microsoft Docs
+title: sp_enumcustomresolvers (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb49ae55f4bde2304713f4fd336076585a987904
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f0b23d39e365a27cc2734e7e051e431055a21f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993160"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032446"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="arguments"></a>인수  
  [  **@distributor =**] **'***배포자***'**  
- 사용자 지정 해결 프로그램이 있는 배포자의 이름입니다. *배포자* 은 **sysname**, 기본값은 NULL입니다. *이 매개 변수는 사용 되지 않으며 이후 릴리스에서 제거 됩니다.*  
+ 사용자 지정 해결 프로그램이 있는 배포자의 이름입니다. *배포자* 됩니다 **sysname**, 기본값은 NULL입니다. *이 매개 변수는 사용 되지 않으며 이후 릴리스에서 제거 됩니다.*  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -61,13 +61,13 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_enumcustomresolvers** 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_enumcustomresolvers**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_enumcustomresolvers**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

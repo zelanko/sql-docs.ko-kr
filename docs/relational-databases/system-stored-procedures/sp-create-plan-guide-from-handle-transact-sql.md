@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide_from_handle (Transact SQL) | Microsoft Docs
+title: sp_create_plan_guide_from_handle (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c57ad0976f2079fb1f5129b1cea59817157af01a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239383"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032973"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
 ## <a name="arguments"></a>인수  
  [ @name =] N'*plan_guide_name*'  
- 계획 지침의 이름입니다. 계획 지침 이름은 현재 데이터베이스 범위에 적용됩니다. *plan_guide_name* 에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md) 숫자 기호 시작할 수 없습니다 (#). 최대 길이 *plan_guide_name* 는 124 자입니다.  
+ 계획 지침의 이름입니다. 계획 지침 이름은 현재 데이터베이스 범위에 적용됩니다. *plan_guide_name* 에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md) 하며 숫자 기호를 사용 하 여 시작할 수 없습니다 (#). 최대 길이인 *plan_guide_name* 는 124 자입니다.  
   
  [ @plan_handle =] *plan_handle*  
- 계획 캐시의 일괄 처리를 식별합니다. *plan_handle* 은 **varbinary(64)** 합니다. *plan_handle* 에서 가져올 수는 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
+ 계획 캐시의 일괄 처리를 식별합니다. *plan_handle* 됩니다 **varbinary(64)** 합니다. *plan_handle* 에서 가져올 수 있습니다 합니다 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
   
  [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
- 지정 된 일괄 처리 안에 있는 문의 시작 위치를 식별 *plan_handle*합니다. *statement_start_offset* 은 **int**, 기본값은 NULL입니다.  
+ 지정 된 일괄 처리 안에 있는 문의 시작 위치를 식별 *plan_handle*합니다. *statement_start_offset* 됩니다 **int**, 기본값은 NULL입니다.  
   
- 문 오프셋의 statement_start_offset 열에 해당는 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
+ 문 오프셋 statement_start_offset 열에 해당 합니다 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
   
  NULL이 지정되거나 문 오프셋이 지정되지 않으면 지정한 계획 핸들에 대한 쿼리 계획을 사용하여 일괄 처리에서 각 문에 대해 계획 지침이 만들어집니다. 결과 계획 지침은 특정 계획을 강제로 사용하게 하는 USE PLAN 쿼리를 사용하는 계획 지침과 동일합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  계획 지침은 일부 문 유형에 대해 만들 수 없습니다. 일괄 처리의 문에 대해 계획 지침을 만들 수 없으면 저장 프로시저가 문을 무시하고 일괄 처리의 다음 문을 계속 수행합니다. 문이 같은 일괄 처리로 여러 번 수행되면 마지막 수행을 위한 계획이 활성화되고 문에 대한 이전 계획이 비활성화됩니다. 일괄 처리의 문은 계획 지침에 사용할 수 없습니다. 오류 10532이 발생하고 문이 실패합니다. 이 오류의 발생을 방지하려면 항상 sys.dm_exec_query_stats 동적 관리 뷰에서 계획 핸들을 가져오는 것이 좋습니다.  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle은 계획 캐시에 표시된 계획에 따라 계획 지침을 만듭니다. 이것은 일괄 처리 텍스트, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 XML 실행 계획을 문자 단위로 계획 캐시에서 결과 계획 지침으로 가져옵니다. 이러한 텍스트 문자열에는 중요한 정보가 포함될 수 있습니다. 이 경우 이러한 정보는 데이터베이스의 메타데이터에 저장됩니다. 적절 한 권한이 있는 사용자는 sys.plan_guides 카탈로그 뷰를 사용 하 여이 정보를 볼 수 있습니다 및 **계획 지침 속성** 대화 상자에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 중요한 정보가 계획 지침에서 공개되지 않게 하려면 계획 캐시에서 만든 계호기 지침을 검토하는 것이 좋습니다.  
+>  sp_create_plan_guide_from_handle은 계획 캐시에 표시된 계획에 따라 계획 지침을 만듭니다. 이것은 일괄 처리 텍스트, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 XML 실행 계획을 문자 단위로 계획 캐시에서 결과 계획 지침으로 가져옵니다. 이러한 텍스트 문자열에는 중요한 정보가 포함될 수 있습니다. 이 경우 이러한 정보는 데이터베이스의 메타데이터에 저장됩니다. 적절 한 권한이 있는 사용자는 sys.plan_guides 카탈로그 뷰를 사용 하 여이 정보를 볼 수는 **계획 지침 속성** 대화 상자 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 중요한 정보가 계획 지침에서 공개되지 않게 하려면 계획 캐시에서 만든 계호기 지침을 검토하는 것이 좋습니다.  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>쿼리 힌트 내에 여러 명령문에 대한 계획 지침 만들기  
  sp_create_plan_guide와 같이 sp_create_plan_guide_from_handle은 계획 캐시에서 대상 일괄 처리 또는 모듈에 대한 쿼리 계획을 제거합니다. 이 작업을 통해 모든 사용자가 새 계획 지침을 사용하여 시작할 수 있습니다. 단일 쿼리 계획 내에 여러 명령문에 대한 계획 지침을 만들 경우 명시적 트랜잭션에 모든 계획 지침을 만들어 캐시에서 계획 제거를 연기할 수 있습니다. 이 방법을 사용하여 트랜잭션이 완료되고 지정한 각 문에 대한 계획 지침을 만들 때까지 캐시에 계획이 남아 있게 할 수 있습니다. 예 B를 참조하십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다. 그리고 sp_create_plan_guide_from_handle을 사용하여 만든 각 계획 지침에 대해 개별 권한이 필요합니다. OBJECT 유형의 계획 지침을 만들려면 참조된 개체에 ALTER 권한이 있어야 합니다. SQL 또는 TEMPLATE 유형의 계획 지침을 만들려면 현재 데이터베이스에 대한 ALTER 권한이 있어야 합니다. 만들어질 계획 지침 유형을 확인하려면 다음 쿼리를 실행하십시오.  
   
 ```  
@@ -125,8 +125,8 @@ GO
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

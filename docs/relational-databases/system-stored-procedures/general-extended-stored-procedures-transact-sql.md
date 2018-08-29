@@ -20,16 +20,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], extended
 - extending SQL Server functionality
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6e58e179fc8565af00eeb871dec5979e84893676
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36cb807f60d4472cf6f029cdc6999c2bee57ca99
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990575"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034366"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>일반 확장 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

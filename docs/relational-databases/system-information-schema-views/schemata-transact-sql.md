@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SCHEMATA view
 - SCHEMATA view
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c8892f5fb2a584368567793f5bc52b23b810b52
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 06b4cb93e86a872d1b8d3c0542097dd091d0c0cd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558293"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070822"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "39558293"
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|현재 데이터베이스의 이름입니다.|  
 |**SCHEMA_NAME**|**nvarchar(** 128 **)**|스키마 이름을 반환합니다.|  
-|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|스키마 소유자의 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 신뢰할 수 있는 유일한 개체 스키마 검색 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|스키마 소유자의 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 신뢰할 수 있는 유일한 개체 스키마 검색 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|항상 NULL을 반환합니다.|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|기본 문자 집합의 이름을 반환합니다.|  

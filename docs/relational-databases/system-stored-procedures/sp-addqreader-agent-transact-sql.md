@@ -1,5 +1,5 @@
 ---
-title: sp_addqreader_agent (Transact SQL) | Microsoft Docs
+title: sp_addqreader_agent (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d89800f8eeaa7c960b636f93555009cbc87c028f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3e67683fe75f555b58acf09cb2b1bee939d7151
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990668"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034714"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,34 +48,34 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
   
 ## <a name="arguments"></a>인수  
  [ **@job_login**=] **'***job_login***'**  
- 에이전트 실행에 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)**, 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
+ 에이전트 실행에 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
   
  [ **@job_password**=] **'***job_password***'**  
- 에이전트 실행에 사용되는 Windows 계정의 암호입니다. *job_password* 은 **sysname**, 기본값은 없습니다.  
+ 에이전트 실행에 사용되는 Windows 계정의 암호입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다.  
   
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 최상의 보안을 위해 런타임에 로그인 이름과 암호를 제공해야 합니다.  
   
  [ **@job_name**=] **'***job_name***'**  
- 기존 에이전트 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 에이전트가 만들어지는 경우에만 지정됩니다.  
+ 기존 에이전트 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 에이전트가 만들어지는 경우에만 지정됩니다.  
   
  [  **@frompublisher=** ] *frompublisher*  
- 프로시저가 게시자에서 실행되는지 여부를 지정합니다. *frompublisher* 는 bit 이며 기본값은 **0**합니다. 값이 **1** 프로시저가 게시 데이터베이스의 게시자에서 실행 되 고 있음을 의미 합니다.  
+ 프로시저가 게시자에서 실행되는지 여부를 지정합니다. *frompublisher* 는 bit 이며 기본값은 **0**합니다. 값이 **1** 프로시저가 게시 데이터베이스의 게시자에서 실행 될 것임을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_addqreader_agent** 트랜잭션 복제에 사용 됩니다.  
   
- **sp_addqreader_agent** 지연 업데이트 한 후 원하는 배포자에서 한 번 이상 실행 해야 [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 하기 전에 [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)합니다.  
+ **sp_addqreader_agent** 지연 후 업데이트를 지 원하는 배포자에서 한 번 이상 실행 해야 합니다 [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 하기 전에 [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)합니다.  
   
- 실행할 때 큐 판독기 에이전트 작업이 제거 되 [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)합니다.  
+ 큐 판독기 에이전트 작업을 실행할 때 제거 됩니다 [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_addqreader_agent**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_addqreader_agent**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
  [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_describe_parameter_encryption (Transact SQL) | Microsoft 문서
+title: sp_describe_parameter_encryption (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_describe_parameter_encryption
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7593c3ba25b97b97d3191a10f5d4506fbaa2a494
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 75f1fdb4a6d67e1e7e760361f0b28a281bee0339
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542943"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073942"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>인수  
- [ \@tsql =] Transact-SQL_batch'  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 거래 SQL_batch nvarchar(n) 또는 nvarchar(max) 수 있습니다.  
+ [ \@tsql =] ' Transact-SQL_batch'  
+ 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. Transact SQL_batch nvarchar (n) 또는 nvarchar (max) 수 있습니다.  
   
- [ \@매개 변수 =] N'parameters의  
- *\@매개 변수* sp_executesql 비슷한 Transact SQL 일괄 처리에 대 한 매개 변수 선언 문자열을 제공 합니다. 매개 변수는 nvarchar (n) 또는 nvarchar (max) 수 있습니다.  
+ [ \@params =] N'parameters'  
+ *\@params* TRANSACT-SQL 일괄 처리는 sp_executesql과 비슷하게 매개 변수에 대 한 선언 문자열을 제공 합니다. 매개 변수는 nvarchar (n) 또는 nvarchar (max) 수 있습니다.  
   
- 하는 하나의 문자열에 포함 된 모든 매개 변수의 정의 포함 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다  *\@params*합니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다  *\@params* 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ 에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch 합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다  *\@params*합니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다  *\@params* 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
 ## <a name="return-value"></a>반환 값  
  0은 성공을 나타냅니다. 다른 작업 실패를 나타냅니다.  
@@ -69,7 +69,7 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|결과 집합에서 행의 id입니다.|  
 |**database_id**|**int**|데이터베이스 id입니다.|  
-|**column_encryption_key_id**|**int**|열 암호화 키 id입니다. 참고:이 id 표시 행에 있는 [sys.column_encryption_keys &#40;Transact SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 카탈로그 보기.|  
+|**column_encryption_key_id**|**int**|열 암호화 키 id입니다. 참고:이 id의 행을 나타냅니다 합니다 [sys.column_encryption_keys &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 카탈로그 뷰에 있습니다.|  
 |**column_encryption_key_version**|**int**|나중에 사용하도록 예약되어 있습니다. 현재 1 항상 포함 됩니다.|  
 |**column_encryption_key_metadata_version**|**binary(8)**|열 암호화 키의 생성 시간을 나타내는 타임 스탬프입니다.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|열 암호화 키의 암호화 된 값입니다.|  
@@ -83,13 +83,13 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|결과 집합에서 행의 id입니다.|  
 |**parameter_name**|**sysname**|지정 된 매개 변수 중 하나의 이름을 합니다  *\@params* 인수입니다.|  
-|**column_encryption_algorithm**|**tinyint**|매개 변수 열에 대해 구성 하는 암호화 알고리즘을 나타내는 코드에 해당 합니다. 현재 지원 되는 값은: 2 **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
+|**column_encryption_algorithm**|**tinyint**|매개 변수 열에 대해 구성 하는 암호화 알고리즘을 나타내는 코드에 해당 합니다. 현재 지원 되는 값: 2 **AEAD_AES_256_CBC_HMAC_SHA_256**합니다.|  
 |**column_encryption_type**|**tinyint**|매개 변수 열에 대 한 구성 암호화 종류를 나타내는 코드에 해당 합니다. 지원 되는 값은 다음과 같습니다.<br /><br /> 0 – 일반 텍스트 (열이 암호화 되지 않습니다.)<br /><br /> 1 – 임의 암호화<br /><br /> 2-결정적 암호화 합니다.|  
 |**column_encryption_key_ordinal**|**int**|코드의 첫 번째 결과의 행을 설정합니다. 에 해당 하는 매개 변수, 참조 되는 행의 열에 대해 구성 된 열 암호화 키를 설명 합니다.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|버전 번호 형식 정규화 알고리즘입니다.|  
   
 ## <a name="remarks"></a>Remarks  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항상 암호화를 지 원하는 클라이언트 드라이버를 자동으로 호출 합니다. **sp_describe_parameter_encryption** 암호화 메타 데이터 응용 프로그램에서 발급 하는 매개 변수가 있는 쿼리를 검색할 수 있습니다. 이후에, 드라이버 암호화 메타 데이터를 사용 하 여 상시 암호화로 보호 된 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고 암호화를 사용 하 여 응용 프로그램에 제출 된 일반 텍스트 매개 변수 값을 대체 데이터베이스 엔진에 쿼리를 보내기 전에 매개 변수 값입니다.  
+ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상시 암호화 지원 클라이언트 드라이버를 자동으로 호출 **sp_describe_parameter_encryption** 응용 프로그램에서 발급 한 매개 변수가 있는 쿼리에 대 한 암호화 메타 데이터를 검색 합니다. 이후에, 드라이버 암호화 메타 데이터를 사용 하 여 상시 암호화로 보호 된 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고 암호화를 사용 하 여 응용 프로그램에 제출 된 일반 텍스트 매개 변수 값을 대체 데이터베이스 엔진에 쿼리를 보내기 전에 매개 변수 값입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** 하 고 **VIEW ANY COLUMN MASTER KEY DEFINITION** 데이터베이스의 권한.  

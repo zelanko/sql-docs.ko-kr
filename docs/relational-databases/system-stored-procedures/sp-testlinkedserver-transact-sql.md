@@ -1,5 +1,5 @@
 ---
-title: sp_testlinkedserver (Transact SQL) | Microsoft Docs
+title: sp_testlinkedserver (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_testlinkedserver
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 059f4056b418122c3ee8b89c17dea99909677ce2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b03253014b198a83d2c9516fd7fa3e09ce16fbab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243519"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032803"
 ---
 # <a name="sptestlinkedserver-transact-sql"></a>sp_testlinkedserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@servername =** ]*서버 이름*  
- 연결된 서버의 이름입니다. *servername* 은 **sysname**, 기본값은 없습니다.  
+ [  **@servername =** ]*servername*  
+ 연결된 서버의 이름입니다. *servername* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한이 선택되어 있지 않지만 호출자는 적절한 로그인 매핑이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -67,7 +67,7 @@ sp_testlinkedserver SEATTLESales;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addlinkedsrvlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   

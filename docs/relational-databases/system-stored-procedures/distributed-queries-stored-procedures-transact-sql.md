@@ -1,5 +1,5 @@
 ---
-title: 분산 쿼리 저장된 프로시저 (Transact SQL) | Microsoft Docs
+title: 분산 쿼리 저장된 프로시저 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], distributed queries
 - distributed queries [SQL Server], stored procedures
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5fe30603627276fc0d8c43b59634f67d049d9643
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d70636377a5a5913d8b9c6c8944725820f3d58c4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237571"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030635"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>분산 쿼리 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "33237571"
 |[sp_dropserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
 |[sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

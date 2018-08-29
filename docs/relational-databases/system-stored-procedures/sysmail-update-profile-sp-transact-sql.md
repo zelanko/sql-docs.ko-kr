@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a1b6d810355590ddc69c0b57fa0fc3e24e461696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4cbd14af00e8a2c4858c611b051cc0bc03a1993
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259653"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030645"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +45,29 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 ## <a name="arguments"></a>인수  
  [ **@profile_id** = ] *profile_id*  
- 업데이트할 프로필 ID입니다. *profile_id* 은 **int**, 기본값은 NULL입니다. 중 하나 이상을 *profile_id* 또는 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
+ 업데이트할 프로필 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 하나 이상의 *profile_id* 하거나 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
   
  [ **@profile_name** = ] **'***profile_name***'**  
- 업데이트할 프로필의 이름 또는 프로필의 새 이름입니다. *profile_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나 이상을 *profile_id* 또는 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
+ 업데이트할 프로필의 이름 또는 프로필의 새 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하나 이상의 *profile_id* 하거나 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
   
  [ **@description** =] **'***설명***'**  
- 프로필에 대한 새 설명입니다. *설명* 은 **nvarchar (256)**, 기본값은 NULL입니다.  
+ 프로필에 대한 새 설명입니다. *설명* 됩니다 **nvarchar(256)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  프로필 ID와 프로필 이름을 둘 다 지정하면 프로시저가 프로필 이름을 제공된 이름으로 변경하고 프로필에 대한 설명을 업데이트합니다. 이 인수 중 하나만 제공할 경우 프로시저는 프로필에 대한 설명을 업데이트합니다.  
   
- 저장된 프로시저 **sysmail_update_profile_sp** 에 **msdb** 데이터베이스에 있으며가 소유 하 고는 **dbo** 스키마입니다. 현재 데이터베이스 없는 경우 세 부분으로 이루어진 이름으로 프로시저를 실행 해야 **msdb**합니다.  
+ 저장된 프로시저 **sysmail_update_profile_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
   
-## <a name="permissions"></a>Permissions  
- 실행의 구성원에 게이 프로시저 기본값에 대 한 권한을 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 이 프로시저 기본의 멤버에 대 한 권한을 실행 합니다 **sysadmin** 고정된 서버 역할입니다.  
   
 ## <a name="examples"></a>예  
  **A. 프로필 설명 변경**  
   
- 다음 예제에서는 명명 된 프로필에 대 한 설명을 변경 `AdventureWorks Administrator` 에 **msdb** 데이터베이스입니다.  
+ 다음 예제에서는 라는 프로필에 대 한 설명을 변경 `AdventureWorks Administrator` 에 **msdb** 데이터베이스입니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -87,10 +86,10 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Profile to send alert e-mail to operators.';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [데이터베이스 메일 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category_subscription (Transact SQL) | Microsoft Docs
+title: sp_syspolicy_add_policy_category_subscription (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c3e5f4079a75fca4112da1185a941b3a77e6b85
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6006c4cbcbd33b4881faf4399cee082a4891ceda
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253122"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030914"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +47,28 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
 ## <a name="arguments"></a>인수  
  [ **@target_type=** ] **'***target_type***'**  
- 범주 구독의 대상 유형입니다. *target_type* 은 **sysname**필요 하 고 'DATABASE'로 설정 되어야 합니다.  
+ 범주 구독의 대상 유형입니다. *target_type* 됩니다 **sysname**고, 필요 하며, 'DATABASE'로 설정 되어야 합니다.  
   
  [  **@target_object=** ] **'***target_object***'**  
- 범주를 구독할 데이터베이스의 이름이입니다. *target_object* 은 **sysname**, 이며 필수입니다.  
+ 범주를 구독할 데이터베이스의 이름이입니다. *target_object* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
   
  [  **@policy_category=** ] **'***policy_category***'**  
- 구독할 정책 범주의 이름이입니다. *policy_category* 은 **sysname**, 이며 필수입니다.  
+ 구독할 정책 범주의 이름이입니다. *policy_category* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
   
- 에 대 한 값을 가져오려면 *policy_category*, msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
+ 값을 얻으려면 *policy_category*, msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**를 출력으로 반환 됩니다.  
+ 범주 구독의 식별자입니다. *policy_category_subscription_id* 됩니다 **int**, 이며 OUTPUT으로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_add_policy_category_subscription은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  없는 정책 범주를 지정하면 새 정책 범주가 만들어지고 저장 프로시저를 실행할 때 모든 데이터베이스에 대해 구독이 위임됩니다. 이후에 새 범주의 위임된 구독을 제거하면 *target_object*로 지정한 데이터베이스에 대해서만 구독이 적용됩니다. 위임된 구독 설정을 변경하는 방법은 [sp_syspolicy_update_policy_category&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저는 현재 저장 프로시저 소유자의 컨텍스트에서 실행됩니다.  
   
 ## <a name="examples"></a>예  
@@ -83,9 +82,9 @@ EXEC msdb.dbo.sp_syspolicy_add_policy_category_subscription @target_type = N'DAT
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [정책 기반 관리 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [정책 기반 관리 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription은 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_unsubscribe_from_policy_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

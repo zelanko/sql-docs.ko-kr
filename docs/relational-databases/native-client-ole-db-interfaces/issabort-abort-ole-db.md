@@ -19,13 +19,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23e7cca6868d61b6a26901b6542732a60776a0e2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fb9e2731c16773606f0b045ca004d520348e34b5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562830"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072076"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "39562830"
   
 **ISSAbort** 인터페이스에 노출 되는 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 제공 합니다 **issabort:: Abort** 메서드는 현재 행 집합 및 모든 명령을 취소 하는 데 사용 되는 일괄 처리 명령을 사용 하 여 처음에 행 집합을 생성 및 실행을 아직 완료 되지 않은 합니다.  
   
- **ISSAbort** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자별 인터페이스를 사용 하 여 사용 가능한 **QueryInterface** 에 **IMultipleResults** 반환한 개체 ** Icommand:: Execute** 나 **iopenrowset:: Openrowset**합니다.  
+ **ISSAbort** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자별 인터페이스를 사용 하 여 사용 가능한 **QueryInterface** 에 **IMultipleResults** 반환한 개체  **Icommand:: Execute** 나 **iopenrowset:: Openrowset**합니다.  
   
 ## <a name="syntax"></a>구문  
   

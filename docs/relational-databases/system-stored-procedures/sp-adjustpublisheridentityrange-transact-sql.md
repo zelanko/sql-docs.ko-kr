@@ -1,5 +1,5 @@
 ---
-title: sp_adjustpublisheridentityrange (Transact SQL) | Microsoft Docs
+title: sp_adjustpublisheridentityrange (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8d39485c2ed9519353a2175fa4e127a5900b0e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb3d39fd2c1f4369af598af1c593ea530150d2ab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987188"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032781"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +47,28 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 새 ID 범위가 다시 할당되는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다.  
+ 새 ID 범위가 다시 할당되는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@table_name=**] **'***table_name***'**  
- 새 ID 범위가 다시 할당되는 테이블의 이름입니다. *table_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 새 ID 범위가 다시 할당되는 테이블의 이름입니다. *table_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@table_owner=**] **'***table_owner***'**  
- 게시자에서 테이블의 소유자입니다. *table_owner* 은 **sysname**, 기본값은 NULL입니다. 경우 *table_owner* 를 지정 하지 않으면 현재 사용자의 이름이 사용 됩니다.  
+ 게시자에서 테이블의 소유자입니다. *table_owner* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *table_owner* 지정 하지 않으면 현재 사용자의 이름이 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_adjustpublisheridentityrange** 모든 유형의 복제에 사용 됩니다.  
   
- 자동 ID 범위를 사용할 수 있는 게시인 경우 배포 에이전트 또는 병합 에이전트는 해당 임계값에 기반하여 게시의 ID 범위를 자동으로 조정하는 역할을 합니다. 그러나 어떤 이유로 든에 대 한 배포 에이전트 또는 병합 에이전트가 실행 되지 않은 시간 기간에 대 한 id 범위 리소스 도달할 때까지 사용한 지점 임계값으로 하는 경우 사용자가 호출할 수 **sp_adjustpublisheridentityrange** 게시자에 대 한 값의 새 범위를 할당 합니다.  
+ 자동 ID 범위를 사용할 수 있는 게시인 경우 배포 에이전트 또는 병합 에이전트는 해당 임계값에 기반하여 게시의 ID 범위를 자동으로 조정하는 역할을 합니다. 그러나 어떤 이유로 배포 에이전트 또는 병합 에이전트 실행 하지 않은 기간에 대 한 id 범위 리소스를 임계값 지점 많이 소비 될 경우 사용자가 호출할 수 있습니다 **sp_adjustpublisheridentityrange** 게시자에 대 한 새 범위의 값을 할당 합니다.  
   
- 실행할 때 **sp_adjustpublisheridentityrange**, 어느 *게시* 또는 *table_name* 지정 해야 합니다. 두 가지 모두 지정하거나 둘 다 지정하지 않은 경우 오류가 반환됩니다.  
+ 실행할 때 **sp_adjustpublisheridentityrange**하거나, *게시* 하거나 *table_name* 지정 해야 합니다. 두 가지 모두 지정하거나 둘 다 지정하지 않은 경우 오류가 반환됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_adjustpublisheridentityrange**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_adjustpublisheridentityrange**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

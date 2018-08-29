@@ -1,5 +1,5 @@
 ---
-title: sp_drop_agent_parameter (Transact SQL) | Microsoft Docs
+title: sp_drop_agent_parameter (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21c04d3e2661608e6dd2f6d1f64826fd0d0f2d8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e97721099ee3abe6d6afc9e9dabaa363e9842d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988488"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032050"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  하나 또는 모든 매개 변수에서 프로필에서 삭제 된 **MSagent_parameters** 테이블입니다. 이 저장 프로시저는 에이전트가 실행되고 있는 모든 데이터베이스의 배포자에서 실행될 수 있습니다.  
+  프로필에서 하나 또는 모든 매개 변수를 삭제 합니다 **MSagent_parameters** 테이블입니다. 이 저장 프로시저는 에이전트가 실행되고 있는 모든 데이터베이스의 배포자에서 실행될 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,21 +47,21 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>인수  
  [  **@profile_id=**] *profile_id*  
- 매개 변수를 삭제할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 없습니다.  
+ 매개 변수를 삭제할 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@parameter_name=**] **'***p a r a***'**  
- 삭제할 매개 변수의 이름입니다. *p a r a* 은 **sysname**, 기본값은 **%** 합니다. 경우 **%**, 지정된 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
+ [  **@parameter_name=**] **'***parameter_name***'**  
+ 삭제할 매개 변수의 이름입니다. *parameter_name* 됩니다 **sysname**, 기본값은 **%** 합니다. 하는 경우 **%**, 지정된 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_drop_agent_parameter** 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_drop_agent_parameter**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_drop_agent_parameter**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (Transact SQL) | Microsoft Docs
+title: sp_helpmergefilter (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996040"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030819"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
- 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 **%**, 모든 아티클의 이름을 반환 하는 합니다.  
+ 아티클의 이름입니다. *문서* 는 **sysname**, 기본값은 **%**, 모든 아티클의 이름을 반환 합니다.  
   
  [  **@filtername=**] **'***filtername***'**  
- 정보를 반환할 필터의 이름입니다. *filtername* 은 **sysname**, 기본값은 **%**, 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
+ 정보를 반환할 필터의 이름입니다. *filtername* 됩니다 **sysname**, 기본값은 **%**, 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -62,26 +62,26 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|조인 필터 ID입니다.|  
 |**filtername**|**sysname**|필터의 이름입니다.|  
-|**조인 아티클의 이름**|**sysname**|조인 아티클의 이름입니다.|  
+|**조인 아티클 이름**|**sysname**|조인 아티클의 이름입니다.|  
 |**join_filterclause**|**nvarchar(2000)**|조인을 한정하는 필터 절입니다.|  
 |**join_unique_key**|**int**|고유 키에 조인이 설정되어 있는지를 지정합니다.|  
 |**기본 테이블 소유자**|**sysname**|기본 테이블 소유자의 이름입니다.|  
 |**기본 테이블 이름**|**sysname**|기본 테이블의 이름입니다.|  
-|**조인 테이블 소유자입니다.**|**sysname**|기본 테이블에 조인되는 테이블 소유자의 이름입니다.|  
+|**조인 테이블 소유자**|**sysname**|기본 테이블에 조인되는 테이블 소유자의 이름입니다.|  
 |**조인 테이블 이름**|**sysname**|기본 테이블에 조인되는 테이블의 이름입니다.|  
-|**아티클 이름**|**sysname**|기본 테이블에 조인되는 테이블 아티클의 이름입니다.|  
-|**filter_type**|**tinyint**|병합 필터의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **1** = 조인 필터만<br /><br /> **2** = 논리적 레코드 관계<br /><br /> **3** = 둘 다|  
+|**문서 이름**|**sysname**|기본 테이블에 조인되는 테이블 아티클의 이름입니다.|  
+|**filter_type**|**tinyint**|병합 필터의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **1** = 조인 필터만<br /><br /> **2** = 논리적 레코드 관계<br /><br /> **3** = 모두|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergefilter** 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helpmergefilter**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpmergefilter**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
