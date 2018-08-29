@@ -17,22 +17,22 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddafa3150bff469209eff2f8166da0b831787506
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 52ba9962b6192ce6ba6a403d35e3ff9559786c1f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984265"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774470"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자를 사용하면 전체 텍스트 인덱스를 만들어 데이터베이스 테이블에서 텍스트 기반 열에 대해 전체 텍스트 검색을 수행할 수 있습니다. 전체 텍스트 인덱스는 일반 인덱스를 기반으로 하므로 먼저 일반 인덱스를 만들어야 합니다. 일반 인덱스는 null이 아닌 단일 열에 대해 작성해야 하며, 값이 큰 열보다 값이 작은 열을 선택하는 것이 좋습니다.  
   
 > [!NOTE]  
-> 전체 텍스트 인덱스를 만들려면 우선 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 나 엔터프라이즈 관리자와 같은 외부 도구를 사용하여 데이터베이스의 전체 텍스트 카탈로그를 만들어야 합니다.  
+> 전체 텍스트 인덱스를 만들려면 우선 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 나 엔터프라이즈 관리자와 같은 외부 도구를 사용하여 데이터베이스의 전체 텍스트 카탈로그를 만들어야 합니다.  
   
 > [!NOTE]  
-> [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 일부 버전에서는 전체 텍스트 인덱스 기능을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)을 참조하세요.  
+> [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서는 전체 텍스트 인덱스 기능을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)을 참조하세요.  
   
 ## <a name="options"></a>Options  
 **선택한 전체 텍스트 인덱스**  
@@ -54,7 +54,7 @@ ms.locfileid: "38984265"
 현재 전체 텍스트 인덱스가 저장되어 있는 전체 텍스트 카탈로그의 이름을 표시합니다. 인덱스를 다른 카탈로그에 저장하려면 카탈로그 이름을 클릭하고 드롭다운 목록에서 다른 이름을 선택합니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 나 엔터프라이즈 관리자 같은 외부 도구를 사용하여 카탈로그를 먼저 만들어야 합니다.  
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 나 엔터프라이즈 관리자 같은 외부 도구를 사용하여 카탈로그를 먼저 만들어야 합니다.  
   
 **ID 범주**  
 확장하면 현재 인덱스의 이름 필드가 표시됩니다.  

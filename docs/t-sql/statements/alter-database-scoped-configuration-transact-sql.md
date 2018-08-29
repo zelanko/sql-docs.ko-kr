@@ -25,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041941"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409543"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -242,7 +242,7 @@ WHEN_SUPPORTED
   
 **DacFx**  
   
- ALTER DATABASE SCOPED CONFIGURATION은 SQL Server 2016부터 시작하는 Azure SQL Database 및 SQL Server의 새로운 기능입니다. 이는 데이터베이스 스키마에 영향을 주고, 스키마의 내보내기(데이터와 함께 또는 데이터 없이)를 이전 버전의 SQL Server(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)])로 가져올 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.  
+ ALTER DATABASE SCOPED CONFIGURATION은 SQL Server 2016부터 시작하는 Azure SQL Database 및 SQL Server의 새로운 기능입니다. 이는 데이터베이스 스키마에 영향을 주고, 스키마의 내보내기(데이터와 함께 또는 데이터 없이)를 이전 버전의 SQL Server(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)])로 가져올 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 또는 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.  
 
 **ELEVATE_ONLINE** 
 

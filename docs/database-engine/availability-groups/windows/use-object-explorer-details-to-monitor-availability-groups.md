@@ -19,19 +19,19 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9cbcb449c2e8d1705093ca40c21244e3cb7eb056
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770189"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409424"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 **의** 개체 탐색기 정보 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 창을 사용하여 기존 Always On 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  개체 탐색기 정보 창을 사용하는 방법은 [개체 탐색기 정보 창](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)을 참조하세요.  
+>  개체 탐색기 정보 창을 사용하는 방법은 [개체 탐색기 정보 창](../../../ssms/object/object-explorer-details-pane.md)을 참조하세요.  
   
 -   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   

@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216934"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40411023"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -543,7 +543,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  클러스터형 인덱스를 만들 때 테이블에 대한 FILESTREAM 데이터의 위치를 지정합니다. FILESTREAM_ON 절에서 FILESTREAM 데이터를 다른 FILESTREAM 파일 그룹 또는 파티션 구성표로 이동할 수 있습니다.  
   
@@ -606,7 +606,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  FILESTREAM  
    
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  **varbinary(max)** 열에 대해서만 유효합니다. **varbinary(max)** BLOB 데이터에 대한 FILESTREAM 저장소를 지정합니다.  
   

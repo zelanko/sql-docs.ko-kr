@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036400"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411013"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
 
-이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 스파크라인 차트와 함께 기본 테이블을 만듭니다.   
+이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 스파크라인 차트와 함께 기본 테이블을 만듭니다.   
   
 스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 대개 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에서 테이블과 행렬로 표시됩니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
   

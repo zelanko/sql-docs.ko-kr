@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951818"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406111"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 에이전트, JobSteps 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951818"
   
  아래 표에는 **SQLAgent:JobSteps** 카운터가 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |**Active steps**|이 카운터는 현재 실행 중인 작업 단계 수를 보고합니다.|  
 |**Queued steps**|이 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행될 준비가 되어 있지만 아직 실행이 시작되지 않은 작업 단계 수를 보고합니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "32951818"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |--------------|-----------------|  
 |**_Total**|모든 작업 단계에 대한 정보입니다.|  
 |**ActiveScripting**|**ActiveScripting** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  
@@ -57,8 +57,8 @@ ms.locfileid: "32951818"
 |**TSQL**|[!INCLUDE[tsql](../../includes/tsql-md.md)]을 실행하는 작업 단계에 대한 정보입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [작업 단계 관리](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [성능 개체 사용](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [작업 단계 관리](../../ssms/agent/manage-job-steps.md)   
+ [성능 개체 사용](../../ssms/agent/use-performance-objects.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

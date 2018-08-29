@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948398"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410391"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948398"
      **보고 및 로깅** 대화 상자를 표시합니다. 이 대화 상자에 대한 자세한 내용은 아래를 참조하세요.  
   
      **서버**  
-     하위 계획 태스크를 실행할 서버를 선택하는 데 사용되는 **서버** 대화 상자를 표시합니다. 이 옵션은 다중 서버 환경의 마스터 서버에서만 사용할 수 있습니다. 자세한 내용은 [다중 서버 환경 만들기](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) 및 [유지 관리 계획&#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)을 참조하세요.  
+     하위 계획 태스크를 실행할 서버를 선택하는 데 사용되는 **서버** 대화 상자를 표시합니다. 이 옵션은 다중 서버 환경의 마스터 서버에서만 사용할 수 있습니다. 자세한 내용은 [다중 서버 환경 만들기](../../ssms/agent/create-a-multiserver-environment.md) 및 [유지 관리 계획&#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)을 참조하세요.  
   
      **이름**  
      유지 관리 계획 이름을 표시합니다. 새 유지 관리 계획의 경우 유지 관리 계획 디자이너가 열리기 전에 나타나는 대화 상자에서 이름을 지정합니다. 유지 관리 계획의 이름을 바꾸려면 개체 탐색기에서 해당 계획을 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  

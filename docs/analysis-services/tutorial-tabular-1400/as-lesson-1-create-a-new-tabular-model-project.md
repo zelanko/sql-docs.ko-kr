@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 1: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 403e6d04d339e3126afe964bd919304d04295c0b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007131"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43108672"
 ---
 # <a name="create-a-tabular-model-project"></a>테이블 형식 모델 프로젝트 만들기
 
@@ -24,7 +24,7 @@ ms.locfileid: "38007131"
   
 이 단원에 소요되는 예상 시간: **10분**  
   
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 문서는 테이블 형식 모델 제작 자습서의에서 첫 번째 단원입니다. 이 단원을 완료 하려면 몇 가지 필수 구성 요소 전체 할 수 있습니다. 자세한 내용은 참조 하세요 [Analysis Services-Adventure Works 자습서](../tutorial-tabular-1400/as-adventure-works-tutorial.md)합니다.  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 041b08244a94ebb9a8ae8f377591e35ba5046819
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297369"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410043"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "36297369"
 5.  `DISABLE_PARAMETER_SNIFFING` 힌트를 사용하도록 쿼리를 다시 작성합니다. `OPTION(RECOMPILE)`, `WITH RECOMPILE` 또는 `OPTIMIZE FOR <value>`를 사용하는 경우 외에는 매개 변수 검색을 완전히 사용하지 않도록 설정하므로 지역 변수 기술을 사용하는 것과 결과가 같습니다.
 
 > [!TIP] 
-> [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 계획 분석 기능을 활용하면 이로 인해 문제가 발생하는지 빠르게 식별할 수 있습니다. 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)를 참조하세요.
+> [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 계획 분석 기능을 활용하면 이로 인해 문제가 발생하는지 빠르게 식별할 수 있습니다. 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)를 참조하세요.
 
 ## <a name="MissingIndexes"></a> 누락된 인덱스
 

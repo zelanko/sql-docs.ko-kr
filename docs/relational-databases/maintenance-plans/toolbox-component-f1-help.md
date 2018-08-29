@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c2e4f0eb18863a51fc7fa1b81870ff74ed47ca7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f888ef097c3377d61dbac91a0d448e08b77baa1b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942478"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411030"
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "32942478"
  Integration Services용 Azure 기능 팩에는 Azure 데이터 원본 및 태스크에 연결하여 일반적인 Azure 작업을 수행할 수 있는 연결 관리자가 포함되어 있습니다. 도구 상자에 이러한 항목을 추가하려면 기능 팩을 설치하세요. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [도구 상자 사용](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
+ [도구 상자 사용](../../ssms/use-the-toolbox.md)   
  [도구 상자 항목 선택&#40;유지 관리 태스크 페이지&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   
   

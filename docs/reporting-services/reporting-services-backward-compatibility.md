@@ -20,12 +20,12 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 947d4664d042818d7955f45252d2986accd86f8d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 447bf776d24143cb14423987234d8f898de5a193
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982795"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410508"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services의 이전 버전과의 호환성
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]동작의 변경된 내용에 대해 알아봅니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다.
@@ -36,10 +36,10 @@ ms.locfileid: "38982795"
   
 |항목|설명|  
 |-----------|-----------------|  
-|[SQL Server 2016에서 SQL Server Reporting Services에 지원 되지 않는 기능](http://msdn.microsoft.com/d529cc96-3483-480b-9bfc-bd28b1d0ef52)|이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 있지만 나중 버전에서 제거된 기능을 설명합니다.|  
-|[SQL Server 2016의 SQL Server Reporting Services에서 사용되지 않는 기능](http://msdn.microsoft.com/3876c01e-f81d-4cce-9104-5106a8c369e6)|이전 버전과의 호환성을 위해 이 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 유지되었지만 나중 버전의 SQL Server에서는 제거될 기능을 설명합니다.|  
-|[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](http://msdn.microsoft.com/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]로 업그레이드할 때 발생할 수 있는 문제에 대해 설명합니다.|  
-|[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경](http://msdn.microsoft.com/2a767f0f-84f2-4099-8784-1e37790f858e)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 변경된 기능을 설명합니다.|  
+|[SQL Server 2016에서 SQL Server Reporting Services에 지원 되지 않는 기능](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 있지만 나중 버전에서 제거된 기능을 설명합니다.|  
+|[SQL Server 2016의 SQL Server Reporting Services에서 사용되지 않는 기능](deprecated-features-in-sql-server-reporting-services-ssrs.md)|이전 버전과의 호환성을 위해 이 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 유지되었지만 나중 버전의 SQL Server에서는 제거될 기능을 설명합니다.|  
+|[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]로 업그레이드할 때 발생할 수 있는 문제에 대해 설명합니다.|  
+|[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 변경된 기능을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [이전 버전과의 호환성 | Analysis Services](http://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
