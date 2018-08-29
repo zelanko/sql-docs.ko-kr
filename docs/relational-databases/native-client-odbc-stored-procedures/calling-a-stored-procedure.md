@@ -21,13 +21,13 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2ab28794100ad3a47fbc5ce8c891f255927e0a01
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7ef4c821f9fbcd1697e89f5d27025079950a6700
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558773"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094980"
 ---
 # <a name="calling-a-stored-procedure"></a>저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "39558773"
   
  {[**?=**]**call***procedure_name*[([*parameter*][**,**[* parameter*]]...)]}  
   
- 위치 *포함* 프로시저의 이름을 지정 하 고 *매개 변수* 프로시저 매개 변수를 지정 합니다. 명명된 매개 변수는 ODBC CALL 이스케이프 시퀀스를 사용하는 문에서만 지원됩니다.  
+ 여기서 *procedure_name* 프로시저의 이름을 지정 하 고 *매개 변수* 프로시저 매개 변수를 지정 합니다. 명명된 매개 변수는 ODBC CALL 이스케이프 시퀀스를 사용하는 문에서만 지원됩니다.  
   
  프로시저는 0개 이상의 매개 변수를 가질 수 있고 값(구문 시작에 나오는 선택적 매개 변수 표식인 ?=로 표시됨)을 반환할 수도 있습니다. 매개 변수가 입력 또는 입/출력 매개 변수인 경우 리터럴 또는 매개 변수 표식을 사용할 수 있습니다. 매개 변수가 출력 매개 변수인 경우에는 출력을 알 수 없기 때문에 매개 변수 표식을 사용해야 합니다. 매개 변수 표식을 사용 하 여 바인딩되어야 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 프로시저 호출 하기 전에 문이 실행 됩니다.  
   
  입력 및 입/출력 매개 변수는 프로시저 호출에서 생략할 수 있습니다. 매개 변수 없이 괄호만 지정하여 프로시저를 호출하면 드라이버는 첫 번째 매개 변수에 기본값을 사용하도록 데이터 원본에 지시합니다. 예를 들어:  
   
- {**호출** * 포함 ***()**}  
+ {**호출** * * procedure_name **()**}  
   
  프로시저에 매개 변수가 없으면 프로시저가 실패할 수 있습니다. 괄호 없이 프로시저를 호출하면 드라이버는 아무 매개 변수 값도 보내지 않습니다. 예를 들어:  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_bindrule (Transact SQL) | Microsoft 문서
+title: sp_bindrule (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 15576737e238ebd81d36e1ab2ff3090f6aa30791
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 610bd8a1676bc732c887c92b1a291d4254614e0e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560723"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110591"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,26 +55,26 @@ sp_bindrule [ @rulename = ] 'rule' ,
  [  **@objname=**] **'***object_name***'**  
  규칙을 바인딩할 테이블 및 열 또는 별칭 데이터 형식입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
   
- *object_name* 는 **nvarchar(776)** 없습니다. 경우 *object_name* 는 한 부분 이름 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열 상속 *규칙* 규칙 열에 직접 바인딩된 경우를 제외 합니다.  
+ *object_name* 됩니다 **nvarchar(776)** 기본값은 없습니다. 하는 경우 *object_name* 은 한 부분으로 이루어진 이름, 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열 상속 *규칙* 규칙 열에 직접 바인딩된 경우를 제외 합니다.  
   
 > [!NOTE]  
->  *object_name* 는 대괄호를 포함할 수 있습니다 **[** 및 **]** 문자를 구분된 식별자 문자로. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
+>  *object_name* 대괄호를 포함할 수 있습니다 **[** 하 고 **]** 구분된 식별자 문자로 문자입니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
 > [!NOTE]  
 >  별칭 데이터 형식을 사용하는 식에 대해 만든 규칙을 열이나 별칭 데이터 형식에 바인딩할 수 있지만 이들 규칙을 참조할 때 컴파일할 수 없습니다. 별칭 데이터 형식에 대해 만든 규칙을 사용하지 마십시오.  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 규칙을 별칭 데이터 형식에 바인딩하는 경우에만 사용합니다. *future_only_flag* 는 **varchar(15)** 기본값은 NULL입니다. 이 매개 변수 설정 하면 **futureonly** 별칭 데이터 형식의 기존 열 새 규칙을 상속 하는 것을 금지 합니다. 경우 *futureonly_flag* 이 NULL 이면 새 규칙이 바인딩되어 있는 현재 규칙이 없거나 별칭 데이터 형식의 기존 규칙을 사용 하는 별칭 데이터 형식의 열입니다.  
+ 규칙을 별칭 데이터 형식에 바인딩하는 경우에만 사용합니다. *future_only_flag* 됩니다 **varchar(15)** 이며 기본값은 NULL입니다. 이 매개 변수 설정 하면 **futureonly** 별칭 데이터 형식의 기존 열 새 규칙을 상속 하는 것을 금지 합니다. 하는 경우 *futureonly_flag* 가 null 인 경우 새 규칙을 현재 규칙이 없거나 별칭 데이터 형식의 기존 규칙을 사용 하는 별칭 데이터 형식의 열에 바인딩되어 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>Remarks  
- (CHECK 제약 조건을 사용 하는 것이 좋습니다) 하지만 열에 새 규칙을 바인딩할 수 있는 별칭 데이터 형식 또는 **sp_bindrule** 는 기존 규칙의 바인딩을 해제 하지. 이 경우 이전 규칙은 무시됩니다. 기존의 CHECK 제약 조건으로 규칙이 열에 바인딩된 경우에는 모든 제한이 평가됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 규칙을 바인딩할 수 없습니다.  
+ (CHECK 제약 조건을 사용 하는 것이 좋습니다) 하지만 열에 새 규칙을 바인딩할 수 있습니다 또는 사용 하 여 별칭 데이터 형식 **sp_bindrule** 없이 기존 규칙을 바인딩 해제 합니다. 이 경우 이전 규칙은 무시됩니다. 기존의 CHECK 제약 조건으로 규칙이 열에 바인딩된 경우에는 모든 제한이 평가됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 규칙을 바인딩할 수 없습니다.  
   
  규칙은 바인딩 시점이 아니라 INSERT 문을 시도할 때 적용되며 열에 문자 규칙을 바인딩할 수 있습니다 **숫자** 삽입 작업이 유효 하지 않지만 데이터 형식이 있습니다.  
   
- 별칭 데이터 형식의 기존 열 경우 새 규칙을 상속 *futureonly_flag* 로 지정 된 **futureonly**. 별칭 데이터 형식으로 정의된 새 열은 항상 규칙을 상속합니다. 그러나 ALTER TABLE 문의 ALTER COLUMN 절이 열의 데이터 형식을 규칙에 바인딩된 별칭 데이터 형식으로 변경하는 경우에는 데이터 형식에 바인딩된 규칙이 열에 상속되지 않습니다. 규칙이 특히에 연결 해야 열을 사용 하 여 **sp_bindrule**.  
+ 별칭 데이터 형식의 기존 열 하지 않는 한 새 규칙을 상속할 *futureonly_flag* 으로 지정 됩니다 **futureonly**합니다. 별칭 데이터 형식으로 정의된 새 열은 항상 규칙을 상속합니다. 그러나 ALTER TABLE 문의 ALTER COLUMN 절이 열의 데이터 형식을 규칙에 바인딩된 별칭 데이터 형식으로 변경하는 경우에는 데이터 형식에 바인딩된 규칙이 열에 상속되지 않습니다. 규칙 특히 바인딩되어야 열을 사용 하 여 **sp_bindrule**합니다.  
   
  관련된 정보에 추가 됩니다 열에 규칙을 바인딩하면 해당 **sys.columns** 테이블. 관련된 정보는 추가 별칭 데이터 형식에 규칙을 바인딩하면 해당 **sys.types** 테이블.  
   
@@ -94,7 +93,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>2. 별칭 데이터 형식에 규칙 바인딩  
- `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. 형식의 기존 열 `ssn` 상속도 `rule_ssn` 제외 규칙 **futureonly** 에 지정 된 *futureonly_flag*, 또는 `ssn` 에 직접 바인딩된 규칙이. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
+ `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. 형식의 기존 열 `ssn` 상속 합니다 `rule_ssn` 규칙을 하지 않는 한 **futureonly** 에 대해 지정 된 *futureonly_flag*, 또는 `ssn` 직접 바인딩한 규칙이 있는 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
   
 ```  
 USE master;  
@@ -112,7 +111,7 @@ EXEC sp_bindrule rule_ssn, 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>4. 구분 식별자 사용  
- 다음 예제에서는 구분 식별자를 사용 하 여 *object_name* 매개 변수입니다.  
+ 다음 예제에서 구분된 식별자의 사용을 보여 줍니다 *object_name* 매개 변수입니다.  
   
 ```  
 USE master;  

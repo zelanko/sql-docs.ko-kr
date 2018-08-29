@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS view
 - REFERENTIAL_CONSTRAINTS view
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1732ea37cf7a6f84ef2f3a09c9c94fba9413fdfc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2844927e05c33c38134432918027cd2902091374
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39555663"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43106281"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39555663"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|제약 조건 한정자입니다.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|제약 조건이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|제약 조건이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**제약 조건 이름**|**sysname**|제약 조건 이름입니다.|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|UNIQUE 제약 조건의 한정자입니다.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|UNIQUE 상수가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|UNIQUE 상수가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|UNIQUE 제약 조건입니다.|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|참조 제약 일치 조건이며 항상 SIMPLE을 반환합니다. 이는 일치 조건을 정의하지 않음을 의미합니다. 다음 중 하나가 TRUE인 경우에 조건이 일치하는 것으로 간주됩니다.<br /><br /> 외래 키 열에서 적어도 하나의 값이 NULL인 경우<br /><br /> 외래 키 열의 모든 값이 NULL이 아니며 기본 키 테이블에 키가 일치하는 행이 있는 경우|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 현재 제약 조건에서 정의한 참조 무결성을 위반하는 경우에 수행되는 동작입니다. 다음 중 하나를 반환합니다. <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> 현재 제약 조건의 ON UPDATE에 대해 NO ACTION이 지정된 경우에는 제약 조건에서 참조되는 기본 키 업데이트가 외래 키로 전파되지 않습니다. 적어도 하나의 외래 키가 같은 값을 포함하여 기본 키의 해당 업데이트가 참조 무결성을 위반하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 부모 테이블 및 참조하는 테이블에 대해 어떠한 변경 사항도 적용하지 않습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 발생합니다.<br /><br /> 현재 제약 조건의 ON UPDATE에 대해 CASCADE가 지정된 경우에는 기본 키 값에 대한 모든 변경 사항이 자동으로 외래 키 값으로 전파됩니다.|  

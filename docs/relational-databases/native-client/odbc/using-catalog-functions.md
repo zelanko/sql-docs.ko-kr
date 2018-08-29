@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 18e2196decf03103fab153bab8e2770c455353b8
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 35c37bfb4273fbebc7a5c970df2d6594aead753f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542883"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43086547"
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "39542883"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버를 사용 하면 ODBC 카탈로그 함수 호출을 통해 데이터베이스 구조를 결정 하는 응용 프로그램입니다. 카탈로그 함수는 결과 집합에 정보를 반환하며 카탈로그의 시스템 테이블을 쿼리하는 카탈로그 저장 프로시저를 사용하여 구현됩니다. 예를 들어 응용 프로그램은 시스템의 모든 테이블이나 특정 테이블의 모든 열에 대한 정보를 포함하는 결과 집합을 요청할 수 있습니다. 표준 ODBC 카탈로그 함수는 응용 프로그램이 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 카탈로그 정보를 가져오는 데 사용됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 단일 쿼리를 통해 여러 다른 유형의 OLE DB 데이터 원본에 있는 데이터에 액세스하는 분산 쿼리를 지원합니다. 원격 OLE DB 데이터 원본에 액세스하는 방법 중 하나는 데이터 원본을 연결된 서버로 정의하는 것입니다. 사용 하 여이 작업을 수행할 수 있습니다 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). 연결된 서버를 정의하면 Transact-SQL 문에서 네 부분으로 된 이름을 사용하여 해당 서버의 개체를 참조할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 단일 쿼리를 통해 여러 다른 유형의 OLE DB 데이터 원본에 있는 데이터에 액세스하는 분산 쿼리를 지원합니다. 원격 OLE DB 데이터 원본에 액세스하는 방법 중 하나는 데이터 원본을 연결된 서버로 정의하는 것입니다. 사용 하 여 이렇게 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)합니다. 연결된 서버를 정의하면 Transact-SQL 문에서 네 부분으로 된 이름을 사용하여 해당 서버의 개체를 참조할 수 있습니다.  
   
  *linked_server_name.catalog.schema.object_name*.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "39542883"
   
      연결된 서버에 포함되어 있는 카탈로그 목록을 반환합니다.  
   
- 연결 된 서버 이름 및 카탈로그 이름을 추가한 후의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버는 두 부분 이름을 사용 하 여 카탈로그에서 정보 가져오기 지원 *linked_server_name ***.*** 카탈로그* 에 대 한 *카탈로그 이름* 에서 다음 ODBC 카탈로그 함수:  
+ 연결된 된 서버 이름 및 카탈로그 이름을 설정한 후 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보를 가져오는 지원 *linked_server_name ***.*** 카탈로그* 에 대 한 *CatalogName* 에서 다음 ODBC 카탈로그 함수:  
   
 -   **SQLColumnPrivileges**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "39542883"
   
 -   **SQLTables**  
   
- 2 부 *linked_server_name ***.*** 카탈로그* 에 지원 됩니다 *FKCatalogName* 및 *PKCatalogName* 에서 [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ 두 부분 *linked_server_name ***.*** 카탈로그* 에 지원 됩니다 *FKCatalogName* 하 고 *PKCatalogName* 온 [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)합니다.  
   
  SQLLinkedServers 및 SQLLinkedCatalogs를 사용하려면 다음 파일이 필요합니다.  
   

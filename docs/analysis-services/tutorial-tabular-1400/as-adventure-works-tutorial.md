@@ -1,6 +1,6 @@
 ---
 title: Analysis Services Adventure Works 자습서 (1400) | Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28aa401eb037fecadca17ededf041ab82a4bc498
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7abd968db3aacbb71ed238e3f6ae6b857c8b1d99
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042451"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084716"
 ---
-# <a name="tabular-modeling-1400-compatibility-level"></a>테이블 형식 모델링 (1400 호환성 수준)
+# <a name="tabular-modeling-1400-compatibility-level"></a>테이블 형식 모델링(1400 호환성 수준)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "38042451"
   
 -   테이블 형식 모델을 배포 하는 방법에 **Azure Analysis Services** 서버 또는 **SQL Server 2017 Analysis Services** SSDT를 사용 하 여 서버.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 
 이 자습서를 완료 하려면 다음을 수행 해야 합니다.  
   

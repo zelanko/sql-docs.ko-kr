@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437693"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118581"
 ---
-# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>SQL Server Machine Learning Services (In-database) Windows에서 설치 
+# <a name="install-sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017부터 SQL Server Machine Learning Services, SQL Server 2016에 도입 된 R Services 기능에 대 한 후속 데이터베이스 내 분석에 대 한 R 및 Python 지원이 제공 됩니다. 함수 라이브러리 R 및 Python에 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트 실행. 
@@ -100,7 +100,7 @@ SQL Server 2017부터 SQL Server Machine Learning Services, SQL Server 2016에 �
 
 7. 설치가 완료 되 면 컴퓨터를 다시 시작 하 라는 메시지가 표시 되는 경우 지금 합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
 
-## <a name="bkmk_enableFeature"></a>외부 스크립트 실행을 사용 하도록 설정
+## <a name="bkmk_enableFeature"></a>스크립트 실행 활성화
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
 

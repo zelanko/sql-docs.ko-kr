@@ -15,13 +15,13 @@ ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 970d6c575766c614b0ab650c19290095220b3433
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09406c0f90dbe456da64b1edf34f3331f897a97d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548113"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111147"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 ODBC API 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -17,19 +17,19 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e2febda8a84ca1d8479b0139947683f70a23658
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 91627601d466971f4201913584b3f7b47a717a85
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562887"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083858"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 합니다 *CatalogName*, *TableName*, 또는 *ColumnName* 매개 변수입니다. **SQLFetch** 잘못 된 값은이 매개 변수에서 사용 하는 경우 SQL_NO_DATA를 반환 합니다.  
+  **SQLColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 합니다 *CatalogName*, *TableName*, 또는 *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
   
 > [!NOTE]  
 >  큰 값 형식의 경우 모든 길이 매개 변수는 SQL_SS_LENGTH_UNLIMITED 값으로 반환됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys.registered_search_properties (TRANSACT-SQL) | Microsoft 문서
+title: sys.registered_search_properties (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -28,13 +28,13 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a174f95ef4c6519c88002ca7393c0d5b1123e4a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79fddbbaa06dc5486b08a1c7209d5952b1a10dcd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541573"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43107146"
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

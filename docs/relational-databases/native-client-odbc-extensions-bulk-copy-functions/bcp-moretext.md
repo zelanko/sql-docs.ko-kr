@@ -1,5 +1,5 @@
 ---
-title: bcp_moretext | Microsoft 문서
+title: bcp_moretext | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33f53b7933b5c3ae516589fe083a5a1bfd9c7a9a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 44f346d44a20ba01fbe6ecbc5df233eb697e33b6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548503"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093364"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ RETCODE bcp_moretext (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- 이 함수를 함께에서 사용할 수 있습니다 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 하 고 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 값을 복사 긴 가변 길이 데이터를 보다 작은 많은 청크로 SQL server입니다. **bcp_moretext** 다음 SQL Server 데이터 형식의 열에 사용할 수 있습니다: **텍스트**를 **ntext**를 **이미지**, **varchar (max) **하십시오 **nvarchar (max)**, **varbinary (max)**, 사용자 정의 형식 (UDT) 및 XML입니다. **bcp_moretext** 데이터 변환을 지원 하지 않습니다, 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
+ 이 함수를 함께에서 사용할 수 있습니다 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 하 고 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 값을 복사 긴 가변 길이 데이터를 보다 작은 많은 청크로 SQL server입니다. **bcp_moretext** 다음 SQL Server 데이터 형식의 열에 사용할 수 있습니다: **텍스트**를 **ntext**를 **이미지**, **varchar (max)** 하십시오 **nvarchar (max)**, **varbinary (max)**, 사용자 정의 형식 (UDT) 및 XML입니다. **bcp_moretext** 데이터 변환을 지원 하지 않습니다, 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
   
  하는 경우 **bcp_bind** 가 null이 아닌 호출 *pData* 에서 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext**를 **bcp_sendrow** 보냅니다 길이 관계 없이 전체 데이터 값입니다. 그러나 If, **bcp_bind** NULL이 포함 되어 *pData* 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext** 에서성공적인반환후에즉시데이터를복사할수**bcp_sendrow** 나타내는 데이터가 있는 바인딩된 모든 열이 처리 되었습니다.  
   

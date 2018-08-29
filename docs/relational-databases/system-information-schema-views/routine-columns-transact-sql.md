@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINE_COLUMNS view
 - INFORMATION_SCHEMA.ROUTINE_COLUMNS view
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ca7c277ab96cfc12a44b6b650f5f28a1821c08b5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e976804e34e7074b23f89ba8c61eeb46a7d3d9e7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557663"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110466"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39557663"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|테이블 반환 함수의 카탈로그 이름 또는 데이터베이스 이름입니다.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블 반환 함수가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블 반환 함수가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|테이블 반환 함수의 이름입니다.|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|열 이름입니다.|  
 |**ORDINAL_POSITION**|**int**|열 ID입니다.|  
@@ -60,7 +59,7 @@ ms.locfileid: "39557663"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
 |**데이터 정렬 이름**|**nvarchar(** 128 **)**|열이 문자 데이터 정렬에 대 한 고유 이름을 반환 하거나 **텍스트** 데이터 형식입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|열이 별칭 데이터 형식인 경우 이 열은 사용자 정의 데이터 형식이 생성된 데이터베이스 이름이 됩니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|열이 사용자 정의 데이터 형식인 경우 이 열은 사용자 정의 데이터 형식이 포함된 스키마의 이름이 됩니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|열이 사용자 정의 데이터 형식인 경우 이 열은 사용자 정의 데이터 형식이 포함된 스키마의 이름이 됩니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**DOMAIN_NAME**|**nvarchar(** 128 **)**|열이 사용자 정의 데이터 형식인 경우 이 열은 사용자 정의 데이터 형식의 이름이 됩니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

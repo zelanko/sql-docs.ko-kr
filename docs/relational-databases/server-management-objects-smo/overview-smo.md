@@ -15,13 +15,13 @@ caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 125c8ae22faabb7b32bb37ee1f8620dfd0cf815a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 489f2466c01ce32936eee06ac2fa51ab85b26848
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546743"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094471"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "39546743"
   
 -   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
--   SOAP 요청을 관리하기 위한 HTTP 끝점. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
+-   SOAP 요청을 관리하기 위한 HTTP 엔드포인트. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
   
 -   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 사용](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "39546743"
   
  **끝점**  
   
- SOAP 및 데이터베이스 미러링 요청은 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 끝점으로 처리됩니다.  
+ SOAP 및 데이터베이스 미러링 요청은 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 엔드포인트로 처리됩니다.  
   
  **스냅숏 격리/행 수준 버전 관리**  
   

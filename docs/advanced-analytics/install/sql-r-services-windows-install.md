@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 75e962b9be2acb1d44451081f0aef2bccd5a09fc
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437622"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118511"
 ---
-# <a name="install-sql-server-2016-r-services-in-database"></a>SQL Server 2016 R Services(In-Database) 설치 
+# <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 설치 및 구성 하는 방법 설명 **SQL Server 2016 R Services (In-database)** 합니다. SQL Server 2016에 있는 경우 SQL Server에서 R 코드의 실행을 사용 하도록 설정 하려면이 기능을 설치 합니다.
@@ -85,7 +85,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 7. 설치가 완료 되 면 컴퓨터를 다시 시작 하 라는 메시지가 표시 되는 경우 지금 합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
 
 
-##  <a name="bkmk_enableFeature"></a>외부 스크립트 실행을 사용 하도록 설정
+##  <a name="bkmk_enableFeature"></a>스크립트 실행 활성화
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
 

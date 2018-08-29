@@ -24,19 +24,19 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35fdd4d3407b31b00e1685f49f86b560b305b464
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 92f5069b41eec016eb599c6f4f43b1df744c6e6f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540123"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43086461"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   다음 그림에서는 서버 쪽 XML 서식 지정 아키텍처를 보여 줍니다.  
   
- ![서버 쪽 XML 서식 지정의 아키텍처입니다. ] (../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "아키텍처의 XML 서버 쪽 서식 지정 합니다.")  
+ ![서버 쪽 XML 서식 지정의 아키텍처입니다. ](../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "아키텍처의 XML 서버 쪽 서식 지정 합니다.")  
   
  이 예에서는 클라이언트에서 지정한 명령이 서버로 전송됩니다. 서버는 XML 문서를 생성하여 클라이언트로 반환합니다. 이 경우 서버 인스턴스가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 서버 쪽 XML 서식 지정을 사용하면 SQLXMLOLEDB 공급자나 SQLOLEDB 공급자를 사용할 수 있습니다.  SQLXMLOLEDB 공급자는 SQLXML 4.0에 포함된 Sqlxml4.dll을 사용합니다. SQLOLEDB 공급자를 사용하면 기본적으로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 또는 MDAC(Microsoft Data Access Components) 2.6 이상 버전에 포함된 Sqlxmlx.dll에서 제공되는 SQLXML 기능을 가져옵니다. SQLOLEDB로 Sqlxml4.dll을 사용 하려면 SQLOLEDB 연결 개체에서 "SQLXML.4.0" SQLXML Version 속성을 설정 해야 합니다. 두 경우 모두, 서버는 XML 문서를 생성하여 클라이언트로 보냅니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "39540123"
   
  다음 그림에서는 클라이언트 쪽 XML 서식 지정 아키텍처를 보여 줍니다.  
   
- ![클라이언트 쪽 XML 서식 지정의 아키텍처입니다. ] (../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "아키텍처의 XML 클라이언트 쪽 서식 지정 합니다.")  
+ ![클라이언트 쪽 XML 서식 지정의 아키텍처입니다. ](../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "아키텍처의 XML 클라이언트 쪽 서식 지정 합니다.")  
   
  이 예에서 클라이언트는 SQLXMLOLEDB 공급자를 사용합니다. 연결 문자열에서 데이터 공급자 속성은 SQLOLEDB로 설정 되어야 합니다. 이 값이 SQLXML 4.0에서 허용되는 유일한 값입니다. 클라이언트에서 실행된 명령은 서버로 전송되고, 서버에서 생성된 행 집합은 클라이언트로 전송됩니다. 행 집합의 XML 문서 서식은 클라이언트에서 지정됩니다.  
   

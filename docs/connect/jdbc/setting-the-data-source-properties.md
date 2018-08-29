@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9957a3273f2e33fea59560c4af30ec0315eea92
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 000d33df0320333e688051f1888659d152f62dde
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458027"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784282"
 ---
 # <a name="setting-the-data-source-properties"></a>데이터 원본 속성 설정
 
@@ -29,7 +29,7 @@ ms.locfileid: "39458027"
 
 일반적으로 응용 프로그램 서버 및 servlet/JSP 엔진과 같은 Java EE 제품을 사용하여 데이터베이스 액세스를 위한 데이터 원본을 구성할 수 있습니다. 구성으로 속성을 속성=값 쌍으로 입력할 수 있는 경우 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md) 항목에 소개한 속성을 지정할 수 있습니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 원본에 대한 자세한 내용은 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스를 참조하세요. SQLServerDataSource 클래스를 사용 하 여 연결할 수 있도록 하는 방법의 예는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스를 참조 하십시오 [데이터 원본 샘플](../../connect/jdbc/data-source-sample.md)합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 대한 자세한 내용은 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스를 참조하세요. SQLServerDataSource 클래스를 사용 하 여 연결할 수 있도록 하는 방법의 예는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 참조 하십시오 [데이터 원본 샘플](../../connect/jdbc/data-source-sample.md)합니다.
 
 ## <a name="see-also"></a>참고 항목
 

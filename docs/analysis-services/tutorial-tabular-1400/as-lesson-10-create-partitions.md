@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 10: 파티션 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 4bfa52e31f2e2fb46acf10bf6f6e02e7a15a3c15
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38017886"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43091331"
 ---
 # <a name="create-partitions"></a>파티션 만들기
 
@@ -24,7 +24,7 @@ ms.locfileid: "38017886"
   
 이 단원에 소요되는 예상 시간: **15분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 
 이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [9 단원: 계층 만들기](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)합니다.  
   

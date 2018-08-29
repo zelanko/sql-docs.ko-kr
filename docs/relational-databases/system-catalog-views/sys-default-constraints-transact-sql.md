@@ -1,5 +1,5 @@
 ---
-title: sys.default_constraints (Transact SQL) | Microsoft 문서
+title: sys.default_constraints (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.default_constraints catalog view
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 362006b22a60ab8c7e36ca7f3b8bbe513eb6c31c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 22165257f1f1ee291781fce5018b4b66df6b9e9f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561521"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087450"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39561521"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
-|**parent_column_id**|**int**|ID 열에 **parent_object_id** 이 기본이 속한.|  
+|**parent_column_id**|**int**|열 ID **parent_object_id** 속한이 기본값입니다.|  
 |**definition**|**nvarchar(max)**|이 기본값을 정의하는 SQL 식입니다.|  
 |**is_system_named**|**bit**|1 = 시스템에서 이름을 생성했습니다.<br /><br /> 0 = 사용자가 제공한 이름입니다.|  
   

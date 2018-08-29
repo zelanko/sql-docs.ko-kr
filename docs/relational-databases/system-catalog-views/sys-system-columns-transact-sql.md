@@ -1,5 +1,5 @@
 ---
-title: sys.system_columns (Transact SQL) | Microsoft 문서
+title: sys.system_columns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sys.system_columns catalog view
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b78df2c3c7512fa7b5d2699998b010efbcf7c0e1
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 80cf322c0a5835274afffc8d8c48e217b63d75dd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544003"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085005"
 ---
 # <a name="syssystemcolumns-transact-sql"></a>sys.system_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "39544003"
 |**column_id**|**int**|열의 ID입니다. 개체 내에서 고유합니다.<br /><br /> 열 ID는 순차적이지 않을 수 있습니다.|  
 |**system_type_id**|**tinyint**|열의 시스템 유형 ID입니다.|  
 |**user_type_id**|**int**|열의 유형에 대한 사용자 정의 ID입니다.<br /><br /> 연결할 형식의 이름을 반환할 합니다 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) 카탈로그 뷰에이 열입니다.|  
-|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열은 **max_length** 값은 16 또는 값에 의해 설정 됩니다 **sp_tableoption** 'text in row'.|  
+|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption** 'text in row'.|  
 |**전체 자릿수**|**tinyint**|숫자 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 0입니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우에는 열의 소수 자릿수이고, 그렇지 않으면 0입니다.|  
 |**collation_name**|**sysname**|문자 기반일 경우에는 열의 데이터 정렬 이름이고, 그렇지 않으면 NULL입니다.|  
@@ -60,8 +60,8 @@ ms.locfileid: "39544003"
 |**is_dts_replicated**|**bit**|1 = [!INCLUDE[ssIS](../../includes/ssis-md.md)]를 사용해 복제된 열입니다.|  
 |**is_xml_document**|**bit**|1 = 내용이 완전한 XML 문서입니다.<br /><br /> 0 = 내용이 문서 조각 이거나 열 데이터 형식이 아니므로 **xml**.|  
 |**xml_collection_id**|**int**|0이 아닌 열 데이터 형식이 면 **xml** XML를 입력 합니다. 이 값은 열의 유효성 검사 XML 스키마 네임스페이스가 들어 있는 컬렉션의 ID가 됩니다.<br /><br /> 0 = XML 스키마 컬렉션이 없습니다.|  
-|**default_object_id**|**int**|독립 실행형 될 기본 개체 ID [sys.sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md), 또는 열 수준 기본 제약 조건, 인라인. **parent_object_id** 인라인 열 수준 기본 개체의 열은 테이블 자체에 대 한 참조입니다. 또는 기본값이 없을 경우 0입니다.|  
-|**rule_object_id**|**int**|독립 실행형 규칙의 ID를 사용 하 여 열에 바인딩된 **sys.sp_bindrule**.<br /><br /> 0 = 독립 실행형 규칙이 없습니다.<br /><br /> 열 수준의 CHECK 제약 조건을 참조 하십시오. [sys.check_constraints &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|**default_object_id**|**int**|독립 실행형 인지에 관계 없이 기본 개체의 ID [sys.sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md), 또는 인라인 열 수준 DEFAULT 제약 조건입니다. 합니다 **parent_object_id** 인라인 열 수준 기본 개체의 열은 테이블 자체를 참조 합니다. 또는 기본값이 없을 경우 0입니다.|  
+|**rule_object_id**|**int**|독립 실행형 규칙의 ID를 사용 하 여 열에 바인딩된 **sys.sp_bindrule**합니다.<br /><br /> 0 = 독립 실행형 규칙이 없습니다.<br /><br /> 열 수준 CHECK 제약 조건 참조 [sys.check_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)합니다.|  
 |is_sparse|**bit**|1 = 열이 스파스 열입니다. 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.|  
 |is_column_set|**bit**|1 = 열이 열 집합입니다. 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.|  
 |generated_always_type|**tinyint**|열 형식을 나타내는 숫자 값입니다.<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
@@ -75,7 +75,7 @@ ms.locfileid: "39544003"
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

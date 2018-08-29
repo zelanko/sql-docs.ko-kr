@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sys.filegroups catalog view
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
 caps.latest.revision: 54
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 626256e237e776711f8fec7ae509461f5edb6692
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4b6f36ea3a44d6861d365b512beb815f7f34f8b0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542973"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094272"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39542973"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<열을 상속 >**|--|열이이 뷰를 상속 하는 목록이 참조 [sys.data_spaces &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
+|**\<열을 상속 >**|--|이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)합니다.|  
 |**filegroup_guid**|**uniqueidentifier**|파일 그룹의 GUID입니다.<br /><br /> NULL = PRIMARY 파일 그룹|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 값은 NULL입니다.|  
 |**is_read_only**|**bit**|1 = 읽기 전용 파일 그룹입니다.<br /><br /> 0 = 읽기/쓰기 파일 그룹입니다.|  

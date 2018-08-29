@@ -31,13 +31,13 @@ caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 02c6f11a2726d16c0961815eb01506ba3220a443
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 88b7eda2ead8d997c571d45f0fc41fddf3abd670
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533763"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110920"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|CONTRACT|  
 |AL|ALTER|DATABASE|  
 |AL|ALTER<br /> **T o 적용**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 고 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]입니다. |DATABASE SCOPED CREDENTIAL|
-|AL|ALTER|ENDPOINT|  
+|AL|ALTER|엔드포인트|  
 |AL|ALTER|FULLTEXT CATALOG|  
 |AL|ALTER|FULLTEXT STOPLIST|  
 |AL|ALTER|Login|  
@@ -169,7 +169,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
 |CL|CONTROL<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
-|CL|CONTROL|ENDPOINT|  
+|CL|CONTROL|엔드포인트|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
 |CL|CONTROL|Login|  
@@ -188,7 +188,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|User|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
-|CO|CONNECT|ENDPOINT|  
+|CO|CONNECT|엔드포인트|  
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
@@ -272,7 +272,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
 |TO|TAKE OWNERSHIP<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
-|TO|TAKE OWNERSHIP|ENDPOINT|  
+|TO|TAKE OWNERSHIP|엔드포인트|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
 |TO|TAKE OWNERSHIP|SEARCH PROPERTY LIST|  
@@ -299,7 +299,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
 |VW|VIEW DEFINITION<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
-|VW|VIEW DEFINITION|ENDPOINT|  
+|VW|VIEW DEFINITION|엔드포인트|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
 |VW|VIEW DEFINITION|Login|  

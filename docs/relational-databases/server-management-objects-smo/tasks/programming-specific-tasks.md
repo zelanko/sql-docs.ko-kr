@@ -23,13 +23,13 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d96fef819457de4710801ba3a77a3a053eb6c851
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 42e8aa2568d8422d012dfed871fbf2bc26181b86
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553083"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43109157"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "39553083"
 |[동의어 사용](../../../relational-databases/server-management-objects-smo/tasks/using-synonyms.md)|SMO에서 동의어를 만드는 방법에 대해 설명합니다.|  
 |[메시지 사용](../../../relational-databases/server-management-objects-smo/tasks/using-messages.md)|시스템 메시지를 사용하는 방법과 고유의 사용자 정의 메시지를 정의하는 방법에 대해 설명합니다.|  
 |[전체 텍스트 검색 구현](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|SMO에서 전체 텍스트 검색 카탈로그와 인덱스를 구현하는 방법에 대해 설명합니다.|  
-|[끝점 구현](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|데이터베이스 미러링, SOAP 요청 및 Service Broker에 대한 페이로드를 처리하는 끝점을 만드는 방법에 대해 설명합니다.|  
+|[엔드포인트 구현](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|데이터베이스 미러링, SOAP 요청 및 Service Broker에 대한 페이로드를 처리하는 엔드포인트를 만드는 방법에 대해 설명합니다.|  
 |[통계 생성 및 업데이트](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|SMO에서 데이터베이스에 통계를 설정하고 이를 모니터링하는 방법에 대해 설명합니다.|  
 |[이벤트 추적 및 재생](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|사용 하는 방법에 설명 합니다 **추적** 및 **재생** smo에서 개체를 추적 및 재생 이벤트를 합니다.|  
   
