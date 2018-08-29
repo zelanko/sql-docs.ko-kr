@@ -16,12 +16,12 @@ caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1715f116d875a0037a926ab36900e52701b7bf98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15828ee511caeb99e7fc6123edff84df3e9fca8c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921478"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406108"
 ---
 # <a name="back-up-database-general-page"></a>데이터베이스 백업(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "32921478"
 -   [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  데이터베이스 유지 관리 계획을 정의하여 데이터베이스 백업을 만들 수 있습니다. 자세한 내용은 [온라인 설명서의](http://msdn.microsoft.com/library/ms187658.aspx) 데이터베이스 유지 관리 계획 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 을 참조하세요.  
+    >  데이터베이스 유지 관리 계획을 정의하여 데이터베이스 백업을 만들 수 있습니다. 자세한 내용은 [온라인 설명서의](../maintenance-plans/maintenance-plans.md) 데이터베이스 유지 관리 계획 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 을 참조하세요.  
   
  **부분 백업을 만들려면**  
   
 -   부분 백업의 경우 PARTIAL 옵션과 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문을 사용해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
   
 ### <a name="source"></a>원본  
  **원본** 패널의 옵션은 데이터베이스를 식별하고 백업 작업에 대한 구성 요소 및 백업 유형을 지정합니다.  

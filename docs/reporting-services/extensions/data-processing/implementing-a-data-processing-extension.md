@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e4aaea407128642cb8ce9e8696eac0236cd60379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f1a83936f219fb95e03554383f6374b9f696f47
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015640"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406239"
 ---
 # <a name="implementing-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 집합을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합을 본떠서 만든 것입니다.  
@@ -59,9 +59,6 @@ ms.locfileid: "33015640"
   
  [데이터 처리 확장 프로그램 코드 디버깅](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  데이터 처리 확장 프로그램에서 코드를 디버깅하는 방법을 설명합니다.  
-  
- [데이터 처리 확장 프로그램 제거](../../../reporting-services/extensions/data-processing/removing-a-data-processing-extension.md)  
- 보고서 서버 또는 보고서 디자이너에서 데이터 처리 확장 프로그램을 제거하는 방법을 설명합니다.  
   
  완전히 구현된 데이터 처리 확장 프로그램 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   

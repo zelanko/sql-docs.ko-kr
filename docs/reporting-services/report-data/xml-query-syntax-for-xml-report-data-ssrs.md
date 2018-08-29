@@ -20,12 +20,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24dd0f5497d89f49234dc53e0ad71a7cf2e9ab47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d206256152536c562128072ceaf47b88fb78b0de
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021490"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410406"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 XML 데이터 원본에 대한 데이터 집합을 만들 수 있습니다. 데이터 원본을 정의한 후 데이터 집합에 대한 쿼리를 만듭니다. 데이터 원본이 가리키는 XML 데이터의 형식에 따라 XML **Query** 나 요소 경로를 포함하여 데이터 집합 쿼리를 만듭니다. XML **쿼리**는 **\<Query>** 태그로 시작하며 데이터 원본에 따라 달라지는 네임스페이스와 XML 요소를 포함합니다. 요소 경로는 네임스페이스로부터 독립적이며 기본 XML 데이터에서 사용할 노드 및 노드 특성을 XPath 형식 구문으로 지정합니다. 요소 경로에 대한 자세한 내용은 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)을 참조하세요.  
@@ -54,7 +54,7 @@ ms.locfileid: "33021490"
   
 -   URL 요청의 경우 쿼리 매개 변수는 표준 URL 매개 변수로 포함됩니다.  
   
--   웹 서비스 요청의 경우 쿼리 매개 변수는 웹 서비스 메서드에 전달됩니다. 쿼리 매개 변수를 정의하려면 **데이터 집합 속성** 대화 상자의 **매개 변수** 페이지를 사용합니다. 자세한 내용은 [데이터 집합 속성 대화 상자, 매개 변수](../../reporting-services/report-data/dataset-properties-dialog-box-parameters.md)를 참조하세요.  
+-   웹 서비스 요청의 경우 쿼리 매개 변수는 웹 서비스 메서드에 전달됩니다. 쿼리 매개 변수를 정의하려면 **데이터 집합 속성** 대화 상자의 **매개 변수** 페이지를 사용합니다. 
   
 ### <a name="example"></a>예제  
  다음 표의 예에서는 보고서 서버 웹 서비스, XML 문서 및 포함 XML 데이터에서 데이터를 검색하는 방법을 보여 줍니다.  

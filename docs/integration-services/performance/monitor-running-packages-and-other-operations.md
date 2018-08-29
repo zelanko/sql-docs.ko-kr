@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3be991897702d63aa505c3c18b4a86fed5f9840c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403125"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411044"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
   다음 도구 중 하나 이상을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행, 프로젝트 유효성 검사 및 기타 작업을 모니터링할 수 있습니다. 데이터 탭과 같은 일부 도구는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 프로젝트에 대해서만 사용할 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "35403125"
   
 |||  
 |-|-|  
-|Integration Services 초기화|1|  
+|Integration Services 초기화|@shouldalert|  
 |작업 정리(SQL 에이전트 작업)|2|  
 |프로젝트 버전 정리(SQL 에이전트 작업)|3|  
 |프로젝트 배포|101|  
@@ -184,7 +184,7 @@ ms.locfileid: "35403125"
 > [!NOTE]  
 >  **데이터베이스** 노드 아래의 **SSISDB** 노드에 사용자 지정 보고서를 추가한 경우에는 SSISDB 접두사가 필요하지 않습니다.  
   
- 사용자 지정 보고서를 만들고 추가하는 방법은 [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)를 참조하십시오.  
+ 사용자 지정 보고서를 만들고 추가하는 방법은 [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)를 참조하십시오.  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services 서버용 보고서 보기
   현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다.  보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](#reports)를 참조하세요.  

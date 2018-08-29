@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031470"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409407"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio의 Reporting Services(SSRS)
   보고서 서버 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 다음을 수행할 수 있습니다.  
   
 -   기능을 활성화하고 서버 기본값을 설정하며 실행 중인 작업을 관리합니다.  
   
--   보고서를 보고 사용자 지정 보고서를 만듭니다. 개체 탐색기의 많은 노드에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]와 함께 설치된 표준 보고서 집합이 표시됩니다. 관리자 권한이 있어야 합니다. 사용자 지정 보고서의 스키마가 설치된 보고서의 스키마와 일치해야 합니다. 자세한 내용은 [Management Studio의 사용자 지정 보고서](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) 및 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
+-   보고서를 보고 사용자 지정 보고서를 만듭니다. 개체 탐색기의 많은 노드에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]와 함께 설치된 표준 보고서 집합이 표시됩니다. 관리자 권한이 있어야 합니다. 사용자 지정 보고서의 스키마가 설치된 보고서의 스키마와 일치해야 합니다. 자세한 내용은 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md) 및 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
  보고서 작성자는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 다음을 수행합니다.  
   

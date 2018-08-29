@@ -14,12 +14,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020657"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406658"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Data Warehouse로 데이터 로드
 
@@ -33,7 +33,7 @@ SSIS(SQL Server Integration Services) 패키지를 만들어 [Azure SQL Data War
 
 ## <a name="basic-concepts"></a>기본 개념
 
-패키지는 SSIS의 작업 단위입니다. 관련된 패키지는 프로젝트에서 그룹화됩니다. SQL Server Data Tools를 사용하여 Visual Studio에서 프로젝트를 만들고 패키지를 디자인합니다. 디자인 프로세스는 도구 상자에서 디자인 화면으로 구성 요소를 끌어서 놓고, 연결하고, 해당 속성을 설정하는 시각적 프로세스입니다. 패키지를 완료한 후에 실행할 수 있고, 필요에 따라 포괄적인 관리, 모니터링 및 보안을 위해 SQL Server에 배포할 수 있습니다.
+패키지는 SSIS의 작업 단위입니다. 관련된 패키지는 프로젝트에서 그룹화됩니다. SQL Server Data Tools를 사용하여 Visual Studio에서 프로젝트를 만들고 패키지를 디자인합니다. 디자인 프로세스는 도구 상자에서 디자인 화면으로 구성 요소를 끌어서 놓고, 연결하고, 해당 속성을 설정하는 시각적 프로세스입니다. 패키지를 완료한 후에 실행할 수 있고, 필요에 따라 포괄적인 관리, 모니터링 및 보안을 위해 SQL Server 또는 SQL Database에 배포할 수 있습니다.
 
 SSIS에 대한 자세한 소개는 이 아티클의 범위를 벗어납니다. 자세히 알아보려면 다음 아티클을 참조하세요.
 
@@ -106,7 +106,7 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 이 자습서에서는 데이터 원본으로 SQL Server를 사용합니다. SQL Server는 온-프레미스 또는 Azure 가상 머신에서 실행됩니다.
 
-SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와 원본 및 대상 또는 OLE DB 연결 관리자와 원본 및 대상을 사용할 수 있습니다. 이 자습서에서는 구성 옵션이 가장 적기 때문에 ADO NET를 사용합니다. OLE DB는 ADO NET보다 약간 더 나은 성능을 제공할 수 있습니다.
+SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와 원본 및 대상 또는 OLE DB 연결 관리자와 원본 및 대상을 사용할 수 있습니다. 이 자습서에서는 구성 옵션이 가장 적기 때문에 ADO.NET을 사용합니다. OLE DB는 ADO NET보다 약간 더 나은 성능을 제공할 수 있습니다.
 
 바로 가기로 SQL Server 가져오기 및 내보내기 마법사를 사용하여 기본 패키지를 만들 수 있습니다. 그런 다음, 패키지를 저장하고 Visual Studio 또는 SSDT를 열어 보고 사용자 지정합니다. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
@@ -196,7 +196,7 @@ SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와
 8. **ADO.NET 대상 편집기**에서 **매핑** 탭을 선택하여 원본의 열이 대상의 열로 매핑되는 방법을 확인합니다.
    
     ![][13]
-9. **확인**을 클릭하여 데이터 원본 구성을 완료합니다.
+9. **확인**을 클릭하여 대상 구성을 완료합니다.
 
 ## <a name="run-the-package-to-load-the-data"></a>패키지를 실행하여 데이터 로드
 도구 모음의 **시작** 단추를 클릭하거나 **디버그** 메뉴의 **실행** 옵션 중 하나를 선택하여 패키지를 실행합니다.

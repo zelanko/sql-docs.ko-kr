@@ -17,12 +17,12 @@ caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9728613d59d3ae060d247431184d270ea759cbd6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c455f1e8925bc1e61c2786e3fc01290104a5555
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771709"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406547"
 ---
 # <a name="remove-log-shipping-sql-server"></a>로그 전달 제거(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "34771709"
   
 3.  로그 전달 주 서버에서 **sp_delete_log_shipping_primary_database** 를 실행하여 주 서버에서 로그 전달 구성에 대한 정보를 삭제합니다. 이렇게 하면 백업 작업도 삭제됩니다.  
   
-4.  로그 전달 주 서버에서 백업 작업을 사용하지 않도록 설정합니다. 자세한 내용은 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)을 참조하세요.  
+4.  로그 전달 주 서버에서 백업 작업을 사용하지 않도록 설정합니다. 자세한 내용은 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
   
 5.  로그 전달 보조 서버에서 복사 및 복원 작업을 사용하지 않도록 설정합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34771709"
   
 -   [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

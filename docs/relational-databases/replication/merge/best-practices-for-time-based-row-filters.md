@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52e7df29e98c3193d90c23f7cb63199721b1de6b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2c66f26fd27bd0f36161866ec0cf6e69b03bc752
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355445"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406746"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|Reception|112|2006-10-04|1|  
+|@shouldalert|Reception|112|2006-10-04|@shouldalert|  
 |2|Dinner|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
@@ -89,16 +89,16 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
-|3|Party|112|2006-10-11|1|  
-|4|Wedding|112|2006-10-12|1|  
+|@shouldalert|Reception|112|2006-10-04|0|  
+|2|Dinner|112|2006-10-10|@shouldalert|  
+|3|Party|112|2006-10-11|@shouldalert|  
+|4|Wedding|112|2006-10-12|@shouldalert|  
   
  이제 다음 주의 행사가 복제할 행사로 플래그가 지정됩니다. 다음에 행사 코디네이터 112가 사용하는 구독에 대해 병합 에이전트가 실행되면 행 2, 3 및 4는 구독자에 다운로드되고 행 1은 구독자에서 제거됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [GETDATE&#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
- [작업 구현](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [작업 구현](../../../ssms/agent/implement-jobs.md)   
  [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

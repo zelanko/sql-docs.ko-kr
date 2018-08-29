@@ -20,18 +20,18 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2459b8508cc7b69225b21aef96148978897d3ff7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f069527720dd29cf9491f9a42b6b0acfab66f28
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945719"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406639"
 ---
 # <a name="maintenance-plan-design-tab"></a>유지 관리 계획(디자인 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **유지 관리 계획(디자인 탭)** 을 사용하여 유지 관리 계획 및 해당 하위 계획의 속성을 지정할 수 있습니다. 도구 상자에서 계획 디자이너로 태스크를 끌어다 놓은 다음 태스크 그룹을 마우스 오른쪽 단추로 클릭하여 분기 실행 경로를 만듭니다. 유지 관리 계획은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 작업으로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지로 저장됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **하위 계획 추가**  
  구성할 수 있는 하위 계획을 추가합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32945719"
  유지 관리 계획 작업과 관련된 보고서를 관리하고 로컬 또는 원격 서버에 대한 로깅을 구성하는 데 사용되는 **보고 및 로깅** 대화 상자를 표시합니다.  
   
  **서버**  
- 하위 계획 태스크를 실행할 서버를 선택하는 데 사용되는 **서버** 대화 상자를 표시합니다. 이 옵션은 다중 서버 환경의 마스터 서버에서만 사용할 수 있습니다. 자세한 내용은 [다중 서버 환경 만들기](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)를 참조하세요.  
+ 하위 계획 태스크를 실행할 서버를 선택하는 데 사용되는 **서버** 대화 상자를 표시합니다. 이 옵션은 다중 서버 환경의 마스터 서버에서만 사용할 수 있습니다. 자세한 내용은 [다중 서버 환경 만들기](../../ssms/agent/create-a-multiserver-environment.md)를 참조하세요.  
   
  **이름**  
  유지 관리 계획 이름을 표시합니다. 새 유지 관리 계획의 경우 유지 관리 계획 디자이너가 열리기 전에 나타나는 대화 상자에서 이름을 지정합니다. 유지 관리 계획의 이름을 바꾸려면 개체 탐색기에서 해당 계획을 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  

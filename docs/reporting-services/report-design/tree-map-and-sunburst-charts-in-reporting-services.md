@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002945"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406734"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services의 트리 맵 및 선버스트 차트
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
   
 ##  <a name="bkmk_sample_data"></a> 샘플 AdventureWorks 데이터  
- 이 섹션은 데이터 원본 및 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]의 데이터 집합을 만들기 위한 샘플 쿼리 및 기본 단계를 포함하고 있습니다. 보고서가 이미 데이터 원본 및 데이터 집합을 포함하고 있는 경우 이 섹션을 건너뛸 수 있습니다.  
+ 이 섹션은 데이터 원본 및 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 데이터 집합을 만들기 위한 샘플 쿼리 및 기본 단계를 포함하고 있습니다. 보고서가 이미 데이터 원본 및 데이터 집합을 포함하고 있는 경우 이 섹션을 건너뛸 수 있습니다.  
   
  쿼리는 AdventureWorks 판매 주문 세부 정보 데이터를 판매 지역, 제품 범주, 제품 하위 범주 및 판매 이유 데이터와 함께 반환합니다.  
   

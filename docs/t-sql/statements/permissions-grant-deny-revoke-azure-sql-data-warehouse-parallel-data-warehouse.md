@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969285"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411828"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ REVOKE
  암시적 권한은 또한 포괄적 또는 상위 권한을 상속할 수도 있습니다. 예를 들어, 테이블에 대한 **UPDATE** 권한은 해당 테이블, 또는 해당 테이블의 **CONTROL** 권한을 포함하는 스키마의 **UPDATE** 권한을 가짐으로써 상속할 수 있습니다,  
   
 ### <a name="ownership-chaining"></a>소유권 체인  
- 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx)을 참조하세요.  
+ 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)을 참조하세요.  
   
 ## <a name="permission-list"></a>허가 목록  
   

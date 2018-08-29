@@ -3,22 +3,19 @@ title: 가용성 그룹에 대한 압축 튜닝 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-caps.latest.revision: 12
 author: MashaMSFT
-ms.author: v-saume
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ab713b7089f4c76214fe5e290196757cce43317
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9f70d290ce9d5abd66439d0110c66d35919457f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770939"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023422"
 ---
 # <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

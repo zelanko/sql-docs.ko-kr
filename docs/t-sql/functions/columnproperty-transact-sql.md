@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782594"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411017"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsCursorType**|프로시저 매개 변수가 CURSOR 형식입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsDeterministic**|열이 결정적입니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력 계산 열 또는 뷰 열이 아닙니다.|  
 |**IsFulltextIndexed**|열이 전체 텍스트 인덱싱을 위해 등록됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
-|**IsHidden**|시스템에서 생성된 열 값입니다. **sys.columns.is_hidden**에 해당합니다.|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0 = 숨기지 않음<br /><br /> 1 = 숨김|  
+|**IsHidden**|시스템에서 생성된 열 값입니다. **sys.columns.is_hidden**에 해당합니다.|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0 = 숨기지 않음<br /><br /> 1 = 숨김|  
 |**IsIdentity**|IDENTITY 속성을 사용하는 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsIdNotForRepl**|IDENTITY_INSERT 설정을 확인하는 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**IsIndexable**|열을 인덱싱할 수 있습니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
