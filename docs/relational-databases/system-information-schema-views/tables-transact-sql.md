@@ -18,17 +18,16 @@ helpviewer_keywords:
 - TABLES view
 - INFORMATION_SCHEMA.TABLES view
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 68671053cfdcaf56a434afdc99d081042e7d1e1e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b3c9f3f40330eb7d41e84e1231e42cd20c9212d1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556303"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43101166"
 ---
 # <a name="tables-transact-sql"></a>TABLES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39556303"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|테이블 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 신뢰할 수 있는 유일한 개체 스키마 검색 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다. INFORMATION_SCHEMA 뷰는 모든 새 기능을 반영하도록 업데이트되지 않으므로 완전하지 않을 수 있습니다.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 신뢰할 수 있는 유일한 개체 스키마 검색 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다. INFORMATION_SCHEMA 뷰는 모든 새 기능을 반영하도록 업데이트되지 않으므로 완전하지 않을 수 있습니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다.|  
 |**TABLE_TYPE**|**varchar (** 10 **)**|테이블 유형입니다. VIEW 또는 BASE TABLE이 될 수 있습니다.|  
   

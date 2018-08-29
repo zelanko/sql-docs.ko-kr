@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b4404c25500d6732db6f2346b1fdedb34e9bed8f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548893"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102020"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "39548893"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|카탈로그의 특정 이름입니다. 이 이름은 ROUTINE_CATALOG와 동일합니다.|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|스키마의 특정 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|스키마의 특정 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|카탈로그의 특정 이름입니다. 이 이름은 ROUTINE_NAME과 동일합니다.|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|함수의 카탈로그 이름입니다.|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|이 함수를 포함하는 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \* ** 개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|이 함수를 포함하는 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|함수의 이름입니다.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|저장 프로시저의 경우에는 PROCEDURE를, 함수의 경우에는 FUNCTION을 반환합니다.|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL 나중에 사용하도록 예약되어 있습니다.|  

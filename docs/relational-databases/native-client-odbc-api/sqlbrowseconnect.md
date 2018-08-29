@@ -17,13 +17,13 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ad3a4853ae82592b0c996ce8ca595cc1db315df
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 34565484d2a7b40a3502b3f7fb836a6ae0ee422c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541913"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104175"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,14 +55,14 @@ ms.locfileid: "39541913"
 |DATABASE|사용자 계정 컨트롤|사용자 계정 컨트롤|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름입니다.|  
 |LANGUAGE|사용자 계정 컨트롤|사용자 계정 컨트롤|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 국가별 언어입니다.|  
   
- **SQLBrowseConnect** 은 ODBC 데이터 원본 정의에 저장 된 데이터베이스 및 언어 키워드의 값을 무시 합니다. 데이터베이스 또는 연결 문자열에 지정 된 언어에 전달 하는 경우 **SQLBrowseConnect** 유효 하지 않은 경우 **SQLBrowseConnect** 수준 3 연결 특성 SQL_NEED_DATA를 반환 합니다.  
+ **SQLBrowseConnect** 은 ODBC 데이터 원본 정의에 저장 된 데이터베이스 및 언어 키워드의 값을 무시 합니다. 데이터베이스 또는 연결 문자열에 지정 된 언어에 전달 하는 경우 **SQLBrowseConnect** 올바르지 **SQLBrowseConnect** SQL_NEED_DATA 및 수준 3 연결 특성을 반환 합니다.  
   
  호출 하 여 설정 되는 다음 특성을 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)에서 반환한 결과 집합을 결정 합니다. **SQLBrowseConnect**.  
   
 |attribute|Description|  
 |---------------|-----------------|  
-|SQL_COPT_SS_BROWSE_CONNECT|를 SQL_MORE_INFO_YES로 설정 된 경우 **SQLBrowseConnect** 서버 속성의 확장 된 문자열을 반환 합니다.<br /><br /> 다음은 확장된에서 반환 된 문자열의 예로 **SQLBrowseConnect**.<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 이 문자열에서 세미콜론은 서버에 대한 다양한 정보 부분을 구분합니다. 서로 다른 서버 인스턴스를 구분하려면 쉼표를 사용합니다.|  
-|SQL_COPT_SS_BROWSE_SERVER|서버 이름을 지정 하는 경우 **SQLBrowseConnect** 지정한 서버에 대 한 정보를 반환 합니다. SQL_COPT_SS_BROWSE_SERVER는 NULL로 설정 된 경우 **SQLBrowseConnect** 도메인의 모든 서버에 대 한 정보를 반환 합니다.<br /><br /> <br /><br /> 네트워크 문제 때문에 **SQLBrowseConnect** 모든 서버 로부터 시기 적절 한 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 각 요청이 있을 때마다 다를 수 있습니다.|  
+|SQL_COPT_SS_BROWSE_CONNECT|Sql_more_info_yes로 설정 되어 있으면 **SQLBrowseConnect** 서버 속성의 확장된 문자열을 반환 합니다.<br /><br /> 다음은 확장된에서 반환 된 문자열의 예로 **SQLBrowseConnect**.<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 이 문자열에서 세미콜론은 서버에 대한 다양한 정보 부분을 구분합니다. 서로 다른 서버 인스턴스를 구분하려면 쉼표를 사용합니다.|  
+|SQL_COPT_SS_BROWSE_SERVER|서버 이름을 지정 하는 경우 **SQLBrowseConnect** 지정한 서버에 대 한 정보를 반환 합니다. SQL_COPT_SS_BROWSE_SERVER가 NULL로 설정 된 경우 **SQLBrowseConnect** 도메인의 모든 서버에 대 한 정보를 반환 합니다.<br /><br /> <br /><br /> 네트워크 문제 때문에 **SQLBrowseConnect** 모든 서버 로부터 시기 적절 한 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 각 요청이 있을 때마다 다를 수 있습니다.|  
 |SQL_COPT_SS_BROWSE_CACHE_DATA|SQL_COPT_SS_BROWSE_CACHE_DATA 특성이 SQL_CACHE_DATA_YES로 설정되었을 때 버퍼 길이가 결과를 저장하기에 부족한 경우 데이터를 청크로 인출할 수 있습니다. 이 길이 SQLBrowseConnect BufferLength 인수에 지정 됩니다.<br /><br /> 더 많은 데이터를 사용할 수 있을 때 SQL_NEED_DATA가 반환됩니다. 검색할 데이터가 더 없는 경우 SQL_SUCCESS가 반환됩니다.<br /><br /> 기본값은 SQL_CACHE_DATA_NO입니다.|  
   
 ## <a name="sqlbrowseconnect-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQLBrowseConnect 지원  

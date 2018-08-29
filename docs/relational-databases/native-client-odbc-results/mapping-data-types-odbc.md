@@ -22,13 +22,13 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1da5a84c56f27e1068c87ad4e988fdb96e1f22a3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a8a5b0b407e6e9713baa73474a9f61f42c531957
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552073"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100253"
 ---
 # <a name="mapping-data-types-odbc"></a>데이터 형식 매핑(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "39552073"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **타임 스탬프** 데이터 형식이 때문에 SQL_BINARY 또는 SQL_VARBINARY ODBC 데이터 형식에 매핑되 값 **타임 스탬프** 열에는 없는 **datetime** 값 하지만 **binary (8)** 또는 **varbinary(8)** 시퀀스를 나타내는 값 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행에는 활동입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 바이트 수가 홀수인 SQL_C_WCHAR(유니코드) 값을 발견하면 후행 홀수 바이트가 잘립니다.  
   
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>ODBC의 sql_variant 데이터 형식 처리  
- **sql_variant** 데이터 형식의 열 데이터 형식 중 하나를 포함할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 Lob (large object)를 제외한 **텍스트**를 **ntext**, 및 ** 이미지**합니다. 예를 들어 열 포함할 수 있습니다 **smallint** 일부 행에 값 **float** 다른 행에 대 한 값 및 **char/nchar** 나머지의 값입니다.  
+ **sql_variant** 데이터 형식의 열 데이터 형식 중 하나를 포함할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 Lob (large object)를 제외한 **텍스트**를 **ntext**, 및  **이미지**합니다. 예를 들어 열 포함할 수 있습니다 **smallint** 일부 행에 값 **float** 다른 행에 대 한 값 및 **char/nchar** 나머지의 값입니다.  
   
  합니다 **sql_variant** 데이터 형식은 비슷합니다 합니다 **Variant** Microsoft Visual Basic®의 데이터 형식입니다.  
   

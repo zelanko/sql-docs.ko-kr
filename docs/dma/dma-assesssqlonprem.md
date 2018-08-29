@@ -1,8 +1,8 @@
 ---
-title: 엔터프라이즈를 평가 하 고 통합 평가 보고서 (SQL Server) | Microsoft Docs
-description: DMA를 사용 하 여 엔터프라이즈 평가 및 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션하기 전에 평가 보고서를 통합 하는 방법에 알아봅니다.
+title: (Data Migration Assistant)는 SQL Server 마이그레이션 평가 수행 합니다. | Microsoft Docs
+description: 다른 SQL Server로 또는 Azure SQL Database로 마이그레이션하기 전에 온-프레미스 SQL Server를 평가 하기 위해 Data Migration Assistant 사용 방법 알아보기
 ms.custom: ''
-ms.date: 08/21/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,230 +16,98 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9f8deae9dc7f31eaa41c5e4261a2848648f60090
-ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
+ms.openlocfilehash: 1a8de403a529ca5b74c6391f0e3f4cef2cca26d2
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40396416"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152784"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 마이그레이션 평가 수행 합니다.
 
-다음 단계별 지침을 통해 온-프레미스 SQL Server 또는 Azure Vm에서 실행 중인 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션에 대 한 성공적인 크기 조정 된 평가 수행 하려면 Data Migration Assistant를 사용 하 여 합니다.
+다음 단계별 지침을 온-프레미스 SQL Server Data Migration Assistant를 사용 하 여 Azure VM 또는 Azure SQL Database에서 실행 중인 SQL Server로 마이그레이션에 대 한 첫 번째 평가 수행 하는 데 도움이 됩니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="create-an-assessment"></a>평가 만들기
 
-- DMA가 시작 됩니다. 네트워크에 있는 도구 컴퓨터를 지정 합니다. 이 컴퓨터에 SQL Server 대상에 연결 되어 있는지 확인 합니다.
-- 다운로드 및 설치:
-    - [Data Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595) v3.6 이상.
-    - [PowerShell](http://aka.ms/wmf5download) v5.0 이상.
-    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 이상.
-    - [SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) 17.0 이상.
-    - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)합니다.
-- 다운로드 및 추출 합니다.
-    - 합니다 [DMA 보고서 Power BI 템플릿](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)합니다.
-    - 합니다 [LoadWarehouse 스크립트](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip)합니다.
+1.  선택 된 **새로 만들기** (+) 아이콘을 선택한 후는 **평가** 프로젝트 형식.
 
-## <a name="loading-the-powershell-modules"></a>PowerShell 모듈을 로드합니다.
-PowerShell 모듈 디렉터리에 저장 하는 PowerShell 모듈을 사용 하기 전에 명시적으로 로드 하는 데 필요 없이 모듈 호출 할 수 있습니다.
+2.  원본 및 대상 서버 유형을 설정 합니다.
 
-모듈을 로드 하려면 다음 단계를 수행 합니다.
-1. C:\Program Files\WindowsPowerShell\Modules 이동한 다음 라는 폴더를 만듭니다 **DataMigrationAssistant**합니다.
-2. 엽니다는 [PowerShell 모듈](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip), 사용자가 만든 폴더에 저장 합니다.
+    최신 온-프레미스 SQL Server 인스턴스 또는 Azure VM에서 호스팅되는 SQL Server 온-프레미스 SQL Server 인스턴스 업그레이드 하는 경우 원본 및 대상 서버 유형으로 설정 **SQL Server**합니다. Azure SQL Database로 마이그레이션하는 경우 대신로 대상 서버 유형 **Azure SQL Database**합니다.
 
-      ![PowerShell 모듈](../dma/media//dma-assesssqlonprem/dma-powershell-modules.png)
+3.  **만들기**를 클릭합니다.
 
-    다음 그림에 나와 있는 것 처럼 연결된 (psm1 파일을 포함 하는 각 폴더:
+    ![평가 만들기](../dma/media/NewAssessment.png)
 
-   ![PowerShell 모듈 psm1 파일](../dma/media//dma-assesssqlonprem/dma-powershell-modules-psm1-files.png)
+## <a name="choose-assessment-options"></a>평가 옵션 선택
 
-   > [!NOTE]
-   > 폴더 및 포함 된 (psm1 파일 이름이 있어야 합니다.
+1. 마이그레이션하려는 대상 SQL Server 버전을 선택 합니다.
 
-   > [!IMPORTANT]
-   > 모듈을 제대로 로드 되도록 WindowsPowerShell 디렉터리에 저장 하면 PowerShell 파일의 차단을 해제 해야 합니다. PowerShell 파일을 차단 해제를 마우스 오른쪽 단추로 클릭 파일을 선택 **속성**를 선택 합니다 **차단 해제** 텍스트 상자를 선택한 후 **확인**합니다.
+2. 보고서 유형을 선택 합니다.
 
-   ![psm1 파일 속성](../dma/media//dma-assesssqlonprem/dma-psm1-file-properties.png)
+   대상 Azure VM에서 호스팅되는 SQL Server 또는 온-프레미스 SQL Server로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하는 경우에 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
 
-    새 PowerShell 세션을 시작 하는 경우 PowerShell이이 모듈 자동 로드 이제 해야 합니다.
+    -   **호환성 문제**
 
-## <a name="create-an-inventory-of-sql-servers"></a>SQL Server의 인벤토리 생성
-SQL Server를 평가 하기 위해 PowerShell 스크립트를 실행 하기 전에 평가 하려는 SQL Server의 인벤토리를 작성 해야 합니다.
+    -   **새로운 기능의 권장 사항**
 
-이 인벤토리 두 가지 형식 중 하나일 수 있습니다.
-- Excel CSV 파일
-- SQL Server 테이블
+    ![SQL Server 대상에 대 한 평가 보고서 유형을 선택합니다](../dma/media/AssessmentTypes.png)
 
-### <a name="if-using-a-csv-file"></a>CSV 파일을 사용 하는 경우
-데이터의 두 개의 열이 있는 csv 파일을 사용 하 여 데이터를 확인 **인스턴스 이름** 하 고 **데이터베이스 이름**, 열 머리글 행 없는 하 고 합니다.
- 
- ![csv 파일 내용](../dma/media//dma-assesssqlonprem/dma-csv-file-contents.png)
+   Azure SQL Database로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하는 경우에 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
 
-### <a name="if-using-sql-server-table"></a>SQL Server 테이블을 사용 하는 경우
-라는 데이터베이스를 만듭니다 **EstateInventory** 테이블을 호출 하 고 **DatabaseInventory**합니다. 다음 4 개의 열이 없으면으로이 인벤토리 데이터를 포함 하는 테이블 임의 개수의 열을 포함할 수 있습니다.
-- 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면
-- InstanceName
-- DatabaseName
-- AssessmentFlag
- 
- ![SQL Server 목차](../dma/media//dma-assesssqlonprem/dma-sql-server-table-contents.png)
+    -   **데이터베이스 호환성 확인**
 
-이 데이터베이스 도구는 컴퓨터에 없는 경우 도구는 컴퓨터에이 SQL Server 인스턴스에 네트워크 연결 되어 있는지 확인 합니다.
+    -   **기능 패리티 확인**
 
-CSV 파일을 통해 SQL Server 테이블을 사용 하는 이점은 인스턴스 제어 / 가져옵니다 쉽게 평가를 더 작은 청크로 구분 하는 평가 위한 픽업 데이터베이스 평가 플래그 열을 사용할 수 있는 경우  그런 다음 여러 평가 걸쳐 있을 수 있습니다 (이 문서의 뒷부분에서 평가 실행 중인에서 섹션 참조) (참조 섹션에서이 문서의 뒷부분에서 평가 실행)는 여러 CSV 파일을 유지 관리 하는 것 보다 쉽습니다.
+    ![SQL Database 대상에 대 한 평가 보고서 유형 선택](../dma/media/AssessmentTypes_Azure.png)
 
-개체 및 복잡성에 수에 따라 평가 걸릴 수 있습니다는 매우 긴 시간 (시간 +), 관리 하기 쉬운 청크로 평가 구분 하는 것이 좋습니다 이므로 염두에 두어야 합니다.
+## <a name="add-databases-to-assess"></a>평가 하는 데이터베이스 추가
 
-## <a name="running-a-scaled-assessment"></a>크기 조정 된 평가 실행합니다.
-Modules 디렉터리에 PowerShell 모듈을 로드 하 고 인벤토리를 만들, PowerShell을 열고 dmaDataCollector 함수를 실행 하 여 크기 조정 된 평가 실행 해야 합니다.
- 
-  ![dmaDataCollector 함수 목록](../dma/media//dma-assesssqlonprem/dma-dmaDataCollector-function-listing.png)
+1.  선택 **소스 추가** 연결 플라이 아웃 메뉴를 엽니다.
 
-DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니다.
+2.  SQL server 인스턴스 이름을 입력, 인증 유형을 선택, 올바른 연결 속성을 설정 및 선택한 **Connect**합니다.
 
-|매개 변수  |Description
-|---------|---------|
-|**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다. |
-|**서버 이름** | SQL Server 인스턴스 이름을 사용 하는 경우 인벤토리 **SqlServer** 에 **getServerListFrom** 매개 변수입니다. |
-|**DatabaseName** | 인벤토리 테이블을 호스팅하는 데이터베이스입니다. |
-|**AssessmentName** | DMA 평가의 이름입니다. |
-|**TargetPlatform** | 수행 하려는 평가 대상 형식입니다.  가능한 값은 **AzureSQLDatabase**, **SQLServer2012**를 **SQLServer2014**하십시오 **SQLServer2016**,  **SQLServerLinux2017**, 및 **SQLServerWindows2017**합니다. |
-|**AuthenticationMethod** | 평가 하려는 SQL Server 대상에 연결 하기 위한 인증 방법입니다. 가능한 값은 **이렇게 하면 SQLAuth** 하 고 **WindowsAuth**합니다. |
-|**OutputLocation** | JSON을 저장 하는 평가 출력 파일 디렉터리입니다. 평가 중인 데이터베이스 수 및 데이터베이스 내에서 개체의 수에 따라 평가 시간이 아주 오래 걸릴 수 있습니다. 파일은 모든 평가 완료 후에 기록 됩니다. |
+3.  데이터베이스를 평가 하 고 선택한 선택 **추가**합니다.
 
-예기치 않은 오류가 있으면이 프로세스에서 시작 하는 명령 창 종료 됩니다.  실패 원인을 확인 하려면 오류 로그를 검토 합니다.
- 
-  ![오류 로그 위치](../dma/media//dma-assesssqlonprem/dma-error-log-file-location.png)
+    > [!NOTE] 
+    > Shift 또는 Ctrl 키를 누른 채로 클릭 하는 동안 선택 하 여 여러 데이터베이스를 제거할 수 있습니다 **제거 원본**합니다. 사용 하 여 여러 SQL Server 인스턴스에서 데이터베이스를 추가할 수도 있습니다는 **소스 추가** 단추입니다.
 
-## <a name="consuming-the-assessment-json-file"></a>평가 JSON 파일 사용
+4.  클릭 **다음** 평가를 시작 합니다.
 
-평가 완료 되 면 준비가 이제 분석에 대 한 SQL Server로 데이터를 가져옵니다. 평가 JSON 파일에서 사용할 PowerShell을 열고 dmaProcessor 함수를 실행 합니다.
- 
-  ![dmaProcessor 함수 목록](../dma/media//dma-assesssqlonprem/dma-dmaProcessor-function-listing.png)
+    ![소스를 추가 하 고 평가 시작 합니다.](../dma/media/SelectDatabase.png)
 
-DmaProcessor 함수와 연결 된 매개 변수를 다음과에서 같습니다.
+## <a name="view-results"></a>결과 보기
 
-|매개 변수  |Description
-|---------|---------|
-|**processTo**  | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
-|**서버 이름** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
-|**CreateDMAReporting** | JSON 파일을 처리 하는 것에 대 한 만들기 준비 데이터베이스입니다.  이미 지정한 데이터베이스가 하나에이 매개 변수를 설정 하는 경우 다음 개체 만들어지지 않기 때문입니다.  이 매개 변수는 삭제 된 단일 개체를 다시 만드는 데 유용 합니다. |
-|**CreateDataWarehouse** | Power BI 보고서에서 사용할 데이터 웨어하우스를 만듭니다. |
-|**DatabaseName** | DMAReporting 데이터베이스의 이름입니다. |
-|**warehouseName** | 데이터 웨어하우스 데이터베이스의 이름입니다. |
-|**jsonDirectory** | JSON 평가 파일이 포함 된 디렉터리입니다.  그런 다음 디렉터리에 여러 JSON 파일이 하나씩 처리 됩니다. |
+평가 기간 추가 데이터베이스 수와 각 데이터베이스의 스키마 크기에 따라 달라 집니다. 사용 가능한 즉시 각 데이터베이스에 대 한 결과가 표시 됩니다.
 
-DmaProcessor 함수에는 단일 파일을 처리 하는 데 몇 초 걸립니다.
+1.  평가 완료 하는 데이터베이스를 선택한 다음 전환할 **호환성 문제** 하 고 **기능 권장 사항** 전환기를 사용 하 여 합니다.
 
-## <a name="loading-the-data-warehouse"></a>데이터 웨어하우스 로드
-dmaProcessor에 평가 파일 처리 완료 후 보고서 데이터 표에 DMAReporting 데이터베이스로 데이터 로드 됩니다. 이 시점에서 데이터 웨어하우스 로드 해야 합니다.
+2.  모든 호환성 수준에서 대상 SQL Server 버전에서 지 원하는에서 선택한 호환성 문제를 검토 합니다 **옵션** 페이지입니다.
 
-1. 크기에 모든 누락 값을 채우는 LoadWarehouse 스크립트를 사용 합니다.
+영향을 받는 개체에서 해당 세부 정보 및 잠재적으로에서 식별 한 모든 문제에 대 한 수정 분석 하 여 호환성 문제를 검토할 수 있습니다 **주요 변경 내용**하십시오 **동작 변경 내용**, 및  **사용 되지 않는 기능**합니다.
 
-    스크립트는 DMAReporting 데이터베이스에서 보고서 데이터 테이블에서 데이터를 가져오는을 웨어하우스로 로드 합니다.  이 로드 프로세스 중에 오류가 경우 차원 테이블에서 누락 된 항목의 결과 가능성이 높습니다.
+![평가 결과 보기](../dma/media/ReviewResults.png)
 
-2. 데이터 웨어하우스를 로드 합니다.
- 
-      ![LoadWarehouse 콘텐츠 로드](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-loaded.png)
+마찬가지로, 기능 권장 사항에서 검토할 수 있습니다 **성능**를 **저장소**, 및 **보안** 영역입니다.
 
-## <a name="set-your-database-owners"></a>사용자 데이터베이스 소유자를 설정 합니다.
-필수 상태인 동안 보고서에서 가장 많은 가치를 얻을 것이 좋습니다 데이터베이스 소유자를 설정 하는 합니다 **dimDBOwner** 차원의 하 한 다음 업데이트 **DBOwnerKey** 에  **FactAssessment** 테이블입니다.  다음이 프로세스를 사용 하면 조각화 및 특정 데이터베이스 소유자를 기준으로 Power BI 보고서를 필터링 합니다.
+기능 권장 사항 다양 한 메모리 내 OLTP 및 Columnstore, Stretch Database, Always Encrypted, 동적 데이터 마스킹 및 투명 한 데이터 암호화와 같은 기능을 설명합니다.
 
-또한 데이터베이스 소유자를 설정 하는 데에 대 한 기본적인 TSQL 문을 제공 LoadWarehouse 스크립트를 사용할 수 있습니다.
+![기능 권장 사항 보기](../dma/media/FeatureRecommendations.png)
 
-  ![LoadWarehouse 설정 소유자](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-set-owners.png)
+Azure SQL Database에 대 한 평가가 마이그레이션 차단 문제와 기능 패리티 문제를 제공합니다. 특정 옵션을 선택 하 여 두 범주에 대 한 결과 검토 합니다.
 
-## <a name="dma-reports"></a>DMA 보고서
+- 합니다 **SQL Server 기능 패리티** 범주는 다양 한 권장 사항, Azure 및 완화 단계에서 사용할 수 있는 대안을 제공 합니다. 마이그레이션 프로젝트에서이 노력을 계획할 수 있습니다.
 
-1. Power BI Desktop에서 DMA 보고서 Power BI 템플릿을 엽니다.
-2. 가리키는 서버 세부 정보를 입력 하 **DMAWarehouse** 데이터베이스를 선택한 후 **부하**합니다.
+  ![SQL Server 기능 패리티에 대 한 정보 보기](../dma/media/SQLFeatureParity.png)
 
-    > [!IMPORTANT]
-    > 값을 그대로 사용 하려면 Enter를 누르지 마십시오.
+- 합니다 **호환성 문제** 범주는 Azure SQL database로 온-프레미스 SQL Server 데이터베이스 마이그레이션 차단 하는 부분적으로 지원 되거나 지원 되지 않는 기능을 제공 합니다. 그런 다음 해당 문제를 해결 하기 위한 권장 사항을 제공 합니다.
 
-      ![DMA 보고서 Power BI 템플릿 로드](../dma/media//dma-assesssqlonprem/dma-reports-powerbi-template-loaded.png)
+  ![보기 호환성 문제](../dma/media/CompatibilityIssues.png)
 
-   보고서에서 데이터를 새로 고쳐 짐 후 합니다 **DMAWarehouse** 데이터베이스 다음과 유사한 보고서를 사용 하 여 표시 됩니다.
+## <a name="export-results"></a>결과 내보내기
 
-   ![DMAWarehouse 보고서 보기](../dma/media//dma-assesssqlonprem/dma-DMAWarehouse-report.png)
+모든 데이터베이스 평가 완료 한 후 선택 **보고서 내보내기** 에 JSON 파일 또는 CSV 파일에 결과 내보냅니다. 그런 다음 고유한 편의 위해 데이터를 분석할 수 있습니다.
 
-   > [!TIP]
-   > 예상 했던 데이터에 표시 되지 않는 경우에 활성 책갈피를 변경해 보세요.  자세한 내용은 기능 섹션을 참조 하세요.
-
-## <a name="working-with-dma-reports"></a>DMA 보고서 사용
-DMA 보고서를 사용 하려면 슬라이서를 기준으로 필터링 하려면 사용 합니다.
-- 인스턴스 이름
-- 데이터베이스 이름
-- 팀 이름
-
-또한 보고 컨텍스트 사이 전환 하려면 책갈피를 사용할 수 있습니다.
-- 클라우드 평가
-- 온-프레미스 평가
-
-  ![DMA 보고서 책갈피](../dma/media//dma-assesssqlonprem/dma-report-bookmarks.png)
-
-> [!NOTE]
-> Azure SQL Database 평가만 수행 하면 클라우드 보고서만 채워집니다. 반대로, 온-프레미스 평가만 수행 하면 온-프레미스 보고서만 채워집니다. 그러나 Azure와 온-프레미스 평가 수행 하 고 다음 두 평가 웨어하우스에 로드 전환할 수 있습니다 클라우드 보고서와 CTRL-클릭 하 여 온-프레미스 보고서 간에 연결 된 아이콘.
-
-## <a name="reports-visuals"></a>보고서 시각적 개체
-Power BI 보고서에 표시 된 세부 정보는 다음 섹션에 표시 됩니다.
-
-### <a name="readiness-"></a>준비 %
-
-  ![DMA 준비 백분율](../dma/media//dma-assesssqlonprem/dma-readiness-percentage.png)
-
-이 시각적 개체 선택 컨텍스트를 기반으로 업데이트 됩니다 (모든 인스턴스, 데이터베이스 [의 배수로]).
-
-### <a name="readiness-count"></a>준비 상태 수
-
-  ![DMA 준비 개수](../dma/media//dma-assesssqlonprem/dma-readiness-count.png)
-
-이 시각적 개체는 아직 마이그레이션할 준비가 되지 않은 데이터베이스의 수를 마이그레이션할 준비가 된 데이터베이스의 수를 보여 줍니다.
-
-### <a name="readiness-bucket"></a>준비 버킷
-
-  ![DMA 준비 버킷](../dma/media//dma-assesssqlonprem/dma-readiness-bucket.png)
-
-이 시각적 개체의 다음 준비 버킷 데이터베이스에 대 한 분석을 보여 줍니다.
-- 100% 준비
-- 75 ~ 99% 준비
-- 50-75% 준비
-- 준비 안 됨
-
-### <a name="issues-word-cloud"></a>문제 워드 클라우드
- 
-  ![DMA 문제 WordCloud](../dma/media//dma-assesssqlonprem/dma-issues-word-cloud.png)
-
-이 시각적 개체에서 선택 항목 컨텍스트 내에서 현재 발생 하는 문제를 보여 줍니다. (모든 인스턴스, 데이터베이스 [의 배수로]). 클수록 단어가 나타납니다 큼 화면에서 해당 범주의 문제 수 있습니다. 단어 위에 마우스 포인터를 가져가면 해당 범주에서 발생 한 문제 수를 보여 줍니다.
-
-### <a name="database-readiness"></a>데이터베이스 준비
-
-  ![DMA 데이터베이스 준비 보고서](../dma/media//dma-assesssqlonprem/dma-database-readiness-report.png)
-
-이 섹션에는 인스턴스 데이터베이스의 준비 상태를 보여주는 보고서의 기본 부분입니다. 이 보고서의 드릴 다운 계층 구조에 있습니다.
-- InstanceDatabase
-- ChangeCategory
-- Title
-- ObjectType
-- ImpactedObjectName
-
- ![DMA 데이터베이스 준비 보고서 드릴 다운](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown.png)
-
-이 보고서는 수정 계획 보고서를 만들기 위한 필터 점으로 역할도 합니다.
-
-수정 계획 보고서를 드릴 하이 그래프에서 데이터 요소를 마우스 오른쪽 단추로 클릭을 가리킵니다 **드릴스루**를 선택한 후 **수정 계획**합니다.
-
-이 작업의 현재 계층 구조 수준을 기반으로 드릴스루 옵션을 선택 하는 수정 계획 보고서를 필터링 합니다.
-
-  ![DMA 데이터베이스 준비 보고서 필터링 드릴 다운](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown-filtered.png)
-
-  ![DMA 업데이트 관리 계획 보고서](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report.png)
-
-필터를 사용 하 여 고유한 사용자 지정 수정 빌드할 계획에서 업데이트 관리 계획 보고서를 사용할 수도 있습니다는 **시각화 필터** 블레이드입니다.
- 
-  ![DMA 업데이트 관리 계획 보고서 필터 옵션](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report-filter-options.png)
-
-### <a name="script-disclaimer"></a>스크립트의 고 지 사항
-*이 문서에서 제공 하는 샘플 스크립트는 Microsoft 표준 지원 프로그램 또는 서비스에서 지원 되지 않습니다. 모든 스크립트는 모든 종류의 보증도 없이 있는 그대로 제공 됩니다. Microsoft에서는 등 제한 되지 않고 모든 묵시적된 보증을 부인 상품성 또는 특정 목적에의 적합성 보증을 암시 합니다. 사용 하는 샘플 스크립트 및 설명서의 성능으로 인해 발생 하는 위험이와 책임입니다. 없는 이벤트에서 Microsoft, 작성자가, 또는 다른 생성, 프로덕션 환경 또는 스크립트의 배달에 참여 하는 모든 책임을 지지 모든 손해에 대해 전혀 (손해를 포함 한, 제한 없이 비즈니스 수익, 비즈니스 중단, 손실 손실에 대 한 비즈니스 정보 또는 기타 금전적 손실) Microsoft가 그와 같은 손해의 가능성을 사전에 알고 있던 경우에를 사용 하는 샘플 스크립트 또는 설명서를 사용할 수 없어 책임입니다.  다른 사이트/리포지토리/블로그에서 이러한 스크립트를 보고 하기 전에 권한을 검색 합니다.*
+동시에 여러 평가 실행 하 고 열어서 평가 상태를 볼 수는 **모든 평가** 페이지입니다.

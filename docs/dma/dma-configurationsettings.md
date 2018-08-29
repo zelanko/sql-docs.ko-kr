@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server)에 대 한 설정 구성 | Microsoft Docs
 description: 구성 파일의 값을 업데이트 하 여 Data Migration Assistant에 대 한 설정을 구성 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: a8ab80d5e83ef5f7650f87f8c4618466eb3dee74
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 79d32d9d1ceb60e3cb3433bd5d9d5a06c9976403
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783994"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152804"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 

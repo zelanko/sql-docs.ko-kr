@@ -2,7 +2,7 @@
 title: Data Migration Assistant 통합된 평가 보고서를 Power BI (SQL Server)를 사용 하 여 분석 | Microsoft Docs
 description: 가져온 했으며 SQL Server에 통합 하는 데이터 마이그레이션 평가 보고서를 분석 하려면 Power BI를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 09/07/2017
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: dd2280fbc15ffe515cc8fc6b020a6ec3e2cf1647
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fd265f1cf67d421ca7a21987b2d48c3f929f5873
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787634"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152624"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Power BI를 사용 하 여 Data Migration Assistant에서 만든 통합된 평가 보고서 분석
 

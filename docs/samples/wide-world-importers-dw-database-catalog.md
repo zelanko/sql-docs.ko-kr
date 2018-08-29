@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: cbdcbe160e585fc1d5dfc30c51f511f32d4a0be9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556953"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104667"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ WideWorldImportersDW 차원 테이블에 있습니다. WideWorldImporters 데이
 |City|`Application.Cities`, `Application.StateProvinces` 및 `Application.Countries` 데이터 형식에 사용할 수 있습니다.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups` 및 `Sales.CustomerCategories` 데이터 형식에 사용할 수 있습니다.|
 |Date|회계 연도 포함 하 여 날짜에 대 한 정보를 사용 하 여 새 테이블 (11 월 1 일에 따라 회계 연도 대 한 시작)입니다.|
-|Employee|`Application.People`을 참조하세요.|
+|Employee|`Application.People` 을 참조하세요.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors` 및 `Warehouse.PackageType` 데이터 형식에 사용할 수 있습니다.|
 |공급자|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`에 적용되지 않습니다.|
-|PaymentMethod|`Application.PaymentMethods`을 참조하세요.|
-|TransactionType|`Application.TransactionTypes`을 참조하세요.|
+|PaymentMethod|`Application.PaymentMethods` 을 참조하세요.|
+|TransactionType|`Application.TransactionTypes` 을 참조하세요.|
 
 ### <a name="fact-tables"></a>팩트 테이블
 

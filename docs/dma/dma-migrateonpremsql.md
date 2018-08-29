@@ -2,7 +2,7 @@
 title: 업그레이드 온-프레미스 SQL Server 또는 SQL Server Data Migration Assistant를 사용 하 여 Azure Vm에서 SQL Server | Microsoft Docs
 description: Azure Vm의 SQL Server 또는 SQL Server의 이후 버전으로는 온-프레미스 SQL Server를 업그레이드 하려면 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 8a68205fe742f386241ab0653afce5b274077cbd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2638b536cc97f53e62daf578d1249a2a62987e62
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946957"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152794"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server 또는 SQL Server Data Migration Assistant를 사용 하 여 Azure Vm에서 온-프레미스 SQL Server 업그레이드
 

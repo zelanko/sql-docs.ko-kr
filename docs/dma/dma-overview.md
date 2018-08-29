@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server)의 개요 | Microsoft Docs
 description: 다른 SQL Server 또는 Azure 데이터베이스에 SQL Server 데이터베이스를 마이그레이션하기 위해 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3480f529b5f560f50518fa3af4a810ea0acc0bbb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fbf3441d82f2de405e1a227821834b3943db3285
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781524"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152694"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
 
@@ -44,7 +44,7 @@ ms.locfileid: "37781524"
 
   - 주요 변경 내용
   - 동작 변경 내용
-  - 사용 되지 않는 기능
+  - 사용되지 않는 기능
 
 - 데이터베이스는 업그레이드 후에 활용할 수 있는 대상 SQL Server 플랫폼의 새로운 기능을 검색 합니다. 이러한 기능 권장 사항으로 설명 하 고 다음 범주로 구성 됩니다.
 

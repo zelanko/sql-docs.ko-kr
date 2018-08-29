@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_cached_plans (Transact SQL) | Microsoft 문서
+title: sys.dm_exec_cached_plans (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -23,23 +23,23 @@ caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 142b9c8cb9b383a3d6018955078eadb6b78fa105
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 44740badeb2d763727aeba2ce81adc524e3de0d4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543813"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100772"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 빠른 쿼리 실행을 위해 캐시하는 각 쿼리 계획에 대한 행을 반환합니다. 이 동적 관리 뷰를 사용하여 캐시된 쿼리 계획, 캐시된 쿼리 텍스트, 캐시된 계획이 사용한 메모리 양, 캐시된 계획의 재사용 횟수를 찾을 수 있습니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다. 또한 열에 있는 값 **memory_object_address** 및 **pool_id** 는 필터링 열 값이 NULL로 설정 됩니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다. 또한 열에 값 **memory_object_address** 및 **pool_id** 필터링 되는 열 값이 NULL로 설정 됩니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하 여 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_cached_plans**.  
+>  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_cached_plans**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "39543813"
 |refcounts|**int**|이 캐시 개체를 참조하는 캐시 개체의 수입니다. **Refcounts** 항목을 캐시에 적어도 1 이어야 합니다.|  
 |usecounts|**int**|캐시 개체를 조회한 횟수입니다. 매개 변수가 있는 쿼리가 캐시에서 계획을 찾는 경우에는 증가하지 않습니다. 실행 계획을 사용하는 경우에는 여러 번 증가할 수 있습니다.|  
 |size_in_bytes|**int**|캐시 개체가 사용한 바이트 수입니다.|  
-|memory_object_address|**varbinary(8)**|캐시된 항목의 메모리 주소입니다. 이 값은 함께 사용할 수 있습니다 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 및 캐시 된 계획의 메모리 분석을 가져오려면 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)_entries 캐시 항목의 비용을.|  
+|memory_object_address|**varbinary(8)**|캐시된 항목의 메모리 주소입니다. 이 값을 사용 하 여 사용할 수 있습니다 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 캐시 된 계획의 메모리 분석을 가져오려면 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)항목 캐시 비용을 가져오려고와 함께 사용 합니다.|  
 |cacheobjtype|**nvarchar(34)**|캐시에 있는 개체의 유형입니다. 이 값은<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
 |objtype|**nvarchar(16)**|개체의 유형입니다. 사용 가능한 값과 해당 설명을 다음과 같습니다.<br /><br /> 저장된 프로시저가 프로시저:<br />준비: 준비 된 문<br />임시: 임시 쿼리입니다. 가리키는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 하 여 언어 이벤트로 전송 된 **osql** 또는 **sqlcmd** 대신 원격 프로시저 호출으로.<br />ReplProc: 복제 필터 프로시저<br />트리거: 트리거<br />보기: 보기<br />기본값: 기본값<br />UsrTab: 사용자 테이블<br />SysTab: 시스템 테이블<br />CHECK 제약 조건 확인:<br />규칙: 규칙|  
 |plan_handle|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 다음 동적 관리 함수와 함께 사용할 수 있습니다.<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>3. 계획 컴파일 시 사용된 SET 옵션의 반환  
- 다음 예에서는 계획 컴파일 시 사용된 SET 옵션을 반환합니다. `sql_handle` 계획도 반환 됩니다. PIVOT 연산자는 출력 하는 `set_options` 및 `sql_handle` 특성 행 대신 열으로. 반환 되는 값에 대 한 자세한 내용은 `set_options`를 참조 하십시오 [sys.dm_exec_plan_attributes &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ 다음 예에서는 계획 컴파일 시 사용된 SET 옵션을 반환합니다. `sql_handle` 계획도 반환 됩니다. PIVOT 연산자는 출력 하는 `set_options` 및 `sql_handle` 특성 행 대신 열으로. 반환 된 값에 대 한 자세한 내용은 `set_options`를 참조 하세요 [sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)합니다.  
   
 ```  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -118,11 +118,11 @@ GO
 ## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_plan_attributes &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_os_memory_objects &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
- [sys.dm_os_memory_cache_entries &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
+ [sys.dm_os_memory_cache_entries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
  [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   
