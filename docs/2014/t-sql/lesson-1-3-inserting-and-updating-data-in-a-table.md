@@ -5,30 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting and updating data
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d9dc8bbbc16ef6ed827e5d5ce2bdd95979b67068
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 051301fc440de5336701438e35fbbaebc68b0b17
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157483"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035507"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>테이블에서 데이터 삽입 및 업데이트(자습서)
   이제 **Products** 테이블을 만들었으므로 INSERT 문을 사용하여 테이블에 데이터를 삽입할 준비가 되었습니다. 데이터가 삽입된 후 UPDATE 문을 사용하여 행 내용을 변경합니다. UPDATE 문의 WHERE 절을 사용하여 업데이트를 단일 행으로 제한합니다. 4개의 문이 다음 데이터를 입력합니다.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
-|1|Clamp|12.48|Workbench clamp|  
+|@shouldalert|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  

@@ -1,5 +1,5 @@
 ---
-title: sp_catalogs (Transact SQL) | Microsoft Docs
+title: sp_catalogs (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 360cc30c65068ffe2b3b6b38eab57cc7b9fe1f91
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d4a5f266872a8e16932fb2fd52c06636ecdcb54e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33239373"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030110"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 ## <a name="arguments"></a>인수  
  [  **@server_name =**] **'***linked_svr***'**  
- 연결된 서버의 이름입니다. *linked_svr* 은 **sysname**, 기본값은 없습니다.  
+ 연결된 서버의 이름입니다. *linked_svr* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**catalog_name**|**nvarchar(** 128 **)**|카탈로그의 이름입니다.|  
+|**Catalog_name**|**nvarchar(** 128 **)**|카탈로그의 이름입니다.|  
 |**설명**|**nvarchar (** 4000 **)**|카탈로그에 관한 설명입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

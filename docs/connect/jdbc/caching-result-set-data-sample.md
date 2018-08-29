@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a8c38f11fe4860437dda427ba3e2046b9b4867
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 62be6ad99231fb6fde258e145fb6c29e86759309
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456237"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787270"
 ---
 # <a name="caching-result-set-data-sample"></a>결과 집합 데이터 샘플 캐싱
 
@@ -30,7 +30,7 @@ ms.locfileid: "39456237"
 > [!NOTE]  
 > 클라이언트에서 캐시된 행의 수를 제한하는 것은 결과 집합에 포함된 전체 행 수를 제한한다는 의미가 아닙니다. 결과 집합에 포함된 전체 행 수를 제어하려면 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체와 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체에서 상속된 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 메서드를 사용합니다.
 
-클라이언트에서 캐시되는 행 수에 제한을 설정하려면 우선 Statement 개체를 만들 때 사용할 커서 유형을 구체적으로 지정하여 Statement 개체 중 하나를 만들 때 서버측 커서를 제일 먼저 사용해야 합니다. 예를 들어 JDBC 드라이버에서 제공하는 커서 유형인 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 사용되는 빨리 감기 및 읽기 전용 서버측 커서입니다.
+클라이언트에서 캐시되는 행 수에 제한을 설정하려면 우선 Statement 개체를 만들 때 사용할 커서 유형을 구체적으로 지정하여 Statement 개체 중 하나를 만들 때 서버측 커서를 제일 먼저 사용해야 합니다. 예를 들어 JDBC 드라이버에서 제공하는 커서 유형인 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 사용되는 빨리 감기 및 읽기 전용 서버측 커서입니다.
 
 > [!NOTE]  
 > 이 대신에 SQL Server 전용 커서 유형을 사용하려면 selectMethod 연결 문자열 속성 값을 "cursor"로 설정하여 사용하면 됩니다. JDBC 드라이버에서 지 원하는 커서 유형에 대 한 자세한 내용은 참조 하세요. [커서 유형 이해](../../connect/jdbc/understanding-cursor-types.md)합니다.

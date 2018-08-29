@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_db (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_enable_db (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03a2ffce46b6789e32cccc361760f2aea842adb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255774"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030287"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sys.sp_cdc_enable_db
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  변경 데이터 캡처를 사용할 수 없습니다 [시스템 데이터베이스](../../relational-databases/databases/system-databases.md) 또는 배포 데이터베이스입니다.  
   
- sys.sp_cdc_enable_db는 메타데이터 테이블 및 DDL 트리거를 포함하여 데이터베이스 차원 범위의 변경 데이터 캡처 개체를 만듭니다. 또한 cdc 스키마 및 cdc 데이터베이스 사용자를 만들고 데이터베이스 항목에 대 한 is_cdc_enabled 열을 설정는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 1입니다.  
+ sys.sp_cdc_enable_db는 메타데이터 테이블 및 DDL 트리거를 포함하여 데이터베이스 차원 범위의 변경 데이터 캡처 개체를 만듭니다. 또한 cdc 스키마 및 cdc 데이터베이스 사용자를 만들고 데이터베이스 항목의 is_cdc_enabled 열을 설정 합니다 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 1입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -74,7 +73,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

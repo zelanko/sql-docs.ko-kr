@@ -1,5 +1,5 @@
 ---
-title: sp_control_dbmasterkey_password (Transact SQL) | Microsoft Docs
+title: sp_control_dbmasterkey_password (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a9894a10965affbd65406276445f6c84f05ce76e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a468fc35805dc51bd76a51021fab82f66c8fc25
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239233"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037536"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +45,18 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
 ## <a name="arguments"></a>인수  
  @db_name=N'*database_name*'  
- 이 자격 증명에 연결된 데이터베이스의 이름을 지정합니다. 시스템 데이터베이스일 수 없습니다. *a s e _* 은 **nvarchar**합니다.  
+ 이 자격 증명에 연결된 데이터베이스의 이름을 지정합니다. 시스템 데이터베이스일 수 없습니다. *database_name* 됩니다 **nvarchar**합니다.  
   
  @password= N'*암호*'  
- 마스터 키의 암호를 지정합니다. *암호* 은 **nvarchar**합니다.  
+ 마스터 키의 암호를 지정합니다. *암호* 됩니다 **nvarchar**합니다.  
   
  @action= N'add'  
- 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에 추가되도록 지정합니다. 자격 증명에는 데이터베이스 마스터 키의 암호가 포함됩니다. 에 전달 된 값 @action 은 **nvarchar**합니다.  
+ 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에 추가되도록 지정합니다. 자격 증명에는 데이터베이스 마스터 키의 암호가 포함됩니다. 전달 되는 값 @action 됩니다 **nvarchar**합니다.  
   
  @action=N'drop'  
- 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에서 삭제되도록 지정합니다. 에 전달 된 값 @action 은 **nvarchar**합니다.  
+ 지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에서 삭제되도록 지정합니다. 전달 되는 값 @action 됩니다 **nvarchar**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 키 암호화 및 암호 해독을 위한 데이터베이스 마스터 키가 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다.  
   
 > [!CAUTION]  
@@ -79,15 +78,15 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  sp_control_dbmasterkey_password로 추가한 자격 증명을 사용하여 데이터베이스 마스터 키를 여는 경우 데이터베이스 마스터 키는 서비스 마스터 키에 의해 다시 암호화됩니다. 데이터베이스가 읽기 전용 모드인 경우 재암호화 작업이 실패하고 데이터베이스 마스터 키가 암호화되지 않은 상태로 남습니다. 이후에 데이터베이스 마스터 키에 액세스하려면 OPEN MASTER KEY 문과 암호를 사용해야 합니다. 암호를 사용하지 않아도 되도록 하려면 데이터베이스를 읽기 전용 모드로 전환하기 전에 자격 증명을 만들어야 합니다.  
   
- **이전 버전과 호환성 문제 잠재적인:** 현재 저장된 프로시저는 확인 하지는 마스터 키가 있는지 여부를 합니다. 이전 버전과의 호환성을 위해 허용되지만 경고가 표시됩니다. 이 기능은 더 이상 지원되지 않습니다. 이후 릴리스에서 마스터 키가 있어야 하 고 저장된 프로시저에 사용 되는 암호에 **sp_control_dbmasterkey_password** 데이터베이스 마스터 키를 암호화 하는 데 사용 된 암호 중 하 나와 동일 해야 합니다.  
+ **이전 버전과 잠재적인 호환성 문제:** 현재 저장된 프로시저 확인 하지 않습니다 마스터 키가 있는지 여부를 합니다. 이전 버전과의 호환성을 위해 허용되지만 경고가 표시됩니다. 이 기능은 더 이상 지원되지 않습니다. 향후 릴리스에서 마스터 키가 있어야 하 고 저장된 프로시저에 사용 된 암호에 **sp_control_dbmasterkey_password** 데이터베이스 마스터 키를 암호화 하는 데 사용 된 암호 중 하 나와 동일한 암호 여야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>1. AdventureWorks2012 마스터 키에 대한 자격 증명 만들기  
- 다음 예에서는 `AdventureWorks2012` 데이터베이스 마스터 키에 대한 자격 증명을 만들고 마스터 키 암호를 자격 증명에 암호로 저장합니다. 때문에 전달 되는 모든 매개 변수 `sp_control_dbmasterkey_password` 데이터 형식 이어야 합니다 **nvarchar**, 캐스팅 연산자와 함께 텍스트 변환 됩니다 `N`합니다.  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스 마스터 키에 대한 자격 증명을 만들고 마스터 키 암호를 자격 증명에 암호로 저장합니다. 때문에 전달 되는 모든 매개 변수 `sp_control_dbmasterkey_password` 데이터 형식 이어야 합니다 **nvarchar**, 캐스팅 연산자를 사용 하 여 텍스트 문자열을 변환할지 `N`합니다.  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
@@ -104,7 +103,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

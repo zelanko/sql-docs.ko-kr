@@ -1,5 +1,5 @@
 ---
-title: sp_helparticledts (Transact SQL) | Microsoft Docs
+title: sp_helparticledts (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helparticledts
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e296b7e03f64fc95338750ef57360dd3f250af98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c095e7567a61758c23c434ddd04f26730a57b058
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994750"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029384"
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
 ## <a name="arguments"></a>인수  
  [  **@publication =**] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
- 게시에 있는 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 없습니다.  
+ 게시에 있는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -64,12 +64,12 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_helparticledts** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  복제 DTS(데이터 변환 서비스) 프로그램에서 태스크를 명명할 때 복제 에이전트가 요구하는 명명 규칙을 따라야 합니다. Execute SQL 작업 등 사용자 지정 태스크의 경우 이름은 아티클 이름, 접두사 및 선택적 부분으로 이루어진 연결 문자열입니다. 코드를 쓰는 경우 사용할 작업 이름이 확실치 않으면 결과 집합이 지정하는 태스크 이름을 사용해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helparticledts**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helparticledts**합니다.  
   
   

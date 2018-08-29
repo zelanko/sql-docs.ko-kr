@@ -1,5 +1,5 @@
 ---
-title: sp_mergedummyupdate (Transact SQL) | Microsoft Docs
+title: sp_mergedummyupdate (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d31ad74486c8be2b964f4dd3f02c5b5a04ac0b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c06f7c39d495808bd700947082b7416f7dd2853
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021572"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +46,23 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
   
 ## <a name="arguments"></a>인수  
  [  **@source_object=**] **'***source_object***'**  
- 원본 개체의 이름입니다. *source_object*은 **nvarchar (386)**, 기본값은 없습니다.  
+ 원본 개체의 이름입니다. *source_object*됩니다 **nvarchar(386)**, 기본값은 없습니다.  
   
  [  **@rowguid=**] **'***rowguid***'**  
- 행 식별자입니다. *rowguid* 은 **uniqueidentifier**, 기본값은 없습니다.  
+ 행 식별자입니다. *rowguid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_mergedummyupdate** 병합 복제에 사용 됩니다.  
   
- **sp_mergedummyupdate** 복제 충돌 뷰어 (Wzcnflct.exe)에 자신의 대체를 작성 하는 경우 유용 합니다.  
+ **sp_mergedummyupdate** 복제 충돌 뷰어 (Wzcnflct.exe)에 자신의 대체를 작성 하는 경우에 유용 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_mergedummyupdate**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_mergedummyupdate**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

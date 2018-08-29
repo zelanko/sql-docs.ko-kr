@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_scan (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_scan (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_scan
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a295451cc5894d55d2e61ed941fb46af93d53c1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f321deee03c7231287a02d03472e637731e62926
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255894"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038396"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,30 +49,30 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
   
 ## <a name="arguments"></a>인수  
  [  **@maxtrans=** ] *max_trans*  
- 각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 은 **int** 기본값은 500입니다.  
+ 각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 됩니다 **int** 이며 기본값은 500입니다.  
   
  [  **@maxscans=** ] *max_scans*  
- 로그에서 모든 행을 추출하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 은 **int** 기본값은 10입니다.  
+ 로그에서 모든 행을 추출하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 됩니다 **int** 이며 기본값은 10입니다.  
   
  [  **@continuous=** ] *연속*  
- 저장된 프로시저는 단일 검색 주기 (0)를 실행 한 후 종료 하거나 계속 실행 하 여 지정 된 시간에 대 한 일시 중지 해야 나타냅니다 *polling_interval* 종료할지 검색 주기 (1) 전에 합니다. *연속* 은 **tinyint** 기본값은 0입니다.  
+ 저장된 프로시저는 단일 검색 주기 (0)를 실행 한 후 종료 하거나 계속 실행 하 여 지정 된 시간에 대 한 일시 중지 해야 하는지 여부를 나타냅니다 *polling_interval* 종료할지 검색 주기 (1) 전에 합니다. *지속적인* 됩니다 **tinyint** 이며 기본값은 0입니다.  
   
  [  **@pollinginterval=** ] *polling_interval*  
- 로그 검색 주기 사이의 시간(초)입니다. *polling_interval* 은 **bigint** 기본값은 0입니다.  
+ 로그 검색 주기 사이의 시간(초)입니다. *polling_interval* 됩니다 **bigint** 이며 기본값은 0입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  변경 데이터 캡처에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 캡처 작업이 사용되면 sys.sp_cdc_scan이 sys.sp_MScdc_capture_job에 의해 내부적으로 호출됩니다. 변경 데이터 캡처 로그 검색 작업이 이미 활성화되어 있거나 데이터베이스에 트랜잭션 복제가 설정되어 있는 경우에는 이 프로시저를 명시적으로 실행할 수 없습니다. 이 저장 프로시저는 자동으로 구성되는 캡처 작업의 동작을 사용자 지정하려는 관리자만 사용해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

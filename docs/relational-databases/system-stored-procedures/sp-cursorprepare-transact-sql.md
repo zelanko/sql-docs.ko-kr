@@ -1,5 +1,5 @@
 ---
-title: sp_cursorprepare (Transact SQL) | Microsoft Docs
+title: sp_cursorprepare (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b616b58f13845c06dbc6510e2d4ca28dee744192
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 32e045fe8cc12a8419e94759176e2871db2d2422
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239843"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036529"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  커서 문이나 일괄 처리를 실행 계획으로 컴파일하되 커서를 만들지는 않습니다. 컴파일된 문은 나중에 sp_cursorexecute에서 사용할 수 있습니다. 이 절차에서는 sp_cursorexecute와 결합 되어 sp_cursoropen와 동일한 기능을 갖지만 두 단계로 분리 됩니다. sp_cursorprepare가 ID를 지정 하 여 호출 = 표 형식 데이터 TDS (stream) 패킷의 3입니다.  
+  커서 문이나 일괄 처리를 실행 계획으로 컴파일하되 커서를 만들지는 않습니다. 컴파일된 문은 나중에 sp_cursorexecute에서 사용할 수 있습니다. Sp_cursorexecute와 결합 하는이 절차에서는 sp_cursoropen과 동일한 기능 하지만 두 단계로 분리 됩니다. sp_cursorprepare가 ID를 지정 하 여 호출 = 3 tabular data TDS (stream) 패킷에서을 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,28 +52,28 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 >  *prepared_handle* 이후에 커서를 열기 위해 sp_cursorexecute 프로시저에 제공 됩니다. 작성된 핸들은 로그오프하거나 sp_cursorunprepare 프로시저를 통해 명시적으로 핸들을 제거할 때까지 존재합니다.  
   
  *params*  
- 매개 변수가 있는 문을 식별합니다. *params* 문에 매개 변수 표식에 대 한 변수 정의 바뀝니다. *params* 필요로 하는 필수 매개 변수는 **ntext**, **nchar**, 또는 **nvarchar** 값을 입력 합니다. 문에 매개 변수가 없으면 NULL 값을 입력합니다.  
+ 매개 변수가 있는 문을 식별합니다. 합니다 *params* 문에서 매개 변수 표식에 대 한 변수 정의 바뀝니다. *params* 필요로 하는 필수 매개 변수를 **ntext**를 **nchar**, 또는 **nvarchar** 값을 입력 합니다. 문에 매개 변수가 없으면 NULL 값을 입력합니다.  
   
 > [!NOTE]  
->  사용 하 여는 **ntext** 입력으로 문자열 값으로 *stmt* 에 매개 변수가 및 *scrollopt* PARAMETERIZED_STMT 값이 ON입니다.  
+>  사용 하 여는 **ntext** 입력 문자열 값 *stmt* 매개 변수가 및 *scrollopt* PARAMETERIZED_STMT 값이 ON입니다.  
   
  *stmt*  
- 커서 결과 집합을 정의합니다. *stmt* 호출에 대 한 필수 매개 변수 이며 프로그램 **ntext**, **nchar** 또는 **nvarchar** 값을 입력 합니다.  
+ 커서 결과 집합을 정의합니다. *stmt* 매개 변수가 필수 항목이 며에 대 한 호출을 **ntext**, **nchar** 또는 **nvarchar** 값을 입력 합니다.  
   
 > [!NOTE]  
->  규칙을 지정 하는 *stmt* 값은 예외와 sp_cursoropen에 대해와 동일 하는 *stmt* 문자열 데이터 형식 이어야 합니다 **ntext**합니다.  
+>  규칙을 지정 하는 *stmt* 값은 예외를 사용 하 여 sp_cursoropen 동일는 *stmt* 문자열 데이터 형식 이어야 합니다 **ntext**.  
   
  *options*  
- 커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 하려면 다음이 필요 **int** 값을 입력 합니다.  
+ 커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 다음이 필요 합니다 **int** 값을 입력 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
- 스크롤 옵션입니다. *scrollopt* 다음 중 하나 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
+ 스크롤 옵션입니다. *scrollopt* 다음 중 하나를 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,16 +90,16 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 요청 된 값에서 정의한 커서에 대 한 적절 한 수 있으므로 *stmt*,이 매개 변수 둘 다로 사용 입력 및 출력 합니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적절한 값을 할당합니다.  
+ 요청 된 값에서 정의한 커서에 대 한 적절 한 수 있으므로 *stmt*,이 매개 변수 둘 다로 입력과 출력 사용 됩니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적절한 값을 할당합니다.  
   
  *ccopt*  
- 동시성 제어 옵션입니다. *ccopt* 다음 중 하나 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
+ 동시성 제어 옵션입니다. *ccopt* 다음 중 하나를 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  
-|0x0004|**낙관적** (이전의 optcc)|  
+|0x0004|**낙관적** (이전의 OPTCC)|  
 |0x0008|OPTIMISTIC(이전의 OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -109,23 +109,23 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 와 마찬가지로 *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청 된 것에서 다른 값을 할당할 수 있습니다.  
+ 와 마찬가지로 *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청 된에서 다른 값을 할당할 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  RPC 상태 매개 변수는 다음 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|성공|  
 |0x0001|실패|  
-|1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 대 한 이유는 문에 결과 집합을 생성 하지 않습니다. 예를 들어는 INSERT 또는 DDL 문입니다.|  
+|1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 대 한 이유는 문의 결과 집합을 생성 하지 않습니다. 예를 들어는 INSERT 또는 DDL 문입니다.|  
   
 ## <a name="examples"></a>예  
- 때 *stmt* 매개 변수화 및 *scrollopt* PARAMETERIZED_STMT 값이 ON 일 문자열의 형식은 다음과 같습니다.  
+ 때 *stmt* 매개 변수가 하며 *scrollopt* PARAMETERIZED_STMT 값이 ON 일 문자열의 형식은 다음과 같습니다.  
   
- {  *\<지역 변수 이름 > * *\<데이터 유형 >* } [,... *n* ]  
+ {  *\<로컬 변수 이름 > * *\<데이터 형식 >* } [,... *n* ]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_cursorexecute &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorunprepare &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   

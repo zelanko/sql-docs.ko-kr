@@ -1,5 +1,5 @@
 ---
-title: sys.linked_logins (Transact SQL) | Microsoft Docs
+title: sys.linked_logins (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.linked_logins catalog view
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 51517820a9c402448f2d19423dd6a62a16ba9875
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9b03700e08422b6e6fd585f5612713c95b11115d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179269"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036790"
 ---
 # <a name="syslinkedlogins-transact-sql"></a>sys.linked_logins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,17 +37,17 @@ ms.locfileid: "33179269"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|서버 ID **sys.servers**합니다.|  
+|**server_id**|**int**|서버의 ID **sys.servers**합니다.|  
 |**local_principal_id**|**int**|매핑이 적용되는 서버 보안 주체입니다.<br /><br /> 0 = 와일드카드 또는 공용입니다.|  
 |**uses_self_credential**|**bit**|1일 경우 매핑은 세션에서 자체의 자격 증명을 사용해야 함을 나타냅니다. 그렇지 않은 경우 0은 세션에서 제공된 이름과 암호를 사용함을 나타냅니다.|  
 |**remote_name**|**sysname**|연결할 때 사용할 원격 사용자 이름입니다. 암호 역시 저장되지만 카탈로그 뷰 인터페이스에서는 표시되지 않습니다.|  
 |**modify_date**|**datetime**|연결된 로그인을 마지막으로 변경한 날짜입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [연결 된 서버 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)  
+ [연결 된 서버 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)  
   
   

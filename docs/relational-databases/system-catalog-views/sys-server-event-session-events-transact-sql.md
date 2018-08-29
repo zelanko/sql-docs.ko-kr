@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_events (Transact SQL) | Microsoft Docs
+title: sys.server_event_session_events (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e1422d0b32df504e42c2a94742533bff5fdbc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 62909fb21035f6cd9415dab60e4ef6b6d0fa99f9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220814"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030061"
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ ms.locfileid: "33220814"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |event_id|**int**|이벤트 ID입니다. 이 ID는 이벤트 세션 개체 내에서 고유합니다. Null을 허용하지 않습니다.|  
-|name|**sysname**|이벤트의 이름입니다. Null을 허용하지 않습니다.|  
+|NAME|**sysname**|이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |패키지|**sysname**|이벤트가 포함된 이벤트 패키지의 이름입니다. Null을 허용하지 않습니다.|  
 |module|**sysname**|이벤트가 포함된 모듈의 이름입니다. Null을 허용하지 않습니다.|  
 |predicate|**nvarchar(3000)**|이벤트에 적용되는 조건자 식입니다. Null을 허용합니다.|  
 |predicate_xml|**nvarchar(3000)**|이벤트에 적용되는 XML 조건자 식입니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 뷰는 다음과 같은 관계 카디널리티를 가집니다.  
   
 ||||  
@@ -58,7 +58,7 @@ ms.locfileid: "33220814"
 |보낸 사람|수행할 작업|관계|  
 |sys.server_event_session_events.event_session_id|sys.server_event_sessions.event_session_id|다 대 일|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [확장 이벤트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  

@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: bec8d747e193f54b1f706a911f3a78a3442e81b4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662415"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785479"
 ---
 # <a name="basic-data-types-sample"></a>기본 데이터 형식 샘플
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 결과 집합 getter 메서드를 사용하여 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식 값을 검색하는 방법과 함께 결과 집합 update 메서드를 사용하여 이러한 값을 업데이트하는 방법을 보여 줍니다.  
+이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 결과 집합 getter 메서드를 사용하여 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 값을 검색하는 방법과 함께 결과 집합 update 메서드를 사용하여 이러한 값을 업데이트하는 방법을 보여 줍니다.  
   
 이 샘플의 코드 파일 이름은 BasicDataTypes.java이며 다음과 같은 위치에 있습니다.  
 

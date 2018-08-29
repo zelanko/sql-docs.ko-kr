@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 4cf71fa76c4759364954c8cbff446957dd80c8aa
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: f152e497fd1a19924321580280e520598773081d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108065"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018041"
 ---
 # <a name="large-clr-user-defined-types"></a>큰 CLR 사용자 정의 형식
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

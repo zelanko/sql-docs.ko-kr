@@ -14,18 +14,18 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e17da2ae58d76268ec962c007b0fd81b5fc06d60
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 08f1f202ded4c9e0053cfc6c315b87c6f4616eee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662405"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786198"
 ---
 # <a name="using-multiple-result-sets"></a>다중 결과 집합 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-둘 이상의 결과 집합을 반환하는 인라인 SQL 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 저장 프로시저를 사용하는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 반환된 각 데이터 집합을 검색할 수 있도록 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스에 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 메서드를 제공합니다. 또한 결과 집합을 둘 이상 반환하는 문을 실행하는 경우에는 SQLServerStatement 클래스의 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 메서드를 사용합니다. 이는 반환된 값이 결과 집합인지 업데이트 횟수인지를 나타내는 **부울** 값을 반환합니다.
+둘 이상의 결과 집합을 반환하는 인라인 SQL 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 사용하는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 반환된 각 데이터 집합을 검색할 수 있도록 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스에 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 메서드를 제공합니다. 또한 결과 집합을 둘 이상 반환하는 문을 실행하는 경우에는 SQLServerStatement 클래스의 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 메서드를 사용합니다. 이는 반환된 값이 결과 집합인지 업데이트 횟수인지를 나타내는 **부울** 값을 반환합니다.
 
 execute 메서드가 **true**를 반환하면 실행한 명령문은 하나 이상의 결과 집합을 반환합니다. getResultSet 메서드를 호출하면 첫 번째 결과 집합에 액세스할 수 있습니다. 추가 결과 집합이 있는지 확인하려면 추가 결과 집합이 있을 때 **부울** 값 **true**를 반환하는 [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) 메서드를 호출합니다. 추가 결과 집합이 있는 경우 다시 getResultSet 메서드를 호출하여 액세스할 수 있으며 모든 결과 집합을 처리할 때까지 프로세스를 계속할 수 있습니다. GetMoreResults 메서드를 반환 하는 경우 **false**, 가지 자세한 결과가 없습니다. 프로세스를 설정 합니다.
 

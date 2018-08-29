@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepullsubscription (Transact SQL) | Microsoft Docs
+title: sp_dropmergepullsubscription (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f623dfa9aa2f00f681092543c4539da37ab7485
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fa2a31c5ef60b869fe387e4a3ac8155a73d3690
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992620"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017959"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,32 +49,32 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수 항목입니다. 값을 지정 **모든** 모든 게시에 대 한 구독을 제거 하려면  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수 항목입니다. 값을 지정 **모든** 모든 게시에 대 한 구독을 제거 하려면  
   
  [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자*은 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수 항목입니다.  
+ 게시자의 이름입니다. *게시자*됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수 항목입니다.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db*은 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수 항목입니다.  
+ 게시자 데이터베이스의 이름입니다. *publisher_db*됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수 항목입니다.  
   
- [  **@reserved=**] **'***예약***'**  
- 나중에 사용하도록 예약되었습니다. *예약 된* 은 **비트**, 기본값은 **0**합니다.  
+ [  **@reserved=**] **'***예약 된***'**  
+ 나중에 사용하도록 예약되었습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergepullsubscription** 병합 복제에 사용 됩니다.  
   
- **sp_dropmergepullsubscription** 병합 에이전트가 생성 되지 않습니다 되지만 해당 병합 끌어오기 구독에 대 한 병합 에이전트를 삭제 **sp_addmergepullsubscription**합니다.  
+ **sp_dropmergepullsubscription** 병합 에이전트에서 생성 되지 않습니다 하지만 해당 병합 끌어오기 구독에 대 한 병합 에이전트를 삭제 **sp_addmergepullsubscription**합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 병합 끌어오기 구독을 만든 사용자를 실행할 수 **sp_dropmergepullsubscription**합니다. **db_owner** 고정된 데이터베이스 역할은 실행할 수만 **sp_dropmergepullsubscription** 병합 끌어오기 구독을 만든 사용자가이 역할에 속하는 경우입니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 병합 끌어오기 구독을 만든 사용자를 실행할 수 있습니다 **sp_dropmergepullsubscription**합니다. 합니다 **db_owner** 고정된 데이터베이스 역할은 실행할 수만 **sp_dropmergepullsubscription** 병합 끌어오기 구독을 만든 사용자가이 역할에 속한 경우.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [끌어오기 구독 삭제](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   

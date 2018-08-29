@@ -17,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08f0e46bde340eb1b64f8c7ad9ba2d1f8ec63d9f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea2923af852801639d3cc2007d872a2823bc5d1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989335"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026872"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +147,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|1|한 번|  
+|@shouldalert|한 번|  
 |2|요청 시|  
 |4|일별|  
 |8|매주|  
@@ -165,7 +164,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|1|첫째|  
+|@shouldalert|첫째|  
 |2|둘째|  
 |4|셋째|  
 |8|넷째|  
@@ -180,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|1|한 번|  
+|@shouldalert|한 번|  
 |2|둘째|  
 |4|Minute|  
 |8|Hour|  
@@ -284,7 +283,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |0(기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자|  
-|1|ODBC 데이터 원본 서버|  
+|@shouldalert|ODBC 데이터 원본 서버|  
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |3|OLE DB 공급자|  
   

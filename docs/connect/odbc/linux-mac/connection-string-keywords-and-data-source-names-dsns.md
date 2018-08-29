@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982315"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786906"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스와의 연결을 만들 수 있는 방법을 설명합니다.  
+이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와의 연결을 만들 수 있는 방법을 설명합니다.  
   
 ## <a name="connection-properties"></a>연결 속성  
 
@@ -67,7 +67,7 @@ Server = [protocol:]server[,port]
  - **OutFile.dat-S 아웃 bcp master.INFORMATION_SCHEMA.TABLES <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>SSL(Secure Sockets Layer) 사용  
-SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 연결을 암호화할 수 있습니다. SSL은 네트워크에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 사용자 이름 및 암호를 보호합니다. SSL은 또한 MITM(메시지 가로채기) 공격으로부터 보호하기 위해 서버의 ID를 확인합니다.  
+SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 연결을 암호화할 수 있습니다. SSL은 네트워크에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름 및 암호를 보호합니다. SSL은 또한 MITM(메시지 가로채기) 공격으로부터 보호하기 위해 서버의 ID를 확인합니다.  
 
 암호화를 사용하면 보안은 강화되지만 성능은 저하됩니다.
 
@@ -78,7 +78,7 @@ SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includ
 ||**TrustServerCertificate = 아니요**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화되지 않습니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화되지 않습니다.|  
-|**Encrypt=yes**|서버 인증서를 확인합니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 인증서에 있는 주체 CN(일반 이름) 또는 SAN(주체 대체 이름)의 이름(또는 IP 주소)은 연결 문자열에 지정된 서버 이름(또는 IP 주소)과 정확하게 일치해야 합니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.|  
+|**Encrypt=yes**|서버 인증서를 확인합니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 인증서에 있는 주체 CN(일반 이름) 또는 SAN(주체 대체 이름)의 이름(또는 IP 주소)은 연결 문자열에 지정된 서버 이름(또는 IP 주소)과 정확하게 일치해야 합니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.|  
 
 기본적으로 암호화된 연결에서 서버의 인증서를 항상 확인합니다. 그러나 자체 서명 된 인증서가 있는 서버에 연결한 경우 추가적으로 `TrustServerCertificate` 신뢰할 수 있는 인증서 기관 목록 비교 하 여 인증서를 검사를 무시 하는 옵션:  
 

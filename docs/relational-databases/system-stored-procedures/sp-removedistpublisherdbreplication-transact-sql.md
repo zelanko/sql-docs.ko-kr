@@ -1,5 +1,5 @@
 ---
-title: sp_removedistpublisherdbreplication (Transact SQL) | Microsoft Docs
+title: sp_removedistpublisherdbreplication (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02194543d95dc03491d4b882555e48698c100ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a99244a59c0022ed92797fc8c5e10bd3bf3dae63
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996060"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022571"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_Removedistpublisherdbreplication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +47,18 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [  **@publisher=** ] **'***게시자***'**  
- 게시자 서버의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
+ 게시자 서버의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname** 이며 기본값은 없습니다.  
+ 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname** 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_removedistpublisherdbreplication** 트랜잭션 및 스냅숏 복제에 사용 됩니다.  
   
- **sp_removedistpublisherdbreplication** 배포 데이터베이스를 삭제 하지 않고 게시 된 데이터베이스를 다시 만들어야 하는 경우에 사용 됩니다. 다음 메타 데이터가 제거됩니다.  
+ **sp_removedistpublisherdbreplication** 배포 데이터베이스를 삭제 하지 않고 게시 된 데이터베이스를 만들어야 하는 경우에 사용 됩니다. 다음 메타 데이터가 제거됩니다.  
   
 -   모든 게시 메타 데이터  
   
@@ -68,10 +68,10 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 -   게시에 속한 모든 복제 에이전트 작업의 메타 데이터  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할의 멤버나 배포자는 **db_owner** 고정된 데이터베이스 역할이 배포 데이터베이스에서 실행할 수 있는 **sp_ removedistpublisherdbreplication**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버만 합니다 **sysadmin** 고정된 서버 역할의 멤버나 배포자 합니다 **db_owner** 고정된 데이터베이스 역할의 배포 데이터베이스에서 실행할 수 있습니다 **sp_ removedistpublisherdbreplication**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

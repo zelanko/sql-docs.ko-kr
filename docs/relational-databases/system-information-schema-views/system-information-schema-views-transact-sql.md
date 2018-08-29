@@ -1,5 +1,5 @@
 ---
-title: 시스템 정보 스키마 뷰 (Transact SQL) | Microsoft Docs
+title: 시스템 정보 스키마 뷰 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,17 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a3c0ef6d8a3c4c774b441e807c4ca513b214f26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 155073a76c84f7f90af44386f63a2b90a2144bb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240193"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022598"
 ---
-# <a name="system-information-schema-views-transact-sql"></a>시스템 정보 스키마 뷰 (Transact SQL)
+# <a name="system-information-schema-views-transact-sql"></a>시스템 정보 스키마 뷰 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   정보 스키마 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메타데이터를 가져오기 위해 사용할 수 있는 여러 수단 중 하나입니다. 정보 스키마 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타데이터의 내부 시스템 테이블에 종속되지 않는 뷰를 제공합니다. 정보 스키마 뷰는 기본 시스템 테이블이 많이 변경되더라도 응용 프로그램이 제대로 작동할 수 있도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 정보 스키마 뷰는 INFORMATION_SCHEMA에 대한 ISO 표준 정의를 준수합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "33240193"
 |---------------------|-----------------------------------------------|  
 |데이터베이스|Catalog|  
 |스키마|스키마|  
-|개체|개체|  
+|Object|Object|  
 |사용자 정의 데이터 형식|도메인|  
   
  이 이름 매핑 규칙은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 호환 뷰에 적용됩니다.  
@@ -72,8 +71,8 @@ WHERE TABLE_NAME = N'Product';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

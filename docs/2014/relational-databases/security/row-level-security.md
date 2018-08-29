@@ -15,16 +15,15 @@ helpviewer_keywords:
 - security [SQL Server], predicate based access control
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eefc0764be46d8356dc1ac8e04b8025bf6119afd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 344497fea67a2bfdadf66095056ac9e909d945a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311283"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017486"
 ---
 # <a name="row-level-security"></a>행 수준 보안
   행 수준 보안(RLS)을 통해 고객은 쿼리(예: 그룹 멤버십 또는 실행 컨텍스트)를 실행하는 사용자의 특징을 기반으로 데이터베이스 테이블의 행에 대한 액세스를 제어할 수 있습니다. 행 수준 보안에 출시 되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 합니다. 이 기능에 대한 최신 설명을 보려면 최신 설명서에서 [행 수준 보안](https://msdn.microsoft.com/library/dn765131.aspx) 을 참조하세요.  

@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278714"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42787443"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요. 이 추적 플래그는 해당 JDBC 개체 로거와 함께 사용되어 JDBC 드라이버의 ActivityId를 추적하고 전송할지 여부를 결정합니다. Logging.Properties 파일 업데이트 외에 com.microsoft.sqlserver.jdbc 로거를 FINER 이상으로 설정해야 합니다. 특정 클래스에서 생성된 요청에 대해 ActivityId를 서버로 전송하려는 경우 해당 클래스 로거는 FINER 또는 FINEST로 설정되어야 합니다. 예를 들어, 클래스가 SQLServerStatement인 경우 com.microsoft.sqlserver.jdbc.SQLServerStatement 로거를 설정해야 합니다.  
   
- 다음 샘플에서는 [!INCLUDE[tsql](../../includes/tsql_md.md)]을 사용하여 링 버퍼에 저장되고 RPC 및 일괄 처리 작업 시 클라이언트에서 전송된 작업 ID를 기록하는 확장 이벤트 세션을 시작합니다.  
+ 다음 샘플에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 링 버퍼에 저장되고 RPC 및 일괄 처리 작업 시 클라이언트에서 전송된 작업 ID를 기록하는 확장 이벤트 세션을 시작합니다.  
   
 ```sql
 create event session MySession on server  

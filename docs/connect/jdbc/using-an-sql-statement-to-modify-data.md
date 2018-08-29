@@ -14,18 +14,18 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 750e91c909e859d5d1e3d2bf15b5e0bf4cc11db1
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 4463d57727435e501213725ed94fba001cb4306b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662435"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786535"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>SQL 문을 사용하여 데이터 수정
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 포함된 데이터를 수정하려면 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드를 사용합니다. executeUpdate 메서드는 SQL 문을 데이터베이스로 전달하여 처리한 다음, 영향을 받은 행 수를 나타내는 값을 반환합니다.
+SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터를 수정하려면 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드를 사용합니다. executeUpdate 메서드는 SQL 문을 데이터베이스로 전달하여 처리한 다음, 영향을 받은 행 수를 나타내는 값을 반환합니다.
 
 이렇게 하려면 먼저 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 메서드를 사용하여 SQLServerStatement 개체를 만들어야 합니다.
 
@@ -34,7 +34,7 @@ SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)
 [!code[JDBC#UsingSQLToModifyData1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_1_1.java)]
 
 > [!NOTE]  
-> 매개 변수가 있는 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스의 데이터를 수정해야 하는 경우 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) 메서드를 사용해야 합니다.
+> 매개 변수가 있는 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 수정해야 하는 경우 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) 메서드를 사용해야 합니다.
 >
 > 데이터를 삽입하려는 열에 공백 같은 특수 문자가 포함되어 있으면 기본값인 경우라도 삽입할 값을 제공해야 합니다. 그렇지 않으면 삽입 작업이 실패합니다.
 >

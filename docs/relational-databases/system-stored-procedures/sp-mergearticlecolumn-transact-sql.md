@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (Transact SQL) | Microsoft Docs
+title: sp_mergearticlecolumn (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999560"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023931"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,41 +52,41 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [  **@publication =**] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@article =**] **'***문서***'**  
- 게시에 있는 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 없습니다.  
+ 게시에 있는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@column =**] **'***열***'**  
- 수직 분할을 만들 열을 식별합니다. *열* 은 **sysname**, 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *열* 인 경우 NULL 일 수 없습니다 *작업* 로 설정 된 **drop**합니다. 아티클에서 열을 제외 하려면 실행 **sp_mergearticlecolumn** 지정 *열* 및 `@operation = N'drop'` 제거할 각 열에 대해 지정 된 위치에서 *문서*.  
+ 수직 분할을 만들 열을 식별합니다. *열* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *열* 인 경우 NULL 일 수 없습니다 *작업이* 로 설정 되어 **drop**합니다. 아티클에서 열을 제외 하려면 실행 **sp_mergearticlecolumn** 지정 *열* 하 고 `@operation = N'drop'` 제거할 각 열에 대해 지정 된 *문서*.  
   
  [ **@operation =**] **'***operation***'**  
- 복제 상태입니다. *작업* 은 **nvarchar (4)**, 기본값은 ADD입니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 은 열을 지웁니다.  
+ 복제 상태입니다. *작업이* 됩니다 **nvarchar(4)**, 기본값은 ADD 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열을 지웁니다.  
   
  [  **@schema_replication=**] **'***schema_replication***'**  
- 병합 에이전트가 실행될 때 스키마 변경 내용이 전파되도록 지정합니다. *schema_replication* 은 **nvarchar (5)**, 기본값은 FALSE입니다.  
+ 병합 에이전트가 실행될 때 스키마 변경 내용이 전파되도록 지정합니다. *schema_replication* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
   
 > [!NOTE]  
->  만 **FALSE** 대해서는 *schema_replication*합니다.  
+>  만 **FALSE** 지원 됩니다 *schema_replication*합니다.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 스냅숏 무효화 기능을 설정하거나 해제합니다. *force_invalidate_snapshot* 는 **비트**, 기본값은 **0**합니다.  
+ 스냅숏 무효화 기능을 설정하거나 해제합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
   
- **1** 병합 아티클에 대 한 변경 유효 하려면 스냅숏을 무효화 하 지정 되는 경우에는 값의 경우 **1** 새 스냅숏 발생에 대 한 사용 권한을 부여 합니다.  
+ **1** 은 병합 아티클의 변경이을 유효 하지 않게 스냅숏을 무효화를 지정 하는 경우, 값 및 **1** 새 스냅숏 발생에 대 한 사용 권한을 부여 합니다.  
   
  [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
  구독 다시 초기화 기능을 설정하거나 해제합니다. *force_reinit_subscription* 은 bit 이며 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 구독이 다시 초기화 되지 않도록 지정 합니다.  
   
- **1** 아티클의 병합 아티클에 대 한 변경 될 수 있습니다는 구독이 다시 초기화 되도록 해당 되는 경우의 값 및 **1** 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
+ **1** 아티클의 병합 아티클에 대 한 변경 될 수 있습니다 구독 다시 초기화 해야 하는 경우, 값 및 **1** 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_mergearticlecolumn** 병합 복제에 사용 됩니다.  
   
  자동 ID 범위 관리가 사용되는 경우 아티클에서 ID 열을 삭제할 수 없습니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
@@ -98,11 +98,11 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_mergearticlecolumn**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_mergearticlecolumn**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+## <a name="see-also"></a>관련 항목  
+ [병합 아티클 사이에서 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

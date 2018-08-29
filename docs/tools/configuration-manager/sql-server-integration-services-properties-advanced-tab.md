@@ -13,13 +13,14 @@ ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 07cf0c4e21b89fea29d85cc34b2015339bd2590f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a6100e4e312bff8de216d1b1ac1c4b66078c36ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983530"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786755"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>SQL Server Integration Services 속성(고급 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergepublication (Transact SQL) | Microsoft Docs
+title: sp_validatemergepublication (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f038c33a58eae7fd9a12d0b0b6a223d325be140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2abb97e73958695c4be57157e0523d0d1b4829b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998510"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029953"
 ---
 # <a name="spvalidatemergepublication-transact-sql"></a>s sp_validatemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_validatemergepublication [@publication=] 'publication'
   
 ## <a name="arguments"></a>인수  
  [**@publication=**] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@level=** ] *수준*  
- 수행할 유효성 검사의 유형입니다. *수준* 은 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
+ 수행할 유효성 검사의 유형입니다. *수준* 됩니다 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
   
 |수준 값|Description|  
 |-----------------|-----------------|  
@@ -61,13 +61,13 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication** 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_validatemergepublication**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_validatemergepublication**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [복제 된 데이터 유효성 검사](../../relational-databases/replication/validate-replicated-data.md)   
  [sp_validatemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  

@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278824"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784592"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278824"
 > [!NOTE]  
 >  이전 예제에서는 연결 문자열에 사용자 이름과 암호를 사용했지만 보다 안전한 통합 보안을 사용해야 합니다. 자세한 내용은 이 항목 후반에 있는 [통합 인증으로 연결](#Connectingintegrated) 섹션을 참조하십시오.  
   
- 다음 연결 문자열에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 운영 체제에서 실행 중인 응용 프로그램에서 통합 인증 및 Kerberos를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결하는 방법의 예를 보여 줍니다.  
+ 다음 연결 문자열에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 운영 체제에서 실행 중인 응용 프로그램에서 통합 인증 및 Kerberos를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법의 예를 보여 줍니다.  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>명명된 다중 SQL Server 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서는 서버당 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버당 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
   
  포트 번호를 사용하려면 다음을 수행합니다.  
   

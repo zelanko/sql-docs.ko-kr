@@ -1,5 +1,5 @@
 ---
-title: sp_add_notification (Transact SQL) | Microsoft Docs
+title: sp_add_notification (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238410"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038293"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 ## <a name="arguments"></a>인수  
  [ **@alert_name=** ] **'***alert***'**  
- 이 알림에 대한 경고입니다. *경고* 은 **sysname**, 기본값은 없습니다.  
+ 이 알림에 대한 경고입니다. *경고* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@operator_name=** ] **'***operator***'**  
- 경고가 발생할 경우 알림을 받을 운영자입니다. *연산자* 은 **sysname**, 기본값은 없습니다.  
+ 경고가 발생할 경우 알림을 받을 운영자입니다. *연산자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@notification_method=** ] *notification_method*  
- 운영자에게 알림을 보내는 방법입니다. *notification_method* 은 **tinyint**, 기본값은 없습니다. *notification_method* 와 함께 다음이 값 중 하나 이상이 될 수는 **OR** 논리 연산자입니다.  
+ 운영자에게 알림을 보내는 방법입니다. *notification_method* 됩니다 **tinyint**, 기본값은 없습니다. *notification_method* 와 함께 다음이 값 중 하나 이상이 될 수는 **OR** 논리 연산자입니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|전자 메일|  
 |**2**|호출기|  
@@ -64,10 +63,10 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- **sp_add_notification** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_add_notification** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 그래픽 방식으로 전체 경고 시스템을 간편하게 관리할 수 있도록 해 줍니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 경고 인프라를 쉽게 구성할 수 있습니다.  
   
@@ -75,13 +74,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
  전자 메일 메시지 또는 호출기 알림을 전송하는 동안 오류가 발생하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 오류 로그에 오류가 보고됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_add_notification**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_add_notification**합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 지정된 경고(`Test Alert`)에 전자 메일 알림을 추가합니다.  
   
-> **참고:** 에 `Test Alert` 이미 존재 하 고 `François Ajenstat` 유효한 연산자 이름입니다.  
+> **참고:** 이 예에서는 가정 `Test Alert` 이미 있고 `François Ajenstat` 유효한 연산자 이름입니다.  
   
 ```  
 USE msdb ;  
@@ -94,7 +93,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

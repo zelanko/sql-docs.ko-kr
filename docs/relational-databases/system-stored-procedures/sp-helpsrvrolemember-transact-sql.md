@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrolemember (Transact SQL) | Microsoft Docs
+title: sp_helpsrvrolemember (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4c800464cf0da918e748ba6b6c9d1ffc4c093a0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4bbc6ed2343b9a659b30b737135c9f28cb2b401b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250730"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035237"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="arguments"></a>인수  
  [  **@srvrolename =** ] **'***역할***'**  
- 고정 서버 역할의 이름입니다. *역할* 은 **sysname**, 기본값은 NULL입니다. 경우 *역할*를 지정 하지 않으면 모든 고정된 서버 역할에 대 한 정보를 포함 하는 결과 집합입니다.  
+ 고정 서버 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *역할*지정 하지 않으면 모든 고정된 서버 역할에 대 한 정보를 포함 하는 결과 집합입니다.  
   
  *역할* 다음 값 중 하나일 수 있습니다.  
   
@@ -68,19 +68,19 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|서버 역할의 이름입니다.|  
-|MemberName|**sysname**|서버 역할의 멤버의 이름|  
+|MemberName|**sysname**|서버 역할의 멤버 이름|  
 |MemberSID|**varbinary(85)**|MemberName의 보안 식별자|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  Sp_helprolemember를 사용 하 여 데이터베이스 역할의 멤버를 표시 합니다.  
   
- 모든 로그인은 public의 멤버입니다. sp_helpsrvrolemember 때문에 public 역할을 인식 하지 않으므로 내부적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] public 역할로 구현 하지 않습니다.  
+ 모든 로그인은 public의 멤버입니다. sp_helpsrvrolemember 때문에 public 역할을 인식 하지 못하는, 내부적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 역할로 구현 하지 않습니다.  
   
- 추가 서버 역할에서 제거 된 멤버 참조 또는 [ALTER SERVER ROLE &#40;Transact SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
+ 추가 하거나 서버 역할에서 제거 된 멤버를 참조 하십시오 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
   
- sp_helpsrvrolemember는 사용자 정의 서버 역할을 인수로 사용 하지 않습니다. 사용자 정의 서버 역할의 멤버를 확인 하려면의 예제를 참조 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
+ sp_helpsrvrolemember 인수로 사용자 정의 서버 역할을 사용 하지 않습니다. 사용자 정의 서버 역할의 멤버를 확인 하려면에서 예제를 참조 하세요 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -90,7 +90,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergedeleteconflictrows (Transact SQL) | Microsoft Docs
+title: sp_helpmergedeleteconflictrows (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a624b6ef69048375b671112f138d3f2ed7477604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8bb0cf7dfa6b5eb44a7d30320f1beb0f90fbca7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997100"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025661"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다.  
   
  [  **@source_object=**] **'***source_object***'**  
- 원본 개체의 이름입니다. *source_object* 은 **nvarchar (386)**, 기본값은 NULL입니다.  
+ 원본 개체의 이름입니다. *source_object* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
   
  [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름이입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
+ 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름이입니다. *publisher_db* 은 **sysname**, 기본값은 NULL입니다.  
+ 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -66,8 +66,8 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|삭제 충돌의 원본 개체입니다.|  
 |**rowguid**|**uniqueidentifier**|삭제 충돌에 대한 행 식별자입니다.|  
-|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** UpdateConflict =: 충돌이 행 수준에서 검색 됩니다.<br /><br /> **2** ColumnUpdateConflict =: 충돌이 열 수준에서 검색 합니다.<br /><br /> **3** UpdateDeleteWinsConflict =: 삭제가 충돌에서 승리 합니다.<br /><br /> **4** UpdateWinsDeleteConflict =: 충돌에서 패한 삭제 된 rowguid가이 테이블에 기록 됩니다.<br /><br /> **5** UploadInsertFailed =: 게시자에 구독자에서 삽입을 적용할 수 없습니다.<br /><br /> **6** DownloadInsertFailed =: 구독자에서 게시자에서의 삽입을 적용할 수 없습니다.<br /><br /> **7** UploadDeleteFailed =: 구독자에서의 삭제를 게시자로 업로드할 수 없습니다.<br /><br /> **8** DownloadDeleteFailed =: 게시자에서의 삭제를 구독자로 다운로드할 수 없습니다.<br /><br /> **9** UploadUpdateFailed =: 게시자에 구독자에서 업데이트를 적용할 수 없습니다.<br /><br /> **10** 수행 된 업데이트가: 구독자에 게시자에서 업데이트를 적용할 수 없습니다.|  
-|**reason_code**|**Int**|상황에 맞는 오류 코드입니다.|  
+|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** UpdateConflict =: 충돌이 행 수준에서 검색 됩니다.<br /><br /> **2** ColumnUpdateConflict =: 충돌이 열 수준에서 검색 합니다.<br /><br /> **3** UpdateDeleteWinsConflict =: 삭제가 충돌에서 승리 합니다.<br /><br /> **4** UpdateWinsDeleteConflict =: 삭제 충돌이 손실 된 rowguid가이 테이블에 기록 됩니다.<br /><br /> **5** UploadInsertFailed =: 게시자에 구독자에서 삽입을 적용할 수 없습니다.<br /><br /> **6** DownloadInsertFailed =: 구독자에서 게시자에서 삽입을 적용할 수 없습니다.<br /><br /> **7** UploadDeleteFailed =: 구독자에서의 삭제를 게시자로 업로드할 수 없습니다.<br /><br /> **8** DownloadDeleteFailed =: 삭제 게시자에서 구독자로 다운로드할 수 없습니다.<br /><br /> **9** UploadUpdateFailed =: 게시자에서 구독자 업데이트를 적용할 수 없습니다.<br /><br /> **10** 수행 된 업데이트가: 구독자에 게시자에서 업데이트를 적용할 수 없습니다.|  
+|**reason_code**|**정수**|상황에 맞는 오류 코드입니다.|  
 |**reason_text**|**varchar(720)**|상황에 맞는 오류 설명입니다.|  
 |**origin_datasource**|**varchar(255)**|충돌의 시작입니다.|  
 |**pubid**|**uniqueidentifier**|게시 식별자입니다.|  
@@ -76,13 +76,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergedeleteconflictrows** 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helpmergedeleteconflictrows**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpmergedeleteconflictrows**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

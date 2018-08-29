@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_set_config_history_retention (Transact SQL) | Microsoft Docs
+title: sp_syspolicy_set_config_history_retention (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_set_config_history_retention
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5a879313cc9405406514b02df6477a302612d97f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8618b9b210fadc162d5f9fd17adb6febce4e541d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256836"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023048"
 ---
 # <a name="spsyspolicysetconfighistoryretention-transact-sql"></a>sp_syspolicy_set_config_history_retention(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
   
 ## <a name="arguments"></a>인수  
  [  **@value=** ] *값*  
- 정책 기반 관리에 대한 정책 평가 기록을 보존할 일 수입니다. *값* 은 **sqlvariant**합니다.  
+ 정책 기반 관리에 대한 정책 평가 기록을 보존할 일 수입니다. *값* 됩니다 **sqlvariant**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_set_config_history_retention은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
- 경우 *값* 설정 된 0으로 기록 되지 자동으로 제거 됩니다.  
+ 하는 경우 *값* 설정할지를 0으로 기록을 자동으로 제거 되지 합니다.  
   
  현재 기록 보존 값을 보려면 다음 쿼리를 실행합니다.  
   
@@ -62,11 +61,11 @@ SELECT current_value FROM msdb.dbo.syspolicy_configuration
 WHERE name = 'HistoryRetentionInDays'  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자가 서버 트리거를 만들 하 고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약할 수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 정책 평가 기록의 보존 일 수를 28일로 설정합니다.  
@@ -77,8 +76,8 @@ EXEC msdb.dbo.sp_syspolicy_set_config_history_retention @value = 28;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [정책 기반 관리 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [정책 기반 관리 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_configure &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

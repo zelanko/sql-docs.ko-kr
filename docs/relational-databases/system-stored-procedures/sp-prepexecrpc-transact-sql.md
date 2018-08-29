@@ -1,5 +1,5 @@
 ---
-title: sp_prepexecrpc (Transact SQL) | Microsoft Docs
+title: sp_prepexecrpc (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_prepexecrpc
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 536932ef57cc8bb042979dd2332552f34713743d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ab11cbca7177408ed94e79967ab55bad9fbc50b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250275"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027957"
 ---
 # <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  RPC 식별자를 사용하여 지정된 매개 변수가 있는 저장 프로시저 호출을 준비 및 실행합니다. sp_prepexecrpc ID를 호출한 = 표 형식 데이터 TDS (stream) 패킷의 14입니다.  
+  RPC 식별자를 사용하여 지정된 매개 변수가 있는 저장 프로시저 호출을 준비 및 실행합니다. sp_prepexecrpc ID를 호출한 = 14 tabular data TDS (stream) 패킷에서를 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,15 +46,15 @@ sp_prepexecrpc handle OUTPUT, RPCCall
   
 ## <a name="arguments"></a>인수  
  *handle*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성하는 준비된 핸들 식별자입니다. *처리* 은 필수 매개 변수는 **int** 값을 반환 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성하는 준비된 핸들 식별자입니다. *처리할* 은 필수 매개 변수를 **int** 값을 반환 합니다.  
   
  *RPCCall*  
- ODBC 정식 구문을 사용하여 저장 프로시저를 정의합니다. *RPCCall* 필요로 하는 필수 매개 변수는 **ntext** 문자열 값을 입력 합니다.  
+ ODBC 정식 구문을 사용하여 저장 프로시저를 정의합니다. *RPCCall* 필요로 하는 필수 매개 변수를 **ntext** 문자열 값을 입력 합니다.  
   
  *bound_param*  
- 추가 매개 변수의 선택적 사용을 나타냅니다. *bound_param* 사용 중인 추가 매개 변수를 지정 하려면 모든 데이터 형식의 입력된 값을 필요로 합니다.  
+ 추가 매개 변수의 선택적 사용을 나타냅니다. *bound_param* 사용 중인 추가 매개 변수를 지정 하려면 모든 데이터 형식의 입력된 값에 대 한 호출 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

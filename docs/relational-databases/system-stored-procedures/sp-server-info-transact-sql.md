@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (Transact SQL) | Microsoft Docs
+title: sp_server_info (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0715ea7f2f58b8212b48e990c3e2d2f76301b373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9355b4a6ca344111c5b3d9365823b2175942bcea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261119"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026210"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
   
 ## <a name="arguments"></a>인수  
  [  **@attribute_id =** ] **'***attribute_id***'**  
- 특성의 정수 ID입니다. *attribute_id* 은 **int**, 기본값은 NULL입니다.  
+ 특성의 정수 ID입니다. *attribute_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -58,14 +58,14 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|특성 이름입니다.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|특성의 현재 설정입니다.|  
   
- 다음 표에서는 특성을 나열합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 클라이언트 라이브러리는 특성에 현재 사용 하 여 **1**, **2**, **18**, **22**, 및 **500** 연결 시 시간입니다.  
+ 다음 표에서는 특성을 나열합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 클라이언트 라이브러리는 현재 특성을 사용 **1**, **2**합니다 **18**를 **22**, 및 **500** 연결 시 시간입니다.  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 설명|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
 |**10**|OWNER_TERM|owner|  
-|**11**|TABLE_TERM|table|  
+|**11**|TABLE_TERM|테이블|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**13**|TABLE_LENGTH<br /><br /> 테이블 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 테이블 한정자 이름(세 부분으로 구성된 테이블 이름의 첫 번째 부분)에 사용할 수 있는 최대 길이를 나타냅니다.|128|  
@@ -75,12 +75,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> 해당 서버의 문자 집합 순서를 나타냅니다.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 기본 DBMS가 명명된 저장점을 지원하는지를 나타냅니다.|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 기본 데이터베이스 또는 게이트웨이가 여러 결과 집합을 지원하는지를 나타냅니다. 지원될 경우 게이트웨이를 통해 여러 결과 집합을 클라이언트에 반환하는 여러 문을 보낼 수 있습니다.|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> 지정에서 **sp_tables**, 게이트웨이가 테이블, 뷰 및 현재 사용자 (즉, 테이블에 대해 최소한 SELECT 권한이 있는 사용자)가 액세스할 수를 반환 합니다.|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> 지정에서 든 **sp_tables**, 게이트웨이가 테이블, 뷰 및 등등으로 현재 사용자 (즉, 테이블에 대해 최소한 SELECT 권한이 있는 사용자)가 액세스할 수를 반환 합니다.|Y|  
 |**100**|USERID_LENGTH<br /><br /> 사용자 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
-|**101**|QUALIFIER_TERM<br /><br /> 세 부분으로 구성된 이름 중 첫 번째 부분인 테이블 한정자에 대한 DBMS 공급업체 용어를 나타냅니다.|데이터베이스|  
+|**101**|QUALIFIER_TERM<br /><br /> 세 부분으로 구성된 이름 중 첫 번째 부분인 테이블 한정자에 대한 DBMS 공급업체 용어를 나타냅니다.|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 기본 DBMS가 명명된 트랜잭션을 지원하는지를 나타냅니다.|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 저장 프로시저가 언어 이벤트로 실행될 수 있는지 나타냅니다.|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 지정에서 **sp_stored_procedures**, 게이트웨이가 현재 사용자에 의해 실행 가능한 저장된 프로시저만 반환 합니다.|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> 지정에서 든 **sp_stored_procedures**, 게이트웨이가 현재 사용자가 실행 된 저장된 프로시저만 반환 합니다.|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> DBMS의 인덱스에 사용 가능한 최대 열 수를 나타냅니다.|16|  
 |**106**|RENAME_TABLE<br /><br /> 테이블의 이름을 바꿀 수 있는지를 나타냅니다.|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 열의 이름을 바꿀 수 있는지를 나타냅니다.|Y|  
@@ -92,14 +92,14 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> DB-Library의 원격 저장 프로시저 기능을 통해 저장 프로시저를 실행할 수 있는지 나타냅니다.|Y|  
 |**500**|SYS_SPROC_VERSION<br /><br /> 저장 프로시저가 현재 구현하고 있는 카탈로그의 버전을 나타냅니다.|현재 버전 번호|  
   
-## <a name="remarks"></a>주의  
- **sp_server_info** 에서 제공 하는 정보의 하위 집합을 반환 **SQLGetInfo** ODBC의 합니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_server_info** 에서 제공 된 정보의 하위 집합을 반환 **SQLGetInfo** ODBC에서.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [카탈로그 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [카탈로그 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

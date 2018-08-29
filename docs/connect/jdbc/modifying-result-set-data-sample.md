@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: af7c20d6540cb5db098bc8f08c33930355253be2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453987"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784584"
 ---
 # <a name="modifying-result-set-data-sample"></a>결과 집합 데이터 샘플 수정
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 응용 프로그램 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서 업데이트 가능한 데이터 집합을 검색하는 방법을 보여 줍니다. 그런 다음, [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 메서드를 사용하여 데이터 행을 데이터 집합에 삽입하고 수정한 후, 마지막에는 데이터 집합에서 삭제합니다.
+이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 응용 프로그램 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 업데이트 가능한 데이터 집합을 검색하는 방법을 보여 줍니다. 그런 다음, [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 메서드를 사용하여 데이터 행을 데이터 집합에 삽입하고 수정한 후, 마지막에는 데이터 집합에서 삭제합니다.
 
 이 샘플의 코드 파일 이름은 UpdateResultSet.java이며 다음과 같은 위치에 있습니다.
 

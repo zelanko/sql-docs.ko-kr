@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (Transact SQL) | Microsoft Docs
+title: sp_helpserver (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258595"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038636"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="arguments"></a>인수  
  [ **@server =** ] **'***server***'**  
- 정보를 보고할 대상이 되는 서버입니다. 때 *서버* 를 지정 하지 않으면 모든 서버에 대 한 보고서 **master.sys.servers**합니다. *서버* 은 **sysname**, 기본값은 NULL입니다.  
+ 정보를 보고할 대상이 되는 서버입니다. 때 *server* 지정 하지 않으면 모든 서버에 대 한 보고서 **master.sys.servers**합니다. *서버* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@optname =** ] **'***옵션***'**  
- 서버를 설명하는 옵션입니다. *옵션* 은 **varchar (** 35 **)**, 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
+ 서버를 설명하는 옵션입니다. *옵션* 됩니다 **varchar (** 35 **)**, 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**데이터 정렬 호환**|연결된 서버에 대한 분산 쿼리 실행에 영향을 미칩니다. 이 옵션이 true로 설정되어 있는 경우|  
 |**데이터 액세스**|분산 쿼리 액세스에 대해 연결된 서버의 사용 여부를 설정합니다.|  
@@ -67,7 +67,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**원격 데이터 정렬 사용**|로컬 서버가 아닌 원격 열의 데이터 정렬을 사용합니다.|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- 지정한 서버와 다른 서버의 관계입니다. *show_topology* 은 **varchar (** 1 **)**, 기본값은 NULL입니다. 경우 *show_topology* 과 같지 않은 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 같으면 **t**, 결과 집합에 나열 된 열과 함께 **sp_helpserver** 도 반환 **topx** 및 **topy** 정보입니다.  
+ 지정한 서버와 다른 서버의 관계입니다. *show_topology* 됩니다 **varchar (** 1 **)**, 기본값은 NULL입니다. 하는 경우 *show_topology* 같지 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 값과 같음 **t**에 결과 집합에 나열 된 열 외에도 **sp_helpserver** 반환 **topx** 및 **topy** 정보입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패).  
@@ -84,10 +84,10 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|연결된 서버에 대한 연결 시간 제한 값입니다.|  
 |**query_timeout**|**int**|연결된 서버에 대한 쿼리 시간 제한 값입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서버 상태가 두 개 이상일 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  
   
 ## <a name="examples"></a>예  
@@ -110,8 +110,8 @@ GO
 EXEC sp_helpserver 'SEATTLE2';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

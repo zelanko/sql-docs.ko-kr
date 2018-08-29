@@ -1,5 +1,5 @@
 ---
-title: sp_helplogins (Transact SQL) | Microsoft Docs
+title: sp_helplogins (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40a25164c12e9a1c886a7cba6b8f9b0277daf0ed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d497fdd54fd0a8fce44282a2caa819fef60a76fb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253929"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028792"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
 ## <a name="arguments"></a>인수  
  [ **@LoginNamePattern =** ] **'***login***'**  
- 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정 된 경우 존재 해야 합니다. 경우 *로그인* 은 지정 하지 않으면 모든 로그인에 대 한 정보가 반환 됩니다.  
+ 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정한 경우 존재 해야 합니다. 하는 경우 *로그인* 은 지정 하지 않으면 모든 로그인에 대 한 정보 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,33 +57,33 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
 |**SID**|**varbinary(85)**|로그인 SID(보안 ID)입니다.|  
-|**DefDBName**|**sysname**|기본 데이터베이스입니다 **LoginName** 의 인스턴스로 연결할 때 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
-|**DefLangName**|**sysname**|기본 언어에서 사용 하는 **LoginName**합니다.|  
-|**하는지 여부가 결정**|**char (5)**|Yes = **LoginName** 데이터베이스에 연결 된 사용자 이름이 있습니다.<br /><br /> 더 = **LoginName** 연관된 된 사용자 이름을 없습니다.|  
-|**ARemote**|**char (7)**|Yes = **LoginName** 연관된 된 원격 로그인 했습니다.<br /><br /> 더 = **LoginName** 연결된 된 로그인이 없습니다.|  
+|**DefDBName**|**sysname**|기본 데이터베이스 **LoginName** 인스턴스에 연결할 때 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.|  
+|**DefLangName**|**sysname**|사용 되는 언어를 기본 **LoginName**합니다.|  
+|**하는지 여부가 결정 됩니다**|**char(5)**|Yes = **LoginName** 데이터베이스에 연결 된 사용자 이름이 있습니다.<br /><br /> 이상 = **LoginName** 는 연결 된 사용자 이름이 없습니다.|  
+|**ARemote**|**char (7)**|Yes = **LoginName** 에 연결된 된 원격 로그인 합니다.<br /><br /> 이상 = **LoginName** 연결된 된 로그인이 없습니다.|  
   
  두 번째 보고서에는 다음 표와 같이 각 로그인에 매핑된 사용자와 해당 로그인의 역할 멤버 자격에 관한 정보가 포함되어 있습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
-|**DBName**|**sysname**|기본 데이터베이스입니다 **LoginName** 의 인스턴스로 연결할 때 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
-|**UserName**|**sysname**|사용자 계정이 **LoginName** 에 결과를 매핑할 **DBName**, 역할 및는 **LoginName** 에서의 멤버인 **DBName**합니다.|  
+|**DBName**|**sysname**|기본 데이터베이스 **LoginName** 인스턴스에 연결할 때 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.|  
+|**UserName**|**sysname**|사용자 계정이 **LoginName** 에 매핑되 **DBName**, 및 역할을 하는 **LoginName** 의 멤버인 **DBName**합니다.|  
 |**UserOrAlias**|**char(8)**|MemberOf = **UserName** 는 역할입니다.<br /><br /> 사용자 = **UserName** 사용자 계정입니다.|  
   
-## <a name="remarks"></a>주의  
- 로그인을 제거 하기 전에 사용 하 여 **sp_helplogins** 로그인에 매핑된 사용자 계정을 식별할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 로그인을 제거 하기 전에 사용 하 여 **sp_helplogins** 로그인에 매핑되는 사용자 계정을 식별할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **securityadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **securityadmin** 고정된 서버 역할입니다.  
   
- 지정 된 로그인에 매핑된 모든 사용자 계정을 확인 하려면 **sp_helplogins** 서버 내에서 모든 데이터베이스를 확인 해야 합니다. 따라서 서버의 각 데이터베이스에 대해 다음 조건 중 최소한 하나를 만족해야 합니다.  
+ 지정 된 로그인에 매핑된 모든 사용자 계정을 식별 **sp_helplogins** 서버 내의 모든 데이터베이스를 확인 해야 합니다. 따라서 서버의 각 데이터베이스에 대해 다음 조건 중 최소한 하나를 만족해야 합니다.  
   
 -   실행 중인 사용자 **sp_helplogins** 데이터베이스에 액세스할 수 있는 권한이 있습니다.  
   
--   **게스트** 사용자 계정이 데이터베이스에 사용 되어야 합니다.  
+-   합니다 **게스트** 데이터베이스에서 사용자 계정을 사용할 수 있습니다.  
   
- 경우 **sp_helplogins** 는 데이터베이스에 액세스할 수 없는 **sp_helplogins** 고 오류 메시지 15622를 표시 한 많은 정보를 반환 합니다.  
+ 하는 경우 **sp_helplogins** 데이터베이스에 액세스할 수 없습니다 **sp_helplogins** 고 오류 메시지 15622를 표시 합니다. 가능한 한 많은 정보를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `John`이라는 로그인에 대한 정보를 보고합니다.  
@@ -105,7 +105,7 @@ John        pubs     John       User
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   

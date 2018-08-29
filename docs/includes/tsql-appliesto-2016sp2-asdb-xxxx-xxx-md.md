@@ -1,1 +1,1 @@
-<Token>**이 항목은 다음에 적용됩니다.** ![예](media/yes.png)SQL Server(2016 SP2부터)![예](media/yes.png)Azure SQL Database![아니요](media/no.png)Azure SQL Data Warehouse ![아니요](media/no.png)Parallel Data Warehouse </Token>
+<Token>**적용 대상:** ![yes](media/yes.png)(2016 SP2부터 시작) 하는 SQL Server ![예](media/yes.png)Azure SQL Database ![없음](media/no.png)Azure SQL Data Warehouse ![없음](media/no.png) 병렬 데이터 웨어하우스 </Token>

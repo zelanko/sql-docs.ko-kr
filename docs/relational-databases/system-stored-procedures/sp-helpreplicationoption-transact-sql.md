@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationoption (Transact SQL) | Microsoft Docs
+title: sp_helpreplicationoption (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 462d7532b3f5eefe7d933cd4801ee45cfc028d04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cefbf375ec5e952f2c3c69d7cc0b934c9f5757b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994980"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020438"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 ## <a name="arguments"></a>인수  
  [  **@optname =**] **'***option_name***'**  
- 쿼리할 복제 옵션의 이름입니다. *option_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 쿼리할 복제 옵션의 이름입니다. *option_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**트랜잭션**|트랜잭션 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
 |**병합**|병합 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
@@ -68,13 +68,13 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_helpreplicationoption** 복제 옵션을 특정 서버에서 사용 하는 방법에 대 한 정보를 가져오는 데 사용 됩니다. 특정 데이터베이스에 대 한 정보를 가져오려면 **sp_helpreplicationdboption**합니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_helpreplicationoption** 특정 서버에서 사용 하도록 설정 하는 복제 옵션에 대 한 정보를 가져오는 데 사용 됩니다. 특정 데이터베이스에 대 한 정보를 가져오려면 **sp_helpreplicationdboption**합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할로 설정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

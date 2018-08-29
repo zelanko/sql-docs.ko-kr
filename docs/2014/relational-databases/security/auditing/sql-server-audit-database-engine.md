@@ -14,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238783"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022071"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
   *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사된 이벤트는 이벤트 로그 또는 감사 파일에 쓸 수 있습니다.  

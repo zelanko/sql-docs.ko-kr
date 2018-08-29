@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds (Transact SQL) | Microsoft Docs
+title: sp_replmonitorsubscriptionpendingcmds (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c94d01031094e03ddde2fc9bcdf234729ecd11c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be00206267ea37c74c3b1055598ac9a2770a622
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001049"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038536"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,24 +51,24 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [ **@publisher** = ] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
+ 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
- 게시된 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
+ 게시된 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publication** =] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@subscriber** =] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 없습니다.  
+ 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@subscriber_db** = ] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db* 은 **sysname**, 기본값은 없습니다.  
+ 구독 데이터베이스의 이름입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@subscription_type** =] *subscription_type*  
- 구독 유형입니다. *publication_type* 은 **int**, 기본값은 없으며 수 있습니다 이러한 값 중 하나 여야 합니다.  
+ 구독 유형입니다. *publication_type* 됩니다 **int**이며 기본값은 없습니다 수 있습니다 이러한 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|밀어넣기 구독|  
 |**1**|끌어오기 구독|  
@@ -83,13 +83,13 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_replmonitorsubscriptionpendingcmds** 트랜잭션 복제와 함께 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_replmonitorsubscriptionpendingcmds** 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할의 멤버나 배포자는 **db_owner** 고정된 데이터베이스 역할이 배포 데이터베이스에서 실행할 수 있는 **sp_ replmonitorsubscriptionpendingcmds**합니다. 한 게시 액세스 목록의 멤버 실행할 수 있는 배포 데이터베이스를 사용 하는 게시에 대 한 **sp_replmonitorsubscriptionpendingcmds** 보류 중인 해당 게시에 대 한 명령 돌아갑니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버만 합니다 **sysadmin** 고정된 서버 역할의 멤버나 배포자 합니다 **db_owner** 고정된 데이터베이스 역할의 배포 데이터베이스에서 실행할 수 있습니다 **sp_ replmonitorsubscriptionpendingcmds**합니다. 배포 데이터베이스를 사용 하는 게시를 실행할 수에 대 한 게시 액세스의 구성원 나열 **sp_replmonitorsubscriptionpendingcmds** 보류 중인 명령 게시에 대해 반환할 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [프로그래밍 방식으로 복제 모니터링](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: syspolicy_system_health_state (Transact SQL) | Microsoft Docs
+title: syspolicy_system_health_state (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_system_health_state view
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2978c1f2e79e0f519b46fb47d67778187c4ef1db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dbdc22b03d58bb3aac10b684d4fdc2e0c074123b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220294"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027872"
 ---
 # <a name="syspolicysystemhealthstate-transact-sql"></a>syspolicy_system_health_state(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ ms.locfileid: "33220294"
 |target_query_expression|**nvarchar(max)**|정책을 준수하는지 평가하는 대상을 정의하는 식입니다.|  
 |result|**bit**|이 대상의 정책 관련 상태입니다.<br /><br /> 0 = 실패<br /><br /> 1 = 성공|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  syspolicy_system_health_state 뷰는 사용 가능한 각 활성 정책과 관련된 대상 쿼리 식의 최근 상태를 표시합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기 및 개체 탐색기 정보 페이지는 이 뷰에서 정책 상태를 집계하여 중요한 상태를 표시합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_helpqreader_agent (Transact SQL) | Microsoft Docs
+title: sp_helpqreader_agent (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be49f8a6303096487ef2c36593280fcc72e38a91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d240d66768ee4b812542f959108ebea6baec4d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995950"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022711"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="arguments"></a>인수  
  [  **@frompublisher=** ] *frompublisher*  
- 저장 프로시저가 게시자에서 호출되는지 또는 배포자에서 호출되는지 여부를 지정합니다. *frompublisher* 는 bit 이며 기본값은 0입니다. **1** 저장된 프로시저가 게시자에서 호출 될 것을 의미 하 고 **0** 저장된 프로시저가 배포자에서 호출 될 것을 의미 합니다.  
+ 저장 프로시저가 게시자에서 호출되는지 또는 배포자에서 호출되는지 여부를 지정합니다. *frompublisher* 는 bit 이며 기본값은 0입니다. **1** 은 저장된 프로시저가 게시자에서 호출 됨 및 **0** 저장된 프로시저가 배포자에서 호출 되는 것을 의미 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -55,19 +55,19 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |**id**|**int**|에이전트의 ID입니다.|  
 |**name**|**nvarchar(100)**|에이전트의 이름입니다.|  
 |**job_id**|**uniqueidentifier**|에이전트 작업의 고유한 ID입니다.|  
-|**job_login**|**nvarchar(512)**|배포 에이전트가 실행 되는, 형식으로 반환 되는 Windows 계정이 며 *도메인*\\*username*합니다.|  
-|**job_password**|**sysname**|보안상의 이유로 값 **\* \* \* \* \* \* \* \* \* \*** 는 항상 반환 됩니다.|  
+|**job_login**|**nvarchar(512)**|배포 에이전트를 실행 하는 형식으로 반환 되는 Windows 계정입니다 *도메인*\\*username*합니다.|  
+|**job_password**|**sysname**|값이 보안상의 이유로 **\* \* \* \* \* \* \* \* \* \*** 항상 반환 됩니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_helpqreader_agent** 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 때의 값 *frompublisher* 은 **1**의 구성원만는 **sysadmin** 고정된 서버 역할의 멤버나 게시자는 **db_owner**게시 데이터베이스의 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helpqreader_agent**합니다. 그렇지 않은 경우의 구성원만는 **sysadmin** 고정된 서버 역할의 멤버나 배포자는 **db_owner** 배포 데이터베이스의 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpqreader_ 에이전트**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 때 값 *frompublisher* 는 **1**의 구성원만 합니다 **sysadmin** 고정된 서버 역할의 멤버나 게시자는 **db_owner**게시 데이터베이스의 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpqreader_agent**합니다. 이 고, 그렇지의 멤버만 합니다 **sysadmin** 고정된 서버 역할의 멤버나 배포자 합니다 **db_owner** 고정된 데이터베이스 역할의 배포 데이터베이스를 실행할 수 있습니다 **sp_helpqreader_ 에이전트**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

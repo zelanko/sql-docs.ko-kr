@@ -1,5 +1,5 @@
 ---
-title: sp_getagentparameterlist (Transact SQL) | Microsoft Docs
+title: sp_getagentparameterlist (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getagentparameterlist
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eb58b1f831c1eaec76189b55c8758b0aa6485f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d313f0445183366735e9c1fe2b65a8eb823fcc3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994120"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021243"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
   
 ## <a name="arguments"></a>인수  
  [  **@agent_type =** ] **'***agent_type***'**  
- 매개 변수를 추가할 복제 에이전트입니다. *agent_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
+ 매개 변수를 추가할 복제 에이전트입니다. *agent_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|에이전트|  
+|값|에이전트|  
 |-----------|-----------|  
 |**1**|스냅숏|  
 |**2**|로그 판독기|  
@@ -59,12 +59,12 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_getagentparameter**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_getagentparameter**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_captured_columns (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_get_captured_columns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550584"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024148"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="arguments"></a>인수  
  [ @capture_instance =] '*capture_instance*'  
- 원본 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 은 **sysname** NULL 일 수 없습니다.  
+ 원본 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 됩니다 **sysname** NULL 일 수 없습니다.  
   
- 테이블에 대 한 캡처 인스턴스를 보고 하려면 실행는 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 저장 프로시저입니다.  
+ 테이블에 대 한 캡처 인스턴스에서 보고서를 실행 합니다 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 저장 프로시저입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -74,12 +73,12 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|숫자 기반일 경우에는 열의 소수 자릿수이고, 그렇지 않으면 NULL입니다.|  
 |datetime_precision|**smallint**|datetime 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 NULL입니다.|  
   
-## <a name="remarks"></a>주의  
- Sys.sp_cdc_get_captured_columns를 사용 하 여 캡처 인스턴스 쿼리 함수를 쿼리하여 반환 된 캡처된 열에 대 한 열 정보를 가져오는 [cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 또는 [cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)합니다. 열 이름, ID 및 위치는 캡처 인스턴스의 수명 동안 일정하게 유지됩니다. 추적된 테이블에서 기본 원본 열의 데이터 형식이 변경될 경우에만 열 데이터 형식이 변경됩니다. 기존 캡처 인스턴스의 캡처된 열에 영향을 미치지 하는 열을 추가 하거나 원본 테이블에서 삭제 됩니다.  
+## <a name="remarks"></a>Remarks  
+ Sys.sp_cdc_get_captured_columns를 사용 하 여 캡처 인스턴스 쿼리 함수를 쿼리하여 반환 된 캡처된 열에 대 한 열 정보를 얻을 [cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 또는[cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)합니다. 열 이름, ID 및 위치는 캡처 인스턴스의 수명 동안 일정하게 유지됩니다. 추적된 테이블에서 기본 원본 열의 데이터 형식이 변경될 경우에만 열 데이터 형식이 변경됩니다. 열에 추가 되거나 원본 테이블에서 삭제 되는 기존 캡처 인스턴스의 캡처된 열에 영향이 없습니다.  
   
- 사용 하 여 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 원본 테이블에 적용 되는 언어 (DDL) 문을 데이터 정의 대 한 정보를 얻을 수 있습니다. 추적되는 원본 열의 구조를 수정하는 모든 DDL 변경이 결과 집합에 반환됩니다.  
+ 사용 하 여 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 정보를 가져올 데이터 정의 언어 (DDL) 문을 원본 테이블에 적용 합니다. 추적되는 원본 열의 구조를 수정하는 모든 DDL 변경이 결과 집합에 반환됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 다른 모든 사용자의 경우 원본 테이블에서 캡처된 모든 열에 대한 SELECT 권한이 필요하며 캡처 인스턴스에 대한 제어 역할이 정의된 경우 해당 데이터베이스 역할의 멤버 자격이 필요합니다. 호출자에게 원본 데이터를 볼 수 있는 권한이 없으면 함수는 오류 22981(개체가 없거나 액세스가 거부되었습니다)을 반환합니다.  
   
 ## <a name="examples"></a>예  
@@ -93,7 +92,7 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

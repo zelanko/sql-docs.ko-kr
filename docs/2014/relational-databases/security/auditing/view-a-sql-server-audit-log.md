@@ -13,16 +13,15 @@ helpviewer_keywords:
 - viewing audit logs
 - logs [SQL Server], audit
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bb33f72c7b3f5f7af6d15004ce6377cbc8d6ffe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c70487017cb8e92570bfe9adb1bc957cf70e7e52
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219043"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026265"
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 감사 로그 보기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 SQL Server 감사 로그를 보는 방법에 대해 설명합니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_attributes (Transact SQL) | Microsoft Docs
+title: sys.xml_schema_attributes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,21 +20,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e7271dd8521ad4f84c0c3fa528b088dc217dbe9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a40f4cbe1e3f1a4f2fa2ba39023f0840a201b3a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220454"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017247"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML 스키마 구성 요소 특성을 각 행을 반환 **symbol_space** 의 **A**합니다.  
+  특성을 XML 스키마 구성 요소 별로 하나의 행을 반환 **symbol_space** 의 **는**합니다.  
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**\<열을 상속 >**|--|상속 [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)합니다.|  
@@ -42,11 +41,11 @@ ms.locfileid: "33220454"
 |**must_be_qualified**|**bit**|1 = 특성의 네임스페이스를 명시적으로 한정해야 합니다.<br /><br /> 0 = 특성의 네임스페이스를 암시적으로 한정할 수 있습니다. (기본값)|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|특성의 기본값입니다. 기본값을 제공하지 않으면 NULL입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [XML 스키마 &#40;XML 유형 시스템&#41; 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [XML 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;SQL 트랜잭션&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.server_file_audits (Transact SQL) | Microsoft Docs
+title: sys.server_file_audits (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222104"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035933"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33222104"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|감사의 ID입니다.|  
-|name|**sysname**|감사의 이름입니다.|  
+|NAME|**sysname**|감사의 이름입니다.|  
 |audit_guid|**uniqueidentifier**|감사의 GUID입니다.|  
 |create_date|**datetime**|파일 감사를 만든 UTC 날짜입니다.|  
 |modify_date|**datatime**|파일 감사를 마지막으로 수정한 UTC 날짜입니다.|  
@@ -58,12 +58,12 @@ ms.locfileid: "33222104"
 |log_file_path|**nvarchar(260)**|감사가 있는 경로입니다. 파일 감사의 경우 파일 경로이고 응용 프로그램 로그 감사의 경우 응용 프로그램 로그 경로입니다.|  
 |log_file_name|**nvarchar(260)**|CREATE AUDIT DDL에서 제공하는 로그 파일의 기본 이름입니다. base_log_name 파일에 증분값을 접미사로 추가하여 로그 파일 이름을 만듭니다.|  
   
-## <a name="permissions"></a>Permissions  
- 있는 보안 주체는 **ALTER ANY SERVER AUDIT** 또는 **VIEW ANY DEFINITION** 권한이 카탈로그 뷰에 액세스할 수 있어야 합니다. 또한 보안 주체가 거부 되지 않아야 **VIEW ANY DEFINITION** 권한.  
+## <a name="permissions"></a>사용 권한  
+ 사용 하 여 보안 주체를 **ALTER ANY SERVER AUDIT** 또는 **VIEW ANY DEFINITION** 권한이이 카탈로그 뷰에 액세스할 수 있습니다. 또한 보안 주체 거부 하지 말아야 **VIEW ANY DEFINITION** 권한.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

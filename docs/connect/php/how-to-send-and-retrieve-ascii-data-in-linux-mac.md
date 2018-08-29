@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979825"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787930"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ PDO_SQLSRV 드라이버에 대 한 인코딩 기본 점이 SQLSRV 드라이버�
 ## <a name="example"></a>예제  
 다음 예제에서는 SQL Server 용 PHP 드라이버를 사용 하 여 연결 하기 전에 특정 로캘을 지정 하 여 ASCII 데이터를 검색 하는 방법을 보여 줍니다. MacOS의 동일한 로캘을에서 다양 한 Linux 플랫폼의 로캘은 있습니다 다르게 이름이 지정 됩니다. 예를 들어 하는 미국 ISO-8859-1 (라틴어 1) 로캘이 `en_US.ISO-8859-1` macOS에서 이름은 동안 Linux에 `en_US.ISO8859-1`입니다.
   
-예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 서버에 설치 됩니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
+예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 설치 됩니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   
 ```  
 <?php  

@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661775"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785487"
 ---
 # <a name="using-adaptive-buffering"></a>선택 버퍼링 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-선택 버퍼링은 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있는 기능입니다. 응용 프로그램은 드라이버가 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 모든 버전에서 선택 버퍼링 기능을 사용할 수 있습니다.
+선택 버퍼링은 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있는 기능입니다. 응용 프로그램은 드라이버가 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 버전에서 선택 버퍼링 기능을 사용할 수 있습니다.
 
-일반적으로 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 쿼리를 실행할 때 모든 결과를 서버에서 검색하여 응용 프로그램 메모리에 넣습니다. 이 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 리소스 소비를 최소화하지만 매우 큰 결과를 생성하는 쿼리의 경우 JDBC 응용 프로그램에서 OutOfMemoryError가 throw될 수 있습니다.
+일반적으로 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 쿼리를 실행할 때 모든 결과를 서버에서 검색하여 응용 프로그램 메모리에 넣습니다. 이 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 리소스 소비를 최소화하지만 매우 큰 결과를 생성하는 쿼리의 경우 JDBC 응용 프로그램에서 OutOfMemoryError가 throw될 수 있습니다.
 
-응용 프로그램에서 매우 큰 결과를 처리할 수 있도록 하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 선택 버퍼링을 제공합니다. 선택 버퍼링을 사용하면 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 명령문 실행 결과를 한 번에 모두 검색하는 것이 아니라 응용 프로그램에 필요할 때 검색합니다. 또한 응용 프로그램에서 더 이상 액세스할 수 없는 결과를 즉시 삭제합니다. 다음은 선택 버퍼링을 유용하게 사용할 수 있는 몇 가지 예입니다.
+응용 프로그램에서 매우 큰 결과를 처리할 수 있도록 하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 선택 버퍼링을 제공합니다. 선택 버퍼링을 사용하면 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명령문 실행 결과를 한 번에 모두 검색하는 것이 아니라 응용 프로그램에 필요할 때 검색합니다. 또한 응용 프로그램에서 더 이상 액세스할 수 없는 결과를 즉시 삭제합니다. 다음은 선택 버퍼링을 유용하게 사용할 수 있는 몇 가지 예입니다.
 
 - **쿼리로 매우 큰 결과 집합이 생성되는 경우**: 메모리에 저장할 수 있는 행보다 더 많은 행을 생성하는 SELECT 문을 응용 프로그램에서 실행하는 경우가 있습니다. 이전 릴리스에서는 OutOfMemoryError를 방지하기 위해 응용 프로그램에서 서버 커서를 사용해야 했습니다. 선택 버퍼링을 사용하면 서버 커서 없이도 임의의 큰 결과 집합을 정방향 읽기 전용으로 처리할 수 있습니다.
 
-- **쿼리가 너무 큰** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **열 또는** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **출력 매개 변수 값을 생성합니다.** 응용 프로그램이 너무 커서 응용 프로그램 메모리에 한 번에 저장할 수 없는 큰 단일 값(열 또는 출력 매개 변수)을 검색할 수 있습니다. 선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 응용 프로그램은 스트림에서 읽으면서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 해당 값을 검색합니다.
+- **쿼리가 너무 큰** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **열 또는** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **출력 매개 변수 값을 생성합니다.** 응용 프로그램이 너무 커서 응용 프로그램 메모리에 한 번에 저장할 수 없는 큰 단일 값(열 또는 출력 매개 변수)을 검색할 수 있습니다. 선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 응용 프로그램은 스트림에서 읽으면서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 값을 검색합니다.
 
 > [!NOTE]  
 > 선택 버퍼링을 사용하면 JDBC 드라이버는 필요한 양의 데이터만 버퍼링합니다. 드라이버는 버퍼 크기를 제어 또는 제한하는 공용 메서드를 제공하지 않습니다.
@@ -56,7 +56,7 @@ JDBC 드라이버 버전 1.2를 사용하는 경우 응용 프로그램에서 [s
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>선택 버퍼링을 사용하여 큰 데이터 검색
 
-get\<Type>Stream 메서드를 사용하여 큰 값을 한 번 읽은 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 반환하는 순서로 ResultSet 열과 CallableStatement 출력 매개 변수에 액세스하면 결과를 처리할 때 선택 버퍼링이 응용 프로그램 메모리 사용량을 최소화합니다. 선택 버퍼링을 사용하면 다음과 같은 결과를 얻을 수 있습니다.
+get\<Type>Stream 메서드를 사용하여 큰 값을 한 번 읽은 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환하는 순서로 ResultSet 열과 CallableStatement 출력 매개 변수에 액세스하면 결과를 처리할 때 선택 버퍼링이 응용 프로그램 메모리 사용량을 최소화합니다. 선택 버퍼링을 사용하면 다음과 같은 결과를 얻을 수 있습니다.
 
 - [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스에 정의된 get\<Type>Stream 메서드는 응용 프로그램에서 표시하는 경우 스트림을 재설정할 수 있다 하더라도 기본적으로 한 번 읽기 스트림을 반환합니다. 응용 프로그램에서 스트림 `reset`을 원할 경우 먼저 해당 스트림에서 `mark` 메서드를 호출해야 합니다.
 
@@ -83,7 +83,7 @@ get\<Type>Stream 메서드를 사용하여 큰 값을 한 번 읽은 다음, [!I
 
 - 일부의 경우가 있습니다를 사용 하 여 위치 **selectMethod = cursor** 대신 **responseBuffering 적응 =** 와 같은 더 많은 이점을 제공할 것:
 
-  - 응용 프로그램에 정방향 전용 처리를 하는 경우 읽기 전용 결과 집합을 천천히를 사용 하 여 사용자 입력을 받은 후 각 행을 읽는 등 **selectMethod = cursor** of **responseBuffering 적응 =** 수 리소스 사용량을 줄이는 데 도움이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.
+  - 응용 프로그램에 정방향 전용 처리를 하는 경우 읽기 전용 결과 집합을 천천히를 사용 하 여 사용자 입력을 받은 후 각 행을 읽는 등 **selectMethod = cursor** of **responseBuffering 적응 =** 수 리소스 사용량을 줄이는 데 도움이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
 
   - 응용 프로그램이 동일한 연결에서 동시에 둘 이상의 정방향 읽기 전용 결과 집합을 처리하는 경우 **responseBuffering=adaptive** 대신 **selectMethod=cursor**를 사용하면 이러한 결과 집합을 처리하는 동안 드라이버에 필요한 메모리를 줄일 수 있습니다.
 

@@ -16,16 +16,15 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 79
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8ed369dbd8cd63f7d1cb9e63adf0721fcb07e612
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ff538aed10cf6fa9c3ad0ae3f6fa04b223edd1dd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40392805"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019809"
 ---
 # <a name="surface-area-configuration"></a>노출 영역 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새로 설치의 기본 구성에서는 많은 기능이 활성화되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 악의적인 사용자로부터 공격 대상이 될 수 있는 기능 수를 최소화하기 위해 주요 서비스와 기능만 필요에 따라 설치하고 시작합니다. 시스템 관리자는 설치 시 이러한 기본값을 변경할 수 있으며 필요에 따라 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기능을 활성화 또는 비활성화할 수 있습니다. 또한 다른 컴퓨터에서 연결하는 경우 일부 구성 요소는 프로토콜을 구성해야만 사용할 수 있습니다.  
@@ -70,8 +69,8 @@ ms.locfileid: "40392805"
 ## <a name="command-prompt-options"></a>명령 프롬프트 옵션  
  **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlet을 사용하여 노출 영역 구성 정책을 호출할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 cmdlet 사용](../../database-engine/use-the-database-engine-cmdlets.md)을 참조하세요.  
   
-## <a name="soap-and-service-broker-endpoints"></a>SOAP 및 Service Broker 끝점  
- 끝점을 끄려면 정책 기반 관리를 사용하고 끝점의 속성을 만들고 변경하려면 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql) 및 [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용합니다.  
+## <a name="soap-and-service-broker-endpoints"></a>SOAP 및 Service Broker 엔드포인트  
+ 엔드포인트를 끄려면 정책 기반 관리를 사용하고 엔드포인트의 속성을 만들고 변경하려면 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-endpoint-transact-sql) 및 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

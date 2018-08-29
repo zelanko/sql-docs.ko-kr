@@ -19,14 +19,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, database mirroring
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7688a2ca435a3bf342205f04af4544f8e306f40c
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1e15ed88f461fac8297fae327c14366c345346a9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108865"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024283"
 ---
 # <a name="using-database-mirroring"></a>데이터베이스 미러링 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_grant_publication_access (Transact SQL) | Microsoft Docs
+title: sp_grant_publication_access (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c6739cd65e016e08773831d0bc87e46ac27ae1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 681e62cea3b5bf9a22cedd1ab1803737b2080642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994200"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023941"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,26 +45,26 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
   
 ## <a name="arguments"></a>인수  
  [ **@publication**=] **'***게시***'**  
- 액세스할 게시의 이름입니다. **'***게시***'** 은 **sysname**, 기본값은 없습니다.  
+ 액세스할 게시의 이름입니다. **'***발행물***'** 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@login**=] **'***로그인***'**  
- 로그인 ID입니다. **'***로그인***'** 은 **sysname**, 기본값은 없습니다.  
+ 로그인 ID입니다. **'***로그인***'** 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@reserved =**] **'***예약***'**  
+ [  **@reserved =**] **'***예약 된***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_grant_publication_access** 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
   
  이 저장 프로시저는 반복적으로 호출할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_grant_publication_access**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_grant_publication_access**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_help_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [게시자 보안 설정](../../relational-databases/replication/security/secure-the-publisher.md)   

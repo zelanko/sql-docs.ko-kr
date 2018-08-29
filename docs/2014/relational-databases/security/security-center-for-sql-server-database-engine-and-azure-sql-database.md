@@ -16,16 +16,15 @@ helpviewer_keywords:
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7135846a7d442f9f43bfac505ed35a903c6b874a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4836c7e6c6ce0199b280a3f2d4534f506591aad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283099"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020350"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
   이 페이지의 보안 및 보호 하는 방법에 대 한 필요한 정보를 찾을 수 있도록 링크를 제공 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]고 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]입니다.  
@@ -107,7 +106,7 @@ ms.locfileid: "37283099"
   
  `Restricting Data Access to Selected Data Elements`  
   
--    [뷰](../views/views.md) 및 [프로시저](../stored-procedures/stored-procedures-database-engine.md)를 사용한 데이터 액세스 제한  
+-   [뷰](../views/views.md) 및 [프로시저](../stored-procedures/stored-procedures-database-engine.md)를 사용한 데이터 액세스 제한  
   
 -   [행 수준 보안](http://msdn.microsoft.com/library/azure/dn765131.aspx)  
   

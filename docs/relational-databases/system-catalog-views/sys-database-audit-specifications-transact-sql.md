@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specifications (Transact SQL) | Microsoft Docs
+title: sys.database_audit_specifications (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91195df8c736b15429d4ac7e339ff19217c91bfd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181649"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027301"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,22 +38,22 @@ ms.locfileid: "33181649"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|이름|**sysname**|감사 사양의 이름입니다.|  
+|속성|**sysname**|감사 사양의 이름입니다.|  
 |database_specification_id|**int**|데이터베이스 사양의 ID입니다.|  
 |create_date|**datetime**|감사 사양을 만든 날짜입니다.|  
 |modified_date|**datetime**|감사 사양을 마지막으로 수정한 날짜입니다.|  
 |is_state_enabled|**bit**|감사 사양 상태:<br /><br /> 0 - 사용 안 함<br /><br /> 1 – 사용|  
 |audit_GUID|**uniqueidentifer**|이 사양을 포함하는 감사의 GUID입니다. 데이터베이스 연결/시작 시 멤버 데이터베이스 감사 사양을 열거하는 동안 사용됩니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  데이터베이스가 읽기 전용 모드인 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 기능을 사용하여 데이터베이스 감사 사양을 추가할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
- 보안 주체는 **ALTER ANY DATABASE AUDIT** 또는 **VIEW DEFINITION** 권한, dbo 역할 및 db_owners 고정된 데이터베이스 역할의 멤버가이 카탈로그 뷰에 대 한 액세스 권한이 있습니다. 또한 보안 주체가 거부 되지 않아야 **VIEW DEFINITION** 권한.  
+## <a name="permissions"></a>사용 권한  
+ 사용 하 여 보안 주체를 **ALTER ANY DATABASE AUDIT** 또는 **VIEW DEFINITION** 권한, dbo 역할 및 db_owners 고정된 데이터베이스 역할의 멤버가이 카탈로그 뷰에 액세스할 수 있습니다. 또한 보안 주체 거부 하지 말아야 **VIEW DEFINITION** 권한.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]을 참조하세요. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 을 참조하세요. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

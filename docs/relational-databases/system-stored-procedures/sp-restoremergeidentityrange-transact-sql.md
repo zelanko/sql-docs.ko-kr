@@ -1,5 +1,5 @@
 ---
-title: sp_restoremergeidentityrange (Transact SQL) | Microsoft Docs
+title: sp_restoremergeidentityrange (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8be3de617713868a755dbab55e4ac4674dfd07a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 55fa550c0dab2d0e03681e0dfa75bc91e676f5d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997680"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038318"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +47,23 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [ **@publication** =] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값 **모든**합니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
   
  [ **@article** =] **'***문서***'**  
- 아티클의 이름입니다. *문서* 은 **sysname**의 기본값은 **모든**합니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
+ 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_restoremergeidentityrange** 병합 복제와 함께 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_restoremergeidentityrange** 병합 복제에 사용 됩니다.  
   
- **sp_restoremergeidentityrange** 배포자 로부터 최대 id 범위 할당 정보를 가져오고의 값을 업데이트는 **max_used** 열 [MSmerge_identity_range_allocations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) 자동 id 범위 관리를 사용 하는 아티클에 대 한 합니다.  
+ **sp_restoremergeidentityrange** 배포자 로부터 최대 id 범위 할당 정보를 가져오고 값을 업데이트 합니다 **max_used** 열의 [MSmerge_identity_range_allocations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) 자동 id 범위 관리를 사용 하는 아티클에 대해 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_restoremergeidentityrange**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_restoremergeidentityrange**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)  

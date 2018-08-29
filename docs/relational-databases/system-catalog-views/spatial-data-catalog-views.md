@@ -14,15 +14,15 @@ dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27cce898323cc7a265d2dba8f9fea77a8c6045ae
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d9c4de9835fb2b5c8880631fa0ec9ea319e67f41
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33176333"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020682"
 ---
 # <a name="spatial-data-catalog-views"></a>공간 데이터 카탈로그 뷰
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

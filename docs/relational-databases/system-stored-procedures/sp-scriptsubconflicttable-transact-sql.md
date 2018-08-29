@@ -1,5 +1,5 @@
 ---
-title: sp_scriptsubconflicttable (Transact SQL) | Microsoft Docs
+title: sp_scriptsubconflicttable (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86a5b01b46aee8a08c0e490b0d59e3887211d51e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9eddd0192cff32db884f153a00b0f5526d16028
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997660"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020852"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 아티클을 포함하는 게시의 이름입니다. 이 이름은 데이터베이스에서 고유해야 합니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 아티클을 포함하는 게시의 이름입니다. 이 이름은 데이터베이스에서 고유해야 합니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
- 구독 아티클 이름입니다. *문서* 은 **sysname**, 기본값은 없습니다.  
+ 구독 아티클 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -60,13 +60,13 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|지연 구독 아티클에 대한 충돌 테이블을 구독자에 만들기 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 반환합니다. 이 스크립트는 구독 데이터베이스의 구독자에서 실행됩니다.|  
   
-## <a name="remarks"></a>주의  
- **sp_scriptsubconflicttable** 초기 스냅숏이 수동으로 적용은 구독이 있는 구독자에 사용 됩니다. 구독자에서 충돌 테이블은 선택 사항입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_scriptsubconflicttable** 초기 스냅숏이 수동으로 적용 되는 구독이 있는 구독자에 사용 됩니다. 구독자에서 충돌 테이블은 선택 사항입니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_scriptsubconflicttable**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_scriptsubconflicttable**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [지연 업데이트 충돌 감지 및 해결](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_default (Transact SQL) | Microsoft Docs
+title: sp_help_agent_default (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ea2d817e869f7ff66ddf70243e01b2f334fb14b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a835b1bafa037e249450118cb08f3d886bb6283b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994660"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017819"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@profile_id=**] *profile_id * * * 출력**  
- 에이전트 유형에 대한 기본 구성 ID입니다. *profile_id* 은 **int**, 기본값은 없습니다. *profile_id* 유형의 에이전트에 대 한 기본 구성의 ID를 반환 하 고는 출력 매개 변수 이기도 합니다.  
+ [  **@profile_id=**] *profile_id * 출력**  
+ 에이전트 유형에 대한 기본 구성 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다. *profile_id* 도 출력 매개 변수 이며 에이전트 유형에 대 한 기본 구성의 ID를 반환 합니다.  
   
  [  **@agent_type=**] **'***agent_type***'**  
- 에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
+ 에이전트의 유형입니다. *agent_type* 됩니다 **int**이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|스냅숏 에이전트입니다.|  
 |**2**|로그 판독기 에이전트입니다.|  
@@ -63,13 +63,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_default** 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **replmonitor** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_help_agent_default**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **replmonitor** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_help_agent_default**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_refreshsubscriptions (Transact SQL) | Microsoft Docs
+title: sp_refreshsubscriptions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb85456e42a3dfbef482e4260095f5496885328d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7029d3013ce3a9dd0bfe173261f7dbd4eef3fad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995390"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027967"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +46,23 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication** =] **'***게시***'**  
- 구독을 새로 고칠 게시입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 구독을 새로 고칠 게시입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_refreshsubscriptions** 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
   
- **sp_refreshsubscriptions** 호출한 **sp_addarticle** 즉시 업데이트 게시에 대 한 합니다.  
+ **sp_refreshsubscriptions** 호출한 **sp_addarticle** 즉시 업데이트 게시 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_refreshsubscriptions**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_refreshsubscriptions**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

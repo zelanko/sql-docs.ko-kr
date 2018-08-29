@@ -15,16 +15,16 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead61697c2db5bc574699ac460584225564e5774
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332707"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410370"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
 
- > 이전 버전의 SQL Server와 관련된 내용은 [1단원: 프로젝트 및 기본 패키지 만들기](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx)를 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 내용은 [1단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)를 참조하세요.
 
 이 단원에서는 하나의 플랫 파일 원본에서 데이터를 추출하고 두 개의 조회 변환 구성 요소를 사용하여 데이터를 변환하며 **AdventureWorksDW2012** 의 **FactCurrency**팩트 테이블에 해당 데이터를 쓰는 간단한 ETL 패키지를 만듭니다. 이 단원에서는 새로운 패키지를 만들고 데이터 원본 및 대상 연결을 추가하고 구성하며 새로운 제어 흐름 및 데이터 흐름 구성 요소를 사용하여 작업하는 방법에 대해 설명합니다.  
   
@@ -61,10 +61,10 @@ SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tool
   
 |열 이름|데이터 형식|조회 테이블|조회 열|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
+|AverageRate|FLOAT|없음|없음|  
 |CurrencyKey|int(FK)|DimCurrency|CurrencyKey(PK)|  
 |DateKey|int(FK)|FactOnlineSales|DateKey (PK)|  
-|EndOfDayRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
+|EndOfDayRate|FLOAT|없음|없음|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>대상과 호환될 원본 데이터 매핑  
 원본 및 대상 데이터 형식을 분석하면 **CurrencyKey** 와 **DateKey** 값을 조회해야 한다는 사실을 알 수 있습니다. 이러한 조회를 수행할 변환은 **DimCurrency** 및 **DimDate** 차원 테이블의 대체 키를 사용하여 **CurrencyKey** 및 **DateKey** 값을 가져옵니다.  
@@ -72,7 +72,7 @@ SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tool
 |플랫 파일 열|테이블 이름|열 이름|데이터 형식|  
 |--------------------|--------------|---------------|-------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
-|1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
+|@shouldalert|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|FactOnlineSales|FullDateAlternateKey|날짜|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   

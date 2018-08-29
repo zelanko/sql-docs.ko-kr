@@ -1,5 +1,5 @@
 ---
-title: sp_ivindexhasnullcols (Transact SQL) | Microsoft Docs
+title: sp_ivindexhasnullcols (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4431ae915c43d6ceb96200c3ebbf6aa976dd4ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7ca9be2e67f49a2881171dcfb4e0a99a6672bd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995060"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023733"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,26 +47,26 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
   
 ## <a name="arguments"></a>인수  
  [ **@viewname**=] **'***view_name***'**  
- 확인할 뷰의 이름입니다. *view_name* 은 **sysname**, 기본값은 없습니다.  
+ 확인할 뷰의 이름입니다. *view_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@fhasnullcols**=] *field_has_null_columns* 출력  
- 뷰 인덱스에 NULL을 허용하는 열이 있는지 여부를 표시하는 플래그입니다. *view_name* 은 **sysname**, 기본값은 없습니다. 값을 반환 **1** 뷰 인덱스에 열이 NULL을 허용 하는 경우. 값을 반환 **0** 보기에 NULL을 허용 하는 열이 포함 되어 있지 않으면입니다.  
+ 뷰 인덱스에 NULL을 허용하는 열이 있는지 여부를 표시하는 플래그입니다. *view_name* 됩니다 **sysname**, 기본값은 없습니다. 값을 반환 **1** 뷰 인덱스에는 열이 NULL을 허용 하는 경우. 값을 반환 **0** 보기에 NULL을 허용 하는 열이 없는 경우.  
   
 > [!NOTE]  
->  자체는 저장된 프로시저의 반환 코드를 반환 하는 경우 **1**, 즉 저장된 프로시저 실행이 실패 했다는,이 값은 **0** 무시 해야 합니다.  
+>  저장된 프로시저 자체가 반환 코드를 반환 하는 경우 **1**오류가 있었습니다 즉 저장된 프로시저 실행,이 값은 **0** 무시 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_ivindexhasnullcols** 트랜잭션 복제에 사용 됩니다.  
   
  기본적으로 게시에 있는 인덱싱된 뷰 아티클은 구독자에서 테이블로 만들어집니다. 단, 인덱싱된 열에서 NULL 값을 허용하는 경우 인덱싱된 뷰는 구독자에서 테이블 대신 인덱싱된 뷰로 만들어집니다. 이 저장 프로시저를 실행하면 현재 인덱싱된 뷰에 이 문제가 있는지 여부를 사용자에게 경고할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_ivindexhasnullcols**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_ivindexhasnullcols**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

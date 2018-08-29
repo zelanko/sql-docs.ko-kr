@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ad64d1d455a4419c66949ba0196f9a9557a8ae52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aa7b018044aca4dec144e2be66bfba68cef5597
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262185"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021836"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,43 +57,43 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 ## <a name="arguments"></a>인수  
  [ **@account_id** = ] *account_id*  
- 업데이트할 계정 ID입니다. *account_id* 은 **int**, 기본값은 NULL입니다. 중 하나 이상을 *account_id* 또는 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
+ 업데이트할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 하나 이상의 *account_id* 하거나 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
   
  [ **@account_name** =] **'***account_name***'**  
- 업데이트할 계정 이름입니다. *account_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나 이상을 *account_id* 또는 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
+ 업데이트할 계정 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하나 이상의 *account_id* 하거나 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
   
  [ **@email_address** =] **'***email_address***'**  
- 메시지를 보낼 새 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. 주소의 서버 이름은 데이터베이스 메일이 이 계정에서 메일을 보낼 때 사용하는 서버입니다. *email_address* 은 **nvarchar (128)**, 기본값은 NULL입니다.  
+ 메시지를 보낼 새 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. 주소의 서버 이름은 데이터베이스 메일이 이 계정에서 메일을 보낼 때 사용하는 서버입니다. *email_address* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다.  
   
  [ **@display_name** = ] **'***display_name***'**  
- 이 계정에서 보내는 전자 메일 메시지에 사용할 새 표시 이름입니다. *display_name* 은 **nvarchar (128)**, 기본값은 없습니다.  
+ 이 계정에서 보내는 전자 메일 메시지에 사용할 새 표시 이름입니다. *display_name* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
   
  [ **@replyto_address** =] **'***replyto_address***'**  
- 이 계정에서 보내는 전자 메일 메시지의 회신 머리글에 사용할 새 주소입니다. *replyto_address* 은 **nvarchar (128)**, 기본값은 없습니다.  
+ 이 계정에서 보내는 전자 메일 메시지의 회신 머리글에 사용할 새 주소입니다. *replyto_address* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
   
  [ **@description** =] **'***설명***'**  
- 계정에 대한 새 설명입니다. *설명* 은 **nvarchar (256)**, 기본값은 NULL입니다.  
+ 계정에 대한 새 설명입니다. *설명* 됩니다 **nvarchar(256)**, 기본값은 NULL입니다.  
   
  [ **@mailserver_name** = ] **'***server_name***'**  
- 이 계정에 사용할 SMTP 메일 서버의 새 이름입니다. 실행 하는 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확인할 수 있어야는 *server_name* IP 주소입니다. *server_name* 은 **sysname**, 기본값은 없습니다.  
+ 이 계정에 사용할 SMTP 메일 서버의 새 이름입니다. 실행 하는 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확인할 수 있어야 합니다 *server_name* IP 주소를 합니다. *server_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@mailserver_type** = ] **'***server_type***'**  
- 전자 메일 서버의 새 유형입니다. *server_type* 은 **sysname**, 기본값은 없습니다. 값만 **'SMTP'** 지원 됩니다.  
+ 전자 메일 서버의 새 유형입니다. *server_type* 됩니다 **sysname**, 기본값은 없습니다. 값만 **'SMTP'** 지원 됩니다.  
   
  [ **@port** = ] *port_number*  
- 전자 메일 서버의 새 포트 번호입니다. *port_number* 은 **int**, 기본값은 없습니다.  
+ 전자 메일 서버의 새 포트 번호입니다. *port_number* 됩니다 **int**, 기본값은 없습니다.  
   
  [ **@timeout** =] **'***timeout***'**  
- 단일 전자 메일 메시지의 SmtpClient.Send에 대한 시간 제한 매개 변수입니다. *제한 시간* 은 **int** (초) 이며 기본값은 없습니다.  
+ 단일 전자 메일 메시지의 SmtpClient.Send에 대한 시간 제한 매개 변수입니다. *시간 제한* 됩니다 **int** (초), 기본값은 없습니다.  
   
  [ **@username** =] **'***username***'**  
- 전자 메일 서버에 로그온하는 데 사용할 새 사용자 이름입니다. *사용자 이름* 은 **sysname**, 기본값은 없습니다.  
+ 전자 메일 서버에 로그온하는 데 사용할 새 사용자 이름입니다. *사용자 이름* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@password** =] **'***암호***'**  
- 전자 메일 서버에 로그온하는 데 사용할 새 암호입니다. *암호* 은 **sysname**, 기본값은 없습니다.  
+ 전자 메일 서버에 로그온하는 데 사용할 새 암호입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@use_default_credentials** =] use_default_credentials  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스의 자격 증명을 사용하여 메일을 SMTP 서버로 보낼지 여부를 지정합니다. **use_default_credentials** 는 bit 이며 기본값은 없습니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 이면 데이터베이스 메일 사용 하는 **@username** 및 **@password** SMTP 서버에 인증 합니다. 경우 **@username** 및 **@password** NULL은 다음 익명 인증을 사용 합니다. 이 매개 변수를 지정하기 전에 해당 SMTP 관리자에게 문의하세요.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스의 자격 증명을 사용하여 메일을 SMTP 서버로 보낼지 여부를 지정합니다. **use_default_credentials** 는 bit 이며 기본값은 없습니다. 이 매개 변수가 1이면 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 자격 증명을 사용합니다. 이 매개 변수가 0 인 경우 데이터베이스 메일이 사용 하는 **@username** 하 고 **@password** SMTP 서버에서 인증에 대 한 합니다. 하는 경우 **@username** 하 고 **@password** 가 NULL 이면 익명 인증을 사용 합니다. 이 매개 변수를 지정하기 전에 해당 SMTP 관리자에게 문의하세요.  
   
  [ **@enable_ssl** =] enable_ssl  
  데이터베이스 메일에서 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화할지 여부를 지정합니다. SMTP 서버에 SSL이 필요한 경우 이 옵션을 사용합니다. **enable_ssl** 는 bit 이며 기본값은 없습니다.  
@@ -102,18 +101,18 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  계정 이름과 계정 ID가 둘 다 지정되면 저장 프로시저는 계정에 대한 정보를 업데이트할 뿐만 아니라 계정 이름도 변경합니다. 계정 이름을 변경하면 계정 이름의 오류를 수정할 수 있습니다.  
   
- 저장된 프로시저 **sysmail_update_account_sp** 에 **msdb** 데이터베이스에 있으며가 소유 하 고는 **dbo** 스키마입니다. 현재 데이터베이스 없는 경우 세 부분으로 이루어진 이름으로 프로시저를 실행 해야 **msdb**합니다.  
+ 저장된 프로시저 **sysmail_update_account_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-the-information-for-an-account"></a>1. 계정에 대한 정보 변경  
- 다음 예제에서는 계정을 업데이트 `AdventureWorks Administrator` 에 **msdb** 데이터베이스입니다. 계정에 대한 정보는 제공된 값으로 설정됩니다.  
+ 다음 예제에서는 계정 업데이트 `AdventureWorks Administrator` 에 **msdb** 데이터베이스입니다. 계정에 대한 정보는 제공된 값으로 설정됩니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -153,9 +152,9 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [데이터베이스 메일 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

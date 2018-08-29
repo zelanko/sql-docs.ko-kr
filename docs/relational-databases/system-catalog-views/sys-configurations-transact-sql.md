@@ -1,5 +1,5 @@
 ---
-title: sys.configurations (Transact SQL) | Microsoft Docs
+title: sys.configurations (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25de8a6eb70c79551caca8188c4f67a786e62172
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4f006cdbe3fa99f206af97dcae5edf97a6a86be0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181719"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030562"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "33181719"
 |**minimum**|**sql_variant**|구성 옵션의 최소값입니다.|  
 |**maximum**|**sql_variant**|구성 옵션의 최대값입니다.|  
 |**value_in_use**|**sql_variant**|이 옵션에 대해 현재 유효한 값을 실행하고 있습니다.|  
-|**설명**|**nvarchar(255)**|구성 옵션의 설명입니다.|  
+|**description**|**nvarchar(255)**|구성 옵션의 설명입니다.|  
 |**is_dynamic**|**bit**|1 = RECONFIGURE 문이 실행될 때 효력을 갖는 변수입니다.|  
-|**is_advanced**|**bit**|1 = 변수가 표시 됩니다 경우에만 **advancedoption 표시** 설정 됩니다.|  
+|**is_advanced**|**bit**|1 = 변수가 표시 됩니다 경우에만 합니다 **advancedoption 표시** 설정 됩니다.|  
   
- 모든 서버 구성 옵션의 목록에 대 한 참조 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)합니다.  
+ 모든 서버 구성 옵션 목록을 참조 하세요 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)합니다.  
   
 > [!NOTE]  
->  데이터베이스 수준 구성 옵션에 대 한 참조 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)합니다. 소프트 NUMA를 구성 하려면 참조 [소프트 NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)합니다.  
+>  데이터베이스 수준 구성 옵션에 대해서 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)합니다. 소프트 NUMA를 구성 하려면 참조 [SOFT-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [서버 차원의 구성 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [서버 차원의 구성 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

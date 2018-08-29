@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergesubscription (Transact SQL) | Microsoft Docs
+title: sp_validatemergesubscription (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2533df98905501a9253769200a56fb66a27a56d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d124c472a02f0a30cf73bb9597ebf934304e4a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999430"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023282"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 ## <a name="arguments"></a>인수  
  [**@publication=**] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@subscriber=** ] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 없습니다.  
+ 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db* 은 **sysname**, 기본값은 없습니다.  
+ 구독 데이터베이스의 이름입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@level=** ] *수준*  
- 수행할 유효성 검사의 유형입니다. *수준* 은 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
+ 수행할 유효성 검사의 유형입니다. *수준* 됩니다 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
   
 |수준 값|Description|  
 |-----------------|-----------------|  
@@ -69,13 +69,13 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription** 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_validatemergesubscription**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_validatemergesubscription**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [복제 된 데이터 유효성 검사](../../relational-databases/replication/validate-replicated-data.md)   
  [sp_validatemergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  

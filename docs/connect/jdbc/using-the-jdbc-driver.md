@@ -14,18 +14,18 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661795"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785635"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 손쉽게 연결하는 방법에 대한 빠른 시작 지침을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결하려면 먼저 로컬 컴퓨터 또는 서버에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 설치하고 로컬 컴퓨터에 JDBC 드라이버를 설치해야 합니다.  
+이 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 손쉽게 연결하는 방법에 대한 빠른 시작 지침을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하려면 먼저 로컬 컴퓨터 또는 서버에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 로컬 컴퓨터에 JDBC 드라이버를 설치해야 합니다.  
   
 ## <a name="choosing-the-right-jar-file"></a>올바른 JAR 파일 선택
 

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252632"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036361"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>인수  
  [ @capture_instance =] '*capture_instance*'  
- 원본 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 은 **sysname** NULL 일 수 없습니다.  
+ 원본 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 됩니다 **sysname** NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,10 +65,10 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|DDL 변경과 관련된 LSN(로그 시퀀스 번호)입니다.|  
 |ddl_time|**datetime**|DDL 변경과 관련된 시간입니다.|  
   
-## <a name="remarks"></a>주의  
- 원본 테이블 열 구조를 추가 하거나 열을 삭제 하거나 기존 열의 데이터 형식을 변경 등을 변경 하는 DDL 수정 하는 원본 테이블에서 유지 관리는 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블입니다. 이러한 변경 내용은 이 저장 프로시저를 사용하여 보고할 수 있습니다. cdc.ddl_history의 항목은 캡처 프로세스에서 로그의 DDL 트랜잭션을 읽을 때 생성됩니다.  
+## <a name="remarks"></a>Remarks  
+ 원본 테이블 열 구조의 추가 열을 삭제 하거나 기존 열의 데이터 형식을 변경 등을 변경 하는 원본 테이블에 DDL 수정에서 유지 관리 합니다 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블입니다. 이러한 변경 내용은 이 저장 프로시저를 사용하여 보고할 수 있습니다. cdc.ddl_history의 항목은 캡처 프로세스에서 로그의 DDL 트랜잭션을 읽을 때 생성됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스의 모든 캡처 인스턴스에 대한 행을 반환하려면 db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 다른 모든 사용자의 경우 원본 테이블에서 캡처된 모든 열에 대한 SELECT 권한이 필요하며 캡처 인스턴스에 대한 제어 역할이 정의된 경우 해당 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -89,7 +88,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

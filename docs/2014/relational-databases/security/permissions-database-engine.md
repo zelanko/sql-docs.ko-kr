@@ -19,16 +19,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 63
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f45a4c892af973850161733508cd9ab43eb7e772
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 53399e161e9c585c42c0442efe5138794819a273
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331473"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024960"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. 이 항목에서는 다음 정보를 제공합니다.  
@@ -218,11 +217,11 @@ ms.locfileid: "37331473"
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
-|ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
-|ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
-|ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
-|ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|엔드포인트|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
+|엔드포인트|CONNECT|CO|SERVER|CONTROL SERVER|  
+|엔드포인트|CONTROL|CL|SERVER|CONTROL SERVER|  
+|엔드포인트|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|엔드포인트|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  

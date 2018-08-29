@@ -19,13 +19,13 @@ ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c9bd3706b07f1b2b5e9f94b4b34cc7c48f51b215
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 00b05935b12c52ef655fc2587c8b016c2434f25f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542903"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058736"
 ---
 # <a name="effects-of-iso-options"></a>ISO 옵션의 효과
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "39542903"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 네 번째 SET 옵션인 CONCAT_NULL_YIELDS_NULL이 설정됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버가 경우이 옵션을 설정 하지 않으면 AnsiNPW = NO 또는 데이터 소스에 지정 된 [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 또는 [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md).  
   
- ISO 옵션 앞에서 설명한 것 처럼 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버를 경우 QUOTED_IDENTIFIER 옵션 설정 하지 않기 QuotedID = NO 또는 데이터 소스에 지정 된 **SQLDriverConnect** 또는  **SQLBrowseConnect**.  
+ 앞에서 설명한 ISO 옵션과 마찬가지로 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 경우 QUOTED_IDENTIFIER 옵션을 설정 하지 않습니다 QuotedID = NO 데이터 소스의 나 지정 된 **SQLDriverConnect** 또는  **SQLBrowseConnect**합니다.  
   
  드라이버가 SET 옵션의 현재 상태를 알 수 있도록 ODBC 응용 프로그램은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SET 문을 사용하여 이러한 옵션을 설정해서는 안 되며 데이터 원본 또는 연결 옵션을 통해서만 이러한 옵션을 설정해야 합니다. 응용 프로그램이 SET 문을 실행하면 드라이버가 잘못된 SQL 문을 생성할 수 있습니다.  
   

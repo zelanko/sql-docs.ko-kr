@@ -1,5 +1,5 @@
 ---
-title: sp_change_subscription_properties (Transact SQL) | Microsoft Docs
+title: sp_change_subscription_properties (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c049bd3ede58a884028cf3f1415660ebf2365f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 352a97795452a73837fb6111dd62c915844cd373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992470"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036685"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,24 +50,24 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
+ 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
+ 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@property=**] **'***속성***'**  
- 변경할 속성입니다. *속성* 은 **sysname**합니다.  
+ 변경할 속성입니다. *속성* 됩니다 **sysname**합니다.  
   
  [  **@value=**] **'***값***'**  
- 속성의 새 값입니다. *값* 은 **nvarchar (1000)**, 기본값은 없습니다.  
+ 속성의 새 값입니다. *값* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
   
  [  **@publication_type =** ] *publication_type*  
- 게시의 복제 유형을 지정합니다. *publication_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
+ 게시의 복제 유형을 지정합니다. *publication_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|게시 유형|  
+|값|게시 유형|  
 |-----------|----------------------|  
 |**0**|트랜잭션|  
 |**1**|스냅숏|  
@@ -77,7 +76,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|Value|Description|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||스냅숏의 대체 폴더 위치를 지정합니다. NULL로 설정하면 게시자가 지정한 기본 위치에서 스냅숏 파일이 선택됩니다.|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
@@ -87,7 +86,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|배포자에 연결할 때 Windows 인증을 사용합니다.|  
 ||**0**|배포자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
 |**dts_package_name**||SQL Server 2000 DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다. 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
-|**dts_package_password**||패키지 암호를 지정합니다. *dts_package_password* 은 **sysname** 기본값은 NULL 이며 암호 속성이 남아 있을 것 이라는 것을 지정 하는 변경 되지 않습니다.<br /><br /> 참고: DTS 패키지에는 암호가 있어야 합니다.<br /><br /> 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
+|**dts_package_password**||패키지 암호를 지정합니다. *dts_package_password* 됩니다 **sysname** 기본값은 NULL 사용 하 여 변경 되지 않은 상태로 남아 있을 암호 속성이 지정 합니다.<br /><br /> 참고: DTS 패키지 암호가 지정 되어야 합니다.<br /><br /> 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
 |**dts_package_location**||DTS 패키지가 저장된 위치입니다. 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
 |**dynamic_snapshot_location**||스냅숏 파일을 저장한 폴더의 경로를 지정합니다. 이 값은 병합 게시일 때만 지정할 수 있습니다.|  
 |**ftp_address**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
@@ -97,15 +96,15 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**호스트 이름**||게시자에 연결할 때 사용하는 호스트 이름입니다.|  
 |**internet_login**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 암호입니다.|  
-|**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  
+|**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  
 ||**0**|웹 동기화에 기본 인증을 사용합니다.<br /><br /> 참고: 웹 동기화 웹 서버에 SSL 연결이 필요합니다.|  
 |**internet_timeout**||웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
 |**internet_url**||웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
 |**merge_job_login**||에이전트가 실행되는 Windows 계정의 로그인입니다.|  
 |**merge_job_password**||에이전트가 실행되는 Windows 계정의 암호입니다.|  
-|**publisher_login**||게시자 로그인입니다. 변경 *publisher_login* 구독을 병합 게시에 대해서만 지원 됩니다.|  
-|**publisher_password**||게시자 암호입니다. 변경 *publisher_password* 구독을 병합 게시에 대해서만 지원 됩니다.|  
-|**publisher_security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. 변경 *publisher_security_mode* 구독을 병합 게시에 대해서만 지원 됩니다.|  
+|**publisher_login**||게시자 로그인입니다. 변경 *publisher_login* 병합 게시에 대 한 구독 에서만 지원 됩니다.|  
+|**publisher_password**||게시자 암호입니다. 변경 *publisher_password* 병합 게시에 대 한 구독 에서만 지원 됩니다.|  
+|**publisher_security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. 변경 *publisher_security_mode* 병합 게시에 대 한 구독 에서만 지원 됩니다.|  
 ||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
 |**use_ftp**|**true**|일반 프로토콜 대신 FTP를 사용하여 스냅숏을 검색합니다.|  
 ||**false**|일반 프로토콜을 사용하여 스냅숏을 검색합니다.|  
@@ -116,17 +115,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_change_subscription_properties** 모든 유형의 복제에 사용 됩니다.  
   
  **sp_change_subscription_properties** 끌어오기 구독에 사용 됩니다.  
   
- Oracle 게시자의 경우 값에 대 한 *publisher_db* 서버 인스턴스당 하나의 데이터베이스만 허용 하므로 무시 됩니다.  
+ Oracle 게시자의 경우 값 *publisher_db* Oracle 서버 인스턴스당 하나의 데이터베이스만 허용 하므로 무시 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_change_subscription_properties**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_change_subscription_properties**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 - large data, OLE objects
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3582b5566adc03ed8d4e7e35a71b32d18a1f4c41
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 52c1793b315e89770efaae9cedca7b4da730c71c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106099"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034951"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

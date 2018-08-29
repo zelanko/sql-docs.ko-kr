@@ -1,5 +1,5 @@
 ---
-title: sp_unregister_custom_scripting (Transact SQL) | Microsoft Docs
+title: sp_unregister_custom_scripting (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9956d2836bc9111105117a816189ec284eba3664
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a62df4743139a976a5571b07b762127e95c6d5c3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999021"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037806"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  이 저장된 프로시저는 사용자 정의 사용자 지정 저장된 프로시저를 제거 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 실행 하 여 등록 된 [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  이 저장된 프로시저는 사용자 정의 사용자 지정 저장된 프로시저를 제거 하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 실행 하 여 등록 된 스크립트 파일 [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,9 +48,9 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
   
 ## <a name="arguments"></a>인수  
  [ **@type** =] **'***형식***'**  
- 제거되는 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *형식* 은 **varchar (16)** 이며 기본값은 없고 수는 다음 값 중 하나 여야 합니다.  
+ 제거되는 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *형식* 됩니다 **varchar(16)** 이며 기본값은 없고 수 있습니다 다음 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**업데이트**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
@@ -58,21 +58,21 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 |**custom_script**|DDL(데이터 정의 언어) 트리거 끝에서 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
   
  [ **@publication** =] **'***게시***'**  
- 사용자 지정 저장 프로시저 또는 스크립트가 제거되는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다.  
+ 사용자 지정 저장 프로시저 또는 스크립트가 제거되는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@article** =] **'***문서***'**  
- 사용자 지정 저장 프로시저 또는 스크립트가 제거되는 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 NULL입니다.  
+ 사용자 지정 저장 프로시저 또는 스크립트가 제거되는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_unregister_custom_scripting** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정 서버 역할의 **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_ unregister_custom_scripting**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 구성원만 합니다 **sysadmin** 고정 서버 역할을 **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_ unregister_custom_scripting**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_register_custom_scripting &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
   
   

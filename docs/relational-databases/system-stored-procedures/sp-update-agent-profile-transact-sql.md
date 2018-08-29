@@ -1,5 +1,5 @@
 ---
-title: sp_update_agent_profile (Transact SQL) | Microsoft Docs
+title: sp_update_agent_profile (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_update_agent_profile
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e05343a842f0946d3b4c29b01c91766f39e02f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5a651cb32bab9498ef6162ece5a8cfebd4e86d3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000410"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028415"
 ---
 # <a name="spupdateagentprofile-transact-sql"></a>sp_update_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
   
 ## <a name="arguments"></a>인수  
  [**@agent_type=**] **'***agent_type***'**  
- 에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
+ 에이전트의 유형입니다. *agent_type* 됩니다 **int**이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|스냅숏 에이전트입니다.|  
 |**2**|로그 판독기 에이전트입니다.|  
@@ -57,21 +57,21 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**9**|큐 판독기 에이전트입니다.|  
   
  [**@agent_id=**] *agent_id*  
- 에이전트의 ID입니다. *agent_id* 은 **int**, 기본값은 없습니다.  
+ 에이전트의 ID입니다. *agent_id* 됩니다 **int**, 기본값은 없습니다.  
   
  [**@profile_id=**] *profile_id*  
- 에이전트가 사용해야 하는 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 없습니다. 각 에이전트에 대해 정의 된 프로필의 목록을 보려면 사용 하 여 [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)합니다. 시스템 프로필에 대 한 자세한 내용은 참조 [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)합니다.  
+ 에이전트가 사용해야 하는 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다. 각 에이전트에 대해 정의 된 프로필의 목록을 보려면 사용 하 여 [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)합니다. 시스템 프로필에 대 한 자세한 내용은 참조 하세요. [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_update_agent_profile** 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_update_agent_profile**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_update_agent_profile**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   

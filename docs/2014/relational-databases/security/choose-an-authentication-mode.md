@@ -22,16 +22,15 @@ helpviewer_keywords:
 - mixed authentication mode
 - SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 513a28480fbcd3c664b090ddcd68ebc0aa9df308
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 226a36b90d14e6a24ca651bec5ffee0688e6aaa9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155924"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019532"
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
   설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. Windows 인증 모드 및 혼합 모드의 2가지 유형이 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "37155924"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 Kerberos 보안 프로토콜을 사용할 수 없습니다.  
   
--   ph x="1" /&gt; 로그인에서는 Windows에서 제공하는 추가 암호 정책을 사용할 수 없습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에서는 Windows에서 제공하는 추가 암호 정책을 사용할 수 없습니다.  
   
 -   암호화된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 암호는 연결 시 네트워크를 통해 전달되어야 합니다. 자동으로 연결되는 일부 응용 프로그램은 클라이언트에서 암호를 저장합니다. 이들은 추가 공격 지점입니다.  
   

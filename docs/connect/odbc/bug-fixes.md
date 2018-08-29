@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946907"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784795"
 ---
 # <a name="list-of-bugs-fixed"></a>수정 된 버그 목록
 
-이 페이지부터 각 릴리스에서 수정 된 버그 목록이 들어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+이 페이지부터 각 릴리스에서 수정 된 버그 목록이 들어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Azure Active Directory 인증에 대 한 오류 메시지를 고정
 - 인코딩 감지 고정된 로캘 환경 변수를 다르게 설정 된 경우
@@ -40,7 +40,7 @@ ms.locfileid: "37946907"
 - Windows에서 ADAL 인증을 사용 하는 경우에 캐시 문제를 해결 함
 - 잠금가 하는 문제를 해결 하 고 Windows에서 로그 추적을 덮어쓰기
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - MARS가 활성화 된 SQLFreeHandle 및 연결 특성을 호출 하는 경우 1 초 지연 고정 "Encrypt = yes"
 - 전달 된 버퍼의 크기가 작은 경우 SQLGetData 검색 중인 데이터 (Windows)에 오류 22003 충돌 해결
@@ -50,7 +50,7 @@ ms.locfileid: "37946907"
 - MacOS 설치 관리자에서 경고를 수정 했습니다.
 - 연결 복원 력 및 연결 풀링 모두 설정 된 경우 서버에서 삭제할 세션을 일으키는 세션 복구를 시도 하는 동안 잘못 된 상태가 SQL Server로 보내기 고정
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 버그를 수정 했습니다 대량 삽입 "액세스 거부" 오류와 함께 실패할 수 있습니다 때 Kerberos 인증을 사용 하는 경우
 - 버전 2.3.1 아래에 있는 unixODBC 버그에 대 한 제거 해결 (unixODBC에 전달 된 특정 버퍼의 크기 두 배로 증가 드라이버)

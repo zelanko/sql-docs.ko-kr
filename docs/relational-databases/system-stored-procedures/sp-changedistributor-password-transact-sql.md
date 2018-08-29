@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributor_password (Transact SQL) | Microsoft Docs
+title: sp_changedistributor_password (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributor_password
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75b32e5782001a4babdad370bd02e559dbc72022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbdfc415fcc6e141dfc6adb035b6fa1bfd496d0a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987725"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037006"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_changedistributor_password [ @password= ] 'password'
   
 ## <a name="arguments"></a>인수  
  [  **@password=**] **'***암호***'**  
- 새 암호입니다. *암호* 은 **sysname**, 기본값은 없습니다. 배포자가 로컬인 경우의 암호는 **distributor_admin** 시스템 로그인 변경 됩니다.  
+ 새 암호입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. 배포자가 로컬인 경우의 암호를 **distributor_admin** 시스템 로그인 변경 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_changedistributor_password** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_changedistributor_password**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_changedistributor_password**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)   
  [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   

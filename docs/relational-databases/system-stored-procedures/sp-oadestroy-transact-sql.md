@@ -1,5 +1,5 @@
 ---
-title: sp_OADestroy (Transact SQL) | Microsoft Docs
+title: sp_OADestroy (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OADestroy
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 745b9f47c6fded870a6a4453e868cebdc88eb2b3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 758f9be98c13f599fabcea77d1007c73a688d5e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251223"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037380"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +50,12 @@ sp_OADestroy objecttoken
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 숫자(실패)이며 OLE Automation 개체가 반환한 HRESULT의 정수 값입니다.  
   
- HRESULT 반환 코드에 대 한 자세한 내용은 참조 [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)합니다.  
+ HRESULT 반환 코드에 대 한 자세한 내용은 참조 하세요. [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)합니다.  
   
-## <a name="remarks"></a>주의  
- 경우 **sp_OADestroy** 를 호출 하지 않으면 만든 OLE 개체 일괄 처리의 끝에 자동으로 제거 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 하는 경우 **sp_OADestroy** 를 호출 하지 않으면 만들어진 OLE 개체 일괄 처리의 끝에 자동으로 제거 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -70,8 +70,8 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [OLE 자동화 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [OLE Automation 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

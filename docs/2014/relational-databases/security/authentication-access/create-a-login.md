@@ -21,16 +21,15 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc696a697c251bb8b800f22d948f1141a92ecae6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274669"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020515"
 ---
 # <a name="create-a-login"></a>로그인 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인을 만드는 방법에 대해 설명합니다. 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결하는 사용자 또는 프로세스의 ID입니다.  
@@ -189,7 +188,7 @@ ms.locfileid: "37274669"
   
     1.  **개체 선택** 대화 상자의 **개체 유형 선택**에서 **개체 유형...** 을 클릭합니다.  
   
-    2.  **개체 유형 선택** 대화 상자에서 **끝점**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**개체 유형 중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  **개체 유형 선택** 대화 상자에서 **엔드포인트**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**개체 유형 중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  **선택할 개체 이름을 입력하세요(예제)** 에서 **찾아보기...** 를 클릭합니다.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "37274669"
   
     5.  **개체 선택** 대화 상자에서 **확인**을 클릭합니다.  
   
-4.  **선택한 유형의 모든 개체...** 의 **개체 유형 선택** 대화 상자에서 **끝점**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  **선택한 유형의 모든 개체...** 의 **개체 유형 선택** 대화 상자에서 **엔드포인트**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**개체 유형 중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **이름**  
  표에 추가된 각 보안 주체 또는 보안 개체의 이름입니다.  

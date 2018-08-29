@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: bcb5b6636fcabab8d6cb5eb3709f632f9968c3a7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279264"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784562"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39279264"
 |TDS.Channel|이 범주는 SQL 서버와의 TCP 통신 채널의 동작을 추적합니다. 로깅된 메시지는 소켓을 열고 닫는 동작과 읽고 쓰는 동작을 포함합니다. 또한 SQL 서버와의 SSL(Secure Sockets Layer) 연결 설정과 관련된 메시지를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINE, FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Writer|이 범주는 TDS 채널에 대한 쓰기 동작을 추적합니다. 내용이 아닌, 쓰기 길이만 추적됩니다. 또한 이 범주에서는 문의 실행을 취소하기 위해 주의 신호가 서버로 전송되는 경우의 문제를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Reader|FINEST 수준에서 이 범주는 TDS 채널의 특정 읽기 동작을 추적합니다. FINEST 수준에서는 추적이 자세할 수 있습니다. WARNING 및 SEVERE 수준에서 이 범주는 드라이버가 연결을 닫기 전 SQL 서버에서 잘못된 TDS 프로토콜을 수신하는 경우 추적을 수행합니다.<br /><br /> 이 범주는 로깅 수준을 FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
-|TDS.Command|이 범주는 낮은 수준의 상태 전환 및 [!INCLUDE[tsql](../../includes/tsql_md.md)] 문 실행, ResultSet 커서 인출, 커밋 등 TDS 명령 실행과 관련된 기타 정보를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
+|TDS.Command|이 범주는 낮은 수준의 상태 전환 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 실행, ResultSet 커서 인출, 커밋 등 TDS 명령 실행과 관련된 기타 정보를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.TOKEN|이 범주는 TDS 패킷 내의 토큰만 로깅하며 TDS.DATA 범주보다 정보가 덜 자세합니다. 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.<br /><br /> FINEST 수준에서 이 범주는 응답에서 처리되는 TDS 토큰을 추적합니다. SEVERE 수준에서 이 범주는 잘못된 TDS 토큰이 발견되는 경우 추적을 수행합니다.|  
 |SQLServerDatabaseMetaData|[SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
 |SQLServerResultSetMetaData|[SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  

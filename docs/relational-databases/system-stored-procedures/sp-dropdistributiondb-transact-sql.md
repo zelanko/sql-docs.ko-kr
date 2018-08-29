@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributiondb (Transact SQL) | Microsoft Docs
+title: sp_dropdistributiondb (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7dacdf22808f4bc3a4192a7adebafdd66eeb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cf4ab210cfd94cfc2f35ec6adadb47fb47a184f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989278"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038145"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_dropdistributiondb [ @database= ] 'database'
   
 ## <a name="arguments"></a>인수  
  [  **@database=**] **'***데이터베이스***'**  
- 삭제할 데이터베이스입니다. *데이터베이스* 은 **sysname**, 기본값은 없습니다.  
+ 삭제할 데이터베이스입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributiondb** 모든 유형의 복제에 사용 됩니다.  
   
- 이 저장된 프로시저를 실행 하 여 배포자를 삭제 하기 전에 실행 해야 **sp_dropdistributor**합니다.  
+ 이 저장된 프로시저를 실행 하 여 배포자를 삭제 하기 전에 실행 해야 합니다 **sp_dropdistributor**합니다.  
   
- **sp_dropdistributiondb** 도 있는 경우 배포 데이터베이스에 대 한 큐 판독기 에이전트 작업을 제거 합니다.  
+ **sp_dropdistributiondb** 있으면 배포 데이터베이스에 대 한 큐 판독기 에이전트 작업을 제거 합니다.  
   
  배포를 사용하지 않으려면 배포 데이터베이스가 온라인 상태여야 합니다. 배포 데이터베이스에 대해 배포 스냅숏이 있으면 배포를 사용하지 않도록 설정하기 전에 이 스냅숏을 먼저 삭제해야 합니다. 데이터베이스 스냅숏은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅숏과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_dropdistributiondb**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_dropdistributiondb**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_help_change_data_capture (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_help_change_data_capture (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263219"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027249"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>인수  
  [ @source_schema =] '*source_schema*'  
- 원본 테이블이 속한 스키마의 이름입니다. *source_schema* 은 **sysname**, 기본값은 NULL입니다. 때 *source_schema* 지정 된 *source_name* 도 지정 해야 합니다.  
+ 원본 테이블이 속한 스키마의 이름입니다. *source_schema* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *source_schema* 를 지정 하면 *source_name* 도 지정 해야 합니다.  
   
  Null이 아닌 *source_schema* 현재 데이터베이스에 존재 해야 합니다.  
   
- 경우 *source_schema* 은 NULL이 아니며 *source_name* NULL이 아닌 수도 있어야 합니다.  
+ 하는 경우 *source_schema* 가 NULL이 아닌 *source_name* NULL이 아닌 수도 있어야 합니다.  
   
  [ @source_name =] '*source_name*'  
- 원본 테이블의 이름입니다. *source_name* 은 **sysname**, 기본값은 NULL입니다. 때 *source_name* 지정 된 *source_schema* 도 지정 해야 합니다.  
+ 원본 테이블의 이름입니다. *source_name* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *source_name* 를 지정 하면 *source_schema* 도 지정 해야 합니다.  
   
  Null이 아닌 *source_name* 현재 데이터베이스에 존재 해야 합니다.  
   
- 경우 *source_name* 은 NULL이 아니며 *source_schema* NULL이 아닌 수도 있어야 합니다.  
+ 하는 경우 *source_name* 가 NULL이 아닌 *source_schema* NULL이 아닌 수도 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -76,8 +75,8 @@ sys.sp_cdc_help_change_data_capture
 |capture_instance|**sysname**|캡처 인스턴스의 이름입니다.|  
 |object_id|**int**|원본 테이블과 관련된 변경 테이블의 ID입니다.|  
 |source_object_id|**int**|원본 테이블의 ID입니다.|  
-|start_lsn|**binary(10)**|변경 테이블 쿼리의 하위 끝점을 나타내는 LSN(로그 시퀀스 번호)입니다.<br /><br /> NULL = 하위 끝점이 설정되지 않았습니다.|  
-|end_lsn|**binary(10)**|변경 테이블 쿼리의 상위 끝점을 나타내는 LSN입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
+|start_lsn|**binary(10)**|변경 테이블 쿼리의 하위 엔드포인트를 나타내는 LSN(로그 시퀀스 번호)입니다.<br /><br /> NULL = 하위 엔드포인트가 설정되지 않았습니다.|  
+|end_lsn|**binary(10)**|변경 테이블 쿼리의 상위 엔드포인트를 나타내는 LSN입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
 |supports_net_changes|**bit**|순 변경 지원이 활성화됩니다.|  
 |has_drop_pending|**bit**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 사용되지 않습니다.|  
 |role_name|**sysname**|변경 데이터에 대한 액세스를 제어하는 데 사용되는 데이터베이스 역할의 이름입니다.<br /><br /> NULL = 역할이 사용되지 않습니다.|  
@@ -87,11 +86,11 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|원본 테이블의 행을 고유하게 식별하는 데 사용되는 인덱스 열의 목록입니다.|  
 |captured_column_list|**nvarchar(max)**|캡처된 원본 열 목록입니다.|  
   
-## <a name="remarks"></a>주의  
- 때 둘 다 *source_schema* 및 *source_name* null 인 NULL을 명시적으로 설정 또는이 저장된 프로시저 호출자가 선택 하는 캡처 인스턴스를 모든 데이터베이스에 대 한 정보 반환 에 대 한 액세스. 때 *source_schema* 및 *source_name* 이 NULL, 설정 된 특정 명명 된 테이블에 대 한 정보만 반환 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 때 둘 다 *source_schema* 하 고 *source_name* 기본적으로 NULL 또는 NULL을 명시적으로 설정 되어이 저장된 프로시저 호출자가 선택 하는 캡처 인스턴스의 모든 데이터베이스에 대 한 정보를 반환 에 대 한 액세스. 때 *source_schema* 하 고 *source_name* 는 NULL이 아닌 명명된 된 특정 설정 된 테이블에 대 한 정보만 반환 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 때 *source_schema* 및 *source_name* 이 NULL 이면 호출자의 권한 부여 결과 집합에 포함 되는 활성화 된 테이블을 결정 합니다. 호출자는 캡처 인스턴스의 모든 캡처된 열에 대해 SELECT 권한을 가지고 있어야 하며 포함할 테이블 정보에 대해 정의된 제어 역할의 멤버여야 합니다. db_owner 데이터베이스 역할의 멤버는 정의된 모든 캡처 인스턴스에 대한 정보를 볼 수 있습니다. 설정된 특정 테이블에 대한 정보가 요청되면 동일한 SELECT 및 멤버 자격 조건이 명명된 테이블에 적용됩니다.  
+## <a name="permissions"></a>사용 권한  
+ 때 *source_schema* 하 고 *source_name* 이 NULL 이면 결과 집합에 설정된 된 테이블이 포함 된 호출자의 권한 부여를 결정 합니다. 호출자는 캡처 인스턴스의 모든 캡처된 열에 대해 SELECT 권한을 가지고 있어야 하며 포함할 테이블 정보에 대해 정의된 제어 역할의 멤버여야 합니다. db_owner 데이터베이스 역할의 멤버는 정의된 모든 캡처 인스턴스에 대한 정보를 볼 수 있습니다. 설정된 특정 테이블에 대한 정보가 요청되면 동일한 SELECT 및 멤버 자격 조건이 명명된 테이블에 적용됩니다.  
   
 ## <a name="examples"></a>예  
   

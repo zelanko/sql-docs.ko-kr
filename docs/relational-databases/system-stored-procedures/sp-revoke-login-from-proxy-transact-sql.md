@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (Transact SQL) | Microsoft Docs
+title: sp_revoke_login_from_proxy (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6275facb81f14269eca19979c115c5ea80844563
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 66a96c8c55bf344c7750e4706ad8c89593a29fde
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253552"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027856"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_revoke_login_from_proxy
   
 ## <a name="arguments"></a>인수  
  [ **@name=** ] **'***name***'**  
- 이름에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 서버 역할 또는 **msdb** 에 대 한 액세스를 제거할 데이터베이스 역할입니다. *이름* 은 **nvarchar (256)** 이며 기본값은 없습니다.  
+ 이름을 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 서버 역할 또는 **msdb** 데이터베이스 역할에 대 한 액세스를 제거 하려면. *이름을* 됩니다 **nvarchar(256)** 기본값은 없습니다.  
   
  [ **@proxy_id=** ] *id*  
- 액세스 권한을 제거할 프록시의 ID입니다. 어느 *id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *id* 은 **int**, 기본값은 NULL입니다.  
+ 액세스 권한을 제거할 프록시의 ID입니다. 어느 *id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 합니다 *id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다.  
   
  [ **@proxy_name=** ] **'***proxy_name***'**  
- 액세스 권한을 제거할 프록시의 이름입니다. 어느 *id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *proxy_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 액세스 권한을 제거할 프록시의 이름입니다. 어느 *id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 프록시를 참조하는 로그인이 소유한 작업은 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -78,8 +77,8 @@ EXEC dbo.sp_revoke_login_from_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server 에이전트 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_help_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   

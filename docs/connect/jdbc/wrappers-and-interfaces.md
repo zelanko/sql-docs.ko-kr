@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457787"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784031"
 ---
 # <a name="wrappers-and-interfaces"></a>래퍼 및 인터페이스
 
@@ -61,7 +61,7 @@ Java.sql.Wrapper 인터페이스는 두 메서드를 정의 합니다. **isWrapp
 
 ## <a name="interfaces"></a>인터페이스
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0부터 응용 프로그램 서버는 인터페이스를 사용하여 관련 클래스의 드라이버 관련 메서드에 액세스할 수 있습니다. 응용 프로그램 서버는 프록시를 만들고 인터페이스에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 기능을 노출하여 클래스를 래핑할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 응용 프로그램 서버가 클래스의 프록시를 만들 수 있도록 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 있는 인터페이스를 지원합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0부터 응용 프로그램 서버는 인터페이스를 사용하여 관련 클래스의 드라이버 관련 메서드에 액세스할 수 있습니다. 응용 프로그램 서버는 프록시를 만들고 인터페이스에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 기능을 노출하여 클래스를 래핑할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 응용 프로그램 서버가 클래스의 프록시를 만들 수 있도록 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 있는 인터페이스를 지원합니다.
 
 인터페이스는 표준 Java 인터페이스에서 파생되므로 드라이버 관련 기능이나 제네릭 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 기능에 액세스하기 위해 래핑 해제되면 동일한 개체를 사용할 수 있습니다.
 

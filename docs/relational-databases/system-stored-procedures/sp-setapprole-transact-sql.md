@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole (Transact SQL) | Microsoft Docs
+title: sp_setapprole (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_setapprole
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac733afa3f8afef74a9d6affb16e0f9dbcd5b4a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 44588ed7365e7f38ec514e1d272e342572f8c967
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259060"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038716"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,27 +49,27 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="arguments"></a>인수  
  [  **@rolename =** ] **'***역할***'**  
- 현재 데이터베이스에 정의된 응용 프로그램 역할의 이름입니다. *역할* 은 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
+ 현재 데이터베이스에 정의된 응용 프로그램 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
   
- [  **@password =** ] **{암호화 N'***암호***'을 (를)**  
- 응용 프로그램 역할을 활성화하는 데 필요한 암호입니다. *암호* 은 **sysname**, 기본값은 없습니다. *암호* ODBC를 사용 하 여 난독 처리 될 **암호화** 함수입니다. 사용 하는 경우는 **암호화** 함수를 배치 하 여 암호를 유니코드 문자열로 변환 해야 **N** 첫 번째 따옴표 앞입니다.  
+ [  **@password =** ] **{0} 암호화 N'***암호***'}**  
+ 응용 프로그램 역할을 활성화하는 데 필요한 암호입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. *암호* ODBC를 사용 하 여 난독 처리할 수 있습니다 **암호화** 함수입니다. 사용 하는 경우는 **암호화할** 함수 암호는 배치 하 여 유니코드 문자열로 변환할 수 있어야 합니다 **N** 첫 번째 따옴표 앞입니다.  
   
- 암호화 옵션을 사용 하는 연결에서 지원 되지 않습니다 **SqlClient**합니다.  
+ 암호화 옵션을 사용 하는 연결이 지원 되지 않습니다 **SqlClient**합니다.  
   
 > [!IMPORTANT]  
 >  ODBC **암호화** 함수 암호화를 제공 하지 않습니다. 이 함수를 사용해서는 네트워크로 전송되는 암호를 보호할 수 없습니다. 이 정보가 네트워크를 통해 전송되는 경우 SSL이나 IPSec을 사용하십시오.  
   
- **@encrypt '없음' =**  
+ **@encrypt = 'none'**  
  난독 처리가 사용되지 않도록 지정합니다. 암호는 일반 텍스트로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달됩니다. 기본값입니다.  
   
  **@encrypt'odbc' =**  
- ODBC를 사용 하 여 암호 ODBC는 난독 처리를 지정 **암호화** 암호를 보내기 전에 함수는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. 이 값은 ODBC 클라이언트 또는 SQL Server용 OLE DB 공급자를 사용하는 경우에만 지정할 수 있습니다.  
+ ODBC가 암호를 난독 처리는 ODBC를 사용 하 여 지정 **암호화할** 암호를 보내기 전에 함수는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. 이 값은 ODBC 클라이언트 또는 SQL Server용 OLE DB 공급자를 사용하는 경우에만 지정할 수 있습니다.  
   
  [  **@fCreateCookie =** ] **true** | **false**  
  쿠키를 만들지 여부를 지정합니다. **true** 1로 암시적으로 변환 됩니다. **false** 암시적으로 0으로 변환 됩니다.  
   
  [  **@cookie =** ]  **@cookie 출력**  
- 쿠키를 포함할 출력 매개 변수를 지정합니다. 경우에 쿠키는 생성의 값 **@fCreateCookie** 은 **true**합니다. **varbinary(8000)**  
+ 쿠키를 포함할 출력 매개 변수를 지정합니다. 경우에 쿠키는 생성 된 값 **@fCreateCookie** 은 **true**합니다. **varbinary(8000)**  
   
 > [!NOTE]  
 >  현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 응용 프로그램은 계속해서 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 응용 프로그램이 제대로 작동할 수 있도록 해야 합니다.  
@@ -78,18 +77,18 @@ sp_setapprole [ @rolename = ] 'role',
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 및 1(실패)  
   
-## <a name="remarks"></a>주의  
- 응용 프로그램 역할이 활성화에 사용 하 여 **sp_setapprole**를 활성 상태로 사용자는 서버에서 연결을 끊습니다 또는 실행 될 때까지 **sp_unsetapprole**합니다. **sp_setapprole** 직접만 실행할 수 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문. **sp_setapprole** 다른 저장 프로시저 또는 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
+## <a name="remarks"></a>Remarks  
+ 사용 하 여 응용 프로그램 역할이 활성화 되 **sp_setapprole**, 사용자 서버에서 연결을 끊습니다 또는 실행 될 때까지 역할 활성화 **sp_unsetapprole**합니다. **sp_setapprole** 직접만 실행할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. **sp_setapprole** 다른 저장 프로시저 또는 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
- 응용 프로그램 역할의 개요를 참조 하십시오. [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)합니다.  
+ 응용 프로그램 역할의 개요를 보려면 [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)입니다.  
   
 > [!IMPORTANT]  
 >  응용 프로그램 역할 암호가 네트워크를 통해 전송되는 경우 이 암호를 보호하려면 응용 프로그램 역할을 사용할 때 항상 암호화된 연결을 사용해야 합니다.  
 >   
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **암호화** 옵션에서 지원 하지 않는 **SqlClient**합니다. 자격 증명을 저장해야 할 경우에는 crypto API 함수를 사용하여 암호화합니다. 매개 변수 *암호* 는 단방향 해시로 저장 됩니다. 이전 버전과의 호환성을 유지 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 암호 복잡성 정책에 의해 적용 되지 **sp_addapprole**합니다. 암호 복잡성 정책의 적용 하려면 사용 하 여 [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)합니다.  
+>  합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **암호화** 옵션에서 지원 되지 않습니다 **SqlClient**합니다. 자격 증명을 저장해야 할 경우에는 crypto API 함수를 사용하여 암호화합니다. 매개 변수 *암호* 단방향 해시로 저장 됩니다. 이전 버전과의 호환성을 유지 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 암호 복잡성 정책이 적용 되지 않습니다 **sp_addapprole**합니다. 암호 복잡성 정책 적용을 사용 하 여 [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요 **공용** 및 역할에 대 한 암호를 알고 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 **공용** 및 역할에 대 한 암호를 알고 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -120,7 +119,7 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   

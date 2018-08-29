@@ -14,24 +14,24 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 39596d1bc481005606a7442d755b3cc9a1ec668b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279018"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787000"
 ---
 # <a name="performing-batch-operations"></a>일괄 작업 수행
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스를 여러 번 업데이트할 때 성능을 향상시키기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 여러 업데이트를 하나의 작업으로 전송하는 기능을 지원하며, 이를 일괄 처리(batch)라고 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 여러 번 업데이트할 때 성능을 향상시키기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 여러 업데이트를 하나의 작업으로 전송하는 기능을 지원하며, 이를 일괄 처리(batch)라고 합니다.  
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스는 모두 일괄 처리 업데이트를 전송하는 데 사용할 수 있습니다. [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 메서드는 명령을 추가하는 데 사용됩니다. [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 메서드는 명령 목록을 지우는 데 사용됩니다. [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 메서드는 처리할 모든 명령을 전송하는 데 사용됩니다. 단순 업데이트 횟수를 반환하는 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문만 일괄 처리의 일부로 실행할 수 있습니다.  
   
  executeBatch 메서드는 각 명령의 업데이트 횟수에 해당하는 **int** 값 배열을 반환합니다. 명령 중 하나가 실패 하면는 BatchUpdateException throw 되지 않으며 업데이트 횟수 배열을 검색 BatchUpdateException 클래스의 getUpdateCounts 메서드를 사용 해야 합니다. 명령 하나가 실패하더라도 드라이버는 계속해서 나머지 명령을 처리합니다. 그러나 명령에 구문 오류가 있으면 일괄 처리에 있는 문이 실패합니다.  
   
 > [!NOTE]  
->  업데이트 횟수를 사용할 필요가 없다면 SET NOCOUNT ON 문을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]로 먼저 발급할 수 있습니다. 이렇게 하면 네트워크 트래픽이 감소하고 응용 프로그램의 성능도 향상됩니다.  
+>  업데이트 횟수를 사용할 필요가 없다면 SET NOCOUNT ON 문을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 먼저 발급할 수 있습니다. 이렇게 하면 네트워크 트래픽이 감소하고 응용 프로그램의 성능도 향상됩니다.  
   
  예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음과 같은 테이블을 만듭니다.  
   

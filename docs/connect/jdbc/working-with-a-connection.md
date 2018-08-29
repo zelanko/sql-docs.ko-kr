@@ -14,25 +14,25 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f5878e83f9b23f273da46f356b05f8ce6563712e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662385"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785628"
 ---
 # <a name="working-with-a-connection"></a>연결 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-다음 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결하는 다양한 방법의 예를 보여 줍니다.
+다음 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 다양한 방법의 예를 보여 줍니다.
 
 > [!NOTE]  
-> JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 연결하는 데 문제가 있으면 [연결 문제 해결](../../connect/jdbc/troubleshooting-connectivity.md)에서 문제 해결을 위한 제안 사항을 참조하세요.
+> JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 문제가 있으면 [연결 문제 해결](../../connect/jdbc/troubleshooting-connectivity.md)에서 문제 해결을 위한 제안 사항을 참조하세요.
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>DriverManager 클래스를 사용한 연결
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결하는 가장 간단한 방식은 다음과 같이 JDBC 드라이버를 로드하고 DriverManager 클래스의 getConnection 메서드를 호출하는 것입니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 가장 간단한 방식은 다음과 같이 JDBC 드라이버를 로드하고 DriverManager 클래스의 getConnection 메서드를 호출하는 것입니다.
 
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  

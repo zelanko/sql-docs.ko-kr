@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepartition (Transact SQL) | Microsoft Docs
+title: sp_addmergepartition (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepartition
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8fde5c3b05a29e173e823141d4d34c06860518e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6087f6ee00305eae2ccbef0aef496377f2c9a57e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988558"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026474"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  값에 따라 필터링 된 구독에 대 한 동적으로 필터링 된 파티션을 만들고 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 또는 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자에 있습니다. 이 저장 프로시저는 게시된 데이터베이스의 게시자에서 실행되며 파티션을 수동으로 생성하는 데 사용됩니다.  
+  값으로 필터링 되는 구독에 대 한 동적으로 필터링 된 파티션을 만듭니다 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 하거나 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자의 합니다. 이 저장 프로시저는 게시된 데이터베이스의 게시자에서 실행되며 파티션을 수동으로 생성하는 데 사용됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,28 +47,28 @@ sp_addmergepartition [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication**=] **'***게시***'**  
- 파티션을 생성할 병합 게시입니다. *게시* 은 **sysname**, 기본값은 없습니다. 경우 *suser_sname* 지정 된 값의 *hostname* NULL 이어야 합니다.  
+ 파티션을 생성할 병합 게시입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 *suser_sname* 지정 된 값 *hostname* NULL 이어야 합니다.  
   
  [ **@suser_sname**=] **'***suser_sname***'**  
- 값으로 필터링 되는 구독에 대 한 파티션을 만들 때 사용 되는 값은는 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자에는 함수입니다. *suser_sname* 은 **sysname**, 기본값은 없습니다.  
+ 값을 기준으로 필터링 되어에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자 함수입니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@host_name**=] **'***host_name***'**  
- 값으로 필터링 되는 구독에 대 한 파티션을 만들 때 사용 되는 값은는 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자에는 함수입니다. *host_name* 은 **sysname**, 기본값은 없습니다.  
+ 값을 기준으로 필터링 되어에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자 함수입니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepartition** 병합 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-addmergepartition-tra_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_addmergepartition**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addmergepartition**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [매개 변수가 있는 필터로 병합 게시에 대 한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

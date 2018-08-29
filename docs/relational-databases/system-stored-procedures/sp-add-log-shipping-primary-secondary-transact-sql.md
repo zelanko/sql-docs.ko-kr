@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_primary_secondary (Transact SQL) | Microsoft Docs
+title: sp_add_log_shipping_primary_secondary (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_secondary
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0598d778953e96e8247c8011c5e41cbc03380bba
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2ddbd6c115bcb620b3aaadd22d2293c681dc0c3a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33240703"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022627"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +47,28 @@ sp_add_log_shipping_primary_secondary
   
 ## <a name="arguments"></a>인수  
  [ **@primary_database** =] '*primary_database*'  
- 주 서버의 데이터베이스 이름입니다. *primary_database* 은 **sysname**, 기본값은 없습니다.  
+ 주 서버의 데이터베이스 이름입니다. *primary_database* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@secondary_server** =] '*secondary_server*',  
- 보조 서버의 이름입니다. *secondary_server* 은 **sysname**, 기본값은 없습니다.  
+ 보조 서버의 이름입니다. *secondary_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@secondary_database** =] '*secondary_database*'  
- 보조 데이터베이스의 이름입니다. *secondary_database* 은 **sysname**, 기본값은 없습니다.  
+ 보조 데이터베이스의 이름입니다. *secondary_database* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
- **sp_add_log_shipping_primary_secondary** 에서 실행 되어야 합니다는 **마스터** 주 서버의 데이터베이스입니다.  
+ **sp_add_log_shipping_primary_secondary** 에서 실행 해야 합니다 **마스터** 주 서버의 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 구성원만는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
+ 멤버는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 이 예제에서는 사용 하 여 **sp_add_log_shipping_primary_secondary** 보조 데이터베이스에 대 한 항목을 추가 하도록 **LogShipAdventureWorks** FLATIRON 보조 서버에 있습니다.  
+ 이 예제를 사용 하 여 **sp_add_log_shipping_primary_secondary** 보조 데이터베이스에 대 한 항목을 추가 하려면 **LogShipAdventureWorks** 을 FLATIRON 보조 서버입니다.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_primary_secondary   

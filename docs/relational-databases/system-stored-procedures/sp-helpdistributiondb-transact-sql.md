@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact SQL) | Microsoft Docs
+title: sp_helpdistributiondb (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df4a44be4ef3271e6af8e7148bfee50f40c71617
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996930"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018299"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="arguments"></a>인수  
  [  **@database=**] **'***database_name***'**  
- 속성이 반환되는 데이터베이스 이름입니다. *a s e _* 은 **sysname**, 기본값은 **%** 에 배포자와 관련 된 모든 데이터베이스에 대 한 사용자에 게 권한이 있습니다.  
+ 속성이 반환되는 데이터베이스 이름입니다. *database_name* 은 **sysname**, 기본값은 **%** 는 배포자와 연결 된 모든 데이터베이스에 대 한 사용자에 게 권한이 있습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -69,13 +69,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistributiondb** 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버는 **db_owner** 고정된 데이터베이스 역할 또는 **replmonitor** 배포 데이터베이스에서 역할 및 배포 데이터베이스를 사용 하는 게시의 게시 액세스 목록에 사용자가 실행할 수 있습니다 **sp_helpdistributiondb** 파일 관련 정보를 반환 합니다. 멤버는 **공용** 역할이 실행할 수 있는 **sp_helpdistributiondb** 액세스 권한이 있는 배포 데이터베이스에 대 한 파일-관련 없는 정보를 반환 합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **db_owner** 고정된 데이터베이스 역할 또는 **replmonitor** 배포 데이터베이스의 역할 및 배포 데이터베이스를 사용 하는 게시의 게시 액세스 목록에서 사용자가 실행할 수 있습니다 **sp_helpdistributiondb** 파일 관련 정보를 반환 합니다. 멤버는 **공용** 역할을 실행할 수 있습니다 **sp_helpdistributiondb** 액세스 권한이 있는 배포 데이터베이스에 대 한 비 파일 관련 정보를 반환 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

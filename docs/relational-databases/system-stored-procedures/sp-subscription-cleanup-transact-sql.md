@@ -1,5 +1,5 @@
 ---
-title: sp_subscription_cleanup (Transact SQL) | Microsoft Docs
+title: sp_subscription_cleanup (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_subscription_cleanup
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e17866eb6119d91a1859cc5fea70e49d8bae094c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0963089d011326c00cc0604b9f7455a5246d74ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997150"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028683"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,27 +49,27 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
+ 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
+ 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다. NULL인 경우 게시 데이터베이스에서 공유 에이전트 게시를 사용하는 구독이 삭제됩니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 게시 데이터베이스에서 공유 에이전트 게시를 사용하는 구독이 삭제됩니다.  
   
- [  **@reserved=**] **'***예약***'**  
+ [  **@reserved=**] **'***예약 된***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_subscription_cleanup** 트랜잭션 및 스냅숏 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_subscription_cleanup**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_subscription_cleanup**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_expired_subscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
  [sp_mergesubscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

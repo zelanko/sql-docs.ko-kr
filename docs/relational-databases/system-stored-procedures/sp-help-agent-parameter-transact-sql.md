@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_parameter (Transact SQL) | Microsoft Docs
+title: sp_help_agent_parameter (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_help_agent_parameter
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9176a2b583cc3cb4212a51f898ecbbe3d2685cc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb9d2e6ed445ddc9df876a5cee759cf928fe823a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994390"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038896"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  프로필의 모든 매개 변수가 반환 된 [MSagent_parameters &#40;Transact SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 시스템 테이블입니다. 이 저장 프로시저는 에이전트가 실행되고 있는 모든 데이터베이스의 배포자에서 실행될 수 있습니다.  
+  프로필의 모든 매개 변수를 반환 합니다 [MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 시스템 테이블입니다. 이 저장 프로시저는 에이전트가 실행되고 있는 모든 데이터베이스의 배포자에서 실행될 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
   
 ## <a name="arguments"></a>인수  
  [  **@profile_id=**] *profile_id*  
- 프로필의 id는 [MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 테이블입니다. *profile_id* 은 **int**, 기본값은 **-1**, 모든 매개 변수를 반환 하는 합니다.  
+ 프로필의 id를 [MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 테이블입니다. *profile_id* 됩니다 **int**, 기본값은 **-1**, 모든 매개 변수를 반환 하는 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -59,13 +59,13 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_parameter** 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **replmonitor** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_help_agent_parameter**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **replmonitor** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_help_agent_parameter**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 에이전트 프로필 작업](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

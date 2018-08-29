@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (Transact SQL) | Microsoft Docs
+title: sp_helplinkedsrvlogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 74f2885b8b1226afbcd7f4aceb4d6f5835e20a0b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33253266"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036575"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
   
 ## <a name="arguments"></a>인수  
  [  **@rmtsrvname=**] **'***rmtsrvname***'**  
- 로그인 매핑이 적용되는 연결된 서버의 이름입니다. *rmtsrvname* 은 **sysname**, 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 대해 정의된 로그인 매핑을 모두 반환합니다.  
+ 로그인 매핑이 적용되는 연결된 서버의 이름입니다. *rmtsrvname* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 대해 정의된 로그인 매핑을 모두 반환합니다.  
   
  [  **@locallogin=**] **'***locallogin***'**  
- 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결된 된 서버에 매핑되는 로컬 서버의 로그인 *rmtsrvname*합니다. *locallogin* 은 **sysname**, 기본값은 NULL입니다. NULL에 정의 된 모든 로그인 매핑을 지정 *rmtsrvname* 반환 됩니다. 그렇지 않은 경우 NULL에 대 한 매핑 *locallogin* 를 *rmtsrvname* 이미 존재 해야 합니다. *locallogin* 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자입니다. Windows 사용자는 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결된 된 서버에 매핑되는 로컬 서버의 로그인 *rmtsrvname*합니다. *locallogin* 됩니다 **sysname**, 기본값은 NULL입니다. NULL에 관한 모든 로그인 매핑 정의 지정 *rmtsrvname* 반환 됩니다. 그렇지 않은 경우 NULL에 대 한 매핑이 *locallogin* 하 *rmtsrvname* 이미 존재 해야 합니다. *locallogin* 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자입니다. Windows 사용자는 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -60,11 +60,11 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**연결 된 서버**|**sysname**|연결된 서버 이름입니다.|  
 |**로컬 로그인**|**sysname**|매핑이 적용되는 로컬 로그인입니다.|  
-|**자체 매핑이 지원 됩니다.**|**smallint**|0 = **로컬 로그인** 에 매핑된 **원격 로그인** 에 연결할 때 **연결 된 서버**합니다.<br /><br /> 1 = **로컬 로그인** 에 연결할 때 동일한 로그인 및 암호에 매핑되어 **연결 된 서버**합니다.|  
-|**원격 로그인**|**sysname**|로그인 이름에 **LinkedServer** 에 매핑되는 **LocalLogin** 때 **IsSelfMapping** 은 0입니다. 경우 **IsSelfMapping** 는 1, **RemoteLogin** 은 NULL입니다.|  
+|**자체 매핑이**|**smallint**|0 = **로컬 로그인** 매핑됩니다 **Remote Login** 에 연결할 때 **연결 된 서버**합니다.<br /><br /> 1 = **local Login** 에 연결할 때 동일한 로그인 및 암호에 매핑됩니다 **연결 된 서버**합니다.|  
+|**원격 로그인**|**sysname**|로그인 이름 **LinkedServer** 에 매핑된 **LocalLogin** 때 **IsSelfMapping** 은 0입니다. 하는 경우 **IsSelfMapping** 가 1 이면 **RemoteLogin** NULL입니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 로그인 매핑을 삭제 하기 전에 사용 하 여 **sp_helplinkedsrvlogin** 사용 되는 연결 된 서버를 확인 하려면.  
+ 사용 하 여 로그인 매핑을 삭제 하기 전에 **sp_helplinkedsrvlogin** 관련 된 연결 된 서버를 확인 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  사용 권한을 확인하지 않습니다.  

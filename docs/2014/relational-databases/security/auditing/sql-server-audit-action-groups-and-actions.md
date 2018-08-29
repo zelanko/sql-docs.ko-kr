@@ -20,16 +20,15 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b8dd9598fa04b51f250daacaab010739b3855341
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9425c18109817aa3f0112262b6b0928d4e77cf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225283"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029806"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트 그룹과 개별 이벤트를 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)을 참조하세요.  
@@ -37,7 +36,7 @@ ms.locfileid: "37225283"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit는 0개 이상의 감사 동작 항목으로 구성되어 있습니다. 이러한 감사 동작 항목은 동작 그룹(예: Server_Object_Change_Group) 또는 개별 동작(예: 테이블에 대한 SELECT 작업)일 수 있습니다.  
   
 > [!NOTE]  
->  Server_Object_Change_Group에는 모든 서버 개체(데이터베이스 또는 끝점)에 대한 CREATE, ALTER 및 DROP이 포함됩니다.  
+>  Server_Object_Change_Group에는 모든 서버 개체(데이터베이스 또는 엔드포인트)에 대한 CREATE, ALTER 및 DROP이 포함됩니다.  
   
  감사의 동작 범주는 다음과 같습니다.  
   

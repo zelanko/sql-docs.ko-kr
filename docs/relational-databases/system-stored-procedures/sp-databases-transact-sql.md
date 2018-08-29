@@ -1,5 +1,5 @@
 ---
-title: sp_databases (Transact SQL) | Microsoft Docs
+title: sp_databases (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c22415c34f0e25dc1117b6a5f86839c66f0ba53b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3fefa914e8b4eb591dcd222df1de6753770d85c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238004"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029216"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,20 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|데이터베이스의 이름입니다. 에 [!INCLUDE[ssDE](../../includes/ssde-md.md)],이 열에 저장 되어 있는 데이터베이스 이름을 나타내는 **sys.databases** 카탈로그 뷰.|  
+|**DATABASE_NAME**|**sysname**|데이터베이스의 이름입니다. 에 [!INCLUDE[ssDE](../../includes/ssde-md.md)],이 열에 저장 된 데이터베이스 이름을 나타냅니다는 **sys.databases** 카탈로그 뷰.|  
 |**DATABASE_SIZE**|**int**|데이터베이스 크기(KB)입니다.|  
 |**설명**|**varchar(254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 이 필드는 항상 NULL을 반환합니다.|  
   
 ## <a name="remarks"></a>Remarks  
  반환된 데이터베이스 이름은 현재 데이터베이스 컨텍스트를 변경하기 위해 USE 문에서 매개 변수로 사용할 수 있습니다.  
   
- **sp_databases** 해당 키 없음에서 ODBC Open Database Connectivity ()가 있습니다.  
+ **sp_databases** 에 해당 요소가에서 열린 데이터베이스 연결 (ODBC).  
   
 ## <a name="permissions"></a>사용 권한  
  CREATE DATABASE, ALTER ANY DATABASE 또는 VIEW ANY DEFINITION 권한이 필요하며 데이터베이스에 대한 액세스 권한이 있어야 합니다. VIEW ANY DEFINITION 권한은 거부될 수 없습니다.  
@@ -73,6 +73,6 @@ EXEC sp_databases;
   
 ## <a name="see-also"></a>관련 항목  
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [HAS_DBACCESS &#40;Transact SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
+ [HAS_DBACCESS &#40;TRANSACT-SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

@@ -14,19 +14,19 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 1aa3823813392c660c8e31fc517ec4b7ae2e1e29
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: ff40299845ab92822d223f177cc9674ce9fd67f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661875"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787019"
 ---
 # <a name="release-notes"></a>릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Windows 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보입니다.  
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2의 새로운 기능
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2의 새로운 기능
 
 **추가 기능**:
 
@@ -34,7 +34,7 @@ ms.locfileid: "39661875"
 
 [버그 수정](../bug-fixes.md)
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1의 새로운 기능
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1의 새로운 기능
 
 **추가 기능**:
 
@@ -48,7 +48,7 @@ Azure Active Directory 대화형 인증 지원
 [버그 수정](../bug-fixes.md)
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17의 새로운 기능
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17의 새로운 기능
 
 **추가 기능**:
 
@@ -71,11 +71,11 @@ Azure SQL 관리 되는 인스턴스 (확장 된 비공개 미리 보기)를 지
 > -   오류 메시지는 항상 언어에 관계 없이 영어로 표시 됩니다 (Azure와 동일) 설정 
   
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1의 새로운 기능  
- ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 에 대 한 지원이 추가 되었습니다 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 하 고 [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) Microsoft SQL Server 2016과 함께 사용 하는 경우.  해당 연결 풀링 키워드/특성에 설명 되어 있습니다 [드라이버 인식 연결 풀링 ODBC Driver for SQL Server에서에서](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)합니다.
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1의 새로운 기능  
+ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 대 한 지원이 추가 되었습니다 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 하 고 [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) Microsoft SQL Server 2016과 함께 사용 하는 경우.  해당 연결 풀링 키워드/특성에 설명 되어 있습니다 [드라이버 인식 연결 풀링 ODBC Driver for SQL Server에서에서](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)합니다.
 
- ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-13-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13의 새로운 기능  
- ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SQL Server 용 ODBC Driver 11에서 이전 기능을 포함 하며 Microsoft SQL Server 2016에 대 한 지원이 추가 되었습니다.
+ ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-13-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13의 새로운 기능  
+ ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 용 ODBC Driver 11에서 이전 기능을 포함 하며 Microsoft SQL Server 2016에 대 한 지원이 추가 되었습니다.
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11의 새로운 기능  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11의 새로운 기능  
  SQL Server용 ODBC 드라이버 11에는 SQL Server 2012 Native Client의 ODBC와 함께 제공되는 모든 기능뿐만 아니라 새로운 [기능](./features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)이 포함되어 있습니다.  

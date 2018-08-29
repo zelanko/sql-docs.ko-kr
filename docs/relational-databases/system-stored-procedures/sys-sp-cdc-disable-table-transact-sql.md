@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_table (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_disable_table (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9450d80191ac611004cc39528820f49949232823
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255927"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028331"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,31 +51,31 @@ sys.sp_cdc_disable_table
   
 ## <a name="arguments"></a>인수  
  [  **@source_schema=** ] **'***source_schema***'**  
- 원본 테이블이 포함된 스키마의 이름입니다. *source_schema* 은 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+ 원본 테이블이 포함된 스키마의 이름입니다. *source_schema* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
  *source_schema* 현재 데이터베이스에 존재 해야 합니다.  
   
  [  **@source_name=** ] **'***source_name***'**  
- 변경 데이터 캡처가 비활성화되는 원본 테이블의 이름입니다. *source_name* 은 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+ 변경 데이터 캡처가 비활성화되는 원본 테이블의 이름입니다. *source_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
  *source_name* 현재 데이터베이스에 존재 해야 합니다.  
   
  [  **@capture_instance=** ] **'***capture_instance***'** | **'** 모든 **'**  
- 지정된 원본 테이블에 대해 비활성화할 캡처 인스턴스의 이름입니다. *capture_instance* 은 **sysname** NULL 일 수 없습니다.  
+ 지정된 원본 테이블에 대해 비활성화할 캡처 인스턴스의 이름입니다. *capture_instance* 됩니다 **sysname** NULL 일 수 없습니다.  
   
- 모든 캡처 인스턴스에 대해 정의 된 'all'을 지정 하는 경우 *source_name* 을 사용할 수 없습니다.  
+ 모든 캡처 인스턴스에 대해 정의 된 '모두'를 지정 하면 *source_name* 비활성화 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- **sys.sp_cdc_disable_table** 변경 데이터 캡처 변경 테이블 및 시스템 함수는 지정 된 원본 테이블 및 캡처 인스턴스와 연결 된 삭제 합니다. 변경 데이터 캡처 시스템 테이블 및 집합에서 지정 된 캡처 인스턴스와 연결 된 모든 행을 삭제는 **is_tracked_by_cdc** 테이블 항목에 대 한 열은 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) 카탈로그 뷰 0입니다.  
+## <a name="remarks"></a>Remarks  
+ **sys.sp_cdc_disable_table** 변경 데이터 캡처 변경 테이블 및 시스템 함수 지정 된 원본 테이블 및 캡처 인스턴스와 연결 된 삭제 합니다. 변경 데이터 캡처 시스템 테이블 및 집합에서 지정 된 캡처 인스턴스와 연결 된 모든 행을 삭제 합니다 **is_tracked_by_cdc** 테이블 항목에 대 한 열을 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) 카탈로그 뷰 0.  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **db_owner** 고정된 데이터베이스 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **db_owner** 고정된 데이터베이스 역할.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `HumanResources.Employee` 테이블에 대해 변경 데이터 캡처를 비활성화합니다.  
@@ -90,7 +89,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.remote_logins (Transact SQL) | Microsoft Docs
+title: sys.remote_logins (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_logins catalog view
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: df40db329851fbe931cb96f5b1aac99905d705c4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f4c403c86373043cd98ebec8121c696c384be4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179509"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023981"
 ---
 # <a name="sysremotelogins-transact-sql"></a>sys.remote_logins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +37,16 @@ ms.locfileid: "33179509"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|서버 ID **sys.servers**합니다. 이 이름은 "원격" 서버의 연결에 의해 제공됩니다.|  
+|**server_id**|**int**|서버의 ID **sys.servers**합니다. 이 이름은 "원격" 서버의 연결에 의해 제공됩니다.|  
 |**remote_name**|**sysname**|연결이 제공하는 매핑할 로그인 이름입니다. NULL인 경우에는 연결에서 지정된 로그인 이름이 사용됩니다.|  
 |**local_principal_id**|**int**|로그인이 매핑될 서버 보안 주체의 ID입니다. 0인 경우에는 원격 로그인이 같은 이름을 가진 로그인에 매핑됩니다.|  
 |**modify_date**|**datetime**|연결된 로그인을 마지막으로 변경한 날짜입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [연결 된 서버 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [연결 된 서버 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

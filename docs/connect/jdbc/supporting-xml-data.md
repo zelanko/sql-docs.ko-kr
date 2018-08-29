@@ -14,22 +14,22 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56c724017d364f3e581a6f4add22ece0091a2406
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d97499468b1d44f761b01888312e1ba97c722c7c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978755"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785956"
 ---
 # <a name="supporting-xml-data"></a>XML 데이터 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 저장할 수 있도록 하는 **xml** 데이터 형식을 제공합니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 **xml** 데이터 형식을 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만들 때 열 유형으로 사용하거나 [!INCLUDE[tsql](../../includes/tsql_md.md)] CAST 및 CONVERT 함수에서 사용할 수 있습니다. JDBC 드라이버에서 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본 매핑은 문자열입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 하는 **xml** 데이터 형식을 제공합니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 **xml** 데이터 형식을 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만들 때 열 유형으로 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 및 CONVERT 함수에서 사용할 수 있습니다. JDBC 드라이버에서 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본 매핑은 문자열입니다.  
   
- JDBC 드라이버에서는 SQLXML 인터페이스를 소개하는 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. 합니다 **SQLXML** JDBC 4.0 데이터 형식이 며 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** 데이터 형식입니다. 따라서 응용 프로그램에서 SQLXML 데이터 형식을 사용하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 응용 프로그램에서 SQLXML 개체 및 해당 메서드에 액세스할 때 sqljdbc3.jar를 사용하려고 시도하면 예외가 발생합니다.  
+ JDBC 드라이버에서는 SQLXML 인터페이스를 소개하는 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. 합니다 **SQLXML** JDBC 4.0 데이터 형식이 며 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** 데이터 형식입니다. 따라서 응용 프로그램에서 SQLXML 데이터 형식을 사용하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 응용 프로그램에서 SQLXML 개체 및 해당 메서드에 액세스할 때 sqljdbc3.jar를 사용하려고 시도하면 예외가 발생합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 XML 데이터를 데이터베이스 열에 저장하기 전에 항상 해당 데이터의 유효성을 검사합니다. 응용 프로그램은 **SQLXML** 데이터 형식을 사용할 수 있는데 그 이유는 JDBC 드라이버에서 이 데이터 형식을 자동으로 **xml** 데이터 형식에 매핑하기 때문입니다. **SQLXML**은 sqljdbc4.jar에서 지원됩니다. 참조 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) 에서 지 원하는 JRE 버전 목록은 여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]입니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 데이터를 데이터베이스 열에 저장하기 전에 항상 해당 데이터의 유효성을 검사합니다. 응용 프로그램은 **SQLXML** 데이터 형식을 사용할 수 있는데 그 이유는 JDBC 드라이버에서 이 데이터 형식을 자동으로 **xml** 데이터 형식에 매핑하기 때문입니다. **SQLXML**은 sqljdbc4.jar에서 지원됩니다. 참조 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) 에서 지 원하는 JRE 버전 목록은 여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]입니다.  
   
  이 섹션의 항목에서는 SQLXML 인터페이스에 대해 설명하고, JDBC API 메서드를 사용하여 **SQLXML** 데이터 형식에 대한 프로그램을 작성하는 방법에 대해 설명합니다.  
   

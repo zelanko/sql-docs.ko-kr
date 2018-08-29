@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_configure (Transact SQL) | Microsoft Docs
+title: sp_syspolicy_configure (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c51d30c8453cd5a9c2a92a3eb2ad22016c461b8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b6214cd4658ac5ad9b6bd0b959a3040223dc1c3c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255937"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020979"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 ## <a name="arguments"></a>인수  
  [ **@name =** ] **'***name***'**  
- 구성할 설정의 이름입니다. *이름* 은 **sysname**가 필요 하며, NULL 또는 빈 문자열일 수 없습니다.  
+ 구성할 설정의 이름입니다. *이름을* 됩니다 **sysname**고, 필요 하며, NULL 또는 빈 문자열일 수 없습니다.  
   
  *이름* 다음 값 중 하나일 수 있습니다.  
   
@@ -57,17 +56,17 @@ sp_syspolicy_configure [ @name = ] 'name'
 -   'LogOnSuccess' - 정책 기반 관리에서 성공한 정책 평가를 로깅할지 여부를 지정합니다.  
   
  [  **@value =** ] *값*  
- 지정 된 값에 대 한 연결 된 값은 *이름*합니다. *값* 은 **sql_variant**, 이며 필수입니다.  
+ 지정 된 값과 연결 된 값인 *이름을*입니다. *값* 됩니다 **sql_variant**, 이며 반드시 지정 해야 합니다.  
   
--   에 대 한 'Enabled'를 지정 하는 경우 *이름*, 다음 값 중 하나를 사용할 수 있습니다.  
+-   에 대 한 'Enabled'를 지정 하는 경우 *이름을*, 다음 값 중 하나를 사용할 수 있습니다.  
   
     -   0 = 정책 기반 관리를 사용하지 않습니다.  
   
     -   1 = 정책 기반 관리를 사용합니다.  
   
--   에 대 한 'HistoryRententionInDays'를 지정 하는 경우 *이름*를 정수 값으로 일 수를 지정 합니다.  
+-   에 대 한 'HistoryRententionInDays'를 지정 하는 경우 *이름을*를 정수 값으로 일 수를 지정 합니다.  
   
--   에 대 한 'LogOnSuccess'를 지정 하는 경우 *이름*, 다음 값 중 하나를 사용할 수 있습니다.  
+-   에 대 한 'LogOnSuccess'를 지정 하는 경우 *이름을*, 다음 값 중 하나를 사용할 수 있습니다.  
   
     -   0 = 실패한 정책 평가만 로깅합니다.  
   
@@ -76,16 +75,16 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_configure는 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  이러한 설정의 현재 값을 보려면 msdb.dbo.syspolicy_configuration 시스템 뷰를 쿼리합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자가 서버 트리거를 만들 하 고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약할 수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 정책 기반 관리를 사용하도록 설정합니다.  
@@ -115,10 +114,10 @@ EXEC msdb.dbo.sp_syspolicy_configure @name = N'LogOnSuccess'
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [정책 기반 관리 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [정책 기반 관리 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_enabled &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention은 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_set_log_on_success &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

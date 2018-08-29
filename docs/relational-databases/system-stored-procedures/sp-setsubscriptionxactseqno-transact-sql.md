@@ -1,5 +1,5 @@
 ---
-title: sp_setsubscriptionxactseqno (Transact SQL) | Microsoft Docs
+title: sp_setsubscriptionxactseqno (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f59325c709b8d16d5e120a135d5d9f9697692b1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96592ae1f8f2b1de9e2d294c27d68598d2718ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000470"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037980"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [  **@publisher=** ] **'***게시자***'**  
- 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
+ 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다. 에 대 한-SQL Server 이외 게시자를 *publisher_db* 배포 데이터베이스의 이름입니다.  
+ 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다. 에 SQL Server 이외 게시자를 *publisher_db* 배포 데이터베이스의 이름입니다.  
   
  [  **@publication=** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다. 에 대 한 모든 값을 지정 해야 배포 에이전트가 둘 이상의 게시에 의해 공유 *게시*합니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 둘 이상의 게시에서 배포 에이전트를 공유 하는 경우에에 대 한 모든 값을 지정 해야 *게시*합니다.  
   
  [  **@xact_seqno=** ] *xact_seqno*  
- 배포자에서 구독자에 적용될 다음 트랜잭션의 LSN입니다. *xact_seqno* 은 **varbinary (16)**, 기본값은 없습니다.  
+ 배포자에서 구독자에 적용될 다음 트랜잭션의 LSN입니다. *xact_seqno* 됩니다 **varbinary(16)**, 기본값은 없습니다.  
   
 ## <a name="result-set"></a>결과 집합  
   
@@ -74,20 +74,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_setsubscriptionxactseqno** 트랜잭션 복제에 사용 됩니다.  
   
- **sp_setsubscriptionxactseqno** 피어 투 피어 트랜잭션 복제 토폴로지에 사용할 수 없습니다.  
+ **sp_setsubscriptionxactseqno** 피어 투 피어 트랜잭션 복제 토폴로지를 사용할 수 없습니다.  
   
- **sp_setsubscriptionxactseqno** 에서 오류가 발생 하는 특정 트랜잭션을 건너뛸 데 사용할 수 있습니다 때 구독자에서 적용 됩니다. 실패 하 고 배포 에이전트가 중지 된 후 호출 [sp_helpsubscriptionerrors &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 실패 한 트랜잭션의 xact_seqno 값을 검색 하 고 를호출하는배포자에서**sp_setsubscriptionxactseqno**에 대 한이 값을 전달 *xact_seqno*합니다. 그러면 이 LSN 이후의 명령만 처리됩니다.  
+ **sp_setsubscriptionxactseqno** 에서 오류가 발생 하는 특정 트랜잭션을 건너뛸 수 때 구독자에서 적용 됩니다. 오류가 발생 하는 경우 배포 에이전트를 중지 한 후를 호출 [sp_helpsubscriptionerrors &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 실패 한 트랜잭션의 xact_seqno 값을 검색 하 고 를호출하는배포자에서**sp_setsubscriptionxactseqno**에 대 한이 값을 전달 *xact_seqno*합니다. 그러면 이 LSN 이후의 명령만 처리됩니다.  
   
- 값을 지정 **0** 에 대 한 *xact_seqno* 구독자에 배포 데이터베이스에 모든 보류 중인 명령을 제공 합니다.  
+ 값을 지정 **0** 에 대 한 *xact_seqno* 배포 데이터베이스의 모든 보류 중인 명령을 구독자에 게 전달할 합니다.  
   
- **sp_setsubscriptionxactseqno** 배포 에이전트가 복수 구독 스트림을 사용 하는 경우 실패할 수 있습니다.  
+ **sp_setsubscriptionxactseqno** 배포 에이전트에서 복수 구독 스트림을 사용 하는 경우 실패할 수 있습니다.  
   
  이 오류가 발생하면 단일 구독 스트림으로 배포 에이전트를 실행해야 합니다. 자세한 내용은 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_setsubscriptionxactseqno**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_setsubscriptionxactseqno**합니다.  
   
   

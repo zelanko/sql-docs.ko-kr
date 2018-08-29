@@ -1,5 +1,5 @@
 ---
-title: sp_db_vardecimal_storage_format (Transact SQL) | Microsoft Docs
+title: sp_db_vardecimal_storage_format (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 060f5e31593456168274507cb2abe789725c586d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6bd4332bcb13b306fb49b82dac2ed1c49ecc837b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239943"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024170"
 ---
 # <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 ## <a name="arguments"></a>인수  
  [ @dbname=] '*database_name*'  
- 저장소 형식을 변경할 데이터베이스의 이름입니다. *a s e _* 은 **sysname**, 기본값은 없습니다. 데이터베이스 이름을 생략하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 모든 데이터베이스의 VarDecimal 저장소 형식 상태가 반환됩니다.  
+ 저장소 형식을 변경할 데이터베이스의 이름입니다. *database_name* 됩니다 **sysname**, 기본값은 없습니다. 데이터베이스 이름을 생략하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 모든 데이터베이스의 VarDecimal 저장소 형식 상태가 반환됩니다.  
   
- [ @vardecimal_storage_format=] {'ON' |' OFF'을 (를)  
- VarDecimal 저장소 형식을 사용하도록 설정할지 여부를 지정합니다. @vardecimal_storage_format은 ON 또는 OFF가 될 수 있습니다. 매개 변수는 **varchar(3)**, 기본값은 없습니다. 데이터베이스 이름을 제공하지만 @vardecimal_storage_format을 생략하면 지정한 데이터베이스의 현재 설정이 반환됩니다. 이 인수는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에는 영향을 주지 않습니다.  
+ [ @vardecimal_storage_format=] {'ON' |' 해제 '}  
+ VarDecimal 저장소 형식을 사용하도록 설정할지 여부를 지정합니다. @vardecimal_storage_format은 ON 또는 OFF가 될 수 있습니다. 매개 변수가 **varchar(3)**, 기본값은 없습니다. 데이터베이스 이름을 제공하지만 @vardecimal_storage_format을 생략하면 지정한 데이터베이스의 현재 설정이 반환됩니다. 이 인수는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에는 영향을 주지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -66,7 +66,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  경우는 @vardecimal_storage_format 인수를 제공 하지 않으면 데이터베이스 이름 및 Vardecimal State 열을 반환 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_db_vardecimal_storage_format은 VarDecimal 상태를 반환하지만 VarDecimal 상태를 변경할 수는 없습니다.  
   
  다음과 같은 경우 sp_db_vardecimal_storage_format이 실패합니다.  
@@ -79,7 +79,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  VarDecimal 저장소 형식 상태를 OFF로 변경하려면 데이터베이스를 단순 복구 모드로 설정해야 합니다. 데이터베이스가 단순 복구 모드로 설정되면 로그 체인이 끊어집니다. VarDecimal 저장소 형식 상태를 OFF로 설정한 후 전체 데이터베이스 백업을 수행합니다.  
   
- VarDecimal 데이터베이스 압축을 사용하는 테이블이 있을 경우 상태를 OFF로 변경하면 실패합니다. 테이블의 저장소 형식을 변경 하려면 사용 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)합니다. VarDecimal 저장소 형식을 사용하는 데이터베이스 테이블을 확인하려면 다음 예와 같이 `OBJECTPROPERTY` 함수를 사용하고 `TableHasVarDecimalStorageFormat` 속성을 검색합니다.  
+ VarDecimal 데이터베이스 압축을 사용하는 테이블이 있을 경우 상태를 OFF로 변경하면 실패합니다. 테이블의 저장소 형식을 변경 하려면 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)합니다. VarDecimal 저장소 형식을 사용하는 데이터베이스 테이블을 확인하려면 다음 예와 같이 `OBJECTPROPERTY` 함수를 사용하고 `TableHasVarDecimalStorageFormat` 속성을 검색합니다.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -113,7 +113,7 @@ EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

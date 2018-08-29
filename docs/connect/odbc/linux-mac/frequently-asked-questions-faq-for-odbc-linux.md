@@ -14,26 +14,26 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17d25f6084e136736dbc4c8a8ff3cb019ce4692e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d199b4cb7120be85c50eda758e27330705ff6fe9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991375"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786744"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 및 macOS에 대한 FAQ(질문과 대답)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-다음은 Linux 및 macOS 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]와 관련된 질문에 대한 대답입니다.
+다음은 Linux 및 macOS 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 관련된 질문에 대한 대답입니다.
   
 ## <a name="frequently-asked-questions"></a>질문과 대답
 
 **Linux 또는 macOS 기반 기존 ODBC 응용 프로그램이 어떻게 드라이버에서 작동하나요?**  
 다른 드라이버를 사용 중인 Linux 또는 macOS에서 컴파일하고 실행한 ODBC 응용 프로그램을 컴파일하고 실행할 수 있어야 합니다. 
   
-**[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]의 어떤 기능이 이 버전의 드라이버를 지원하나요?**
+**[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 어떤 기능이 이 버전의 드라이버를 지원하나요?**
 
-Linux 또는 macOS 기반 ODBC 드라이버는 LocalDB를 제외한 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 의 모든 서버 기능을 지원합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 지원 되는 기능을 참조 하세요 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)합니다.  
+Linux 또는 macOS 기반 ODBC 드라이버는 LocalDB를 제외한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 의 모든 서버 기능을 지원합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원 되는 기능을 참조 하세요 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)합니다.  
   
 **드라이버가 Kerberos 인증을 지원하나요?**  
 예 사용 하 여 서버에 연결할 수 있어야는 기존 Kerberos 환경 설정에 있는 경우는 `Trusted_Connection=Yes` DSN 또는 연결 문자열 옵션입니다. 자세한 내용은 [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md)을 참조하세요.  

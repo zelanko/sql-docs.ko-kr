@@ -15,13 +15,14 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 983b5a1e1597aee61400b121d19aa8436512b06a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5f432f23edf8c7cffff880112e9c6d22031d83fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770769"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410390"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 사용 피드백 모음에 대한 로컬 감사
 

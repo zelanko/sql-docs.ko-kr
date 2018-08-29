@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95940aac67d5f525503721246025ff25bbfc7e1c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3185e5b5fe0af7db68fd8bb91dfdf568bb14d354
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259999"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034730"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,26 +50,26 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>인수  
  [ @table_server=] '*table_server*'  
- 테이블 정보가 요청된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 연결된 서버의 이름입니다. *table_server* 은 **sysname**, 기본값은 없습니다.  
+ 테이블 정보가 요청된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 연결된 서버의 이름입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ @table_name=] '*table_name*'  
- 인덱스 정보를 제공할 원격 테이블의 이름입니다. *table_name* 은 **sysname**, 기본값은 NULL입니다. NULL을 지정한 경우에는 지정된 데이터베이스의 모든 테이블이 반환됩니다.  
+ 인덱스 정보를 제공할 원격 테이블의 이름입니다. *table_name* 됩니다 **sysname**, 기본값은 NULL입니다. NULL을 지정한 경우에는 지정된 데이터베이스의 모든 테이블이 반환됩니다.  
   
  [ @table_schema=] '*table_schema*'  
- 테이블 스키마를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 테이블 소유자에 해당합니다. *table_schema* 은 **sysname**, 기본값은 NULL입니다.  
+ 테이블 스키마를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 테이블 소유자에 해당합니다. *table_schema* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ @table_catalog=] '*table_db*'  
- 데이터베이스의 이름 *table_name* 상주 합니다. *table_db* 은 **sysname**, 기본값은 NULL입니다. NULL 인 경우 *table_db* 기본값으로 **마스터**합니다.  
+ 데이터베이스의 이름인 *table_name* 상주 합니다. *table_db* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 인 경우 *table_db* 기본값으로 **마스터**합니다.  
   
  [ @index_name=] '*index_name*'  
- 정보가 요청되는 인덱스의 이름입니다. *인덱스* 은 **sysname**, 기본값은 NULL입니다.  
+ 정보가 요청되는 인덱스의 이름입니다. *인덱스* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ @is_unique=] '*is_unique*'  
- 정보가 반환될 인덱스의 유형입니다. *is_unique* 은 **비트**, 기본값은 NULL 이며 다음 값 중 하나가 될 수 있습니다.  
+ 정보가 반환될 인덱스의 유형입니다. *is_unique* 됩니다 **비트**, 기본값은 NULL 이며 다음 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|1.|고유 인덱스에 관한 정보를 반환합니다.|  
+|@shouldalert|고유 인덱스에 관한 정보를 반환합니다.|  
 |0|고유하지 않은 인덱스에 관한 정보를 반환합니다.|  
 |NULL|모든 인덱스에 관한 정보를 반환합니다.|  
   
@@ -91,7 +91,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |PAGES|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
 |FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -104,12 +104,12 @@ EXEC sp_indexes @table_server = 'Seattle1',
    @table_catalog = 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [분산 쿼리 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [분산 쿼리 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers& #40; Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

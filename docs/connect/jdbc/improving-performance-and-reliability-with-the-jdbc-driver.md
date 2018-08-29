@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9780fc2942f74df6eb26c5cccfad60821b9bfc0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: e9108ab6ac330086acab16a73550d5fcab5d3970
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459717"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783896"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>JDBC 드라이버로 성능 및 안정성 개선
 
@@ -37,7 +37,7 @@ ms.locfileid: "39459717"
 |[트랜잭션 크기 관리](../../connect/jdbc/managing-transaction-size.md)|트랜잭션 성능을 개선하는 기법을 설명합니다.|  
 |[문 및 결과 집합 사용](../../connect/jdbc/working-with-statements-and-result-sets.md)|문 또는 결과 집합 개체를 사용 하는 경우 성능 향상을 위한 기술을 설명 합니다.|  
 |[적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md)|서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있도록 설계된 선택 버퍼링 기능에 대해 설명합니다.|  
-|[스파스 열](../../connect/jdbc/sparse-columns.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스파스 열에 대한 JDBC Driver의 지원을 설명합니다.|  
+|[스파스 열](../../connect/jdbc/sparse-columns.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스파스 열에 대한 JDBC Driver의 지원을 설명합니다.|  
 |[JDBC 드라이버에 대한 준비된 문 메타데이터 캐싱](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|준비 된 문 쿼리를 사용 하 여 성능 향상을 위한 기술을 설명 합니다.|
 |[일괄 처리 삽입 작업에 대량 복사 API 사용](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|일괄 처리 삽입 작업 및 그 이점에 대 한 대량 복사 API를 사용 하도록 설정 하는 방법에 설명 합니다.|
 

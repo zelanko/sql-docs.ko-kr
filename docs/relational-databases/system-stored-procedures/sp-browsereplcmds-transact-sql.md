@@ -1,5 +1,5 @@
 ---
-title: sp_browsereplcmds (Transact SQL) | Microsoft Docs
+title: sp_browsereplcmds (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19c4c3b162d882f3d7a31701ad2cc838fcaaed74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 744f28362bcb64d0d4e294e464cbd94c26f13d60
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991300"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036557"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,28 +52,28 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="arguments"></a>인수  
  [  **@xact_seqno_start =**] **'***xact_seqno_start***'**  
- 반환할 가장 낮은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_start* 은 **nchar (22)**, 기본값은 0x00000000000000000000입니다.  
+ 반환할 가장 낮은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_start* 됩니다 **nchar(22)**, 기본값은 0x00000000000000000000입니다.  
   
  [  **@xact_seqno_end =**] **'***xact_seqno_end***'**  
- 반환할 가장 높은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_end* 은 **nchar (22)**, 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
+ 반환할 가장 높은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_end* 됩니다 **nchar(22)**, 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
   
  [  **@originator_id =**] **'***originator_id***'**  
- 지정 하는 경우 지정 된 명령을 *originator_id* 반환 됩니다. *originator_id* 은 **int**, 기본값은 NULL입니다.  
+ 지정 된 명령을 *originator_id* 반환 됩니다. *originator_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [  **@publisher_database_id =**] **'***publisher_database_id***'**  
- 지정 하는 경우 지정 된 명령을 *publisher_database_id* 반환 됩니다. *publisher_database_id* 은 **int**, 기본값은 NULL입니다.  
+ 지정 된 명령을 *publisher_database_id* 반환 됩니다. *publisher_database_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [  **@article_id =**] **'***article_id***'**  
- 지정 하는 경우 지정 된 명령을 *article_id* 반환 됩니다. *article_id* 은 **int**, 기본값은 NULL입니다.  
+ 지정 된 명령을 *article_id* 반환 됩니다. *article_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [  **@command_id =**] *command_id*  
- 명령의 위치 [MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 디코딩될 합니다. *command_id* 은 **int**, 기본값은 NULL입니다. 을 지정 하는 경우 다른 모든 매개 변수 또한 지정 해야 하 고 *xact_seqno_start*동일 해야 *xact_seqno_end*합니다.  
+ 명령의 위치인 [MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 디코딩할 합니다. *command_id* 됩니다 **int**, 기본값은 NULL입니다. 지정 하는 경우 다른 모든 매개 변수 또한 지정 해야 하 고 *xact_seqno_start*같아야 *xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id*  
- 지정한 복제 에이전트에 해당하는 명령만 반환하도록 지정합니다. *agent_id* 은 **int**, 기본값은 NULL입니다.  
+ 지정한 복제 에이전트에 해당하는 명령만 반환하도록 지정합니다. *agent_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [  **@compatibility_level =**] *compatibility_level*  
- 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다는 *compatibility_level* 은 **int**, 기본값은 9000000입니다.  
+ 버전이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반이 *compatibility_level* 은 **int**, 이며 기본값은 9000000입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -98,13 +97,13 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
  긴 명령은 결과 집합에서 여러 행으로 분할될 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_browsereplcmds** 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 또는 **replmonitor** 배포 데이터베이스의 고정된 데이터베이스 역할 를실행할수있습니다**sp_browsereplcmds**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버만 합니다 **sysadmin** 고정 서버 역할의 멤버는 **db_owner** 하거나 **replmonitor** 배포 데이터베이스의 고정된 데이터베이스 역할 실행할수있습니다**sp_browsereplcmds**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

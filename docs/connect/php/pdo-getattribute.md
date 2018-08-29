@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e455225592c6f8ddd4964f9df80c2159543aade
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979726"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787086"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ mixed PDO::getAttribute ( $attribute )
 |attribute|처리기|지원되는 값|설명|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|특정 사례에 열 이름이 있는지 여부를 지정합니다. PDO::CASE_LOWER는 열 이름을 소문자로 지정하고, PDO::CASE_NATURAL은 열 이름을 데이터베이스에서 반환된 대로 유지하며, PDO::CASE_UPPER는 열 이름을 대문자로 지정합니다.<br /><br />기본값은 PDO::CASE_NATURAL입니다.<br /><br />이 특성은 PDO::setAttribute를 사용하여 설정할 수도 있습니다.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열 배열|드라이버 및 관련 라이브러리의 버전을 설명합니다. ODBC 버전(*MajorVer*.*MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client DLL 이름 및 버전, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전(*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*) 등의 요소를 사용하여 배열을 반환합니다.|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열 배열|드라이버 및 관련 라이브러리의 버전을 설명합니다. ODBC 버전(*MajorVer*.*MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL 이름 및 버전, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전(*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*) 등의 요소를 사용하여 배열을 반환합니다.|  
 |PDO::ATTR_DRIVER_NAME|PDO|String|항상 "sqlsrv"를 반환합니다.|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전(*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)을 나타냅니다.|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|드라이버에서 오류를 처리하는 방법을 지정합니다.<br /><br />PDO::ERRMODE_SILENT(기본값)에서는 오류 코드 및 정보를 설정합니다.<br /><br />PDO::ERRMODE_WARNING은 E_WARNING을 발생시킵니다.<br /><br />PDO::ERRMODE_EXCEPTION은 예외를 발생시킵니다.<br /><br />이 특성은 PDO::setAttribute를 사용하여 설정할 수도 있습니다.|  

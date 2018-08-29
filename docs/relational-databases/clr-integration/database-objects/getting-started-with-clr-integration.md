@@ -6,7 +6,7 @@ ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: clr
-ms.topic: get-started-article
+ms.topic: quickstart
 dev_langs:
 - TSQL
 - VB
@@ -27,12 +27,12 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7f5d4385a8f4687688a15029a898ccfecd2f9c44
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349465"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036585"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

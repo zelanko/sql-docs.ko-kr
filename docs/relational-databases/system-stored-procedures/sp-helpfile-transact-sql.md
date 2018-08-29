@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (Transact SQL) | Microsoft Docs
+title: sp_helpfile (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4de2e386d30c718177482cd50d38f169922f5d8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 74acb22b50ce918f070c817cb8954b46e47bb876
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245124"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023841"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="arguments"></a>인수  
  [ **@filename =** ] **'***name***'**  
- 현재 데이터베이스에 있는 파일의 논리적 이름입니다. *이름* 은 **sysname**, 기본값은 NULL입니다. 경우 *이름* 은 지정 하지 않으면 현재 데이터베이스의 모든 파일의 특성이 반환 됩니다.  
+ 현재 데이터베이스에 있는 파일의 논리적 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *이름을* 은 지정 하지 않으면 현재 데이터베이스의 모든 파일의 특성이 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -55,15 +55,15 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|논리적 파일 이름입니다.|  
-|**fileid**|**smallint**|파일의 숫자 식별자입니다. 반환 되는지 *이름* 지정*합니다.*|  
+|**fileid**|**smallint**|파일의 숫자 식별자입니다. 경우에 반환 되지 않습니다 *이름을* 된*합니다.*|  
 |**filename**|**nchar(260)**|물리적 파일 이름입니다.|  
 |**filegroup**|**sysname**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 파일이 로그 파일입니다. 파일 그룹에 속하지 않습니다.|  
 |**size**|**nvarchar(15)**|파일 크기(KB)입니다.|  
 |**maxsize**|**nvarchar(15)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar(15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  
-|**사용**|**varchar(9)**|데이터 파일에 대 한 값이 **'데이터에만 해당'** 및 값은 로그 파일에 대 한 **'로그 만'** 합니다.|  
+|**사용 현황**|**varchar(9)**|데이터 파일에 대 한 값이 **'데이터만'** 하 고 값은 로그 파일에 대 한 **'로그'** 합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -76,8 +76,8 @@ EXEC sp_helpfile;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   

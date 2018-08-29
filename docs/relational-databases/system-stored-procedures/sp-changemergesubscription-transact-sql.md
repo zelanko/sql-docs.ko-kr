@@ -1,5 +1,5 @@
 ---
-title: sp_changemergesubscription (Transact SQL) | Microsoft Docs
+title: sp_changemergesubscription (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2426efe2b47c5bdd6fbf952202d70dbc4fc5e365
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82fcd86e9b80c2492da938000a0510d52583dc55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991510"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018059"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,23 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 변경할 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
+ 변경할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
   
  [  **@subscriber=**] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 NULL입니다.  
+ 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@subscriber_db=**] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db*은 **sysname**, 기본값은 NULL입니다.  
+ 구독 데이터베이스의 이름입니다. *subscriber_db*됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@property=**] **'***속성***'**  
- 지정된 게시에 대해 변경할 속성입니다. *속성* 은 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
+ 지정된 게시에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
   
  [  **@value=**] **'***값***'**  
- 지정 된 항목에 대 한 새 값 *속성*합니다. *값* 은 **nvarchar (255)**, 테이블의 값 중 하나일 수 있습니다.  
+ 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
   
-|속성|Value|Description|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
-|**설명**||해당 병합 구독에 관한 설명입니다.|  
+|**description**||해당 병합 구독에 관한 설명입니다.|  
 |**priority**||구독 우선 순위입니다. 우선 순위는 기본 해결 프로그램이 충돌을 감지했을 때 먼저 적용할 항목을 선택하는 데 사용합니다.|  
 |**merge_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
 |**merge_job_password**||에이전트가 실행되는 Windows 계정의 암호입니다.|  
@@ -86,15 +86,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_changemergesubscription** 병합 복제에 사용 됩니다.  
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_changemergesubscription**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_changemergesubscription**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.tcp_endpoints (Transact SQL) | Microsoft Docs
+title: sys.tcp_endpoints (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,31 +21,31 @@ helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5ca1f1dae30d432ec339825cc5ab5815351150b4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221294"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034882"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  시스템 내의 각 TCP 끝점당 한 개의 행을 포함합니다. 설명 하는 끝점 **sys.tcp_endpoints** 권한을 부여 하 고 연결 권한을 취소할 개체를 제공 합니다. 포트 및 IP 주소와 관련해서 표시되는 정보는 프로토콜을 구성하는 데 사용되지 않으며 실제 프로토콜 구성과 일치하지 않을 수도 있습니다. 프로토콜을 보고 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다.  
+  시스템 내의 각 TCP 엔드포인트당 한 개의 행을 포함합니다. 설명 하는 끝점 **sys.tcp_endpoints** 부여 하 고 연결 권한을 취소 하는 개체를 제공 합니다. 포트 및 IP 주소와 관련해서 표시되는 정보는 프로토콜을 구성하는 데 사용되지 않으며 실제 프로토콜 구성과 일치하지 않을 수도 있습니다. 프로토콜을 보고 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다.  
   
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**< 상속 된 열 >**||열을 상속 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)합니다.|  
-|**port**|ssNoversion|끝점이 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
+|**port**|ssNoversion|엔드포인트가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
 |**is_dynamic_port**|bit|1 = 포트 번호가 동적으로 할당되었는지 여부를 나타냅니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**ip_address**|**nvarchar(45)**|LISTENER_IP 절에서 지정한 수신기 IP 주소입니다. Null을 허용합니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 다음 쿼리를 실행하여 끝점 및 연결에 대한 정보를 수집합니다. 현재 연결이 없거나 TCP 연결이 없는 끝점은 NULL 값으로 표시됩니다. 추가 **여기서** 절 `WHERE des.session_id = @@SPID` 현재 연결에 대 한 정보를 반환 합니다.  
+ 다음 쿼리를 실행하여 엔드포인트 및 연결에 대한 정보를 수집합니다. 현재 연결이 없거나 TCP 연결이 없는 엔드포인트는 NULL 값으로 표시됩니다. 추가 합니다 **여기서** 절 `WHERE des.session_id = @@SPID` 현재 연결에 대 한 정보를 반환 합니다.  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
@@ -65,6 +65,6 @@ LEFT JOIN sys.dm_exec_connections AS dec
   
 ## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [끝점 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [끝점 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

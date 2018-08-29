@@ -1,5 +1,5 @@
 ---
-title: sp_addmergealternatepublisher (Transact SQL) | Microsoft Docs
+title: sp_addmergealternatepublisher (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergealternatepublisher
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd7c439b29a24c6f1187922a81bbdd3f1acfce0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a99c19da699f420158c9449948cde6a3e42f23f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988568"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035326"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,42 +53,42 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
+ 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
+ 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@alternate_publisher=**] **'***alternate_synchronization_partner***'**  
- 대체 게시자의 이름입니다. *alternate_synchronization_partner* 은 **sysname**, 기본값은 없습니다.  
+ 대체 게시자의 이름입니다. *alternate_synchronization_partner* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
- 대체 게시자에 있는 게시 데이터베이스의 이름입니다. *alternate_publisher_db* 은 **sysname**, 기본값은 없습니다.  
+ 대체 게시자에 있는 게시 데이터베이스의 이름입니다. *alternate_publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@alternate_publication=**] **'***alternate_synchronization_partner***'**  
- 대체 동기화 파트너에 있는 게시의 이름입니다. *alternate_synchronization_partner* 은 **sysname**, 기본값은 없습니다.  
+ 대체 동기화 파트너에 있는 게시의 이름입니다. *alternate_synchronization_partner* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@alternate_distributor=**] **'***alternate_distributor***'**  
- 대체 동기화 파트너에 대한 배포자의 이름입니다. *alternate_distributor* 은 **sysname**, 기본값은 없습니다.  
+ 대체 동기화 파트너에 대한 배포자의 이름입니다. *alternate_distributor* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@friendly_name=**] **'***friendly_name***'**  
- 대체 동기화 파트너를 구성하는 게시자, 게시 및 배포자의 연결을 식별하기 위한 표시 이름입니다. *friendly_name* 은 **nvarchar (255)**, 기본값은 NULL입니다.  
+ 대체 동기화 파트너를 구성하는 게시자, 게시 및 배포자의 연결을 식별하기 위한 표시 이름입니다. *friendly_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
- [  **@reserved=**] **'***예약***'**  
+ [  **@reserved=**] **'***예약 된***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_addmergealternatepublisher** 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_addmergealternatepublisher**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addmergealternatepublisher**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_dropmergealternatepublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

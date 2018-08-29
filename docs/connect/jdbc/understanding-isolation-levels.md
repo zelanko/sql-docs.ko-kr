@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74cc593c494c80492a96644f25fe4a7b6bc7a85e
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f4a91678f90164a85907a21f50d74b50561ceaff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662215"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785670"
 ---
 # <a name="understanding-isolation-levels"></a>격리 수준 이해
 
@@ -65,7 +65,7 @@ ms.locfileid: "39662215"
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 새 스냅숏 격리 수준을 사용하려면 다음과 같은 `SQLServerConnection` 상수 중 하나를 사용할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 스냅숏 격리 수준을 사용하려면 다음과 같은 `SQLServerConnection` 상수 중 하나를 사용할 수 있습니다.  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -77,7 +77,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 격리 수준에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서에서 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]의 격리 수준"을 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 격리 수준에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]의 격리 수준"을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목
 

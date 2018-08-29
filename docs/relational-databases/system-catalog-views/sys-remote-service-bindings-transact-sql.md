@@ -1,5 +1,5 @@
 ---
-title: sys.remote_service_bindings (Transact SQL) | Microsoft Docs
+title: sys.remote_service_bindings (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_service_bindings catalog view
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b51b1ad09e3b1dd3252178e45934fafa46d4e688
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4a1ce5436427aa22d6008a63bf6e6b100eebd029
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181519"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037640"
 ---
 # <a name="sysremoteservicebindings-transact-sql"></a>sys.remote_service_bindings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "33181519"
 |**remote_principal_id**|**int**|원격 서비스 바인딩에 지정된 사용자의 ID입니다. Service Broker는 지정된 계약에서 지정된 서비스와 통신할 때 이 사용자가 소유한 인증서를 사용합니다. NULL을 허용합니다.|  
 |**is_anonymous_on**|**bit**|이 원격 서비스 바인딩은 ANONYMOUS 보안을 사용합니다. 대화를 시작하는 사용자의 ID는 대상 서비스에 제공되지 않습니다. NULL을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
   

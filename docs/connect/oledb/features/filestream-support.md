@@ -15,14 +15,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b8c2b2c79ab9564fab1160a0434d7146a311a0f8
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 6dde88550692c8290148387ad8f3048d70e3eaec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106149"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029126"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

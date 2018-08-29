@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0dbdc7e2ccfdd2afc3e674100605a39d727bf5ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969089"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787950"
 ---
 # <a name="sqllogship-application"></a>sqllogship 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ## <a name="remarks"></a>Remarks  
  가능하면 백업, 복사 및 복원 작업을 사용하여 백업, 복사 및 복원을 수행하는 것이 좋습니다. 일괄 처리 작업 또는 다른 응용 프로그램에서 이러한 작업을 시작하려면 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 저장 프로시저를 호출하세요.  
   
- **sqllogship** 에서 생성된 로그 전달 기록은 로그 전달 백업, 복사 및 복원 작업으로 생성된 기록과 섞여 있습니다. 로그 전달 구성에 대해 백업, 복사 또는 복원 작업을 수행하도록 **sqllogship** 을 반복적으로 사용하려면 해당 로그 전달 작업을 비활성화하는 것을 고려하십시오. 자세한 내용은 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)을 참조하세요.  
+ **sqllogship** 에서 생성된 로그 전달 기록은 로그 전달 백업, 복사 및 복원 작업으로 생성된 기록과 섞여 있습니다. 로그 전달 구성에 대해 백업, 복사 또는 복원 작업을 수행하도록 **sqllogship** 을 반복적으로 사용하려면 해당 로그 전달 작업을 비활성화하는 것을 고려하십시오. 자세한 내용은 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
   
  **sqllogship** 응용 프로그램인 SqlLogShip.exe는 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 디렉터리에 설치됩니다.  
   

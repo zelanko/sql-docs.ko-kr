@@ -1,5 +1,5 @@
 ---
-title: sp_requestpeertopologyinfo (Transact SQL) | Microsoft Docs
+title: sp_requestpeertopologyinfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_requestpeertopologyinfo
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7050183f973c7882cb78ed26d6ef42a39bdefa1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63b68bcd4235256a038fd3b791d36470e262f203
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996670"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021302"
 ---
 # <a name="sprequestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  채웁니다는 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 시스템 테이블에 피어 투 피어 트랜잭션 복제 토폴로지에 대 한 정보입니다. 실행 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md) XML 형식으로 테이블에서 정보를 얻을 수 있습니다.  
+  채웁니다 합니다 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 피어 투 피어 트랜잭션 복제 토폴로지에 대 한 정보를 사용 하 여 시스템 테이블입니다. 실행할 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md) XML 형식으로 테이블에서 정보를 얻을 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,22 +47,22 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ @publication=] '*게시*'  
- 토폴로지 차원 상태 요청을 수행할 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 토폴로지 차원 상태 요청을 수행할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ @request_id=] *request_id*  
- 토폴로지 상태 요청에 할당된 ID 번호입니다. *request_id* 은 **int**, 기본값은 NULL입니다. 이 ID를 사용 하 여 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)합니다.  
+ 토폴로지 상태 요청에 할당된 ID 번호입니다. *request_id* 됩니다 **int**, 기본값은 NULL입니다. 이 ID를 사용할 수 있습니다 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- sp_requestpeertopologyinfo는 피어 투 피어 트랜잭션 복제에 사용됩니다. 실행 하기 전에 sp_requestpeertopologyinfo를 실행 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)합니다. 이러한 프로시저는 피어 투 피어 토폴로지 구성 마법사에서 사용되지만 XML 형식의 토폴로지 정보가 필요한 경우 직접 사용할 수도 있습니다. 테이블 형식 결과 선호 하는 경우 쿼리는 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 시스템 테이블입니다.  
+## <a name="remarks"></a>Remarks  
+ sp_requestpeertopologyinfo는 피어 투 피어 트랜잭션 복제에 사용됩니다. 실행 하기 전에 sp_requestpeertopologyinfo를 실행 [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)합니다. 이러한 프로시저는 피어 투 피어 토폴로지 구성 마법사에서 사용되지만 XML 형식의 토폴로지 정보가 필요한 경우 직접 사용할 수도 있습니다. 테이블 형식 결과 원한다 면 쿼리는 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 시스템 테이블입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>관련 항목  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

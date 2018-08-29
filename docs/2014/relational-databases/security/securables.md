@@ -17,16 +17,15 @@ helpviewer_keywords:
 - hierarchies [SQL Server], securables
 - server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cdd6daa0eb7578b8889fdc4b236f1b83df42a005
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da63c9918fb2d4c89ab32b3a06402c39bea0785b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320003"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029105"
 ---
 # <a name="securables"></a>보안 개체
   보안 개체는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인증 시스템이 액세스를 조정하는 리소스입니다. 예를 들어, 테이블은 보안 개체입니다. 스스로 보호할 수 있는 "범위"라는 중첩된 계층을 만들면 일부 보안 개체를 다른 보안 개체에 포함시킬 수 있습니다. 보안 개체 범위는 **서버**, **데이터베이스**및 **스키마**입니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "37320003"
   
 -   가용성 그룹  
   
--   끝점  
+-   엔드포인트  
   
 -   로그인  
   

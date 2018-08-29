@@ -22,17 +22,16 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55408f62c8e66c33bcb58682831970312c51130d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7091aa6596fd66260ae43d39f0f19e5770b6dcdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998175"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030143"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "37998175"
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**연결**|**connection_successful**|0|**connection_successful**|0|데이터베이스에 연결되었습니다.|  
 |**연결**|**connection_failed**|0|**invalid_login_name**|2|이 SQL Server 버전에서 로그인 이름이 잘못되었습니다.|  
-|**연결**|**connection_failed**|1|**windows_auth_not_supported**|2|이 버전의 SQL Server에서는 Windows 로그인이 지원되지 않습니다.|  
+|**연결**|**connection_failed**|@shouldalert|**windows_auth_not_supported**|2|이 버전의 SQL Server에서는 Windows 로그인이 지원되지 않습니다.|  
 |**연결**|**connection_failed**|2|**attach_db_not_supported**|2|사용자가 지원되지 않는 데이터베이스 파일 첨부를 요청했습니다.|  
 |**연결**|**connection_failed**|3|**change_password_not_supported**|2|사용자가 지원되지 않는 사용자 로그인 암호 변경을 요청했습니다.|  
 |**연결**|**connection_failed**|4|**login_failed_for_user**|2|로그인에 실패했습니다.|  
@@ -80,7 +79,7 @@ ms.locfileid: "37998175"
 |**연결**|**connection_failed**|8|**client_close**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 클라이언트 연결 설정 시 시간이 초과되었습니다. 연결 제한 시간을 늘려 보세요.|  
 |**연결**|**connection_failed**|9|**재구성**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 당시에 데이터베이스가 재구성 중이었으므로 연결이 실패했습니다.|  
 |**연결**|**connection_terminated**|0|**idle_connection_timeout**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 연결이 시스템에 정의된 임계값보다 오랫동안 유휴 상태였습니다.|  
-|**연결**|**connection_terminated**|1|**재구성**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
+|**연결**|**connection_terminated**|@shouldalert|**재구성**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
 |**연결**|**제한**|*\<이유 코드 >*|**reason_code**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >* 합니다. 자세한 내용은 [엔진 제한](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
 |**연결**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
 |**연결**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  

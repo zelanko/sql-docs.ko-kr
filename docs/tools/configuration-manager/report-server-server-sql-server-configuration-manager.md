@@ -13,13 +13,14 @@ ms.assetid: ea939db1-ce97-4eea-8223-1ca6a82128d7
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0440354a60726e56aecb240b1150457211c1b3ea
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 62cc70ec7a6eba35a14e69a1a5a1f641bbb8f6ba
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061501"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787953"
 ---
 # <a name="report-server-ltservergt-sql-server-configuration-manager"></a>보고서 서버 &lt;server&gt;(SQL Server 구성 관리자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 406c1c25c346680caba70c467e20e99df9977f13
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454197"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787459"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 인터페이스
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-JDBC 드라이버에서는 java.sql.SQLXML 인터페이스를 소개하는 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 데이터 형식에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** 데이터 형식입니다.  
+JDBC 드라이버에서는 java.sql.SQLXML 인터페이스를 소개하는 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 데이터 형식에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** 데이터 형식입니다.  
   
 XML 값에 액세스 하기 위한 메서드를 제공 하는 SQLXML 인터페이스는 **문자열**, **판독기** 또는 **기록기**, 또는 **Stream**합니다. XML 값은 또한 **Source**를 통해 액세스하거나 **Result**로 설정할 수 있는데 이들은 DOM(문서 개체 모델), SAX(Simple API for XML), StAX(Streaming API for XML)와 같은 XML 파서와 XSLT 변환 및 XPath와 함께 사용할 수 있습니다.  
   

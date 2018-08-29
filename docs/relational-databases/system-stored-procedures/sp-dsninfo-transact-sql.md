@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (Transact SQL) | Microsoft Docs
+title: sp_dsninfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a9c04611a342f81b6aa0a0b403eb6ff4ce8a643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e4783420f9298e2e820341993774b81bbab7e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992580"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017496"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +50,12 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="arguments"></a>인수  
  [  **@dsn =**] **'***dsn***'**  
- ODBC DSN 또는 OLE DB 연결된 서버의 이름입니다. *dsn* 은 **varchar (128)**, 기본값은 없습니다.  
+ ODBC DSN 또는 OLE DB 연결된 서버의 이름입니다. *dsn* 됩니다 **varchar(128)**, 기본값은 없습니다.  
   
  [  **@infotype =**] **'***info_type***'**  
- 반환되는 정보의 유형입니다. 경우 *info_type* 지정 하지 않으면 NULL을 지정 하는 경우에 모든 정보 유형이 반환 됩니다. *info_type* 은 **varchar (128)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+ 반환되는 정보의 유형입니다. 하는 경우 *info_type* 지정 되지 않았거나 NULL을 지정한 경우 모든 정보 유형이 반환 됩니다. *info_type* 됩니다 **varchar(128)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**DBMS_NAME**|데이터 원본의 공급업체 이름을 나타냅니다.|  
 |**DBMS_VERSION**|데이터 원본의 버전을 나타냅니다.|  
@@ -63,15 +63,15 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**SQL_SUBSCRIBER**|데이터 원본이 구독자가 될 수 있는지를 나타냅니다.|  
   
  [ **@login =**] **'***login***'**  
- 데이터 원본의 로그인입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *로그인*은 **varchar (128)**, 기본값은 NULL입니다.  
+ 데이터 원본의 로그인입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *로그인*됩니다 **varchar(128)**, 기본값은 NULL입니다.  
   
  [  **@password =**] **'***암호***'**  
- 로그인의 암호입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *암호*은 **varchar (128)**, 기본값은 NULL입니다.  
+ 로그인의 암호입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *암호*됩니다 **varchar(128)**, 기본값은 NULL입니다.  
   
  [  **@dso_type=**] *dso_type*  
- 데이터 원본 유형입니다. *dso_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
+ 데이터 원본 유형입니다. *dso_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|ODBC 데이터 원본|  
 |**3**|OLE DB 데이터 원본|  
@@ -86,15 +86,15 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**정보 유형**|**nvarchar(64)**|DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER 등의 정보 유형입니다.|  
 |**Value**|**nvarchar(512)**|관련 정보 유형의 값입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_dsninfo** 모든 유형의 복제에 사용 됩니다.  
   
- **sp_dsninfo** 데이터베이스 복제 또는 쿼리에 사용할 수 있는지 여부를 보여 주는 ODBC 또는 OLE DB 데이터 원본 정보를 검색 합니다.  
+ **sp_dsninfo** 복제 또는 쿼리에 대해 데이터베이스를 사용할 수 있는지 여부를 보여 주는 ODBC 또는 OLE DB 데이터 원본 정보를 검색 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_dsninfo**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_dsninfo**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_enumdsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

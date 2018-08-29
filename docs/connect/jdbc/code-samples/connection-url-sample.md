@@ -14,18 +14,18 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 578789591b1f0eb62c6da1f3048909962b9f1bc5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 8b0365cf9427d11353e7f086d1f2faf1de511d30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451568"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786658"
 ---
 # <a name="connection-url-sample"></a>연결 URL 샘플
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 연결 URL을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에 연결하는 방법을 보여 줍니다. 또한 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에서 데이터를 검색하는 방법도 보여 줍니다.
+이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 연결 URL을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법을 보여 줍니다. 또한 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 검색하는 방법도 보여 줍니다.
 
 이 샘플의 코드 파일 이름은 ConnectURL.java이며 다음과 같은 위치에 있습니다.
 

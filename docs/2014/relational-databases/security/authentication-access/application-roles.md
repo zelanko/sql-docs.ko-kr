@@ -19,16 +19,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 - groups [SQL Server], roles
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5613f0657b8b8c5a3a9083be022865d83264e5db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b82ecbd1fffd99e5830948f0bf2bb799d6f1a851
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262289"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019902"
 ---
 # <a name="application-roles"></a>응용 프로그램 역할
   응용 프로그램 역할은 응용 프로그램이 사용자와 같은 자체 사용 권한으로 실행할 수 있도록 설정하는 데이터베이스 보안 주체입니다. 응용 프로그램 역할을 사용하면 특정 데이터에 대한 액세스를 특정 응용 프로그램을 통해 연결하는 사용자에게만 허용할 수 있습니다. 데이터베이스 역할과는 달리 응용 프로그램 역할에는 멤버가 없으며 기본적으로 비활성화됩니다. 응용 프로그램 역할은 두 인증 모드에서 모두 작동하며 **sp_setapprole**을 사용하여 활성화되고 암호가 필요합니다. 응용 프로그램 역할은 데이터베이스 수준의 보안 주체이기 때문에 다른 데이터베이스에서 **guest**에 부여한 사용 권한을 통해서만 해당 데이터베이스에 액세스할 수 있습니다. 따라서 다른 데이터베이스의 응용 프로그램 역할은 **guest** 가 해제된 데이터베이스에 액세스할 수 없습니다.  

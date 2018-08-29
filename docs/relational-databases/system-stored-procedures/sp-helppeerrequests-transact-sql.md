@@ -1,5 +1,5 @@
 ---
-title: sp_helppeerrequests (Transact SQL) | Microsoft Docs
+title: sp_helppeerrequests (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfb696723ce749ec3db1cea12b88a4bf36a27c8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba660dbcaf09b3df5890032ab0f1b428cce7860e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996180"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028103"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  실행 하 여 이러한 요청을 시작한 하는 피어 투 피어 복제 토폴로지의 참가자 들이 받은 모든 상태 요청에 대 한 정보를 반환 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 모두에서 토폴로지에 게시 된 데이터베이스입니다. 이 저장 프로시저는 피어 투 피어 복제 토폴로지에 참여하는 게시자의 게시 데이터베이스에서 실행됩니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
+  피어 투 피어 복제 토폴로지를 실행 하 여 이러한 요청이 시작 된 위치에서 참가자 들이 받은 모든 상태 요청에 대 한 정보를 반환 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 언제 든 토폴로지에서 게시 된 데이터베이스입니다. 이 저장 프로시저는 피어 투 피어 복제 토폴로지에 참여하는 게시자의 게시 데이터베이스에서 실행됩니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +47,10 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>인수  
  [ **@publication**=] **'***게시***'**  
- 상태 요청이 전송된 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
+ 상태 요청이 전송된 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@description**= ] **'***description***'**  
- 호출할 때 제공 되는 정보를 정의 사용자에 따라 반환 된 응답을 필터링 할 수 있도록 하는 개별 상태 요청을 식별 하는 데 사용할 수 있는 값 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)합니다. *설명* 은 **nvarchar (4000)**, 기본값은 **%** 합니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 제공 된 값이 일치 하는 설명을 가진 상태 요청만 반환 하는 데 사용 되 *설명*문자열 일치를 사용 하 여 여기서는 [같은 &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)절.  
+ 개별 상태 요청을 호출할 때 제공 되는 정보를 정의 사용자를 기반으로 하는 반환 된 응답을 필터링 하는 데 사용할 수 있는 값 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)합니다. *설명을* 됩니다 **nvarchar(4000)**, 기본값은 **%** 합니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 제공 된 값이 일치 하는 설명을 가진 상태 요청만 반환 하는 데 사용 됩니다 *설명을*사용 하 여 문자열에 일치 하는 경우는 [같은 &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)절.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -59,20 +59,20 @@ sp_helppeerrequests [ @publication = ] 'publication'
 |**id**|**int**|요청을 식별합니다.|  
 |**게시**|**sysname**|상태 요청이 전송된 게시의 이름입니다.|  
 |**sent_date**|**datetime**|상태 요청이 전송된 날짜와 시간입니다.|  
-|**설명**|**nvarchar(4000)**|개별 상태 요청을 식별하기 위해 사용할 수 있는 사용자 정의 정보입니다.|  
+|**description**|**nvarchar(4000)**|개별 상태 요청을 식별하기 위해 사용할 수 있는 사용자 정의 정보입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_helppeerrequests** 피어 투 피어 트랜잭션 복제에 사용 됩니다.  
   
  **sp_helppeerrequests** 피어 투 피어 토폴로지에 게시 된 데이터베이스를 복원 하는 경우에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helppeerrequests**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helppeerrequests**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerresponses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   

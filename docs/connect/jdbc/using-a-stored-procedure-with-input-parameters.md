@@ -14,18 +14,18 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f3198c1d8308ea2142683562a4c0d15a173504
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: b1662275280f97dcba0c02a21747738e1984b34f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661765"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784802"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>입력 매개 변수가 있는 저장 프로시저 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-호출할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 저장 프로시저는 데이터를 저장 프로시저에 전달하는 데 사용할 수 있는 입력 매개 변수가 하나 이상인 저장 프로시저입니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이러한 종류의 저장 프로시저를 호출하여 반환되는 데이터를 처리하는 데 사용할 수 있는 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스를 제공합니다.
+호출할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 데이터를 저장 프로시저에 전달하는 데 사용할 수 있는 입력 매개 변수가 하나 이상인 저장 프로시저입니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이러한 종류의 저장 프로시저를 호출하여 반환되는 데이터를 처리하는 데 사용할 수 있는 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스를 제공합니다.
 
 JDBC 드라이버를 사용하여 입력 매개 변수가 포함된 저장 프로시저를 호출하는 경우에는 `call` SQL 이스케이프 시퀀스와 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 함께 사용해야 합니다. 입력 매개 변수가 있는 `call` 이스케이프 시퀀스의 구문은 다음과 같습니다.
 

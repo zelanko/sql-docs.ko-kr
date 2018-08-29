@@ -1,5 +1,5 @@
 ---
-title: sp_get_distributor (Transact SQL) | Microsoft Docs
+title: sp_get_distributor (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 088b2d2c6e334d48fae3e9257f76c5fd8129c15d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994100"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021292"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_get_distributor
 |**배포 게시자**|**int**|**0** = 아니요. **1** = 예|  
 |**원격 배포 게시자가 있음**|**int**|**0** = 아니요. **1** = 예|  
   
-## <a name="remarks"></a>주의  
- **sp_get_distributor** 에서 주로 사용 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스냅숏, 트랜잭션 및 병합 복제에 있습니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_get_distributor** 는 주로 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스냅숏, 트랜잭션 및 병합 복제에 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 모든 사용자가 실행할 수 **sp_get_distributor**합니다. NULL이 아닌 결과 집합이 반환 됩니다 때이 저장 프로시저의 멤버에 의해 실행 되는 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버 또는 배포 데이터베이스에는  **db_owner** 게시 된 데이터베이스를 하나 이상에 고정된 데이터베이스 역할입니다. NULL이 아닌 결과 집합이 반환 됩니다이 저장된 프로시저를 실행할 때의 게시 액세스 목록 (PAL)의 사용자가 적어도 하나의 게시 된 데이터베이스 또는 배포 데이터베이스에 대 한-SQL Server 이외 게시자의 PAL에 실행할 수도 **sp _get_distributor**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 모든 사용자가 실행할 수 있습니다 **sp_get_distributor**합니다. NULL이 아닌 결과 집합이 반환 됩니다이 저장 하는 경우의 멤버에서 프로시저를 실행 합니다 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버 또는 배포 데이터베이스에는  **db_owner** 하나 이상의 게시 된 데이터베이스에서 고정된 데이터베이스 역할. NULL이 아닌 결과 집합에도 반환 됩니다이 저장된 프로시저를 실행할 때의 게시 액세스 목록 (PAL)의 사용자가 적어도 하나의 게시 된 데이터베이스에서 또는 배포 데이터베이스에 대 한-SQL Server 이외 게시자의 PAL에 실행할 수도 있습니다 **sp _get_distributor**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [배포자 및 게시자 정보 스크립트](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

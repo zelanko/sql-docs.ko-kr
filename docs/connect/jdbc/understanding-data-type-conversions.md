@@ -14,22 +14,22 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0164fdcfebdf0fb92aac1f37820495ad8e591a41
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662205"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783885"
 ---
 # <a name="understanding-data-type-conversions"></a>데이터 형식 변환 이해
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Java 프로그래밍 언어 데이터 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식으로 손쉽게 변환하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 사양에서 요구하는 데이터 형식 변환 기능을 제공합니다. 모든 형식은에서 변환 될 수 있어 유연성이 뛰어납니다 **개체**, **문자열**, 및 **byte** 데이터 형식입니다.
+Java 프로그래밍 언어 데이터 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 손쉽게 변환하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 사양에서 요구하는 데이터 형식 변환 기능을 제공합니다. 모든 형식은에서 변환 될 수 있어 유연성이 뛰어납니다 **개체**, **문자열**, 및 **byte** 데이터 형식입니다.
 
 ## <a name="getter-method-conversions"></a>Getter 메서드 변환
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식을 기반으로 하는 다음 차트에는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 get\<Type>() 메서드에 대한 JDBC 드라이버의 변환 맵과 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 get\<Type> 메서드에서 지원되는 변환 등이 나와 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 다음 차트에는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 get\<Type>() 메서드에 대한 JDBC 드라이버의 변환 맵과 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 get\<Type> 메서드에서 지원되는 변환 등이 나와 있습니다.
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -59,7 +59,7 @@ GetString에서 호출 되는 **이진**, **varbinary**를 **varbinary (max)**, 
 
 대해 updateString를 호출 하는 경우는 **이진**, **varbinary**합니다 **varbinary (max)**, 또는 **이미지** 문자열 값 처리 열 데이터 형식 16 진수 문자열 값입니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**인 경우 데이터 값은 올바른 **XML**이어야 합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 데이터 형식이 **XML**인 경우 데이터 값은 올바른 **XML**이어야 합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -81,13 +81,13 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 
 - **비손실(x)**: setter 형식이 원본 서버 유형과 동일하거나 작은 경우의 숫자 변환입니다. 예를 들어, 원본 서버 **10진수** 열에 대해 setBigDecimal을 호출하는 경우는 변환이 필요하지 않습니다. 숫자에서 문자로 변환하는 경우에는 Java **숫자** 데이터 형식이 **문자열**로 변환됩니다. 예를 들어 varchar(50) 열에 값 "53"으로 setDouble을 호출하면 해당 대상 열에 문자 값 "53"이 생성됩니다.
 
-- **변환(y)**: Java **숫자** 형식을 보다 작은 원본 서버 **숫자** 형식으로 변환하는 것입니다. 이 변환은 일반적이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 변환 규칙을 따릅니다. 또한 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로가 발생하면 지원되지 않는 변환 오류가 발생합니다. 예를 들어, 원본 정수 열에 대해 "1.9999" 값으로 updateDecimal을 사용하면 대상 열 값이 "1"이 됩니다. 하지만 "3000000000"을 전달하면 드라이버에서 오류가 발생합니다.
+- **변환(y)**: Java **숫자** 형식을 보다 작은 원본 서버 **숫자** 형식으로 변환하는 것입니다. 이 변환은 일반적이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 규칙을 따릅니다. 또한 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로가 발생하면 지원되지 않는 변환 오류가 발생합니다. 예를 들어, 원본 정수 열에 대해 "1.9999" 값으로 updateDecimal을 사용하면 대상 열 값이 "1"이 됩니다. 하지만 "3000000000"을 전달하면 드라이버에서 오류가 발생합니다.
 
-- **데이터 의존(z)**: Java **문자열** 유형을 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식으로 변환하려면 먼저 드라이버에서 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]로 전달하고 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 변환을 수행해야 합니다. sendStringParametersAsUnicode가 true로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 **nvarchar**에서 **이미지**로의 변환을 허용하지 않으며 SQLServerException이 발생합니다. sendStringParametersAsUnicode가 false로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 **varchar**에서 **이미지**로의 변환을 허용하며 예외가 발생하지 않습니다.
+- **데이터 의존(z)**: Java **문자열** 유형을 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환하려면 먼저 드라이버에서 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전달하고 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변환을 수행해야 합니다. sendStringParametersAsUnicode가 true로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **nvarchar**에서 **이미지**로의 변환을 허용하지 않으며 SQLServerException이 발생합니다. sendStringParametersAsUnicode가 false로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **varchar**에서 **이미지**로의 변환을 허용하며 예외가 발생하지 않습니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 변환을 수행하고 문제가 발생하면 JDBC 드라이버에 오류를 전달합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 변환을 수행하고 문제가 발생하면 JDBC 드라이버에 오류를 전달합니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**인 경우 데이터 값은 올바른 **XML**이어야 합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 데이터 형식이 **XML**인 경우 데이터 값은 올바른 **XML**이어야 합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -110,13 +110,13 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 
 - **비손실(x)**: setter 형식이 원본 서버 유형과 동일하거나 작은 경우의 숫자 변환입니다. 예를 들어, 원본 서버 **10진수** 열에 대해 setBigDecimal을 호출하는 경우는 변환이 필요하지 않습니다. 숫자에서 문자로 변환하는 경우에는 Java **숫자** 데이터 형식이 **문자열**로 변환됩니다. 예를 들어, 값이 "53"인 varchar(50) 열에 setDouble을 호출하면 해당 대상 열에 문자 값 "53"이 생성됩니다.
 
-- **변환(y)**: Java **숫자** 형식을 보다 작은 원본 서버 **숫자** 형식으로 변환하는 것입니다. 이 변환은 일반적이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 변환 규칙을 따릅니다. 또한 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로로 인해 지원되지 않는 변환 오류가 발생합니다. 예를 들어, 원본 정수 열에 대해 "1.9999" 값으로 updateDecimal을 사용하면 대상 열 값이 "1"이 됩니다. 하지만 "3000000000"을 전달하면 드라이버에서 오류가 발생합니다.
+- **변환(y)**: Java **숫자** 형식을 보다 작은 원본 서버 **숫자** 형식으로 변환하는 것입니다. 이 변환은 일반적이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 규칙을 따릅니다. 또한 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로로 인해 지원되지 않는 변환 오류가 발생합니다. 예를 들어, 원본 정수 열에 대해 "1.9999" 값으로 updateDecimal을 사용하면 대상 열 값이 "1"이 됩니다. 하지만 "3000000000"을 전달하면 드라이버에서 오류가 발생합니다.
 
-- **데이터 의존(z)**: Java **문자열** 유형을 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식으로 변환하려면 먼저 드라이버에서 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]로 전달하고 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 변환을 수행해야 합니다. sendStringParametersAsUnicode 연결 속성이 true로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 **nvarchar**에서 **이미지**로의 변환을 허용하지 않으며 SQLServerException이 발생합니다. sendStringParametersAsUnicode가 false로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 **varchar**에서 **이미지**로의 변환을 허용하며 예외가 발생하지 않습니다.
+- **데이터 의존(z)**: Java **문자열** 유형을 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환하려면 먼저 드라이버에서 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전달하고 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변환을 수행해야 합니다. sendStringParametersAsUnicode 연결 속성이 true로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **nvarchar**에서 **이미지**로의 변환을 허용하지 않으며 SQLServerException이 발생합니다. sendStringParametersAsUnicode가 false로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **varchar**에서 **이미지**로의 변환을 허용하며 예외가 발생하지 않습니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 대량 설정 변환을 수행하고 문제가 발생하면 JDBC 드라이버에 오류를 전달합니다. 클라이언트 쪽 변환은 예외 이며만의 경우 수행 됩니다 **날짜**, **시간**합니다 **타임 스탬프**를 **부울**, 및  **문자열** 값입니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대량 설정 변환을 수행하고 문제가 발생하면 JDBC 드라이버에 오류를 전달합니다. 클라이언트 쪽 변환은 예외 이며만의 경우 수행 됩니다 **날짜**, **시간**합니다 **타임 스탬프**를 **부울**, 및  **문자열** 값입니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**인 경우 데이터 값은 올바른 **XML**이어야 합니다. setObject(byte[], SQLXML), setObject(inputStream, SQLXML) 또는 setObject(Blob, SQLXML) 메서드를 호출하는 경우 데이터 값은 XML 문자의 16진수 문자열 표현이어야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 데이터 형식이 **XML**인 경우 데이터 값은 올바른 **XML**이어야 합니다. setObject(byte[], SQLXML), setObject(inputStream, SQLXML) 또는 setObject(Blob, SQLXML) 메서드를 호출하는 경우 데이터 값은 XML 문자의 16진수 문자열 표현이어야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_secondary_database (Transact SQL) | Microsoft Docs
+title: sp_delete_log_shipping_secondary_database (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_secondary_database
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c9d8c89292eaee178b71e278d740cdddff67bcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8d36528068c958e72266ee016858d9233d04194d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257065"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030467"
 ---
 # <a name="spdeletelogshippingsecondarydatabase-transact-sql"></a>sp_delete_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_delete_log_shipping_secondary_database
   
 ## <a name="arguments"></a>인수  
  [  **@secondary_database =** ] '*secondary_database*'  
- 보조 데이터베이스의 이름입니다. *secondary_database* 은 **sysname**, 기본값은 없습니다.  
+ 보조 데이터베이스의 이름입니다. *secondary_database* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -54,14 +53,14 @@ sp_delete_log_shipping_secondary_database
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>주의  
- **sp_delete_log_shipping_secondary_database** 에서 실행 되어야 합니다는 **마스터** 보조 서버에서 데이터베이스.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_log_shipping_secondary_database** 에서 실행 해야 합니다 **마스터** 보조 서버의 데이터베이스.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>관련 항목  
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

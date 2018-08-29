@@ -1,5 +1,5 @@
 ---
-title: sp_droplinkedsrvlogin (Transact SQL) | Microsoft Docs
+title: sp_droplinkedsrvlogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e33633f7ac76fd58db3fba0da141d426de14e97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6e85ed0511ea1986bc19f46903513dfd8a5bc2c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254400"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021014"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
   
 ## <a name="arguments"></a>인수  
  [  **@rmtsrvname =** ] **'***rmtsrvname***'**  
- 연결된 된 서버 이름인 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 매핑이 적용 되 합니다. *rmtsrvname* 은 **sysname**, 기본값은 없습니다. *rmtsrvname* 이미 존재 해야 합니다.  
+ 연결된 된 서버 이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 매핑이 적용 되 합니다. *rmtsrvname* 됩니다 **sysname**, 기본값은 없습니다. *rmtsrvname* 이미 존재 해야 합니다.  
   
  [  **@locallogin =** ] **'***locallogin***'**  
- 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결된 된 서버에 매핑되는 로컬 서버의 로그인 *rmtsrvname*합니다. *locallogin* 은 **sysname**, 기본값은 없습니다. 에 대 한 매핑을 *locallogin* 를 *rmtsrvname* 이미 존재 해야 합니다. 기본 매핑은 만든 NULL 인 경우 **sp_addlinkedserver**, 로컬 서버의 모든 로그인을 연결 된 서버의 로그인에 매핑되는 삭제 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결된 된 서버에 매핑되는 로컬 서버의 로그인 *rmtsrvname*합니다. *locallogin* 됩니다 **sysname**, 기본값은 없습니다. 에 대 한 매핑이 *locallogin* 하 *rmtsrvname* 이미 존재 해야 합니다. 기본 매핑을 만들어 NULL 인 경우 **sp_addlinkedserver**, 로컬 서버의 모든 로그인을 연결 된 서버의 로그인에 매핑되는 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- 로컬 서버에에서 만든 기본 매핑을 사용 되는 경우는 기존에 대 한 매핑이 로그인을 삭제, **sp_addlinkedserver** 해당 로그인을 대신 하 여 연결된 된 서버에 연결할 때. 기본 매핑을 변경 하려면 **sp_addlinkedsrvlogin**합니다.  
+## <a name="remarks"></a>Remarks  
+ 로컬 서버에 만든 기본 매핑을 사용 되는 경우는 기존에 대 한 매핑을 로그인을 삭제 합니다 **sp_addlinkedserver** 로그인 대신 연결된 된 서버에 연결 되 면 합니다. 기본 매핑을 변경 하려면 **sp_addlinkedsrvlogin**합니다.  
   
- 기본 매핑을 삭제 되 면 명시적으로 지정 된 연결된 된 서버에 로그인 매핑을 사용 하 여 로그인만 **sp_addlinkedsrvlogin**, 연결 된 서버에 액세스할 수 있습니다.  
+ 기본 매핑을 삭제 하는 경우 명시적으로 지정 된 연결된 된 서버에 로그인 매핑을 사용 하 여 로그인만 **sp_addlinkedsrvlogin**, 연결 된 서버에 액세스할 수 있습니다.  
   
  **sp_droplinkedsrvlogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -80,7 +80,7 @@ EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

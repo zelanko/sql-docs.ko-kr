@@ -1,5 +1,5 @@
 ---
-title: sp_replication_agent_checkup (Transact SQL) | Microsoft Docs
+title: sp_replication_agent_checkup (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fcb953c182dd6f4e9726a45a6fbf10efd8584cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 927bd9990148112c05874f6589a7c0a33ac21f43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995630"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028218"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +45,18 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
   
 ## <a name="arguments"></a>인수  
  [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- 진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다. *heartbeat_interval* 은 **int**, 기본값은 10 분입니다.  
+ 진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다. *heartbeat_interval* 됩니다 **int**, 기본값은 10 분입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **sp_replication_agent_checkup** 주의 대상으로 하는 각 에이전트에 대해 14151 오류를 발생 시킵니다. 또한 에이전트에 대한 실패 기록 메시지를 기록합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_replication_agent_checkup** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_replication_agent_checkup**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_replication_agent_checkup**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

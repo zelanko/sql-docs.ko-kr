@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: da5c91d54a5456fa0705731dd5c24cad65aa6ab9
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 39167b329ed80b279e5a2b46692d063760ee2443
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107129"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020528"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD 커서 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

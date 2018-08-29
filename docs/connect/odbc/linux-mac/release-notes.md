@@ -12,17 +12,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7395524fd185afa03a317e49400822ad459dbf55
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: a12475a1f759be12949d5642e5af865b10e4af99
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662275"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786028"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2의 새로운 기능
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2의 새로운 기능
 
 **지원 되는 새 배포**: Ubuntu 18.04
 
@@ -45,7 +45,7 @@ ConnectRetryCount 및 ConnectRetryInterval 연결 문자열 키워드를 사용 
 
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1의 새로운 기능
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1의 새로운 기능
 
 **추가 기능**:
 
@@ -61,7 +61,7 @@ ConnectRetryCount 및 ConnectRetryInterval 연결 문자열 키워드를 사용 
 
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17의 새로운 기능
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17의 새로운 기능
 
 **지원 되는 새 배포**: macOS High Sierra 및 Ubuntu 17.10 
 
@@ -87,9 +87,9 @@ Azure SQL 관리 되는 인스턴스 (확장 된 비공개 미리 보기)를 지
 > -   [Dbname1] ALTER DATABASE MODIFY NAME = [dbname2] 지원 되지 않습니다
 > -   오류 메시지는 항상 언어에 관계 없이 영어로 표시 됩니다 (Azure와 동일) 설정 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1의 새로운 기능  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1의 새로운 기능  
 
-ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 상시 암호화 및 Microsoft SQL Server 2016과 함께 사용 하는 경우 Azure Active Directory에 대 한 지원이 추가 되었습니다.
+ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 상시 암호화 및 Microsoft SQL Server 2016과 함께 사용 하는 경우 Azure Active Directory에 대 한 지원이 추가 되었습니다.
 
 **지원 되는 새 배포**: OS X 10.11 및 macOS 10.12 macOS에서 ODBC 드라이버의 첫 번째 릴리스에서 지원 됩니다. Ubuntu 16.10 이제도 함께 지원 됩니다 Red Hat 6, 7 및 SUSE 12입니다. 각 플랫폼에 플랫폼 관련 패키지 RPM 또는 DEB 손쉬운 설치 및 구성 합니다.  참조 [드라이버를 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 설치 지침에 대 한 합니다.
 
@@ -97,7 +97,7 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)
 
 **BCP API 지원을**: Linux 및 macOS의 ODBC 드라이버는 이제 사용을 지원 합니다 [BCP API 함수 (**bcp_init**등.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
-## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Microsoft ODBC Driver 13.0 for의 새로운 기능 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] linux  
+## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Microsoft ODBC Driver 13.0 for의 새로운 기능 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] linux  
 Microsoft ODBC Driver 13.0 for SQL Server를 사용 하 여 SQL Server 2014 및 SQL Server 2016 이제 지원 됩니다.  
 
 **지원 되는 새 배포**:
@@ -110,7 +110,7 @@ Microsoft ODBC Driver 13.0 for SQL Server를 사용 하 여 SQL Server 2014 및 
 
 **TLS 1.2 지원**: SQL Server를 사용 하 여 보안 통신을 사용 하는 경우 이제는 Microsoft ODBC Driver 13.0 for SQL Server Linux TLS 1.2 지원 합니다.
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Linux 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11의 새로운 기능  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Linux 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11의 새로운 기능  
 SUSE Linux(Preview)의 ODBC 드라이버는 64비트 SUSE Linux Enterprise 11 서비스 팩 2를 지원합니다. 자세한 내용은 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)을 참조하세요.  
 
 Linux 기반 ODBC 드라이버는 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]을 지원합니다. 자세한 내용은 [Linux Support for High Availability, Disaster Recovery 기반 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  

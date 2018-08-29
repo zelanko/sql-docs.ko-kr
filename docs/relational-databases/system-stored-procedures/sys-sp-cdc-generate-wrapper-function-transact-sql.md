@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_generate_wrapper_function (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_generate_wrapper_function (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6ddf84aa517b7f7e21e605264e1efa7ca1977d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259263"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022943"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="arguments"></a>인수  
  [ @capture_instance=] '*capture_instance*'  
- 스크립트를 생성할 캡처 인스턴스입니다. *capture_instance* 은 **sysname** 있으며 기본값은 NULL입니다. 값이 생략되거나 NULL로 명시적으로 설정된 경우 모든 캡처 인스턴스에 대해 래퍼 스크립트가 생성됩니다.  
+ 스크립트를 생성할 캡처 인스턴스입니다. *capture_instance* 됩니다 **sysname** 있고 기본값은 NULL입니다. 값이 생략되거나 NULL로 명시적으로 설정된 경우 모든 캡처 인스턴스에 대해 래퍼 스크립트가 생성됩니다.  
   
  [ @closed_high_end_point=] *high_end_pt_flag*  
- 생성된 프로시저가 커밋 시간이 상위 끝점과 같은 변경 내용을 추출 간격에 포함할지 여부를 나타내는 플래그 비트입니다. *high_end_pt_flag* 은 **비트** 하며 끝점 포함 되어야 함을 나타내는 1의 기본값입니다. 값 0은 모든 커밋 시간이 상위 끝점보다 낮아야 함을 나타냅니다.  
+ 생성된 프로시저가 커밋 시간이 상위 엔드포인트와 같은 변경 내용을 추출 간격에 포함할지 여부를 나타내는 플래그 비트입니다. *high_end_pt_flag* 됩니다 **비트** 있고 기본값은 끝점 포함 되어야 함을 나타내는 1입니다. 값 0은 모든 커밋 시간이 상위 엔드포인트보다 낮아야 함을 나타냅니다.  
   
  [ @column_list=] '*column_list*'  
- 래퍼 함수가 반환하는 결과 집합에 포함할 캡처된 열 목록입니다. *column_list* 은 **nvarchar (max)** 있으며 기본값은 NULL입니다. NULL을 지정하면 캡처된 모든 열이 포함됩니다.  
+ 래퍼 함수가 반환하는 결과 집합에 포함할 캡처된 열 목록입니다. *column_list* 됩니다 **nvarchar (max)** 있고 기본값은 NULL입니다. NULL을 지정하면 캡처된 모든 열이 포함됩니다.  
   
  [ @update_flag_list=] '*update_flag_list*'  
- 래퍼 함수가 반환하는 결과 집합에 업데이트 플래그가 포함되는 포함 열 목록입니다. *update_flag_list* 은 **nvarchar (max)** 있으며 기본값은 NULL입니다. NULL을 지정하면 업데이트 플래그가 포함되지 않습니다.  
+ 래퍼 함수가 반환하는 결과 집합에 업데이트 플래그가 포함되는 포함 열 목록입니다. *update_flag_list* 됩니다 **nvarchar (max)** 있고 기본값은 NULL입니다. NULL을 지정하면 업데이트 플래그가 포함되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -77,7 +76,7 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar(145)**|생성된 함수의 이름입니다.|  
 |**create_script**|**nvarchar(max)**|캡처 인스턴스 래퍼 함수를 만드는 스크립트입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  캡처 인스턴스에 대한 모든 변경 쿼리를 래핑하는 함수를 만드는 스크립트는 항상 생성됩니다. 캡처 인스턴스가 순 변경 쿼리를 지원하는 경우 이 쿼리에 대한 래퍼를 생성하는 스크립트도 생성됩니다.  
   
 ## <a name="examples"></a>예  
@@ -108,7 +107,7 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [변경 데이터 캡처 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [변경 데이터 캡처 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   

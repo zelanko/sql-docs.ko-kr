@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_category_subscription (Transact SQL) | Microsoft Docs
+title: sp_syspolicy_delete_policy_category_subscription (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_category_subscription
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fb514ae527e7b3a116dfa96974e1b8342a953363
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2df8a0c11270371ea793081008b1cd1cccc7d33a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261459"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025684"
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +44,20 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
   
 ## <a name="arguments"></a>인수  
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 정책 범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**합니다.  
+ 정책 범주 구독의 식별자입니다. *policy_category_subscription_id* 됩니다 **int**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_delete_policy_category_subscription은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  구독이 위임된 경우에는 정책 범주 구독을 삭제할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저는 현재 저장 프로시저 소유자의 컨텍스트에서 실행됩니다.  
   
- 에 대 한 값을 가져오려면 *policy_category_subscription_id*, 다음 쿼리를 사용할 수 있습니다.  
+ 값을 얻으려면 *policy_category_subscription_id*, 다음 쿼리를 사용할 수 있습니다.  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_object, b.name AS category_name  
@@ -76,8 +75,8 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [정책 기반 관리 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [정책 기반 관리 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription은 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

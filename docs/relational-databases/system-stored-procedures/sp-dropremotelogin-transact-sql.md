@@ -1,5 +1,5 @@
 ---
-title: sp_dropremotelogin (Transact SQL) | Microsoft Docs
+title: sp_dropremotelogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4565f5a3005a556d24777a220ff020816f01a346
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 89633f39028047e4caf4bb2dd8db0f4ce022c96c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256589"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026500"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,28 +48,28 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>인수  
  [  **@remoteserver =** ] **'***remoteserver***'**  
- 제거할 원격 로그인에 매핑된 원격 서버의 이름입니다. *remoteserver* 은 **sysname**, 기본값은 없습니다. *remoteserver* 이미 존재 해야 합니다.  
+ 제거할 원격 로그인에 매핑된 원격 서버의 이름입니다. *remoteserver* 됩니다 **sysname**, 기본값은 없습니다. *remoteserver* 이미 존재 해야 합니다.  
   
  [ **@loginame =** ] **'***login***'**  
- 원격 서버와 연결된 로컬 서버의 선택적 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정 된 경우 이미 존재 해야 합니다.  
+ 원격 서버와 연결된 로컬 서버의 선택적 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정 하는 경우 이미 존재 해야 합니다.  
   
  [  **@remotename =** ] **'***remote_name***'**  
- 에 매핑된 원격 로그인의 선택적 이름 *로그인* 원격 서버에서 로그인 할 때입니다. *remote_name* 은 **sysname**, 기본값은 NULL입니다.  
+ 매핑되는 원격 로그인의 선택적 이름 *로그인* 원격 서버에서 로그인 할 때입니다. *remote_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- 경우에 *remoteserver* 지정 된, 로컬 서버에서 해당 원격 서버에 대 한 원격 로그인을 모두 제거 됩니다. 경우 *로그인* 에서 지정 된 모든 원격 로그인 이기도 *remoteserver* 는 특정에 매핑된 로컬 로그인은 로컬 서버에서 제거 됩니다. 경우 *remote_name* 도 지정 되어 해당 원격 사용자에 대 한 원격 로그인만 *remoteserver* 로컬 서버에서 제거 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 경우에 *remoteserver* 지정 된 경우 해당 원격 서버에 대 한 모든 원격 로그인이 로컬 서버에서 제거 됩니다. 하는 경우 *로그인* 에서 지정 된 모든 원격 로그인 이기도 *remoteserver* 특정에 매핑된 로컬 로그인이 로컬 서버에서 제거 됩니다. 하는 경우 *remote_name* 도 지정 되어 해당 원격 사용자의 원격 로그인만 *remoteserver* 로컬 서버에서 제거 됩니다.  
   
- 로컬 서버 사용자를 추가 하려면 사용 하 여 **sp_addlogin**합니다. 사용 하 여 로컬 서버 사용자를 제거 하려면 **sp_droplogin**합니다.  
+ 로컬 서버 사용자를 추가 하려면 사용 하 여 **sp_addlogin**합니다. 로컬 서버 사용자를 제거 하려면 사용 하 여 **sp_droplogin**합니다.  
   
- 원격 로그인은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하는 경우에만 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 이상 버전에서는 연결된 서버의 로그인을 사용합니다. 사용 하 여 **sp_addlinkedsrvlogin** 및 **sp_droplinkedsrvlogin** 추가 하 고 연결 된 서버 로그인을 제거 합니다.  
+ 원격 로그인은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하는 경우에만 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 이상 버전에서는 연결된 서버의 로그인을 사용합니다. 사용 하 여 **sp_addlinkedsrvlogin** 하 고 **sp_droplinkedsrvlogin** 추가 하 고 연결 된 서버 로그인을 제거 합니다.  
   
  **sp_dropremotelogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **sysadmin** 또는 **securityadmin** 고정 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **sysadmin** 하거나 **securityadmin** 고정 서버 역할입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -96,7 +94,7 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

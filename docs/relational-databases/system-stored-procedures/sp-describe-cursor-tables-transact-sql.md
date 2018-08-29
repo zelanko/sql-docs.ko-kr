@@ -1,5 +1,5 @@
 ---
-title: sp_describe_cursor_tables (Transact SQL) | Microsoft Docs
+title: sp_describe_cursor_tables (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 767cf7be622e557f78e207cfc8fecb9c4b0707e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ea3ceaa425321202c14c3df6f1d2c225a7ec16b7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261872"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038836"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,25 +54,25 @@ sp_describe_cursor_tables
   
 ## <a name="arguments"></a>인수  
  [ @cursor_return=] *output_cursor_variable*출력  
- 커서 출력을 수신하기 위해 선언된 커서 변수의 이름입니다. *output_cursor_variable* 은 **커서**은 없으며 기본적에 연결할 수 있는 모든 커서 sp_describe_cursor_tables가 호출 된 시점입니다. 반환된 커서는 스크롤할 수 있으며 동적인 읽기 전용 커서입니다.  
+ 커서 출력을 수신하기 위해 선언된 커서 변수의 이름입니다. *output_cursor_variable* 됩니다 **커서**없습니다 기본적 이며 반드시 sp_describe_cursor_tables가 호출 시 모든 커서와도 연결 수 없습니다. 반환된 커서는 스크롤할 수 있으며 동적인 읽기 전용 커서입니다.  
   
- [ @cursor_source=] {N'local' | N'global' | N'variable'을 (를)  
- 보고할 커서를 로컬 커서, 전역 커서 또는 커서 변수의 이름 중 어느 것을 사용하여 지정할지 결정합니다. 매개 변수는 **nvarchar (30)** 합니다.  
+ [ @cursor_source=] {N'local' | N'global' | N'variable'}  
+ 보고할 커서를 로컬 커서, 전역 커서 또는 커서 변수의 이름 중 어느 것을 사용하여 지정할지 결정합니다. 매개 변수가 **nvarchar(30)** 합니다.  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- LOCAL 키워드를 갖거나 LOCAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *local_cursor_name* 은 **nvarchar (128)** 합니다.  
+ LOCAL 키워드를 갖거나 LOCAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *local_cursor_name* 됩니다 **nvarchar (128)** 합니다.  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- GLOBAL 키워드를 갖거나 GLOBAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *global_cursor_name* SQLSetCursorName를 호출 하 여 커서를 명명한 다음 ODBC 응용 프로그램에 의해 열린 API 서버 커서의 이름일 수도 있습니다. *global_cursor_name* 은 **nvarchar (128)** 합니다.  
+ GLOBAL 키워드를 갖거나 GLOBAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *global_cursor_name* SQLSetCursorName를 호출 하 여 커서를 명명할 ODBC 응용 프로그램에 의해 열린 API 서버 커서의 이름일 수도 있습니다. *global_cursor_name* 됩니다 **nvarchar (128)** 합니다.  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
- 열린 커서와 연관된 커서 변수의 이름입니다. *input_cursor_variable* 은 **nvarchar (128)** 합니다.  
+ 열린 커서와 연관된 커서 변수의 이름입니다. *input_cursor_variable* 됩니다 **nvarchar (128)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
- sp_describe_cursor_tables 변수로 해당 보고서를 캡슐화 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] **커서** 출력 매개 변수입니다. 이로 인해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 한 번에 하나의 행만 출력 작업을 하는 트리거가 허용됩니다. 이는 API 함수에서 바로 프로시저를 호출할 수 없음을 의미하기도 합니다. **커서** 출력 매개 변수를 프로그램 변수에 바인딩되어야 하지만 Api 바인딩을 지원 하지 않습니다 **커서** 매개 변수 또는 변수입니다.  
+ sp_describe_cursor_tables 변수로 해당 보고서를 캡슐화를 [!INCLUDE[tsql](../../includes/tsql-md.md)] **커서** 매개 변수를 출력 합니다. 이로 인해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 한 번에 하나의 행만 출력 작업을 하는 트리거가 허용됩니다. 이는 API 함수에서 바로 프로시저를 호출할 수 없음을 의미하기도 합니다. 합니다 **커서** 출력 매개 변수를 프로그램 변수에 바인딩되어야 하지만 Api 바인딩을 지원 하지 않습니다 **커서** 매개 변수 또는 변수입니다.  
   
  다음 표에서는 sp_describe_cursor_tables에 의해 반환된 커서의 형식을 보여 줍니다.  
   
@@ -87,10 +87,10 @@ sp_describe_cursor_tables
 |dbid|**int**|테이블이 있는 데이터베이스의 ID입니다. OPENQUERY 또는 OPENROWSET가 사용된 경우에는 0입니다.|  
 |dbname|**sysname**, **null 허용**|테이블이 있는 데이터베이스의 이름입니다. OPENQUERY 또는 OPENROWSET가 사용된 경우에는 NULL입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_describe_cursor_tables는 서버 커서가 참조하는 기본 테이블을 설명합니다. 커서가 반환한 결과 집합의 특성 설명을 보려면 sp_describe_cursor_columns를 사용합니다. 스크롤 및 업데이트 허용 여부 등 커서의 전역 특성에 대한 설명을 보려면 sp_describe_cursor를 사용합니다. 연결 시 표시될 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 보고서를 가져오려면 sp_cursor_list를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -134,9 +134,9 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [커서](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;Transact SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;TRANSACT-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   

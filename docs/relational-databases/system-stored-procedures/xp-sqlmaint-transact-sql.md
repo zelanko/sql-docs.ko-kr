@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sqlmaint
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-author: CarlRabeler
-ms.author: carlrab
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e93410713f9af8228fd757803792665c569b549a
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 5bd203a2d0d5d8eee4c73156bef42ff655978cee
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030184"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

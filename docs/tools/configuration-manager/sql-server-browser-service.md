@@ -21,13 +21,14 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e60d4a23373ecd3ecb92540de4f8e6893482990a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98f690178bedda265e785cce233e26cb4f6c1240
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074110"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784321"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "33074110"
   
 -   올바른 서버 인스턴스에 연결  
   
--   DAC(관리자 전용 연결) 끝점에 연결  
+-   DAC(관리자 전용 연결) 엔드포인트에 연결  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 서비스(sqlbrowser)는 [!INCLUDE[ssAS](../../includes/ssas-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에 대해 인스턴스 이름과 버전 번호를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 설치됩니다.  
   

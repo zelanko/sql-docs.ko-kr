@@ -1,5 +1,5 @@
 ---
-title: sp_add_category (Transact SQL) | Microsoft Docs
+title: sp_add_category (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f98fd4dbccc6b47297c8b0ebb2073dd23d35c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c884d126356f4347616370ce9cd8b8eb41089fc0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238913"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021927"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,37 +47,37 @@ sp_add_category
   
 ## <a name="arguments"></a>인수  
  [ **@class =** ] **'***class***'**  
- 추가할 범주의 클래스입니다. *클래스* 은 **varchar(8)** , 작업의 기본 값 이며 다음이 값 중 하나일 수 있습니다.  
+ 추가할 범주의 클래스입니다. *클래스* 됩니다 **varchar(8)** 작업의 기본 값 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |JOB|작업 범주를 추가합니다.|  
 |ALERT|경고 범주를 추가합니다.|  
 |OPERATOR|운영자 범주를 추가합니다.|  
   
  [ **@type =** ] **'***type***'**  
- 추가할 범주의 유형입니다. *형식* 은 **varchar(12)** 의 기본값은 **로컬**, 다음이 값 중 하나일 수 있습니다.  
+ 추가할 범주의 유형입니다. *형식* 됩니다 **varchar(12)**, 기본값은 **로컬**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |LOCAL|로컬 작업 범주|  
 |다중 서버|다중 서버 작업 범주|  
 |없음|JOB이 아닌 다른 클래스에 대 한 범주**합니다.**|  
   
  [ **@name =** ] **'***name***'**  
- 추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *이름* 은 **sysname**, 기본값은 없습니다.  
+ 추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- **sp_add_category** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_add_category** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_add_category**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_add_category**합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `AdminJobs`라는 로컬 작업 범주를 만듭니다.  
@@ -94,12 +93,12 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs& #40; Transact SQL & #41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo.sysjobservers &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [dbo.sysjobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobservers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

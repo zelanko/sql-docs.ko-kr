@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributiondb (Transact SQL) | Microsoft Docs
+title: sp_changedistributiondb (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79a09738a497dd2398005494189e4af83d99075c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4056a3cc6e8dada73358a896dbe8925b09363166
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988289"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029579"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,34 +48,34 @@ sp_changedistributiondb [ @database= ] 'database'
   
 ## <a name="arguments"></a>인수  
  [  **@database=**] **'***데이터베이스***'**  
- 배포 데이터베이스의 이름입니다. *데이터베이스* 은 **sysname**, 기본값은 없습니다.  
+ 배포 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@property=**] **'***속성***'**  
- 지정된 데이터베이스에 대해 변경할 속성입니다. *속성* 은 **sysname**, 다음이 값 중 하나일 수 있습니다.  
+ 지정된 데이터베이스에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**history_retention**|기록 테이블의 보존 기간입니다.|  
 |**max_distretention**|최대 배포 보존 기간입니다.|  
 |**min_distretention**|최소 배포 보존 기간입니다.|  
-|NULL(기본값)|사용 가능한 모든 *속성* 값을 출력 합니다.|  
+|NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
   
  [  **@value=**] **'***값***'**  
- 지정한 속성의 새 값입니다. *값* 은 **nvarchar (255)**, 기본값은 NULL입니다.  
+ 지정한 속성의 새 값입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_changedistributiondb** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_changedistributiondb**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_changedistributiondb**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

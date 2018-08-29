@@ -14,12 +14,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20ec695090a164fb0cb5509833db78bd6b38fe69
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: b6d923bce43ad2f9ed3fd0a7d33d456910125768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662115"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786718"
 ---
 # <a name="understanding-transactions"></a>트랜잭션 이해
 
@@ -43,7 +43,7 @@ ms.locfileid: "39662115"
 
 분산 트랜잭션은 ACID(원자성, 일관성, 격리성, 영속성)라는 중요한 트랜잭션 처리 속성을 유지하면서 둘 이상의 네트워크 데이터베이스에서 데이터를 업데이트합니다. 분산 트랜잭션 지원은 JDBC 2.0 옵션 API 사양의 JDBC API에 추가되었습니다. 일반적으로 분산 트랜잭션 관리는 Java EE 응용 프로그램 서버 환경에서 JTS(Java Transaction Service) 트랜잭션 관리자가 자동으로 수행합니다. 그러나 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 임의의 JTA(Java Transaction API) 규격 트랜잭션 관리자 하에서 분산 트랜잭션을 지원합니다.
 
-JDBC 드라이버는 MS DTC([!INCLUDE[msCoName](../../includes/msconame_md.md)] Distributed Transaction Coordinator)와 원활하게 통합되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 진정한 분산 트랜잭션을 지원합니다. MS DTC는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 시스템용으로 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 제공하는 분산 트랜잭션 기능입니다. MS DTC는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]의 검증된 트랜잭션 처리 기술을 사용하여 완전한 2단계 분산 커밋 프로토콜 및 분산 트랜잭션 복구와 같은 XA 기능을 지원합니다.
+JDBC 드라이버는 MS DTC([!INCLUDE[msCoName](../../includes/msconame_md.md)] Distributed Transaction Coordinator)와 원활하게 통합되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 진정한 분산 트랜잭션을 지원합니다. MS DTC는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 시스템용으로 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 제공하는 분산 트랜잭션 기능입니다. MS DTC는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]의 검증된 트랜잭션 처리 기술을 사용하여 완전한 2단계 분산 커밋 프로토콜 및 분산 트랜잭션 복구와 같은 XA 기능을 지원합니다.
 
 분산된 트랜잭션을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)합니다.
 

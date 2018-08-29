@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661865"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785196"
 ---
 # <a name="using-savepoints"></a>저장점 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-저장점은 트랜잭션의 일부를 롤백하는 메커니즘을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서는 SAVE TRANSACTION savepoint_name 문을 사용하여 저장점을 만듭니다. 나중에 트랜잭션의 시작 지점으로 롤백하는 대신 저장점으로 롤백하려면 ROLLBACK TRANSACTION savepoint_name 문을 실행합니다.
+저장점은 트랜잭션의 일부를 롤백하는 메커니즘을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 SAVE TRANSACTION savepoint_name 문을 사용하여 저장점을 만듭니다. 나중에 트랜잭션의 시작 지점으로 롤백하는 대신 저장점으로 롤백하려면 ROLLBACK TRANSACTION savepoint_name 문을 실행합니다.
 
 저장점은 오류가 발생할 가능성이 거의 없는 경우에 유용합니다. 오류가 자주 발생하지 않는 경우 업데이트 전에 각 트랜잭션을 테스트하여 업데이트가 유효한지 확인하는 것보다 저장점을 사용하여 트랜잭션의 일부를 롤백하는 것이 더 효율적입니다. 업데이트와 롤백은 비용이 많이 드는 작업이므로 저장점은 오류가 발생할 가능성이 적고 업데이트 전에 미리 유효성을 검사하는 데 비교적 비용이 많이 드는 경우에만 효과적입니다.
 

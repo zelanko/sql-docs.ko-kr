@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662355"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786026"
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 기본 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식을 Java 프로그래밍 언어가 인식할 수 있는 형식으로 변환하며 그 반대 과정도 수행합니다. JDBC 드라이버는 포함 된 JDBC 4.0 API를 지원 합니다 **SQLXML** 데이터 형식 및 국가별 (유니코드) 데이터 형식이 같은 **NCHAR**를 **NVARCHAR**, **LONGNVARCHAR**, 및 **NCLOB**합니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 기본 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Java 프로그래밍 언어가 인식할 수 있는 형식으로 변환하며 그 반대 과정도 수행합니다. JDBC 드라이버는 포함 된 JDBC 4.0 API를 지원 합니다 **SQLXML** 데이터 형식 및 국가별 (유니코드) 데이터 형식이 같은 **NCHAR**를 **NVARCHAR**, **LONGNVARCHAR**, 및 **NCLOB**합니다.  
   
 ## <a name="data-type-mappings"></a>데이터 형식 매핑
 
-다음 표에서는 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], JDBC 및 Java 프로그래밍 언어 데이터 형식 간의 기본 매핑을 나열합니다.  
+다음 표에서는 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC 및 Java 프로그래밍 언어 데이터 형식 간의 기본 매핑을 나열합니다.  
   
 | SQL Server 형식   | JDBC 형식(java.sql.Types)                        | Java 언어 형식          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ ms.locfileid: "39662355"
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) time [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 형식과 함께 java.sql.Time을 사용하려면 **sendTimeAsDatetime** 연결 속성을 false로 설정해야 합니다.  
+(1) time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식과 함께 java.sql.Time을 사용하려면 **sendTimeAsDatetime** 연결 속성을 false로 설정해야 합니다.  
   
 (의 값에 프로그래밍 방식으로 액세스할 수 2) **datetimeoffset** 사용 하 여 [DateTimeOffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)합니다.  
   

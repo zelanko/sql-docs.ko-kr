@@ -13,22 +13,22 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f408cb1f6cb82610cfa74a4d59a3ce15e4307e64
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992915"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785172"
 ---
 # <a name="support-for-localdb"></a>LocalDB 지원
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB의 경량 버전이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 는 사용할 수 있었던 이후 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]합니다. 이 항목에서는 LocalDB 인스턴스의 데이터베이스에 연결하는 방법에 대해 설명합니다.
+LocalDB의 경량 버전이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있었던 이후 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다. 이 항목에서는 LocalDB 인스턴스의 데이터베이스에 연결하는 방법에 대해 설명합니다.
 
 ## <a name="remarks"></a>Remarks
 
-LocalDB 설치 및 LocalDB 인스턴스를 구성 하는 방법을 비롯 한 LocalDB에 대 한 자세한 내용은 참조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서 항목에 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB입니다.
+LocalDB 설치 및 LocalDB 인스턴스를 구성 하는 방법을 비롯 한 LocalDB에 대 한 자세한 내용은 참조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서 항목에 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB입니다.
 
 간단히 말해, LocalDB를 사용 하 수 있습니다.
 

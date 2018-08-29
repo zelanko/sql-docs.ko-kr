@@ -1,5 +1,5 @@
 ---
-title: sp_dropanonymousagent (Transact SQL) | Microsoft Docs
+title: sp_dropanonymousagent (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10b75c7c2e083a09dbebfc720487511397a1af90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6440ede3f3fe645946cfc1bfc01fe65fb20c6e55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988508"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025956"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +44,23 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
   
 ## <a name="arguments"></a>인수  
  [  **@subid=**] *sub_id*  
- 익명 구독에 관한 전역 식별자입니다. *sub_id* 은 **uniqueidentifier**, 기본값은 없습니다. 구독자에서이 식별자를 검색할 수 있습니다를 사용 하 여 **sp_helppullsubscription**합니다. 값은 **subid** 반환된 된 결과 집합의 필드는이 전역 식별자입니다.  
+ 익명 구독에 관한 전역 식별자입니다. *sub_id* 됩니다 **uniqueidentifier**, 기본값은 없습니다. 구독자에서이 식별자를 검색할 수 있습니다 사용 하 여 **sp_helppullsubscription**합니다. 값을 **subid** 반환된 된 결과 집합의 필드는이 전역 식별자입니다.  
   
- [  **@type=**] *유형*  
- 구독 유형입니다. *형식* 은 **int**, 기본값은 없습니다. 유효한 값은 **1** 또는 **2**합니다. 지정 **1**, 스냅숏 복제 또는 트랜잭션 복제 배포 에이전트를 사용 하는 경우. 지정 **2**경우 병합 에이전트를 사용 하 여 복제를 병합 합니다.  
+ [  **@type=**] *형식*  
+ 구독 유형입니다. *형식* 됩니다 **int**, 기본값은 없습니다. 유효한 값은 **1** 하거나 **2**합니다. 지정할 **1**는 스냅숏 복제 또는 트랜잭션 복제 배포 에이전트를 사용 하는 경우. 지정할 **2**경우 병합 에이전트를 사용 하 여 복제를 병합 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_dropanonymousagent** 모든 유형의 복제에 사용 됩니다.  
   
  이 저장 프로시저는 익명 구독 에이전트를 삭제할 때에만 사용하며 잘 알려진 구독 삭제에는 사용할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **db_owner** 고정된 데이터베이스 역할이 배포 데이터베이스에서 실행할 수 있는 **sp_dropanonymousagent**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **db_owner** 고정된 데이터베이스 역할의 배포 데이터베이스에서 실행할 수 있습니다 **sp_dropanonymousagent**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

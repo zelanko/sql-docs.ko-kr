@@ -14,20 +14,20 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661665"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785198"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC 드라이버 데이터 형식 이해
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 데이터베이스로 사용하는 Java 응용 프로그램 내의 JDBC 기본 및 고급 데이터 형식 사용을 지원합니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 데이터베이스로 사용하는 Java 응용 프로그램 내의 JDBC 기본 및 고급 데이터 형식 사용을 지원합니다.  
   
-JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식과 Java 언어 형식 및 개체 사이의 변환을 중재합니다. JDBC 형식은 SQL-92 및 SQL-99 형식을 기준으로 합니다. JDBC 드라이버는 JDBC 사양에 따르며 예측 가능성과 융통성 사이의 올바른 균형을 제공하도록 디자인되었습니다.  
+JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 Java 언어 형식 및 개체 사이의 변환을 중재합니다. JDBC 형식은 SQL-92 및 SQL-99 형식을 기준으로 합니다. JDBC 드라이버는 JDBC 사양에 따르며 예측 가능성과 융통성 사이의 올바른 균형을 제공하도록 디자인되었습니다.  
   
 이 섹션의 항목에서는 기본 및 고급 데이터 형식을 사용하는 방법 및 데이터 형식을 다른 데이터 형식으로 변환하는 방법을 설명합니다.  
   

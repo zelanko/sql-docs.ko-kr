@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (Transact SQL) | Microsoft Docs
+title: sp_removedbreplication (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee6f832fda56d69e064ef49c669ab2d945c5140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeda476ae204ce33c44dd858f90e19a677e74e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998007"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026579"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
  [ **@dbname=**] **'***dbname***'**  
  데이터베이스의 이름입니다. *dbname* 은 기본값은 NULL을 가진 **sysname**입니다. NULL인 경우 현재 데이터베이스를 사용합니다.  
   
- [ **@type** =] *유형*  
- 데이터베이스 개체를 제거할 복제의 유형입니다. *형식* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
+ [ **@type** =] *형식*  
+ 데이터베이스 개체를 제거할 복제의 유형입니다. *형식* 됩니다 **nvarchar(5)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |||  
 |-|-|  
@@ -64,18 +64,18 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_removedbreplication** 모든 유형의 복제에 사용 됩니다.  
   
- **sp_removedbreplication** 복원 해야 하는 복제 개체가 없는 복제 된 데이터베이스를 복원 하는 경우 유용 합니다.  
+ **sp_removedbreplication** 복원할 필요가 없는 복제 개체를 가진 복제 된 데이터베이스를 복원 하는 경우에 유용 합니다.  
   
- **sp_removedbreplication** 읽기 전용으로 표시 된 데이터베이스에 대해 사용할 수 없습니다.  
+ **sp_removedbreplication** 읽기 전용으로 표시 되는 데이터베이스에 대해 사용할 수 없습니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_removedbreplication**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_removedbreplication**합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

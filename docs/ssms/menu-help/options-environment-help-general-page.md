@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042640"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42773985"
 ---
 # <a name="options-environment---help---general-page"></a>옵션(환경 - 도움말 - 일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  
+**옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  
   
 > [!NOTE]  
 > 이 페이지에서 수행한 옵션 변경 내용은 환경을 다시 시작해야만 적용됩니다.  
   
 ## <a name="settings"></a>설정  
 **다음을 사용하여 도움말 표시**  
-도움말 표시 방법을 지정합니다. 항목을 외부 부동 창에 표시하려면 드롭다운 목록에서 **외부 도움말 뷰어** 를 선택합니다. 도움말 항목을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 내에 도킹된 웹 브라우저 창에 표시하려면 **통합 도움말 뷰어**를 선택합니다.  
+도움말 표시 방법을 지정합니다. 항목을 외부 부동 창에 표시하려면 드롭다운 목록에서 **외부 도움말 뷰어** 를 선택합니다. 도움말 항목을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 내에 도킹된 웹 브라우저 창에 표시하려면 **통합 도움말 뷰어**를 선택합니다.  
   
 **페이지 당 검색 결과**  
 단일 **검색 결과** 페이지에 표시할 항목 수를 지정합니다.  

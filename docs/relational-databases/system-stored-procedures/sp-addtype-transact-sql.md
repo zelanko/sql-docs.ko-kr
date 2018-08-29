@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96a2d930ae6c85e4da6d516d6c30d6c54a7fd3ac
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 764241bcd61b407b46e87c796c8a02997d9ff9ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066703"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023860"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_addtype [ @typename = ] type,
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
  별칭 데이터 형식 이름은 데이터베이스 내에서 고유해야 하지만 이름이 서로 다른 별칭 데이터 형식은 같은 정의를 사용할 수 있습니다.  

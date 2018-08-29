@@ -17,14 +17,14 @@ helpviewer_keywords:
 - resynchronizing rows
 - data updates [SQL Server], OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7990651bf9d412eec7d2826daedee0fafaa53943
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: dc7d722f4d4b97cd4242195d49ff7d5290c52f24
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107905"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017464"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>행 집합의 데이터 업데이트 - 행 다시 동기화
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

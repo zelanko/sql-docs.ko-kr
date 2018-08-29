@@ -1,5 +1,5 @@
 ---
-title: sp_replrestart (Transact SQL) | Microsoft Docs
+title: sp_replrestart (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replrestart
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905726825618d1412528a0c3f543bd7886213e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482bd5a501544ca5bdc36250db0c30b8c18abb81
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996240"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038776"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32996240"
   백업 및 복원 중에 트랜잭션 복제에서 사용되며 배포자의 복제된 데이터가 게시자의 데이터와 동기화되도록 합니다.   이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!IMPORTANT]  
->  **sp_replrestart** 내부 복제 저장 프로시저를이 항목에서 지시 된 대로 트랜잭션 복제 토폴로지에 게시 된 데이터베이스를 복원할 때만 사용 해야는 [Backing Up and Restoring 하기 위한 전략 스냅숏 및 트랜잭션 복제](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)합니다.  
+>  **sp_replrestart** 내부 복제 저장 프로시저 및 항목에서 지시 된 대로 트랜잭션 복제 토폴로지에서 게시 데이터베이스를 복원 하는 경우에 사용 해야는 [Backing Up and Restoring 전략 스냅숏 및 트랜잭션 복제](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ sp_replrestart
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_replrestart** 배포자에서 높은 로그 시퀀스 번호 (LSN) 값이 게시자에서 가장 높은 LSN 값과 일치 경우 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_replrestart** 배포자에서 가장 높은 로그 시퀀스 번호 (LSN) 값에는 게시자에서 가장 높은 LSN 값을 일치 않을 때 사용 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_replrestart**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_replrestart**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

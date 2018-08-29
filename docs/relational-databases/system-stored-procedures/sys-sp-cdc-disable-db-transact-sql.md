@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_db (Transact SQL) | Microsoft Docs
+title: sys.sp_cdc_disable_db (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_db
 - change data capture [SQL Server], disabling databases
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cd6a97984889be0c7a9e8b9d9aca0a0eaf4a4a2a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b9b2c437c356b5e956f5658d76064930cb6887a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255821"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023228"
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sys.sp_cdc_disable_db
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- **sys.sp_cdc_disable_db** 변경 현재 사용 하도록 설정 하는 데이터베이스의 모든 테이블에 대 한 데이터 캡처를 비활성화 합니다. 변경 테이블, 작업, 저장 프로시저, 함수 등 변경 데이터 캡처와 관련된 모든 시스템 개체가 삭제됩니다. **is_cdc_enabled** 데이터베이스 항목에 대 한 열은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 0으로 설정 합니다.  
+## <a name="remarks"></a>Remarks  
+ **sys.sp_cdc_disable_db** 변경 현재 사용 하도록 설정 하는 데이터베이스의 모든 테이블에 대 한 데이터 캡처를 비활성화 합니다. 변경 테이블, 작업, 저장 프로시저, 함수 등 변경 데이터 캡처와 관련된 모든 시스템 개체가 삭제됩니다. 합니다 **is_cdc_enabled** 데이터베이스 항목에 대 한 열을 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 0으로 설정 됩니다.  
   
 > [!NOTE]  
 >  변경 데이터 캡처를 사용하지 않을 때 데이터베이스에 대해 정의된 캡처 인스턴스가 많으면 장기 실행 트랜잭션으로 인해 sys.sp_cdc_disable_db를 실행하지 못할 수 있습니다. sys.sp_cdc_disable_db를 실행하기 전에 sys.sp_cdc_disable_table을 사용하여 개별 캡처 인스턴스를 비활성화하면 이 문제를 방지할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -73,7 +72,7 @@ EXECUTE sys.sp_cdc_disable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.sp_cdc_enable_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
  [sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
   

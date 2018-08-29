@@ -1,5 +1,5 @@
 ---
-title: sp_linkedservers (Transact SQL) | Microsoft Docs
+title: sp_linkedservers (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_linkedservers
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58c827d61009f2c4be3ba86f2a12f49c3eb178ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 009131848d6e9cf942737ddc54c3d1b00f6e1163
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252675"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038166"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ sp_linkedservers
 |**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|지정되어 있는 연결된 서버에 대한 액세스를 관리하는 OLE DB 공급자의 이름입니다.|  
 |**SRV_PRODUCT**|**nvarchar(** 128 **)**|연결된 서버의 제품 이름입니다.|  
 |**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 데이터 원본 속성입니다.|  
-|**경우 SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 공급자 문자열 속성입니다.|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 위치 속성입니다.|  
+|**데 충분할 경우 SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 공급자 문자열 속성입니다.|  
+|**서버의 이름이**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 위치 속성입니다.|  
 |**SRV_CAT**|**sysname**|지정되어 있는 연결된 서버에 해당하는 OLE DB 카탈로그 속성입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_columns_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
@@ -71,6 +71,6 @@ sp_linkedservers
  [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [분산 쿼리 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [분산 쿼리 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   
