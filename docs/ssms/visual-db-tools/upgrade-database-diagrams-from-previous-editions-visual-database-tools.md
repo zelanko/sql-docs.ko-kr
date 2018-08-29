@@ -23,16 +23,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 637a674bcbbc22e0a10ac2e49c7ea0c875b85c44
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60450ac29e788921557a76bde211775fecbc4734
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052981"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776005"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>이전 버전에서 데이터베이스 다이어그램 업그레이드(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스를 기반으로 만든 데이터베이스 다이어그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]의 데이터베이스 다이어그램으로 설정하면 자동으로 업그레이드됩니다. 다이어그램을 설정하는 자세한 단계는 [데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)을 참조하세요.  
+이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 기반으로 만든 데이터베이스 다이어그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 다이어그램으로 설정하면 자동으로 업그레이드됩니다. 다이어그램을 설정하는 자세한 단계는 [데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)을 참조하세요.  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>레거시 데이터베이스 다이어그램을 업그레이드하려면  
   

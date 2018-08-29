@@ -28,12 +28,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7320b1f4d91d94b4e53da3640458030057a45f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 399b756b0530079c6f38732da4ebf1ef94755e73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044590"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776289"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33044590"
   
 **속성** 창에는 특정 속성의 필요 여부에 따라 다른 유형의 편집 필드가 표시됩니다. 회색으로 표시된 속성은 읽기 전용입니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **개체 이름**  
 현재 선택한 개체가 나열됩니다. 활성 편집기 또는 디자이너의 개체만 표시됩니다.  
   
@@ -58,5 +58,5 @@ ms.locfileid: "33044590"
 설명 창은 **속성** 창의 맨 아래에 나타나며 속성 유형과 속성에 대한 간단한 설명을 표시합니다. 바로 가기 메뉴의 **설명** 명령을 사용하여 속성 설명을 설정 및 해제할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server Management Studio의 속성 창](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[SQL Server Management Studio의 속성 창](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

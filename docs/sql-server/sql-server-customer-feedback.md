@@ -1,8 +1,8 @@
 ---
 title: SQL Server를 구성하여 Microsoft에 피드백 보내기 | Microsoft Docs
 description: ''
-author: annashres
-ms.author: anshrest
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 755a2351aae2917fb7ef745fa1f14342492ee892
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995424"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017781"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ SSMS는 자체 크래시 덤프를 수집하지 않습니다. SSMS와 관련된 
     [조직에서 Windows 원격 분석 구성](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 및 Windows 7
 
-    [WER 설정](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx)
+    [WER 설정](/windows/desktop/wer/wer-settings)
  
 ## <a name="feedback-for-analysis-services"></a>Analysis Services에 대한 피드백
 

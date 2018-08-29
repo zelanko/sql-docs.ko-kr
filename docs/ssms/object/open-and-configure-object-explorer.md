@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041800"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776367"
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]메뉴를 사용하여 개체 탐색기를 엽니다. **도구** 메뉴의 **옵션** 을 사용하여 개체 탐색기 옵션을 구성합니다.  
+**의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]메뉴를 사용하여 개체 탐색기를 엽니다. **도구** 메뉴의 **옵션** 을 사용하여 개체 탐색기 옵션을 구성합니다.  
   
 ## <a name="viewing-object-explorer"></a>개체 탐색기 보기  
-개체 탐색기는 기본적으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에서 볼 수 있습니다. 개체 탐색기를 볼 수 없는 경우 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
+개체 탐색기는 기본적으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 볼 수 있습니다. 개체 탐색기를 볼 수 없는 경우 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
 ## <a name="configuring-object-explorer-options"></a>개체 탐색기 옵션 구성  
 개체 탐색기 설정을 구성하려면 **도구** 메뉴에서 **옵션**을 클릭한 다음 **SQL Server 개체 탐색기**를 클릭합니다.  

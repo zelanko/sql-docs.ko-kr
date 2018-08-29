@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045030"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774704"
 ---
 # <a name="projects-sql-server-management-studio"></a>프로젝트(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 프로젝트는 데이터베이스 관리 및 개발을 위해 함께 저장할 수 있는 논리적으로 연관된 스크립트 및 파일 모음입니다.  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 프로젝트는 데이터베이스 관리 및 개발을 위해 함께 저장할 수 있는 논리적으로 연관된 스크립트 및 파일 모음입니다.  
   
 ## <a name="script-project-overview"></a>스크립트 프로젝트 개요  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스크립트 프로젝트는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]의 솔루션 탐색기 구성 요소에 표시됩니다. 스크립트 프로젝트는 없거나 1개 이상의 프로젝트 파일을 포함할 수 있습니다. 프로젝트를 솔루션에 추가하거나 솔루션 내에서 둘 이상의 프로젝트를 결합할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 솔루션 탐색기 구성 요소에 표시됩니다. 스크립트 프로젝트는 없거나 1개 이상의 프로젝트 파일을 포함할 수 있습니다. 프로젝트를 솔루션에 추가하거나 솔루션 내에서 둘 이상의 프로젝트를 결합할 수 있습니다.  
   
 프로젝트는 다음과 같습니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "33045030"
 또한 프로젝트를 원본 코드 제어 시스템에 통합할 수 있습니다.  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>스크립트 프로젝트에서 SQL Server의 인스턴스에 연결  
-스크립트 프로젝트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]인스턴스에 대한 연결을 포함할 수 있습니다. 해당 연결을 클릭하여 프로젝트에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 연결할 수 있습니다. 이렇게 하면 선택한 연결에 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 연결된 SQL 스크립트 창이 열립니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인증을 사용하는 연결로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 MDX 스크립트를 열 경우 편집기가 열리고 스크립트가 로드된 후에 **SQL Server에 연결** 대화 상자에서 암호를 입력하라는 메시지가 나타납니다.  
+스크립트 프로젝트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 연결을 포함할 수 있습니다. 해당 연결을 클릭하여 프로젝트에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. 이렇게 하면 선택한 연결에 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 SQL 스크립트 창이 열립니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 연결로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 MDX 스크립트를 열 경우 편집기가 열리고 스크립트가 로드된 후에 **SQL Server에 연결** 대화 상자에서 암호를 입력하라는 메시지가 나타납니다.  
   
 해당 창이 닫히면 연결이 끊어집니다.  
   
-연결에 대한 정보를 수정하려면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]의 속성 창을 사용합니다.  
+연결에 대한 정보를 수정하려면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 속성 창을 사용합니다.  
   
 ## <a name="project-tasks"></a>프로젝트 태스크  
   

@@ -17,16 +17,16 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4459d482fad2639e8aa3ff35dccb38e2aa5cd25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4be2922f005d96a7db71ff642a1a05054e5e479
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045240"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774970"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio에 사용자 지정 보고서 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 항목에서는 .rdl 파일로 저장되는 간단한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 보고서를 만든 다음 이 rdl 파일을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에 사용자 지정 보고서로 추가하는 방법에 대해 설명합니다. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 다양한 고급 보고서를 만들 수 있습니다. 이 항목을 사용하여 보고서를 만들려면 컴퓨터에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 가 설치되어 있어야 합니다. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 를 사용하여 사용자 지정 보고서를 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]를 설치할 필요는 없습니다.  
+이 항목에서는 .rdl 파일로 저장되는 간단한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만든 다음 이 rdl 파일을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 사용자 지정 보고서로 추가하는 방법에 대해 설명합니다. [!INCLUDE[ssRS](../../includes/ssrs.md)] 다양한 고급 보고서를 만들 수 있습니다. 이 항목을 사용하여 보고서를 만들려면 컴퓨터에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 가 설치되어 있어야 합니다. [!INCLUDE[ssRS](../../includes/ssrs.md)] 를 사용하여 사용자 지정 보고서를 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 설치할 필요는 없습니다.  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>.rdl 파일로 저장되는 간단한 보고서를 만들려면  
@@ -47,11 +47,11 @@ ms.locfileid: "33045240"
   
 8.  **연결 속성** 대화 상자의 **서버 이름** 입력란에 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스 이름을 입력합니다.  
   
-9. **데이터베이스 이름 선택 또는 입력** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]등의 데이터베이스 이름을 입력한 다음 **확인**을 클릭합니다.  
+9. **데이터베이스 이름 선택 또는 입력** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]등의 데이터베이스 이름을 입력한 다음 **확인**을 클릭합니다.  
   
 10. **데이터 원본 선택** 페이지에서 **다음**을 클릭합니다.  
   
-11. **쿼리 디자인** 페이지의 **쿼리 문자열** 입력란에 [!INCLUDE[tsql](../../includes/tsql_md.md)] 에 대한 현재 연결을 나열하는 다음 [!INCLUDE[ssDE](../../includes/ssde_md.md)]문을 입력한 후 **다음**을 클릭합니다. 보고서 마법사 쿼리 문자열 입력란에는 보고서 매개 변수를 사용할 수 없습니다. 더 복잡한 사용자 지정 보고서는 수동으로 만들어야 합니다.  
+11. **쿼리 디자인** 페이지의 **쿼리 문자열** 입력란에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대한 현재 연결을 나열하는 다음 [!INCLUDE[ssDE](../../includes/ssde_md.md)]문을 입력한 후 **다음**을 클릭합니다. 보고서 마법사 쿼리 문자열 입력란에는 보고서 매개 변수를 사용할 수 없습니다. 더 복잡한 사용자 지정 보고서는 수동으로 만들어야 합니다.  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   
@@ -59,13 +59,13 @@ ms.locfileid: "33045240"
   
 13. **마법사 완료** 페이지의 **보고서 이름** 입력란에 **ConnectionsReport**를 입력한 다음 **마침** 을 클릭하여 보고서를 만들고 저장합니다.  
   
-14. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio_md.md)]를 닫습니다.  
+14. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 닫습니다.  
   
 15. 사용자 지정 보고서를 위해 데이터베이스 서버에 만든 폴더에 **ConnectionsReport.rdl** 을 복사합니다.  
   
 ### <a name="to-add-a-report-to-management-studio"></a>Management Studio에 보고서를 추가하려면  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 개체 탐색기의 노드를 마우스 오른쪽 단추로 클릭하고 **보고서**를 가리킨 다음 **사용자 지정 보고서**를 클릭합니다. **파일 열기** 대화 상자에서 사용자 지정 보고서 폴더를 찾고 **ConnectionsReport.rdl** 파일을 선택한 다음 **열기**를 클릭합니다.  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 개체 탐색기의 노드를 마우스 오른쪽 단추로 클릭하고 **보고서**를 가리킨 다음 **사용자 지정 보고서**를 클릭합니다. **파일 열기** 대화 상자에서 사용자 지정 보고서 폴더를 찾고 **ConnectionsReport.rdl** 파일을 선택한 다음 **열기**를 클릭합니다.  
   
     개체 탐색기 노드에서 새 사용자 지정 보고서를 처음으로 열면 해당 노드의 바로 가기 메뉴에 있는 **사용자 지정 보고서** 의 가장 최근에 사용한 목록에 이 보고서가 추가됩니다. 표준 보고서를 처음으로 열면 이 보고서도 **사용자 지정 보고서**의 가장 최근에 사용한 목록에 표시됩니다. 사용자 지정 보고서 파일을 삭제하면 다음에 이 항목을 선택할 때 가장 최근에 사용한 목록에서 해당 항목을 삭제하라는 메시지가 표시됩니다.  
   
@@ -77,5 +77,5 @@ ms.locfileid: "33045240"
 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)  
 [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [사용자 지정 보고서 실행 경고 표시](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[SQL Server Reporting Services](http://msdn.microsoft.com/en-us/b8d18d3d-9db0-43e7-8286-7b46cc3a37ed)  
+[SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

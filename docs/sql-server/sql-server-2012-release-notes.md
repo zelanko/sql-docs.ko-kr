@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926204"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775436"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed act
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**해결 방법:** 이 문제는 SQL Server 엔진 또는 Analysis Services가 설치되지 못할 때 발생할 수 있습니다. 이 문제를 해결하려면 SQL Server 설치 로그를 참조하고 SQL Server 엔진 및 Analysis Services 실패를 해결합니다. 자세한 내용은 SQL Server 설치 로그 파일 보기 및 읽기를 참조하십시오. 자세한 내용은 [View and Read SQL Server Setup Log Files](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx)을 참조하세요.  
+**해결 방법:** 이 문제는 SQL Server 엔진 또는 Analysis Services가 설치되지 못할 때 발생할 수 있습니다. 이 문제를 해결하려면 SQL Server 설치 로그를 참조하고 SQL Server 엔진 및 Analysis Services 실패를 해결합니다. 자세한 내용은 SQL Server 설치 로그 파일 보기 및 읽기를 참조하십시오. 자세한 내용은 [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 네트워크 이름을 바꾼 후 SQL Server 2008, 2008 R2 Analysis Services 장애 조치(Failover) 클러스터가 SQL Server 2012로 업그레이드되지 않을 수 있음  
 **문제:** Windows 클러스터 관리 도구를 사용하여 Microsoft SQL Server 2008 또는 Microsoft SQL Server 2008 R2 Analysis Services 장애 조치(Failover) 클러스터의 네트워크 이름을 변경하고 나면 업그레이드 작업에 실패할 수도 있습니다.  
@@ -225,7 +225,7 @@ SQL Server 2012는 Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 S
   
 8.  **복구 진행률** 페이지에 복구 작업 상태가 표시됩니다. **완료** 페이지에서 작업이 완료되었음을 알려 줍니다.  
   
-SQL Server 인스턴스를 복구하는 방법에 대한 자세한 내용은 [실패한 SQL Server 2012 설치 복구](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx)를 참조하세요.  
+SQL Server 인스턴스를 복구하는 방법에 대한 자세한 내용은 [실패한 SQL Server 2012 설치 복구](../database-engine/install-windows/repair-a-failed-sql-server-installation.md)를 참조하세요.  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 OS 업그레이드 후 SQL Server 2012 인스턴스가 실패할 수 있음  
 **문제:** 운영 체제를 Windows 7 SP1에서 Windows Vista로 업그레이드한 후 다음 오류로 인해 SQL Server 2012 인스턴스가 실패할 수 있습니다.  
@@ -237,7 +237,7 @@ SQL Server 인스턴스를 복구하는 방법에 대한 자세한 내용은 [�
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server 버전을 업그레이드하려면 다시 시작해야 함  
 **문제**: SQL Server 2012 인스턴스 버전을 업그레이드하는 경우 새 버전과 관련된 일부 기능이 즉시 활성화되지 않을 수 있습니다.  
   
-**해결 방법**: SQL Server 2012 인스턴스의 버전 업그레이드를 수행한 후 컴퓨터를 다시 시작합니다. SQL Server 2012에서 지원되는 업그레이드에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](http://msdn.microsoft.com/library/ms143393.aspx)를 참조하세요.  
+**해결 방법**: SQL Server 2012 인스턴스의 버전 업그레이드를 수행한 후 컴퓨터를 다시 시작합니다. SQL Server 2012에서 지원되는 업그레이드에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)를 참조하세요.  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 읽기 전용 파일 그룹 또는 파일이 포함된 데이터베이스를 업그레이드할 수 없음  
 **문제**: 파일/파일 그룹이 읽기 전용으로 설정된 경우 데이터베이스를 연결하거나 백업에서 데이터베이스를 복구하는 방식으로 데이터베이스를 업그레이드할 수 없습니다.  오류 3415가 반환됩니다.  이 문제는 SQL Server 인스턴스의 전체 업그레이드를 실행하는 경우에도 적용됩니다. 즉, SQL Server 2012를 설치하여 기존 SQL Server 인스턴스를 대체하려고 하는데 하나 이상의 기존 데이터베이스가 읽기 전용으로 설정되어 있습니다.  
@@ -247,7 +247,7 @@ SQL Server 인스턴스를 복구하는 방법에 대한 자세한 내용은 [�
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 동일한 IP 주소를 사용하는 경우 SQL Server 장애 조치(Failover) 클러스터 인스턴스의 다시 설치가 실패함  
 **문제:** SQL Server 장애 조치(Failover) 클러스터 인스턴스를 설치하는 동안 잘못된 IP 주소를 지정하는 경우 설치에 실패합니다. 실패한 인스턴스를 제거한 후 올바른 IP 주소와 동일한 인스턴스 이름을 사용하여 SQL Server 장애 조치(Failover) 클러스터 인스턴스를 다시 설치하려고 하면 설치에 실패합니다. 이 오류는 이전 설치로 인해 중복된 리소스 그룹이 남겨졌기 때문에 발생합니다.  
   
-**해결 방법:** 이 문제를 해결하려면 설치하는 동안 다른 인스턴스 이름을 사용하거나 다시 설치하기 전에 리소스 그룹을 수동으로 삭제합니다. 자세한 내용은 [SQL  Server  장애 조치(failover)  클러스터에서 노드 추가 또는 제거](http://msdn.microsoft.com/library/ms191545)를 참조하십시오.  
+**해결 방법:** 이 문제를 해결하려면 설치하는 동안 다른 인스턴스 이름을 사용하거나 다시 설치하기 전에 리소스 그룹을 수동으로 삭제합니다. 자세한 내용은 [SQL  Server  장애 조치(failover)  클러스터에서 노드 추가 또는 제거](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하십시오.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -504,10 +504,10 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
 |드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔트포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
-|SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니요|  
-|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|예|예|예|예|사용자 계정 컨트롤|  
-|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|예|예|예|예|예|  
-|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  
+|SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
+|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
+|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|사용자 계정 컨트롤|예|예|예|예|  
+|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|사용자 계정 컨트롤|  
   
 **\&#42;** .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)이 있는 ADO.NET용 연결 패치 다운로드:  
   

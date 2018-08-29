@@ -21,19 +21,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9741b7db06a3be3adb6eb86f044fd7403fe1c2c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a69fb847726732f3b1321593655f29c3bb2f6d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043470"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775282"
 ---
 # <a name="solutions-sql-server-management-studio"></a>솔루션(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 솔루션은 하나 이상의 관련 프로젝트의 모음입니다. 프로젝트는 일반적으로 사용되는 관리 스크립트와 같이 개발자가 관련 파일을 구성하는 데 사용되는 컨테이너입니다.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션은 하나 이상의 관련 프로젝트의 모음입니다. 프로젝트는 일반적으로 사용되는 관리 스크립트와 같이 개발자가 관련 파일을 구성하는 데 사용되는 컨테이너입니다.  
   
 ## <a name="solution-overview"></a>솔루션 개요  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 를 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]를 위한 스크립트 개발 플랫폼으로 사용할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 코드 편집기를 사용하여 관계형 및 다차원 데이터베이스에 대한 스크립트 및 쿼리를 개발하고 프로젝트에서 관련 스크립트와 쿼리를 수집할 수 있습니다.  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]를 위한 스크립트 개발 플랫폼으로 사용할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 코드 편집기를 사용하여 관계형 및 다차원 데이터베이스에 대한 스크립트 및 쿼리를 개발하고 프로젝트에서 관련 스크립트와 쿼리를 수집할 수 있습니다.  
   
 프로젝트에 포함되는 항목은 다음과 같습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33043470"
   
 -   쿼리 및 스크립트에 사용되는 연결 정보와 파일  
   
-솔루션에 하나 이상의 관련 프로젝트를 결합할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 솔루션 탐색기 창을 사용하여 솔루션 및 프로젝트를 관리할 수 있습니다.  
+솔루션에 하나 이상의 관련 프로젝트를 결합할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 솔루션 탐색기 창을 사용하여 솔루션 및 프로젝트를 관리할 수 있습니다.  
   
 개발 변경 내용 추적 및 주기 관리를 위해 솔루션 및 프로젝트를 [!INCLUDE[msCoName](../../includes/msconame_md.md)] VSS(Visual SourceSafe) 데이터베이스 또는 다른 타사 원본 제어 공급자에 통합할 수 있습니다.  
   

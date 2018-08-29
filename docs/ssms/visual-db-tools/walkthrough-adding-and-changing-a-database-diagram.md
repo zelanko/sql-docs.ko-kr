@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054970"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775555"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33054970"
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 연습을 완료하려면 다음이 필요합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 예제 데이터베이스를 포함하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] 에 대한 액세스 권한  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스를 포함하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 에 대한 액세스 권한  
   
 -   데이터베이스 소유자 **dbo** 권한이 있는 계정  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33054970"
   
 1.  **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
-2.  데이터베이스 노드를 연 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] 노드를 엽니다.  
+2.  데이터베이스 노드를 연 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 노드를 엽니다.  
   
 3.  데이터베이스 다이어그램 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스 다이어그램**을 선택합니다.  
   
@@ -217,7 +217,7 @@ XML을 포함하여 대부분의 데이터 형식에 대해 인덱스를 만들 
 [데이터베이스 다이어그램 디자이너 설정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [다이어그램에 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [다이어그램에서 테이블 간의 관계 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[XML 인덱스 만들기](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[XML 인덱스 만들기](../../relational-databases/xml/create-xml-indexes.md)  
 [데이터베이스 다이어그램의 이미지를 클립보드로 복사&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [다이어그램 레이아웃 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

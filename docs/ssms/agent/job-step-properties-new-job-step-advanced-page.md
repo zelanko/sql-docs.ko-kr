@@ -18,33 +18,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ba89c1f12638f4a9ed4698d82dca0f97d3d931a0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 771869ddfa25e6b19fe0545e638a7b305441e2fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987835"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775071"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>작업 단계 속성 - 새 작업 단계(고급 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계의 속성을 확인하고 변경할 수 있습니다.  
+이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인하고 변경할 수 있습니다.  
   
 ## <a name="options"></a>Options  
 **성공한 경우 동작**  
-작업 단계 성공 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 수행할 동작을 설정합니다.  
+작업 단계 성공 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행할 동작을 설정합니다.  
   
 **다시 시도 횟수**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 실패한 작업 단계를 다시 시도하는 횟수를 설정합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 실패한 작업 단계를 다시 시도하는 횟수를 설정합니다.  
   
 **다시 시도 간격(분)**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 작업 단계를 다시 시도하기 전에 대기하는 시간을 설정합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 작업 단계를 다시 시도하기 전에 대기하는 시간을 설정합니다.  
   
 **실패한 경우 동작**  
-작업 단계 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 수행할 동작을 설정합니다.  
+작업 단계 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행할 동작을 설정합니다.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 작업 단계 옵션  
 **출력 파일**  
@@ -54,7 +54,7 @@ ms.locfileid: "37987835"
 작업 단계의 출력에 사용할 파일을 찾아 봅니다.  
   
 **보기**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
   
 **기존 파일에 출력 추가**  
 출력을 파일의 기존 내용에 추가합니다. 그렇지 않으면 작업 단계가 실행될 때마다 이전 파일 내용을 덮어씁니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "37987835"
 작업 단계의 출력에 사용할 파일을 찾아 봅니다.  
   
 **보기**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
   
 **기존 파일에 출력 추가**  
 작업 단계를 실행할 때마다 이전 파일 내용에 작업 단계 출력을 추가합니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "37987835"
 작업 단계의 출력에 사용할 파일을 찾아 봅니다.  
   
 **보기**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
   
 **기존 파일에 출력 추가**  
 작업 단계를 실행할 때마다 이전 파일 내용에 작업 단계 출력을 추가합니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "37987835"
 작업 단계의 출력에 사용할 파일을 찾아 봅니다.  
   
 **보기**  
-[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 이 단추를 사용하여 출력 파일을 표시할 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
   
 **기존 파일에 출력 추가**  
 출력을 파일의 기존 내용에 추가합니다. 그렇지 않으면 작업 단계가 실행될 때마다 이전 파일 내용을 덮어씁니다.  

@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7eef59e5e20ff33936e0db32849c4f1be4bf6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050100"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776359"
 ---
 # <a name="use-the-toolbox"></a>도구 상자 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-도구 상자의 항목, 텍스트 및 컨트롤을 선택하여 양식, 페이지 및 디자이너로 끌어다 놓고 이러한 원본의 항목을 다시 도구 상자로 끌어다 놓아 나중에 다시 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 에서는 태스크를 유지 관리 계획으로 끌어다 놓을 수 있습니다.  
+도구 상자의 항목, 텍스트 및 컨트롤을 선택하여 양식, 페이지 및 디자이너로 끌어다 놓고 이러한 원본의 항목을 다시 도구 상자로 끌어다 놓아 나중에 다시 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서는 태스크를 유지 관리 계획으로 끌어다 놓을 수 있습니다.  
   
 도구 상자의 항목은 탭이라는 섹션으로 그룹화됩니다. 다음은 일반 도구 상자 태스크의 참조 목록과 이에 대한 사용 방법입니다.  
   

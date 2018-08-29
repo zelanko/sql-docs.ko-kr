@@ -18,16 +18,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e29b71abbcba7e5b37ff1547321b6bd6d27d339c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c103c7149b26a1d87be4436a91ba4ae211440aff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047170"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775086"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>데이터 정렬 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 대화 상자를 사용하면 열의 데이터 정렬 순서를 지정할 수 있습니다. 열의 데이터 정렬 순서는 열의 값을 다른 열이나 상수 값과 비교하는 모든 작업에 사용됩니다. 이 순서는 SUBSTRING 및 CHARINDEX 등과 같은 일부 문자열 함수의 동작에도 영향을 줍니다. 열의 데이터 정렬 순서 설정이 미치는 영향에 대한 전체 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 설명서를 참조하십시오.  
+이 대화 상자를 사용하면 열의 데이터 정렬 순서를 지정할 수 있습니다. 열의 데이터 정렬 순서는 열의 값을 다른 열이나 상수 값과 비교하는 모든 작업에 사용됩니다. 이 순서는 SUBSTRING 및 CHARINDEX 등과 같은 일부 문자열 함수의 동작에도 영향을 줍니다. 열의 데이터 정렬 순서 설정이 미치는 영향에 대한 전체 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명서를 참조하십시오.  
   
 이 대화 상자는 다음과 같은 경우에 나타납니다.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "33047170"
   
 -   **열 속성** 탭의 **데이터 정렬** 필드를 클릭한 다음 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭한 경우  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **SQL 데이터 정렬**  
-드롭다운 목록의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 정의되어 있는 데이터 정렬 순서 중에서 하나를 선택합니다.  
+드롭다운 목록의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 정의되어 있는 데이터 정렬 순서 중에서 하나를 선택합니다.  
   
 **Windows 데이터 정렬**  
 드롭다운 목록의 Windows에 정의되어 있는 데이터 정렬 순서 중에서 하나를 선택합니다.  

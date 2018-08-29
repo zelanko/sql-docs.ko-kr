@@ -29,20 +29,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980435"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775096"
 ---
 # <a name="operators"></a>연산자
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
+운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
   
 ## <a name="operator-attributes-and-concepts"></a>운영자 특성 및 개념  
 운영자의 기본 특성은 다음과 같습니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "38980435"
 -   연락처 정보  
   
 ### <a name="naming-an-operator"></a>운영자 명명  
-운영자는 모두 이름이 있어야 합니다. 운영자 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스 내에서 고유해야 하며 **128** 자를 초과할 수 없습니다.  
+운영자는 모두 이름이 있어야 합니다. 운영자 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 **128** 자를 초과할 수 없습니다.  
   
 ### <a name="contact-information"></a>연락처 정보  
 운영자의 연락 정보는 운영자가 알림을 받는 방법을 정의합니다. 운영자는 전자 메일, 호출기 또는 **net send** 명령으로 알림을 받을 수 있습니다.  
   
 > [!IMPORTANT]  
-> **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+> **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
   
 -   **전자 메일 알림**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "38980435"
   
         이 소프트웨어는 서비스 공급자를 호출하는 소유자에 해당됩니다. 이 소프트웨어는 전자 메일 주소 정보의 일부나 전부를 호출기 번호로 해석하거나 전자 메일 이름이 변환 테이블의 호출기 번호와 일치하는지 확인하여 받은 편지함을 주기적으로 처리는 메일 클라이언트 역할을 수행합니다.  
   
-        운영자가 모두 호출기 공급자를 공유하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 를 사용하여 호출기-전자 메일 시스템에서 요청하는 특수한 전자 메일의 서식을 지정할 수 있습니다. 특수한 서식은 접두사 또는 접미사이며 전자 메일의 다음 항목에 포함될 수 있습니다.  
+        운영자가 모두 호출기 공급자를 공유하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 호출기-전자 메일 시스템에서 요청하는 특수한 전자 메일의 서식을 지정할 수 있습니다. 특수한 서식은 접두사 또는 접미사이며 전자 메일의 다음 항목에 포함될 수 있습니다.  
   
         **제목:**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38980435"
     **net send** 명령을 사용하여 운영자에게 메시지를 보냅니다. **net send**에서는 네트워크 메시지의 수신자(컴퓨터나 사용자)를 지정합니다.  
   
     > [!NOTE]  
-    > **net send** 명령은 Microsoft Windows Messenger를 사용합니다. 경고를 성공적으로 보내려면 이 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 실행 중인 컴퓨터와 운영자가 사용하는 컴퓨터에서 모두 실행되어야 합니다.  
+    > **net send** 명령은 Microsoft Windows Messenger를 사용합니다. 경고를 성공적으로 보내려면 이 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터와 운영자가 사용하는 컴퓨터에서 모두 실행되어야 합니다.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>경고 알림 및 유사 시 대기 운영자  
 경고에 응답하여 알림을 받을 운영자를 선택할 수 있습니다. 또한 경고를 예약하여 운영자가 교대로 알림을 받도록 지정할 수도 있습니다. 예를 들어 운영자 A는 월, 수, 금에 발생하는 경고에 대한 알림을 받고 운영자 B는 화, 목, 토에 발생하는 경고에 대한 알림을 받으며  
@@ -109,7 +109,7 @@ ms.locfileid: "38980435"
   
     주 운영자에게 연락하지 못한 이유에는 호출기 주소가 틀리거나 운영자가 근무 중이 아닌 경우가 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 **msdb** 데이터베이스의 시스템 테이블에 액세스할 수 없는 경우  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 **msdb** 데이터베이스의 시스템 테이블에 액세스할 수 없는 경우  
   
     **sysnotifications** 시스템 테이블에서 경고에 대해 운영자 업무를 지정합니다.  
   
@@ -133,5 +133,5 @@ ms.locfileid: "38980435"
 |알림 할당 관련 태스크|[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[경고에 대한 응답 정의&#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification(Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 메일](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f04e3569753aa9a2f73f2e1f12cb51c9b20bbe3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 547de2c618f1a05efa14337301f4a799dfc44fc2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044400"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776670"
 ---
 # <a name="manage-files-with-encoding"></a>인코딩으로 파일 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,5 +69,5 @@ Visual SourceSafe를 사용하여 ANSI, UTF8 또는 유니코드로 파일을 �
   
 ## <a name="see-also"></a>참고 항목  
 [솔루션 및 프로젝트 관리 파일](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[파일 확장명을 코드 편집기에 연결](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

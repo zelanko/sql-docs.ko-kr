@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053600"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775435"
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "33053600"
 > [!NOTE]  
 > 이 항목의 속성은 사전순이 아니라 범주별로 정렬됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **ID 범주**  
 확장하면 **이름** 속성이 표시됩니다.  
   
 **이름**  
-현재 쿼리의 이름을 표시합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서는 이를 변경할 수 없습니다.  
+현재 쿼리의 이름을 표시합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서는 이를 변경할 수 없습니다.  
   
 **Database Name**  
 선택한 테이블의 데이터 원본 이름을 표시합니다.  
@@ -60,7 +60,7 @@ MAKE TABLE 쿼리를 작성하는 경우 새 테이블의 이름을 입력하십
 결과 집합에서 중복 항목을 필터링하도록 쿼리를 지정합니다. 이 옵션은 하나 이상의 테이블에 있는 열 중 일부만 사용하고 이 열에 중복 값이 포함되어 있는 경우 또는 둘 이상의 테이블을 조인하는 과정에서 결과 집합에 중복 행이 만들어지는 경우에 유용합니다. 이 옵션을 선택하면 SQL 창에서 DISTINCT를 문에 삽입하는 것과 결과가 같습니다.  
   
 **GROUP BY 확장**  
-집계 쿼리를 기반으로 하는 쿼리에 대한 추가 옵션을 사용할 수 있음을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에만 적용됩니다.  
+집계 쿼리를 기반으로 하는 쿼리에 대한 추가 옵션을 사용할 수 있음을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용됩니다.  
   
 **모든 열 출력**  
 현재 쿼리에서 모든 테이블의 전체 열이 결과 집합에 포함되도록 지정합니다. 이 옵션을 선택하면 SQL 문에서 SELECT 키워드 다음에 개별 열 이름 대신 별표(*)를 지정하는 것과 결과가 같습니다.  
@@ -69,7 +69,7 @@ MAKE TABLE 쿼리를 작성하는 경우 새 테이블의 이름을 입력하십
 쿼리 매개 변수를 표시합니다. 이 매개 변수를 편집하려면 속성을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 일반 OLE DB에만 적용됩니다.  
   
 **SQL 주석**  
-SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 쿼리의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 이상 버전에만 적용됩니다.  
+SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 쿼리의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 **Top 사양 범주**  
 확장하면 **Top**, **Percent**, **식**및 **With Ties** 속성이 표시됩니다.  
@@ -77,16 +77,16 @@ SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집�
 **(Top)**  
 결과 집합에서 처음 *n* 개 행 또는 처음 *n* %에 해당하는 행만 반환하는 TOP 절이 쿼리에 포함되도록 지정합니다. 기본값은 쿼리가 결과 집합에서 처음 10개 행을 반환하는 것입니다.  
   
-이 상자는 반환할 행 수를 변경하거나 백분율을 다르게 지정하려는 경우에 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에만 적용됩니다.  
+이 상자는 반환할 행 수를 변경하거나 백분율을 다르게 지정하려는 경우에 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에만 적용됩니다.  
   
 **식**  
-쿼리에서 반환할 행의 수나 비율을 지정합니다. **Percent** 를 예로 설정한 경우 이 값은 쿼리에서 반환할 행의 비율을 나타내고, **Percent** 를 아니요로 설정한 경우 이 값은 반환할 행의 수를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 이상 버전에만 적용됩니다.  
+쿼리에서 반환할 행의 수나 비율을 지정합니다. **Percent** 를 예로 설정한 경우 이 값은 쿼리에서 반환할 행의 비율을 나타내고, **Percent** 를 아니요로 설정한 경우 이 값은 반환할 행의 수를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 **Percent**  
-결과 집합의 처음 *n* %에 해당하는 행만 쿼리가 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 이상 버전에만 적용됩니다.  
+결과 집합의 처음 *n* %에 해당하는 행만 쿼리가 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 **With Ties**  
-뷰에 WITH TIES 절이 포함되도록 지정합니다. WITH TIES는 백분율을 기반으로 하는 ORDER BY 절과 TOP 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율 값이 ORDER BY 절에서 동일한 값을 가진 행 집합의 중간까지만 포함하면 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 이상 버전에만 적용됩니다.  
+뷰에 WITH TIES 절이 포함되도록 지정합니다. WITH TIES는 백분율을 기반으로 하는 ORDER BY 절과 TOP 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율 값이 ORDER BY 절에서 동일한 값을 가진 행 집합의 중간까지만 포함하면 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [매개 변수를 사용하여 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

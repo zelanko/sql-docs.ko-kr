@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997325"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775440"
 ---
 # <a name="failover-cluster-troubleshooting"></a>장애 조치(Failover) 클러스터 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "37997325"
   
      이 방법으로 운영 체제 오류를 복구하면 시간이 걸릴 수 있습니다. 운영 체제 오류를 쉽게 복구할 수 있다면 이 방법을 사용하지 마십시오.  
   
-     자세한 내용은 [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 및 [방법: 시나리오 2의 장애 조치(failover) 클러스터 오류 복구](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx)를 참조하세요.  
+     자세한 내용은 [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 및 [방법: 시나리오 2의 장애 조치(failover) 클러스터 오류 복구](recover-from-failover-cluster-instance-failure.md)를 참조하세요.  
   
 ## <a name="resolving-common-problems"></a>일반적인 문제 해결  
  다음 목록에서는 일반적인 사용법 문제와 그 해결 방법에 대해 설명합니다.  

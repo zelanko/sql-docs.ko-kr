@@ -21,27 +21,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 361457778678c8edc08df87091174d0c5b65d31f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985315"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774706"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+> 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
   
 마스터 서버와 대상 서버 간 연결은 기본적으로 전체 SSL(Secure Sockets Layer) 암호화 및 인증서 확인을 사용할 수 있도록 설정됩니다. 자세한 내용은 [대상 서버의 암호화 옵션 설정](../../ssms/agent/set-encryption-options-on-target-servers.md)을 참조하세요.  
   
-대상 서버가 많으면 대상 서버 트래픽으로 인해 프로덕션 서버의 성능이 저하될 수 있으므로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 기능에 대한 성능 요구 사항이 중요한 프로덕션 서버에 마스터 서버를 정의하지 않는 것이 좋습니다. 또한 전용 마스터 서버로 이벤트를 전달하면 하나의 서버에서 집중 관리할 수 있습니다. 자세한 내용은 [이벤트 관리](../../ssms/agent/manage-events.md)를 참조하세요.  
+대상 서버가 많으면 대상 서버 트래픽으로 인해 프로덕션 서버의 성능이 저하될 수 있으므로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대한 성능 요구 사항이 중요한 프로덕션 서버에 마스터 서버를 정의하지 않는 것이 좋습니다. 또한 전용 마스터 서버로 이벤트를 전달하면 하나의 서버에서 집중 관리할 수 있습니다. 자세한 내용은 [이벤트 관리](../../ssms/agent/manage-events.md)를 참조하세요.  
   
 > [!NOTE]  
-> 다중 서버 작업 처리를 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스 계정이 마스터 서버에서 **msdb** 데이터베이스 역할인 **TargetServersRole** 의 멤버여야 합니다. 마스터 서버 마법사는 등록 과정에서 이 역할에 서비스 계정을 자동으로 추가합니다.  
+> 다중 서버 작업 처리를 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 마스터 서버에서 **msdb** 데이터베이스 역할인 **TargetServersRole** 의 멤버여야 합니다. 마스터 서버 마법사는 등록 과정에서 이 역할에 서비스 계정을 자동으로 추가합니다.  
   
 ## <a name="considerations-for-multiserver-environments"></a>다중 서버 환경 고려 사항  
   

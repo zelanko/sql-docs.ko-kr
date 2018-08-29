@@ -18,16 +18,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 984c38131f47c47a7670430d283a0b521dcc0faa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f18e4f5113958850a90fc7f8ac185bb41f107c0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041417"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776380"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 메뉴 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]의 메뉴 모음에서 사용할 수 있는 대화 상자 및 페이지에 대한 F1 도움말을 제공합니다.  
+이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 메뉴 모음에서 사용할 수 있는 대화 상자 및 페이지에 대한 F1 도움말을 제공합니다.  
   
 [SQL Server Management Studio 정보](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

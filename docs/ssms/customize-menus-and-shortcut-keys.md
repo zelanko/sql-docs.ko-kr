@@ -25,12 +25,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bcca6b82d28f350571105826131c0fd99152a12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045870"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775622"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,7 +164,7 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
 6.  **사용자 지정** 대화 상자에서 **닫기**를 클릭합니다.  
   
 > [!NOTE]  
-> 일부 명령은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 에 관련 내용이 표시되는 경우에만 사용할 수 있습니다. 메뉴에 사용할 수 있는 명령이 없으면 메뉴 항목을 사용할 수 없습니다.  
+> 일부 명령은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에 관련 내용이 표시되는 경우에만 사용할 수 있습니다. 메뉴에 사용할 수 있는 명령이 없으면 메뉴 항목을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server Management Studio의 기능](../ssms/features-in-sql-server-management-studio.md)  
