@@ -19,13 +19,13 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7064658e57f07eff4c06c245079c9a868a91c277
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7c6d35168b466f5eb8b49d30ed1b1a79e103f62
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546393"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066706"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client에서 연결 문자열 키워드 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "39546393"
 |**QueryLogFile**|장기 실행 쿼리의 데이터를 기록하는 데 사용할 파일의 전체 경로 및 파일 이름입니다.|  
 |**QueryLogTime**|장기 실행 쿼리 기록을 위한 임계값(밀리초)을 지정하는 숫자 문자열입니다. 지정된 시간 내에 응답을 받지 못한 쿼리가 장기 실행 쿼리 로그 파일에 기록됩니다.|  
 |**QuotedId**|"yes"인 경우 QUOTED_IDENTIFIERS가 연결에 대해 ON으로 설정되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 SQL 문에서 ISO 규칙에 따라 따옴표를 사용합니다. "no"인 경우 QUOTED_IDENTIFIERS가 연결에 대해 OFF로 설정되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 SQL 문에서 레거시 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 규칙에 따라 따옴표를 사용합니다. 자세한 내용은 [ISO 옵션의 효과](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)합니다.|  
-|**지역**|"yes"인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 통화, 날짜 및 시간 데이터를 문자 데이터로 변환할 때 클라이언트 설정을 사용합니다. 변환이 한쪽 방향으로만 이루어지므로 드라이버는 INSERT 또는 UPDATE 문에 사용된 매개 변수 등에서 ODBC 표준 형식이 아닌 날짜 문자열이나 통화 값을 인식하지 못합니다. "no"인 경우 드라이버는 ODBC 표준 문자열을 사용하여 문자 데이터로 변환된 통화, 날짜 및 시간을 나타냅니다.|  
+|**Regional**|"yes"인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 통화, 날짜 및 시간 데이터를 문자 데이터로 변환할 때 클라이언트 설정을 사용합니다. 변환이 한쪽 방향으로만 이루어지므로 드라이버는 INSERT 또는 UPDATE 문에 사용된 매개 변수 등에서 ODBC 표준 형식이 아닌 날짜 문자열이나 통화 값을 인식하지 못합니다. "no"인 경우 드라이버는 ODBC 표준 문자열을 사용하여 문자 데이터로 변환된 통화, 날짜 및 시간을 나타냅니다.|  
 |**SaveFile**|연결에 성공하면 현재 연결에 대한 특성이 저장되는 ODBC 데이터 원본 파일의 이름입니다.|  
 |**Server**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 이 값은 네트워크의 서버 이름(IP 주소)이거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자 별칭이어야 합니다.<br /><br /> 합니다 **주소** 키워드를 재정의 합니다 **Server** 키워드입니다.<br /><br /> 다음 중 하나를 지정하여 로컬 서버에서 기본 인스턴스에 연결할 수 있습니다.<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> Localdb에 대 한 자세한 내용은 참조 하세요. [SQL Server Native Client 지원 LocalDB에 대 한](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)합니다.<br /><br /> 명명된 된 인스턴스를 지정 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 추가  **\\ ***InstanceName*합니다.<br /><br /> 없는 서버를 지정 하는 경우 로컬 컴퓨터의 기본 인스턴스에 연결 됩니다.<br /><br /> IP 주소를 지정 하는 경우에서 TCP/IP 또는 명명 된 파이프 프로토콜이 설정 되어 있는지 확인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager입니다.<br /><br /> 전체 구문은 합니다 **Server** 키워드는 다음과 같습니다:<br /> <br /> **Server =**[* 프로토콜***:**] *서버*[**, * * * 포트*]<br /><br /> *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.<br /><br /> 다음 예제는 명명된 파이프를 지정하는 방법입니다.<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 이 줄은 명명된 파이프 프로토콜, 로컬 시스템의 명명된 파이프(`\\.\pipe`), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름(`MSSQL$MYINST01`) 및 명명된 파이프의 기본 이름(`sql/query`)을 지정합니다.<br /><br /> 모두를 *프로토콜* 또는 **네트워크** 키워드가 지정 되지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에 지정 된 프로토콜 순서를 사용할지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager입니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.<br /><br /> 전달 되는 값의 시작 부분에 있는 공백은 무시 됩니다 **Server** 사용 하는 경우 ODBC 연결 문자열에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client입니다.|  
 |**ServerSPN**|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버가 생성한 기본 SPN을 사용합니다.|  

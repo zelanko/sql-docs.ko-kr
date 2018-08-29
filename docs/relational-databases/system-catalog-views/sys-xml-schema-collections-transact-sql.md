@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_collections (Transact SQL) | Microsoft 문서
+title: sys.xml_schema_collections (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1248a985298d55a6dae7ccd6f19768eb6c248309
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 15deb8cb7fda0d31c14fffa92ae4a0cb41212e9f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543933"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068085"
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  각 XML 스키마 컬렉션에 대한 행을 반환합니다. XML 스키마 컬렉션은 XSD 정의의 명명된 집합입니다. XML 스키마 컬렉션 자체는 관계형 스키마에 포함되고 스키마 범위 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이름으로 식별됩니다. 다음과 같은 튜플은 고유: xml_collection_id, schema_id 및 이름입니다.  
+  각 XML 스키마 컬렉션에 대한 행을 반환합니다. XML 스키마 컬렉션은 XSD 정의의 명명된 집합입니다. XML 스키마 컬렉션 자체는 관계형 스키마에 포함되고 스키마 범위 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이름으로 식별됩니다. 다음 튜플은 고유: xml_collection_id, schema_id 및 이름입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

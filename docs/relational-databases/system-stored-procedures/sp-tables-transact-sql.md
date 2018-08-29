@@ -1,5 +1,5 @@
 ---
-title: sp_tables (Transact SQL) | Microsoft 문서
+title: sp_tables (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 80a0c9c99ab21096fe1d0fa6fd3eac77c7b82e48
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1c070be83daf534bc3084689aaa9aa8c1149f374
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559713"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43061896"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
  [  **@table_qualifier=** ] **'***한정자***'**  
  테이블 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*한정자 ***.*** 소유자 ***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ **,** [  **@table_type=** ] **"'***유형***'**, **'** 유형 **'"** ]  
+ [ **하십시오** [  **@table_type=** ] **"'***형식***'** 를 **'** 형식 **'"** ]  
  쉼표로 구분된 값 목록으로서 지정된 테이블 유형의 모든 테이블에 대한 정보를 제공합니다. 여기에 포함 됩니다 **테이블**를 **SYSTEMTABLE**, 및 **뷰**합니다. *형식* 됩니다 **varchar(100)**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
@@ -89,9 +89,9 @@ sp_tables [ [ @table_name = ] 'name' ]
 ## <a name="remarks"></a>Remarks  
  상호 운용성을 최대한 높이려면 게이트웨이 클라이언트가 SQL-92-표준 SQL 패턴 일치(% 및 _ 와일드카드 문자)만 허용해야 합니다.  
   
- 현재 사용자의 특정 테이블에 대한 읽기 또는 쓰기 액세스에 대한 권한 정보는 항상 확인되지는 않습니다. 그렇기 때문에 액세스는 보장되지 않습니다. 이 결과 집합은 테이블 및 뷰뿐만 아니라 이러한 유형을 지원하는 DBMS 제품으로의 게이트웨이에 대한 동의어 및 별칭을 포함합니다. 경우 서버 특성 **ACCESSIBLE_TABLES** 는 Y의 결과 집합에서 **sp_server_info**를 현재 사용자가 액세스할 수 있는 테이블에만 반환 됩니다.  
+ 현재 사용자의 특정 테이블에 대한 읽기 또는 쓰기 액세스에 대한 권한 정보는 항상 확인되지는 않습니다. 그렇기 때문에 액세스는 보장되지 않습니다. 이 결과 집합은 테이블 및 뷰뿐만 아니라 이러한 유형을 지원하는 DBMS 제품으로의 게이트웨이에 대한 동의어 및 별칭을 포함합니다. 경우 서버 특성인 **ACCESSIBLE_TABLES** 결과 집합에 Y **sp_server_info**, 현재 사용자가 액세스할 수 있는 테이블만 반환 됩니다.  
   
- **sp_tables** 는 **SQLTables** odbc에서. 반환 된 결과 의해 정렬 됩니다 **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, 및 **TABLE_NAME**.  
+ **sp_tables** 같습니다 **SQLTables** ODBC에서. 반환 된 결과 정렬 **TABLE_TYPE**를 **TABLE_QUALIFIER**를 **TABLE_OWNER**, 및 **TABLE_NAME**합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  

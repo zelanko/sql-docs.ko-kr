@@ -19,13 +19,13 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 945cf6145b1e7173dcadc5115f9e1ee9fc74a7a4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fe8c90fd406aecae5d5ecc5a60efe009d43313e7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561503"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43080837"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ oTestCommand.Execute , , adExecuteStream
 |내용 유형||출력 내용 유형을 반환합니다. READ ONLY 속성입니다.<br /><br /> 이 속성은 내용 유형(예: TEXT/XML, TEXT/HTML, image/jpeg 등)에 대한 정보를 브라우저에 제공합니다. 이 속성의 값이 있는 **콘텐츠 형식** 문서의 본문으로 전송 되는 MIME 형식 (다목적 인터넷 메일 확장)이 포함 된 HTTP 헤더의 일부로 브라우저에 보낸 필드.|  
 |매핑 스키마|NULL|클라이언트 응용 프로그램이 매핑 스키마(XDR 또는 XSD)에 대해 XPath 쿼리를 실행하는 경우 이 속성은 매핑 스키마의 이름을 지정하는 데 사용됩니다.<br /><br /> 지정된 경로는 상대 경로(xyz/abc/MySchema.xml) 또는 절대 경로(C:\MyFolder\abc\MySchema.xml)일 수 있습니다.<br /><br /> 상대 경로 지정 하는 경우 기본 경로 속성으로 지정 된 기본 경로 상대 경로 확인 하는 데 사용 됩니다. 자료 Path 속성에 지정 된 경로가 없는 경우 상대 경로 현재 디렉터리에 상대적입니다.<br /><br /> 매핑 스키마 속성에 값을 지정 하는 로컬 디렉터리 경로 또는 URL (http://)을 지정할 수 있습니다. URL을 지정하는 경우 프록시 서버를 통해 HTTP 및 HTTPS 서버에 액세스하도록 WinHTTP를 구성해야 합니다. Proxycfg.exe 유틸리티를 실행하여 이 작업을 수행할 수 있습니다. 자세한 내용은 MSDN 라이브러리의 "WinHTTP 프록시 구성 유틸리티 사용"을 참조하십시오.<br /><br /> 이 속성을 사용 하는 예제를 보려면 [실행 되는 XPath 쿼리 &#40;SQLXMLOLEDB 공급자&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |네임스페이스||이 속성을 사용하면 네임스페이스를 사용하는 XPath 쿼리를 실행할 수 있습니다. 이 속성을 사용 하는 예제를 보려면 [네임 스페이스를 사용 하 여 XPath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  
-|ss Stream Flags||이 속성은 보안 제한의 특정 유형을 지정하는 데 사용됩니다. 예를 들어 파일에 대한 URL 참조나 파일(예: 외부 사이트)에 대한 절대 경로를 허용하지 않을 수 있습니다. 또는 템플릿에서 쿼리를 허용하지 않을 수도 있습니다.<br /><br /> 이 속성에는 다음과 같은 값을 할당할 수 있습니다.<br /><br /> 1 2 STREAM_FLAGS_DISALLOW_URL = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = 8 STREAM_FLAGS_DISALLOW_QUERY = STREAM_FLAGS_ DONTCACHEMAPPINGSCHEMA 16 = 32 STREAM_FLAGS_DONTCACHETEMPLATE = STREAM_FLAGS_DONTCACHEXSL =<br /><br /> 다음 표에서는 이러한 값에 대한 추가 정보를 제공합니다.|  
+|ss Stream Flags||이 속성은 보안 제한의 특정 유형을 지정하는 데 사용됩니다. 예를 들어 파일에 대한 URL 참조나 파일(예: 외부 사이트)에 대한 절대 경로를 허용하지 않을 수 있습니다. 또는 템플릿에서 쿼리를 허용하지 않을 수도 있습니다.<br /><br /> 이 속성에는 다음과 같은 값을 할당할 수 있습니다.<br /><br /> 1 = 2 STREAM_FLAGS_DISALLOW_URL STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = 8 STREAM_FLAGS_DISALLOW_QUERY = STREAM_FLAGS_ DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL =<br /><br /> 다음 표에서는 이러한 값에 대한 추가 정보를 제공합니다.|  
 |xml root||이 속성은 결과 XML의 루트 태그를 정의하는 데 사용됩니다. 예를 들어 데이터베이스에 대해 SQL 쿼리를 실행하고 결과 XML 문서에 단일 루트 요소가 없는 경우 이 속성 값을 사용하여 문서에 단일 루트 요소를 추가합니다.<br /><br /> 이 속성을 사용 하는 예제를 보려면 [SQL 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md).|  
 |xsl||이 속성은 쿼리에서 반환된 XML 문서에 XSL 변환을 적용하려는 경우 XSL 파일 이름을 지정하는 데 사용됩니다.<br /><br /> 지정된 경로는 상대 경로(xyz/abc/MyXSL.xsl) 또는 절대 경로(C:\MyFolder\abc\MyXSL.xsl)일 수 있습니다.<br /><br /> 상대 경로 지정 하는 경우 기본 경로 속성으로 지정 된 기본 경로 상대 경로 확인 하는 데 사용 됩니다. 자료 Path 속성에 지정 된 경로가 없는 경우 상대 경로 현재 디렉터리에 상대적입니다.<br /><br /> 예를 들어가이 속성을 사용 하는 XSL 변환 (SQLXMLOLEDB 공급자) 적용을 참조 하십시오.|  
   

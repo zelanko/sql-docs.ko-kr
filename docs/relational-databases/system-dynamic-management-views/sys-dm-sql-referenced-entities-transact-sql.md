@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referenced_entities (Transact SQL) | Microsoft 문서
+title: sys.dm_sql_referenced_entities (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9dff46e117f5c75162e7fd8e0f717a0e72829714
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: de28f90a9863ebc1ee24f571da03ac460e9ad411
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541683"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067249"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *schema_name*. ] *referencing_entity_name*  
- 참조 엔터티의 이름입니다. *schema_name* 는 참조 클래스 개체를 경우에 필요 합니다.  
+ [ *schema_name*합니다. ] *referencing_entity_name*  
+ 참조 엔터티의 이름입니다. *schema_name* 참조 클래스는 개체 때 필요 합니다.  
   
- *schema_name.referencing_entity_name* 는 **nvarchar(517)**.  
+ *schema_name.referencing_entity_name* 됩니다 **nvarchar(517)** 합니다.  
   
- *< Referencing_class >* :: = {개체 | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER을 (를)  
+ *< Referencing_class >* :: = {개체 | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  지정된 참조 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- *< referencing_class >* 는 **nvarchar(60)**.  
+ *< referencing_class >* 됩니다 **nvarchar(60)** 합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -89,7 +89,7 @@ sys.dm_sql_referenced_entities (
 |referenced_schema_name|**sysname**|참조된 엔터티가 속한 스키마입니다.<br /><br /> 스키마 이름 지정 없이 엔터티가 참조되는 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
 |referenced_entity_name|**sysname**|참조된 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
 |referenced_minor_name|**sysname**|참조된 엔터티가 열인 경우 열 이름이며 그렇지 않은 경우 NULL입니다. 예를 들어 참조된 엔터티 자체를 나열하는 행에서 referenced_minor_name은 NULL입니다.<br /><br /> 열이 참조 엔터티에서 이름으로 식별되거나 부모 엔터티가 SELECT * 문에 사용된 경우 참조된 엔터티는 열입니다.|  
-|referenced_id|**int**|참조된 엔터티의 ID입니다. referenced_minor_id가 0이 아닌 경우 referenced_id는 열이 정의된 엔터티입니다.<br /><br /> 서버 간 참조의 경우 항상 NULL입니다.<br /><br /> 데이터베이스 간 참조의 경우 데이터베이스가 오프라인 상태이거나 엔터티를 바인딩할 수 없어 ID를 확인할 수 없으면 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비 스키마 바운드 참조의 경우 참조 된 엔터티는 이름 확인이 호출자에 종속 되는 경우 또는 데이터베이스에 존재 하지 않을 경우 ID 확인할 수 없습니다.  후자의 경우 is_caller_dependent은 1로 설정 됩니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
+|referenced_id|**int**|참조된 엔터티의 ID입니다. referenced_minor_id가 0이 아닌 경우 referenced_id는 열이 정의된 엔터티입니다.<br /><br /> 서버 간 참조의 경우 항상 NULL입니다.<br /><br /> 데이터베이스 간 참조의 경우 데이터베이스가 오프라인 상태이거나 엔터티를 바인딩할 수 없어 ID를 확인할 수 없으면 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비 스키마 바운드 참조의 경우 참조 된 엔터티는 이름 확인이 호출자에 종속 되는 경우 또는 데이터베이스에 존재 하지 않을 경우 ID 확인할 수 없습니다.  후자의 경우,이 따라 is_caller_dependent는 1로 설정 됩니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
 |referenced_minor_id|**int**|참조된 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. 예를 들어 참조된 엔터티 자체를 나열하는 행에서 referenced_minor_is는 0입니다.<br /><br /> 비스키마 바운드 참조의 경우 모든 참조된 엔터티를 바인딩할 수 있는 경우에만 열 종속성이 보고됩니다. 바인딩할 수 없는 참조된 엔터티가 있는 경우 열 수준 종속성이 보고되지 않으며 referenced_minor_id는 0입니다. 예 4를 참조하십시오.|  
 |referenced_class|**tinyint**|참조된 엔터티의 클래스입니다.<br /><br /> 1 = 개체 또는 열<br /><br /> 6 = 형식<br /><br /> 10 = XML 스키마 컬렉션<br /><br /> 21 = 파티션 함수|  
 |referenced_class_desc|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  

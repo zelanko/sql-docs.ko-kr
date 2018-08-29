@@ -1,5 +1,5 @@
 ---
-title: sys.table_types (Transact SQL) | Microsoft 문서
+title: sys.table_types (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - UDTT
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eef7f540231ff230bf32e4f2e0d4613c5dab8477
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5fd03f2faea1d877ba755bfd53220e0690456f27
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559253"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43079893"
 ---
 # <a name="systabletypes-transact-sql"></a>sys.table_types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 정의 테이블 형식의 속성을 표시합니다. 테이블 형식은 테이블 변수 또는 테이블 반환 매개 변수를 선언하는 데 사용할 수 있는 형식입니다. 각 테이블 형식에는 **type_table_object_id** 즉 외래 키에 있는 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 보기. ID 열이 유사한 방식으로 다양 한 카탈로그 뷰를 쿼리 하는 데 사용할 수 있는 **object_id** 의 열 및 제약 조건 등과 같은 테이블 형식의 구조를 검색 하는 일반 테이블의 열입니다.    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 정의 테이블 형식의 속성을 표시합니다. 테이블 형식은 테이블 변수 또는 테이블 반환 매개 변수를 선언하는 데 사용할 수 있는 형식입니다. 각 테이블 형식에는 **type_table_object_id** 외래 키로는 합니다 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰. ID 열이를 사용 하 여 유사한 방식으로 다양 한 카탈로그 뷰를 쿼리 하는 **object_id** 해당 열 및 제약 조건과 같은 테이블 형식의 구조를 검색 하는 일반 테이블의 열입니다.    
  
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

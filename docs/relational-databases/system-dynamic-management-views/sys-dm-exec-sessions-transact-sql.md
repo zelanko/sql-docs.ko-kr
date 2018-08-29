@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sessions (Transact SQL) | Microsoft 문서
+title: sys.dm_exec_sessions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fac27390005afad19f67c5e774c381067ee78745
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 018c23894e8f8b9303ed80213f7312dc90aec967
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542103"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43075746"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증된 세션당 행 하나를 반환합니다. sys.dm_exec_sessions는 모든 활성 사용자 연결 및 내부 태스크에 대한 정보를 표시하는 서버 범위 뷰입니다. 이 정보에는 클라이언트 버전, 클라이언트 프로그램 이름, 클라이언트 로그인 시간, 로그인 사용자, 현재 세션 설정 등이 포함됩니다. sys.dm_exec_sessions를 사용하여 우선 현재 시스템 로드를 보고 원하는 세션을 확인한 다음 다른 동적 관리 뷰 또는 동적 관리 함수를 사용하여 해당 세션에 대한 자세한 내용을 볼 수 있습니다.  
   
- Sys.dm_exec_connections, sys.dm_exec_sessions와 sys.dm_exec_requests 동적 관리 뷰를 매핑하는 [옵션](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블입니다.  
+ Sys.dm_exec_connections, sys.dm_exec_sessions 및 sys.dm_exec_requests 동적 관리 뷰를 매핑하는 [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블입니다.  
   
-> **참고:** 에서이 메서드를 호출 하 여 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_sessions**.  
+> **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 하거나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_sessions**합니다.  
   
 |열 이름|데이터 형식|설명 및 버전 정보|  
 |-----------------|---------------|-----------------|  
@@ -54,12 +54,12 @@ ms.locfileid: "39542103"
 |nt_domain|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 도메인입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |nt_user_name|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 사용자 이름입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |상태|**nvarchar(30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행** -현재 하나 이상의 요청을 실행 합니다.<br /><br /> **휴면** -현재 요청이 실행 되 고<br /><br /> **휴지** -세션 연결 풀링으로 인해 다시 설정 하 고 사전 로그인 상태입니다.<br /><br /> **사전 연결** -세션이 리소스 관리자 분류자입니다.<br /><br /> Null을 허용하지 않습니다.|  
-|context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. 컨텍스트 정보를 사용 하 여 사용자가 설정 되 고 [CONTEXT_INFO 설정](../../t-sql/statements/set-context-info-transact-sql.md) 문. Null을 허용합니다.|  
+|context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. 컨텍스트 정보를 사용 하 여 사용자가 설정 되는 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문입니다. Null을 허용합니다.|  
 |cpu_time|**int**|이 세션에서 사용한 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |memory_usage|**int**|이 세션에서 사용한 8KB 메모리 페이지 수입니다. Null을 허용하지 않습니다.|  
 |total_scheduled_time|**int**|세션(세션 내 요청)이 실행되도록 예약된 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |total_elapsed_time|**int**|세션을 설정한 후 경과된 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
-|endpoint_id|**int**|세션과 연관된 끝점의 ID입니다. Null을 허용하지 않습니다.|  
+|endpoint_id|**int**|세션과 연관된 엔드포인트의 ID입니다. Null을 허용하지 않습니다.|  
 |last_request_start_time|**datetime**|세션에서 마지막 요청이 시작된 시간입니다. 여기에는 현재 실행 중인 요청이 포함됩니다. Null을 허용하지 않습니다.|  
 |last_request_end_time|**datetime**|세션에서 마지막 요청이 완료된 시간입니다. Null을 허용합니다.|  
 |reads|**bigint**|이 세션을 수행하는 동안 해당 세션의 요청에 의해 수행된 읽기 수입니다. Null을 허용하지 않습니다.|  

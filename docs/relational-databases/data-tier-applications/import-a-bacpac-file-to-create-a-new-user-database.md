@@ -32,13 +32,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1ece4cfc83ce8abf9eede88183bcca9c04816391
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 22669d2c229ef88ea6e953cf69d1b9e73bff9f21
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558463"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076879"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "39558463"
 2.  내보내기 파일의 데이터에서 대량 복사본 가져오기  
   
 ## <a name="sql-server-utility"></a>SQL Server 유틸리티  
- DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. 그러면 DAC가 **** 유틸리티 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **배포된 데이터 계층 응용 프로그램** 노드에 표시되고 **** 세부 정보 페이지에 보고됩니다.  
+ DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
   
 ## <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 가져오기 중에 만들어진 데이터베이스에는 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다. 단, 데이터베이스 데이터 정렬 및 호환성 수준은 DAC 내보내기 파일에 정의된 값으로 설정됩니다. DAC 내보내기 파일은 원본 데이터베이스의 값을 사용합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "39558463"
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]SP4(서비스 팩 4) 이상을 실행하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에만 DAC를 가져올 수 있습니다. 이후 버전에서 DAC를 내보내는 경우 DAC에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 지원되지 않는 개체가 포함될 수 있습니다. 이러한 DAC를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]인스턴스에 배포할 수 없습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 출처를 알 수 없거나 신뢰할 수 없는 DAC 내보내기 파일은 가져오지 않는 것이 좋습니다. 이러한 파일에 포함된 악성 코드가 의도하지 않은 Transact-SQL 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 내보내기 파일을 사용하려면 먼저 DAC의 압축을 풀고 저장 프로시저 및 다른 사용자 정의 코드와 같은 코드를 검사하세요. 이러한 검사를 수행하는 방법은 [Validate a DAC Package](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx)를 참조하세요.  
+ 출처를 알 수 없거나 신뢰할 수 없는 DAC 내보내기 파일은 가져오지 않는 것이 좋습니다. 이러한 파일에 포함된 악성 코드가 의도하지 않은 Transact-SQL 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 내보내기 파일을 사용하려면 먼저 DAC의 압축을 풀고 저장 프로시저 및 다른 사용자 정의 코드와 같은 코드를 검사하세요. 이러한 검사를 수행하는 방법은 [Validate a DAC Package](validate-a-dac-package.md)를 참조하세요.  
   
 ## <a name="security"></a>보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC 내보내기 파일에 저장됩니다. 파일을 가져오면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  

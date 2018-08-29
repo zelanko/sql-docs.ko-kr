@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 2: 데이터 가져오기 | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007204"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062214"
 ---
 # <a name="get-data"></a>데이터 가져오기
 
@@ -22,14 +22,14 @@ ms.locfileid: "38007204"
 
 이 단원에서 사용 하 여 **데이터 가져오기** AdventureWorksDW 예제 데이터베이스에 연결할 데이터, 미리 보기 및 필터를 선택 하 고 다음 모델 작업 영역으로 가져옵니다.  
   
-가져올 데이터를 사용 하 여 다양 한 원본에서에서 데이터를 가져올 수 있습니다. 파워 쿼리 M 수식을 사용 하 여 데이터를 쿼리할 수 있습니다 또는 [네이티브 SQL 쿼리 식](../tabular-models/ssas-import-query.md)합니다.
+내부적으로 데이터 가져오기에 연결 및 데이터 모델링 및 분석을 위해 바꾸기에 대 한 다양 한 도구를 제공 하는 파워 쿼리 됩니다. 자세한 내용은 참조 하세요 [전원 쿼리 설명서](https://docs.microsoft.com/power-query/)합니다. 
 
 > [!NOTE]
 > 이 자습서의 작업 및 이미지를 온-프레미스 서버에서 AdventureWorksDW2014 데이터베이스에 연결을 표시 합니다. 경우에 따라 Azure SQL Data Warehouse에 AdventureWorksDW 데이터베이스를 다른 개체 표시 될 수 있습니다. 그러나 이러한는 근본적으로 동일 합니다.
   
 이 단원에 소요되는 예상 시간: **10분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 
 이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [1 단원: 새 테이블 형식 모델 프로젝트를 만들](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)합니다.  
   

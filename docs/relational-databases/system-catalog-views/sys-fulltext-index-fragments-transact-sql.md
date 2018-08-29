@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_fragments (Transact SQL) | Microsoft 문서
+title: sys.fulltext_index_fragments (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2d6d073d2ed93208b0fc6c5fbe032b768392ee35
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0691f165a90b6bb8daa6e666b66dee9100ddfa9d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543019"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43078474"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- 쿼리 가능 조각이 많이 있는 경우 조각을 모두 병합하도록 전체 텍스트 인덱스를 포함하는 전체 텍스트 카탈로그를 다시 구성하는 것이 좋습니다. 다시 구성 하는 전체 텍스트 카탈로그 사용 [전체 텍스트 카탈로그 변경](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* 재구성. 예를 들어 `ftCatalog` 데이터베이스에서 `AdventureWorks2012`라는 전체 텍스트 카탈로그를 다시 구성하려면 다음을 입력합니다.  
+ 쿼리 가능 조각이 많이 있는 경우 조각을 모두 병합하도록 전체 텍스트 인덱스를 포함하는 전체 텍스트 카탈로그를 다시 구성하는 것이 좋습니다. 다시 구성 하는 전체 텍스트 카탈로그 사용 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* 다시 구성 합니다. 예를 들어 `ftCatalog` 데이터베이스에서 `AdventureWorks2012`라는 전체 텍스트 카탈로그를 다시 구성하려면 다음을 입력합니다.  
   
 ```  
 USE AdventureWorks2012;  

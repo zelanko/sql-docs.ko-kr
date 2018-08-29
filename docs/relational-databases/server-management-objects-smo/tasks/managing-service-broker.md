@@ -17,13 +17,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f56aaf619e61b8406474a390afad9d21fe07f217
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0c5df63aefb01268f3f9f0df7702842e80f1064c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548463"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43080444"
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "39548463"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceQueue> 개체는 메시지를 보내기 전과 메시지가 수신된 후 메시지를 저장합니다. 이 개체는 서비스 간의 비동기 통신을 지원하며 같은 대화 그룹의 메시지를 자동으로 잠그는 등의 기타 유용한 기능을 제공합니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> 개체는 대화에 대한 주소 지정 가능 끝점인 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 서비스를 나타냅니다. [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지는 한 서비스에서 다른 서비스로 전송됩니다. 서비스는 메시지를 보관할 큐를 지정하고 대상이 될 수 있는 서비스에 계약을 지정합니다.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> 개체는 대화에 대한 주소 지정 가능 엔드포인트인 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 서비스를 나타냅니다. [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지는 한 서비스에서 다른 서비스로 전송됩니다. 서비스는 메시지를 보관할 큐를 지정하고 대상이 될 수 있는 서비스에 계약을 지정합니다.  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 개체는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)]가 원격 서비스와의 통신 시 사용하는 보안 및 인증 설정을 나타냅니다.  
   

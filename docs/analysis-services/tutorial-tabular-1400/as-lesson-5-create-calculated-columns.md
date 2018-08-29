@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 5: 계산된 열 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 476eca07ed1367141372586ca13bd2a93d9d8105
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37973053"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063862"
 ---
 # <a name="create-calculated-columns"></a>계산 열 만들기
 
@@ -28,7 +28,7 @@ ms.locfileid: "37973053"
   
 이 단원에 소요되는 예상 시간: **15분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 
 이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [4 단원: 관계 만들기](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)합니다. 
   

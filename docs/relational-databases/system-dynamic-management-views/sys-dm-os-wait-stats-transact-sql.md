@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_wait_stats (TRANSACT-SQL) | Microsoft 문서
+title: sys.dm_os_wait_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 111
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1e4d6fc33210c17740a655b6348cad03905412c5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 253f8628a461f3d2e8ff27961e7dabfafe04d2a1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39565767"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076743"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,7 +122,7 @@ GO
 |BMPREPARTITION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BMPREPLICATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BPSORT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BROKER_CONNECTION_RECEIVE_TASK |연결 끝점에서 메시지를 받기 위한 액세스를 대기하는 경우에 발생합니다. 끝점에 대한 수신 액세스는 직렬화됩니다.| 
+|BROKER_CONNECTION_RECEIVE_TASK |연결 엔드포인트에서 메시지를 받기 위한 액세스를 대기하는 경우에 발생합니다. 엔드포인트에 대한 수신 액세스는 직렬화됩니다.| 
 |BROKER_DISPATCHER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_ENDPOINT_STATE_MUTEX |Service Broker 연결 끝점의 상태에 액세스 하려는 경합이 있을 때 발생 합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.| 
 |BROKER_EVENTHANDLER |태스크가 대기 하는 Service broker 주 이벤트 처리기에서 때 발생 합니다. 매우 짧게 발생해야 합니다.| 
@@ -368,7 +368,7 @@ GO
 |HTMEMO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HTREINIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HTREPARTITION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HTTP_ENUMERATION |시스템 시작 시에 HTTP를 시작할 HTTP 끝점을 열거하기 위해 발생합니다.| 
+|HTTP_ENUMERATION |시스템 시작 시에 HTTP를 시작할 HTTP 엔드포인트를 열거하기 위해 발생합니다.| 
 |HTTP_START |연결이 HTTP 초기화가 완료될 때까지 대기하는 경우에 발생합니다.| 
 |HTTP_STORAGE_CONNECTION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |IMPPROV_IOWAIT |SQL Server 대량 로드 I/O가 완료를 대기할 때 발생 합니다.| 

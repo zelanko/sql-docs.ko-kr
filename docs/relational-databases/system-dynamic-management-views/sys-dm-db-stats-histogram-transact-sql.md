@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (Transact SQL) | Microsoft 문서
+title: sys.dm_db_stats_histogram (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99c01084174fb87b023dec50aea0ac8dd77509a9
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dba0361e897d907af1eb6cd0b706168c41c616c4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541413"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43065628"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 현재에서 지정 된 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)에 대 한 통계 히스토그램을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 유사한 `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
@@ -69,7 +69,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
  
  에 대 한 결과 집합 `sys.dm_db_stats_histogram` 와 비슷한 정보를 반환 합니다 `DBCC SHOW_STATISTICS WITH HISTOGRAM` 도 포함 `object_id`합니다 `stats_id`, 및 `step_number`합니다.
 
- 때문에 열 `range_high_key` 는 sql_variant 데이터 형식을 사용 해야 할 수도 있습니다 `CAST` 또는 `CONVERT` 조건부가 아닌 문자열 상수와 비교 하는 경우.
+ 때문에 열 `range_high_key` 는 sql_variant 데이터 사용 해야 형식 `CAST` 또는 `CONVERT` 조건자 문자열이 아닌 상수를 사용 하 여 비교를 수행 하는 경우.
 
 ### <a name="histogram"></a>히스토그램
   
@@ -149,6 +149,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>관련 항목  
-[DBCC SHOW_STATISTICS (거래 SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+[DBCC SHOW_STATISTICS (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [개체 관련된 동적 관리 뷰 및 함수 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

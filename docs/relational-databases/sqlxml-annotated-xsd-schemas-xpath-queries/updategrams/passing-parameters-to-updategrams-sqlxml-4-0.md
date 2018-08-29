@@ -21,13 +21,13 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eb9b7473935e87e0bca27f90505471a142d12010
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cdfe34072c9eeda158cc36279e2e4371a197447e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554143"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43077512"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "39554143"
  Updategram을 사용하면 NULL을 매개 변수 값으로 전달할 수 있습니다. 에 NULL 매개 변수 값을 전달 하려면 지정 된 **nullvalue** 특성입니다. 에 할당 된 값을 **nullvalue** 특성 매개 변수 값으로 제공 됩니다. Updategram은 이 값을 NULL로 처리합니다.  
   
 > [!NOTE]  
->  ** \<sql:header >** 및 ** \<updg:header >** 를 지정 해야 합니다 **nullvalue** unqualified로 반면;에서 ** \<updg:sync >** 를 지정할 합니다 **nullvalue** 으로 정규화 된 (예를 들어 **updg: nullvalue**).  
+>  **\<sql:header >** 및  **\<updg:header >** 를 지정 해야 합니다 **nullvalue** unqualified로 반면;에서  **\<updg:sync >** 를 지정할 합니다 **nullvalue** 으로 정규화 된 (예를 들어 **updg: nullvalue**).  
   
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면에 지정 된 요구 사항을 충족 해야 합니다 [SQLXML 예 실행에 대 한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
