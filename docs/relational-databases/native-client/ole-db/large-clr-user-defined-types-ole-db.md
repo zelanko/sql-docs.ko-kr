@@ -17,13 +17,13 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 300d8721640d39cc31036b77b5a9223d08adf5dd
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 01f2d3f7fa12ece687d2794105361e8ef2a96406
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554553"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082731"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "39554553"
   
 |SQL Server 데이터 형식|OLE DB 데이터 형식|메모리 레이아웃|값|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE[](바이트 배열)\)|132(oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE[]\(바이트 배열)\)|132(oledb.h)|  
   
  UDT 값은 바이트 배열로 나타납니다. 16진수 문자열로의 변환 및 그 반대의 변환이 지원됩니다. 리터럴 값은 접두사 "0x"를 사용하여 16진수 문자열로 나타납니다. 16진수 문자열은 밑수가 16인 이진 데이터의 텍스트 표현입니다. 예를 들어 서버 형식 **varbinary(10)** 를 DBTYPE_STR로 변환하는 경우 모든 문자 쌍이 단일 바이트를 나타내는 20자의 16진수 표현이 생성됩니다.  
   

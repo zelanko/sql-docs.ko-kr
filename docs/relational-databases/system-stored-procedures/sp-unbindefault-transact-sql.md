@@ -1,5 +1,5 @@
 ---
-title: sp_unbindefault (Transact SQL) | Microsoft Docs
+title: sp_unbindefault (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80453657de70133f269b35387813389ecb7cff0a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 51d6461bf5ad23cc39853a86054652bb8d20b63a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262321"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031925"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33262321"
   현재 데이터베이스의 열에서 또는 별칭 데이터 형식에서 기본값의 바인딩을 해제(제거)합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT 키워드를 사용 하 여 기본 정의 만드는 것이 좋습니다는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 문 대신 합니다.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT 키워드를 사용 하 여 기본 정의 만드는 것이 좋습니다는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 하거나 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 문 대신 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,23 +49,23 @@ sp_unbindefault [ @objname = ] 'object_name'
   
 ## <a name="arguments"></a>인수  
  [ **@objname=** ] **'***object_name***'**  
- 바인딩 해제될 기본값이 있는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 은 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다.  
+ 바인딩 해제될 기본값이 있는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다.  
   
  별칭 데이터 형식에서 기본값의 바인딩을 해제하는 경우 같은 기본값을 가진 이 데이터 형식의 열에 대한 바인딩도 해제됩니다. 기본값을 직접 바인딩한 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
->  *object_name* 괄호를 사용할 수 있습니다 **[]** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
+>  *object_name* 대괄호를 포함할 수 있습니다 **[]** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 별칭 데이터 형식에서 기본값의 바인딩을 해제하는 경우에만 사용됩니다. *futureonly_flag* 은 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 은 **futureonly**, 데이터 형식의 기존 열에 지정된 된 기본 손실 되지 않습니다.  
+ 별칭 데이터 형식에서 기본값의 바인딩을 해제하는 경우에만 사용됩니다. *futureonly_flag* 됩니다 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 됩니다 **futureonly**, 데이터 형식의 기존 열에 지정된 된 기본 손실 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- 기본값의 텍스트를 표시 하려면 실행 **sp_helptext** 매개 변수 기본값의 이름으로 합니다.  
+## <a name="remarks"></a>Remarks  
+ 기본값의 텍스트를 표시 하려면 실행 **sp_helptext** 매개 변수로 기본값의 이름입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  테이블 열에서 기본값의 바인딩을 해제하려면 테이블에 대한 ALTER 사용 권한이 필요합니다. 별칭 데이터 형식에서 기본값의 바인딩을 해제하려면 유형에 대한 CONTROL 사용 권한 또는 유형이 속한 스키마에 대한 ALTER 사용 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -92,7 +92,7 @@ EXEC sp_unbindefault 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>4. 구분 식별자 사용  
- 다음 예제에서 구분된 식별자를 사용 하 여 *object_name* 매개 변수입니다.  
+ 다음 예제에서 구분된 식별자를 사용 하 여 보여 줍니다 *object_name* 매개 변수입니다.  
   
 ```  
 CREATE TABLE [t.3] (c1 int); -- Notice the period as part of the table   
@@ -106,9 +106,9 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_bindefault&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
