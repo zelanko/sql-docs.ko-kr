@@ -19,23 +19,23 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83662d032d762eb4109576ab2f2aa253aaabb6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845508"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786179"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   BLOB(Binary Large Object)을 나타냅니다.  
   
- **패키지에 대 한** com.microsoft.sqlserver.jdbc  
+ **패키지:** com.microsoft.sqlserver.jdbc  
   
  **확장:** java.lang.Object  
   
- **구현:** java.sql.Blob, java.io.Serializable  
+ 구현:** java.sql.Blob, java.io.Serializable  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,10 +44,10 @@ ms.locfileid: "32845508"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>주의  
- BLOB에 저장 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] IMAGE 데이터 형식으로.  
+## <a name="remarks"></a>Remarks  
+ BLOB은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 IMAGE 데이터 형식으로 저장됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerBlob 멤버](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

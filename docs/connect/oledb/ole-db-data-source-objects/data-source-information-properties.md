@@ -18,14 +18,14 @@ helpviewer_keywords:
 - information properties [OLE DB]
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0fd9afc87acfb4c39e406ea3deb0b5e9bd7e82d0
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 06a6f4152876f123d1e7fc7ecaf009061d10aa59
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108135"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031956"
 ---
 # <a name="data-source-information-properties"></a>데이터 원본 정보 속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

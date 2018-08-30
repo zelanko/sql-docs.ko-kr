@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd787ee638e570419362fd62a4844ff856e8dbf1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3287815e6622d2d44693b401e2829275d22a2785
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982355"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787490"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server의 기능
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,28 +35,28 @@ Azure Active Directory 사용자, DBA의 및 응용 프로그램 프로그래머
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver 11 for SQL Server  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 에서 제공되는 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]Native Client ODBC 드라이버에 대한 모든 기능이 포함되어 있습니다. 자세한 내용은 [SQL Server Native Client 프로그래밍](http://msdn.microsoft.com/library/ms130892.aspx)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ODBC 드라이버는 Windows 운영 체제에서 제공되는 ODBC 드라이버를 기반으로 합니다. 자세한 내용은 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)를 참조하세요.  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 제공되는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native Client ODBC 드라이버에 대한 모든 기능이 포함되어 있습니다. 자세한 내용은 [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 Windows 운영 체제에서 제공되는 ODBC 드라이버를 기반으로 합니다. 자세한 내용은 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)를 참조하세요.  
   
-이 릴리스의 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 에는 다음 새 기능이 포함되어 있습니다.  
+이 릴리스의 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 다음 새 기능이 포함되어 있습니다.  
   
 ### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>로그인 시간 제한을 지정 하는 것에 대 한 bcp.exe – l 옵션
  
-–l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 대한 `bcp.exe` 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp.exe`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다. 약 10초 미만의 로그인 시간 제한은 안정적이지 않습니다.  
+–l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 `bcp.exe` 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp.exe`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다. 약 10초 미만의 로그인 시간 제한은 안정적이지 않습니다.  
   
 ### <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에서 [드라이버 인식 연결 풀링](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 자세한 내용은 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)을 참조하세요.  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 자세한 내용은 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)을 참조하세요.  
   
 ### <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]는 [비동기 실행(알림 방법)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)을 지원합니다. 사용 샘플은 [비동기 실행&#40;알림 방법&#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)을 참조하세요.  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 [비동기 실행(알림 방법)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)을 지원합니다. 사용 샘플은 [비동기 실행&#40;알림 방법&#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)을 참조하세요.  
   
 ### <a name="connection-resiliency"></a>연결 복원력
 응용 프로그램이 Microsoft Azure SQL 데이터베이스에 연결되어 있는지 확인하려면 Windows 기반 ODBC 드라이버가 유휴 연결을 복원하면 됩니다. 자세한 내용은 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)을 참조하세요.  
   
 ## <a name="behavior-changes"></a>동작 변경 내용
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client는 `-y0` 에 대 한 옵션 `sqlcmd.exe` 출력이 표시 너비를 0 경우 1MB에서 잘립니다.
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 `-y0` 에 대 한 옵션 `sqlcmd.exe` 출력이 표시 너비를 0 경우 1MB에서 잘립니다.
   
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]부터 `–y0`이 지정된 경우 단일 열에서 검색할 수 있는 데이터 양에 제한이 없습니다. 이제 `sqlcmd.exe`가 2GB([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 최대 데이터 형식) 정도의 열을 스트림합니다.  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]부터 `–y0`이 지정된 경우 단일 열에서 검색할 수 있는 데이터 양에 제한이 없습니다. 이제 `sqlcmd.exe`가 2GB([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 최대 데이터 형식) 정도의 열을 스트림합니다.  
   
 또 다른 차이점은 해당 둘 다 지정 하면 `-h` 및 `-y0` 이제 오류 옵션이 호환 되지 않음을 보고를 생성 합니다. 열 제목 사이에 인쇄할 행 수를 지정하고 `-y0`과 호환된 적 없었던 `-h`는 무시되었지만 헤더는 인쇄되지 않았습니다.
   

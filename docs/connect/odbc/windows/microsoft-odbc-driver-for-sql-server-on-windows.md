@@ -14,17 +14,17 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 08d1c94854e4d073d4cb26a3e2e320a0d93c08f1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047441"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787937"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-에 대 한 Microsoft ODBC Driver [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 는 Microsoft 표준 ODBC 인터페이스를 구현 응용 프로그래밍 인터페이스 (API)를 제공 하는 독립 실행형 ODBC 드라이버 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.
+에 대 한 Microsoft ODBC Driver [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 Microsoft 표준 ODBC 인터페이스를 구현 응용 프로그래밍 인터페이스 (API)를 제공 하는 독립 실행형 ODBC 드라이버 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.
 
 Microsoft ODBC Driver for SQL Server를 사용하여 새 응용 프로그램을 만들 수 있습니다. 또한 현재 이전 ODBC 드라이버를 사용하는 이전 응용 프로그램을 업그레이드할 수도 있습니다. ODBC Driver for SQL Server는 Azure SQL 데이터베이스, Azure SQL 데이터 웨어하우스, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 SQL Server 2005에 대한 연결을 지원합니다.  
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver for SQL Server를 사용하여 새 응용 프로그램을 
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>드라이버 인식 연결 풀링</li><li>연결 복원력</li><li>비동기 실행(폴링 메서드)</li></ul> |    
 
 ## <a name="documentation"></a>설명서  
-이 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 문서에는 다음이 포함되어 있습니다.  
+이 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문서에는 다음이 포함되어 있습니다.  
   
 -   [릴리스 정보](../../../connect/odbc/windows/release-notes.md)  
 -   [Windows 기반 Microsoft ODBC Driver for SQL Server의 기능](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  

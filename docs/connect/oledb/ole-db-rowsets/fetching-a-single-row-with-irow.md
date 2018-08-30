@@ -19,14 +19,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7398658ce254bcfd8b4b1059625d8628852225aa
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b83b13e1cd0c4818a21351fb5433dae89f54cd0a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108945"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032358"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>IRow를 사용하여 단일 행 인출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

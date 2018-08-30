@@ -14,24 +14,24 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a60bc049b02ca998119fd4741fa51589a029aeca
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 8cd04af79e5b9d9da8aa67c87f8e9504e0145b78
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452297"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786013"
 ---
 # <a name="working-with-large-data"></a>큰 데이터 작업
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-JDBC 드라이버에서는 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있는 선택 버퍼링이 지원됩니다. 적응 버퍼링을 사용하면 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 문 실행 결과를 한 번에 모두 검색하는 것이 아니라 응용 프로그램에 필요할 때 검색합니다. 또한 응용 프로그램에서 더 이상 액세스할 수 없는 결과를 즉시 삭제합니다.
+JDBC 드라이버에서는 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있는 선택 버퍼링이 지원됩니다. 적응 버퍼링을 사용하면 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 문 실행 결과를 한 번에 모두 검색하는 것이 아니라 응용 프로그램에 필요할 때 검색합니다. 또한 응용 프로그램에서 더 이상 액세스할 수 없는 결과를 즉시 삭제합니다.
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] JDBC 드라이버 버전 1.2에서 버퍼링 모드의 기본값은 "**full**"이었습니다. 즉 응용 프로그램에서 연결 속성 또는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하여 "responseBuffering" 연결 속성을 "**adaptive**"로 설정하지 않은 경우 이 드라이버에서는 전체 결과를 서버에서 한 번에 읽어오는 동작이 지원됩니다. 적응 버퍼링 동작을 사용하려면 응용 프로그램에서 명시적으로 "responseBuffering" 연결 속성을 "**adaptive**"로 설정해야 합니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] JDBC 드라이버 버전 1.2에서 버퍼링 모드의 기본값은 "**full**"이었습니다. 즉 응용 프로그램에서 연결 속성 또는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하여 "responseBuffering" 연결 속성을 "**adaptive**"로 설정하지 않은 경우 이 드라이버에서는 전체 결과를 서버에서 한 번에 읽어오는 동작이 지원됩니다. 적응 버퍼링 동작을 사용하려면 응용 프로그램에서 명시적으로 "responseBuffering" 연결 속성을 "**adaptive**"로 설정해야 합니다.  
   
-**adaptive** 값이 기본 버퍼링 모드이며 JDBC 드라이버는 필요에 따라 가능한 최소한의 데이터를 버퍼링합니다. 적응 버퍼링 사용에 대 한 자세한 내용은 참조 하세요. [를 사용 하 여 적응 버퍼링](../../connect/jdbc/using-adaptive-buffering.md)합니다.  
+**adaptive** 값이 기본 버퍼링 모드이며 JDBC 드라이버는 필요에 따라 가능한 최소한의 데이터를 버퍼링합니다. 적응 버퍼링 사용에 대 한 자세한 내용은 참조 하세요. [를 사용 하 여 선택 버퍼링](../../connect/jdbc/using-adaptive-buffering.md)합니다.  
   
- 이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서 큰 값 데이터를 검색하는 데 사용할 수 있는 여러 가지 방법에 대해 설명합니다.  
+ 이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 큰 값 데이터를 검색하는 데 사용할 수 있는 여러 가지 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

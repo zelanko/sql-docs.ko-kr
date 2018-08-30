@@ -15,12 +15,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cd3bb6f733b9d9cac1dc3973e65199c9357bbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054721"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785529"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>이 버전의 드라이버에서 알려진 문제
 
@@ -30,7 +30,7 @@ ms.locfileid: "38054721"
 
 추가 문제는 [Microsoft ODBC 드라이버 팀 블로그](http://blogs.msdn.com/b/sqlnativeclient/)에 게시됩니다.  
 
-- Windows, Linux 및 macOS는 PUA(사용자 지정 영역) 또는 EUDC(최종 사용자 정의)의 문자를 다르게 변환합니다. [!INCLUDE[tsql](../../../includes/tsql_md.md)] 내에서 서버에 수행되는 변환은 Windows 변환 라이브러리를 사용합니다. 드라이버의 변환은 Windows, Linux 또는 macOS 변환 라이브러리를 사용 합니다. 이러한 변환을 수행할 때 각 라이브러리는 다른 결과를 생성할 수 있습니다. 자세한 내용은 [최종 사용자 정의 및 개인 사용자 영역 문자](http://msdn.microsoft.com/library/dd317802.aspx)를 참조하세요.
+- Windows, Linux 및 macOS는 PUA(사용자 지정 영역) 또는 EUDC(최종 사용자 정의)의 문자를 다르게 변환합니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 내에서 서버에 수행되는 변환은 Windows 변환 라이브러리를 사용합니다. 드라이버의 변환은 Windows, Linux 또는 macOS 변환 라이브러리를 사용 합니다. 이러한 변환을 수행할 때 각 라이브러리는 다른 결과를 생성할 수 있습니다. 자세한 내용은 [최종 사용자 정의 및 개인 사용자 영역 문자](/windows/desktop/Intl/end-user-defined-characters)를 참조하세요.
 
 - 인코딩이 u t F-8 인 경우 드라이버 관리자를 변환 하지 않습니다 올바르게 항상 u t F-8에서 u t F-16으로. 현재 데이터 손상이 문자열에 하나 이상의 문자가 올바른 utf-8 문자가 없을 때 발생 합니다. ASCII 문자에 대 한 연결이 올바르게 매핑됩니다. ODBC API의 SQLCHAR 버전(예: SQLDriverConnectA)을 호출할 때 드라이버 관리자가 이 변환을 시도합니다. ODBC API의 SQLWCHAR 버전(예: SQLDriverConnectW)을 호출할 때 드라이버 관리자가 이 변환을 시도하지 않습니다.  
 

@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226badb1031792badc1601cd12c2a0e2f13c9bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4132dfdc915f45f67b267a197dbfeef2004eb36f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827768"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784988"
 ---
 # <a name="application-security"></a>응용 프로그램 보안
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,11 +63,11 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  "file:/install_dir/lib/-" 코드는 JDBC 드라이버의 설치 디렉터리를 나타냅니다.  
   
 ## <a name="protecting-server-communication"></a>서버 통신 보호  
- JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스와 통신할 경우 IPSEC(인터넷 프로토콜 보안), SSL(Secure Sockets Layer) 또는 둘 다를 사용하여 통신 채널의 보안을 유지할 수 있습니다.  
+ JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 통신할 경우 IPSEC(인터넷 프로토콜 보안), SSL(Secure Sockets Layer) 또는 둘 다를 사용하여 통신 채널의 보안을 유지할 수 있습니다.  
   
- SSL 지원을 사용하여 IPSec 외에 추가 수준의 보호 기능을 제공할 수 있습니다. SSL을 사용 하는 방법에 대 한 자세한 내용은 참조 [SSL 암호화를 사용 하 여](../../connect/jdbc/using-ssl-encryption.md)합니다.  
+ SSL 지원을 사용하여 IPSec 외에 추가 수준의 보호 기능을 제공할 수 있습니다. SSL을 사용하는 방법에 대한 자세한 내용은 [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

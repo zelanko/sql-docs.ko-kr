@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6e9360b346ed267fcaad61ef6c06b9408c837b8d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "35402985"
 ---
 # <a name="operators-ssis-expression"></a>연산자(SSIS 식)

@@ -1,5 +1,5 @@
 ---
-title: 시스템 요구 사항 Microsoft 드라이버에 대 한 for PHP for SQL Server | Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfb813b857557a3a30bd89d9c96346ee261bc89
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174950"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787269"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +67,7 @@ Windows 버전의 64 비트 버전 Windows의 드라이버를 다운로드 하�
 |ODBC 드라이버 13  | | | |Y| | |
 |ODBC 드라이버 11  |Y|Y|Y|Y|Y|Y|
 
-SQLSRV 드라이버를 사용 하는 경우 [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) 버전에 대 한 정보가 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Microsoft ODBC Driver for SQL Server에서 사용 되 고는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]합니다. PDO_SQLSRV 드라이버를 사용하는 경우 [PDO::getAttribute](../../connect/php/pdo-getattribute.md)를 사용하여 버전을 검색할 수 있습니다.  
+SQLSRV 드라이버를 사용 하는 경우 [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) 버전에 대 한 정보가 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server에서 사용 되 고는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]합니다. PDO_SQLSRV 드라이버를 사용하는 경우 [PDO::getAttribute](../../connect/php/pdo-getattribute.md)를 사용하여 버전을 검색할 수 있습니다.  
 
 ## <a name="sql-server"></a>SQL Server
 

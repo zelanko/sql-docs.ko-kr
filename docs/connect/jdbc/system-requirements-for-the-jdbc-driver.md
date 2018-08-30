@@ -14,17 +14,17 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662285"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785659"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]의 데이터에 액세스하려면 컴퓨터에 다음 구성 요소를 설치해야 합니다.
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]의 데이터에 액세스하려면 컴퓨터에 다음 구성 요소를 설치해야 합니다.
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]([다운로드](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
@@ -44,7 +44,7 @@ ms.locfileid: "39662285"
   
 **SQL Server용 Microsoft JDBC Driver 7.0**  
 
-  JDBC 드라이버 7.0 각 설치 패키지에 대 한 두 개의 JAR 클래스 라이브러리가: **mssql-jdbc-7.0.0.jre8.jar**, 및 **mssql-jdbc-7.0.0.jre10.jar**합니다.
+  JDBC Driver 6.2에는 각 설치 패기지에 **mssql-jdbc-6.2.2.jre7.jar** 및 **mssql-jdbc-6.2.2.jre8.jar**의 두 JAR 클래스 라이브러리가 포함되어 있습니다.
 
   JDBC Driver 7.0은 모든 주요 Sun 동등 Java 가상 머신에서 사용 가능하고 지원되지만 Sun JRE 8.0 및 10.0에 대해서만 테스트되었습니다.
   
@@ -68,7 +68,7 @@ ms.locfileid: "39662285"
   
 **SQL Server용 Microsoft JDBC Driver 6.4:**  
 
-  JDBC Driver 6.4 각 설치 패키지에 대 한 3 개의 JAR 클래스 라이브러리가: **mssql-jdbc-6.4.0.jre7.jar**를 **mssql-jdbc-6.4.0.jre8.jar**, 및 **mssql-jdbc-6.4.0.jre9.jar** .
+  JDBC Driver 6.2에는 각 설치 패기지에 **mssql-jdbc-6.2.2.jre7.jar** 및 **mssql-jdbc-6.2.2.jre8.jar**의 두 JAR 클래스 라이브러리가 포함되어 있습니다.
 
   JDBC Driver 6.4는 모든 주요 Sun 동등 Java 가상 머신에서 사용 가능하고 지원되지만 Sun JRE 7.0, 8.0 및 9.0에 대해서만 테스트되었습니다.
   
@@ -149,9 +149,9 @@ JDBC Driver 6.4 Maven 중앙 리포지토리에서 사용할 수 있는 이기�
  JDBC 드라이버는 JVM(Java Virtual Machine)의 사용을 지원하는 모든 운영 체제에서 작동하도록 설계되어 있지만 Sun Solaris, SUSE Linux 및 Windows 운영 체제에서만 공식적으로 테스트가 완료되었습니다.  
   
 ## <a name="supported-languages"></a>지원되는 언어  
- JDBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 모든 열 데이터 정렬을 지원합니다. JDBC 드라이버에서 지 원하는 데이터 정렬에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버의 국가별 기능](../../connect/jdbc/international-features-of-the-jdbc-driver.md)합니다.  
+ JDBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 열 데이터 정렬을 지원합니다. JDBC 드라이버에서 지 원하는 데이터 정렬에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버의 국가별 기능](../../connect/jdbc/international-features-of-the-jdbc-driver.md)합니다.  
   
- 데이터 정렬에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서의 "데이터 정렬 사용"을 참조하세요.  
+ 데이터 정렬에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "데이터 정렬 사용"을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

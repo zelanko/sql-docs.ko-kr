@@ -14,23 +14,23 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 514368a42c47213db586b49fb521ca9a4b19a273
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d4ae3c44fadc45cf577bc3da4801580ed480f27
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845958"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786731"
 ---
 # <a name="sqlserverclob-class"></a>SQLServerClob 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   CLOB(Character Large Binary Object)을 나타냅니다.  
   
- **패키지에 대 한** com.microsoft.sqlserver.jdbc  
+ **패키지:** com.microsoft.sqlserver.jdbc  
   
  **확장:** java.lang.Object  
   
- **구현:** java.sql.Clob, java.io.Serializable  
+ 구현:** java.sql.Clob, java.io.Serializable  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,10 +39,10 @@ ms.locfileid: "32845958"
 public class SQLServerClob  
 ```  
   
-## <a name="remarks"></a>주의  
- CLOB에 저장 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] TEXT 또는 NTEXT 데이터 형식으로.  
+## <a name="remarks"></a>Remarks  
+ CLOB은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 TEXT 또는 NTEXT 데이터 형식으로 저장됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerClob 멤버](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

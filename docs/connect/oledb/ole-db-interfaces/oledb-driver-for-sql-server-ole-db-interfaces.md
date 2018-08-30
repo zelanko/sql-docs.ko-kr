@@ -1,5 +1,5 @@
 ---
-title: SQL Server (OLE DB) 참조에 대 한 OLE DB 드라이버 | Microsoft Docs
+title: SQL Server용 OLE DB 드라이버(OLE DB) 참조
 description: SQL Server용 OLE DB 드라이버(OLE DB) 참조
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, OLE DB
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d4b8fbd8cee581e747b79b5bc34598e3c1367fb3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105809"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017692"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>SQL Server용 OLE DB 드라이버(OLE DB) 인터페이스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

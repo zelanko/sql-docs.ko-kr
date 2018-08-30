@@ -21,14 +21,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, asynchronous operations
 - OLE DB Driver for SQL Server, asynchronous operations
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e42374d2d3abc982dc8c2d2defddf724ee72c9d1
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a6413c21dd80c96c57a0c4f7e5e60cb12683adc2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108045"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025164"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

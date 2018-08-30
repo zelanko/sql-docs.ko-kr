@@ -1,5 +1,5 @@
 ---
-title: 시스템 요구 사항 (ODBC Driver for SQL Server) | Microsoft Docs
+title: SQL Server용 OLE DB 드라이버의 시스템 요구 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -18,17 +18,17 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bab69d8a2ebf405e99cc9cff7e4cdadb94d79f98
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fcac85e31f20d84377a2788e373892e05e8fddfa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047486"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786016"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-이 항목에서는 Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver를 사용하기 위한 요구 사항을 나열합니다.
+이 항목에서는 Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver를 사용하기 위한 요구 사항을 나열합니다.
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>SQL Server용 Microsoft ODBC Driver 13, 13.1 및 17
@@ -52,7 +52,7 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64 비트 버전에 대�
 |Ubuntu Linux 16.10|13, 13.1|
 |Ubuntu Linux 17.10|17|
 
-에 대 한 패키지를 설치 합니다 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 및 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 및 macOS에서 드라이버의 종속성 에설명된대로사용자배포의패키지관리시스템을사용하여을설치하는경우에자동으로해결[ 드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.
+에 대 한 패키지를 설치 합니다 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 및 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux 및 macOS에서 드라이버의 종속성 에설명된대로사용자배포의패키지관리시스템을사용하여을설치하는경우에자동으로해결[ 드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - transactions [OLE DB]
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 04be1dd71842471a05b3d0f46655f13a0113768f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 3cf4aa84b59e41976383b6d5d567579ba2b457bf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108685"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022332"
 ---
 # <a name="transactions"></a>의
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

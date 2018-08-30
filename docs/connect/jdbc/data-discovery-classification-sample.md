@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c3f420269314667729836d0f6f536935ebe6ec5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467781"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786015"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이렇게 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에는 결과 집합 getter 메서드를 사용 하 여 검색 하는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ' SQL 데이터 검색 및 분류 ' 테이블의 정보는 이러한 정보를 보관 합니다.
+이렇게 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에는 결과 집합 getter 메서드를 사용 하 여 검색 하는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' SQL 데이터 검색 및 분류 ' 테이블의 정보는 이러한 정보를 보관 합니다.
   
 이 샘플에 대 한 코드 파일의 이름은 DataDiscoveryAndClassification.java를 하 고 다음 위치에서 찾을 수 있습니다.  
 

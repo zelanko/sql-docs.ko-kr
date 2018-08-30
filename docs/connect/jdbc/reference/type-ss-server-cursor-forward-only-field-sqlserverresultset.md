@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7af382db57ad0fbd3ecc615e2ab4f142398ec2b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 457c2a8e537b06d444e122f3e3ea1b0e4d6bf5f9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848678"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783911"
 ---
-# <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드 (SQLServerResultSet)
+# <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 빠른 정방향 전용, 읽기 전용 커서 유형입니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 빠른 정방향 전용의 읽기 전용 커서 유형을 지정하는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,9 +39,9 @@ public static final int TYPE_SS_SERVER_CURSOR_FORWARD_ONLY
 ```  
   
 ## <a name="field-value"></a>필드 값  
- **int** 2004 년의 값입니다.  
+ **int** 값 1004입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

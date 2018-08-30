@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7bea017a9fd36dc0e910fc2dfff69df10aabbde
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0261dc230cd255057a893ba41306bb9e836f85fd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453080"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786571"
 ---
 # <a name="retrieving-result-set-data-sample"></a>결과 집합 데이터 샘플 검색
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에서 데이터 집합을 검색한 다음, 해당 데이터를 표시하는 방법을 보여 줍니다.
+이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터 집합을 검색한 다음, 해당 데이터를 표시하는 방법을 보여 줍니다.
 
 이 샘플의 코드 파일 이름은 RetrieveResultSet.java이며 다음과 같은 위치에 있습니다.
 

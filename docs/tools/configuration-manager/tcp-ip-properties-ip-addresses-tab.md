@@ -17,12 +17,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371bbb3c202087b88bb5b29ce7ea5976cd6bdf7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5c17fba2f6b8745cb58d829f1c9ac9e28cd682cd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986013"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786582"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -67,6 +67,6 @@ ms.locfileid: "37986013"
 ## <a name="see-also"></a>참고 항목  
  [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [TCP/IP를 사용하여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)   
- [SQL Server Browser 서비스](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
+ [SQL Server Browser 서비스](sql-server-browser-service.md)  
   
   

@@ -14,19 +14,19 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c3b72cb8d69659202b9a8f138ca14860dfe275c
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: d47c4234482c879e2ee564f8035c9e2033a469f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278555"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786197"
 ---
 # <a name="connecting-with-ssl-encryption"></a>SSL 암호화를 사용한 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   이 문서의 예제에서는 응용 프로그램이 Java 응용 프로그램에서 SSL(Secure Sockets Layer) 암호화를 사용할 수 있도록 하는 연결 문자열 속성을 사용하는 방법에 대해 설명합니다. **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** 및 **hostNameInCertificate** 등의 새 연결 문자열 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
   
- **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **true**로 설정되어 있는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 인증서의 유효성을 검사하지 않습니다. 이 설정은 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 자체 서명된 인증서만 있는 경우와 같이 테스트 환경에서 연결을 허용하는 데 필요합니다.  
+ **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **true**로 설정되어 있는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 인증서의 유효성을 검사하지 않습니다. 이 설정은 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 자체 서명된 인증서만 있는 경우와 같이 테스트 환경에서 연결을 허용하는 데 필요합니다.  
   
  다음 코드 예제에서는 연결 문자열에 **trustServerCertificate** 속성을 설정하는 방법을 보여 줍니다.  
   
@@ -37,7 +37,7 @@ String connectionUrl =
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **false**로 설정되어 있는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 인증서의 유효성을 검사합니다. 서버 인증서의 유효성 검사는 SSL 핸드셰이크의 일부로 서버가 연결할 올바른 서버인지 확인합니다. 서버 인증서의 유효성을 검사하려면 명시적으로 **trustStore** 및 **trustStorePassword** 연결 속성을 사용하거나 암시적으로 기본 JVM(Java Virtual Machine)의 기본 트러스트 저장소를 사용하여 연결 시에 트러스트 자료를 제공해야 합니다.  
+ **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **false**로 설정되어 있는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 인증서의 유효성을 검사합니다. 서버 인증서의 유효성 검사는 SSL 핸드셰이크의 일부로 서버가 연결할 올바른 서버인지 확인합니다. 서버 인증서의 유효성을 검사하려면 명시적으로 **trustStore** 및 **trustStorePassword** 연결 속성을 사용하거나 암시적으로 기본 JVM(Java Virtual Machine)의 기본 트러스트 저장소를 사용하여 연결 시에 트러스트 자료를 제공해야 합니다.  
   
  **trustStore** 속성은 클라이언트에서 신뢰하는 인증서 목록이 포함되어 있는 인증서 trustStore 파일에 대한 경로(파일 이름 포함)를 지정합니다. **trustStorePassword** 속성은 trustStore 데이터의 무결성을 검사하는 데 사용되는 암호를 지정합니다. JVM의 기본 트러스트 저장소를 사용 하 여에 대 한 자세한 내용은 참조는 [SSL 암호화를 위한 클라이언트 구성](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)합니다.  
   
@@ -67,7 +67,7 @@ String connectionUrl =
 > [!NOTE]  
 >  또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스에서 제공하는 적절한 **setter** 메서드를 사용하여 연결 속성의 값을 설정할 수 있습니다.  
   
- **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **false**로 설정되며 연결 문자열의 서버 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 인증서의 서버 이름과 일치하지 않는 경우 다음 오류가 발생합니다. 드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]로 보안 연결을 설정할 수 없습니다. 오류: "java.security.cert.CertificateException: SSL(Secure Sockets Layer)을 초기화하는 동안 인증서의 서버 이름에 대해 유효성 검사를 수행하지 못했습니다."  
+ **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **false**로 설정되며 연결 문자열의 서버 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 인증서의 서버 이름과 일치하지 않는 경우 다음 오류가 발생합니다. 드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보안 연결을 설정할 수 없습니다. 오류: "java.security.cert.CertificateException: SSL(Secure Sockets Layer)을 초기화하는 동안 인증서의 서버 이름에 대해 유효성 검사를 수행하지 못했습니다."  
   
 ## <a name="see-also"></a>참고 항목  
  [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)   

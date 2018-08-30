@@ -15,14 +15,14 @@ helpviewer_keywords:
 - sparse columns, OLE DB Driver for SQL Server
 - sparse columns, OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b17aee151630795f2cbee9c679058c748fbf31df
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1b2e03ba16922f4130203dd897612a418e456f5f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106969"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029762"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 스파스 열 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "39106969"
 
   OLE DB Driver for SQL Server는 스파스 열을 지원합니다. 스파스 열에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [스파스 열 사용](../../../relational-databases/tables/use-sparse-columns.md) 하 고 [열 집합 사용](../../../relational-databases/tables/use-column-sets.md)합니다.  
   
- SQL Server 용 OLE DB 드라이버에서 스파스 열 지원에 대 한 자세한 내용은 [스파스 열 지원 &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)합니다.  
+ 스파스 열에 대한 자세한 내용은 [SQL Server용 OLE DB 드라이버의 스파스 열 지원](../../oledb/ole-db/sparse-columns-support-ole-db.md)을 참조하세요.  
   
  이 기능을 보여 주는 예제 응용 프로그램에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](http://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
