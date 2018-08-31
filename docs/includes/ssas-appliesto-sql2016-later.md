@@ -1,1 +1,1 @@
-**적용 대상:**![예](media/yes.png)SQL Server Analysis Services(2016 이상)![아니요](media/no.png)Azure Analysis Services
+**적용 대상:** ![yes](media/yes.png)(2016부터 시작) 하는 SQL Server Analysis Services ![없음](media/no.png)Azure Analysis Services
