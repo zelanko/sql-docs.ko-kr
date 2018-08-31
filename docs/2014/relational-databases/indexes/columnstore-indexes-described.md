@@ -19,12 +19,12 @@ caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8dd4fdcc7031f56850cded09b098356d2fbad195
+ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211323"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802533"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *메모리 내 columnstore 인덱스* 저장 하 고 열 기반 데이터 저장소 및 열 기반 쿼리 처리를 사용 하 여 데이터를 관리 합니다. columnstore 인덱스는 주로 대량 로드 및 읽기 전용 쿼리를 수행하는 데이터 웨어하우징 작업에 효과적입니다. columnstore 인덱스를 사용하면 기존의 행 기반 저장소 대비 최대 **10배의 쿼리 성능** 이익과 압축되지 않은 데이터 크기 대비 최대 **7배의 데이터 압축** 을 얻을 수 있습니다.  

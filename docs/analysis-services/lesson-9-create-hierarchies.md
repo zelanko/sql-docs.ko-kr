@@ -1,6 +1,6 @@
 ---
-title: '10 단원: 계층 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+title: '9 단원: 계층 만들기 | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d4c1fc4905c52351b61a4e79b2ff21f47501f337
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033374"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791700"
 ---
 # <a name="lesson-9-create-hierarchies"></a>9단원: 계층 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "38033374"
   
 이 단원에 소요되는 예상 시간: **20분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [8 단원: 큐브 뷰 만들기](../analysis-services/lesson-8-create-perspectives.md)합니다.  
   
 ## <a name="create-hierarchies"></a>계층 만들기  

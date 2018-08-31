@@ -1,6 +1,6 @@
 ---
-title: '7 단원: 측정값 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+title: '6 단원: 측정값 만들기 | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 146d93bc2c7257ce409f3a293f6c9050acde9ca7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994965"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795622"
 ---
 # <a name="lesson-6-create-measures"></a>6 단원: 측정값 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "37994965"
   
 이 단원에 소요되는 예상 시간: **30분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [5 단원: 계산 열 만들기](../analysis-services/lesson-5-create-calculated-columns.md)합니다.  
   
 ## <a name="create-measures"></a>측정값 만들기  

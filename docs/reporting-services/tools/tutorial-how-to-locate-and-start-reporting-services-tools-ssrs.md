@@ -25,12 +25,12 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13258b6c570aa0e40c5cca7cbde7b583abd5f297
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce5c4f7872003f3d2f74dddd31cf93929202185
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036440"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406200"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구를 찾고 시작하는 방법
 
@@ -138,43 +138,43 @@ ms.locfileid: "33036440"
   
  첫 번째 보고서를 시작하려면 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요. 보고서 디자이너에서 사용할 수 있는 쿼리 디자이너에 대한 자세한 내용은 [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다.  
   
-##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]외부에서 페이지를 매긴 보고서를 만드는 데 사용할 수 있는 독립 실행형 응용 프로그램입니다. 보고서를 보고서 디자이너에서 만들었는지 아니면 이전 버전의 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서 만들었는지에 상관없이 모든 기존 보고서를 사용자 지정하고 업데이트할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 보고서 작성기를 다운로드할 수 있습니다.  
+##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]외부에서 페이지를 매긴 보고서를 만드는 데 사용할 수 있는 독립 실행형 응용 프로그램입니다. 보고서를 보고서 디자이너에서 만들었는지 아니면 이전 버전의 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 만들었는지에 상관없이 모든 기존 보고서를 사용자 지정하고 업데이트할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 보고서 작성기를 다운로드할 수 있습니다.  
   
  Microsoft 다운로드 센터에서[보고서 작성기를 다운로드](http://go.microsoft.com/fwlink/?LinkID=219138) 하세요.  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd"></a>시작하려면 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>시작하려면 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털의  **새로 만들기** 메뉴에서 **페이지를 매긴 보고서**를 선택합니다.  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  이 컴퓨터에 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]를 아직 설치하지 않은 경우 **[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 가져오기**를 선택합니다.  
+2.  이 컴퓨터에 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 아직 설치하지 않은 경우 **[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 가져오기**를 선택합니다.  
   
      또는  
   
      Microsoft 다운로드 센터에서[보고서 작성기를 다운로드](http://go.microsoft.com/fwlink/?LinkID=219138) 하세요.  
   
-3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 가 열립니다. 이제 페이지를 매긴 보고서를 만들거나 열 수 있습니다.  
+3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 가 열립니다. 이제 페이지를 매긴 보고서를 만들거나 열 수 있습니다.  
   
-##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]  
+##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
  [SQL Server Mobile 보고서 게시자](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 및 iPad, iPhone 등의 모바일 장치에서 볼 수 있는 모바일 보고서를 만듭니다.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 모바일 보고서 게시자를 다운로드할 수 있습니다.  
   
  Microsoft 다운로드 센터에서[SQL Server 모바일 보고서 게시자를 다운로드](http://go.microsoft.com/fwlink/?LinkID=733527) 하세요.  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-short-mdmd"></a>시작하려면 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
+### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>시작하려면 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털의  **새로 만들기** 메뉴에서 **모바일 보고서**를 선택합니다.  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  이 컴퓨터에 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]를 아직 설치하지 않은 경우 **[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] 가져오기**를 선택합니다.  
+2.  이 컴퓨터에 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]를 아직 설치하지 않은 경우 **[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 가져오기**를 선택합니다.  
   
      또는  
   
      Microsoft 다운로드 센터에서[SQL Server 모바일 보고서 게시자를 다운로드](http://go.microsoft.com/fwlink/?LinkID=733527) 하세요.  
   
-3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] 가 열립니다. 이제 모바일 보고서를 만들거나 열 수 있습니다.  
+3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 가 열립니다. 이제 모바일 보고서를 만들거나 열 수 있습니다.  
 
 ## <a name="next-steps"></a>다음 단계
 

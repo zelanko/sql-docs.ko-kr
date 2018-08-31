@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c08495fb3a6486f58462562be120ea1d4cd7f8ad
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9e55a9a6d7a432a145477bb4af92a0225d92c623
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019480"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703586"
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services 인스턴스에 대한 SPN 등록
+# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   SPN(서비스 사용자 이름)은 Kerberos가 클라이언트 및 서비스 ID를 상호 인증하는 데 사용되는 Active Directory 도메인의 서비스 인스턴스를 고유하게 식별합니다. SPN은 서비스 인스턴스가 실행되는 로그온 계정과 연결되어 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34019480"
 |Host-name|서비스가 실행 중인 컴퓨터를 식별합니다. 정규화된 도메인 이름이거나 NetBIOS 이름일 수 있으며, 두 가지 경우 모두 SPN을 등록해야 합니다.<br /><br /> 서버의 NetBIOS  이름에 대한 SPN을 등록할 때 `SetupSPN –S` 를 사용하여 중복 등록을 확인하세요. NetBIOS  이름은 포리스트에서 고유한 것으로 보장되지 않으며 SPN  등록이 중복되면 연결이 실패합니다.<br /><br /> Analysis  Services  부하 분산 클러스터의 경우 호스트 이름은 클러스터에 할당된 가상 이름이어야 합니다.<br /><br /> IP  주소를 사용하여 SPN을 만들지 마세요. Kerberos는 도메인의 DNS  확인 기능을 사용합니다. IP 주소를 지정하면 이 기능이 우회됩니다.|  
 |Port-number|포트 번호가 SPN  구문의 일부이지만 Analysis  Services  SPN을 등록할 때는 포트 번호를 지정하지 않습니다. 콜론( : ) 문자는 Analysis Services에서 인스턴스 이름을 지정하는 데 사용됩니다. Analysis Services 인스턴스의 경우 포트는 기본 포트(TCP 2383) 또는 SQL Server Browser 서비스에서 할당한 포트(TCP 2382)로 간주됩니다.|  
 |Instance-name|Analysis Services는 동일한 컴퓨터에 여러 번 설치될 수 있는 복제 가능한 서비스입니다. 각 인스턴스는 인스턴스 이름을 통해 식별됩니다.<br /><br /> 인스턴스 이름 앞에는 콜론(:) 문자가 붙습니다. 예를 들어 SRV01이라는 호스트 컴퓨터와 명명된 인스턴스 SSAS-Tabular가 주어진 경우 SPN은 SRV01:SSAS-Tabular이어야 합니다.<br /><br /> 명명된 Analysis  Services  인스턴스를 지정하는 구문은 다른 SQL  Server  인스턴스에서 사용하는 구문과 다릅니다. 다른 서비스는 백슬래시(\)를 사용하여 SPN에서 인스턴스 이름을 추가합니다.|  
-|서비스 계정|**MSSQLServerOLAPService** Windows  서비스의 시작 계정입니다. Windows  도메인 사용자 계정,  가상 계정,  MSA(관리 서비스 계정)  또는 기본 제공 계정(예:  서비스별 SID,  NetworkService  또는 LocalSystem)일 수 있습니다. Windows 도메인 사용자 계정을 domain\user 형식일 수 있습니다 또는 user@domain합니다.|  
+|서비스 계정|**MSSQLServerOLAPService** Windows  서비스의 시작 계정입니다. Windows  도메인 사용자 계정,  가상 계정,  MSA(관리 서비스 계정)  또는 기본 제공 계정(예:  서비스별 SID,  NetworkService  또는 LocalSystem)일 수 있습니다. Windows 도메인 사용자 계정으로 도메인 \ 사용자 형식을 지정할 수 있습니다 또는 user@domain합니다.|  
   
 ##  <a name="bkmk_virtual"></a> 가상 계정에 대한 SPN  등록  
  가상 계정은 SQL  Server  서비스의 기본 계정 유형입니다. 가상 계정은 **NT Service\MSOLAPService** 기본 인스턴스 및 **NT Service\MSOLAP$**\<인스턴스 이름 > 명명 된 인스턴스에 대 한 합니다.  
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **NT Service\MSOLAP $로 실행 되는 명명 된 인스턴스에 대 한 구문 예\<인스턴스 이름 >**  
   
- 이 예에서는 기본 가상 계정에서 실행되는 명명된 인스턴스에 대한 **setspn** 구문을 보여 줍니다. 이 예에서 컴퓨터 호스트 이름은 **AW-SRV02**이고 인스턴스 이름은 **AW-FINANCE**입니다. 이것은 가상 계정 보다는 SPN에 대해 지정 된 컴퓨터 계정을 **NT Service\MSOLAP$**\<인스턴스 이름 >.  
+ 이 예에서는 기본 가상 계정에서 실행되는 명명된 인스턴스에 대한 **setspn** 구문을 보여 줍니다. 이 예에서 컴퓨터 호스트 이름은 **AW-SRV02**이고 인스턴스 이름은 **AW-FINANCE**입니다. 다시는 가상 계정이 아니라 SPN에 대해 지정 된 컴퓨터 계정을 **NT Service\MSOLAP$**\<인스턴스 이름 >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -109,11 +109,11 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  이 예에서는 AdventureWorks 도메인의 도메인 사용자 계정 **SSAS-Service** 에서 실행 중인 Analysis Services 기본 인스턴스에 대한 **setspn**구문을 보여 줍니다.  
   
 ```  
-Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn –s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
->  SPN  등록 방법에 따라 `Setspn -L <domain account>` 또는 `Setspn -L <machinename>`을 실행하여 SPN이 Analysis  Services  서버에 대해 만들어졌는지 확인하세요. MSOLAPSVC.3/ 표시 되어야\<호스트 이름 > 목록에 있습니다.  
+>  SPN  등록 방법에 따라 `Setspn -L <domain account>` 또는 `Setspn -L <machinename>`을 실행하여 SPN이 Analysis  Services  서버에 대해 만들어졌는지 확인하세요. MSOLAPSVC.3/ 표시\<호스트 이름 > 목록에서.  
   
 ##  <a name="bkmk_builtin"></a> 기본 제공 계정에 대한 SPN 등록  
  이 방법은 권장되지는 않지만 이전 Analysis Services 설치는 경우에 따라 네트워크 서비스, 로컬 서비스, 로컬 시스템과 같은 기본 제공 계정에서 실행되도록 구성되어 있습니다.  
@@ -162,17 +162,17 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Analysis  Services  인스턴스는 단일 포트에서만 수신 대기할 수 있습니다. 여러 포트를 사용하는 것은 지원되지 않습니다. 포트 구성에 대한 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft BI 인증 및 Id 위임](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Kerberos를 사용한 상호 인증](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Kerberos  인증을 사용하도록 SQL  Server  2008  Analysis  Services  및 SQL  Server  2005  Analysis  Services를 구성하는 방법](http://support.microsoft.com/kb/917409)   
- [서비스 사용자 이름(SPN) SetSPN 구문(Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [어떤 SPN을 어떻게 사용합니까?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Kerberos 인증을 사용 하도록 SQL Server 2008 Analysis Services 및 SQL Server 2005 Analysis Services를 구성 하는 방법](http://support.microsoft.com/kb/917409)   
+ [서비스 사용자 이름 (Spn) SetSPN 구문 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [어떤 SPN을 사용 하 고 어떻게 합니까?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [서비스 계정 단계별 가이드](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [IIS(Internet Information Services)에서 호스팅되는 웹 응용 프로그램을 구성할 때 SPN을 사용하는 방법](http://support.microsoft.com/kb/929650)   
+ [인터넷 정보 서비스에서 호스트 되는 웹 응용 프로그램을 구성한 경우 Spn을 사용 하는 방법](http://support.microsoft.com/kb/929650)   
  [서비스 계정의 새로운 기능](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [SharePoint 2010 제품에 대한 Kerberos 인증 구성(백서)](http://technet.microsoft.com/library/ff829837.aspx)  
+ [SharePoint 2010 제품 (백서)에 대 한 Kerberos 인증 구성](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

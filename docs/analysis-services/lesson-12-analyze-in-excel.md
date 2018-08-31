@@ -1,6 +1,6 @@
 ---
-title: '13 단원: Excel에서 분석 | Microsoft Docs'
-ms.date: 05/08/2018
+title: '단원 12: Excel에서 분석 | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a59a91b86da12dc9df4b9d3ce2b65ef456439627
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971675"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795652"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>12단원: Excel에서 분석
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "37971675"
   
 이 단원에 소요되는 예상 시간: **20분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [단원 11: 역할 만들기](../analysis-services/lesson-11-create-roles.md)합니다.  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>기본 큐브 뷰 및 Internet Sales 큐브 뷰를 사용하여 검색  

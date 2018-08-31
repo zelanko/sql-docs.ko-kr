@@ -1,6 +1,6 @@
 ---
-title: '11 단원: 파티션 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+title: '단원 10: 파티션 만들기 | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d738649ea357b172975505ff7993b56181ce0b4f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985895"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791934"
 ---
 # <a name="lesson-10-create-partitions"></a>10단원: 파티션 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "37985895"
   
 이 단원에 소요되는 예상 시간: **15분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [9 단원: 계층 만들기](../analysis-services/lesson-9-create-hierarchies.md)합니다.  
   
 ## <a name="create-partitions"></a>파티션 만들기  

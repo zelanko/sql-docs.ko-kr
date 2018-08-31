@@ -1,6 +1,6 @@
 ---
-title: 9 단원에는 큐브 뷰 만들기 | Microsoft Docs
-ms.date: 05/08/2018
+title: 8 단원에는 큐브 뷰 만들기 | Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e917e817768571e1959ae6163743ecdad0409af
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 90120c5dd439e4518086b261d507bf49f62450f1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031621"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795542"
 ---
 # <a name="lesson-8-create-perspectives"></a>8단원: 큐브 뷰 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "38031621"
   
 이 단원에 소요되는 예상 시간: **5분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [7 단원: 핵심 성과 지표 만들기](../analysis-services/lesson-7-create-key-performance-indicators.md)합니다.  
   
 ## <a name="create-perspectives"></a>큐브 뷰 만들기  

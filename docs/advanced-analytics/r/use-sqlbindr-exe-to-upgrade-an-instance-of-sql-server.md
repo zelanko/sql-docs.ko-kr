@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e781ee8330400a7b6e40ed249ce072cc8f9f83e6
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174800"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795662"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>기계 학습 (R 및 Python) 구성에서 SQL Server 인스턴스 요소를 업그레이드 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-SQL Server 2016 R Services Machine Learning Server 9.3에 바인딩된, R 기본 패키지 3.4.1, RevoScaleR 9.3에 있어야 합니다.이 고 MicrosoftML 9.3 있어야 합니다. 
+SQL Server 2016 R Services Machine Learning Server 9.3에 바인딩된, R 기본 패키지 3.4.3, RevoScaleR 9.3에 있어야 합니다.이 고 MicrosoftML 9.3 있어야 합니다. 
 
 미리 학습된 된 모델에 추가한 경우에 모델에 MicrosoftML 라이브러리에 포함 되 고 MicrosoftML 함수를 통해 호출할 수 있습니다. 자세한 내용은 [microsoftml R 샘플](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)합니다.
 
@@ -183,7 +183,7 @@ SQL Server 2016 R Services Machine Learning Server 9.3에 바인딩된, R 기본
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
-    | 미리 학습 된 모델 | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
+    | 미리 학습된 모델 | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
 
 1. 대상 서버에.zip 및.cab 파일을 전송 합니다.
 

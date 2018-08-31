@@ -1,6 +1,6 @@
 ---
-title: '6 단원: 계산된 열 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+title: '5 단원: 계산된 열 만들기 | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c3b86f84567e85fb604883e7cd7f8de83feb252e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031591"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792184"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>5단원: 계산 열 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "38031591"
   
 이 단원에 소요되는 예상 시간: **15분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [4 단원: 관계 만들기](../analysis-services/lesson-4-create-relationships.md)합니다. 
   
 ## <a name="create-calculated-columns"></a>계산 열 만들기  

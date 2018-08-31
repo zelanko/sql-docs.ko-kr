@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393930"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703626"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>3 단원: 데이터를 탐색하고 시각화하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "40393930"
 
 사용 하 여 플롯을 만들려면 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)에서 제공 하는 향상 된 R 함수 중 하나 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)합니다. 이 단계에서 데이터를 기반으로 히스토그램 플롯을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 저장된 프로시저에서이 함수를 래핑할 수 있습니다 **PlotHistogram**합니다.
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 마우스 오른쪽 단추로 클릭는 **TaxiNYC_Sample** 데이터베이스를 확장 하 고 **프로그래밍**를 펼친 다음 **저장 프로시저** 보려는 2 단원에서 만든 절차입니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 마우스 오른쪽 단추로 클릭는 **NYCTaxi_Sample** 데이터베이스를 확장 하 고 **프로그래밍**를 펼친 다음 **저장 프로시저** 보려는 2 단원에서 만든 절차입니다.
 
 2. 마우스 오른쪽 단추로 클릭 **PlotHistogram** 선택한 **수정** 소스를 보려면. 호출 하는이 절차를 실행할 수 있습니다 **rxHistogram** 왕복된 nyctaxi_sample 테이블의 열에 포함 된 데이터입니다.
 
@@ -126,7 +126,9 @@ ms.locfileid: "40393930"
     > [!NOTE]
     > Bcp의 명령 스위치는 대/소문자를 구분하지 않습니다.
   
-3.  연결에 성공하면 그래픽 파일 형식에 대한 자세한 정보를 입력하라는 메시지가 표시됩니다. 다음과 같은 변경을 제외하고 각 프롬프트에서 Enter 키를 눌러 기본값을 적용합니다.
+3.  연결에 성공하면 그래픽 파일 형식에 대한 자세한 정보를 입력하라는 메시지가 표시됩니다. 
+
+   다음과 같은 변경을 제외하고 각 프롬프트에서 Enter 키를 눌러 기본값을 적용합니다.
     
     -   **prefix-length of field plot**에 대해 0을 입력합니다.
   

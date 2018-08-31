@@ -1,6 +1,6 @@
 ---
-title: '8 단원: 핵심 성과 지표 만들기 | Microsoft Docs'
-ms.date: 05/08/2018
+title: '7 단원: 핵심 성과 지표 만들기 | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: multidimensional-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033411"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790104"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>7단원: 핵심 성과 지표 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "38033411"
   
 이 단원에 소요되는 예상 시간: **15분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [6 단원: 측정값 만들기](../analysis-services/lesson-6-create-measures.md)합니다.   
   
 ## <a name="create-key-performance-indicators"></a>KPI(핵심 성과 지표) 만들기  

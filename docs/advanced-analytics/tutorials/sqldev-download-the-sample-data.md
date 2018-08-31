@@ -1,28 +1,28 @@
 ---
-title: 포함 된 R (SQL Server Machine Learning)에 대 한 NYC Taxi 데이터 및 스크립트 다운로드 | Microsoft Docs
-description: 뉴욕 시 택시 샘플 데이터를 다운로드 하 고 데이터베이스를 만들기 위한 지침입니다. 데이터는 SQL Server 저장 프로시저 및 T-SQL 함수에서 R을 포함 하는 방법을 보여 주는 SQL Server 자습서에 사용 됩니다.
+title: 포함 된 R 및 Python (SQL Server Machine Learning)에 대 한 NYC Taxi 데이터 및 스크립트 다운로드 | Microsoft Docs
+description: 뉴욕 시 택시 샘플 데이터를 다운로드 하 고 데이터베이스를 만들기 위한 지침입니다. R을 포함 하는 방법을 보여 주는 SQL Server 자습서에서 데이터를 사용 하 고 Python에서 SQL Server 저장 프로시저 및 T-SQL 함수입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aca4450bdc152449fd30e974305d14a4ccbf77c5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392632"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703606"
 ---
-# <a name="load-nyc-taxi-demo-data-for-sql-server-tutorials"></a>SQL Server 자습서에 대 한 NYC 택시 데이터 로드
+# <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server에 대 한 NYC Taxi 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server에서 데이터베이스 내 분석에 대 한 R을 사용 하는 방법에 대 한 자습서에 대 한 시스템을 준비 합니다.
+이 문서에서는 SQL Server에서 데이터베이스 내 분석에 대 한 R 및 Python을 사용 하는 방법에 대 한 자습서에 대 한 시스템을 준비 합니다.
 
 이 연습에서는 샘플 데이터, 환경, 준비에 대 한 PowerShell 스크립트를 다운로드 하 고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 여러 자습서에 사용 되는 파일입니다. 완료 된 경우는 **NYCTaxi_Sample** 데이터베이스가 실습 데모 데이터를 제공 하 고 로컬 인스턴스에에서 사용할 수 있습니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 인터넷에 연결, PowerShell 및 컴퓨터의 로컬 관리자 권한이 해야 합니다. 있어야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 도구를 개체 만들기를 확인 합니다.
 
@@ -30,9 +30,9 @@ ms.locfileid: "40392632"
 
 1.  Windows PowerShell 명령 콘솔을 엽니다.
   
-    대상 디렉터리를 만들거나 지정된 대상에 파일을 쓰려면 관리자 권한이 필요한 경우 **관리자 권한으로 실행**옵션을 사용합니다.
+    사용 된 **관리자 권한으로 실행** 대상 디렉터리를 만들거나 지정된 된 대상에 파일을 작성 하는 옵션입니다.
   
-2.  *DestDir* 매개 변수 값을 로컬 디렉터리로 변경하여 다음 PowerShell 명령을 실행합니다.  여기서 사용한 기본값은 **TempRSQL**입니다.
+2.  *DestDir* 매개 변수 값을 로컬 디렉터리로 변경하여 다음 PowerShell 명령을 실행합니다. 여기서 사용한 기본값은 **TempRSQL**입니다.
   
     ```ps
     $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
@@ -45,7 +45,7 @@ ms.locfileid: "40392632"
     *DestDir* 에 지정한 폴더가 존재하지 않을 경우 PowerShell 스크립트를 통해 생성됩니다.
   
     > [!TIP]
-    > 오류가 발생할 경우 Bypass 인수를 사용하고 변경 범위를 현재 세션으로 지정하여 이 연습에 대해서만 PowerShell 스크립트 실행 정책을 일시적으로 **무제한** 으로 설정할 수 있습니다.
+    > 오류가 발생 하는 PowerShell 스크립트의 실행 정책을 일시적으로 설정할 수 있습니다 **무제한** Bypass 인수를 사용 하 여 현재 세션에 변경 내용을 범위 지정이 연습에 대해서만 합니다.
     >   
     >````
     > Set\-ExecutionPolicy Bypass \-Scope Process
@@ -54,7 +54,7 @@ ms.locfileid: "40392632"
   
     인터넷 연결에 따라 다운로드하는 데 시간이 걸릴 수도 있습니다.
   
-3.  모든 파일이 다운로드되면 PowerShell 스크립트가  *DestDir*에 지정된 폴더에서 열립니다. PowerShell 명령 프롬프트에서 다음 명령을 실행하고 다운로드된 파일을 검토합니다.
+3.  모든 파일을 다운로드 한 PowerShell 스크립트를 열립니다는 *DestDir* 폴더입니다. PowerShell 명령 프롬프트에서 다음 명령을 실행하고 다운로드된 파일을 검토합니다.
   
     ```
     ls
@@ -93,7 +93,7 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 - 서버 인스턴스의 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 가 설치 되었습니다. 기본 인스턴스의 경우에서 컴퓨터 이름으로 간단히이 수 있습니다.
 
-- 데이터베이스 이름입니다. 이 자습서에서는 스크립트 가정 `TaxiNYC_Sample`합니다.
+- 데이터베이스 이름입니다. 이 자습서에서는 스크립트 가정 `NYCTaxi_Sample`합니다.
 
 - 사용자 이름 및 사용자 암호입니다. 이러한 값에 대 한 SQL Server 데이터베이스 로그인을 입력 합니다. 또는 신뢰할 수 있는 Windows id를 수락 하는 스크립트를 수정한 경우 이러한 값을 비어 두려면 Enter 키를 누릅니다. Windows id 연결에 사용 됩니다.
 
