@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b505c769fc86dd62b738a54c20c98adafd69db60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f645d72cfc751aa302c7a4e4f4e13284b4197106
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018270"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406204"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 데이터 모델은 간단 합니다. 데이터는 데이터 집합의 컬렉션으로 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 로 가져옵니다. 데이터 집합 간의 형식 관계는 필요하지 않습니다. 데이터 집합 간의 조회는 키 값이 일치하는 한 작동합니다. 날짜/시간 집계는 모바일 보고서 런타임을 통해 처리되며 데이터 집합 간에 날짜/시간 데이터 세분성이 달라도 데이터 집합 간의 집계 일치 여부를 확인합니다.   
@@ -29,7 +29,7 @@ ms.locfileid: "33018270"
   
 * **로컬 Excel 파일**: Excel 문서를 선택하고 가져올 워크시트를 선택합니다. 가져온 데이터는 모바일 보고서 정의 내에 저장됩니다. 원본 Excel 파일에서 데이터를 새로 고치려면 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **데이터** 탭 오른쪽 위에 있는 **데이터 새로 고침** 명령을 사용합니다. [SSRS 모바일 보고서용으로 Excel 데이터 준비](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)에 대해 자세히 확인해 보세요.  
   
-* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 공유 데이터 집합**: 서버에 게시된 데이터 집합 목록을 검색하여 모바일 보고서에 추가할 데이터 집합을 선택합니다. 서버 데이터를 기반으로 하는 모바일 보고서는 항상 원본 서버 데이터 집합에 연결된 상태로 유지되며 서버 데이터의 최신 상태를 반영합니다. [지원되는 데이터 원본 목록](https://msdn.microsoft.com/library/ms159219.aspx)을 참조하세요.   
+* **SQL Server 모바일 보고서 게시자 공유 데이터 집합**: 서버에 게시된 데이터 집합 목록을 검색하여 모바일 보고서에 추가할 데이터 집합을 선택합니다. 서버 데이터를 기반으로 하는 모바일 보고서는 항상 원본 서버 데이터 집합에 연결된 상태로 유지되며 서버 데이터의 최신 상태를 반영합니다. [지원되는 데이터 원본 목록](../report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.   
   
   자세한 내용은 [모바일 보고서 게시자의 공유 데이터 집합에서 데이터 가져오기](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)를 참조하세요.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33018270"
   
 ## <a name="connect-mobile-report-elements-to-data"></a>데이터에 모바일 보고서 요소 연결 ##  
   
-각 [!INCLUDE[PRODUCT_NAME](../../includes/short-product-name.md)] 요소는 데이터 설정을 하나 이상 포함합니다. 예를 들어 방사형 계기 요소에는 주 값과 비교 값의 두 데이터 설정이 포함되어 있습니다. 이러한 각 설정은 특정 데이터 집합에서 정확히 하나의 필드(열)를 가리킵니다.   
+각 SQL Server 모바일 보고서 게시자 요소에는 하나 이상의 데이터 설정을 포함합니다. 예를 들어 방사형 계기 요소에는 주 값과 비교 값의 두 데이터 설정이 포함되어 있습니다. 이러한 각 설정은 특정 데이터 집합에서 정확히 하나의 필드(열)를 가리킵니다.   
   
 모바일 보고서 런타임은 사용자의 선택 항목에 따라 계기에 대해 집계된 값을 제공합니다. 같은 방사형 계기 인스턴스의 비교 값을 다른 데이터 집합의 필드에 바인딩할 수 있습니다.   
   

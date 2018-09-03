@@ -27,13 +27,13 @@ caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: edf54224fddb5fce7eafdc978d05535264aa29d0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452677"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099379"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 도입된 지원되지 않는 기능은 호환성 수준으로 보호되지 않습니다. 이는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 제거된 기능을 나타냅니다.
 > 
 > 예를 들어 `FASTFIRSTROW` 힌트는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 더 이상 사용되지 않으며 `OPTION (FAST n )` 힌트로 대체되었습니다. 데이터베이스 호환성 수준을 110으로 설정하면 지원되지 않는 힌트를 복원하지 않습니다.
-> 지원되지 않는 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](http://msdn.microsoft.com/library/ms144262(v=sql.110)) 및 [SQL Server 2008에서 지원되지 않는 데이터베이스 엔진 기능](http://msdn.microsoft.com/library/ms144262(v=sql.100))을 참조하세요.
+> 지원되지 않는 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)), [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)) 및 [SQL Server 2008에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md))을 참조하세요.
 
 > [!IMPORTANT]
 > 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 도입된 주요 변경 내용은 호환성 수준으로 보호되지 않을 **수 있습니다**. 이는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 버전 간 동작 변경을 나타냅니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작은 일반적으로 호환성 수준으로 보호됩니다. 그러나 변경되거나 제거된 시스템 개체는 호환성 수준으로 보호되지 **않습니다**.
@@ -159,7 +159,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > -  시스템 개체의 변경된 열 이름입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 sys.dm_os_sys_info의 *single_pages_kb* 열 이름은 *pages_kb*로 변경되었습니다. 호환성 수준에 관계 없이 쿼리 `SELECT single_pages_kb FROM sys.dm_os_sys_info`는 오류 207(잘못된 열 이름)을 생성합니다.
 > -  제거된 시스템 개체입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 `sp_dboption`이 제거되었습니다. 호환성 수준에 관계 없이 `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` 문은 오류 2812(저장된 프로시저 'sp_dboption'을 찾을 수 없음)를 생성합니다.
 >
-> 주요 변경 내용에 대한 자세한 내용은 [SQL Server 2017에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [SQL Server 2016에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [SQL Server 2014에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [SQL Server 2012에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](http://msdn.microsoft.com/library/ms143179(v=sql.110)) 및 [SQL Server 2008에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](http://msdn.microsoft.com/library/ms143179(v=sql.100))을 참조하세요.
+> 주요 변경 내용에 대한 자세한 내용은 [SQL Server 2017에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [SQL Server 2016에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [SQL Server 2014에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)), [SQL Server 2012에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)) 및 [SQL Server 2008에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md))을 참조하세요.
   
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>데이터베이스 호환성 수준 업그레이드 모범 사례 
 호환성 수준 업그레이드를 위해 권장되는 워크플로는 [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)을 참조하세요.  

@@ -1,7 +1,7 @@
 ---
 title: 식의 데이터 형식(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61d9e125f12d9c642408316ccb936e54f2a29372
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9030de2c1c189bdbdb036b40df8400c07da8bbb5
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022833"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405363"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -143,9 +143,9 @@ ms.locfileid: "33022833"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=120955)의 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 및 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 및 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 의 [SQL Server Books Onl의e](http://go.microsoft.com/fwlink/?linkid=120955)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [Analysis Services의 데이터 형식](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

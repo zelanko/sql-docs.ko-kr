@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef72373f91b9104c8ff83f6d1d9b012b283df3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 811c4b01264d16df1091629524823dd14acf3ea0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036250"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406529"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
-이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
+이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
 
 가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  
   

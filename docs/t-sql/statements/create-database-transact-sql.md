@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: b8d694b0afadd7504b60bd7bcc06df3151e42735
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456197"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405684"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -56,7 +56,33 @@ ms.locfileid: "39456197"
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오. 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>개요
 
@@ -293,7 +319,7 @@ CREATE DATABASE database_snapshot_name
  지정된 데이터베이스에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용할 수 있도록 지정합니다. 즉, 메시지 배달이 시작되고 sys.databases 카탈로그 뷰에서 is_broker_enabled가 True로 설정됩니다. 데이터베이스에 기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자가 유지됩니다.  
   
  NEW_BROKER  
- sys.databases와 복원된 데이터베이스 둘 다에서 새 service_broker_guid 값을 만들고 정리 작업을 통해 모든 대화 끝점을 끝냅니다. 이때 Service Broker가 설정되지만 원격 대화 끝점에 메시지가 전송되지 않습니다. 이전 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 참조하는 경로는 새 식별자로 다시 만들어야 합니다.  
+ sys.databases와 복원된 데이터베이스 둘 다에서 새 service_broker_guid 값을 만들고 정리 작업을 통해 모든 대화 엔드포인트를 끝냅니다. 이때 Service Broker가 설정되지만 원격 대화 엔드포인트에 메시지가 전송되지 않습니다. 이전 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 참조하는 경로는 새 식별자로 다시 만들어야 합니다.  
   
  ERROR_BROKER_CONVERSATIONS  
  데이터베이스가 연결 또는 복원되었다는 오류 메시지를 표시하고 모든 대화를 끝냅니다. Service Broker는 이 작업이 완료될 때까지 해제된 후 설정됩니다. 데이터베이스에 기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자가 유지됩니다.  
@@ -858,7 +884,30 @@ GO
  [데이터베이스](../../relational-databases/databases/databases.md)   
  [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
 
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 논리 서버](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Database<br />논리 서버 *</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
 
 ## <a name="overview"></a>개요
 
@@ -1169,7 +1218,30 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 - [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldbls) 
 
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="overview"></a>개요
 
@@ -1230,7 +1302,30 @@ CREATE DATABASE TestDB1;
 
 [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi) 참조 
 
-# <a name="sql-data-warehousetabsqldw"></a>[SQL Data Warehouse](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><strong><em>*SQL Data<br />Warehouse *</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
 
 ## <a name="overview"></a>개요
 
@@ -1331,7 +1426,30 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATEBASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL 병렬 데이터 웨어하우스](#tab/sqlpdw)
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
 
 ## <a name="overview"></a>개요
 
@@ -1458,4 +1576,4 @@ CREATE DATABASE mytest
  [ALTER DATABASE &#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
-  
+::: moniker-end

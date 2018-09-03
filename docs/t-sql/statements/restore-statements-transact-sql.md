@@ -44,12 +44,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7caf240c4f1fa6d0641b91db7061d50752941b6b
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 37bf91db051a3f3a8369ecefea68288139181075
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008945"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405993"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -72,8 +72,8 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
@@ -725,7 +725,7 @@ RESTORE DATABASE Sales
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
@@ -734,7 +734,7 @@ RESTORE DATABASE Sales
 
 # <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
-이 명령을 사용하면 전체 데이터베이스 백업에서 전체 데이터베이스를 복원합니다(전체 복원).
+이 명령을 사용하면 Azure Blob Storage 계정의 전체 데이터베이스 백업(전체 복원)에서 전체 데이터베이스를 복원할 수 있습니다.
 
 지원되는 다른 복원 명령은 다음을 참조하세요.
 - [RESTORE FILELISTONLY(Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -763,7 +763,7 @@ DATABASE
   
 FROM URL
 
-복원 작업에 사용할 URL을 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에서 백업을 복구하는 데 사용됩니다. 
+복원 작업에 사용되는 URL에 배치된 하나 이상의 백업 장치를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에서 백업을 복구하는 데 사용됩니다. 
 
 > [!IMPORTANT]  
 > URL에서 복원할 때 여러 장치에서 복원하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
@@ -773,7 +773,7 @@ FROM URL
  
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-비동기 복원의 경우 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함). 
+RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함). 
 
 다음 데이터베이스 옵션은 설정/재정의되며 나중에 변경할 수 없습니다.
 
@@ -806,6 +806,7 @@ FROM URL
 ##  <a name="examples"></a> 예  
 다음 예제에서는 URL에서 자격 증명 생성을 비롯한 복사 전용 데이터베이스 백업을 복원합니다.  
   
+###  <a name="restore-mi-database"></a> 1. 세 개의 백업 장치에서 데이터베이스를 복원합니다.   
 ```sql
 
 -- Create credential
@@ -819,16 +820,14 @@ FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-Wid
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
-
---The following error is shown if the database already exists:
+```
+데이터베이스가 이미 있는 경우 다음 오류가 표시됩니다.
+```
 Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
-
--- An example with variables:
-DECLARE @db_name sysname = 'WideWorldImportersStandard';
-DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
-RESTORE DATABASE @db_name
-FROM URL = @url
+```
+###  <a name="restore-mi-database-variables"></a> 2. 변수를 통해 지정된 데이터베이스를 복원합니다.  
+-- 변수가 있는 예: DECLARE @db_name sysname = 'WideWorldImportersStandard'; DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak'; RESTORE DATABASE @db_name FROM URL = @url
 ```  
 
 ::: moniker-end
@@ -843,23 +842,23 @@ FROM URL = @url
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
+# SQL Parallel Data Warehouse
 
 
-데이터베이스 백업에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 어플라이언스로 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 사용자 데이터베이스를 복원합니다. 데이터베이스는 이전에 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE&#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/backup-transact-sql.md) 명령으로 만든 백업에서 복원됩니다. 백업 및 복원 작업을 사용하여 재해 복구 계획을 작성하거나 한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 이동합니다.  
+Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
   
 > [!NOTE]  
->  master 복원에는 어플라이언스 로그인 정보 복원이 포함됩니다. master를 복원하려면 **Configuration Manager** 도구의 [master 데이터베이스 복원&#40;Transact-SQL&#41; ](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) 페이지를 사용합니다. 제어 노드에 액세스할 수 있는 관리자가 이 작업을 수행할 수 있습니다.  
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스 백업에 대한 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에 있는 “백업 및 복원”을 참조하세요.  
+>  Restoring master includes restoring appliance login information. To restore master, use the [Restore the master Database &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
+For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="syntax"></a>구문  
+## Syntax  
   
 ```sql  
   

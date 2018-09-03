@@ -19,12 +19,12 @@ caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ffab68d239f7992d7f3b1c3a289f8c67c17b53
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ed503598b4a093876b0323ee1284a7bb9d782171
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358815"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410363"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37358815"
   
 -   RMO: [방법: 구독에서 웹 동기화를 사용하도록 구성(RMO 프로그래밍)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- 웹 동기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터를 사용하여 끌어오기 구독을 병합 게시에 동기화합니다. IIS 버전 5.0, IIS 버전 6.0 및 [!INCLUDE[iisver](../../includes/iisver-md.md)] 이 지원됩니다. 웹 동기화 구성 마법사는 [!INCLUDE[iisver](../../includes/iisver-md.md)]에서 지원되지 않습니다.  
+ 웹 동기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터를 사용하여 끌어오기 구독을 병합 게시에 동기화합니다. IIS 버전 5.0, IIS 버전 6.0 및 IIS 버전 7.0이 지원됩니다. 웹 동기화 구성 마법사는 IIS 버전 7.0에서 지원되지 않습니다.  
   
 > [!IMPORTANT]  
 >  응용 프로그램에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 오류가 발생할 수 있습니다. 여기에는 다음이 포함됩니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  

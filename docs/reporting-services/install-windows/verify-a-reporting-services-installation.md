@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 886143cc00831cd6921a07738f6ffbd1e6ef36ef
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983779"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40415897"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나로 설치할 수 있습니다. 설치를 확인하기 위해 수행해야 하는 단계는 보고서 서버 모드에 따라 다릅니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "38983779"
   
 2.  **SQL Server Reporting Services 서비스** 가 설치되어 있고 **실행 중** 상태인지 확인합니다.  
   
-     목록에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 표시되지 않으면 해당 서비스가 설치되어 있는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)를 참조하세요.  
+     목록에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 표시되지 않으면 해당 서비스가 설치되어 있는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  
   
 ### <a name="to-verify-the-service-application"></a>서비스 응용 프로그램을 확인하려면  
   
@@ -71,7 +71,7 @@ ms.locfileid: "38983779"
   
 1.  SharePoint 문서 라이브러리에서 텍스트 상자(예: 제목)만 포함된 기본 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 이 보고서에는 어떠한 데이터 원본 또는 데이터 집합도 포함되지 않습니다. 이 보고서의 목적은 보고서 작성기를 열고 기본 보고서를 미리 볼 수 있는지 확인하기 위한 것입니다.  
   
-2.  보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법은 [보고서 작성기 시작](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259)을 참조하세요.  
+2.  보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법은 [보고서 작성기 시작](../report-builder/start-report-builder.md)을 참조하세요.  
   
 ### <a name="reporting-services-samples"></a>Reporting Services 예제  
   

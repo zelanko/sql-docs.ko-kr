@@ -1,7 +1,7 @@
 ---
 title: 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,12 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e0a75286b8a4e3529202c5ef700d4157b85f2a8a
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550734"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42440068"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  
@@ -51,7 +51,7 @@ ms.locfileid: "34550734"
 ## <a name="when-credentials-are-used-in-report-builder"></a>보고서 작성기에서 자격 증명이 사용된 경우  
  보고서 작성기에서 자격 증명은 주로 보고서 서버에 연결할 때 또는 포함된 데이터 원본 작성, 데이터베이스 쿼리 실행 또는 보고서 미리 보기와 같은 데이터 관련 태스크를 위해 사용됩니다. 자격 증명은 보고서에 저장되지 않습니다. 자격 증명은 보고서 서버나 로컬 클라이언트에서 별도로 관리됩니다. 다음 목록에서는 제공해야 하는 자격 증명 유형, 자격 증명이 저장되는 위치 및 사용 방법을 설명합니다.  
   
--   [Reporting Services 로그인 대화 상자&#40;보고서 작성기&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md)에 입력하는 보고서 서버 자격 증명  
+-   Reporting Services 로그인 대화 상자에 입력하는 서버 자격 증명을 보고합니다.  
   
      보고서 서버나 SharePoint 사이트로 처음 저장, 게시 또는 이동할 때 자격 증명을 입력해야 할 수도 있습니다. 입력한 자격 증명은 보고서 작성기 세션이 종료될 때까지 사용됩니다. 이러한 자격 증명을 저장하도록 선택한 경우에는 해당 자격 증명이 사용자 설정과 함께 컴퓨터에 안전하게 저장됩니다. 이후의 보고서 작성기 세션에서 저장된 자격 증명은 같은 보고서 서버나 SharePoint 사이트에 연결하는 데 사용됩니다. 보고서 서버 관리자나 SharePoint 관리자는 사용할 자격 증명 유형을 지정합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34550734"
   
      보고서 서버에서는 이러한 자격 증명을 외부 데이터 원본으로 데이터를 연결하는 데 사용합니다. 일부 데이터 원본 유형의 경우 자격 증명을 보고서 서버에 안전하게 저장할 수 있습니다. 이러한 자격 증명을 사용하면 다른 사용자가 기본 데이터 연결에 자격 증명을 제공하지 않고 보고서를 실행할 수 있습니다.  
   
--   데이터 집합 쿼리를 실행하거나, 데이터 집합 필드를 새로 고치거나, 보고서를 미리 볼 때 [데이터 원본 자격 증명 입력 대화 상자&#40;보고서 작성기&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)에서 입력한 데이터 원본 자격 증명  
+-   데이터 집합 쿼리를 실행하거나, 데이터 집합 필드를 새로 고치거나, 보고서를 미리 볼 때 **데이터 원본 자격 증명 입력 대화 상자**에 입력하는 데이터 원본 자격 증명입니다.  
   
      이러한 자격 증명은 보고서 작성기에서 외부 데이터 원본으로 데이터를 연결하거나 자격 증명을 요구하도록 구성된 보고서를 미리 볼 때 사용합니다. 이 대화 상자에 입력한 자격 증명은 보고서 서버에 저장되지 않으며 다른 사용자가 사용할 수 없습니다. 보고서 작성기는 보고서 편집 세션 중에 자격 증명을 캐시하므로 쿼리를 실행하거나 보고서를 미리 볼 때마다 자격 증명을 입력하지 않아도 됩니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34550734"
 |통합 보안|현재 사용자를 가장합니다.|모든 데이터 원본 유형에 대해 현재 사용자 계정을 사용하여 연결합니다.|  
 |Windows 자격 증명|지정한 사용자를 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우: 가장된 사용자 계정을 사용하여 연결합니다.|  
 |데이터베이스 자격 증명|무인 실행 계정 또는 서비스 계정을 가장합니다.<br /><br /> Reporting Services는 서비스 ID를 사용하여 연결 요청을 보낼 경우 관리자 권한을 제거합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 사용자 이름과 암호를 연결 문자열에 추가합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우:<br /><br /> TCP/IP 프로토콜을 사용할 경우 연결되고 그렇지 않을 경우 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 데이터베이스 자격 증명을 사용할 경우 보고서 서버에서 연결에 실패합니다.|  
-|InclusionThresholdSetting|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
+|없음|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
   
 ## <a name="setting-credentials-programmatically"></a>프로그래밍 방식으로 자격 증명 설정  
  코드에 자격 증명을 설정하여 보고서 및 보고서 서버에 대한 액세스를 제어할 수 있습니다. 자세한 내용은 [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)을 참조하세요.  

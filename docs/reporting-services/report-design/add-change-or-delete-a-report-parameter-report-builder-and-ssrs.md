@@ -15,26 +15,26 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5cba98e1d3aacddfe191dfec324d664e905fc1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c6751843d730f01f609b19069bda900a4e9aebe
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020370"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405325"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   보고서 매개 변수를 사용하면 보고서 데이터를 선택하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. 기본값 및 사용 가능한 값 목록을 제공할 수 있으며 사용자는 선택 항목을 변경할 수 있습니다.  
   
  보고서를 게시한 후에는 보고서 서버에서 보고서 매개 변수의 기본값, 사용 가능한 값 및 기타 속성을 변경할 수 있습니다. 링크된 보고서를 만들어 여러 기본 매개 변수 값 집합을 제공할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
- 이 문서는 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 의 페이지를 매긴 보고서 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에 보고서 매개 변수를 추가하는 방법에 대해 설명합니다. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]에서 모바일 보고서에 보고서 매개 변수를 추가할 수도 있습니다. 자세한 내용은 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 을 참조하세요.  
+ 이 문서에서는 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지를 매긴 보고서 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에 보고서 매개 변수를 추가하는 방법에 대해 설명합니다. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 모바일 보고서에 보고서 매개 변수를 추가할 수도 있습니다. 자세한 내용은 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>보고서 매개 변수를 추가하거나 편집하려면  
   
-1.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 있는 보고서 디자이너의 **보고서 데이터** 창에서 **매개 변수** 노드를 마우스 오른쪽 단추로 클릭하고 **매개 변수 추가**를 클릭합니다. **보고서 매개 변수 속성** 대화 상자가 열립니다.  
+1.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 있는 보고서 디자이너의 **보고서 데이터** 창에서 **매개 변수** 노드를 마우스 오른쪽 단추로 클릭하고 **매개 변수 추가**를 클릭합니다. **보고서 매개 변수 속성** 대화 상자가 열립니다.  
   
 2.  **이름**에 매개 변수의 이름을 입력하거나 기본 이름을 그대로 사용합니다.  
   

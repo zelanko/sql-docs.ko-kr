@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 36acedbe323b1b28c4b8db11d3241e77b8a8f322
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452527"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899763"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -71,10 +71,10 @@ SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하�
 이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
 
 SQL Server Management Studio 17.8.1:<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 SQL Server Management Studio 17.8.1 업그레이드 패키지(17.x에서 17.8.1로 업그레이드):<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 모듈은 이제 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.

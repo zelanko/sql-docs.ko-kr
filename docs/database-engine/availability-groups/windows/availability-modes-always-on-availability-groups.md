@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f032e856363bca6d84b420260eed53b734d88d82
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3cd07d9db6cd372a635ddc492064bcaa3ffd92d3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769349"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406245"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,10 +69,10 @@ ms.locfileid: "34769349"
   
 |현재 주 복제본|자동 장애 조치(Failover) 대상|동기-커밋 모드 다음에 대한 동작|비동기-커밋 모드 다음에 대한 동작|자동 장애 조치(Failover) 가능 여부|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 및 03|04|예|  
-|02|01|01 및 03|04|예|  
-|03||01 및 02|04|아니요|  
-|04|||01, 02 및 03|아니요|  
+|01|02|02 및 03|04|사용자 계정 컨트롤|  
+|02|01|01 및 03|04|사용자 계정 컨트롤|  
+|03||01 및 02|04|아니오|  
+|04|||01, 02 및 03|아니오|  
   
  일반적으로 노드 04는 비동기 커밋 복제본으로서 재해 복구 사이트에 배포됩니다. 노드 04에 대한 장애 조치(Failover)를 수행한 후 노드 01, 02, 03은 비동기 커밋 모드로 유지된다는 점에서 두 사이트 간의 긴 네트워크 지연 시간으로 인해 가용성 그룹의 잠재적 성능이 저하되는 것을 방지할 수 있습니다.  
   
@@ -143,6 +143,15 @@ ms.locfileid: "34769349"
   
 > [!NOTE]  
 >  WSFC 쿼럼 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
+
+### <a name="data-latency-on-secondary-replica"></a>보조 복제본의 데이터 대기 시간
+읽기 전용 작업에 약간의 데이터 대기 시간을 허용할 수 있는 경우 보조 복제본에 대한 읽기 전용 액세스를 구현하는 것이 좋습니다. 데이터 대기 시간이 허용 가능하지 않은 경우에는 주 복제본에 대해 읽기 전용 작업을 실행하는 것이 좋습니다.
+
+주 복제본은 주 데이터베이스의 변경 내용에 대한 로그 레코드를 보조 복제본으로 보냅니다. 각 보조 데이터베이스에서 전용 다시 실행 스레드가 이 로그 레코드를 적용합니다. 읽기 액세스 보조 데이터베이스에서는 변경 내용이 포함된 로그 레코드가 보조 데이터베이스에 적용되고 트랜잭션이 주 데이터베이스에서 커밋될 때까지는 쿼리 결과에 지정된 데이터 변경 내용이 나타나지 않습니다.+
+
+이로 인해 주 복제본과 보조 복제본 사이에는 대개 몇 초 내외의 대기 시간이 있습니다. 하지만 네트워크 문제로 인해 처리량이 줄어드는 경우와 같은 특수한 경우에는 대기 시간이 중요할 수 있습니다. I/O 병목이 발생하고 데이터 이동이 일시 중지되면 대기 시간이 증가합니다. 일시 중지된 데이터 이동을 모니터링하려면 [Always On 대시보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 또는 [sys.dm_hadr_database_replica_states 동적 관리 뷰](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)를 사용하면 됩니다.
+
+보조 복제본의 다시 실행 대기 시간을 조사하는 방법에 대한 자세한 내용은 [보조 복제본에 반영되지 않은 기본 변경 내용 문제 해결](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)을 참조하세요.
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **가용성 모드와 장애 조치(failover) 모드를 변경하려면**  

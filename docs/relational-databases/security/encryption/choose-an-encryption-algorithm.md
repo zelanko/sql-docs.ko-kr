@@ -1,7 +1,7 @@
 ---
 title: 암호화 알고리즘 선택 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549603"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096561"
 ---
 # <a name="choose-an-encryption-algorithm"></a>암호화 알고리즘 선택
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549603"
   
 -   일반적으로 짧은 키보다 긴 키가 강력한 암호화를 생성합니다.  
   
--   동일한 키 길이를 사용하는 대칭 암호화보다 비대칭 암호화가 약하지만 상대적으로 속도가 느립니다.  
+-   비대칭 암호화는 대칭 암호화보다 느립니다.  
   
 -   스트림 암호화보다 긴 키를 사용하는 블록 암호화가 강력합니다.  
   
 -   짧은 암호보다 길고 복잡한 암호가 강력합니다.  
+
+-   대칭 암호화는 일반적으로 키가 로컬에만 저장되어 있을 때 권장되며, 네트워크를 통해 키를 공유해야 할 때는 비대칭 암호화를 사용하는 것이 좋습니다.
   
 -   많은 양의 데이터를 암호화하는 경우 대칭 키를 사용하여 데이터를 암호화한 다음 비대칭 키를 사용하여 해당 대칭 키를 암호화하는 것이 좋습니다.  
   

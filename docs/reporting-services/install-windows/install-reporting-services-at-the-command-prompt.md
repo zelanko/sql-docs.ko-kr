@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 736159b9928eb3eb28665302140c72f8c8f4b382
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: b9c5d6a80e03ddf55fd463cac0c74486135884dd
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400906"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405479"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>명령 프롬프트에 Reporting Services 2016 설치
 
@@ -56,7 +56,7 @@ Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint 모드 Reporting Services  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE(SharePoint 모드)  
- SharePoint 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하기 위한 입력 설정은 **/RSSHPINSTALLMODE**입니다. 입력 설정에는 SharePointFilesOnlyMode라는 한 옵션만 있습니다. 이 옵션은 SharePoint 모드에 필요한 모든 파일을 설치하지만 설치 후 구성이 필요합니다. SharePoint 중앙 관리를 사용하여 이 추가 구성 단계가 완료됩니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)를 참조하세요.  
+ SharePoint 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하기 위한 입력 설정은 **/RSSHPINSTALLMODE**입니다. 입력 설정에는 SharePointFilesOnlyMode라는 한 옵션만 있습니다. 이 옵션은 SharePoint 모드에 필요한 모든 파일을 설치하지만 설치 후 구성이 필요합니다. SharePoint 중앙 관리를 사용하여 이 추가 구성 단계가 완료됩니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  
   
 ### <a name="examples-of-sharepoint-mode-installation"></a>SharePoint 모드 설치 예  
  다음 예에서는 SharePoint 모드로 SQL Server 데이터베이스 엔진 서비스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(RS_SHPWFE)을 설치합니다.  

@@ -22,19 +22,19 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b28f6079135161b7aeabbb2bebf06a4d8ac883d4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028290"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406737"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
-  이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 및 보고서 디자이너에서 만드는 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 생성한 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 생성한 모바일 보고서에서도 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 및 기본 모드|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 및 기본 모드|  
   
  직접 보고서에 매개 변수를 추가하려면 [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
     
@@ -144,7 +144,7 @@ ms.locfileid: "33028290"
 ##  <a name="bkmk_Report_Parameters"></a> 보고서 매개 변수 속성  
  보고서 속성 대화 상자를 사용하여 보고서 매개 변수 속성을 변경할 수 있습니다. 다음 표에는 각 매개 변수에 대해 설정할 수 있는 속성이 요약되어 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |속성|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 이름은 데이터 집합 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 이름이 유사합니다.|  
 |프롬프트|보고서 뷰어 도구 모음에서 매개 변수 옆에 표시되는 텍스트입니다.|  

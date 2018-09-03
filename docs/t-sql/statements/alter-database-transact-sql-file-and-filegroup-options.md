@@ -45,23 +45,32 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ada5cd545aa805d5f5ec95bcb21a9258011ea56e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459938"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43095341"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션 
 
 데이터베이스와 연결된 파일 및 파일 그룹을 수정합니다. 데이터베이스의 파일과 파일 그룹을 추가 또는 제거하고 데이터베이스 또는 해당 파일과 파일 그룹의 특성을 변경합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.
 
-작업 중인 특정 SQL 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제를 보려면 다음 탭 중 하나를 클릭합니다.
-
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오. 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> |||
+> |-|-|-|
+> |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>구문  
   
@@ -658,7 +667,24 @@ GO
 [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
 [데이터베이스 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)    
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB Managed Instance](#tab/sqldbmi)  
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 Azure SQL Database Managed Instance의 데이터베이스에 이 문을 사용합니다.
 
@@ -1036,4 +1062,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
+ 
+::: moniker-end

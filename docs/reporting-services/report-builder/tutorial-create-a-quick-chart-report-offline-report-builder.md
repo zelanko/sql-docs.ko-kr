@@ -19,23 +19,23 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ff4d216b7122e3500a99871834029d92d9aa072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022420"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405554"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
 
-  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
+  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
   
 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 결과는 동일하며 이 그림의 원형 차트와 같은 원형 차트가 만들어집니다.  
   
  ![보고서 작성기 빠른 원형 차트](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "보고서 작성기 빠른 원형 차트")  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- XML 데이터나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하려면 보고서 작성기에 대한 액세스 권한이 있어야 합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 보고서 서버에서 기본 모드 또는 SharePoint 통합 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하거나 Microsoft 다운로드 센터에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 를 다운로드할 수 있습니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)를 참조하세요.  
+ XML 데이터나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하려면 보고서 작성기에 대한 액세스 권한이 있어야 합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 보고서 서버에서 기본 모드 또는 SharePoint 통합 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하거나 Microsoft 다운로드 센터에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 를 다운로드할 수 있습니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)를 참조하세요.  
   
 ##  <a name="TwoWays"></a> 이 자습서에서 수행하는 두 가지 방법  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33022420"
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>이 자습서의 데이터가 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 사용  
  이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명이 있어야 합니다. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 SQL Server의 인스턴스에서 처리해야 보고서 데이터 집합에 필요한 메타데이터가 반환됩니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하는 경우 이점은 나머지 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 자습서에서도 동일한 방법을 사용하기 때문에 다른 자습서를 이용하는 방식을 미리 알 수 있다는 점입니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하는 경우 이점은 나머지 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 자습서에서도 동일한 방법을 사용하기 때문에 다른 자습서를 이용하는 방식을 미리 알 수 있다는 점입니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하려면 몇 가지 다른 필수 구성 요소가 있어야 합니다. 자세한 내용은 [자습서의 사전 요구 사항 &#40;보고서 작성기&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md)를 참조하세요.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33022420"
  차트 레이블 및 범례를 사용자 지정하는 방법에 대한 자세한 내용은 [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 및 [범례 항목의 텍스트 변경 #40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   
 ##  <a name="WhatsNext"></a> 다음 단계  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]를 실행하려면 *연결 문자열*을 사용하여 데이터베이스 등의 데이터 원본에 액세스할 수 있는 권한이 있어야 합니다. 연결 문자열은 실제로 사용자를 데이터 원본에 연결하는 역할을 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 실행하려면 데이터 원본에 실제로 연결되는 *연결 문자열*을 사용하여 데이터베이스와 같은 데이터 원본에 액세스할 수 있는 권한이 있어야 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
   
  다른 자습서를 진행하려면 SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명만 있으면 됩니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  
   

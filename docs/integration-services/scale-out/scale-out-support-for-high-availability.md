@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3ab8635837723b99a559bffcd546ff99d27fe283
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411805"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405562"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -46,7 +46,7 @@ Scale Out 마스터의 주 노드에 SQL Server 데이터베이스 엔진 서비
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Scale Out 마스터 서비스 DNS 호스트 이름을 Scale Out 마스터 인증서의 CN에 포함
 
-이 호스트 이름은 Scale Out 마스터 끝점에서 사용됩니다. (서버 이름이 아닌 DNS 호스트 이름을 제공하는지 확인합니다.)
+이 호스트 이름은 Scale Out 마스터 엔드포인트에서 사용됩니다. (서버 이름이 아닌 DNS 호스트 이름을 제공하는지 확인합니다.)
 
 ![HA 마스터 구성](media/ha-master-config.PNG)
 
@@ -109,6 +109,9 @@ Azure 가상 머신에서 이 구성 단계는 추가 단계가 필요합니다.
 ## <a name="9-add-the-scale-out-workers"></a>9. Scale Out 작업자 추가
 
 이제 [Integration Services Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 통해 Scale Out 작업자를 추가할 수 있습니다. 연결 페이지에서 `[SQL Server Availability Group Listener DNS name],[Port]`를 입력합니다.
+
+# <a name="upgrade-scale-out-in-high-availability-environment"></a>고가용성 환경에서 Scale Out 업그레이드
+고가용성 환경에서 Scale Out을 업그레이드하려면 [SSIS 카탈로그용 Always On의 업그레이드 단계](../catalog/ssis-catalog.md#Upgrade)를 따르고, 각 머신에서 Scale Out 마스터와 Scale Out 작업자를 업그레이드 하고, Scale Out 마스터 서비스의 새 버전으로 7단계 위에 Windows Server 장애 조치(failover) 클러스터 역할을 다시 만듭니다.
 
 ## <a name="next-steps"></a>다음 단계
 자세한 내용은 다음 문서를 참조하세요.

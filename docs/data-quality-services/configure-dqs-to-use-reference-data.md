@@ -19,19 +19,22 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72392490f9f462145b033e150577164baa86206a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: a1185bbfdcbaff6cdf763aa72d0219b573669ca9
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310032"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42776445"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성하는 방법에 대해 설명합니다. Windows Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  
-  
+
+> [!IMPORTANT]
+> 이 문서에서는 Azure DataMarket에서 이전에 사용할 수 있었던 타사 참조 데이터 서비스에 대해 설명합니다. 예를 들어 Melissa 주소 데이터를 포함한 DataMarket 및 Data Services는 2016년 12월 31일 이후 중단되었습니다. 따라서 DataMarket의 지정된 서비스를 사용하여 이 문서의 예제를 더 이상 실행할 수 없습니다. 타사 참조 데이터 공급자로부터 직접 온라인으로 사용할 수 있는 참조 데이터 서비스는 계속 사용할 수 있습니다.
+
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  

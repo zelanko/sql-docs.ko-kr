@@ -1,6 +1,6 @@
 ---
-title: SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Database로 데이터 로드 | Microsoft Docs
-description: SSIS(SQL Server Integration Services) 패키지를 만들어 다양한 데이터 원본에서 Azure SQL Database로 데이터를 이동하는 방법을 보여줍니다.
+title: SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드 | Microsoft Docs
+description: SSIS(SQL Server Integration Services) 패키지를 만들어 다양한 데이터 원본에서 SQL Server 또는 Azure SQL Database로 데이터를 이동하는 방법을 보여 줍니다.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,26 +10,27 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/14/2018
+ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ed87e5a83e992ba5de6289d72465d92c94126748
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175029"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411859"
 ---
-# <a name="load-data-into-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Database로 데이터 로드
+# <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
 
-SSIS(SQL Server Integration Services) 패키지를 만들어 [Azure SQL Database](/azure/sql-database/)로 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
+SSIS(SQL Server Integration Services) 패키지를 만들어 SQL Server 또는 [Azure SQL Database](/azure/sql-database/)에 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
 
 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
 
 * Visual Studio에서 새 Integration Services 프로젝트를 만듭니다.
 * 원본에서 대상으로 데이터를 로드하는 SSIS 패키지를 디자인합니다.
 * SSIS 패키지를 실행하여 데이터를 로드합니다.
+
 
 ## <a name="basic-concepts"></a>기본 개념
 
@@ -57,9 +58,13 @@ SQL Server 및 SQL Database에 연결하려면 ADO.NET 연결 관리자와 원�
 1. **SSIS(SQL Server Integration Services)** SSIS는 SQL Server의 구성 요소이며 SQL Server의 라이선스 버전 또는 개발자나 평가 버전이 필요합니다. SQL Server의 평가 버전을 가져오려면 [SQL Server 평가](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)를 참조하세요.
 2. **Visual Studio**(선택 사항) 무료 Visual Studio 커뮤니티 버전을 가져오려면 [Visual Studio 커뮤니티][Visual Studio Community]를 참조하세요. Visual Studio를 설치하지 않으려는 경우 SSDT(SQL Server Data Tools)만을 설치할 수 있습니다. SSDT는 제한된 기능을 포함한 Visual Studio 버전을 설치합니다.
 3. **Visual Studio용 SSDT(SQL Server Data Tools)** Visual Studio용 SQL Server Data Tools를 가져오려면 [SSDT(SQL Server Data Tools) 다운로드][Download SQL Server Data Tools (SSDT)]를 참조하세요.
-4. **Azure SQL Database 데이터베이스 및 사용 권한** 이 자습서에서는 SQL Database 인스턴스에 연결하고 데이터를 로드합니다. 연결하고, 테이블을 만들고, 데이터를 로드하는 사용 권한이 있어야 합니다.
-5. **샘플 데이터** 이 자습서에서는 원본 데이터로 AdventureWorks 샘플 데이터베이스의 SQL Server에 저장된 샘플 데이터를 사용하여 SQL Database로 로드합니다. AdventureWorks 샘플 데이터베이스를 가져오려면 [AdventureWorks 샘플 데이터베이스][AdventureWorks 2014 Sample Databases]를 참조하세요.
-6. **방화벽 규칙** SQL Database에 데이터를 업로드하려면 먼저 로컬 컴퓨터의 IP 주소를 사용하여 SQL Database에 방화벽 규칙을 만들어야 합니다.
+4. 이 자습서에서는 SQL Server 또는 SQL Database 인스턴스에 연결하고 여기에 데이터를 로드합니다. 다음 중 하나에 연결하고, 테이블을 만들고, 데이터를 로드할 수 있는 권한이 있어야 합니다.
+   - **Azure SQL Database 데이터베이스**. 자세한 내용은 [Azure SQL Database](/azure/sql-database/)를 참조하세요.  
+      로 구분하거나 여러
+   - **SQL Server 인스턴스**입니다. SQL Server는 온-프레미스 또는 Azure 가상 머신에서 실행됩니다. SQL Server의 평가판 또는 개발자 버전을 다운로드하려면 [SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)를 참조하세요.
+
+5. **샘플 데이터** 이 자습서에서는 원본 데이터로 AdventureWorks 샘플 데이터베이스의 SQL Server에 저장된 샘플 데이터를 사용합니다. AdventureWorks 샘플 데이터베이스를 가져오려면 [AdventureWorks 샘플 데이터베이스][AdventureWorks 2014 Sample Databases]를 참조하세요.
+6. SQL Database에 데이터를 로드하는 경우 **방화벽 규칙**입니다. SQL Database에 데이터를 업로드하려면 먼저 로컬 컴퓨터의 IP 주소를 사용하여 SQL Database에 방화벽 규칙을 만들어야 합니다.
 
 ## <a name="create-a-new-integration-services-project"></a>새 Integration Services 프로젝트 만들기
 1. Visual Studio를 시작합니다.
@@ -81,7 +86,7 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
     ![][02]
 2. 데이터 흐름 태스크를 두 번 클릭하여 데이터 흐름 탭으로 전환합니다.
 3. 도구 상자의 기타 원본 목록에서 ADO.NET 원본을 디자인 화면으로 끕니다. 원본 어댑터를 선택한 상태로 **속성** 창에서 해당 이름을 **SQL Server 원본**으로 변경합니다.
-4. 도구 상자의 기타 대상 목록에서 ADO.NET 대상을 ADO.NET 원본 아래의 디자인 화면으로 끕니다. 대상 어댑터를 선택한 상태로 **속성** 창에서 해당 이름을 **SQL DB 대상**으로 변경합니다.
+4. 도구 상자의 기타 대상 목록에서 ADO.NET 대상을 ADO.NET 원본 아래의 디자인 화면으로 끕니다. 대상 어댑터를 선택한 상태로 **속성** 창에서 해당 이름을 **SQL 대상**으로 변경합니다.
    
     ![][09]
 
@@ -128,16 +133,16 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 1. 대상 어댑터를 두 번 클릭하여 **ADO.NET 대상 편집기**를 엽니다.
    
     ![][11]
-2. **ADO.NET 대상 편집기**의 **연결 관리자** 탭에서 **연결 관리자** 목록 옆의 **새로 만들기** 단추를 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자를 열고 이 자습서에서 데이터를 로드하는 Azure SQL Database 데이터베이스에 대한 연결 설정을 만듭니다.
+2. **ADO.NET 대상 편집기**의 **연결 관리자** 탭에서 **연결 관리자** 목록 옆의 **새로 만들기** 단추를 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자를 열고 이 자습서에서 데이터를 로드하는 데이터베이스에 대한 연결 설정을 만듭니다.
 3. **ADO.NET 연결 관리자 구성** 대화 상자에서 **새로 만들기** 단추를 클릭하여 **연결 관리자** 대화 상자를 열고 새 데이터 연결을 만듭니다.
 4. **연결 관리자** 대화 상자에서 다음을 수행합니다.
    1. **공급자**의 경우 SqlClient 데이터 공급자를 선택합니다.
-   2. **서버 이름**의 경우 SQL Database 이름을 입력합니다.
+   2. **서버 이름**의 경우 SQL Server 또는 SQL Database 서버의 이름을 입력합니다.
    3. **서버에 로그온** 섹션에서 **SQL Server 인증 사용**을 선택하고 인증 정보를 입력합니다.
-   4. **데이터베이스에 연결** 섹션에서 기존 SQL Database 데이터베이스를 선택합니다.
-   5. **연결 테스트**를 클릭합니다.
-   6. 연결 테스트의 결과를 보고하는 대화 상자에서 **확인**을 클릭하여 **연결 관리자** 대화 상자로 돌아갑니다.
-   7. **연결 관리자** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자로 돌아갑니다.
+   4. **데이터베이스에 연결** 섹션에서 기존 데이터베이스를 선택합니다.
+    1. **연결 테스트**를 클릭합니다.
+    2. 연결 테스트의 결과를 보고하는 대화 상자에서 **확인**을 클릭하여 **연결 관리자** 대화 상자로 돌아갑니다.
+    c. **연결 관리자** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자로 돌아갑니다.
 5. **ADO.NET 연결 관리자 구성** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 대상 편집기**로 돌아갑니다.
 6. **ADO.NET 대상 편집기**에서 **테이블 또는 뷰 사용** 목록 옆의 **새로 만들기**를 클릭하여 **테이블 만들기** 대화 상자를 열고 원본 테이블과 일치하는 열 목록으로 새 대상 테이블을 만듭니다.
    
@@ -167,7 +172,7 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 ![][15]
 
-축하합니다. SQL Server Integration Services를 사용하여 Azure SQL Database로 데이터를 성공적으로 로드했습니다.
+축하합니다. SQL Server Integration Services를 사용하여 SQL Server 또는 Azure SQL Database에 데이터를 성공적으로 로드했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

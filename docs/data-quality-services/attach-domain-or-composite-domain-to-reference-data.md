@@ -18,19 +18,22 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d45174da7a0d8792229051a9f6cdb486b64e8343
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 074a799f9027fee4297332f47dbdbd064ab7593d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309822"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790934"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>참조 데이터에 도메인 또는 복합 도메인 연결
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   이 항목에서는 데이터 품질 기술 자료의 도메인/복합 도메인을 Windows Azure Marketplace의 참조 데이터 서비스에 연결하여 고품질 데이터 참조 데이터에 대한 정보를 구축하는 방법에 대해 설명합니다. 각 참조 데이터 서비스에는 스키마(데이터 열)가 포함되어 있습니다. 도메인 또는 복합 도메인을 참조 데이터 서비스에 연결한 후 연결된 도메인 또는 연결된 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑해야 합니다. 복합 도메인을 참조 데이터 서비스에 연결하면 한 도메인만 참조 데이터 서비스에 연결한 다음 복합 도메인 내 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑할 수 있습니다.  
-  
+
+> [!IMPORTANT]
+> 이 문서에서는 Azure DataMarket에서 이전에 사용할 수 있었던 타사 참조 데이터 서비스에 대해 설명합니다. 예를 들어 Melissa 주소 데이터를 포함한 DataMarket 및 Data Services는 2016년 12월 31일 이후 중단되었습니다. 따라서 DataMarket의 지정된 서비스를 사용하여 이 문서의 예제를 더 이상 실행할 수 없습니다. 타사 참조 데이터 공급자로부터 직접 온라인으로 사용할 수 있는 참조 데이터 서비스는 계속 사용할 수 있습니다.
+
 > [!WARNING]  
 >  도메인을 참조 데이터 서비스 스키마의 열에 매핑하는 동안 참조 데이터 서비스에 연결된 복합 도메인을 도메인 드롭다운 목록에서 사용할 수 있습니다. 복합 도메인을 참조 데이터 서비스 스키마의 열에 매핑하지 마세요. 복합 도메인 내의 개별 도메인만 참조 데이터 서비스 스키마의 적절한 열에 매핑해야 합니다. 그렇지 않으면 오류가 발생합니다.  
   
@@ -45,7 +48,7 @@ ms.locfileid: "35309822"
   
 ###  <a name="Security"></a> 보안  
   
-#### <a name="permissions"></a>사용 권한  
+#### <a name="permissions"></a>Permissions  
  참조 데이터에 도메인을 매핑하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 역할이 있어야 합니다.  
   
 ##  <a name="Map"></a> Melissa Data의 참조 데이터에 도메인 매핑  

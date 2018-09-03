@@ -1,7 +1,7 @@
 ---
 title: 테이블릭스 데이터 영역에 표시하기 위한 데이터 준비(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6b8f3672b21a43c87eb1dec7008593a93f3b850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0106cac1213e9037008bc9c89b0ef501457c6446
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023970"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405600"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역에 표시하기 위한 데이터 준비(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역에는 데이터 집합의 데이터가 표시됩니다. 데이터 집합에 대해 검색된 모든 데이터를 보거나 필터를 만들어 일부 데이터만 볼 수 있습니다. 또한 조건 식을 추가하여 Null 값을 채우거나 데이터 집합에 대한 쿼리를 수정하여 기존 열에 대한 정렬 순서를 정의하는 열을 포함할 수도 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "33023970"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터 원본에서 데이터를 검색하기 전에 데이터에서 Null 값을 제거하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 온라인 설명서 [의](http://go.microsoft.com/fwlink/?linkid=120955)설명서에 있는 "Null 값" 및 "Null 값 및 조인"을 참조하십시오.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에서 데이터를 검색하기 전에 null을 제거하는 방법에 대한 자세한 내용은 [NULL 및 UNKNOWN(Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)을 참조하세요.  
   
 ## <a name="handling-null-field-names"></a>Null 필드 이름 처리  
  식에서 Null 값을 테스트하는 것은 쿼리 결과 집합에 필드 자체가 있는 한 문제가 되지 않습니다. 사용자 지정 코드에서는 런타임에 데이터 원본으로부터 반환된 컬렉션 필드에 Null 필드가 나타나는지 여부를 테스트할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  

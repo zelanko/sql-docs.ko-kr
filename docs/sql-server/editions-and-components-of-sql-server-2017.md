@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184695"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780764"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
 |기능|Enterprise|표준|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|기본 R 통합|사용자 계정 컨트롤|예|예|예|아니오|   
-|고급 R 통합|사용자 계정 컨트롤|아니오|아니오|아니오|아니오| 
+|기본 R 통합 <sup>1</sup>|사용자 계정 컨트롤|예|예|예|아니오|   
+|고급 R 통합 <sup>2</sup>|사용자 계정 컨트롤|아니오|아니오|아니오|아니오| 
 |기본 Python 통합|사용자 계정 컨트롤|예|예|예|아니오|
 |고급 Python 통합|사용자 계정 컨트롤|아니오|아니오|아니오|아니오| 
 |Machine Learning Server(독립 실행형)|사용자 계정 컨트롤|아니오|아니오|아니오|아니오|   
-|Polybase 계산 노드|사용자 계정 컨트롤|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup> | 
+|Polybase 계산 노드|사용자 계정 컨트롤|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup> | 
 |Polybase 헤드 노드|사용자 계정 컨트롤|아니오|아니오|아니오|아니오| 
 |JSON|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|   
 |쿼리 저장소|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|   
@@ -318,11 +318,16 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |전체 텍스트 및 의미 체계 검색|사용자 계정 컨트롤|예|예|예|아니오| 
 |쿼리에서 언어 지정|사용자 계정 컨트롤|예|예|예|아니오|   
 |Service Broker(메시징)|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요(클라이언트 전용)|아니요(클라이언트 전용)|아니요(클라이언트 전용)|   
-|Transact-SQL 끝점|사용자 계정 컨트롤|예|예|아니오|아니오| 
+|Transact-SQL 엔드포인트|사용자 계정 컨트롤|예|예|아니오|아니오| 
 |그래프|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
 
 
-<sup>1</sup> 여러 계산 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
+<sup>1</sup> 기본 통합은 2 코어 및 메모리 내 데이터 집합으로 제한됩니다. 
+
+<sup>2</sup> 고급 통합은 하드웨어 제한에 따라 모든 크기의 데이터 집합을 병렬 처리하기 위해 사용 가능한 모든 코어를 사용할 수 있습니다. 
+
+<sup>3</sup> 여러 계산 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
+
 
 ## <a name="IS"></a> Integration Services
 

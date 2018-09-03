@@ -1,6 +1,6 @@
 ---
 title: SQL Server 설명서 | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +23,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e481ca33bd3d3eae0c4aec4ea1cc3af1aac4276a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986387"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42776109"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +51,7 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
 
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 콘텐츠가 곧 .docs 사이트에 병합됩니다.  현재는 다음을 참조하세요.
-- [SQL Server 2014용 온라인 설명서](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2014의 새로운 기능](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
-- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [이전 버전](https://docs.microsoft.com/previous-versions/sql/)
+![info_tip](../sql-server/media/info-tip.png) SQL Server **2014** 설명서는 [여기](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)에서 사용할 수 있습니다.
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -70,8 +66,8 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
-::: moniker range="= sql-server-2016"
-**SQL Server를 사용해 보세요.**
+::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
+**SQL Server 2016을 사용해 보세요.**
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Windows용 SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
@@ -99,9 +95,10 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |![Replication Services](../sql-server/media/replication-services.png "Replication Services")|**[복제](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 복제는 한 데이터베이스에서 다른 데이터베이스로 데이터 및 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server DQS(Data Quality Services)는 기술 자료 기반 데이터 정리 솔루션을 제공합니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 컴퓨터 기반 및 대화형 방법을 통해 데이터에 대한 데이터 수정 및 중복 제거를 수행할 수 있습니다. 클라우드 기반 참조 데이터 서비스를 사용할 수 있으며, SQL Server Integration Services 및 Master Data Services와 DQS를 통합하는 데이터 관리 솔루션을 작성할 수 있습니다.|
 |![Master  Data  Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 마스터 데이터 관리를 위한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 작성된 솔루션을 사용하면 정확한 정보를 기반으로 보고와 분석을 수행할 수 있습니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 사용하여 마스터 데이터에 대한 중앙 리포지토리를 만들고 시간 경과에 따라 변경되는 데이터의 감사 가능 및 보안 가능 레코드를 유지 관리합니다.|
+| &nbsp; | &nbsp; |
 
-::: moniker range="= sql-server-2016"
-## <a name="migrate-and-move-data"></a>데이터 마이그레이션 및 이동
+::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
+## <a name="migrate-and-move-data-in-version-2016"></a>버전 2016에서 데이터 마이그레이션 및 이동
 
 - [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)

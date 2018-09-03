@@ -50,12 +50,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d3c166347f18cbb2686919c1e799bf9ded3d7b3e
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 60fae479512b89afe2d9499716071a9376edd439
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008985"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40410495"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -79,8 +79,8 @@ SQL 데이터베이스를 백업합니다.
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
@@ -954,7 +954,7 @@ WITH STATS = 5;
 > </tr>
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
 >   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
@@ -1170,7 +1170,7 @@ WITH STATS = 5;
 > </tr>
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
 > </tr>
 > </table>

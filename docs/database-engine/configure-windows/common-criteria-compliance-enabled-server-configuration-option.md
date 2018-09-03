@@ -1,13 +1,12 @@
 ---
-title: common criteria compliance enabled 서버 구성 옵션 | Microsoft Docs
+title: Common Criteria Compliance Enabled 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -17,23 +16,22 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 24
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 320c81ef93d11e1ebd73c861617be322a99f2655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 5f259daef42200f05fe3bc495559d1ed4292638f
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863708"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40427283"
 ---
-# <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled 서버 구성 옵션
+# <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria Compliance Enabled 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  common criteria compliance enabled 옵션은 Common Criteria에 필요한 다음 요소를 사용할 수 있게 합니다.  
+common criteria compliance enabled 옵션은 [정보 기술 보안 평가에 대한 Common Criteria](https://www.commoncriteriaportal.org/)에 필요한 다음 요소를 사용할 수 있게 합니다.  
   
-|조건|Description|  
+|조건|설명|  
 |--------------|-----------------|  
 |RIP(잔여 정보 보호)|RIP를 사용하는 경우 메모리를 새 리소스에 다시 할당하기 전에 알려진 비트 패턴을 사용하여 메모리 할당을 덮어써야 합니다. RIP 표준이 충족되면 보안이 향상될 수 있지만 메모리 할당을 덮어쓰는 동안 성능이 저하될 수 있습니다. common criteria compliance enabled 옵션을 설정하면 덮어쓰기가 수행됩니다.|  
 |로그인 통계를 확인할 수 있는 기능|common criteria compliance enabled 옵션을 설정하면 로그인 감사를 사용할 수 있습니다. 사용자가 성공적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인할 때마다 마지막으로 성공한 로그인 시간, 마지막으로 실패한 로그인 시간 및 마지막으로 성공한 로그인 시간과 현재 로그인 시간 사이의 시도 횟수에 대한 정보를 사용할 수 있습니다. 이러한 로그인 통계는 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 동적 관리 뷰를 쿼리하여 볼 수 있습니다.|  
@@ -67,6 +65,4 @@ GO
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 다시 시작합니다.
   
 ## <a name="see-also"></a>참고 항목  
- [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

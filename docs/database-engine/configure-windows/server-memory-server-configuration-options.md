@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870238"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405350"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,8 @@ ms.locfileid: "32870238"
 이 옵션을 설정해도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [동적 메모리 관리](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)에는 영향을 미치지 않으므로 다른 메모리 클럭의 요청에 따라 확장 또는 축소할 수 있습니다. *메모리의 페이지 잠금* 사용자 권한을 사용할 때 **max server memory**를 에 대한 상한값을 [위에서 설명한 대로](#max_server_memory) 설정하는 것이 좋습니다.
 
 > [!IMPORTANT]
-> 이 옵션의 설정은 필요한 경우, 즉 sqlservr 프로세스가 페이징 아웃되고 있다는 징후가 있는 경우에만 사용해야 합니다. 이 경우 오류 17890이 아래 예제와 유사한 Errorlog에서 보고됩니다. `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]로 시작되는 [추적 플래그 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)는 Standard Edition이 잠긴 페이지를 사용하는 데 필요하지 않습니다. 
+> 이 옵션의 설정은 필요한 경우, 즉 sqlservr 프로세스가 페이징 아웃되고 있다는 징후가 있는 경우에만 사용해야 합니다. 이 경우 오류 17890이 아래 `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` 예제와 유사한 Errorlog에 보고됩니다.
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [추적 플래그 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)는 페이지 잠금을 사용하는 데 Standard Edition가 필요하지 않습니다. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>메모리의 페이지 잠금을 사용하려면  
 메모리의 페이지 잠금 옵션을 사용하려면  
@@ -122,7 +123,7 @@ ms.locfileid: "32870238"
  인스턴스를 다시 시작하지 않고 이러한 설정을 변경할 수 있으므로 사용 패턴에 가장 맞는 설정을 쉽게 찾을 수 있습니다.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>SQL Server에 최대 메모리 양 제공  
-모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 프로세스 가상 주소 공간 제한까지 메모리를 구성할 수 있습니다. 자세한 내용은 [Windows 및 Windows Server 릴리스에 대한 메모리 제한](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016)을 참조하세요.
+모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 프로세스 가상 주소 공간 제한까지 메모리를 구성할 수 있습니다. 자세한 내용은 [Windows 및 Windows Server 릴리스에 대한 메모리 제한](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)을 참조하세요.
   
 ## <a name="examples"></a>예  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [버전 및 SQL Server 2016의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [버전 및 SQL Server 2017의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Linux의 SQL Server 2017 버전 및 지원되는 기능](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Windows 및 Windows Server 릴리스에 대한 메모리 제한](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Windows 및 Windows Server 릴리스에 대한 메모리 제한](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

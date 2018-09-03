@@ -17,12 +17,12 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de8e4632223d81f8e49e78fee7ef14fb9983a268
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037200"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405249"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
@@ -286,7 +286,7 @@ ms.locfileid: "33037200"
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 창 및 모드를 제어합니다.  
   
-    |Description|키 조합|  
+    |설명|키 조합|  
     |-----------------|---------------------|  
     |선택한 프로젝트 빌드|Ctrl+Shift+B|  
     |속성 창 표시|F4|  
@@ -296,7 +296,7 @@ ms.locfileid: "33037200"
   
 -   보고서 디자인 화면에서 항목을 제어합니다.  
   
-    |Description|키 조합|  
+    |설명|키 조합|  
     |-----------------|---------------------|  
     |특정 보고서 항목에서 다음 보고서 항목으로 포커스 이동|Tab|  
     |선택한 보고서 항목 이동|화살표 키|  
@@ -313,7 +313,7 @@ ms.locfileid: "33037200"
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714)
-[솔루션 탐색기](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[솔루션 탐색기](../../ssms/solution/solution-explorer.md)   
 [Reporting Services 보고서](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools의 배포 및 버전 지원](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

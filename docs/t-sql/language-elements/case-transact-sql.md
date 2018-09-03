@@ -24,13 +24,13 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e65dd6ddbb2b71c92e7e3dd967a4cf50af2d687
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58c276a0e70857b09c30bc405a0437cb2fbba61f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453917"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087802"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ END
   
  Transact-SQL 문, 문 블록, 사용자 정의 함수 및 저장 프로시저의 실행 흐름을 제어하는 데 CASE 식을 사용할 수는 없습니다. 흐름 제어 메서드의 목록은 [흐름 제어 언어&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)를 참조하세요.  
   
- CASE 문은 해당 조건을 순서대로 평가하고 충족되는 첫 번째 조건에서 중지합니다. CASE 문이 식 결과를 입력으로 받기 전에 식이 계산되는 경우도 있습니다. 이러한 식을 계산하는 동안 오류가 발생할 수 있습니다. CASE 문의 WHEN 인수에 나타나는 집계 식이 먼저 계산된 다음 CASE 문에 제공됩니다. 예를 들어, 다음 쿼리는 MAX 집계 값을 생성할 때 0으로 나누기 오류를 생성합니다. 이는 CASE 식을 계산하기 전에 발생합니다.  
+ CASE 식은 해당 조건을 순서대로 평가하고 충족되는 첫 번째 조건에서 중지합니다. CASE 식이 식의 결과를 입력으로 받기 전에 식이 계산되는 경우도 있습니다. 이러한 식을 계산하는 동안 오류가 발생할 수 있습니다. CASE 식의 WHEN 인수에 나타나는 집계 식이 먼저 계산된 다음, CASE 식에 제공됩니다. 예를 들어, 다음 쿼리는 MAX 집계 값을 생성할 때 0으로 나누기 오류를 생성합니다. 이는 CASE 식을 계산하기 전에 발생합니다.  
   
 ```sql  
 WITH Data (value) AS   

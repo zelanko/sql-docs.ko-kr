@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022680"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432586"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 집합 또는 포함된 데이터 집합 만들기(보고서 작성기 및 SSRS)
 포함된 데이터 집합은 단일 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 사용하기 위한 것입니다. 보고서 서버의 공유 데이터 집합은 여러 보고서(모바일 및 페이지 매김 둘 다)에서 사용될 수 있습니다. 데이터 집합을 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 필요합니다.  
   
- 다음 작업에는 **보고서 작성기** 를 사용하세요.  
+## <a name="report-builder-tasks"></a>보고서 작성기 작업
+
+다음 작업에는 보고서 작성기를 사용하세요.  
   
 1.  데이터 집합 디자인 뷰에서 공유 데이터 집합을 만듭니다. 공유 데이터 집합은 게시된 공유 데이터 원본을 사용해야 합니다.  
   
@@ -33,7 +35,9 @@ ms.locfileid: "33022680"
   
 3.   데이터 집합을 보고서 서버 또는 SharePoint 사이트에 직접 저장합니다.  
   
- 다음 작업에는 **의** 보고서 디자이너 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하세요.  
+## <a name="report-designer-tasks"></a>보고서 디자이너 작업
+
+다음 작업에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너를 사용하세요.  
   
 1.  솔루션 탐색기에서 공유 데이터 집합을 만듭니다. 공유 데이터 집합은 솔루션 탐색기의 공유 데이터 원본 폴더에 있는 데이터 원본을 사용해야 합니다.  
   
@@ -46,7 +50,7 @@ ms.locfileid: "33022680"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>보고서 작성기를 열고 공유 데이터 집합을 만들려면  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>보고서 작성기에서 공유 데이터 집합을 만들려면
   
 1.  보고서 작성기를 엽니다. 다음 그림과 같이 **새 보고서 또는 데이터 집합** 창이 열립니다.  
   

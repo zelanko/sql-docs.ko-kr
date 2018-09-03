@@ -1,1 +1,1 @@
-<Token>**이 항목은 다음에 적용됩니다.** ![예](media/yes.png)SQL Server![예](media/yes.png)Azure SQL Database(관리되는 인스턴스만 해당)![아니요](media/no.png)Azure SQL Data Warehouse![아니요](media/no.png)병렬 데이터 웨어하우스 </Token>
+<Token>**적용 대상:** ![예](media/yes.png)SQL Server ![예](media/yes.png)Azure SQL Database(Managed Instance만 해당) ![아니요](media/no.png)Azure SQL Data Warehouse ![아니요](media/no.png)병렬 데이터 웨어하우스 </Token>

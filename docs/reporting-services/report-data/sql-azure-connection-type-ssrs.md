@@ -1,7 +1,7 @@
 ---
 title: SQL Azure 연결 형식(SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3183a2d7ec717cfd5f00768c16a142727d3fc058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e8ed9c88cf2e6c77321e26e6704ae64cb2249b3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022790"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405858"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 연결 형식(SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술을 기반으로 작성된 클라우드 기반의 호스트되는 관계형 데이터베이스입니다. 보고서에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 의 데이터를 포함하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하고 데이터를 검색할 수 있습니다.  
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  저장 프로시저에 기본값을 사용하는 매개 변수가 있는 경우 매개 변수의 값으로 DEFAULT 키워드를 사용하여 해당 값에 액세스할 수 있습니다. 쿼리 매개 변수가 보고서 매개 변수에 연결되어 있으면 사용자가 보고서 매개 변수의 입력란에 DEFAULT라는 단어를 입력하거나 선택할 수 있습니다.  
   
- 저장 프로시저에 대한 자세한 내용은 msdn.microsoft.com의 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335) 에서 "저장 프로시저(데이터베이스 엔진)"를 참조하세요.  
+ 저장 프로시저에 대한 자세한 내용은 [저장 프로시저(데이터베이스 엔진)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)를 참조하세요.  
   
   
 ##  <a name="Parameters"></a> 매개 변수  

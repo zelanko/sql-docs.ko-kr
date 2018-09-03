@@ -1,14 +1,14 @@
 ---
 title: SSIS를 사용하여 패키지 배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7abdad422347e140e230eac9b7f19a78d5ba47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328267"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028817"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.    
@@ -45,37 +45,49 @@ ms.locfileid: "35328267"
 마지막으로 패키지 실행 유틸리티를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 패키지를 실행합니다.    
     
 발생할 수 있는 복잡한 실제 배포 문제를 시뮬레이션하는 것이 이 자습서의 목표입니다. 그러나 패키지를 다른 컴퓨터에 배포할 수 없는 경우에도 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 있는 msdb 데이터베이스에 패키지를 설치한 다음 동일한 인스턴스에 있는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 패키지를 실행하여 이 자습서를 수행할 수 있습니다.    
-    
-## <a name="what-you-will-learn"></a>학습 내용    
+
+**이 자습서에 소요되는 예상 시간:** 2시간
+
+## <a name="what-you-learn"></a>학습 내용    
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 패키지 및 기타 필요한 파일을 프로젝트에 추가하는 단계를 진행합니다. 프로젝트가 완료된 후에 배포 번들을 만들고 번들을 대상 컴퓨터에 복사한 다음 패키지를 대상 컴퓨터에 설치합니다.    
     
-## <a name="requirements"></a>요구 사항    
+## <a name="prerequisites"></a>사전 요구 사항    
 이 자습서는 기본적인 파일 시스템 작업에는 익숙하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다. 이 자습서에서 사용되는 기본 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개념을 더 쉽게 이해할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서인 [SSIS ETL 패키지를 만드는 방법](../integration-services/ssis-how-to-create-an-etl-package.md)을 먼저 완료하는 것이 좋습니다.    
     
-**원본 컴퓨터.** 배포 번들을 만들려는 컴퓨터에는 **다음 구성 요소가 설치되어 있어야 합니다.**
-- SQL Server  
-- 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 이러한 파일은 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 샘플 데이터베이스)를 다운로드하면 함께 설치됩니다.     
-> **참고!** AdventureWorks의 테이블이나 사용하는 다른 데이터를 만들고 삭제할 수 있는 권한이 있어야 합니다.         
+### <a name="on-the-source-computer"></a>원본 컴퓨터의 경우
+
+배포 번들을 만드는 컴퓨터에는 **다음 구성 요소가 설치되어 있어야 합니다**.
+
+- SQL Server. ([SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)에서 SQL Server의 평가판 또는 개발자 버전을 다운로드합니다.)
+
+- 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)을 참조하세요. Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
+
+-   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorks2014.bak`를 다운로드하고 백업을 복원하세요.  
+
+-   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 수 있는 권한이 있어야 합니다.
     
 -   [SQL Server Data Tools(SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
-**대상 컴퓨터.** 패키지를 배포하려는 컴퓨터에 **다음 구성 요소가 설치되어 있어야 합니다.**    
+### <a name="on-the-destination-computer"></a>대상 컴퓨터의 경우
+
+패키지를 배포하려는 컴퓨터에 **다음 구성 요소가 설치되어 있어야 합니다.**    
     
-- SQL Server
-- 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 이러한 파일은 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 샘플 데이터베이스)를 다운로드하면 함께 설치됩니다. 
+- SQL Server. ([SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)에서 SQL Server의 평가판 또는 개발자 버전을 다운로드합니다.)
+
+- 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)을 참조하세요. Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
+
+-   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorks2014.bak`를 다운로드하고 백업을 복원하세요.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 참조하세요.    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 참조하세요. SSIS를 설치하려면 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
     
--   AdventureWorks에서 테이블을 작성 및 삭제하고 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 패키지를 실행할 수 있는 권한이 있어야 합니다.    
+-   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 권한과 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SSIS 패키지를 실행할 권한이 있어야 합니다.    
     
--   msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 시스템 데이터베이스의 sysssispackages 테이블에 대한 읽기/쓰기 권한    
+-   `sysssispackages` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 시스템 데이터베이스의 `msdb` 테이블에 대한 읽기/쓰기 권한    
     
 배포 번들을 만든 컴퓨터에 패키지를 배포하려면 해당 컴퓨터는 원본 및 대상 컴퓨터에 대한 요구 사항을 모두 충족해야 합니다.    
-    
-**이 자습서에 소요되는 예상 시간:** 2시간    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원    
 [1단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 이 단원에서는 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 패키지 및 기타 필수 파일을 프로젝트에 추가하여 ETL 솔루션 배포를 준비합니다.    

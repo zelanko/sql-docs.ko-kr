@@ -17,15 +17,15 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c6c7edf99179ba576fbb2a30668768eeca222e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9c3e64d56db1d24a386619a274e293135f3d95d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036390"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406083"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
-이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 KPI(핵심 성과 지표)를 추가합니다.  
+이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에 KPI(핵심 성과 지표)를 추가합니다.  
 
 KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 시나리오에서 제품 하위 범주별 판매 요약이 KPI입니다. KPI의 현재 상태는 색, 계기 및 표시기를 사용하여 표시됩니다.
   

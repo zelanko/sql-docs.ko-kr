@@ -22,12 +22,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8d2bbaf2046f8cf62264005e787938a8d61fee6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d9feea0894878a081360b655add9b3845d0264a
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025690"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415858"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 로그 파일 및 소스
   보고서 서버 및 보고서 서버 환경은 서버 작업 및 상태에 대한 정보를 기록하는 데 여러 가지 로그 대상을 사용합니다. 로깅에는 실행 로깅 및 추적 로깅의 두 가지 기본 범주가 있습니다. 실행 로깅에는 보고서 실행 통계, 감사, 성능 진단 및 최적화에 대한 정보가 포함됩니다. 추적 로깅은 오류 메시지 및 일반 진단에 대한 정보입니다.  
@@ -36,10 +36,10 @@ ms.locfileid: "33025690"
   
  다음 표에는 로그의 내용을 보는 방법과 로그 위치를 포함한 각 로그에 관한 추가 정보의 링크가 제공됩니다.  
   
-|Log|Description|  
+|Log|설명|  
 |---------|-----------------|  
 |[보고서 서버 ExecutionLog 및 ExecutionLog3 뷰](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)|실행 로그는 보고서 서버 데이터베이스에 저장되는 SQL Server 뷰입니다.<br /><br /> 보고서 서버 실행 로그에는 보고서를 실행한 시간과 사람, 보고서가 배달된 위치 및 사용된 렌더링 형식을 포함하여 특정 보고서에 대한 데이터가 들어 있습니다.|  
-|SharePoint 추적 로그|SharePoint에서 실행하는 보고서 서버의 경우 SharePoint 추적 로그에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 정보가 포함됩니다. SharePoint 통합 로깅 서비스의 경우 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 관련 정보를 구성할 수도 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
+|SharePoint 추적 로그|SharePoint에서 실행하는 보고서 서버의 경우 SharePoint 추적 로그에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 정보가 포함됩니다. SharePoint 통합 로깅 서비스의 경우 [!INCLUDE[ssRS](../../includes/ssrs.md)] 관련 정보를 구성할 수도 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
 |[보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)|서비스 추적 로그에는 응용 프로그램을 디버깅하거나 문제 또는 이벤트를 조사하는 경우에 유용한 세부 정보가 들어 있습니다. 추적 로그 파일은 ReportServerService_\<timestamp>.log이며 다음 폴더에 있습니다.<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`|  
 |[보고서 서버 HTTP 로그](../../reporting-services/report-server/report-server-http-log.md)|HTTP 로그 파일에는 보고서 서버 웹 서비스 및 보고서 관리자에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록이 포함되어 있습니다.|  
 |[Windows 응용 프로그램 로그](../../reporting-services/report-server/windows-application-log.md)|Microsoft Windows 응용 프로그램 로그에는 보고서 서버 이벤트에 대한 정보가 들어 있습니다.|  

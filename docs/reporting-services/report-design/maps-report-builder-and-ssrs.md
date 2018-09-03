@@ -1,7 +1,7 @@
 ---
 title: 지도(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -22,12 +22,12 @@ caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e5a6a0c2bfb86e57f900a89c48e84ca68e6689f
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028920"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410410"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
   지리적 배경에 대해 비즈니스 데이터를 시각화하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도를 추가할 수 있습니다. 선택하는 지도 유형은 보고서에 나타낼 정보에 따라 다릅니다. 위치만 표시하는 지도, 지역의 세대 수에 따라 거품 크기가 달라지는 거품형 지도, 각 상점에서 이윤이 가장 높은 제품에 따라 표식 스타일이 달라지는 표식 지도 또는 상점 간 경로를 표시하는 선 지도 등을 추가할 수 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "33028920"
   
 -   **ESRI 셰이프 파일.** ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터를 포함합니다. ESRI 셰이프 파일은 파일 집합입니다. .shp 파일의 데이터는 지리적 또는 기하학적 모양을 지정합니다. .dbf 파일의 데이터는 모양의 특성을 제공합니다. 디자인 뷰에서 지도를 보거나 보고서 서버에서 지도를 실행하려면 두 파일이 모두 같은 폴더에 있어야 합니다. 로컬 파일 시스템에서 .shp 파일의 공간 데이터를 추가하면 이 공간 데이터가 보고서에 포함됩니다. 런타임에 동적으로 공간 데이터를 검색하려면 셰이프 파일을 보고서 서버로 업로드한 다음 공간 데이터 원본으로 지정합니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
--   **데이터베이스에 저장된 SQL Server 공간 데이터.** **관계형 데이터베이스에서** SQLGeometry **또는** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정하는 쿼리를 사용할 수 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/spatial/spatial-data-types-overview.md) 에서 [공간 데이터 형식 개요](http://go.microsoft.com/fwlink/?linkid=98335)를 참조하세요.  
+-   **데이터베이스에 저장된 SQL Server 공간 데이터.** **관계형 데이터베이스에서** SQLGeometry **또는** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정하는 쿼리를 사용할 수 있습니다. 자세한 내용은 [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)를 참조하세요.  
   
      쿼리 디자이너에 나타나는 결과 집합에서 각 공간 데이터 행은 하나의 단위로 처리되고 단일 지도 요소에 저장됩니다. 예를 들어 결과 집합에서 한 행에 여러 개의 점이 정의되어 있으면 표시 속성이 해당 지도 요소의 모든 점에 적용됩니다.  
   

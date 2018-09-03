@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053351"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410358"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
 
@@ -85,7 +85,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>기본 모드와 SharePoint 웹 파트
 
- Reporting Services는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 이상 또는 [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 이상의 인스턴스에 설치하고 등록할 수 있는 두 가지 웹 파트를 제공합니다. SharePoint 사이트에서 이러한 웹 파트를 사용하여 기본 모드에서 실행되는 보고서 서버에서 저장 및 처리되는 보고서를 찾고 확인할 수 있습니다. 이러한 웹 파트는 Reporting Services의 이전 릴리스에서 도입되었습니다.  
+ Reporting Services는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 이상 또는 SharePoint Portal Server 2003 이상의 인스턴스에 설치하고 등록할 수 있는 두 가지 웹 파트를 제공합니다. SharePoint 사이트에서 이러한 웹 파트를 사용하여 기본 모드에서 실행되는 보고서 서버에서 저장 및 처리되는 보고서를 찾고 확인할 수 있습니다. 이러한 웹 파트는 Reporting Services의 이전 릴리스에서 도입되었습니다.  
   
 ## <a name="sharepoint-mode"></a>SharePoint 모드
 
@@ -106,7 +106,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 ||설명|  
 |-|-----------------|  
 |**(1)**|웹 서버 또는 WFE(웹 프런트 엔드). Reporting Services 추가 기능은 데이터 원본 또는 구독 관리와 같은 작업을 위해 보고서 또는 Reporting Services 관리 페이지 보기와 같은 웹 응용 프로그램 기능을 활용하려는 각 웹 서버에 설치해야 합니다.|  
-|**(2)**|추가 기능은 Reporting Services 서비스 프록시를 통해 클라이언트가 응용 프로그램 서버와 통신할 수 있도록 URL 및 SOAP 끝점을 설치합니다.|  
+|**(2)**|추가 기능은 Reporting Services 서비스 프록시를 통해 클라이언트가 응용 프로그램 서버와 통신할 수 있도록 URL 및 SOAP 엔드포인트를 설치합니다.|  
 |**(3)**|Reporting Services 공유 서비스를 실행하는 응용 프로그램 서버입니다. 보고서 처리의 스케일 아웃은 SharePoint 팜의 일부로 추가 응용 프로그램 서버에 Reporting Services 서비스를 추가하여 관리됩니다.|  
 |**(4)**|권한, 전자 메일, 프록시 및 구독을 포함하여 서로 다른 구성을 사용하는 두 개 이상의 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다.|  
 |**(5)**|보고서, 데이터 원본 및 기타 항목은 SharePoint 콘텐츠 데이터베이스에 저장됩니다.|  

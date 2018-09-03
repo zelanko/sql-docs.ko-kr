@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008805"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024466"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 이 자습서에서는 시나리오를 통해 소유권 체인 및 사용자 컨텍스트 전환과 관련된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보안 개념을 설명합니다.  
   
 > [!NOTE]  
-> 이 자습서의 코드를 실행하려면 혼합 모드 보안을 구성하고 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스를 설치해야 합니다. 혼합 모드 보안에 대한 자세한 내용은 [인증 모드 선택](../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
+> 이 자습서의 코드를 실행하려면 혼합 모드 보안을 구성하고 AdventureWorks2017 데이터베이스를 설치해야 합니다. 혼합 모드 보안에 대한 자세한 내용은 [인증 모드 선택](../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
   
 ## <a name="scenario"></a>시나리오  
-이 시나리오에서는 두 사용자에게 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에 저장된 구매 주문 데이터에 액세스할 수 있는 계정이 필요합니다. 요구 사항은 다음과 같습니다.  
+이 시나리오에서는 두 사용자에게 AdventureWorks2017 데이터베이스에 저장된 구매 주문 데이터에 액세스할 수 있는 계정이 필요합니다. 요구 사항은 다음과 같습니다.  
   
 -   첫 번째 계정(TestManagerUser)은 전체 구매 주문의 세부 사항을 모두 볼 수 있어야 합니다.  
-  
 -   두 번째 계정(TestEmployeeUser)은 부분 운송을 받은 항목에 대해 구매 주문 번호, 주문 날짜, 운송 날짜, 제품 ID 번호, 구매 주문별로 주문하고 받은 항목, 구매 주문 번호별로 주문하고 받은 항목을 볼 수 있어야 합니다.  
-  
--   다른 모든 계정은 현재의 해당 사용 권한을 유지해야 합니다.  
-  
+-   다른 모든 계정은 현재의 해당 사용 권한을 유지해야 합니다.   
 이 시나리오의 요구 사항을 만족시키기 위해 이 예제는 소유권 체인 및 컨텍스트 전환의 개념을 설명하는 네 부분으로 나뉘어 있습니다.  
   
-1.  환경 구성  
-  
-2.  구매 주문별로 데이터에 액세스하는 저장 프로시저 만들기  
-  
+1.  환경 구성   
+2.  구매 주문별로 데이터에 액세스하는 저장 프로시저 만들기   
 3.  저장 프로시저를 통해 데이터 액세스  
-  
 4.  환경 다시 설정  
   
-이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.  
+이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.
+
+## <a name="prerequisites"></a>사전 요구 사항
+이 자습서를 완료하려면 SQL Server Management Studio, SQL Server를 실행하는 서버에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다.
+
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
+- [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
+
+SQL Server Management Studio에서 데이터베이스를 복원하는 방법은 [데이터베이스를 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.   
   
 ## <a name="1-configure-the-environment"></a>1. 환경 구성  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 다음 코드를 사용하여 `AdventureWorks2012` 데이터베이스를 열고 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하여 dbo 사용자가 컨텍스트로 표시되는지 확인합니다.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 다음 코드를 사용하여 `AdventureWorks2017` 데이터베이스를 열고 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하여 dbo 사용자가 컨텍스트로 표시되는지 확인합니다.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 CURRENT_USER 문에 대한 자세한 내용은 [CURRENT_USER&#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md)를 참조하세요.  
   
-다음 코드를 dbo 사용자로 사용하여 서버와 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에서 두 사용자를 만듭니다.  
+이 코드를 dbo 사용자로 사용하여 서버와 AdventureWorks2017 데이터베이스에 두 명의 사용자를 만듭니다.  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+반환된 오류:
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 `TestManagerUser` 스키마 소유권으로 인해 `Purchasing` 가 마지막 섹션에서 생성된 저장 프로시저에서 참조하는 개체를 소유하므로 `TestEmployeeUser` 는 저장 프로시저를 통해 기본 테이블에 액세스할 수 있습니다. 아직 `TestEmployeeUser` 컨텍스트를 사용하는 다음 코드는 구매 주문 952를 매개 변수로 전달합니다.  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

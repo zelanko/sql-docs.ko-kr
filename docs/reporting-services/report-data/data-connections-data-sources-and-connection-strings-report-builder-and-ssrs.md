@@ -1,7 +1,7 @@
 ---
 title: 데이터 연결, 데이터 원본, 연결 문자열-보고서 작성기-SSRS | Microsoft Docs
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d97b92107887fe0348213947fc683bf9e86013d
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969418"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42441572"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)
 
@@ -26,11 +26,23 @@ ms.locfileid: "37969418"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 및  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
 
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>다음의 데이터 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
+1.  **보고서 데이터 창의 데이터 원본** 포함된 데이터 원본을 만들거나 공유 데이터 원본을 추가하면 데이터 원본이 보고서 데이터 창에 표시됩니다.  
+  
+2.  **연결 대화 상자** 연결 대화 상자를 사용하여 연결 문자열을 작성하거나 붙여 넣습니다.  
+  
+3.  **데이터 연결 정보** 연결 문자열은 데이터 확장 프로그램에 전달됩니다.  
+  
+4.  **자격 증명** 자격 증명은 연결 문자열과 별도로 관리됩니다.  
+  
+5.  **데이터 확장 프로그램/데이터 공급자** 여러 데이터 액세스 계층을 통해 데이터에 연결할 수 있습니다.  
+  
+6.  **외부 데이터 원본** 관계형 데이터베이스,  다차원 데이터베이스,  SharePoint  목록,  웹 서비스 또는 보고서 모델에서 데이터를 검색합니다.  
+
 ##  <a name="bkmk_data_sources"></a> 포함된 데이터 원본 또는 공유 데이터 원본  
  공유 데이터 원본은 자주 사용하는 데이터 원본이 있는 경우에 유용합니다. 가능한 한 공유 데이터 원본을 사용하는 것이 좋습니다. 공유 데이터 원본을 사용하면 보고서 및 보고서 액세스 관리가 더 쉬울 뿐만 아니라 보고서 및 보고서에서 액세스하는 데이터 원본을 보다 안전하게 유지할 수 있습니다. 공유 데이터 원본이 필요한 경우에는 공유 데이터 원본을 만들어 주도록 시스템 관리자에게 요청하세요.  
   
@@ -44,7 +56,7 @@ ms.locfileid: "37969418"
   
      개발자는 <xref:Microsoft.ReportingServices.DataProcessing> API를 사용하여 다른 유형의 데이터 원본을 지원하는 데이터 처리 확장을 만들 수 있습니다.  
   
--   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서 보고서 서버 또는 SharePoint 사이트를 찾은 다음 보고서에서 포함된 데이터 원본을 만들거나 공유 데이터 원본을 선택합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서는 공유 데이터 원본을 만들 수 없습니다. 또한 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서는 사용자 지정 데이터 확장 프로그램을 사용할 수 없습니다.  
+-   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 보고서 서버 또는 SharePoint 사이트를 찾은 다음 보고서에서 포함된 데이터 원본을 만들거나 공유 데이터 원본을 선택합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서는 공유 데이터 원본을 만들 수 없습니다. 또한 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서는 사용자 지정 데이터 확장 프로그램을 사용할 수 없습니다.  
   
  다음 표에는 포함된 데이터 원본과 공유 데이터 원본의 차이점이 요약되어 있습니다.  
   
@@ -86,21 +98,6 @@ ms.locfileid: "37969418"
 -   파워 뷰용 Microsoft BI 의미 체계 모델: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]용으로 구성된 SharePoint 사이트에서는 이 데이터 원본 유형을 사용할 수 있습니다. 이 데이터 원본 유형은 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 프레젠테이션에 대해서만 사용됩니다. 자세한 내용은 [파워 뷰용의 완벽한 표 형식 BI 의미 체계 모델 구성](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)(영문)을 참조하세요.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원하는 데이터 원본 및 버전의 전체 목록은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
-  
-## <a name="data-in-includessrbnoversionincludesssrbnoversion-mdmd"></a>다음의 데이터 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
-  
-1.  **보고서 데이터 창의 데이터 원본** 포함된 데이터 원본을 만들거나 공유 데이터 원본을 추가하면 데이터 원본이 보고서 데이터 창에 표시됩니다.  
-  
-2.  **연결 대화 상자** 연결 대화 상자를 사용하여 연결 문자열을 작성하거나 붙여 넣습니다.  
-  
-3.  **데이터 연결 정보** 연결 문자열은 데이터 확장 프로그램에 전달됩니다.  
-  
-4.  **자격 증명** 자격 증명은 연결 문자열과 별도로 관리됩니다.  
-  
-5.  **데이터 확장 프로그램/데이터 공급자** 여러 데이터 액세스 계층을 통해 데이터에 연결할 수 있습니다.  
-  
-6.  **외부 데이터 원본** 관계형 데이터베이스,  다차원 데이터베이스,  SharePoint  목록,  웹 서비스 또는 보고서 모델에서 데이터를 검색합니다.  
   
 ##  <a name="bkmk_connection_examples"></a> 자주 사용하는 연결 문자열 예  
  연결 문자열은 데이터 공급자에 대한 연결 속성의 텍스트 표현입니다. 다음 표에서는 다양한 데이터 연결 형식에 대한 연결 문자열의 예를 보여 줍니다.  

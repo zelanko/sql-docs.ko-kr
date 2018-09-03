@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e576153f1e9f0fc43360bc3ce25af284c402b14e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870058"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40415900"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32870058"
   
 -   [유용한 확장 이벤트](#BKMK_XEVENTS)  
   
-##  <a name="BKMK_DATA_SYNC_PROCESS"></a> 데이터 동기화 프로세스  
+##  <a name="data-synchronization-process"></a>데이터 동기화 프로세스  
  전체 동기화 시간을 예측하고 병목 상태를 식별하려면 동기화 프로세스를 이해해야 합니다. 성능 병목 상태는 프로세스의 어디에서나 발생할 수 있으며 병목 상태를 찾으면 기본 문제를 더 깊이 파악하는 데 도움이 될 수 있습니다. 다음 그림과 표에서 데이터 동기화 프로세스를 보여 줍니다.  
   
  ![가용성 그룹 데이터 동기화](media/always-onag-datasynchronization.gif "가용성 그룹 데이터 동기화")  
@@ -48,14 +48,14 @@ ms.locfileid: "32870058"
 |||||  
 |-|-|-|-|  
 |**시퀀스**|**단계 설명**|**설명**|**유용한 메트릭**|  
-|1|로그 생성|로그 데이터는 디스크에 플러시됩니다. 이 로그를 보조 복제본에 복제해야 합니다. 로그 레코드에 전송 큐를 입력합니다.|[SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|@shouldalert|로그 생성|로그 데이터는 디스크에 플러시됩니다. 이 로그를 보조 복제본에 복제해야 합니다. 로그 레코드에 전송 큐를 입력합니다.|[SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|캡처|각 데이터베이스에 대한 로그가 캡처되어 해당 파트너 큐(데이터베이스-복제본 쌍마다 한 개)로 전송됩니다. 이 캡처 프로세스는 가용성 복제본이 연결되고 데이터 이동이 어떤 이유로든 일시 중단되지 않는 한 지속적으로 실행되며 데이터베이스-복제본 쌍이 동기화 중이거나 동기화된 것으로 표시됩니다. 캡처 프로세스가 메시지를 충분히 빠르게 스캔하여 큐에 넣을 수 없는 경우 로그 전송 큐가 축적됩니다.|[SQL Server:가용성 복제본 > 복제본에 전송된 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)는 해당 가용성 복제본의 큐에 저장된 모든 데이터베이스 메시지의 합계를 집계한 것입니다.<br /><br /> 주 복제본의 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB/sec).|  
 |3|Send|각 데이터베이스 복제본 큐의 메시지가 큐에서 제거되고 유선을 통해 해당 보조 복제본으로 전송됩니다.|[SQL Server:가용성 복제본 > 전송에 보낸 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 및 [SQL Server:가용성 복제본 > 메시지 승인 시간](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
 |4|수신 및 캐시|각 보조 복제본이 메시지를 수신하고 캐시합니다.|성능 카운터 [SQL Server:가용성 복제본 > 수신된 로그 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|확정|로그가 확정을 위해 보조 복제본에 플러시됩니다. 로그가 플러시된 후 승인이 주 복제본으로 다시 보내집니다.<br /><br /> 로그가 확정된 후 데이터 손실이 방지됩니다.|성능 카운터 [SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 대기 유형 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|다시 실행|보조 복제본에 대해 플러시된 페이지를 다시 실행합니다. 페이지는 다시 실행을 위해 대기하는 동안 다시 실행 큐에 보관됩니다.|[SQL Server:데이터베이스 복제본 > 다시 실행한 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> 대기 유형 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
-##  <a name="BKMK_FLOW_CONTROL_GATES"></a> 흐름 제어 게이트  
+##  <a name="flow-control-gates"></a>흐름 제어 게이트  
  가용성 그룹은 모든 가용성 복제본에서 네트워크 및 메모리 리소스 등의 과도한 리소스 사용을 피하기 위해 주 복제본에 흐름 제어 게이트를 포함하도록 설계됩니다. 이러한 흐름 제어 게이트는 가용성 복제본의 동기화 상태에 영향을 주지 않으며 RPO를 포함한 가용성 데이터베이스의 전체 성능에 영향을 줄 수 있습니다.  
   
  로그는 주 복제본에 캡처된 후 다음 표와 같이 두 단계의 흐름 제어를 적용합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "32870058"
   
  두 가지 유용한 성능 카운터 [SQL Server:가용성 복제본 > 흐름 제어/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 및 [SQL Server:가용성 복제본 > 흐름 제어 시간(ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md)은 마지막 초 이내에 흐름 제어가 활성화된 시간 및 흐름 제어를 위해 대기하면서 소비한 시간을 보여 줍니다. 흐름 제어 대기 시간이 클수록 RPO가 더 큽니다. 흐름 제어에 대한 높은 대기 시간을 야기할 수 있는 문제 유형에 대한 자세한 내용은 [문제 해결: 가용성 그룹이 RPO를 초과하는 경우](troubleshoot-availability-group-exceeded-rpo.md)를 참조하세요.  
   
-##  <a name="BKMK_RTO"></a> 장애 조치(failover) 시간 예측(RTO)  
+##  <a name="estimating-failover-time-rto"></a>장애 조치(failover) 시간 예측(RTO)  
  SLA의 RTO는 지정된 시간에 Always On 구현의 장애 조치(failover) 시간에 따라 달라지며 다음 수식으로 표현될 수 있습니다.  
   
  ![가용성 그룹 RTO 계산](media/always-on-rto.gif "가용성 그룹 RTO 계산")  
@@ -90,7 +90,7 @@ ms.locfileid: "32870058"
   
  장애 조치(failover) 오버헤드 시간 Toverhead는 WSFC 클러스터를 장애 조치하고 데이터베이스를 온라인 상태로 만드는 데 걸리는 시간을 포함합니다. 이 시간은 대개 짧고 일정합니다.  
   
-##  <a name="BKMK_RPO"></a> 잠재적 데이터 손실 예측(RPO)  
+## <a name="estimating-potential-data-loss-rpo"></a>잠재적 데이터 손실 예측(RPO)  
  SLA의 RPO는 임의의 지정된 시간에 Always On 구현의 예상 데이터 손실에 따라 달라집니다. 이 예상 데이터 손실은 다음 수식으로 나타낼 수 있습니다.  
   
  ![가용성 그룹 RPO 계산](media/always-on-rpo.gif "가용성 그룹 RPO 계산")  
@@ -103,8 +103,234 @@ ms.locfileid: "32870058"
  로그 전송 큐는 치명적인 오류에서 손실될 수 있는 모든 데이터를 나타냅니다. 얼핏 보기에 로그 생성 속도가 로그 전송 속도 대신에 사용되는 것 같아 이상해 보입니다([log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 참조). 그러나 로그 전송 속도만 사용하면 동기화 시간만 제공하는 반면에 RPO는 데이터가 동기화되는 속도가 아닌 데이터가 생성되는 속도를 기반으로 데이터 손실을 측정한다는 것을 기억해야 합니다.  
   
  Tdata_loss를 예측하는 더 간단한 방법은 [last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)을 사용하는 것입니다. 기본 복제에 대한 DMV는 모든 복제본에 대해 이 값을 보고합니다. 기본 복제본에 대한 값과 보조 복제본에 대한 값 간의 차를 계산하면 보조 복제본의 로그가 기본 복제본에 캡처되는 속도를 예상할 수 있습니다. 앞에서 언급했듯이 이 계산은 로그가 생성되는 속도를 기반으로 잠재적 데이터 손실을 알려 주는 것이 아니라 가까운 근사값입니다.  
+
+## <a name="estimate-rto--rpo-with-the-ssms-dashboard"></a>SSMS 대시보드를 사용하여 RTO 및 RPO 추정
+Always On 가용성 그룹에서는 보조 복제본에 호스팅되는 데이터베이스에 대해 RTO 및 RPO가 계산되고 표시됩니다. 주 복제본의 대시보드에서 RTO 및 RPO는 보조 복제본으로 그룹화됩니다. 
+
+대시보드 내에서 RTO 및 RPO를 보려면 다음을 수행합니다.
+1. SQL Server Management Studio에서 **Always On 고가용성** 노드를 확장하고, 가용성 그룹의 이름을 마우스 오른쪽 단추로 클릭하고, **대시보드 표시**를 선택합니다. 
+1. **그룹화** 탭 아래의 **열 추가/제거**를 선택합니다. **예상 복구 시간(초)** [RTO] 및 **예상 데이터 손실(시간)** [RPO]를 모두 확인합니다. 
+
+   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+
+### <a name="calculation-of-secondary-database-rto"></a>보조 데이터베이스 RTO 계산 
+복구 시간 계산은 장애 조치(failover)가 발생한 후 *보조 데이터베이스*를 복구하는 데 필요한 시간을 결정합니다.  장애 조치(failover) 시간은 대개 짧고 일정합니다. 검색 시간은 클러스터 수준 설정에 따라 달라지며 개별 가용성 복제본에 의존하지 않습니다. 
+
+
+보조 데이터베이스(DB_sec)의 경우 해당 RTO의 계산 및 표시는 **redo_queue_size** 및 **redo_rate**를 기반으로 합니다.
+
+![RTO 계산](media/calculate-rto.png)
+
+코너 케이스를 제외하고 보조 데이터베이스의 RTO를 계산하는 수식은 다음과 같습니다.
+
+![RTO를 계산하는 수식](media/formula-calc-second-dba-rto.png)
+
+
+
+### <a name="calculation-of-secondary-database-rpo"></a>보조 데이터베이스 RPO 계산
+
+보조 데이터베이스(DB_sec)의 경우 해당 RPO의 계산과 표시는 is_failover_ready, last_commit_time 및 상관 관계가 있는 주 데이터베이스(DB_pri)의 last_commit_time을 기반으로 합니다. 보조 database.is_failover_ready = 1이면 daa가 동기화되고 장애 조치(failover) 시 데이터 손실이 발생하지 않습니다. 그러나 이 값이 0이면 주 데이터베이스의 **last_commit_time**과 보조 데이터베이스의 **last_commit_time** 사이에 간격이 있습니다. 
+
+주 데이터베이스의 경우 **last_commit_time**은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time**은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 이 번호는 주 데이터베이스와 보조 데이터베이스 모두에서 동일해야 합니다. 이 두 값 사이의 간격은 보류 중인 트랜잭션이 보조 데이터베이스에서 강화되지 않고 장애 조치(failover) 시 손실되는 기간입니다. 
+
+![RPO 계산](media/calculate-rpo.png)
+
+### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO/RPO 수식에 사용된 성능 카운터
+
+- **redo_queue_size**(KB) [*RTO에서 사용됨*]: 다시 실행 큐 크기는 **last_received_lsn**과 **last_redone_lsn** 사이의 트랜잭션 로그 크기입니다. **last_received_lsn**는 이 보조 데이터베이스를 호스팅하는 보조 복제본이 모든 로그 블록을 받은 지점을 식별하는 로그 블록 ID입니다. **Last_redone_lsn**는 보조 데이터베이스에서 마지막으로 다시 실행된 로그 레코드의 실제 로그 시퀀스 번호입니다. 이 두 값에 따라 시작 로그 블록(**last_received_lsn**) 및 최종 로그 블록(**last_redone_lsn**)의 ID를 찾을 수 있습니다. 그런 다음, 이러한 두 로그 블록 사이의 공간은 트랜잭션 로그 블록이 아직 다시 실행되지 않은 방법을 나타낼 수 있습니다. 이는 킬로바이트(KB)로 측정됩니다.
+-  **redo_rate**(KB/sec) [*RTO에서 사용됨*]: 경과된 시간의 기간에서 표시되는 누적 값, 보조 데이터베이스에서 트랜잭션 로그(KB)의 양을 킬로바이트(KB)/escond로 다시 실행되었습니다. 
+- **last_commit_time**(날짜/시간) [*RPO에서 사용됨*]: 주 데이터베이스의 경우 **last_commit_time**은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time**은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 보조의 이 값은 주의 동일한 값과 동기화되어야 하므로, 이 두 값 사이의 간격은 데이터 손실(RPO)의 추정치입니다.  
+ 
+## <a name="estimate-rto-and-rpo-using-dmvs"></a>DMV를 사용하여 RTO 및 RPO 추정
+
+DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 및 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)를 쿼리하여 데이터베이스의 RPO 및 RTO를 추정할 수 있습니다. 아래 쿼리는 두 가지 작업을 모두 수행하는 저장 프로시저를 만듭니다. 
+
+  >[!NOTE]
+  > RPO를 추정하기 위해 저장 프로시저를 실행하려면 RTO가 생성하는 값이 필요하므로 저장 프로시저를 만들고 실행하여 먼저 RTO를 추정합니다. 
+
+### <a name="create-a-stored-procedure-to-estimate-rto"></a>RTO를 추정하는 저장 프로시저 만들기 
+
+1. 대상 보조 복제본에서 저장 프로시저 **proc_calculate_RTO**를 만듭니다. 이 저장 프로시저가 이미 있는 경우 먼저 삭제한 다음, 다시 만듭니다. 
+
+ ```sql
+    if object_id(N'proc_calculate_RTO', 'p') is not null
+        drop procedure proc_calculate_RTO
+    go
+    
+    raiserror('creating procedure proc_calculate_RTO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RTO
+    --
+    -- description: Calculate RTO of a secondary database.
+    -- 
+    -- parameters:  @secondary_database_name nvarchar(max): name of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RTO
+    (
+    @secondary_database_name nvarchar(max)
+    )
+    as
+    begin
+      declare @db sysname
+      declare @is_primary_replica bit 
+      declare @is_failover_ready bit 
+      declare @redo_queue_size bigint 
+      declare @redo_rate bigint
+      declare @replica_id uniqueidentifier
+      declare @group_database_id uniqueidentifier
+      declare @group_id uniqueidentifier
+      declare @RTO float 
+
+      select 
+      @is_primary_replica = dbr.is_primary_replica, 
+      @is_failover_ready = dbcs.is_failover_ready, 
+      @redo_queue_size = dbr.redo_queue_size, 
+      @redo_rate = dbr.redo_rate, 
+      @replica_id = dbr.replica_id,
+      @group_database_id = dbr.group_database_id,
+      @group_id = dbr.group_id 
+      from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs    on dbr.replica_id = dbcs.replica_id and 
+      dbr.group_database_id = dbcs.group_database_id  where dbcs.database_name = @secondary_database_name
+
+      if  @is_primary_replica is null or @is_failover_ready is null or @redo_queue_size is null or @replica_id is null or @group_database_id is null or @group_id is null
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else if @is_primary_replica = 1
+      begin
+        print 'You are visiting wrong replica';
+        return
+      end
+
+      if @redo_queue_size = 0 
+        set @RTO = 0 
+      else if @redo_rate is null or @redo_rate = 0 
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else 
+        set @RTO = CAST(@redo_queue_size AS float) / @redo_rate
+    
+      print 'RTO of Database '+ @secondary_database_name +' is ' + convert(varchar, ceiling(@RTO))
+      print 'group_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_id)
+      print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
+      print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
+    end
+ ```
+
+2. 대상 보조 데이터베이스 이름으로 **proc_calculate_RTO**를 실행합니다.
+  ```sql
+   exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
+  ```
+3. 출력에는 대상 보조 복제본 데이터베이스의 RTO 값이 표시됩니다. RPO 추정 저장 프로시저와 함께 사용할 *group_id*, *replica_id* 및 *group_database_id*를 저장합니다. 
+   
+   예제 출력:
+<br>데이터베이스 DB_sec의 RTO'는 0입니다.
+<br>데이터베이스 DB4의 group_id는 F176DD65-C3EE-4240-BA23-EA615F965C9B입니다.
+<br>데이터베이스 DB4의 replica_id는 405554F6-3FDC-4593-A650-2067F5FABFFD입니다.
+<br>데이터베이스 DB4의 group_database_id는 39F7942F-7B5E-42C5-977D-02E7FFA6C392입니다.
+
+### <a name="create-a-stored-procedure-to-estimate-rpo"></a>RPO를 추정하는 저장 프로시저 만들기 
+1. 주 복제본에서 저장 프로시저 **proc_calculate_RPO**를 만듭니다. 이미 있는 경우 먼저 삭제한 다음, 다시 만듭니다. 
+
+ ```sql
+    if object_id(N'proc_calculate_RPO', 'p') is not null
+                    drop procedure proc_calculate_RPO
+    go
+    
+    raiserror('creating procedure proc_calculate_RPO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RPO
+    --
+    -- description: Calculate RPO of a secondary database.
+    -- 
+    -- parameters:  @group_id uniqueidentifier: group_id of the secondary database.
+    --              @replica_id uniqueidentifier: replica_id of the secondary database.
+    --              @group_database_id uniqueidentifier: group_database_id of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RPO
+    (
+     @group_id uniqueidentifier,
+     @replica_id uniqueidentifier,
+     @group_database_id uniqueidentifier
+    )
+    as
+    begin
+          declare @db_name sysname
+          declare @is_primary_replica bit
+          declare @is_failover_ready bit
+          declare @is_local bit
+          declare @last_commit_time_sec datetime 
+          declare @last_commit_time_pri datetime      
+          declare @RPO nvarchar(max) 
+
+          -- secondary database's last_commit_time 
+          select 
+          @db_name = dbcs.database_name,
+          @is_failover_ready = dbcs.is_failover_ready, 
+          @last_commit_time_sec = dbr.last_commit_time 
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.replica_id = @replica_id and dbr.group_database_id = @group_database_id
+
+          -- correlated primary database's last_commit_time 
+          select
+          @last_commit_time_pri = dbr.last_commit_time,
+          @is_local = dbr.is_local
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.is_primary_replica = 1 and dbr.group_database_id = @group_database_id
+
+          if @is_local is null or @is_failover_ready is null
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+
+          if @is_local = 0
+          begin
+            print 'You are visiting wrong replica'
+            return
+          end  
+
+          if @is_failover_ready = 1
+            set @RPO = '00:00:00'
+          else if @last_commit_time_sec is null or  @last_commit_time_pri is null 
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+          else
+          begin
+            if DATEDIFF(ss, @last_commit_time_sec, @last_commit_time_pri) < 0
+            begin
+                print 'RPO of database '+ @db_name +' is not available'
+                return
+            end
+            else
+                set @RPO =  CONVERT(varchar, DATEADD(ms, datediff(ss ,@last_commit_time_sec, @last_commit_time_pri) * 1000, 0), 114)
+          end
+          print 'RPO of database '+ @db_name +' is ' + @RPO
+      end
+ ```
+
+2. 대상 보조 데이터베이스의 *group_id*, *replica_id* 및 *group_database_id*를 사용하여 **proc_calculate_RPO**를 실행합니다. 
+
+ ```sql
+   exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
+        @replica_id =  '405554F6-3FDC-4593-A650-2067F5FABFFD',
+        @group_database_id  = '39F7942F-7B5E-42C5-977D-02E7FFA6C392'
+ ```
+3. 출력에는 대상 보조 복제본 데이터베이스의 RPO 값이 표시됩니다. 
+
   
-##  <a name="BKMK_Monitoring_for_RTO_and_RPO"></a> RTO 및 RPO 모니터링  
+##  <a name="monitoring-for-rto-and-rpo"></a>RTO 및 RPO 모니터링  
  이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)에 나오는 GUI 자습서와 유사합니다.  
   
  [예상 장애 조치(failover) 시간(RTO)](#BKMK_RTO) 및 [예상 잠재적 데이터 손실(RPO)](#BKMK_RPO)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태**의 성능 메트릭으로 제공됩니다([SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
@@ -232,7 +458,7 @@ ms.locfileid: "32870058"
 ##  <a name="BKMK_SCENARIOS"></a> 성능 문제 해결 시나리오  
  다음 표는 일반적인 성능 관련 문제 해결 시나리오를 나열합니다.  
   
-|시나리오|Description|  
+|시나리오|설명|  
 |--------------|-----------------|  
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  

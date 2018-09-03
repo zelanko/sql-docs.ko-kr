@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702984"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925993"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ SQL Server 버전  |재배포 가능 설치 링크
     이 경우 1부에서 만든 Azure Active Directory 서비스 사용자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 권한을 부여해 봅시다.  
   
     > [!IMPORTANT]  
-    >  Azure Active Directory 서비스 사용자는 주요 자격 증명 모음에 대해 적어도 `get`, `list`, `wrapKey`및 `unwrapKey` 권한이 있어야 합니다.  
+    >  Azure Active Directory 서비스 사용자는 Key Vault에 대해 적어도 `get`, `wrapKey` 및 `unwrapKey` 권한이 있어야 합니다.  
   
      아래와 같이 **매개 변수에 대해 1부의** 클라이언트 ID `ServicePrincipalName` 를 사용합니다. 성공적으로 실행되는 경우 `Set-AzureRmKeyVaultAccessPolicy` 가 출력 없이 자동으로 실행됩니다.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      `Get-AzureRmKeyVault` cmdlet을 호출하여 권한을 확인합니다. '액세스 정책' 아래의 문 출력에 이 주요 자격 증명 모음에 대한 액세스 권한이 다른 테넌트로 나열되는 AAD 응용 프로그램 이름이 표시되어야 합니다.  

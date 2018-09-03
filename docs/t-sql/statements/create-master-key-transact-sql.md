@@ -27,13 +27,13 @@ caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3f74e50441a1015eb6ae5709f38da6315dd6284c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 98bea9d55f324cb65fdf71d25cbf5586c307bea0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457187"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111655"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 SQL Server 및 Parallel Data Warehouse의 경우 마스터 키는 일반적으로 서비스 마스터 키와 하나 이상의 암호로 보호됩니다. 데이터베이스가 실제로 다른 서버로 이동하는 경우(로그 전달, 백업 복원 등) 데이터베이스에는 원래 서버 서비스 마스터 키로 암호화된 마스터 키의 복사본(이 암호화가 ALTER MASTER KEY DDL을 사용하여 명시적으로 제거되지 않는 한) 및 CREATE MASTER KEY 또는 후속 ALTER MASTER KEY DDL 조작 중 지정된 각 암호로 암호화된 사본을 포함합니다. 마스터 키 및 데이터베이스를 이동한 후 키 계층에서 마스터 키를 루트로 사용하여 암호화한 모든 데이터를 복구하기 위해 사용자는 마스터 키를 보호하기 위해 사용한 암호 중 하나를 사용하여 OPEN MASTER KEY 문을 사용하거나, 마스터 키의 백업을 복원하거나 또는 새 서버에서 원래 서비스 마스터 키의 백업을 복원합니다. 
 
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 경우 마스터 키에 대한 서비스 마스터 키 보호가 Microsoft Azure 플랫폼에서 관리되므로 암호 보호가 데이터베이스가 한 서버에서 다른 서버로 이동할 수있는 상황에서 데이터 손실 시나리오를 방지하기 위한 안전 메커니즘으로 간주되지 않습니다. 따라서 Maser Key 암호는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서 선택 사항입니다.
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 경우 마스터 키에 대한 서비스 마스터 키 보호가 Microsoft Azure 플랫폼에서 관리되므로 암호 보호가 데이터베이스가 한 서버에서 다른 서버로 이동할 수있는 상황에서 데이터 손실 시나리오를 방지하기 위한 안전 메커니즘으로 간주되지 않습니다. 따라서 마스터 키 암호는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서 선택 사항입니다.
   
 > [!IMPORTANT]  
 >  마스터 키는 [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md)를 사용하여 백업하고 백업 복사본을 외부의 안전한 위치에 보관해야 합니다.  

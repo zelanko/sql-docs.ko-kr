@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f90ac792fe849ca91735e5a9b22a399d7798cf23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2efa6c156e1fff67e83c19c53c2c64c834329bd2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014600"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406103"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>매개 변수가 있는 드릴스루(RDLC) 보고서 만들기 - ReportViewer
-[드릴스루](http://technet.microsoft.com/library/ff519554.aspx) 보고서는 다른 보고서 내에서 링크를 클릭했을 때 열리는 보고서입니다. 드릴스루 보고서는 원본 요약 보고서에 포함된 항목에 대한 세부 정보를 포함합니다. 이 자습서에서는 [로컬 모드 보고](http://msdn.microsoft.com/library/ff487969.aspx)에서 매개 변수 및 쿼리가 있는 드릴스루 보고서를 만드는 다음과 같은 단원을 설명합니다.  
+[드릴스루](http://technet.microsoft.com/library/ff519554.aspx) 보고서는 다른 보고서 내에서 링크를 클릭했을 때 열리는 보고서입니다. 드릴스루 보고서는 원본 요약 보고서에 포함된 항목에 대한 세부 정보를 포함합니다. 이 자습서에서는 [로컬 모드 보고](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)에서 매개 변수 및 쿼리가 있는 드릴스루 보고서를 만드는 다음과 같은 단원을 설명합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 이 연습을 사용하려면 **AdventureWorks2014** 샘플 데이터베이스에 대한 액세스 권한이 있어야 합니다. **AdventureWorks2014** 샘플 데이터베이스를 가져오는 방법에 대한 자세한 내용은 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 참조하세요.  

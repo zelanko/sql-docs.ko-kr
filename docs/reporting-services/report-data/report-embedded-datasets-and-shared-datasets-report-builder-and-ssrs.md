@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2f7eecd7b6b98f03e75abea03370dff14524333f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75567e7c1dfd0ca78adaf283d09c7c6a0019c706
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022490"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405606"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
   데이터 집합은 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 집합은 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 집합은 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "33022490"
   
  포함된 데이터 원본과 공유 데이터 원본은 작성,  저장 및 관리되는 방법이 다릅니다. 다음 표에는 포함된 데이터 원본과 공유 데이터 원본의 차이점이 요약되어 있습니다.  
   
-|Description|포함된<br /><br /> 데이터 원본|Shared<br /><br /> 데이터 원본|  
+|설명|포함된<br /><br /> 데이터 원본|Shared<br /><br /> 데이터 원본|  
 |-----------------|------------------------------|----------------------------|  
 |데이터 연결이 보고서 정의에 포함되어 있습니다.|![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")||  
 |보고서 서버의 데이터 연결에 대한 포인터가 보고서 정의에 포함되어 있습니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|  
@@ -181,7 +181,7 @@ ms.locfileid: "33022490"
  데이터 집합의 데이터는 그룹화할 수 없습니다. 데이터 집합의 데이터를 집계하려면 데이터가 보고서에 대해 반환되기 전에 집계를 계산하도록 쿼리 명령을 편집할 수 있습니다. 이를 *서버 집계*라고 합니다. 식에서 이러한 값을 미리 계산된 집계로 식별하려면 Aggregate  함수를 사용합니다. 자세한 내용은 [집계 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)를 참조하세요.  
   
 ##  <a name="Parameters"></a> 매개 변수 및 데이터 집합 사용  
- 쿼리 변수가 들어 있는 포함된 데이터 집합 쿼리의 경우 쿼리 매개 변수 및 그에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 보고서를 실행하면 보고서 매개 변수의 값이 데이터 집합 쿼리 매개 변수에 연결됩니다. 이러한 방식으로 외부 데이터 원본에 대해 실행되는 쿼리 명령은 보고서 매개 변수에 대해 지정되는 값을 포함합니다. 보고서 매개 변수를 사용하면 보고서에 표시할 데이터를 선택할 수 있습니다. 쿼리 매개 변수와 보고서 매개 변수를 연결하는 방법은 [데이터 집합 속성 대화 상자, 매개 변수&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 페이지에 나와 있습니다.  
+ 쿼리 변수가 들어 있는 포함된 데이터 집합 쿼리의 경우 쿼리 매개 변수 및 그에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 보고서를 실행하면 보고서 매개 변수의 값이 데이터 집합 쿼리 매개 변수에 연결됩니다. 이러한 방식으로 외부 데이터 원본에 대해 실행되는 쿼리 명령은 보고서 매개 변수에 대해 지정되는 값을 포함합니다. 보고서 매개 변수를 사용하면 보고서에 표시할 데이터를 선택할 수 있습니다. 쿼리 매개 변수와 보고서 매개 변수를 연결하는 방법은 데이터 집합 속성 대화 상자, 매개 변수 페이지에서 볼 수 있습니다.  
   
  공유 데이터 집합의 경우 쿼리 매개 변수는 보고서 서버에서 보고서와 독립적으로 관리할 수 있는 공유 데이터 집합 정의의 일부분입니다. 다음 목록에서는 쿼리 매개 변수 값 지원에 대해 설명합니다.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "33022490"
   
 -   보고서 매개 변수를 나타내는 기본 제공 컬렉션 매개 변수에 대한 참조는 포함할 수 없습니다.  
   
- 공유 데이터 집합에 대한 쿼리 매개 변수 값을 구성하려면 디자인 모드에서 보고서 서버의 공유 데이터 집합을 찾아 열고 [데이터 집합 속성 대화 상자, 매개 변수&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 페이지에서 옵션을 설정합니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+ 공유 데이터 집합에 대한 쿼리 매개 변수 값을 구성하려면 데이터 집합 디자인 모드에서 보고서 서버의 공유 데이터 집합을 찾아 열고 데이터 집합 속성 대화 상자, 매개 변수 페이지에서 옵션을 설정합니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]같은 다차원 데이터 원본의 경우에는 그래픽 쿼리 디자이너를 사용하면 쿼리 필터를 지정하고 해당하는 쿼리 매개 변수를 만드는 옵션을 선택할 수 있습니다. 매개 변수 옵션을 선택하면 데이터 확장 프로그램이 별도의 보고서 데이터 집합을 자동으로 만들어 해당 매개 변수의 드롭다운 목록에 사용 가능한 값을 제공합니다. 기본적으로 이러한 숨겨진 데이터 집합은 보고서 데이터 창에 나타나지 않습니다.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "33022490"
  보고서를 처리하는 동안 데이터 집합에 대한 쿼리를 실행하면 결과 집합에 행이 없을 수 있습니다. 렌더링된 보고서에서 빈 데이터 집합에 연결된 데이터 영역은 빈 데이터 영역으로 표시됩니다. 렌더링된 보고서에서 빈 데이터 영역을 표시하는 대신 텍스트를 지정하여 표시할 수 있습니다. 모든 데이터 집합에 대한 쿼리에서 런타임에 생성된 데이터가 없는 경우 하위 보고서에 사용할 메시지도 지정할 수 있습니다. 자세한 내용은 [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Options"></a> 데이터 집합 옵션 설정  
- 국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서,  국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 집합의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 자세한 내용은 [SQL  Server  온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "데이터베이스 및 데이터베이스 엔진 응용 프로그램에 대한 국가별 고려 사항"  및 "데이터 정렬 작업"을 참조하십시오. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
+ 국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서,  국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 집합의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

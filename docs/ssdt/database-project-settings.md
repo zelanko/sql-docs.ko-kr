@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087195"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776035"
 ---
 # <a name="database-project-settings"></a>데이터베이스 프로젝트 설정
 데이터베이스 프로젝트 설정을 사용하여 데이터베이스, 디버깅 및 빌드 구성의 여러 측면을 제어할 수 있습니다. 이러한 설정은 다음 범주로 구분됩니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "39087195"
 확장 Transact-SQL 확인은 개발자가 빌드할 때 데이터베이스 프로젝트를 Transact-SQL 컴파일러 서비스에 전송하여 SQL Server 엔진의 파서 및 인터프리터에 대한 해당 코드의 유효성을 검사할 수 있도록 하는 데이터베이스 프로젝트 시스템에 있는 기능입니다.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL 컴파일러 서비스  
-Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진 기반의 구성 요소입니다. 이 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진의 정확성과 동일한 수준으로 DDL 문의 구문 및 의미 체계의 유효성을 검사합니다. 이는 기본적으로 컴파일러 서비스가 Microsoft SQL Server 2012에서 더 이상 사용되지 않은 구문 또는 기능을 지원하지 않음을 의미합니다. 더 이상 사용되지 않는 기능에 대한 자세한 내용은 [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx)을 참조하십시오.  
+Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진 기반의 구성 요소입니다. 이 서비스는 Microsoft SQL Server 2012 데이터베이스 엔진의 정확성과 동일한 수준으로 DDL 문의 구문 및 의미 체계의 유효성을 검사합니다. 이는 기본적으로 컴파일러 서비스가 Microsoft SQL Server 2012에서 더 이상 사용되지 않은 구문 또는 기능을 지원하지 않음을 의미합니다. 더 이상 사용되지 않는 기능에 대한 자세한 내용은 [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)을 참조하세요.  
   
 데이터베이스 프로젝트의 유효성 검사 목적으로 컴파일러 서비스는 부분적으로 포함된 데이터베이스를 만들고 해당 데이터베이스에 대한 DDL 문의 실행을 시뮬레이션합니다. 자세한 내용은 [부분적으로 포함된 데이터베이스](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx)를 참조하십시오.  
   

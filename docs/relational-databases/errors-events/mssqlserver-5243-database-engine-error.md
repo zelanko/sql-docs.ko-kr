@@ -15,12 +15,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14a58546faa866cb4508ce6481cf04bdf02a3618
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7bd57d6e3d853ca38731f54c3de949618155105b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321124"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405442"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,21 @@ ms.locfileid: "34321124"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메모리 내 저장소 엔진 구조에서 구조적 불일치를 감지했습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-[!INCLUDE[dbccBoilerPlate](../../includes/dbccboilerplate-md.md)]  
+하드웨어 오류를 찾습니다. 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. Windows 시스템 및 응용 프로그램 로그와 SQL Server 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하세요. 로그에 하드웨어 관련 문제가 있으면 모두 해결합니다.
+
+데이터 손상 문제가 지속되면 다른 하드웨어 구성 요소로 교체하여 문제를 해결하십시오. 시스템의 디스크 컨트롤러에 쓰기 캐시가 설정되어 있지 않은지 확인합니다. 쓰기 캐시가 문제가 된다고 생각되면 하드웨어 공급업체에 문의하세요.
+
+마지막으로 새 하드웨어 시스템으로 교체하는 것이 유용할 수도 있습니다. 여기에는 디스크 드라이브를 다시 포맷하고 운영 체제를 다시 설치하는 작업도 포함됩니다.
+
+백업에서 복원. 하드웨어 관련 문제가 아니면 정상적인 백업(있는 경우)을 사용하여 데이터베이스를 복원합니다.
+
+DBCC CHECKDB 실행. 정상적인 백업이 없으면 REPAIR 절 없이 DBCC CHECKDB를 실행하여 손상된 정도를 확인합니다. DBCC CHECKDB 실행 시 REPAIR 절을 사용하라는 메시지가 나타나면 적합한 REPAIR 절을 사용하여 DBCC CHECKDB를 실행하고 손상을 복구하십시오.
+
+> **경고 태그는 지원되지 않습니다.**
+> **tr 태그는 지원되지 않습니다.**
+> **tr 태그는 지원되지 않습니다.**
+
+REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행해도 문제가 해결되지 않으면 주 지원 공급자에게 문의하세요.
   
 ## <a name="see-also"></a>참고 항목  
 [DBCC CHECKDB&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  

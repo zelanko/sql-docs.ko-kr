@@ -13,17 +13,16 @@ helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b720d3d93760ffba3a7c31a376eeb9d7b2d36919
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1f00edaaedadfc454737a2922a17188a22532a30
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560203"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43080111"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "39560203"
  Windows 방화벽 규칙은 모든 연결에 적용되며 로그인(기존 모델 연결) 및 포함된 데이터베이스 사용자에 동일한 효력을 갖습니다. Windows 방화벽에 대한 자세한 내용은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을(를) 참조하세요.  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 방화벽  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 은 여러 수준 연결(로그인) 및 데이터베이스 수준 연결(포함된 데이터베이스 사용자)에 대해 별도의 방화벽 규칙을 허용합니다. 사용자 데이터베이스에 연결할 때 첫 번째 데이터베이스 방화벽 규칙이 확인됩니다. 데이터베이스에 액세스를 허용하는 규칙이 없는 경우, 서버 수준 방화벽 규칙이 확인되고 논리 서버 master 데이터베이스에 대한 액세스가 필요합니다. 포함된 데이터베이스 사용자와 결합된 데이터베이스 수준 방화벽 규칙은 연결 시 서버의 master 데이터베이스에 액세스할 필요가 없고 향상된 연결 확장성을 제공합니다.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 여러 수준 연결(로그인) 및 데이터베이스 수준 연결(포함된 데이터베이스 사용자)에 대해 별도의 방화벽 규칙을 허용합니다. 사용자 데이터베이스에 연결할 때 첫 번째 데이터베이스 방화벽 규칙이 확인됩니다. 데이터베이스에 액세스를 허용하는 규칙이 없는 경우, 서버 수준 방화벽 규칙이 확인되고 논리 서버 master 데이터베이스에 대한 액세스가 필요합니다. 포함된 데이터베이스 사용자와 결합된 데이터베이스 수준 방화벽 규칙은 연결 시 서버의 master 데이터베이스에 액세스할 필요가 없고 향상된 연결 확장성을 제공합니다.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 방화벽 규칙에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   

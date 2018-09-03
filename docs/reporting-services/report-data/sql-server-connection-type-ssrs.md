@@ -1,7 +1,7 @@
 ---
 title: SQL Server 연결 형식(SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e893f9ccca533ca31e48ff8f08f187e2366764c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d523fe31c6b07ebe835d7353af298c93fd9e90f
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022280"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405733"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 연결 형식(SSRS)
   보고서에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 포함하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 현재 버전 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 이 데이터베이스에서 데이터를 검색할 수 있습니다.  
@@ -117,7 +117,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
  저장 프로시저에 기본값을 사용하는 매개 변수가 있는 경우 매개 변수의 값으로 DEFAULT 키워드를 사용하여 해당 값에 액세스할 수 있습니다. 쿼리 매개 변수가 보고서 매개 변수에 연결되어 있으면 사용자가 보고서 매개 변수의 입력란에 DEFAULT라는 단어를 입력하거나 선택할 수 있습니다.  
   
- 자세한 내용은 msdn.microsoft.com의 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335) 에서 "저장 프로시저(데이터베이스 엔진)"를 참조하세요.  
+ 자세한 내용은 [저장 프로시저(데이터베이스 엔진)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)를 참조하세요.  
   
   
 ##  <a name="Parameters"></a> 매개 변수  

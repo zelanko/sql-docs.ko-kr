@@ -1,62 +1,31 @@
 items:
-- name: 개요
+- name: SQL Server Machine Learning
   items:
-  - name: SQL Server Machine Learning Services란?
+  - name: Machine Learning Services(R, Python)
     href: what-is-sql-server-machine-learning.md
-    items:
-    - name: 데이터베이스 내 분석
-      href: r/sql-server-r-services.md
-    - name: 독립 실행형 서버
-      href: r/r-server-standalone.md
-  - name: 새 기능
+  - name: R Services
+    href: r/sql-server-r-services.md
+  - name: 독립 실행형 서버
+    href: r/r-server-standalone.md
+  - name: 새로운 기능
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: 버전별 기능
-    href: r/differences-in-r-features-between-editions-of-sql-server.md
-- name: Architecture
-  href: architecture-overview-machine-learning.md
-  items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R 상호 운용성
-      href: r/r-interoperability-in-sql-server.md
-    - name: R 통합을 지원하는 구성 요소
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: R에 대한 보안
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Machine Learning Services의 Python
-      href: python/sql-server-python-services.md
-    - name: Python 상호 운용성
-      href: python/python-interoperability.md
-    - name: Python을 지원하는 구성 요소
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python 보안
-      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-  - name: SQL Server 2017
-    items:
-    - name: 데이터베이스 내 분석
-      href: install/sql-machine-learning-services-windows-install.md
-    - name: 독립 실행형 서버
-      href: install/sql-machine-learning-standalone-windows-install.md
-  - name: SQL Server 2016
-    items:
-    - name: R Services(In-database)
-      href: install/sql-r-services-windows-install.md
-    - name: R Server (Standalone)
-      href: install/sql-r-standalone-windows-install.md
+  - name: Machine Learning Services(R, Python)
+    href: install/sql-machine-learning-services-windows-install.md
+  - name: R Services
+    href: install/sql-r-services-windows-install.md
+  - name: 독립 실행형 서버(R, Python)
+    href: install/sql-machine-learning-standalone-windows-install.md
   - name: 미리 학습된 모델
     href: install/sql-pretrained-models-install.md
   - name: 명령 프롬프트 설치
     href: install/sql-ml-component-commandline-install.md
   - name: 오프라인 설치(인터넷 없음)
     href: install/sql-ml-component-install-without-internet-access.md
-  - name: CAB 다운로드(오프라인 설치)
-    href: install/sql-ml-cab-downloads.md
+    items:
+    - name: CAB 다운로드(오프라인 설치)
+      href: install/sql-ml-cab-downloads.md
   - name: R 및 Python 업그레이드
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: R 도구 설정
@@ -177,6 +146,29 @@ items:
   href: https://github.com/Microsoft/sql-server-samples
 - name: 솔루션
   href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: 개념
+  href: architecture-overview-machine-learning.md
+  items:
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: R 상호 운용성
+      href: r/r-interoperability-in-sql-server.md
+    - name: R 통합을 지원하는 구성 요소
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: R에 대한 보안
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: Machine Learning Services의 Python
+      href: python/sql-server-python-services.md
+    - name: Python 상호 운용성
+      href: python/python-interoperability.md
+    - name: Python을 지원하는 구성 요소
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Python 보안
+      href: python/security-overview-sql-server-python-services.md
 - name: 방법
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -322,9 +314,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 85ed543ae5239ab46c388de63714756b15a58190
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427385"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118080"

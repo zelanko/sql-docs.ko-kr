@@ -18,12 +18,12 @@ caps.latest.revision: 68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92426569e62b69590cce538968faf0008d0ae741
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c0f5af9180e8c9799126fb2c2d84f11ab01d0920
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786074"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703706"
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "37786074"
 >  채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
   
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
- 삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 또는 [UPDATE](../../t-sql/queries/update-transact-sql.md)를 실행하는 경우에는 이 옵션이 아무런 영향을 미치지 않습니다. 기본값은 OFF입니다.  
+ 삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려고 할 때 응답 유형을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 또는 [UPDATE](../../t-sql/queries/update-transact-sql.md)를 실행하는 경우에는 이 옵션이 아무런 영향을 미치지 않습니다. 기본값은 OFF입니다.  
   
  ON  
  중복된 키 값이 고유 인덱스에 삽입되는 경우 경고 메시지가 나타나고 고유성 제약 조건을 위반하는 행만 실패합니다.  

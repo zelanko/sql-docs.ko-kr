@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066671"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432514"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 보고서에서 데이터 검색 문제 해결
 보고서 처리의 첫 번째 단계는 데이터 집합 쿼리를 실행하여 각 데이터 집합에 대한 보고서 데이터를 검색하는 것입니다. 보고서를 로컬로 미리 볼 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 데이터를 컴퓨터로 읽어 들여야 합니다. 보고서 서버에서 보고서를 실행할 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 보고서 서버에서 데이터를 검색해야 합니다. 이 항목을 사용하여 보고서 데이터 검색 관련 문제를 해결할 수 있습니다.   
@@ -47,7 +47,7 @@ ms.locfileid: "38066671"
 암호에 특수 문자가 포함되어 있지 않은지 확인합니다. 암호 변경이 불가능한 경우 데이터베이스 관리자에게 문의하여 해당 자격 증명을 로컬에 저장하고 서버에 시스템 ODBC DSN(데이터 원본 이름)의 일부로 저장합니다. 자세한 내용은 MSDN에 있는 .NET Framework SDK 설명서의 "OdbcConnection.ConnectionString"을 참조하세요.   
   
 > [!NOTE]  
->연결 문자열에 암호와 같은 로그인 정보를 추가하지 않는 것이 좋습니다. 보고서 디자이너에서는 자격 증명을 입력하는 데 사용할 수 있는 **데이터 원본 속성** 또는 [공유 데이터 원본 속성](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 대화 상자에 [자격 증명](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 페이지를 제공합니다. 이러한 자격 증명은 보고서 제작 컴퓨터에 안전하게 저장됩니다.  
+>연결 문자열에 암호와 같은 로그인 정보를 추가하지 않는 것이 좋습니다. 보고서 디자이너에서는 자격 증명을 입력하는 데 사용할 수 있는 **데이터 원본 속성** 또는 **공유 데이터 원본 속성** 대화 상자에 **자격 증명** 페이지를 제공합니다. 이러한 자격 증명은 보고서 제작 컴퓨터에 안전하게 저장됩니다.  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>쿼리 디자이너에서 쿼리를 실행할 때 데이터가 표시되지 않는 이유  
 데이터 집합을 만들 때 데이터 집합 필드 컬렉션이 보고서 데이터 창에 표시됩니다. 일부 경우에는 데이터 집합 필드 컬렉션이 예상대로 표시되지 않습니다.   
@@ -71,7 +71,7 @@ ms.locfileid: "38066671"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

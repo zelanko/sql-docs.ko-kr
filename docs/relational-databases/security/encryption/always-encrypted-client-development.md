@@ -1,7 +1,7 @@
 ---
 title: 상시 암호화(클라이언트 개발) | Microsoft 문서
 ms.custom: ''
-ms.date: 07/29/2016
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -14,13 +14,13 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f2d372307528366248c5830626aee2b8fd14816
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 887603c4da7eb9a582d8068a98690116dc14128c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39547153"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076470"
 ---
 # <a name="always-encrypted-client-development"></a>상시 암호화(클라이언트 개발)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,11 @@ ms.locfileid: "39547153"
 
 - [.NET Framework Data Provider for SQL Server와 Always Encrypted 사용](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [상시 암호화와 JDBC 드라이버 사용](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
-- [상시 암호화와 Windows ODBC 드라이버 사용](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [상시 암호화와 ODBC 드라이버 사용](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [상시 암호화와 PHP 드라이버 사용](../../../connect/php/using-always-encrypted-php-drivers.md)
 
-
+> [!NOTE]
+> 상시 암호화는 현재 [.NET CORE](https://docs.microsoft.com/dotnet/core/)에서 지원되지 않습니다.
 
 ## <a name="see-also"></a>참고 항목
 

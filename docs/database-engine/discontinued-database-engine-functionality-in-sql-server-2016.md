@@ -39,12 +39,12 @@ caps.latest.revision: 100
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 024986a082bee4e823d66fdb588e65fc6d4f4c88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9b801380bb6bc37fb419eedfa91d510fb8ad1076
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989709"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405967"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ ms.locfileid: "37989709"
   
 ## <a name="previous-versions"></a>이전 버전  
   
--   [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](https://msdn.microsoft.com/library/ms144262\(v=sql.120\))  
+-   [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](https://msdn.microsoft.com/library/ms144262\(v=sql.110\))  
+-   [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [SQL Server 2008에서 지원되지 않는 데이터베이스 엔진 기능](https://msdn.microsoft.com/library/ms144262\(v=sql.100\))  
+-   [SQL Server 2008에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 이후에는 지원되지 않는 데이터베이스 엔진 기능](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

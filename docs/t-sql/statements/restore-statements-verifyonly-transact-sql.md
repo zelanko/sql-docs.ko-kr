@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb8fb779fdd28114cdea97abf572315795f7f7d2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452127"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42441436"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 문 - VERIFYONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -124,6 +124,14 @@ FROM <backup_device> [ ,...n ]
   
 ### <a name="permissions"></a>Permissions  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 백업 세트나 백업 장치에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
+ 
+## <a name="examples"></a>예  
+ 다음 예제에서는 디스크에서 백업을 확인합니다.
+  
+```  
+RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
+GO
+```  
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

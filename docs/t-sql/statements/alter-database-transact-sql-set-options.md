@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법 알아보기
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -32,13 +32,13 @@ caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 16505ba07dcd1035ad260b68785eea763c050d1b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560503"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067575"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -46,9 +46,31 @@ ms.locfileid: "39560503"
 
 작업 중인 특정 SQL 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제를 보려면 다음 탭 중 하나를 클릭합니다.
 
-구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오. 
+구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙]을 참조하세요(../.. /t-sql/language-elements/transact-sql-syntFor 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요. 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
   
 데이터베이스 미러링, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 및 호환성 수준은 `SET` 옵션이지만 길이 때문에 별도의 항목에서 설명합니다. 자세한 내용은 [ALTER DATABASE 데이터베이스 미러링](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 및 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
@@ -89,7 +111,7 @@ SET
   | <service_broker_option>  
   | <snapshot_option>  
   | <sql_option>   
-  | <target_recovery_time_option>   
+  | <target_recovery_time_option> 
   | <termination>  
 }  
 ;
@@ -118,7 +140,7 @@ SET
    }  
 }  
   
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF }   
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -377,15 +399,15 @@ AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정�
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 강제 계획을 통해 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. Query Store를 사용하도록 설정되어 있지 않거나 *읽기/쓰기* 모드가 아닌 경우 명령문은 실패합니다.   
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. Query Store를 사용하도록 설정되어 있지 않거나 *읽기/쓰기* 모드가 아닌 경우 명령문은 실패합니다.   
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 뷰에 표시된 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
 
 **\<change_tracking_option> ::=**  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
-변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 항목의 뒤 부분에 나오는 예 섹션을 참조하십시오.  
+변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 문서의 뒷부분에 나오는 예 섹션을 참조하세요.  
   
 ON  
 데이터베이스에 변경 내용 추적을 설정합니다. 변경 내용 추적을 설정하면 AUTO CLEANUP 및 CHANGE RETENTION 옵션도 설정할 수 있습니다.  
@@ -1086,7 +1108,7 @@ MINUTES
 데이터베이스가 다른 상태로 바뀔 때 완료되지 않은 트랜잭션을 롤백할 시점을 지정합니다. termination 절을 생략하면 데이터베이스에 잠금이 있는 경우 ALTER DATABASE 문이 무기한 대기합니다. termination 절은 SET 절 다음에 한 번만 지정할 수 있습니다.  
   
 > [!NOTE]  
->  모든 데이터베이스 옵션에서 WITH \<termination> 절을 사용하는 것은 아닙니다. 자세한 내용은 이 항목에 있는 "주의 섹션"의 "[옵션 설정](#SettingOptions) " 아래에 있는 표를 참조하십시오.  
+>  모든 데이터베이스 옵션에서 WITH \<termination> 절을 사용하는 것은 아닙니다. 자세한 내용은 이 문서에 있는 “주의” 섹션의 “[옵션 설정](#SettingOptions)” 아래에 있는 표를 참조하세요.  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 지정한 시간(초)이 경과한 후 롤백할 것인지 또는 즉시 롤백할 것인지를 지정합니다.  
@@ -1263,8 +1285,27 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 논리 서버](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
 호환성 수준은 `SET` 옵션이지만 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서 설명합니다.  
   
 > [!NOTE]  
@@ -1308,14 +1349,11 @@ SET
 }
 
 <automatic_tuning_option> ::=  
-{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+{   AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
-}  
-
-ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
-ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
+}
 
 <change_tracking_option> ::=  
 {  
@@ -1327,7 +1365,7 @@ ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_I
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1448,7 +1486,7 @@ OFF
   
 > [!NOTE]  
 > 포함된 데이터베이스에서는 AUTO_SHRINK 옵션을 사용할 수 없습니다.  
-  
+
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
 ON  
 쿼리에서 통계를 사용하거나 통계가 최신이 아닐 때 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.  
@@ -1485,35 +1523,57 @@ AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정�
   
 동기 통계 업데이트를 사용하는 경우 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계 ](../../relational-databases/statistics/statistics.md)에서 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.  
 
-**\<automatic_tuning_option> ::=**  
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
 **적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-
-데이터베이스의 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)을 사용하거나 사용하지 않도록 설정합니다.
-
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO 자동 조정 값을 자동으로 설정하면 자동 튜닝에 대해 Azure 구성 기본값을 적용합니다.
-INHERIT INHERIT 값을 사용하면 부모 서버에서 기본 구성을 상속합니다. 부모 서버에서 자동 튜닝 구성을 사용자 지정하고 이러한 서버의 모든 데이터베이스가 이러한 사용자 지정 설정을 상속하려는 경우 특히 유용합니다. 상속이 작동하기 위해 FORCE_LAST_GOOD_PLAN, CREATE_INDEX 및 DROP_INDEX라는 세 가지 개별 튜닝 옵션을 데이터베이스에서 기본값으로 설정해야 합니다.
-CUSTOM CUSTOM 값을 사용하여 데이터베이스에서 사용할 수 있는 자동 튜닝 옵션 각각을 수동으로 사용자 지정 구성해야 합니다.
-
-[자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 인덱스 관리 `CREATE_INDEX` 옵션을 사용하거나 사용하지 않도록 설정합니다.
-
-CREATE_INDEX = { DEFAULT | ON | OFF } DEFALT 서버에서 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
-ON 사용하도록 설정하면 누락된 인덱스는 데이터베이스에서 자동으로 생성됩니다. 인덱스 생성을 수행하여 워크로드의 성능이 향상되었는지 확인합니다. 이렇게 만든 인덱스가 더 이상 워크로드 성능을 향상시키지 않으면 자동으로 되돌려집니다. 자동으로 생성된 인덱스는 시스템 생성 인덱스로 플래그가 지정됩니다.
-OFF 데이터베이스에서 누락된 인덱스를 자동으로 생성하지 않습니다.
-
-[자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 인덱스 관리 `DROP_INDEX` 옵션을 사용하거나 사용하지 않도록 설정합니다.
-
-DROP_INDEX = { DEFAULT | ON | OFF } DEFALT 서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
-ON 성능 워크로드에 대한 중복 인덱스 또는 더 이상 유용하지 않은 인덱스를 자동으로 삭제합니다. OFF 데이터베이스에서 누락된 인덱스를 자동으로 삭제하지 않습니다.
-
-[자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 계획 수정 `FORCE_LAST_GOOD_PLAN` 옵션을 사용하거나 사용하지 않도록 설정합니다.
-
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
-DEFAULT 서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
+  
+[자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)에 대한 자동 옵션을 제어합니다.  
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }  
+AUTO  
+자동 튜닝 값을 AUTO로 설정하면 자동 튜닝에 대해 Azure 구성 기본값을 적용합니다.  
+    
+INHERIT  
+INHERIT 값을 사용하면 부모 서버에서 기본 구성이 상속됩니다. 부모 서버에서 자동 튜닝 구성을 사용자 지정하고 이러한 서버의 모든 데이터베이스가 이러한 사용자 지정 설정을 상속하려는 경우 특히 유용합니다. 상속이 작동하기 위해 FORCE_LAST_GOOD_PLAN, CREATE_INDEX 및 DROP_INDEX라는 세 가지 개별 튜닝 옵션을 데이터베이스에서 기본값으로 설정해야 합니다.  
+  
+CUSTOM  
+CUSTOM 값을 사용하여 데이터베이스에서 사용할 수 있는 각 자동 튜닝 옵션을 수동으로 사용자 지정을 구성해야 합니다.  
+  
+[자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 인덱스 관리 `CREATE_INDEX` 옵션을 사용하거나 사용하지 않도록 설정합니다.  
+  
+CREATE_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.  
+  
 ON  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 강제 계획을 통해 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. Query Store를 사용하도록 설정되어 있지 않거나 *읽기/쓰기* 모드가 아닌 경우 명령문은 실패합니다.   
+사용하도록 설정하면 누락된 인덱스는 데이터베이스에서 자동으로 생성됩니다. 인덱스 생성을 수행하여 워크로드의 성능이 향상되었는지 확인합니다. 이렇게 만든 인덱스가 더 이상 워크로드 성능을 향상시키지 않으면 자동으로 되돌려집니다. 자동으로 생성된 인덱스는 시스템 생성 인덱스로 플래그가 지정됩니다.  
+  
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 뷰에 표시된 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
-
+데이터베이스에서 누락된 인덱스를 자동으로 생성하지 않습니다.  
+  
+[자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 인덱스 관리 `DROP_INDEX` 옵션을 사용하거나 사용하지 않도록 설정합니다.  
+  
+DROP_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.  
+  
+ON  
+성능 워크로드에 대한 중복 인덱스 또는 더 이상 유용하지 않은 인덱스를 자동으로 삭제합니다.   
+  
+OFF  
+데이터베이스에서 누락된 인덱스를 자동으로 삭제하지 않습니다.  
+  
+[자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 계획 수정 `FORCE_LAST_GOOD_PLAN` 옵션을 사용하거나 사용하지 않도록 설정합니다.  
+  
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT  
+서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.  
+  
+ON  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. Query Store를 사용하도록 설정되어 있지 않거나 *읽기/쓰기* 모드가 아닌 경우 명령문은 실패합니다.   
+  
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.  
+  
 **\<change_tracking_option> ::=**  
   
 변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 문서의 뒷부분에 나오는 예 섹션을 참조하세요.  
@@ -2021,7 +2081,26 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 호환성 수준은 `SET` 옵션이지만 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서 설명합니다.  
   
@@ -2062,6 +2141,11 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
 
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING 
@@ -2072,7 +2156,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -2217,6 +2301,17 @@ AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정�
   
 동기 통계 업데이트를 사용하는 경우 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계 ](../../relational-databases/statistics/statistics.md)에서 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.  
   
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+
+`FORCE_LAST_GOOD_PLAN` [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md) 옵션을 사용하거나 사용하지 않도록 설정합니다.  
+  
+FORCE_LAST_GOOD_PLAN = { ON | OFF }  
+ON  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. Query Store를 사용하도록 설정되어 있지 않거나 *읽기/쓰기* 모드가 아닌 경우 명령문은 실패합니다.   
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
+
 **\<change_tracking_option> ::=**  
   
 변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 문서의 뒷부분에 나오는 예 섹션을 참조하세요.  
@@ -2695,3 +2790,4 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
+::: moniker-end

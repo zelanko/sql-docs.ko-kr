@@ -1,14 +1,14 @@
 ---
 title: SSIS에서 ETL 패키지를 만드는 방법 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -23,16 +23,16 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.openlocfilehash: 1b2863ac1e5a9f9bdf072e674bb4e556eeecc268
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999283"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029599"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL 패키지를 만드는 방법
 
- > 이전 버전의 SQL Server와 관련된 내용은 [SSIS 자습서: 간단한 ETL 패키지 만들기](https://msdn.microsoft.com/library/ms169917(SQL.120).aspx)를 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 내용은 [SSIS 자습서: 간단한 ETL 패키지 만들기](ssis-how-to-create-an-etl-package.md)를 참조하세요.
 
 이 자습서에서는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 간단한 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만드는 방법을 배웁니다. 사용자가 만든 패키지는 플랫 파일로부터 데이터를 가져와서 데이터 형식을 바꾼 다음 바뀐 데이터를 팩트 테이블에 삽입합니다. 다음 단원에서는 패키지를 확장하여 루핑, 패키지 구성, 로깅 및 오류 흐름을 보여 줍니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38999283"
 
 -   **AdventureWorksDW2012** 샘플 데이터베이스. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorksDW2012.bak`를 다운로드하고 백업을 복원하세요.  
 
--   **샘플 데이터** 파일. 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 - 간단한 ETL 패키지 만들기](https://www.microsoft.com/download/details.aspx?id=56827)를 참조하세요.
+-   **샘플 데이터** 파일. 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)을 참조하세요.
 
     - Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
     - 샘플 패키지는 데이터 파일이 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package` 폴더에 있다고 가정합니다. 다운로드의 압축을 다른 위치에 풀 경우 샘플 패키지의 여러 위치에서 파일 경로를 업데이트해야 할 수 있습니다.

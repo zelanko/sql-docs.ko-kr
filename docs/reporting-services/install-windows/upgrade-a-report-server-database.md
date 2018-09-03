@@ -1,7 +1,7 @@
 ---
 title: 보고서 서버 데이터베이스 업그레이드 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.reviewer: ''
@@ -18,18 +18,18 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4a15d4ee21977d16ed3f8b0a49d12b4c9e88cbd2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9997e0c0d68d01721a33924f8d7b1e7842a9a21a
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322612"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405857"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
 
 보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 저장소를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  
   
- **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 “ReportServer 및 ReportServerTempDB”인 두 개의 데이터베이스로 구성됩니다.  
+ **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 ReportServer 및 ReportServerTempDB인 두 개의 데이터베이스로 구성됩니다.  
   
  **SharePoint 모드:** SQL Server 2016 Reporting Services SharePoint 모드에서는 보고서 서버 데이터베이스가 실제로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 각 인스턴스에 대해 만들어진 데이터베이스 컬렉션입니다.  
 
@@ -45,7 +45,7 @@ ms.locfileid: "35322612"
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 더 이상 별도의 업그레이드 단추나 업그레이드 스크립트를 제공하지 않습니다. 보고서 서버 서비스의 자동 업그레이드 기능 덕분에 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터는 이러한 기능이 더 이상 사용되지 않습니다.  
   
- 스키마를 업데이트한 후에는 이전 버전으로 업그레이드를 롤백할 수 없습니다. 따라서 이전 설치를 다시 만들어야 하는 경우에 대비하여 항상 보고서 서버 데이터베이스를 백업해야 합니다.  
+ 스키마를 업데이트한 후에는 이전 버전으로 업그레이드를 롤백할 수 없습니다. 따라서 이전 설치를 다시 만들어야 하는 경우를 대비하여 항상 보고서 서버 데이터베이스를 백업합니다.  
   
 ## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>스키마, 메타데이터 및 보고서 서버 내용을 업데이트하는 방법  
  보고서 서버 데이터베이스는 다음 세 단계로 업그레이드됩니다.  
@@ -73,8 +73,7 @@ ms.locfileid: "35322612"
 ## <a name="next-steps"></a>다음 단계
 
 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[데이터베이스 변경 마법사](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services 설치 마이그레이션](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 

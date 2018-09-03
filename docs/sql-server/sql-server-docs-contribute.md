@@ -1,6 +1,6 @@
 ---
 title: SQL Server 설명서에 기여하는 방법 | Microsoft Docs
-ms.date: 04/12/2018
+ms.date: 08/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b35b9edbfb257d327f310d526729b7a60215e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926534"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775998"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -33,36 +33,14 @@ ms.locfileid: "36926534"
 
 ## <a id="githubui"></a> 브라우저에서 편집
 
-다음 단계는 브라우저에서 SQL Server 콘텐츠에 대한 간단한 편집을 수행하는 개요를 제공합니다. 전체 프로세스는 문서, [사소하거나 드문 변경 내용에 대한 GitHub 참여 워크플로](https://docs.microsoft.com/contribute/light-workflow)에 설명되어 있습니다.
+브라우저에서 SQL Server 콘텐츠를 간단하게 편집한 다음, Microsoft에 제출할 수 있습니다. 전체 프로세스는 [Microsoft Docs 기여자 가이드 개요](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) 문서에 설명되어 있습니다. 다음 비디오는 브라우저에서 변경 사항을 제출하는 종단 간 프로세스를 보여 줍니다.
 
-1. 이를 포함하는 모든 문서에는 오른쪽에 **편집** 단추가 있습니다. 변경하려는 문서를 찾고, **편집** 단추를 클릭하여 시작합니다.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
 
-   ![SQL 문서에 대한 편집 단추](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
-
-   docs.microsoft.com의 모든 콘텐츠는 다양한 GitHub 리포지토리에서 관리됩니다. 편집 단추를 클릭하면 **sql-docs** 리포지토리의 문서로 이동됩니다. 또는 Azure 설명서에서 SQL 문서를 편집하는 경우 **azure-docs** 리포지토리로 이동됩니다. 
-
-1. 다음으로 GitHub에서 문서의 오른쪽 위에 있는 연필 아이콘을 클릭합니다.
-
-   ![편집 단추](./media/sql-server-docs-contribute/edit-button.png)
-
-   > [!NOTE]
-   > 문서를 편집하려면 GitHub에 로그인해야 합니다. GitHub 계정이 없는 경우 [GitHub 계정 설정](https://docs.microsoft.com/contribute/get-started-setup-github)을 참조하세요. 새 계정을 만든 후 편집하려면 GitHub로 이메일 주소를 확인해야 합니다.
-
-1. 브라우저에서 문서를 편집합니다. 모든 문서는 Markdown으로 작성됩니다. 마크다운에서 도움이 필요한 경우 [Markdown 기본 사항](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)을 검토할 수 있습니다. 게시된 문서가 기존 Markdown을 렌더링하는 방법을 관찰하여 배울 수도 있습니다.
-
-1. 편집 창의 맨 아래로 스크롤하고, 변경 내용의 제목을 입력하고, **파일 변경 내용 제안** 단추를 클릭합니다.
-
-   ![끌어오기 요청 제안](./media/sql-server-docs-contribute/propose-file-change.png)
-
-1. 다음 페이지에서 **끌어오기 요청 만들기**를 클릭합니다.
-
-   ![끌어오기 요청 만들기](./media/sql-server-docs-contribute/create-pull-request.png)
-
-1. 끌어오기 요청에 대한 제목과 설명을 입력합니다. 그런 다음, **끌어오기 요청 만들기**를 다시 클릭합니다.
-
-   ![끌어오기 요청 만들기](./media/sql-server-docs-contribute/create-pull-request2.png)
-
-이 시점에서 끌어오기 요청 설명의 나머지 프로세스를 통해 안내해야 합니다. 전체 프로세스 및 추가 세부 정보는[참가자 가이드](https://docs.microsoft.com/contribute/light-workflow)에서 찾을 수 있습니다.
+> [!TIP]
+> **편집** 단추의 위치는 비디오에서 표시된 것과 약간 다르지만 프로세스는 동일합니다.
+>
+> ![편집 단추](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
 ## <a id="tools"></a> 도구를 사용하여 로컬로 편집
 
@@ -73,7 +51,7 @@ ms.locfileid: "36926534"
 - [GitHub 계정 만들기](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [콘텐츠 제작 도구 설치](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [로컬로 Git 리포지토리 설정](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [도구를 사용하여 참여](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
+- [도구를 사용하여 참여](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
 설명서에 중요한 변경 내용이 있는 끌어오기 요청을 제출하는 경우 GitHub에서 온라인 **기여 CLA(라이선스 규약)** 를 제출하도록 요청하는 메시지를 받습니다. 끌어오기 요청을 수락되도록 하려면 온라인 양식을 완료해야 합니다.
 
@@ -115,10 +93,11 @@ ms.locfileid: "36926534"
 
 문서에 대한 올바른 applies-to include를 찾으려면 다음 팁을 사용합니다.
 
+- 일반적으로 사용되는 목록은 [SQL Server 버전 및 applies-to include 파일](applies-to-includes.md)을 참조하세요.
 - 동일한 기능 또는 관련된 작업을 다루는 다른 문서를 살펴봅니다. 해당 문서를 편집하는 경우 applies-to include에 대한 Markdown을 복사할 수 있습니다(제출하지 않고 편집을 취소할 수 있음).
 - 텍스트 "applies-to"를 포함하는 파일에 대한 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 디렉터리를 검색합니다. github에서 **찾기** 버튼을 사용하여 신속하게 필터링할 수 있습니다. 파일을 클릭하여 렌더링되는 방법을 확인합니다.
 - 명명 규칙에 유의하십시오. 이름에 x가 있는 경우 일반적으로 서비스에 대한 지원 부족을 나타내는 자리 표시자입니다. 예를 들어 **appliesto-xx-xxxx-asdw-xxx-md.md**는 **asdw**만 설명된 반면 다른 필드에는 x가 있으므로 Azure SQL Data Warehouse에 대한 지원만을 나타냅니다.
-- 일부 includes는 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**와 같은 버전 번호를 지정합니다. 특정 버전의 SQL Server를 사용하여 도입된 기능을 아는 경우 이러한 includes를 사용합니다. 
+- 일부 includes는 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**와 같은 버전 번호를 지정합니다. 특정 버전의 SQL Server를 사용하여 도입된 기능을 아는 경우 이러한 includes를 사용합니다.
 
 ## <a name="contributor-resources"></a>참가자 리소스
 

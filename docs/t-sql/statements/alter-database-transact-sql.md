@@ -29,14 +29,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008975"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "42802572"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL) 
 
 데이터베이스의 특정 구성 옵션을 수정합니다. 
 
@@ -50,23 +50,10 @@ ms.locfileid: "40008975"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />논리 서버](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL 병렬<br />데이터 웨어하우스](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -300,8 +287,8 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th style="border: 1"><strong><em>* SQL DB<br />논리 서버 *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Database<br />논리 서버 *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
 > </tr>
@@ -664,8 +651,8 @@ ALTER DATABASE db1 FAILOVER
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
->   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
 > </tr>
@@ -800,8 +787,8 @@ ALTER DATABASE WideWorldImporters
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><strong><em>*SQL Data<br />Warehouse *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
 > </tr>
@@ -913,7 +900,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>참고 항목  
 [CREATE DATABASE(Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[참조 아티클의 SQL Data Warehouse 목록](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+[참조 아티클의 SQL Data Warehouse 목록](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -929,8 +916,8 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />논리 서버</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
 > </tr>
@@ -984,7 +971,7 @@ LOG_SIZE = *size* [GB]
 변경되는 데이터베이스에 모든 트랜잭션 로그를 저장하기 위해 데이터베이스당 최대 기가바이트를 새로 지정합니다. 해당 크기는 어플라이언스의 모든 계산 노드에 분산됩니다.  
   
 ENCRYPTION { ON | OFF }  
-데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)이 **1**로 설정된 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 암호화를 구성할 수 있습니다. 투명한 데이터 암호화를 구성하기 전에 데이터베이스 암호화 키를 만들어야 합니다. 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
+데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)이 **1**로 설정된 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 암호화를 구성할 수 있습니다. 투명한 데이터 암호화를 구성하기 전에 데이터베이스 암호화 키를 만들어야 합니다. 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
 
 SET AUTO_CREATE_STATISTICS { ON | OFF } 자동 통계 작성 옵션인 AUTO_CREATE_STATISTICS가 ON으로 설정된 경우 쿼리 최적화 프로그램은 필요에 따라 쿼리 조건자의 개별 열에 대한 통계를 작성하므로 쿼리 계획에 대한 카디널리티 예상치의 정확도가 높아집니다. 이러한 단일 열 통계는 기존 통계 개체에 히스토그램이 없는 열에 대해 작성됩니다.
 
@@ -1022,7 +1009,7 @@ REPLICATED_SIZE, DISTRIBUTED_SIZE 및 LOG_SIZE에 대한 값이 데이터베이�
 통계 설정은 관리자가 자동 통계를 사용하는 경우에만 작동합니다.  사용자가 관리자인 경우 기능 스위치[AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md)를 사용하여 자동 통계를 사용하거나 사용하지 않도록 설정합니다. 
   
 ## <a name="locking-behavior"></a>잠금 동작  
-DATABASE 개체에 대한 공유 잠금을 사용합니다. 읽기 또는 쓰기를 위해 다른 사용자가 사용 중인 데이터베이스는 변경할 수 없습니다. 여기에는 해당 데이터베이스에서 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) 문을 발급한 세션이 포함됩니다.  
+DATABASE 개체에 대한 공유 잠금을 사용합니다. 읽기 또는 쓰기를 위해 다른 사용자가 사용 중인 데이터베이스는 변경할 수 없습니다. 여기에는 해당 데이터베이스에서 [USE](../language-elements/use-transact-sql.md) 문을 발급한 세션이 포함됩니다.  
   
 ## <a name="performance"></a>성능  
 데이터베이스 축소는 해당 데이터베이스 내의 실제 데이터의 크기와 디스크의 조각화 양에 따라 많은 시간 및 시스템 리소스가 필요할 수 있습니다. 예를 들어 데이터베이스를 축소하면 여러 시간 이상이 걸릴 수 있습니다.  
