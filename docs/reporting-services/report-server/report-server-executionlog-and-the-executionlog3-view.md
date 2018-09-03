@@ -1,29 +1,23 @@
 ---
 title: 보고서 서버 ExecutionLog 및 ExecutionLog3 뷰 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2127c8b47f7b61114b8a2b9aa7bce78df5682f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028900"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273795"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 실행 로그에는 단일 서버 또는 기본 모드를 사용하는 스케일 아웃 배포 또는 SharePoint 팜을 사용한 다중 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 집합 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 집합 또는 처리)에 대한 사항을 제안할 수 있습니다.  
@@ -113,7 +107,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름 사용자 환경에 보고서 서버가 두 개 이상 포함된 경우 InstanceName 배포를 분석하여 네트워크 부하 분산 장치가 예상한 대로 보고서 서버 간에 요청을 분배하는지 모니터링 및 확인할 수 있습니다.|  
 |ItemPath|보고서 또는 보고서 항목이 저장된 위치의 경로|  
@@ -328,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportPath|보고서의 경로 구조입니다.  예를 들어 보고서 관리자의 루트 폴더에 있고 이름이 "test"인 보고서의 ReportPath는 "/test"입니다.<br /><br /> 보고서 관리자에서 "samples" 폴더에 저장된 이름이 "test"인 보고서의 ReportPath는 "/Samples/test"입니다.|  
@@ -360,7 +354,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportID|보고서 식별자|  

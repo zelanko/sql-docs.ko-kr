@@ -24,16 +24,16 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72d889e8be30c90a61627379d53ca41156fe0a27
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 90b53c9b8a2b4e4976c526762cdc67dbf2752263
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096991"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118490"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -119,8 +119,7 @@ ms.locfileid: "43096991"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- 
-  **데이터베이스 사용자 - 신규** 대화 상자에는 또한 **소유한 스키마**, **멤버 자격**, **보안 개체**및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
+ **데이터베이스 사용자 - 신규** 대화 상자에는 또한 **소유한 스키마**, **멤버 자격**, **보안 개체**및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
   
 -   **소유한 스키마** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 스키마가 나열됩니다. 데이터베이스 사용자로부터 스키마를 추가하거나 제거하려면 **이 사용자가 소유한 스키마**아래에서 스키마 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
   

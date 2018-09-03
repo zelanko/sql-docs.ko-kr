@@ -1,26 +1,20 @@
 ---
 title: 보고서 파트 관리 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4209c0fd93e8a0c9a2702971e114a4cbb7cfaadd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ebfe30b11c7d4aea0d98557b2457577f1c8632d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024520"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273725"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   보고서 파트는 여러 사용자가 다시 사용하고 페이지가 매겨진 보고서 및 여러 보고서에서 다시 사용할 수 있습니다. 사용자는 서버에서 보고서 파트를 검색하여 보고서에 추가할 수 있습니다.  또한 사용자에게 서버의 보고서 파트에 대한 업데이트를 알리고 보고서 파트의 새 버전을 다시 게시할 수 있습니다. 이러한 보고서 제작 동작은 Reporting Services 보안 권한에 의해 제어되고 이의 영향을 받습니다.  이 항목에서는 서버에 게시된 보고서 파트 속성 및 동작을 검토합니다.  
@@ -34,7 +28,7 @@ ms.locfileid: "33024520"
  보고서 작성기와 같은 보고서 제작 응용 프로그램에서 SharePoint 통합 모드의 보고서 서버로 보고서 파트를 게시하면 보고서 서버 카탈로그도 업데이트되므로 갤러리 검색에도 새 보고서 파트나 업데이트 보고서 파트가 정확히 반영됩니다.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint 폴더로 보고서 파트 직접 업로드  
- 보고서 파트가 보고서 제작 응용 프로그램에서 게시되지 않고 대신에 SharePoint 문서 폴더로 직접 업로드되는 경우 보고서 서버 카탈로그가 업데이트되지 않습니다. 따라서 보고서 파트 갤러리를 검색할 때 업로드된 보고서 파트를 찾을 수 없습니다. SharePoint 폴더와 보고서 서버 카탈로그의 동기화 상태를 유지하기 위해 SharePoint 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 동기화 기능을 활성화할 수 있습니다. 자세한 내용은 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)를 참조하세요.  
+ 보고서 파트가 보고서 제작 응용 프로그램에서 게시되지 않고 대신에 SharePoint 문서 폴더로 직접 업로드되는 경우 보고서 서버 카탈로그가 업데이트되지 않습니다. 따라서 보고서 파트 갤러리를 검색할 때 업로드된 보고서 파트를 찾을 수 없습니다. SharePoint 폴더와 보고서 서버 카탈로그의 동기화 상태를 유지하기 위해 SharePoint 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 동기화 기능을 활성화할 수 있습니다. 자세한 내용은 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)(SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능을 활성화)을 참조하세요.  
   
  GetProperties 및 SetProperties와 같은 일부 Reporting Services 관리 API를 호출하여 파일을 동기화할 수도 있습니다.  
   
@@ -54,15 +48,15 @@ ms.locfileid: "33024520"
   
  별표(*)는 이번 릴리스에 새로 추가된 것임을 나타냅니다.  
   
-|속성|Description|보고서 파트<br /><br /> 갤러리 검색 조건|  
+|속성|설명|보고서 파트<br /><br /> 갤러리 검색 조건|  
 |--------------|-----------------|---------------------------------------------|  
-|속성|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
-|Description|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|예|  
-|CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|예|  
-|CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
-|ModifiedBy|ModifiedBy는 보고서 파트를 마지막으로 수정한 사람의 ID입니다.|예|  
-|ModifiedDate|서버에서 보고서 파트가 마지막으로 수정된 날짜입니다.<br /><br /> 이 필드는 보고서 파트에 대해 서버 쪽 업데이트가 이루어진 시점을 확인하는 논리의 일부로 사용됩니다. 자세한 내용은 이 표의 뒷부분에 나오는 ComponentID에 대한 설명을 참조하십시오.|예|  
-|SubType (*)|SubType은 "테이블릭스" 또는 "차트"와 같이 검색할 보고서 파트의 종류를 나타내는 문자열입니다.|예|  
+|속성|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|사용자 계정 컨트롤|  
+|설명|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|사용자 계정 컨트롤|  
+|CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|사용자 계정 컨트롤|  
+|CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|사용자 계정 컨트롤|  
+|ModifiedBy|ModifiedBy는 보고서 파트를 마지막으로 수정한 사람의 ID입니다.|사용자 계정 컨트롤|  
+|ModifiedDate|서버에서 보고서 파트가 마지막으로 수정된 날짜입니다.<br /><br /> 이 필드는 보고서 파트에 대해 서버 쪽 업데이트가 이루어진 시점을 확인하는 논리의 일부로 사용됩니다. 자세한 내용은 이 표의 뒷부분에 나오는 ComponentID에 대한 설명을 참조하십시오.|사용자 계정 컨트롤|  
+|SubType (*)|SubType은 "테이블릭스" 또는 "차트"와 같이 검색할 보고서 파트의 종류를 나타내는 문자열입니다.|사용자 계정 컨트롤|  
 |ComponentID (*)|ComponentID는 보고서 파트의 고유 식별자입니다. 카탈로그에 추가되는 새 필드로, 서버 쪽뿐만 아니라 보고서 작성기와 같은 보고서 제작 응용 프로그램에서도 표시됩니다.<br /><br /> 클라이언트 응용 프로그램이 서버에서 보고서 파트의 업데이트를 확인할 때도 이 필드가 사용됩니다. 클라이언트 응용 프로그램은 서버에서 현재 클라이언트 쪽 보고서에 있는 ComponentID를 검색합니다. 일치하는 ComponentID가 있으면, ModifiedDate를 보고서 항목의 클라이언트 쪽 SyncDate와 비교합니다.|지원 안 함|  
   
 ## <a name="controlling-access-to-report-parts"></a>보고서 파트에 대한 액세스 제어  
@@ -78,7 +72,7 @@ ms.locfileid: "33024520"
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드의 서버  
   
-|동작|Role|  
+|동작|역할|  
 |-------------|----------|  
 |보고서 파트 추가, 삭제, 항목 속성 편집, 보안 관리 및 다운로드|모든 권한|  
 |보고서 파트 추가, 삭제, 항목 속성 편집 및 다운로드|디자인<br /><br /> 참가|  

@@ -1,26 +1,20 @@
 ---
 title: SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 99fedd6b1dd298f545b578342b79ca91aafc0eef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 973ac09ae8630b5118ec1b5221ccda8d3ef78acc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028460"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275752"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
 
@@ -45,7 +39,7 @@ ms.locfileid: "33028460"
 ##  <a name="bkmk_general"></a> 일반 ULS 로그 권장 사항  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 환경을 모니터링하는 데 권장되는 이벤트 범주 및 수준을 나열합니다. 이벤트를 기록하면 각 항목에 이벤트 기록 시간, 프로세스 이름 및 스레드 ID가 포함됩니다.  
   
-|범주|Level|Description|  
+|범주|Level|설명|  
 |--------------|-----------|-----------------|  
 |데이터베이스|자세히|데이터베이스 액세스를 포함하는 이벤트를 기록합니다.|  
 |일반|자세히|다음 항목에 대한 액세스를 포함하는 이벤트를 기록합니다.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 페이지<br /><br /> 보고서 뷰어 HTTP 처리기<br /><br /> 보고서 액세스 파일(.rdl)<br /><br /> 데이터 원본 파일(.rsds)<br /><br /> SharePoint 사이트의 URL(.smdl 파일)|  

@@ -1,28 +1,22 @@
 ---
 title: 보고서 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035452208fbd27c3669239f9177136d71051d854
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022410"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268132"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
 
@@ -119,7 +113,7 @@ ms.locfileid: "33022410"
 ##  <a name="ExportFormats"></a> 보고서를 보는 중에 내보낼 수 형식  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다양한 형식으로 보고서를 렌더링하는 렌더링 확장 프로그램을 제공합니다. 선택한 파일 형식에 맞게 보고서 디자인을 최적화해야 합니다.  다음 표에는 사용자 인터페이스에서 내보낼 수 형식이 나와 있습니다.  URL에 액세스하여 내보내는 경우 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 내보내는 경우에는 추가 형식을 사용할 수 있습니다.  이 항목의 [보고서를 내보내는 다른 방법](#OtherWaysExportingReports)섹션을 참조하세요.  
   
-|형식|렌더링 확장 프로그램 유형|Description|  
+|형식|렌더링 확장 프로그램 유형|설명|  
 |------------|------------------------------|-----------------|  
 |Acrobat(PDF) 파일|하드 페이지 나누기|PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.<br /><br /> 자세한 내용은 [PDF 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)를 참조하세요.|  
 |Atom|data|Atom 렌더링 확장 프로그램은 보고서에서 Atom 규격 데이터 피드를 생성합니다. 데이터 피드는 Atom 규격 데이터 피드를 사용할 수 있는 파워 피벗 또는 Power BI와 같은 응용 프로그램을 통해 읽을 수 있고 교환할 수 있습니다.<br /><br /> 이 확장 프로그램의 출력 형식은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서입니다. 이 문서에서는 보고서의 각 데이터 영역에 대한 데이터 피드가 하나 이상 생성되는데, 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 여러 개의 데이터 피드가 생성될 수 있습니다.<br /><br /> 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.|  

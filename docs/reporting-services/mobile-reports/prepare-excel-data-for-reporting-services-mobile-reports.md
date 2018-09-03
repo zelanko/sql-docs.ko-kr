@@ -1,26 +1,20 @@
 ---
 title: Reporting Services 모바일 보고서에 대한 Excel 데이터 준비 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 76f71b0f284602ae1860fcba5bc69f9221b0be33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 688ef70a1ffc0a511d848acada7446897cedd736
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019604"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273901"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 대한 Excel 데이터 준비
   

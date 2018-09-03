@@ -1,14 +1,10 @@
 ---
 title: UnattendedExecutionAccount 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - UnattendedExecutionAccount
@@ -18,16 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - UnattendedExecutionAccount property
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9ae78fd87fb1b1ba7115fd44863f0bf200524956
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13430da95799b6d35beea291e3a01e48f40a02c2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030630"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266790"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>ConfigurationSetting 속성 - UnattendedExecutionAccount
   보고서 서버가 무인 모드로 보고서를 실행할 때 가장하는 사용자 계정을 반환합니다. 읽기 전용입니다.  
