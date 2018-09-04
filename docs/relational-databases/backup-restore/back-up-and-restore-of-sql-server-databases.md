@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410389"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348153"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "40410389"
 -   하드웨어, 인력, 백업 미디어 저장 공간, 저장된 미디어의 물리적 보안 등과 같은 리소스의 제약 요건  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>백업 및 복원에 대한 복구 모델의 영향  
- 백업 및 복원 작업은 복구 모델의 컨텍스트에서 수행됩니다. 복구 모델은 트랜잭션 로그의 관리 방법을 제어하는 데이터베이스 속성입니다. 또한 데이터베이스의 복구 모델은 데이터베이스에 지원되는 복원 시나리오 및 백업 유형을 결정합니다. 일반적으로 데이터베이스는 단순 복구 모델 또는 전체 복구 모델 모두 사용합니다. 전체 복구 모델은 대량 작업 이전에 대량 로그 복구 모델로 전환하여 보완될 수 있습니다. 이러한 복구 모델 및 이러한 복구 모델이 트랜잭션 로그 관리에 미치는 영향에 대한 자세한 내용은 [트랜잭션 로그(SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)를 참조하세요.  
+ 백업 및 복원 작업은 복구 모델의 컨텍스트에서 수행됩니다. 복구 모델은 트랜잭션 로그의 관리 방법을 제어하는 데이터베이스 속성입니다. 또한 데이터베이스의 복구 모델은 데이터베이스에 지원되는 복원 시나리오 및 백업 유형을 결정합니다. 일반적으로 데이터베이스는 단순 복구 모델 또는 전체 복구 모델 모두 사용합니다. 전체 복구 모델은 대량 작업 이전에 대량 로그 복구 모델로 전환하여 보완될 수 있습니다. 이러한 복구 모델 및 이러한 복구 모델이 트랜잭션 로그 관리에 미치는 영향에 대한 자세한 내용은 [트랜잭션 로그(SQL Server)](../logs/the-transaction-log-sql-server.md)를 참조하세요.  
   
  데이터베이스에 가장 적합한 복구 모델은 비즈니스 요구 사항에 따라 달라집니다. 트랜잭션 로그 관리를 방지하고 백업 및 복원을 단순화하려면 단순 복구 모델을 사용하십시오. 관리 오버헤드가 증가하더라도 작업 손실 가능성을 최소화하려면 전체 복구 모델을 사용하십시오. 백업 및 복원에 미치는 복구 모델의 영향에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
   

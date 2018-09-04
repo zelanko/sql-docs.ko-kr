@@ -1,14 +1,10 @@
 ---
 title: RS.exe 유틸리티(SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a11f06ce38e29c9910108fa71cf845de570ab71b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9990f797ab83f3ced5009b179944227107350ce
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035106"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282081"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -72,7 +66,7 @@ rs {-?}
  **-u** 인수에 사용할 암호를 지정합니다( **-u** 를 지정한 경우 필수). 이 값은 대/소문자를 구분합니다.  
   
  **-e**  
- 스크립트가 실행되어야 하는 대상 SOAP 끝점을 지정합니다(옵션). 유효한 값은 다음과 같습니다.  
+ 스크립트가 실행되어야 하는 대상 SOAP 엔드포인트를 지정합니다(옵션). 유효한 값은 다음과 같습니다.  
   
 -   Mgmt2010  
   
@@ -82,7 +76,7 @@ rs {-?}
   
 -   Exec2005  
   
- 값이 지정되지 않은 경우 Mgmt2005가 끝점으로 사용됩니다. SOAP 끝점에 대한 자세한 내용은 [Report Server Web Service Endpoints](../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)을 참조하세요.  
+ 값이 지정되지 않은 경우 Mgmt2005가 엔드포인트로 사용됩니다. SOAP 엔드포인트에 대한 자세한 내용은 [Report Server Web Service Endpoints](../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)을 참조하세요.  
   
  **-l** *time_out*  
  서버에 대한 연결 제한 시간이 초과하기 전까지의 시간(초)을 지정합니다(옵션). 기본값은 60초입니다. 시간 제한 값을 지정하지 않으면 이 기본값이 사용됩니다. 값을 **0** 으로 지정하면 연결 시간 제한이 없습니다.  

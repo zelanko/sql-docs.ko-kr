@@ -1,16 +1,12 @@
 ---
 title: SSRS(SQL Server Reporting Services)란? | Microsoft Docs
 description: 온-프레미스에서 모바일 및 페이지가 매겨진 Reporting Services 보고서에 대한 도구 및 서비스에 대해 알아봅니다.
-ms.custom: ''
 ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services]
 - SSRS
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: cfeadac5c872c75075cc40e1f2dc07e7a592aa6d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 73b89a2c83b9f1cc7a9d365d8c7c787d7d972e41
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991795"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271540"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
 

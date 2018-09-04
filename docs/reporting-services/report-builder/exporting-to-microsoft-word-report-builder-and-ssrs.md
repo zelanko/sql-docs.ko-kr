@@ -1,26 +1,20 @@
 ---
 title: Microsoft Word로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 73c41c24d4572c6bc91ec0a8728be590344787df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7caedeed8680e6a4f3ef57c70bdac340cba2082e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022320"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270875"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -58,7 +52,7 @@ ms.locfileid: "33022320"
 ##  <a name="DocumentProperties"></a> 문서 속성  
  Word 렌더러는 DOCX 파일에 다음과 같은 메타데이터를 기록합니다.  
   
-|보고서 요소 속성|Description|  
+|보고서 요소 속성|설명|  
 |-------------------------------|-----------------|  
 |Report Title(보고서 제목)|Title|  
 |Report.Author|작성자|  

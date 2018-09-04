@@ -1,28 +1,22 @@
 ---
 title: 사용자 역할 속성(Management Studio) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5c000e40c7ec5633a24d7edb018a028774ca20a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 528569dce74c3439d60404e87580e657ef3fdb81
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030730"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279849"
 ---
 # <a name="user-role-properties-management-studio"></a>사용자 역할 속성(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의에 포함된 태스크를 볼 수 있으며 태스크 목록을 변경하거나 역할 설명을 수정할 수 있습니다.  
@@ -34,7 +28,7 @@ ms.locfileid: "33030730"
 > [!NOTE]  
 >  사용자 역할 할당은 기본 모드로 실행되는 보고서 서버에만 사용됩니다. 보고서 서버가 SharePoint 통합용으로 구성된 경우 이 페이지에는 SharePoint 사이트에 정의된 역할 및 사용 권한 수준에 대한 읽기 전용 정보가 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
  역할 정의의 이름을 지정합니다.  
   

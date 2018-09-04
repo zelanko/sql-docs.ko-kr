@@ -1,30 +1,24 @@
 ---
 title: 데이터 집합 속성 대화 상자, 매개 변수 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - "10150"
 - sql13.rtp.rptdesigner.datasetproperties.parameters.f1
 - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3a6cb62404bc37e48bdf87d370fc3277341cbcff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 424616f9ea7e00737b341c95d621b4ae74cc7847
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019180"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280551"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>데이터 집합 속성 대화 상자, 매개 변수
   **데이터 집합 속성** 대화 상자에서 **매개 변수** 를 선택하여 보고서 매개 변수에 연결되는 쿼리 매개 변수를 비롯한 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  
@@ -33,7 +27,7 @@ ms.locfileid: "33019180"
   
  한 보고서 매개 변수의 기본값이 쿼리 매개 변수에 연결된 다른 보고서 매개 변수에 종속된 경우 보고서 매개 변수의 순서( **보고서 매개 변수 속성** 대화 상자에 표시되는 순서)가 중요한 의미를 가집니다. 목록의 아래쪽에 있는 보고서 매개 변수는 목록의 위쪽에 있는 보고서 매개 변수를 참조할 수 있습니다. 보고서 매개 변수에 대한 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **추가**  
  목록에 새 매개 변수를 추가합니다.  
   

@@ -1,29 +1,23 @@
 ---
 title: 바로 가기 키(보고서 작성기) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4e2fa3d574930cbf03ee9fbf1664431668b808c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020630"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264542"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
   보고서 작성기에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들고 편집하는 경우 Windows 환경에서 제공하는 모든 바로 가기 키를 탐색에 사용할 수 있습니다. 여러 표준 키보드 매핑 구성표 중에서 선택할 수 있습니다.  
@@ -37,7 +31,7 @@ ms.locfileid: "33020630"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>보고서 작성기의 바로 가기 키  
   
-|Description|키 조합|  
+|설명|키 조합|  
 |-----------------|---------------------|  
 |보고서 작성기 메뉴를 엽니다.|Alt+F|  
 |보고서를 만듭니다.|Ctrl+N|  

@@ -1,28 +1,22 @@
 ---
 title: SetVirtualDirectory 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e1692ea69ca807924b55811110476f01333cd99d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d559e91fc27a3c16383efed9de78edeaf70aa82
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031630"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272216"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting 메서드 - SetVirtualDirectory
   지정한 응용 프로그램에 가상 디렉터리 이름을 설정합니다.  

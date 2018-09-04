@@ -1,23 +1,19 @@
 ---
 title: 보고서 뷰어 웹 파트의 SharePoint 사이트 설정 - SSRS | Microsoft Docs
-ms.custom: ''
 ms.date: 10/31/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: dc85547d213367d3a754e40764fa4335a45c5ce7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f39ac00241bd1c4a26b79766a7bc37865ef11181
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035151"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281871"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>보고서 뷰어 웹 파트의 SharePoint 사이트 설정 - Reporting Services
 

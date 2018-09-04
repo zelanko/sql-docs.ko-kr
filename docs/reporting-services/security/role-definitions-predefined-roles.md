@@ -1,30 +1,24 @@
 ---
 title: 미리 정의된 역할 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028560"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282435"
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  
@@ -44,7 +38,7 @@ ms.locfileid: "33028560"
   
  다음 표에서는 미리 정의된 역할, 범위 및 용도에 대해 설명합니다.  
   
-|미리 정의된 역할|범위|Description|  
+|미리 정의된 역할|범위|설명|  
 |---------------------|-----------|-----------------|  
 |[내용 관리자 역할](#bkmk_content)|항목|모든 항목 수준 태스크를 포함합니다. 이 역할에 할당된 사용자는 다른 사용자에게 사용 권한을 부여할 수 있는 권한, 보고서 및 기타 항목을 저장할 폴더 구조를 정의하는 권한 등 보고서 서버 콘텐츠 관리에 대한 모든 권한을 갖습니다.|  
 |[게시자 역할](#bkmk_publisher)|항목|이 역할에 할당된 사용자는 보고서 서버에 항목을 추가할 수 있으며 이러한 항목을 포함하는 폴더를 만들고 관리할 수도 있습니다.|  
@@ -62,7 +56,7 @@ ms.locfileid: "33028560"
 ### <a name="content-manager-tasks"></a>내용 관리자 태스크  
  다음 표에서는 **내용 관리자** 역할에 포함되는 태스크를 나열합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |링크된 보고서 만들기|링크되지 않은 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  
@@ -99,7 +93,7 @@ ms.locfileid: "33028560"
 ### <a name="publisher-tasks"></a>게시자 태스크  
  다음 표에서는 **게시자** 역할에 포함되는 태스크를 설명합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |링크된 보고서 만들기|링크된 보고서를 만들어 보고서 서버 폴더에 게시합니다.|  
 |데이터 원본 관리|공유 데이터 원본 항목을 만들고 삭제하며 데이터 원본 속성과 내용을 확인하고 수정합니다.|  
@@ -121,7 +115,7 @@ ms.locfileid: "33028560"
 ### <a name="browser-tasks"></a>브라우저 태스크  
  다음 표에서는 **브라우저** 역할 정의에 포함되는 태스크에 대해 설명합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
 |리소스 보기|리소스 및 리소스 속성을 봅니다.|  
@@ -140,7 +134,7 @@ ms.locfileid: "33028560"
 ### <a name="report-builder-tasks"></a>보고서 작성기 태스크  
  다음 표에서는 **보고서 작성기** 역할 정의에 포함되는 태스크에 대해 설명합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
@@ -162,7 +156,7 @@ ms.locfileid: "33028560"
 ### <a name="my-reports-tasks"></a>내 보고서 태스크  
  다음 표에서는 **내 보고서** 역할에 포함된 태스크를 설명합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |링크된 보고서 만들기|사용자의 내 보고서 폴더에 저장되어 있는 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  
 |폴더 관리|폴더를 만들고, 확인하고, 삭제하며 폴더 속성을 확인하고 수정합니다.|  
@@ -190,7 +184,7 @@ ms.locfileid: "33028560"
 ### <a name="system-administrator-tasks"></a>시스템 관리자 태스크  
  다음 표에서는 **시스템 관리자** 역할에 포함되는 태스크를 설명합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서 정의를 보고서 서버에 게시하지 않고 실행을 시작합니다.|  
 |작업 관리|실행 중인 작업을 확인 및 취소합니다. 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.|  
@@ -206,7 +200,7 @@ ms.locfileid: "33028560"
   
 ### <a name="system-user-tasks"></a>시스템 사용자 태스크  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서를 보고서 서버에 게시하지 않고 실행합니다.|  
 |보고서 서버 속성 보기|응용 프로그램 이름, 내 보고서 설정 여부 및 보고서 기록 기본값 등 보고서 서버에 적용되는 속성을 봅니다.<br /><br /> **시스템 사용자** 역할에서 이 태스크를 제거하면 사이트 설정 페이지를 사용할 수 없습니다. 각 페이지의 맨 위에 응용 프로그램 제목도 표시되지 않습니다. 기본적으로 보고서 관리자의 제목은 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"입니다.|  

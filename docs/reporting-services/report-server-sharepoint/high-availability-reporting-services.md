@@ -1,24 +1,19 @@
 ---
 title: SQL Server Reporting Services의 고가용성 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e38cb8a9126a821e2a12dbf1c620c442213c94af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2fd43bdb059037366800d73d25cb8fb8cf9cfda
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024180"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279812"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>SQL Server Reporting Services의 고가용성
 

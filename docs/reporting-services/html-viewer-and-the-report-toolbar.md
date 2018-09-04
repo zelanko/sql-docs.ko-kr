@@ -3,27 +3,21 @@ title: HTML 뷰어 및 보고서 도구 모음 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f53e3459a1a52884995575dd0e19c6b237875a76
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017900"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269480"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 서버의 요청에 따라 보고서를 표시하는 데 사용되는 HTML 뷰어를 제공합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  
@@ -59,7 +53,7 @@ ms.locfileid: "33017900"
   
  기본 보고서 서버 설치에는 다음과 같은 내보내기 형식이 포함되어 있습니다. 실제로 사용할 수 있는 내보내기 형식 목록은 여기에 나열된 것과 다를 수 있습니다.  
   
-|내보내기 형식|Description|  
+|내보내기 형식|설명|  
 |-------------------|-----------------|  
 |XML|보고서를 XML 구문으로 표시합니다. XML로 표시된 보고서는 새 브라우저 창에서 열립니다.|  
 |CSV|보고서를 쉼표로 분리된 형식으로 표시합니다. 보고서가 CSV 파일 형식과 연결된 응용 프로그램에서 열립니다.|  

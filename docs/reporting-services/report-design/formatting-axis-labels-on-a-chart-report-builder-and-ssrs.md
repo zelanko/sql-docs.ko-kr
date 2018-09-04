@@ -1,14 +1,10 @@
 ---
 title: 차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -28,16 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b18f14d4a21b1515438715d24378a8e272a317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027980"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273370"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
   좌표 기반 차트 종류(세로 막대형, 가로 막대형, 영역형, 점, 꺾은선형 및 범위형)에는 데이터 관계를 범주화하고 표시하는 데 사용되는 두 개의 축이 있습니다. 각 축에는 다양한 유형의 서식이 지정됩니다.  
@@ -63,7 +57,7 @@ ms.locfileid: "33027980"
   
  축 눈금은 축을 따라 표시될 데이터 범위를 정의하는 최소값과 최대값으로 바인딩됩니다. 차트는 결과 집합의 값을 바탕으로 각 축에서 최소값과 최대값을 계산합니다. 값 축에서 눈금은 항상 값 필드의 가장 작은 수와 가장 큰 수에 의해 결정됩니다. 범주 축에서 최소값과 최대값 형식은 범주 필드의 형식에 따라 결정됩니다. 데이터 집합의 모든 필드는 세 가지 범주 필드 유형 중 하나로 분류할 수 있습니다. 다음 표에서는 이러한 세 가지 유형의 범주 필드에 대해 설명합니다.  
   
-|범주 필드 유형|Description|예제|  
+|범주 필드 유형|설명|예제|  
 |-------------------------|-----------------|-------------|  
 |숫자|범주는 x축을 따라 숫자순으로 표시됩니다.|x축을 따라 직원 ID 번호를 표시하는 직원 ID 번호별 판매 보고서|  
 |날짜/시간|범주는 시간순으로 x축을 따라 표시됩니다.|x축을 따라 서식이 지정된 날짜를 표시하는 월별 판매 보고서|  

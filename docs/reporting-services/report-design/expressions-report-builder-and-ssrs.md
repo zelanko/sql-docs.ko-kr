@@ -1,26 +1,20 @@
 ---
 title: 식(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2e0630d23d308c061f5d3adf69e17473b5cfbf2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0e20a42c42702e99e1ed607b7ebb7a74a88e6b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024350"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273136"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
   식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 에서 페이지를 매긴 보고서 전체에서 광범위하게 사용됩니다. 
@@ -86,7 +80,7 @@ ms.locfileid: "33024350"
   
  다음 표에서는 식에 포함할 수 있는 참조의 종류를 보여 줍니다.  
   
-|참조|Description|예제|  
+|참조|설명|예제|  
 |----------------|-----------------|-------------|  
 |[상수](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|글꼴 색과 같은 상수 값을 요구하는 속성에 대해 대화형으로 액세스할 수 있는 상수에 대해 설명합니다.|`="Blue"`|  
 |[연산자](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|식에서 참조를 조합하는 데 사용할 수 있는 연산자에 대해 설명합니다. 예를 들어 **&** 연산자는 문자열을 연결하는 데 사용됩니다.|`="The report ran at: " & Globals!ExecutionTime & "."`|  

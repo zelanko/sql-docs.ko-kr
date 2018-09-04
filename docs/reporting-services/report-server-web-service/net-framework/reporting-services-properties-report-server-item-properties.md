@@ -1,14 +1,10 @@
 ---
 title: 보고서 서버 항목 속성 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027010"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267639"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 속성 - 보고서 서버 항목 속성
   항목 속성은 보고서 서버 데이터베이스의 항목에 대한 특정 속성입니다. 이러한 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.  
@@ -37,7 +31,7 @@ ms.locfileid: "33027010"
 ## <a name="item-properties"></a>항목 속성  
  다음 속성은 보고서 서버 데이터베이스의 모든 항목에 적용됩니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**CreatedBy**|처음에 항목을 보고서 서버 데이터베이스에 추가한 사용자의 이름입니다.|  
 |**CreationDate**|항목이 보고서 서버 데이터베이스에 추가된 날짜와 시간입니다.|  
@@ -55,14 +49,14 @@ ms.locfileid: "33027010"
 ## <a name="folder-properties"></a>폴더 속성  
  위에 나열한 항목 속성 외에도 다음 속성이 보고서 서버 데이터베이스의 폴더에 적용됩니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**Reserved**|보고서 서버에서 예약된 폴더에 대해 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 통해 반환되는 값입니다. 예약된 폴더에는 Users, My Reports 및 /가 포함됩니다. 예약된 폴더는 수정하거나 제거할 수 없습니다.|  
   
 ## <a name="report-properties"></a>보고서 속성  
  위에 나열한 항목 속성 외에도 다음 속성이 보고서 서버 데이터베이스의 보고서에 적용됩니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**언어**|보고서에서 사용된 언어입니다. 값은 IETF(Internet Engineering Task Force) RFC1766 사양에 정의된 언어 코드입니다. 첫 번째 부분은 기본 언어를 지정하며 2자로 구성되어 있습니다. 하이픈으로 구분된 두 번째 부분은 해당 언어의 변형 또는 방언을 지정합니다. 보고서 정의에서 **Body** 요소와 연관된 **Style** 요소에 값이 지정되지 않은 경우 기본값은 보고서 서버의 언어입니다.|  
 |**ReportProcessingTimeout**|개별 보고서에 대한 제한 시간(초)입니다. 이 값이 설정된 경우 지정된 시간이 경과하면 보고서 서버에서 보고서 처리를 중지합니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 값이 **null**이면 시스템 속성 **ReportProcessingTimeout**의 값이 보고서 처리 제한 시간에 사용됩니다. 기본값은 **null**입니다. 자세한 내용은 [보고서 서버 시스템 속성](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)을 참조하세요.|  
@@ -76,7 +70,7 @@ ms.locfileid: "33027010"
 ## <a name="resource-properties"></a>리소스 속성  
  위에 나열한 항목 속성 외에도 다음 속성이 보고서 서버 데이터베이스의 리소스에 적용됩니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**MimeType**|보고서 서버 데이터베이스에 있는 리소스의 MIME 형식입니다.|  
   

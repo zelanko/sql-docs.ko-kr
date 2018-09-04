@@ -1,26 +1,20 @@
 ---
 title: 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e95fd161dfadcab075a770e8e6ab6001da6c07e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69acae71d971915406b0e287d420043e2d36bae3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019150"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278894"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시
   보고서에는 보고서 데이터 창에 기본적으로 표시되지 않는 자동 생성 데이터 집합(숨겨진 데이터 집합이라고도 함)이 포함될 수도 있습니다. 이러한 데이터 집합은 다음과 같은 방법으로 생성됩니다.  

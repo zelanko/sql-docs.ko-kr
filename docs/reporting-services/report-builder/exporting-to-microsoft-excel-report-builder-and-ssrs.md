@@ -1,26 +1,20 @@
 ---
 title: Microsoft Excel로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2985d8337cfbbb33b867de3f84f307bea4a6a67b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad451fd016345ec541782f4ac4aed85dd3974799
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022390"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275658"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 형식(.xlsx)으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  
@@ -178,7 +172,7 @@ ms.locfileid: "33022390"
 |워크시트당 최대 열 수|256|16,384|  
 |워크시트당 최대 행 수|65,536|1,048,576|  
 |워크시트에 허용된 색상 수|56(색상표)<br /><br /> 보고서에 56개보다 많은 수의 색을 사용한 경우 렌더링 확장 프로그램에서는 필요한 색을 사용자 지정 색상표에 이미 들어 있는 56색 중 하나로 대체합니다.|약 1600만(24비트 색상)|  
-|ZIP 압축 파일|InclusionThresholdSetting|ZIP 압축|  
+|ZIP 압축 파일|없음|ZIP 압축|  
 |기본 글꼴 패밀리|Arial|Calibri|  
 |기본 글꼴 크기|10pt|11pt|  
 |기본 행 높이|12.75pt|15pt|  
@@ -215,7 +209,7 @@ ms.locfileid: "33022390"
 |-------------------------------|-----------------|  
 |만든 날짜|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
 |작성자|Report.Author|  
-|Description|Report.Description|  
+|설명|Report.Description|  
 |LastSaved|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
   
 ##  <a name="PageHeadersFooters"></a> 페이지 머리글 및 바닥글  

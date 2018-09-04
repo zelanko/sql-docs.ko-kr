@@ -1,26 +1,20 @@
 ---
 title: 공유 데이터 집합 디자인 뷰 (보고서 작성기) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 7348789d794cb10892ed4a6c7f22c68b1bfb75cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fa8b79e7ec59efb3bfeb20cbb32e408630e0a3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021370"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280204"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 집합 디자인 뷰 (보고서 작성기)
   보고서에서 데이터 집합은 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 공유 데이터 집합은 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 다른 사용자와 공유할 데이터 집합을 만들 수 있습니다. 공유 데이터 집합 디자인 창에서 공유 데이터 원본을 선택하고, 공유 데이터 집합에 대한 속성을 지정하고, 쿼리 디자이너를 통해 쿼리를 만듭니다.  
@@ -82,7 +76,7 @@ ms.locfileid: "33021370"
   
  보고서 작성자가 이 공유 데이터 집합을 보고서에 추가하면 보고서 서버의 데이터 집합 정의에 대한 포인터가 추가됩니다. 보고서에서 데이터 집합 필드 컬렉션은 보고서 데이터 창에 표시됩니다. 쿼리 텍스트는 사용할 수 없습니다.  
   
- 쿼리를 실행하기 위해 사용한 자격 증명은 보고서 서버에서 보고서를 미리 보거나 보고서를 실행할 때 사용한 자격 증명과 구분됩니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
+ 쿼리를 실행하기 위해 사용한 자격 증명은 보고서 서버에서 보고서를 미리 보거나 보고서를 실행할 때 사용한 자격 증명과 구분됩니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
 ### <a name="running-a-report-with-parameters"></a>매개 변수가 있는 보고서 실행  
  쿼리에 쿼리 변수가 포함되는 경우 데이터 집합 매개 변수가 자동으로 만들어집니다. 또한 데이터 집합 쿼리 작성을 마치면 데이터 집합 매개 변수로 설정된 보고서 매개 변수가 자동으로 만들어집니다.  

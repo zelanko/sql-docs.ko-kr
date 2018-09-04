@@ -1,28 +1,22 @@
 ---
 title: 보고서 서버 HTTP 로그 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a528b55edcadfa54a0b1cad4095b384d89de5c6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028120"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272735"
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
   보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.   
@@ -61,20 +55,20 @@ ms.locfileid: "33028120"
 ## <a name="log-file-fields"></a>로그 파일 필드  
  다음 표에서는 로그에서 사용 가능한 필드를 설명합니다. 필드 목록은 구성 가능하므로 **HTTPTraceSwitches** 구성 설정을 통해 포함할 필드를 지정할 수 있습니다. **기본값** 열은 **HTTPTraceSwitches**를 지정하지 않을 경우 로그 파일에 자동으로 해당 필드가 포함되는지 여부를 지정합니다.  
   
-|필드|Description|Default|  
+|필드|설명|Default|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|이 값은 선택 사항입니다. 기본값은 ReportServerServiceHTTP_입니다. 로그 파일을 중앙 위치에 저장하기 위해 서버 이름을 포함하는 경우와 같이 다른 파일 명명 규칙을 사용하려면 다른 값을 지정할 수 있습니다.|예|  
+|HttpTraceFileName|이 값은 선택 사항입니다. 기본값은 ReportServerServiceHTTP_입니다. 로그 파일을 중앙 위치에 저장하기 위해 서버 이름을 포함하는 경우와 같이 다른 파일 명명 규칙을 사용하려면 다른 값을 지정할 수 있습니다.|사용자 계정 컨트롤|  
 |HTTPTraceSwitches|이 값은 선택 사항입니다. 이 값을 지정하면 로그 파일에 사용되는 필드를 쉼표로 구분된 형식으로 구성할 수 있습니다.|아니오|  
 |date|작업이 발생한 날짜입니다.|아니오|  
 |Time|작업이 발생한 시간입니다.|아니오|  
-|ClientIp|보고서 서버에 액세스하는 클라이언트의 IP 주소입니다.|예|  
+|ClientIp|보고서 서버에 액세스하는 클라이언트의 IP 주소입니다.|사용자 계정 컨트롤|  
 |UserName|보고서 서버에 액세스한 사용자의 이름입니다.|아니오|  
 |ServerPort|연결에 사용되는 포트 번호입니다.|아니오|  
 |Host|호스트 헤더의 내용입니다.|아니오|  
-|메서드|클라이언트에서 호출된 동작 또는 SOAP 메서드입니다.|예|  
-|UriStem|액세스한 리소스입니다.|예|  
+|메서드|클라이언트에서 호출된 동작 또는 SOAP 메서드입니다.|사용자 계정 컨트롤|  
+|UriStem|액세스한 리소스입니다.|사용자 계정 컨트롤|  
 |UriQuery|리소스에 액세스하는 데 사용된 쿼리입니다.|아니오|  
-|ProtocolStatus|HTTP 상태 코드입니다.|예|  
+|ProtocolStatus|HTTP 상태 코드입니다.|사용자 계정 컨트롤|  
 |BytesReceived|서버가 받은 바이트 수입니다.|아니오|  
 |TimeTaken|네트워크 전송 시간을 제외하고 HTTP.SYS가 요청 데이터를 반환한 순간부터 서버가 마지막 보내기 작업을 마칠 때까지의 시간(밀리초)입니다.|아니오|  
 |ProtocolVersion|클라이언트에 사용된 프로토콜 버전입니다.|아니오|  

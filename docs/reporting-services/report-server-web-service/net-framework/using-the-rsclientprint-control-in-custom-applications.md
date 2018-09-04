@@ -1,14 +1,10 @@
 ---
 title: 사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 67ee94b303f8d75e3249b1f20b2ed891c632dc92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef2cedf56fd314244a598ddc77df391f44237ca
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027870"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272982"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 컨트롤인 **RSPrintClient**는 HTML 뷰어에 표시되는 보고서에 대한 클라이언트 쪽 인쇄 기능을 제공합니다. 사용자는 제공된 **인쇄** 대화 상자를 사용하여 인쇄 작업 시작, 보고서 미리 보기, 인쇄할 페이지 지정, 여백 조정 등의 작업을 수행할 수 있습니다. 클라이언트 쪽 인쇄 작업 과정에서 보고서 서버는 이미지(EMF) 렌더링 확장 프로그램으로 보고서를 렌더링하고 운영 체제의 인쇄 기능으로 인쇄 작업을 만들어 프린터에 보냅니다.  
@@ -72,7 +66,7 @@ ms.locfileid: "33027870"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 속성  
   
-|속성|형식|RW|Default|Description|  
+|속성|형식|RW|Default|설명|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|보고서 설정|왼쪽 여백을 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서에 지정되지 않은 경우 기본값은 12.2밀리미터입니다.|  
 |MarginRight|Double|RW|보고서 설정|오른쪽 여백을 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서에 지정되지 않은 경우 기본값은 12.2밀리미터입니다.|  
@@ -109,7 +103,7 @@ ms.locfileid: "33027870"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Print 메서드에 대한 RSPrintClient 지원  
  **RSClientPrint** 개체는 인쇄 대화 상자를 시작하는 데 사용되는 **Print** 메서드를 지원합니다. 다음은 **Print** 메서드에 사용되는 인수입니다.  
   
-|인수|입력/출력|형식|Description|  
+|인수|입력/출력|형식|설명|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|입력|String|보고서 서버 가상 디렉터리를 지정합니다(예: `https://adventure-works/reportserver`).|  
 |ReportPathParameters|입력|String|보고서 서버 폴더 네임스페이스에 있는 보고서의 전체 이름을 매개 변수를 포함하여 지정합니다. 보고서는 URL 액세스를 통해 검색됩니다. 예제: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  

@@ -19,16 +19,16 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a9f8f115dd24f27f1c140677775ba9e29dd7468
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982895"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348484"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > SQL Server 2014의 경우 [전체 데이터베이스 백업 만들기(SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx)로 이동하세요.
+ > SQL Server 2014의 경우 [전체 데이터베이스 백업 만들기(SQL Server)](create-a-full-database-backup-sql-server.md)로 이동하세요.
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법을 설명합니다.  
   

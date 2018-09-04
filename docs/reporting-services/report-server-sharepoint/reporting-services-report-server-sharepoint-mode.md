@@ -1,24 +1,19 @@
 ---
 title: Reporting Services 보고서 서버(SharePoint 모드) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8bb9d1a2949a838c579322a8e0b6fcd523c9f2eb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 228b53997a5cefc04bfcdb51aadd07d3febd2914
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035171"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274241"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
@@ -59,7 +54,7 @@ ms.locfileid: "38035171"
   
 -   SharePoint 페이지에 추가할 수 있는 보고서 뷰어 웹 파트를 통해 SharePoint 웹 응용 프로그램 내에서 보고서를 볼 수 있습니다. 웹 파트에는 페이지 탐색, 검색, 인쇄 및 내보내기 기능이 포함되어 있습니다.  
   
--   새 SOAP 끝점에 대해 프로그래밍하여 SharePoint 사이트와 통합되는 사용자 지정 응용 프로그램을 만들 수 있습니다. 업데이트된 WMI(Windows Management Instrumentation) 공급자를 사용하여 SharePoint 통합 모드에서 실행되는 보고서 서버 인스턴스를 프로그래밍 방식으로 구성할 수도 있습니다.  
+-   새 SOAP 엔드포인트에 대해 프로그래밍하여 SharePoint 사이트와 통합되는 사용자 지정 응용 프로그램을 만들 수 있습니다. 업데이트된 WMI(Windows Management Instrumentation) 공급자를 사용하여 SharePoint 통합 모드에서 실행되는 보고서 서버 인스턴스를 프로그래밍 방식으로 구성할 수도 있습니다.  
   
 -   연결된 모드의 Microsoft Access 서비스 보고  
   
@@ -107,9 +102,9 @@ ms.locfileid: "38035171"
 > [!TIP]  
 >  보고서 서버, SharePoint용 Reporting Services 추가 기능 및 SharePoint 제품의 모든 조합에서 모든 기능이 지원되는 것은 아닙니다. 자세한 내용은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  
   
--   SharePoint에서 Reporting Services 추가 기능은 SharePoint 사이트 또는 팜에서 보고서 서버 내용을 확인, 저장 및 관리할 수 있도록 ReportServer 프록시 끝점, 보고서 뷰어 웹 파트 및 응용 프로그램 페이지를 제공합니다.  
+-   SharePoint에서 Reporting Services 추가 기능은 SharePoint 사이트 또는 팜에서 보고서 서버 내용을 확인, 저장 및 관리할 수 있도록 ReportServer 프록시 엔드포인트, 보고서 뷰어 웹 파트 및 응용 프로그램 페이지를 제공합니다.  
   
--   Reporting Services에서는 업데이트된 프로그램 파일, SOAP 끝점, 사용자 지정 보안 및 배달 확장 프로그램을 제공합니다. 보고서 서버는 SharePoint 사이트를 통해 보고서 액세스와 배달만 전적으로 지원하는 SharePoint 통합 모드에서 실행되도록 구성해야 합니다.  
+-   Reporting Services에서는 업데이트된 프로그램 파일, SOAP 엔드포인트, 사용자 지정 보안 및 배달 확장 프로그램을 제공합니다. 보고서 서버는 SharePoint 사이트를 통해 보고서 액세스와 배달만 전적으로 지원하는 SharePoint 통합 모드에서 실행되도록 구성해야 합니다.  
   
  SharePoint에 Reporting Services 추가 기능을 설치하고 통합을 위해 두 서버를 구성하면 SharePoint 라이브러리에 보고서 서버 콘텐츠 형식을 업로드 또는 게시한 다음 SharePoint 사이트에서 해당 문서를 보고 관리할 수 있습니다. 보고서 서버 내용을 업로드하거나 게시하는 것이 중요한 첫 번째 단계입니다. 웹 파트와 페이지는 SharePoint 사이트에서 보고서 정의(.rdl), 보고서 모델(.smdl) 및 공유 데이터 원본(.rsds)을 선택하면 사용할 수 있게 됩니다.  
   

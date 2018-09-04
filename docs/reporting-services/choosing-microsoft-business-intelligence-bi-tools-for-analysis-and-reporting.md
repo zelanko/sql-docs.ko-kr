@@ -1,26 +1,20 @@
 ---
 title: 분석 및 보고에 대한 Microsoft BI(Business Intelligence) 도구 선택 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b0268948fe26b5f1f008cd2a3fbc2c5e83bc6c03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a2d2b1a8956f4ccdacb26ff735eb2e5dcf2a702
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016080"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278650"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>분석 및 보고에 대한 Microsoft BI(Business Intelligence) 도구 선택
 적절한 비즈니스 인텔리전스 도구를 선택하는 것은 엄청날 수 있습니다. 다른 Microsoft 제품에 대해 알아보고 필요한 사항에 가장 맞는 하나를 찾아보세요.

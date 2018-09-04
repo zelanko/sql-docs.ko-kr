@@ -1,26 +1,20 @@
 ---
 title: 용어 설명(보고서 작성기) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8951dbb1d2ecfe434f60ab0937861e5b83eba5ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc416e0b7f23013b9f0550a2ded8d14db680eea3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022730"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271008"
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
   
@@ -275,7 +269,7 @@ ms.locfileid: "33022730"
 |관계형 데이터베이스|정보를 테이블에 데이터 행과 열로 저장하고, 한 테이블의 지정된 열에 있는 데이터를 사용하여 다른 테이블의 추가 데이터를 찾는 방법으로 검색을 수행하는 데이터베이스 또는 데이터베이스 관리 시스템입니다.|  
 |관계형 데이터베이스 관리 시스템(relational database management system)|데이터를 관련된 행과 열로 구성하는 시스템입니다.|  
 |관계형 OLAP|관계형 데이터베이스의 테이블을 사용하여 다차원 구조를 저장하는 저장소 모드입니다.|  
-|관계(relationship)|1. 한 테이블의 기본 키와 다른 테이블의 외래 키를 참조하는 테이블 간 연결입니다. 데이터베이스 다이어그램에서 관계선은 테이블 간 참조 무결성이 적용될 경우 실선으로, INSERT 및 UPDATE 트랜잭션에 대해 참조 무결성이 적용되지 않을 경우 점선으로 표시됩니다. 관계선의 끝점은 기본 키 기호를 표시하여 기본 키-외래 키 관계를 나타내거나 무한대 기호를 표시하여 일 대 다 관계의 외래 키 쪽을 나타냅니다. <br />2. Metadata Services에서 관계는 한 개체가 원점이 되고 다른 개체가 대상이 되는 개체 쌍 간 연결을 나타냅니다. 연결은 후속 개체 쌍 각각에 대해 반복되므로 한 관계의 대상이 다음 관계의 원점이 됩니다. 이러한 방식으로 정보 모델의 모든 개체는 정보 모델 전체에서 한 개체로부터 다음 개체로 확장되는 관계 체인을 통해 연결됩니다.|  
+|관계(relationship)|1. 한 테이블의 기본 키와 다른 테이블의 외래 키를 참조하는 테이블 간 연결입니다. 데이터베이스 다이어그램에서 관계선은 테이블 간 참조 무결성이 적용될 경우 실선으로, INSERT 및 UPDATE 트랜잭션에 대해 참조 무결성이 적용되지 않을 경우 점선으로 표시됩니다. 관계선의 엔드포인트는 기본 키 기호를 표시하여 기본 키-외래 키 관계를 나타내거나 무한대 기호를 표시하여 일 대 다 관계의 외래 키 쪽을 나타냅니다. <br />2. Metadata Services에서 관계는 한 개체가 원점이 되고 다른 개체가 대상이 되는 개체 쌍 간 연결을 나타냅니다. 연결은 후속 개체 쌍 각각에 대해 반복되므로 한 관계의 대상이 다음 관계의 원점이 됩니다. 이러한 방식으로 정보 모델의 모든 개체는 정보 모델 전체에서 한 개체로부터 다음 개체로 확장되는 관계 체인을 통해 연결됩니다.|  
 |렌더링된 보고서(rendered report)|적합한 표시 형식으로 데이터와 레이아웃 정보가 모두 들어 있는 완전히 처리된 보고서입니다.|  
 |렌더링 확장 프로그램(rendering extension)|보고서의 출력 형식을 처리하는 데 사용되는 Reporting Services의 구성 요소입니다.|  
 |렌더링 확장 프로그램(rendering extension)|보고서를 특정 형식으로 렌더링하는 플러그 인입니다.|  

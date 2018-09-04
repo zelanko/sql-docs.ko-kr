@@ -1,26 +1,20 @@
 ---
 title: 식의 상수(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: d639171653906294640e327abb25b08a99bc38dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ffdf75ddf3cf6d2124f3aea7b4af59f1c117a6d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020500"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276162"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>식의 상수(보고서 작성기 및 SSRS)
   상수는 리터럴 텍스트 또는 미리 정의된 텍스트로 구성됩니다. 보고서 처리기는 미리 정의된 상수에 액세스할 수 있으므로 사용자가 식에 상수를 포함하면 이러한 상수가 나타내는 값은 식이 계산되기 전에 대체됩니다.  
@@ -40,7 +34,7 @@ ms.locfileid: "33020500"
 ## <a name="rdl-constants"></a>RDL 상수  
  식에서 RDL(Report Definition Language)로 정의된 상수를 사용할 수 있습니다. **식** 대화 상자에서는 열거 형식이라고도 하는 특정 유효 값만 허용하는 보고서 속성에 대한 식을 만들 경우 상수가 표시됩니다. 다음 표에서는 두 가지 예를 보여 줍니다.  
   
-|속성|Description|값|  
+|속성|설명|값|  
 |--------------|-----------------|------------|  
 |TextAlign|입력란의 텍스트 정렬을 위한 유효한 값|General, Left, Center, Right|  
 |BorderStyle|보고서에 추가된 선에 대한 유효한 값|Default, None, Dotted, Dashed, Solid, Double, DashDot, DashDotdot|  
@@ -53,7 +47,7 @@ ms.locfileid: "33020500"
 ## <a name="clr-constants"></a>CLR 상수  
  식에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 정의된 상수를 사용할 수 있습니다. 다음 표에서는 시스템 정의 색의 예를 보여 줍니다.  
   
-|상수|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |MistyRose|배경색을 기반으로 하는 보고서 속성에 대한 식을 만드는 경우 이름으로 색을 지정할 수 있습니다. 유효한 이름은 **식** 대화 상자에 나열됩니다.|  
   

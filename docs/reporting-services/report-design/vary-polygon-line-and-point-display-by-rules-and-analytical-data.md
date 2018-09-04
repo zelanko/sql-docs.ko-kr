@@ -1,14 +1,10 @@
 ---
 title: 규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10538"
@@ -21,16 +17,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12f65c737b17c62c925a1b129a2d527ac849aeaf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027460"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278842"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경
   지도 계층의 다각형, 선 및 점에 대한 표시 옵션은 계층에 대한 옵션을 설정하거나, 계층의 지도 요소에 대한 규칙을 설정하거나, 계층의 특정 포함된 지도 요소에 대한 옵션을 무시하여 제어됩니다.  
@@ -126,7 +120,7 @@ ms.locfileid: "33027460"
   
  다음 표에는 사용할 수 있는 여러 형식의 예가 나와 있습니다.  
   
-|키워드 및 형식|Description|범례에 텍스트로 나타나는 항목의 예|  
+|키워드 및 형식|설명|범례에 텍스트로 나타나는 항목의 예|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|합계 값의 통화를 소수 자릿수 없이 표시합니다.|$400|  
 |`#FROMVALUE {C2}`|합계 값의 통화를 소수점 두 자리까지 표시합니다.|$400.55|  

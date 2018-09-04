@@ -1,26 +1,20 @@
 ---
 title: 식의 기본 제공 컬렉션(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e73b24b9680a18dcc19ab294aa6357310ac6cf36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93c0b81d1a267f447564605b86b34fadcfcb1c83
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021220"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278155"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>식에 기본 제공 컬렉션(보고서 작성기 및 SSRS)
   보고서의 식에는 ReportItems, 매개 변수, 필드, 데이터 집합, 데이터 원본, 변수 및 보고서 이름과 같은 전역 정보에 대한 기본 제공 필드 등 기본 제공 컬렉션에 대한 참조가 포함될 수 있습니다. **식** 대화 상자에 표시되지 않는 컬렉션도 있습니다. DataSets 및 DataSources 컬렉션은 보고서 서버의 게시된 보고서에 대해 런타임에만 사용할 수 있습니다. ReportItems 컬렉션은 페이지 또는 페이지 머리글의 입력란과 같이 보고서 영역에 있는 입력란의 컬렉션입니다.  
@@ -33,7 +27,7 @@ ms.locfileid: "33021220"
 ##  <a name="Collections"></a> 기본 제공 컬렉션 이해  
  다음 표에서는 식을 작성할 때 사용할 수 있는 기본 제공 컬렉션을 보여 줍니다. 각 행에는 컬렉션에 대한 대/소문자 구분 프로그래밍 이름, 식 대화 상자를 사용하여 컬렉션에 대한 참조를 대화형으로 추가할 수 있는지 여부, 예, 그리고 컬렉션 값이 초기화되어 사용 가능해지는 시점을 포함한 설명이 포함됩니다.  
   
-|기본 제공 컬렉션|식 대화 상자의 범주|예제|Description|  
+|기본 제공 컬렉션|식 대화 상자의 범주|예제|설명|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Globals**|기본 제공 필드|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|보고서 이름이나 페이지 번호를 비롯하여 보고서에 유용한 전역 변수를 나타냅니다. 항상 사용할 수 있습니다.<br /><br /> 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.|  
 |**사용자**|기본 제공 필드|`=User.UserID`<br /><br /> -또는-<br /><br /> `=User.Language`|언어 설정 또는 사용자 ID를 비롯하여 보고서를 실행하는 사용자에 대한 데이터 컬렉션을 나타냅니다. 항상 사용할 수 있습니다.<br /><br /> 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.|  

@@ -1,14 +1,10 @@
 ---
 title: Reporting Services 구독 모니터링 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1b81bf16cc4f9352da7b0a4c37cac91dd73f5eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8f95bd3da2aefb0fc98388231641d94b3442311
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035740"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282635"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
@@ -50,7 +44,7 @@ ms.locfileid: "33035740"
   
  다음 표에서는 **상태** 열에 사용할 수 있는 값에 대해 설명합니다.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |새 구독|구독을 처음 만들 때 나타납니다.|  
 |비활성|구독을 처리할 수 없을 때 나타납니다. 자세한 내용은 이 항목의 뒷부분에 있는 "비활성 구독 관리"를 참고하십시오.|  

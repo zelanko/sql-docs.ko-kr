@@ -1,26 +1,20 @@
 ---
 title: 공유 데이터 집합 관리 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7bd03c804791c67128d81eb3d7a6dbc64373e03b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9148b723d2ac5ccb566c28524f54bad48de2a75
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021610"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268738"
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 집합 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 공유 데이터 집합은 외부 데이터 원본에 연결되는 공유 데이터 원본에서 데이터를 검색합니다. 공유 데이터 집합을 사용하면 쿼리를 공유하여 여러 보고서에서 일관성 있는 데이터 집합을 제공할 수 있습니다. 데이터 집합 쿼리에는 데이터 집합 매개 변수를 포함할 수 있습니다. 처음 사용할 때 또는 일정을 지정하여 특정 매개 변수 조합에 대해 쿼리 결과를 캐시하도록 공유 데이터 집합을 구성할 수 있습니다. 공유 데이터 집합 캐싱을 보고서 캐싱 및 보고서 데이터 피드와 함께 사용하면 데이터 원본에 대한 액세스를 쉽게 관리할 수 있습니다.  
@@ -57,7 +51,7 @@ ms.locfileid: "33021610"
   
  다음과 같은 추가 공유 데이터 집합 속성이 자동으로 구성됩니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|보고서 서버에 연결된 공유 데이터 원본에 대한 자격 증명이 저장되는지 여부를 지정합니다.|  
 |HasUserProfileDependencies|보고서의 쿼리 또는 필터 식에 User 전역 컬렉션에 대한 참조가 있는지 여부를 지정합니다.|  

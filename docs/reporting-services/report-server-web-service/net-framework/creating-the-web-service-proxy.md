@@ -1,14 +1,10 @@
 ---
 title: 웹 서비스 프록시 만들기 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7cfc77e602a6d5082a9ffc44ed98b1710bcd19e9
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+ms.openlocfilehash: 319f34f50b4378f71b87b79978fadb011d310b7a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024179"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280294"
 ---
 # <a name="creating-the-web-service-proxy"></a>웹 서비스 프록시 만들기
   클라이언트와 웹 서비스는 입력 및 출력 매개 변수를 XML로 캡슐화하는 SOAP 메시지를 사용하여 통신할 수 있습니다. 프록시 클래스는 매개 변수를 XML 요소에 매핑한 다음 네트워크를 통해 SOAP 메시지를 보냅니다. 이와 같이 프록시 클래스 덕분에 SOAP 수준에서 웹 서비스와 통신할 필요가 없으며 SOAP 및 웹 프록시를 지원하는 임의의 개발 환경에서 웹 서비스 메서드를 호출할 수 있습니다.  
@@ -42,13 +36,13 @@ ms.locfileid: "39024179"
   
 1.  명령 프롬프트에서 Wsdl.exe를 사용하여 (최소한) URL을 보고서 서버 웹 서비스에 지정함으로써 프록시 클래스를 만듭니다.  
   
-     예를 들어 다음 명령 프롬프트 문은 보고서 서버 웹 서비스의 관리 끝점에 대한 URL을 지정합니다.  
+     예를 들어 다음 명령 프롬프트 문은 보고서 서버 웹 서비스의 관리 엔드포인트에 대한 URL을 지정합니다.  
   
     ```  
     wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
-     WSDL 도구에서는 프록시 생성을 위해 다수의 명령 프롬프트 인수를 사용합니다. 위의 예에서는 C# 언어 및 웹 서비스 끝점을 두 개 이상 사용하는 경우 이름 충돌 방지를 위해 프록시에 사용하도록 제안된 네임스페이스를 지정하고 ReportingService2010.cs라는 C# 파일을 생성합니다. 이 예에서 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]을 지정한다면 이름이 ReportingService2010.vb인 프록시 파일을 생성하게 됩니다. 이 파일은 명령을 실행하는 위치인 디렉터리에 만들어집니다.  
+     WSDL 도구에서는 프록시 생성을 위해 다수의 명령 프롬프트 인수를 사용합니다. 위의 예에서는 C# 언어 및 웹 서비스 엔드포인트를 두 개 이상 사용하는 경우 이름 충돌 방지를 위해 프록시에 사용하도록 제안된 네임스페이스를 지정하고 ReportingService2010.cs라는 C# 파일을 생성합니다. 이 예에서 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]을 지정한다면 이름이 ReportingService2010.vb인 프록시 파일을 생성하게 됩니다. 이 파일은 명령을 실행하는 위치인 디렉터리에 만들어집니다.  
   
 2.  프록시 클래스를 어셈블리 파일(확장명 .dll)에 컴파일하고 이 클래스를 프로젝트에서 참조하거나 프로젝트 항목으로 추가합니다.  
   
@@ -85,7 +79,7 @@ ReportingService2010 service = new ReportingService2010();
   
 3.  **URL** 필드에 보고서 서버 웹 서비스에 대한 전체 경로를 입력합니다.  
   
-     보고서 서버 웹 서비스의 보고서 실행 끝점에 대한 간단한 URL은 다음과 같습니다.  
+     보고서 서버 웹 서비스의 보고서 실행 엔드포인트에 대한 간단한 URL은 다음과 같습니다.  
   
     ```  
     http://<Server Name>/reportserver/reportexecution2005.asmx  

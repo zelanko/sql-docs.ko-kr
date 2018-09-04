@@ -1,26 +1,20 @@
 ---
 title: 매개 변수 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 6f4f702b15f214c43a5d866f27eba0519932d6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f4c9c14b2c79a6b97370ebf71298540399a93e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021800"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280283"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>기본 제공 컬렉션 - 매개 변수 컬렉션 참조(보고서 작성기)
   보고서 매개 변수는 식에서 참조할 수 있는 기본 제공 컬렉션 중 하나입니다. 식에 매개 변수를 포함하면 사용자의 선택에 따라 보고서 데이터와 모양을 사용자 지정할 수 있습니다. 식은 (*Fx*) 또는 \<**Expression**> 옵션을 제공하는 모든 보고서 항목 속성 또는 입력란 속성에 사용할 수 있습니다. 식은 보고서의 내용과 모양을 다른 방법으로 제어하는 데도 사용됩니다. 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
@@ -35,7 +29,7 @@ ms.locfileid: "33021800"
 ##  <a name="Single"></a> 식에서 단일 값 매개 변수 사용  
  다음 표에서는 식에서 임의 데이터 형식의 단일 값 매개 변수에 대한 참조를 포함할 때 사용할 구문의 예를 보여 줍니다.  
   
-|예제|Description|  
+|예제|설명|  
 |-------------|-----------------|  
 |`=Parameters!` *\<ParameterName>* `.IsMultiValue`|**False**를 반환합니다.<br /><br /> 매개 변수가 다중값인지 확인합니다. **True**일 경우 매개 변수는 다중값이며 개체 컬렉션입니다. **False**일 경우 매개 변수는 단일 값이며 단일 개체입니다.|  
 |`=Parameters!` *\<ParameterName>* `.Count`|정수 값 1을 반환합니다. 단일 값 매개 변수의 경우 개수는 항상 1입니다.|  
@@ -49,7 +43,7 @@ ms.locfileid: "33021800"
 ##  <a name="Multi"></a> 식에서 다중값 매개 변수 사용  
  다음 표에서는 식에서 임의 데이터 형식의 다중값 매개 변수에 대한 참조를 포함할 때 사용할 구문의 예를 보여 줍니다.  
   
-|예제|Description|  
+|예제|설명|  
 |-------------|-----------------|  
 |`=Parameters!` *\<MultivalueParameterName>* `.IsMultiValue`|**True** 또는 **False**를 반환합니다.<br /><br /> 매개 변수가 다중값인지 확인합니다. **True**일 경우 매개 변수는 다중값이며 개체 컬렉션입니다. **False**일 경우 매개 변수는 단일 값이며 단일 개체입니다.|  
 |`=Parameters!` *\<MultivalueParameterName>* `.Count`|정수 값을 반환합니다.<br /><br /> 값 개수를 나타냅니다. 단일 값 매개 변수의 경우 개수는 항상 1입니다. 다중값 매개 변수의 경우 개수는 0개 이상입니다.|  

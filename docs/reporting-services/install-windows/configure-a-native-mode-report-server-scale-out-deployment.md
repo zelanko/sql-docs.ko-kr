@@ -1,29 +1,23 @@
 ---
 title: 기본 모드 보고서 서버 확장 배포 구성 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 344c748b915ff8db4ce8a58267ab5e343a03c4f5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8d40d80f17277c018ba0bbd6bc82be1dcaf94c3b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970225"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275508"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
 
@@ -35,8 +29,7 @@ Power BI Report Server의 경우 적절한 성능을 보장하려면 모든 확�
   
 SQL Server 2016 Reporting Services의 경우 SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
  
-  
-            *스케일 아웃 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
+  *스케일 아웃 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
   
 -   서버 클러스터에 있는 여러 보고서 서버의 부하 분산을 위한 선행 조건. 여러 보고서 서버의 부하를 분산하려면 먼저 같은 보고서 서버 데이터베이스를 공유하도록 구성해야 합니다.  
   
@@ -52,8 +45,7 @@ SQL Server 2016 Reporting Services의 경우 SharePoint 모드 보고서 서버�
   
  Reporting Services는 Microsoft Cluster Services 클러스터에 참여하지 않습니다. 그러나 장애 조치(Failover) 클러스터의 일부인 데이터베이스 엔진 인스턴스에 보고서 서버 데이터베이스를 만들 수는 있습니다.  
   
- 
-            **스케일 아웃 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
+ **스케일 아웃 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
   
 -   보고서 서버 인스턴스를 설치하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
   
@@ -142,8 +134,7 @@ An error occurred within the report server database.  This may be due to a conne
 3.  확장 배포 페이지에서 배포에 조인되기를 기다리고 있는 보고서 서버 인스턴스를 선택한 다음 **서버 추가**를 선택합니다.  
   
     > [!NOTE]  
-    >  
-            **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
+    >  **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
     >   
     >  **해결 방법:** 첫 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업하고 이 키를 두 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 복원합니다. 그런 다음 두 번째 서버를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 조인합니다.  
   

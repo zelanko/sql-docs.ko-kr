@@ -1,26 +1,20 @@
 ---
 title: Count 함수(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2016b2aef554c2efa6c97b8541607bacd77e23fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d56bc57e8a4f675430c4abe6ef099a0ec204d0dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025150"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279481"
 ---
 # <a name="report-builder-functions---count-function"></a>보고서 작성기 함수 - Count 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 값의 개수를 반환합니다.  
@@ -67,7 +61,7 @@ Count(expression, scope, recursive)
   
  예제  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 코드 예에서는 기본 범위 및 부모 그룹 범위에 대해 Null이 아닌 `Size` 값의 수를 계산하는 식을 보여 줍니다. `GroupbySubcategory`자식 그룹에 속하는 행의 셀에 식이 추가됩니다. 부모 그룹은 `GroupbyCategory`입니다. 식은 `GroupbySubcategory` (기본 범위)에 대한 결과를 표시한 후 `GroupbyCategory` (부모 그룹 범위)에 대한 결과를 표시합니다.  
   
 > [!NOTE]  

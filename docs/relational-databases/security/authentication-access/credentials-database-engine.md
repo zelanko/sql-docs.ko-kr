@@ -22,16 +22,16 @@ helpviewer_keywords:
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 31
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2568332bf5016a576e07783e19ad6aeb0b265e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0453d00704ff56da07653b924d02a393d36eaeb0
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43081374"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118101"
 ---
 # <a name="credentials-database-engine"></a>자격 증명(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "43081374"
   
  master 데이터베이스에 저장되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스를 통해 사용할 수 있는 자격 증명은 [CREATE CREDENTIAL&#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md)을 참조하세요. 특정 데이터베이스에 사용되고 해당 데이터베이스로 이식 가능한 자격 증명은 [CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.  
   
- 시스템 자격 증명은 자동으로 생성되며 특정 끝점과 연결됩니다. 시스템 자격 증명의 이름은 2개의 해시 기호(##)로 시작됩니다.  
+ 시스템 자격 증명은 자동으로 생성되며 특정 엔드포인트와 연결됩니다. 시스템 자격 증명의 이름은 2개의 해시 기호(##)로 시작됩니다.  
   
  자격 증명에 대한 자세한 내용은 [sys.credentials](../../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md) 및 [sys.database_scoped_credentials](../../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 카탈로그 뷰를 참조하세요.  
   

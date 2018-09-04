@@ -1,13 +1,9 @@
 ---
 title: 스케일 아웃 배포의 암호화 키 추가 및 제거 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 89f023698e20ac37c6c82092d9c95b8bd1204cd6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 288e4a4fab078a7b4d8afb7544416ee8a7429340
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35321662"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281599"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>확장 배포의 암호화 키 추가 및 제거
   여러 보고서 서버에서 공유 보고서 서버 데이터베이스를 사용하도록 구성하여 스케일 아웃 배포 모델에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 실행할 수 있습니다. 스케일 아웃 배포의 멤버 자격은 보고서 서버가 암호화 키를 보고서 서버 데이터베이스에 저장하는지 여부에 따라 결정됩니다. 특정 보고서 서버 인스턴스에 대한 암호화 키를 추가 및 제거하여 스케일 아웃 배포 멤버 자격을 제어할 수 있습니다. 배포에서 노드를 제거하는 경우 순서에 관계없이 제거할 수 있습니다. 배포에 노드를 추가할 경우 이미 배포에 포함되어 있는 보고서 서버로부터 새 인스턴스를 조인해야 합니다.  
@@ -58,8 +52,7 @@ ms.locfileid: "35321662"
   
 2.  **rskeymgmt.exe**를 실행합니다. 보고서 서버 스케일 아웃 배포에 속하는 어떠한 보고서 서버에 대해서도 이 프로그램을 실행할 수 있습니다.  
   
-3.  
-            **-r** 인수를 사용하여 스케일 아웃 배포에서 보고서 서버 인스턴스를 해제합니다. 다음은 인수 지정 예입니다.  
+3.  **-r** 인수를 사용하여 스케일 아웃 배포에서 보고서 서버 인스턴스를 해제합니다. 다음은 인수 지정 예입니다.  
   
     ```  
     rskeymgmt -r <installation ID>  

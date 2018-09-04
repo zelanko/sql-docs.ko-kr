@@ -1,14 +1,10 @@
 ---
 title: 배달 확장 프로그램 구현 준비 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - interfaces [Reporting Services]
 - delivery extensions [Reporting Services], implementing
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1c74178a2f5ece00d7e9fb86943cd5029ee403ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbc1a9e64e2bdd089776c565c33f4a07105a5619
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018070"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271167"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>배달 확장 프로그램 구현 준비
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 우선 배달 확장 프로그램을 사용할 방식, 배달 확장 프로그램에 필요한 설정, 보고서 알림을 배달하기 위해 구현할 특정 기능 등을 결정해야 합니다.  
@@ -44,7 +38,7 @@ ms.locfileid: "33018070"
   
  다음 표에서는 배달 확장 프로그램에 대해 사용할 수 있는 인터페이스 및 클래스를 설명합니다.  
   
-|인터페이스 또는 클래스|Description|  
+|인터페이스 또는 클래스|설명|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 확장 프로그램을 나타냅니다.|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 인터페이스|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 배달 확장 프로그램을 나타냅니다.|  

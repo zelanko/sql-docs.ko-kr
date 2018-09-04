@@ -1,26 +1,20 @@
 ---
 title: Reporting Services의 서버 및 데이터베이스 연결 문제 해결 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 020a53efdc65a1460698eb631b516832ab31f057
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 452fc5d54e1bba8671bc8a30a10b56aad9b317a1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405213"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274993"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  
@@ -64,7 +58,7 @@ ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발�
   
 \<your server name>에 연결할 수 없습니다. Reporting Services WMI 공급자가 설치되지 않았거나 잘못 구성되었습니다(Microsoft.SqlServer.Management.UI.RSClient).  
   
-이 오류를 해결하려면 소프트웨어를 다시 설치해야 합니다. 다른 모든 경우에는 임시 해결 방법으로 다음과 같이 SOAP 끝점을 통해 보고서 서버에 연결할 수 있습니다.  
+이 오류를 해결하려면 소프트웨어를 다시 설치해야 합니다. 다른 모든 경우에는 임시 해결 방법으로 다음과 같이 SOAP 엔드포인트를 통해 보고서 서버에 연결할 수 있습니다.  
   
 * Management Studio의 **서버에 연결** 대화 상자에서 **서버 이름**에 보고서 서버 URL을 입력합니다. 기본적으로 `http://<your server name>/reportserver`입니다. 또는 SQL Server 2008 Express with Advanced Services를 사용 중인 경우 `http://<your server name>/reportserver$sqlexpress`입니다.  
   

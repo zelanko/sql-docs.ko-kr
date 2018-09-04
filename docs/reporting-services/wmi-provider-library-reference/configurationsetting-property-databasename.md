@@ -1,14 +1,10 @@
 ---
 title: DatabaseName 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - DatabaseName Property
@@ -18,16 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DatabaseName property
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1a8d046fffdb3cf4369cf16775c1e22e1e5487f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca0762f06560bc7f6e4d6050754105b8842572d0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030500"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281265"
 ---
 # <a name="configurationsetting-property---databasename"></a>ConfigurationSetting 속성 - DatabaseName
   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다. 읽기 전용입니다.  

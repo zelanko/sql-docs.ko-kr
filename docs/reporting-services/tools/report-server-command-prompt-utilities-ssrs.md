@@ -1,14 +1,10 @@
 ---
 title: 보고서 서버 명령 프롬프트 유틸리티(SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rsconfig utility
@@ -17,21 +13,19 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - rskeymgmt utility
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4f52c7216e42d3d0e233446de2521d403cafe610
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da7d30f725a0e30b4e655d968c3e48804125878b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031400"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271678"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>보고서 서버 명령 프롬프트 유틸리티(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 서버를 관리하는 데 사용할 수 있는 몇 가지 명령줄 유틸리티가 포함되어 있습니다. 이러한 유틸리티는 보고서 서버를 설치할 때 자동으로 설치됩니다.  
   
-|속성|명령 파일|지원되는 배포 모드|Description|  
+|속성|명령 파일|지원되는 배포 모드|설명|  
 |----------|------------------|-------------------------------|-----------------|  
 |RSS 유틸리티|rs.exe|기본 모드 및 SharePoint 모드. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 릴리스에는 SharePoint 모드에 대한 지원이 도입되었습니다.|[rs 유틸리티](../../reporting-services/tools/rs-exe-utility-ssrs.md) 는 스크립팅된 작업을 수행하는 데 사용할 수 있는 스크립트 호스트입니다. 이 도구를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 실행하여 보고서 서버 데이터베이스 간의 데이터 복사, 보고서 게시, 보고서 서버 데이터베이스에 항목 만들기 등을 수행할 수 있습니다. 스크립트를 사용하여 서버를 관리하는 방법에 대한 자세한 내용은 [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)을 참조하세요.|  
 |Powershell cmdlet||SharePoint만|PowerShell cmdlet 목록은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.|  

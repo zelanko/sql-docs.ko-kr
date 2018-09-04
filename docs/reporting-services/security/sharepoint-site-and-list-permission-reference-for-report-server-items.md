@@ -1,14 +1,10 @@
 ---
 title: 보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 79bfc468d44f86fad3aca24637ab66b25700cb39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c89daa9b9ede26b005480abdcfc2dfc2a675d065
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032920"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278705"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
   이 항목에서는 SharePoint 통합 모드로 실행되는 보고서 서버에 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 SharePoint의 사용 권한 참조를 제공합니다. 사용자 지정 권한 수준을 만드는 경우 이 항목은 사용할 권한을 선택하는 데 도움이 될 수 있습니다.  
@@ -49,7 +43,7 @@ ms.locfileid: "33032920"
 ## <a name="list-permissions"></a>목록 사용 권한  
  보고서 서버 항목이 포함된 라이브러리에 설정한 사용 권한에 따라 사용자가 이러한 항목에 액세스하는 방법이 결정됩니다.  
   
-|사용 권한|Description|F|C|V|보고서 서버 작업|  
+|사용 권한|설명|F|C|V|보고서 서버 작업|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |목록 관리|목록을 만들고 삭제하며, 목록의 열을 추가하거나 제거하고, 목록의 공용 보기를 추가하거나 제거합니다.|X|||제작 도구에서 게시 작업을 수행하는 중 SharePoint 라이브러리에 폴더를 만듭니다. 이 사용 권한은 보고서 기록을 관리하는 경우에도 필요합니다.|  
 |항목 추가|목록의 항목, 문서 라이브러리의 문서, 웹 토론 설명을 각각 추가합니다.|X|X||SharePoint 라이브러리에 보고서, 보고서 모델, 공유 데이터 원본 및 리소스(외부 이미지 파일)를 추가합니다. 공유 데이터 원본을 만듭니다. 공유 데이터 원본에서 보고서 모델을 생성합니다. 보고서 작성기를 시작하고 새 보고서를 만들거나 모델을 보고서 작성기에 로드합니다.|  
@@ -66,7 +60,7 @@ ms.locfileid: "33032920"
 ## <a name="site-permissions"></a>사이트 사용 권한  
  사이트 사용 권한에 따라 특정 라이브러리에 저장된 항목과 직접 관련이 없는 보고서 서버 작업에 대한 액세스 권한이 결정됩니다. 예를 들어 여러 라이브러리의 항목에서 사용할 수 있는 공유 일정 만들기 및 관리, 사이트 전체에서 사용될 수 있는 보고서 뷰어 웹 파트 구성 등이 여기에 포함됩니다.  
   
-|사용 권한|Description|F|C|V|보고서 서버 작업|  
+|사용 권한|설명|F|C|V|보고서 서버 작업|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |사용 권한 관리|웹 사이트의 사용 권한 수준을 만들고 변경하며, 사용자와 그룹에 사용 권한을 할당합니다.|X|||모든 보고서 서버 항목과 작업에 대한 사용 권한을 변경할 수 있습니다. 모델 항목 보안을 설정할 수 있습니다.|  
 |웹 사이트 관리|웹 사이트에 대한 모든 관리 태스크를 수행하고 콘텐츠를 관리합니다.|X|||공유 일정을 만들고 변경 및 삭제합니다.|  
@@ -74,7 +68,7 @@ ms.locfileid: "33032920"
 |사용자 정보 찾아보기|웹 사이트의 사용자 정보를 봅니다.|X|X|X|여러 사이트, 라이브러리, 폴더에서 보고서 및 기타 항목을 찾아봅니다. 라이브러리에 보고서 및 기타 항목을 게시합니다.|  
 |사용 권한 열거|웹 사이트, 목록, 폴더, 문서 또는 목록 항목의 사용 권한을 열거합니다.|X|||모든 보고서 서버 항목에 대한 사용 권한을 읽습니다. 모델 항목 보안 설정이 포함된 보고서 모델을 사용하는 클릭 광고 보고서를 봅니다.|  
 |알림 관리|웹 사이트의 모든 사용자에 대해 알림을 관리합니다.|X|||사이트의 모든 구독을 만들고 변경 및 삭제합니다.|  
-|원격 인터페이스 사용|SOAP, Web DAV 또는 SharePoint Designer 인터페이스를 사용하여 웹 사이트에 액세스합니다.|X|X|X|보고서 서버에 대한 URL 프록시 끝점을 호출하는 데 사용됩니다.|  
+|원격 인터페이스 사용|SOAP, Web DAV 또는 SharePoint Designer 인터페이스를 사용하여 웹 사이트에 액세스합니다.|X|X|X|보고서 서버에 대한 URL 프록시 엔드포인트를 호출하는 데 사용됩니다.|  
 |열기|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
   
 ## <a name="see-also"></a>참고 항목  

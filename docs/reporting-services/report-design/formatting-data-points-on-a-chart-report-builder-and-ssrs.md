@@ -1,29 +1,23 @@
 ---
 title: 차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028150"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269673"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 데이터 요소는 차트에서 가장 작은 개별 엔터티입니다. 셰이프 차트가 아닌 차트에서 데이터 요소는 차트 종류에 따라 다르게 표시됩니다. 예를 들어 선 계열은 하나 이상의 연결된 데이터 요소로 구성됩니다. 셰이프 차트에서 데이터 요소는 전체 차트를 구성하는 개별 조각 또는 세그먼트로 표현됩니다. 예를 들어 원형 차트에서는 각 조각이 데이터 요소입니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)를 참조하세요.  
@@ -63,19 +57,19 @@ ms.locfileid: "33028150"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>데이터 요소 레이블, 도구 설명 및 범례 텍스트의 키워드 추가  
  대/소문자를 구분하는 차트 관련 키워드를 사용하여 차트에 있는 항목을 표현할 수 있습니다. 이러한 키워드는 도구 설명, 사용자 지정 범례 텍스트 및 데이터 요소 레이블 속성에만 적용할 수 있습니다. 대부분의 경우 차트 키워드에도 동일한 단순 식이 있지만 키워드를 입력하는 것이 더 빠르고 간편합니다. 다음은 차트 키워드 목록입니다.  
   
-|차트 키워드|Description|적용 가능한 차트 종류|동일한 단순 식의 예|  
+|차트 키워드|설명|적용 가능한 차트 종류|동일한 단순 식의 예|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|데이터 요소의 Y 값|All|`=Fields!MyDataField.Value`|  
-|#VALY2|데이터 요소의 Y 값 #2|범위, 거품형|InclusionThresholdSetting|  
-|#VALY3|데이터 요소의 Y 값 #3|주식형, 원통형|InclusionThresholdSetting|  
-|#VALY4|데이터 요소 #4의 Y 값|주식형, 원통형|InclusionThresholdSetting|  
-|#SERIESNAME|계열 이름|All|InclusionThresholdSetting|  
-|#LABEL|데이터 요소 레이블|All|InclusionThresholdSetting|  
+|#VALY2|데이터 요소의 Y 값 #2|범위, 거품형|없음|  
+|#VALY3|데이터 요소의 Y 값 #3|주식형, 원통형|없음|  
+|#VALY4|데이터 요소 #4의 Y 값|주식형, 원통형|없음|  
+|#SERIESNAME|계열 이름|All|없음|  
+|#LABEL|데이터 요소 레이블|All|없음|  
 |#AXISLABEL|축 데이터 요소 레이블|셰이프|`=Fields!MyDataField.Value`|  
-|#INDEX|데이터 요소 인덱스|All|InclusionThresholdSetting|  
+|#INDEX|데이터 요소 인덱스|All|없음|  
 |#PERCENT|데이터 요소 Y 값의 백분율|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|계열의 모든 Y 값에 대한 합계|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|범례 항목의 텍스트에 해당하는 텍스트|All|InclusionThresholdSetting|  
+|#LEGENDTEXT|범례 항목의 텍스트에 해당하는 텍스트|All|없음|  
 |#AVG|계열의 모든 Y 값에 대한 평균|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|계열의 모든 Y 값에 대한 최소값|모두|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|계열의 모든 Y 값에 대한 최대값|All|`=Max(Fields!MyDataField.Value)`|  
