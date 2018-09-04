@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,22 +30,35 @@ caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6d788da4f619feebd27919d8a34ec81de4a923f4
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a5f2edc15c171a80c16ccc77f11bf7673571d53
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452707"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074476"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
 SQL Server, SQL Database, SQL Data Warehouse 또는 병렬 데이터 웨어하우스 데이터베이스에 대한 로그인을 만듭니다. 특정 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제는 다음 탭 중 하나를 클릭합니다.
 
-구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
- 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
-  
+구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오. 
+
+## <a name="click-a-product"></a>제품을 클릭하세요.
+
+다음 행에서 관심이 있는 제품 이름을 클릭합니다. 클릭하면 웹페이지의 여기에서 클릭한 제품에 적절한 다른 콘텐츠를 표시합니다.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> ||||||
+> |-|-|-|-|-|
+> |**_\* SQL Server \*_**|[SQL Database<br />논리 서버](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[SQL 병렬<br />데이터 웨어하우스](create-login-transact-sql.md?view=aps-pdw-2016)
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
+
 ## <a name="syntax"></a>구문 
   
 ```  
@@ -76,7 +89,7 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
   
 ## <a name="arguments"></a>인수  
 *login_name*  
-만들 로그인 이름을 지정합니다. 로그인에는 SQL Server 로그인, Windows 로그인, 인증서 매핑 로그인 및 비대칭 키 매핑 로그인의 네 가지 유형이 있습니다. Windows 도메인 계정에서 매핑된 로그인을 만들 경우 Windows 2000 이전 버전의 사용자 로그온 이름을 [\<domainName>\\<login_name>] 형식으로 사용해야 합니다. login_name@DomainName 형식의 UPN은 사용할 수 없습니다. 이 문서의 뒷부분에 나오는 예 4를 참조하세요. 인증 로그인은 **sysname** 형식이고 [식별자](http://msdn.microsoft.com/library/ms175874.aspx)에 대한 규칙을 따라야 하며 '**\\**'을 포함할 수 없습니다. Windows 로그인은 '**\\**'를 포함할 수 없습니다. Active Directory 사용자에 기반한 로그인은 21자 미만의 이름으로 제한됩니다. 
+만들 로그인 이름을 지정합니다. 로그인에는 SQL Server 로그인, Windows 로그인, 인증서 매핑 로그인 및 비대칭 키 매핑 로그인의 네 가지 유형이 있습니다. Windows 도메인 계정에서 매핑된 로그인을 만들 경우 Windows 2000 이전 버전의 사용자 로그온 이름을 [\<domainName>\\<login_name>] 형식으로 사용해야 합니다. login_name@DomainName 형식의 UPN은 사용할 수 없습니다. 이 문서의 뒷부분에 나오는 예 4를 참조하세요. 인증 로그인은 **sysname** 형식이고 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 하며 '**\\**'을 포함할 수 없습니다. Windows 로그인은 '**\\**'를 포함할 수 없습니다. Active Directory 사용자에 기반한 로그인은 21자 미만의 이름으로 제한됩니다. 
 
 PASSWORD **='***password***'* 는 SQL Server 로그인에만 적용됩니다. 만들 로그인의 암호를 지정합니다. 강력한 암호를 사용해야 합니다. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. SQL Server 2012(11.x)부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다. 
   
@@ -140,7 +153,7 @@ ASYMMETRIC KEY *asym_key_name*
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
 
 ## <a name="permissions"></a>Permissions  
-- 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
+- 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
 - **CREDENTIAL** 옵션을 사용하는 경우에는 서버에 대한 **ALTER ANY CREDENTIAL** 권한도 필요합니다. 
   
 ## <a name="after-creating-a-login"></a>로그인을 만든 후  
@@ -246,7 +259,30 @@ GO
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
 - [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
   
-# <a name="sql-databasetabsqldb"></a>[SQL 데이터베이스](#tab/sqldb)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Database<br />논리 서버 *</em></strong></th>
+>   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
   
 ## <a name="syntax"></a>구문 
   
@@ -260,13 +296,9 @@ CREATE LOGIN login_name
     [ , SID = sid ]  
 ```  
 
-> [!IMPORTANT]  
-> 
-  [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 이 T-SQL 기능은 특정 동작이 변경되었습니다. 모든 T-SQL 동작 변경에 대한 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)을 참조하세요.
-  
 ## <a name="arguments"></a>인수  
 *login_name*  
-만들 로그인 이름을 지정합니다. Azure SQL Database는 SQL 로그인만 지원합니다. 
+만들 로그인 이름을 지정합니다. Azure SQL Database 논리 서버는 SQL 로그인만 지원합니다. 
 
 PASSWORD **='** password**'*  
 만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용해야 합니다. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다. 
@@ -296,11 +328,11 @@ SQL Database에서 로그인을 만들려면 마스터 데이터베이스에 연
   
 SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 강제 실행하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다. 
   
- SQL Database 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)를 참조하세요. 
+ SQL Database 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요. 
  
 ## <a name="permissions"></a>Permissions
 
-프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
+프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
 
 ## <a name="logins"></a>로그인
 - 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있어야 합니다. 서버의 **ALTER ANY LOGIN** 권한 또는 securityadmin 고정 서버 역할의 멤버 자격이 있는 Azure AD(Azure Active Directory) 계정만 이 명령을 실행할 수 있음
@@ -310,8 +342,8 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT]((../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
-- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT]((../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
   
 ## <a name="examples"></a>예  
@@ -355,8 +387,161 @@ GO
  [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
  [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
+
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
+>   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+
+## <a name="overview"></a>개요
+
+## <a name="syntax"></a>구문 
   
-# <a name="sql-data-warehousetabsqldw"></a>[SQL Data Warehouse](#tab/sqldw)
+```sql
+-- Syntax for Azure SQL Database  
+CREATE LOGIN login_name  
+ { WITH <option_list> }  
+  
+<option_list> ::=   
+    PASSWORD = { 'password' }  
+    [ , SID = sid ]  
+```  
+
+## <a name="arguments"></a>인수  
+*login_name*  
+만들 로그인 이름을 지정합니다. Azure SQL Database 관리 인스턴스는 SQL 로그인만 지원합니다. 
+
+PASSWORD **='** password**'*  
+만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용해야 합니다. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다. 
+  
+암호는 대소문자를 구분합니다. 암호의 길이는 항상 8자 이상이어야 하며 128자를 초과할 수 없습니다. 암호에는 a-z, A-Z, 0-9 및 영숫자가 아닌 대부분의 문자를 포함할 수 있습니다. 암호는 홑따옴표 또는 *login_name*을 포함할 수 없습니다. 
+
+SID = *sid*  
+로그인을 다시 만드는데 사용됩니다. SQL Server 인증 로그인에만 적용되고 Windows 인증 로그인에는 적용되지 않습니다. 새 SQL Server 인증 로그인의 SID를 지정합니다. 이 옵션을 사용하지 않으면 SQL Server에서 자동으로 SID를 할당합니다. SID 구조는 SQL Server 버전에 따라 달라집니다. SQL Database의 경우 `0x01060000000000640000000000000000`과 GUID를 나타내는 16바이트로 구성된 32바이트(**binary(32)**) 리터럴입니다. `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`)을 입력합니다. 
+  
+## <a name="remarks"></a>Remarks  
+- 암호는 대소문자를 구분합니다.
+- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992)을 참조하세요.
+- 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다. 
+- 액세스를 허용하려면 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md)가 로그인 형식과 일치해야 합니다.
+    - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
+  
+## <a name="login"></a>로그인
+
+### <a name="sql-database-logins"></a>SQL Database 로그인
+**CREATE LOGIN** 문은 일괄 처리의 유일한 명령문이어야 합니다. 
+  
+**sqlcmd**와 같이 SQL Database에 연결하는 몇 가지 방법에서는 *\<login>*@*\<server>* 표기법을 사용하여 SQL Database 서버 이름을 연결 문자열의 로그인 이름에 추가해야 합니다. 예를 들어 로그인이 `login1`이고 SQL Database 서버의 정규화된 이름이 `servername.database.windows.net`인 경우 연결 문자열의 *username* 매개 변수는 `login1@servername`이어야 합니다. *username* 매개 변수의 총 길이는 128문자이므로 *login_name*은 127문자에서 서버 이름의 길이를 뺀 길이로 제한됩니다. 이 예에서는 `login_name`이 10자이므로 `servername`에는 117자까지만 사용할 수 있습니다. 
+  
+SQL Database에서 로그인을 만들려면 마스터 데이터베이스에 연결해야 합니다. 
+  
+ SQL Server 규칙을 사용하여 \<loginname>@\<servername> 형식의 SQL Server 인증 로그인을 만들 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버가 **myazureserver**이고 로그인이 **myemail@live.com**인 경우 로그인을 **myemail@live.com@myazureserver**로 제공해야 합니다. 
+  
+SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 강제 실행하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다. 
+  
+ SQL Database 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요. 
+ 
+## <a name="permissions"></a>Permissions
+
+프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
+
+## <a name="logins"></a>로그인
+- 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있어야 합니다. 서버의 **ALTER ANY LOGIN** 권한 또는 securityadmin 고정 서버 역할의 멤버 자격이 있는 Azure AD(Azure Active Directory) 계정만 이 명령을 실행할 수 있음
+- Azure SQL 논리 서버에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 함
+  
+## <a name="after-creating-a-login"></a>로그인을 만든 후  
+로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
+  
+- 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT]((../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
+- **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
+  
+## <a name="examples"></a>예  
+  
+### <a name="a-creating-a-login-with-a-password"></a>1. 암호로 로그인 만들기  
+ 다음 예에서는 특정 사용자에 대한 로그인을 만들고 암호를 할당합니다. 
+  
+```sql  
+CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';  
+GO  
+```  
+  
+### <a name="b-creating-a-login-from-a-sid"></a>2. SID에서 로그인 만들기  
+ 다음 예제에서는 우선 SQL Server 인증 로그인을 만들고 로그인의 SID를 결정합니다. 
+  
+```sql  
+CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
+  
+SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';  
+GO  
+```  
+  
+ 쿼리는 0x241C11948AEEB749B0D22646DB1A19F2를 SID로 반환합니다. 쿼리는 다른 값을 반환합니다. 다음 문은 로그인을 삭제한 후 로그인을 다시 만듭니다. 이전 쿼리의 SID를 사용합니다. 
+  
+```sql  
+DROP LOGIN TestLogin;  
+GO  
+  
+CREATE LOGIN TestLogin   
+WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;  
+  
+SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';  
+GO  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 엔진 권한 시작](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
+ [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [암호 정책](../../relational-databases/security/password-policy.md)   
+ [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)   
+ [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)   
+ [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
+ [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
+
+
+  
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>>   <th><strong><em>*SQL Data<br />Warehouse *</em></strong></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
   
 ## <a name="syntax"></a>구문 
   
@@ -401,18 +586,18 @@ SQL Data Warehouse에서 로그인을 만들려면 master 데이터베이스에 
   
 SQL Data Warehouse에서 연결을 인증하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 강제 실행하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다. 
   
- SQL Data Warehouse 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)를 참조하세요. 
+ SQL Data Warehouse 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요. 
  
 ## <a name="permissions"></a>Permissions
 
-프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
+프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후  
 로그인을 만든 후 해당 로그인으로 SQL Data Warehouse에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT](grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
-- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT](grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오. 
   
@@ -458,7 +643,29 @@ GO
  [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
  [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
   
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL 병렬 데이터 웨어하우스](#tab/sqlpdw)
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
+>   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
+
   
 ## <a name="syntax"></a>구문 
   
@@ -477,7 +684,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>인수  
 *login_name*  
-만들 로그인 이름을 지정합니다. 로그인에는 SQL Server 로그인, Windows 로그인, 인증서 매핑 로그인 및 비대칭 키 매핑 로그인의 네 가지 유형이 있습니다. Windows 도메인 계정에서 매핑된 로그인을 만들 경우 Windows 2000 이전 버전의 사용자 로그온 이름을 [\<domainName>\\<login_name>] 형식으로 사용해야 합니다. login_name@DomainName 형식의 UPN은 사용할 수 없습니다. 이 문서의 뒷부분에 나오는 예 4를 참조하세요. 인증 로그인은 **sysname** 형식이고 [식별자](http://msdn.microsoft.com/library/ms175874.aspx)에 대한 규칙을 따라야 하며 '**\\**'을 포함할 수 없습니다. Windows 로그인은 '**\\**'를 포함할 수 없습니다. Active Directory 사용자에 기반한 로그인은 21자 미만의 이름으로 제한됩니다. 
+만들 로그인 이름을 지정합니다. 로그인에는 SQL Server 로그인, Windows 로그인, 인증서 매핑 로그인 및 비대칭 키 매핑 로그인의 네 가지 유형이 있습니다. Windows 도메인 계정에서 매핑된 로그인을 만들 경우 Windows 2000 이전 버전의 사용자 로그온 이름을 [\<domainName>\\<login_name>] 형식으로 사용해야 합니다. login_name@DomainName 형식의 UPN은 사용할 수 없습니다. 이 문서의 뒷부분에 나오는 예 4를 참조하세요. 인증 로그인은 **sysname** 형식이고 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 하며 '**\\**'을 포함할 수 없습니다. Windows 로그인은 '**\\**'를 포함할 수 없습니다. Active Directory 사용자에 기반한 로그인은 21자 미만의 이름으로 제한됩니다. 
 
 PASSWORD **='***password***'* 는 SQL Server 로그인에만 적용됩니다. 만들 로그인의 암호를 지정합니다. 강력한 암호를 사용해야 합니다. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. SQL Server 2012(11.x)부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다. 
   
@@ -515,7 +722,7 @@ WINDOWS
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
 
 ## <a name="permissions"></a>Permissions  
-서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
+서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
   
 ## <a name="after-creating-a-login"></a>로그인을 만든 후  
 로그인을 만든 후 해당 로그인으로 SQL Data Warehouse에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
@@ -564,3 +771,5 @@ GO
  [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 ---  
+
+::: moniker-end
