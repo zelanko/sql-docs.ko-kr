@@ -18,9 +18,9 @@ ms.locfileid: "39084676"
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: SQL Server 데이터에 RevoScaleR R 함수를 사용하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-RevoScaleR는 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처리 기능을 제공하는 Microsoft R 패키지입니다. SQL Server의 R 개발에 대해,  RevoScaleR는 계산 컨텍스트를 설정하거나, 패키지를 관리하는 기능이 있고, 가장 중요한 기능으로는 데이터를 가져오는 것 부터 시각화 및 분석에 이르기까지 모든 작업을 할 수 있는 핵심적인 빌트인 패키지입니다. SQL Server의 기계 학습 알고리즘은 RevoScaleR 데이터에 대해 종속성을 가집니다. 이런 RevoScaleR의 중요성을 생각하면, 함수를 언제 어떻게 적절하게 사용하는 방법을 아는것은 필수적입니다.
+RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처리 기능을 제공하는 Microsoft R 패키지입니다. SQL Server의 R 개발에 대해, RevoScaleR은 계산 컨텍스트를 설정하거나 패키지를 관리하는 기능이 있고, 가장 중요한 기능으로는 데이터를 가져오는 것부터 시각화 및 분석에 이르기까지 모든 작업을 할 수 있는 핵심적인 빌트인 패키지입니다. SQL Server의 기계 학습 알고리즘은 RevoScaleR 데이터에 대해 종속성을 가집니다. 이런 RevoScaleR의 중요성을 생각하면, 함수를 언제 어떻게 적절하게 사용할 수 있는지 아는 것은 필수적입니다.
 
-이 자습서에서는 원격 계산 컨텍스트르 만드는 방법, 로컬 및 원격 계산 컨텍스트 간에 데이터를 이동하는 방법, 그리고 원격 SQL 서버에서 R 코드를 실행하는 방법을 배우게 됩니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
+이 자습서에서는 원격 계산 컨텍스트를 만드는 방법, 로컬 및 원격 계산 컨텍스트 간에 데이터를 이동하는 방법, 그리고 원격 SQL 서버에서 R 코드를 실행하는 방법을 배우게 됩니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
 
 + 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
 + 모델 학습 및 점수 매기기를 사용 하 여 수행 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트를 계산 합니다. 
