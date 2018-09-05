@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3dc4c730ea9c7c9ba0126a50ed4bb8129efc9c
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152583"
+ms.locfileid: "43193029"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,21 @@ ms.locfileid: "43152583"
 
 이 릴리스에 추가 되었습니다 [Python 지원 및 업계 최고의 기계 학습 알고리즘](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)합니다. 새 범위를 반영 하도록 이름이 바뀌었거나, SQL Server 2017 표시 미치는 [SQL Server Machine Learning Services (In-database)](what-is-sql-server-machine-learning.md), Python 및 R 모두에 대 한 언어 지원 
 
-이 릴리스에 도입 [SQL Server Machine Learning Server (독립 실행형)](r/r-server-standalone.md)전용된 시스템에서 실행 하려는 R 및 Python 워크 로드에 대 한 SQL Server의 완전히 독립적입니다. 독립 실행형 서버를 사용 하 여 배포 및 SQL Server를 사용 하지 않고 R 또는 Python 솔루션을 확장할 수 있습니다.
+### <a name="r-enhancements"></a>R의 향상 된 기능
+
+SQL Server 2017의 Machine Learning Services의 R 구성 요소는 기본 R, RevoScaler 및 기타 패키지의 업데이트 된 버전을 사용 하 여 SQL Server 2016 R Services의 다음 세대입니다.
+
+R에 대 한 새 기능에 포함 됩니다 [ **패키지 관리**](r/install-additional-r-packages-on-sql-server.md)를 다음 강조 표시를 사용 하 여: 
+
++ 데이터베이스 역할에는 패키지를 관리 하 고 패키지 설치에 대 한 권한을 할당 하는 Dba 데 도움이 됩니다.
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 친숙 한 T-SQL 언어 패키지를 관리 하는 Dba 하도록 도와줍니다.
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) 함수 설치, 제거 또는 목록 패키지 사용자가 소유 하는 데 도움이 됩니다. 자세한 내용은 [SQL Server에서 R을 설치 하거나 RevoScaleR 함수를 사용 하는 방법을 패키지](r/use-revoscaler-to-manage-r-packages.md)합니다.
+
+### <a name="r-libraries"></a>R 라이브러리
+
+| 패키지 | Description |
+|---------|-------------|
+| [**MicrosoftML**](using-the-microsoftml-package.md) | 이 릴리스에서 MicrosoftML 이전 SQL Server 2016 R Services에 필요한 업그레이드 단계를 제거는 기본 R 설치에 포함 됩니다. MicrosoftML의 최첨단 기계 학습 알고리즘 및 크기를 조정 하거나 원격 계산 컨텍스트에서 실행할 수 있는 데이터 변환을 제공 합니다. 사용자 지정 가능한 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 선형 회귀 및 로지스틱 회귀 알고리즘에 포함 됩니다.  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>데이터베이스 내 분석에 대 한 Python 통합
 
@@ -39,16 +53,13 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 [**revoscalepy**](python/what-is-revoscalepy.md)| Python-RevoScaleR에 해당 합니다. 선형 및 로지스틱 회귀, 의사 결정 트리, 승격 된 트리 및 임의 포리스트의 모든 병렬 및 원격 계산 컨텍스트에서 실행 되 고 수에 대 한 Python 모델을 만들 수 있습니다. 이 패키지는 여러 데이터 원본 및 원격 계산 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자가 데이터를 탐색 하거나 데이터를 이동 하지 않고 모델을 작성 하는 원격 SQL Server에서 Python 코드를 실행할 수 있습니다. |
 |[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |MicrosoftML R 패키지의 Python에 해당 합니다. |
 
-### <a name="r-libraries"></a>R 라이브러리
-
-| 패키지 | Description |
-|---------|-------------|
-| [**MicrosoftML (R)**](using-the-microsoftml-package.md) | 최첨단 기계 학습 알고리즘 및 데이터 변환을 원격 크기가 조정 되거나 실행 될 수 있는 컨텍스트를 계산 합니다. 사용자 지정 가능한 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 선형 회귀 및 로지스틱 회귀 알고리즘에 포함 됩니다.  |
-| [**R 패키지 관리**](r/install-additional-r-packages-on-sql-server.md) | 다음 강조 표시를 사용 하 여이 릴리스에서 향상: 데이터베이스 역할 dba가 패키지를 관리 하 고 패키지를 설치 하는 권한을 할당 하는 데 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) Dba 없이 패키지를 관리 하는 데 t-sql로 문 R 및 R 함수에 풍부한 알거나 [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) 설치, 제거 또는 패키지 나열 하는 데 사용자가 소유 합니다. |
-
 ### <a name="pre-trained-models"></a>미리 학습된 모델
 
 [**미리 학습 된 모델** ](install/sql-pretrained-models-install.md) Python 및 R 모두를 사용 하 여 이러한 모델은 이미지 인식과 긍정 음수가 감성 분석, 사용자 고유의 데이터에서 예측을 생성할 수 있습니다. 
+
+### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>SQL Server 설치 프로그램에서 공유 기능으로 독립 실행형 서버
+
+이 릴리스는 또한 추가 [SQL Server Machine Learning Server (독립 실행형)](r/r-server-standalone.md), R 및 Python에서 통계 및 예측 분석을 지 원하는, 완전히 독립적인 데이터 과학 서버. 로이 서버는 R Services를 사용 하 여 다음 버전의 SQL Server 2016 R Server (독립 실행형). 독립 실행형 서버를 사용 하 여 배포 및 SQL Server에 종속성이 없는 R 또는 Python 솔루션을 확장할 수 있습니다.
 
 
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016의에서 새로운 기능

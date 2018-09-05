@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
-ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
+ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130609"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348342"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39130609"
  그룹의 유일한 구성원은 서비스별 SID입니다. 오른쪽에 로그온 계정이 있습니다. 로그온 계정 이름은 cosmetic이고, 서비스별 SID에 컨텍스트를 제공합니다. 이후에 로그온 계정을 변경한 다음 이 페이지로 돌아가면 보안 그룹과 서비스별 SID는 변경되지 않고 로그온 계정 레이블이 다른 것을 알 수 있습니다.  
   
 ##  <a name="bkmk_winpriv"></a> Analysis Services 서비스 계정에 할당된 Windows 권한  
- Analysis Services는 서비스를 시작하고 시스템 리소스를 요청하는 데 운영 체제의 사용 권한이 필요합니다. 서버 모드 및 인스턴스가 클러스터링되었는지 여부에 따라 요구 사항이 다릅니다. Windows 권한에 익숙하지 않은 경우 자세한 내용은 [권한](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 및 [권한 상수(Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) 를 참조하세요.  
+ Analysis Services는 서비스를 시작하고 시스템 리소스를 요청하는 데 운영 체제의 사용 권한이 필요합니다. 서버 모드 및 인스턴스가 클러스터링되었는지 여부에 따라 요구 사항이 다릅니다. Windows 권한에 익숙하지 않은 경우 자세한 내용은 [권한](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 및 [권한 상수(Windows)](/windows/desktop/SecAuthZ/privilege-constants) 를 참조하세요.  
   
  Analysis Services의 모든 인스턴스에는 **서비스로 로그온** (SeServiceLogonRight) 권한이 필요합니다. SQL Server 설치 프로그램에서 설치 중 지정된 서비스 계정에 이 권한을 자동으로 할당합니다. 다차원 및 데이터 마이닝 모드에서 실행되는 서버의 경우 이 권한이 Analysis Services 서비스 계정에서 독립 실행형 서버 설치에 필요한 유일한 Windows 권한이며, 이 권한이 설치 프로그램에서 Analysis Services에 대해 구성하는 유일한 권한입니다. 클러스터형 및 테이블 형식 인스턴스의 경우 추가 Windows 권한을 수동으로 추가해야 합니다.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "39130609"
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server 서비스 계정 및 서비스별 SID (블로그)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server 서비스 SID를 사용 하 여 서비스 격리 (KB 문서)를 제공 합니다.](http://support.microsoft.com/kb/2620201)   
- [액세스 토큰 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [보안 식별자 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [액세스 토큰 (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [보안 식별자 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [액세스 토큰 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [액세스 제어 목록 (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

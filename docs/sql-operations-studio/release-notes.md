@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (미리 보기) 릴리스 정보 | Microsoft Docs
 description: Microsoft SQL Operations Studio (미리 보기) 릴리스 정보
 ms.custom: tools|sos
-ms.date: 07/19/2018
+ms.date: 08/30/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,71 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: 8d38e568aba12f8124035505b8ce1565f0c9b2cd
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188959"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348423"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (미리 보기) 릴리스 정보
 
-**[7 월 공개 미리 보기 다운로드](download.md)**
+**[8 월 공개 미리 보기 다운로드](download.md)**
+
+
+## <a name="august-2018-august-public-preview"></a>2018 년 8 월 (8 월 공개 미리 보기)
+
+릴리스 날짜: 2018 년 8 월 30 일  
+버전: 0.32.8
+
+*0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함 되어 있습니다 ([#1971](https://github.com/Microsoft/sqlopsstudio/issues/1971)하십시오 [#2372](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+
+합니다 *년 8 월 공개 미리 보기* 버그 수정, 제품 안정화 및 기존 시나리오의 간격을 채우는에 중점을 둡니다.  
+
+- SQL Server 가져오기 확장 발표
+- SQL Server Profiler 세션 관리
+- SQL Server Profiler 세션 템플릿 지원
+- SQL Server 에이전트의 향상 된 기능
+- 새 커뮤니티 확장: 첫 번째 응답자 키트
+- 수명 품질 향상: 연결 문자열
+
+### <a name="bug-fixes"></a>버그 수정
+
+- 쿼리 편집기 창에서 SQL을 사용 하 여 구문 분석 된 `Parse Syntax` 명령입니다.
+- 수정 [#143 발급](https://github.com/Microsoft/sqlopsstudio/issues/143): 변수 이름의 선택 하지 않으면 두 번 클릭 합니다.
+- 수정 [문제 #387](https://github.com/Microsoft/sqlopsstudio/issues/387): SQL 탭 DB 아이콘은 빨간색입니다.
+- 수정 [#825 발급](https://github.com/Microsoft/sqlopsstudio/issues/825): 요청: 자동으로 스크립트 다음 현재 서버에 연결 하는 중... 
+- 수정 [#1278 발급](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [데스크톱 항목]-이름 및 설명에 대 한 중복 값입니다.
+- 수정 [#1285 발급](https://github.com/Microsoft/sqlopsstudio/issues/1285): 업데이트 하면 응용 프로그램 아이콘을 제거 하 고 대체 Windows에서.
+- 수정 [#1317 발급](https://github.com/Microsoft/sqlopsstudio/issues/1317): 소수 구분 기호를 수정 합니다.
+- 수정 [#1474 발급](https://github.com/Microsoft/sqlopsstudio/issues/1474): 연결 변경 취소는 현재 연결을 끊습니다.
+- 수정 [#1497 발급](https://github.com/Microsoft/sqlopsstudio/issues/1497): 아래쪽 옵션 잘립니다 차트로 보기.
+- 수정 [#1524 발급](https://github.com/Microsoft/sqlopsstudio/issues/1524): 셸/대시보드: 주 viewlet 아이콘 draggable 되며 응용 프로그램 크래시가 발생할 수 있습니다.
+- 수정 [#1578 발급](https://github.com/Microsoft/sqlopsstudio/issues/1578): 이름을 클릭 하 여 원격 파일 브라우저 폴더를 확장/축소 수 없습니다.
+- 수정 [#1620 발급](https://github.com/Microsoft/sqlopsstudio/issues/1620): 기능 제안: 기존 연결에 대 한 연결 문자열을 가져옵니다.
+- 수정 [#1624 발급](https://github.com/Microsoft/sqlopsstudio/issues/1624): SelectBox 사용 하지 않도록 설정 하는 경우 색을 변경 하지 않습니다.
+- 수정 [#1728 발급](https://github.com/Microsoft/sqlopsstudio/issues/1728): JSON/EXCEL/CSV 작동 하지 않음로 저장 합니다.
+- 수정 [#1744 발급](https://github.com/Microsoft/sqlopsstudio/issues/1744): 결과 창 탭 간에 전환 하는 경우 해당 스크롤 위치를 손실 됩니다.
+- 수정 [#1748 발급](https://github.com/Microsoft/sqlopsstudio/issues/1748): Excel 파일 두 번째 (및 후속) 시간을 절약 하는 경우 오류 메시지입니다.
+- 수정 [#1782 발급](https://github.com/Microsoft/sqlopsstudio/issues/1782): 데이터를 편집: 셀 이스케이프 키를 눌러 원래 값으로 되돌리기 하지 않습니다.
+- 수정 [#1836 발급](https://github.com/Microsoft/sqlopsstudio/issues/1836): SQL Operations Studio 사용 하 여 연결 되지 않은.sql 파일입니다.
+- 수정 [#1850 발급](https://github.com/Microsoft/sqlopsstudio/issues/1850): 입력 N ' n 자동 완성 ' '입니다.
+- 수정 [#1985 발급](https://github.com/Microsoft/sqlopsstudio/issues/1985): 쿼리 결과 표 형태에서 복사 1 열으로 해제 되어 있습니다.
+- 수정 [#1998 발급](htpts://github.com/Microsoft/sqlopsstudio/pull/1998): VS Code 추가 버전을 대화에 대 한 합니다.
+- 수정 [#2042 발급](https://github.com/Microsoft/sqlopsstudio/pull/2042): 에이전트: sql 파일에서 쿼리 가져오기 단추를 사용 하도록 설정된 합니다.
+- 수정 [#2091 발급](https://github.com/Microsoft/sqlopsstudio/issues/2091): 바로 가기 Ctrl + C를 사용 하 여 결과 창에서 복사할 수 없습니다.
+- 수정 [#2099 발급](https://github.com/Microsoft/sqlopsstudio/pull/2099): saveAsCsv 옵션이 더 추가 합니다.
+- 수정 [#2107 발급](https://github.com/Microsoft/sqlopsstudio/issues/2107): 대시보드 및 Profiler 문서에 대 한 문서 아이콘 업데이트 합니다.
+- 수정 [#2129 발급](https://github.com/Microsoft/sqlopsstudio/pull/2129): 탭을 전환 하는 경우 스크롤 위치를 편집 데이터를 저장 합니다.
+- 수정 [#2152 발급](https://github.com/Microsoft/sqlopsstudio/issues/2152): 결과 그리드 행 표시기 0 기반 합니다.
+
+## <a name="known-issues"></a>알려진 문제
+
+- [문제 #2371](https://github.com/Microsoft/sqlopsstudio/issues/2371) Excel 데이터의 첫 번째 행만 저장 하는 대로 저장
+- [문제 #2150](https://github.com/Microsoft/sqlopsstudio/issues/2150): Ubuntu 16.04를 컨테이너에는 SQL에 연결할 수 없습니다.
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/sqlopsstudio/releases)합니다.
+
 
 ## <a name="july-2018-july-public-preview"></a>2018 년 7 월 (7 월 공개 미리 보기)
 
@@ -61,10 +116,6 @@ ms.locfileid: "39188959"
  - 수정 [1817 발급](https://github.com/Microsoft/sqlopsstudio/issues/1817): 오류 de Ortografia
  - 수정 [1830 발급](https://github.com/Microsoft/sqlopsstudio/issues/1830): component() 호출 된 후 iconPath ButtonComponent에서 설정 아이콘 변경 되지 않습니다
  - 수정 [1843 발급](https://github.com/Microsoft/sqlopsstudio/issues/1843): 더 나은 테이블 구성
-
-
-자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/sqlopsstudio/releases)합니다.
-
 
 
 ## <a name="june-2018-june-public-preview"></a>2018 년 6 월 (6 월 공개 미리 보기)

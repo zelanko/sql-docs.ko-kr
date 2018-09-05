@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400706"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381261"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증 자습서:
 
@@ -35,7 +35,11 @@ ms.locfileid: "39400706"
 > * TRANSACT-SQL에서 AD 기반 로그인 만들기
 > * 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여
 
-## <a name="prerequisites"></a>사전 요구 사항
+> [!NOTE]
+>
+> 구성 하려는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 타사 AD 공급자를 사용 하도록 linux에서 하세요 [타사 Active Directory 공급자를 사용 하 여 Linux의 SQL Server를 사용 하 여](./sql-server-linux-active-directory-third-party-providers.md)입니다.
+
+## <a name="prerequisites"></a>필수 구성 요소
 
 AD 인증을 구성 하기 전에 해야 합니다.
 
@@ -93,7 +97,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 
       이제 확인 프로그램 `/etc/resolv.conf` 다음과 같이 줄을 포함 하는 파일:  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -115,7 +119,28 @@ AD 인증을 구성 하기 전에 해야 합니다.
 
      이제 확인 프로그램 `/etc/resolv.conf` 다음과 같이 줄을 포함 하는 파일:  
 
-     ```Code
+     ```/etc/resolv.conf
+     nameserver **<AD domain controller IP address>**
+     ```
+
+   - **SLES**:
+
+     편집 된 `/etc/sysconfig/network/config` AD 도메인 컨트롤러 IP가 DNS 쿼리에 사용할 수 있도록 파일 및 AD 도메인이 도메인 검색 목록에는:
+
+     ```/etc/sysconfig/network/config
+     <...>
+     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+     ```
+
+     이 파일을 편집한 후 네트워크 서비스를 다시 시작 합니다.
+
+     ```bash
+     sudo systemctl restart network
+     ```
+
+     이제 확인 프로그램 `/etc/resolv.conf` 다음과 같이 줄을 포함 하는 파일:
+
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -307,19 +332,27 @@ AD 인증을 사용 하는 클라이언트에 대 한 특정 연결 문자열 �
    이전에 설치한 있는지 확인 합니다 [mssql 도구](sql-server-linux-setup-tools.md) 패키지를 사용 하 여 연결 `sqlcmd` 자격 증명을 지정 하지 않고:
 
    ```bash
-   sqlcmd -S mssql.contoso.com
+   sqlcmd -S mssql-host.contoso.com
    ```
 
 * 도메인에 가입 된 Windows 클라이언트에서 SSMS
 
-   도메인 자격 증명을 사용 하는 도메인에 가입 된 Windows 클라이언트에 로그인 합니다. 있는지 확인 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 가 설치 되어 다음에 연결 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정 하 여 **Windows 인증** 에 **서버에 연결** 대화 합니다.
+   도메인 자격 증명을 사용 하는 도메인에 가입 된 Windows 클라이언트에 로그인 합니다. 있는지 확인 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 가 설치 되어 다음에 연결 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 (예: "mssql-host.contoso.com")을 지정 하 여 **Windows 인증** 에 **서버에 연결** 대화 합니다.
 
 * 다른 클라이언트 드라이버를 사용 하 여 AD 인증
 
   * JDBC: [Kerberos를 사용 하 여 통합 인증을 SQL Server 연결](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [통합된 인증을 사용 하 여](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [연결 문자열 구문](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
- 
+
+## <a name="performance-improvements"></a>성능 향상
+AD 계정 조회 시간이 걸리고 있습니다 체크 표시 하는 경우 AD 구성의 단계를 사용 하 여 유효 [타사 AD 공급자를 통해 Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 하 여](sql-server-linux-active-directory-third-party-providers.md)를 추가할 수 있습니다는 줄 아래 `/var/opt/mssql/mssql.conf` 을 SSSD 호출을 건너뛰고 직접 LDAP 호출을 사용 합니다.
+
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
+
 ## <a name="next-steps"></a>다음 단계
 
 이 자습서에서는 Linux의 SQL Server를 사용 하 여 Active Directory 인증을 설정 하는 방법을 단계별로 안내 합니다. 방법을 배웠습니다에:

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0200c7bedb0d0dd7dd990ef8cbe9ed2114978b8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025630"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348644"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "34025630"
   
  다음 표에서는 개체별로 유효하지 않은 문자열 보여 줍니다.  
   
-|개체|유효하지 않은 문자|  
+|Object|유효하지 않은 문자|  
 |------------|------------------------|  
-|**Server**|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 자세한 내용은 [명명 규칙(Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) 을 참조하십시오.|  
+|**Server**|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 참조 [명명 규칙 (Windows)](/windows/desktop/DNS/naming-conventions) 세부 정보에 대 한 합니다.|  
 |**DataSource**|: / \ * &#124; ? "() {} <>|  
-|**Level** 또는 **Attribute**|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. , ; ' ` : / \ * &#124; ? " & % $ ! + = {} < >|  
-|**Dimension** 또는 **Hierarchy**|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. , ; ' ` : / \ * &#124; ? " & % $ ! + () = {} \<, >|  
-|기타 모든 개체|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. , ; ' ` : / \ * &#124; ? " & % $ ! + () = {} < >|  
+|**Level** 또는 **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = {} < >|  
+|**Dimension** 또는 **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<, >|  
+|기타 모든 개체|. , ; ' ` : / \ * &#124; ? " & % $ ! + () = {} < >|  
   
  **예외: 예약 문자가 허용 되는 경우**  
   
@@ -81,11 +81,11 @@ ms.locfileid: "34025630"
 |MOLAP(모든 버전)|아니요|  
 |테이블 형식 - 1050|아니요|  
 |테이블 형식 - 1100|아니요|  
-|테이블 형식 – 1130 이상|예|  
+|테이블 형식 – 1130 이상|사용자 계정 컨트롤|  
   
  데이터베이스 기본 ModelType을 가질 수 있습니다. 기본값은 다차원과 같으므로 열 이름에 예약 문자를 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 예약어](../../../mdx/mdx-reserved-words.md)   
  [Analysis Services에서의 번역 지원](../../../analysis-services/translation-support-in-analysis-services.md)   
  [XML for Analysis 호환성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  

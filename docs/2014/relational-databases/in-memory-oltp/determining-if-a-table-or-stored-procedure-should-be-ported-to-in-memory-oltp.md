@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395995"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348433"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 수집기를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다. 트랜잭션 성능 분석 보고서에는 응용 프로그램에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "40395995"
   
  트랜잭션 성능 수집기 및 트랜잭션 성능 분석 보고서를 사용하여 다음과 같은 작업을 수행할 수 있습니다.  
   
--   작업을 분석하여 메모리 내 OLTP로 성능이 향상될지를 확인합니다. 트랜잭션 성능 수집기는 작업의 성능 특징을 수집하고 평가합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 그런 다음 트랜잭션 성능 분석 보고서는 메모리 내 OLTP로 변환할 경우 가장 이익이 되는 테이블과 저장 프로시저를 추천합니다.  
+-   작업을 분석하여 메모리 내 OLTP로 성능이 향상될지를 확인합니다. 트랜잭션 성능 수집기는 작업의 성능 특징을 수집하고 평가합니다. . 그런 다음 트랜잭션 성능 분석 보고서는 메모리 내 OLTP로 변환할 경우 가장 이익이 되는 테이블과 저장 프로시저를 추천합니다.  
   
 -   메모리 내 OLTP로 마이그레이션하는 작업을 계획하고 실행하는 데 도움이 됩니다. 디스크 기반 테이블에서 메모리 최적화 테이블로의 마이그레이션 경로는 시간이 많이 걸릴 수 있습니다. 메모리 최적화 관리자를 사용하여 테이블을 메모리 내 OLTP로 이동하기 전에 테이블에서 제거해야 하는 비호환성을 식별할 수 있습니다. 메모리 최적화 관리자는 메모리 액세스에 최적화된 테이블로의 테이블 마이그레이션이 응용 프로그램에 미치는 영향을 이해하는 데도 도움이 됩니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "40395995"
   
  SQL Server 2012 또는 이후 버전의 데이터 수집기를 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
- 트랜잭션이 프로파일링된 인스턴스와 다른 인스턴스에 있는 관리 데이터 웨어하우스 데이터베이스에 데이터를 업로드하려면 데이터 수집기에 대한 올바른 자격 증명으로 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시가 필요합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하도록 설정하려면 먼저 도메인이 활성화된 로그인을 사용하여 자격 증명을 설정해야 합니다. 도메인이 활성화된 로그인은 관리 데이터 웨어하우스 데이터베이스에 대한 `mdw_admin` 그룹의 멤버여야 합니다. 참조 [방법: 자격 증명 (SQL Server Management Studio) 만들기](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) 자격 증명을 만드는 방법에 대 한 정보에 대 한 합니다.  
+ 트랜잭션이 프로파일링된 인스턴스와 다른 인스턴스에 있는 관리 데이터 웨어하우스 데이터베이스에 데이터를 업로드하려면 데이터 수집기에 대한 올바른 자격 증명으로 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시가 필요합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하도록 설정하려면 먼저 도메인이 활성화된 로그인을 사용하여 자격 증명을 설정해야 합니다. 도메인이 활성화된 로그인은 관리 데이터 웨어하우스 데이터베이스에 대한 `mdw_admin` 그룹의 멤버여야 합니다. 참조 [방법: 자격 증명 (SQL Server Management Studio) 만들기](../security/authentication-access/create-a-credential.md) 자격 증명을 만드는 방법에 대 한 정보에 대 한 합니다.  
   
  다른 인스턴스에서 관리 데이터 웨어하우스 데이터베이스로 업로드하기 위해 데이터 컬렉션을 구성하려면  
   

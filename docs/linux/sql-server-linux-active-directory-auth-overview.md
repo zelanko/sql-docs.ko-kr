@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087115"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381171"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 active Directory 인증
 
@@ -52,7 +52,6 @@ AD 인증을 구성 하는 방법에 대 한 세부 정보는 자습서에 제�
 ## <a name="known-issues"></a>알려진 문제
 
 - 이때 데이터베이스 미러링 끝점에 지원 되는 유일한 인증 방법에는 인증서가 있습니다. 향후 릴리스에서 WINDOWS 인증 방법을 활성화 됩니다.
-- 타사 AD 도구 Centrify, Powerbroker, 등 Vintela 지원 되지 않습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

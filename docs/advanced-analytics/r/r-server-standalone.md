@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240031"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (독립 실행형) 및 SQL server에서 Machine Learning Server (독립 실행형)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ SQL Server 2016은 R만 있습니다. SQL Server 2017은 R과 Python을 지원�
 | Python 샘플 및 스크립트 | R에서와 마찬가지로 Python 기본 제공 데이터 집합 및 스크립트를 포함 합니다. Revoscalepy 데이터 \Program files\Microsoft SQL 영문 Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 데이터입니다. |
 | R 및 Python에서 미리 학습 된 모델 | 미리 학습 된 모델은 특정 사용 사례에 대 한 생성 되 고 microsoft 데이터 과학 엔지니어링 팀에서 유지 관리 합니다. 으로 미리 학습 된 모델을 사용할 수 있습니다-텍스트에서 양수 음수가 감정 점수 매기기 또는 기능에서 제공 하는 새 데이터 입력을 사용 하 여 이미지를 검색 하는 것입니다. 미리 학습 된 모델 지원 되며 독립 실행형 서버에서 사용할 수 있지만 SQL Server 설치 프로그램을 통해 설치할 수 없습니다. 자세한 내용은 [SQL Server에서 기계 학습 모델을 미리 학습 된 설치](../install/sql-pretrained-models-install.md)합니다. |
 
-## <a name="use-cases"></a>사용 사례
+## <a name="using-a-standalone-server"></a>독립 실행형 서버를 사용 하 여
 
 R 및 Python 개발자는 일반적으로 오픈 소스 R 및 Python의 메모리 및 처리 제약 조건 초과 이동 하려면 독립 실행형 서버를 선택 합니다. 독립 실행형 서버에서 실행 하는 R 및 Python 라이브러리 로드 및 다중 코어에서 많은 양의 데이터 처리 고 통합 된 단일 출력으로 결과 집계할 수 있습니다. 확장성과 유틸리티에 대 한 고성능 함수는 엔지니어링: 엔지니어링 예측 분석, 통계 모델링, 데이터 시각화 및 첨단 기계 학습 알고리즘 상용 서버 제품에서 제공 하 고 지 Microsoft입니다.
 

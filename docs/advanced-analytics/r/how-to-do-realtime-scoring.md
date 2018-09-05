@@ -1,253 +1,112 @@
 ---
-title: 실시간 점수 매기기 또는 SQL Server Machine Learning에서 네이티브 점수 매기기를 수행 하는 방법 | Microsoft Docs
+title: 예측 및 SQL Server에서 기계 학습 모델을 사용 하 여 예측을 생성 하는 방법 | Microsoft Docs
+description: 기본 예측 점수 매기기 및 R 및 SQL Server Machine Learning에서 Pythin 예측에 대 한 실시간 점수 매기기 또는 예측 T-SQL rxPredict, 또는 sp_rxPredict를 사용 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40394572"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348214"
 ---
-# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 네이티브 점수 매기기를 수행 하는 방법
+# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>예측 및 SQL Server에서 기계 학습 모델을 사용 하 여 예측을 생성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server의 두 가지 방법에서 결과 예측에 대 한 R에서 작성 하는 미리 학습 된 모델을 사용 하 여 실시간을 보여 줍니다. 실시간 점수 매기기와 네이티브 점수 매기기 기계 학습 모델을 R을 설치 하지 않고도 사용할 수 있도록 설계 되었습니다. -SQL Server 데이터베이스에 저장-호환 형식으로 미리 학습 된 모델을 지정 신속 하 게 새 입력에 대 한 예측 점수를 생성 하려면 표준 데이터 액세스 기법을 사용할 수 있습니다.
+기존 모델을 사용 하 여 예측 또는 새 데이터 입력에 대 한 결과 예측할 기계 학습의 핵심 작업입니다. 이 문서에서는 SQL Server에서 예측을 생성 하는 방법을 열거 합니다. 접근 방식 간의 내부 처리 방법론 속도의 증분을 줄이는 것은 기반 고속 예측에 대해 실행 됩니다 시간 종속성. 더 빠른 예측이 더 적은 종속성을 의미합니다.
 
-## <a name="choose-a-scoring-method"></a>점수 매기기 방법 선택
+내부 처리 인프라를 사용 하 여 라이브러리 요구 사항 함께 제공 됩니다 (실시간 또는 네이티브 점수 매기기). Microsoft 라이브러리의 함수 여야 합니다. 오픈 소스 또는 타사 함수를 호출 하는 R 또는 Python 코드는 CLR 또는 c + + 확장에서 지원 되지 않습니다.
 
-다음 옵션은 빠른 일괄 처리 예측을 위해 지원 됩니다.
+다음 표에서 예측 및 예측에 대 한 점수 매기기 프레임 워크를 보여 줍니다. 
 
-+ **네이티브 점수 매기기**: SQL Server 2017 Windows, SQL Server 2017 Linux 및 Azure SQL Database의 T-SQL PREDICT 함수입니다.
-+ **실시간 점수 매기기**: sp를 사용 하 여\_rxPredict 저장 프로시저에서 SQL Server 2016 또는 SQL Server 2017 (Windows만 해당).
+| 방법           | 인터페이스         | 라이브러리 요구 사항 | 처리 속도 |
+|-----------------------|-------------------|----------------------|----------------------|
+| 확장성 프레임 워크 | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 없음 모델 기반으로 모든 R 또는 Python 함수 | 수백 밀리초입니다. <br/>로드 된 런타임 환경에 새 데이터 점수를 매길 전에 3부터 6 백 밀리초 평균 고정된 비용. |
+| 실시간 점수 매기기 CLR 확장 | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
+| 네이티브 점수 매기기 c + + 확장| [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 직렬화 된 모델 | R: RevoScaleR <br/>Python: revoscalepy | 평균적으로 20 밀리초입니다. | 
 
-> [!NOTE]
-> SQL Server 2017의 PREDICT 함수를 사용 하는 것이 좋습니다.
-> Sp 데\_rxPredict SQLCLR 통합을 사용 해야 합니다. 이 옵션을 사용 하기 전에 보안 문제를 고려 합니다.
+처리 속도 출력의 물질 하지 차별화 기능입니다. 동일한 기능 및 입력을 가정 하지 점수가 매겨진된 출력 해야 사용 하는 방법에 따라 다릅니다.
 
-모델을 준비 하 고 점수를 생성 한 다음 전체 프로세스는 유사 합니다.
+모델을 지원 되는 함수를 사용 하 여 만든 다음 디스크에 저장 하거나 데이터베이스에 이진 형식으로 저장 하는 원시 바이트 스트림으로 serialize 될 해야 합니다. 저장된 프로시저 또는 T-SQL을 사용 하 여 로드 하 고는 R 또는 Python을 실행 하는 언어 시간 오버 헤드 없이 이진 모델을 사용 하 여 더 빠르게 완료 될 때까지 새 입력에 대 한 예측 점수를 생성할 때 발생 합니다.
+
+CLR 및 c + + 확장의 중요 한 이유는 자체 데이터베이스 엔진에 근접 합니다. 데이터베이스 엔진의 기본 언어는 c + +, 더 적은 종속성을 사용 하 여 실행 하는 c + +로 작성 된 확장을 의미 합니다. 반면 CLR 확장.NET Core에 따라 달라 집니다. 
+
+예상할 수 있듯이 이러한 런타임 환경에서 지원 되는 플랫폼 저하 됩니다. 네이티브 데이터베이스 엔진 확장 관계형 데이터베이스는 어디서 나 실행: Windows, Linux의 Azure. .NET Core 필요가 있는 CLR 확장은 현재 Windows만 있습니다.
+
+## <a name="scoring-overview"></a>점수 매기기 개요
+
+_점수 매기기_ 은 두 단계로 이루어집니다. 먼저 테이블에서 로드를 이미 학습 된 모델을 지정 합니다. 둘째, 새 패스 입력 예측 값을 생성 하는 함수, 데이터 (또는 _점수_). 입력은 테이블 형식 또는 단일 행을 반환 하는 T-SQL 쿼리 경우가 많습니다. 확률을 나타내는 단일 열 값을 출력 하도록 선택할 수 있습니다 또는 신뢰 구간, 오류 또는 기타 유용한 보수 하 여 예측과 같은 여러 값을 출력할 수 있습니다.
+
+단계를 수행 합니다. 모델을 준비 하는 전체 프로세스 하 고 점수를 생성 한 다음 요약할 수 있습니다. 이러한 방식으로:
 
 1. 지원 되는 알고리즘을 사용 하 여 모델을 만듭니다.
 2. 특수 이진 형식을 사용 하 여 모델을 serialize 합니다.
 3. SQL Server에 사용할 수 있는 모델을 확인 합니다. 일반적으로 즉, SQL Server 테이블에 직렬화 된 모델을 저장 합니다.
-4. 함수 또는 저장된 프로시저를 호출 하 고 모델 및 입력된 데이터를 전달 합니다.
+4. 함수 또는 매개 변수로 모델 및 입력된 데이터를 지정 하는 저장된 프로시저를 호출 합니다.
 
-### <a name="requirements"></a>요구 사항
+입력 데이터 행 수를 포함 하는 경우 것이 일반적으로 더 빠릅니다 점수 매기기 프로세스의 일부로 테이블에 예측 값을 삽입 합니다.  단일 점수를 생성 하는 것이 더 일반적 시나리오는 폼 또는 사용자 요청에서 입력된 값을 얻으려면 하 고 클라이언트 응용 프로그램에는 점수를 반환 합니다. 연속 된 점수를 생성 하는 경우 성능 향상을 위해 SQL Server 메모리로 다시 로드 될 수 있도록 모델을 캐시 될 수 있습니다.
 
-+ PREDICT 함수는 SQL Server 2017의 모든 버전에서 제공 하 고 기본적으로 활성화 됩니다. R을 설치 하거나 추가 기능을 활성화할 필요가 없습니다.
+## <a name="compare-methods"></a>메서드를 비교 합니다.
 
-+ Sp를 사용 하는 경우\_rxPredict, 몇 가지 추가 단계가 필요 합니다. 참조 [실시간 점수 매기기를 사용 하도록 설정](#bkmk_enableRtScoring)합니다.
+핵심 데이터베이스 엔진 프로세스의 무결성을 유지 하려면 R 및 Python 지원이 RDBMS 처리에서 언어 처리를 분리 하는 이중 아키텍처에서 설정 됩니다. Microsoft은 SQL Server 2016부터 T-SQL에서 실행할 R 스크립트를 허용 하는 확장성 프레임 워크를 추가 합니다. SQL Server 2017의 Python 통합이 추가 되었습니다. 
 
-+ 이때 RevoScaleR 및 MicrosoftML 호환 되는 모델을 만들 수 있습니다. 나중에 추가 모델 유형에 사용할 수 있습니다. 현재 지원 되는 알고리즘 목록은 참조 하세요 [실시간 점수 매기기](../real-time-scoring.md)합니다.
+확장성 프레임 워크는 R 또는 Python에서 간단한 함수에서 교육 복잡 한 기계 학습 모델에 이르기까지에서 수행할 수 있는 모든 작업을 지원 합니다. 그러나 이중 프로세스 아키텍처 작업의 복잡성에 관계 없이 모든 호출에 대해 외부 R 또는 Python 프로세스를 호출 해야 합니다. 테이블에서 미리 학습 된 모델을 로드 하 고 SQL Server에 이미 있는 데이터에 대 한 점수 매기기 작업에 수반 되는 경우 외부 프로세스를 호출 하는 오버 헤드는 특정 상황에서 사용할 수 있는 대기 시간을 추가 합니다. 예를 들어 사기 감지에 관련 되도록 빠른 점수 매기기 필요 합니다.
 
-### <a name="serialization-and-storage"></a>Serialization 및 저장소
+사기 감지 시나리오에 대 한 점수 매기기 속도 높이려면 SQL Server는 R 및 Python 시작 프로세스의 오버 헤드를 제거 하는 c + + 및 CLR 확장으로 기본 점수 매기기 라이브러리를 추가 합니다.
+
+[**실시간 점수 매기기** ](../real-time-scoring.md) 고성능 점수 매기기에 대 한 첫 번째 솔루션 이었습니다. R 및 Python RevoScaleR, MicrosoftML (R), revoscalepy를 Microsoft 제어 함수 처리는 CLR 라이브러리에 의존 실시간 점수 매기기 초기 버전의 SQL Server 2017 및 이후 업데이트에서는 SQL Server 2016에 도입 하 고 microsoftml (Python)입니다. CLR 라이브러리를 사용 하 여 호출 되는 **sp_rxPredict** 저장된 프로시저를 R 또는 Python 런타임을 호출 하지 않고도 모든 지원 되는 모델 형식에서 점수를 생성 합니다.
+
+[**네이티브 점수 매기기** ](../sql-native-scoring.md) 는 SQL Server 2017 기능을 네이티브 c + + 라이브러리로 하지만 RevoScaleR 및 revoscalepy 모델에 대해서만 구현 합니다. 빠르고 보다 안전한 방법은 하지만 더 작은 다른 방법론을 기준으로 하는 함수 집합을 지원 합니다.
+
+## <a name="choose-a-scoring-method"></a>점수 매기기 방법 선택
+
+플랫폼 요구 사항에는 종종는 점수 매기기 방법입니다.
+
+| 제품 버전 및 플랫폼 | 방법 |
+|------------------------------|-------------|
+| Windows, SQL Server 2017 Linux 및 Azure SQL Database의 SQL Server 2017 | **네이티브 점수 매기기** 사용 하 여 T-SQL 예측 |
+| SQL Server 2017 (Windows에만 해당), SQL Server 2016 R Services sp1 이상 | **실시간 점수 매기기** sp\_rxPredict 저장 프로시저 |
+
+PREDICT 함수를 사용 하 여 네이티브 점수 매기기는 것이 좋습니다. Sp를 사용 하 여\_rxPredict SQLCLR 통합을 사용 해야 합니다. 이 옵션을 사용 하기 전에 보안 문제를 고려 합니다.
+
+## <a name="serialization-and-storage"></a>Serialization 및 저장소
 
 빠른 점수 매기기 옵션 중 하나를 사용 하 여 모델을 사용 하려면 크기에 대 한 최적화 된 특수 한 serialize 된 형식을 사용 하 여 및 효율성을 점수 매기기 모델을 저장 합니다.
 
-+ 호출 `rxSerializeModel` 지원 되는 모델을 작성 하는 **원시** 형식입니다.
-+ 호출 `rxUnserializeModel` 다른 R 코드에서 사용 하 여 모델을 다시 구성 하기 위해 또는 모델을 표시 합니다.
-
-자세한 내용은 [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)합니다.
++ 호출 [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) 지원 되는 모델을 작성 하는 **원시** 형식입니다.
++ 호출 [rxUnserializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)' 다른 R 코드에서 사용 하 여 모델을 다시 구성 하기 위해 또는 모델을 표시 합니다.
 
 **SQL을 사용 하 여**
 
-사용 하 여 모델 학습 수 SQL 코드에서 `sp_execute_external_script`에서 직접 학습된 된 모델에 테이블 형식의 열을 삽입할 **varbinary (max)** 합니다.
-
-간단한 예제를 보려면 [이 자습서](../tutorials/rtsql-create-a-predictive-model-r.md)
+사용 하 여 모델 학습 수 SQL 코드에서 [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)에서 직접 학습된 된 모델에 테이블 형식의 열을 삽입할 **varbinary (max)** 합니다. 간단한 예제를 보려면 [R에서 preditive 모델 만들기](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **R을 사용 하 여**
 
-R 코드에서 모델을 테이블에 저장 하는 방법은 두 가지 있습니다.
-
-+ 호출 된 `rxWriteObject` 모델 데이터베이스에 직접 작성 하는 RevoScaleR 패키지에서 작동 합니다.
-
-  `rxWriteObject()` 함수 SQL Server와 같은 ODBC 데이터 소스에서 R 개체를 검색 또는 SQL Server 개체를 쓸 수 있습니다. API는 간단한 키-값 저장소를 따라 모델링 됩니다.
+R 코드에서 호출 된 [rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) 모델 데이터베이스에 직접 쓸 RevoScaleR 패키지의 함수입니다. 합니다 **rxWriteObject()** 함수 SQL Server와 같은 ODBC 데이터 소스에서 R 개체를 검색 또는 SQL Server 개체를 쓸 수 있습니다. API는 간단한 키-값 저장소를 따라 모델링 됩니다.
   
-  이 함수를 사용 하는 경우에 먼저 새 serialization 함수를 사용 하 여 모델을 직렬화 해야 합니다. 그런 다음 설정 합니다 *serialize* 인수에서 `rxWriteObject` serialization 단계를 반복 하지 않으려면 FALSE로 합니다.
+이 함수를 사용 하는 경우 반드시 사용 하 여 모델 serialize [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) 첫 번째입니다. 그런 다음 설정 합니다 *serialize* 에서 인수 **rxWriteObject** serialization 단계를 반복 하지 않으려면 FALSE로 합니다.
 
-+ 파일에 원시 형식으로 모델을 저장할 수도 수 있으며 그런 다음 SQL Server에 파일에서 읽을 수 있습니다. 이동 하거나 환경 간에 모델을 복사 하는 경우에이 옵션이 유용할 수 있습니다.
+이진 형식으로 모델을 직렬화 하는 것은 유용 하지만 R을 사용 하 여 예측의 점수를 매기는 경우 및 Python 확장성 프레임 워크에서 런타임 환경 실행 해야 하는 아닙니다. Raw 바이트 형식으로 파일에 모델을 저장할 수 있으며 그런 다음 SQL Server에 파일에서 읽을 수 있습니다. 이동 하거나 환경 간에 모델을 복사 하는 경우에이 옵션이 유용할 수 있습니다.
 
-## <a name="native-scoring-with-predict"></a>네이티브 예측 된 점수 매기기
+## <a name="scoring-in-related-products"></a>관련된 제품에서 점수 매기기
 
-이 예제에서는 모델을 만들고 T-SQL에서 실시간 예측 함수를 호출 합니다.
-
-### <a name="step-1-prepare-and-save-the-model"></a>1단계. 준비 및 모델 저장
-
-샘플 데이터베이스 및 필요한 테이블을 만들려면 다음 코드를 실행 합니다.
-
-```SQL
-CREATE DATABASE NativeScoringTest;
-GO
-USE NativeScoringTest;
-GO
-DROP TABLE IF EXISTS iris_rx_data;
-GO
-CREATE TABLE iris_rx_data (
-  "Sepal.Length" float not null, "Sepal.Width" float not null
-  , "Petal.Length" float not null, "Petal.Width" float not null
-  , "Species" varchar(100) null
-);
-GO
-```
-
-데이터를 사용 하 여 데이터 테이블을 구성 하려면 다음 문을 사용 합니다 **아이리스** 데이터 집합입니다.
-
-```SQL
-INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'iris_data <- iris;'
-  , @input_data_1 = N''
-  , @output_data_1_name = N'iris_data';
-GO
-```
-
-이제 모델을 저장 하는 것에 대 한 테이블을 만듭니다.
-
-```SQL
-DROP TABLE IF EXISTS ml_models;
-GO
-CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
-  , model_version nvarchar(100) not null
-  , native_model_object varbinary(max) not null);
-GO
-```
-
-다음 코드를 기반으로 모델을 만듭니다는 **iris** 데이터 집합 이라는 테이블에 저장 **모델**합니다.
-
-```SQL
-DECLARE @model varbinary(max);
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'
-    iris.sub <- c(sample(1:50, 25), sample(51:100, 25), sample(101:150, 25))
-    iris.dtree <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris[iris.sub, ])
-    model <- rxSerializeModel(iris.dtree, realtimeScoringOnly = TRUE)
-    '
-  , @params = N'@model varbinary(max) OUTPUT'
-  , @model = @model OUTPUT
-  INSERT [dbo].[ml_models]([model_name], [model_version], [native_model_object])
-  VALUES('iris.dtree','v1', @model) ;
-```
-
-> [!NOTE] 
-> 사용 해야 합니다 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 모델을 저장 하는 RevoScaleR 함수입니다. 표준 R `serialize` 함수에 필요한 형식을 생성할 수 없습니다.
-
-이진 형식으로 저장 된 모델을 보려면 다음을과 같은 문은 실행할 수 있습니다.
-
-```SQL
-SELECT *, datalength(native_model_object)/1024. as model_size_kb
-FROM ml_models;
-```
-
-### <a name="step-2-run-predict-on-the-model"></a>2단계. 모델에 예측을 실행 합니다.
-
-다음 간단한 예측 문을 사용 하 여 의사 결정 트리 모델에서 분류를 가져옵니다 합니다 **네이티브 점수 매기기** 함수입니다. 사용자가 제공한 특성, 꽃잎 길이 너비에 따라 붓 꽃 종류를 예측 합니다.
-
-```SQL
-DECLARE @model varbinary(max) = (
-  SELECT native_model_object
-  FROM ml_models
-  WHERE model_name = 'iris.dtree'
-  AND model_version = 'v1');
-SELECT d.*, p.*
-  FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
-  WITH(setosa_Pred float, versicolor_Pred float, virginica_Pred float) as p;
-go
-```
-
-오류를 받게 되 면 "동안 오류가 발생 했습니다 PREDICT 함수를 실행 합니다. 모델이 손상 되었거나 잘못 된", 일반적으로 쿼리 모델을 반환 하지 않았습니다.을 의미 합니다. 모델 이름을 올바르게 입력 여부 또는 모델 테이블이 비어 있는지 확인 합니다.
-
-> [!NOTE]
-> 열 및 값을 반환 하므로 **PREDICT** 모델 유형별로 다를 수 있습니다 사용 하 여 반환된 된 데이터의 스키마를 정의 해야 합니다는 **WITH** 절.
-
-## <a name="real-time-scoring-with-sprxpredict"></a>Sp_rxPredict으로 실시간 점수 매기기
-
-이 섹션에서는 설정 하는 데 필요한 단계를 설명 **실시간** 예측을 T-SQL에서 함수를 호출 하는 방법의 예제를 제공 합니다.
-
-### <a name ="bkmk_enableRtScoring"></a> 1 단계입니다. 실시간 점수 매기기 절차를 사용 하도록 설정
-
-점수 매기기에 사용 하려는 각 데이터베이스에 대해이 기능을 활성화 해야 합니다. 서버 관리자에 RevoScaleR 패키지에 포함 되어 있는 명령줄 유틸리티를 RegisterRExt.exe를 실행 해야 합니다.
-
-> [!NOTE]
-> 작업 실시간 채 점을 위해 순서로 SQL CLR 기능을 사용 해야 인스턴스에; 또한 데이터베이스는 신뢰할 수 있는 표시 해야 합니다. 스크립트를 실행 하는 경우 이러한 함수를 수행 됩니다. 그러나이 작업을 수행 하기 전에 추가 보안에 미치는 영향을 고려해 야!
-
-1. 관리자 권한 명령 프롬프트를 열고 RegisterRExt.exe가 있는 폴더로 이동 합니다. 기본 설치에서 경로 사용할 수 있습니다.
-    
-    `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
-
-2. 인스턴스 및 확장된 저장된 프로시저를 사용 하도록 설정 하려는 대상 데이터베이스의 이름을 대체 하 여 다음 명령을 실행 합니다.
-
-    `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
-
-    예를 들어 CLRPredict 데이터베이스 기본 인스턴스에서 확장된 저장된 프로시저에 추가 하려면 다음을 입력 합니다.
-
-    `RegisterRExt.exe /installRts /database:CLRPRedict`
-
-    인스턴스 이름을 데이터베이스가 기본 인스턴스에 있는 경우 선택 사항입니다. 명명된 된 인스턴스를 사용 하는 경우 인스턴스 이름을 지정 해야 합니다.
-
-3. RegisterRExt.exe 다음 개체를 만듭니다.
-
-    + 신뢰할 수 있는 어셈블리
-    + 저장된 프로시저 `sp_rxPredict`
-    + 새 데이터베이스 역할을 `rxpredict_users`입니다. 데이터베이스 관리자가 실시간 점수 매기기 기능을 사용 하는 사용자에 권한을 부여 하려면이 역할을 사용 합니다.
-
-4. 모든 사용자가 실행 해야 하는 추가 `sp_rxPredict` 새 역할을 합니다.
-
-> [!NOTE]
-> 
-> SQL Server 2017에 추가 보안 조치의에서 경우 CLR 통합을 사용 하 여 문제를 방지 하기 위해 이러한 측정값도이 저장된 프로시저의 사용에 대해 추가적인 제한을 적용합니다. 
-
-### <a name="step-2-prepare-and-save-the-model"></a>2단계. 준비 및 모델 저장
-
-Sp에 의해 필요한 이진 형식\_rxPredict PREDICT 함수를 사용 하는 데 필요한 형식으로 동일 합니다. 따라서 R 코드에서 호출을 포함할 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)를 지정 해야 하 고 `realtimeScoringOnly = TRUE`이 예제와 같이:
-
-```R
-model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
-```
-
-### <a name="step-3-call-sprxpredict"></a>3단계. Sp_rxPredict 호출
-
-Sp 호출\_rxPredict 것은 다른 저장 프로시저입니다. 현재 릴리스에서 저장된 프로시저는 두 개의 매개 변수를 사용 합니다.  _\@모델_ 이진 형식으로 모델에 대 한 및  _\@inputData_ 점수 매기기에 사용 하 여 데이터에 대 한 정의 유효한 SQL 쿼리입니다.
-
-PREDICT 함수에서 사용 되는 동일한 이진 형식 이므로 앞의 예제에서 모델 및 데이터 테이블을 사용할 수 있습니다.
-
-```SQL
-DECLARE @irismodel varbinary(max)
-SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree' 
-AND model_version = 'v1''
-
-EXEC sp_rxPredict
-@model = @irismodel,
-@inputData = N'SELECT * FROM iris_rx_data'
-```
-
-> [!NOTE]
-> 
-> Sp에 대 한 호출\_rxPredict 점수 매기기에 대 한 입력된 데이터에 모델의 요구 사항과 일치 하는 열이 포함 되어 있지 않으면 실패 합니다. 현재 다음.NET 데이터 형식만 지원 됩니다: double, float, short, ushort, long, ulong 및 문자열입니다.
-> 
-> 따라서 실시간 점수 매기기에 사용 하기 전에 입력된 데이터에서 지원 되지 않는 형식 필터링 해야 합니다.
-> 
-> 해당 SQL 형식에 대 한 자세한 내용은 [SQL-CLR 형식 매핑](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) 하거나 [CLR 매개 변수 데이터 매핑](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)합니다.
-
-## <a name="disable-real-time-scoring"></a>실시간 점수 매기기를 사용 하지 않도록 설정
-
-실시간 점수 매기기 기능을 사용 하지 않으려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 실행 합니다. `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
-
-## <a name="real-time-scoring-in-other-microsoft-product"></a>다른 Microsoft 제품의 실시간 점수 매기기
-
-독립 실행형 서버 또는 Microsoft Machine Learning Server 대신 SQL Server 데이터베이스 내 분석을 사용할 경우 저장된 프로시저 및 예측을 생성 하기 위한 T-SQL 함수 외에 다른 옵션입니다.
-
-독립 실행형 서버 및 Machine Learning Server 지원의 개념을 *웹 서비스* 코드 배포에 대 한 합니다. 번들로 R 또는 Python 미리 학습 된 모델을 웹 서비스로 새 데이터 입력을 평가 하려면 런타임에 호출 합니다. 자세한 내용은 다음 문서를 참조하세요.
+사용 중인 경우는 [독립 실행형 서버](r-server-standalone.md) 또는 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 저장된 프로시저 및 예측을 신속 하 게 생성 하기 위한 T-SQL 함수 외에 다른 옵션이 있습니다. 독립 실행형 서버 및 Machine Learning Server 지원의 개념을 *웹 서비스* 코드 배포에 대 한 합니다. 번들로 R 또는 Python 미리 학습 된 모델을 웹 서비스로 새 데이터 입력을 평가 하려면 런타임에 호출 합니다. 자세한 내용은 다음 문서를 참조하세요.
 
 + [Machine Learning Server에 웹 서비스는 무엇입니까?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [운영 화 란?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
 + [Python 모델 azureml 모델-관리 sdk를 사용 하 여 웹 서비스로 배포](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [R 코드 블록 또는 실시간 모델을 새 웹 서비스로 게시](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [R에 대 한 mrsdeploy 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+
+
+## <a name="see-also"></a>참고자료
+
++ [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
++ [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
++ [sp-rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
++ [T-SQL을 예측 합니다.](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

@@ -8,17 +8,17 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9be6cf7b38482673db0308b4680500dede313e09
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 8874c7196e77e9df7fe710f1b02be49cee10e3c8
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118341"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240099"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2016 R Services는 SQL Server에서 R 코드를 실행 하는 데 사용 되는 데이터베이스 엔진 인스턴스를 추가 합니다. 핵심 엔진 프로세스 로부터 격리 하지만 저장된 프로시저, R 문이 포함 된 T-SQL 스크립트 또는 T-SQL을 포함 하는 R 코드와 관계형 데이터에 완벽 하 게 사용할 수 있는 코드는 확장성 프레임 워크에서 실행 됩니다. 
+SQL Server 2016 R Services는 SQL Server에서 R 코드와 함수를 실행 하는 데 사용 되는 데이터베이스 엔진 인스턴스를 추가 합니다. 핵심 엔진 프로세스 로부터 격리 하지만 저장된 프로시저, R 문이 포함 된 T-SQL 스크립트 또는 T-SQL을 포함 하는 R 코드와 관계형 데이터에 완벽 하 게 사용할 수 있는 코드는 확장성 프레임 워크에서 실행 됩니다. 
 
 R Services에 로드 하 고 다중 코어에서 많은 양의 데이터를 처리 하 고 통합 된 단일 출력으로 결과 집계 수 있도록 Microsoft에서 엔터프라이즈 R 패키지를 사용 하 여 오버레이 R의 기본 배포에 포함 됩니다. Microsoft의 R 함수 및 알고리즘은 확장성과 유틸리티에 대 한 엔지니어링: 예측 분석, 통계 모델링, 데이터 시각화 및 첨단 기계 학습 알고리즘 설계 상용 서버 제품에서 제공 하 고 Microsoft에서 지원 합니다. 
 
@@ -36,6 +36,16 @@ SQL Server 2016은 R만 있습니다. 다음 표에 SQL Server 2016의 기능을
 | R 도구 | R 콘솔 창 및 명령 프롬프트를 R 배포에 표준 도구 이며  |
 | R 샘플 및 스크립트 |  오픈 소스 R 및 RevoScaleR 패키지 만들고 미리 설치 된 데이터를 사용 하 여 스크립트를 실행할 수 있도록 기본 제공 데이터 집합을 포함 |
 | R에서 미리 학습 된 모델 | 미리 학습 된 모델은 특정 사용 사례에 대 한 생성 되 고 microsoft 데이터 과학 엔지니어링 팀에서 유지 관리 합니다. 으로 미리 학습 된 모델을 사용할 수 있습니다-텍스트에서 양수 음수가 감정 점수 매기기 또는 기능에서 제공 하는 새 데이터 입력을 사용 하 여 이미지를 검색 하는 것입니다. 모델 R Services에서 실행 되지만 SQL Server 설치 프로그램을 통해 설치할 수 없습니다. 자세한 내용은 [설치 미리 학습 된 기계 학습 모델 SQL Server에서](../install/sql-pretrained-models-install.md)합니다. |
+
+## <a name="using-r-services"></a>R Services를 사용 하 여
+
+개발자 및 분석가 로컬 SQL Server 인스턴스를 기반으로 실행 되는 코드에 있는 경우가 많습니다. SQL Server 형식에서 R 코드를 실행 하는 기능을 얻게 Machine Learning 서비스를 추가 하 고 외부 스크립트 실행을 사용 하도록 설정 하 여: 저장된 프로시저에서 스크립트를 래핑, SQL Server 테이블에 모델을 저장 또는 쿼리에서 T-SQL 및 R 함수를 결합 합니다.
+
+데이터베이스 내 분석에 대 한 가장 일반적인 방법은 사용 하는 것 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), Rscript 입력된 매개 변수로 전달 합니다.
+
+기존 클라이언트-서버 상호 작용은 또 다른 방법은. IDE에 있는 모든 클라이언트 워크스테이션에서 설치할 수 있습니다 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), 한 다음 실행을 푸시하는 코드 작성 (라고 하는 *원격 계산 컨텍스트*) 데이터 및 작업을 원격 SQL 서버입니다. 
+
+마지막으로 사용 하는 경우는 [독립 실행형 서버](r-server-standalone.md) 및 Developer 버전에서는 동일한 라이브러리 및 인터프리터를 사용 하 여 클라이언트 워크스테이션에서 솔루션을 구축 하 고 다음 SQL Server Machine Learning에서 프로덕션 코드를 배포할 수 있습니다 Services (In-database)입니다. 
 
 ## <a name="how-to-get-started"></a>시작 하는 방법
 

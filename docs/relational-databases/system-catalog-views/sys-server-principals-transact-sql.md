@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106263"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694696"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106263"
 |**default_language_name**|**sysname**|이 보안 주체에 대한 기본 언어입니다.|  
 |**credential_id**|**int**|이 보안 주체와 연결된 자격 증명의 ID입니다. 이 보안 주체와 연결된 자격 증명이 없는 경우 credential_id는 NULL이 됩니다.|  
 |**owning_principal_id**|**int**|합니다 **principal_id** 서버 역할의 소유자입니다. 보안 주체가 서버 역할이 아닌 경우 NULL입니다.|  
-|**is_fixed_role**|**bit**|보안 주체가 고정 서버 역할 중 하나인 경우 1을 반환합니다. 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.|  
+|**is_fixed_role**|**bit**|보안 주체가 고정된 사용 권한 가진 기본 제공 서버 역할 중 하나 이면 1을 반환 합니다. 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.|  
   
 ## <a name="permissions"></a>사용 권한  
  모든 로그인은 자신의 로그인 이름, 시스템 로그인 및 고정 서버 역할을 볼 수 있습니다. 다른 로그인을 보려면 로그인할 때 ALTER ANY LOGIN 또는 사용 권한이 필요합니다. 사용자 정의 서버 역할을 보려면 ANY SERVER ROLE 또는 역할의 멤버 자격이 필요합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "43106263"
  다음 쿼리는 서버 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  
   
 > [!IMPORTANT]  
->  고정 서버 역할의 사용 권한은 sys.server_permissions에 나타나지 않습니다. 따라서 서버 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
+>  (Public)이 아닌 고정된 서버 역할의 사용 권한을 sys.server_permissions에 나타나지 않습니다. 따라서 서버 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

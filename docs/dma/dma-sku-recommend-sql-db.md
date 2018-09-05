@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152834"
+ms.locfileid: "43240151"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인
 
@@ -34,11 +34,14 @@ ms.locfileid: "43152834"
 > [!NOTE] 
 > 이 기능은 현재 사용할 수만 통해 명령줄 인터페이스 (CLI)입니다. DMA 사용자 인터페이스를 통해이 기능에 대 한 지원이 향후 릴리스에서 추가 됩니다.
 
+> [!IMPORTANT]
+> Azure SQL Database에 대 한 SKU 권장 사항은 마이그레이션을 이상 SQL Server 2016에서 현재 사용할 수 있습니다.
+
 다음 지침을 통해 Azure SQL 데이터베이스 SKU 권장 사항을 확인 하 고 Data Migration Assistant를 사용 하 여 azure에 연결된 된 데이터베이스를 프로 비전 합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이미 있는 경우이 도구를 닫고 설치를 닫은 다음 다시 및 도구를 업그레이드 하 라는 메시지가 표시 됩니다.
+Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이미 있는 경우이 도구를 닫고 설치를 닫은 다음 다시 및 도구를 업그레이드 하 라는 메시지가 나타납니다.
 
 ## <a name="collect-performance-counters"></a>성능 카운터를 수집 합니다.
 
@@ -144,7 +147,7 @@ TSV 출력 파일에는 다음 그림에 표시 된 열 포함 됩니다.
 - **ExclusionReasons** -이 값은 계층에 권장 되는 경우 비어 있습니다. 권장 되지 않는 각 계층에서 발견 되지 않았습니다 이유는 이유 제공 됩니다.
 - **AppliedRules** -적용 된 규칙의 약식 표기 합니다.
 
-권장된 값은 온-프레미스 데이터베이스 비슷합니다 성공률을 사용 하 여 Azure에서 실행 하 여 쿼리 하는 데 필요한 최소 SKU는 참고 합니다. 예를 들어, 최소 권장 되는 SKU는 표준 계층 S4 경우 S3을 선택 하 고 아래 됩니다 쿼리 제한 시간 초과로 인해 또는 실행 되지 않습니다.
+권장된 값은 온-프레미스 데이터베이스 비슷합니다 성공률을 사용 하 여 Azure에서 실행 하 여 쿼리 하는 데 필요한 최소 SKU입니다. 예를 들어, 최소 권장 되는 SKU는 표준 계층 S4 경우 S3을 선택 하 고 아래 됩니다 쿼리 제한 시간 초과로 인해 또는 실행 되지 않습니다.
 
 HTML 파일을 그래픽 형식으로이 정보를 포함 합니다. Azure 구독 정보를 입력, 가격 책정 계층 선택, 데이터베이스에 대 한 수준 및 최대 데이터 크기를 계산 및 데이터베이스를 프로 비전 하는 스크립트를 생성 하는 HTML 파일을 사용할 수 있습니다. PowerShell을 사용 하 여이 스크립트를 실행할 수 있습니다.
 

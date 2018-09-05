@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 8cc1010f2492054a467abfc53e859d39a86e1c78
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e779e3bd3958f440234bdc5f078d52088803a78
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086705"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240069"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용 하 여 Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션
 
@@ -34,7 +34,7 @@ SQL Server의 백업 및 복원 기능은 Windows의 SQL Server에서 Linux의 S
 
 SQL Server Always On 가용성 그룹에서 Linux Windows에서 SQL Server 데이터베이스 마이그레이션도 만들 수 있습니다. 참조 [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 자습서를 완료 하려면 다음 필수 조건이 필요 합니다.
 
@@ -164,6 +164,44 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
    ```
 
    데이터베이스를 복원 했습니다. 메시지를 가져와야 합니다.
+
+   `RESTORE DATABASE` 다음 예제와 같이 오류를 반환할 수 있습니다.
+
+   ```bash
+   File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
+   Msg 5133, Level 16, State 1, Server servername, Line 1
+   Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
+   ```
+   
+   이 경우 데이터베이스는 보조 파일을 포함합니다. 이러한 파일에 지정 되지 않은 경우는 `MOVE` 절의 `RESTORE DATABASE`, 복원 절차는 원본 서버와 동일한 경로에 만들려고 시도 합니다. 
+
+   백업에 포함 된 모든 파일을 나열할 수 있습니다.
+   ```sql
+   RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   GO
+   ```
+   (첫 번째 두 개의 열만 나열) 아래와 같은 목록을 얻게 됩니다.
+   ```sql
+   LogicalName         PhysicalName                                                                 ..............
+   ----------------------------------------------------------------------------------------------------------------------
+   YourDB              Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB.mdf          ..............
+   YourDB_Product      Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf  ..............
+   YourDB_Customer     Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Customer.ndf ..............
+   YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
+   ```
+   
+   이 목록을 사용 하 여 만들려는 `MOVE` 절 추가 파일에 대 한 합니다. 이 예제에서는 `RESTORE DATABASE` 됩니다.
+
+   ```sql
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Product' TO '/var/opt/mssql/data/YourDB_Product.ndf',
+   MOVE 'YourDB_Customer' TO '/var/opt/mssql/data/YourDB_Customer.ndf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
+   GO
+   ```
+
 
 1. 모든 서버에서 데이터베이스를 나열 하 여 복원 작업을 확인 합니다. 복원된 된 데이터베이스 나열 되어야 합니다.
 

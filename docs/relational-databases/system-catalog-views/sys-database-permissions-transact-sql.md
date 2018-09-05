@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5020aa262de57eb63849e3aac51a9d8f571a40
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a1bf31190d1dbdcac8506d2306b6cd6ecbd259ac
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43193049"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "43084781"
 |**class**|**tinyint**|사용 권한이 있는 클래스를 식별합니다.<br /><br /> 0 = 데이터베이스<br />1 = 개체 또는 열<br />3 = 스키마<br />4 = 데이터베이스 보안 주체<br />5 = 어셈블리- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />6 = 형식<br />10 = XML 스키마 컬렉션- <br />                      **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br />15 = 메시지 유형- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />16 = 서비스 계약- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />17 = Service- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />18 = 원격 서비스 바인딩- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />19 =-경로 **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />23 = 전체 텍스트 카탈로그- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />24 = 대칭 키- **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />25 인증서-= **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />26 = 비대칭 키 **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|  
 |**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|사용 권한이 존재하는 항목의 ID입니다. 이는 클래스에 따라 해석됩니다. 일반적으로 **major_id** 단순히 클래스가 나타내는에 적용 되는 ID의 종류입니다. <br /><br /> 0 = 데이터베이스 자체 <br /><br /> > 0 사용자 개체에 대 한 개체 Id = <br /><br /> \<0 시스템 개체에 대 한 개체 Id = |  
-|**minor_id**|**int**|사용 권한이 존재하는 항목의 보조 ID입니다. 이는 클래스에 따라 해석됩니다. 종종 합니다 **major_id** 가 0 이면 개체의 클래스에 사용할 수 없는 subcategory 있기 때문입니다. 그렇지 않을 경우 테이블의 열 ID입니다.|  
+|**minor_id**|**int**|사용 권한이 존재하는 항목의 보조 ID입니다. 이는 클래스에 따라 해석됩니다. 종종 합니다 **minor_id** 가 0 이면 개체의 클래스에 사용할 수 없는 subcategory 있기 때문입니다. 그렇지 않을 경우 테이블의 열 ID입니다.|  
 |**grantee_principal_id**|**int**|사용 권한이 부여된 데이터베이스 보안 주체 ID입니다.|  
 |**grantor_principal_id**|**int**|사용 권한 부여자의 데이터베이스 보안 주체 ID입니다.|  
 |**type**|**char(4)**|데이터베이스 사용 권한의 유형입니다. 사용 권한 유형 목록은 다음 표를 참조하세요.|  

@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 51ffa33bef7ab880704c9c1391a69feb3e194202
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a75ed22e46576c701e281f495d5bc123ca489526
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984565"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348464"
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>SQL Server에서 MicrosoftML 패키지 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 합니다 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) Microsoft R Server 및 SQL Server 2017을 사용 하 여 제공 되는 패키지에 여러 기계 학습 알고리즘을 포함 합니다. 이러한 Api는 내부 기계 학습 응용 프로그램, Microsoft에서 개발한 및 된 구체화 된 고성능 빅 데이터에서 수 년에 걸쳐 멀티 코어 처리 및 빠른 데이터 스트리밍을 사용 하 여 합니다. MicrosoftML에 텍스트 및 이미지 처리를 위한 다양 한 변환도 포함 됩니다.
 
-SQL Server 2017 CTP 2.0에서 Python 언어에 대 한 지원이 추가 되었습니다. 합니다 **microsoftml** r에서 MicrosoftML 패키지에서 해당 함수를 포함 하는 Python에 대 한 패키지 
+SQL Server 2017에 Python 언어에 대 한 지원이 추가 되었습니다. 합니다 **microsoftml** r에서 MicrosoftML 패키지에서 해당 함수를 포함 하는 Python에 대 한 패키지 
 
 + **R에 대 한 MicrosoftML**
 
