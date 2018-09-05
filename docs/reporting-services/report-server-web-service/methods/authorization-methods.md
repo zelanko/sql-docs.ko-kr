@@ -1,14 +1,10 @@
 ---
 title: 권한 부여 메서드 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - tasks [Reporting Services]
 - roles [Reporting Services], methods
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 479c1814a6ce52f3deec42d5ce84f40bc00278a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd6b4f1c6c4847096eaf181080187798a8be36d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025200"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271125"
 ---
 # <a name="authorization-methods"></a>권한 부여 메서드
   다음 메서드를 사용하여 보고서 서버에서 태스크, 역할 및 정책을 관리할 수 있습니다.  
@@ -45,7 +39,7 @@ ms.locfileid: "33025200"
 |<xref:ReportService2010.ReportingService2010.InheritParentSecurity%2A>|보고서 서버 데이터베이스의 특정 항목과 연결된 정책을 삭제하고 항목에 대한 보안 정책을 부모의 보안 정책으로 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|<xref:ReportService2010> 끝점을 사용하는 데 SSL(Secure Sockets Layer) 프로토콜이 필요한지 여부를 나타내는 부울 값을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.ListRoles%2A>|보고서 서버에서 관리되는 역할의 이름과 설명을 반환합니다.|  
-|<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|<xref:ReportExecution2005> 끝점에서 호출될 때 보안 연결이 필요한 SOAP(Simple Object Access Protocol) 메서드 목록을 반환합니다. 반환되는 메서드를 결정하는 데는 보고서 서버의 **SecureConnectionLevel** 설정이 사용됩니다.|  
+|<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|<xref:ReportExecution2005> 엔드포인트에서 호출될 때 보안 연결이 필요한 SOAP(Simple Object Access Protocol) 메서드 목록을 반환합니다. 반환되는 메서드를 결정하는 데는 보고서 서버의 **SecureConnectionLevel** 설정이 사용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.ListTasks%2A>|보고서 서버에서 관리되는 태스크를 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetPolicies%2A>|지정된 항목과 연결된 정책을 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetRoleProperties%2A>|역할 메타데이터 속성을 설정하고 태스크 집합과 역할을 연결합니다. 이 메서드는 기본 모드에만 적용됩니다.|  

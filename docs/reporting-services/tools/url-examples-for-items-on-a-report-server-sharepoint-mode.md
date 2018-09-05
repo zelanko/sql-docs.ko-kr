@@ -1,26 +1,20 @@
 ---
 title: 보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 42638cca55a7d567ebe3ec3bfad37880cca6aebe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036990"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273454"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -36,7 +30,7 @@ ms.locfileid: "33036990"
   
  웹 계층의 다음 요소를 사용하여 보고서 서버 내용에 액세스하고 보안을 유지할 수 있습니다. 목록 및 페이지와 같은 다른 개체는 보고서 서버 내용에 액세스하는 데 사용되지 않으므로 다음 표에서 설명하지 않습니다.  
   
-|Object|Description|  
+|Object|설명|  
 |------------|-----------------|  
 |SharePoint 웹 응용 프로그램|SharePoint 웹 응용 프로그램은 독립 실행형 서버로 설치하거나 가상 서버 컬렉션이 포함된 팜에 설치할 수 있습니다. 웹 응용 프로그램에는 URL(예: `http:*//servername*`)이 있으며 여러 사이트가 포함될 수 있습니다.|  
 |사이트|사이트는 웹 응용 프로그램의 부모 사이트 또는 하위 사이트입니다.|  
@@ -51,7 +45,7 @@ ms.locfileid: "33036990"
   
  사용할 서버의 이름을 찾으려면 브라우저를 열고 보고서를 게시할 SharePoint 라이브러리를 찾습니다. 서버 이름은 프로토콜 접두사 바로 뒤에 표시됩니다(예: `http:*//servername*`).  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 프록시 끝점은 사용할 수 없습니다. 프록시 끝점에는 포트 번호가 포함됩니다(예: `http:*//servername:8080/reportserver*`).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 프록시 엔드포인트는 사용할 수 없습니다. 프록시 엔드포인트에는 포트 번호가 포함됩니다(예: `http:*//servername:8080/reportserver*`).  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 서버 사이트 또는 하위 사이트에 대한 URL  
  보고서 또는 보고서 데이터 원본을 배포하는 경우 SharePoint 사이트 및 하위 사이트(있는 경우)에 대한 URL을 사용해야 합니다. URL에서 사이트 이름은 서버 이름 바로 뒤에 표시됩니다(예: `http://*servername/site*` 또는 `http://*servername/site/subsite*`).  

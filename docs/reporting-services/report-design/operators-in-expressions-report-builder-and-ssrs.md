@@ -1,26 +1,20 @@
 ---
 title: 식의 연산자(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8c2d21c06a97b78bb774911078b6e9e5e00f1859
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a098567515f7f5884c787c288ea01b09bb34c06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027440"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266729"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>식의 연산자(보고서 작성기 및 SSRS)
   연산자는 식에서 한 개 이상의 항목에 적용되는 동작을 나타내는 기호입니다. 식에서 지원되는 연산자의 범주는 산술 연산자, 비교 연산자, 연결 연산자, 논리 또는 비트 연산자, 비트 시프트 연산자입니다.  
@@ -31,7 +25,7 @@ ms.locfileid: "33027440"
 ### <a name="arithmetic"></a>산술  
  산술 연산자는 식에서 두 숫자 항목에 대한 수치 연산을 수행합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |^|특정 숫자를 다른 숫자의 승수로 거듭제곱합니다.|  
 |*|두 숫자를 곱합니다.|  
@@ -44,7 +38,7 @@ ms.locfileid: "33027440"
 ### <a name="comparison"></a>비교  
  비교 연산자는 두 식이 동일한지 여부를 테스트합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |<|보다 작음|  
 |\<=|작거나 같음|  
@@ -58,7 +52,7 @@ ms.locfileid: "33027440"
 ### <a name="string-concatenation"></a>문자열 연결  
  문자열 연결은 식에서 첫 번째 문자열에 두 번째 문자열을 추가합니다. 다른 문자열 연산의 경우 기본 제공 함수를 사용하십시오.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |&|두 문자열을 연결합니다.|  
 |+|두 문자열을 연결합니다.|  
@@ -66,7 +60,7 @@ ms.locfileid: "33027440"
 ### <a name="logical-and-bitwise"></a>논리 및 비트  
  논리 및 비트 연산자는 식에서 두 정수 항목 사이의 논리 조작을 수행합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |And|두 부울 식에 논리 결합을 수행하거나 두 숫자 식에 비트 결합을 수행합니다.|  
 |Not|부울 식에 논리 부정을 수행하거나 숫자 식에 비트 부정을 수행합니다.|  
@@ -78,7 +72,7 @@ ms.locfileid: "33027440"
 ### <a name="bit-shift"></a>비트 시프트  
  비트 연산자는 식에서 두 정수 항목 사이에 비트 조작을 수행합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |<\<|비트 패턴에 산술 왼쪽 시프트를 수행합니다.|  
 |>>|비트 패턴에 산술 오른쪽 시프트를 수행합니다.|  
