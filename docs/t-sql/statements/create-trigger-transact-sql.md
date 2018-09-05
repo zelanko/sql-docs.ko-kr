@@ -32,12 +32,12 @@ caps.latest.revision: 140
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ecf29c3e591bce67ef204ad8aabdb4eea84fa992
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+ms.openlocfilehash: fb429009395a190380f2200dba7ccd3f6cda4c27
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038140"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240271"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -558,7 +558,7 @@ END;
 ```  
   
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>7. 트리거를 발생시킨 이벤트 보기  
- 다음 예에서는 `sys.triggers` 및 `sys.trigger_events` 카탈로그 뷰를 쿼리하여 `safety` 트리거를 발생시킨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트를 확인합니다. `safety`는 이전 예에서 만들었습니다.  
+ 다음 예에서는 `sys.triggers` 및 `sys.trigger_events` 카탈로그 뷰를 쿼리하여 `safety` 트리거를 발생시킨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트를 확인합니다. `safety` 트리거는 위에 있는 'D' 예제에서 생성됩니다.  
   
 ```sql  
 SELECT TE.*  

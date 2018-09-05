@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 701de1160cad251691253b32b828c6ad91c945db
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058751"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348323"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> 열 옵션
 
  `COLLATE` *Windows_collation_name*  
- 식에 대한 데이터 정렬을 지정합니다. 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 Windows 데이터 정렬 중 하나여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 Windows 데이터 정렬 목록의 경우 [Windows 데이터 정렬 이름(Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)을 참조하세요.  
+ 식에 대한 데이터 정렬을 지정합니다. 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 Windows 데이터 정렬 중 하나여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 Windows 데이터 정렬 목록의 경우 [Windows 데이터 정렬 이름(Transact-SQL)](windows-collation-name-transact-sql.md)을 참조하세요.  
   
  `NULL` | `NOT NULL`  
  열에서 `NULL` 값이 허용되는지 여부를 지정합니다. 기본값은 `NULL`입니다.  
@@ -180,7 +180,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |*n* 값|전체 자릿수|소수 자릿수|  
 |--:|--:|-:|  
 |`0`|19|0|  
-|`1`|21|@shouldalert|  
+|`1`|21|1|  
 |`2`|22|2|  
 |`3`|23|3|  
 |`4`|24|4|  
@@ -247,7 +247,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 | `bigint`|8|  
 | `int` |4|  
 | `smallint` |2|  
-| `tinyint` |@shouldalert|  
+| `tinyint` |1|  
   
  `bit`  
  `1`, `0` 또는 NULL 값을 가질 수 있는 정수 데이터 형식입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 bit 열의 저장소를 최적화합니다. 테이블에 8개 이하의 bit 열이 있는 경우 열은 1바이트로 저장되고, 9-16개의 bit 열이 있을 경우 2바이트로 저장되는 식입니다.  

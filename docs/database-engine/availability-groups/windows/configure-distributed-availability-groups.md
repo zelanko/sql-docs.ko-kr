@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769069"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348204"
 ---
 # <a name="configure-distributed-availability-group"></a>분산 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "34769069"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>모든 IP 주소를 수신 대기하도록 끝점 수신기를 설정합니다.
+### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>모든 IP 주소를 수신 대기하도록 엔드포인트 수신기를 설정합니다.
 
-끝점에서 분배 가용성 그룹의 서로 다른 가용성 그룹 간에 통신할 수 있는지 확인합니다. 하나의 가용성 그룹이 끝점의 특정 네트워크로 설정되면 분산 가용성 그룹이 제대로 작동하지 않습니다. 분산 가용성 그룹에서 복제본을 호스팅하는 각 서버에서 수신기를 `LISTENER_IP = ALL`로 구성합니다. 
+엔드포인트에서 분배 가용성 그룹의 서로 다른 가용성 그룹 간에 통신할 수 있는지 확인합니다. 하나의 가용성 그룹이 엔드포인트의 특정 네트워크로 설정되면 분산 가용성 그룹이 제대로 작동하지 않습니다. 분산 가용성 그룹에서 복제본을 호스팅하는 각 서버에서 수신기를 `LISTENER_IP = ALL`로 구성합니다. 
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>모든 IP 주소를 수신 대기하도록 수신기 만들기
 
-예를 들어 다음 스크립트에서는 모든 IP 주소에서 수신 대기하는 5022 TCP 포트에 수신기 끝점을 만듭니다.  
+예를 들어 다음 스크립트에서는 모든 IP 주소에서 수신 대기하는 5022 TCP 포트에 수신기 엔드포인트를 만듭니다.  
 
 ```sql
 CREATE ENDPOINT [aodns-hadr] 
@@ -51,7 +51,7 @@ GO
 
 #### <a name="alter-a-listener-to-listen-to-all-ip-addresses"></a>모든 IP 주소를 수신 대기하도록 수신기 변경
 
-예를 들어 다음 스크립트에서는 모든 IP 주소에서 수신 대기하도록 수신기 끝점을 변경합니다.  
+예를 들어 다음 스크립트에서는 모든 IP 주소에서 수신 대기하도록 수신기 엔드포인트를 변경합니다.  
 
 ```sql
 ALTER ENDPOINT [aodns-hadr] 
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>첫 번째 가용성 그룹 만들기
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>첫 번째 클러스터에 주 가용성 그룹 만들기  
-첫 WSFC에 주 가용성 그룹을 만듭니다.   이 예제에서 `ag1` 데이터베이스에 대한 가용성 그룹 이름은 `db1`입니다.      
+첫 WSFC에 주 가용성 그룹을 만듭니다.   이 예제에서 `ag1` 데이터베이스에 대한 가용성 그룹 이름은 `db1`입니다. 기본 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전역 기본**이라고 합니다. Server1은 이 예제의 전역 기본입니다.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>두 번째 가용성 그룹 만들기  
- 그런 다음 두 번째 WSFC에서 두 번째 가용성 그룹인 `ag2`을(를) 만듭니다. 이 경우 주 가용성 그룹에서 자동으로 시딩되므로 데이터베이스를 지정하지 않습니다.  
+ 그런 다음 두 번째 WSFC에서 두 번째 가용성 그룹인 `ag2`을(를) 만듭니다. 이 경우 주 가용성 그룹에서 자동으로 시딩되므로 데이터베이스를 지정하지 않습니다.  보조 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전달자**라고 합니다. 이 예에서 server3은 전달자입니다. 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -135,7 +135,7 @@ GO
 ```  
   
 > [!NOTE]  
-> 보조 가용성 그룹은 동일한 데이터베이스 미러링 끝점(이 예제에서는 5022 포트)을 사용해야 합니다. 그렇지 않으면 로컬 장애 조치(failover) 후 복제가 중지됩니다.  
+> 보조 가용성 그룹은 동일한 데이터베이스 미러링 엔드포인트(이 예제에서는 5022 포트)를 사용해야 합니다. 그렇지 않으면 로컬 장애 조치(failover) 후 복제가 중지됩니다.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>보조 복제본을 보조 가용성 그룹에 조인  
  이 예제에서는 보조 복제본 `server4`에서 다음 명령이 실행되어 가용성 그룹 `ag2` 에 조인됩니다. 그런 다음 가용성 그룹은 보조 가용성 그룹에 데이터베이스를 만들어 직접 시딩을 지원할 수 있습니다.  
@@ -180,7 +180,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** 은 가용성 그룹의 데이터베이스 미러링 끝점과 함께 각 가용성 그룹에 대한 수신기를 지정합니다. 이 예제에서 수신기는 `5022` 포트(수신기를 만드는 데 사용된 `60173` 포트 아님)입니다. Azure의 인스턴스 등, 부하 분산 장치를 사용할 경우 [가용성 그룹 포트에 대해 부하 분산 규칙을 추가합니다](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). SQL Server 인스턴스 포트 외에도 수신기 포트에 대한 규칙을 추가합니다. 
+>  **LISTENER_URL** 은 가용성 그룹의 데이터베이스 미러링 엔드포인트와 함께 각 가용성 그룹에 대한 수신기를 지정합니다. 이 예제에서 수신기는 `5022` 포트(수신기를 만드는 데 사용된 `60173` 포트 아님)입니다. Azure의 인스턴스 등, 부하 분산 장치를 사용할 경우 [가용성 그룹 포트에 대해 부하 분산 규칙을 추가합니다](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). SQL Server 인스턴스 포트 외에도 수신기 포트에 대한 규칙을 추가합니다. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>두 번째 클러스터에 분산 가용성 그룹 조인  
  그런 다음 두 번째 WSFC에 분산형 가용성 그룹을 조인합니다.  
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 이 경우에는 수동 장애 조치(failover)만 지원됩니다. 다음 Transact-SQL 문은 `distributedag`라는 이름의 분산 가용성 그룹을 장애 조치(failover)합니다.  
 
 
-1. 두 가용성 그룹에 대해 가용성 모드를 동기 커밋으로 설정합니다. 
+1. 전역 기본 및 전달자 *모두*에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
    >일반 가용성 그룹과 마찬가지로 분산된 가용성 그룹의 두 가용성 그룹 복제본 부분 간에 동기화 상태는 두 복제본의 가용성 모드에 따라 다릅니다. 예를 들어 동기 커밋이 발생할 경우 현재 주 가용성 그룹 및 보조 가용성 그룹은 모두 동기 커밋 가용성 모드로 구성되어야 합니다.  
 
 
-1. 분산 가용성 그룹의 상태가 `SYNCHRONIZED`으로 변경될 때까지 대기합니다. 기본 가용성 그룹의 주 복제본을 호스트하는 SQL Server에서 다음 쿼리를 실행합니다. 
+1. 분산 가용성 그룹의 상태가 `SYNCHRONIZED`으로 변경될 때까지 대기합니다. 기본 가용성 그룹의 주 복제본인 전역 기본에서 다음 쿼리를 실행합니다. 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     가용성 그룹 **synchronization_state_desc** 가 `SYNCHRONIZED`가 되면 계속합니다. **synchronization_state_desc** 가 `SYNCHRONIZED`가 아니면 변경될 때까지 5초 마다 명령을 실행합니다. **synchronization_state_desc** = `SYNCHRONIZED`가 될 때까지 진행하지 마세요. 
 
-1. 기본 가용성 그룹의 주 복제본을 호스트하는 SQL Server에서 분산 가용성 그룹 역할을 `SECONDARY`로 설정합니다. 
+1. 전역 기본에서 분산 가용성 그룹 역할을 `SECONDARY`로 설정합니다. 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

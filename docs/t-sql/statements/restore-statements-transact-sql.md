@@ -44,12 +44,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 37bf91db051a3f3a8369ecefea68288139181075
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: c37bc6aed288fd54e12839d5dd7f4f765e3eb823
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40405993"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348374"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -773,6 +773,8 @@ FROM URL
  
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
+전제 조건으로 BLOB 저장소 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 저장소 URL을 사용하여 자격 증명을 조회하고 백업 장치를 읽는 데 필요한 정보를 찾습니다.
+
 RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함). 
 
 다음 데이터베이스 옵션은 설정/재정의되며 나중에 변경할 수 없습니다.
@@ -799,27 +801,30 @@ RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경
 암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
     
 ## <a name="permissions"></a>Permissions  
-복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다.  
-  
+RESTORE를 실행하려면 사용자에게 CREATE DATABASE 권한이 있어야 합니다.  
+```
+CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
+GRANT CREATE ANY DATABASE TO [mylogin];
+```  
 멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
   
 ##  <a name="examples"></a> 예  
 다음 예제에서는 URL에서 자격 증명 생성을 비롯한 복사 전용 데이터베이스 백업을 복원합니다.  
   
-###  <a name="restore-mi-database"></a> 1. 세 개의 백업 장치에서 데이터베이스를 복원합니다.   
+###  <a name="restore-mi-database"></a> 1. 네 개의 백업 장치에서 데이터베이스를 복원합니다.   
 ```sql
 
 -- Create credential
-CREATE CREDENTIAL [https://mibackups.blob.core.windows.net/wide-world-importers]
+CREATE CREDENTIAL [https://mybackups.blob.core.windows.net/wide-world-importers]
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
        SECRET = 'sv=2017-11-09&ss=bq&srt=sco&sp=rl&se=2022-06-19T22:41:07Z&st=2018-06-01T14:41:07Z&spr=https&sig=s7wddcf0w%3D';
 GO
--- Simple example 
+-- Restore database
 RESTORE DATABASE WideWorldImportersStandard
-FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
+FROM URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
 ```
 데이터베이스가 이미 있는 경우 다음 오류가 표시됩니다.
 ```
@@ -827,8 +832,27 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 ###  <a name="restore-mi-database-variables"></a> 2. 변수를 통해 지정된 데이터베이스를 복원합니다.  
--- 변수가 있는 예: DECLARE @db_name sysname = 'WideWorldImportersStandard'; DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak'; RESTORE DATABASE @db_name FROM URL = @url
+
+```
+DECLARE @db_name sysname = 'WideWorldImportersStandard';
+DECLARE @url nvarchar(400) = N'https://mybackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
+
+RESTORE DATABASE @db_name 
+FROM URL = @url
 ```  
+
+### <a name="restore-mi-database-progress"></a> 3. RESTORE 문의 진행 상태를 추적합니다. 
+
+```
+SELECT  query = a.text, start_time, percent_complete,
+        eta = dateadd(second,estimated_completion_time/1000, getdate()) 
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a 
+WHERE r.command = 'RESTORE DATABASE'
+```
+
+> [!Note]
+> 이 보기에는 두 개의 복원 요청이 표시될 수 있습니다. 하나는 클라이언트가 보낸 원래 RESTORE 문이고, 다른 하나는 클라이언트 연결에 실패하더라도 실행되는 백그라운드 RESTORE 문입니다.
 
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -843,22 +867,22 @@ Database 'WideWorldImportersStandard' already exists. Choose a different databas
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# SQL Parallel Data Warehouse
+# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
 
 
-Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
+데이터베이스 백업에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 어플라이언스로 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 사용자 데이터베이스를 복원합니다. 데이터베이스는 이전에 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE&#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/backup-transact-sql.md) 명령으로 만든 백업에서 복원됩니다. 백업 및 복원 작업을 사용하여 재해 복구 계획을 작성하거나 한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 이동합니다.  
   
 > [!NOTE]  
->  Restoring master includes restoring appliance login information. To restore master, use the [Restore the master Database &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
-For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+>  master 복원에는 어플라이언스 로그인 정보 복원이 포함됩니다. master를 복원하려면 **Configuration Manager** 도구의 [master 데이터베이스 복원&#40;Transact-SQL&#41; ](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) 페이지를 사용합니다. 제어 노드에 액세스할 수 있는 관리자가 이 작업을 수행할 수 있습니다.  
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스 백업에 대한 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에 있는 “백업 및 복원”을 참조하세요.  
   
-## Syntax  
+## <a name="syntax"></a>구문  
   
 ```sql  
   

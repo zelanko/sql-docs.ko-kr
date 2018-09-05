@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd3fe488c2ae6bff1b94a11996bc67a88fd72691
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 447f57e753c243958904d6f5c6c380ed157c222e
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863988"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381221"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자 열기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32863988"
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Windows 10에서 ODBC 데이터 원본 관리자를 열려면   
 
-1.  **시작** 페이지에서 **ODBC 데이터 원본**을 입력합니다. *ODBC 데이터 원본 데스크톱 응용 프로그램* 이 선택 항목으로 표시됩니다. 
+1.  **시작** 페이지에서 **ODBC 데이터 원본**을 입력합니다. *ODBC 데이터 원본 데스크톱 앱*이 선택 항목으로 표시됩니다. 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Windows 7에서 ODBC 데이터 원본 관리자를 열려면  

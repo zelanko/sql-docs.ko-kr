@@ -1,7 +1,7 @@
 ---
 title: 쿼리 힌트(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331599"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240291"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331599"
  쿼리에 비클러스터형 메모리 액세스에 최적화된 columnstore 인덱스가 사용되지 않도록 방지합니다. 쿼리에 Columnstore 인덱스 사용을 방지하기 위한 쿼리 힌트와 Columnstore 인덱스를 사용하기 위한 인덱스 힌트가 포함되어 있으면 힌트가 충돌하게 되고 오류가 반환됩니다.  
   
  MAX_GRANT_PERCENT = *percent*  
- PERCENT 단위의 최대 메모리 부여 크기입니다. 쿼리가 이 제한을 초과하지 않게 보장합니다. Resource Governor 설정이 이보다 낮으면 실제 제한을 더 낮게 설정할 수 있습니다. 유효한 값은 0.0에서 100.0 사이의 값입니다.  
+ PERCENT 단위의 최대 메모리 부여 크기입니다. 쿼리가 이 제한을 초과하지 않게 보장합니다. 리소스 관리자 설정이 이 힌트에 지정된 값보다 낮은 경우 실제 제한을 더 낮게 설정할 수 있습니다. 유효한 값은 0.0에서 100.0 사이의 값입니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -255,7 +255,7 @@ ms.locfileid: "39331599"
  이러한 계획이 불가능할 경우 쿼리 최적화 프로그램은 쿼리 실행 시 오류를 검색하도록 지연시키지 않고 오류를 반환합니다. 행에는 가변 길이 열이 포함될 수 있으며 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 처리할 수 있는 범위 이상의 잠재적 최대 크기를 가진 행을 정의하도록 허용합니다. 그러나 대개 응용 프로그램은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 처리할 수 있는 한도 내의 실제 크기를 가진 행을 저장합니다. 너무 긴 행이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실행 오류를 반환합니다.  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1로 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 적용됩니다.
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  힌트 이름 **작은 따옴표 안**에서 지정한 대로 쿼리 프로세서에 하나 이상의 추가 힌트를 제공합니다.   
 
@@ -285,11 +285,17 @@ ms.locfileid: "39331599"
  일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조합니다.
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ 쿼리가 데이터베이스 호환성 수준 *n*으로 컴파일된 것처럼 쿼리 수준에서 쿼리 최적화 프로그램 동작을 강제 실행합니다. 여기서 *n*은 지원되는 데이터베이스 호환성 수준입니다. *n*에 대해 현재 지원되는 값 목록은 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
  
-> [!TIP]
-> 힌트 이름은 대/소문자를 구분하지 않습니다.
+    > [!NOTE]
+    > 데이터베이스 범위 구성, 추적 플래그 또는 다른 쿼리 힌트(예: QUERYTRACEON)를 통해 강제 실행되는 경우 QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 힌트는 기본 또는 레거시 카디널리티 예상 설정을 재정의하지 않습니다.   
+    > 이 힌트는 쿼리 최적화 프로그램의 동작에만 영향을 줍니다. 특정 데이터베이스 기능의 가용성과 같이, 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 따라 달라질 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능에는 영향을 주지 않습니다.   
   
   지원되는 모든 USE HINT 이름 목록은 동적 관리 뷰 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 사용하여 쿼리할 수 있습니다.    
+
+> [!TIP]
+> 힌트 이름은 대/소문자를 구분하지 않습니다.   
   
 > [!IMPORTANT] 
 > 일부 USE HINT 힌트는 전역 또는 세션 수준에서 사용하는 추적 플래그나 데이터베이스 범위 구성 설정과 충돌할 수 있습니다. 이 경우 쿼리 수준 힌트(USE HINT)가 항상 우선합니다. USE HINT가 쿼리 수준에서 사용하는 다른 쿼리 힌트나 추적 플래그와 충돌하는 경우(예: QUERYTRACEON) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리를 실행할 때 오류를 생성합니다. 

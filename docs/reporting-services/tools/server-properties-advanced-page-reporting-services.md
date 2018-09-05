@@ -2,25 +2,18 @@
 title: 서버 속성(고급 페이지) - Reporting Services | Microsoft Docs
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412624"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266271"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
 
@@ -139,15 +132,15 @@ ms.locfileid: "40412624"
 
 **OfficeOnlineDiscoveryURL** ***(Power BI Report Server 전용)*** Excel 통합 문서를 볼 수 있도록 Office Online Server 인스턴스의 주소를 설정합니다.
 
-**RequireIntune** Intune이 Power BI 모바일 앱을 통해 조직의 보고서에 액세스하도록 이 옵션을 설정합니다. *기본값은 false입니다.*
+**RequireIntune** Intune이 Power BI 모바일 앱을 통해 조직의 보고서에 액세스하도록 요구합니다. *기본값은 false입니다.*
 
-**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server 전용)*** 일정 새로 고침 제한 시간을 설정입니다. *기본값은 120입니다.*
+**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server 전용)*** 일정 새로 고침 제한 시간을 설정합니다. *기본값은 120입니다.*
 
-**ShowDownloadMenu** 클라이언트 도구 다운로드 메뉴를 사용하도록 이 옵션을 설정합니다. *기본값은 true입니다.*
+**ShowDownloadMenu** 클라이언트 도구 다운로드 메뉴를 사용하도록 설정합니다. *기본값은 true입니다.*
 
 **TimeInitialDelaySeconds** 초기 시간을 지연할 시간(초)을 설정합니다. *기본값은 60입니다.*
 
-**TrustedFileFormat** 저장할 수 있는 모든 외부 파일 형식을 설정합니다. *기본값은 jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png입니다.*
+**TrustedFileFormat** Reporting Services 포털 사이트의 브라우저 내에서 열리는 모든 외부 파일 형식을 설정합니다. 나열되지 않은 외부 파일 형식의 경우 브라우저에서 옵션을 다운로드하라는 메시지가 표시됩니다. 기본값은 jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png입니다.
 
 **EnablePowerBIReportExportData** ***(Power BI Report Server 전용)***  
 Power BI 시각적 개체에서 Power BI Report Server 데이터 내보내기를 사용하도록 설정합니다. 사용 가능한 값은 True 또는 False입니다.  기본값은 True입니다.  

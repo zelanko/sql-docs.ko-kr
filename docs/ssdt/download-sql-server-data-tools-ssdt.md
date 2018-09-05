@@ -1,7 +1,7 @@
 ---
 title: SSDT(SQL Server Data Tools) 다운로드 | Microsoft 문서
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 6989aaf0ccef6a9cb7656a23ffdc28062a33839b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e2a11a9b01f6c1f45ba6f10bda351441235f8247
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084932"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152614"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,53 +84,6 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 
 
-## <a name="ssdt-for-vs-2015-standalone-installer"></a>VS 2015용 SSDT(독립 실행형 설치 관리자)
-
-[![다운로드](../ssdt/media/download.png)Visual Studio 2015용 SSDT(17.4) 다운로드](https://go.microsoft.com/fwlink/?linkid=863440)
-
-**버전 정보**  
-  
-릴리스 번호: 17.4
-
-이 릴리스에 대한 빌드 번호: 14.0.61712.050
-  
-전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
-
-### <a name="available-languages---ssdt-for-vs-2015"></a>사용 가능한 언어 - VS 2015용 SSDT
-  
-이 **VS 2015용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.  
-
-[중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
-[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
-[프랑스어]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
-[독일어]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
-[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | 
-[일본어]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | 
-[한국어]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | 
-[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | 
-[러시아어]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | 
-[스페인어]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)  
-
-### <a name="iso-images---ssdt-for-vs-2015"></a>ISO 이미지 - VS 2015용 SSDT
-
-SSDT의 ISO 이미지를 사용해도 SSDT를 설치하거나 관리 설치 지점을 설정할 수 있습니다. ISO는 SSDT에 필요한 모든 구성 요소가 들어 있는 자체 포함된 파일이고 다시 시작 가능한 다운로드 관리자를 사용하여 다운로드할 수 있어 네트워크 대역폭이 제한되어 있거나 덜 안정적인 상황에 유용합니다. 다운로드가 완료된 다음 ISO를 드라이브로 탑재하거나 DVD로 구울 수 있습니다.
-
-> [!NOTE]
-> 지금 VS 2015 17.4용 SSDT의 ISO 이미지를 사용할 수 있습니다.
-
-[중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
-[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
-[프랑스어]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
-[독일어]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
-[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x410) |
-[일본어]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x411) |
-[한국어]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x412) |
-[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x416) |
-[러시아어]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x419) |
-[스페인어]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40a)
-
 
 
 ## <a name="supported-sql-versions"></a>지원되는 SQL 버전
@@ -143,6 +96,11 @@ SSDT의 ISO 이미지를 사용해도 SSDT를 설치하거나 관리 설치 지�
   
 ## <a name="dacfx"></a>DacFx
 Visual Studio 2015용 SSDT 및 Visual Studio 2017용 SSDT는 모두 DacFx 17.4.1를 사용합니다. [DacFx(Data-Tier Application Framework) 17.4.1 다운로드](https://www.microsoft.com/download/details.aspx?id=56508)
+
+## <a name="previous-versions"></a>이전 버전
+
+Visual Studio 2015용 SSDT 또는 SSDT의 이전 버전을 다운로드하고 설치하려면 [SQL Server Data Tools의 이전 릴리스(SSDT 및 SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)를 참조하세요.
+
 
 
 ## <a name="next-steps"></a>다음 단계  
