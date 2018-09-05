@@ -1,6 +1,6 @@
 ---
 title: SQL Server machine learning에서 실시간 점수 매기기 | Microsoft Docs
-description: Sp_rxPredict, SQL Server에서 R로 작성 된 미리 학습 된 모델에 대해 dta 입력 점수 매기기를 사용 하 여 예측을 생성 합니다.
+description: Sp_rxPredict, SQL Server에서 R로 작성 된 미리 학습 된 모델에 대해 입력 데이터 점수 매기기를 사용 하 여 예측을 생성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
@@ -8,20 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d5a3d0318f925918ef98ae18744e4287d6b81108
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40394787"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348303"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>SQL Server machine learning에서 sp_rxPredict으로 실시간 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server 관계형 데이터에 대 한 거의 실시간으로 작동 하는 방법을 점수 매기기, machine learning을 사용한 모델 R에서 작성 된 설명 
-
-> [!Note]
-> 네이티브 점수 매기기는 매우 빠르게 평가 하는 것에 대 한 네이티브 T-SQL 예측 함수를 사용 하는 실시간 점수 매기기의 특수 구현 합니다. 자세한 내용 및 가용성을 참조 하세요 [네이티브 점수 매기기](sql-native-scoring.md)합니다.
+실시간 점수 매기기 CLR 확장 기능이 고성능 예측 또는 워크 로드 예측의 점수에 대 한 SQL Server에서 사용 합니다. 실시간 점수 매기기 언어 중립적 이므로 R 종속 되지 않고 실행 하거나 Python 번 실행 합니다. Microsoft 함수에서 생성, 학습 및 SQL Server에서 이진 형식으로 직렬화 된 모델을 가정 하 고, 실시간 점수 매기기 하 여 R 또는 Python 추가 기능에 있지 않은 SQL Server 인스턴스에서 새 데이터 입력에 대해 예측 된 결과 생성 합니다. 설치 합니다.
 
 ## <a name="how-real-time-scoring-works"></a>실시간 점수 매기기 작업
 
@@ -36,41 +33,58 @@ ms.locfileid: "40394787"
 3. 모델에 대 한 입력으로 새 입력된 데이터를 테이블 형식 또는 단일 행을 제공합니다.
 4. 점수를 생성 하려면 sp_rxPredict 저장 프로시저를 호출 합니다.
 
-## <a name="get-started"></a>시작
-
-코드 예제 및 지침을 참조 하세요 [네이티브 점수 매기기 또는 실시간 점수 매기기를 수행 하는 방법을](r/how-to-do-realtime-scoring.md)합니다.
-
-점수를 매기기 위해 rxPredict를 사용할 수 있는 방법을의 예제를 참조 하세요. [종단 간 최종 대출 상각 예측 빌드를 사용 하 여 Azure HDInsight Spark 클러스터 및 SQL Server 2016 R 서비스](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
-
 > [!TIP]
-> R 코드에서 단독으로 작업 하는 경우 사용할 수도 있습니다는 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 빠른 점수를 매기기 위해는 함수입니다.
+> 작업에서 실시간 점수 매기기의 예제를 참조 하세요. [종단 간 최종 대출 상각 예측 빌드를 사용 하 여 Azure HDInsight Spark 클러스터 및 SQL Server 2016 R 서비스](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
-## <a name="requirements"></a>요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-실시간 점수 매기기는 이러한 플랫폼에서 지원 됩니다.
++ [SQL Server CLR 통합 사용](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)합니다.
 
-+ SQL Server 2017 Machine Learning Services
-+ 이상 버전 9.1.0으로 R 구성 요소를 업그레이드를 사용 하 여 SQL Server R Services 2016
++ [실시간 점수 매기기를 사용 하도록 설정](#bkmk_enableRtScoring)합니다.
 
-SQL Server에서 SQL Server에 CLR 기반 라이브러리를 추가 하기 전에 실시간 점수 매기기 기능을 설정 해야 합니다.
++ 사전에 지원 되는 중 하나를 사용 하 여 모델을 학습 해야 합니다 **rx** 알고리즘입니다. R의 경우으로 실시간 점수 매기기 `sp_rxPredict` 와 함께 [RevoScaleR 및 MicrosoftML 알고리즘 지원](#bkmk_rt_supported_algos)합니다. Python에 대 한 참조 [revoscalepy 및 microsoftml 알고리즘 지원](#bkmk_py_supported_algos)
 
-Microsoft R Server를 기반으로 하는 분산된 환경에서 실시간 점수 매기기에 대 한 정보를 참조 합니다 [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) 함수에서 사용할 수 있는 [mrsDeploy 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)를 지 원하는 실시간 점수 매기기 모델을 새 R Server에서 실행 되는 웹 서비스를 게시 합니다.
++ 사용 하 여 모델 serialize [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) R에 대 한 및 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) Python에 대 한 합니다. 이러한 serialization 함수 빠른 점수 매기기를 지원 하도록 최적화 되었습니다.
 
-### <a name="restrictions"></a>Restrictions
+> [!Note]
+> 실시간 점수 매기기 몇 행에서 수백 수천 개의 행에 이르기까지 더 작은 데이터 집합에 대 한 빠른 예측에 대 한 현재 최적화 됩니다. 사용 하 여 큰 데이터 집합 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 빠를 수 있습니다.
 
-+ 사전에 지원 되는 중 하나를 사용 하 여 모델을 학습 해야 합니다 **rx** 알고리즘입니다. 자세한 내용은 참조 하세요 [알고리즘을 지원](#bkmk_rt_supported_algos)합니다. 사용 하 여 실시간 점수 매기기 `sp_rxPredict` RevoScaleR 및 MicrosoftML 알고리즘을 지원 합니다.
+<a name="bkmk_py_supported_algos"></a>
 
-+ 새로운 직렬화 함수를 사용 하 여 모델을 저장 해야 합니다. [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) R에 대 한 및 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) Python에 대 한 합니다. 이러한 serialization 함수 빠른 점수 매기기를 지원 하도록 최적화 되었습니다.
+## <a name="supported-algorithms"></a>지원되는 알고리즘
 
-+ 실시간 점수 매기기 인터프리터; 사용 하지 않습니다. 따라서 인터프리터 필요할 수 있는 모든 기능 점수 매기기 단계에서 지원 되지 않습니다.  이러한 포함 될 수 있습니다.
+### <a name="python-algorithms-using-real-time-scoring"></a>실시간 점수 매기기를 사용 하 여 Python 알고리즘
 
-  + 사용 하 여 모델을 `rxGlm` 또는 `rxNaiveBayes` 알고리즘이 현재 지원 되지 않습니다
++ revoscalepy 모델
 
-  + R 변환 함수를 사용 하 여 또는 같은 변환을 포함 하는 수식을 사용 하는 RevoScaleR 모델 <code>A ~ log(B)</code> 실시간 점수 매기기에서 지원 되지 않습니다. 이 유형의 모델을 사용 하려면에서 변환을 수행 하는 권장 된 실시간 점수 매기기 데이터를 전달 하기 전에 데이터를 입력 합니다.
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
+  
+  모델 표시 \* 또한 PREDICT 함수를 사용 하 여 네이티브 점수 매기기를 지원 합니다.
 
-+ 실시간 점수 매기기 몇 행에서 수백 수천 개의 행에 이르기까지 더 작은 데이터 집합에 대 한 빠른 예측에 대 한 현재 최적화 됩니다. 사용 하 여 큰 데이터 집합 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 빠를 수 있습니다.
++ microsoftml 모델
 
-### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-real-time-scoring"></a><a name="bkmk_rt_supported_algos">실시간 점수 매기기를 지 원하는 알고리즘
+  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_net](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+
++ Microsoftml 제공한 변환
+
+  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
+
+
+<a name="bkmk_rt_supported_algos"></a>
+
+### <a name="r-algorithms-using-real-time-scoring"></a>실시간 점수 매기기를 사용 하 여 R 알고리즘
 
 + RevoScaleR 모델
 
@@ -101,14 +115,91 @@ Microsoft R Server를 기반으로 하는 분산된 환경에서 실시간 점�
 
 ### <a name="unsupported-model-types"></a>지원 되지 않는 모델 유형
 
-이전 섹션에서 명시적으로 나열 된 것 이외의 R 변환에 대 한 실시간 점수 매기기 지원 되지 않습니다. 
+실시간 점수 매기기 인터프리터; 사용 하지 않습니다. 따라서 인터프리터 필요할 수 있는 모든 기능 점수 매기기 단계에서 지원 되지 않습니다.  이러한 포함 될 수 있습니다.
 
-RevoScaleR 및 다른 Microsoft R 관련 라이브러리를 사용 하 여 작업에 익숙한 개발자를 위한 지원 되지 않는 함수를 포함 `rxGlm` 또는 `rxNaiveBayes` RevoScaleR에 PMML 모델에서 알고리즘 및 CRAN에서 다른 R 라이브러리를 사용 하 여 만든 다른 모델 또는 다른 리포지토리입니다.
+  + 사용 하 여 모델을 `rxGlm` 또는 `rxNaiveBayes` 알고리즘이 지원 되지 않습니다.
 
-### <a name="known-issues"></a>알려진 문제
+  + 변환 함수 또는 같은 변환을 포함 하는 수식을 사용 하 여 모델 <code>A ~ log(B)</code> 실시간 점수 매기기에서 지원 되지 않습니다. 이 유형의 모델을 사용 하려면 실시간 점수 매기기 데이터를 전달 하기 전에 입력된 데이터 변환을 수행 하는 것이 좋습니다.
 
-+ `sp_rxPredict` NULL 값을 모델로 전달 될 때 부정확 한 메시지를 반환 합니다. "System.Data.SqlTypes.SqlNullValueException:Data에서 Null"입니다.
+
+## <a name="example-sprxpredict"></a>예제: sp_rxPredict
+
+이 섹션에서는 설정 하는 데 필요한 단계를 설명 **실시간** 예측, R에서 T-SQL에서 함수를 호출 하는 방법의 예제를 제공 합니다.
+
+<a name ="bkmk_enableRtScoring"></a> 
+
+### <a name="step-1-enable-the-real-time-scoring-procedure"></a>1단계. 실시간 점수 매기기 절차를 사용 하도록 설정
+
+점수 매기기에 사용 하려는 각 데이터베이스에 대해이 기능을 활성화 해야 합니다. 서버 관리자에 RevoScaleR 패키지에 포함 되어 있는 명령줄 유틸리티를 RegisterRExt.exe를 실행 해야 합니다.
+
+> [!NOTE]
+> 작업 실시간 채 점을 위해 순서로 SQL CLR 기능을 사용 해야 인스턴스에; 또한 데이터베이스는 신뢰할 수 있는 표시 해야 합니다. 스크립트를 실행 하는 경우 이러한 함수를 수행 됩니다. 그러나이 작업을 수행 하기 전에 추가 보안에 미치는 영향을 고려해 야!
+
+1. 관리자 권한 명령 프롬프트를 열고 RegisterRExt.exe가 있는 폴더로 이동 합니다. 기본 설치에서 경로 사용할 수 있습니다.
+    
+    `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
+
+2. 인스턴스 및 확장된 저장된 프로시저를 사용 하도록 설정 하려는 대상 데이터베이스의 이름을 대체 하 여 다음 명령을 실행 합니다.
+
+    `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
+
+    예를 들어 CLRPredict 데이터베이스 기본 인스턴스에서 확장된 저장된 프로시저에 추가 하려면 다음을 입력 합니다.
+
+    `RegisterRExt.exe /installRts /database:CLRPRedict`
+
+    인스턴스 이름을 데이터베이스가 기본 인스턴스에 있는 경우 선택 사항입니다. 명명된 된 인스턴스를 사용 하는 경우 인스턴스 이름을 지정 해야 합니다.
+
+3. RegisterRExt.exe 다음 개체를 만듭니다.
+
+    + 신뢰할 수 있는 어셈블리
+    + 저장된 프로시저 `sp_rxPredict`
+    + 새 데이터베이스 역할을 `rxpredict_users`입니다. 데이터베이스 관리자가 실시간 점수 매기기 기능을 사용 하는 사용자에 권한을 부여 하려면이 역할을 사용 합니다.
+
+4. 모든 사용자가 실행 해야 하는 추가 `sp_rxPredict` 새 역할을 합니다.
+
+> [!NOTE]
+> 
+> SQL Server 2017에 추가 보안 조치의에서 경우 CLR 통합을 사용 하 여 문제를 방지 하기 위해 이러한 측정값도이 저장된 프로시저의 사용에 대해 추가적인 제한을 적용합니다. 
+
+### <a name="step-2-prepare-and-save-the-model"></a>2단계. 준비 및 모델 저장
+
+Sp에 의해 필요한 이진 형식\_rxPredict PREDICT 함수를 사용 하는 데 필요한 형식으로 동일 합니다. 따라서 R 코드에서 호출을 포함할 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)를 지정 해야 하 고 `realtimeScoringOnly = TRUE`이 예제와 같이:
+
+```R
+model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
+```
+
+### <a name="step-3-call-sprxpredict"></a>3단계. Sp_rxPredict 호출
+
+Sp 호출\_rxPredict 것은 다른 저장 프로시저입니다. 현재 릴리스에서 저장된 프로시저는 두 개의 매개 변수를 사용 합니다.  _\@모델_ 이진 형식으로 모델에 대 한 및  _\@inputData_ 점수 매기기에 사용 하 여 데이터에 대 한 정의 유효한 SQL 쿼리입니다.
+
+PREDICT 함수에서 사용 되는 동일한 이진 형식 이므로 앞의 예제에서 모델 및 데이터 테이블을 사용할 수 있습니다.
+
+```SQL
+DECLARE @irismodel varbinary(max)
+SELECT @irismodel = [native_model_object] from [ml_models]
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
+
+EXEC sp_rxPredict
+@model = @irismodel,
+@inputData = N'SELECT * FROM iris_rx_data'
+```
+
+> [!NOTE]
+> 
+> Sp에 대 한 호출\_rxPredict 점수 매기기에 대 한 입력된 데이터에 모델의 요구 사항과 일치 하는 열이 포함 되어 있지 않으면 실패 합니다. 현재 다음.NET 데이터 형식만 지원 됩니다: double, float, short, ushort, long, ulong 및 문자열입니다.
+> 
+> 따라서 실시간 점수 매기기에 사용 하기 전에 입력된 데이터에서 지원 되지 않는 형식 필터링 해야 합니다.
+> 
+> 해당 SQL 형식에 대 한 자세한 내용은 [SQL-CLR 형식 매핑](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) 하거나 [CLR 매개 변수 데이터 매핑](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)합니다.
+
+## <a name="disable-real-time-scoring"></a>실시간 점수 매기기를 사용 하지 않도록 설정
+
+실시간 점수 매기기 기능을 사용 하지 않으려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 실행 합니다. `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>다음 단계
 
-[실시간 점수 매기기를 수행 하는 방법](r/how-to-do-realtime-scoring.md)
+점수를 매기기 위해 rxPredict를 사용할 수 있는 방법을의 예제를 참조 하세요 [종단 간 최종 대출 상각 예측 빌드를 사용 하 여 Azure HDInsight Spark 클러스터 및 SQL Server 2016 R 서비스가](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)합니다.
+
+SQL Server에서 점수 매기기 자세한 배경 정보를 참조 하세요 [SQL Server machine learning에서 예측을 생성 하는 방법을](r/how-to-do-realtime-scoring.md)합니다.
