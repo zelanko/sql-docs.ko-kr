@@ -33,12 +33,12 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
 
 ## <a name="target-audience"></a>대상 사용자
 
-이 자습서는 r, 및 요약 및 모델 생성 등과 같은 데이터 과학 작업을 사용 하 여 어느 정도 알고 이미 있는 사람들 또는 데이터 과학자를 위한 것입니다. 그러나 모든 코드가 제공 되므로 R을 처음 접하는 경우에 코드를 실행 하 고 필요한 서버 및 클라이언트 환경이 있다고 가정 하면 과정을 따르려면 수 있습니다.
+이 자습서는 R에 익숙하거나, 데이터 요약 및 모델 생성과 같은 데이터 과학 작업에 어느 정도 익숙한 데이터 과학자나 사람들을 위한 것입니다. 하지만 모든 코드가 제공되므로 R을 처음 접하는 경우에도 필요한 서버 및 클라이언트 환경만 있으면 코드를 실행하며 따라 할 수 있습니다.
 
-방법을 잘 알고 있어야 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문에 액세스 하는 방법을 배우고를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 도구를 사용 하 여 데이터베이스:
+또한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문법에 익숙해야 하고, 아래와 같은 도구를 이용해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 접근하는 방법을 알아야 합니다.
 
 + [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 
-+ Visual Studio에서 데이터베이스 도구 
++ Visual Studio의 데이터베이스 도구
 + 무료 [Visual Studio Code 용 mssql 확장](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)합니다.
   
 > [!TIP]
@@ -46,11 +46,11 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- **R 지 원하는 SQL Server**
+- **R을 지원하는 SQL Server**
   
-    설치할 [SQL Server 2017의 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) R 기능 또는 설치를 사용 하 여 [SQL Server 2016 R Services (In-database)](../install/sql-r-services-windows-install.md)합니다.
+    R 사용을 위해 [SQL Server 2017의 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)나 [SQL Server 2016 R Services (In-database)](../install/sql-r-services-windows-install.md)를 설치합니다.
 
-    외부 스크립팅이 사용 되 고 실행 패드 서비스가 실행 되 고 서비스에 액세스할 수 있는 권한이 있는지 확인 합니다.
+    외부 스크립트가 허용됐는지, Launchpad 서비스가 실행되고 있는지, 그리고 서비스에 접근할 수 있는 권한이 있는지 확인하십시오.
   
 -  **데이터베이스 사용 권한**
   
