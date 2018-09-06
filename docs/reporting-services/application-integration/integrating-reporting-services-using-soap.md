@@ -1,14 +1,10 @@
 ---
 title: SOAP을 사용하여 Reporting Services 통합 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,24 +15,22 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 - Web service [Reporting Services], application integration
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 54a5a16ea0e24db1638654ffed9921bd30551b2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53fc067c50db33b0f0861e2901eec91ac947902c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014570"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277555"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>SOAP을 사용하여 Reporting Services 통합
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API는 사용자 지정 보고 솔루션 개발을 위한 다수의 웹 서비스 끝점을 제공합니다. 끝점은 현재 관리와 실행의 두 범주로 나누어집니다. 관리 기능은 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010> 끝점을 통해 표시됩니다. <xref:ReportService2005> 끝점은 기본 모드로 구성된 보고서 서버를 관리하는 데 사용되고, <xref:ReportService2006> 끝점은 SharePoint 통합 모드에 대해 구성된 보고서 서버를 관리하는 데 사용됩니다. <xref:ReportService2010>은 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버를 관리할 수 있습니다.  
+  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API는 사용자 지정 보고 솔루션 개발을 위한 다수의 웹 서비스 엔드포인트를 제공합니다. 엔드포인트는 현재 관리와 실행의 두 범주로 나누어집니다. 관리 기능은 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010> 엔드포인트를 통해 표시됩니다. <xref:ReportService2005> 엔드포인트는 기본 모드로 구성된 보고서 서버를 관리하는 데 사용되고, <xref:ReportService2006> 엔드포인트는 SharePoint 통합 모드에 대해 구성된 보고서 서버를 관리하는 데 사용됩니다. <xref:ReportService2010>은 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버를 관리할 수 있습니다.  
   
 > [!NOTE]  
->  <xref:ReportService2005> 및 <xref:ReportService2006> 끝점은 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010> 끝점에는 두 끝점의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
+>  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010>엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
   
- 실행 기능은 <xref:ReportExecution2005> 끝점을 통해 표시되며 보고서 서버가 기본 또는 SharePoint 통합 모드로 구성된 경우에 사용됩니다. 다음 항목에서는 이러한 끝점을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, SharePoint 및 웹 응용 프로그램에서 보고 솔루션을 개발하는 방법을 설명합니다.  
+ 실행 기능은 <xref:ReportExecution2005> 엔드포인트를 통해 표시되며 보고서 서버가 기본 또는 SharePoint 통합 모드로 구성된 경우에 사용됩니다. 다음 항목에서는 이러한 엔드포인트를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, SharePoint 및 웹 응용 프로그램에서 보고 솔루션을 개발하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows 응용 프로그램에서 SOAP API 사용](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
