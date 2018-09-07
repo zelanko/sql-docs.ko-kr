@@ -38,8 +38,7 @@ ms.locfileid: "40393068"
   
 -   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
--   
-            [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
+-   [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
   
 -   [데모 작업을 사용한 성능 측정](#PerformanceMeasurementsusingtheDemoWorkload) 을 수행하기 위한 지침 – 데모 작업 자체를 실행하기 위한 지침뿐만 아니라 작업을 추진하는 데 사용되는 도구인 ostress를 설치하고 실행하기 위한 지침이 포함되어 있습니다.  
   
@@ -184,16 +183,14 @@ ms.locfileid: "40393068"
   
  Sales.SalesOrderHeader_inmem  
   
--   
-            *기본 제약 조건* 은 메모리 최적화 테이블에 지원되며 대부분의 기본 제약 조건은 있는 그대로 마이그레이션되었습니다. 그러나 원래 테이블 Sales.SalesOrderHeader에는 OrderDate 및 ModifiedDate 열에 대한 현재 날짜를 검색하는 두 가지 기본 제약 조건이 포함되어 있습니다. 동시 작업과 처리량이 많은 주문 처리 작업에서 전역 리소스는 경합 지점이 될 수 있습니다. 시스템 시간은 이러한 전역 리소스이며 판매 주문을 삽입하는 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 작업을 실행할 때 병목 현상을 발생시킬 수 있다는 사실이 관찰되었습니다. 이는 판매 주문 정보뿐만 아니라 판매 주문 머리글의 여러 열에 대해 시스템 시간을 검색해야 하는 경우 특히 해당하는 사실입니다. 이러한 문제는 이 예제에서 삽입되는 각 판매 주문에 대해 시스템 시간을 한 번만 검색하고 Sales.usp_InsertSalesOrder_inmem 저장 프로시저에서 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem의 datetime 열에 이 값을 사용하여 해결되었습니다.  
+-   *기본 제약 조건* 은 메모리 최적화 테이블에 지원되며 대부분의 기본 제약 조건은 있는 그대로 마이그레이션되었습니다. 그러나 원래 테이블 Sales.SalesOrderHeader에는 OrderDate 및 ModifiedDate 열에 대한 현재 날짜를 검색하는 두 가지 기본 제약 조건이 포함되어 있습니다. 동시 작업과 처리량이 많은 주문 처리 작업에서 전역 리소스는 경합 지점이 될 수 있습니다. 시스템 시간은 이러한 전역 리소스이며 판매 주문을 삽입하는 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 작업을 실행할 때 병목 현상을 발생시킬 수 있다는 사실이 관찰되었습니다. 이는 판매 주문 정보뿐만 아니라 판매 주문 머리글의 여러 열에 대해 시스템 시간을 검색해야 하는 경우 특히 해당하는 사실입니다. 이러한 문제는 이 예제에서 삽입되는 각 판매 주문에 대해 시스템 시간을 한 번만 검색하고 Sales.usp_InsertSalesOrder_inmem 저장 프로시저에서 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem의 datetime 열에 이 값을 사용하여 해결되었습니다.  
   
 -   *별칭 UDT* - 원래 테이블은 PurchaseOrderNumber 및 AccountNumber 열에 대해 두 가지 별칭 UDT(사용자 정의 데이터 형식)인 dbo.OrderNumber 및 dbo.AccountNumber를 각각 사용합니다. 
             [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 메모리 최적화 테이블에 대한 별칭 UDT를 지원하지 않으므로 새 테이블은 시스템 데이터 형식 nvarchar(25) 및 nvarchar(15)을 각각 사용합니다.  
   
 -   *인덱스 키의 Null 허용 열* - 원래 테이블에서 SalesPersonID 열은 Null을 허용하지만 새 테이블에서 이 열은 Null을 허용하지 않으며 값(-1)을 사용하는 기본 제약 조건을 갖습니다. 이는 메모리 최적화 테이블에 대한 인덱스의 경우 인덱스 키에 Null 허용 열이 있을 수 없기 때문이며, 이 경우 -1은 NULL의 대리 값입니다.  
   
--   
-            *계산 열* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에서는 메모리 최적화 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
+-   *계산 열* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에서는 메모리 최적화 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
   
 -   *Foreign key 제약 조건을* 메모리 최적화 테이블에 대 한 지원 되지 않습니다 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다. 이 테이블의 데이터에 대한 참조 무결성은 다음 스크립트를 사용하여 dbo.usp_ValidateIntegrity 저장 프로시저를 통해 확인될 수 있습니다.  
   
@@ -202,8 +199,7 @@ ms.locfileid: "40393068"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   
-            *CHECK 제약 조건* 은 SQL Server 2014에서 메모리 최적화 테이블에 지원되지 않습니다. 도메인 무결성은 이 스크립트를 사용하여 참조 무결성과 함께 확인됩니다.  
+-   *CHECK 제약 조건* 은 SQL Server 2014에서 메모리 최적화 테이블에 지원되지 않습니다. 도메인 무결성은 이 스크립트를 사용하여 참조 무결성과 함께 확인됩니다.  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -216,8 +212,7 @@ ms.locfileid: "40393068"
   
 -   *기본 제약 조건* - SalesOrderHeader와 유사하게 시스템 날짜/시간을 필요로 하는 기본 제약 조건은 마이그레이션되지 않으며, 대신 판매 주문을 삽입하는 저장 프로시저가 첫 번째 삽입 시 현재 시스템 날짜/시간을 삽입하는 작업을 처리합니다.  
   
--   
-            *계산 열* - 계산 열이 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 메모리 최적화 테이블에 지원되지 않기 때문에 계산 열 LineTotal이 마이그레이션되지 않았습니다. 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
+-   *계산 열* - 계산 열이 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 메모리 최적화 테이블에 지원되지 않기 때문에 계산 열 LineTotal이 마이그레이션되지 않았습니다. 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -247,8 +242,7 @@ ms.locfileid: "40393068"
   
  Sales.SpecialOffer  
   
--   
-  *CHECK* 및 *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOffer_inmem 및 Sales.usp_DeleteSpecialOffer_inmem을 사용하여 특별 행사를 삽입하고 삭제할 수 있습니다. 이러한 프로시저는 도메인 및 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 도메인 및 참조 무결성을 있는 그대로 확인할 수 있습니다.  
+-   *CHECK* 및 *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOffer_inmem 및 Sales.usp_DeleteSpecialOffer_inmem을 사용하여 특별 행사를 삽입하고 삭제할 수 있습니다. 이러한 프로시저는 도메인 및 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 도메인 및 참조 무결성을 있는 그대로 확인할 수 있습니다.  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -259,8 +253,7 @@ ms.locfileid: "40393068"
   
  Sales.SpecialOfferProduct  
   
--   
-  *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOfferProduct_inmem을 사용하여 특별 행사와 제품 간의 관계를 삽입할 수 있습니다. 이 프로시저는 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 참조 무결성을 있는 그대로 확인할 수 있습니다.  
+-   *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOfferProduct_inmem을 사용하여 특별 행사와 제품 간의 관계를 삽입할 수 있습니다. 이 프로시저는 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 참조 무결성을 있는 그대로 확인할 수 있습니다.  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
@@ -563,9 +556,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 샘플의 메모리 및 디스크 공간 사용률  
  아래에서는 예제 데이터베이스의 메모리 및 디스크 공간 사용률 측면에서 기대하는 것에 대해 설명합니다. 또한 논리적 코어가 16개인 테스트 서버에서 관찰한 결과도 보여 줍니다.  
   
-###  
-            <a name="Memoryutilizationforthememory-optimizedtables">
-            </a> 메모리 최적화 테이블의 메모리 사용률  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 메모리 최적화 테이블의 메모리 사용률  
   
 #### <a name="overall-utilization-of-the-database"></a>데이터베이스의 전체 사용률  
  다음 쿼리를 사용하여 시스템에서 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 의 총 메모리 사용률을 얻을 수 있습니다.  
@@ -665,8 +656,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>데모를 다시 설정한 후  
  저장 프로시저 Demo.usp_DemoReset을 사용하여 데모를 다시 설정할 수 있습니다. 이 프로시저는 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem 테이블의 데이터를 삭제하고 원래 테이블 SalesOrderHeader 및 SalesOrderDetail의 데이터로 초기값을 다시 설정합니다.  
   
- 테이블의 행이 삭제되었더라도 메모리가 즉시 회수되지는 않습니다. 
-            [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 필요에 따라 백그라운드에서 메모리 최적화 테이블의 삭제된 행에서 메모리를 회수합니다. 데모가 다시 설정된 직후에는 시스템에 트랜잭션 작업이 없으므로 삭제된 행의 메모리가 아직 회수되지 않은 것을 확인할 수 있습니다.  
+ 테이블의 행이 삭제되었더라도 메모리가 즉시 회수되지는 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 필요에 따라 백그라운드에서 메모리 최적화 테이블의 삭제된 행에서 메모리를 회수합니다. 데모가 다시 설정된 직후에는 시스템에 트랜잭션 작업이 없으므로 삭제된 행의 메모리가 아직 회수되지 않은 것을 확인할 수 있습니다.  
   
 ```  
 SELECT type  
