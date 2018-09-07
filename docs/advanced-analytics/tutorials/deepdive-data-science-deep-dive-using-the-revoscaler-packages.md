@@ -1,6 +1,6 @@
 ---
 title: SQL Server Machine Learning을 사용 하 여 함수 RevoScaleR에 대 한 자습서 | Microsoft Docs
-description: 이 자습서에서는 사용 지원 되는 R 사용 하 여 SQL Server Machine Learning에서 RevoScaleR 함수를 호출 하는 방법에 알아봅니다.
+description: 이 자습서에서는 R을 지원하는 SQL Server Machine Learning에서 RevoScaleR 함수를 호출하는 방법에 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/15/2018
@@ -18,18 +18,18 @@ ms.locfileid: "39084676"
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: SQL Server 데이터에 RevoScaleR R 함수를 사용하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처리 기능을 제공하는 Microsoft R 패키지입니다. SQL Server의 R 개발에 대해,  RevoScaleR은 계산 컨텍스트를 설정하거나 패키지를 관리하는 기능이 있고, 가장 중요한 기능으로는 데이터를 가져오는 것부터 시각화 및 분석에 이르기까지 모든 작업을 할 수 있는 핵심적인 빌트인 패키지입니다. SQL Server의 기계 학습 알고리즘은 RevoScaleR 데이터에 대해 종속성을 가집니다. 이런 RevoScaleR의 중요성을 생각하면, 함수를 언제 어떻게 적절하게 사용할 수 있는지 아는 것은 필수적입니다. 
+RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처리 기능을 제공하는 Microsoft R 패키지입니다. SQL Server의 R 개발에 대해,  RevoScaleR은 계산 환경을 설정하거나 패키지를 관리하는 기능이 있고, 가장 중요한 기능으로는 데이터를 가져오는 것부터 시각화 및 분석에 이르기까지 모든 작업을 할 수 있는 핵심적인 빌트인 패키지입니다. SQL Server의 기계 학습 알고리즘은 RevoScaleR 데이터에 대해 종속성을 가집니다. 이런 RevoScaleR의 중요성을 생각하면, 함수를 언제 어떻게 적절하게 사용할 수 있는지 아는 것은 필수적입니다. 
 
-이 자습서에서는 원격 계산 컨텍스트를 만드는 방법, 로컬 및 원격 계산 컨텍스트 간에 데이터를 이동하는 방법, 그리고 원격 SQL 서버에서 R 코드를 실행하는 방법을 배우게 됩니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
+이 자습서에서는 원격 계산 환경을 만드는 방법, 로컬 및 원격 계산 환경 간에 데이터를 이동하는 방법, 그리고 원격 SQL 서버에서 R 코드를 실행하는 방법을 배우게 됩니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
 
-+ 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
-+ 모델 학습 및 점수 매기기를 사용 하 여 수행 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트를 계산 합니다. 
-+ RevoScaleR 함수를 사용 하 여 새로 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 점수 매기기 결과 저장 하는 테이블입니다.
-+ 서버에서 모두 그림을 만들고 로컬에서 계산 컨텍스트.
-+ 데이터에 대해 모델 학습 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 R을 실행 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스.
-+ 데이터의 하위 집합을 추출 하 고 로컬 워크스테이션에서 분석에 다시 사용 하기 위해 XDF 파일로 저장 합니다.
-+ ODBC 연결을 열어 점수 매기기에 대 한 새 데이터를 가져오기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 점수 매기기는 로컬 워크스테이션에서 수행 됩니다.
-+ 사용자 지정 R 함수를 만들고 계산 컨텍스트를 시뮬레이션 하는 데 서버에서 실행 합니다.
++ 데이터는 처음에 CSV 파일 또는 XDF 파일에서 가져옵니다. RevoScaleR 패키지의 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
++ 모델 학습과 평가는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계산 환경에 의해 수행됩니다.
++ RevoScaleR 함수를 이용해 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만들어 평가 결과를 저장하십시오.
++ 서버나 로컬 계산 환경에서 plot을 생성할 수 있습니다.
++ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 모델을 학습시키고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 R을 실행하십시오.
++ 데이터의 하위 집합을 추출하고 XDF 파일로 저장해 로컬 워크스테이션에서의 분석에 재사용하십시오.
++ ODBC 과[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 연결해 학습을 위한 새로운 데이터를 가져오십시오. 모델 평가는 로컬 워크스테이션에서 수행됩니다.
++ 직접 R 함수를 만들고 서버의 계산 환경으로 실행해 시뮬레이션하십시오.
 
 ## <a name="target-audience"></a>대상 사용자
 
@@ -58,9 +58,9 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
 
 -   **데이터 과학 개발 컴퓨터**
   
-    로컬 및 원격 계산 컨텍스트 간에 앞뒤로 전환, 두 시스템이 필요 합니다. 로컬은 일반적으로 데이터 과학 워크 로드에 대 한 합당 power 사용 하 여 개발 워크스테이션입니다. 원격이 예제의 경우 SQL Server 2017 또는 SQL Server 2016 R 기능을 사용 합니다. 
+    로컬이나 원격 계산 환경으로 전환하기 위해 두 시스템이 필요 합니다. 로컬 환경은 일반적으로 데이터 과학 작업을 하는데 충분한 성능을 가진 개발 환경입니다. 이 경우, 원격 환경은 R을 사용할 수 있는 SQL Server 2017 또는 SQL Server 2016 입니다. 
     
-    로컬 및 원격 시스템에서 동일한 버전 RevoScaleR에 서술 계산 컨텍스트를 전환 합니다. 로컬 워크스테이션에서 가져올 수 있습니다는 RevoScaleR 패키지 및 관련된 공급자를 설치 하거나 다음 중 하나를 사용 하 여: [Azure에서 데이터 과학 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)를 [(무료) Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), 또는 [ Microsoft Machine Learning Server (독립 실행형)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)합니다. 에서는 독립 실행형 서버 옵션을 사용 하 여 Linux 또는 Windows 설치 관리자를 사용 하 여 무료 개발자 버전을 설치 합니다. 또한 독립 실행형 서버를 설치 하려면 SQL Server 설치 프로그램을 사용할 수 있습니다.
+    로컬과 원격 시스템에서 같은 버전의 RevoScaleR을 사용해야 계산 환경을 바꿀 수 있습니다. 로컬 워크스테이션에서 가져올 수 있습니다는 RevoScaleR 패키지 및 관련된 공급자를 설치 하거나 다음 중 하나를 사용 하 여: [Azure에서 데이터 과학 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)를 [(무료) Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), 또는 [ Microsoft Machine Learning Server (독립 실행형)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)합니다. 에서는 독립 실행형 서버 옵션을 사용 하 여 Linux 또는 Windows 설치 관리자를 사용 하 여 무료 개발자 버전을 설치 합니다. 또한 독립 실행형 서버를 설치 하려면 SQL Server 설치 프로그램을 사용할 수 있습니다.
       
 -   **추가 R 패키지**
   
