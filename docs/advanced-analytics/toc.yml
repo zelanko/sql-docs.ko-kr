@@ -7,7 +7,7 @@ items:
     href: r/sql-server-r-services.md
   - name: 독립 실행형 서버
     href: r/r-server-standalone.md
-  - name: 새로운 기능
+  - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
@@ -19,19 +19,21 @@ items:
     href: install/sql-machine-learning-standalone-windows-install.md
   - name: 미리 학습된 모델
     href: install/sql-pretrained-models-install.md
-  - name: 명령 프롬프트 설치
-    href: install/sql-ml-component-commandline-install.md
   - name: 오프라인 설치(인터넷 없음)
     href: install/sql-ml-component-install-without-internet-access.md
     items:
     - name: CAB 다운로드(오프라인 설치)
       href: install/sql-ml-cab-downloads.md
+  - name: 명령 프롬프트 설치
+    href: install/sql-ml-component-commandline-install.md
   - name: R 및 Python 업그레이드
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: R 도구 설정
     href: r/set-up-a-data-science-client.md
   - name: Python 도구 설정
     href: python/setup-python-client-tools-sql.md
+  - name: 가상 서버 설정
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
 - name: 빠른 시작
   items:
   - name: R
@@ -147,28 +149,13 @@ items:
 - name: 솔루션
   href: tutorials/data-science-scenarios-and-solution-templates.md
 - name: 개념
-  href: architecture-overview-machine-learning.md
   items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R 상호 운용성
-      href: r/r-interoperability-in-sql-server.md
-    - name: R 통합을 지원하는 구성 요소
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: R에 대한 보안
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Machine Learning Services의 Python
-      href: python/sql-server-python-services.md
-    - name: Python 상호 운용성
-      href: python/python-interoperability.md
-    - name: Python을 지원하는 구성 요소
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python 보안
-      href: python/security-overview-sql-server-python-services.md
+  - name: 확장성 프레임워크
+    href: concepts/extensibility-framework.md
+  - name: R 확장
+    href: concepts/extension-r.md
+  - name: Python 확장
+    href: concepts/extension-python.md
 - name: 방법
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -236,18 +223,26 @@ items:
       href: r/performance-case-study-r-services.md
     - name: R 코드 프로파일링 함수 사용
       href: r/using-r-code-profiling-functions.md
+  - name: 보안
+    items:
+    - name: SQL Server의 R 런타임에 대한 보안 고려 사항
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: R에 대한 보안
+      href: r/security-overview-sql-server-r.md
+    - name: Python 보안
+      href: python/security-overview-sql-server-python-services.md
+    - name: SQL Server 실행 패드 서비스 계정
+      href: general/sql-server-launchpad-service-account.md
+    - name: SQLRUserGroup 수정
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: SQLRUserGroup을 데이터베이스 사용자로 추가
+      href: r/add-sqlrusergroup-to-database.md
   - name: 관리
     items:
     - name: R 구성 및 관리
       href: r/configuration-sql-server-r-services.md
     - name: Machine Learning Services의 고급 구성 옵션
       href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: SQL Server의 R 런타임에 대한 보안 고려 사항
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: SQL Server Machine Learning Services의 사용자 계정 풀 수정
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
-    - name: SQLRUserGroup을 데이터베이스 사용자로 추가
-      href: r/add-sqlrusergroup-to-database.md
     - name: 웹 서비스를 사용하여 모델 배포 및 사용
       href: operationalization-with-mrsdeploy.md
     - name: 솔루션 관리 및 모니터링
@@ -287,8 +282,6 @@ items:
     href: known-issues-for-sql-server-machine-learning-services.md
   - name: 릴리스 정보
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
-  - name: 가상 머신 설정
-    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
   - name: 문제 해결
     href: machine-learning-troubleshooting-faq.md
     items:
@@ -314,9 +307,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118080"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888869"
