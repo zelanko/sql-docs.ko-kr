@@ -38,7 +38,7 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
 또한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문법에 익숙해야 하고, 아래와 같은 도구를 이용해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 접근하는 방법을 알아야 합니다.
 
 + [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 
-+ Visual Studio의 데이터베이스 도구
++ Visual Studio의 데이터베이스 도구 
 + 무료 [Visual Studio Code 용 mssql 확장](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)합니다.
   
 > [!TIP]
