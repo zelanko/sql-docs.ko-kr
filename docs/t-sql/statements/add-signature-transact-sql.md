@@ -1,13 +1,8 @@
 ---
 title: ADD SIGNATURE(Transact-SQL) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 227a0215b4d5438ce10229e0a3e8398312f7ca1c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6a1c422dd7ae2c190f844b70c5a780c0390f86e7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788444"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812289"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +99,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 그러나 ProcSelectT1ForAlice에 서명하는 데 사용된 것과 같은 인증서로 procSelectT1에 연대 서명을 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 체인 전체에 대해 서명을 유지하며 T1에 대한 액세스를 허용합니다. 연대 서명은 아무런 권한을 부여하지 않으므로 Alice가 procSelectT1을 직접 호출하려고 시도해도 T1에는 액세스할 수 없습니다. 아래의 3번 예에서는 이 예에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 보여 줍니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 개인 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
 ## <a name="examples"></a>예  

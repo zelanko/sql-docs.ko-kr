@@ -3,28 +3,23 @@ title: SQL Server 개체 및 버전에 대한 DAC 지원 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: data-tier-applications
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 52d1896a61c0238337d8730c4038861841fd6124
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a907b72d8e8433c3db7854e3e7c441cfb16525f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930018"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819249"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +44,7 @@ ms.locfileid: "32930018"
 |FUNCTION: 다중 문 테이블 반환|FUNCTION: 스칼라|  
 |INDEX: 클러스터형|INDEX: 비클러스터형|  
 |INDEX: 공간|INDEX: 고유|  
-|LOGIN|사용 권한|  
+|LOGIN|Permissions|  
 |역할 멤버 자격|SCHEMA|  
 |통계|STORED PROCEDURE: Transact-SQL|  
 |동의어|TABLE: CHECK 제약 조건|  

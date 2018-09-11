@@ -7,9 +7,7 @@ ms.prod_service: database-engine
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbdeployment.settings.f1
@@ -25,12 +23,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d87f60bc73ff969aa2f3f6ef42264ea8cb93b23c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47b1098c4799c0649f52f5470dddc4d654e7bbcf
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930853"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809179"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32930853"
 ###  <a name="Security"></a> 보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC BACPAC 파일에 저장됩니다. BACPAC를 가져오면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
-#### <a name="permissions"></a>사용 권한  
+#### <a name="permissions"></a>Permissions  
  마법사에 원본 데이터베이스에 대한 DAC 내보내기 권한이 필요합니다. 로그인하려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.  
   
  마법사에 대상 인스턴스 또는 서버에 대한 DAC 가져오기 권한이 필요합니다. 로그인은 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버이거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  

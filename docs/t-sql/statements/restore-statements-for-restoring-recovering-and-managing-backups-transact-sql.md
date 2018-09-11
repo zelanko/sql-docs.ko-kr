@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9c5f4509735b763e6ea5752c9f6dd3c1e07a06e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 46930e648b72b03453a05f1a55da92a8325f9bda
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456997"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171715"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   이 섹션에서는 백업을 위한 RESTORE 문에 대해 설명합니다. 백업을 복원 및 복구하기 위한 주 RESTORE {DATABASE | LOG} 문 외에도 여러 가지 보조 RESTORE 문을 사용하여 백업을 관리하고 복원 시퀀스를 계획할 수 있습니다. 이 보조 RESTORE 명령에는 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY가 포함됩니다.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!IMPORTANT]  
 >  이전 버전의 SQL Server에서는 모든 사용자가 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY 및 RESTORE VERIFYONLY Transact-SQL 문을 사용하여 백업 세트 및 백업 장치에 대한 정보를 검색할 수 있었습니다. 여기에는 백업 파일의 내용에 대한 정보도 포함되므로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 이러한 문을 사용하려면 CREATE DATABASE 권한이 필요합니다. 이 요구 사항을 통해 이전 버전보다 더욱 백업 파일의 보안을 유지하고 백업 정보를 보호할 수 있습니다. 이 사용 권한에 대한 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   

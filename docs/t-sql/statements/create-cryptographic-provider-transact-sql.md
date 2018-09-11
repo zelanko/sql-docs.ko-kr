@@ -1,13 +1,8 @@
 ---
 title: CREATE CRYPTOGRAPHIC PROVIDER(Transact-SQL) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_CRYPTOGRAPHIC_TSQL
@@ -25,16 +20,15 @@ helpviewer_keywords:
 - CREATE CRYPTOGRAPHIC PROVIDER statement
 - 33032 (Database Engine error)
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
-caps.latest.revision: 20
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d54bfc4450f9511b821f6fe6ad4d48017e28c12f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8ec316925fcd21a80561750665386a72f096060d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789634"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815889"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +65,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CONTROL SERVER 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

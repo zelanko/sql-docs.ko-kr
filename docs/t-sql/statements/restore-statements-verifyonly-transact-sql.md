@@ -27,19 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
-ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
+ms.openlocfilehash: a38b641435f24ec07157b650877a5ac107948f75
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42441436"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171725"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 문 - VERIFYONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   백업을 확인하되 복원하지는 않으며, 백업 세트가 완성되었는지와 전체 백업을 읽을 수 있는지를 확인합니다. 그러나 RESTORE VERIFYONLY는 백업 볼륨에 포함된 데이터의 구조를 확인하지는 않습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 RESTORE VERIFYONLY를 개선하여 데이터에 대한 추가 검사를 수행하는 방법으로 오류 발견율을 높였습니다. 가능한 한 실제에 가깝도록 데이터를 복원하는 것이 목표입니다. 자세한 내용은 주의 섹션을 참조하십시오.  
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  백업이 유효한 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 성공 메시지를 반환합니다.  
   

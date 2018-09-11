@@ -3,13 +3,9 @@ title: 데이터 계층 응용 프로그램 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
@@ -17,16 +13,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9273ba91e4662c6175a1d2922b7cab3e6d739f01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d66981713b0ba67c87a33530436c8159f8a6a33a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931129"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813339"
 ---
 # <a name="data-tier-applications"></a>의
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +112,7 @@ ms.locfileid: "32931129"
   
  SQL Server Management Studio, Azure 포털 및 DACFx API와 같은 데이터베이스 관리 도구에서는 이 두 기능이 모두 지원됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **CREATE DATABASE** 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **DROP DATABASE** 권한이 할당되어 있어야 합니다.  
   
 ## <a name="data-tier-application-tasks"></a>데이터 계층 응용 프로그램 태스크  

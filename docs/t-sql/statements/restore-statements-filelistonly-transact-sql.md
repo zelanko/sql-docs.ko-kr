@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 825d55cd035f2e1dce9ab0d5b7b18cefa53256fe
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9199dc846777670598d7d7af767cc01c9d2bf978
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453647"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171568"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문 - FILELISTONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 세트에 포함된 로그 파일과 데이터베이스의 목록을 결과 집합으로 반환합니다.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  인수에 대한 자세한 설명은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  

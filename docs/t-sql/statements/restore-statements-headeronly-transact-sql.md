@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cae70ca1a3d78583b49a79b212f233c073ae835f
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 473f5ae3e6d193f926d4995b3fd3ec47263e3e9d
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459407"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171674"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 문 - HEADERONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 백업 장치의 모든 백업 세트에 대한 백업 헤더 정보를 모두 포함하는 결과 집합을 반환합니다. 
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
-  
+ 
 > [!NOTE]  
 >  인수에 대한 자세한 설명은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
   
