@@ -37,7 +37,7 @@ ms.locfileid: "39084185"
   
 ## <a name="create-the-database-and-user"></a>데이터베이스 및 사용자 만들기
 
-이 연습에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 새 데이터베이스를 생성하고, 데이터를 읽고 쓸 수 있는 권한을 가진 계정으로 SQL에 로그인 하고, R 스크립트를 실행합니다.
+이 연습에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 새 데이터베이스를 생성하고, 데이터를 읽고 쓸 수 있는 권한을 가진 계정으로 SQL에 로그인하고, R 스크립트를 실행합니다.
 
 > [!NOTE]
 > 데이터를 쓰지 않고 읽기만 한다면, R 스크립트를 실행하는 계정은 특정 데이터베이스에 대한 SELECT 권한(**db_datareader** 역할)이 필요합니다. 그러나 이 자습서에서는 데이터베이스를 준비하고, 평가 결과를 저장하는 테이블을 만드는 데 필요한 DDL 관리자 권한이 있어야 합니다.
@@ -111,9 +111,9 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
 - **DDL 권한이 없습니다. 그래도 자습서를 실행할 수 있나요?**
   
-    예; 그러나 다른 사람에게 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 미리 로드하도록 요청하고 새 테이블을 만들기 위해 호출하는 섹션을 건너뛰어야 합니다. DDL 권한이 필요한 함수는 가능한 경우 항상 자습서에서 언급될 것입니다.
+    예, 그러나 다른 사람에게 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 미리 로드하도록 요청하고 새 테이블을 만들기 위해 호출하는 섹션을 건너뛰어야 합니다. DDL 권한이 필요한 함수는 가능한 경우 항상 자습서에서 언급될 것입니다.
 
-    또한 EXECUTE ANY EXTERNAL SCRIPT 사용 권한을 부여 받으려면 관리자에 게 문의하십시오. 원격이나 `sp_execute_external_script`를 통해 R 스크립트를 실행할 때 필요합니다.
+    또한 EXECUTE ANY EXTERNAL SCRIPT 사용 권한을 부여받으려면 관리자에게 문의하십시오. 원격이나 `sp_execute_external_script`를 통해 R 스크립트를 실행할 때 필요합니다.
 
 ## <a name="next-step"></a>다음 단계
 
