@@ -14,19 +14,19 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c5c68384656aad7de2262b57e6b1d0e7150686d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 14ab3c0d7b2f0fa391f7d5f5eed6a9bfe6078158
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846058"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785389"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  에 연결 하는 데 관련 된 속성 목록을 나타냅니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 사용 하 여 데이터베이스를 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 경우와 관련된 속성 목록을 나타냅니다.  
   
- **패키지에 대 한** com.microsoft.sqlserver.jdbc  
+ **패키지:** com.microsoft.sqlserver.jdbc  
   
  **구현:** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32846058"
 public class SQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>주의  
- 이 클래스는 SQLServerDataSource 클래스, ISQLServerDataSource 인터페이스 및 데이터 소스 인터페이스에 대 한 래핑 해제를 지원 합니다. 자세한 내용은 참조 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 이 클래스는 SQLServerDataSource 클래스, ISQLServerDataSource 인터페이스 및 데이터 원본 인터페이스에 대 한 래핑 해제를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

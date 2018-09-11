@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a2f22f105ea3e47b7965338abc6060162de7983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 78d153c70eb403f662bf2a5d386147add23ff459
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834988"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784268"
 ---
 # <a name="getlong-method-javalangstring"></a>getLong 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  로 지정된 된 매개 변수의 값을 검색 하는 **긴** java 프로그래밍 언어 매개 변수 이름이 지정 됩니다.  
+  매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 **long**으로 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ public long getLong(java.lang.String sCol)
 #### <a name="parameters"></a>매개 변수  
  *sCol*  
   
- A **문자열** 매개 변수 이름이 들어 있는입니다.  
+ 매개 변수 이름이 들어 있는 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  A **긴** 값입니다.  
@@ -49,13 +49,13 @@ public long getLong(java.lang.String sCol)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 getLong 메서드는 java.sql.CallableStatement 인터페이스의 getLong 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 getLong 메서드는 java.sql.CallableStatement 인터페이스의 getLong 메서드에 의해 지정됩니다.  
   
- 이 메서드는의 경우에 지원 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 와 같이 정수 값 반환할 안전 하 게 수 있는 데이터 형식을 **bigint**, **int**, **smallint**, **tinyint** , 및 **비트**합니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 **bigint**, **int**, **smallint**, **tinyint** 및 **bit**와 같이 정수 값을 안전하게 반환할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에서만 지원됩니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [getLong 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [getLong 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

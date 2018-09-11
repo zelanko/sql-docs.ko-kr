@@ -14,19 +14,19 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04e26d10a6e33754c67ff738332494935c15fe77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1421688e8454baa972fc592249f2a79a17d1b3d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840986"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786895"
 ---
 # <a name="isqlservercallablestatement-interface"></a>ISQLServerCallableStatement 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  JDBC의 호출 가능한 문을 나타냅니다. 이 인터페이스에 추가 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0.  
+  JDBC의 호출 가능한 문을 나타냅니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0에서 추가되었습니다.  
   
- **패키지에 대 한** com.microsoft.sqlserver.jdbc  
+ **패키지:** com.microsoft.sqlserver.jdbc  
   
  **확장:** java.sql.CallableStatement, [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32840986"
 public interface ISQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>주의  
- 이 인터페이스는 구현 하 여 [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 이 인터페이스는 구현한 [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)합니다.  
   
- 이 인터페이스를 노출 다음 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-특정 메서드:  
+ 이 인터페이스는 다음 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 관련 메서드를 노출합니다.  
   
 |메서드|자세한 내용은 다음을 참조하세요.|  
 |------------|-------------------------------|  
@@ -48,7 +48,7 @@ public interface ISQLServerCallableStatement
 |microsoft.sql.DateTimeOffset getDateTimeOffset(String)|[getDateTimeOffset(String)](../../../connect/jdbc/reference/getdatetimeoffset-method-string.md)|  
 |void setDateTimeOffset(String, microsoft.sql.DateTimeOffset)|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

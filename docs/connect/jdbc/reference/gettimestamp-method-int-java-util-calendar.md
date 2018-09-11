@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42c3ccd58cc8e3c7775d701ea0a48e1619e9a588
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e2598df3478f4d3606666300721a0a72610b44ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838778"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784297"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp 메서드(int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 Java 프로그래밍 언어에서 달력 개체를 사용 하 여 지정 된 매개 변수 인덱스의에서 java.sql.Timestamp 개체로 지정된 된 매개 변수의 값을 검색 합니다.  
+  매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 Calendar 개체를 사용하여 Java 프로그래밍 언어의 java.sql.Timestamp 개체로 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,9 +40,9 @@ public java.sql.Timestamp getTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱스*  
+ *index*  
   
- **int** 매개 변수 인덱스를 나타내는입니다.  
+ 매개 변수 인덱스를 나타내는 **int**입니다.  
   
  *cal*  
   
@@ -54,13 +54,13 @@ public java.sql.Timestamp getTimestamp(int index,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getTimestamp 메서드는 java.sql.CallableStatement 인터페이스의 getTimestamp 메서드에 의해 지정 됩니다.  
   
- 이 메서드가 반환 값만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** 및 **smalldatetime** 열입니다.  
+ 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 및 **smalldatetime** 열에서만 값을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [getTimestamp 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [getTimestamp 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

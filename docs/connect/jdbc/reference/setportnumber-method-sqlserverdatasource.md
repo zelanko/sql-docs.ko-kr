@@ -1,5 +1,5 @@
 ---
-title: setPortNumber 메서드 (SQLServerDataSource) | Microsoft Docs
+title: setPortNumber 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5665bd5ed6f10a755f3980607995b19887908379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 608c83e843941f80d4f6c9805711394975fb0c20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844508"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785810"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  와 통신 하는 데 사용할 포트 번호를 설정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와의 통신에 사용할 포트 번호를 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,17 +39,17 @@ public void setPortNumber(int portNumber)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *포트 번호*  
+ *portNumber*  
   
- **int** 포트 번호를 포함 하는 값입니다.  
+ 포트 번호가 들어 있는 **int** 값입니다.  
   
-## <a name="remarks"></a>주의  
- 포트 번호는 소켓 연결을 열 때 사용 되는 TCP/IP 포트 번호 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다. PortNumber 속성이 설정 하지 않으면는 [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) 메서드는 기본값인 1433 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ 포트 번호는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 소켓 연결을 열 때 사용되는 TCP/IP 포트 번호입니다. portNumber 속성이 설정되어 있지 않으면 [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) 메서드는 기본값인 1433을 반환합니다.  
   
 > [!NOTE]  
->  SetPortNumber 메서드 범위에 전달 된 포트 값에 검사를 수행 하지 않습니다. 오류가 따라서 99999와 같이 유효 하지 않은 포트 번호를 전달할 수 있습니다.  
+>  SetPortNumber 메서드는 전달 된 포트 값에 대해 범위 검사를 수행 하지 않습니다. 오류를 트리거하지 않고 따라서 99999와 같이 올바르지 않은 포트 번호를 전달할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

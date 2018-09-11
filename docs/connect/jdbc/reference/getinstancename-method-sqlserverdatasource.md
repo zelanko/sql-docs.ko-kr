@@ -1,5 +1,5 @@
 ---
-title: getInstanceName 메서드 (SQLServerDataSource) | Microsoft Docs
+title: getInstanceName 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83ee00a02b29a1d0dd8bba87fe81a1bfbfe0c4e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 86d209b066d9a2e08052e143b8e7b6a08ee183a0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834518"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786905"
 ---
 # <a name="getinstancename-method-sqlserverdatasource"></a>getInstanceName 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  반환 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인스턴스 이름입니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,9 +39,9 @@ public java.lang.String getInstanceName()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 이름 또는 null 값이 없는 설정 된 경우 인스턴스를 포함 하 합니다.  
+ 인스턴스 이름이 들어 있는 **문자열**이며, 값이 설정되어 있지 않은 경우 null입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

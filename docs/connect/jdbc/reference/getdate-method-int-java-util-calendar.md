@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cdf89172da4d3b0d465a3eae452922e5a5a4877
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d1ac2a261deed2ab161fc5ba4bf87639faa0aa55
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834958"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784481"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate 메서드(int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  매개 변수 인덱스와 일정 개체를 지정 하 여 Java 프로그래밍 언어의 java.sql.Date 개체로 지정된 된 매개 변수의 값을 검색 합니다.  
+  매개 변수 인덱스와 Calendar 개체가 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 java.sql.Date 개체로 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,9 +40,9 @@ public java.sql.Date getDate(int index,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱스*  
+ *index*  
   
- **int** 매개 변수 인덱스를 나타내는입니다.  
+ 매개 변수 인덱스를 나타내는 **int**입니다.  
   
  *cal*  
   
@@ -54,13 +54,13 @@ public java.sql.Date getDate(int index,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 getDate 메서드는 java.sql.CallableStatement 인터페이스의 getDate 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 getDate 메서드는 java.sql.CallableStatement 인터페이스의 getDate 메서드에 의해 지정됩니다.  
   
- 유효한 날짜 부분을 반환 하는이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** 또는 **smalldatetime** 데이터 형식의 시간 부분은 Java 기준 시간인 00:00 (자정)으로 설정 합니다.  
+ 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 또는 **smalldatetime** 데이터 형식의 유효한 날짜 부분을 반환합니다. 이때 시간 부분은 Java 기준 시간인 00:00(자정)으로 설정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [getDate 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [getDate 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

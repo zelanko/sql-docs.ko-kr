@@ -19,12 +19,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04066c42fabfd81d5579e4900bd6072c7f767747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bdfcd711d1ddc2b36fe4524b14cd12455f346b30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839418"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785346"
 ---
 # <a name="getschemas-method-"></a>getSchemas 메서드()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,23 +44,23 @@ public java.sql.ResultSet getSchemas()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getSchemas 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSchemas 메서드에 의해 지정 됩니다.  
   
- GetSchemas 메서드에 의해 반환 된 결과 집합에는 다음과 같은 정보가 포함 되어 있습니다.  
+ getSchemas 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|이름|유형|Description|  
+|속성|형식|설명|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**문자열**|스키마의 이름입니다.|  
-|TABLE_CATALOG|**문자열**|스키마의 카탈로그 이름입니다.|  
+|TABLE_SCHEM|**String**|스키마의 이름입니다.|  
+|TABLE_CATALOG|**String**|스키마의 카탈로그 이름입니다.|  
   
  결과는 TABLE_CATALOG 및 TABLE_SCHEM 순으로 정렬됩니다. 각 행에는 첫 번째 열로 TABLE_SCHEM이 있고 두 번째 열로 TABLE_CATALOG가 있습니다.  
   
 > [!NOTE]  
->  GetSchemas 메서드에 의해 반환 되는 데이터에 대 한 자세한 내용은 "sys.schemas (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  
+>  getSchemas 메서드에서 반환되는 데이터에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “sys.schemas(Transact-SQL)”를 참조하십시오.  
   
 ## <a name="example"></a>예제  
- GetSchemas 메서드를 사용 하 여 카탈로그 및 해당 관련된 스키마 이름에 대 한 정보를 반환 하는 방법은 다음 예제에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 연결 인수에 사용할 데이터베이스를 지정 하는 경우.  
+ 다음 예제에서는 연결 인수로 사용할 데이터베이스를 지정할 경우 getSchemas 메서드를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 카탈로그 및 해당 관련 스키마에 대한 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  
 public static void executeGetSchemas(Connection con) {  
@@ -85,7 +85,7 @@ public static void executeGetSchemas(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

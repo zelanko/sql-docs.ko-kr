@@ -1,5 +1,5 @@
 ---
-title: setServerName 메서드 (SQLServerDataSource) | Microsoft Docs
+title: setServerName 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8843d601229fc8db7e374857857841eb5e3fc52a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 888def6d56546428b2f642f227bbf2765cc001f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844808"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783903"
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>setServerName 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  실행 중인 컴퓨터의 이름을 설정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행 중인 컴퓨터의 이름을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,14 +39,14 @@ public void setServerName(java.lang.String serverName)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *서버 이름*  
+ *serverName*  
   
- A **문자열** 서버 이름이 들어 있는입니다.  
+ 서버 이름을 포함하는 **문자열**입니다.  
   
-## <a name="remarks"></a>주의  
- 서버 이름은 실행 하는 대상 컴퓨터의 호스트 이름을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다. ServerName 속성을 설정 하지 않으면 경우 [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) 기본값인 null 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ 서버 이름은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행 중인 대상 컴퓨터의 호스트 이름입니다. serverName 속성이 설정되어 있지 않으면 [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)은 기본값인 null을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

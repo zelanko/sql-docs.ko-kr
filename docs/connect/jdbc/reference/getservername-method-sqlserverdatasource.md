@@ -1,5 +1,5 @@
 ---
-title: getServerName 메서드 (SQLServerDataSource) | Microsoft Docs
+title: getServerName 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd2d58a2c47553fee1d5c8d4cf9355998078e4d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8e709a5adc084c316733333a9012beee3fd77ef4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838660"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786361"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>getServerName 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이름을 반환 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인스턴스.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,12 +39,12 @@ public java.lang.String getServerName()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 포함 하는 서버 이름 또는 null 값이 없는 설정 된 경우.  
+ 서버 이름이 들어 있는 **문자열**이며, 값이 설정되어 있지 않은 경우 null입니다.  
   
-## <a name="remarks"></a>주의  
- 서버 이름은 실행 하는 대상 컴퓨터의 호스트 이름을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다. GetServerName 속성을 설정 하지 않으면 getservername은 기본값인 null 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ 서버 이름은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행 중인 대상 컴퓨터의 호스트 이름입니다. getServerName 속성이 설정되어 있지 않으면 getServerName은 기본값인 null을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

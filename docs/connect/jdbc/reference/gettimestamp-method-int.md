@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9169645c578a2f5a45c75248c61e99d61771bb11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e60839e4bd4cd42211712233f75cfc0018a2ee01
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838808"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785944"
 ---
 # <a name="gettimestamp-method-int"></a>getTimestamp 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +39,9 @@ public java.sql.Timestamp getTimestamp(int index)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱스*  
+ *index*  
   
- **int** 매개 변수 인덱스를 나타내는입니다.  
+ 매개 변수 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  타임 스탬프 개체입니다.  
@@ -49,13 +49,13 @@ public java.sql.Timestamp getTimestamp(int index)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getTimestamp 메서드는 java.sql.CallableStatement 인터페이스의 getTimestamp 메서드에 의해 지정 됩니다.  
   
- 이 메서드가 반환 값만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** 및 **smalldatetime** 열입니다.  
+ 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 및 **smalldatetime** 열에서만 값을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [getTimestamp 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [getTimestamp 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: setInstanceName 메서드 (SQLServerDataSource) | Microsoft Docs
+title: setInstanceName 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30a04c2c4094f8265a829b6b130b1e7423d154f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29b2c2033c705858577ac759b34b53fa2f9395c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841928"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784388"
 ---
 # <a name="setinstancename-method-sqlserverdatasource"></a>setInstanceName 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  설정의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인스턴스 이름입니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,11 +39,11 @@ public void setInstanceName(java.lang.String instanceName)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인스턴스 이름*  
+ *instanceName*  
   
- A **문자열** 인스턴스 이름이 들어 있는입니다.  
+ A **문자열** 인스턴스 이름을 포함 하는 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

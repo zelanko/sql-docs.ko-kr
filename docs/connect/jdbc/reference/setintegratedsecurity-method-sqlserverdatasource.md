@@ -19,17 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2dca7a3c3cb2f6ac80fd9901c05e03135a42dc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9ac959d60bb84fe4d63d2da80665c00c0783c4bf
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842869"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784577"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>setIntegratedSecurity 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  설정 된 **부울** integratedSecurity 속성이 사용 되는지 여부를 나타내는 값입니다.  
+  integratedSecurity 속성이 사용되는지 여부를 나타내는 **Boolean** 값을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,17 +41,17 @@ public void setIntegratedSecurity(boolean enable)
 #### <a name="parameters"></a>매개 변수  
  *enable*  
   
- **true 이면** integratedSecurity가 사용 되는 경우. 그렇지 않으면 **false**입니다.  
+ integratedSecurity가 사용되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
-## <a name="remarks"></a>주의  
- 로 설정 "**true**" 증명에서 Windows 자격 증명을 사용 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 응용 프로그램의 사용자를 인증 합니다. 경우 "**true**", [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 컴퓨터 또는 네트워크 로그온 시 이미 제공 된 자격 증명에 대 한 로컬 컴퓨터 자격 증명 캐시를 검색 합니다. 경우 "**false**", 사용자 이름 및 암호를 제공 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 Windows 자격 증명을 사용하여 응용 프로그램 사용자를 인증하도록 하려면 “**true**”로 설정합니다. “**true**”로 설정할 경우 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 로컬 컴퓨터 자격 증명 캐시에서 컴퓨터 또는 네트워크 로그온 시 이미 제공된 자격 증명을 검색합니다. “**false**”로 설정하는 경우 사용자 이름과 암호를 입력해야 합니다.  
   
 > [!NOTE]  
->  이 속성은 에서만 지원 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows 운영 체제.  
+>  이 속성은 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows 운영 체제에서만 지원됩니다.  
   
- 통합된 인증을 사용 하는 방법에 대 한 자세한 내용은 참조 [연결 URL 작성](../../../connect/jdbc/building-the-connection-url.md)합니다.  
+ 통합된 인증을 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [연결 URL 작성](../../../connect/jdbc/building-the-connection-url.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

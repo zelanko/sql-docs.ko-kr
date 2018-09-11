@@ -1,5 +1,5 @@
 ---
-title: getVersionColumns 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getVersionColumns 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 449af2fc385e569c8a08051f155f704108153f84
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841628"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784062"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,15 +43,15 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>매개 변수  
  *catalog*  
   
- A **문자열** 카탈로그 이름이 들어 있는입니다.  
+ 카탈로그 이름이 포함하는 **문자열**입니다.  
   
  *schema*  
   
- A **문자열** 스키마 이름 패턴이 들어 있는입니다.  
+ 스키마 이름 패턴이 들어 있는 **문자열**입니다.  
   
  *table*  
   
- A **문자열** 테이블 이름이 들어 있는입니다.  
+ 테이블 이름이 들어 있는 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
@@ -59,27 +59,27 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getVersionColumns 메서드는 java.sql.DatabaseMetaData 인터페이스의 getVersionColumns 메서드에 의해 지정 됩니다.  
   
- GetVersionColumns 메서드에 의해 반환 된 결과 집합에는 다음 정보가 포함 됩니다.  
+ getVersionColumns 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|이름|유형|Description|  
+|속성|형식|설명|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|JDBC 드라이버에서는 지원되지 않습니다.|  
-|COLUMN_NAME|**문자열**|열 이름입니다.|  
+|COLUMN_NAME|**String**|열 이름입니다.|  
 |DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
-|TYPE_NAME|**문자열**|데이터 형식의 이름입니다.|  
+|TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
 |COLUMN_SIZE|**int**|열의 전체 자릿수입니다.|  
 |BUFFER_LENGTH|**int**|열의 길이(바이트)입니다.|  
 |DECIMAL_DIGITS|**short**|열의 소수 자릿수입니다.|  
 |PSEUDO_COLUMN|**short**|열이 의사 열인지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> versionColumnUnknown(0)<br /><br /> versionColumnNotPseudo(1)<br /><br /> versionColumnPseudo(2)|  
   
 > [!NOTE]  
->  GetVersionColumns 메서드에 의해 반환 되는 데이터에 대 한 자세한 내용은 "sp_datatype_info (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  
+>  getVersionColumns 메서드에서 반환되는 데이터에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “sp_datatype_info(Transact-SQL)”를 참조하십시오.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 Person.Contact 테이블에 자동으로 업데이트 되는 열에 대 한 정보를 반환할 getVersionColumns 메서드를 사용 하 여 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 예제 데이터베이스.  
+ 다음 예제에서는 getVersionColumns 메서드를 사용하여 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스의 Person.Contact 테이블에서 자동으로 업데이트된 열에 대한 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  
@@ -104,7 +104,7 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: getTypeInfo 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getTypeInfo 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d81b932d536240b01c79e8e4a8e8589efae4d603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1917982457f00ff4e383d8ba8d317de4352cb61
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843258"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786190"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,39 +44,39 @@ public java.sql.ResultSet getTypeInfo()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getTypeInfo 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTypeInfo 메서드에 의해 지정 됩니다.  
   
- GetTypeInfo 메서드에 의해 반환 된 결과 집합에는 다음 정보가 포함 됩니다.  
+ getTypeInfo 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|이름|유형|Description|  
+|속성|형식|설명|  
 |----------|----------|-----------------|  
-|TYPE_NAME|**문자열**|데이터 형식의 이름입니다.|  
+|TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
 |DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |PRECISION|**int**|총 유효 자릿수입니다.|  
-|LITERAL_PREFIX|**문자열**|상수 앞에 사용되는 문자 또는 문자열입니다.|  
-|LITERAL_SUFFIX|**문자열**|상수 끝에 사용되는 문자 또는 문자열입니다.|  
-|CREATE_PARAMS|**문자열**|데이터 형식의 생성 매개 변수에 대한 설명입니다.|  
+|LITERAL_PREFIX|**String**|상수 앞에 사용되는 문자 또는 문자열입니다.|  
+|LITERAL_SUFFIX|**String**|상수 끝에 사용되는 문자 또는 문자열입니다.|  
+|CREATE_PARAMS|**String**|데이터 형식의 생성 매개 변수에 대한 설명입니다.|  
 |NULLABLE|**short**|열에 null 값이 포함될 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typeNoNulls(0)<br /><br /> typeNullable(1)<br /><br /> typeNullableUnknown(2)|  
-|CASE_SENSITIVE|**boolean**|데이터 형식이 대/소문자를 구분하는지 여부를 나타냅니다. "**true**"형식이 고, 그러지 않으면 대/소문자 구분"하는 경우**false**"입니다.|  
+|CASE_SENSITIVE|**boolean**|데이터 형식이 대/소문자를 구분하는지 여부를 나타냅니다. 데이터 형식이 대/소문자를 구분하면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  
 |SEARCHABLE|**short**|SQL WHERE 절에 열을 사용할 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typePredNone(0)<br /><br /> typePredChar(1)<br /><br /> typePredBasic(2)<br /><br /> typeSeachable(3)|  
-|UNSIGNED_ATTRIBUTE|**boolean**|데이터 형식의 부호를 나타냅니다. "**true**"형식이 고, 그렇지 않으면 서명 되지 않은"경우**false**"입니다.|  
-|FIXED_PREC_SCALE|**boolean**|데이터 형식이 money 값일 수 있음을 나타냅니다. "**true**" 데이터 형식이 money 형식이 면 그렇지 않은 경우 "**false**"입니다.|  
-|AUTO_INCREMENT|**boolean**|데이터 형식이 자동으로 증가될 수 있음을 나타냅니다. "**true**"고, 그렇지 않으면 증가 유형을 자동 수"if**false**"입니다.|  
-|LOCAL_TYPE_NAME|**문자열**|데이터 형식의 지역화된 이름입니다.|  
+|UNSIGNED_ATTRIBUTE|**boolean**|데이터 형식의 부호를 나타냅니다. 형식에 부호가 없으면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  
+|FIXED_PREC_SCALE|**boolean**|데이터 형식이 money 값일 수 있음을 나타냅니다. 데이터 형식이 money 형식이면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  
+|AUTO_INCREMENT|**boolean**|데이터 형식이 자동으로 증가될 수 있음을 나타냅니다. 데이터 형식이 자동으로 증가될 수 있으면 “**true**”이고, 그렇지 않으면 “**false**”입니다.|  
+|LOCAL_TYPE_NAME|**String**|데이터 형식의 지역화된 이름입니다.|  
 |MINIMUM_SCALE|**short**|소수점 이하의 최대 자릿수입니다.|  
 |MAXIMUM_SCALE|**short**|소수점 이하의 최소 자릿수입니다.|  
 |SQL_DATA_TYPE|**int**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |SQL_DATETIME_SUB|**int**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |NUM_PREC_RADIX|**int**|열이 보유할 수 있는 최대 수를 계산하는 데 필요한 비트 수 또는 자릿수입니다.|  
 |INTERVAL_PRECISION|**smallint**|전체 자릿수를 유도하는 간격의 값입니다.|  
-|USERTYPE|**smallint**|**usertype** 에서 값의 **systypes** 테이블입니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서를 참조하세요.|  
+|USERTYPE|**smallint**|**systypes** 테이블의 **usertype** 값입니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하세요.|  
   
 > [!NOTE]  
->  GetTypeInfo 메서드에 의해 반환 되는 데이터에 대 한 자세한 내용은 "sp_datatype_info (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  
+>  getTypeInfo 메서드에서 반환되는 데이터에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “sp_datatype_info(Transact-SQL)”를 참조하십시오.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 사용 되는 데이터 형식에 대 한 정보를 반환할 getTypeInfo 메서드를 사용 하는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] (또는 이상) 데이터베이스입니다.  
+ 다음 예제에서는 getTypeInfo 메서드를 사용하여 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 또는 그 이상의 데이터베이스에 사용되는 데이터 형식에 대한 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  
 public static void executeGetTypeInfo(Connection con) {  
@@ -101,7 +101,7 @@ public static void executeGetTypeInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

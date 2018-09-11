@@ -16,19 +16,19 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015807"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787875"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver에서 사용할 수 있습니다.
+[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver에서 사용할 수 있습니다.
   
-다음 명령은 Windows 인증 (Kerberos)을 사용 하는 방법을 보여 줍니다 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인증, 각각.
+다음 명령은 Windows 인증 (Kerberos)을 사용 하는 방법을 보여 줍니다 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, 각각.
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -73,12 +73,12 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 > [!NOTE]  
 > **-K** 가 CTP for SUSE Linux에서 지원되지 않습니다. 그러나 `sqlcmd`에 전달된 DSN 파일에서 **ApplicationIntent=ReadOnly** 키워드를 지정합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
   
-- -l *timeout* 초 수를 지정는 `sqlcmd` 서버에 연결 하려고 할 때 로그인 시간이 초과 합니다.
+- -l *timeout* 서버에 연결을 시도할 때 `sqlcmd` 로그인 제한 시간(초)을 지정합니다.
 
 - -m *error_level* stdout에 보낼 오류 메시지를 제어합니다.  
   
 - **-M * * * multisubnet_failover*  
-[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]를 참조 하세요 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]를 참조 하세요 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
   
 > [!NOTE]  
 > **-M** 이 CTP for SUSE Linux에서 지원되지 않습니다. 그러나 `sqlcmd`에 전달된 DSN 파일에서 **MultiSubnetFailover=Yes** 키워드를 지정합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
@@ -102,7 +102,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -s *column_separator_char* 열 구분 기호 문자를 지정 합니다.  
 
 - -S [*protocol*:] *server*[**,***port*]  
-인스턴스를 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 연결할 차원 인지 또는 사용, DSN입니다. Linux 및 macOS에서 ODBC 드라이버-S. 필요 사실은 **tcp** 만 유효한 프로토콜입니다.  
+인스턴스를 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결할 차원 인지 또는 사용, DSN입니다. Linux 및 macOS에서 ODBC 드라이버-S. 필요 사실은 **tcp** 만 유효한 프로토콜입니다.  
   
 - -t *query_timeout* 명령(또는 SQL 문)이 시간 초과까지의 시간(초)을 지정합니다.  
   
@@ -162,7 +162,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 ## <a name="unavailable-options"></a>사용할 수 없는 옵션
 현재 릴리스에서 다음 옵션을 사용할 수 없습니다.  
 
-- -A DAC(관리자 전용 연결)를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]에 로그인합니다. DAC(관리자 전용 연결)를 만드는 방법에 대한 자세한 내용은 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)을 참조하세요.  
+- -A DAC(관리자 전용 연결)를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인합니다. DAC(관리자 전용 연결)를 만드는 방법에 대한 자세한 내용은 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)을 참조하세요.  
   
 - -f *code_page* 입력 및 출력 코드 페이지를 지정합니다.  
   

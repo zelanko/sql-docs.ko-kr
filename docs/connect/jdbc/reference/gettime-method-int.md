@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 989368b68f540779986f5d0634417db7fa1b6849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0d46160200368d8206caa82844ea977a3bf0e1b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838588"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785372"
 ---
 # <a name="gettime-method-int"></a>getTime 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +39,9 @@ public java.sql.Time getTime(int index)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱스*  
+ *index*  
   
- **int** 매개 변수 인덱스를 나타내는입니다.  
+ 매개 변수 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  시간 개체입니다.  
@@ -49,13 +49,13 @@ public java.sql.Time getTime(int index)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 getTime 메서드는 java.sql.CallableStatement 인터페이스의 getTime 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 getTime 메서드는 java.sql.CallableStatement 인터페이스의 getTime 메서드에 의해 지정됩니다.  
   
- "Getter 메서드 변환" 이라는 차트 참조 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md) 된을 확인할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식은이 방법으로 검색할 수 있습니다.  
+ "Getter 메서드 변환" 이라는 차트에 나오는 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md) 는 보려는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 메서드를 사용 하 여 데이터 형식을 검색할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [getTime 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [getTime 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

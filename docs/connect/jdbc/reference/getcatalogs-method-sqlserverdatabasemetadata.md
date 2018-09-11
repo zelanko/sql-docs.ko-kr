@@ -1,5 +1,5 @@
 ---
-title: getCatalogs 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getCatalogs 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20537ecc2ecb42b1384e52e3e95dd611f7ad8797
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84f5f8668dea2b06a6390235be315ee25a27ba80
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832208"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786533"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,20 +44,20 @@ public java.sql.ResultSet getCatalogs()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getCatalogs 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCatalogs 메서드에 의해 지정 됩니다.  
   
 > [!NOTE]  
->  호출 하려면 master 데이터베이스에 연결 해야 SQL Azure에서 **SQLServerDatabaseMetaData.getCatalogs**합니다. SQL Azure 사용자 데이터베이스에서 카탈로그의 전체 집합을 반환 하는 것을 지원 하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs** 는 sys.databases 보기를 사용 하 여 카탈로그를 가져옵니다. 권한 설명을 참조 하십시오 [sys.databases (SQL Azure 데이터베이스)](http://go.microsoft.com/fwlink/?LinkId=217396) 이해 하려면 **SQLServerDatabaseMetaData.getCatalogs** SQL Azure의 동작입니다.  
+>  SQL Azure 호출 하려면 master 데이터베이스에 연결 해야 **SQLServerDatabaseMetaData.getCatalogs**합니다. SQL Azure는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs** sys.databases 뷰를 사용 하 여 카탈로그를 가져옵니다. 권한 설명을 참조 하세요 [sys.databases (SQL Azure 데이터베이스)](http://go.microsoft.com/fwlink/?LinkId=217396) 알아야 **SQLServerDatabaseMetaData.getCatalogs** SQL Azure 동작 합니다.  
   
- GetCatalogs 메서드에 의해 반환 된 결과 집합에는 다음 정보가 포함 됩니다.  
+ getCatalogs 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|이름|유형|Description|  
+|속성|형식|설명|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**문자열**|시스템 데이터베이스를 비롯 한 카탈로그의 이름 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.|  
+|TABLE_CAT|**String**|[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 시스템 데이터베이스를 비롯한 카탈로그의 이름입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는에 포함 된 모든 데이터베이스의 이름을 반환 하려면 getCatalogs 메서드를 사용 하는 방법을 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], 시스템 데이터베이스를 포함 합니다.  
+ 다음 예제에서는 getCatalogs 메서드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 시스템 데이터베이스를 비롯한 모든 데이터베이스의 이름을 반환하는 방법을 보여 줍니다.  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  
@@ -82,7 +82,7 @@ public static void executeGetCatalogs(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

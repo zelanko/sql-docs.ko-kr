@@ -1,5 +1,5 @@
 ---
-title: getTablePrivileges 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getTablePrivileges 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a7bcc60d73aba7e0939d70224a765168738b64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 43b6de38738f8bea736d3c156dadb2a288fcbc65
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840326"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786021"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,15 +43,15 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>매개 변수  
  *catalog*  
   
- A **문자열** 카탈로그 이름이 들어 있는입니다. 이 매개 변수에 null을 제공하면 카탈로그 이름을 사용할 필요가 없음을 나타냅니다.  
+ 카탈로그 이름이 포함하는 **문자열**입니다. 이 매개 변수에 null을 제공하면 카탈로그 이름을 사용할 필요가 없음을 나타냅니다.  
   
  *schema*  
   
- A **문자열** 스키마 이름 패턴이 들어 있는입니다. 이 매개 변수에 null을 제공하면 스키마 이름을 사용할 필요가 없음을 나타냅니다.  
+ 스키마 이름 패턴이 들어 있는 **문자열**입니다. 이 매개 변수에 null을 제공하면 스키마 이름을 사용할 필요가 없음을 나타냅니다.  
   
  *table*  
   
- A **문자열** 테이블 이름 패턴이 들어 있는입니다.  
+ 테이블 이름 패턴이 들어 있는 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
@@ -59,26 +59,26 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getTablePrivileges 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTablePrivileges 메서드에 의해 지정 됩니다.  
   
- GetTablePrivileges 메서드에 의해 반환 된 결과 집합에는 다음 정보가 포함 됩니다.  
+ getTablePrivileges 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|이름|유형|Description|  
+|속성|형식|설명|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**문자열**|카탈로그 이름입니다.|  
-|TABLE_SCHEM|**문자열**|테이블 스키마 이름입니다.|  
-|TABLE_NAME|**문자열**|테이블 이름.|  
-|GRANTOR|**문자열**|액세스 권한을 부여하는 개체입니다.|  
-|GRANTEE|**문자열**|액세스 권한을 받는 개체입니다.|  
-|PRIVILEGE|**문자열**|부여되는 액세스 권한의 유형입니다.|  
-|IS_GRANTABLE|**문자열**|피부여자가 다른 사용자에게 액세스 권한을 부여할 수 있는지 여부를 나타냅니다.|  
+|TABLE_CAT|**String**|카탈로그 이름입니다.|  
+|TABLE_SCHEM|**String**|테이블 스키마 이름입니다.|  
+|TABLE_NAME|**String**|테이블 이름.|  
+|GRANTOR|**String**|액세스 권한을 부여하는 개체입니다.|  
+|GRANTEE|**String**|액세스 권한을 받는 개체입니다.|  
+|PRIVILEGE|**String**|부여되는 액세스 권한의 유형입니다.|  
+|IS_GRANTABLE|**String**|피부여자가 다른 사용자에게 액세스 권한을 부여할 수 있는지 여부를 나타냅니다.|  
   
 > [!NOTE]  
->  GetTablePrivileges 메서드에 의해 반환 되는 데이터에 대 한 자세한 내용은 "sp_table_privileges (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  
+>  getTablePrivileges 메서드에서 반환되는 데이터에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “sp_table_privileges(Transact-SQL)”를 참조하십시오.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 getTablePrivileges 메서드를 사용 하 여 Person.Contact 테이블에 대 한 액세스 권한을 반환 하는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 예제 데이터베이스.  
+ 다음 예제에서는 getTablePrivileges 메서드를 사용하여 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스의 Person.Contact 테이블에 대한 액세스 권한을 반환하는 방법을 보여 줍니다.  
   
 ```  
 public static void executeGetTablePrivileges(Connection con) {  
@@ -103,7 +103,7 @@ public static void executeGetTablePrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

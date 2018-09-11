@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3965327a41cacb25e76346b82128fb583aaf83b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04915501bf8e4618b35c8019779af5e60cda8057
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828008"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787109"
 ---
-# <a name="concurssscrolllocks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS 필드 (SQLServerResultSet)
+# <a name="concurssscrolllocks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS 필드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형 행 잠금 사용 합니다.  
+  행 잠금을 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 읽기/쓰기 낙관적 동시성 유형을 지정하는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ## <a name="field-value"></a>필드 값  
  **int** 값 1009입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

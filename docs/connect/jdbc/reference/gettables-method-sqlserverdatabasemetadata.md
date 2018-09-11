@@ -1,5 +1,5 @@
 ---
-title: getTables 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getTables 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64b6559137dca42bf2602b19aaa92c754dc255be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2bbe1c39895febd9d853afee54c034d6eb77c3b1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840808"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784799"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,17 +44,17 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>매개 변수  
  *catalog*  
   
- A **문자열** 카탈로그 이름이 들어 있는입니다. 이 매개 변수에 null을 제공하면 카탈로그 이름을 사용할 필요가 없음을 나타냅니다.  
+ 카탈로그 이름이 포함하는 **문자열**입니다. 이 매개 변수에 null을 제공하면 카탈로그 이름을 사용할 필요가 없음을 나타냅니다.  
   
  *schema*  
   
- A **문자열** 스키마 이름 패턴이 들어 있는입니다. 이 매개 변수에 null을 제공하면 스키마 이름을 사용할 필요가 없음을 나타냅니다.  
+ 스키마 이름 패턴이 들어 있는 **문자열**입니다. 이 매개 변수에 null을 제공하면 스키마 이름을 사용할 필요가 없음을 나타냅니다.  
   
- *테이블 이름*  
+ *tableName*  
   
- A **문자열** 테이블 이름 패턴이 들어 있는입니다.  
+ 테이블 이름 패턴이 들어 있는 **문자열**입니다.  
   
- *형식*  
+ *types*  
   
  포함할 테이블의 형식이 들어 있는 문자열 배열입니다. Null은 모든 테이블 형식이 포함되어야 함을 나타냅니다.  
   
@@ -64,29 +64,29 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 getTables 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTables 메서드에서 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 getTables 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTables 메서드에 의해 지정됩니다.  
   
- GetTables 메서드에서 반환 된 결과 집합에는 다음 정보가 포함 됩니다.  
+ getTables 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|이름|유형|Description|  
+|속성|형식|설명|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**문자열**|지정된 테이블이 있는 데이터베이스의 이름입니다.|  
-|TABLE_SCHEM|**문자열**|테이블 스키마 이름입니다.|  
-|TABLE_NAME|**문자열**|테이블 이름.|  
-|TABLE_TYPE|**문자열**|테이블 형식입니다.|  
-|REMARKS|**문자열**|테이블에 대한 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.  |  
-|TYPE_CAT|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
-|TYPE_SCHEM|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
-|TYPE_NAME|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
-|SELF_REFERENCING_COL_NAME|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
-|REF_GENERATION|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|TABLE_CAT|**String**|지정된 테이블이 있는 데이터베이스의 이름입니다.|  
+|TABLE_SCHEM|**String**|테이블 스키마 이름입니다.|  
+|TABLE_NAME|**String**|테이블 이름.|  
+|TABLE_TYPE|**String**|테이블 형식입니다.|  
+|REMARKS|**String**|테이블에 대한 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 열의 값을 반환하지 않습니다.|  
+|TYPE_CAT|**String**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|TYPE_SCHEM|**String**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|TYPE_NAME|**String**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|SELF_REFERENCING_COL_NAME|**String**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|REF_GENERATION|**String**|JDBC 드라이버에서는 지원되지 않습니다.|  
   
 > [!NOTE]  
->  GetTables 메서드에서 반환 된 데이터에 대 한 자세한 내용은 "sp_tables (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  
+>  getTables 메서드에서 반환되는 데이터에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “sp_tables(Transact-SQL)”를 참조하십시오.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 getTables 메서드를 사용 하 여 Person.Contact 테이블에 대 한 테이블 설명 정보를 반환 하는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 예제 데이터베이스.  
+ 다음 예제에서는 getTables 메서드를 사용하여 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스의 Person.Contact 테이블에 대한 테이블 설명 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  
 public static void executeGetTables(Connection con) {  
@@ -111,7 +111,7 @@ public static void executeGetTables(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

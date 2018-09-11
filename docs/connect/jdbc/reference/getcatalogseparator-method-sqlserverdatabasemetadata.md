@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e03c787a5153420b4ba1171f6d0f1bc2f95137cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1a8587c005186cb9806e35eec66d0ed571f372c1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831908"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784077"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>getCatalogSeparator 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  검색 된 **문자열** 이 데이터베이스가 카탈로그 및 테이블 이름 사이 구분 기호로 사용 하는 합니다.  
+  이 데이터베이스에서 카탈로그 및 테이블 이름 사이에 구분 기호로 사용하는 **문자열**을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,17 +39,17 @@ public java.lang.String getCatalogSeparator()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 하는 카탈로그 구분 기호를 포함 합니다.  
+ 카탈로그 구분 기호가 들어 있는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getCatalogSeparator 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCatalogSeparator 메서드에 의해 지정 됩니다.  
   
- 사용 하는 경우는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터베이스에이 메서드는 기간을 반환 합니다 (".")는 카탈로그 구분 기호로 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 카탈로그 구분 기호로 마침표(“.”)를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

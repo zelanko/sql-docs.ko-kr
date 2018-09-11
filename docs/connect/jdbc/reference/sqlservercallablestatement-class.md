@@ -14,19 +14,19 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3813574070c53f16cd04ff262d7134c87d4ea85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8dca164af73506119cfaef376bcb7776708f76df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846298"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783921"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   입력 및 출력 매개 변수와 함께 호출할 저장 프로시저 이름을 지정할 수 있도록 합니다. 이 클래스는 ? = call( ?, ..) 구문을 사용하여 반환 상태 값을 검색하는 기능도 제공합니다.  
   
- **패키지에 대 한** com.microsoft.sqlserver.jdbc  
+ **패키지:** com.microsoft.sqlserver.jdbc  
   
  **구현:** [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
@@ -39,16 +39,16 @@ ms.locfileid: "32846298"
 public final class SQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>주의  
- SQLServerCallableStatement 입력 및 출력 매개 변수와 함께 호출할 저장된 프로시저 이름을 지정할 수 있습니다. SQLServerCallableStatement와 반환 상태 값을 검색 하는 기능도 제공는 `? = call( ?, ..)` 구문입니다.  
+## <a name="remarks"></a>Remarks  
+ SQLServerCallableStatement를 사용하면 입력 및 출력 매개 변수와 함께 호출할 저장 프로시저 이름을 지정할 수 있습니다. SQLServerCallableStatement 사용 하 여 반환 상태 값을 검색 하는 기능도 제공 합니다 `? = call( ?, ..)` 구문입니다.  
   
- 이 클래스는 SQLServerCallableStatement 클래스, ISQLServerCallableStatement 인터페이스, java.sql.CallableStatement 인터페이스 및 클래스와 인터페이스에 대 한 SQLServerPreparedStatement에서 지 원하는에 대 한 래핑 해제를 지원 합니다. 자세한 내용은 참조 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
+ 이 클래스는 SQLServerCallableStatement 클래스, ISQLServerCallableStatement 인터페이스, java.sql.CallableStatement 인터페이스 및 클래스 및 SQLServerPreparedStatement에서 래핑 해제에 대 한 지원 되는 인터페이스에 대 한 래핑 해제를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
   
- 지정 된 형식과 충돌을 입력 하는 경우에 형식에 대 한 호출 됩니다 set SQLServerCallableStatement 중 하나는 메서드 [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md), 마지막 SQLServerCallableStatement set 메서드에 의해 지정 된 형식이 사용 됩니다. 그러나 이로 인해 호환되지 않는 데이터 유형 변환 오류가 발생할 수 있습니다. SQLServerCallableStatement 설정 메서드를 호출 하지 않으면 첫 번째 지정 된 형식의 [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 호출이 사용 합니다.  
+ 지정 된 형식을 사용 하 여 충돌을 입력 하는 경우 형식에 대해 라고 set SQLServerCallableStatement 중 하나는 메서드 [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md), 마지막 SQLServerCallableStatement set 메서드에 지정 된 유형이 사용 됩니다. 그러나 이로 인해 호환되지 않는 데이터 유형 변환 오류가 발생할 수 있습니다. SQLServerCallableStatement set 메서드가 호출되지 않은 경우 첫 번째 [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 호출로 지정된 유형이 사용됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0은 결과 집합 JDBC 4.0 권장 사항을 준수 및 OUT 매개 변수를 검색 하기 전에 업데이트 횟수를 검색 해야 합니다. 결과 집합 및 업데이트 횟수를 완전히 처리하기 전에 OUT 매개 변수가 검색된 경우 처리되지 않은 결과 집합 및 업데이트 횟수는 손실됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0은 OUT 매개 변수를 검색하기 전에 결과 집합 및 업데이트 횟수를 검색해야 한다는 JDBC 4.0 권장 사항을 준수합니다. 결과 집합 및 업데이트 횟수를 완전히 처리하기 전에 OUT 매개 변수가 검색된 경우 처리되지 않은 결과 집합 및 업데이트 횟수는 손실됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

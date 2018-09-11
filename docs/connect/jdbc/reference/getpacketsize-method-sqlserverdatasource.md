@@ -1,5 +1,5 @@
 ---
-title: getPacketSize 메서드 (SQLServerDataSource) | Microsoft Docs
+title: getPacketSize 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4350bb6f3d6213548b298b45052ca009e8f99cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7067b0a96fdde31afdd8d4a4f67c757346385b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836798"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786907"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  와 통신 하는 데 사용 되는 현재 네트워크 패킷 크기를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], 바이트 단위로 지정 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와의 통신에 사용되는 현재 네트워크 패킷 크기(바이트)를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,12 +39,12 @@ public int getPacketSize()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **int** 현재 네트워크 패킷 크기를 포함 하는 값입니다.  
+ 현재 네트워크 패킷 크기가 들어 있는 **int** 값입니다.  
   
-## <a name="remarks"></a>주의  
- PacketSize 속성을 설정 하지 않으면 getPacketSize 메서드는 기본값인 8000 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ packetSize 속성이 설정되어 있지 않으면 getPacketSize 메서드는 기본값인 8000을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

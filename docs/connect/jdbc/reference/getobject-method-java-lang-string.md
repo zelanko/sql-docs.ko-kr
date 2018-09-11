@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82618a47bc45d9d204e7c37305289796e77e5a60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6f6952daf4c1428d59b0e83656571a578af255f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837268"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786660"
 ---
 # <a name="getobject-method-javalangstring"></a>getObject 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,33 +41,33 @@ public java.lang.Object getObject(java.lang.String sCol)
 #### <a name="parameters"></a>매개 변수  
  *sCol*  
   
- A **문자열** 매개 변수 이름이 들어 있는입니다.  
+ 매개 변수 이름이 들어 있는 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **개체** 값입니다.  
+ **Object** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getObject 메서드는 java.sql.CallableStatement 인터페이스의 getObject 메서드에 의해 지정 됩니다.  
   
  이 메서드는 지정된 열의 값을 Java 개체로 반환합니다. Java 개체의 형식은 열의 SQL 형식에 해당하는 기본 Java 개체 형식으로서, JDBC 사양에 지정된 기본 제공 형식에 대한 매핑을 따릅니다. 값이 SQL NULL이면 드라이버에서는 Java null을 반환합니다.  
   
- 이 메서드는 데이터베이스 관련 추상 데이터 형식을 읽는 데에도 사용할 수 있습니다. JDBC 2.0 API SQL 사용자 정의 형식의 데이터를 구체화 getObject 메서드의 동작이 확장 됩니다. 열에 구조화 되었거나 고유한 값이 포함 된 경우이 메서드의 동작은 것에 대 한 호출 처럼 `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`합니다.  
+ 이 메서드는 데이터베이스 관련 추상 데이터 형식을 읽는 데에도 사용할 수 있습니다. JDBC 2.0 API에서는 getObject 메서드의 동작이 확장되어 SQL 사용자 정의 형식의 데이터를 구체화합니다. 열에 구조화되었거나 고유한 값이 들어 있는 경우 이 메서드는 `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`를 호출할 때와 동일하게 동작합니다.  
   
- 시작 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0부터는 다음과 같은 결과가 나타납니다.  
   
--   형식의 값 **날짜** java.sql.Date 개체로 반환 됩니다.  
+-   **date** 형식의 값은 java.sql.Date 개체로 반환됩니다.  
   
--   형식의 값 **시간** java.sql.Time 개체로 반환 됩니다.  
+-   **time** 형식의 값은 java.sql.Time 개체로 반환됩니다.  
   
--   형식의 값 **datetime2** java.sql.Timestamp 개체로 반환 됩니다.  
+-   **datetime2** 형식의 값은 java.sql.Timestamp 개체로 반환됩니다.  
   
--   형식의 값 **datetimeoffset** 은 microsoft.sql.DateTimeOffset 개체로 반환 됩니다.  
+-   **datetimeoffset** 형식의 값은 microsoft.sql.DateTimeOffset 개체로 반환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [getObject 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [getObject 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -14,19 +14,19 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46281eca1f326f39a0e8aff7e167214152a839e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7a40dc7a3f55a9c331f15783a4349e3ffbed269
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847796"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784068"
 ---
 # <a name="sqlserverxaresource-class"></a>SQLServerXAResource 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  XAResource 나타냅니다 XA에 대 한 분산 트랜잭션 관리 합니다.  
+  XA 분산 트랜잭션 관리를 위한 XAResource를 나타냅니다.  
   
- **패키지에 대 한** com.microsoft.sqlserver.jdbc  
+ **패키지:** com.microsoft.sqlserver.jdbc  
   
  **확장:** java.lang.Object  
   
@@ -39,10 +39,10 @@ ms.locfileid: "32847796"
 public class SQLServerXAResource  
 ```  
   
-## <a name="remarks"></a>주의  
- 구현 되는 XA 트랜잭션 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 를 사용 하 여 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 분산 트랜잭션 관리자 (DTC). SQLServerXAResource 클래스를 호출 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] DTC와 상호 작용 sqljdbc_xa.dll 이라는 dll을 확장 합니다. SQLServerXAResource (XA_START, XA_END, XA_PREPARE 등)에서 수신 되는 XA 호출은 해당 DTC 함수 호출에 매핑됩니다.  
+## <a name="remarks"></a>Remarks  
+ XA 트랜잭션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] DTC(분산 트랜잭션 관리자)를 사용하여 구현됩니다. SQLServerXAResource 클래스는 DTC와 상호 작용하는 sqljdbc_xa.dll이라는 이름의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 dll을 호출합니다. SQLServerXAResource에서 받은 XA_START, XA_END, XA_PREPARE 등의 XA 호출은 해당하는 DTC 함수 호출에 매핑됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerXAResource 멤버](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

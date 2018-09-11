@@ -1,6 +1,6 @@
 ---
-title: OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery | Microsoft Docs
-description: OLE DB Driver for SQL Server 고가용성, 재해 복구에 대 한 지원
+title: SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원 | Microsoft Docs
+description: SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,35 +12,35 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 02f6c8da18d94c243ea9c3c07717af5b9750b066
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: ac2a123be5557069964edaddf0a3d6234fba6d19
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612168"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027529"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 문서에서는 SQL Server 지원에 대 한 OLE DB Driver 설명 (에 추가 된 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])에 대 한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(Failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 및 [활성 보조: 읽기 가능한 보조 복제본&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+  이 문서에서는 SQL Server 지원에 대 한 OLE DB 드라이버 설명 (추가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])에 대 한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(Failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 및 [활성 보조: 읽기 가능한 보조 복제본&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
- 연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. OLE DB Driver for SQL Server 응용 프로그램 장애 조치 되 가용성 그룹의 데이터베이스에 연결 되 면 원래 연결이 끊어지고, 및 응용 프로그램 장애 조치 후 작업을 계속 하려면 새 연결을 열어야 합니다.  
+ 연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. SQL Server용 OLE DB 드라이버 응용 프로그램이 장애 조치(Failover)되는 가용성 그룹의 데이터베이스에 연결된 경우, 원래 연결은 끊어지며 장애 조치 후 응용 프로그램이 계속 작동하려면 새 연결을 열어야 합니다.  
   
- 가용성 그룹 수신기에 연결 하지 경우와 여러 IP 주소가 호스트 이름에 연결 되어 있는 경우 OLE DB Driver for SQL Server가 DNS 항목과 연결 된 모든 IP 주소 순차적으로 반복 합니다. DNS 서버가 반환한 첫 번째 IP 주소가 NIC(네트워크 인터페이스 카드)에 바인딩되지 않은 경우 시간이 오래 걸릴 수 있습니다. 가용성 그룹 수신기에 연결할 때 OLE DB Driver for SQL Server에 병렬 모든 IP 주소에 대 한 연결을 설정 하 고 연결 시도가 성공 하면 드라이버는 보류 중인 연결 시도 삭제 합니다.  
+ 가용성 그룹 수신기에 연결하지 않았고 여러 IP 주소가 호스트 이름과 연결된 경우 SQL Server용 OLE DB 드라이버는 DNS 항목과 연결된 모든 IP 주소를 순차적으로 반복합니다. DNS 서버가 반환한 첫 번째 IP 주소가 NIC(네트워크 인터페이스 카드)에 바인딩되지 않은 경우 시간이 오래 걸릴 수 있습니다. 가용성 그룹 수신기에 연결할 때 SQL Server용 OLE DB 드라이버는 모든 IP 주소에 병렬로 연결을 설정하려고 시도하며 연결 시도가 성공하면 드라이버는 보류 중인 연결 시도를 삭제합니다.  
   
 > [!NOTE]  
 > 연결 제한 시간을 늘리고 연결 재시도 논리를 구현하면 응용 프로그램이 가용성 그룹에 연결될 가능성이 증가합니다. 또한 가용성 그룹 장애 조치(failover)로 인해 연결이 실패할 수 있으므로 실패한 연결을 다시 연결할 때까지 다시 시도하는 연결 재시도 논리를 구현해야 합니다.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결  
- 항상 지정 **MultiSubnetFailover = Yes** SQL Server Always On 가용성 그룹 수신기에 연결할 때 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의 합니다. **MultiSubnetFailover** 모든 Always On 가용성 그룹 및 장애 조치 클러스터 인스턴스에 대 한 보다 빠르게 장애 조치할 수 있도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 및 토폴로지에 대 한 단일 및 다중 서브넷 Always On 장애 조치 시간을 크게 저하 됩니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치 하는 동안 OLE DB Driver for SQL Server는 TCP 연결을 다시 시도 합니다.  
+ SQL Server Always On 가용성 그룹 수신기 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 **MultiSubnetFailover=Yes**를 지정하세요. **MultiSubnetFailover**를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 모든 Always On 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치 하는 동안 OLE DB Driver for SQL Server에 TCP 연결을 다시 시도 합니다.  
   
- **MultiSubnetFailover** 연결 속성을 응용 프로그램 장애 조치 클러스터 인스턴스 또는 가용성 그룹에 배포 되 고 해당 OLE DB Driver for SQL Server는 데이터베이스에 연결 하려고 나타냅니다는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 모든 IP에 연결 하려고 시도 하 여 인스턴스 주소입니다. 연결에 대해 **MultiSubnetFailover=Yes**를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이 Always On 가용성 그룹 또는 장애 조치 클러스터 인스턴스의 장애 조치 후 더 빠르게 다시 연결할 수 있도록 하며 모두 단일 및 다중 서브넷 가용성 그룹과 장애 조치 클러스터 인스턴스에 적용 합니다.  
+ **MultiSubnetFailover** 연결 속성은 응용 프로그램을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 SQL Server용 OLE DB 드라이버가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결에 대해 **MultiSubnetFailover=Yes**를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이렇게 하면 Always On 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
   
- 연결 문자열 키워드에 대 한 자세한 내용은 참조 [OLE DB 드라이버와 SQL Server에 대 한 연결 문자열 키워드를 사용 하 여](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)합니다.  
+ 연결 문자열 키워드에 대한 내용은 [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조하세요.  
   
  가용성 그룹 수신기 또는 장애 조치(Failover) 클러스터 인스턴스 이외의 다른 항목에 연결할 때 **MultiSubnetFailover=Yes**를 지정하면 성능에 상당히 부정적인 영향을 줄 수 있으므로 이러한 설정은 지원되지 않습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "35612168"
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>데이터베이스 미러링에서 다중 서브넷 클러스터를 사용하도록 업그레이드  
 연결 문자열에 **MultiSubnetFailover** 및 **Failover_Partner** 연결 키워드가 있으면 연결 오류가 발생합니다. **MultiSubnetFailover**가 사용되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(failover) 파트너 응답을 반환하는 경우에도 오류가 발생합니다.  
   
-OLE DB Driver for SQL Server 응용 프로그램 현재 사용 하 여 데이터베이스 미러링 다중 서브넷 시나리오를 업그레이드 하는 경우, 제거 해야는 **에서 Failover_Partner** 연결 속성 및 사용 하 여 바꾸기  **MultiSubnetFailover** 로 설정 **예** 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿉니다. 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=Yes**를 사용하는 경우 드라이버에서 오류가 발생합니다. 그러나 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=No**(또는 **ApplicationIntent=ReadWrite**)를 사용하면 응용 프로그램에서 데이터베이스 미러링을 사용합니다.  
+현재 데이터베이스 미러링을 사용 중인 SQL Server용 OLE DB 드라이버 응용 프로그램을 다중 서브넷 시나리오로 업그레이드할 경우에는 **Failover_Partner** 연결 속성을 제거하고, 이를 **Yes**로 설정된 **MultiSubnetFailover**로 바꾸고, 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿔야 합니다. 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=Yes**를 사용하는 경우 드라이버에서 오류가 발생합니다. 그러나 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=No**(또는 **ApplicationIntent=ReadWrite**)를 사용하면 응용 프로그램에서 데이터베이스 미러링을 사용합니다.  
   
 가용성 그룹의 주 데이터베이스에서 데이터베이스 미러링이 사용되고 가용성 그룹 수신기가 아닌 주 데이터베이스에 연결하는 연결 문자열에 **MultiSubnetFailover=Yes**가 사용될 경우 드라이버에서 오류를 반환합니다.  
 
@@ -78,14 +78,14 @@ OLE DB Driver for SQL Server 응용 프로그램 현재 사용 하 여 데이터
 
 
 ## <a name="ole-db"></a>OLE DB  
-OLE DB Driver for SQL Server 모두를 지원 합니다.는 **ApplicationIntent** 및 **MultiSubnetFailover** 키워드입니다.   
+모두는 OLE DB Driver for SQL Server 지원 합니다 **ApplicationIntent** 하며 **MultiSubnetFailover** 키워드.   
   
-두 개의 OLE DB 연결 문자열 키워드가 추가 된 지원 하기 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] OLE DB driver for SQL Server:  
+지원 하기 위해 두 개의 OLE DB 연결 문자열 키워드가 추가 되었습니다 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] OLE DB 드라이버에서 SQL Server에 대 한 합니다.  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
   
- SQL Server 용 OLE DB Driver의 연결 문자열 키워드에 대 한 자세한 내용은 참조 [OLE DB 드라이버와 SQL Server에 대 한 연결 문자열 키워드를 사용 하 여](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)합니다.  
+ SQL Server 용 OLE DB 드라이버에서 연결 문자열 키워드에 대 한 자세한 내용은 참조 [OLE DB Driver for SQL Server를 사용 하 여 연결 문자열 키워드를 사용 하 여](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)입니다.  
 
 ### <a name="application-intent"></a>응용 프로그램 의도 
 
@@ -95,12 +95,12 @@ OLE DB Driver for SQL Server 모두를 지원 합니다.는 **ApplicationIntent*
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-OLE DB Driver for SQL Server 응용 프로그램 방법 중 하나를 사용 하 여 응용 프로그램 의도 지정 수 있습니다.  
+OLE DB 드라이버를 SQL Server 응용 프로그램에 대 한 방법 중 하나를 사용 하 여 응용 프로그램 의도 지정 수 있습니다.:  
   
- -   **Idbinitialize:: Initialize**  
+ -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize**는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 응용 프로그램 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
   
- -   **Idatainitialize:: Getdatasource**  
+ -   **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource**는 **응용 프로그램 의도** 키워드를 포함할 수 있는 입력 연결 문자열을 사용합니다.  
   
  -   **IDBProperties::SetProperties**  
@@ -118,16 +118,16 @@ OLE DB Driver for SQL Server 응용 프로그램 방법 중 하나를 사용 하
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-OLE DB Driver for SQL Server 응용 프로그램 MultiSubnetFailover 옵션을 설정 하려면 다음 방법 중 하나를 사용할 수 있습니다.  
+OLE DB Driver for SQL Server 응용 프로그램 수 MultiSubnetFailover 옵션을 설정 하려면 다음 방법 중 하나를 사용 합니다.  
 
- -   **Idbinitialize:: Initialize**  
+ -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize**는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 응용 프로그램 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
   
- -   **Idatainitialize:: Getdatasource**  
- **Idatainitialize:: Getdatasource** 포함 될 수 있는 입력된 연결 문자열은 **MultiSubnetFailover** 키워드입니다.  
+ -   **IDataInitialize::GetDataSource**  
+ **IDataInitialize::GetDataSource**는 **MultiSubnetFailover** 키워드를 포함할 수 있는 입력 연결 문자열을 사용합니다.  
 
 -   **IDBProperties::SetProperties**  
-설정 하는 **MultiSubnetFailover** 속성 값, 호출 **idbproperties:: Setproperties** 전달는 **SSPROP_INIT_MULTISUBNETFAILOVER** 값을갖는속성 **VARIANT_TRUE** 또는 **VARIANT_FALSE** 또는 **DBPROP_INIT_PROVIDERSTRING** 속성 들어 있는 값을 "**MultiSubnetFailover = Yes** "또는"**MultiSubnetFailover = No**"입니다.
+설정 하는 **MultiSubnetFailover** 속성 값, 호출 **idbproperties:: Setproperties** 전달 합니다 **SSPROP_INIT_MULTISUBNETFAILOVER** 값을사용하여속성 **VARIANT_TRUE** 나 **VARIANT_FALSE** 하거나 **DBPROP_INIT_PROVIDERSTRING** 값을 포함 하는 속성 "**MultiSubnetFailover = Yes** "또는"**MultiSubnetFailover = No**"입니다.
 
 #### <a name="example"></a>예제
 
@@ -151,8 +151,8 @@ hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void **)&pIDBProperties)
 pIDBProperties->SetProperties(1, &PropSet);
 ```
 
-## <a name="see-also"></a>관련 항목  
- [OLE DB Driver for SQL Server 기능](../../oledb/features/oledb-driver-for-sql-server-features.md)    
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
   
   
