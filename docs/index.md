@@ -3,17 +3,18 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL 문서 | Microsoft 문서
 description: SQL에 대한 자세한 정보
+ms.date: 09/01/2018
 author: craigg-msft
 ms.author: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: install
-ms.openlocfilehash: 48562de9521387f6d40a31828fba7e508171c79a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 20861197abd978fc6598d9290fffa5b0059f8153
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031179"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343128"
 ---
 <div id="main" class="v2">
     <div class="container">
