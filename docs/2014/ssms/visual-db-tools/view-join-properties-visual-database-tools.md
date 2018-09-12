@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c2b6b23a17c4df85a24a342652eb58dc1e6e4f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d53c4db17cfd1957627f8c0f28d0f4b5174e0b60
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247883"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818889"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>조인 속성 보기(Visual Database Tools)
   속성 창에서 뷰의 속성 컬렉션을 볼 수 있습니다.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 200fd0b8db6b3816cd6870c153ca16e09aabfa9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74d6710a8111a46c2f148ba8da76e9760bce9f71
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284359"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808149"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>쿼리 결과 복사(Visual Database Tools)
   **결과** 창에서 탭으로 구분된 텍스트로 결과 집합을 복사할 수 있습니다. 전체 결과 집합, 연속된 모든 숫자 또는 연속되지 않은 행이나 셀을 복사할 수 있습니다.  

@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], data-tier applications
 - monitoring server performance [SQL Server], DACs
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e42ec1e943f53c8e2250f55335c667ed15eaf0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ddd797b3b2f387c1a4695c8fc831eb7db91d21e5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163014"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812209"
 ---
 # <a name="monitor-data-tier-applications"></a>데이터 계층 응용 프로그램 모니터링
   SSMS( **)의** 유틸리티 탐색기 **및** 개체 탐색기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 시스템 뷰 및 테이블과 함께 DAC(데이터 계층 응용 프로그램)를 모니터링할 수 있습니다. 또한 DAC에 포함된 데이터베이스의 모든 개체를 표준 데이터베이스 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 모니터링 기술을 사용하여 모니터링할 수 있습니다.  
@@ -34,7 +30,7 @@ ms.locfileid: "37163014"
  인스턴스가 SQL Server 유틸리티에서 관리되는지 여부에 상관없이 SSMS **개체 탐색기** 에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 배포된 각 DAC에 대한 기본 구성 정보가 표시됩니다. 또한 데이터베이스를 모니터링할 때와 동일한 절차를 사용하여 배포된 DAC와 연결된 데이터베이스를 모니터링할 수 있습니다.  
   
 ## <a name="using-the-sql-server-utility"></a>SQL Server 유틸리티 사용  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기**의 **배포된 데이터 계층 응용 프로그램** 세부 정보 페이지에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 관리되는 인스턴스에 배포된 모든 DAC의 리소스 사용률을 보고하는 대시보드가 표시됩니다. 이 세부 정보 페이지의 위쪽 창에는 배포된 각 DAC가 해당 CPU 및 파일 리소스의 사용률이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 정의된 정책을 벗어나는지 여부를 나타내는 시각적 표시기와 함께 나열됩니다. 목록 뷰에서 DAC를 선택할 경우 페이지 아래쪽 창의 탭에 추가 세부 정보가 표시됩니다. 세부 정보 페이지에 제공되는 정보에 대한 자세한 내용은 [배포된 데이터 계층 응용 프로그램 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)를 참조하세요.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기**의 **배포된 데이터 계층 응용 프로그램** 세부 정보 페이지에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 관리되는 인스턴스에 배포된 모든 DAC의 리소스 사용률을 보고하는 대시보드가 표시됩니다. 이 세부 정보 페이지의 위쪽 창에는 배포된 각 DAC가 해당 CPU 및 파일 리소스의 사용률이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 정의된 정책을 벗어나는지 여부를 나타내는 시각적 표시기와 함께 나열됩니다. 목록 뷰에서 DAC를 선택할 경우 페이지 아래쪽 창의 탭에 추가 세부 정보가 표시됩니다. 세부 정보 페이지에 제공되는 정보에 대한 자세한 내용은 [배포된 데이터 계층 응용 프로그램 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)를 참조하세요.  
   
  **배포된 데이터 계층 응용 프로그램** 세부 정보 페이지를 사용하여 사용률이 낮거나 하드웨어 리소스를 과도하게 사용하는 DAC를 신속하게 식별한 후 문제를 해결하기 위한 계획을 수립할 수 있습니다. 현재 하드웨어 리소스를 충분히 활용하지 않는 여러 DAC를 단일 서버로 통합하여 일부 서버를 다른 곳에 사용하도록 해제할 수 있습니다. DAC가 현재 서버의 리소스를 과도하게 사용하는 경우 DAC를 더 큰 서버로 이동하거나 현재 서버에 리소스를 추가할 수 있습니다.  
   

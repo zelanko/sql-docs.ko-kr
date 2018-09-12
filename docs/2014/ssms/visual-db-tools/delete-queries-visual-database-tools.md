@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9690ed54b747460fe5ee706d50085c53c85c1a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ff4f49b2fac5b9add358b7041a79d803733d9c4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240049"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807899"
 ---
 # <a name="delete-queries-visual-database-tools"></a>쿼리 삭제(Visual Database Tools)
   쿼리를 프로젝트에서 제거하고 파일 시스템에서 영구 삭제하는 방식으로 쿼리를 삭제할 수 있습니다. 다음 절차를 사용하여 삭제한 쿼리는 휴지통에 보관되지 않으므로 복원할 수 없습니다.  

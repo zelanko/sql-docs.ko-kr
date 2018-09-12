@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ee87fea9b2586b8da9c54b2d074228b93a97e11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86b820eb481bf1f27b28d54aa386c4dbc601ce81
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191203"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818489"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
   기존 솔루션 내에 하나 이상의 프로젝트를 만들 수 있습니다.  

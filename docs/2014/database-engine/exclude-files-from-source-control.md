@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b3507f06db699e8e88de2fe2e22f870b97b896e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa1379d18c84db90207e68d548219740ac8d60af
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330443"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811869"
 ---
 # <a name="exclude-files-from-source-control"></a>원본 제어에서 파일 제외
   작업 하는 솔루션에 원본 제어 서비스가 필요 하지 않은 파일이 있을 경우 사용할 수 있습니다 합니다 **소스 제어에서 제외** 소스 제어에서 파일을 제외 하는 명령입니다. 이렇게 하면 파일이 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 데이터베이스에 남아 있지만 더 이상 프로젝트와 함께 체크 인 또는 체크 아웃되지 않습니다.  

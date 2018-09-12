@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2f034cadd18ea0cf448a2044debe6b081c2a7e2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b307be56b6711f4c51b6bf7b96d03d946296e57
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239413"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807429"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>원본 제어에서 솔루션 및 프로젝트 열기
   사용할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 소스 제어에서 직접 솔루션이 나 프로젝트를 엽니다. 소스 제어에서 솔루션을 열면 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경은 솔루션의 최신 버전을 자동으로 검색하여 지정된 위치에 복사합니다.  

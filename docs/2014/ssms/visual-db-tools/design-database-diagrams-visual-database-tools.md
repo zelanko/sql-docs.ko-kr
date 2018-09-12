@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00f9386b6940d24f3ce7a063a58fb76c436221f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 355993756847c6fcc94b1c5a33b6058fd5b1a8ce
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255395"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819239"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 디자인(Visual Database Tools)
   데이터베이스 디자이너는 연결할 데이터베이스를 디자인하고 시각화할 수 있게 하는 비주얼 도구입니다. 데이터베이스를 디자인할 때 데이터베이스 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제할 수 있습니다. 데이터베이스를 시각화하기 위해 테이블, 열, 키, 관계의 일부 또는 전부를 표시하는 다이어그램을 하나 이상 만들 수 있습니다.  
@@ -52,13 +51,13 @@ ms.locfileid: "37255395"
  테이블 뷰에 대한 자세한 내용은 [다이어그램에 표시된 정보의 양 사용자 지정&#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)을 참조하세요.  
   
 ## <a name="relationships-in-a-database-diagram"></a>데이터베이스 다이어그램에서의 관계  
- 데이터베이스 다이어그램의 각 관계는 세 가지 고유 기능인 끝점, 선 스타일 및 관련 테이블을 사용하여 나타낼 수 있습니다.  
+ 데이터베이스 다이어그램의 각 관계는 세 가지 고유 기능인 엔드포인트, 선 스타일 및 관련 테이블을 사용하여 나타낼 수 있습니다.  
   
- **끝점** 선의 끝점은 관계가 일 대 일 관계인지 일 대 다 관계인지를 나타냅니다. 관계의 한 끝점에 키가 있고 다른 끝점에 숫자 8이 있는 경우 이는 일 대 다 관계이며, 관계의 각 끝점에 키가 있는 경우 일 대 일 관계입니다.  
+ **엔드포인트** 선의 엔드포인트는 관계가 일 대 일 관계인지 일 대 다 관계인지를 나타냅니다. 관계의 한 엔드포인트에 키가 있고 다른 엔드포인트에 숫자 8이 있는 경우 이는 일 대 다 관계이며, 관계의 각 엔드포인트에 키가 있는 경우 일 대 일 관계입니다.  
   
- **선 스타일** 선의 끝점이 아니라 선 자체는 외래 키 테이블에 데이터를 새로 추가하는 경우 DBMS(데이터베이스 관리 시스템)에서 관계에 대한 참조 무결성을 적용할지 여부를 나타냅니다. 선이 실선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용합니다. 그러나 선이 점선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용하지 않습니다.  
+ **선 스타일** 선의 엔드포인트가 아니라 선 자체는 외래 키 테이블에 데이터를 새로 추가하는 경우 DBMS(데이터베이스 관리 시스템)에서 관계에 대한 참조 무결성을 적용할지 여부를 나타냅니다. 선이 실선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용합니다. 그러나 선이 점선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용하지 않습니다.  
   
- **관련 테이블** 관계 선은 한 테이블과 다른 테이블 사이에 외래 키 관계가 있음을 나타냅니다. 일 대 다 관계의 경우 외래 키 테이블은 선의 숫자 8 기호 옆에 있는 테이블입니다. 선의 두 끝점이 모두 같은 테이블에 연결되면 반사 관계입니다. 자세한 내용은 [반사 관계 그리기&#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)를 참조하세요.  
+ **관련 테이블** 관계 선은 한 테이블과 다른 테이블 사이에 외래 키 관계가 있음을 나타냅니다. 일 대 다 관계의 경우 외래 키 테이블은 선의 숫자 8 기호 옆에 있는 테이블입니다. 선의 두 엔드포인트가 모두 같은 테이블에 연결되면 반사 관계입니다. 자세한 내용은 [반사 관계 그리기&#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  

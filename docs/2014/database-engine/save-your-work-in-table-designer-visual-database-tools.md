@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f663776ebfee8d03b9659ba21d607fca7b8a63a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83c7d725b248a72f56e32f2828ea5f410d28d398
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182898"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818789"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>테이블 디자이너에서 작업 내용 저장(Visual Database Tools)
   테이블 디자이너에 열려 있는 테이블의 변경 내용을 저장할 수 있습니다.  

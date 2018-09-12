@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,19 +16,19 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c5520359d8dd661d6636dbfcccddf60577adad2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb23912591cf03291311430dbacaef8d89d661cd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298563"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813759"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 에이전트, Statistics 개체
   SQL Server 에이전트 **Statistics** 성능 개체에는 SQL Server 에이전트에 관한 정보를 보고하는 성능 카운터가 포함되어 있습니다.  
   
  다음 표에서는 **SQLAgent:Statistics** 카운터를 나열합니다.  
   
-|속성|Description|  
+|이름|Description|  
 |----------|-----------------|  
 |**SQL Server Restarted**|SQL Server 에이전트가 시작된 후 Microsoft SQL Server가 SQL Server 에이전트에 의해 성공적으로 다시 시작된 횟수입니다.|  
   

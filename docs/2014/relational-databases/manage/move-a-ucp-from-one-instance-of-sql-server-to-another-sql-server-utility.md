@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5def37bd423f6c968d1111db903cd1481b48e24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c08b4940fa2734eb435b99dcc2b00137e6d1d8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331753"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817609"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>UCP를 한 SQL Server 인스턴스에서 다른 인스턴스로 이동(SQL Server 유틸리티)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 UCP(유틸리티 제어 지점)를 한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에서 다른 인스턴스로 이동하는 방법에 대해 설명합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "37331753"
   
 8.  데이터 수집 및 집계 작업이 완료될 때까지 약 1시간 동안 기다립니다.  
   
-9. 데이터를 새로 고치려면 **유틸리티 탐색기** 에서 **관리되는 인스턴스**노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다. 목록 뷰 데이터가 **유틸리티 탐색기** 내용 창에 표시됩니다. 자세한 내용은 [리소스 상태 정책 결과 보기&#40;SQL Server 유틸리티&#41;](view-resource-health-policy-results-sql-server-utility.md)를 참조하세요.  
+9. 데이터를 새로 고치려면 **유틸리티 탐색기**에서 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다. 목록 뷰 데이터가 **유틸리티 탐색기** 내용 창에 표시됩니다. 자세한 내용은 [리소스 상태 정책 결과 보기&#40;SQL Server 유틸리티&#41;](view-resource-health-policy-results-sql-server-utility.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)   

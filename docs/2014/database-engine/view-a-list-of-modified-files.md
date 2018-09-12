@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f26b11bb7822262cb9b240bfe0d8c318d2011d1
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228243"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811329"
 ---
 # <a name="view-a-list-of-modified-files"></a>수정된 파일의 목록 보기
   사용할 수는 **보류 중인 체크 인** 전혀 표시할 창 시간이 현재 솔루션에서 체크 아웃 된 파일의 목록 및 단일 단추를 사용 하 여 이러한 파일을 체크 인하려면 클릭 합니다.  

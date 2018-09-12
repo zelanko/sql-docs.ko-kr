@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f2f7014b9e347d12989900856d6e23ffb4e6a51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac98ea43f3ad261477abdcc0a0307c58a019daa4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218533"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811739"
 ---
-# <a name="job-properties-new-job-targets-page"></a>작업 속성: 새 작업 (대상 페이지)
+# <a name="job-properties-new-job-targets-page"></a>작업 속성: 새 작업(대상 페이지)
   이 페이지를 사용하여 작업의 대상 서버를 관리할 수 있습니다.  
   
 ## <a name="options"></a>변수  

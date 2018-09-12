@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0b79b2d5c63d1f9e08ec7407c58593c5aee7c52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3bd59ad9da06ac51a1830d0eafaf8e354bb2fc03
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217123"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817169"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>SCSI 호스트 어댑터 문제 검색
   이 규칙은 시스템 이벤트 로그에서 EventId 1066을 검사합니다. 이 오류는 SCSI 호스트 어댑터 구성 문제 또는 장치 오작동으로 인해 발생합니다.  

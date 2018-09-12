@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af846a1348d67acbb1b1d5776a357baaf99bf07e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a43e1efc508195b837879305080c7eb6636a2141
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176500"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811629"
 ---
 # <a name="browse-for-servers-network-servers"></a>서버 찾아보기(네트워크 서버)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 연결 시 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 정확한 이름을 모르는 경우 **서버 이름** 상자에서 **더 찾아보기**를 클릭하여 **서버 찾아보기** 대화 상자를 엽니다.  

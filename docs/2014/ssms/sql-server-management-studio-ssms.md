@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 893b4c108feb62f6cd076090bf4f0506765df819
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8ba142bcac50883ded20c7ff54d282e64a86562
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178996"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813159"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server 인프라를 관리 하기 위한 통합된 환경이입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]는 SQL Server 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 또한 데이터 계층 구성 요소(예: 응용 프로그램에 사용되는 데이터 웨어하우스 및 데이터베이스)를 배포, 모니터링 및 업그레이드하는 도구와 쿼리 및 스크립트를 작성하는 도구를 제공합니다.  

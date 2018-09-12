@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a3021f29ae5d6d730a20ebb5b79f54f7e7d87d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 876dca18a03a5b9440630c5cc0c7443fdd6d8eb2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309753"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807520"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>패싯 속성 대화 상자, 종속 조건 페이지
   이 대화 상자를 사용하여 이 정책 기반 관리 패싯을 현재 참조하는 조건 목록을 표시할 수 있습니다.  

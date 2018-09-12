@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b657d02a06d76645fce350e1f6ba82523e69ff37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f050f50dd7e749ab10be637390b4e28af3334683
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222653"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818059"
 ---
 # <a name="check-in-files"></a>파일 체크 인
   수정한 원본 제어 파일을 다른 사용자가 사용할 수 있게 만들려면 파일을 원본 제어로 체크 인해야 합니다. 파일을 체크 인하면 체크 인한 버전이 원본 제어 공급자에 기록되며 파일의 최신 버전이 됩니다.  

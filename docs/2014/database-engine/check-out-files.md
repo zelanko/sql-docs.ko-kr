@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 319555e7a87922b65ff4846b8b5830041893d3c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 313d5d85bd7ad8343fe90f0eeda16bf15e53ef44
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167174"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808439"
 ---
 # <a name="check-out-files"></a>파일 체크 아웃
   체크 인한 파일을 편집하는 것을 허용하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경을 구성하지 않은 경우 파일을 수정할 수 있으려면 체크 아웃해야 합니다. 파일을 체크 아웃하면 파일 버전의 복사본이 로컬 디스크에 복사되며 파일의 읽기 전용 특성이 제거됩니다.  

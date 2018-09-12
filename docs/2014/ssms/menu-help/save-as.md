@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0164c0a426f0d317107178a5f7c2e7eb9e41c5b8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326903"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814419"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
   이 대화 상자를 사용하여 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장할 수 있습니다. 이 대화 상자를 표시 하려면 클릭 **저장할**  *\<파일 >* **으로** 에 **파일** 메뉴 (여기서  *\<파일 >* 현재 항목의 이름)에 코드 편집기에서 ALT + F를 누르십시오.  

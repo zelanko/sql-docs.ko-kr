@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 204b3a4419ffe486907e8a60bcf7fd229c78192e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc741ae71ffec313b44ead1c2f634631fb99405a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277259"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818909"
 ---
 # <a name="open-projects-from-source-control"></a>원본 제어에서 프로젝트 열기
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원본 제어에서 프로젝트를 직접 열 수 있습니다. 이렇게 할 경우 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 최신 버전의 프로젝트를 검색하여 로컬 디스크에 복사합니다. 또한 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경은 프로젝트에 대한 솔루션을 자동으로 만듭니다.  

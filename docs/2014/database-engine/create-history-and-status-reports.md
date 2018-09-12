@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8374df1a73b68636ea22586dc44eea42ed8d89c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28d2dc6931f32b95bb318732a146b53d7bac5201
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314333"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807220"
 ---
 # <a name="create-history-and-status-reports"></a>기록 및 상태 보고서 만들기
   현재 로드된 솔루션에서 파일의 기록 또는 현재 상태에 대한 보고서를 만들 수 있습니다. 또한 보고서를 미리 본 다음 프린터, 파일 또는 클립보드로 보고서를 보낼 수 있습니다. 이러한 보고서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 의해 생성되지 않습니다. 대신에 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe가 이 보고서를 생성합니다.  

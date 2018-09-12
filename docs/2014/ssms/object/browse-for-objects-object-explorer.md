@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9c7893dcf6f250668b000c07126e62449518698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8873f15c60c68aaa1a1db07bfd996e4a7be79b9d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168324"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814899"
 ---
 # <a name="browse-for-objects-object-explorer"></a>개체 찾아보기(개체 탐색기)
   선택한 유형의 개체 목록을 표시합니다. 해당 확인란을 선택하여 이 목록에서 하나 이상의 개체를 선택합니다. **개체 찾아보기** 상자에는 동작에 해당하는 항목만 표시되며 보기 권한이 있는 항목만 표시됩니다.  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 149b7f15a59dd6f3532353e757faac69fc25befd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183600"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811899"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
   다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
@@ -41,13 +40,13 @@ ms.locfileid: "37183600"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|예|예|아니오|아니요|아니요|아니요|아니요|  
-|**MSX = 8.0 &LT; SP3**|예|예|아니오|아니요|아니요|아니요|아니요|  
-|**MSX = 8.0 SP3 이상**|아니요|아니요|예|예|예|예|예|  
-|**MSX = 9.0**|아니요|아니요|아니요|예|예|예|예|  
-|**MSX = 10.0**|아니요|아니요|아니요|아니요|예|예|예|  
-|**MSX = 10.5**|아니요|아니요|아니요|아니요|아니요|예|예|  
-|**MSX = 11.0**|아니요|아니요|아니요|아니요|아니요|아니요|예|  
+|**MSX = 7.0**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|아니요|  
+|**MSX = 8.0 &LT; SP3**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|아니요|  
+|**MSX = 8.0 SP3 이상**|아니요|아니요|예|예|예|예|사용자 계정 컨트롤|  
+|**MSX = 9.0**|아니요|아니요|아니요|예|예|예|사용자 계정 컨트롤|  
+|**MSX = 10.0**|아니요|아니요|아니요|아니요|예|예|사용자 계정 컨트롤|  
+|**MSX = 10.5**|아니요|아니요|아니요|아니요|아니요|예|사용자 계정 컨트롤|  
+|**MSX = 11.0**|아니요|아니요|아니요|아니요|아니요|아니요|사용자 계정 컨트롤|  
   
  다중 서버 환경을 만들 때에는 다음 사항을 고려하십시오.  
   

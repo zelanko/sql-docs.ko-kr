@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 72c66f95a45bece098fe6b9a55bea536653e94b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2ba0470599798a7a00972395a567db706332b8d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313823"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810649"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>리소스 상태 정책 정의 수정(SQL Server 유틸리티)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 리소스 상태 정책 정의를 수정하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 리소스 사용률 정책을 수정하려면 먼저 UCP(유틸리티 제어 지점)를 만들어야 합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)를 참조하세요.  
@@ -36,7 +35,7 @@ ms.locfileid: "37313823"
   
 2.  유틸리티 탐색기 탐색 창에서 **유틸리티 관리** 를 클릭하여 전역 모니터링 정책을 보거나 수정한 다음 유틸리티 탐색기 내용 창에서 **정책** 탭을 클릭합니다.  
   
-3.  유틸리티 탐색기 내용 창에서 화살표나 정책 설명을 클릭하여 **전역 데이터 계층 모니터링 정책 설정** 또는 **전역 관리되는 인스턴스 모니터링 정책 설정** 을 선택합니다.  
+3.  유틸리티 탐색기 내용 창에서 화살표나 정책 설명을 클릭하여 **전역 데이터 계층 모니터링 정책 설정** 또는 **전역 관리되는 인스턴스 모니터링 정책 설정**을 선택합니다.  
   
 4.  정책 설명 오른쪽에 있는 컨트롤을 사용하여 미달 사용 또는 초과 사용 정책 임계값을 설정합니다.  
   

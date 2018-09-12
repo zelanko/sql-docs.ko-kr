@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b622e93023d6ee606d59e24c97cddefd4fd2c1fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 011ff05ee4781000e49c130c154ed0cc868ecb55
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198403"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809469"
 ---
-# <a name="operator-properties-and-new-operator-general-page"></a>운영자 속성 및 새 운영자 (일반 페이지)
+# <a name="operator-properties-and-new-operator-general-page"></a>운영자 속성 및 새 운영자(일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자의 일반 속성을 확인하고 수정할 수 있습니다.  
   
 ## <a name="options"></a>변수  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8d3ede0b93b40b336279b6690d4539af247ceec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a48ce1c2bacb411caa4f7d6ee0c1b166a6013741
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187770"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809209"
 ---
 # <a name="delete-a-solution"></a>솔루션 삭제
   솔루션을 삭제하면 솔루션의 파일 항목뿐만 아니라 물리적 저장소의 파일도 영구적으로 삭제됩니다.  

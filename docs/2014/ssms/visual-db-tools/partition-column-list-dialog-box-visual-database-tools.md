@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7625135e097627776eae7fc63222c578f9b535d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce0f53334ebca555d57284e0b6cad4065b1084
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172224"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817119"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>분할 열 목록 대화 상자(Visual Database Tools)
   테이블에 관련된 분할 구성표가 있으면 이 대화 상자를 사용하여 분할 함수를 적용할 열을 선택할 수 있습니다. 함수가 작동하기 위해서는 전환한 열의 데이터 형식이 분할 함수에 정의되어 있는 열의 데이터 형식과 동일해야 합니다.  

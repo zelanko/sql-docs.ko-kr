@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7e3cd9e8292b287b8658453ffa415c7d9e8b52d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2ddb223ea763415fe24638ba86bf8968c29c1d7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283029"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811529"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>선호도 마스크 기본값 유지
   이 규칙은 선호도 마스크에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정이 기본값인 0으로 설정되어 있는지 검사합니다. 선호도 마스크 옵션은 CPU 선호도를 동적으로 제어합니다.  

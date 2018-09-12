@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a65a894ae850d45a5887e08f51e50539ce818226
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a96b1e1bd047f2a09a8969b1f57ef73520c11489
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177640"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817009"
 ---
 # <a name="detect-failed-input-output-request"></a>실패 한 입된/출력 요청 검색
   이 규칙은 시스템 이벤트 로그에서 EventId 50을 검사합니다. 이 오류는 실패한 I/O 요청으로 인해 발생합니다.  

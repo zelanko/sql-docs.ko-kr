@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57490e0592f11e78ffddf44f0d3c3f60d90925a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84e6be3acae31d5e50dd0361de710439019cfd2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238173"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814079"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음 **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "37238173"
 |--------------|--------------------|  
 |**테이블**|조인에 관련된 테이블 또는 테이블 반환 개체의 이름입니다. 여기서는 테이블의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
 |**열**|테이블 조인에 사용된 열의 이름입니다. 연산자 목록의 연산자는 열에 있는 데이터 간의 관계를 지정합니다. 여기서는 열의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
-|**같음**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbii.gif "Visual Database Tools 아이콘")|  
+|**연산자**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbii.gif "Visual Database Tools 아이콘")|  
 |**모든 행 \<table1 >**|오른쪽 테이블에 일치하는 항목이 없는 경우에도 왼쪽 테이블의 모든 행이 출력되도록 지정합니다. 오른쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 왼쪽 우선 외부 조인을 지정하는 것과 결과가 같습니다.|  
 |**모든 행 \<table2 >**|왼쪽 테이블에 일치하는 항목이 없는 경우에도 오른쪽 테이블의 모든 행이 출력되도록 지정합니다. 왼쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 RIGHT OUTER JOIN을 지정하는 것과 결과가 같습니다.|  
   

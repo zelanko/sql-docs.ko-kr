@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cb0c2cd4f715c947e11b5ae68d8d7ea9f7618a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0e422a938822982ea716a9b4c7d90f57d2c597a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290079"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814109"
 ---
 # <a name="customize-toolbars-page"></a>사용자 지정(도구 모음 페이지)
   **도구 모음** 탭을 사용하여 도구 모음을 만들고 제거하며 다시 설정하고 해당 이름을 바꿀 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **도구 모음**을 클릭하여 이 탭에 액세스할 수 있습니다.  

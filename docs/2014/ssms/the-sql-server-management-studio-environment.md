@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b75f6d32c88adcc1af98253a45eaafdfdc31994b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a3dfc928f2679e4b4c76d461d564957e673cf40
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292113"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810041"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 환경
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리를 관리 및 개발하기 위한 풍부한 환경을 제공합니다.  
