@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6605dfb451a4c062bb75900a9d096e3cb2eea08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f24e3205852d4b10ca0cac83efb4b6a8ad190811
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179012"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806899"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>쿼리에서 열 제거(Visual Database Tools)
   쿼리에 계속 사용할 필요가 없는 열은 제거할 수 있습니다. 쿼리에서 열을 제거하면 쿼리 및 뷰 디자이너의 선택 목록, 정렬 사양, 검색 조건, **SQL 창**및 기타 모든 그룹화 사양에서 해당 열에 대한 참조가 제거됩니다.  

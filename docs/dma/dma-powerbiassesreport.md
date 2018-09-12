@@ -19,10 +19,10 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: fd265f1cf67d421ca7a21987b2d48c3f929f5873
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
+ms.lasthandoff: 09/07/2018
 ms.locfileid: "43152624"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Power BI를 사용 하 여 Data Migration Assistant에서 만든 통합된 평가 보고서 분석

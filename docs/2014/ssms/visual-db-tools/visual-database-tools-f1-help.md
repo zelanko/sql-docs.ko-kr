@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88e5c7bdab59e9e2bbee4b924f145a8b8940b769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0b673678337681a1ef5e2f727f684ae7eb7915e
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159724"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806909"
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 도움말
   다음 항목에서는 테이블 속성 창 및 열 속성 탭과 같은 Visual Database Tools 요소에 대한 대화 상자 및 속성 창에서 제공하는 명령과 옵션에 대해 설명합니다.  
