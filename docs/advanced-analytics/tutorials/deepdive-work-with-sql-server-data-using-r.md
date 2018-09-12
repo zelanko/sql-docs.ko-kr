@@ -1,5 +1,5 @@
 ---
-title: R (SQL 및 R 심층 분석)를 이용해 SQL Server의 데이터 다뤄보기 | Microsoft Docs
+title: R(SQL 및 R 심층 분석)을 이용해 SQL Server의 데이터 다뤄보기 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -17,13 +17,13 @@ ms.locfileid: "39084185"
 # <a name="lesson-1-create-a-database-and-permissions"></a>1 단원: 데이터베이스 및 권한 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 를 SQL Server에서 사용하는 방법을 다룬 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이 문서는 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 SQL Server에서 사용하는 방법을 다룬 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
 
 이 단원에서는 환경을 설정하고, 모델 학습에 필요한 데이터를 추가하고, 데이터를 간단히 다뤄봅니다. 이 과정은 아래 작업을 통해 이루어집니다.
   
-- 모델 학습과 평가에 사용되는 데이터를 저장하기 위해 두 개의 데이터베이스를 생성합니다.
+- 두 개의 R 모델 학습 및 점수 매기기에 사용되는 데이터를 저장할 새 데이터베이스를 만듭니다.
   
-- 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 간 통신을 위해 사용할 계정(Windows 사용자 또는 SQL 로그인)을 만듭니다.
+- 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 간에 통신할 때 사용할 계정(Windows 사용자 또는 SQL 로그인)을 만듭니다.
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 및 데이터베이스 개체 작업을 위한 데이터 원본을 R에서 만듭니다.
   
