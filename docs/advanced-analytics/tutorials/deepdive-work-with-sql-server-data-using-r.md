@@ -9,7 +9,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
 ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/17/2018
 ms.locfileid: "39084185"
@@ -46,7 +46,7 @@ ms.locfileid: "39084185"
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 을 사용할 수 있는 인스턴스를 선택하고 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 선택합니다.
   
-2. 새 데이터베이스의 이름을 입력합니다. 원하는 이름을 임의로 사용할 수 있지만 이 연습의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 R 스크립트를 적절하게 변경해야 합니다.
+2. 새 데이터베이스의 이름을 입력합니다. 원하는 이름을 임의로 사용할 수 있지만 이 연습의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 R 스크립트를 적절하게 편집해야 합니다.
   
     > [!TIP]
     > 업데이트된 데이터베이스 이름을 보려면 **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침** 을 선택합니다.
@@ -103,7 +103,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     스키마가 특정 유저 이름과 연관되어 있다면, 그 유저는 _스키마 소유자_ 입니다. 개체를 만들 때 다른 스키마에서 만들도록 요청하지 않으면 항상 그 유저의 고유한 스키마에서 만들어집니다.
   
-    예를 들어 **TestData**라는 이름으로 테이블을 생성하고 기본 스키마가 **db_datareader**라면, 테이블의 이름은`< database_name >.db_datareader`가 됩니다.
+    예를 들어 이름으로 테이블을 만들 `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< database_name >.db_datareader 합니다. TestData'.
   
     이러한 이유로 테이블이 서로 다른 스키마에 속하기만 하면 한 데이터베이스에 같은 이름의 테이블이 여러 개 포함될 수 있습니다.
    
