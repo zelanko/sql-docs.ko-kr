@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08670b9b7ec22b7bc1e1c5c21064f65e0f867d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf2da51d7f3bcca41dbb92da14ca3961bd5d46bb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282389"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820659"
 ---
 # <a name="advanced-save-options"></a>저장 고급 옵션
   이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. 액세스는 **고급 저장 옵션** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **저장** \<쿼리 이름 >**.sql** 를 엽니다는 **다른 이름으로 파일 저장** 대화 상자에서 아래쪽 화살표를 클릭 합니다 **저장** 단추를 클릭 한 다음 클릭 **인코딩하여 저장**합니다.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9f4b3655243e726d11a5b73227ec73db8660ba1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b48d4b760759d2c3976f4598a4064802bae563b4
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191637"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889429"
 ---
 # <a name="example-specifying-the-element-directive"></a>예제: ELEMENT 지시어 지정
   이 예에서는 직원 정보를 검색하고 다음과 같이 요소 중심 XML을 생성합니다.  

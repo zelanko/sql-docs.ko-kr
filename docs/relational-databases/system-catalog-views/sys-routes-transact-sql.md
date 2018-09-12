@@ -1,7 +1,7 @@
 ---
 title: sys.routes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,20 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b4a7ab2ef3fa5f632b78124734181e0cff80440a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 54817a71f8ef6cd4206b96848be0b903e282b750
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554213"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171735"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   이 카탈로그 뷰에는 각 경로에 대한 행이 포함되어 있습니다. Service Broker는 이러한 경로를 사용하여 서비스의 네트워크 주소를 찾습니다.   
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-  
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|데이터베이스 내에서 고유한 경로의 이름입니다. NULL을 허용하지 않습니다.|  

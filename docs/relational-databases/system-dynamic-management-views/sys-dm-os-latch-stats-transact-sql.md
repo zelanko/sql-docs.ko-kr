@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_latch_stats (Transact SQL) | Microsoft Docs
+title: sys.dm_os_latch_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467909"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375686"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34467909"
   클래스별로 구성된 모든 래치 대기에 대한 정보를 반환합니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_latch_stats**합니다.  
+>  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_latch_stats**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,12 +45,12 @@ ms.locfileid: "34467909"
 |max_wait_time_ms|**bigint**|메모리 개체가 이 래치를 기다린 최대 시간입니다. 이 값이 지나치게 높으면 내부 교착 상태가 발생한 것일 수 있습니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sys.dm_os_latch_stats를 사용하면 여러 래치 클래스에 대한 상대적 대기 수와 대기 시간을 조사하여 래치 경합의 원인을 확인할 수 있습니다. 어떤 경우에는 래치 경합을 해결하거나 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
   
  다음과 같이 `DBCC SQLPERF`를 사용하여 sys.dm_os_latch_stats의 내용을 다시 설정할 수 있습니다.  
@@ -105,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|DBCC를 사용하여 차등 백업 작업을 동기화하는 데 사용됩니다.|  
 |BACKUP_OPERATION|데이터베이스, 로그 또는 파일 백업 같은 백업 작업 내의 내부 데이터 구조 동기화에 사용됩니다.|  
 |BACKUP_FILE_HANDLE|복원 작업 동안 파일 열기 작업을 동기화하는 데 사용됩니다.|  
-|BUFFER|데이터베이스 페이지에 대한 단기 액세스를 동기화하는 데 사용됩니다. 데이터베이스 페이지를 읽거나 수정하기 전에 버퍼 래치가 필요합니다. 버퍼 래치 경합은 핫 페이지와 느린 I/O를 비롯하여 여러 문제를 나타낼 수 있습니다.<br /><br /> 이 래치 클래스는 페이지 래치의 가능한 모든 용도에 적용됩니다. sys.dm_os_wait_stats는 페이지 래치 대기를 I/O 작업 및 읽기 인해 및 페이지에 대 한 쓰기 작업 간에 달라를 집니다.|  
+|BUFFER|데이터베이스 페이지에 대한 단기 액세스를 동기화하는 데 사용됩니다. 데이터베이스 페이지를 읽거나 수정하기 전에 버퍼 래치가 필요합니다. 버퍼 래치 경합은 핫 페이지와 느린 I/O를 비롯하여 여러 문제를 나타낼 수 있습니다.<br /><br /> 이 래치 클래스는 페이지 래치의 가능한 모든 용도에 적용됩니다. sys.dm_os_wait_stats는 페이지의 작업을 쓰고 읽고 I/O 작업으로 인 한 페이지 래치 대기 간에 차이가 발생 합니다.|  
 |BUFFER_POOL_GROW|버퍼 풀 증가 작업 동안 내부 버퍼 관리자 동기화에 사용됩니다.|  
 |DATABASE_CHECKPOINT|데이터베이스 내의 검사점 직렬화에 사용됩니다.|  
 |CLR_PROCEDURE_HASHTABLE|내부적으로만 사용됩니다.|  
@@ -126,7 +126,7 @@ GO
 |FCB|파일 제어 블록에 대한 액세스를 동기화하는 데 사용됩니다.|  
 |FCB_REPLICA|내부적으로만 사용됩니다.|  
 |FGCB_ALLOC|파일 그룹 내에서 라운드 로빈 할당 정보에 대한 액세스를 동기화하는 데 사용됩니다.|  
-|FGCB_ADD_REMOVE|ADD 및 DROP 파일 작업을 위해 파일 그룹에 대한 액세스를 동기화하는 데 사용됩니다.|  
+|FGCB_ADD_REMOVE|파일 그룹 추가 대 한 액세스를 동기화, 삭제 하 고, 증가 함에 따라 파일 축소 작업을 사용 합니다.|  
 |FILEGROUP_MANAGER|내부적으로만 사용됩니다.|  
 |FILE_MANAGER|내부적으로만 사용됩니다.|  
 |FILESTREAM_FCB|내부적으로만 사용됩니다.|  
@@ -169,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_HOST_NAME|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_READ_CACHE|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 인스턴스 수준 맵을 대기자 큐 동기화 하는 데 사용 합니다. 데이터베이스 ID, 데이터베이스 버전 및 큐 ID 튜플 당 하나의 큐가 있습니다. 많은 연결이 때이 클래스의 래치 경합이 발생할 수 있습니다: WAITFOR(RECEIVE)에서 대기 상태입니다. WAITFOR(RECEIVE); 호출 WAITFOR timeout; 초과 메시지를 표시 합니다. 커밋 또는 WAITFOR(RECEIVE); 포함 하는 트랜잭션이 롤백 WAITFOR(RECEIVE) 대기 상태에 있는 스레드의 수를 줄여 경합을 줄일 수 있습니다. |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 인스턴스 수준 맵을 대기자 큐 동기화 하는 데 사용 합니다. 데이터베이스 ID, 데이터베이스 버전 및 큐 ID 튜플 당 하나의 큐가 있습니다. 많은 연결 되 면이 클래스의 래치 경합이 발생할 수 있습니다: WAITFOR(RECEIVE)에서 대기 상태입니다. WAITFOR(RECEIVE); 호출 WAITFOR; 제한 시간이 초과 메시지를 표시 합니다. 커밋 또는 WAITFOR(RECEIVE); 포함 된 트랜잭션이 롤백 WAITFOR(RECEIVE) 대기 상태에 있는 스레드의 수를 줄여 경합을 줄일 수 있습니다. |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_TRANSPORT|내부적으로만 사용됩니다.|  
@@ -198,11 +198,11 @@ GO
 |VERSIONING_STATE_CHANGE|내부적으로만 사용됩니다.|  
 |KTM_VIRTUAL_CLOCK|내부적으로만 사용됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  
  [DBCC SQLPERF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

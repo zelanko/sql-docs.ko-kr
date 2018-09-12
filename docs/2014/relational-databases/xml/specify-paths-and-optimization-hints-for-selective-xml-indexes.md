@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
@@ -14,12 +13,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42fbf8de0e7d0240ff9ad7faca43f215c0a695a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0305c5229d5e690b163cfec12e87aa1d412af4f6
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202863"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889849"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
   이 항목에서는 선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 인덱싱에 대한 최적화 힌트를 지정합니다.  
@@ -362,20 +361,20 @@ WHERE T.xmldata.exist('
   
 |최적화 힌트|보다 효율적인 저장소|성능 향상|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|예|아니요|  
-|**SINGLETON**|아니요|예|  
-|**DATA TYPE**|예|예|  
-|**MAXLENGTH**|예|예|  
+|**node()**|사용자 계정 컨트롤|아니요|  
+|**SINGLETON**|아니요|사용자 계정 컨트롤|  
+|**DATA TYPE**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|**MAXLENGTH**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
   
 ### <a name="optimization-hints-and-data-types"></a>최적화 힌트 및 데이터 형식  
  노드를 XQuery 데이터 형식 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 인덱싱할 수 있습니다. 다음 표에서는 각 데이터 형식에서 지원되는 최적화 힌트를 보여 줍니다.  
   
 |최적화 힌트|XQuery 데이터 형식|SQL 데이터 형식|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|예|아니요|  
-|**SINGLETON**|예|예|  
-|**DATA TYPE**|예|아니요|  
-|**MAXLENGTH**|예|아니요|  
+|**node()**|사용자 계정 컨트롤|아니요|  
+|**SINGLETON**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|**DATA TYPE**|사용자 계정 컨트롤|아니요|  
+|**MAXLENGTH**|사용자 계정 컨트롤|아니요|  
   
 ### <a name="node-optimization-hint"></a>node() 최적화 힌트  
  적용 대상: XQuery 데이터 형식  

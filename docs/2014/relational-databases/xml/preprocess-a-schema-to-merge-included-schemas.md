@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f5a572c5c486ccf03edbb5442f5de2cb723bae4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f97cb2b7887da1ed6f15f4edb46572cf1730065e
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157754"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889379"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>포함된 스키마를 병합하기 위해 스키마 전처리
   W3C XSD **include** 요소는 XML 스키마를 두 개 이상의 실제 파일로 분할할 수 있는 스키마 모듈화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  

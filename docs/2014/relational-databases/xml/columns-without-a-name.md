@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 723ee2f2c9d9da6665c6a9a4b530e3deb247ff2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d2cdbd40c93597db6c3083ce4ca92ac815e79e
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292163"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889009"
 ---
 # <a name="columns-without-a-name"></a>이름이 없는 열
   이름이 없는 열은 인라인됩니다. 예를 들어 계산 열이나 열 별칭을 지정하지 않는 중첩된 스칼라 쿼리는 이름이 없는 열을 생성합니다. 열이 있으면 `xml` 형식, 해당 데이터 형식 인스턴스의 내용이 삽입 됩니다. 그렇지 않을 경우에는 열 내용이 텍스트 노드로 삽입됩니다.  

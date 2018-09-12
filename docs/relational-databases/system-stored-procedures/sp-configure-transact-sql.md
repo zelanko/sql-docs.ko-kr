@@ -1,7 +1,7 @@
 ---
 title: sp_configure (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.component: system-stored-procedures
@@ -23,20 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e3bcdf08d5b9d6cdd1b73477f08620c2a97b6e71
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9ebd6f7eb1493afda5adba7071cfeff175b7458b
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028386"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171664"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pwd-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
 
   현재 서버에 대한 전역 구성 설정을 표시하거나 변경합니다.
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-  
 > [!NOTE]  
 >  데이터베이스 수준 구성 옵션에 대해서 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)합니다. 소프트 NUMA를 구성 하려면 참조 [SOFT-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)합니다.  
   

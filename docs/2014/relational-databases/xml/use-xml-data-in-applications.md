@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,12 +28,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13440d6941d05fd02c1c98c8a75d538adbf749de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd4cd4f0edba28fc8bb7171a2e120fe7439057c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293953"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889809"
 ---
 # <a name="use-xml-data-in-applications"></a>응용 프로그램에서 XML 데이터 사용
   작업에 사용할 수 있는 옵션에 설명 합니다 `xml` 응용 프로그램에서 데이터 형식입니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  

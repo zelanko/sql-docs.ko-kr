@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0d1e5df1490533bd797b7142e9903ce00bf33be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c9304d32ba3288d712d6869303af212ce506193
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306943"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820849"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
   **속성** 창을 사용하여 선택한 요소의 속성을 확인할 수 있습니다. 또한 **속성** 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **속성** 창은 **보기** 메뉴에서 **속성** 창을 클릭하여 사용할 수 있습니다.  

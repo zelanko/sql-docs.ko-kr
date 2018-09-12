@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e10e920a5c60d389eaec6a5af06e4597d9667967
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6b4000b1242a3c3efa720a6c7f8992f7aede472
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287849"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820629"
 ---
 # <a name="view-project-history"></a>프로젝트 기록 보기
   [!INCLUDE[msCoName](../includes/msconame-md.md)] VSS(Visual SourceSafe) 프로젝트의 기록에는 파일 작성, 추가, 삭제, 복구 등을 비롯하여 각 프로젝트 파일에서 수행된 모든 동작의 목록이 포함됩니다.  

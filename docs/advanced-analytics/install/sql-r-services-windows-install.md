@@ -1,27 +1,28 @@
 ---
 title: SQL Server 2016 R Services (In-database) 설치 | Microsoft Docs
+description: SQL Server에서 R는 Windows에서 SQL Server 2016 R Services를 설치할 때 사용할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118511"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311683"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 설치 및 구성 하는 방법 설명 **SQL Server 2016 R Services (In-database)** 합니다. SQL Server 2016에 있는 경우 SQL Server에서 R 코드의 실행을 사용 하도록 설정 하려면이 기능을 설치 합니다.
+이 문서에서는 설치 및 구성 하는 방법 설명 **SQL Server 2016 R Services**합니다. SQL Server 2016에 있는 경우 SQL Server에서 R 코드의 실행을 사용 하도록 설정 하려면이 기능을 설치 합니다.
+
+SQL Server 2017에서 R 통합으로 제공 됩니다 [Machine Learning Services](../r/r-server-standalone.md), Python의 추가 반영 합니다. R 통합 SQL Server 2017 설치 미디어가 있는 경우, 참조 [SQL Server 2017 Machine Learning Services 설치](sql-machine-learning-services-windows-install.md) 기능을 추가 합니다. 
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
-
-+ R Services를 설치 하려면 SQL Server 2016 설치가 필요 합니다. 대신 SQL Server 2017 설치 미디어가 있는 경우 설치 해야 [SQL Server 2017 Machine Learning Services (In-database)](sql-machine-learning-services-windows-install.md) 해당 버전의 SQL Server에 대 한 R 통합을 가져오려고 합니다.
 
 + 데이터베이스 엔진 인스턴스를 반드시 입력 해야 합니다. 기존 인스턴스에 증분 방식으로 추가할 수는 있지만 방금 R을 설치할 수 없습니다.
 
@@ -31,7 +32,7 @@ ms.locfileid: "43118511"
 
 + 설치 하지 마세요 **공유 기능** > **R Server (독립 실행형)** 컴퓨터의 동일한 데이터베이스 내 인스턴스를 실행 합니다. 
 
-+ SQL Server 인스턴스를 오픈 소스 R 및 Anaconda 배포의 자체 복사본을 사용 하기 때문에 다른 버전의 R 및 Python을 사용 하 여 side-by-side-설치를 사용할 수 있습니다. 그러나 SQL Server 외부 SQL Server 컴퓨터의 R 및 Python을 사용 하는 코드를 실행 중인 다양 한 문제가 발생할 수 있습니다.
+  SQL Server 인스턴스를 오픈 소스 R 및 Anaconda 배포의 자체 복사본을 사용 하기 때문에 다른 버전의 R 및 Python을 사용 하 여 side-by-side-설치를 사용할 수 있습니다. 그러나 SQL Server 외부 SQL Server 컴퓨터의 R 및 Python을 사용 하는 코드를 실행 중인 다양 한 문제가 발생할 수 있습니다.
     
   + 다른 실행 파일을 다른 라이브러리를 사용 하 고 SQL Server에서 실행 하는 경우 보다 서로 다른 결과 가져옵니다.
   + 리소스 경합을 SQL Server에서 외부 라이브러리에서 실행 되는 R 및 Python 스크립트를 관리할 수 없습니다.
@@ -128,7 +129,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
     이제 **run_value**가 1로 설정되어야 합니다.
 
-2. 열기는 **서비스** 패널 또는 SQL Server 구성 관리자를 확인 하 고 **SQL Server 실행 패드 서비스** 실행. R에 있는 모든 데이터베이스 엔진 인스턴스에 대해 하나의 서비스 해야 하거나 Python 설치 합니다. 자세한 내용은 [Python 통합을 지 원하는 구성 요소](../python/new-components-in-sql-server-to-support-python-integration.md)합니다.
+2. 열기는 **서비스** 패널 또는 SQL Server 구성 관리자를 확인 하 고 **SQL Server 실행 패드 서비스** 실행. R에 있는 모든 데이터베이스 엔진 인스턴스에 대해 하나의 서비스 해야 하거나 Python 설치 합니다. 서비스에 대 한 자세한 내용은 참조 하세요. [Extensibility framework](../concepts/extensibility-framework.md)합니다.
 
 7. 실행 패드를 실행 하는 경우에 외부 스크립팅 런타임을 SQL Server와 통신할 수 있는지 확인 하려면 간단한 R을 실행할 수 있어야 합니다. 
 
@@ -148,7 +149,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
     | hello |
     |----|
-    | @shouldalert|
+    | 1|
 
 ## <a name="bkmk_FollowUp"></a> 기타 고려 사항
 

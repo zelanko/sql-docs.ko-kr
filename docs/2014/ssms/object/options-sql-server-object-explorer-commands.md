@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e3c6b143f352b51f7c5b16a7f29f5165624746f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5e5af30cc693efb01f14eec7ff9d428d09a3459
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172014"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820679"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>옵션 (SQL Server 개체 탐색기-명령)
   개체 탐색기에서 테이블이나 뷰를 마우스 오른쪽 단추로 클릭하면 테이블의 행을 표시하는 다음 두 가지 옵션이 나타납니다.  

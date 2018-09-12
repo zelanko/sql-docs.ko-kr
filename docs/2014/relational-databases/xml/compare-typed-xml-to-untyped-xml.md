@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,12 +28,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0da42dce1cef6d625a8e650a72c481b9458e35df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcffb5fa9a023f893446479769c75089ca13fe06
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305093"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890269"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
   `xml` 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 변수, 매개 변수 또는 열을 사용 하 여 필요에 따라 XML 스키마의 컬렉션을 연결할 수 있습니다 `xml` 형식입니다. 이 경우에 `xml` 데이터 형식 인스턴스에 라고 *형식화 된*합니다. 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  

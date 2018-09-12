@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
-ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
+ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193029"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888859"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,6 +23,8 @@ ms.locfileid: "43193029"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017의에서 새로운 기능
 
 이 릴리스에 추가 되었습니다 [Python 지원 및 업계 최고의 기계 학습 알고리즘](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)합니다. 새 범위를 반영 하도록 이름이 바뀌었거나, SQL Server 2017 표시 미치는 [SQL Server Machine Learning Services (In-database)](what-is-sql-server-machine-learning.md), Python 및 R 모두에 대 한 언어 지원 
+
+상향 기능 공지 사항 모두에 대 한 참조 [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)합니다.
 
 ### <a name="r-enhancements"></a>R의 향상 된 기능
 
@@ -42,7 +44,11 @@ R에 대 한 새 기능에 포함 됩니다 [ **패키지 관리**](r/install-ad
 
 ### <a name="python-integration-for-in-database-analytics"></a>데이터베이스 내 분석에 대 한 Python 통합
 
-T-SQL 및 Python 통합은 이제을 통해 지원 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장 프로시저입니다. 이 저장된 프로시저를 사용 하 여 모든 Python 코드를 호출할 수 있습니다. 엔터프라이즈급 배포 Python 모델 및 스크립트와 간단한 저장된 프로시저를 사용 하 여 응용 프로그램에서 호출할 수 있도록 안전 하 고 이중 아키텍처에서 코드가 실행 됩니다. SQL에서 Python 프로세스 및 MPI 링 병렬화로 스트리밍 데이터에서 추가 성능 향상.
+Python은 기계 학습 작업의 다양 한 기능과 뛰어난 유연성을 제공 하는 언어입니다. Python 용 오픈 소스 라이브러리는 사용자 지정 가능한 신경망에 대 한 여러 플랫폼 및 자연어 처리를 위한 인기 있는 라이브러리를 포함합니다. 이제이 널리 사용 되는 언어는 SQL Server 2017의 Machine Learning에서 지원 됩니다.
+
+Python과 데이터베이스 엔진을 사용 하 여 통합 데이터에 근접 한 분석을 유지할 수 있으며 비용 및 데이터 이동과 관련 된 보안 위험을 제거할 수 있습니다. Visual Studio와 같은 도구를 사용 하 여 Python을 기반으로 기계 학습 솔루션을 배포할 수 있습니다. 프로덕션 응용 프로그램에 예측 모델을 가져올 수 있습니다 또는 시각적 개체에서 SQL Server 데이터를 사용 하 여 Python 3.5 런타임 메서드에 액세스 합니다.
+
+통해 T-SQL 및 Python 통합은 지원 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장 프로시저입니다. 이 저장된 프로시저를 사용 하 여 모든 Python 코드를 호출할 수 있습니다. 엔터프라이즈급 배포 Python 모델 및 스크립트와 간단한 저장된 프로시저를 사용 하 여 응용 프로그램에서 호출할 수 있도록 안전 하 고 이중 아키텍처에서 코드가 실행 됩니다. SQL에서 Python 프로세스 및 MPI 링 병렬화로 스트리밍 데이터에서 추가 성능 향상.
 
 T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-sql.md) 수행 하는 함수 [네이티브 점수 매기기](sql-native-scoring.md) 필요한 이진 형식으로 이전에 저장 하는 미리 학습 된 모델입니다.
 
@@ -67,6 +73,8 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 이 릴리스에 도입 된 기계 학습을 통해 SQL server 기능 **SQL Server 2016 R Services**, 데이터베이스 엔진 인스턴스를 내 상주 데이터에 대해 처리 R 스크립트에 대 한 데이터베이스 내 분석 엔진입니다.
 
 또한 **SQL Server 2016 R Server (독립 실행형)** Windows 서버에서 R Server를 설치 하는 방법으로 릴리스 되었습니다. 처음에 SQL Server 설치 프로그램에는 Windows에 대 한 R Server를 설치 하는 유일한 방법은 제공 합니다. 이후 릴리스에서 개발자 및 데이터 과학자의 R Server에 Windows 하고자 했던 동일한 목표를 달성 하려면 다른 독립 실행형 설치 관리자를 사용할 수 있습니다. SQL Server의 독립 실행형 서버는 독립 실행형 서버 제품에 기능적 [Microsoft R Server에 대 한 Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)합니다.
+
+상향 기능 공지 사항 모두에 대 한 참조 [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)합니다.
 
 | 릴리스 |기능 업데이트 |
 |---------|----------------|

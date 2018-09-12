@@ -1,26 +1,26 @@
 ---
-title: Machine Learning Services에서 SQL Server | Microsoft Docs
-description: SQL Server 2017의 Machine Learning Services, R 및 Python에 대 한 개요 소개 데이터베이스 내 분석에 대 한 지원
+title: R 및 Python Machine Learning Services에서 SQL Server | Microsoft Docs
+description: SQL Server 및 SQL server에서 데이터 과학 및 통계 모델링, 기계 학습 모델, 예측 분석, 데이터 시각화 등에 대 한 관계형 데이터와 통합 하는 Python R입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 09/10/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240191"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343118"
 ---
-# <a name="machine-learning-services-in-sql-server-2017"></a>Machine Learning 서비스에서 SQL Server 2017
+# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL server 2017 machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017의 Machine Learning Services는 SQL Server에서 R 및 Python 코드를 실행 하는 데 사용 되는 데이터베이스 엔진 인스턴스를 추가 합니다. 핵심 엔진 프로세스 로부터 격리 하지만 저장된 프로시저, R 또는 Python 문이 포함 된 T-SQL 스크립트 또는 T-SQL을 포함 하는 R 또는 Python 코드와 관계형 데이터에 완벽 하 게 사용할 수 있는 코드는 확장성 프레임 워크에서 실행 됩니다. 
 
-이전에 SQL Server 2016 R Services에서 사용 하는 경우 SQL Server 2017의 Machine Learning 서비스는 기본 R, RevoScaleR, MicrosoftML, 및 2016에 도입 된 다른 라이브러리의 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대입니다.
+이전에 사용한 [SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017의 Machine Learning 서비스는 기본 R, RevoScaleR MicrosoftML의 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대 및 다른 라이브러리 2016에 도입 합니다.
 
 Machine Learning 서비스의 핵심 가치 제안을 소수 자릿수 및 계산 및 처리, 데이터 상주를 제공 하는 기능에 대 한 고급 분석을 제공 하는 엔터프라이즈 R 및 Python 패키지의 기능에서 데이터 끌어오기를 할 필요가 없습니다 네트워크입니다.
 
@@ -44,6 +44,8 @@ SQL Server 2017은 R과 Python을 지원합니다. 다음 표에서 구성 요�
 ## <a name="using-sql-mls"></a>SQL MLS를 사용 하 여
 
 개발자 및 분석가 로컬 SQL Server 인스턴스를 기반으로 실행 되는 코드에 있는 경우가 많습니다. SQL Server 형식에서 R 및 Python 코드를 실행 하는 기능을 얻게 Machine Learning 서비스를 추가 하 고 외부 스크립트 실행을 사용 하도록 설정 하 여: 저장된 프로시저에서 스크립트를 래핑, SQL Server 테이블에 모델을 저장 또는 T-SQL 및 R 또는 Python 함수를 결합 합니다. 쿼리에서 합니다.
+
+데이터 보안 모델의 경계 내에서 스크립트 실행이: 관계형 데이터베이스에 대 한 권한이 스크립트에 대 한 데이터 액세스의 기반이 됩니다. R 또는 Python 스크립트를 실행 하는 사용자는 SQL 쿼리를 해당 사용자가 액세스할 수 없습니다는 모든 데이터를 사용할 수 없습니다. 표준 데이터베이스 읽기 및 쓰기 권한, 외부 스크립트를 실행 하는 추가 권한이 필요 합니다. 모델 및 관계형 데이터에 대 한 작성 하는 코드는 저장된 프로시저에서 래핑된 이진 형식으로 직렬화 및 테이블에 저장 또는 파일로 원시 바이트 스트림으로 직렬화 하는 경우 디스크에서 로드 합니다.
 
 데이터베이스 내 분석에 대 한 가장 일반적인 방법은 사용 하는 것 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), R 또는 Python 스크립트를 입력된 매개 변수로 전달 합니다.
 

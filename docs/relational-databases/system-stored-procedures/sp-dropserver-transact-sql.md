@@ -1,7 +1,7 @@
 ---
 title: sp_dropserver (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,36 +23,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: faf0d79f399a714e4402d59c662df12021eb34f2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1aa8b62529bee6c5035161a9d7964c5f2f8ec5c7
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031906"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171705"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 알려진 원격 서버 및 연결된 서버 목록에서 서버를 제거합니다.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```sql  
 sp_dropserver [ @server = ] 'server'   
      [ , [ @droplogins = ] { 'droplogins' | NULL} ]  
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@server =** ] **'***server***'**  
+ *server*  
  제거할 서버입니다. *server* 은 **sysname**이며 기본값은 없습니다. *서버* 존재 해야 합니다.  
   
- [ **@droplogins =** ] **'droplogins'** | NULL  
- 원격 및 연결 된 서버 로그인에 대 한 관련 있는 여부를 나타냅니다 *서버* 경우에 제거 해야 **droplogins** 지정 됩니다. **@droplogins** 됩니다 **char(10)**, 기본값은 NULL입니다.  
+ *droplogins*  
+ 원격 및 연결 된 서버 로그인에 대 한 관련 있는 여부를 나타냅니다 *서버* 경우에 제거 해야 **droplogins** 지정 됩니다. **`@droplogins`** 됩니다 **char(10)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

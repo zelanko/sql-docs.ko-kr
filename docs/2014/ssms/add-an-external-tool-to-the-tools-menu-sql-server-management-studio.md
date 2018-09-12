@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4377bb872c4d442fd6aca2a6f9acde7e5b803d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2060e431f0f1502a4b0b3952e4fbde29143a9f56
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249483"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820319"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 응용 프로그램을 시작할 수 있습니다. 외부 응용 프로그램은 **도구** 메뉴에 추가하여 실행할 수 있습니다.  

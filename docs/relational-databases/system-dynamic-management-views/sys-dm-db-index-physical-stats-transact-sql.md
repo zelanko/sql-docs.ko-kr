@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085556"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375706"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|압축된 페이지 수입니다.<br /><br /> 힙의 경우 새로 할당된 페이지는 PAGE 압축되지 않습니다. 힙은 데이터를 대량으로 가져오거나 힙을 다시 작성하는 경우의 두 가지 특별한 조건에서 PAGE 압축됩니다. 일반적으로 페이지 할당을 발생시키는 DML 작업은 PAGE 압축되지 않습니다. compressed_page_count 값이 원하는 임계값보다 커지면 힙을 다시 작성하십시오.<br /><br /> 클러스터형 인덱스가 있는 테이블의 경우 compressed_page_count 값은 PAGE 압축의 효율성을 나타냅니다.|  
 |hobt_id|BIGINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Columnstore 인덱스에 대 한 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합에 대 한 ID입니다. 행 집합으로 데이터를 힙에 저장 되는지 이진 트리. 부모 columnstore 인덱스와 동일한 인덱스 ID를 갖습니다. 자세한 내용은 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)합니다.<br /><br /> 경우에는 NULL|  
 |column_store_delete_buffer_state|TINYINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = 열기<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시하는 중<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비|  
-|column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE – 부모 인덱스는 columnstore 인덱스가 아닙니다.<br /><br /> 이 사용 하 여 스캐너를 열고 – deleters 합니다.<br /><br /> 드레이닝 – deleters 드레이닝는 하지만 스캐너에서 계속 사용 합니다.<br /><br /> 플러시 – 버퍼 닫히고 버퍼의 행 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지 중-닫힌된 삭제 버퍼의 행 삭제 비트맵에 기록 된 하지만 스캐너 여전히 사용 하기 때문에 버퍼에 잘리지 않습니다. 새 스캐너는 열기 버퍼는 충분 하므로 사용 되지 않는 버퍼를 사용 하지 않아도 됩니다.<br /><br /> 준비 됨 –이 삭제 버퍼를 사용할 준비가 되었습니다.|  
+|column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> – 잘못 부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> 이 사용 하 여 스캐너를 열고 – deleters 합니다.<br /><br /> 드레이닝 – deleters 드레이닝는 하지만 스캐너에서 계속 사용 합니다.<br /><br /> 플러시 – 버퍼 닫히고 버퍼의 행 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지 중-닫힌된 삭제 버퍼의 행 삭제 비트맵에 기록 된 하지만 스캐너 여전히 사용 하기 때문에 버퍼에 잘리지 않습니다. 새 스캐너는 열기 버퍼는 충분 하므로 사용 되지 않는 버퍼를 사용 하지 않아도 됩니다.<br /><br /> 준비 됨 –이 삭제 버퍼를 사용할 준비가 되었습니다.|  
   
 ## <a name="remarks"></a>Remarks  
  sys.dm_db_index_physical_stats 동적 관리 함수는 DBCC SHOWCONTIG 문을 대체합니다.  

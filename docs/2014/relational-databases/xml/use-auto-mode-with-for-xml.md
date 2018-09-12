@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8974a7a44f7f88dedd81e734af5a8b1f86530a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ed5e1d620a5a56848a57f67b92345fc535db3cf
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186490"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888499"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML에서 AUTO 모드 사용
   [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)에 설명된 대로 AUTO 모드는 쿼리 결과를 중첩 XML 요소로 반환합니다. 이 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. AUTO 모드 쿼리는 간단한 계층을 생성하려는 경우에 유용합니다. 그러나 [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md) 및 [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md) 에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  

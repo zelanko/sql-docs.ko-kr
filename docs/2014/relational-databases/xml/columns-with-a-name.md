@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,28 +15,28 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa867d399d11b65be61617a51991d6cc2dd2a8f2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d3966ec508c7b9b4858c3982b28a5f634ce7b426
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083225"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889289"
 ---
 # <a name="columns-with-a-name"></a>이름이 있는 열
   다음은 이름이 있는 행 집합 열이 대/소문자를 구분하여 결과 XML에 매핑되는 특정 조건입니다.  
   
--   열 이름을 사용 하 여 시작 되는 at 기호 (\@).  
+-   열 이름이 \@ 기호로 시작하는 경우  
   
--   열 이름을 사용 하 여 시작 되지 않습니다는 at 기호 (\@).  
+-   열 이름이 \@ 기호로 시작하지 않는 경우  
   
--   열 이름을 사용 하 여 시작 되지 않습니다는 at 기호\@ 는 슬래시 (/)를 포함 합니다.  
+-   열 이름이 \@ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
   
 -   여러 열이 같은 접두사를 공유하는 경우  
   
 -   하나의 열에 다른 이름이 있는 경우  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>열 이름이로 시작 하는 At 기호 (\@)  
- 열 이름을 사용 하 여 시작 하는 경우는 at 기호 (\@)는 슬래시 (/)의 특성을 포함 하지 않습니다는 <`row`> 해당 열 값이 있는 요소가 만들어집니다. 다음 쿼리는 두 개의 열을 반환 하는 예를 들어 (\@PmId, Name) 행 집합입니다. 결과 XML에서 **PmId** 특성이 해당 <`row`> 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
+## <a name="column-name-starts-with-an-at-sign-"></a>열 이름이 \@ 기호로 시작하는 경우  
+ 열 이름을 사용 하 여 시작 하는 경우는 at 기호 (\@)는 슬래시 (/)의 특성을 포함 하지 않습니다는 <`row`> 해당 열 값이 있는 요소가 만들어집니다. 예를 들어 다음 쿼리는 2개의 열(\@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에서 **PmId** 특성이 해당 <`row`> 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
   
 ```  
   
@@ -69,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>열 이름으로 시작 하지 않습니다는 At 기호 (\@)  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>열 이름이 \@ 기호로 시작하지 않는 경우  
  열 이름을 사용 하 여 시작 되지 않으면는 at 기호 (\@), XPath 노드 테스트 중 하나가 아닌 및 행 요소의 하위 요소인 XML 요소 슬래시 기호 (/)를 포함 하지 않는 <`row`> 기본적으로 생성 됩니다.  
   
  다음 쿼리는 결과인 열 이름을 지정합니다. 따라서 <`result`> 요소 자식이 <`row`> 요소에 추가됩니다.  
@@ -116,8 +115,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>열 이름으로 시작 하지 않습니다는 At 기호 (\@)는 슬래시 (/)를 포함 합니다.  
- 열 이름을 사용 하 여 시작 되지 않으면는 at 기호 (\@), 슬래시 (/)를 포함 하지만 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n*** "이면 각 Name***i*** 는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. 이름 하는 경우***n*** 시작 '\@', 이름 특성에 매핑됩니다***n-1*** 요소입니다.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>열 이름이 \@ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
+ 열 이름이 \@ 기호로 시작하지 않지만 슬래시 기호(/)를 포함할 경우 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n*** "이면 각 Name***i*** 는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. Name***n***이 '\@'으로 시작하는 경우 Name***n-1*** 요소의 특성에 매핑됩니다.  
   
  예를 들어 다음 쿼리는 이름, 중간 이름 및 성을 포함하는 복잡한 요소 EmpName으로 표현되는 직원 ID와 이름을 반환합니다.  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2b6ecc75ade6da9d489c30105ad3bc4e961bf59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cbccdf13e88375e39dcd53c5e8461eb76064e34
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220553"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820819"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>색 대화 상자(Visual Database Tools)
   **색 대화 상자** 에서는 사용자가 선택한 색의 RGB 값을 반환합니다. 사용자는 디스플레이 드라이버에 의해 결정된 기본 색 집합이나 사용자 지정 색 집합에서 선택할 수 있습니다. 기본 색에서 선택하거나 사용자 지정 색을 만듭니다. 색 매트릭스에서 클릭하거나 **색상**, **채도**, **명도**, **빨강**, **녹색**및 **파랑** 상자에 입력하여 색을 정의합니다.  

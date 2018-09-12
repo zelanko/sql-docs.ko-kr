@@ -1,7 +1,7 @@
 ---
 title: 복제 스냅숏 에이전트 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190173"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311693"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
   복제 스냅숏 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅숏 파일을 준비하여 스냅숏 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  
@@ -62,7 +62,8 @@ ms.locfileid: "37190173"
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -112,7 +113,7 @@ ms.locfileid: "37190173"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 배포자에 연결할 때 사용되는 로그인입니다.  
   
  **-DistributorPassword** *distributor_password*  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 배포자에 연결할 때 사용되는 암호입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 배포자에 연결할 때 사용되는 암호입니다. .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  배포자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드(기본값)를 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
@@ -194,6 +195,14 @@ ms.locfileid: "37190173"
 |**0**|오류 메시지만 출력됩니다.|  
 |**1** (기본값)|모든 진행률 보고 메시지가 출력됩니다(기본값).|  
 |**2**|모든 오류 메시지 및 진행률 보고 메시지가 출력되며, 디버깅에 유용합니다.|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ 테이블 개체 사전 인출 되어 캐시 됩니다 하는 경우를 지정 하는 선택적 매개 변수입니다.  기본 동작은 내부 계산을 기반으로 하는 SMO 구성 요소를 사용 하 여 특정 테이블 속성을 프리페치 하 합니다.  이 매개 변수는 않는 실행 하는 SMO 프리페치 상당한 작업은 더 이상를 시나리오에 유용할 수 있습니다. 이 매개 변수를 사용 하지 않으면이 의사 결정 테이블 아티클로 게시에 추가 되는 백분율을 기준으로 런타임에 수행 됩니다.  
+  
+|OutputVerboseLevel 값|Description|  
+|------------------------------|-----------------|  
+|**0**|SMO 요소의 프리페치 메서드를 호출 하는 사용할 수 없습니다.|  
+|**1**|스냅숏 에이전트에서 SMO를 사용 하 여 일부 테이블 속성 캐시 프리페치 메서드를 호출 합니다.|  
   
  **-PacketSize** *packet_size*  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 때 스냅숏 에이전트에서 사용하는 패킷 크기(바이트)입니다. 기본값은 8192바이트입니다.  

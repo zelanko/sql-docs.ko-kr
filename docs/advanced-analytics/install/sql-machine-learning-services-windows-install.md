@@ -1,29 +1,30 @@
 ---
 title: SQL Server Machine Learning Services (In-database) Windows에서 설치 | Microsoft Docs
+description: SQL Server 또는 SQL Server의 Python에는 R은 Windows에서 SQL Server 2017의 Machine Learning Services를 설치할 때 사용할 수입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118581"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311653"
 ---
 # <a name="install-sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017부터 SQL Server Machine Learning Services, SQL Server 2016에 도입 된 R Services 기능에 대 한 후속 데이터베이스 내 분석에 대 한 R 및 Python 지원이 제공 됩니다. 함수 라이브러리 R 및 Python에 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트 실행. 
+SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learning 서비스에 대 한 후속 데이터베이스 내 분석을 제공 됩니다 [SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016에서 도입 되었습니다. 함수 라이브러리 R 및 Python에 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트 실행. 
 
 이 문서를 실행 하 여 machine learning 구성 요소를 설치 하는 방법에 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 및 다음을 화면의 지시 합니다.
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
-+ SQL Server 2017 설치는 R, Python, 또는 둘 다에 대 한 언어 지원을 사용 하 여 Machine Learning 서비스를 설치 하려는 경우 필요 합니다. 대신 SQL Server 2016 설치 미디어가 있는 경우 설치할 수 있습니다 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 언어 지원을 받을 수 있습니다.
++ SQL Server 2017 설치는 R 및 Python을 사용 하 여 Machine Learning 서비스에 대 한 필요합니다. 대신 SQL Server 2016 설치 미디어가 있는 경우 참조 [SQL Server 2016 R Services 설치](sql-r-services-windows-install.md) R 언어 지원을 받을 수 있습니다.
 
 + 데이터베이스 엔진 인스턴스를 반드시 입력 해야 합니다. 기존 인스턴스를 증분 방식으로 추가할 수는 있지만 방금 R 또는 Python 기능을 설치할 수 없습니다.
 
@@ -146,7 +147,7 @@ SQL Server 2017부터 SQL Server Machine Learning Services, SQL Server 2016에 �
 
     이제 **run_value**가 1로 설정되어야 합니다.
     
-2. 열기는 **서비스** 패널 또는 SQL Server 구성 관리자를 확인 하 고 **SQL Server 실행 패드 서비스** 실행. R에 있는 모든 데이터베이스 엔진 인스턴스에 대해 하나의 서비스 해야 하거나 Python 설치 합니다. 자세한 내용은 [Python 통합을 지 원하는 구성 요소](../python/new-components-in-sql-server-to-support-python-integration.md)합니다. 
+2. 열기는 **서비스** 패널 또는 SQL Server 구성 관리자를 확인 하 고 **SQL Server 실행 패드 서비스** 실행. R에 있는 모든 데이터베이스 엔진 인스턴스에 대해 하나의 서비스 해야 하거나 Python 설치 합니다. 서비스에 대 한 자세한 내용은 참조 하세요. [Extensibility framework](../concepts/extensibility-framework.md)합니다. 
    
 3. 실행 패드를 실행 하는 경우 외부 스크립팅 런타임을 SQL Server와 통신할 수 있는지 확인 하려면 간단한 R 및 Python 스크립트를 실행할 수 있어야 합니다.
 
@@ -182,7 +183,7 @@ SQL Server 2017부터 SQL Server Machine Learning Services, SQL Server 2016에 �
 
     | hello |
     |----|
-    | @shouldalert|
+    | 1|
 
 
 > [!NOTE]

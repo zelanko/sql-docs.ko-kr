@@ -1,5 +1,5 @@
 ---
-title: SQL Server 기계 학습의 R 데이터 형식 작업 | Microsoft Docs
+title: SQL Server Machine Learning의 R 데이터 형식 작업 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,41 +7,41 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586045"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890069"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목에 포함 된 R 라이브러리와는 다음과 같은 제품에서 지원 되는 데이터 형식을 설명 합니다.
+이 문서에 포함 된 R 라이브러리 및 다음 제품의 지원 되는 데이터 형식을 설명 합니다.
 
 + SQL Server 2016 R Services (In-database)
-+ SQL Server 컴퓨터 학습 Services (In-database)
++ SQL Server Machine Learning Services (In-database)
 
-이 항목에는 또한 지원 되지 않는 데이터 형식을 나열 하 고 목록에서 데이터 형식 변환 R 및 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 합니다.
+이 문서는 지원 되지 않는 데이터 형식에도 나열 및 목록 데이터 형식 변환이 SQL Server와 R 간에 데이터 전달 될 때 암시적으로 수행할 수 있는 합니다.
 
 ## <a name="r-libraries"></a>R 라이브러리
 
-R 서비스 및 컴퓨터 학습 서비스 R와 두 제품 특정 버전의 Microsoft R Open에 따라 정렬 됩니다. 예를 들어 SQL Server 2017 컴퓨터 학습 서비스를 최신 릴리스에서 기반으로 Microsoft R Open 3.3.3 합니다.
+두 제품의 R Services 및 R 사용 하 여 Machine Learning 서비스는 특정 버전의 Microsoft R Open을 사용 하 여 정렬 됩니다. 예를 들어 최신 릴리스의 SQL Server 2017 Machine Learning Services는 기반으로 Microsoft R Open 3.3.3 합니다.
 
-SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 관리자 권한을 엽니다.
+SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 RGui를 엽니다.
 
-1. 기본 인스턴스에 대 한 경로 다음과 같이 됩니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+1. 기본 인스턴스에 대 한 경로 다음과 같을 수 됩니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. 메시지에는 R 배포 및 Microsoft R Open 버전 번호를 나열 하는 표시 됩니다.
 
-Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참조 [R 서버-새로운](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)합니다.
+Microsoft R Server의 특정 버전에 포함 된 R 버전을 참조 하세요 [R Server-새로운](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)합니다.
 
-참고 SQL Server에서 패키지 관리 시스템 평균이 동일한 패키지를 공유 하거나 같은 패키지의 다른 버전을 사용 하 여 여러 사용자가 여러 버전의 R 패키지는 동일한 컴퓨터에 설치할 수 있습니다. 자세한 내용은 참조 [SQL Server에서 R 패키지 관리](../r/install-additional-r-packages-on-sql-server.md)합니다.
+동일한 패키지를 공유 하거나 동일한 패키지의 서로 다른 버전을 사용 하 여 여러 사용자와 동일한 컴퓨터에 R 패키지의 여러 버전을 설치할 수는 SQL Server에서 패키지 관리 시스템을 의미 하는 참고 합니다. 자세한 내용은 [SQL Server에서 R 패키지 관리](../r/install-additional-r-packages-on-sql-server.md)합니다.
 
 ## <a name="r-and-sql-data-types"></a>R 및 SQL 데이터 형식
 
-반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 몇 십 개의 데이터 형식을 지원 R에 제한 된 수의 스칼라 데이터 형식 (숫자, 정수, 복소수, 논리, 문자, 날짜/시간 및 원시). 결과적으로, 데이터를 사용할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 스크립트에서 변환 될 수 있습니다 암시적으로 호환 되는 데이터 형식으로. 그러나 정확한 변환을 자동으로 수행할 수 없는 경우가 있으며 예: "처리 되지 않은 SQL 데이터 형식" 오류가 반환 됩니다.
+반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여러 여러 데이터 형식을 지 원하는 R에는 스칼라 데이터 형식의 제한 된 수 (숫자, 정수, 복소수, 논리, 문자, 날짜/시간 및 원시). 결과적으로, 데이터를 사용할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 스크립트에서 데이터 변환 될 수 있습니다 암시적으로 호환 되는 데이터 형식입니다. 그러나는 정확한 변환을 자동으로 수행할 수 없는 경우가 많습니다 및 "처리 되지 않은 SQL 데이터 형식"와 같은 오류가 반환 됩니다.
 
-이 섹션에 제공 되 고 지원 되지 않는 데이터 형식을 나열 하는 암시적 변환이 나와 있습니다. R 및 SQL Server 간 데이터 형식 매핑에 대 한 지침이 제공 됩니다.
+이 섹션에 제공 되 고 지원 되지 않는 데이터 형식을 나열 하는 암시적 변환을 나열 됩니다. R 및 SQL Server 간에 데이터 형식을 매핑하기 위한 지침이 제공 됩니다.
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R과 SQL Server 간 암시적 데이터 형식 변환
 
@@ -75,7 +75,7 @@ Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참�
 
 [SQL Server 형식 시스템](../../t-sql/data-types/data-types-transact-sql.md)에서 지원되는 데이터 형식의 범주 중에서 다음 형식은 R 코드에 전달될 때 문제를 일으킬 수 있습니다.
 
-+ 데이터 형식에 나열 된는 **다른** SQL 유형 시스템 항목의 섹션: **커서**, **타임 스탬프**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **테이블**
++ 에 나열 된 데이터 형식 합니다 **다른** SQL 유형 시스템 문서의 섹션: **커서**에 **타임 스탬프**를 **hierarchyid**,  **uniqueidentifier**하십시오 **sql_variant**를 **xml**, **테이블**
 + 모든 공간 형식
 + **image**
 
@@ -102,7 +102,7 @@ Microsoft SQL Server 2016 및 Microsoft Azure SQL Database의 데이터 형식 �
 
 일반적으로 특정 데이터 형식 또는 데이터 구조가 R에서 어떻게 사용되는지 잘 모를 경우  `str()` 함수를 사용하여 R개체의 내부 구조와 형식을 가져옵니다. 함수 결과는 R 콘솔에 인쇄되며 **의** 메시지 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]탭에서 쿼리 결과로도 확인할 수 있습니다. 
 
-데이터베이스에서 R 코드에 사용할 데이터를 검색할 경우 항상 R에서 사용할 수 없는 열을 제거하고 분석에 도움이 되지 않는 열(예: GUID(uniqueidentifier)), 감사에 사용되는 타임스탬프와 기타 열 또는 ETL 프로세스에서 만들어진 계보 정보를 제거해야 합니다. 
+GUID (uniqueidentifier)), 타임 스탬프 및 감사에 사용 되는 다른 열과 같은 분석 또는 계보 유용 하지 않은 열 뿐만 아니라 R에서 사용할 수 없는 열 항상 제거 해야에 R 코드에서 사용 하기 위해 데이터베이스에서 데이터를 검색할 때 ETL 프로세스에서 만들어진 정보입니다. 
 
 불필요한 열을 포함하면, 특히 카디널리티가 높은 열이 요소로 사용될 경우 R 코드의 성능이 크게 저하될 수 있습니다. 따라서 SQL Server 시스템 저장 프로시저 및 정보 뷰를 사용하여 지정된 테이블에 대한 데이터 형식을 미리 가져오고 호환되지 않는 열을 제거하거나 변환하는 것이 좋습니다. 자세한 내용은 [시스템 정보 스키마 뷰(TRANSACT-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)를 참조하세요.
 
@@ -118,7 +118,7 @@ R에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이�
 
 다음 예제에서는 SQL Server와 R 간에 왕복을 수행할 때 데이터를 변환하는 방법을 보여 줍니다.
 
-쿼리는 일련의 값을 가져옵니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 저장된 프로시저를 사용 하 여 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R 런타임을 사용 하 여 값을 출력 합니다.
+쿼리를 일련의 값을 가져옵니다를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 저장된 프로시저를 사용 하 여 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R 런타임을 사용 하 여 값을 출력 합니다.
 
 ```SQL
 CREATE TABLE MyTable (    
@@ -190,4 +190,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>관련 항목
 
-[Python 라이브러리 및 데이터 형식](../python/python-libraries-and-data-types.md)

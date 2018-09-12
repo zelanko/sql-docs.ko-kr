@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a00e44cc43f59b4b158f0b780c3bd14b944d3a52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dda9f7469adb205fad6a3aeee4714ab5ee19da4
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270359"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889629"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
   사용 하 여 오버플로 열의 데이터 주소를 지정 하는 방법을 보여 주는이 예제는 `XMLTEXT` 지시문을 `SELECT` EXPLICIT 모드를 사용 하 여 문을 합니다.  

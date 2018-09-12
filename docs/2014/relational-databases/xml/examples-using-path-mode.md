@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 68cfc33604bee9ed3e4b7d0c34c1ebfb6dec2454
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084015"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888559"
 ---
 # <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
@@ -126,7 +125,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>XPath 형식의 열 이름 지정  
- 다음 쿼리에서 `ProductModelID` 지정 된 열 이름으로 시작 '\@' 슬래시 기호 ('/')를 포함 하지 않습니다. 해당 열 값을 포함하는 <`row`> 요소의 특성이 결과 XML에 만들어집니다.  
+ 다음 쿼리에서 지정된 열 이름 `ProductModelID`는 ‘\@’으로 시작하며 슬래시 기호('/')를 포함하지 않으므로 해당 열 값을 포함하는 <`row`> 요소의 특성이 결과 XML에 만들어집니다.  
   
 ```  
 USE AdventureWorks2012;  
