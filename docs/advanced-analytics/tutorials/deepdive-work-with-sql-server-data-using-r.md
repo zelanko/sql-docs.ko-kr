@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
-ms.translationtype: HT
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084185"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375676"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>1 단원: 데이터베이스 및 권한 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     스키마가 특정 유저 이름과 연관되어 있다면, 그 유저는 _스키마 소유자_ 입니다. 개체를 만들 때 다른 스키마에서 만들도록 요청하지 않으면 항상 그 유저의 고유한 스키마에서 만들어집니다.
   
-    예를 들어 이름으로 테이블을 만들 `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< database_name >.db_datareader 합니다. TestData'.
+    예를 들어 이름으로 테이블을 만들 **TestData**, 기본 스키마 이며 **db_datareader**, 테이블 이름으로 만들어집니다 `<database_name>.db_datareader.TestData`합니다.
   
     이러한 이유로 테이블이 서로 다른 스키마에 속하기만 하면 한 데이터베이스에 같은 이름의 테이블이 여러 개 포함될 수 있습니다.
    
