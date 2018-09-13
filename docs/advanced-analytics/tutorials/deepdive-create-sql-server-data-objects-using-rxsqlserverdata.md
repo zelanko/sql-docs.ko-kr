@@ -1,5 +1,5 @@
 ---
-title: RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체를 만들 | Microsoft Docs
+title: RxSqlServerData (SQL과 R 심층 분석)를 사용하여 SQL Server 데이터 개체 만들기 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -14,25 +14,25 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31203465"
 ---
-# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체 만들기
+# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>RxSqlServerData (SQL과 R 심층 분석)를 사용하여 SQL Server 데이터 개체 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
+이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 쓰는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
 
-지금까지 만든는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 및 데이터를 사용 하는 데 필요한 권한이 있어야 합니다. 이 단계는 데이터에 사용할 수 있는 R에서 일부 개체를 만듭니다.
+지금까지 데이터를 다루기 위해[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들고 필요한 권한을 얻었습니다. 이 단계에서는 데이터를 다루는데 쓸 수 있는 몇 개체를 R로 만들겠습니다.
 
 ## <a name="create-the-sql-server-data-objects"></a>SQL Server 데이터 개체 만들기
 
-이 단계에서의 함수를 사용 하는 **RevoScaleR** 패키지를 만들고 두 개의 테이블을 채웁니다. 두 테이블 모두 시뮬레이션된 신용 카드 사기 데이터를 포함합니다. 한 테이블은 모델 훈련에 사용하고 다른 테이블은 채점에 사용합니다.
+이 단계에서는 두 개의 테이블을 만들고 채우기 위해 **RevoScaleR** 패키지의 함수를 사용합니다. 하나는 모델을 훈련하는 데 사용하고, 다른 테이블은 모델을 평가하는 데 사용됩니다. 두 테이블은 가상의 신용 카드 사기 데이터를 포함합니다. 
 
-원격 테이블을 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터, 호출 된 **RxSqlServerData** 함수입니다.
+원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 테이블을 만들기 위해 **RxSqlServerData** 함수를 호출하십시오.
 
 > [!TIP]
-> R Tools for Visual Studio를 사용하는 경우, 도구 모음에서 **R Tools**를 선택하고 **Windows** 를 클릭하여 R 변수 디버깅 및 보기에 대한 옵션을 표시하세요.
+> R Tools for Visual Studio를 사용하는 경우, 도구 모음에서 **R Tools**를 선택하고 **Windows** 를 클릭하여 R 변수를 확인하거나 디버깅을 할 때 사용할 수 있는 옵션을 확인하세요.
 
 ### <a name="create-the-training-data-table"></a>학습 데이터 테이블 만들기
 
-1. 데이터베이스 연결 문자열이 R 변수에 저장 합니다. 다음은 SQL Server에 대 한 유효한 ODBC 연결 문자열의 두 가지 예제: Windows 통합된 인증에 대 한 개와 SQL 로그인을 사용 하 여 합니다.
+1. 데이터베이스 연결 문자열을 R 변수에 저장하십시오. 다음은 SQL Server를 위한 유효한 ODBC 연결 문자열의 두 가지 예시입니다: SQL 로그인과 Windows 통합 인증
 
     **SQL 로그인**
     ```R
@@ -60,11 +60,11 @@ ms.locfileid: "31203465"
     sqlRowsPerRead = 5000
     ```
   
-    이 매개 변수는 선택 사항이지만 메모리 사용 및 효율적인 계산을 처리하는 데 중요합니다.  대부분의 고급 분석 기능에 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 청크로 데이터를에서 처리 하 고 최종 계산 모든 데이터의 읽은 반환 하는 중간 결과 저장 합니다.
+    이 매개 변수는 선택 사항이지만 메모리 사용 및 효율적인 계산을 처리하는 데 중요합니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에 포함된 대부분의 고급 분석 함수는 데이터를 한 번에 처리하고 중간 결과를 저장하면서 모든 데이터를 읽은 후 최종 계산 결과를 반환합니다.
   
-    이 매개 변수의 값이 너무 크면 큰 데이터 청크를 효율적으로 처리할 수 있는 메모리가 없기 때문에 데이터 액세스 속도가 느려질 수 있습니다.  일부 시스템에서는 *rowsPerRead* 값이 너무 작은 경우 성능이 느려질 수 있습니다. 따라서 대량 데이터 세트로 작업하는 경우엔 시스템에서 이 설정값을 시험하는 것이 좋습니다. 따라서 실험는이 설정을 사용 하 여 시스템에서 큰 데이터 집합으로 작업 하는 것이 좋습니다.
+    이 매개 변수의 값이 너무 크면 큰 데이터 묶음을 효율적으로 처리할 수 있는 메모리가 없기 때문에 데이터 액세스 속도가 느려질 수 있습니다. 일부 시스템에서는 *rowsPerRead* 값이 너무 작은 경우 성능이 느려질 수 있습니다. 따라서 큰 데이터로 작업하는 경우엔 시스템에서 이 설정값을 시험해보는 것이 좋습니다.
   
-    이 연습에 정의 된 기본 일괄 처리 프로세스 크기를 사용 합니다.는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 각 청크에서 행의 수를 제어 합니다. 해당 값을 변수에 저장 `sqlRowsPerRead`합니다.
+    이 과정을 하는 동안에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 정의된 기본 일괄 처리 프로세스 수로 각 묶음의 행의 갯수를 조정하세요. 해당 값을 `sqlRowsPerRead` 변수에 저장합니다.
   
 4.  마지막으로, 새 데이터 원본 개체에 대한 변수를 정의하고 이전에 정의한 인수를 RxSqlServerData 생성자에 전달합니다. 이렇게 하면 데이터 원본 개체가 만들어지기만 하고 채워지지는 않습니다.
   
@@ -74,24 +74,24 @@ ms.locfileid: "31203465"
        rowsPerRead = sqlRowsPerRead)
     ```
 
-#### <a name="to-create-the-scoring-data-table"></a>채점 데이터 테이블 만드는 방법
+#### <a name="to-create-the-scoring-data-table"></a>모델 평가 데이터 테이블 만들기
 
-동일한 단계를 사용 하 여 동일한 프로세스를 사용 하 여 점수 매기기 데이터를 보관 하는 테이블을 만듭니다.
+동일한 과정을 거쳐 모델을 평가하는데 쓰이는 데이터를 보관하는 테이블을 만듭니다.
 
-1. 새 R 변수 *sqlScoreTable*을 만들어 채점에 사용되는 테이블의 이름을 저장합니다.
+1. 새 R 변수 *sqlScoreTable*을 만들어 모델을 평가하는 데에 사용되는 테이블의 이름을 저장합니다.
   
     ```R
     sqlScoreTable <- "ccFraudScoreSmall"
     ```
   
-2. 이 변수를 RxSqlServerData 함수의 인수로 제공해서 두 번째 데이터 원본 개체인 *sqlScoreDS*를 정의합니다.
+2. 이 변수를 RxSqlServerData 함수의 인수로 넘겨 두 번째 데이터 원본 개체인 *sqlScoreDS*를 정의합니다.
   
     ```R
     sqlScoreDS \<- RxSqlServerData(connectionString = sqlConnString,
        table = sqlScoreTable, rowsPerRead = sqlRowsPerRead)
     ```
 
-이미 정의한 연결 문자열 및 기타 매개 변수는 R 작업 영역에서 변수로 되므로 쉽게 새 데이터 원본을 다른 테이블, 뷰 또는 쿼리를 만들 수 있습니다.
+이미 연결 문자열 및 기타 매개 변수를 R 작업 영역에서 변수로 정의했으므로, 다른 테이블, 뷰 또는 쿼리를 위한 데이터 원본을 만드는 것은 간단합니다.
 
 > [!NOTE]
 > 함수는 쿼리를 기반으로 데이터 원본에 대 한 보다는 전체 테이블을 기반으로 데이터 원본을 정의 하기 위해 서로 다른 인수를 사용 합니다. 즉, SQL Server 데이터베이스 엔진 쿼리를 다르게 준비 해야 합니다. 이 자습서의 뒷부분에 나오는 SQL 쿼리를 기반으로 하는 데이터 원본 개체를 만드는 방법을 배웁니다.
