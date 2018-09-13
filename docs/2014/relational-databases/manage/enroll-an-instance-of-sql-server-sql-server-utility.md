@@ -5,8 +5,7 @@ ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,15 +23,15 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 499516a41c06d31a32bb6846d16cb4be6f43de9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1cebb8ef23c5c1c7a12bdc17bc721e51d542a3d6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279159"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810929"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리되는 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
   
  이 릴리스에서 UCP 및 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스는 다음 요구 사항을 충족해야 합니다.  
   

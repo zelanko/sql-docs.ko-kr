@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
@@ -14,15 +13,15 @@ caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c37387c3a5a47a624cdcac57d73552c8eeda9b3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61519602a7387c11b1374c827628c7063a499ed8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192143"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818849"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>유틸리티 대시보드(SQL Server 유틸리티)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 대시보드에서 데이터를 보려면 "Utility<UCP_Name>\\(ComputerName\UCP)"라고 표시된 유틸리티 탐색기 트리의 최상위 노드를 선택합니다. 대시보드에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스와 데이터 계층 응용 프로그램의 요약과 세부 데이터가 포함됩니다. 대시보드의 데이터를 새로 고치려면 유틸리티 탐색기 트리에서 최상위 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 대시보드에서 데이터를 보려면 "Utility<UCP_Name>\\(ComputerName\UCP)"라고 표시된 유틸리티 탐색기 트리의 최상위 노드를 선택합니다. 대시보드에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 응용 프로그램의 요약과 세부 데이터가 포함됩니다. 대시보드의 데이터를 새로 고치려면 유틸리티 탐색기 트리에서 최상위 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
   
  유틸리티 제어 지점을 만드는 방법은 [SQL Server 유틸리티 제어 지점 만들기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 추가하는 방법은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)을 참조하세요.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "37192143"
   
  각 상태 매개 변수에 대한 자세한 상태는 슬라이딩 표시기에 나열됩니다. 슬라이딩 표시기의 오른쪽 부분에는 각 상태 범주에 얼마나 많은 관리되는 인스턴스가 해당되는지 표시됩니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 또는 데이터 계층 응용 프로그램에 대한 필터링된 뷰를 만들려면 유틸리티 대시보드에서 해당 슬라이딩 표시기 옆에 있는 사용 범주 링크를 클릭합니다. 예를 들어 **유틸리티 탐색기 내용** 창에서 **초과 사용 인스턴스 CPU** 를 클릭할 경우, SSMS에서는 현재 정책 설정을 기반으로 CPU가 초과 사용된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대한 필터링된 목록 뷰를 만듭니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 또는 데이터 계층 응용 프로그램에 대한 필터링된 뷰를 만들려면 유틸리티 대시보드에서 해당 슬라이딩 표시기 옆에 있는 사용 범주 링크를 클릭합니다. 예를 들어 **유틸리티 탐색기 내용** 창에서 **초과 사용 인스턴스 CPU**를 클릭할 경우, SSMS에서는 현재 정책 설정을 기반으로 CPU가 초과 사용된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대한 필터링된 목록 뷰를 만듭니다.  
   
  사용 범주 링크를 클릭할 때 유틸리티 탐색기 탐색 창의 해당 노드에 **(필터링됨)** 이 추가됩니다. 즉, **관리되는 인스턴스** 레이블이 **관리되는 인스턴스(필터링됨)** 로 바뀝니다. 필터 설정을 보려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 설정**을 클릭합니다. 필터 설정을 지우려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 제거**를 클릭합니다.  
   
- 개별 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)를 참조하세요.  
+ 개별 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [관리되는 인스턴스 세부 정보&amp;#40;SQL Server 유틸리티&amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)를 참조하세요.  
   
  유틸리티 요약  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 수와 데이터 계층 응용 프로그램의 수를 표시합니다.  

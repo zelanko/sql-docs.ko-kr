@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL Server Machine Learning을 사용 하 여 함수 RevoScaleR에 대 한 자습서 | Microsoft Docs
 description: 이 자습서에서는 R을 지원하는 SQL Server Machine Learning에서 RevoScaleR 함수를 호출하는 방법에 대해 알아봅니다.
 ms.prod: sql
@@ -64,7 +64,7 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
       
 -   **추가 R 패키지**
   
-    이 자습서에서는 다음 패키지를 설치합니다. **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, **e1071**. 설명서는 자습서에서 제공됩니다.
+    이 자습서에서는 다음 패키지를 설치한: **dplyr**를 **ggplot2**를 **ggthemes**를 **reshape2**, 및 **e1071** . 설명서는 자습서의 일부로 제공됩니다.
   
     R 솔루션을 개발하는 워크스테이션, 그리고 R 스크립트가 실행되는 SQL Server 컴퓨터 두 곳에서 모든 패키지를 설치해야 합니다. 서버 컴퓨터에 패키지를 설치할 수 있는 권한이 없는 경우 관리자에게 요청하십시오. 
     
@@ -72,13 +72,13 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
 
 ## <a name="r-development-tools"></a>R 개발 도구
 
-일반적으로 R 개발자는 R 코드를 작성하고 디버깅하기 위해 IDE를 사용합니다. 몇 가지 제안이 있습니다.
+일반적으로 R 개발자가 작성 하 고 R 코드 디버깅에 대 한 Ide를 사용 합니다. 아래 몇 가지 제안이 있습니다. 
 
-- **R Tools for Visual Studio**(RTVS) Microsoft R에 대한 인텔리센스, 디버깅 및 지원을 제공하는 무료 플러그 인입니다. R 서버와 SQL Server 기계 학습 서비스 모두에 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)를 참조하세요.
+- **Visual Studio 용 R 도구** (RTVS)는 무료 Microsoft r 지원과 Intellisense, 디버깅, 제공 하는 플러그 인 R Server와 SQL Server Machine Learning Services를 사용 하 여 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) 를 참조하세요.
 
-- **RStudio**는 R 개발용으로 인기있는 환경 중 하나입니다. 자세한 내용은 [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)를 참조하십시오.
+- **RStudio** 는 R 개발용으로 보다 대중적인 환경 중 하나입니다.  자세한 내용은 [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)합니다.
 
-- 기본 R 도구(R.exe, RTerm.exe, RScripts.exe)는 SQL Server 또는 R 클라이언트에 R을 설치할 때 기본적으로 설치됩니다. IDE를 설치하지 않고도 기본으로 설치되는 R 도구를 사용해 이 자습서의 코드를 실행할 수 있습니다. 
+- 기본 R 도구(R.exe, RTerm.exe, RScripts.exe)는 SQL Server 또는 R 클라이언트에 R을 설치할 때 기본적으로 설치됩니다. IDE를 설치하지 않고도 기본으로 설치되는 R 도구를 사용해 이 자습서의 코드를 실행할 수 있습니다.
 
 로컬과 원격 컴퓨터 모두 RevoScaleR이 필요하다는 사실을 기억하십시오. RStudio를 그냥 설치하거나  Microsoft R 라이브러리가 없는 환경에서는 이 자습서를 완료할 수 없습니다. 자세한 내용은 [데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)을 참조하세요.
 

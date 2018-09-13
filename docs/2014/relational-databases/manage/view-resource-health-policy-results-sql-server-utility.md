@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
@@ -14,15 +13,15 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe09be4c3b91471edda0fcf2e4a0af8ba2092aa5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e58e63bd8a5c7180bd4282b4aaf91092cefee293
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164254"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817249"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>리소스 상태 정책 결과 보기(SQL Server 유틸리티)
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 유틸리티 대시보드를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 및 데이터 계층 응용 프로그램의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유틸리티 리소스 매개 변수를 볼 수 있습니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)를 참조하세요.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 유틸리티 대시보드를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 및 데이터 계층 응용 프로그램의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유틸리티 리소스 매개 변수를 볼 수 있습니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -42,7 +41,7 @@ ms.locfileid: "37164254"
  [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)   
  [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)   
  [배포된 데이터 계층 응용 프로그램 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)   
+ [관리되는 인스턴스 세부 정보&amp;amp;#40;SQL Server 유틸리티&amp;amp;#41;](../../database-engine/managed-instance-details-sql-server-utility.md)   
  [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
   

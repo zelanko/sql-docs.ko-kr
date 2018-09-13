@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328143"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815749"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 유틸리티 문제 해결
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 문제 해결에는 SQL Server 인스턴스를 UCP에 등록하는 작업의 실패 해결, UCP에서 관리되는 인스턴스 목록 뷰에 회색 아이콘으로 표시되는 실패한 데이터 수집 문제 해결, 성능 병목 현상 완화, 리소스 상태 문제 해결 등이 포함됩니다. 로 식별 되는 리소스 상태 문제를 완화 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP를 참조 하세요 [SQL Server 리소스 상태 문제 해결 &#40;SQL Server 유틸리티&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)합니다.  
@@ -46,9 +45,9 @@ ms.locfileid: "37328143"
  위와 같은 예제에서 이 문제를 해결하는 방법은 “sa”를 사용하고 "Domain_1"의 프록시 계정을 제공하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결한 후 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에 등록하는 것입니다.  
   
 ## <a name="failed-wmi-validation"></a>WMI 유효성 검사 실패  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 WMI가 올바르게 구성되지 않을 경우 UCP 만들기 및 관리되는 인스턴스 등록 작업 시 경고가 표시되지만 작업이 중지되지는 않습니다. 또한 변경 하는 경우는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 계정 구성을 있도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트가 필요한 WMI 클래스의 영향을 받는 관리 되는 인스턴스에 대 한 데이터 수집에 사용 권한을 갖지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP에 업로드 하지 못했습니다. 그러면 UCP에 회색 아이콘이 표시됩니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 WMI가 올바르게 구성되지 않을 경우 UCP 만들기 및 관리되는 인스턴스 등록 작업 시 경고가 표시되지만 작업이 중지되지는 않습니다. 또한 변경 하는 경우는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 계정 구성을 있도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트가 필요한 WMI 클래스의 영향을 받는 관리 되는 인스턴스에 대 한 데이터 수집에 사용 권한을 갖지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP에 업로드 하지 못했습니다. 그러면 UCP에 회색 아이콘이 표시됩니다.  
   
- 데이터 수집이 실패하면 해당 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스의 UCP 목록 뷰에 회색 상태 아이콘이 표시됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스의 작업 기록에는 sysutility_mi_collect_and_upload가 2단계(PowerShell 스크립트에서 수집된 단계 데이터)에서 실패했다고 표시됩니다.  
+ 데이터 수집이 실패하면 해당 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관리되는 인스턴스의 UCP 목록 뷰에 회색 상태 아이콘이 표시됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스의 작업 기록에는 sysutility_mi_collect_and_upload가 2단계(PowerShell 스크립트에서 수집된 단계 데이터)에서 실패했다고 표시됩니다.  
   
  이 경우 다음과 같은 오류 메시지만 출력됩니다.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "37328143"
   
 -   Windows Server 2003에서 SQL Server 에이전트 서비스를 관리 되는 인스턴스의 성능을 모니터링 하는 Windows 그룹의 일부 여야 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스에서 WMI 서비스가 설정되고 구성되어 있어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관리되는 인스턴스에서 WMI 서비스가 설정되고 구성되어 있어야 합니다.  
   
 -   WMI 리포지토리를 관리 되는 인스턴스에서 손상 되었을 수 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
@@ -126,7 +125,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   관리 되는 인스턴스 및 UCP에서 TCP/IP를 사용할지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. TCP/IP를 통해 사용 하도록 설정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager입니다.  
   
--   UCP에서 SQL Server Browser 서비스가 시작되어야 하며 자동으로 시작하도록 구성되어 있어야 합니다. 조직에서 SQL Server Browser 서비스 사용을 금지하는 경우 다음 단계를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스가 UCP에 연결하는 것을 허용하십시오.  
+-   UCP에서 SQL Server Browser 서비스가 시작되어야 하며 자동으로 시작하도록 구성되어 있어야 합니다. 조직에서 SQL Server Browser 서비스 사용을 금지하는 경우 다음 단계를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 UCP에 연결하는 것을 허용하세요.  
   
     1.  관리 되는 인스턴스에서 Windows 작업 표시줄에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 클릭 **시작**, 클릭 **실행 하는 중...** .  
   
@@ -154,7 +153,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   확인 하는 관리 되는 인스턴스가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 네트워크에 연결 됩니다.  
   
--   이름은 같지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스의 대/소문자 설정이 다른 데이터베이스가 있는 경우 데이터베이스와 해당 뷰포인트 간의 식별이 잘못되어 데이터 수집이 실패할 수 있습니다. 예를 들어 "MYDATABASE"라는 데이터베이스가 "MyDatabase"라는 데이터베이스의 상태를 보여 줄 수 있습니다. 이 시나리오에서는 오류가 발생하지 않습니다. 또한 UCP에 표시되는 다른 객체에서 데이터베이스 파일 및 파일 그룹 이름 등의 대/소문자가 일치하지 않아 데이터 수집이 실패할 수도 있습니다.  
+-   이름은 같지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관리되는 인스턴스의 대/소문자 설정이 다른 데이터베이스가 있는 경우 데이터베이스와 해당 뷰포인트 간의 식별이 잘못되어 데이터 수집이 실패할 수 있습니다. 예를 들어 "MYDATABASE"라는 데이터베이스가 "MyDatabase"라는 데이터베이스의 상태를 보여 줄 수 있습니다. 이 시나리오에서는 오류가 발생하지 않습니다. 또한 UCP에 표시되는 다른 객체에서 데이터베이스 파일 및 파일 그룹 이름 등의 대/소문자가 일치하지 않아 데이터 수집이 실패할 수도 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리되는 인스턴스가 Windows Server 2003 컴퓨터에서 호스팅되는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 성능 모니터 사용자 보안 그룹이나 로컬 관리자 그룹에 속해야 합니다. 그렇지 않으면 액세스 거부 오류가 발생하고 데이터베이스 수집이 실패합니다. 추가할를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스 계정은 Performance Monitor Users 보안 그룹에 다음 단계를 사용 합니다.  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,15 +15,15 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b657f69ae221044fcc0fa1211b21954b4ad1d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6467ed40913eaf498ea4ef29a501cc16e318dac
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244623"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819839"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server 유틸리티에서 SQL Server 인스턴스 제거
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하십시오. 이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하세요. 이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
   
 > [!IMPORTANT]  
 >  이 절차를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하기 전에 제거할 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 SQL Server 에이전트 서비스가 실행 중인지 확인하십시오.  
@@ -40,7 +39,7 @@ ms.locfileid: "37244623"
 ## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>SQL Server 유틸리티에서 수동으로 SQL Server의 관리되는 인스턴스 제거  
  이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
   
- PowerShell을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하십시오. 이 스크립트는 다음 작업을 수행합니다.  
+ PowerShell을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하세요. 이 스크립트는 다음 작업을 수행합니다.  
   
 -   서버 인스턴스 이름으로 UCP를 얻습니다.  
   
@@ -67,7 +66,7 @@ $ManagedInstance.Remove($InstanceConnection);
 select @@SERVERNAME AS instance_name  
 ```  
   
- 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 UCP에서 완전하게 제거됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 데이터를 다음번 새로 고치면 목록 뷰에 해당 인스턴스가 표시되지 않습니다. 이 상태는 SSMS 사용자 인터페이스를 통해 관리되는 인터페이스 제거 작업을 성공적으로 수행한 것과 동일합니다.  
+ 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 UCP에서 완전하게 제거됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 데이터를 다음번 새로 고치면 목록 뷰에 해당 인스턴스가 표시되지 않습니다. 이 상태는 SSMS 사용자 인터페이스를 통해 관리되는 인스턴스 제거 작업을 성공적으로 수행한 것과 동일합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리](use-utility-explorer-to-manage-the-sql-server-utility.md)   
