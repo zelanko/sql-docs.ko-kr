@@ -1,5 +1,5 @@
 ---
-title: RxSqlServerData (SQL과 R 심층 분석)를 사용하여 SQL Server 데이터 개체 만들기 | Microsoft Docs
+title: RxSqlServerData(SQL과 R 심층 분석)를 사용하여 SQL Server 데이터 개체 만들기 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -14,12 +14,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31203465"
 ---
-# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>RxSqlServerData (SQL과 R 심층 분석)를 사용하여 SQL Server 데이터 개체 만들기
+# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>RxSqlServerData(SQL과 R 심층 분석)를 사용하여 SQL Server 데이터 개체 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 쓰는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
 
-지금까지 데이터를 다루기 위해[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들고 필요한 권한을 얻었습니다. 이 단계에서는 데이터를 다루는데 쓸 수 있는 몇 개체를 R로 만들겠습니다.
+지금까지 데이터를 다루기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들고 필요한 권한을 얻었습니다. 이 단계에서는 데이터를 다루는 데 쓸 수 있는 몇 개체를 R로 만들겠습니다.
 
 ## <a name="create-the-sql-server-data-objects"></a>SQL Server 데이터 개체 만들기
 
@@ -28,11 +28,11 @@ ms.locfileid: "31203465"
 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 테이블을 만들기 위해 **RxSqlServerData** 함수를 호출하십시오.
 
 > [!TIP]
-> R Tools for Visual Studio를 사용하는 경우, 도구 모음에서 **R Tools**를 선택하고 **Windows** 를 클릭하여 R 변수를 확인하거나 디버깅을 할 때 사용할 수 있는 옵션을 확인하세요.
+> R Tools for Visual Studio를 사용하는 경우, 도구 모음에서 **R Tools**를 선택하고 **Windows**를 클릭하여 R 변수를 확인하거나 디버깅할 때 사용할 수 있는 옵션을 확인하세요.
 
 ### <a name="create-the-training-data-table"></a>학습 데이터 테이블 만들기
 
-1. 데이터베이스 연결 문자열을 R 변수에 저장하십시오. 다음은 SQL Server를 위한 유효한 ODBC 연결 문자열의 두 가지 예시입니다: SQL 로그인과 Windows 통합 인증
+1. 데이터베이스 연결 문자열을 R 변수에 저장하십시오. 다음은 SQL Server를 위한 유효한 ODBC 연결 문자열의 두 가지 예시입니다. SQL 로그인과 Windows 통합 인증
 
     **SQL 로그인**
     ```R
@@ -76,7 +76,7 @@ ms.locfileid: "31203465"
 
 #### <a name="to-create-the-scoring-data-table"></a>모델 평가 데이터 테이블 만들기
 
-동일한 과정을 거쳐 모델을 평가하는데 쓰이는 데이터를 보관하는 테이블을 만듭니다.
+동일한 단계에 따라 동일한 프로세스를 사용하여 채점 데이터를 보관하는 테이블을 만듭니다.
 
 1. 새 R 변수 *sqlScoreTable*을 만들어 모델을 평가하는 데에 사용되는 테이블의 이름을 저장합니다.
   
@@ -91,7 +91,7 @@ ms.locfileid: "31203465"
        table = sqlScoreTable, rowsPerRead = sqlRowsPerRead)
     ```
 
-이미 연결 문자열 및 기타 매개 변수를 R 작업 영역에서 변수로 정의했으므로, 다른 테이블, 뷰 또는 쿼리를 위한 데이터 원본을 만드는 것은 간단합니다.
+이미 R 작업 영역에서 연결 문자열 및 다른 매개 변수를 변수로 정의했으므로 여러 테이블, 뷰 또는 쿼리를 위한 새 데이터 원본을 만드는 것은 간단합니다.
 
 > [!NOTE]
 > 함수는 쿼리를 기반으로 데이터 원본에 대 한 보다는 전체 테이블을 기반으로 데이터 원본을 정의 하기 위해 서로 다른 인수를 사용 합니다. 즉, SQL Server 데이터베이스 엔진 쿼리를 다르게 준비 해야 합니다. 이 자습서의 뒷부분에 나오는 SQL 쿼리를 기반으로 하는 데이터 원본 개체를 만드는 방법을 배웁니다.
