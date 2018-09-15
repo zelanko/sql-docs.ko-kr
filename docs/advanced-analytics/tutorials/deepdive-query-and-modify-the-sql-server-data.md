@@ -1,5 +1,5 @@
 ---
-title: 쿼리 및 수정 (SQL과 R 심층 분석)에서 SQL Server 데이터 | Microsoft Docs
+title: SQL Server 데이터를 요청하고 수정하기(SQL과 R 심층 분석) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -14,22 +14,22 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31202225"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>쿼리 및 SQL Server 데이터 (SQL과 R 심층 분석)를 수정 합니다.
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>SQL Server 데이터를 요청하고 수정하기(SQL과 R 심층 분석)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
+이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 쓰는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
 
-이제 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드했으므로 앞서 만든 데이터 원본을 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 R 함수에 대한 인수로 사용하여 변수에 대한 기본 정보를 가져오고 요약 및 히스토그램을 생성합니다.
+이제 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 불러왔으므로 앞서 만든 데이터 원본을 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 R 함수에 대한 인수로 사용하여 변수에 대한 기본 정보를 가져오고 요약 및 히스토그램을 생성할 수 있습니다.
 
-이 단계에서는 몇 가지 빠른 분석을 수행한 다음 데이터를 강화하도록 데이터 원본을 다시 사용합니다.
+이 단계에서는 간단한 분석을 수행한 다음 데이터를 강화하도록 데이터 원본을 다시 사용합니다.
 
-## <a name="query-the-data"></a>데이터 쿼리
+## <a name="query-the-data"></a>데이터 요청하기
 
-먼저, 열과 해당 데이터 형식 목록을 가져옵니다.
+먼저, 열과 해당 데이터의 형식 목록을 가져옵니다.
 
-1.  함수를 사용 하 여 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 분석 하려는 데이터 원본을 지정 합니다.
+1.  [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 함수를 사용하여  분석하려는 데이터 원본을 지정합니다.
 
-    RevoScaleR의 버전을 따라 사용할 수도 있습니다 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)합니다. 
+    RevoScaleR의 버전에 따라 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)를 사용할 수도 있습니다.
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -56,13 +56,13 @@ ms.locfileid: "31202225"
     *Var 9: fraudRisk, Type: integer*
 
 
-## <a name="modify-metadata"></a>메타 데이터를 수정 합니다.
+## <a name="modify-metadata"></a>메타 데이터 수정하기
 
-모든 변수가 정수로 저장되었지만 일부 변수는 범주형 데이터를 나타내며 R에서는 *요인(factor) 변수* 라고 합니다. 예를 들어 *state* 열에는 50개 주와 콜롬비아 특별구에 대한 식별자로 사용되는 숫자가 포함되어 있습니다.   데이터를 더 쉽게 이해하기 위해 숫자를 주 약어 목록으로 바꿉니다.
+모든 변수가 정수로 저장되었지만 일부 변수는 범주형 데이터를 나타내고, 이런 변수를 R에서는 *요인(factor) 변수* 라고 합니다. 예를 들어 *state* 열에는 50개 주와 콜롬비아 특별구에 대한 식별자로 사용되는 숫자가 포함되어 있습니다. 데이터를 더 쉽게 이해하기 위해 숫자를 각 주의 약어 목록으로 바꿉니다.
 
-이 단계에서는 약어를 포함 하는 문자열 벡터 만들고 원래 정수 식별자에 이러한 범주 값을 매핑합니다. 다음에서 새 변수를 사용 하 여는 *colInfo* 인수를 추가 하는이 열이 처리는 비율을 지정 합니다. 데이터를 분석 하거나 이동할 때마다 약어가 사용 되 고 열을 인수로 처리 됩니다.
+이 단계에서는 약어를 포함하는 문자열 벡터를 만들고 기존의 정수 식별자에 이 범주 값을 매핑합니다. 그리고 *colInfo* 인수에 저장된 새로운 변수를 사용하여 이 열이 요인으로 처리되도록 지정합니다. 데이터를 분석하거나 이동할 때마다 약어가 사용되고 열을 인수로 처리합니다.
 
-을 요소로 사용하기 전에 열을 약어에 매핑하면 실제로 성능도 향상됩니다. 자세한 내용은 [R 및 데이터 최적화](..\r\r-and-data-optimization-r-services.md)를 참조하세요.
+열을 요인으로 사용하지 말고 약어에 매핑하는 것은 실제로 성능 향상의 요인이 됩니다. 자세한 내용은 [R 및 데이터 최적화](..\r\r-and-data-optimization-r-services.md)를 참조하세요.
 
 1. 먼저 R 변수 *stateAbb*를 만들고 다음과 같이 추가할 문자열 벡터를 정의합니다.
   
