@@ -23,7 +23,7 @@ ms.locfileid: "31203465"
 
 ## <a name="create-the-sql-server-data-objects"></a>SQL Server 데이터 개체 만들기
 
-이 단계에서는 두 개의 테이블을 만들고 채우기 위해 **RevoScaleR** 패키지의 함수를 사용합니다. 하나는 모델을 훈련하는 데 사용하고, 다른 테이블은 모델을 평가하는 데 사용됩니다. 두 테이블은 가상의 신용 카드 사기 데이터를 포함합니다. 
+이 단계에서는 두 개의 테이블을 만들고 채우기 위해 **RevoScaleR** 패키지의 함수를 사용합니다. 하나는 모델을 훈련하는 데 사용하고, 다른 테이블은 모델을 평가하는 데 사용됩니다. 두 테이블은 가상의 신용 카드 사기 데이터를 포함합니다.
 
 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 테이블을 만들기 위해 **RxSqlServerData** 함수를 호출하십시오.
 
@@ -32,7 +32,7 @@ ms.locfileid: "31203465"
 
 ### <a name="create-the-training-data-table"></a>학습 데이터 테이블 만들기
 
-1. 데이터베이스 연결 문자열을 R 변수에 저장하십시오. 다음은 SQL Server를 위한 유효한 ODBC 연결 문자열의 두 가지 예시입니다. SQL 로그인과 Windows 통합 인증
+1. 데이터베이스 연결 문자열이 R 변수에 저장 합니다. 다음은 SQL Server에 대 한 유효한 ODBC 연결 문자열의 두 가지 예제: Windows 통합된 인증에 대 한 개와 SQL 로그인을 사용 하 여 합니다.
 
     **SQL 로그인**
     ```R
@@ -60,9 +60,9 @@ ms.locfileid: "31203465"
     sqlRowsPerRead = 5000
     ```
   
-    이 매개 변수는 선택 사항이지만 메모리 사용 및 효율적인 계산을 처리하는 데 중요합니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에 포함된 대부분의 고급 분석 함수는 데이터를 한 번에 처리하고 중간 결과를 저장하면서 모든 데이터를 읽은 후 최종 계산 결과를 반환합니다.
+    이 매개 변수는 선택 사항이지만 메모리 사용 및 효율적인 계산을 처리하는 데 중요합니다.  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에 포함된 대부분의 고급 분석 함수는 데이터를 한 번에 처리하고 중간 결과를 저장하면서 모든 데이터를 읽은 후 최종 계산 결과를 반환합니다.
   
-    이 매개 변수의 값이 너무 크면 큰 데이터 묶음을 효율적으로 처리할 수 있는 메모리가 없기 때문에 데이터 액세스 속도가 느려질 수 있습니다. 일부 시스템에서는 *rowsPerRead* 값이 너무 작은 경우 성능이 느려질 수 있습니다. 따라서 큰 데이터로 작업하는 경우엔 시스템에서 이 설정값을 시험해보는 것이 좋습니다.
+    이 매개 변수의 값이 너무 크면 큰 데이터 청크를 효율적으로 처리할 수 있는 메모리가 없기 때문에 데이터 액세스 속도가 느려질 수 있습니다.  일부 시스템에서는 *rowsPerRead* 값이 너무 작은 경우 성능이 느려질 수 있습니다. 따라서 대량 데이터 세트로 작업하는 경우엔 시스템에서 이 설정값을 시험하는 것이 좋습니다. 따라서 실험는이 설정을 사용 하 여 시스템에서 큰 데이터 집합으로 작업 하는 것이 좋습니다.
   
     이 과정을 하는 동안에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 정의된 기본 일괄 처리 프로세스 수로 각 묶음의 행의 갯수를 조정하세요. 해당 값을 `sqlRowsPerRead` 변수에 저장합니다.
   
@@ -74,17 +74,17 @@ ms.locfileid: "31203465"
        rowsPerRead = sqlRowsPerRead)
     ```
 
-#### <a name="to-create-the-scoring-data-table"></a>모델 평가 데이터 테이블 만들기
+#### <a name="to-create-the-scoring-data-table"></a>채점 데이터 테이블 만드는 방법
 
 동일한 단계에 따라 동일한 프로세스를 사용하여 채점 데이터를 보관하는 테이블을 만듭니다.
 
-1. 새 R 변수 *sqlScoreTable*을 만들어 모델을 평가하는 데에 사용되는 테이블의 이름을 저장합니다.
+1. 새 R 변수 *sqlScoreTable*을 만들어 채점에 사용되는 테이블의 이름을 저장합니다.
   
     ```R
     sqlScoreTable <- "ccFraudScoreSmall"
     ```
   
-2. 이 변수를 RxSqlServerData 함수의 인수로 넘겨 두 번째 데이터 원본 개체인 *sqlScoreDS*를 정의합니다.
+2. 이 변수를 RxSqlServerData 함수의 인수로 제공해서 두 번째 데이터 원본 개체인 *sqlScoreDS*를 정의합니다.
   
     ```R
     sqlScoreDS \<- RxSqlServerData(connectionString = sqlConnString,
