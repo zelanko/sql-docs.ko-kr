@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087565"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564209"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 * 빠른 프로세서와 가능한 많은 프로세서 코어가 장착된 서버를 사용하여 병렬 쿼리 처리 기능을 이용합니다.
 * 서버에 충분한 I/O 컨트롤러 대역폭이 있는지 확인합니다. 
 * 모든 분할된 대형 테이블에 클러스터형 인덱스를 만들어 B-트리 검색 최적화를 이용합니다.
-* 데이터를 분할된 테이블에 대량으로 로드하는 경우에는 [데이터 로드 성능 가이드](http://msdn.microsoft.com/en-us/library/dd425070.aspx) 백서의 모범 사례 권장 사항을 따르세요.
+* 데이터를 분할된 테이블에 대량으로 로드하는 경우에는 [데이터 로드 성능 가이드](http://msdn.microsoft.com/library/dd425070.aspx) 백서의 모범 사례 권장 사항을 따르세요.
 
 ### <a name="example"></a>예제
 

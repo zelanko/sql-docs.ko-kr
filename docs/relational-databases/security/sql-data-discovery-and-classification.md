@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084636"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563839"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "39084636"
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-확장 속성 카탈로그 뷰[sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)를 사용하여 메타데이터에 액세스할 수 있습니다.
+확장 속성 카탈로그 뷰[sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)를 사용하여 메타데이터에 액세스할 수 있습니다.
 
 다음 코드 예제는 해당 분류를 사용하여 모든 분류된 열을 반환합니다.
 
@@ -150,8 +150,8 @@ Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://g
 
 열 수준 보안 메커니즘을 적용하여 중요한 열을 보호하는 것이 좋습니다.
 
-* [동적 데이터 마스킹](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) 사용 중인 중요한 열을 난독 처리합니다.
-* [항상 암호화](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) 중요한 미사용 열을 암호화합니다.
+* [동적 데이터 마스킹](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) 사용 중인 중요한 열을 난독 처리합니다.
+* [항상 암호화](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) 중요한 미사용 열을 암호화합니다.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

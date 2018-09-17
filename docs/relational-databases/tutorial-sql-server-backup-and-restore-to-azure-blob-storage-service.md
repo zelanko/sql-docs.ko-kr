@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2c3ae93bc044f75f502a357df50495f5041b165e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991896"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563708"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>자습서: Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37991896"
 [2단원: SQL Server 자격 증명 만들기](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 이 단원에서는 Azure 저장소 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만들 수 있습니다.  
   
-[3단원: Azure Blob Storage Service로 전체 데이터베이스 백업 작성](https://technet.microsoft.com/en-us/library/jj720552\(v=sql.110\).aspx)  
+[3단원: Azure Blob Storage Service로 전체 데이터베이스 백업 작성](https://technet.microsoft.com/library/jj720552\(v=sql.110\).aspx)  
 이 단원에서는 Azure Blob Storage 서비스에 AdventureWorks2012 데이터베이스 백업을 작성하는 T-SQL 문을 실행합니다.  
   
 [4단원: 전체 데이터베이스 백업에서 복원 수행](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

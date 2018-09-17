@@ -36,12 +36,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bef7cd94172b6560803b5bf3372903419f1eb10
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ff9a91e139b350e858ee715b40065afda89cc374
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077337"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564159"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -1001,7 +1001,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. INSERT 문에 레이블 및 쿼리 힌트 사용  
- 이 쿼리는 INSERT 문에 레이블 및 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제어 노드에 제출된 후 계산 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
+ 이 쿼리는 INSERT 문에 레이블 및 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제어 노드에 제출된 후 계산 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
   
 ```  
 -- Uses AdventureWorks  

@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a5a475f73f7c6db799bebb4477613679883e470c
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770739"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564029"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Service Broker(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,18 @@ ms.locfileid: "34770739"
   
      자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
-2.  **Service Broker 끝점이 존재하고 올바르게 구성되어 있는지 확인합니다.**  
+2.  **Service Broker 엔드포인트가 존재하고 올바르게 구성되어 있는지 확인합니다.**  
   
-     가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 다음과 같이 Service Broker 끝점을 구성해야 합니다.  
+     가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 다음과 같이 Service Broker 엔드포인트를 구성해야 합니다.  
   
     -   LISTENER_IP를 'ALL'로 설정합니다. 이 설정을 사용하면 가용성 그룹 수신기에 바인딩된 모든 유효한 IP 주소에서 연결이 가능해집니다.  
   
     -   모든 호스트 서버 인스턴스에서 Service Broker 포트를 동일한 포트 번호로 설정합니다.  
   
         > [!TIP]  
-        >  특정 서버 인스턴스에서 Service Broker 끝점의 포트 번호를 보려면 **sys.tcp_endpoints** 카탈로그 뷰의 [port](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) 열을 쿼리합니다. 여기서 **type_desc** = 'SERVICE_BROKER'입니다.  
+        >  특정 서버 인스턴스에서 Service Broker 엔드포인트의 포트 번호를 보려면 **sys.tcp_endpoints** 카탈로그 뷰의 [port](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) 열을 쿼리합니다. 여기서 **type_desc** = 'SERVICE_BROKER'입니다.  
   
-     다음 예에서는 기본 Service Broker 포트(4022)를 사용하며 모든 유효한 IP 주소를 수신하는 Windows 인증 Service Broker 끝점을 만듭니다.  
+     다음 예에서는 기본 Service Broker 포트(4022)를 사용하며 모든 유효한 IP 주소를 수신하는 Windows 인증 Service Broker 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT [SSBEndpoint]  
@@ -60,16 +60,16 @@ ms.locfileid: "34770739"
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
+     자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
 
     > [!NOTE]  
-    SQL Server Broker는 다중 서브넷을 인식하지 않습니다. "registerallprovidersip"를 0으로 설정하여 사용하고, https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server에서 정의된 DNS의 클러스터에 필요한 권한을 부여하는 DNS에서 고정 IP를 사용하지 않는지 확인합니다. Broker는 비활성화된 IP를 사용하도록 시도하는 상태 "CONVERSING"으로 메시지를 지연시킬 수 있습니다.
+    SQL Server Broker는 다중 서브넷을 인식하지 않습니다. "registerallprovidersip"를 0으로 설정하여 사용하고, https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server에서 정의된 DNS의 클러스터에 필요한 권한을 부여하는 DNS에서 고정 IP를 사용하지 않는지 확인합니다. Broker는 비활성화된 IP를 사용하도록 시도하는 상태 "CONVERSING"으로 메시지를 지연시킬 수 있습니다.
 
-3.  **끝점에 대한 CONNECT 권한을 부여합니다.**  
+3.  **엔드포인트에 대한 CONNECT 권한을 부여합니다.**  
   
-     Service Broker 끝점에 대한 CONNECT 권한을 PUBLIC 또는 로그인으로 부여합니다.  
+     Service Broker 엔드포인트에 대한 CONNECT 권한을 PUBLIC 또는 로그인으로 부여합니다.  
   
-     다음 예에서는 `broker_endpoint` 라는 Service Broker 끝점에 대한 연결을 PUBLIC으로 부여합니다.  
+     다음 예에서는 `broker_endpoint`라는 Service Broker 엔드포인트에 대한 연결을 PUBLIC으로 부여합니다.  
   
     ```  
     GRANT CONNECT ON ENDPOINT::[broker_endpoint] TO [PUBLIC]  
@@ -92,7 +92,7 @@ ms.locfileid: "34770739"
   
     -   ADDRESS를 서비스 데이터베이스를 호스팅하는 가용성 그룹의 수신기 IP 주소로 설정합니다.  
   
-    -   PORT를 각 원격 SQL Server 인스턴스의 Service Broker 끝점에 지정한 포트로 설정합니다.  
+    -   PORT를 각 원격 SQL Server 인스턴스의 Service Broker 엔드포인트에 지정한 포트로 설정합니다.  
   
      다음 예에서는 `RouteToTargetService` 서비스에 대해 `ISBNLookupRequestService` 라는 경로를 만듭니다. 이 경로는 포트 4022를 사용하는 가용성 그룹 수신기 `MyAgListener`를 대상으로 합니다.  
   

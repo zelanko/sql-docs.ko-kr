@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 813c9b6c661cc6d04cb586ac61f2c8041bb781df
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f0e356fc4e62fb07cff0f08c375488a759d01712
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067145"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563999"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 다음 예에서는 Azure SQL Data Warehouse에서 PolyBase에 사용될 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다.
 
 Azure Data Lake Store는 서비스 간 인증에 Azure Active Directory 응용 프로그램을 사용합니다.
-데이터베이스 범위 자격 증명을 만들려면 그 전에 [AAD 응용 프로그램을 만들고](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint 및 Key를 문서화하십시오.
+데이터베이스 범위 자격 증명을 만들려면 그 전에 [AAD 응용 프로그램을 만들고](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint 및 Key를 문서화하십시오.
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User

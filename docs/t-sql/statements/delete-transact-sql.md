@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eacfa9caf004be0a82db42a6e9d30adcbf0a490
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 70ab9c35fb38ced74905e791214a9493ac394d6b
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064246"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564179"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -461,7 +461,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문에 레이블 및 쿼리 힌트 사용  
- 이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
+ 이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
   
 ```  
 -- Uses AdventureWorks  

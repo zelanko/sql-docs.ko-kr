@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aa24f75efeb5453573d54d0ec3a51d98414933e3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f143da5d3d7fbd5a03bfac5f2012826d04103450
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993096"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563539"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +66,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  보기에 유지할 이벤트 수입니다. 예를 들어 100을 지정하는 경우 필터 조건과 일치하는 최신 이벤트 100개가 진단 세션에 유지됩니다. 일치하는 이벤트가 100개보다 작은 경우 진단 세션은 100개 미만의 이벤트를 포함하게 됩니다. *max_item_count_num*은 100 이하이거나 100,000개여야 합니다.  
   
  *event_name*  
- 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name*은 `sys.pdw_diag_events.is_enabled='True'`의 [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587)에 나열된 이벤트 중 하나입니다.  
+ 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name*은 `sys.pdw_diag_events.is_enabled='True'`의 [sys.pdw_diag_events](http://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587)에 나열된 이벤트 중 하나입니다.  
   
  *filter_property_name*  
  결과를 제한하는 속성의 이름입니다. 예를 들어, 세션 ID에 따라 제한하려는 경우 *filter_property_name*은 *SessionId*여야 합니다. *filter_property_name*에 대한 가능한 값의 목록은 아래 *property_name*을 참조하세요.  
@@ -92,7 +92,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|서비스 프로세스 ID입니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 각 사용자는 최대 10개의 동시 진단 세션이 허용됩니다. 현재 세션 목록은 [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9)를 참조하고, `DROP DIAGNOSTICS SESSION`을 사용하여 필요 없는 세션을 드롭하세요.  
+ 각 사용자는 최대 10개의 동시 진단 세션이 허용됩니다. 현재 세션 목록은 [sys.pdw_diag_sessions](http://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9)를 참조하고, `DROP DIAGNOSTICS SESSION`을 사용하여 필요 없는 세션을 드롭하세요.  
   
  진단 세션은 드롭될 때까지 메타데이터를 계속 수집합니다.  
   

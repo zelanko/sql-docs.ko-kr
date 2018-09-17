@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fcc05bd2e98b93f894a72b9031f7ad897273c7bd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 70f4573aeeae319a95ccad8384164041b2eb81ee
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811049"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564039"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -123,6 +123,6 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 [sys.sensitivity_classifications(Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
-[사용 권한(데이터베이스 엔진)](https://docs.microsoft.com/en-us/sql/relational-databases/security/permissions-database-engine)
+[사용 권한(데이터베이스 엔진)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
 
 [SQL Information Protection 시작](http://aka.ms/sqlip)
