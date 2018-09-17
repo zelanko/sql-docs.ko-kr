@@ -103,7 +103,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     스키마가 특정 유저 이름과 연관되어 있다면, 그 유저는 _스키마 소유자_ 입니다. 개체를 만들 때 다른 스키마에서 만들도록 요청하지 않으면 항상 그 유저의 고유한 스키마에서 만들어집니다.
   
-    예를 들어 이름으로 테이블을 만들 **TestData**, 기본 스키마 이며 **db_datareader**, 테이블 이름으로 만들어집니다 `<database_name>.db_datareader.TestData`합니다.
+    예를 들어 **TestData**라는 이름으로 테이블을 생성하고 기본 스키마가 **db_datareader**라면, 테이블의 이름은`<database_name>.db_datareader.TestData`가 됩니다.
   
     이러한 이유로 테이블이 서로 다른 스키마에 속하기만 하면 한 데이터베이스에 같은 이름의 테이블이 여러 개 포함될 수 있습니다.
    
