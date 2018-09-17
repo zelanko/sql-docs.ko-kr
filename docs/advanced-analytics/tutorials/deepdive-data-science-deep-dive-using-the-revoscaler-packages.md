@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
 ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/11/2018
 ms.locfileid: "44343088"
@@ -22,7 +22,7 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
 
 이 자습서에서는 원격 계산 컨텍스트를 만드는 방법, 로컬 및 원격 계산 컨텍스트 간에 데이터를 이동하는 방법, 그리고 원격 SQL 서버에서 R 코드를 실행하는 방법을 배우게 됩니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
 
-+ 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
++ 데이터는 처음에 CSV 파일 또는 XDF 파일에서 가져옵니다. RevoScaleR 패키지의 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 가져옵니다.
 + 모델 학습과 평가는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계산 환경에 의해 수행됩니다. 
 + RevoScaleR 함수를 이용해 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만들어 평가 결과를 저장하십시오.
 + 서버나 로컬 계산 환경에서 plot을 생성할 수 있습니다.
@@ -60,11 +60,11 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
   
     로컬이나 원격 계산 환경으로 전환하려면 두 시스템이 필요합니다. 로컬 환경은 일반적으로 데이터 과학 작업을 하는 데 충분한 성능을 가진 개발 환경입니다. 이 경우, 원격 환경은 R을 사용할 수 있는 SQL Server 2017 또는 SQL Server 2016입니다. 
     
-    로컬 및 원격 시스템에서 동일한 버전 RevoScaleR에 서술 계산 컨텍스트를 전환 합니다. 로컬 워크스테이션에서 가져올 수 있습니다는 RevoScaleR 패키지 및 관련된 공급자를 설치 하거나 다음 중 하나를 사용 하 여: [Azure에서 데이터 과학 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)를 [(무료) Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), 또는 [ Microsoft Machine Learning Server (독립 실행형)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)합니다. 에서는 독립 실행형 서버 옵션을 사용 하 여 Linux 또는 Windows 설치 관리자를 사용 하 여 무료 개발자 버전을 설치 합니다. 또한 독립 실행형 서버를 설치 하려면 SQL Server 설치 프로그램을 사용할 수 있습니다.
+    로컬과 원격 시스템에서 같은 버전의 RevoScaleR을 사용해야 계산 환경을 바꿀 수 있습니다. 로컬 워크스테이션에서 다음 중 하나를 설치하거나 사용하여 RevoScaleR 패키지 및 관련된 공급자를 가져올 수 있습니다. [Data Science VM on Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [Microsoft R Client(무료)](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), 또는 [Microsoft Machine Learning Server(독립 실행형)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). 독립 실행형 서버 옵션의 경우 Linux 또는 Windows 설치 관리자를 사용하여 무료 개발자 버전을 설치합니다. 또한 독립 실행형 서버를 설치하기 위해 SQL Server 설치 프로그램을 사용할 수 있습니다.
       
 -   **추가 R 패키지**
   
-    이 자습서에서는 다음 패키지를 설치한: **dplyr**를 **ggplot2**를 **ggthemes**를 **reshape2**, 및 **e1071** . 설명서는 자습서의 일부로 제공됩니다.
+    이 자습서에서는 다음 패키지를 설치합니다. **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, **e1071**. 설명서는 자습서에서 제공됩니다. 설명서는 자습서의 일부로 제공됩니다.
   
     R 솔루션을 개발하는 워크스테이션, 그리고 R 스크립트가 실행되는 SQL Server 컴퓨터 두 곳에서 모든 패키지를 설치해야 합니다. 서버 컴퓨터에 패키지를 설치할 수 있는 권한이 없는 경우 관리자에게 요청하십시오. 
     
@@ -72,11 +72,11 @@ RevoScaleR은 데이터 과학 및 기계 학습 작업의 분산 및 병렬 처
 
 ## <a name="r-development-tools"></a>R 개발 도구
 
-일반적으로 R 개발자가 작성 하 고 R 코드 디버깅에 대 한 Ide를 사용 합니다. 아래 몇 가지 제안이 있습니다. 
+일반적으로 R 개발자는 R 코드를 작성하고 디버깅하기 위해 IDE를 사용합니다. 몇 가지 제안이 있습니다.
 
 - **Visual Studio 용 R 도구** (RTVS)는 무료 Microsoft r 지원과 Intellisense, 디버깅, 제공 하는 플러그 인 R Server와 SQL Server Machine Learning Services를 사용 하 여 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) 를 참조하세요.
 
-- **RStudio** 는 R 개발용으로 보다 대중적인 환경 중 하나입니다.  자세한 내용은 [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)합니다.
+- **RStudio**는 R 개발용으로 인기있는 환경 중 하나입니다. 자세한 내용은 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)를 참조하십시오.
 
 - 기본 R 도구(R.exe, RTerm.exe, RScripts.exe)는 SQL Server 또는 R 클라이언트에 R을 설치할 때 기본적으로 설치됩니다. IDE를 설치하지 않고도 기본으로 설치되는 R 도구를 사용해 이 자습서의 코드를 실행할 수 있습니다.
 

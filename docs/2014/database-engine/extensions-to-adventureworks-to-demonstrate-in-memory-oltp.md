@@ -36,7 +36,7 @@ ms.locfileid: "40393068"
   
 -   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
   
--   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
+-   [AdventureWorks 기반의 메모리 내장 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
 -   [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
   
