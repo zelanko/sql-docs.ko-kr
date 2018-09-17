@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1dcc845c366b912f762e9bbf805c54c5de920fca
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 85393d548550f58d43533a0c7e11e0b951288dbb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085835"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563909"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>연습: 사용자 지정 테스트 조건을 사용하여 저장 프로시저 결과 확인
 이 기능 확장 연습에서는 테스트 조건을 만든 후 SQL Server 단위 테스트를 만들어 해당 기능을 확인합니다. 이 프로세스에는 테스트 조건에 대한 클래스 라이브러리 프로젝트를 만들고 이 프로젝트를 서명 및 설치하는 작업이 포함됩니다. 업데이트할 테스트 조건이 이미 있는 경우에는 [방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)를 참조하세요.  
@@ -98,7 +98,7 @@ ms.locfileid: "39085835"
     **솔루션 탐색기**에서 프로젝트의 **참조** 노드 아래에 필요한 참조가 표시됩니다.  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>ResultSetColumnCountCondition 클래스 만들기  
-이제 이름 **Class1**을 **ResultSetColumnCountCondition**으로 바꾸고 [testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)에서 파생시킵니다. **ResultSetColumnCountCondition** 클래스는 결과 집합에 반환된 열 수를 확인하는 간단한 테스트 조건입니다. 이 조건을 사용하여 저장 프로시저에 대한 계약이 올바른지 확인할 수 있습니다.  
+이제 이름 **Class1**을 **ResultSetColumnCountCondition**으로 바꾸고 [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)에서 파생시킵니다. **ResultSetColumnCountCondition** 클래스는 결과 집합에 반환된 열 수를 확인하는 간단한 테스트 조건입니다. 이 조건을 사용하여 저장 프로시저에 대한 계약이 올바른지 확인할 수 있습니다.  
   
 1.  **솔루션 탐색기**에서 Class1.cs를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 후 **ResultSetColumnCountCondition.cs**를 입력합니다.  
   
@@ -118,13 +118,13 @@ ms.locfileid: "39085835"
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  [testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)에서 클래스를 파생시킵니다.  
+4.  [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)에서 클래스를 파생시킵니다.  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. UnitTesting.Conditions.ExportTestConditionAttribute에 대한 자세한 내용은 [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
+5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. UnitTesting.Conditions.ExportTestConditionAttribute에 대한 자세한 내용은 [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  

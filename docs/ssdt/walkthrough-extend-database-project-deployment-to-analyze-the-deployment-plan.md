@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7852d23e283c21f62856e4b3b9242c5e5115d0cd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 389f9d79713ca7a7ee1d33b91dd1778b0604f5f0
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085611"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563790"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석
 배포 참가자를 만들어서 SQL 프로젝트를 배포할 때 사용자 지정 작업을 수행할 수 있습니다. 배포 참가자는 DeploymentPlanModifier 또는 DeploymentPlanExecutor 중에서 만들 수 있습니다. DeploymentPlanModifier를 사용하면 계획을 실행하기 전에 항목을 변경할 수 있고 DeploymentPlanExecutor를 사용하면 계획을 실행하는 동안 작업을 수행할 수 있습니다. 이 연습에서는 데이터베이스 프로젝트를 배포할 때 수행된 작업에 대한 보고서를 만드는 DeploymentUpdateReportContributor라는 DeploymentPlanExecutor를 만듭니다. 이 빌드 참가자는 보고서가 생성되는지 여부를 제어하기 위한 매개 변수를 받기 때문에 추가 필수 단계를 수행해야 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "39085611"
   
 -   클래스 라이브러리 프로젝트를 만들고 필요한 참조를 추가합니다.  
   
--   [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)로부터 상속되는 DeploymentUpdateReportContributor라는 클래스를 정의합니다.  
+-   [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)로부터 상속되는 DeploymentUpdateReportContributor라는 클래스를 정의합니다.  
   
 -   OnExecute 메서드를 재정의합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "39085611"
   
     ```  
   
-    이제 DeploymentPlanExecutor로부터 상속되는 배포 참가자가 정의되었습니다. 빌드 및 배포 프로세스 중에 사용자 지정 참가자가 표준 확장 디렉터리에서 로드됩니다. 배포 계획 Executor 참가자는 [ExportDeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx) 특성으로 식별됩니다.  
+    이제 DeploymentPlanExecutor로부터 상속되는 배포 참가자가 정의되었습니다. 빌드 및 배포 프로세스 중에 사용자 지정 참가자가 표준 확장 디렉터리에서 로드됩니다. 배포 계획 Executor 참가자는 [ExportDeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx) 특성으로 식별됩니다.  
   
     이 특성은 참가자를 검색하는 데 필요합니다. 결과는 다음과 비슷합니다.  
   
@@ -252,9 +252,9 @@ ms.locfileid: "39085611"
             }  
     ```  
   
-    OnExecute 메서드에는 지정된 모든 인수, 원본 및 대상 데이터베이스 모델, 빌드 속성 및 확장 파일에 대한 액세스를 제공하는 [DeploymentPlanContributorContext](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 개체가 전달됩니다. 이 예에서는 모델을 가져온 후 모델에 대한 정보를 출력하기 위한 도우미 함수를 호출합니다. 기본 클래스에서 PublishMessage 도우미 메서드를 사용하여 발생한 모든 오류를 보고합니다.  
+    OnExecute 메서드에는 지정된 모든 인수, 원본 및 대상 데이터베이스 모델, 빌드 속성 및 확장 파일에 대한 액세스를 제공하는 [DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 개체가 전달됩니다. 이 예에서는 모델을 가져온 후 모델에 대한 정보를 출력하기 위한 도우미 함수를 호출합니다. 기본 클래스에서 PublishMessage 도우미 메서드를 사용하여 발생한 모든 오류를 보고합니다.  
   
-    중요한 추가 유형 및 메서드에는 [TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 및 [SqlDeploymentOptions](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)가 포함됩니다.  
+    중요한 추가 유형 및 메서드에는 [TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 및 [SqlDeploymentOptions](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)가 포함됩니다.  
   
     그런 다음 배포 계획의 세부 정보를 자세히 살펴보는 도우미 클래스를 정의합니다.  
   
@@ -527,11 +527,11 @@ ms.locfileid: "39085611"
   
     |**코드 영역**|**유용한 유형**|  
     |-----------------|--------------------|  
-    |클래스 멤버|[TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |클래스 멤버|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport 메서드|XmlWriter 및 XmlWriterSettings|  
-    |ReportPlanOperations 메서드|중요한 유형에는 [DeploymentStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)이 포함됩니다.<br /><br />이외에도 다른 여러 단계가 있습니다. 전체 단계 목록은 API 설명서를 참조하십시오.|  
-    |GetElementCategory|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |ReportPlanOperations 메서드|중요한 유형에는 [DeploymentStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)이 포함됩니다.<br /><br />이외에도 다른 여러 단계가 있습니다. 전체 단계 목록은 API 설명서를 참조하십시오.|  
+    |GetElementCategory|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |GetElementName|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
     그런 후 클래스 라이브러리를 빌드합니다.  
   
@@ -741,10 +741,10 @@ ms.locfileid: "39085611"
     배포 계획이 실행될 때 이를 분석하면 배포에 포함된 모든 정보에 대한 보고를 수행하고 해당 계획의 단계를 기반으로 추가 작업을 수행할 수 있습니다.  
   
 ## <a name="next-steps"></a>Next Steps  
-출력 XML 파일의 처리를 수행하기 위한 추가 도구를 만들 수도 있습니다. 이 예는 [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)의 한 가지 예일 뿐입니다. 또한 배포 계획을 실행하기 전에 변경할 수 있도록 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 만들 수도 있습니다.  
+출력 XML 파일의 처리를 수행하기 위한 추가 도구를 만들 수도 있습니다. 이 예는 [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)의 한 가지 예일 뿐입니다. 또한 배포 계획을 실행하기 전에 변경할 수 있도록 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 만들 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성](http://msdn.microsoft.com/en-us/library/ee461508(v=vs.100).aspx)  
-[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정](http://msdn.microsoft.com/en-us/library/ee461507(v=vs.100).aspx)  
-[빌드 및 배포 참가자를 사용하여 데이터베이스 빌드 및 배포 사용자 지정](http://msdn.microsoft.com/en-us/library/ee461505(v=vs.100).aspx)  
+[연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성](http://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정](http://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[빌드 및 배포 참가자를 사용하여 데이터베이스 빌드 및 배포 사용자 지정](http://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

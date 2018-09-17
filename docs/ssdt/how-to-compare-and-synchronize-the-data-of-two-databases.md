@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae6d78109eb4a6898efc9bc3e972c9f65503cf63
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 197e6130a33df4413d9c936fca9291c02557acb7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088525"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563888"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>방법: 두 데이터베이스의 데이터 비교 및 동기화
 두 데이터베이스에 포함된 데이터를 비교할 수 있습니다. 비교하는 데이터베이스는 각각 ‘원본’ 및 ‘대상’이라고 합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "39088525"
   
     자리 표시자(*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* 및 *tDisplayName*)를 원본 및 대상 데이터베이스에 대한 값으로 바꿉니다.  
   
-    원본 및 대상을 지정하지 않으면 **새 데이터 비교** 대화 상자가 나타납니다. Sql.NewDataComparison 명령의 매개 변수에 대한 자세한 내용은 [Visual Studio Team System의 데이터베이스 기능에 대한 Automation 명령 참조](https://msdn.microsoft.com/en-us/library/dd470565.aspx)를 참조하세요.  
+    원본 및 대상을 지정하지 않으면 **새 데이터 비교** 대화 상자가 나타납니다. Sql.NewDataComparison 명령의 매개 변수에 대한 자세한 내용은 [Visual Studio Team System의 데이터베이스 기능에 대한 Automation 명령 참조](https://msdn.microsoft.com/library/dd470565.aspx)를 참조하세요.  
   
     지정된 원본 및 대상 데이터베이스의 데이터가 비교됩니다. 결과는 데이터 비교 세션에 표시됩니다. 결과를 보거나 데이터를 동기화하는 방법에 대한 자세한 내용은 [데이터 차이 보기](#ViewDifferences) 및 [데이터베이스 데이터 동기화](#Synchronize)를 참조하세요.  
   

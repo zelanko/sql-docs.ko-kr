@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aa41b2ae420f626b2749f55a07f4dfa9eefb926
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 92fdfd91cc3087e91169cd65f6c10f8b40e82848
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086455"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564097"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습
 이 연습에서는 SQL Server 코드 분석 규칙을 만드는 데 사용되는 단계를 보여 줍니다. 이 연습에서 만든 규칙은 저장 프로시저, 트리거 및 함수에서 WAITFOR DELAY 문을 방지하는 데 사용됩니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "39086455"
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>사용자 지정 코드 분석 규칙 지원 클래스 만들기  
 규칙 자체의 클래스를 만들기 전에 방문자 클래스와 특성 클래스를 프로젝트에 추가합니다. 이러한 클래스는 추가 사용자 지정 규칙을 만드는 데 유용할 수 있습니다.  
   
-정의해야 하는 첫 번째 클래스는 [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx)에서 파생된 WaitForDelayVisitor 클래스입니다. 이 클래스는 모델에서 WAITFOR DELAY 문에 대한 액세스를 제공합니다. 방문자 클래스는 SQL Server에서 제공하는 [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용합니다. 이 API에서 Transact\-SQL 코드는 AST(추상 구문 트리)로 표현되며 방문자 클래스는 WAITFORDELAY 문과 같은 특정 구문 개체를 찾으려고 할 때 유용할 수 있습니다. 이러한 개체는 특정 개체 속성 또는 관계와 연결되어 있지 않으므로 개체 모델을 사용하여 찾기가 어려울 수도 있지만 방문자 패턴과 [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용하면 쉽게 찾을 수 있습니다.  
+정의해야 하는 첫 번째 클래스는 [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx)에서 파생된 WaitForDelayVisitor 클래스입니다. 이 클래스는 모델에서 WAITFOR DELAY 문에 대한 액세스를 제공합니다. 방문자 클래스는 SQL Server에서 제공하는 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용합니다. 이 API에서 Transact\-SQL 코드는 AST(추상 구문 트리)로 표현되며 방문자 클래스는 WAITFORDELAY 문과 같은 특정 구문 개체를 찾으려고 할 때 유용할 수 있습니다. 이러한 개체는 특정 개체 속성 또는 관계와 연결되어 있지 않으므로 개체 모델을 사용하여 찾기가 어려울 수도 있지만 방문자 패턴과 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API를 사용하면 쉽게 찾을 수 있습니다.  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>WaitForDelayVisitor 클래스 정의  
   
@@ -121,7 +121,7 @@ ms.locfileid: "39086455"
     }  
     ```  
   
-    이 메서드는 모델에서 WAITFOR 문을 방문하고 DELAY 옵션이 지정된 문을 WAITFOR DELAY 문 목록에 추가합니다. 여기서 참조되는 핵심 클래스는 [WaitForStatement](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)입니다.  
+    이 메서드는 모델에서 WAITFOR 문을 방문하고 DELAY 옵션이 지정된 문을 WAITFOR DELAY 문 목록에 추가합니다. 여기서 참조되는 핵심 클래스는 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)입니다.  
   
 9. **파일** 메뉴에서 **저장**을 클릭합니다.  
   
@@ -400,9 +400,9 @@ ms.locfileid: "39086455"
   
 9. Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.Analyze(Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext) 메소드에 대한 재정의를 추가합니다. 이 메소드는 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext를 입력 매개 변수로 사용합니다. 이 메서드는 잠재적 문제의 목록을 반환합니다.  
   
-    메서드는 컨텍스트 매개 변수에서 Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject, [TSqlFragment](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx)를 가져옵니다. WaitForDelayVisitor 클래스는 모델에서 모든 WAITFOR DELAY 문의 목록을 가져오는 데 사용됩니다.  
+    메서드는 컨텍스트 매개 변수에서 Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject, [TSqlFragment](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx)를 가져옵니다. WaitForDelayVisitor 클래스는 모델에서 모든 WAITFOR DELAY 문의 목록을 가져오는 데 사용됩니다.  
   
-    그 목록에 있는 [WaitForStatement](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)마다 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem이 생성됩니다.  
+    그 목록에 있는 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)마다 Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem이 생성됩니다.  
   
     ```  
     /// <summary>  

@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085945"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564019"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 편집기 옵션
 이 항목에서는 Transact-SQL 편집기의 일부 옵션에 대한 정보를 제공합니다. 이러한 옵션을 설정하려면 **옵션** 대화 상자에서 **도구\옵션** 메뉴로 이동합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "39085945"
 |**SET NOEXEC**|**ON**으로 설정하면 Microsoft® SQL Server™가 Transact-SQL 문의 각 일괄 처리를 컴파일하지만 실행하지는 않습니다. **OFF**로 설정하면 Microsoft® SQL Server™가 컴파일 후 모든 일괄 처리를 실행합니다. 자세한 내용은 [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770)를 참조하세요.|  
 |**SET PARSEONLY**|각 Transact-SQL 문의 구문을 검사한 후 문을 컴파일하거나 실행하지 않고 오류 메시지를 반환합니다. 자세한 내용은 [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)를 참조하십시오.|  
 |**SET CONCAT_NULL_YIELDS_NULL**|연결 결과를 Null 값으로 처리할지 빈 문자열 값으로 처리할지 여부를 제어합니다. 자세한 내용은 [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733)을 참조하세요.|  
-|**SET ARITHABORT**|쿼리 실행 중 오버플로 또는 0으로 나누기 오류가 발생하면 쿼리를 종료합니다. 자세한 내용은 [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx)를 참조하세요.|  
+|**SET ARITHABORT**|쿼리 실행 중 오버플로 또는 0으로 나누기 오류가 발생하면 쿼리를 종료합니다. 자세한 내용은 [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)를 참조하세요.|  
 |**SET SHOWPLAN_TEXT**|Microsoft® SQL Server™가 Transact-SQL 문을 실행하지 않도록 합니다. 대신 SQL Server는 문 실행 방법에 대한 자세한 정보를 반환합니다. 자세한 내용은 [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737)를 참조하세요.|  
 |**SET STATISTICS TIME**|각 문을 구문 분석, 컴파일 및 실행하는 데 필요한 시간(밀리초)을 표시합니다.|  
 |**SET STATISTICS IO**|Microsoft® SQL Server™가 Transact-SQL 문에 의해 생성된 디스크 작동 크기에 대한 정보를 표시하도록 합니다.|  

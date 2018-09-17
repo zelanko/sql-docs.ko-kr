@@ -16,16 +16,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 413ee4cac6f8cb6ca60ad92165f50177e4801cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 93aec2aa71e4ab5bcbadd9eb4f7a1d6a400af216
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987945"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564109"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-  이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
+  이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
 
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 에서 SQL Server 2016 다운로드
 - [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
@@ -122,7 +122,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 
 또한 다음 수정 사항을 참조하세요.
 - DBA와 SQL 커뮤니티의 피드백에 따라 SQL 2016 SP1부터 Hekaton 로깅 메시지가 최소로 줄어듭니다.
-- 새 [추적 플래그](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 검토합니다.
+- 새 [추적 플래그](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 검토합니다.
 - 전체 버전의 WideWorldImporters 샘플 데이터베이스는 이제 SQL Server 2016 SP1부터 Standard Edition 및 Express Edition을 사용하며 [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)에서 사용 가능합니다. 샘플에서 변경이 필요하지 않습니다. Enterprise 버전에 대한 RTM에서 만든 데이터베이스 백업은 SP1에서 Standard 및 Express를 사용합니다. 
 
 SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모범 사례로, SQL Server 2016 SP1의 설치를 따라 다시 부팅을 계획 및 수행하는 것이 좋습니다.
