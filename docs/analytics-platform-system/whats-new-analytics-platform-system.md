@@ -9,20 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
+ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289314"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.1"></a>
+## <a name="aps-cu71"></a>AP CU7.1
+릴리스 날짜-2018 년 7 월
 
+### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>동시성 슬롯 (동작 변경 내용)를 사용 하지 않는 DBCC 명령
+AP는 T-SQL의 하위 집합을 지원 [DBCC 명령을](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 와 같은 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)합니다. 다음이 명령을 사용 하는 이전에 [동시성 슬롯](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) 사용자 쿼리의 로드/실행 될 수 있는 수를 줄입니다. `DBCC` 명령은 전반적인 쿼리 실행 성능을 향상 시킵니다 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐의 이제 실행 됩니다.
+
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>카탈로그 개체를 사용 하 여 일부 메타 데이터 호출을 대체합니다.
+카탈로그 개체를 사용 하 여 SMO를 사용 하는 대신 호출 메타 데이터에 대 한 성능 향상을 AP에서 주었습니다. CU7.1에서 시작 하며, 이러한 메타 데이터 호출의 일부 이제 카탈로그 개체 기본적으로 사용 합니다. 이 동작을 해제할 수 있습니다 [기능 스위치가](appliance-feature-switch.md) 메타 데이터 쿼리를 사용 하 여 고객에 게 문제가 발생 하는 경우.
+
+### <a name="bug-fixes"></a>버그 수정
+AP CU7.1를 사용 하 여 SQL Server 2016 SP2 CU2를 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
+
+| Title | Description |
+|:---|:---|
+| **튜플 이동 기 교착 상태가 발생할** |업그레이드는 분산 트랜잭션 및 튜플 이동 기 백그라운드 스레드에서 교착 상태를 오래 가능성을 해결합니다. CU7.1를 설치한 후 SQL Server 시작 매개 변수 또는 전역 추적 플래그가 튜플 이동 기를 중지 하려면 TF634를 사용한 고객 안전 하 게 제거할 수 있습니다. | 
+| **특정 lag/잠재 고객 쿼리 실패** |이 업그레이드를 사용 하 여 오류가 발생 하는 지연/잠재 고객의 중첩 된 함수를 사용 하 여 CCI 테이블에 대 한 특정 쿼리 고정 됩니다. | 
+
+
+<a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>AP AU7
-APS 2016은 AU7로 업그레이드 하는 필수 구성 요소입니다. 다음은 AP AU7의 새로운 기능:
+릴리스 날짜-2018 년 5 월
+
+APS 2016은 AU7로 업그레이드 하는 필수 구성 요소입니다. 다음은 AP AU7의 새로운 기능입니다.
 
 ### <a name="auto-create-and-auto-update-statistics"></a>자동 생성 및 자동 업데이트 통계
 AP AU7 만들고 기본적으로 통계를 자동으로 업데이트 합니다. 관리자 수의 새 기능 스위치 메뉴 항목을 사용 하는 데 통계 설정을 업데이트 하는 [Configuration Manager](appliance-configuration.md#CMTasks)합니다. 합니다 [기능 스위치가](appliance-feature-switch.md) auto-create, 자동 업데이트 및 통계의 비동기 업데이트 동작을 제어 합니다. 사용 하 여 통계 설정을 업데이트할 수도 있습니다는 [ALTER DATABASE (병렬 데이터 웨어하우스)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 문입니다.
@@ -42,7 +63,7 @@ Microsoft는 BIOS 업데이트를 설치 하려면 모든 고객에 게 권고 �
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 이 섹션에서는 AU6 APS 2016에 대 한 새로운 기능을 설명합니다.
 
