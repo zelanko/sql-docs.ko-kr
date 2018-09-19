@@ -1,6 +1,6 @@
 ---
 title: 역할 | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981535"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975692"
 ---
 # <a name="roles"></a>역할
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다. 
   
  SQL Server Analysis Services에 대 한 Windows 사용자 이름 또는 Windows 그룹 및 사용 권한 (읽기, 프로세스, 관리자)으로 역할 사용자 멤버를 포함 합니다. Azure Analysis Services에 대 한 사용자가 Azure Active Directory 및 사용자 이름에 있어야 하 고 조직의 전자 메일 주소 또는 UPN으로 지정 된 그룹 이어야 합니다. 
-  
+
+> [!IMPORTANT]  
+>  Azure Analysis services에 사용 하 여 배포 SSDT를 사용 하 여 역할을 만들고 조직 사용자가 테이블 형식 모델 프로젝트를 추가 하면 [통합된 작업 영역](workspace-database-ssas-tabular.md)합니다.
+
 > [!IMPORTANT]  
 >  보고 클라이언트 응용 프로그램을 사용 하 여 배포 된 모델에 연결할 사용자를 만들어야 사용 하 여 역할을 하나 이상 적어도 읽기 권한이 해당 사용자가 멤버입니다.  
   
@@ -49,7 +52,7 @@ ms.locfileid: "38981535"
   
 |사용 권한|Description|DAX를 사용하는 행 필터|  
 |-----------------|-----------------|----------------------------|  
-|InclusionThresholdSetting|멤버는 model 데이터베이스 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 데이터가 이 역할의 사용자에게 표시되지 않습니다.|  
+|없음|멤버는 model 데이터베이스 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 데이터가 이 역할의 사용자에게 표시되지 않습니다.|  
 |읽기|멤버는 행 수준 필터를 기반으로 데이터를 쿼리할 수 있지만 SSMS의 model 데이터베이스를 볼 수 없으며, model 데이터베이스 스키마를 변경할 수 없고, 사용자가 모델을 처리할 수 없습니다.|행 필터를 적용할 수 있습니다. 행 필터 DAX 수식에 지정된 데이터만 사용자에게 표시됩니다.|  
 |읽기 및 처리|멤버는 행 수준 필터를 기반으로 데이터를 쿼리할 수 있고 처리 명령을 포함하는 스크립트 또는 패키지를 실행하여 처리 작업을 실행할 수 있지만 데이터베이스를 변경할 수 없습니다. SSMS의 model 데이터베이스를 볼 수 없습니다.|행 필터를 적용할 수 있습니다. 행 필터 DAX 수식에 지정된 데이터만 쿼리할 수 있습니다.|  
 |처리|멤버는 처리 명령을 포함하는 스크립트 또는 패키지를 실행하여 처리 작업을 실행할 수 있습니다. model 데이터베이스 스키마를 수정할 수 없습니다. 데이터를 쿼리할 수 없습니다. SSMS의 model 데이터베이스를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 이 역할에서는 데이터를 쿼리할 수 없습니다.|  

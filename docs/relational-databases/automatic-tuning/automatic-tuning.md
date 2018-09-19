@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068750"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534005"
 ---
 # <a name="automatic-tuning"></a>자동 튜닝
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "43068750"
 
 ## <a name="why-automatic-tuning"></a>왜 자동 튜닝?
 
-식별 중요 한 워크 로드를 모니터링 하는 클래식 데이터베이스 관리의 주요 작업 중 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 성능 향상을 위해 추가 되 고 거의 인덱스를 사용 하는 인덱스를 쿼리 합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 쿼리 및 모니터링 해야 하는 인덱스에 대 한 자세한 정보를 제공 합니다. 그러나 데이터베이스를 지속적으로 모니터링 많은 데이터베이스를 사용 하 여 처리 하는 경우에 특히 힘들고 지루한 작업입니다. 상당히 많은 데이터베이스 관리 작업을 효율적으로 수행할 수 수 있습니다. 대신 모니터링과 데이터베이스를 수동으로 조정 해야 할 모니터링의 일부를 위임 하 고 작업을 튜닝 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 자동 튜닝 기능을 사용 합니다.
+식별 중요 한 워크 로드를 모니터링 하는 클래식 데이터베이스 관리의 기본 작업의 세 가지 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 해야 하는 성능 향상을 위해 추가 되 고 식별 거의 사용 되지 않고 인덱스를 쿼리 합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 쿼리 및 모니터링 해야 하는 인덱스에 대 한 자세한 정보를 제공 합니다. 그러나 데이터베이스를 지속적으로 모니터링 많은 데이터베이스를 사용 하 여 처리할 때 힘들고 지루한 작업입니다. 상당히 많은 데이터베이스 관리 작업을 효율적으로 수행할 수 수 있습니다. 대신 모니터링과 데이터베이스를 수동으로 조정 해야 할 모니터링의 일부를 위임 하 고 작업을 튜닝 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 자동 튜닝 기능을 사용 합니다.
 
-### <a name="how-does-automatic-tuning-works"></a>자동 조정이 작동 하는 어떻게 합니까?
+### <a name="how-does-automatic-tuning-work"></a>자동 튜닝 작업을 어떻게 하나요?
 
-자동 튜닝은 지속적으로 워크 로드의 특징을 학습 하는 분석 프로세스 및 연속 모니터링 하 고 잠재적인 문제 및 향상 된 기능을 식별 합니다.
+자동 튜닝은 워크 로드의 특성에 대 한 지속적으로 학습 하는 분석 프로세스 및 연속 모니터링 하 고 잠재적인 문제 및 향상 된 기능을 식별 합니다.
 
 ![자동 튜닝 프로세스](./media/tuning-process.png)
 

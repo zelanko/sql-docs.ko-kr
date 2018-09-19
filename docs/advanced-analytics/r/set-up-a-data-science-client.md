@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f88c8d715fabb5af8d1af49c3b39b3aa0734c369
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 309a78a2195f55a3ec39604b0c2bd385bb06a271
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434843"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724317"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발에 대 한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ R을 사용할 데이터베이스 계정에 다음 권한을 구성하도록 데
 2. RevoScaleR가 데모 데이터 집합에 통계 요약을 반환 하는이 명령을 실행 하 여 작동을 확인 합니다. SQL Server 데이터베이스 엔진 인스턴스에 대 한 올바른 서버 이름을 제공 했는지 확인 합니다.
 
 ```r
-connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
+connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
 cc <-RxInSqlServer(connectionString=connStr)
 rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)

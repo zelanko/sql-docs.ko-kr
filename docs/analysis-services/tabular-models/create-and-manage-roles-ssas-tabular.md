@@ -1,6 +1,6 @@
 ---
 title: 역할 만들기 및 관리 | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045617"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975672"
 ---
 # <a name="create-and-manage-roles"></a>역할 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자 대화 상자를 사용하여 모델 프로젝트에 대해 역할을 정의합니다. 모델을 배포할 때 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다.  
+  테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자 대화 상자를 사용하여 모델 프로젝트에 대해 역할을 정의합니다. 
+
+> [!IMPORTANT]
+> Azure Analysis Services에 프로젝트를 배포 하는 경우 사용 **통합 작업 영역** 작업 영역 데이터베이스로 합니다. 자세한 내용은 참조 하세요 [작업 영역 데이터베이스](workspace-database-ssas-tabular.md)합니다.
   
- 이 문서에서 작업을 만들고 역할에서 역할 관리자 대화 상자를 사용 하 여 모델 제작 중에 관리 하는 방법을 설명 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 배포 된 모델 데이터베이스에 역할을 관리 하는 방법에 대 한 정보를 참조 하십시오. [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)합니다.  
+ 이 문서의 작업을 만들고 역할에서 역할 관리자 대화 상자를 사용 하 여 모델 제작 중에 관리 하는 방법을 설명 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 배포 된 model 데이터베이스에서 역할을 관리 하는 방법에 대 한 내용은 [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)입니다.  
   
 ## <a name="tasks"></a>태스크  
  역할을 만들고, 편집, 복사 및 삭제하려면 **역할 관리자** 대화 상자를 사용합니다. **역할 관리자** 대화 상자를 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **역할 관리자**를 클릭합니다.  
@@ -54,13 +57,13 @@ ms.locfileid: "34045617"
 7.  멤버를 역할에 추가하려면 **멤버** 탭을 클릭한 다음 **추가**를 클릭합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 역할 멤버를 배포된 모델에 추가할 수도 있습니다. 자세한 내용은 참조 [SSMS를 사용 하 여 역할 관리](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)합니다.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 역할 멤버를 배포된 모델에 추가할 수도 있습니다. 자세한 내용은 [SSMS를 사용 하 여 역할 관리](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)합니다.  
   
 8.  **사용자 또는 그룹 선택** 대화 상자에서 Windows 사용자 또는 Windows 그룹 개체를 멤버로 입력합니다.  
   
 9. **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   

@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 30865bcccb0085d1b01b61aaef826dc76f081169
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 781ab0fb027a16ab50235221c6118a93dfa53342
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36772088"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563620"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36772088"
 |end_time|**datetime**|실행 종료, 실패 또는 취소 된 시간입니다.|진행 중이거나 큐에 대기 중인 작업자에 대 한 NULL입니다. 이 고, 그렇지 start_time 보다 큽니다.|  
 |total_elapsed_time|**int**|밀리초 단위로 실행에 소요 된 총 시간입니다.|보다 크거나 0입니다.<br /><br /> Total_elapsed_time 정수에 대 한 최대값을 초과 하면 total_elapsed_time 최대 값으로 계속 됩니다. 이 조건이 "최대 값을 초과 했습니다." 경고 생성<br /><br /> 시간 (밀리초)의 최 댓 값 24.8 일 하는 것과 같습니다.|  
   
- 이 보기에 의해 보존 된 최대 행에 대 한 정보를 참조 하세요 [시스템 뷰 최대값](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)합니다.  
+ 이 보기에 의해 보존 된 최대 행에 대 한 정보를 참조 하세요 [시스템 뷰 최대값](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

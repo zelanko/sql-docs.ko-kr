@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095322"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563631"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Azure SQL 관리 되는 인스턴스의 CPU 사용량, IO 및 storage 데이터�
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|15 초 보고 간격의 시작을 나타내는 UTC 시간|  
 |end_time|**datetime**|15 초 보고 간격의 끝을 나타내는 UTC 시간|
-|resource_type|Nvarchar (128)|메트릭에 제공 되는 리소스의 형식|
+|resource_type|nvarchar (128)|메트릭에 제공 되는 리소스의 형식|
 |resource_name|nvarchar(128)|리소스의 이름입니다.|
 |sku|nvarchar(128)|인스턴스의 인스턴스 서비스 계층을 관리 합니다. 가능한 값은 다음과 같습니다. <br><ul><li>범용</li></ul><ul><li>중요 비즈니스용</li></ul>|
 |hardware_generation|nvarchar(128)|하드웨어 세대 식별자: Gen 4 또는 Gen 5 등|
@@ -59,7 +59,7 @@ Azure SQL 관리 되는 인스턴스의 CPU 사용량, IO 및 storage 데이터�
 
  
 > [!TIP]  
->  이러한 제한 및 서비스 계층에 대 한 더 많은 컨텍스트 항목을 참조 하세요 [관리 되는 인스턴스 서비스 계층](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)합니다.  
+>  이러한 제한 및 서비스 계층에 대 한 더 많은 컨텍스트 항목을 참조 하세요 [관리 되는 인스턴스 서비스 계층](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)합니다.  
     
 ## <a name="permissions"></a>사용 권한  
  이 보기는 연결할 수 있는 권한이 있는 모든 사용자 역할에 사용할 수는 **마스터** 데이터베이스입니다.  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>관련 항목  
- [인스턴스 서비스 계층 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [인스턴스 서비스 계층 관리](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

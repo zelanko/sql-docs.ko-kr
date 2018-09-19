@@ -1,7 +1,7 @@
 ---
 title: sys.resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,17 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c2f8a0e0cebcf64bedac33861184e806f322d7d1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea822937f8bdf6fe0a79c20a391976169d336610
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038852"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563989"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Azure SQL Database의 CPU 사용량 및 저장소 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 각 사용자 데이터베이스에서 한 행은 리소스 소비 변화에 대한 5분 간격 보고 창입니다. 반환 되는 데이터는 CPU 사용량, 저장소 크기 변경 또는 데이터베이스 SKU 수정 포함 되어 있습니다. 변경 하지 않고 유휴 데이터베이스 5 분 간격에 대 한 행을 가질 수 없습니다. 기록 데이터는 약 14일 동안 보존됩니다.  
+  Azure SQL Database의 CPU 사용량 및 저장소 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 각 사용자 데이터베이스에 대해 5-분 간격 보고 창은 변경 될 리소스 소비량에서에 대해 한 행씩이 있습니다. 반환 되는 데이터는 CPU 사용량, 저장소 크기 변경 및 데이터베이스 SKU 수정 포함 되어 있습니다. 변경 하지 않고 유휴 데이터베이스 5 분 간격에 대 한 행을 가질 수 없습니다. 기록 데이터는 약 14일 동안 보존됩니다.  
   
  합니다 **sys.resource_stats** 보기에는 데이터베이스와 연결 된 Azure SQL Database 서버 버전에 따라 다른 정의가 포함 됩니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 응용 프로그램에 필요한 모든 수정 사항을 고려하세요.  
   
@@ -56,6 +56,7 @@ ms.locfileid: "38038852"
 |max_worker_percent|**decimal(5,2)**|데이터베이스의 서비스 계층 한도에 따른 백분율로 최대 동시 작업자 (요청).<br /><br /> 최대 동시 작업자 수 15 초 샘플을 기반으로 하는 5 분 간격에 대 한 현재 계산 됩니다.|  
 |max_session_percent|**decimal(5,2)**|데이터베이스의 서비스 계층 한도에 따른 백분율로 최대 동시 세션<br /><br /> 최대 동시 세션 수의 15 초 샘플을 기반으로 하는 5 분 간격에 대 한 현재 계산 됩니다.|  
 |dtu_limit|**int**|현재 최대 데이터베이스 DTU 설정이이 데이터베이스에 대 한 간격입니다. |  
+|allocated_storage_in_megabytes|**float**|양을 형식 파일 공간 (mb) 데이터베이스 데이터를 저장 하는 데 사용할 수 있습니다. 서식이 지정 된 파일 공간 데이터 공간 할당 라고도 합니다.  자세한 내용은 참조: [SQL db에서 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  이러한 제한 및 서비스 계층에 대 한 더 많은 컨텍스트 항목을 참조 하세요 [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)합니다.  
@@ -68,7 +69,7 @@ ms.locfileid: "38038852"
   
  데이터베이스를 탄력적 풀의 멤버인 경우 백분율 값으로 표시 하는 리소스 통계는 탄력적 풀 구성에 설정 된 대로 데이터베이스에 대 한 최대 한도의 백분율로 표현 됩니다.  
   
- 이 데이터의 더욱 세부적인 보기를 사용 하 여 **sys.dm_db_resource_stats** 사용자 데이터베이스에서 동적 관리 뷰. 이 뷰의 데이터 15 초 마다 캡처하고 1 시간 동안 기록 데이터를 유지 합니다.  자세한 내용은 [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)합니다.  
+ 이 데이터의 더욱 세부적인 보기를 사용 하 여 **sys.dm_db_resource_stats** 사용자 데이터베이스에서 동적 관리 뷰. 이 뷰는 15초마다 데이터를 캡처하고 1시간 동안 기록 데이터를 유지합니다.  자세한 내용은 [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)합니다.  
 
 ## <a name="examples"></a>예  
  다음 예에서는 지난 1주일 동안 평균적으로 계산 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  

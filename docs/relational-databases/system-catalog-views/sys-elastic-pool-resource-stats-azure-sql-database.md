@@ -1,7 +1,7 @@
 ---
 title: sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997985"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563269"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,8 @@ ms.locfileid: "37997985"
 |**max_worker_percent**|**decimal(5,2)**|풀 한도에 따른 백분율로 최대 동시 작업자 (요청).|  
 |**max_session_percent**|**decimal(5,2)**|풀 한도에 따른 백분율로 최대 동시 세션|  
 |**elastic_pool_dtu_limit**|**int**|현재 최대 탄력적 풀 DTU 설정이 탄력적 풀에 대 한 간격입니다.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|현재 최대 탄력적 풀 저장소 용량 한도이 간격 동안 메가바이트에서이 탄력적 풀에 대 한 설정입니다.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|현재 최대 탄력적 풀 저장소 용량 한도이 간격 동안 메가바이트에서이 탄력적 풀에 대 한 설정입니다.|
+|**avg_allocated_storage_percent**|**decimal(5,2)**|탄력적 풀에 있는 모든 데이터베이스에 의해 할당 되는 데이터 공간의 비율입니다.  이 탄력적 풀의 최대 크기 데이터에 할당 하는 데이터 공간의 비율입니다.  자세한 내용은 참조: [SQL db에서 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Remarks  
  논리 서버의 마스터 데이터베이스에이 뷰가 있습니다. 쿼리를 master 데이터베이스에 연결 해야 **sys.elastic_pool_resource_stats**합니다.  

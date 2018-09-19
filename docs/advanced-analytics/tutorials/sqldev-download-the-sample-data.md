@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703606"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724337"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server에 대 한 NYC Taxi 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "42703606"
 
 이 연습에서는 샘플 데이터, 환경, 준비에 대 한 PowerShell 스크립트를 다운로드 하 고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 여러 자습서에 사용 되는 파일입니다. 완료 된 경우는 **NYCTaxi_Sample** 데이터베이스가 실습 데모 데이터를 제공 하 고 로컬 인스턴스에에서 사용할 수 있습니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 인터넷에 연결, PowerShell 및 컴퓨터의 로컬 관리자 권한이 해야 합니다. 있어야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 도구를 개체 만들기를 확인 합니다.
 
@@ -118,7 +118,7 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 |**개체 이름**|**개체 유형**|**설명**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | database |만들기-db-tb-업로드-data.sql 스크립트에 의해 생성 됩니다. 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo.nyctaxi_sample 테이블: 주 NYC Taxi 데이터 집합을 포함 합니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이이 테이블에 삽입 됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 고급 분석 학습 된 모델을 유지 하는 데 사용 합니다.|
+|**NYCTaxi_Sample** | database |만들기-db-tb-업로드-data.sql 스크립트에 의해 생성 됩니다. 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo.nyctaxi_sample 테이블: 주 NYC Taxi 데이터 집합을 포함 합니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이이 테이블에 삽입 됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 고급 분석 학습 된 모델을 유지 하는 데 사용 합니다.|
 |**fnCalculateDistance** |스칼라 반환 함수(scalar-valued function) | FnCalculateDistance.sql 스크립트에 의해 생성 됩니다. 승차 및 하 차 위치 사이의 직접 거리를 계산합니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md), [학습 모델을 저장 하 고](../r/sqldev-train-and-save-a-model-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 |**fnEngineerFeatures** |테이블 반환 함수(table-valued function) | FnEngineerFeatures.sql 스크립트에 의해 생성 됩니다. 모델 학습을 위한 새로운 데이터 기능을 만듭니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 |**PlotHistogram** |저장 프로시저 | PlotHistogram.sql 스크립트에 의해 생성 됩니다. 변수 히스토그램을 그린에 R 함수를 호출 하 고 그림을 이진 개체로 반환 합니다. 이 저장된 프로시저는 [데이터 탐색 및 시각화](sqldev-explore-and-visualize-the-data.md)합니다.|

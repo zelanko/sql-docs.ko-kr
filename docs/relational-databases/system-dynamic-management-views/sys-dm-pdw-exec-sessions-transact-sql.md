@@ -17,12 +17,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 93a6f3b3ca257a6f6d4c848b2d83bf441ab73cf4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 61f198242e458e97ea4833dbe970116e9669d9a7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040411"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563759"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38040411"
 |app_name|**nvarchar(255)**|필요에 따라 연결 프로세스의 일부로 설정 하는 응용 프로그램 이름 정보를 캡처합니다.|모든 유효한 문자열입니다.|  
 |sql_spid|**int**|SPID의 id. 사용 된 `session_id` 이 세션입니다. 사용 된 `sql_spid` 열을 조인할 **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* 경고 \* \***  이 열에 닫힌된 Spid를 포함 합니다.||  
   
- 이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 최대 시스템 뷰의 값 섹션을 참조 합니다 [최소값 및 최대값 (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) 항목입니다.  
+ 이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 최대 시스템 뷰의 값 섹션을 참조 합니다 [최소값 및 최대값 (SQL Server PDW)](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) 항목입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  `VIEW SERVER STATE` 권한이 필요합니다.  

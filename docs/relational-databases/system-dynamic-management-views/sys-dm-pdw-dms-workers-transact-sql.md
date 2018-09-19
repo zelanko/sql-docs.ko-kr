@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c46c6b83d820d7c970d16e2e84a3a81a0e07b340
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 823b3be3ee731857e9307c7cf1bb15f512310d2e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029573"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563712"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "38029573"
 |source_info|**nvarchar(4000)**|판독기 경우 원본 테이블 및 열 사양입니다.||  
 |destination_info|**nvarchar(4000)**|작성기의 경우, 대상 테이블 사양입니다.||  
   
- 이 보기에 의해 보존 된 최대 행에 대 한 정보를 참조 하세요 [시스템 뷰 최대값](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)합니다.  
+ 이 보기에 의해 보존 된 최대 행에 대 한 정보를 참조 하세요 [시스템 뷰 최대값](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

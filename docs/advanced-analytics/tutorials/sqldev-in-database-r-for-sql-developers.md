@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394521"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724307"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>자습서: SQL Server에서 R을 사용 하 여 데이터베이스 내 분석에 알아봅니다
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL 프로그래머를 위한이 자습서에서는 실습을 빌드하고 배포의 machine learning 솔루션을 저장된 프로시저에서 R 코드를 래핑하여 R 언어를 사용 하 여 얻을 수 있습니다.
 
-이 자습서는 뉴욕 시 택시 여행을 기반으로 하는 잘 알려진 공용 데이터 집합을 사용합니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 이 데이터를 사용하여 시간, 거리 및 승차 위치와 같은 열을 기반으로 특정 여행이 팁을 얻는지 여부를 예측하는 이진 분류 모델을 작성합니다.
+이 자습서에서는 잘 알려진 공용 데이터 집합에서 뉴욕시 택시 여정에 따라 합니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 이 데이터를 사용하여 시간, 거리 및 승차 위치와 같은 열을 기반으로 특정 여행이 팁을 얻는지 여부를 예측하는 이진 분류 모델을 작성합니다.
 
 > [!NOTE]
 > 

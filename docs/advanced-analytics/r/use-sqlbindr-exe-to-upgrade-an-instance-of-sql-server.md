@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795662"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563749"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>기계 학습 (R 및 Python) 구성에서 SQL Server 인스턴스 요소를 업그레이드 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server에서 R 및 Python 통합 Microsoft 독점 및 오픈 소스 패키지를 포함합니다. 표준 SQL Server 서비스에서 R 및 Python 패키지는 SQL Server 릴리스 주기에서 사용 하 여 현재 버전에서 기존 패키지에 대 한 버그 수정에 따라 업데이트 됩니다. 
 
-대부분의 데이터 과학자가 사용 가능 해지면 최신 패키지 사용에 익숙한 경우 SQL Server 2017 Machine Learning Services (In-database) 및 SQL Server 2016 R Services (In-database)을 변경 하 여 최신 버전의 R 및 Python을 가져올 수 있습니다 합니다 *바인딩* SQL Server 서비스를 [Microsoft Machine Learning Server](https://docs.microsoft.com/en-us/machine-learning-server/index) 하며 [최신 수명 주기 지원 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)합니다.
+대부분의 데이터 과학자가 사용 가능 해지면 최신 패키지 사용에 익숙한 경우 SQL Server 2017 Machine Learning Services (In-database) 및 SQL Server 2016 R Services (In-database)을 변경 하 여 최신 버전의 R 및 Python을 가져올 수 있습니다 합니다 *바인딩* SQL Server 서비스를 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) 하며 [최신 수명 주기 지원 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)합니다.
 
 바인딩 설치의 기본 사항을 변경 하지 않습니다: R 및 Python 통합은 여전히이 데이터베이스 엔진 인스턴스의 일부 라이선스는 변경 되지 않습니다 (추가 비용 없이 바인딩과 연결 된), 및 데이터베이스에 대 한 SQL Server 지원 정책 포함 엔진입니다. 하지만 R 및 Python 패키지를 처리 하는 방법을 변경지 않습니다 다시 바인딩해야 합니다. 이 문서의 나머지 부분에서는 바인딩 메커니즘 및 각 버전의 SQL Server에 대 한 작동 하는 방법을 설명 합니다.
 
@@ -269,7 +269,7 @@ R 및 Python 기능의 데이터베이스 엔진 인스턴스를 복구 하려�
 
 ### <a name="parameters"></a>매개 변수
 
-|속성|Description|
+|이름|Description|
 |------|------|
 |*list*| 현재 컴퓨터의 모든 SQL Database 인스턴스 ID 목록을 표시합니다.|
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|

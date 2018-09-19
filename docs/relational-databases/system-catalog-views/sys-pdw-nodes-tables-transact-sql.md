@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 263e2edb61529a197815f95cc595dcb9b5949877
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c25a8486ebdaf81b868b6fedcc25c39e225048c3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032118"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563549"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38032118"
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f)합니다.||  
+|\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)합니다.||  
 |lob_data_space_id|**int**||항상 0입니다.|  
 |filestream_data_space_id|**int**|FILESTREAM 파일 그룹에 대 한 데이터 공간 ID 또는 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|이 테이블에서 사용 되는 최대 열 ID입니다.||  
