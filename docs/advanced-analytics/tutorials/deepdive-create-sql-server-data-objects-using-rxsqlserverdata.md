@@ -94,13 +94,13 @@ ms.locfileid: "31203465"
 이미 R 작업 영역에서 연결 문자열 및 다른 매개 변수를 변수로 정의했으므로 여러 테이블, 뷰 또는 쿼리를 위한 새 데이터 원본을 만드는 것은 간단합니다.
 
 > [!NOTE]
-> 함수는 쿼리를 기반으로 데이터 원본에 대 한 보다는 전체 테이블을 기반으로 데이터 원본을 정의 하기 위해 . 즉, SQL Server 데이터베이스 엔진 쿼리를 다르게 준비 해야 합니다. 이 자습서의 뒷부분에 나오는 SQL 쿼리를 기반으로 하는 데이터 원본 개체를 만드는 방법을 배웁니다.
+> 함수는 쿼리를 기반으로 한 데이터 원본이 아니라 전체 테이블을 기반으로 데이터 원본을 정의하기 위해 여러 인수를 사용합니다. SQL Server 데이터베이스 엔진에서 쿼리를 다르게 준비해야 하기 때문입니다. 이 자습서의 뒷부분에서 SQL 쿼리를 기반으로 데이터 원본을 만드는 방법에 대해 배웁니다.
 
-## <a name="load-data-into-sql-tables-using-r"></a>R을 사용하 여 SQL 테이블에 데이터 불러오기
+## <a name="load-data-into-sql-tables-using-r"></a>R을 사용하여 SQL 테이블에 데이터 불러오기
 
 이제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만들었으므로 적절한 **Rx** 함수를 사용하여 해당 테이블에 데이터를 불러올 수 있습니다.
 
-**RevoScaleR** 패키지에는 다양한 데이터 원본을 지원하는 함수가 있습니다. 텍스트 데이터의 경우 [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) 를 사용해서 데이터 원본 개체를 생성합니다. 이밖에도 Hadoop 데이터, ODBC 데이터 등에서 데이터 원본 개체를 만들기 위한 추가 함수들이 있습니다.
+**RevoScaleR** 패키지에는 다양한 데이터 원본을 지원하는 함수가 있습니다. 텍스트 데이터의 경우 [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata)를 사용해서 데이터 원본 개체를 생성합니다. 이밖에도 Hadoop 데이터, ODBC 데이터 등에서 데이터 원본 개체를 만들기 위한 추가 함수들이 있습니다.
 
 > [!NOTE]
 > 이 섹션을 진행하려면 데이터베이스에 대한 **DDL 실행** 권한이 필요합니다.
@@ -115,7 +115,7 @@ ms.locfileid: "31203465"
   
     **rxGetOption**함수가 호출된 것을 확인하십시오. 이 함수는 **RevoScaleR**에 있는 [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions)에 관련된 GET 메서드입니다. 이 유틸리티를 사용하여 기본 공유 디렉토리나 계산에 사용할 코어의 숫자와 같은 로컬 및 원격 계산 환경에 대한 설정을 변경하거나 확인하십시오.
     
-    특히, 이 호출은 코드를 실행하는 위치에 관계 없이 올바른 라이브러리에서 샘플을 가져옵니다. 예를 들어 SQL Server 및 개발 컴퓨터에서 함수를 실행해 보고 경로가 어떻게 다른지 확인해보세요.
+    특히, 이 호출은 코드를 실행하는 위치에 관계없이 올바른 라이브러리에서 샘플을 가져옵니다. 예를 들어 SQL Server 및 개발 컴퓨터에서 함수를 실행해 보고 경로가 어떻게 다른지 확인해보세요.
   
 2. 새 데이터를 저장할 변수를 정의하고 **RxTextData** 함수를 사용하여 텍스트 데이터 원본을 지정합니다.
   
@@ -132,7 +132,7 @@ ms.locfileid: "31203465"
   
 3. 이 시점에서 잠시 멈추고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 볼 수 있습니다.  데이터베이스의 테이블 목록을 새로 고칩니다.
   
-    R 데이터 개체를 로컬 환경에서 생성했으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 테이블이 생성되지 않았음을 확인할 수 있습니다. 또한, 데이터가 텍스트 파일로부터 R 변수에 저장되지 않았습니다.
+    R 데이터 개체를 로컬 환경에서 생성했으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 테이블이 생성되지 않았음을 확인할 수 있습니다. 또한, 데이터가 텍스트 파일로부터 R 변수에 로드되지 않았습니다.
   
 4. 이제 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 함수를 호출하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터를 삽입합니다.
   
@@ -150,7 +150,7 @@ ms.locfileid: "31203465"
 
 ### <a name="load-data-into-the-scoring-table"></a>채점 테이블에 데이터 불러오기
 
-1. 모델 평가에 쓰일 데이터를 데이터베이스에 불러오기 위해 아래 단계를 반복합니다.
+1. 모델 평가에 쓰일 데이터 집합을 데이터베이스에 로드하기 위해 아래 단계를 반복합니다.
   
     먼저 원본 파일의 경로를 제공합니다.
   
