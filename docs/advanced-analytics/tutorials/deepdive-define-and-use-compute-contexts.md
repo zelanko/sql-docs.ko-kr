@@ -89,11 +89,11 @@ SQL Server를 만드는 함수를 사용 하 여 상황에 맞는 다음 정보�
     
     계산 컨텍스트 정의는 워크스테이션에서 수행할 수 있는 다른 모든 제네릭 R 계산에 영향을 주지 않으며 데이터의 원본을 변경하지 않습니다. 예를 들어 로컬 텍스트 파일을 데이터 원본으로 정의하지만 계산 컨텍스트를 SQL Server로 변경하지 않고 SQL Server 컴퓨터에서 데이터에 대한 모든 읽기 및 요약을 수행할 수 있습니다.
 
-## <a name="enable-tracing-on-the-compute-context"></a>계산 환경에서 추적을 허용하기
+## <a name="enable-tracing-on-the-compute-context"></a>계산 컨텍스트에서 추적 사용
 
-때로는 작업이 로컬 환경에서는 잘 작동하지만 원격 계산 환경에서 실행될 때 문제가 발생하는 경우가 있습니다. 문제를 분석하거나 성능을 모니터링하려는 경우 계산 환경에서 추적을 허용하여 런타임 문제를 쉽게 해결할 수 있습니다.
+때로는 작업이 로컬 컨텍스트에서 작동하지만 원격 계산 컨텍스트에서 실행될 때 문제가 발생합니다. 문제를 분석하거나 성능을 모니터링하려는 경우 계산 컨텍스트에서 추적을 사용하도록 설정하여 런타임 문제 해결을 지원할 수 있습니다.
 
-1. 새로운 계산 환경을 동일한 연결 문자열을 생성합니다. 이 때 **RxInSqlServer** 생성자에 *traceEnabled*와 *traceLevel* 인수를 추가합니다.
+1. 동일한 연결 문자열을 사용하는 새 계산 컨텍스트를 만듭니다. 이 때 **RxInSqlServer** 생성자에 *traceEnabled*와 *traceLevel* 인수를 추가합니다.
 
     ```R
     sqlComputeTrace <- RxInSqlServer(
@@ -107,7 +107,7 @@ SQL Server를 만드는 함수를 사용 하 여 상황에 맞는 다음 정보�
   
     이 예제에서는 *traceLevel* 속성이 7로 설정되었으며 이는 "모든 추적 정보 표시"를 의미합니다.
 
-2. 계산 환경을 변경하려면 [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 함수를 사용하고 이름으로 환경을 지정합니다.
+2. 계산 컨텍스트를 변경하려면 [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 함수를 사용하고 이름으로 컨텍스트를 지정합니다.
 
     ```R
     rxSetComputeContext( sqlComputeTrace)
@@ -115,9 +115,9 @@ SQL Server를 만드는 함수를 사용 하 여 상황에 맞는 다음 정보�
 
     > [!NOTE]
     > 
-    > 이 자습서에서는 추적을 활성화하지 않은 계산 환경을 사용하십시오.
+    > 이 자습서에서는 추적을 사용하지 않도록 설정한 계산 환경을 사용하십시오.
     > 
-    > 추적을 활성화하려는 경우 네트워크의 연결 상태에 따라 영향을 받을 수 있습니다. 또한 성능 문제 때문에 모든 기능에 대해 추적 옵션이 검증되지 않았습니다.
+    > 그러나 추적을 사용하려는 경우 네트워크 연결에 따라 사용자의 경험에 영향을 미칠 수 있습니다. 또한 추적 지원 옵션의 성능 테스트가 일부 작업에 대해 수행되었음에 유의하십시오.
 
 사용 하는 방법을 알아보려면 다음 단계에서는 서버에서 R 코드를 실행 하거나 로컬 컨텍스트를 계산 합니다.
 
