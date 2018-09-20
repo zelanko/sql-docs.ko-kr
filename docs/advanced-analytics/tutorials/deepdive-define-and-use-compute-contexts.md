@@ -1,4 +1,4 @@
-﻿---
+---
 title: (SQL 및 R 심층 분석) 계산 컨텍스트 정의 및 사용 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
@@ -26,11 +26,11 @@ RevoScaleR은 Hadoop, Spark 또는 데이터베이스 내에서 R 코드를 실�
 SQL Server를 만드는 함수를 다음 정보를 사용 하 여 컨텍스트를 계산:
 
 - 에 대 한 연결 문자열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스
-- 출력이 처리되는 방법에 대한 명세
+- 출력 처리 방법 지정
 - 추적을 사용 하도록 설정 하거나 추적 수준을 지정 하는 선택적 인수
-- 공유 데이터 디렉터리에 대한 추가적인 명세
+- 선택적으로 공유 데이터 디렉터리 지정
 
-## <a name="create-and-set-a-compute-context"></a>계산 환경을 생성하고 설정하기.
+## <a name="create-and-set-a-compute-context"></a>계산 컨텍스트를 만들고 설정하기
 
 1. 계산이 수행 되는 인스턴스에 대 한 연결 문자열을 지정 합니다.  앞에서 만든 연결 문자열을 다시 사용할 수 있습니다. 계산을 다른 서버로 이동 하거나 일부 작업을 수행 하는 다른 로그인을 사용 하려는 경우 다른 연결 문자열을 만들 수 있습니다.
 
@@ -45,7 +45,7 @@ SQL Server를 만드는 함수를 다음 정보를 사용 하 여 컨텍스트�
       ```R
       sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=DeepDive;Trusted_Connection=True"
       ```
-2. 출력을 어떻게 처리할지 지정합니다. 다음 코드에서는 워크스테이션의 R 세션이 항상 R 작업 결과를 기다리지만, 원격 계산의 콘솔 출력을 반환하지 않도록 지정합니다.
+2. 출력 처리 방법을 지정합니다. 다음 코드에서는 워크스테이션의 R 세션이 항상 R 작업 결과를 기다리지만, 원격 계산의 콘솔 출력을 반환하지 않도록 지정합니다.
   
     ```R
     sqlWait <- TRUE
@@ -87,7 +87,7 @@ SQL Server를 만드는 함수를 다음 정보를 사용 하 여 컨텍스트�
     
     - 함수를 사용 하 여 계산 컨텍스트를 정의 하는 반면 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 집계 및 기타 계산이 수행 된 것을 표시 합니다.
     
-    계산 환경을 정의하는 것은 워크스테이션에서 수행할 수 있는 다른 모든 제네릭 R 계산에 영향을 주지 않으며 데이터의 원본을 변경하지 않습니다. 예를 들어 로컬 텍스트 파일을 데이터 원본으로 정의하고 계산 환경을 SQL Server로 변경하고 SQL Server에 있는 데이터에 대한 모든 읽기 및 요약을 수행할 수 있습니다.
+    계산 환경을 정의하는 것은 워크스테이션에서 수행할 수 있는 다른 모든 제네릭 R 계산에 영향을 주지 않으며 데이터의 원본을 변경하지 않습니다. 예를 들어 로컬 텍스트 파일을 데이터 원본으로 정의해도 계산 환경을 SQL Server로 변경하고 SQL Server에 있는 데이터에 대한 모든 읽기 및 요약을 수행할 수 있습니다.
 
 ## <a name="enable-tracing-on-the-compute-context"></a>계산 컨텍스트에서 추적 사용
 
