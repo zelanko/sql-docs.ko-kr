@@ -40,7 +40,7 @@ ms.locfileid: "43094804"
   
 -   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
   
--   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
+-   [AdventureWorks 기반의 메모리 내 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
 -   [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – 메모리 내 OLTP 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "43094804"
   
 -   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP용 하드웨어에 대한 일반적인 지침은 다음 블로그 게시물을 참조하세요. [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 메모리 내 OLTP 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
   
 1.  [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502)에서 로컬 폴더(예: 'c:\temp')에 AdventureWorks2016CTP3.bak 및 SQLServer2016CTP3Samples.zip을 다운로드합니다.  

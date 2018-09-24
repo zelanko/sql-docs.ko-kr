@@ -24,7 +24,7 @@ ms.lasthandoff: 08/16/2018
 ms.locfileid: "40394341"
 ---
 # <a name="native-compilation-advisor"></a>네이티브 컴파일 관리자
-  트랜잭션 성능 보고서 도구( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 네이티브 컴파일을 사용하도록 변환할 경우 효과적인 해석된 저장 프로시저에 대한 정보를 제공합니다. 네이티브 컴파일을 사용하도록 변환할 저장 프로시저를 식별한 후 네이티브 컴파일 관리자를 사용하여 해석된 저장 프로시저를 네이티브 컴파일로 마이그레이션할 수 있습니다. 고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)를 참조하세요.  
+  트랜잭션 성능 보고서 도구( [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 네이티브 컴파일을 사용하도록 변환할 경우 효과적인 해석된 저장 프로시저에 대한 정보를 제공합니다. 네이티브 컴파일을 사용하도록 변환할 저장 프로시저를 식별한 후 네이티브 컴파일 관리자를 사용하여 해석된 저장 프로시저를 네이티브 컴파일로 마이그레이션할 수 있습니다. 고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)를 참조하세요.  
   
  먼저 해석된 저장 프로시저가 포함된 인스턴스에 연결합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결할 수 있습니다. 하지만 메모리 최적화 관리자를 사용하여 마이그레이션 작업을 수행하려는 경우에는 메모리 내 OLTP 기능을 사용할 수 있는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결해야 합니다. 메모리 내 OLTP 요구 사항에 대한 자세한 내용은 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)을 참조하십시오.  
   

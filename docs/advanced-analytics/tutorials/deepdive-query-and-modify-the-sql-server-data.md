@@ -19,7 +19,7 @@ ms.locfileid: "45975652"
 
 이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 쓰는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
 
-이제 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드했으므로 앞서 만든 데이터 원본을 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 R 함수에 대한 인수로 사용하여 변수에 대한 기본 정보를 가져오고 요약 및 히스토그램을 생성합니다.
+이제 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 불러왔으므로 앞서 만든 데이터 원본을 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 R 함수에 대한 인수로 사용하여 변수에 대한 기본 정보를 가져오고 요약 및 히 스토그램을 생성할 수 있습니다.
 
 이 단계에서는 간단한 분석을 수행한 다음 데이터를 강화하도록 데이터 원본을 다시 사용합니다.
 

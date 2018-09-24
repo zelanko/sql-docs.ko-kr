@@ -32,7 +32,7 @@ SQL Server를 만드는 함수를 다음 정보를 사용 하 여 컨텍스트�
 
 ## <a name="create-and-set-a-compute-context"></a>계산 컨텍스트를 만들고 설정하기
 
-1. 계산이 수행 되는 인스턴스에 대 한 연결 문자열을 지정 합니다.  앞에서 만든 연결 문자열을 다시 사용할 수 있습니다. 계산을 다른 서버로 이동 하거나 일부 작업을 수행 하는 다른 로그인을 사용 하려는 경우 다른 연결 문자열을 만들 수 있습니다.
+1. 계산을 수행할 인스턴스의 연결 문자열을 지정합니다.  앞서 만들었던 연결 문자열을 다시 사용할 수 있습니다. 다른 서버로 계산을 수행하게 하거나 여러 작업을 수행하기 위해 다른 계정을 사용해야 할 때는 다른 연결 문자열을 생성할 수 있습니다.
 
     **SQL 로그인 사용**
 
@@ -85,7 +85,7 @@ SQL Server를 만드는 함수를 다음 정보를 사용 하 여 컨텍스트�
       
     - [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)함수를 사용하여 정의한 데이터 원본 개체는 데이터가 저장되는 위치를 지정합니다.
     
-    - 함수를 사용 하 여 계산 컨텍스트를 정의 하는 반면 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 집계 및 기타 계산이 수행 된 것을 표시 합니다.
+    - 이와 대조적으로, [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)를 통해 정의된 계산 환경은 집계 및 다른 계산이 어디서 수행되는지 가리킵니다.
     
     계산 환경을 정의하는 것은 워크스테이션에서 수행할 수 있는 다른 모든 제네릭 R 계산에 영향을 주지 않으며 데이터의 원본을 변경하지 않습니다. 예를 들어 로컬 텍스트 파일을 데이터 원본으로 정의해도 계산 환경을 SQL Server로 변경하고 SQL Server에 있는 데이터에 대한 모든 읽기 및 요약을 수행할 수 있습니다.
 
