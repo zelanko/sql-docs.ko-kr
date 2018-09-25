@@ -3,7 +3,7 @@ title: 서비스 마스터 키 복원 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 37eef9b8630dc5bc1c0c3dedf6c6d6c54d0ee4a6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0b077bff2d86140de4da436d603798c7f14bce2c
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697324"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013668"
 ---
 # <a name="restore-the-service-master-key"></a>서비스 마스터 키 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

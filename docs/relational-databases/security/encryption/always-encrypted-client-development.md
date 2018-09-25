@@ -3,7 +3,7 @@ title: 상시 암호화(클라이언트 개발) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/21/2018
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c75bb08f0c96c386db8a9eee307e696b31c67160
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 79db931934c1a5193a5dd253177b3c2ef3131bd4
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43239791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013538"
 ---
 # <a name="always-encrypted-client-development"></a>상시 암호화(클라이언트 개발)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
