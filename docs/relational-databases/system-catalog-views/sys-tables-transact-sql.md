@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 330c8be09065d6c08ba0cc8468b8a5c687fdca6b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 960ffccc2945531aa525c9a1d1db45cc47951190
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096817"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178319"
 ---
 # <a name="systables-transact-sql"></a>sys.tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "43096817"
 |history_retention_period|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>History_retention_period_unit를 사용 하 여 지정 된 단위로 temporal 기록 보존 기간의 지속 시간을 나타내는 숫자 값입니다. |  
 |history_retention_period_unit|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>유형의 temporal 기록 보존 기간 단위를 나타내는 숫자 값입니다. <br /><br />-1: 무한 <br /><br />3: 날짜 <br /><br />4: 주 <br /><br />5: 월 <br /><br />6: 연도 |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Temporal 기록 보존 기간 단위 유형의 텍스트 설명입니다. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-  
+|is_node|**bit**|**적용 대상**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = 그래프 노드 테이블입니다. <br /><br />0 =이 그래프 노드 테이블이 아닙니다. |  
+|is_edge|**bit**|**적용 대상**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = 그래프에 지 테이블입니다. <br /><br />0 =이 그래프에 지 테이블이 아닙니다. |  
+
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   

@@ -12,18 +12,20 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: c4390990701f95dddf19ca53354ffcb5af241d30
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6ccb65aad24ca84f95bb1022c7f074450823e2e9
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083535"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049443"
 ---
-# <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017의 새로운 기능
+# <a name="whats-new-for-sql-server-on-linux"></a>Linux의 SQL Server의 새로운 기능
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Linux에서 실행 되는 SQL Server 2017에 대 한 주요 기능 및 사용 가능한 서비스를 설명 합니다.
+
+SQL Server 2019 preview가 출시 되었습니다. 이 문서에서는 SQL Server 2019 미리 보기 릴리스를 다루지 않습니다. SQL Server 2019 미리 보기를 알아보려면 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)합니다.
 
 > [!NOTE]
 > 이 문서에서 이러한 기능 외에도 누적 업데이트는 GA 릴리스 이후 정기적으로 해제 됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대 한 자세한 내용은 [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu)합니다. 패키지 다운로드 및 알려진된 문제에 대 한 참조를 [릴리스](sql-server-linux-release-notes.md)합니다.

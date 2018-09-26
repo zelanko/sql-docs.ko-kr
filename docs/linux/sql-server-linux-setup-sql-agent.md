@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 32adfba6edf8497f7ea10f8f68401c99c246ae5c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: af15f6243dc29fc3c7596a758295cc53c66a55c0
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084365"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713565"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에서 SQL Server 에이전트를 설치 합니다.
 
@@ -45,7 +45,7 @@ sudo systemctl restart mssql-server
 ## <a name="InstallAgentBelowCU4">아래 및 버전 2017 CU3에 대 한 SQL Server 에이전트 설치</a>
 
 > [!NOTE]
-> 아래 설치 지침은 아래 SQL Server 버전 2017 CU3에 적용 됩니다. 먼저 SQL Server 에이전트를 설치 하기 전에 [SQL Server 2017 설치](sql-server-linux-setup.md#platforms)합니다. 키 및 설치할 때 사용 하는 리포지토리를 구성 합니다 **mssql server 에이전트** 패키지 있습니다.
+> 아래 설치 지침은 아래 SQL Server 버전 2017 CU3에 적용 됩니다. 먼저 SQL Server 에이전트를 설치 하기 전에 [SQL Server 설치](sql-server-linux-setup.md#platforms)합니다. 키 및 설치할 때 사용 하는 리포지토리를 구성 합니다 **mssql server 에이전트** 패키지 있습니다.
 
 플랫폼에 대 한 SQL Server 에이전트를 설치 합니다.
 - [Red Hat Enterprise Linux](#RHEL)

@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: f0c6e0e8b6999ce2ebcce009a4ac1c298ededdff
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40009035"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712125"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 연결 암호화
 
@@ -34,9 +34,13 @@ ms.locfileid: "40009035"
 - KeySpec AT_KEYEXCHANGE 옵션을 사용 하 여 인증서를 만들어야 합니다. 일반적으로 인증서의 키 용도 속성 (KEY_USAGE)에 키 암호화 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)도 포함 됩니다.
 - 인증서의 Subject 속성의 CN (일반 이름)가 동일한 지 호스트 이름이 나 서버 컴퓨터의 정규화 된 도메인 이름 (FQDN)으로 표시 해야 합니다. 참고: 와일드 카드 인증서 지원 됩니다.
 
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>OpenSSL 라이브러리 (선택 사항) 사용에 대 한 구성
+기호화 된 링크를 만들 수 있습니다 합니다 `/opt/mssql/lib/` 는 참조 하는 디렉터리 `libcrypto.so` 및 `libssl.so` 라이브러리를 사용 하 여 암호화 해야 합니다. SQL Server 시스템에서 제공 되는 기본 이외의 특정 버전의 OpenSSL 사용 하도록 강제 적용 하려는 경우에 유용 합니다. 이러한 바로 가기 링크 없으면 SQL Server 시스템에 구성 된 기본 OpenSSL 라이브러리를 로드 됩니다.
+
+이러한 기호화 된 링크 이름이 지정 되어야 합니다 `libcrypto.so` 하 고 `libssl.so` 에 배치 하 고는 `/opt/mssql/lib/` 디렉터리입니다.
+
 ## <a name="overview"></a>개요
 TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호화 하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 올바르게 구성 하는 경우 TLS 개인 정보 및 클라이언트와 서버 간의 통신에 대 한 데이터 무결성을 제공 합니다.  시작 하는 서버나 클라이언트 시작 TLS 연결 일 수 있습니다. 
-
 
 ## <a name="client-initiated-encryption"></a>클라이언트 암호화 시작 
 - **인증서 생성** (/CN SQL Server 호스트 정규화 된 도메인 이름과 일치 해야 합니다)

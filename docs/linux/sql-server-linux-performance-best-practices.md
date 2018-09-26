@@ -1,6 +1,6 @@
 ---
 title: Linux의 SQL Server에 대 한 성능 모범 사례 | Microsoft Docs
-description: 이 문서에서는 Linux에서 SQL Server 2017을 실행 하는 것에 대 한 성능 모범 사례 및 지침을 제공 합니다.
+description: 이 문서에서는 Linux의 SQL Server를 실행 하는 것에 대 한 성능 모범 사례 및 지침을 제공 합니다.
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f27cda67baa5d4101f94a8351bacd1ef3ecbff05
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 42e3c137a4284a3d190051251b875926a4ff532d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101141"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713675"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침
 

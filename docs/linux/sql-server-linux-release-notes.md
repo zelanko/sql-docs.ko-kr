@@ -12,18 +12,21 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: bcc1b86da4da46575279b373d288800e5ea6a35c
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 291e38a59212a179683ec0c3eb8ff661a5243fcc
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381181"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049713"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 다음 릴리스 정보는 Linux에서 실행 되는 SQL Server 2017로 적용 됩니다. 이 문서는 각 릴리스에 대 한 섹션으로 구분 됩니다. GA 릴리스는 지원 가능성을 자세히 설명 있고 알려진 문제를 나열 합니다. 각 CU (누적 업데이트) 또는 일반 배포 릴리스 (GDR)에 CU 변경 뿐만 아니라 Linux 패키지 다운로드에 대 한 링크를 설명 하는 기술 지원 문서에 대 한 링크가 있습니다.
+
+> [!TIP]
+> 이러한 릴리스 정보는 SQL Server 2017 릴리스를 구체적으로 합니다. 새 SQL Server 2019 미리 보기 릴리스에 대 한 자세한 내용은 참조 하세요. [Linux에서 SQL Server 2019 미리 보기에 대 한 릴리스](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)합니다.
 
 ## <a name="supported-platforms"></a>지원 플랫폼
 
@@ -47,6 +50,7 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 | 릴리스               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [GDR2 CU9까지 포함](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
@@ -64,7 +68,7 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 ## <a id="cuinstall"></a> 업데이트를 설치 하는 방법
 
-CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 수행 하는 경우 최신 SQL Server의 CU 패키지를 갖게 됩니다. CU 리포지토리는 Linux의 SQL Server에 대 한 모든 패키지 설치 문서에 대 한 기본값입니다. GDR 리포지토리를 구성한 경우 (**mssql server-2017 gdr**), 조지아 이후 발표 된 중요 보안 업데이트에 한 해 Docker 컨테이너 CU 또는 GDR 업데이트를 필요로 하는 경우에 대 한 공식 이미지를 참조 하세요 [Docker 엔진에 대 한 Linux의 Microsoft SQL Server](http://hub.docker.com/r/microsoft/mssql-server-linux/)합니다. 리포지토리 구성에 대 한 자세한 내용은 참조 하세요. [Linux의 SQL Server에 대 한 리포지토리를 구성](sql-server-linux-change-repo.md)합니다.
+CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 수행 하는 경우 최신 SQL Server의 CU 패키지를 갖게 됩니다. CU 리포지토리는 Linux의 SQL Server에 대 한 모든 패키지 설치 문서에 대 한 기본값입니다. GDR 리포지토리를 구성한 경우 (**mssql server-2017 gdr**), 조지아 이후 발표 된 중요 보안 업데이트에 한 해 Docker 컨테이너 CU 또는 GDR 업데이트를 필요로 하는 경우에 대 한 공식 이미지를 참조 하세요 [Docker 엔진에 대 한 Linux의 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server)합니다. 리포지토리 구성에 대 한 자세한 내용은 참조 하세요. [Linux의 SQL Server에 대 한 리포지토리를 구성](sql-server-linux-change-repo.md)합니다.
 
 기존 SQL Server 패키지를 업데이트 하는 경우에 최신 CU를 가져오려는 각 패키지에 대 한 적절 한 업데이트 명령을 실행 합니다. 각 패키지에 대 한 특정 업데이트 지침은 다음 설치 가이드를 참조 합니다.
 
@@ -72,6 +76,20 @@ CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 �
 - [전체 텍스트 검색 패키지를 설치 합니다.](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트를 사용 하도록 설정](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU11"></a> CU11 (2018 년 9 월)
+
+이 SQL Server 2017 누적 업데이트 11 (CU11) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3038.14 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262)합니다.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 Debian 및 RPM 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3038.14-2 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3038.14-2 | [mssql server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 패키지 | 14.0.3038.14-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[높은 가용성의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[전체 텍스트 검색의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU10"></a> CU10 (2018 년 8 월)
 

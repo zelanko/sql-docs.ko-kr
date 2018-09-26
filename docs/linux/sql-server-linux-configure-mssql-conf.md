@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL Server 설정 구성 | Microsoft Docs
-description: 이 문서에서는 Linux의 SQL Server 2017 설정을 구성 하려면 mssql-conf 도구를 사용 하는 방법을 설명 합니다.
+description: 이 문서에서는 Linux의 SQL Server 설정을 구성 하려면 mssql-conf 도구를 사용 하는 방법을 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,16 +12,19 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2982ae05fd54a09b6ae5640c969bcb77d73c4a4c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 57ef9a199979c2538f536d3c9a2bf8aa7e0b37fa
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086265"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713535"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 **mssql conf** Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu 용 SQL Server 2017을 사용 하 여 설치 하는 구성 스크립트입니다. 이 유틸리티를 사용 하 여 다음 매개 변수를 설정할 수 있습니다.
 
@@ -30,7 +33,7 @@ ms.locfileid: "39086265"
 | [에이전트](#agent) | SQL Server 에이전트를 사용 하도록 설정 |
 | [데이터 정렬](#collation) | Linux의 SQL Server에 대 한 새 데이터 정렬을 설정 합니다. |
 | [고객 의견](#customerfeedback) | SQL Server Microsoft에 피드백을 전송 여부를 선택 합니다. |
-| [데이터베이스 메일 프로필](#dbmail) | Linux에서 SQL Server에 대 한 기본 데이터베이스 메일 프로필 설정 |
+| [데이터베이스 메일 프로필](#dbmail) | Linux의 SQL Server에 대 한 기본 데이터베이스 메일 프로필을 설정 합니다. |
 | [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일 (.mdf)에 대 한 기본 디렉터리를 변경 합니다. |
 | [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그 (.ldf) 파일에 대 한 기본 디렉터리를 변경합니다. |
 | [기본 master 데이터베이스 파일 디렉터리](#masterdatabasedir) | 기존 SQL 설치에서 master 데이터베이스 파일용 기본 디렉터리를 변경합니다.|
@@ -40,12 +43,44 @@ ms.locfileid: "39086265"
 | [기본 백업 디렉터리](#backupdir) | 새 백업 파일용 기본 디렉터리를 변경 합니다. |
 | [형식 덤프](#coredump) | 수집 덤프 메모리 덤프 파일의 유형을 선택 합니다. |
 | [고가용성](#hadr) | 가용성 그룹을 사용 하도록 설정 합니다. |
-| [로컬 감사 디렉터리](#localaudit) | 설정 된 로컬 감사 파일에 추가할 디렉터리입니다. |
+| [로컬 감사 디렉터리](#localaudit) | 로컬 감사 파일에 추가할 디렉터리를 설정 합니다. |
 | [로캘](#lcid) | 사용 하도록 SQL Server에 대 한 로캘을 설정 합니다. |
 | [메모리 제한](#memorylimit) | SQL Server에 대 한 메모리 한계를 설정 합니다. |
 | [TCP 포트](#tcpport) | SQL Server 연결을 수신 하는 위치는 포트를 변경 합니다. |
 | [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
 | [추적 플래그](#traceflags) | 사용 하려는 서비스는 추적 플래그를 설정 합니다. |
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+**mssql conf** 와 함께 설치 되는 구성 스크립트는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu에 대 한 합니다. 이 유틸리티를 사용 하 여 다음 매개 변수를 설정할 수 있습니다.
+
+|||
+|---|---|
+| [에이전트](#agent) | SQL Server 에이전트를 사용 하도록 설정 |
+| [데이터 정렬](#collation) | Linux의 SQL Server에 대 한 새 데이터 정렬을 설정 합니다. |
+| [고객 의견](#customerfeedback) | SQL Server Microsoft에 피드백을 전송 여부를 선택 합니다. |
+| [데이터베이스 메일 프로필](#dbmail) | Linux의 SQL Server에 대 한 기본 데이터베이스 메일 프로필을 설정 합니다. |
+| [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일 (.mdf)에 대 한 기본 디렉터리를 변경 합니다. |
+| [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그 (.ldf) 파일에 대 한 기본 디렉터리를 변경합니다. |
+| [기본 master 데이터베이스 파일 디렉터리](#masterdatabasedir) | 기존 SQL 설치에서 master 데이터베이스 파일용 기본 디렉터리를 변경합니다.|
+| [기본 master 데이터베이스 파일 이름](#masterdatabasename) | Master 데이터베이스 파일의 이름을 변경합니다. |
+| [기본 덤프 디렉터리](#dumpdir) | 새 메모리 덤프 및 기타 문제 해결 파일에 대 한 기본 디렉터리를 변경 합니다. |
+| [기본 오류 로그 디렉터리](#errorlogdir) | 새 SQL Server 오류 로그, 기본 Profiler 추적, 시스템 상태 세션 XE를 및 Hekaton 세션 XE 파일용 기본 디렉터리를 변경합니다. |
+| [기본 백업 디렉터리](#backupdir) | 새 백업 파일용 기본 디렉터리를 변경 합니다. |
+| [형식 덤프](#coredump) | 수집 덤프 메모리 덤프 파일의 유형을 선택 합니다. |
+| [고가용성](#hadr) | 가용성 그룹을 사용 하도록 설정 합니다. |
+| [로컬 감사 디렉터리](#localaudit) | 로컬 감사 파일에 추가할 디렉터리를 설정 합니다. |
+| [로캘](#lcid) | 사용 하도록 SQL Server에 대 한 로캘을 설정 합니다. |
+| [메모리 제한](#memorylimit) | SQL Server에 대 한 메모리 한계를 설정 합니다. |
+| [Microsoft Distributed Transaction Coordinator](#msdtc) | Linux에서 MSDTC 문제 해결 및 구성 합니다. |
+| [MLServices Eula](#mlservices-eula) | Mlservices 패키지에 대 한 R 및 Python Eula를 수락 합니다. SQL Server 2019 에서만 적용 됩니다.|
+| [TCP 포트](#tcpport) | SQL Server 연결을 수신 하는 위치는 포트를 변경 합니다. |
+| [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
+| [추적 플래그](#traceflags) | 사용 하려는 서비스는 추적 플래그를 설정 합니다. |
+
+::: moniker-end
 
 > [!TIP]
 > 이러한 설정 중 일부 환경 변수를 사용 하 여 구성할 수도 있습니다. 자세한 내용은 [환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
@@ -56,7 +91,7 @@ ms.locfileid: "39086265"
 
 * 공유 디스크 클러스터 시나리오의 경우 하지를 다시 시작 합니다 **mssql server** 서비스 변경 내용을 적용 합니다. SQL Server가 응용 프로그램으로 실행 됩니다. 대신 다음 다시 온라인 상태가 오프 라인 리소스를 수행 합니다.
 
-* 이러한 예제를 실행 하 여 mssql conf의 전체 경로 지정 합니다. **/opt/mssql/bin/mssql-conf**합니다. 대신 해당 경로로 이동 하려는 경우 mssql conf 현재 디렉터리의 컨텍스트에서 실행: **. / mssql conf**합니다.
+* 이러한 예제는 전체 경로 지정 하 여 mssql conf를 실행 합니다. **/opt/mssql/bin/mssql-conf**합니다. 대신 해당 경로로 이동 하려는 경우 mssql conf 현재 디렉터리의 컨텍스트에서 실행: **. / mssql conf**합니다.
 
 ## <a id="agent"></a> SQL Server 에이전트를 사용 하도록 설정
 
@@ -70,7 +105,7 @@ ms.locfileid: "39086265"
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+2. SQL Server 서비스를 다시 시작 합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -379,10 +414,11 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-이 기능의 사용 방법을 가용성 그룹이 포함 된 내용은 다음 두 항목을 참조 하세요.
+가용성 그룹을 사용 하 여 사용이 방법에 대 한 자세한 내용은 다음 두 항목을 참조 하세요.
 
 - [Linux의 SQL Server에 대 한 Always On 가용성 그룹 구성](sql-server-linux-availability-group-configure-ha.md)
 - [Linux의 SQL Server에 대 한 읽기-배율 가용성 그룹 구성](sql-server-linux-availability-group-configure-rs.md)
+
 
 ## <a id="localaudit"></a> 로컬 감사 디렉터리 설정
 
@@ -447,6 +483,81 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="msdtc"></a> MSDTC를 구성 합니다.
+
+합니다 **network.rpcport** 하 고 **distributedtransaction.servertcpport** 설정은 MSDTC Microsoft Distributed Transaction Coordinator ()를 구성 하는 데 사용 됩니다. 이러한 설정을 변경 하려면 다음 명령을 실행 합니다.
+
+1. 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다 **설정** "network.rpcport"에 대 한 명령:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
+   ```
+
+2. "Distributedtransaction.servertcpport" 설정 합니다.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
+   ```
+
+이러한 값을 설정 하는 것 외에도 라우팅을 구성 하 고 방화벽 포트 135에 대 한 업데이트도 해야 합니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Linux에서 MSDTC를 구성 하는 방법](sql-server-linux-configure-msdtc.md)합니다.
+
+가지 mssql-conf 모니터링과 MSDTC 문제 해결에 사용할 수 있는 다른 몇 가지 설정이 있습니다. 다음 테이블에는 이러한 설정이 간략하게 설명합니다. 용도에 대 한 자세한 내용은 Windows 지원 문서에서 세부 정보를 참조 하세요 [MS DTC에 대 한 진단 추적을 사용 하는 방법을](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)합니다.
+
+| mssql conf 설정 | Description |
+|---|---|
+| distributedtransaction.allowonlysecurerpccalls | 분산된 트랜잭션에 대 한 보안만 rpc 호출을 구성 합니다. |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 배포에 대 한 보안만 rpc 호출을 구성 합니다. |트랜잭션
+| distributedtransaction.maxlogsize | DTC 트랜잭션 로그 파일 크기 (mb)입니다. 기본값은 64MB |
+| distributedtransaction.memorybuffersize | 추적 저장 되는 순환 버퍼 크기입니다. 이 크기 (mb) 이며 기본값은 10MB |
+| distributedtransaction.servertcpport | MSDTC rpc 서버 포트 |
+| distributedtransaction.trace_cm | 연결 관리자에서 추적 |
+| distributedtransaction.trace_contact | 풀 연락처 및 연락처를 추적합니다. |
+| distributedtransaction.trace_gateway | 추적 게이트웨이 원본 |
+| distributedtransaction.trace_log | 로그 추적 |
+| distributedtransaction.trace_misc | 추적을 다른 범주로 분류 될 수 없습니다. |
+| distributedtransaction.trace_proxy | MSDTC 프록시에 생성 되는 추적 |
+| distributedtransaction.trace_svc | 추적 서비스 및.exe 파일 시작 |
+| distributedtransaction.trace_trace | 자체 추적 인프라 |
+| distributedtransaction.trace_util | 여러 위치에서 호출 되는 추적 유틸리티 루틴 |
+| distributedtransaction.trace_xa | XA 트랜잭션 관리자 (XATM) 추적 원본 |
+| distributedtransaction.tracefilepath | 추적 파일을 저장할 폴더 |
+| distributedtransaction.turnoffrpcsecurity | 분산된 트랜잭션에 대 한 RPC 보안을 사용할지 설정 합니다. |
+
+::: moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="mlservices-eula"></a> MLServices Eula에 동의
+
+추가 [기계 학습 R 또는 Python 패키지](sql-server-linux-setup-machine-learning.md) 데이터베이스 엔진 R 및 Python의 오픈 소스 배포에 대 한 라이선스 동의 필요 합니다. 다음 표에서 모든 사용 가능한 명령 또는 mlservices Eula 관련 된 옵션을 열거 합니다. 동일한 EULA 매개 변수는 설치 된 기능에 따라 R 및 Python에 사용 됩니다.
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+EULA 동의 직접 추가할 수도 있습니다는 [mssql.conf 파일](#mssql-conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+```
+
+:::moniker-end
+
 ## <a id="tcpport"></a> TCP 포트를 변경 합니다.
 
 합니다 **network.tcpport** 변경 내용을 SQL Server 연결에 대 한 수신 대기 하는 TCP 포트를 설정 합니다. 기본적으로이 포트를 1433으로 설정 됩니다. 포트를 변경 하려면 다음 명령을 실행 합니다.
@@ -457,13 +568,13 @@ sudo systemctl restart mssql-server
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+2. SQL Server 서비스를 다시 시작 합니다.
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-1. SQL Server에 연결할 때 호스트 이름 또는 IP 주소를 다음 쉼표 (,)를 사용 하 여 사용자 지정 포트를 지정 해야 합니다. 예를 들어, SQLCMD에 연결 하려면 다음 명령을 사용 합니다.
+3. SQL Server에 연결할 때 호스트 이름 또는 IP 주소를 다음 쉼표 (,)를 사용 하 여 사용자 지정 포트를 지정 해야 합니다. 예를 들어, SQLCMD에 연결 하려면 다음 명령을 사용 합니다.
 
    ```bash
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
@@ -538,9 +649,13 @@ sudo cat /var/opt/mssql/mssql.conf
 
 이 파일에 표시 되지 않은 모든 설정을 기본값으로 사용 하는 참고 합니다. 다음 섹션에서는 샘플을 제공 **mssql.conf** 파일입니다.
 
-## <a name="mssqlconf-format"></a>mssql.conf 형식
+
+## <a id="mssql-conf-format"></a> mssql.conf 형식
 
 다음 **/var/opt/mssql/mssql.conf** 파일은 각 설정에 대 한 예제를 제공 합니다. 이 형식을 사용 하 여 수동으로 변경 하는 **mssql.conf** 필요에 따라 파일입니다. 파일을 수동으로 변경한 수행 하는 경우 변경 내용을 적용 하기 전에 SQL Server를 다시 시작 해야 있습니다. 사용 하 여 **mssql.conf** 파일 Docker를 사용 하 여 Docker 있어야 [데이터를 유지](sql-server-linux-configure-docker.md)합니다. 먼저 전체를 추가 **mssql.conf** 호스트 디렉터리에 파일을 다음 컨테이너를 실행 합니다. 이러한 예제가 [의견](sql-server-linux-customer-feedback.md)합니다.
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```ini
 [EULA]
@@ -589,6 +704,65 @@ traceflag0 = 1204
 traceflag1 = 2345
 traceflag = 3456
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[distributedtransaction]
+servertcpport = 51999
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+rpcport = 13500
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
+
+::: moniker-end
 
 ## <a name="next-steps"></a>다음 단계
 

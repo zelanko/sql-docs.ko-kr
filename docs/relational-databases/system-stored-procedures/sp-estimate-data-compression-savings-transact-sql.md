@@ -23,17 +23,17 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 70efe047d1fae61f9755c2dbeecf9627de5b5a79
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027542"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713955"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다. 전체 테이블 또는 테이블 일부에 대해 압축을 계산할 수 있습니다. 여기에는 힙, 클러스터형 인덱스, 비클러스터형 인덱스, 인덱싱된 뷰 및 테이블/인덱스 파티션이 포함됩니다. 개체는 행 압축 또는 페이지 압축을 사용하여 압축할 수 있습니다. 테이블, 인덱스 또는 파티션이 이미 압축된 경우 이 절차에 따라 테이블, 인덱스 또는 파티션이 다시 압축되는 경우의 크기를 예상할 수 있습니다.  
+  요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다. 전체 테이블 또는 테이블 일부에 대해 압축을 계산할 수 있습니다. 여기에 힙, 클러스터형된 인덱스, 비클러스터형된 인덱스, columnstore 인덱스, 인덱싱된 뷰, 테이블 및 인덱스 파티션이 있습니다. 행, 페이지, columnstore 또는 columnstore 보관 압축을 사용 하 여 개체를 압축할 수 있습니다. 테이블, 인덱스 또는 파티션이 이미 압축된 경우 이 절차에 따라 테이블, 인덱스 또는 파티션이 다시 압축되는 경우의 크기를 예상할 수 있습니다.  
   
 > [!NOTE]  
 >  압축 하 고 **sp_estimate_data_compression_savings** 의 일부 버전 에서만에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -76,7 +76,7 @@ sp_estimate_data_compression_savings
  파티션을 지정을 지정할 수도 있습니다는 [$partition](../../t-sql/functions/partition-transact-sql.md) 함수입니다. 소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
   
  [ @data_compression=] '*data_compression*'  
- 계산할 압축 유형입니다. *data_compression* 다음 값 중 하나일 수 있습니다: NONE, 행 또는 페이지입니다.  
+ 계산할 압축 유형입니다. *data_compression* 다음 값 중 하나일 수 있습니다: NONE, 행, 페이지, COLUMNSTORE 또는 COLUMNSTORE_ARCHIVE입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -96,7 +96,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_requested_compression_setting (KB)|**bigint**|요청된 압축 설정을 사용하여 만든 샘플의 크기이며, 해당되는 경우 조각화가 없는 것으로 가정하고 기존 채우기 비율을 사용합니다.|  
   
 ## <a name="remarks"></a>Remarks  
- sp_estimate_data_compression_savings를 사용하면 테이블 또는 파티션에 행 또는 페이지 압축을 사용하도록 설정할 경우의 압축 전후 크기 변경 사항을 예상할 수 있습니다. 예를 들어 평균 행 크기가 40% 줄어드는 경우 개체 크기를 40% 줄일 수 있습니다. 공간 크기는 채우기 비율과 행 크기에 따라 달라지므로 공간이 절약되지 않을 수도 있습니다. 예를 들어 8000바이트 길이의 행이 있고 행 크기를 40% 줄인 경우에도 여전히 데이터 페이지 하나에 행 하나만 넣을 수 있습니다. 이 경우에는 공간이 절약되지 않습니다.  
+ 테이블 또는 파티션 행, 페이지, columnstore 또는 columnstore 보관 압축을 사용 하는 경우 발생할 수 있는 비용 절감을 예측 하려면 sp_estimate_data_compression_savings를 사용 합니다. 예를 들어 평균 행 크기가 40% 줄어드는 경우 개체 크기를 40% 줄일 수 있습니다. 공간 크기는 채우기 비율과 행 크기에 따라 달라지므로 공간이 절약되지 않을 수도 있습니다. 예를 들어 8000바이트 길이의 행이 있고 행 크기를 40% 줄인 경우에도 여전히 데이터 페이지 하나에 행 하나만 넣을 수 있습니다. 이 경우에는 공간이 절약되지 않습니다.  
   
  sp_estimate_data_compression_savings 실행 결과에서 테이블이 확장됨을 나타내는 경우 테이블의 많은 행이 데이터 형식의 전체 자릿수를 거의 모두 사용하며 압축된 형식에 필요한 작은 오버헤드 추가분이 압축으로 얻을 수 있는 공간 절약보다 큰 것입니다. 드물지만 이러한 경우에는 압축을 사용하지 마십시오.  
   
@@ -112,7 +112,31 @@ sp_estimate_data_compression_savings
  테이블에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- 이 프로시저는 columnstore 테이블에 적용되지 않으므로 데이터 압축 매개 변수 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE를 허용하지 않습니다.  
+ SQL Server 2019 하기 전에이 프로시저는 columnstore 인덱스에 적용 되지 않은 하 고 따라서 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE 데이터 압축 매개 변수를 수락 하지 않았습니다.  SQL Server 2019부터 columnstore 인덱스 수 예측에 대 한 소스 개체와 요청 된 압축 유형입니다.
+
+## <a name="considerations-for-columnstore-indexes"></a>Columnstore 인덱스에 대 한 고려 사항
+ 부터 SQL Server 2019 sp_estimate_compression_savings 지원 columnstore 및 columnstore 보관 압축을 예측 합니다. 페이지 및 행 압축과 달리 개체로 columnstore 압축을 적용 해야 새 columnstore 인덱스를 만드는 합니다. 이 따라서가이 절차의 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE 옵션을 사용 하는 경우, 프로시저에 제공 되는 원본 개체 유형의 압축 된 크기 추정에 사용 되는 columnstore 인덱스의 유형이 결정 합니다. 다음 표에서 참조를 각 원본 개체에 대 한 압축 전후 크기 변경을 예측 하는 데 사용 되는 개체 형식을 @data_compression COLUMNSTORE 또는 COLUMNSTORE_ARCHIVE 매개 변수는 설정입니다.
+
+ |원본 개체|참조 방식 개체|
+ |-----------------|---------------|
+ |힙|클러스터형 columnstore 인덱스|
+ |클러스터형 인덱스|클러스터형 columnstore 인덱스|
+ |비클러스터형 인덱스|비클러스터형 columnstore 인덱스 (있는 경우 사용할 포함의 키 열 및 제공 된 비클러스터형 인덱스의 포괄된 열 테이블의 파티션 열)|
+ |비클러스터형 columnstore 인덱스|비클러스터형 columnstore 인덱스 (제공 된 비클러스터형 columnstore 인덱스와 동일한 열 포함)|
+ |클러스터형 columnstore 인덱스|클러스터형 columnstore 인덱스|
+
+> [!NOTE]  
+> Sp_estimate_compression_ columnstore 인덱스에서 지원 되지 않는 데이터 형식을 갖는 소스 개체의 모든 열이 있는 경우 rowstore 원본 개체 (클러스터형된 인덱스, 비클러스터형 인덱스 또는 힙)에서 columnstore 압축을 추정 하는 경우 절감 액 오류로 실패 합니다.
+
+ 마찬가지로,는 @data_compression NONE, 행 또는 페이지 매개 변수는 설정 및 소스 개체는 columnstore 인덱스, 다음 표에서 사용 되는 참조 개체를 설명 합니다.
+
+ |원본 개체|참조 방식 개체|
+ |-----------------|---------------|
+ |클러스터형 columnstore 인덱스|힙|
+ |비클러스터형 columnstore 인덱스|비클러스터형 인덱스 (비클러스터형 columnstore 인덱스에 포함 된 키 열과 테이블의 파티션 열 경우 포괄된 열으로 열을 포함 합니다.)|
+
+> [!NOTE]  
+> Columnstore 원본 개체에서 rowstore 압축 (NONE, ROW 또는 PAGE)를 예상 하는 경우 원본 인덱스에 포함 되지 않았다고 32 개 보다 많은 열 rowstore (비클러스터형) 인덱스에서 지원 되는 제한 이라고 해야 합니다.
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Production.WorkOrderRouting` 압축을 사용하여 압축할 경우 `ROW` 테이블 크기를 계산합니다.  

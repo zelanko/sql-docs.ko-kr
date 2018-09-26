@@ -12,12 +12,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 1b01cfea93b2348d912b726bbad38f7e97dd0d94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d01a53524bf03e0ea8318c41b05b9cc59499de33
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086845"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713225"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>추출, 변환 및 SSIS 사용 하 여 Linux에서 데이터를 로드 합니다.
 
@@ -85,7 +85,7 @@ Linux 컴퓨터에서 SSIS 패키지를 실행 하려면 다음 작업을 수행
 ## <a name="schedule-packages"></a>패키지 예약
 일정 도구와 같은 Linux 시스템을 사용 하면 `cron` 패키지를 예약 합니다. 이 릴리스에서 패키지 실행을 예약 하려면 Linux에서 SQL 에이전트를 사용할 수 없습니다. 자세한 내용은 참조 하세요. [cron 사용 하 여 Linux에서 일정 SSIS 패키지](sql-server-linux-schedule-ssis-packages.md)합니다.
 
-## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진된 문제
+## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진 문제
 
 제한 사항 및 Linux에서 SSIS의 알려진된 문제에 대 한 자세한 내용은 참조 하세요. [제한 사항 및 Linux에서 SSIS에 대 한 알려진된 문제](sql-server-linux-ssis-known-issues.md)합니다.
 
@@ -93,8 +93,8 @@ Linux 컴퓨터에서 SSIS 패키지를 실행 하려면 다음 작업을 수행
 
 Linux에서 SSIS에 대 한 자세한 내용은 다음 블로그 게시물을 참조 하세요.
 
--   [Linux에서 SSIS는 SQL Server 2017 CTP2.1에서 사용할 수 있습니다.](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
--   [ODBC는 SSIS (SQL Server 2017 CTP 2.1 새로 고침) linux에서 지원](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
+-   [Linux에서 SSIS는 SQL Server CTP2.1에서 사용할 수 있습니다.](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [ODBC는 SSIS (SQL Server CTP 2.1 새로 고침) linux에서 지원](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
 ## <a name="more-info-about-ssis"></a>SSIS에 대 한 자세한 정보
 

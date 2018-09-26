@@ -2,7 +2,7 @@
 title: (OracleToSQL) Oracle 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -13,15 +13,23 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e5a819910b898c4527b5cad24edb62aa9142395e
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 78f1615e375dfeafbcf25a8b0466ed92fbcc16ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393265"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362047"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>(OracleToSQL) Oracle 용 SSMA의 새로운 기능
 이 문서에서는 Oracle 각 릴리스의 변경 내용에 대 한 SSMA를 나열 합니다.  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+Oracle 용 SSMA의 v7.10 릴리스에는 다음 변경 내용이 포함 됩니다.
+- 대상된 수정 사항을 추가 보안 및 글로벌 요구 사항 변화에에서 맞게 개인 정보 보호를 제공 하도록 설계 되었습니다.
+- 계층적 쿼리와 관련 된 변환 향상 되었습니다.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 Oracle 용 SSMA의 v7.9 릴리스에는 다음 변경 내용이 포함 됩니다.
@@ -50,14 +58,14 @@ Oracle 용 SSMA의 v 7.8 릴리스는 다음 변경 내용을 포함 되어 있�
 Oracle 용 SSMA의 v7.7 릴리스에는 다음 변경 내용이 포함 됩니다.
 - Oracle 용 SSMA 품질 및 변환 메트릭을 개선 하는 대상된 수정 사항을 사용 하 여 향상 되었습니다.
 - Oracle 용 SSMA의 32 비트 버전 다시은 인기 있는 필요에 따라입니다. (이전 v7.4) 이전 구현에 비해, 두 개의 설치 관리자 패키지 있지만 나란히 설치할 수 없습니다. 결과적으로, 해야 연결 구성 요소에 따라 가장 적합 한 버전을 선택 해야 합니다. 항상 가능한 경우 64 비트 버전을 사용 하는 것이 좋습니다.
-- SQL Server 2017 지원은 이제 공식 Oracle 확장 팩도 Linux 지원 (새 원격 설치 옵션)입니다. 확장 팩 기능은 제한 된 테스터의 Linux에 설치 하면 및 서버 쪽 데이터 마이그레이션 기능이 지원 되지 않습니다. 
+- SQL Server 2017 지원은 이제 공식 Oracle 확장 팩도 Linux 지원 (새 원격 설치 옵션)입니다. 확장 팩 기능은 제한 된 테스터의 Linux에 설치 하면 및 서버 쪽 데이터 마이그레이션 기능이 지원 되지 않습니다.
 - Oracle 용 SSMA를 사용 하면 일반 테이블로 구체화 된 뷰를 마이그레이션할 수 있습니다 (에서 설정을 구성할 수 있습니다 **프로젝트 설정** -> **동기화**  ->  **구체화 된 뷰에 대 한 백업 테이블 검색**).
 
 > [!IMPORTANT]
 > SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-Oracle 용 SSMA v7.6 릴리스의 품질 및 변환 메트릭을 개선 하는 대상된 수정 사항을 SQL Server 2017 (공개 미리 보기)에 대 한 지원이 향상 되었습니다. Windows 및 Linux에서 SQL Server 2017에 대 한 지원을 공개 미리 보기로 제공 되며 프로덕션 마이그레이션에 사용할 수 없습니다.
+Oracle 용 SSMA v7.6 릴리스의 품질 및 변환 메트릭을 개선 하는 대상된 수정 사항을 SQL Server 2017 (공개 미리 보기)에 대 한 지원이 향상 되었습니다. Windows 및 Linux에서 SQL Server 2017에 대 한 지원을 공개 미리 보기로 제공 않으며 프로덕션 마이그레이션에 사용할 수 없습니다.
 
 > [!IMPORTANT]
 > SSMA v7.4 및 이후 버전에서는 사용 하 여.Net 4.5.2는 설치 필수 이며 도구의 32 비트 버전은 지원 되지 않습니다.
@@ -128,8 +136,8 @@ Oracle 용 SSMA의 2016 년 5 월 릴리스는 다음 변경 내용이 포함 �
 - SQL Server 2016에 대 한 지원이 추가 되었습니다.
 - 추가 SQL Server의 temporal 테이블에 Oracle 못하실지도 보관 테이블 변환 합니다.
 
-    **참고** -SSMA Oracle 플래시 백 데이터 보관 테이블에서 기록 데이터를 복사 하지 않습니다. 결과적으로, 기록 데이터 마이그레이션 프로세스 중에 수동으로 복사 해야 합니다. 또한 SSMA 시스템 테이블로 처리 되므로 기록 테이블에는 SQL Server 메타 데이터 탐색기에 표시 되지 않습니다, 하지만 SQL Server Management Studio에서 기록 테이블을 볼 수 있습니다.
-    SQL Server 2016에서 다음과 같은 여러 Oracle 플래시 백 기능을 지원 하지 않습니다.
+    **참고** -SSMA Oracle 플래시 백 데이터 보관 테이블에서 기록 데이터를 복사 하지 않습니다. 결과적으로, 기록 데이터 마이그레이션 프로세스 중에 수동으로 복사 해야 합니다. 또한 SSMA 시스템 테이블로 처리 되기 때문에 SQL Server 메타 데이터 탐색기에서 기록 테이블을 표시 하지 않습니다, SQL Server Management Studio에서 기록 테이블을 볼 수 있습니다.
+    SQL Server 2016 등 여러 Oracle 플래시 백 기능을 지원 하지 않습니다.
     - Oracle 못하실지도 트랜잭션 쿼리
     - DBMS_FLASHBACK 패키지
     - 플래시 백 트랜잭션

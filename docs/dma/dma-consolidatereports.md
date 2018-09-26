@@ -2,7 +2,7 @@
 title: 엔터프라이즈를 평가 하 고 통합 평가 보고서 (SQL Server) | Microsoft Docs
 description: DMA를 사용 하 여 엔터프라이즈 평가 및 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션하기 전에 평가 보고서를 통합 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,18 +18,18 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152634"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493764"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
 다음 단계별 지침을 통해 온-프레미스 SQL Server 또는 Azure Vm에서 실행 중인 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션에 대 한 성공적인 크기 조정 된 평가 수행 하려면 Data Migration Assistant를 사용 하 여 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - DMA가 시작 됩니다. 네트워크에 있는 도구 컴퓨터를 지정 합니다. 이 컴퓨터에 SQL Server 대상에 연결 되어 있는지 확인 합니다.
 - 다운로드 및 설치:
@@ -88,7 +88,7 @@ SQL Server를 평가 하기 위해 PowerShell 스크립트를 실행 하기 전�
 
 이 데이터베이스 도구는 컴퓨터에 없는 경우 도구는 컴퓨터에이 SQL Server 인스턴스에 네트워크 연결 되어 있는지 확인 합니다.
 
-CSV 파일을 통해 SQL Server 테이블을 사용 하는 이점은 인스턴스 제어 / 가져옵니다 쉽게 평가를 더 작은 청크로 구분 하는 평가 위한 픽업 데이터베이스 평가 플래그 열을 사용할 수 있는 경우  그런 다음 여러 평가 걸쳐 있을 수 있습니다 (이 문서의 뒷부분에서 평가 실행 중인에서 섹션 참조) (참조 섹션에서이 문서의 뒷부분에서 평가 실행)는 여러 CSV 파일을 유지 관리 하는 것 보다 쉽습니다.
+CSV 파일을 통해 SQL Server 테이블을 사용 하는 이점은 인스턴스 제어 / 가져옵니다 쉽게 평가를 더 작은 청크로 구분 하는 평가 위한 픽업 데이터베이스 평가 플래그 열을 사용할 수 있는 경우  그런 다음 여러 평가 걸쳐 있을 수 있습니다 (참조 섹션에서이 문서의 뒷부분에서 평가 실행)는 여러 CSV 파일을 유지 관리 하는 것 보다 쉽습니다.
 
 개체 및 복잡성에 수에 따라 평가 걸릴 수 있습니다는 매우 긴 시간 (시간 +), 관리 하기 쉬운 청크로 평가 구분 하는 것이 좋습니다 이므로 염두에 두어야 합니다.
 
@@ -102,7 +102,7 @@ DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니
 |매개 변수  |Description
 |---------|---------|
 |**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다. |
-|**서버 이름** | SQL Server 인스턴스 이름을 사용 하는 경우 인벤토리 **SqlServer** 에 **getServerListFrom** 매개 변수입니다. |
+|**serverName** | SQL Server 인스턴스 이름을 사용 하는 경우 인벤토리 **SqlServer** 에 **getServerListFrom** 매개 변수입니다. |
 |**DatabaseName** | 인벤토리 테이블을 호스팅하는 데이터베이스입니다. |
 |**AssessmentName** | DMA 평가의 이름입니다. |
 |**TargetPlatform** | 수행 하려는 평가 대상 형식입니다.  가능한 값은 **AzureSQLDatabase**, **SQLServer2012**를 **SQLServer2014**하십시오 **SQLServer2016**,  **SQLServerLinux2017**, 및 **SQLServerWindows2017**합니다. |
@@ -124,7 +124,7 @@ DmaProcessor 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 |매개 변수  |Description
 |---------|---------|
 |**processTo**  | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
-|**서버 이름** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
+|**serverName** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
 |**CreateDMAReporting** | JSON 파일을 처리 하는 것에 대 한 만들기 준비 데이터베이스입니다.  이미 지정한 데이터베이스가 하나에이 매개 변수를 설정 하는 경우 다음 개체 만들어지지 않기 때문입니다.  이 매개 변수는 삭제 된 단일 개체를 다시 만드는 데 유용 합니다. |
 |**CreateDataWarehouse** | Power BI 보고서에서 사용할 데이터 웨어하우스를 만듭니다. |
 |**DatabaseName** | DMAReporting 데이터베이스의 이름입니다. |

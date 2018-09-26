@@ -3,23 +3,37 @@ title: 새로운&#39;SQL Server Machine Learning Services의 새로운 | Microso
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/28/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888859"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712577"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-기계 학습 기능 계속 확장 하 고, 확장 및 데이터 플랫폼 및 분석, 데이터 과학 간의 통합 향상 시킬 수에 따라 각 릴리스에서 SQL Server에 추가 되 고 감독 학습 데이터에 대해 구현 하려는. 
+기계 학습 기능 계속 확장 하 고, 확장 및 데이터 플랫폼, 고급 분석 및 데이터 과학 간의 통합 향상 시킬 수에 따라 각 릴리스에서 SQL Server에 추가 됩니다. 
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="new-in-sql-server-2019-preview"></a>SQL Server 2019 preview의 새로운 기능
+
+이 릴리스는 SQL Server에서 R 및 Python machine learning 작업에 대 한 상위 요청한 기능을 추가합니다. 모든이 릴리스의 기능에에서 대 한 자세한 내용은 참조 하세요. [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) 하 고 [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)합니다.
+
+| 릴리스 | 기능 업데이트 |
+|---------|----------------|
+| CTP 2.0 | R 및 Python 기계 학습 및 새 Java 확장에 대 한 Linux 플랫폼 지원 합니다. 시작 하기 도움말을 참조 하세요 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다. |
+| CTP 2.0 | 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 쉽게 분할 된 데이터에서 여러 모델을 생성할 수 있도록 하는 두 개의 새 매개 변수를 포함 합니다. 이 자습서에서 자세히 알아보세요 [R에서 모델 파티션 만들기](tutorials/r-tutorial-create-models-per-partition.md)합니다. |
+| CTP 2.0 | 장애 조치 클러스터 지원 Windows 및 Linux, SQL Server 실행 패드 서비스가 모든 노드에서 시작 하는 것으로 가정에서 이제 지원 됩니다. 자세한 내용은 [SQL Server 장애 조치 클러스터 설치](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)합니다. |
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017의에서 새로운 기능
 
 이 릴리스에 추가 되었습니다 [Python 지원 및 업계 최고의 기계 학습 알고리즘](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)합니다. 새 범위를 반영 하도록 이름이 바뀌었거나, SQL Server 2017 표시 미치는 [SQL Server Machine Learning Services (In-database)](what-is-sql-server-machine-learning.md), Python 및 R 모두에 대 한 언어 지원 
@@ -66,7 +80,7 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 ### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>SQL Server 설치 프로그램에서 공유 기능으로 독립 실행형 서버
 
 이 릴리스는 또한 추가 [SQL Server Machine Learning Server (독립 실행형)](r/r-server-standalone.md), R 및 Python에서 통계 및 예측 분석을 지 원하는, 완전히 독립적인 데이터 과학 서버. 로이 서버는 R Services를 사용 하 여 다음 버전의 SQL Server 2016 R Server (독립 실행형). 독립 실행형 서버를 사용 하 여 배포 및 SQL Server에 종속성이 없는 R 또는 Python 솔루션을 확장할 수 있습니다.
-
+::: moniker-end
 
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016의에서 새로운 기능
 
@@ -83,15 +97,15 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 ## <a name="linux-support-roadmap"></a>Linux 지원 로드맵
 
-Linux의 SQL Server에서 R 또는 Python에서 데이터베이스를 사용 하 여 machine learning 현재 지원 되지 않습니다. 이후 릴리스에서 공지를 찾습니다.
+SQL Server 2019 CTP 2.0 기계 학습 데이터베이스 엔진 인스턴스를 사용 하 여 패키지를 설치할 때 R, Python 및 Java에 대 한 Linux 지원을 추가 합니다. 자세한 내용은 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다.
 
-그러나 Linux에서 수행할 수 있습니다 [네이티브 점수 매기기](sql-native-scoring.md) T-SQL PREDICT 함수를 사용 하 여 합니다. 네이티브 점수 매기기 호출 또는 심지어는 R 런타임 요구 하지 않고 매우 빠르며 미리 학습 된 모델에서 점수를 매길 수 있습니다. 즉, 클라이언트 응용 프로그램에 맞도록 매우 빠른 예측을 생성 하려면 Linux에서 SQL Server를 사용할 수 있습니다.
+Linux에서 SQL Server 2017는 R 또는 Python 통합 없지만 사용할 수 있습니다 [네이티브 점수 매기기](sql-native-scoring.md) Linux에서 해당 기능을 T-SQL을 통해 사용할 수 있으므로 [PREDICT](), Linux에서 실행 되는 합니다. 네이티브 점수 매기기를 호출 하거나 심지어는 R 런타임 요구 하지 않고 미리 학습 된 모델에서 점수 매기기 고성능 수 있습니다.
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="azure-sql-database-roadmap"></a>Azure SQL Database 로드맵
 
-Azure SQL Database에서 R에 대 한 지원은 제한 됩니다: 프리미엄 계층에서 만든 서비스에 서 부 중앙 미국 에서만 사용할 수 있습니다. Python 지원을 비롯 하 여 확장 된 검사, 향후 릴리스에서 수행 가능성이 있습니다. 그러나이 이번에 출시 될 예정된 날짜 없음는 합니다.  
+현재 있는지 Machine Learning 서비스 (R 및 Python) Azure SQL Database에서 지원 되지 않습니다. 지원은 로드맵 상에 있지만 출시 될 예정된 날짜 없음이 이번에 있습니다.  
 
 ## <a name="next-steps"></a>다음 단계
 

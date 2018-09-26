@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348214"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712475"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>예측 및 SQL Server에서 기계 학습 모델을 사용 하 여 예측을 생성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "43348214"
 
 | 방법           | 인터페이스         | 라이브러리 요구 사항 | 처리 속도 |
 |-----------------------|-------------------|----------------------|----------------------|
-| 확장성 프레임 워크 | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 없음 모델 기반으로 모든 R 또는 Python 함수 | 수백 밀리초입니다. <br/>로드 된 런타임 환경에 새 데이터 점수를 매길 전에 3부터 6 백 밀리초 평균 고정된 비용. |
-| 실시간 점수 매기기 CLR 확장 | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
-| 네이티브 점수 매기기 c + + 확장| [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 직렬화 된 모델 | R: RevoScaleR <br/>Python: revoscalepy | 평균적으로 20 밀리초입니다. | 
+| 확장성 프레임워크 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 없음 모델 기반으로 모든 R 또는 Python 함수 | 수백 밀리초입니다. <br/>로드 된 런타임 환경에 새 데이터 점수를 매길 전에 3부터 6 백 밀리초 평균 고정된 비용. |
+| [실시간 점수 매기기 CLR 확장](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
+| [네이티브 점수 매기기 c + + 확장](../sql-native-scoring.md) | [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 직렬화 된 모델 | R: RevoScaleR <br/>Python: revoscalepy | 평균적으로 20 밀리초입니다. | 
 
 처리 속도 출력의 물질 하지 차별화 기능입니다. 동일한 기능 및 입력을 가정 하지 점수가 매겨진된 출력 해야 사용 하는 방법에 따라 다릅니다.
 
@@ -44,12 +44,13 @@ _점수 매기기_ 은 두 단계로 이루어집니다. 먼저 테이블에서 
 
 단계를 수행 합니다. 모델을 준비 하는 전체 프로세스 하 고 점수를 생성 한 다음 요약할 수 있습니다. 이러한 방식으로:
 
-1. 지원 되는 알고리즘을 사용 하 여 모델을 만듭니다.
-2. 특수 이진 형식을 사용 하 여 모델을 serialize 합니다.
-3. SQL Server에 사용할 수 있는 모델을 확인 합니다. 일반적으로 즉, SQL Server 테이블에 직렬화 된 모델을 저장 합니다.
-4. 함수 또는 매개 변수로 모델 및 입력된 데이터를 지정 하는 저장된 프로시저를 호출 합니다.
+1. 지원 되는 알고리즘을 사용 하 여 모델을 만듭니다. 지원은 선택 하면 점수 매기기 방법에 따라 다릅니다.
+2. 모델을 학습 합니다.
+3. 특수 이진 형식을 사용 하 여 모델을 serialize 합니다.
+3. SQL Server로 모델을 저장 합니다. 일반적으로 즉, SQL Server 테이블에 직렬화 된 모델을 저장 합니다.
+4. 함수 또는 모델 및 데이터 입력을 매개 변수로 지정 하는 저장된 프로시저를 호출 합니다.
 
-입력 데이터 행 수를 포함 하는 경우 것이 일반적으로 더 빠릅니다 점수 매기기 프로세스의 일부로 테이블에 예측 값을 삽입 합니다.  단일 점수를 생성 하는 것이 더 일반적 시나리오는 폼 또는 사용자 요청에서 입력된 값을 얻으려면 하 고 클라이언트 응용 프로그램에는 점수를 반환 합니다. 연속 된 점수를 생성 하는 경우 성능 향상을 위해 SQL Server 메모리로 다시 로드 될 수 있도록 모델을 캐시 될 수 있습니다.
+입력 데이터 행 수를 포함 하는 경우 것이 일반적으로 더 빠릅니다 점수 매기기 프로세스의 일부로 테이블에 예측 값을 삽입 합니다. 단일 점수를 생성 하는 것이 더 일반적 시나리오는 폼 또는 사용자 요청에서 입력된 값을 얻으려면 하 고 클라이언트 응용 프로그램에는 점수를 반환 합니다. 연속 된 점수를 생성 하는 경우 성능 향상을 위해 SQL Server 메모리로 다시 로드 될 수 있도록 모델을 캐시 될 수 있습니다.
 
 ## <a name="compare-methods"></a>메서드를 비교 합니다.
 

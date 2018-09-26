@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 448db7c77d26e06651e01a7e790917757aff0e9d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268811"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713605"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -60,7 +60,7 @@ ms.locfileid: "39268811"
 
    아니요. Windows 10에서 실행 되는 Linux 아니며 현재 SQL Server 및 관련된 도구에 대 한 지원 되는 플랫폼
 
-1. **데이터 파일에 대 한 SQL Server 2017에서 사용할 수 있는 Linux 파일 시스템?**
+1. **데이터 파일에 대 한 SQL Server에서 사용할 수 있는 Linux 파일 시스템?**
 
    현재 SQL Server on Linux ext4 및 XFS 지원합니다. 나중에 필요에 따라 다른 파일 시스템에 대 한 지원이 추가 됩니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "39268811"
 
 1. **Linux에서 실행 되는 SSMS와 같은 도구는 있나요?**
 
-   새 Microsoft SQL Operations Studio (preview) 는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Microsoft SQL Operations Studio (미리 보기) 이란](../sql-operations-studio/what-is.md)합니다.
+   새 Azure Data Studio (미리 보기)는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio (미리 보기) 이란](../azure-data-studio/what-is.md)합니다.
 
 1. **Linux에서 사용할 수 있는 sqlcmd 및 bcp와 같은 명령을?합니다**
 
@@ -125,7 +125,7 @@ ms.locfileid: "39268811"
 
 1. **마이그레이션할 수 데이터를 Oracle 및 기타 데이터베이스 엔진에서 Linux의 SQL server?**
 
-   예 SSMA에서 여러 유형의 데이터베이스 엔진 마이그레이션 지원: Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE (이전의 SAP Sybase ASE). SSMA를 사용 하는 방법의 예제를 참조 하세요 [Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server 2017로 마이그레이션](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)합니다.
+   예 SSMA에서 여러 유형의 데이터베이스 엔진 마이그레이션 지원: Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE (이전의 SAP Sybase ASE). SSMA를 사용 하는 방법의 예제를 참조 하세요 [Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server로 마이그레이션할](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)합니다.
 
 1. **SQL Server 파일에 필요한 권한은 무엇입니까?**
 

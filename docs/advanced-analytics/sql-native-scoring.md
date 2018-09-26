@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348614"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713155"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>예측 T-SQL 함수를 사용 하 여 네이티브 점수 매기기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-예측 값을 생성 하려면 SQL Server 2017의 c + +는 네이티브 확장 기능을 활용 하 여 네이티브 점수 매기기 또는 *점수* 거의 실시간으로 새 데이터 입력에 대 한 합니다. 이 방법론 예측 및 예측 작업의 빠른 처리 속도 제공 하지만 플랫폼과 라이브러리 요구 사항: RevoScaleR 및 revoscalepy 함수 c + + 구현이 합니다.
+사용 하 여 점수 매기기 네이티브 [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 및 예측 값을 생성 하려면 SQL Server 2017의 c + +는 네이티브 확장 기능 또는 *점수* 거의 실시간으로 새 데이터 입력에 대 한 합니다. 이 방법론 예측 및 예측 작업의 가장 가능한 처리 속도 제공 하지만 플랫폼과 라이브러리 요구 사항: RevoScaleR 및 revoscalepy 함수 c + + 구현이 합니다.
 
-네이티브 점수 매기기 이미 학습 된 모델을가 있어야 합니다. SQL Server 2017 Windows 또는 Linux에서 또는 Azure SQL Database에서 네이티브 점수 매기기 호출에 TRANSACT-SQL의 PREDICT 함수를 사용할 수 있습니다. PREDICT 함수는 미리 학습 된 모델을 제공 하는 데이터 입력에 대해 점수를 생성 합니다.
+네이티브 점수 매기기 이미 학습 된 모델을가 있어야 합니다. SQL Server 2017 Windows 또는 Linux에서 또는 Azure SQL Database에서 호출할 수 있습니다 PREDICT 함수를 호출 하는 Transact sql에서 입력된 매개 변수로 제공 하는 새 데이터 점수를 매길 네이티브. PREDICT 함수는 제공 하는 데이터 입력에 대해 점수를 반환 합니다.
 
 ## <a name="how-native-scoring-works"></a>어떻게 네이티브 점수 매기기 작업
 
@@ -33,7 +33,7 @@ ms.locfileid: "43348614"
 
 함수를 통해 전달 하려는 원본 데이터의 열과 함께 입력된 데이터에 대 한 예측을 반환 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 예측은 SQL Server 2017 데이터베이스 엔진의 모든 버전에서 사용할 수 있으며, 기본적으로 Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) 또는 Azure SQL Database에서 SQL Server 2017 Machine Learning Services를 포함 하 여 사용 하도록 설정 합니다. R, Python, 설치 하거나 추가 기능을 활성화할 필요가 없습니다.
 

@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fab956d80dcc7694d3823a030c08507283494d8e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e91385974730facf657d28febe94c4320cf3799
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085815"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713265"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>만들기 및 Linux에서 SQL Server 에이전트 작업 실행
 
@@ -38,7 +38,7 @@ Linux의 SQL Server 에이전트를 사용 하 여 알려진된 문제에 대 �
 이 자습서를 완료 하려면 다음 필수 조건이 필요 합니다.
 
 * 다음 필수 구성 요소를 사용 하 여 Linux 컴퓨터:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md)하십시오 [SLES](quickstart-install-connect-suse.md), 또는 [Ubuntu](quickstart-install-connect-ubuntu.md)) 명령줄 도구를 사용 합니다.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md)하십시오 [SLES](quickstart-install-connect-suse.md), 또는 [Ubuntu](quickstart-install-connect-ubuntu.md)) 명령줄 도구를 사용 합니다.
 
 다음 필수 구성 요소는 선택 사항:
 
@@ -47,7 +47,7 @@ Linux의 SQL Server 에이전트를 사용 하 여 알려진된 문제에 대 �
 
 ## <a name="enable-sql-server-agent"></a>SQL Server 에이전트를 사용 하도록 설정
 
-Linux의 SQL Server 에이전트를 사용 하려면 먼저 SQL Server 2017 설치에 이미 있는 컴퓨터에서 SQL Server 에이전트를 활성화 해야 합니다.
+Linux의 SQL Server 에이전트를 사용 하려면 먼저 설치 된 SQL Server에 이미 있는 컴퓨터에서 SQL Server 에이전트를 활성화 해야 합니다.
 
 1. SQL Server 에이전트를 사용 하도록 설정 하려면 다음 단계를 수행 합니다.
   ```bash

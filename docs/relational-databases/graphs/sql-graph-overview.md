@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101813"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058902"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 그래프 처리
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>에 완전히 통합 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진 
-그래프 확장에 완전히 통합 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진입니다. 저장 및 그래프 데이터를 쿼리 하는 동일한 저장소 엔진, 메타 데이터, 쿼리 프로세서 등 사용 합니다. 따라서 사용자가 단일 쿼리에서 관계형 데이터와 그래프 데이터 간을 쿼리할 수 있습니다. 사용자가 다른 그래프 기능을 결합에서 활용할 수도 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columnstore HA R services와 같은 기술이 등입니다. SQL 그래프 데이터베이스에서는 모든 보안 및 규정 준수 기능에서 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+그래프 확장에 완전히 통합 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진입니다. 저장 및 그래프 데이터를 쿼리 하는 동일한 저장소 엔진, 메타 데이터, 쿼리 프로세서 등을 사용 합니다. 그래프와 단일 쿼리에서 관계형 데이터에서 쿼리 합니다. 다른 그래프 기능을 결합 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columnstore HA R services와 같은 기술이 등입니다. SQL 그래프 데이터베이스에서는 모든 보안 및 규정 준수 기능에서 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
  
-### <a name="tooling-and-ecosystem"></a>도구 및 에코 시스템  
-기존 도구 및 에코 시스템에서 사용자 혜택는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 합니다. 백업 및 복원와 같은 도구 가져오기 및 내보내기에 BCP 즉시 작동 합니다. 관계형 테이블을 사용 하 여 작동 방식으로 다른 도구 또는 SSIS, SSRS 또는 PowerBI와 같은 서비스 그래프 테이블을 사용 하 여 작동 됩니다.
- 
+### <a name="tooling-and-ecosystem"></a>도구 및 에코 시스템
+
+기존 도구 및 에코 시스템에서 활용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 합니다. 백업 및 복원와 같은 도구 가져오기 및 내보내기에 BCP 즉시 작동 합니다. 관계형 테이블을 사용 하 여 작동 방식으로 다른 도구 또는 SSIS, SSRS, 또는 Power BI와 같은 서비스 그래프 테이블을 사용 하 여 작동 됩니다.
+
+## <a name="edge-constraints"></a>에 지 제약 조건
+에 지 제약 그래프에 지 테이블에 정의 되 고 지정 된 가장자리 유형을 연결할 수 있는 노드 테이블의 쌍입니다. 사용자가 해당 그래프 스키마를 더 세부적으로 제어할을 이렇게 합니다. 에 지 제약 조건 사용 하 여 사용자 지정 된 가장자리를 연결할 수는 노드의 형식을 제한할 수 있습니다. 
+
+참조 만들기 및에 지 제약 조건을 사용 하는 방법을 자세히 알아보려면 [에 지 제약 조건](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>DML 병합 
+합니다 [병합](../../t-sql/statements/merge-transact-sql.md) 문은 insert를 수행 하 고, 업데이트 또는 삭제 작업의 원본 테이블에 조인 결과 따라 대상 테이블에 있습니다. 예를 들어, 삽입, 업데이트 또는 원본 테이블과 대상 테이블의 차이점에 따라 대상 테이블에서 행을 삭제 하 여 두 테이블을 동기화 할 수 있습니다. MERGE 문에서 일치 조건자를 사용 하 여 Azure SQL Database 및 SQL Server vNext에서 이제 지원 됩니다. 즉, 일치 조건자를 사용 하 여 별도 INSERT/UPDATE/DELETE 문 대신 단일 문에서 그래프 관계를 지정 하는 새 데이터를 사용 하 여 현재 그래프 데이터 (노드 또는 지 테이블)를 병합할 수 되었습니다.
+
+참조 DML 병합에서 일치를 사용할 수 있는 방법을 자세히 알아보려면 [병합 문](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>다음 단계  
 읽기는 [SQL 그래프 데이터베이스-아키텍처](./sql-graph-architecture.md)
    

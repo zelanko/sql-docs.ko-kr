@@ -1,6 +1,6 @@
 ---
-title: Linux의 SQL Server에 대 한 저장소 구성 | Microsoft Docs
-description: 확인 하 고 Linux의 SQL Server 2017에 대 한 소스 리포지토리를 구성 합니다. 소스 리포지토리에 설치 및 업그레이드 하는 동안 적용 되는 SQL Server의 버전에 적용 됩니다.
+title: SQL Server 2017 및 2019에 대 한 Linux 리포지토리 구성 | Microsoft Docs
+description: 확인 하 고 SQL Server 2019 및 Linux의 SQL Server 2017에 대 한 소스 리포지토리를 구성 합니다. 소스 리포지토리에 설치 및 업그레이드 하는 동안 적용 되는 SQL Server의 버전에 적용 됩니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -11,29 +11,30 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 361f66fff8fecfd748b1bd573367509e93cc7b87
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5aee3ea6a744c15afce8055d153959b8db9ac66d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086985"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713215"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux의 SQL Server 2017 설치 및 업그레이드에 대 한 올바른 저장소를 구성 하는 방법을 설명 합니다.
+이 문서에서는 Linux의 SQL Server 2017 및 SQL Server 2019 설치 및 업그레이드에 대 한 올바른 저장소를 구성 하는 방법을 설명 합니다.
 
-> [!IMPORTANT]
-> CTP 또는 SQL Server 2017의 RC 버전을 이전에 설치한 경우 GA (일반 공급) 리포지토리를 등록 하 고 업그레이드 하거나 다시 설치 하려면이 문서의 단계를 사용 해야 합니다. SQL Server 2017의 미리 보기 릴리스는 지원 되지 않으며 만료 됩니다.
+> [!TIP]
+> SQL Server 2019 CTP 2.0 출시 되었습니다! 해를 사용 하 여이 문서에서는 새로운 **mssql-서버-미리 보기** 리포지토리. 다음의 지침을 사용 하 여를 설치 합니다 [설치 가이드](sql-server-linux-setup.md)합니다.
 
 ## <a id="repositories"></a>저장소
 
 Linux의 SQL Server를 설치할 때 Microsoft 리포지토리를 구성 해야 합니다. 이 리포지토리는 데이터베이스 엔진 패키지를 얻는 데 **mssql server**, 및 관련 SQL Server 패키지 있습니다. 현재 세 가지 주요 리포지토리는:
 
-| 리포지토리 | 속성 | Description |
+| 리포지토리 | 이름 | Description |
 |---|---|---|
-| **미리 보기** | **mssql-server** | SQL server CTP 및 RC 릴리스 미리 보기 리포지토리. 이 리포지토리는 SQL Server 2017에 대 한 지원 되지 않습니다. |
+| **미리 보기 (2017)** | **mssql-server** | SQL Server 2017 CTP 및 RC 리포지토리 (중단). |
+| **미리 보기 (2019)** | **mssql-서버-미리 보기** | SQL Server 2019 CTP 및 RC 리포지토리입니다. |
 | **CU** | **mssql-server-2017** | SQL Server 2017 CU (누적 업데이트) 리포지토리. |
 | **GDR** | **mssql-server-2017-gdr** | 중요 업데이트의 경우에 SQL Server 2017 GDR 리포지토리. |
 
@@ -92,10 +93,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ### <a name="configure-new-repository-rhel"></a>새 리포지토리 (RHEL) 구성
 SQL Server 설치 및 업그레이드를 위해 사용 하는 새 저장소를 구성 합니다. 선택한 리포지토리를 구성 하려면 다음 명령 중 하나를 사용 합니다.
 
-| 리포지토리 | Command |
-|---|---|
-| **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| 리포지토리 | 버전 | Command |
+|---|---|---|
+| **미리 보기 (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ## <a id="sles"></a> SLES 리포지토리 구성
 SLES에서 리포지토리를 구성 하려면 다음 단계를 사용 합니다.
@@ -116,17 +118,19 @@ SLES에서 리포지토리를 구성 하려면 다음 단계를 사용 합니다
 
 | 리포지토리 | 제거할 명령 |
 |---|---|
-| **미리 보기** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **미리 보기 (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **미리 보기 (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
 | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
 | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ### <a name="configure-new-repository-sles"></a>새 리포지토리 (SLES) 구성
 SQL Server 설치 및 업그레이드를 위해 사용 하는 새 저장소를 구성 합니다. 선택한 리포지토리를 구성 하려면 다음 명령 중 하나를 사용 합니다.
 
-| 리포지토리 | Command |
-|---|---|
-| **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| 리포지토리 | 버전 | Command |
+|---|---|---|
+| **미리 보기 (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ## <a id="ubuntu"></a> Ubuntu 리포지토리 구성
 Ubuntu에서 리포지토리를 구성 하려면 다음 단계를 사용 합니다.
@@ -147,7 +151,8 @@ Ubuntu에서 리포지토리를 구성 하려면 다음 단계를 사용 합니�
 
 | 리포지토리 | 제거할 명령 |
 |---|---|
-| **미리 보기** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+| **미리 보기 (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+| **미리 보기 (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -162,10 +167,11 @@ SQL Server 설치 및 업그레이드를 위해 사용 하는 새 저장소를 �
 
 2. 선택한 리포지토리를 구성 하려면 다음 명령 중 하나를 사용 합니다.
 
-   | 리포지토리 | Command |
-   |---|---|
-   | **CU** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | 리포지토리 | 버전 | Command |
+   |---|---|---|
+   | **미리 보기 (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
+   | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. 실행할 **apt get 업데이트**합니다.
 

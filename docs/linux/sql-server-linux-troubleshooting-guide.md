@@ -1,6 +1,6 @@
 ---
 title: Linux의 SQL Server 문제 해결 | Microsoft Docs
-description: Linux에서 SQL Server 2017을 사용 하는 것에 대 한 문제 해결 팁을 제공 합니다.
+description: Linux에서 SQL Server를 사용 하는 것에 대 한 문제 해결 팁을 제공 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 58e4b300a8c9dc3f5c65e884c376ea80b77bc4f0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b49506bc7a2ba4e88b4c6551d45dce24e2873f7e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065296"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712467"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 

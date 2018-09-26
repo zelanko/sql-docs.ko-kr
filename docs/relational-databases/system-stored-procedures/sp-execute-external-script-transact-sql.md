@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2018
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -25,21 +25,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e866f5a9856fe1308bc5233432e053b18d207f7
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118321"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712846"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  외부 위치 인수로 제공 된 스크립트를 실행 합니다. 스크립트 언어로 지원 / 등록 (R 또는 Python) 작성 되어야 합니다. 실행할 **sp_execute_external_script**에 문을 사용 하 여 외부 스크립트를 먼저 사용 해야 합니다 `sp_configure 'external scripts enabled', 1;`합니다.  
+프로시저에는 입력 인수로 제공 된 스크립트를 실행 합니다. 스크립트를 실행 합니다 [확장성 프레임 워크](../../advanced-analytics/concepts/extensibility-framework.md)합니다. 스크립트 써야 지원 되며 등록 된 언어에서 하나 이상의 확장 하는 데이터베이스 엔진: [ **R**](../../advanced-analytics/concepts/extension-r.md)하십시오 [ **Python** ](../../advanced-analytics/concepts/extension-python.md) 또는 [ **Java** (SQL Server 2019에 미리 보기 전용)](../../advanced-analytics/java/extension-java.md)합니다. 
+
+실행할 **sp_execute_external_script**에 문을 사용 하 여 외부 스크립트를 먼저 사용 해야 합니다 `sp_configure 'external scripts enabled', 1;`합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!Note]
+> (R 및 Python)를 학습 하 고 확장을 프로그래밍 하는 컴퓨터는 데이터베이스 엔진 인스턴스에 추가 기능으로 설치 됩니다. 특정 확장에 대 한 지원이 SQL Server 버전에 따라 다릅니다.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax"></a>구문
 
 ```
@@ -47,70 +53,98 @@ sp_execute_external_script
     @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
-    [ , @input_data_1_name = N'input_data_1_name' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]    
+    [ , @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]  
     [ , @output_data_1_name = N'output_data_1_name' ]  
     [ , @parallel = 0 | 1 ]  
     [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
+::: moniker-end
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-2017-and-earlier"></a>2017 및 이전 버전 구문
+
+```
+sp_execute_external_script   
+    @language = N'language',   
+    @script = N'script'  
+    [ , @input_data_1 = N'input_data_1' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @output_data_1_name = N'output_data_1_name' ]  
+    [ , @parallel = 0 | 1 ]  
+    [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
+    [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
+```
+::: moniker-end
 
 ## <a name="arguments"></a>인수
- \@language = N'*언어*'  
- 스크립트 언어를 나타냅니다. *언어* 됩니다 **sysname**합니다.  
+ **@language** = N'*언어*'  
+ 스크립트 언어를 나타냅니다. *언어* 됩니다 **sysname**합니다.  SQL server 버전에 따라 유효한 값은 R (SQL Server 2016 이상), (SQL Server 2017 이상), Python 및 Java (SQL Server 2019 미리 보기). 
+  
+ **@script** = N'*스크립트*' 외부 언어 스크립트 리터럴 또는 변수 입력으로 지정 합니다. *스크립트* 됩니다 **nvarchar (max)** 합니다.  
 
- 유효한 값은 `Python` 또는 `R`합니다. 
-  
- \@스크립트 = N'*스크립트*'  
- 외부 언어 스크립트 리터럴 또는 변수 입력으로 지정 합니다. *스크립트* 됩니다 **nvarchar (max)** 합니다.  
-  
- [ \@input_data_1_name = N'*input_data_1_name*']  
- 정의 된 쿼리를 나타내는 데 사용 된 변수의 이름을 지정 \@input_data_1 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R의 경우 입력된 변수는 데이터 프레임을 사용 합니다. Python의 경우 입력은 테이블 형식 이어야 합니다. *input_data_1_name* 됩니다 **sysname**합니다.  
-  
- 기본값은 `InputDataSet`합니다.  
-  
- [ \@input_data_1 = N'*input_data_1*']  
+  [ **@input_data_1** = N'*input_data_1*']  
  형태로 외부 스크립트에서 사용 하는 입력된 데이터를 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 데이터 형식이 *input_data_1* 됩니다 **nvarchar (max)** 합니다.
-  
- [ \@output_data_1 = N'*output_data_1*']  
- 반환할 데이터를 포함 하는 외부 스크립트의 변수 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 저장된 프로시저 호출이 완료 되 면 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R에 대 한 출력 데이터 프레임을 이어야 합니다. Python pandas 데이터 프레임 출력 이어야 합니다. *output_data_1* 됩니다 **sysname**합니다.  
-  
- 기본값은 "OutputDataSet"입니다.  
-  
- [ \@병렬 = 0 | 1]
 
- 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 된 `@parallel` 매개 변수 1로 합니다. 이 매개 변수의 기본값은 0 (병렬 처리).  
+ [ **@input_data_1_name** = N'*input_data_1_name*']  
+ 정의 된 쿼리를 나타내는 데 사용 된 변수의 이름을 지정 @input_data_1합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R의 경우 입력된 변수는 데이터 프레임을 사용 합니다. Python의 경우 입력은 테이블 형식 이어야 합니다. *input_data_1_name* 됩니다 **sysname**합니다.  기본값은 *InputDataSet*합니다.  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*']  
+ SQL Server 2019에만 적용 됩니다 및 파티션 별 모델을 빌드하는 데 사용 합니다. 예를 들어 제품 이름으로 결과 집합을 정렬 하는 데 사용 된 열의 이름을 지정 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R의 경우 입력된 변수는 데이터 프레임을 사용 합니다. Python의 경우 입력은 테이블 형식 이어야 합니다.
+
+  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*']  
+ SQL Server 2019에만 적용 됩니다 및 파티션 별 모델을 빌드하는 데 사용 합니다. 지리적 지역 또는 날짜와 같은 데이터를 분할 하는 데 사용 된 열의 이름을 지정 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R의 경우 입력된 변수는 데이터 프레임을 사용 합니다. Python의 경우 입력은 테이블 형식 이어야 합니다. 
+::: moniker-end
+
+ [ **@output_data_1_name** = N'*output_data_1*']  
+ 반환할 데이터를 포함 하는 외부 스크립트의 변수 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 저장된 프로시저 호출이 완료 되 면 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R에 대 한 출력 데이터 프레임을 이어야 합니다. Python pandas 데이터 프레임 출력 이어야 합니다. *output_data_1* 됩니다 **sysname**합니다.  기본값은 *OutputDataSet*합니다.  
+
+ [ **@parallel** = 0 | 1]  
+ 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 된 `@parallel` 매개 변수 1로 합니다. 이 매개 변수의 기본값은 0 (병렬 처리). 하는 경우 `@parallel = 1` 클라이언트 컴퓨터에 직접 스트리밍되는 출력 및 해당 `WITH RESULTS SETS` 절이 필요 하 고 출력 스키마를 지정 해야 합니다.  
   
- RevoScaleR 함수를 사용 하 여 사용 하지 않는 R 스크립트를 `@parallel` 매개 변수는 스크립트는 일반적으로 병렬 처리할 수 있는 것으로 가정 하는 큰 데이터 집합을 처리 하는 것에 대 한 유용할 수 있습니다. 예를 들어, R을 사용 하는 경우 `predict` 설정에 새 예측을 생성 하는 모델을 사용 하 여 함수 `@parallel = 1` 힌트로 쿼리 엔진. 행이에 따라 분산 쿼리를 병렬 처리할 수는 **MAXDOP** 설정 합니다.  
+ + RevoScaleR 함수를 사용 하 여 사용 하지 않는 R 스크립트를 `@parallel` 매개 변수는 스크립트는 일반적으로 병렬 처리할 수 있는 것으로 가정 하는 큰 데이터 집합을 처리 하는 것에 대 한 유용할 수 있습니다. 예를 들어, R을 사용 하는 경우 `predict` 설정에 새 예측을 생성 하는 모델을 사용 하 여 함수 `@parallel = 1` 힌트로 쿼리 엔진. 행이에 따라 분산 쿼리를 병렬 처리할 수는 **MAXDOP** 설정 합니다.  
   
- 하는 경우 `@parallel = 1` 클라이언트 컴퓨터에 직접 스트리밍되는 출력 및 해당 `WITH RESULTS SETS` 절이 필요 하 고 출력 스키마를 지정 해야 합니다.  
+ + RevoScaleR 함수를 사용 하는 R 스크립트에 대 한 병렬 처리는 자동으로 처리 하 고 지정할 수 없습니다 `@parallel = 1` 에 **sp_execute_external_script** 호출 합니다.  
   
- RevoScaleR 함수를 사용 하는 R 스크립트에 대 한 병렬 처리는 자동으로 처리 하 고 지정할 수 없습니다 `@parallel = 1` 에 **sp_execute_external_script** 호출 합니다.  
-  
- [ \@params = N'*\@parameter_name data_type* [OUT | 출력] [,....n]']  
+[ **@params** = N' *@parameter_name data_type* [OUT | 출력] [,....n]']  
  외부 스크립트에 사용 되는 입력된 매개 변수 선언의 목록입니다.  
   
- [ \@parameter1 = '*value1*' [OUT | 출력] [,....n]]  
-
+[ **@parameter1** = '*value1*' [OUT | 출력] [,....n]]  
  목록에서 외부 스크립트를 사용 하는 입력된 매개 변수의 값입니다.  
 
 ## <a name="remarks"></a>Remarks
 
-사용 하 여 **sp_execute_external_script** 지원 되는 언어로 작성 된 스크립트를 실행 합니다. 현재 지원 되는 언어는 SQL Server 2016 및 Python에 대 한 R 및 SQL Server 2017에 대 한 R. 
-
 > [!IMPORTANT]
 > 쿼리 트리를 통해 제어 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 쿼리에 대 한 임의 작업을 수행할 수 없습니다. 
+
+사용 하 여 **sp_execute_external_script** 지원 되는 언어로 작성 된 스크립트를 실행 합니다. 현재 지원 되는 언어는 SQL Server 2016 R Services, Python 및 SQL Server 2017의 Machine Learning Services에 대 한 R에 대 한 R입니다. 
 
 기본적으로이 저장된 프로시저가 반환한 결과 집합에는 명명 되지 않은 열을 사용 하 여 출력 됩니다. 열 이름은 스크립트 내에서 사용 되는 스크립팅 환경에 로컬인 및 출력된 결과 집합에 반영 되지 않습니다. 결과 집합 열 이름을 사용 합니다 `WITH RESULTS SET` 절의 [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)합니다.
   
  결과 집합을 반환 하는 것 외에도 스칼라 값을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 출력 매개 변수를 사용 하 여 합니다. 다음 예제에서는 출력 매개 변수를 스크립트에 대 한 입력으로 사용 된 직렬화 된 R 모델의 사용을 보여 줍니다.  
-
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 서버 구성 요소와 함께 설치 이루어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 및 워크스테이션 도구 및 데이터 과학자의 고성능 환경에 연결 하는 연결 라이브러리 집합 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기계 학습 하는 동안 구성 요소를 설치 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부 스크립트의 실행을 사용 하도록 설정 합니다. 자세한 내용은 [SQL Server Machine Learning Services 설정](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)합니다.  
   
 외부 리소스 풀을 구성 하 여 외부 스크립트에서 사용 하는 리소스를 제어할 수 있습니다. 자세한 내용은 [CREATE EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)을 참조하세요. 리소스 관리자 카탈로그 뷰, DMV의 및 카운터에서 워크 로드에 대 한 정보를 얻을 수 있습니다. 자세한 내용은 [리소스 관리자 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [리소스 관리자 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), 및 [ SQL Server, External Scripts 개체](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)합니다.  
 
+### <a name="monitor-script-execution"></a>스크립트 실행 모니터링
+
 사용 하 여 모니터링 스크립트 실행 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 하 고 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)합니다. 
 
-## <a name="streaming-execution-for-r-and-python-scripts"></a>R 및 Python 스크립트에 대 한 스트리밍 실행  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="parameters-for-partition-modeling"></a>파티션 모델링에 대 한 매개 변수
+
+ SQL Server 2019에 현재 공개 미리 보기에서 설정할 수 있습니다 분할 된 데이터에 있는 파티션 하나를 기반으로 또는 제공 되는 열 자연스럽 게 데이터 집합을 논리적 파티션으로 분할 생성 및 사용에 관한 모델링을 사용 하도록 설정 하는 두 개의 추가 매개 변수 스크립트를 실행 하는 동안에 나가, 성별, 지역, 날짜 또는 시간에 대 한 반복 되는 값을 포함 하는 열은 데이터 집합을 분할된 하는 몇 가지 예입니다.
+ 
+ 두 매개 변수가 **input_data_1_partition_by_columns** 하 고 **input_data_1_order_by_columns**결과 집합을 정렬 하려면 두 번째 매개 변수는 사용 하는 위치, 합니다. 매개 변수 입력으로 전달 됩니다 `sp_execute_external_script` 는 외부 스크립트를 실행 하 되 면 모든 파티션에 대 한 합니다. 자세한 내용 및 예제를 참조 하세요 [자습서: 파티션 기반 모델을 만들](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)합니다.
+
+ 스크립트를 지정 하 여 병렬로 실행할 수 있습니다 `@parallel=1`합니다. 입력된 쿼리를 병렬 처리할 수 하는 경우 설정 해야 `@parallel=1` 에 대 한 인수의 일부로 `sp_execute_external_script`합니다. 기본적으로 쿼리 최적화 프로그램에서 작동 `@parallel=1` 있지만이 명시적으로 처리 하려는 경우 256 개 이상의 행이 있는 테이블에서이 스크립트는 데모로 매개 변수를 포함 합니다.
+
+ > [!Tip]
+> 교육 workoads 따르면 `@parallel` 모든 임의 학습 스크립트를 사용 하 여 비 Microsoft rx 알고리즘을 사용 하는 것에 합니다. 일반적으로 (rx 접두사로) RevoScaleR 알고리즘만 SQL Server의 교육 시나리오에서 병렬 처리를 제공합니다. 하지만 SQL Server vNext의 새로운 매개 변수를 사용 하 여 해당 기능을 사용 하 여 특별히 엔지니어링 된 함수를 호출 하는 스크립트를 병렬 처리할 수 있습니다.
+::: moniker-end
+
+### <a name="streaming-execution-for-r-and-python-scripts"></a>R 및 Python 스크립트에 대 한 스트리밍 실행  
 
 스트리밍 작업 메모리에 맞출 수 있는 수보다 더 많은 데이터를 사용 하 여 R 또는 Python 스크립트를 허용 합니다. 스트리밍 하는 동안 전달 되는 행 수를 제어 하려면 매개 변수에 정수 값을 지정할 `@r_rowsPerRead` 에 `@params` 컬렉션입니다.  예를 들어, 매우 다양 한 데이터를 사용 하는 모델을 교육 하는 경우 하나의 청크로 데이터의 모든 행을 받을 수 있는지 확인 하려면 적은 수의 행을 읽은 값을 조정할 수 있습니다. 또한 읽기 및 서버 성능 문제를 완화 하기 위해 한 번에 처리 중인 행 수를 관리 하려면이 매개 변수를 사용할 수 있습니다. 
   

@@ -108,7 +108,7 @@ SQL Server on Linux를 설치한 후 프로덕션 시나리오에 대 한 성능
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | 크로스 플랫폼 GUI 데이터베이스 관리 유틸리티입니다. |
+| [Azure Data Studio](../azure-data-studio/index.md) | 크로스 플랫폼 GUI 데이터베이스 관리 유틸리티입니다. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL 명령을 실행 하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 확장을 사용 하 여 TRANSACT-SQL 문을 실행 하는 크로스 플랫폼 GUI 코드 편집기입니다. |
 

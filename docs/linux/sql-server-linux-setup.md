@@ -1,5 +1,5 @@
 ---
-title: Linux의 SQL Server 2017에 대 한 설치 지침 | Microsoft Docs
+title: Linux의 SQL Server에 대 한 설치 지침 | Microsoft Docs
 description: 설치, 업데이트 및 Linux에서 SQL Server를 제거 합니다. 이 문서는 온라인과 오프 라인 무인 시나리오를 다룹니다.
 author: rothja
 ms.author: jroth
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 5157bd9bbadec02fe21c9b552f05c6f5635c31a4
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: ce9a2c9956ab4c40c2a5840f65bf8a630fb25065
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268751"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713005"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 설치 지침
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 설치, 업데이트 및 Linux의 SQL Server 2017을 제거 하기 위한 지침을 제공 합니다.
+이 문서에서는 설치, 업데이트 및 SQL Server 2017 및 Linux에서 SQL Server 2019 미리 보기 제거에 대 한 지침을 제공 합니다.
 
 > [!TIP]
 > 이 가이드는 몇 가지 배포 시나리오를 coves입니다. 단계별 설치 지침에 대해서만 하려는 경우 빠른 시작 중 하나로 이동:
@@ -71,20 +71,24 @@ SQL Server 2017 Linux에 대 한 다음 시스템 요구 사항에 있습니다.
 
 ## <a id="repositories"></a> 소스 리포지토리 구성
 
-를 설치 하거나 SQL Server를 업그레이드 하는 경우 구성 된 Microsoft 리포지토리에서 최신 버전을의 SQL Server 2017을 가져옵니다. 퀵 스타트를 사용 합니다 **CU (누적 업데이트)** 리포지토리. 하지만 대신 구성할 수 있습니다 합니다 **GDR** 리포지토리. 리포지토리 및 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [Linux의 SQL Server에 대 한 리포지토리를 구성](sql-server-linux-change-repo.md)합니다.
+를 설치 하거나 SQL Server를 업그레이드 하는 경우에 구성 된 Microsoft 리포지토리에서 최신 버전을의 SQL Server를 가져옵니다. SQL Server 2017 누적 업데이트를 사용 하 여 퀵 스타트 **CU** 리포지토리. 하지만 대신 구성할 수 있습니다 합니다 **GDR** 리포지토리 또는 **미리 보기 (vNext)** 리포지토리. 리포지토리 및 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [Linux의 SQL Server에 대 한 리포지토리를 구성](sql-server-linux-change-repo.md)합니다.
 
 > [!IMPORTANT]
 > CTP 또는 SQL Server 2017의 RC 버전을 이전에 설치한 경우 미리 보기 저장소를 제거 하 고는 GA (일반 공급) 하나를 등록 합니다. 자세한 내용은 [Linux의 SQL Server에 대 한 리포지토리를 구성](sql-server-linux-change-repo.md)합니다.
 
-## <a id="platforms"></a> SQL Server 설치
+## <a id="platforms"></a> SQL Server 2017 설치
 
-명령줄에서 Linux의 SQL Server를 설치할 수 있습니다. 자세한 내용은 다음 빠른 시작 중 하나를 참조 합니다.
+명령줄에서 Linux의 SQL Server 2017을 설치할 수 있습니다. 단계별 지침은 다음 빠른 시작 중 하나를 참조 하세요.
 
 - [Red Hat Enterprise Linux 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="sqlvnext"></a> SQL Server 2019 미리 보기 설치
+
+이전 섹션에는 동일한 빠른 시작 링크를 사용 하 여 Linux에서 SQL Server 2019 미리 보기를 설치할 수 있습니다. 그러나 등록 해야 합니다는 **미리 보기 (vNext)** 리포지토리 대신 합니다 **CU** 리포지토리. 빠른 시작이 작업을 수행 하는 방법에 지침을 제공 합니다.  
 
 를 설치한 후 최적의 성능에 대 한 추가 구성을 변경 하는 것이 좋습니다. 자세한 내용은 [성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침](sql-server-linux-performance-best-practices.md)합니다.
 
@@ -99,6 +103,9 @@ SQL Server 2017 Linux에 대 한 다음 시스템 요구 사항에 있습니다.
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 이 명령은 최신 패키지를 다운로드 하 고 아래에 있는 이진 파일을 대체 `/opt/mssql/`합니다. 사용자 데이터베이스를 생성 하 고 시스템 데이터베이스는이 작업이 영향을 받지 않습니다.
+
+> [!TIP]
+> 경우 있습니다 첫 번째 [구성 된 리포지토리에 변경](sql-server-linux-change-repo.md), 있기 합니다 **업데이트** SQL Server의 버전을 업그레이드 하는 명령입니다. 업그레이드 경로 두 저장소 간에 지원 되는 경우 대/소문자만입니다.
 
 ## <a id="rollback"></a> 롤백 SQL Server
 

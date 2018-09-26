@@ -3,19 +3,19 @@ title: SQL Server Machine Learning Services (In-database) Windows에서 설치 |
 description: SQL Server 또는 SQL Server의 Python에는 R은 Windows에서 SQL Server 2017의 Machine Learning Services를 설치할 때 사용할 수입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311653"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713035"
 ---
-# <a name="install-sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스 설치
+# <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning에서 Windows 서비스를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learning 서비스에 대 한 후속 데이터베이스 내 분석을 제공 됩니다 [SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016에서 도입 되었습니다. 함수 라이브러리 R 및 Python에 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트 실행. 
@@ -24,12 +24,12 @@ SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learn
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
-+ SQL Server 2017 설치는 R 및 Python을 사용 하 여 Machine Learning 서비스에 대 한 필요합니다. 대신 SQL Server 2016 설치 미디어가 있는 경우 참조 [SQL Server 2016 R Services 설치](sql-r-services-windows-install.md) R 언어 지원을 받을 수 있습니다.
++ R, Python 또는 Java 언어 지원을 사용 하 여 Machine Learning 서비스를 설치 하려면 SQL Server 2017 (또는 그 이상) 설치가 필요 합니다. 대신 SQL Server 2016 설치 미디어가 있는 경우 설치할 수 있습니다 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 언어 지원을 받을 수 있습니다.
 
 + 데이터베이스 엔진 인스턴스를 반드시 입력 해야 합니다. 기존 인스턴스를 증분 방식으로 추가할 수는 있지만 방금 R 또는 Python 기능을 설치할 수 없습니다.
 
-+ 장애 조치 클러스터에서 Machine Learning 서비스를 설치 하지 마세요. R 및 Python 프로세스 격리에 사용 되는 보안 메커니즘을 Windows Server 장애 조치 클러스터 환경과 호환 되지 않습니다.
-
+- Machine Learning Services를 설치 *지원 되지 않습니다* SQL Server 2017에서 장애 조치 클러스터입니다. 그러나 그 *는* SQL Server 2019를 사용 하 여 합니다. 
+ 
 + 도메인 컨트롤러에서 Machine Learning 서비스를 설치 하지 마세요. Machine Learning 서비스에 대 한 부분 설치 하지 못합니다.
 
 + 설치 하지 마세요 **공유 기능** > **Machine Learning Server (독립 실행형)** 컴퓨터의 동일한 데이터베이스 내 인스턴스를 실행 합니다. 독립 실행형 서버 설치 둘 다의 성능을 저해 하면서 같은 리소스를 경합 합니다.
@@ -108,7 +108,7 @@ SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learn
     > [!TIP]
     > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다: [SQL Server Management Studio (SSMS 다운로드)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
     > 
-    > Preview 릴리스의 아웃 보십시오 [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), 관리 작업 및 SQL Server에 대 한 쿼리를 지 합니다.
+    > 미리 보기 릴리스도 사용할 수 있는 [Azure Data Studio](../../azure-data-studio/what-is.md), 관리 작업 및 SQL Server에 대 한 쿼리를 지 합니다.
   
 2. Machine Learning 서비스를 설치한 인스턴스에 연결, 클릭 **새 쿼리** 쿼리 창을 열고 다음 명령을 실행 합니다.
 
@@ -193,34 +193,31 @@ SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learn
 
 ## <a name="additional-configuration"></a>기타 고려 사항
 
-외부 스크립트 확인 단계를 성공적으로 수행 되었으면 SQL Server Management Studio, Visual Studio Code 또는 T-SQL 문을 서버로 보낼 수 있는 다른 모든 클라이언트에서 Python 명령을 실행할 수 있습니다.
+외부 스크립트 확인 단계를 성공적으로 수행 되었으면 SQL Server Management Studio, Visual Studio Code 또는 T-SQL 문을 서버로 보낼 수 있는 다른 모든 클라이언트에서 R 또는 Python 명령을 실행할 수 있습니다.
 
 명령을 실행할 때 오류가 발생 하면이 섹션의 추가 구성 단계를 검토 합니다. 서비스 또는 데이터베이스에 추가 적절 한 구성을 확인 해야 합니다.
 
-추가 변경 해야 하는 일반적인 시나리오에는 다음이 포함 됩니다.
+인스턴스 수준에서 추가 구성이 포함 될 수 있습니다.
 
 * [인바운드 연결에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [추가 네트워크 프로토콜을 사용 하도록 설정](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [원격 연결을 사용 하도록 설정](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+
+데이터베이스에서 다음 구성을 업데이트 해야 합니다.
+
 * [원격 사용자에 게 기본 제공 권한 확장](#bkmk_configureAccounts)
 * [외부 스크립트를 실행 하는 권한 부여](#permissions-external-script)
 * [개별 데이터베이스에 액세스 권한 부여](#permissions-db)
 
 > [!NOTE]
-> 나열 된 모든 변경 내용이 필요 하 고 none 필요할 수 있습니다. 요구 사항 보안 스키마를 설치한 SQL Server 및 데이터베이스에 연결 하 여 외부 스크립트를 실행 하는 사용자를 예상 하는 방법에 따라 달라 집니다. 추가 문제 해결 팁을 여기서 확인할 수 있습니다: [업그레이드 및 설치 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> 추가 구성이 필요한 지 여부를 보안 스키마를 설치한 SQL Server 및 데이터베이스에 연결 하 여 외부 스크립트를 실행 하는 사용자를 예상 하는 방법에 따라 달라 집니다. 
 
-###  <a name="bkmk_configureAccounts"></a> 실행 패드 계정 그룹에 대 한 암시적된 인증 사용
+###  <a name="bkmk_configureAccounts"></a> SQL 제한 된 사용자 그룹 (SQLRUserGroup) 계정 그룹에 대 한 암시적된 인증 사용
 
-설치하는 동안 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스의 보안 토큰으로 태스크를 실행하기 위해 많은 새 Windows 사용자 계정이 생성됩니다. 사용자가 외부 클라이언트에서 Python 또는 R 스크립트를 보내면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용 가능한 작업자 계정을 활성화 합니다. 그런 다음 호출 하는 사용자의 id로 매핑합니다 하 고 사용자를 대신 하 여 스크립트를 실행 합니다.
+원격 데이터 과학 클라이언트에서 스크립트를 실행 해야 하 고 Windows 인증을 사용 하는, 추가 구성은 R을 실행 하는 작업자 계정에 부여 하는 데 필요한 및 Python 프로세스에 로그인 할 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 귀하를 대신해 인스턴스. 이러한 동작 이라고 *묵시적된 인증*, SQL Server 2016 및 SQL Server 2017의 외부 스크립트의 보안 실행을 지원 하도록 데이터베이스 엔진에 의해 구현 됩니다.
 
-이 이라고 *묵시적된 인증*에 데이터베이스 엔진의 서비스 및 합니다. 이 서비스는 SQL Server 2016 및 SQL Server 2017의 외부 스크립트의 보안 실행을 지원합니다.
-
-Windows 사용자 그룹 **SQLRUserGroup**에서 해당 계정을 볼 수 있습니다. 기본적으로 외부 스크립트 실행을 위한 충분 한 보다 자세한 작업은 일반적으로 20 개의 작업자 계정이 생성 됩니다.
-
-> [!IMPORTANT]
-> 작업자 그룹 이름은 **SQLRUserGroup** R 또는 Python을 설치 하는 여부에 관계 없이 합니다. 각 인스턴스에 대 한 단일 그룹이 있습니다.
-
-원격 데이터 과학 클라이언트에서 스크립트를 실행 해야 하는 경우 Windows 인증을 사용 하는 추가 고려 사항이 있습니다. 이러한 작업자 계정에 로그인 하는 권한을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 귀하를 대신해 인스턴스.
+> [!NOTE]
+> 사용 하는 경우는 **SQL 로그인** SQL Server 계산 컨텍스트에서 스크립트 실행을 위해이 추가 단계가 필요 하지 않습니다.
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서를 확장 하 고 **보안**합니다. 마우스 오른쪽 단추로 클릭 **로그인**, 선택한 **새 로그인**합니다.
 2. 에 **로그인-신규** 대화 상자에서 **검색**합니다.
@@ -230,8 +227,13 @@ Windows 사용자 그룹 **SQLRUserGroup**에서 해당 계정을 볼 수 있습
 6. 기본적으로 그룹에 할당 합니다 **공용** 역할, 데이터베이스 엔진에 연결할 수 있는 권한이 있고.
 7. **확인**을 선택합니다.
 
-> [!NOTE]
-> 사용 하는 경우는 **SQL 로그인** SQL Server 계산 컨텍스트에서 스크립트 실행을 위해이 추가 단계가 필요 하지 않습니다.
+SQL Server 2017 및 이전 버전에서는 로컬 Windows 사용자 계정의 수의 보안 토큰으로 태스크 실행을 위해 만들어진는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스입니다. Windows 사용자 그룹 **SQLRUserGroup**에서 해당 계정을 볼 수 있습니다. 기본적으로 외부 스크립트 실행을 위한 충분 한 보다 자세한 작업은 일반적으로 20 개의 작업자 계정이 생성 됩니다. 
+
+이러한 계정은 다음과 같이 사용 됩니다. 사용자가 외부 클라이언트에서 Python 또는 R 스크립트를 보내면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용 가능한 작업자 계정을 활성화 하 고 호출 하는 사용자의 id로 매핑합니다 사용자를 대신 하 여 스크립트를 실행 합니다. SQL Server에서 데이터 또는 리소스를 검색할 스크립트를 실행 하는 SQL Server 외부에 있으면 SQL Server에 다시 연결 로그인에 필요 합니다. 데이터베이스 로그인을 만드는 **SQLRUserGroup** 연결에 성공할 수도 있습니다.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+SQL Server 2019 작업자 계정 AppContainers, SQL Server 실행 패드 서비스에서 실행 중인 프로세스를 사용 하 여 대체 됩니다. 여전히 데이터베이스 로그인을 추가 해야 하는 작업자 계정에 더 이상 사용 하지만 **SQLRUsergroup** 인증이 필요한 사용 권한에 포함 된 경우. 작업자 계정에 로그인 권한이 없는 것 처럼 실행 패드 서비스 id도 서로 겹치지 않습니다. 로그인을 만드는 **SQLRUserGroup**, 묵시적된 인증이 작동 하려면 허용이 릴리스에서 실행 패드 서비스의 구성 합니다.
+::: moniker-end
 
 ### <a name="permissions-external-script"></a> 외부 스크립트를 실행 하도록 사용자 권한 부여
 

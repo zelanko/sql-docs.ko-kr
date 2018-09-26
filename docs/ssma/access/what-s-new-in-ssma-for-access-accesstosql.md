@@ -2,7 +2,7 @@
 title: Access(AccessToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,21 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 290a88698052e8bf65ebe45e4cc0ba48ccc396ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "40392843"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362027"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL)의 새로운 기능
 이 문서에서는 SSMA 각 릴리스에 대 한 액세스 변경 내용을 나열 합니다.  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for Access v7.10 릴리스의 추가 보안 및 글로벌 요구 사항 변화에에서 맞게 개인 정보 보호를 제공 하도록 설계 하는 대상된 수정 사항을 사용 하 여 향상 되었습니다.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for Access v7.9 릴리스는 다음 변경 내용을 포함 되어 있습니다.
@@ -84,7 +90,7 @@ SSMA for Access v7.3 릴리스는 다음 변경 내용을 포함 되어 있습�
   - SSMA 사용자 지정 변환을 수행 하는 데 사용할 수 있는 라이브러리입니다.
     - 이제 사용자 지정 구문 변환 및 SSMA 이전에 처리 되지 않은 변환을 처리할 수 있는 코드를 생성할 수 있습니다.
       - 이 블로그 게시물에서는 사용자 지정 변환기를 생성 하는 방법에 사용할 [확장 SQL Server Migration Assistant의 변환 기능](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)합니다.
-      - 이 변환에 대 한 샘플 프로젝트를 다운로드 될 수 있습니다 [블로그 게시물](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)합니다.
+      - 이 변환에 대 한 샘플 프로젝트를 다운로드 [블로그 게시물](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)합니다.
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 SSMA for Access v 7.2가 사전 릴리스는 다음 변경 내용을 포함 되어 있습니다.

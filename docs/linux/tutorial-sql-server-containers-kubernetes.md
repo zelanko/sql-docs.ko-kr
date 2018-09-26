@@ -1,6 +1,6 @@
 ---
-title: 고가용성을 위해 Kubernetes에서 SQL Server 컨테이너를 구성 | Microsoft Docs
-description: 이 자습서에서는 Azure Container Service에서 Kubernetes 사용 하 여 SQL Server 고가용성 솔루션을 배포 하는 방법을 보여 줍니다.
+title: Azure Kubernetes 서비스 (AKS)를 사용 하 여 Kubernetes에서 SQL Server 컨테이너 배포 | Microsoft Docs
+description: 이 자습서에서는 Azure Kubernetes Service에서 Kubernetes 사용 하 여 SQL Server 고가용성 솔루션을 배포 하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,20 +11,20 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 5c6e794fa2e76a0fec58d767d14e9ac73fb72534
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980125"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712685"
 ---
-# <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>고가용성을 위해 Kubernetes에서 SQL Server 컨테이너 구성
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes 서비스 (AKS)를 사용 하 여 Kubernetes에서 SQL Server 컨테이너를 배포 합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-고가용성 (HA)에 대 한 영구 저장소를 사용 하 여 Kubernetes에서 Azure Container Service (AKS), SQL Server 인스턴스를 구성 하는 방법에 알아봅니다. 솔루션 복원 력을 제공 합니다. SQL Server 인스턴스가 실패 하면 Kubernetes 자동으로 다시 만듭니다 새 pod에서입니다. AKS는 Kubernetes 노드 오류에 대 한 복원 력을 제공합니다. 
+고가용성 (HA)에 대 한 영구 저장소를 사용 하 여 Azure Kubernetes Service (AKS)에서 Kubernetes에 SQL Server 인스턴스를 구성 하는 방법에 알아봅니다. 솔루션 복원 력을 제공 합니다. SQL Server 인스턴스가 실패 하면 Kubernetes 자동으로 다시 만듭니다 새 pod에서입니다. Kubernetes 노드 실패에 대 한 복원 력을 제공합니다.
 
-이 자습서에는 AKS를 사용 하는 컨테이너에서 항상 사용 가능한 SQL Server 인스턴스를 구성 하는 방법을 보여 줍니다. 
+이 자습서에는 AKS 컨테이너에 항상 사용 가능한 SQL Server 인스턴스를 구성 하는 방법을 보여 줍니다. 할 수도 있습니다 [Kubernetes에서 SQL Server 가용성 그룹 만들기](tutorial-sql-server-ag-kubernetes.md)합니다. 두 가지 다른 Kubernetes 솔루션 비교를 참조 하세요 [SQL Server 컨테이너에 대 한 고가용성](sql-server-linux-container-ha-overview.md)합니다.
 
 > [!div class="checklist"]
 > * SA 암호를 만들려면
@@ -33,7 +33,7 @@ ms.locfileid: "38980125"
 > * SQL Server Management Studio (SSMS)를 사용 하 여 연결
 > * 오류 및 복구를 확인 합니다.
 
-## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>HA 솔루션을 사용 하 여 Azure Container Service에서 실행 중인 Kubernetes
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Azure Kubernetes Service에서 실행 중인 Kubernetes에서 HA 솔루션
 
 Kubernetes 버전 1.6 이상에 대 한 지원 [저장소 클래스](http://kubernetes.io/docs/concepts/storage/storage-classes/), [영구적 볼륨 클레임](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), 및 [Azure 디스크 볼륨 형식](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)합니다. 만들기 및 Kubernetes에 기본적으로 SQL Server 인스턴스를 관리할 수 있습니다. 이 문서의 예제에서에서 만드는 방법을 보여 줍니다.는 [배포](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) 공유 디스크 장애 조치 클러스터 인스턴스에 유사한 고가용성 구성을 위해. 이 구성에서는 Kubernetes 클러스터 오 케 스트레이 터의 역할을 재생합니다. 컨테이너에서 SQL Server 인스턴스를 실패 한 경우는 오 케 스트레이 터 같은 영구 저장소에 연결 하는 컨테이너의 다른 인스턴스를 부트스트랩 합니다.
 
@@ -43,11 +43,11 @@ Kubernetes 버전 1.6 이상에 대 한 지원 [저장소 클래스](http://kube
 
 다음 다이어그램에는 `mssql-server` 컨테이너에 실패 했습니다. 오 케 스트레이 터로 Kubernetes 복제본에 정상 인스턴스의 정확한 수를 설정 및 구성에 따라 새 컨테이너를 시작을 보장 합니다. 오 케 스트레이 터 같은 노드에서 새 pod를 시작 하 고 `mssql-server` 같은 영구 저장소에 다시 연결 합니다. 서비스에 다시 만들어진 연결 `mssql-server`합니다.
 
-![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 다음 다이어그램에서 호스트 하는 노드는 `mssql-server` 컨테이너에 실패 했습니다. Orchestrator 다른 노드에서 새 pod를 시작 하 고 `mssql-server` 같은 영구 저장소에 다시 연결 합니다. 서비스에 다시 만들어진 연결 `mssql-server`합니다.
 
-![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -176,7 +176,7 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:

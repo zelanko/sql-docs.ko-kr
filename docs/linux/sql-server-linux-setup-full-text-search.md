@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a2cb44cf4f6a3b6c689ea66a4d353d97ce8c8af2
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393712"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713145"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 
@@ -88,7 +88,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>지원되는 언어
 
-전체 텍스트 검색 사용 [단어 분리기](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 언어를 기반으로 하는 개별 단어를 식별 하는 방법을 결정 하는 합니다. 쿼리를 통해 등록 된 단어 분리기의 목록을 가져올 수 있습니다 합니다 **sys.fulltext_languages** 카탈로그 뷰에 있습니다. 다음 언어의 단어 분리기가 SQL Server 2017을 사용 하 여 설치 됩니다.
+전체 텍스트 검색 사용 [단어 분리기](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 언어를 기반으로 하는 개별 단어를 식별 하는 방법을 결정 하는 합니다. 쿼리를 통해 등록 된 단어 분리기의 목록을 가져올 수 있습니다 합니다 **sys.fulltext_languages** 카탈로그 뷰에 있습니다. 다음 언어의 단어 분리기가 SQL Server와 함께 설치 됩니다.
 
 | 언어 | 언어 ID |
 |---|---|
@@ -150,7 +150,7 @@ sudo zypper update mssql-server-fts
 
 이진 파일에 저장 된 텍스트를 사용 하 여 전체 텍스트 검색도 작동 합니다. 있지만 경우 설치 된 필터를 파일을 처리 하 필요 합니다. 필터에 대 한 자세한 내용은 참조 하세요. [구성 및 검색에 대 한 필터 관리](../relational-databases/search/configure-and-manage-filters-for-search.md)합니다.
 
-호출 하 여 설치 된 필터의 목록을 볼 수 있습니다 **sp_help_fulltext_system_components '필터'** 합니다. SQL Server 2017에 대 한 다음 필터 설치 됩니다.
+호출 하 여 설치 된 필터의 목록을 볼 수 있습니다 **sp_help_fulltext_system_components '필터'** 합니다. SQL Server에 대 한 다음 필터 설치 됩니다.
 
 | 구성 요소 이름 | 클래스 ID | 버전 |
 |---|---|---|

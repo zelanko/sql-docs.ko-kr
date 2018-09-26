@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724337"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712756"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server에 대 한 NYC Taxi 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 |**PredictTip**  |저장 프로시저 |PredictTip.sql 스크립트에 의해 생성 됩니다. 모델을 사용 하 여 예측을 만들려면 학습된 된 모델을 호출 합니다. 저장 프로시저는 쿼리를 입력 매개 변수로 사용하고 입력된 행에 대한 점수를 포함하는 숫자 값 열을 반환합니다. 이 저장된 프로시저는 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 |**PredictTipSingleMode**  |저장 프로시저| PredictTipSingleMode.sql 스크립트에 의해 생성 됩니다. 모델을 사용 하 여 예측을 만들려면 학습된 된 모델을 호출 합니다. 이 저장 프로시저는 새 관찰을 개별 기능 값이 인라인 매개 변수로 전달되는 입력으로 사용하고 새 관찰의 결과를 예측하는 값을 반환합니다. 이 저장된 프로시저는 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 |**TrainTipPredictionModel**  |저장 프로시저|TrainTipPredictionModel.sql 스크립트에 의해 생성 됩니다. R 패키지를 호출 하 여 로지스틱 회귀 모델을 학습 합니다. 모델은 tipped 열의 값을 예측하며 임의로 선택된 70%의 데이터를 사용하여 학습됩니다. 저장 프로시저의 출력은 nyc_taxi_models 테이블에 저장된 학습된 모델입니다. 이 저장된 프로시저는 [학습 모델을 저장 하 고](../r/sqldev-train-and-save-a-model-using-t-sql.md)입니다.|
+
+## <a name="query-data-for-verification"></a>확인에 대 한 데이터를 쿼리 합니다.
+
+유효성 검사 단계로, 데이터가 업로드 되었는지 확인 하는 쿼리를 실행 합니다.
+
+1. 데이터베이스에서 개체 탐색기에서 확장을 **NYCTaxi_Sample** 데이터베이스를 백업할, 테이블 폴더를 엽니다.
+
+2. 마우스 오른쪽 단추로 클릭 합니다 **dbo.nyctaxi_sample** 선택한 **상위 1000 개의 행 선택** 일부 데이터를 반환 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

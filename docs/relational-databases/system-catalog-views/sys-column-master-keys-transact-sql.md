@@ -1,7 +1,7 @@
 ---
 title: sys.column_master_keys (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079726"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713545"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079726"
 |**modify_date**|**datetime**|열 마스터 키를 마지막으로 수정한 날짜입니다.|  
 |**key_store_provider_name**|**sysname**|CMK를 포함 하는 열 마스터 키 저장소에 대 한 공급자의 이름입니다. 허용된 값은<br /><br /> MSSQL_CERTIFICATE_STORE – 열 마스터 키 저장소는 인증서 저장소입니다.<br /><br /> 사용자 정의 값, 열 마스터 키 저장소를 사용자 지정 형식인 경우.|  
 |**key_path**|**nvarchar(4000)**|키의 열 마스터 키 저장소 관련 경로입니다. 경로의 형식이 열 마스터 키 저장소 형식에 따라 달라 집니다. 예:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 개발자는 사용자 지정 열 마스터 키 저장소에 대 한 정의 어떤 키 경로 사용자 지정 열 마스터 키 저장소입니다.|  
+|**allow_enclave_computations**|**bit**|열 마스터 키가 enclave-사용 (서버 쪽 보안 enclaves 내에서 계산을 위해이 마스터 키로 암호화 된 열 암호화 키를 사용할 수 있음) 인지 여부를 나타냅니다. 자세한 내용은 [안전한 enclaves와 함께 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)합니다.|  
+|**signature**|**varbinary(max)**|디지털 서명을 **key_path** 하 고 **allow_enclave_computations**열 마스터 키를 사용 하 여 생성, 참조 **key_path**합니다.|
+
+
   
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **VIEW ANY COLUMN MASTER KEY** 권한.  

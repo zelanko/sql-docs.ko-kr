@@ -4,7 +4,7 @@ description: 이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/20/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
@@ -12,18 +12,39 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 7327b336019cc2a3cf0244e1c6cd839f53042843
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ac28fbcadf46e596e43860ebdc497b3d13f59d22
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082445"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049623"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 2017이 이제 Linux에서 실행됩니다 동일한 SQL Server 데이터베이스 엔진으로 운영 체제와 관계없이 비슷한 기능 및 서비스를 다양하게 제공합니다.
+::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
+SQL Server 2017부터 SQL Server는 Linux에서 실행 됩니다. 동일한 SQL Server 데이터베이스 엔진으로 운영 체제와 관계없이 비슷한 기능 및 서비스를 다양하게 제공합니다.
+::: moniker-end
+
+::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
+SQL Server 2019 CTP 2.0 on Linux를 실행합니다. 동일한 SQL Server 데이터베이스 엔진으로 운영 체제와 관계없이 비슷한 기능 및 서비스를 다양하게 제공합니다. 이 릴리스에 대 한 자세한 내용을 참조 하세요 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
+::: moniker-end
+
+::: moniker range="= sql-server-2017"
+> [!TIP]
+> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)합니다.
+::: moniker-end
+
+::: moniker range="= sql-server-linux-2017"
+> [!TIP]
+> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-linux-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)합니다.
+::: moniker-end
+
+::: moniker range="= sqlallproducts-allversions"
+> [!TIP]
+> SQL Server 2019 CTP 2.0가 출시 되었습니다! Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
+::: moniker-end
 
 ## <a name="install"></a>설치
 
@@ -50,9 +71,39 @@ SQL Server 2017이 이제 Linux에서 실행됩니다 동일한 SQL Server 데�
 
 ## <a name="explore"></a>탐색
 
-SQL Server 2017은 Linux를 포함하여 모든 지원되는 플랫폼에 동일한 기본 데이터베이스 엔진을 가지고 있습니다 따라서 많은 기존 기능 및 성능이 Linux에서 동일한 방식으로 동작합니다 이 문서에서는 이러한 기능 중 일부를 Linux 관점에서 설명합니다 또한 Linux에만 해당하는 요구 사항에 대해 설명합니다.
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-SQL Server에 이미 익숙한 경우, [릴리스 정보](sql-server-linux-release-notes.md) 를 참고하여 일반적인 지침과 릴리스의 알려진 문제를 살펴봅니다. 그리고 [SQL Server on Linux의 새로운 기능](sql-server-linux-whats-new.md) 과 [SQL Server 2017 전반에 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md) 을 살펴봅니다. 
+SQL Server 2017은 Linux를 포함하여 모든 지원되는 플랫폼에 동일한 기본 데이터베이스 엔진을 가지고 있습니다 따라서 여러 기존 기능을 Linux에서 동일한 방식으로 작동합니다. 이 문서에서는 이러한 기능 중 일부를 Linux 관점에서 설명합니다 또한 Linux에만 해당하는 요구 사항에 대해 설명합니다.
+
+SQL Server에 이미 익숙한 경우, [릴리스 정보](sql-server-linux-release-notes.md) 를 참고하여 일반적인 지침과 릴리스의 알려진 문제를 살펴봅니다. 그리고 [SQL Server on Linux의 새로운 기능](sql-server-linux-whats-new.md) 과 [SQL Server 2017 전반에 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md) 을 살펴봅니다.
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Linux를 비롯 한 모든 지원 되는 플랫폼에서 동일한 기본 데이터베이스 엔진을 있습니다. 따라서 여러 기존 기능을 Linux에서 동일한 방식으로 작동합니다. 이 문서에서는 이러한 기능 중 일부를 Linux 관점에서 설명합니다 또한 Linux에만 해당하는 요구 사항에 대해 설명합니다.
+
+Linux의 SQL Server에 익숙한 경우 검토 합니다 [릴리스](sql-server-linux-release-notes-2019.md) 일반 지침 및이 릴리스의 알려진된 문제에 대 한 합니다. 그러면 [Linux에서 SQL Server 2019 미리 보기에 대 한 새로운](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)합니다.
+
+::: moniker-end
+
+<!--SQL Server All Versions-->
+::: moniker range="=sqlallproducts-allversions"
+
+SQL Server 2017 및 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Linux를 비롯 한 모든 지원 되는 플랫폼에 동일한 기본 데이터베이스 엔진에 있습니다. 따라서 여러 기존 기능을 Linux에서 동일한 방식으로 작동합니다. 이 문서에서는 이러한 기능 중 일부를 Linux 관점에서 설명합니다 또한 Linux에만 해당하는 요구 사항에 대해 설명합니다.
+
+Linux의 SQL Server에 익숙한 경우 릴리스 정보를 검토 합니다.
+
+- [SQL Server 2017 릴리스 정보](sql-server-linux-release-notes.md)
+- [SQL Server 2019 미리 보기 릴리스 정보](sql-server-linux-release-notes-2019.md)
+
+그런 다음 새로운 살펴보겠습니다.
+
+- [SQL Server 2017의 새로운 기능](sql-server-linux-whats-new.md)
+- [What's new for Linux에서 SQL Server 2019 미리 보기](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+
+::: moniker-end
 
 > [!TIP]
 > 자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](sql-server-linux-faq.md)합니다.

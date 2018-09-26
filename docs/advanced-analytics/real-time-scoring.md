@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348303"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713516"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>SQL Server machine learning에서 sp_rxPredict으로 실시간 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-실시간 점수 매기기 CLR 확장 기능이 고성능 예측 또는 워크 로드 예측의 점수에 대 한 SQL Server에서 사용 합니다. 실시간 점수 매기기 언어 중립적 이므로 R 종속 되지 않고 실행 하거나 Python 번 실행 합니다. Microsoft 함수에서 생성, 학습 및 SQL Server에서 이진 형식으로 직렬화 된 모델을 가정 하 고, 실시간 점수 매기기 하 여 R 또는 Python 추가 기능에 있지 않은 SQL Server 인스턴스에서 새 데이터 입력에 대해 예측 된 결과 생성 합니다. 설치 합니다.
+실시간 사용 하 여 점수 매기기를 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 시스템 저장 프로시저 및 CLR 확장 기능 SQL Server의 고성능 예측 또는 워크 로드 예측의 점수에 대 한 합니다. 실시간 점수 매기기 언어 중립적 이며 R 또는 Python 런타임의 종속 되지 않고 실행 합니다. 만든 Microsoft 함수를 사용 하 여 학습 하 고 SQL Server에서 이진 형식으로 직렬화 한 다음 모델을 가정 하 고, 실시간 점수 매기기 하 여 R 또는 Python 추가 되지 않은 SQL Server 인스턴스에서 새 데이터 입력에 대해 예측 된 결과 생성 합니다. 설치 합니다.
 
 ## <a name="how-real-time-scoring-works"></a>실시간 점수 매기기 작업
 
-같은 RevoScaleR 또는 MicrosoftML 함수에 따라 특정 모델 유형에 대해 SQL Server 2017 및 SQL Server 2016에서 지원 되는 실시간 점수 매기기 [(RevoScaleR) rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 또는 [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 네이티브 c + + 라이브러리를 사용 하 여 기계 학습 모델을 특수 이진 형식으로 저장을 위해 제공 하는 사용자 입력을 기반으로 점수를 생성 합니다.
+SQL Server 2017 및 SQL Server 2016에서 지원 됩니다 실시간 점수 매기기 [지원 되는 모델 형식](#bkmk_py_supported_algos) 선형 및 로지스틱 회귀 및 의사 결정 트리 모델링 합니다. 네이티브 c + + 라이브러리를 사용 하 여 기계 학습 모델을 특수 이진 형식으로 저장을 위해 제공 하는 사용자 입력을 기반으로 점수를 생성 합니다.
 
 외부 언어 런타임을 호출 하지 않고도 점수를 매기기 위해 학습 된 모델을를 사용할 수 있으므로 여러 프로세스의 오버 헤드가 줄었습니다. 이 시나리오를 평가 하는 프로덕션에 대 한 훨씬 더 빠른 예측 성능을 지원 합니다. 데이터를 SQL 서버를 벗어나지, 때문에 결과 생성 하 고 R과 SQL 간 데이터 변환 하지 않고도 새 테이블에 삽입할 수 있습니다.
 
@@ -30,13 +30,13 @@ ms.locfileid: "43348303"
 
 1. 점수 매기기를 수행 하는 저장된 프로시저에서 데이터베이스 단위로 활성화 되어야 합니다.
 2. 이진 형식으로 미리 학습 된 모델을 로드 합니다.
-3. 모델에 대 한 입력으로 새 입력된 데이터를 테이블 형식 또는 단일 행을 제공합니다.
-4. 점수를 생성 하려면 sp_rxPredict 저장 프로시저를 호출 합니다.
+3. 새 입력된 매길 데이터를 테이블 형식 또는 단일 행을 모델의 입력으로 제공할 수 있습니다.
+4. 점수를 생성 하려면 호출을 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 저장 프로시저입니다.
 
 > [!TIP]
 > 작업에서 실시간 점수 매기기의 예제를 참조 하세요. [종단 간 최종 대출 상각 예측 빌드를 사용 하 여 Azure HDInsight Spark 클러스터 및 SQL Server 2016 R 서비스](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 + [SQL Server CLR 통합 사용](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)합니다.
 
@@ -45,6 +45,8 @@ ms.locfileid: "43348303"
 + 사전에 지원 되는 중 하나를 사용 하 여 모델을 학습 해야 합니다 **rx** 알고리즘입니다. R의 경우으로 실시간 점수 매기기 `sp_rxPredict` 와 함께 [RevoScaleR 및 MicrosoftML 알고리즘 지원](#bkmk_rt_supported_algos)합니다. Python에 대 한 참조 [revoscalepy 및 microsoftml 알고리즘 지원](#bkmk_py_supported_algos)
 
 + 사용 하 여 모델 serialize [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) R에 대 한 및 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) Python에 대 한 합니다. 이러한 serialization 함수 빠른 점수 매기기를 지원 하도록 최적화 되었습니다.
+
++ 호출 하려는 데이터베이스 엔진 인스턴스에 모델을 저장 합니다. 이 인스턴스는 R 또는 Python 런타임 확장명 필요가 없습니다.
 
 > [!Note]
 > 실시간 점수 매기기 몇 행에서 수백 수천 개의 행에 이르기까지 더 작은 데이터 집합에 대 한 빠른 예측에 대 한 현재 최적화 됩니다. 사용 하 여 큰 데이터 집합 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 빠를 수 있습니다.

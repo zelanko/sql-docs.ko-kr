@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edb89a58c6ca1b845d1705bd3a7d92138fe2bfd6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 47c8bac2f70ccae8a265590577cfed4fdd9242d6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098007"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712655"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,8 @@ ms.locfileid: "43098007"
 |parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 병렬 쿼리의 경우 예약 된 병렬 작업자 수입니다.  |  
 |external_script_request_id |**uniqueidentifier** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
 |is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청을 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
-  
+|page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 바이트 16 진수 표현 페이지 리소스의 경우는 `wait_resource` 열 페이지를 포함 합니다. |
+
 ## <a name="permissions"></a>사용 권한  
  사용자에 게 `VIEW SERVER STATE` 서버의 권한이 사용자 인스턴스에서 실행 중인 모든 세션에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]고, 그렇지 않으면 사용자는 현재 세션에만 표시 됩니다. `VIEW SERVER STATE` 부여할 수 없습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 있도록 `sys.dm_exec_requests` 은 항상 현재 연결으로 제한 됩니다. 
   

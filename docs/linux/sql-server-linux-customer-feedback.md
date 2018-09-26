@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 31bd8be73051349c122eb4a99dc99417b491669d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072182"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713588"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 고객 의견
 
@@ -60,6 +60,9 @@ SQL Server 2017은 고객이 경험하는 설치 문제를 빠르게 찾아 해�
 ### <a name="on-docker"></a>Docker에서
 Docker에서 고객의 의견을 사용 하지 않도록 설정, Docker 있어야 [데이터를 유지](sql-server-linux-configure-docker.md)합니다. 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. 추가 된 `mssql.conf` 줄을 사용 하 여 파일 `[telemetry]` 및 `customerfeedback = false` 호스트 디렉터리에서:
  
    ```bash
@@ -69,15 +72,43 @@ Docker에서 고객의 의견을 사용 하지 않도록 설정, Docker 있어�
    ```bash
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
+
 2. 컨테이너 이미지 실행
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. 추가 된 `mssql.conf` 줄을 사용 하 여 파일 `[telemetry]` 및 `customerfeedback = false` 호스트 디렉터리에서:
+
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'customerfeedback = false' >> <host directory>/mssql.conf
+   ```
+
+2. 컨테이너 이미지 실행
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>SQL Server Linux 사용 현황 피드백 수집에 대 한 로컬 감사
 
 Microsoft SQL Server 2017에는 수집 하 고 컴퓨터 또는 장치 ("표준 컴퓨터 정보")에 대 한 정보를 Microsoft에 전송할 수 있는 인터넷 사용 기능이 포함 되어 있습니다. SQL Server 사용 피드백 모음의 로컬 감사 구성 요소 서비스에 의해 Microsoft로 전송 될 데이터 (로그)를 나타내는 지정 된 폴더에 수집 된 데이터를 작성할 수 있습니다. 로컬 감사의 목적은 고객들이 규정 준수 또는 개인 정보 유효성 검사의 이유로 이 기능을 사용하여 Microsoft에서 수집하는 모든 데이터를 확인하기 위함입니다.
@@ -94,20 +125,20 @@ Linux의 SQL Server에서 로컬 감사는 SQL Server 데이터베이스 엔진�
    sudo mkdir /tmp/audit
    ```
 
-1. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
+2. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다 **설정할** 명령에 **telemetry.userrequestedlocalauditdirectory**:
+3. 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다 **설정할** 명령에 **telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+4. SQL Server 서비스를 다시 시작 합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -116,13 +147,15 @@ Linux의 SQL Server에서 로컬 감사는 SQL Server 데이터베이스 엔진�
 ### <a name="on-docker"></a>Docker에서
 Docker에서 로컬 감사를 사용 하려면 Docker 있어야 [데이터를 유지](sql-server-linux-configure-docker.md)합니다. 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. 새 로컬 감사 로그에 대 한 대상 디렉터리는 컨테이너에 있게 됩니다. 컴퓨터에서 호스트 디렉터리에 새 로컬 감사 로그에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/감사** 디렉터리:
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-   
 1. 추가 된 `mssql.conf` 줄을 사용 하 여 파일 `[telemetry]` 및 `userrequestedlocalauditdirectory = <host directory>/audit` 호스트 디렉터리에서:
  
    ```bash
@@ -132,15 +165,49 @@ Docker에서 로컬 감사를 사용 하려면 Docker 있어야 [데이터를 �
    ```bash
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
-2. 컨테이너 이미지 실행
+
+1. 컨테이너 이미지 실행
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. 새 로컬 감사 로그에 대 한 대상 디렉터리는 컨테이너에 있게 됩니다. 컴퓨터에서 호스트 디렉터리에 새 로컬 감사 로그에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/감사** 디렉터리:
+
+   ```bash
+   sudo mkdir <host directory>/audit
+   ```
+
+1. 추가 된 `mssql.conf` 줄을 사용 하 여 파일 `[telemetry]` 및 `userrequestedlocalauditdirectory = <host directory>/audit` 호스트 디렉터리에서:
+ 
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   ```
+
+1. 컨테이너 이미지 실행
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="next-steps"></a>다음 단계
 
 Linux의 SQL Server에 대 한 자세한 내용은 참조는 [개요 SQL Server on Linux](sql-server-linux-overview.md)합니다.

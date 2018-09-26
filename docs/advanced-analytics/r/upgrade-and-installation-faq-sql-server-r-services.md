@@ -1,18 +1,19 @@
 ---
 title: SQL Server Machine Learning에 대 한 업그레이드 및 설치 FAQ | Microsoft Docs
+ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 695fd6a801b8b8846d297aa0695aa4ebc04e71e5
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393247"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712305"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>R Server 또는 SQL Server Machine Learning에 대 한 업그레이드 및 설치 FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ ms.locfileid: "40393247"
 이 항목에서는 SQL Server의 기능을 학습 하는 컴퓨터의 설치에 대 한 몇 가지 일반적인 질문에 대 한 답변을 제공 합니다. 또한 업그레이드에 대 한 일반적인 질문에 대해서도 다룹니다.
 
 + 일부 문제는 시험판 버전에서 업그레이드에만 발생합니다. 따라서는 하면 버전 및 에디션 확인 먼저이 정보를 읽기 전에 하는 것이 좋습니다. 버전 정보를 가져오려면 실행 `@@VERSION` 에서 SQL Server Management Studio에서 쿼리 합니다.
-+ 최신 릴리스 나 서비스 릴리스를 가능한 한 빨리 최신 릴리스에서 해결 된 모든 문제를 해결 하려면 업그레이드 합니다.
++ 최신 릴리스 또는 최신 릴리스에서 해결 된 문제를 해결 하는 최대한 빨리 서비스 릴리스를 업그레이드 합니다.
 
 **적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-database)
 
@@ -29,6 +30,10 @@ ms.locfileid: "40393247"
 설치 하는 SQL Server의 빌드에 따라 일부는 다음과 같은 제한이 적용 될 수 있습니다.
 
 - SQL Server 2016 R Services의 초기 버전에서 작업 디렉터리를 포함 하는 드라이브에서 8dot3 표기법 필요 했습니다. 시험판 버전을 설치한 경우 SQL Server 2016 서비스 팩 1로 업그레이드 합니다.이 문제를 해결 해야 합니다. 이 요구 사항은 SP1 이후 버전에 적용 되지 않습니다.
+
+- 설치할 수 없는 현재 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 장애 조치 클러스터입니다. 그러나 SQL Server 2019 미리 보기는 테스트 환경에서이 capablity 평가 하려는 경우 장애 조치 지원을 제공 합니다. 자세한 내용은 [What's New](../what-s-new-in-sql-server-machine-learning-services.md)합니다.
+
+- Azure VM에서 몇 가지 추가 구성이 필요할 수 있습니다. 예를 들어, 원격 액세스를 지원 하도록 방화벽 예외를 만들려면 해야 합니다.
 
 - R의 다른 버전 또는 Revolution Analytics의 다른 릴리스를 사용 하 여 side-by-side-설치는 지원 되지 않습니다.
 
