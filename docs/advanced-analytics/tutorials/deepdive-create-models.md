@@ -17,9 +17,9 @@ ms.locfileid: "32446847"
 # <a name="create-r-models-sql-and-r-deep-dive"></a>(SQL과 R 심층 분석) R 모델 생성하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 쓰는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
+이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 사용하는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
 
-이제 교육 데이터를 보강했으므로 선형 회귀를 사용하여 데이터를 분석해야 합니다. 선형 모델은 예측 분석 분야의 중요한 도구이며, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 **RevoScaleR** 패키지에는 확장성 있는 고성능 알고리즘이 포함되어 있습니다.
+이제 교육 데이터를 보강했으므로 선형 회귀를 사용하여 데이터를 분석해야 합니다. 선형 모델은 예측 분석 분야의 중요한 도구이며, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 **RevoScaleR** 패키지는 확장성 있는 고성능 알고리즘을 포함합니다.
 
 ## <a name="create-a-linear-regression-model"></a>선형 회귀 모델 만들기
 
@@ -39,7 +39,7 @@ ms.locfileid: "32446847"
      summary(linModObj)
      ```
 
-이전 단계에서 계산 환경을 서버로 설정했기 때문에, `summary`와 같은 표준 R 함수가 여기서 쓰이는것에 대해 이상하게 생각할 수 있습니다. 하지만 **rxLinMod** 함수는 원격 계산 환경을 사용하여 모델을 만들더라도 로컬 워크스테이션에 대한 모델을 포함하고 이를 공유 디렉터리에 저장하는 개체도 반환합니다.
+이전 단계에서 계산 환경을 서버로 설정했기 때문에, `summary`와 같은 표준 R 함수가 여기서 쓰이는 것에 대해 이상하게 생각할 수 있습니다. 하지만 **rxLinMod** 함수는 원격 계산 환경을 사용하여 모델을 만들더라도 로컬 워크스테이션에 대한 모델을 포함하고 이를 공유 디렉터리에 저장하는 개체도 반환합니다.
 
 따라서 모델이 "로컬" 환경을 사용하여 만들어진 것처럼 가정하고, 이에 대해 표준 R 명령을 실행할 수 있습니다.
 
