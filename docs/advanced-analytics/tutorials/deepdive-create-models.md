@@ -1,5 +1,5 @@
 ---
-title: R 모델 (SQL과 R 심층 분석)을 만들고 | Microsoft Docs
+title: (SQL과 R 심층 분석) R 모델 생성하기 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -14,34 +14,34 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32446847"
 ---
-# <a name="create-r-models-sql-and-r-deep-dive"></a>R 모델 (SQL과 R 심층 분석)을 만들으십시오
+# <a name="create-r-models-sql-and-r-deep-dive"></a>(SQL과 R 심층 분석) R 모델 생성하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
+이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 사용하는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
 
-이제 교육 데이터를 보강했으므로 선형 회귀를 사용하여 데이터를 분석해야 합니다. 선형 모델은 예측 분석 분야의 중요한 도구이며, **의** RevoScaleR [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 패키지에는 확장성 있는 고성능 알고리즘이 포함되어 있습니다.
+이제 교육 데이터를 보강했으므로 선형 회귀를 사용하여 데이터를 분석해야 합니다. 선형 모델은 예측 분석 분야의 중요한 도구이며, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 **RevoScaleR** 패키지는 확장성 있는 고성능 알고리즘을 포함합니다.
 
 ## <a name="create-a-linear-regression-model"></a>선형 회귀 모델 만들기
 
-이 단계에 있는 값의 독립 변수로 사용 하 여 고객에 대 한 신용 카드 잔액을 예측 하는 간단한 선형 모델을 만듭니다는 *성별* 및 *creditLine* 열입니다.
+이 단계에서 *gender*와 *creditLine* 열의 독립 변수의 값으로 고객의 신용 카드 잔액을 예측하는 간단한 선형 모델을 만듭니다.
   
-이 위해 사용 하 여는 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 원격 계산 컨텍스트를 지 원하는 함수입니다.
+원격 계산 환경을 지원하는 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 함수를 사용해 진행하게 됩니다.
   
-1. 완료 된 저장 하는 R 변수를 만들 모델 및 호출 **rxLinMod**, 적절 한 수식 전달 합니다.
+1. 완성된 모델을 저장하기 위한 R 변수를 생성하고, **rxLinMod**을 호출해 적절한 수식을 인수로 전달합니다.
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. 표준 R을 호출 하는 결과의 요약을 보려면 `summary` 모델 개체에 대해 함수입니다.
+2. 결과를 요약해서 보려면 표준 R 함수인 `summary`를 모델 개체와 함께 호출합니다.
   
      ```R
      summary(linModObj)
      ```
 
-일반 R 함수 등의 특이 한 생각할 수 있습니다 `summary` 이전 단계에서 서버에 계산 컨텍스트를 설정 하므로 여기에서 작동할 것입니다. 그러나 **rxLinMod** 함수는 원격 계산 컨텍스트를 사용하여 모델을 만들더라도 로컬 워크스테이션에 대한 모델을 포함하고 이를 공유 디렉터리에 저장하는 개체도 반환합니다.
+이전 단계에서 계산 환경을 서버로 설정했기 때문에, `summary`와 같은 표준 R 함수가 여기서 쓰이는 것에 대해 이상하게 생각할 수 있습니다. 하지만 **rxLinMod** 함수는 원격 계산 환경을 사용하여 모델을 만들더라도 로컬 워크스테이션에 대한 모델을 포함하고 이를 공유 디렉터리에 저장하는 개체도 반환합니다.
 
-따라서 "로컬" 컨텍스트를 사용하여 만들어진 것처럼 모델에 대해 표준 R 명령을 실행할 수 있습니다.
+따라서 모델이 "로컬" 환경을 사용하여 만들어진 것처럼 가정하고, 이에 대해 표준 R 명령을 실행할 수 있습니다.
 
 **결과**
 
@@ -69,9 +69,9 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>로지스틱 회귀 모델 만들기
 
-다음으로, 특정 고객 사기 위험 인지 여부를 나타내는 로지스틱 회귀 모델을 만듭니다. 사용 하 여는 **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 계산 컨텍스트는 원하는 맞춤 원격에 로지스틱 회귀 모델의 함수입니다.
+다음으로, 로지스틱 회귀 모델을 만들어 특정 고객이 사기를 당할 위험이 있는지 예측합니다. 이번에는 원격 계산 환경에 맞는 로지스틱 회귀 모델을 지원하는 **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 함수를 사용합니다.
 
-1.  계산 컨텍스트를 그대로 유지합니다. 또한 계속해서 같은 데이터 원본을 사용합니다.
+1.  계산 환경은 그대로 유지합니다. 또한 이전과 같은 데이터 원본을 사용합니다.
 
 2.  **rxLogit** 함수를 호출하고 모델을 정의하는 데 필요한 수식을 전달합니다.
 
@@ -79,11 +79,11 @@ Condition number: 1.0184
     logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
     ```
   
-    삭제된 더미 변수 3개를 비롯하여 60개의 독립 변수를 포함하는 큰 모델이기 때문에 계산 컨텍스트에서 개체가 반환될 때까지 잠시 기다려야 할 수도 있습니다.
+    삭제된 더미 변수 3개를 비롯하여 60개의 독립 변수를 포함하는 큰 모델이기 때문에 계산 환경에서 개체가 반환될 때까지 잠시 기다려야 할 수도 있습니다.
     
     모델이 이렇게 큰 이유는 R 및 **RevoScaleR** 패키지에서 모든 수준의 범주 요소 변수가 자동으로 별도의 더미 변수로 처리되기 때문입니다.
   
-3.  반환 된 모델의 요약을 확인 하려면 R을 호출 `summary` 함수입니다.
+3.  반환된 모델을 확인하려면 `summary` 함수를 사용하십시오.
   
     ```R
     summary(logitObj)
