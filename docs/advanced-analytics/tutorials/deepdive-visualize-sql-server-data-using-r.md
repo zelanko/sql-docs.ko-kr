@@ -53,7 +53,7 @@ ms.locfileid: "31202315"
   
     최솟값과 최댓값이 `sqlFraudDS` 데이터 원본에 추가되었으므로(`colInfo` 매개 변수를 사용해), 히스토그램에 자동으로 적용됩니다.
   
-5. **rxCube**는 기본적으로 *rxCube 개체*를 반환합니다. 이 개체는 교차 집계를 나타냅니다. 이 개체를 [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 함수를 사용해 R의 표준 그리기 함수 중 하나에서 쉽게 사용할 수 있는 데이터 프레임으로 결과를 변환할 수 있습니다.
+5. **rxCube**는 기본적으로 *rxCube 개체*를 반환합니다. 이 개체는 교차 집계를 나타냅니다. 이 개체를 [rxResultsDF](https://d실행ocs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 함수를 사용해 R의 표준 그리기 함수 중 하나에서 쉽게 사용할 수 있는 데이터 프레임으로 결과를 변환할 수 있습니다.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -85,4 +85,4 @@ ms.locfileid: "31202315"
 
 ## <a name="previous-step"></a>이전 단계
 
-[R 스크립트 만들기 및 실행](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+[R 스크립트 만들고 실행하기](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
