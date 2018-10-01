@@ -55,7 +55,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 08/16/2018
 ms.locfileid: "40184715"
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 2008 R2 설치를 위한 하드웨어 및 소프트웨어 요구 사항
+# <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 Windows 운영 체제에서 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 설치 및 실행을 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다. 
