@@ -23,7 +23,7 @@ ms.locfileid: "31202315"
 
 이 단계에서는 **rxHistogram** 함수를 시용해 _creditLin_ 열에서 성별에 따른 데이터의 분포를 확인해보겠습니다.
 
-## <a name="visualize-data-using-rxhistogram"></a>RxHistogram를 사용해 데이터를 시각화하기
+## <a name="visualize-data-using-rxhistogram"></a>RxHistogram을 사용해 데이터 시각화하기
 
 1. 다음 R 코드를 사용하여 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 함수를 호출하고 수식과 데이터 원본을 그 인수로 전달합니다. 먼저 이 코드를 로컬로 실행해서 예상 결과 및 걸리는 시간을 확인할 수 있습니다.
   
@@ -33,7 +33,7 @@ ms.locfileid: "31202315"
  
     내부적으로 **rxHistogram** 은 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) 패키지에 포함된 **rxCube** 함수를 호출합니다. **rxCube**는 수식에 명시된 변수에 대해 하나의 열을 포함하는 단일 목록(혹은 데이터 프레임)과 수를 나타내는 열을 반환합니다.
     
-2. 이제 계산 환경을 원격 SQL Server 컴퓨터로 설정하고 **rxHistogram**를 다시 실행합니다.
+2. 이제 계산 환경을 원격 SQL Server 컴퓨터로 설정하고 **rxHistogram**을 다시 실행합니다.
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -49,7 +49,7 @@ ms.locfileid: "31202315"
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예제의 `F(numTrans):F(numIntlTrans)`는 `numTrans` 및 `numIntlTrans` 변수를 각 정수 값에 따라 범주 변수로 처리하는 것을 의미합니다.
+    그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예제의 `F(numTrans):F(numIntlTrans)`는 `numTrans` 및 `numIntlTrans` 변수를 각 정숫값에 따라 범주 변수로 처리하는 것을 의미합니다.
   
     최솟값과 최댓값이 `sqlFraudDS` 데이터 원본에 추가되었으므로(`colInfo` 매개 변수를 사용해), 히스토그램에 자동으로 적용됩니다.
   
