@@ -28,9 +28,9 @@ ms.locfileid: "31204695"
 
 ## <a name="change-compute-context-to-the-server"></a>계산 환경을 서버로 변경하기
 
-R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 환경을 지정해야 합니다.
+R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 지정해야 합니다.
 
-1. R을 사용하여 이미 정의한 계산 환경을 활성화하려면 다음과 같이 **rxSetComputeContext** 함수를 사용합니다.
+1. R을 사용하여 이미 정의한 계산 컨텍스트를 활성화하려면 다음과 같이 **rxSetComputeContext** 함수를 사용합니다.
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -38,7 +38,7 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 환경을 지정
   
     이 문을 실행한 후에 모든 계산은 *sqlCompute* 매개 변수에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수행됩니다.
   
-2. 워크스테이션에서 R 코드를 실행하려는 경우  **local** 키워드를 사용하여 계산 환경을 다시 로컬 컴퓨터로 전환할 수 있습니다.
+2. 워크스테이션에서 R 코드를 실행하려는 경우 **local** 키워드를 사용하여 계산 컨텍스트를 다시 로컬 컴퓨터로 전환할 수 있습니다.
   
     ```R
     rxSetComputeContext ("local")
@@ -46,14 +46,14 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 환경을 지정
   
     이 함수에서 지원하는 다른 키워드 목록을 보려면 R 명령줄에서 `help("rxSetComputeContext")` 를 입력합니다.
   
-3. 계산 환경을 지정하면 변경할 때까지 활성 상태로 유지됩니다. 그러나 원격 서버 환경에서 실행할 수 *없는* 모든 R 스크립트는 로컬로 실행됩니다.
+3. 계산 컨텍스트를 지정하면 변경할 때까지 활성 상태로 유지됩니다. 그러나 원격 서버 컨텍스트에서 실행할 수 *없는* 모든 R 스크립트는 로컬로 실행됩니다.
 
-## <a name="compute-some-summary-statistics"></a>몇 가지 요약 통계 계산하기.
+## <a name="compute-some-summary-statistics"></a>몇 가지 요약 통계 계산하기
 
-계산 환경의 작동 방식을 보려면, `sqlFraudDS` 데이터 원본을 이요해 몇 가지 요약 통계를 생성해보십시오. 다시 강조하지만, 데이터 원본 개체는 단지 사용할 데이터를 정의하는 것입니다. 즉, 계산 환경은 바뀌지 않습니다.
+계산 환경의 작동 방식을 보려면, `sqlFraudDS` 데이터 원본을 이용해 몇 가지 요약 통계를 생성해보십시오. 다시 강조하지만, 데이터 원본 개체는 단지 사용할 데이터를 정의하는 것입니다. 즉, 계산 환경은 바뀌지 않습니다.
 
-+ 로컬에 대한 요약 통계를 계산하려면 **rxSetComputeContext**를 사용하고 _로컬_ 키워드를 지정하십시오.
-+ SQL Server 컴퓨터에서 같은 계산을 하려면 앞에서 정의한 SQL 계산 환경으로 전환합니다.
++ 로컬로 요약 통계를 계산하려면 **rxSetComputeContext**를 사용하고 로컬 키워드를 지정하십시오.
++ SQL Server 컴퓨터에서 같은 계산을 하려면 앞에서 정의한 SQL 계산 환경으로 전환하십시오.
 
 1. [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)를 수식이나 데이터 원본 등의 필수 인수와 함께 호출하고 그 결과를 `sumOut` 변수에 할당합니다.
   
@@ -63,7 +63,7 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 환경을 지정
   
     R 언어에는 많은 요약 함수가 있지만, **rxSummary**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 포함하는 다양한 원격 계산 환경에서의 실행만 지원합니다. 이와 유사한 함수에 대한 정보는 [RevoScaleR을 사용하여 데이터 요약하기](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)를 참고하십시오.
   
-2. 계산이 완료되면 `sumOut` 변수의 내용을 콘솔오 출력할 수 있습니다.
+2. 계산이 완료되면 `sumOut` 변수의 내용을 콘솔로 출력할 수 있습니다.
   
     ```R
     sumOut
@@ -110,7 +110,7 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 환경을 지정
 
 계산된 요약 통계를 바탕으로 데이터에 대한 몇 가지 유용한 정보를 발견했습니다. 이런 정보는 나중에 수행될 수 있는 계산에 유용하게 사용될 수 있으므로 이를 데이터 원본에 저장하려고 합니다. 예를 들어 최솟값 및 최댓값은 히스토그램을 계산하는 데에 사용될 수 있습니다. 이러한 이유로 **RxSqlServerData** 데이터 원본에 최댓값 및 최솟값을 추가해보겠습니다.
 
-다행히도 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]는 정수 데이터를 범주 비율 데이터로 효율적으로 변환할 수 있는 최적화 된 함수를 제공합니다.
+다행히도 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]는 정수 데이터를 범주 비율 데이터로 효율적으로 변환할 수 있는 최적화된 함수를 제공합니다.
 
 1. 먼저 몇 가지 임시 변수를 설정합니다.
   
@@ -156,14 +156,14 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 환경을 지정
      이제 `sqlFraudDS` 데이터 원본은 `ccColInfo`에 들어있던 정보를 이용해 새로운 열을 포함합니다.
   
 
-이 시정메서 수정을 가해도 R의 데이터 원본에만 영향을 끼칩니다. 즉 어떤 데이터도 아직 데이터베이스 테이블에 기록되지 않았습니다. 하지만 시각화 및 요약을 수행하기 위해 `sumOut` 변수에 저장된 데이터를 사용할 수 있습니다. 다음 단계에서 계산 환경을 전환하는 동안 이 작업을 하는 방법에 대해 알아봅니다.
+이 시점에서 수정하면 R의 데이터 원본에만 영향을 끼칩니다. 즉 어떤 데이터도 아직 데이터베이스 테이블에 기록되지 않았습니다. 하지만 시각화 및 요약을 수행하기 위해 `sumOut` 변수에 저장된 데이터를 사용할 수 있습니다. 다음 단계에서 계산 환경을 전환하는 동안 이 작업을 하는 방법에 대해 알아봅니다.
 
 > [!TIP]
 > 현재 사용하고 있는 계산 환경을 잊은 경우 `rxGetComputeContext()`를 실행하십시오. 반환 값이 "RxLocalSeq Compute Context" 라면 로컬 계산 환경을 사용하고 있음을 나타냅니다.
 
 ## <a name="next-step"></a>다음 단계
 
-[R을 사용하여 SQL Server 데이터 시각화하기](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[R을 사용하여 SQL Server 데이터 시각화](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 
 ## <a name="previous-step"></a>이전 단계
 
