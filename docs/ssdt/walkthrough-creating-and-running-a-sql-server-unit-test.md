@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a04bd99b8106615efc7e210c11c281abd4fdaf9f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855291"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 이 연습에서는 일부 저장 프로시저의 동작을 확인하는 SQL Server 단위 테스트를 만듭니다. SQL Server 단위 테스트는 잘못된 응용 프로그램 동작을 일으킬 수 있는 코드 결함을 식별하기 위해 만듭니다. SQL Server 단위 테스트와 응용 프로그램 테스트는 자동화된 테스트 집합의 일부로 실행할 수 있습니다.  

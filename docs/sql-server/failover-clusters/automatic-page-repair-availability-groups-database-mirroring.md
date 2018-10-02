@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76ab4cee846252b749a664619d1117eacd4aa93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036700"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844651"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>자동 페이지 복구(가용성 그룹: 데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "33036700"
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  데이터베이스 미러링 자동 페이지 복구는 다음 표에 나열된 오류 중 하나로 인해 실패한 작업이 있는 데이터 파일의 페이지만 복구하도록 시도합니다.  
   
-|오류 번호|Description|자동 페이지 복구 시도가 발생되는 인스턴스|  
+|오류 번호|설명|자동 페이지 복구 시도가 발생되는 인스턴스|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|운영 체제가 데이터에서 실패한 CRC(순환 중복 검사)를 수행한 경우에만 동작이 수행됩니다.|ERROR_CRC이며 이 오류에 대한 운영 체제 값은 23입니다.|  
 |824|논리 오류입니다.|조각난 쓰기 오류 또는 잘못된 페이지 체크섬과 같은 논리적 데이터 오류입니다.|  

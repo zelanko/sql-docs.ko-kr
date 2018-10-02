@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], multiserver jobs
 - jobs [SQL Server Agent], multiserver jobs using proxies
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a08b1c5d3685a4d4193cc7f7b40b59af27ef878
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 2fc185d32566d5ee8aad313790e5159f860fd41e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42774199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856863"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>프록시를 사용하는 다중 서버 작업 문제 해결
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "42774199"
   
 -   "작업 단계에 프록시 계정이 필요하지만 일치하는 프록시를 대상 서버에서 사용할 수 없습니다."  
   
-    이 오류를 해결하려면 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.***\<n*>** \SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 레지스트리 하위 키를 **1(true)** 로 설정합니다. 기본적으로 이 하위 키는 **0** (**false**)으로 설정됩니다. **MSSQL.**\<*n*>의 값은 인스턴스 이름입니다(예: **MSSQL.1** 또는 **MSSQL.3**).  
+    이 오류를 해결하려면 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.**_\<n\>_**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 레지스트리 하위 키를 **1(true)** 로 설정합니다. 기본적으로 이 하위 키는 **0** (**false**)으로 설정됩니다. **MSSQL.**\<*n*>의 값은 인스턴스 이름입니다(예: **MSSQL.1** 또는 **MSSQL.3**).  
   
 -   "프록시를 찾을 수 없습니다."  
   

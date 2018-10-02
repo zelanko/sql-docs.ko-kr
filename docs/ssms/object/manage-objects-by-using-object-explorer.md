@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-objects
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - OE F1 Help
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3af3160f5d6774921faa6de14b2bff0a47ac5c0
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 8a8e9429c2d9e55a54a7b07a2d417dcbbef41eb4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774831"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843001"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>개체 탐색기를 사용하여 개체 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
