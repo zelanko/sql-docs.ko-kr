@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVICE_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1230507e5c304ca111c50dc4dcfc591814be1ed3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739041"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ CREATE SERVICE service_name
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 원격 서비스로부터 새 대화를 허용하는 경우 Service Broker에서 대화 메시지를 넣는 큐는 대상 서비스의 이름에 의해 결정됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  서비스를 만들 수 있는 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다. CREATE SERVICE 문을 실행하는 사용자에게는 큐 및 지정된 모든 계약에 대한 REFERENCES 권한이 있어야 합니다.  
   
  서비스에 대한 REFERENCES 권한은 기본적으로 서비스 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다. 서비스에 대한 SEND 권한은 기본적으로 서비스 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  

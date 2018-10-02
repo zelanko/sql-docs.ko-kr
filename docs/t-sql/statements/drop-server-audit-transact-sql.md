@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP SERVER AUDIT
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DROP SERVER AUDIT statement
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c67b2ec27cc362c3a41dd3e54ca627dad467da92
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 47d025cac6364bab049afac7a0253a6c82a09611
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711471"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ DROP SERVER AUDIT audit_name
   
  DROP SERVER AUDIT는 연결된 서버 또는 데이터베이스 감사 사양을 삭제하지 않습니다. 이러한 사양은 수동으로 삭제하거나 분리하여 나중에 새 서버 감사에 매핑해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  서버 감사 보안 주체를 생성, 변경 또는 삭제하려면 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

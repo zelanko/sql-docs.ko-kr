@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 934267601abcedd1499e45c5a5eafdcee6ab8f35
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a26c80da92e52c785ab247ce6ea6463d6e31886d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670891"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>성능 카운터 MSRS 2011 SharePoint 모드 성능 개체
   이 항목에서는 **SharePoint 모드 배포의 일부인** MSRS 2011 웹 서비스 SharePoint 모드 **및** MSRS 2011 Windows 서비스 SharePoint 모드 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 성능 개체에 대한 성능 카운터를 설명합니다.  

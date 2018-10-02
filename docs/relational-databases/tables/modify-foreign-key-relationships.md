@@ -5,9 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c3ba23f2e2a5a4d67d1b6fca63e5e41bd9da21
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1db55a3bdbe795b027d7f46a6eff541d0a49060c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059864"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812081"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -146,7 +143,7 @@ ms.locfileid: "43059864"
   
     -   **기본값 설정** 테이블의 모든 외래 키 열에 기본값이 정의되어 있으면 열에 정의된 기본값으로 값을 설정합니다.  
   
-4.  **파일** 메뉴에서 *****테이블 이름 저장*을 클릭합니다.  
+4.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **외래 키를 수정하려면**  

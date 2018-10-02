@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.mergejointrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 792014313d846e0c25fd9280da7529006e3c5b0d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6fc41dc0b30164410ca1e5d770632f9866ca26c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833537"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   병합 조인 변환은 FULL, LEFT 또는 INNER 조인으로 두 개의 정렬된 데이터 집합을 조인하여 생성된 출력을 제공합니다. 예를 들어 LEFT 조인을 사용하여 제품 정보가 포함된 테이블을 제품 제조 국가/지역이 나열된 테이블과 조인할 수 있습니다. 조인 결과로 모든 제품과 제조 국가/지역이 나열된 테이블이 생성됩니다.  
@@ -72,7 +69,7 @@ ms.locfileid: "35327777"
 > [!IMPORTANT]  
 >  병합 조인 변환에는 정렬된 데이터를 입력해야 합니다. 이러한 중요 요구 사항에 대한 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **조인 유형**  
  내부 조인, 왼쪽 우선 외부 조인 또는 완전 조인을 사용할지 여부를 지정합니다.  
   

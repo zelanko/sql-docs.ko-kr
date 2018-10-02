@@ -4,30 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 573d6de97d69582297335aad4f558755ad962977
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1502b5f4e71807f0141ecd404011947ec8a10d57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846091"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
-            [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 최적화 테이블에 유지하는 패턴을 지원합니다. 일반적으로, 이는 **datetime** 키를 기준으로 데이터가 저장되는 시나리오가 될 것입니다.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 최적화 테이블에 유지하는 패턴을 지원합니다. 일반적으로, 이는 **datetime** 키를 기준으로 데이터가 저장되는 시나리오가 될 것입니다.  
   
  분할된 테이블과 메모리 최적화 테이블을 공통 스키마로 유지하여 분할된 테이블을 메모리 최적화 테이블로 에뮬레이트할 수 있습니다. 현재 데이터는 메모리 최적화 테이블에 삽입되고 업데이트되는 반면, 자주 액세스하지 않는 데이터는 기존의 분할된 테이블에 유지됩니다.  
   

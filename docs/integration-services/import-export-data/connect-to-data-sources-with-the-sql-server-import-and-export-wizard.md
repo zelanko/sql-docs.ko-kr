@@ -5,21 +5,18 @@ ms.date: 02/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abbc9354d0df37f122aae398b45a35c4b40fee7c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 28fc6d66c9f64be96220154f011a62fe3af97676
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669531"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결
 이 단원의 항목에서는 SQL Server 가져오기 및 내보내기 마법사를 실행할 때 자주 사용되는 데이터 원본에 연결하는 방법을 보여 줍니다. 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에서 데이터 원본에 대한 연결 정보를 제공해야 합니다.

@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.configuredistributionwizard.enablepublishers.f1
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e3573a22bb52d7beaf83495b71afa07237f73ca
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e8370c989cb442de305c57e239beaff827bef37f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701171"
 ---
 # <a name="publishers"></a>배포자 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "37352605"
   
  게시자로 선택한 서버는 이 마법사의 **배포 데이터베이스** 페이지에서 지정한 배포 데이터베이스를 사용합니다. 다른 배포 데이터베이스를 사용하려면 이때 게시자를 설정하지 마십시오. 대신 배포 구성 마법사를 완료한 후 **배포자 속성** 대화 상자를 사용하여 게시자를 추가합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **게시자**  
  이 배포자를 사용하도록 허용할 서버를 선택합니다. 게시자 옆의 속성 단추 (**...**)를 클릭하여 추가 속성을 보고 설정할 수 있습니다.  
   

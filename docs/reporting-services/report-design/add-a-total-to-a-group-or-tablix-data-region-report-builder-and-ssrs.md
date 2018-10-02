@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59491b4a13b0b18e2df96081fac9581a3aec2dfb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dd441fdfcc9d08f7555cb357f7f6e5d5ba64d194
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819461"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>그룹 또는 테이블릭스 데이터 영역에 합계 추가(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 그룹 또는 전체 데이터 영역에 대한 테이블릭스 데이터 영역에 합계를 추가할 수 있습니다. 기본적으로 합계는 필터가 적용된 후 그룹 또는 데이터 영역의 Null이 아닌 숫자 데이터의 합계입니다. 그룹에 대한 합계를 추가하려면 그룹화 창의 그룹에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. 테이블릭스 본문 영역에서 개별 셀에 대한 합계를 추가하려면 셀에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. **합계 추가** 명령은 상황에 맞게 작동하며 숫자 필드에 대해서만 사용할 수 있습니다. 선택한 테이블릭스 셀에 따라 테이블릭스 본문 영역에서 셀을 선택하여 단일 셀에 대한 합계를 추가하거나 테이블릭스 행 그룹 영역 또는 열 그룹 영역에서 셀을 선택하여 전체 그룹에 대한 합계를 추가할 수 있습니다. 테이블릭스 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)을 참조하세요.  

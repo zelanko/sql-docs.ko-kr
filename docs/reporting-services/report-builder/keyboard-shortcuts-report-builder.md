@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7c026c5ddd7e7e9e82269bfa28f04d5b538afc21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264542"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832631"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
   보고서 작성기에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들고 편집하는 경우 Windows 환경에서 제공하는 모든 바로 가기 키를 탐색에 사용할 수 있습니다. 여러 표준 키보드 매핑 구성표 중에서 선택할 수 있습니다.  

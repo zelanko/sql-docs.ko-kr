@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f45a13e8a49f7d245ea67d00f966118fd421bf45
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175193"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613432"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
 

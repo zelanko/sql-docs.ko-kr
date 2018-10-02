@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c2a7dfd1d5e9bafd023d2289c801758e9670629
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086625"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787431"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>방법: 편집할 SQL Server 단위 테스트 열기
 SQL Server 단위 테스트를 만든 후에는 **SQL Server 단위 테스트 디자이너**를 사용하여 Transact\-SQL 문과 테스트 조건을 추가합니다. 디자이너를 사용하여 만든 테스트는 Visual C# 또는 Visual Basic 코드를 생성합니다. 이 코드는 테스트를 실행할 때 실행됩니다.  

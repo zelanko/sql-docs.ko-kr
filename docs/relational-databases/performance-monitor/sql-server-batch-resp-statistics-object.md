@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 9749469dcec6b15c25f8c517d27b0817ba21c893
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a35437442460a8f987921f17da26e40d67f02a8e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685581"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, 일괄 처리 응답 통계 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951668"
 다음 표에서는 SQL Server에 **Batch Resp Statistics** 성능 개체에 대해 설명합니다.
 
 
-|**SQL Server Batch Resp Statistics 카운터**|Description|  
+|**SQL Server Batch Resp Statistics 카운터**|설명|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|응답 시간이 0ms보다 크거나 같고 1ms보다 작은 SQL 일괄 처리 수|
 |**Batches >=000001ms & \<000002ms**|응답 시간이 1ms보다 크거나 같고 2ms보다 작은 SQL 일괄 처리 수|
@@ -54,7 +50,7 @@ ms.locfileid: "32951668"
 
 개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |**CPU Time:Requests**|요청에 소요되는 CPU 시간입니다.|  
 |**CPU Time:Total(ms)**|일괄 처리에 소요되는 CPU 총 시간입니다.|  

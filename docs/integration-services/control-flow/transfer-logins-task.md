@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0846c8135c4b9095ab9c5a1f5549fc0884dd6703
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: dbbe5f928134a6a759129f3c1639c3dd1984b726
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625007"
 ---
 # <a name="transfer-logins-task"></a>로그인 전송 태스크
   로그인 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 사이에서 하나 이상의 로그인을 전송합니다.  
@@ -88,7 +85,7 @@ ms.locfileid: "35405245"
 ## <a name="transfer-logins-task-editor-general-page"></a>로그인 전송 태스크 편집기(일반 페이지)
   **로그인 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 로그인 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이름**  
  로그인 전송 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -104,7 +101,7 @@ ms.locfileid: "35405245"
 > [!IMPORTANT]  
 >  로그인 전송 태스크를 실행하면 대상 서버에 임의의 암호로 로그인이 생성되고 해당 암호는 해제됩니다. 이러한 로그인을 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 해당 암호를 변경한 다음 다시 설정해야 합니다. **sa** 로그인은 전송될 수 없습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **SourceConnection**  
  목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>** 을 클릭하여 원본 서버에 대한 새 연결을 만듭니다.  
   

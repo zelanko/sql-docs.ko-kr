@@ -5,24 +5,21 @@ ms.date: 02/28/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afppigtask.f1
 - sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cfedfef2eb5d73089497add7e64e1875dccdcf4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: cee619bb2c7e11a1bb6609fcc6a6c1f51ebf6da7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402155"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832911"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 태스크
 **Azure HDInsight Pig 태스크** 를 사용하여 Azure HDInsight 클러스터에서 Pig 스크립트를 실행합니다.

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHUTDOWN_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee366089ceb6451aeea16669f45f06b0bc5a97fe
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 98a5cdb6b02cda84424cb305a4ecc63e38056bdc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36244065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797272"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +74,7 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  이 방법 중 하나를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하면 `SERVICE_CONTROL_STOP` 메시지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전송됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  SHUTDOWN 권한은 **sysadmin** 및 **serveradmin** 고정 서버 역할의 멤버에게 할당되며, 양도할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  

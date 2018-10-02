@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7cf50bad1e75b5729bc946f6887e02654b69d8d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683051"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>트랜잭션 아티클 - 변경 내용을 전파하는 방법 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "38005976"
   
 -   **sp_MSdel_\<** *tablename* **>** 은 삭제를 처리합니다.  
   
- 프로시저에서 사용하는 **\<***tablename***>** 은 아티클을 게시에 추가하는 방법과 구독 데이터베이스에 소유자는 다르지만 이름이 같은 테이블이 포함되어 있는지 여부에 따라 다릅니다.  
+ 프로시저에서 사용하는 **\<**_tablename_**>** 은 아티클을 게시에 추가하는 방법과 구독 데이터베이스에 소유자는 다르지만 이름이 같은 테이블이 포함되어 있는지 여부에 따라 다릅니다.  
   
  이러한 프로시저는 아티클을 게시에 추가할 때 지정하는 사용자 지정 프로시저로 바꿀 수 있습니다. 구독자에서 행이 업데이트될 때 데이터를 감사 테이블에 삽입하는 경우와 같이 응용 프로그램에 사용자 지정 논리가 필요할 경우 사용자 지정 프로시저를 사용합니다. 사용자 지정 저장 프로시저 지정 방법은 위에 나열된 항목을 참조하십시오.  
   

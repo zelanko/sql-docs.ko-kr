@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.newaglistener.general.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 53f49ad6acc123634143eec72b0f9b5b084cd929
-ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
+ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39609662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821991"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +265,7 @@ ms.locfileid: "39609662"
   
 -   다중 서브넷 Always On 장애 조치(Failover) 클러스터 인스턴스로 명명된 인스턴스 확인  
   
-    -   서브넷 끝점이 여러 개인 Always On 장애 조치(Failover) 클러스터 인스턴스에 대한 명명된 인스턴스 확인 지원을 추가합니다.  
+    -   서브넷 엔드포인트가 여러 개인 Always On 장애 조치(Failover) 클러스터 인스턴스에 대한 명명된 인스턴스 확인 지원을 추가합니다.  
   
  **MultiSubnetFailover=True가 .NET Framework 3.5 또는 OLEDB에서 지원되지 않음**  
   

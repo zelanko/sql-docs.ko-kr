@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENJSON
@@ -17,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 834e8f7c00cc4185c6d04ee88a501ced0ebdb98a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7ef0c4116ae4106cfba042220e9804ca7d0b39de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701321"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,8 +57,8 @@ FROM OPENJSON(@json);
   
 |Key|value|유형|  
 |---------|-----------|----------|  
-|NAME|John|@shouldalert|  
-|성|Doe|@shouldalert|  
+|NAME|John|1|  
+|성|Doe|1|  
 |나이|45|2|  
 |기술|["SQL","C#","MVC"]|4|
 
@@ -120,7 +118,7 @@ WITH (
   
 |Number|date|Customer|수량|  
 |------------|----------|--------------|--------------|  
-|SO43659|2011-05-31T00:00:00|AW29825|@shouldalert|  
+|SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
 이 함수는 JSON 배열의 요소를 반환하고 형식을 지정합니다.  

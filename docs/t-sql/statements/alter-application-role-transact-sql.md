@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_APPLICATION_ROLE_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ALTER APPLICATION ROLE statement
 - application roles [SQL Server], modifying
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5d4b3b6b886d46d8e7fb91418af8eec82b81a824
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 58cac793f7bcf356f8055c27b598c9521f0c7bce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690231"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ ALTER APPLICATION ROLE application_role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 스키마 동작이 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 동작에서 변경되었습니다. 스키마가 데이터베이스 사용자와 같다고 가정하는 코드에서 올바른 결과가 반환되지 않을 수도 있습니다. sysobjects를 비롯한 이전 카탈로그 뷰는 CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION 등의 DDL 문이 사용된 데이터베이스에서 사용하지 않아야 합니다. 이러한 문이 사용된 데이터베이스에서는 새 카탈로그 뷰를 사용해야 합니다. 새 카탈로그 뷰는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 보안 주체와 스키마 분리를 고려합니다. 카탈로그 뷰에 대한 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다. 기본 스키마를 변경하려면 응용 프로그램 역할에 대한 ALTER 권한도 필요합니다. 응용 프로그램 역할은 자체 기본 스키마를 변경할 수 있지만 응용 프로그램 역할의 이름이나 암호는 변경할 수 없습니다.  
   
 ## <a name="examples"></a>예  

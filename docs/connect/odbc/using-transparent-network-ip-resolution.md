@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d76e50b4761e8d1a32bbcfc4606778f96513ed1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610760"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>투명 네트워크 IP 확인 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -33,13 +30,13 @@ TransparentNetworkIPResolution은 않습니다 호스트 이름의 첫 번째 �
 |TransparentNetworkIPResolution|MultiSubnetFailover|동작|
 |:-:|:-:|:-:|
 |(기본값)|(기본값)|0|
-|(기본값)|설정|@shouldalert|
+|(기본값)|설정|1|
 |(기본값)|사용 안 함|0|
 |설정|(기본값)|0|
-|설정|설정|@shouldalert|
+|설정|설정|1|
 |설정|사용 안 함|0|
 |사용 안 함|(기본값)|2|
-|사용 안 함|설정|@shouldalert|
+|사용 안 함|설정|1|
 |사용 안 함|사용 안 함|2|
 
 `TransparentNetworkIPResolution` DSN 및 연결 문자열 키워드에는 연결 문자열 수준에서이 설정을 제어 합니다. 기본값을 사용 합니다.

@@ -3,17 +3,16 @@ title: 기본 모드에서 SharePoint 모드로 마이그레이션(SSRS) | Micro
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f95a1fe0ef25d4a4366ddd4f7895fe0eda507857
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7adb637db4c3b9bcf7350589ac1ff352e8ec9cd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701481"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.rg.properties.f1
@@ -16,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f345af10cd9f76b12e7f9b6e4871b11d4f953771
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a9b4ed404af053aabee7aff256037fa6b948c932
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856481"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

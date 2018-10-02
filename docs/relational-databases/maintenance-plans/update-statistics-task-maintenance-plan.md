@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.statistics.f1
 helpviewer_keywords:
 - Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2f8bbeeb45f6d49589dc2b20a32bd8614ae82f71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 55c2f04abe858897f013c173b47909845da6b66c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680461"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>통계 업데이트 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "32944508"
   
  이 태스크는 UPDATE STATISTICS 문을 실행합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   

@@ -3,7 +3,6 @@ title: 서버 속성(보안 페이지) - Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: reporting-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.security.f1
@@ -11,12 +10,12 @@ ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: markingmyname
 ms.author: maghan
 ms.date: 06/10/2016
-ms.openlocfilehash: 993cab3a20d22d94f9e57e36a904a0b9393f9c43
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 48fd1cf08882291515a0797957d9999f6bf67e90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279035"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738761"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>서버 속성(보안 페이지) - Reporting Services
 

@@ -5,24 +5,21 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpsubscrconn.f1
 - sql14.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da67b5ad82e681273d47ca19ef8f1fc737b9aa1f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 82431376b5c7fbb052d5f36e158d269587dd7300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671421"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 구독 연결 관리자
   SSIS 패키지는 **Azure 구독 연결 관리자** 를 통해 속성에 대해 지정된 값(Azure 구독 ID 및 관리 인증서)을 사용하여 Azure 구독에 연결할 수 있습니다.  

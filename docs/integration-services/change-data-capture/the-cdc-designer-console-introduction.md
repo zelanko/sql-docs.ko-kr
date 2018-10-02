@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0945097c4895e9162c671686696aea30d936fee5
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6a7a60eff70f5457d3ebe494b03ca2375027f54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620531"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
   이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  

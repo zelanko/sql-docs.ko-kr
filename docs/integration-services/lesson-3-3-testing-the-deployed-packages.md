@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b69d211355699e62e1fea47d2b7a4a68070834bc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f3461277f86e7d8aa8466b5d56cce7a54ed82852
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836231"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>3-3단원 - 배포된 패키지 테스트
 이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포한 패키지를 테스트합니다.  

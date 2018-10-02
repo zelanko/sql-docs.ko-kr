@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - removing delivery extensions
 - deleting delivery extensions
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24036ae33b6b6a8da46b988189a055f5b17cca46
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: daebad069ec1d9791ceab58af1d25f03524c82cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704911"
 ---
 # <a name="removing-a-delivery-extension"></a>배달 확장 프로그램 제거
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 제거하려면 구성 파일에서 배달 확장 프로그램에 대한 **Extension** 요소를 제거하기만 하면 됩니다. 구성 정보를 제거한 후에는 보고서 서버에서 배달 확장 프로그램을 사용할 수 없습니다.  

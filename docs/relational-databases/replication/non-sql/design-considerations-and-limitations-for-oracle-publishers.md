@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c762e0ceedad4c535f5eda7bafe017ed2d61d6d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748751"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -143,8 +139,7 @@ ms.locfileid: "37351715"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이진 유효성 검사와 행 개수 유효성 검사를 지원합니다. Oracle 게시자에서는 행 개수 유효성 검사를 지원합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-replicated-data.md)를 참조하세요.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. Oracle 게시자에서는 문자 모드 스냅숏을 지원합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. Oracle 게시자에서는 문자 모드 스냅숏을 지원합니다.  
   
 -   게시된 Oracle 테이블의 스키마 변경은 지원되지 않습니다. 스키마를 변경하려면 먼저 게시를 삭제하고 스키마를 변경한 다음 게시 및 구독을 다시 만듭니다.  
   

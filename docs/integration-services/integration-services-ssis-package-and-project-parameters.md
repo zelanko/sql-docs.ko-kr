@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750361"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services(SSIS) 패키지 및 프로젝트 매개 변수
   SSIS([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다.  
@@ -43,7 +40,7 @@ ms.locfileid: "35404375"
   
 -   [구성 대화 상자](../integration-services/service/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+-   [패키지 실행 대화 상자](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
 ### <a name="parameter-values"></a>매개 변수 값  
  매개 변수에는 최대 세 가지 서로 다른 유형의 값을 지정할 수 있습니다. 패키지 실행이 시작되면 매개 변수에 대해 단일 값이 사용되고 매개 변수가 해당 최종 리터럴 값으로 확인됩니다.  
@@ -167,7 +164,7 @@ ms.locfileid: "35404375"
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 **매개 변수화** 대화 상자를 사용하여 새 매개 변수나 기존 매개 변수를 태스크의 속성과 연결할 수 있습니다. 태스크나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 제어 흐름 탭을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수화**를 클릭하여 이 대화 상자를 엽니다. 다음 목록에서는 이 대화 상자의 UI 요소에 대해 설명합니다. 매개 변수에 대한 자세한 내용은 [SSIS(Integration Services) 매개 변수](https://msdn.microsoft.com/library/hh213214.aspx)를 참조하세요.
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **속성**  
  매개 변수와 연결할 태스크의 속성을 선택합니다. 이 목록은 매개 변수화할 수 있는 모든 속성으로 채워집니다.  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-menu
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.file.close.f1
@@ -16,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20d162ca05032645174d4775072486cba6360c6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d04a26bd1ae3af20eaed7a8aa5cadc68a59cda8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039930"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844701"
 ---
 # <a name="save-changes"></a>변경 내용 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "33039930"
   
 이전에 저장한 항목의 변경 내용은 저장소의 해당 저장 위치에 자동으로 저장됩니다. 항목을 아직 저장하지 않은 경우 새 저장 위치를 묻는 **다른 이름으로 파일 저장** 대화 상자가 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **다음 항목의 변경 내용을 저장하시겠습니까?**  
 선택한 항목이 저장됩니다. 항목을 선택하거나 선택을 취소할 수 있습니다.  
   

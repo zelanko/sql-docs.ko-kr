@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c17fe8a30934741751a1c0f02cd93430a9f30a0f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f9a2853168944e3611eb22cf377761f9b73f8d50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647411"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.locfileid: "43070675"
 |성공|**int**|메시지가 활성 상태인 시간입니다. 이 값이 시간 제한 값보다 크거나 같으면 메시지가 삭제됩니다.|23|아니오|  
 |TargetLoginName|**nvarchar**|메시지가 전달된 네트워크 주소입니다.|42|아니오|  
 |TargetUserName|**nvarchar**|메시지에 대한 시작 서비스의 이름입니다.|39|아니오|  
-|TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메시지를 삭제한 이유에 대한 설명입니다.|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메시지를 삭제한 이유에 대한 설명입니다.|1|사용자 계정 컨트롤|  
 |Transaction ID|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니오|  
   
  이 이벤트의 TextData 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메시지를 삭제한 이유에 대한 설명이 들어 있습니다.  

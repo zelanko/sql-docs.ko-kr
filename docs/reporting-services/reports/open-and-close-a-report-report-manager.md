@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01e8574905e4f7788c6ab00fb4ec4da8d86b3525
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711741"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)
   보고서 관리자를 사용하여 보고서 서버에 게시된 보고서를 볼 수 있습니다. 기본적으로 모든 보고서는 HTML로 열립니다. 보고서가 열린 후 다른 응용 프로그램 형식으로 내보내어 볼 수 있습니다. 보고서에 대화형 기능이 포함되어 있거나 보고서가 대화형 데이터를 포함한 보고서 작성기 보고서인 경우 해당 링크를 클릭하여 추가 보고서 또는 데이터를 볼 수 있습니다.  

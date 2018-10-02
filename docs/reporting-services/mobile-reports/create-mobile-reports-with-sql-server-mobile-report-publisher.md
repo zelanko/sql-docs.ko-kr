@@ -5,17 +5,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8385a2001b6d4c2bba392805d8072f214af567
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274814"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739341"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
 다양한 데이터 시각화와 함께 모바일 장치용으로 최적화되고 온-프레미스 데이터에 연결된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에 대해 알아봅니다. 

@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: 65
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5b9ee0764face940d76fc02b3c5e5563fd414126
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7ae9cbd530432ac43daca81c82bd477603c6ecbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854571"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +30,7 @@ ms.locfileid: "34327804"
     > [!NOTE]
     > 메모리 내 OLTP에는 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 필요합니다.  
   
--   
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 메모리 최적화 테이블 및 인덱스에 데이터를 저장하기에 충분한 메모리와 온라인 워크로드를 지원하기 위한 추가 메모리가 필요합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 메모리 최적화 테이블 및 인덱스에 데이터를 저장하기에 충분한 메모리와 온라인 워크로드를 지원하기 위한 추가 메모리가 필요합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 을 참조하세요.  
 
 -   VM(가상 머신)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](을)를 실행하는 경우 메모리 최적화 테이블 및 인덱스에 필요한 메모리를 지원하기에 충분한 메모리가 VM에 할당되었는지 확인합니다. VM 호스트 응용 프로그램에 따라 VM에 대한 메모리 할당을 보장하는 구성 옵션을 메모리 예약 또는 동적 메모리를 사용하는 경우 최소 RAM이라고 할 수 있습니다. 이러한 설정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 요구에 충분한지 확인합니다.
   

@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4de826e45d84493b24fbc2b1617c40c4f0a13b9
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 263f1b3a76a30c1ab220234b32dd55af1ab6cfac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674711"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>게시 정보, 경고(스냅숏 게시, SQL Server 2005 이상)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "37355415"
   
  임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 알림 신호는 **경고 구성** 을 클릭하고 **복제 경고 구성** 대화 상자에서 정보를 제공하여 정의합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **설정**  
  경고를 설정하고 임계값을 지정하려면 선택합니다.  
   

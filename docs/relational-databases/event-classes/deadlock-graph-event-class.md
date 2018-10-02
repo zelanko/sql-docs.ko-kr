@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Deadlock Graph event class
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bd3d71a8c8a8d971bb9f6a4628f98fe1cffda54
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 16b53261745e40f0d49a034421ee6fc6c35dfe13
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101104"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831331"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 이벤트 클래스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ ms.locfileid: "43101104"
 |**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|사용자 계정 컨트롤|  
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|교착 상태가 감지된 시간입니다.|14|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|교착 상태에 대한 XML 설명입니다.|@shouldalert|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|교착 상태에 대한 XML 설명입니다.|1|사용자 계정 컨트롤|  
 |**TransactionID**|**bigint**|사용되지 않습니다.|4|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  

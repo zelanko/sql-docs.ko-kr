@@ -1,26 +1,23 @@
 ---
-title: MSSQLSERVER_21889 | Microsoft Docs
+title: MSSQLSERVER_21889 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 21889 (Database Engine error)
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a42d6959fcf743ea17f582a7aa1c9bf752bd423
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 635205cbc92121034cd8c949382c4910c794b55e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835351"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

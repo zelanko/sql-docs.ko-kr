@@ -5,28 +5,24 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 547c6ba12421aada37b9f42aec8d532b2db46f52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3fec04d1ae381eca3b35c4457510ccd9321caeda
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846421"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>임시 테이블 메타데이터 뷰 및 함수
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  
-            [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 관리자가 temporal 테이블에 대한 정보를 검색할 수 있는 다양한 메타베이스 뷰 및 함수가 포함됩니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 관리자가 temporal 테이블에 대한 정보를 검색할 수 있는 다양한 메타베이스 뷰 및 함수가 포함됩니다.  
   
  temporal 테이블에 대한 정보는 다음 메타데이터 뷰에 노출됩니다.  
   

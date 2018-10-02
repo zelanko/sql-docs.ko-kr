@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e37457eb57f1276e8a822bf82e28f79769d63ff3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 830955375dec473f7587ef33c1e7f6927df530b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278921"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725561"
 ---
 # <a name="secure-shared-dataset-items"></a>공유 데이터 집합 항목 보안 설정
   보고서 서버에서 공유 데이터 집합 항목을 여러 보고서에서 사용할 수 있습니다. 공유 데이터 집합에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 공유 데이터 집합 보기, 속성 수정, 캐싱 설정, 캐시 새로 고침 계획 만들기, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자에 대해서는 공유 데이터 집합에 대한 액세스를 허용하는 역할 할당을 만들어야 합니다.  

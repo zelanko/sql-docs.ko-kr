@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782231"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
   유사 항목 조회 변환은 데이터 표준화, 데이터 수정, 누락된 값 제공 등 데이터 정리 태스크를 수행합니다.  
@@ -149,7 +146,7 @@ ms.locfileid: "35406065"
 > [!NOTE]  
 >  유사 항목 조회 변환의 **Exhaustive** 및 **MaxMemoryUsage** 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 또한 **MaxOutputMatchesPerInput** 에 대해 100을 초과하는 값은 **고급 편집기**에서만 지정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)의 유사 항목 조회 변환 섹션을 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **캐시 없음**  
  목록에서 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
@@ -185,7 +182,7 @@ ms.locfileid: "35406065"
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>유사 항목 조회 변환 편집기(열 탭)
   **유사 항목 조회 변환 편집기** 대화 상자의 **열** 탭을 사용하여 입력 및 출력 열의 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 입력 열**  
  입력 열을 사용 가능한 조회 열로 끌어 연결합니다. 이러한 열에는 일치하며 지원되는 데이터 형식이 있어야 합니다. 매핑 선을 선택하고 마우스 오른쪽 단추를 클릭하여 [관계 만들기](../../../integration-services/data-flow/transformations/create-relationships.md) 대화 상자에서 매핑을 편집합니다.  
   
@@ -207,7 +204,7 @@ ms.locfileid: "35406065"
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>유사 항목 조회 변환 편집기(고급 탭)
   **유사 항목 조회 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 유사 항목 조회 매개 변수를 설정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **조회당 출력에서 일치하는 최대 항목 수**  
  변환에서 각 입력 행에 대해 반환할 수 있는 일치하는 최대 항목 수를 지정합니다. 기본값은 **1**입니다.  
   

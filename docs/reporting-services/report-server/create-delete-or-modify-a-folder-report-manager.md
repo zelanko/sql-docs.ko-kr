@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8bc029591a9c693016cfd512190bb5128fc8b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 437116ae427f9d5ed6492962ad290b496f7b1090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279985"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666841"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>폴더 만들기, 삭제 또는 수정(보고서 관리자)
   폴더를 만들어 보고서 서버에 게시하는 항목을 구성하고 관리할 수 있습니다. 폴더를 만들면 관심 있는 보고서를 찾는 데 도움이 될 수 있습니다. 내용 관리자의 경우 폴더는 사용 권한을 적용하는 프레임워크를 제공합니다. 개발 중인 보고서나 배포되면 안 되는 보고서에 대한 액세스를 제한하기 위해 특정 폴더에 역할 할당을 만들 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "43279985"
   
      **새 폴더** 페이지가 열립니다.  
   
-3.  폴더 이름을 입력합니다. 폴더 이름에 공백을 사용할 수 있지만 다음과 같은 URL 인코딩용으로 예약된 문자는 사용할 수 없습니다. ; ? : \@ & = + , $ / * < > |. 한 번에 여러 개의 폴더 이름을 입력하여 여러 폴더를 만들 수는 없습니다.  
+3.  폴더 이름을 입력합니다. 폴더 이름에 공백을 사용할 수 있지만 다음과 같은 URL 인코딩용으로 예약된 문자는 사용할 수 없습니다. \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. 한 번에 여러 개의 폴더 이름을 입력하여 여러 폴더를 만들 수는 없습니다.  
   
 4.  설명을 입력합니다(옵션).  
   

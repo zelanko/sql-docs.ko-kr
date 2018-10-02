@@ -5,21 +5,18 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2903000530d68dd95eff0f1ba9b9f8f6e5edbf22
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3b5d13647276da55fc81c7e6122b5cadf26b0b00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669361"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 이러한 파일의 정보는 패키지 실행 문제를 해결하는 데 도움이 됩니다.  

@@ -5,24 +5,21 @@ ms.date: 02/13/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - Master Data Services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5db1d056725fee435c3e56c7715e7f1ac02695c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32894498"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851077"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 응용 프로그램 요구 사항(MDS(Master Data Services))
 
@@ -77,7 +74,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>계정 및 사용 권한  
   
-|형식|Description|  
+|형식|설명|  
 |----------|-----------------|  
 |Windows 계정|웹 서버 컴퓨터에 로그온할 때는 Windows 역할, 역할 서비스 및 기능을 구성하고 응용 프로그램 풀, 웹 사이트 및 웹 응용 프로그램을 로컬 컴퓨터의 IIS에서 작성 및 관리할 수 있는 사용 권한을 가진 Windows 계정을 사용해야 합니다.|  
 |서비스 계정|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 에서 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]웹 응용 프로그램을 만들 경우 응용 프로그램이 실행되는 응용 프로그램 풀의 ID를 지정해야 합니다. 이 계정은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들 때 지정한 서비스 계정과 다를 수 있습니다.<br /><br /> 이 ID는 도메인 사용자 계정이어야 하며 데이터베이스 액세스를 위해 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 mds_exec 데이터베이스 역할에 추가됩니다. 자세한 내용은 [데이터베이스 로그인, 사용자 및 역할](../../master-data-services/database-logins-users-and-roles-master-data-services.md)을 참조하세요. 또한 이 계정은 파일 시스템의 임시 컴파일 디렉터리인 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] MDSTempDir **에 대한 사용 권한이 부여되는**Windows 그룹인 **MDS_ServiceAccounts**에 추가됩니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  

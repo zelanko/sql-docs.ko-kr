@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_OPENTRAN_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - checking open transactions
 - oldest transactions [SQL Server]
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 40
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: e12c70b7c455f6f3d39ba65f0543a8381bd9e6d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: eafe617f4586863dba9bed75a14cee2623cb54e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821543"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ No active open transactions.
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_ENDPOINT_TSQL
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - DROP ENDPOINT statement
 - dropping endpoints
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1122e616ac59d763e89d938e050e9831380fb5c7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 152eda3ae79d3d941e42bfa68dc951f63b928e5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712549"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  기존 끝점을 삭제합니다.  
+  기존 엔드포인트를 삭제합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +45,16 @@ DROP ENDPOINT endPointName
   
 ## <a name="arguments"></a>인수  
  *endPointName*  
- 제거할 끝점의 이름입니다.  
+ 제거할 엔드포인트의 이름입니다.  
   
 ## <a name="remarks"></a>Remarks  
  사용자 트랜잭션 내에서 ENDPOINT DDL 문을 실행할 수 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
- **sysadmin** 고정 서버 역할의 멤버 또는 끝점 소유자이거나 끝점에 대한 CONTROL 권한을 부여받아야 합니다.  
+## <a name="permissions"></a>Permissions  
+ **sysadmin** 고정 서버 역할의 멤버 또는 엔드포인트 소유자이거나 엔드포인트에 대한 CONTROL 권한을 부여받아야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 이전에 만든 `sql_endpoint`라는 끝점을 제거합니다.  
+ 다음 예에서는 이전에 만든 `sql_endpoint`라는 엔드포인트를 제거합니다.  
   
 ```  
 DROP ENDPOINT sql_endpoint;  

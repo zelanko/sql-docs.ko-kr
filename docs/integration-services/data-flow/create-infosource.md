@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33b6bb4244e24ba212751b6481966676bcc7de5e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: cc55d148beba271181a700eedd9de90f95abe549
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705331"
 ---
 # <a name="create-infosource"></a>InfoSource 만들기
   **InfoSource 만들기** 대화 상자에서는 새 InfoSource를 만들 수 있습니다. 새 InfoSource를 만들려면 **트랜잭션 데이터용 InfoSource 만들기** 또는 **마스터 데이터용 InfoSource 만들기** 대화 상자를 사용합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "35331267"
   
 4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoSource**를 선택한 다음 **만들기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **트랜잭션 데이터**  
  트랜잭션 데이터용 새 InfoSource를 만듭니다.  
   

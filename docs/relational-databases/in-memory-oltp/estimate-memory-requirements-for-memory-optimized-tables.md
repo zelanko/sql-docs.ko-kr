@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0836b89b66c6999f006da2b4f52bb3c029081987
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6cf9281eb9147a133736deed0ed05c3dbbb95702
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684945"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,8 +26,7 @@ ms.locfileid: "43059933"
 
 새로운 메모리 최적화 테이블을 만들든, 아니면 기존 디스크 기반 테이블을 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 테이블로 마이그레이션하든 간에 충분한 메모리로 서버를 프로비전할 수 있도록 각 테이블에 필요한 메모리를 적절히 예측하는 것이 중요합니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
   
-디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션을 고려하는 경우 이 항목을 진행하기 전에 마이그레이션에 가장 적합한 테이블에 대한 지침에 대해 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 항목을 참조하세요. 
-            [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 아래의 모든 항목은 디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션하는 지침을 제공합니다. 
+디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션을 고려하는 경우 이 항목을 진행하기 전에 마이그레이션에 가장 적합한 테이블에 대한 지침에 대해 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 항목을 참조하세요. [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 아래의 모든 항목은 디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션하는 지침을 제공합니다. 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>메모리 요구 사항을 예측하기 위한 기본 지침
 
@@ -46,8 +41,7 @@ ms.locfileid: "43059933"
   
 ## <a name="detailed-computation-of-memory-requirements"></a>메모리 요구 사항의 상세 계산 
   
-- 
-            [메모리 최적화 테이블의 예](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_ExampleTable)  
+- [메모리 최적화 테이블의 예](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_ExampleTable)  
   
 - [테이블에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable)  
   
@@ -59,9 +53,7 @@ ms.locfileid: "43059933"
   
 - [증가에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  
-            <a name="bkmk_ExampleTable">
-            </a> 메모리 최적화 테이블의 예  
+###  <a name="bkmk_ExampleTable"></a> 메모리 최적화 테이블의 예  
 
 다음 메모리 최적화 테이블 스키마를 살펴봅니다.
   

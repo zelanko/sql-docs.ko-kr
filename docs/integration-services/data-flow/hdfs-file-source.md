@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a91a00dad5cb2299aaa11e14d0e952c1b363ec3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9cb4cf4a297a362ada965c3135f7e03fc8304ac2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35399875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720521"
 ---
 # <a name="hdfs-file-source"></a>HDFS 파일 원본
   SSIS 패키지는 HDFS 파일 원본 구성 요소를 통해 HDFS 파일에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 Text 및 Avro입니다. ORC 원본은 지원되지 않습니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "35399875"
   
  ![HDFS 파일 원본 편집기](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS 파일 원본 편집기")  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **Hadoop 파일 원본 편집기** 대화 상자의 **일반** 탭에서 다음 옵션을 구성합니다.  
   
 |필드|설명|  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FULLEXT_CATALOG_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], modifying
 - full-text catalogs [SQL Server], reorganizing
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 79f647c1f75a9463a3e710cdf2e27fce878e6378
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b79d00b02f06395a083ee93a2916a7d3aa5f0233
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712011"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  이 카탈로그를 기본 카탈로그로 지정합니다. 카탈로그를 지정하지 않고 전체 텍스트 인덱스를 만들면 기본 카탈로그가 사용됩니다. 기본 전체 텍스트 카탈로그가 이미 있는 경우 이 카탈로그를 AS DEFAULT로 설정하면 기존 기본값보다 우선 적용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용자는 전체 텍스트 카탈로그에 대해 ALTER 권한이 있거나 **db_owner**, **db_ddladmin** 고정 데이터베이스 역할 또는 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
 > [!NOTE]  

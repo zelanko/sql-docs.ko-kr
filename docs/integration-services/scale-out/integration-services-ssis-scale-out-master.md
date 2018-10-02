@@ -6,20 +6,17 @@ ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 25d404552fe71cf79cda57a7d204a5c2263f8e2e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 343a06ea9ed68b77ebad6bb09b7b01d6989257c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854661"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services(SSIS) 규모 확장 마스터
 Scale Out 마스터는 SSISDB 카탈로그 및 Scale Out 마스터 서비스를 통해 Scale Out 시스템을 관리합니다. 

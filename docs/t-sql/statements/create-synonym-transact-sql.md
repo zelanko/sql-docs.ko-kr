@@ -5,9 +5,7 @@ ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SYNONYM_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - CREATE SYNONYM statement
 - synonyms [SQL Server], creating
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9be0a9961e83896303eade9dfb68696cec7af31c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 434948bebe433c8325fc93e0a79a749e34a886d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785834"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709641"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -108,7 +105,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  지정된 스키마에서 동의어를 만들려면 사용자에게 CREATE SYNONYM 권한이 있어야 하며 스키마를 소유하거나 ALTER SCHEMA 권한이 있어야 합니다.  
   
  CREATE SYNONYM 권한은 부여할 수 있는 권한입니다.  

@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b5ad6cf47fc7d269277d7140ffaccb51c9063be
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 93a47957924d8ff692397fc0a13107b5fcec3d72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699087"
 ---
 # <a name="use-the-new-instance-wizard"></a>새 인스턴스 마법사 사용
   새 인스턴스 마법사는 CDC Service에 대한 새 인스턴스를 만드는 데 사용됩니다. CDC Designer 콘솔에서 Oracle CDC 인스턴스 만들기 마법사를 엽니다. 새 인스턴스 마법사에서 다음 작업을 수행할 수 있습니다.  

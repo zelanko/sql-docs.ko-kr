@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
-caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a14e748959ca5553dc6a8e2af6d26700ab418e7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd46236668f61bb674484c36b4112ec2891cf3aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932448"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693911"
 ---
 # <a name="database-properties-mirroring-page"></a>데이터베이스 속성(미러링 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "32932448"
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **보안 구성**  
  **데이터베이스 미러링 보안 구성 마법사**를 시작하려면 이 단추를 클릭합니다.  
   
@@ -59,13 +55,13 @@ ms.locfileid: "32932448"
   
 -   *fully_qualified_domain_name* 은 서버 인스턴스가 존재하는 서버입니다.  
   
--   *port* 는 서버 인스턴스의 데이터베이스 미러링 끝점에 할당된 포트입니다.  
+-   *port* 는 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 할당된 포트입니다.  
   
-     데이터베이스 미러링에 참가하려면 서버에 데이터베이스 미러링 끝점이 필요합니다. 데이터베이스 미러링 보안 구성 마법사를 사용하여 서버 인스턴스의 첫 번째 미러링 세션을 설정하면 끝점이 자동으로 생성되고 Windows 인증을 사용하도록 구성됩니다. 인증서 기반 인증으로 마법사를 사용하는 방법은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 클릭합니다.  
+     데이터베이스 미러링에 참가하려면 서버에 데이터베이스 미러링 엔드포인트가 필요합니다. 데이터베이스 미러링 보안 구성 마법사를 사용하여 서버 인스턴스의 첫 번째 미러링 세션을 설정하면 엔드포인트가 자동으로 생성되고 Windows 인증을 사용하도록 구성됩니다. 인증서 기반 인증으로 마법사를 사용하는 방법은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 클릭합니다.  
   
-    >**중요!!**  지원할 미러링 세션 수에 관계없이 각 서버 인스턴스에 한 개의 데이터베이스 미러링 끝점이 필요하고, 또 하나만 가질 수 있습니다.  
+    >**중요!!**  지원할 미러링 세션 수에 관계없이 각 서버 인스턴스에 한 개의 데이터베이스 미러링 엔드포인트가 필요하고, 또 하나만 가질 수 있습니다.  
   
- 예를 들어 끝점이 포트 `DBSERVER9` 를 사용하는 `7022`라는 컴퓨터 시스템의 서버 인스턴스에 대한 네트워크 주소는 다음과 같을 수 있습니다.  
+ 예를 들어 엔드포인트가 포트 `DBSERVER9`를 사용하는 `7022`라는 컴퓨터 시스템의 서버 인스턴스에 대한 네트워크 주소는 다음과 같을 수 있습니다.  
   
 ```  
 TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022  

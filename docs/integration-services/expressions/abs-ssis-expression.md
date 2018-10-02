@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f641efd7f5cca048070b7537e43983d6c0d87a14
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c787a67c1c3a65b695e3fc7af79f2eda7c86f3be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852151"
 ---
 # <a name="abs-ssis-expression"></a>ABS(SSIS 식)
   숫자 식의 절대값을 양수로 반환합니다.  

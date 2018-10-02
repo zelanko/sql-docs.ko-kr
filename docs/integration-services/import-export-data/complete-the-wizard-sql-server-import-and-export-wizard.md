@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e691d352507bddb75ba6db0986cc05a75eb6d858
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b7d417f2887c58e88e1bbb52c7fc171eba24030c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710131"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>마법사 완료(SQL Server 가져오기 및 내보내기 마법사)
 복사 작업을 즉시 실행할 것인지 여부를 지정하고 필요에 따라 마법사에서 만든 패키지를 저장하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 **마법사 완료**를 표시합니다. 이 페이지에서는 마법사에서 수행한 선택 사항을 검토한 다음 **마침** 을 클릭하여 복사 작업을 시작합니다.

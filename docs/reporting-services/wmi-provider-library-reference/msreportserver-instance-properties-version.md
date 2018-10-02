@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d327404dc0e8929716804e0ea46df462cae356d9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 59c8f217c2ce52b08d5fe0fbc3c09d9fbda4722d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747651"
 ---
 # <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance 속성 - Version
   Major.Minor.Build.Revision 형식으로 보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  

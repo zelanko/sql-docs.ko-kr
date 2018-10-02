@@ -5,9 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtsserver.importpackage.f1
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 719d14ccca346ee2f89aab62cc61887652db6fba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701631"
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
   패키지 관리에는 모니터링, 관리, 패키지 가져오기 및 내보내기가 포함됩니다.  
@@ -195,7 +192,7 @@ ms.locfileid: "35329297"
 ## <a name="import-package-dialog-box-ui-reference"></a>패키지 가져오기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 가져오기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 가져오고 해당 패키지의 보호 수준을 설정 또는 수정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **패키지 위치**  
  가져온 패키지를 저장할 저장소 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
@@ -235,7 +232,7 @@ ms.locfileid: "35329297"
 ## <a name="export-package-dialog-box-ui-reference"></a>패키지 내보내기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 내보내기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 다른 위치로 내보내고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **패키지 위치**  
  패키지를 내보낼 저장소 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   

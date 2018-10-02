@@ -5,30 +5,27 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataviewer.f1
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31a33e37ec08ea8aac2a6e958ec91ee4cf0bb7af
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c186241a51a0d3c282e8ae12e7ef4ff6737497d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662971"
 ---
 # <a name="data-viewer"></a>데이터 뷰어
   경로에서 데이터 뷰어를 사용하도록 구성한 경우 데이터 뷰어에서는 데이터가 두 데이터 흐름 구성 요소 간을 이동할 때 데이터를 버퍼별로 표시합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **녹색 화살표**  
  다음 버퍼에 데이터를 표시하려면 클릭합니다. 데이터를 단일 버퍼로 이동할 수 있는 경우 이 옵션은 사용할 수 없습니다.  
   

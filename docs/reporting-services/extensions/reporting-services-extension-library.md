@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - namespaces [Reporting Services]
 - Reporting Services, extending
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49dd2b1d0b23806a3372179ee892c8f7ea4a87a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f7c4ca9eac612cd80796f5ab48ae41648f2811d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844521"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 확장 프로그램 라이브러리
   Reporting Services 확장 프로그램 라이브러리는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 클래스, 인터페이스 및 값 형식의 집합입니다. 이 라이브러리는 시스템 기능에 액세스할 수 있도록 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 확장하는 데 사용할 수 있는 기초가 되도록 디자인되었습니다.  

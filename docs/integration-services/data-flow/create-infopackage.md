@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a199dc1bd5303e14e0e27930580aaa7d61fac8b7
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: fea75b95492aa3ee689a785155bdb6b37670ba34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853390"
 ---
 # <a name="create-infopackage"></a>InfoPackage 만들기
   **InfoPackage 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoPackage를 만들 수 있습니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "35330457"
   
 4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoPackage**를 선택한 다음 **만들기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **InfoSource**  
  새 InfoPackage의 기준으로 사용할 InfoSource의 이름을 입력합니다.  
   

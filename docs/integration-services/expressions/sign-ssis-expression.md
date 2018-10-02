@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - positive values [Integration Services]
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4509c0dcd70db2ac003d85fcee64a2f0e364462c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 33be3361e58398005196b479c23ec47e755a386c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857226"
 ---
 # <a name="sign-ssis-expression"></a>SIGN(SSIS 식)
   숫자 식의 양수(+1), 음수(-1) 또는 영(0) 부호를 반환합니다.  

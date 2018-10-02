@@ -4,19 +4,18 @@ ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.logging.f1
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df7e454a1e80250fae1a84ae2b658c7942a5d90b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a30f1087e30665287d37c26c5c36a2557b634669
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280873"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827027"
 ---
 # <a name="server-properties-logging-page"></a>서버 속성(로깅 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 이 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 페이지를 사용하여 보고서 서버에서 수집한 보고서 실행 데이터에 대한 제한을 설정할 수 있습니다. 실행 데이터는 보고서 서버 데이터베이스에 내부적으로 저장됩니다. 기본 모드 또는 SharePoint 통합 모드로 실행되는 보고서 서버에 대한 보고서 작업을 추적할 수 있습니다. 보고서 서버가 스케일 아웃 배포에 포함되는 경우 보고서 실행 로그는 단일 로그 파일에 전체 배포에 대한 모든 보고서 작업 기록을 유지합니다.  

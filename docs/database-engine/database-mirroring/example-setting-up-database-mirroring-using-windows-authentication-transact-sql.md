@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c8fc56b7fadd25ba590091f8f70164b786120c0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 4f4fe56652f71e3c46e93b8115e792154d17a74f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311742"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832291"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>예제: Windows 인증을 사용하여 데이터베이스 미러링 설정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ GO
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 복구 모델을 변경하는 방법에 대한 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  데이터베이스에 대한 ALTER 권한과 CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="example"></a>예제  
@@ -57,7 +54,7 @@ GO
 |미러|PARTNERHOST5|*\<Mydomain>\\<dbousername\>*|  
 |미러링 모니터|WITNESSHOST4|*\<Somedomain>\\<witnessuser\>*|  
   
-1.  주 서버 인스턴스(PARTNERHOST1의 기본 인스턴스)에 끝점을 만듭니다.  
+1.  주 서버 인스턴스(PARTNERHOST1의 기본 인스턴스)에 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -79,7 +76,7 @@ GO
     GO  
     ```  
   
-2.  미러 서버 인스턴스(PARTNERHOST5의 기본 인스턴스)에 끝점을 만듭니다.  
+2.  미러 서버 인스턴스(PARTNERHOST5의 기본 인스턴스)에 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -101,7 +98,7 @@ GO
     GO  
     ```  
   
-3.  미러링 모니터 서버 인스턴스(WITNESSHOST4의 기본 인스턴스)에 끝점을 만듭니다.  
+3.  미러링 모니터 서버 인스턴스(WITNESSHOST4의 기본 인스턴스)에 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -156,15 +153,15 @@ GO
   
 -   [Trustworthy 속성을 사용하도록 미러 데이터베이스 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
--   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

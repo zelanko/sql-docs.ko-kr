@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24ab2577ca22083c298b6f5b5099aee2a96b59c2
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40405208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827354"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "40405208"
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |**성공**|**int**|0 = 오류<br /><br /> 1 = 성공,<br /><br /> 2 = 서버 스로틀로 인해 건너뜀(MSDE)|23|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|이 열의 내용은 통계가 동기적으로 업데이트되는지(**EventSubClass** 1) 또는 비동기적으로 업데이트되는지(**EventSubClass** 2, 3 또는 4)에 따라 결정됩니다.<br /><br /> 1: 업데이트/생성된 통계를 나열합니다.<br /><br /> 2, 3 또는 4: NULL입니다. **IndexID** 열에 업데이트된 통계의 인덱스/통계 ID가 채워집니다.|@shouldalert|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|이 열의 내용은 통계가 동기적으로 업데이트되는지(**EventSubClass** 1) 또는 비동기적으로 업데이트되는지(**EventSubClass** 2, 3 또는 4)에 따라 결정됩니다.<br /><br /> 1: 업데이트/생성된 통계를 나열합니다.<br /><br /> 2, 3 또는 4: NULL입니다. **IndexID** 열에 업데이트된 통계의 인덱스/통계 ID가 채워집니다.|1|사용자 계정 컨트롤|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|사용자 계정 컨트롤|  
 |**형식**|**int**|작업 유형입니다.|57|사용자 계정 컨트롤|  
   

@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d44d44760405f41f7de0393996d500a3e52865
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: cb461d09111be0d0dc31a3d77fbf00ac73520f78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673424"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting 메서드 - ListIPAddresses
   보고서 서버 컴퓨터의 IP 주소를 나열합니다.  

@@ -5,9 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd442f668c272795321a93d23faf2ae832673788
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684741"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>백업 기록 및 헤더 정보(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +64,12 @@ ms.locfileid: "32922388"
   
 -   [백업 확인](#Verification)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="BnRHistoryTables"></a> 백업 및 복원 기록 테이블  
  이 섹션에서는 **msdb** 시스템 데이터베이스에 백업 및 복원 메타데이터를 저장하는 기록 테이블에 대해 설명합니다.  
   
-|기록 테이블|Description|  
+|기록 테이블|설명|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|백업되는 각 데이터 또는 로그 파일에 대해 한 행을 포함합니다.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|백업 세트의 각 파일 그룹에 대해 한 행을 포함합니다.|  
@@ -92,7 +89,7 @@ ms.locfileid: "32922388"
 > [!IMPORTANT]  
 >  RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY 및 RESTORE VERIFYONLY Transact-SQL 문에는 CREATE DATABASE 권한이 필요합니다. 이 요구 사항을 통해 이전 버전보다 더욱 백업 파일의 보안을 유지하고 백업 정보를 보호할 수 있습니다. 이 사용 권한에 대한 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
-|정보 문|백업 기록 테이블|Description|  
+|정보 문|백업 기록 테이블|설명|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|지정한 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 있는 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스와 트랜잭션 로그 파일 목록 만들기"를 참조하세요.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|특정 백업 장치의 모든 백업 세트에 대한 백업 헤더 정보를 모두 검색합니다. RESTORE HEADERONLY 실행 결과는 결과 집합입니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.|  

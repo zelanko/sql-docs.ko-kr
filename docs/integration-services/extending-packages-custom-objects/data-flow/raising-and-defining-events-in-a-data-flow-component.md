@@ -5,12 +5,8 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,16 +18,15 @@ helpviewer_keywords:
 - events [Integration Services], raising
 - predefined events [Integration Services]
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe1ae29ed2a866215fd150edd17884785c659d2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 0f03a535b5a4de1796d310b3b4c45d55d8c83b81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329277"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829431"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 이벤트 발생 및 정의
   구성 요소 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 속성에 제공된 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 인터페이스에 정의된 일부 이벤트를 발생시킬 수 있습니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 컬렉션을 사용하여 사용자 지정 이벤트를 정의하고 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 사용하여 실행하는 동안 해당 이벤트를 발생시킬 수도 있습니다. 이 섹션에서는 이벤트를 만들고 발생시키는 방법을 설명하고 디자인 타임에 이벤트를 발생시켜야 하는 경우에 대한 지침을 제공합니다.  
