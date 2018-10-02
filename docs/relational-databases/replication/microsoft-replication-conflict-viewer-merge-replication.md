@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bbfaf49aecdcaa80692fb9ec49bbd47db8a9650c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d27c90646aa8bae800780af97f9100427ccc06b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633363"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "37357435"
 > [!NOTE]  
 >  논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  복제 충돌 뷰어는 두 개의 섹션으로 나뉘어져 있습니다. 대화 상자의 위쪽 섹션에 선택한 테이블의 충돌 목록이 표시됩니다. 충돌 목록에서 항목을 클릭하면 대화 상자의 아래쪽 섹션에 해당 충돌에 대한 세부 정보가 표시됩니다.  
   
  충돌이 발생한 원인(예: 게시자 및 구독자 모두에서 같은 행 업데이트)에 대한 정보는 대화 상자의 아래쪽 섹션에 표시됩니다. 아래쪽 섹션에서 충돌 데이터는**충돌 시 적용되는 내용** 및 **충돌 시 변경 내용 무시**중 해당하는 열에 표시됩니다. 업데이트된 데이터와 삭제된 데이터 간에 충돌이 있다면 충돌 시 삭제된 쪽을 표시하는 데이터는 없습니다. 이 경우 복제 충돌 뷰어에서는 행이 한 위치에서 삭제되었고 다른 위치에서는 업데이트되었음을 나타내는 메시지를 열 중 하나에 표시합니다. 권장 해결 방법도 표시됩니다.  

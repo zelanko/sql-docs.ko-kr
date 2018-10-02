@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STATUS_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - status information [SQL Server], conversations
 - GET_TRANSMISSION_STATUS statement
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8cf9505ddefcac3fc78f5faa15a00736513f30d5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4c7997c72b376a0187407e7688e29944c0eeb984
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642091"
 ---
 # <a name="gettransmissionstatus-transact-sql"></a>GET_TRANSMISSION_STATUS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
  이 함수가 반환하는 정보는 sys.transmission_queue 관리 뷰의 last_transmission_error 열에 표시되는 정보와 동일합니다. 그러나 이 함수는 현재 전송 큐에 메시지가 없는 대화의 전송 상태를 검색하는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
->  GET_TRANSMISSION_STATUS는 현재 인스턴스에서 대화 끝점을 가지고 있지 않은 메시지에 대한 정보는 제공하지 않습니다. 즉 전달할 메시지에 대한 정보는 제공하지 않습니다.  
+>  GET_TRANSMISSION_STATUS는 현재 인스턴스에서 대화 엔드포인트를 가지고 있지 않은 메시지에 대한 정보는 제공하지 않습니다. 즉 전달할 메시지에 대한 정보는 제공하지 않습니다.  
   
 ## <a name="examples"></a>예  
  이 예에서는 대화 핸들이 `58ef1d2d-c405-42eb-a762-23ff320bddf0`인 대화의 전송 상태를 보고합니다.  

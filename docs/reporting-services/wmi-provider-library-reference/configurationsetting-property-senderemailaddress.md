@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SenderEmailAddress
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc9c4c7f8682ccf3ba317c707deedb5e0a1c2622
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2cf5cc053191561cd788fba6feec31860437cad3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594176"
 ---
 # <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 속성 - SenderEmailAddress
   보고서 서버에서 전자 메일을 보낼 때 사용하는 주소를 가져옵니다. 읽기 전용입니다.  

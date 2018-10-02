@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db70bc495dfbef1a4d1c1e5fffd7bb4631cfcbdf
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a51dd95b42e462c10335e00d9c3b67545d9d07fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595431"
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +37,12 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
  폴더의 새 이름입니다. *new_name*은 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  

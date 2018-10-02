@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DIALOG CONVERSATION
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 93bf812ebdc2b238ec7b84dee99d91e9aef8fb58
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 976c052b519cc72de226c06f27abf8b8f43fd74c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783864"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616851"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +99,7 @@ WHERE database_id = DB_ID() ;
  기존 대화 그룹에서 새 대화를 추가할 그룹을 지정합니다. 이 절이 있으면 새 대화는 *related_conversation_group_id*로 지정한 대화 그룹에 추가됩니다. *related_conversation_group_id*는 **uniqueidentifier** 유형으로 암시적으로 변환할 수 있는 유형이어야 합니다. *related_conversation_group_id*가 기존 대화 그룹을 참조하지 않으면 Service Broker에서는 지정한 *related_conversation_group_id*로 새 대화 그룹을 만들어 새 대화를 해당 대화 그룹과 연결합니다.  
   
  LIFETIME **=***dialog_lifetime*  
- 대화가 열려 있는 최대 시간을 지정합니다. 대화를 완료하려면 수명이 만료되기 전에 두 끝점에서 대화를 명시적으로 종료해야 합니다. *dialog_lifetime* 값은 초 단위로 표시해야 합니다. 수명은 **int** 형식입니다. LIFETIME 절을 지정하지 않으면 대화 수명은 **int** 데이터 형식의 최댓값입니다.  
+ 대화가 열려 있는 최대 시간을 지정합니다. 대화를 완료하려면 수명이 만료되기 전에 두 엔드포인트에서 대화를 명시적으로 종료해야 합니다. *dialog_lifetime* 값은 초 단위로 표시해야 합니다. 수명은 **int** 형식입니다. LIFETIME 절을 지정하지 않으면 대화 수명은 **int** 데이터 형식의 최댓값입니다.  
   
  ENCRYPTION  
  이 대화에서 주고 받은 메시지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부로 보낼 때 암호화해야 하는지 여부를 지정합니다. 암호화해야 하는 대화는 보안 대화(*secured dialog*)입니다. ENCRYPTION = ON인 경우 암호화 지원에 필요한 인증서가 구성되어 있지 않으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화에 대한 오류 메시지를 반환합니다. ENCRYPTION = OFF인 경우 *target_service_name*에 대해 원격 서비스 바인딩이 구성되어 있으면 암호화가 사용되고, 그렇지 않으면 메시지가 암호화되지 않은 상태로 전송됩니다. 이 절이 없으면 기본값은 ON입니다.  
@@ -115,7 +112,7 @@ WHERE database_id = DB_ID() ;
   
  대화의 대상이 BEGIN DIALOG CONVERSATION을 호출할 필요는 없습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 시작자로부터 대화의 첫 번째 메시지가 도착하면 대상 데이터베이스에 대화를 만듭니다.  
   
- 대화를 시작하면 시작 서비스에 대해 데이터베이스에 대화 끝점이 생성되지만 대상 서비스를 호스팅하는 인스턴스에 네트워크로 연결되지는 않습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 첫 번째 메시지를 보낼 때까지 대화의 대상과 통신을 설정하지 않습니다.  
+ 대화를 시작하면 시작 서비스에 대해 데이터베이스에 대화 엔드포인트가 생성되지만 대상 서비스를 호스팅하는 인스턴스에 네트워크로 연결되지는 않습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 첫 번째 메시지를 보낼 때까지 대화의 대상과 통신을 설정하지 않습니다.  
   
  BEGIN DIALOG CONVERSATION 문에서 관련 대화 또는 관련 대화 그룹을 지정하지 않으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 새 대화에 대해 새로운 대화 그룹을 만듭니다.  
   
@@ -125,7 +122,7 @@ WHERE database_id = DB_ID() ;
   
  BEGIN DIALOG CONVERSATION은 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  대화를 시작하려면 현재 사용자는 명령의 FROM 절에서 지정한 서비스의 큐에 대한 RECEIVE 권한과 지정한 계약에 대한 REFERENCES 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

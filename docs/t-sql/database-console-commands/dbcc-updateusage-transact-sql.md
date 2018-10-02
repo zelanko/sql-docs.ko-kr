@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATEUSAGE
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: 56
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 0ef83c4b349e44f7a5f399a7bf84c2be9cd2ca01
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 68e7743681c6023c86d0298eef022ef178eeb411
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611871"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +92,7 @@ DBCC UPDATEUSAGE는 다음을 반환합니다(값은 상황에 따라 다름).
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  

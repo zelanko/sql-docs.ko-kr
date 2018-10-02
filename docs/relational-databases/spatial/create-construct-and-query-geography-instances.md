@@ -4,29 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ba4b3db83dd88dfebf540fb85cdfdff20fabbf4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bc14368f5fc6e2c9b168fd17f31a103a22f46b4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617891"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,13 +177,13 @@ ms.locfileid: "43059312"
  [STArea&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> 비어 있음  
- *empty***geography** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve**및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon, CurvePolygon** 및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
+ _비어 있는_**geography** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve**및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon, CurvePolygon** 및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
   
  **인스턴스가 비어 있는지 확인하려면**  
  [STIsEmpty&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> 닫힘  
- *closed***geography** 인스턴스는 시작점과 끝점이 같은 도형입니다. **Polygon** 인스턴스는 닫혀 있다고 간주되며, **Point** 인스턴스는 닫혀 있지 않습니다.  
+ _닫혀 있는_**geography** 인스턴스는 시작점과 끝점이 같은 도형입니다. **Polygon** 인스턴스는 닫혀 있다고 간주되며, **Point** 인스턴스는 닫혀 있지 않습니다.  
   
  링은 단순하고 닫혀 있는 **LineString** 인스턴스입니다.  
   

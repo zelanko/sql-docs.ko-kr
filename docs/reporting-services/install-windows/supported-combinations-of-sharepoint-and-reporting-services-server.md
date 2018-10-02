@@ -3,7 +3,6 @@ title: 지원되는 SharePoint와 Reporting Services 서버의 조합 | Microsof
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 755ada84caf74044241fa47dce3aa57f8df920cd
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 29bb7917990082bcb0b7c79514fea2f6955cd86b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596501"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>지원되는 SharePoint와 Reporting Services 서버의 조합
 

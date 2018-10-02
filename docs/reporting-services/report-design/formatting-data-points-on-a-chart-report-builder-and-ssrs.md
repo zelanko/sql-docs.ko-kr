@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10248"
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624571"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 데이터 요소는 차트에서 가장 작은 개별 엔터티입니다. 셰이프 차트가 아닌 차트에서 데이터 요소는 차트 종류에 따라 다르게 표시됩니다. 예를 들어 선 계열은 하나 이상의 연결된 데이터 요소로 구성됩니다. 셰이프 차트에서 데이터 요소는 전체 차트를 구성하는 개별 조각 또는 세그먼트로 표현됩니다. 예를 들어 원형 차트에서는 각 조각이 데이터 요소입니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)를 참조하세요.  

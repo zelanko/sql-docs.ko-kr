@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 596d1ac410c3fa590ea6b808c3f3bda049abe752
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 28591401a5dab269a90a977a14f83c7dd4df119e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635421"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>명령 프롬프트에서 DTExec.exe를 사용하여 SSIS 패키지 실행
 이 빠른 시작에서는 명령 프롬프트에서 적절한 매개 변수로 `DTExec.exe`를 실행하여 SSIS 패키지를 실행하는 방법을 보여줍니다.
