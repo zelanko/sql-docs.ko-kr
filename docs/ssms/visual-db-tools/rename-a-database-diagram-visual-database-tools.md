@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], database diagrams
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - renaming database diagrams
 - database diagrams [SQL Server], renaming
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fc3d83d575424c7e18295221170adb3b598c56b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a5169dd6237b53223db41754e708969e7059473
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833261"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 이름 바꾸기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

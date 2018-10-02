@@ -5,10 +5,8 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -16,16 +14,15 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78335b05976d63c1da39a69766fd44e073ad4e54
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822041"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
 

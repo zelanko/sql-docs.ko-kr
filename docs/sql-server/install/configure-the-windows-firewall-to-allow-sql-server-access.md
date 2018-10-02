@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0bad4aef18b77c53f850cbcfe2dafd5d8181ac4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 79b26af281fd55d9fdcda2c0e4cbf9b1de29460a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819711"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -119,11 +116,11 @@ ms.locfileid: "42774358"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스|관리자가 구성한 포트 번호입니다.|아래 [동적 포트](#BKMK_dynamic_ports)섹션의 설명을 참조하세요.|  
 |관리자 전용 연결|기본 인스턴스에 대한 TCP 포트 1434. 다른 포트는 명명된 인스턴스에 사용됩니다. 오류 로그에서 포트 번호를 확인하세요.|기본적으로 DAC(관리자 전용 연결)에 대한 원격 연결은 설정되지 않습니다. 원격 DAC를 설정하려면 노출 영역 구성 패싯을 사용하세요. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스|UDP 포트 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 명명된 인스턴스에 대한 들어오는 연결을 수신하고 이 명명된 인스턴스에 해당하는 TCP 포트 번호를 클라이언트에 제공합니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 명명된 인스턴스가 사용될 때마다 시작됩니다. 명명된 인스턴스의 특정 포트에 연결되도록 클라이언트를 구성한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 시작할 필요가 없습니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스|HTTP 끝점을 만들 때 지정할 수 있습니다. 기본값은 CLEAR_PORT 트래픽의 경우 TCP 포트 80이고, SSL_PORT 트래픽의 경우 443입니다.|URL을 통한 HTTP 연결에 사용됩니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다.|  
+|HTTP 엔드포인트에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스|HTTP 엔드포인트를 만들 때 지정할 수 있습니다. 기본값은 CLEAR_PORT 트래픽의 경우 TCP 포트 80이고, SSL_PORT 트래픽의 경우 443입니다.|URL을 통한 HTTP 연결에 사용됩니다.|  
+|HTTPS 엔드포인트에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 포트 4022. 사용되는 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]에 대한 기본 포트는 없지만 이는 온라인 설명서 예에서는 이 구성이 일반적으로 사용됩니다.|  
-|데이터베이스 미러링|관리자가 선택한 포트입니다. 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|데이터베이스 미러링에 대한 기본 포트는 없지만 온라인 설명서의 예에서는 TCP 포트 5022 또는 7022를 사용합니다. 특히 자동 장애 조치(Failover)를 사용하는 보안 수준이 높은 모드에서는 사용 중인 미러링 끝점이 중단되지 않도록 하는 것이 매우 중요합니다. 방화벽 구성으로 인해 쿼럼이 중단되면 안 됩니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.|  
-|복제|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 복제 연결에는 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 포트(기본 인스턴스의 경우 TCP 포트 1433 등)가 사용됩니다.<br /><br /> 복제 스냅숏을 위한 웹 동기화 및 FTP/UNC 액세스를 위해서는 방화벽에서 추가 포트를 열어야 합니다. 복제는 초기 데이터 및 스키마를 다른 위치로 전송하기 위해 FTP(TCP 포트 21)를 사용하거나 HTTP(TCP 포트 80) 또는 파일 공유를 통해 동기화할 수 있습니다. 파일 공유에는 UDP 포트 137 및 138, TCP 포트 139가 사용됩니다(NetBIOS를 사용하는 경우). 파일 공유에는 TCP 포트 445가 사용됩니다.|HTTP를 통한 동기화의 경우 복제는 IIS 끝점(포트를 구성할 수 있지만 기본 포트는 80)을 사용하지만 IIS 프로세스는 표준 포트(기본 인스턴스의 경우 1433)를 통해 백 엔드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다.<br /><br /> FTP를 사용한 웹 동기화 중에 FTP 전송은 구독자와 IIS 사이가 아닌 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 사이에 이뤄집니다.|  
+|데이터베이스 미러링|관리자가 선택한 포트입니다. 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|데이터베이스 미러링에 대한 기본 포트는 없지만 온라인 설명서의 예에서는 TCP 포트 5022 또는 7022를 사용합니다. 특히 자동 장애 조치(Failover)를 사용하는 보안 수준이 높은 모드에서는 사용 중인 미러링 엔드포인트가 중단되지 않도록 하는 것이 매우 중요합니다. 방화벽 구성으로 인해 쿼럼이 중단되면 안 됩니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.|  
+|복제|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 복제 연결에는 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 포트(기본 인스턴스의 경우 TCP 포트 1433 등)가 사용됩니다.<br /><br /> 복제 스냅숏을 위한 웹 동기화 및 FTP/UNC 액세스를 위해서는 방화벽에서 추가 포트를 열어야 합니다. 복제는 초기 데이터 및 스키마를 다른 위치로 전송하기 위해 FTP(TCP 포트 21)를 사용하거나 HTTP(TCP 포트 80) 또는 파일 공유를 통해 동기화할 수 있습니다. 파일 공유에는 UDP 포트 137 및 138, TCP 포트 139가 사용됩니다(NetBIOS를 사용하는 경우). 파일 공유에는 TCP 포트 445가 사용됩니다.|HTTP를 통한 동기화의 경우 복제는 IIS 엔드포인트(포트를 구성할 수 있지만 기본 포트는 80)를 사용하지만 IIS 프로세스는 표준 포트(기본 인스턴스의 경우 1433)를 통해 백 엔드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.<br /><br /> FTP를 사용한 웹 동기화 중에 FTP 전송은 구독자와 IIS 사이가 아닌 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 사이에 이뤄집니다.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.<br /><br /> [IPsec](#BKMK_IPsec) 예외가 필요할 수도 있습니다.|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용 중인 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 호스트 컴퓨터에서 예외 목록에 **Devenv.exe** 를 추가하고 TCP 포트 135를 열어야 합니다.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용 중인 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 호스트 컴퓨터에서 예외 목록에 **ssms.exe** 를 추가하고 TCP 포트 135를 열어야 합니다. 자세한 내용은 [TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조하세요.|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.  
@@ -155,7 +152,7 @@ ms.locfileid: "42774358"
 
 1. **이름**에 규칙의 이름을 입력합니다. **마침**을 클릭합니다.
 
-끝점에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [끝점 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요. 
+엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요. 
   
 ###  <a name="BKMK_ssas"></a> Analysis Services에서 사용하는 포트  
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자주 사용하는 포트를 보여 줍니다.  
@@ -201,16 +198,16 @@ ms.locfileid: "42774358"
 |<a name="BKMK_IPsec"></a> IPsec 트래픽|UDP 포트 500 및 UDP 포트 4500|도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우 예외 목록에 UDP 포트 4500 및 UDP 포트 500도 추가해야 합니다. IPsec은 Windows 방화벽 스냅인의 **새 인바운드 규칙 마법사** 를 사용하는 옵션입니다. 자세한 내용은 아래의 [고급 보안이 포함된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.|  
 |트러스트된 도메인에 Windows 인증 사용|인증 요청을 허용하도록 방화벽을 구성해야 합니다.|자세한 내용은 [도메인 및 트러스트를 위한 방화벽을 구성하는 방법](http://support.microsoft.com/kb/179442/)을 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 클러스터링|클러스터링을 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 직접 관련되지 않은 추가 포트가 필요합니다.|자세한 내용은 [클러스터 사용을 위한 네트워크 설정(Enable a network for cluster use)](http://go.microsoft.com/fwlink/?LinkId=118372)을 참조하세요.|  
-|HTTP 서버 API(HTTP.SYS)에 예약된 URL 네임스페이스|일반적으로 TCP 포트 80이지만 다른 포트로 구성할 수 있습니다. 자세한 내용은 [HTTP 및 HTTPS 구성(Configuring HTTP and HTTPS)](http://go.microsoft.com/fwlink/?LinkId=118373)을 참조하세요.|HttpCfg.exe를 사용한 HTTP.SYS 끝점 예약에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 정보는 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.|  
+|HTTP 서버 API(HTTP.SYS)에 예약된 URL 네임스페이스|일반적으로 TCP 포트 80이지만 다른 포트로 구성할 수 있습니다. 자세한 내용은 [HTTP 및 HTTPS 구성(Configuring HTTP and HTTPS)](http://go.microsoft.com/fwlink/?LinkId=118373)을 참조하세요.|HttpCfg.exe를 사용한 HTTP.SYS 엔드포인트 예약에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 정보는 [URL 예약 및 등록 정보&amp;#40;SSRS 구성 관리자&amp;#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.|  
   
 ##  <a name="BKMK_port_135"></a> 포트 135에 대한 특별 고려 사항  
- TCP/IP 또는 UDP/IP를 전송 수단으로 하여 RPC를 사용하는 경우 인바운드 포트는 필요에 따라 시스템 서비스에 동적으로 할당되는 경우가 많습니다. 포트 1024보다 큰 TCP/IP 및 UDP/IP 포트가 사용됩니다. 이러한 포트를 비공식적으로 "임의 RPC 포트"라고 합니다. 이 경우 RPC 클라이언트는 RPC 끝점 매퍼를 사용하여 서버에 할당된 동적 포트를 알려 줍니다. 일부 RPC 기반 서비스의 경우 RPC가 포트를 동적으로 할당하도록 하는 대신 사용자가 직접 특정 포트를 구성할 수 있습니다. 또한 서비스에 관계없이 RPC가 동적으로 할당하는 포트의 범위를 좁은 범위로 제한할 수도 있습니다. 포트 135는 많은 서비스에서 사용되기 때문에 악의적인 사용자로부터 자주 공격을 받습니다. 포트 135를 열 때는 방화벽 규칙의 범위를 제한하는 것이 좋습니다.  
+ TCP/IP 또는 UDP/IP를 전송 수단으로 하여 RPC를 사용하는 경우 인바운드 포트는 필요에 따라 시스템 서비스에 동적으로 할당되는 경우가 많습니다. 포트 1024보다 큰 TCP/IP 및 UDP/IP 포트가 사용됩니다. 이러한 포트를 비공식적으로 "임의 RPC 포트"라고 합니다. 이 경우 RPC 클라이언트는 RPC 엔드포인트 매퍼를 사용하여 서버에 할당된 동적 포트를 알려 줍니다. 일부 RPC 기반 서비스의 경우 RPC가 포트를 동적으로 할당하도록 하는 대신 사용자가 직접 특정 포트를 구성할 수 있습니다. 또한 서비스에 관계없이 RPC가 동적으로 할당하는 포트의 범위를 좁은 범위로 제한할 수도 있습니다. 포트 135는 많은 서비스에서 사용되기 때문에 악의적인 사용자로부터 자주 공격을 받습니다. 포트 135를 열 때는 방화벽 규칙의 범위를 제한하는 것이 좋습니다.  
   
  포트 135에 대한 자세한 내용은 다음을 참조하세요.  
   
 -   [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](http://support.microsoft.com/kb/832017)  
   
--   [제품 CD에 포함된 Windows Server 2003 지원 도구를 사용하여 RPC 끝점 매퍼 오류 문제 해결](http://support.microsoft.com/kb/839880)  
+-   [제품 CD에 포함된 Windows Server 2003 지원 도구를 사용하여 RPC 엔드포인트 매퍼 오류 문제 해결](http://support.microsoft.com/kb/839880)  
   
 -   [RPC(원격 프로시저 호출)(Remote procedure call (RPC))](http://go.microsoft.com/fwlink/?LinkId=118375)  
   

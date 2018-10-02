@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - 새 SQL Server
@@ -19,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3696b571b7c17580297faba8ee09db1aad94dbcd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce0078caf1a1d9afe2d17db87be55d530009f5d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819801"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -37,8 +35,7 @@ ms.locfileid: "38052011"
  **SQL Server를 지금 사용해 보세요.** 
 - **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
 - 최신 버전의 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드하세요. 
-- Azure 계정이 있으세요? 
-  [SQL Server 2016이 이미 설치된 가상 머신](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)을 설정하세요.
+- Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 머신](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)을 설정하세요.
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 데이터베이스 엔진
 - 이제 SQL Server 설치 및 설정 중에 **여러 tempDB** 데이터베이스 파일을 구성할 수 있습니다.
