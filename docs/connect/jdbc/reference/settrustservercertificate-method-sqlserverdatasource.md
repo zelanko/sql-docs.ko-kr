@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - setTrustServerCertificate Method (SQLServerDataSource)
@@ -15,21 +13,20 @@ apilocation:
 - setTrustServerCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb5923c3078944a446abfc763c76122f44af2396
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 313e763fd82b1bf8515fcb5f7a850d84da260de9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793741"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  설정 된 **부울** trustServerCertificate 속성이 사용 되는지 여부를 나타내는 값입니다.  
+  trustServerCertificate 속성이 사용되는지 여부를 나타내는 **Boolean** 값을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,16 +36,16 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *TrustServerCertificate*  
+ *trustServerCertificate*  
   
- **true 이면** 경우 서버 (SECURE Sockets Layer) 인증서 자동으로 트러스트 해야 하면 통신 계층이 SSL을 사용 하 여 암호화 됩니다. 그렇지 않으면 **false**입니다.  
+ 통신 계층이 SSL을 사용하여 암호화된 경우 서버 SSL(Secure Sockets Layer) 인증서를 자동으로 트러스트해야 하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
-## <a name="remarks"></a>주의  
- TrustServerCertificate 속성이로 설정 되어 있으면 **true**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 통신 계층이 SSL을 사용 하 여 암호화 된 경우 SSL 인증서가 자동으로 트러스트 합니다. 즉,는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 유효성을 검사 하지 것입니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 인증서입니다. 기본값은 **false**입니다.  
+## <a name="remarks"></a>Remarks  
+ trustServerCertificate 속성이 **true**로 설정되어 있으면 통신 계층이 SSL을 사용하여 암호화된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 인증서가 자동으로 트러스트됩니다. 즉, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 인증서의 유효성을 검사하지 않습니다. 기본 값은 **false**입니다.  
   
- TrustServerCertificate 속성이로 설정 되어 있으면 **false**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 서버 SSL 인증서의 유효성을 검사 합니다.  
+ trustServerCertificate 속성이 **false**로 설정되어 있으면 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 서버 SSL 인증서의 유효성을 검사합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

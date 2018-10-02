@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bb4901d63454c3c7eb6af4ad06c9f626ada5524
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdbe54ce16b8ee0ed441bfcf7098d28004d482d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620251"
 ---
 # <a name="index-element-dta"></a>Index 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "33074070"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|인덱스 특성|데이터 형식|Description|  
+|인덱스 특성|데이터 형식|설명|  
 |---------------------|---------------|-----------------|  
 |**클러스터형**|**boolean**|(선택 사항) 클러스터형 인덱스를 지정합니다. "true" 또는 "false"로 설정합니다. 예를 들면 다음과 같습니다.<br /><br /> `<Index Clustered="true">`<br /><br /> 기본적으로 이 특성은 "false"로 설정됩니다.|  
 |**고유**|**boolean**|(선택 사항) 고유 인덱스를 지정합니다. "true" 또는 "false"로 설정합니다. 예를 들면 다음과 같습니다.<br /><br /> `<Index Unique="true">`<br /><br /> 기본적으로 이 특성은 "false"로 설정됩니다.|  
@@ -62,7 +58,7 @@ ms.locfileid: "33074070"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  

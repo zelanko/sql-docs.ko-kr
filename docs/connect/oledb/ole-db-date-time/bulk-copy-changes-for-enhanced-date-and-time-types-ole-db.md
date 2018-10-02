@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 16ab7dd1f4a083c51108ef86ff9c9428df1649da
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3cc979cd0f47425b5cab4d8b242ad81df18f0659
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805301"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "43029562"
   
 |파일 저장 유형|호스트 파일 데이터 형식|메시지: "< field_name > 필드의 파일 저장 유형 입력 [\<기본 >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DATETIME|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|d|  
 |date|SQLDATE|de|  
 |Time|SQLTIME|te|  
@@ -103,10 +100,10 @@ ms.locfileid: "43029562"
   
 |To --><br /><br /> 보낸 사람|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|date|@shouldalert|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
+|date|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Time|해당 사항 없음|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
-|Smalldatetime|1, 2|1, 4, 10|@shouldalert|@shouldalert|1, 10|1, 5, 10|1, 11|1, 11|  
-|DATETIME|1, 2|1, 4, 10|1, 12|@shouldalert|1, 10|1, 5, 10|1, 11|1, 11|  
+|Smalldatetime|1, 2|1, 4, 10|1|1|1, 10|1, 5, 10|1, 11|1, 11|  
+|DATETIME|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
 |Datetime2|1, 2|1, 4, 10|1, 12|1, 10|1, 10|1, 5, 10|1, 3|1, 3|  
 |Datetimeoffset|1, 2, 8|1, 4, 8, 10|1, 8, 10|1, 8, 10|1, 8, 10|1, 10|1, 3|1, 3|  
 |Char/wchar(date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|해당 사항 없음|해당 사항 없음|  
@@ -119,7 +116,7 @@ ms.locfileid: "43029562"
 |기호|의미|  
 |------------|-------------|  
 |-|변환이 지원되지 않습니다.<br />|  
-|@shouldalert|제공 된 데이터가 올바르지 않으면 오류가 게시 됩니다. datetimeoffset 값에서 시간 부분은 UTC 변환이 요청되지 않았더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 이는 TDS와 서버에서는 UTC에 맞게 datetimeoffset 값의 시간을 항상 정규화하기 때문입니다. 따라서 클라이언트에서는 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 합니다.|  
+|1|제공 된 데이터가 올바르지 않으면 오류가 게시 됩니다. datetimeoffset 값에서 시간 부분은 UTC 변환이 요청되지 않았더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 이는 TDS와 서버에서는 UTC에 맞게 datetimeoffset 값의 시간을 항상 정규화하기 때문입니다. 따라서 클라이언트에서는 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 합니다.|  
 |2|시간 구성 요소가 무시됩니다.|  
 |3|잘림을 수행하여 데이터 손실이 발생하면 오류가 게시됩니다. datetime2의 경우 소수 자릿수 초의 자릿수(소수 자릿수)는 다음 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **형식** : DBTIME2<br /><br /> **암시된 소수 자릿수 0** 8<br /><br /> **암시된 소수 자릿수 1..9** 1..9<br /><br /> <br /><br /> **형식** : DBTIMESTAMP<br /><br /> **암시된 소수 자릿수 0:** 19<br /><br /> **암시된 소수 자릿수 1..9:** 21..29<br /><br /> <br /><br /> **형식** : DBTIMESTAMPOFFSET<br /><br /> **암시된 소수 자릿수 0:** 26<br /><br /> **암시된 소수 자릿수 1..9:** 28..36|  
 |4|날짜 구성 요소가 무시됩니다.|  
