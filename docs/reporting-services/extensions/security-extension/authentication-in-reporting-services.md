@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4bc59cdba34b35dc08cbd5a0e5f7717db1e2ac
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2ec5ac57e69b74b97b027ce5119ab74ec97acee9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651641"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
   인증은 사용자의 권한을 ID에 설정하는 과정입니다. 사용자를 인증하는 데 사용할 수 있는 많은 방법이 있습니다. 가장 일반적인 방법은 암호를 사용하는 것입니다. 예를 들어 폼 인증을 구현하는 경우 사용자에게 자격 증명을 요구(대개 로그인 이름과 암호를 요구하는 인터페이스를 통해 이루어짐)한 다음 데이터베이스 테이블이나 구성 파일과 같은 데이터 저장소와 대조하여 사용자를 검사하도록 구현합니다. 자격 증명을 확인할 수 없는 경우 인증 프로세스가 실패하고 사용자는 익명 ID를 가집니다.  

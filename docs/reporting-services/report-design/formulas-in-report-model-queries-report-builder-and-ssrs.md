@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f5b1b17b7aa487691fe352d6d8085b7ab6ba3f29
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607695"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>보고서 모델 쿼리의 수식(보고서 작성기 및 SSRS)
   수식은 보고서 모델을 데이터 원본으로 사용하는 보고서의 값에 대해 수행되는 계산입니다. 보고서 모델 데이터 원본의 쿼리를 정의할 때 보고서 모델 쿼리 디자이너의 **수식 정의 대화 상자** 에서 수식을 정의합니다. 수식에는 함수, 연산자, 상수 그리고 필드나 엔터티에 대한 참조가 포함될 수 있습니다. 수식을 사용하면 숫자 데이터 및 텍스트 데이터를 결합, 집계, 필터링 및 계산할 수 있습니다. 수식을 만들어 새 필드로 저장하거나 기존 필드의 수식을 수정할 수 있습니다.  

@@ -4,7 +4,6 @@ ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce7bd172b582247d9eadc6f22ae4a9589e00dd8c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2dcdb2dff46534f52cd8fb115edd8d29072c98a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623382"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 기능 및 태스크(SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기반 콘텐츠는 보고서 및 보고서 기능, 보고서 서버 기능 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 제품 기능별로 구성됩니다.  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4feb5d83ff4d149e16fc6ad7538b76f5275bdf3b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: afcf64474e58e0e34226506bed10c78fd810e0ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595941"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 사용자 인터페이스
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너 탭의 디자인 화면 외에도 사용자 인터페이스를 사용하면 패키지에 기능을 추가하고 패키지 개체의 속성을 구성하기 위한 다음 창과 대화 상자에 액세스할 수 있습니다.  

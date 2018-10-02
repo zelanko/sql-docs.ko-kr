@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.patheditor.general.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: efe52410b491848001fc7e0861e27732d36bc173
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a5fcda8f88d1e16dc39bd4de431239a30cfd218d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410635"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658627"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  
@@ -65,7 +62,7 @@ ms.locfileid: "35410635"
   
  **데이터 흐름 경로 편집기** 대화 상자의 **일반** 노드를 사용하여 경로의 이름을 지정하고 경로를 설명할 수 있을 뿐만 아니라 경로 주석 옵션을 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이름**  
  경로에 사용할 고유 이름을 제공합니다.  
   
@@ -90,7 +87,7 @@ ms.locfileid: "35410635"
 ## <a name="metadata-page---data-flow-path-editor"></a>메타데이터 페이지 - 데이터 흐름 경로 편집기
 **데이터 흐름 경로 편집기** 대화 상자의 **메타데이터** 페이지를 사용하여 경로 열의 메타데이터를 볼 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **경로 메타데이터**  
  열 메타데이터를 나열합니다. 열 데이터를 정렬하려면 열 제목을 클릭합니다.  
   
@@ -130,7 +127,7 @@ ms.locfileid: "35410635"
 ## <a name="data-viewers-page---data-flow-path-editor"></a>데이터 뷰어 페이지 - 데이터 흐름 경로 편집기
 **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이름**  
  데이터 뷰어를 나열합니다.  
   

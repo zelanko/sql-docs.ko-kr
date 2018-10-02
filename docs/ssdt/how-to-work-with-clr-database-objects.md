@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4ded4a4ff7298df9d28f5f54997637ec5a5c0b54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640742"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>방법: CLR 데이터베이스 개체 작업
 Transact\-SQL 프로그래밍 언어뿐만 아니라 .NET Framework 언어를 사용하여 데이터를 검색 및 업데이트하는 데이터베이스 개체를 만들 수 있습니다. 관리 코드로 작성된 데이터베이스 개체를 SQL Server CLR(공용 언어 런타임) 데이터베이스 개체라고 합니다. SQL Server에서 호스트되는 CLR 데이터베이스 개체를 사용할 경우의 이점과 Transact\-SQL 및 CLR 중에서 선택하는 방법은 [CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md) 및 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)을 참조하세요.  

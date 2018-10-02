@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f5a9bab3624ebe4c294a29279cb1906f307d8db
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8c463e7146a4b9127696410f04f25d37b8424937
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640770"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>모바일 보고서에 계기 추가 | Reporting Services
 계기는 모바일 보고서에서 가장 기본적이고 가장 널리 사용되는 시각화 개체입니다. 데이터 집합의 단일 값을 표시합니다. 값만 표시하거나 목표와 비교하여 값을 표시합니다.

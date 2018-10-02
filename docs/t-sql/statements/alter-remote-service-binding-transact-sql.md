@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER REMOTE SERVICE BINDING
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - ALTER REMOTE SERVICE BINDING statement
 - modifying remote service bindings
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-caps.latest.revision: 37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd6cfcbb65e7ef90f88f7fa8a895d39e815e8824
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b32bbcb94aa1f52c951c0bce341828e7df202b4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788904"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598361"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## <a name="remarks"></a>Remarks  
  *user_name*과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name*에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스 로그인에 대한 인증서와 일치해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  원격 서비스 바인딩을 변경할 수 있는 권한은 기본적으로 원격 서비스 바인딩의 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
  ALTER REMOTE SERVICE BINDING 문을 실행하는 사용자에게는 이 문에 지정된 사용자를 가장할 수 있는 권한이 있어야 합니다.  

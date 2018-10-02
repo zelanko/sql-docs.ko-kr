@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,16 +14,15 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b146c1dcd31cc6e45fbbd794392249aa9ffa0447
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668551"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교
 SSDT(SQL Server Data Tools)에는 두 데이터베이스 정의를 비교하는 데 사용할 수 있는 스키마 비교 유틸리티가 포함되어 있습니다.  비교의 원본 및 대상으로는 연결된 데이터베이스, SQL Server 데이터베이스 프로젝트, 스냅숏 또는 .dacpac 파일의 임의 조합을 사용할 수 있습니다.  비교 결과는 대상을 원본과 동일하게 만들기 위해 수행해야 하는 일련의 작업으로 표시됩니다.  비교가 완료되면 대상을 직접 업데이트하거나(대상이 프로젝트 또는 데이터베이스인 경우) 같은 효과가 있는 업데이트 스크립트를 생성할 수 있습니다.  

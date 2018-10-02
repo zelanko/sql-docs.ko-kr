@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, monitoring
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1eb49ac4481320c3d37f2ef8a18b9070a990d47b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679121"
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +43,8 @@ ms.locfileid: "42774969"
   
 |인스턴스 유형|개체 이름|  
 |-----------------|---------------|  
-|Default|**SQLAgent:***object*:*counter*|  
-|명명된 형식|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
+|Default|**SQLAgent:**_object_:_counter_|  
+|명명된 형식|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 성능 개체가 포함됩니다.  
   
