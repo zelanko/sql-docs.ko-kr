@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10460"
@@ -13,12 +12,12 @@ f1_keywords:
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3ada91659b6ad5a2324bd20a80c778616058c42e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ac4a86eb45f5c9a0715b6b9e018490b15c4e42c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841911"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>보고서 매개 변수의 기본값 추가, 변경 또는 삭제
   보고서 매개 변수를 만든 후에는 기본값 목록을 제공할 수 있습니다. 모든 매개 변수에 유효한 기본값이 있는 경우 보고서를 처음으로 보거나 미리 볼 때 해당 보고서가 자동으로 실행됩니다.  

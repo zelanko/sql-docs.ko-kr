@@ -1,13 +1,11 @@
 ---
-title: REVOKE 개체 사용 권한(Transact-SQL) | Microsoft Docs
+title: REVOKE 엔드포인트 사용 권한(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - REVOKE statement, endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: affe623c4657f040b53263b737a45fa9af0614c6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: cad53aef8b06cca5dc37bca1b5a95d82d6c89d74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839911"
 ---
-# <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 끝점 사용 권한(Transact-SQL)
+# <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 엔드포인트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  끝점에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
+  엔드포인트에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,10 +50,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="arguments"></a>인수  
  *permission*  
- 끝점에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
+ 엔드포인트에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  ON ENDPOINT **::***endpoint_name*  
- 사용 권한을 부여할 끝점을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 부여할 엔드포인트를 지정합니다. 범위 한정자(**::**)가 필요합니다.  
   
  { FROM | TO } \<server_principal>사용 권한을 취소할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
   
@@ -90,11 +87,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="remarks"></a>Remarks  
  현재 데이터베이스가 **master**인 경우에만 서버 범위의 사용 권한을 취소할 수 있습니다.  
   
- 끝점 정보는 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 사용 권한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되며 서버 보안 주체 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
+ 엔드포인트 정보는 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 사용 권한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되며 서버 보안 주체 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
- 끝점은 서버 수준 보안 개체입니다. 다음 표에는 끝점에 대해 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
+ 엔드포인트는 서버 수준 보안 개체입니다. 다음 표에는 엔드포인트에 대해 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
-|끝점 사용 권한|끝점 사용 권한에 포함된 사용 권한|서버 사용 권한에 포함된 사용 권한|  
+|엔드포인트 사용 권한|엔드포인트 사용 권한에 포함된 사용 권한|서버 사용 권한에 포함된 사용 권한|  
 |-------------------------|------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER ANY ENDPOINT|  
 |CONNECT|CONTROL|CONTROL SERVER|  
@@ -102,13 +99,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>사용 권한  
- 끝점에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY ENDPOINT 권한이 필요합니다.  
+## <a name="permissions"></a>Permissions  
+ 엔드포인트에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY ENDPOINT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>1. 끝점에 대한 VIEW DEFINITION 권한 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 `VIEW DEFINITION`으로부터 끝점 `Mirror7`에 대한 `ZArifin` 권한을 취소합니다.  
+### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>1. 엔드포인트에 대한 VIEW DEFINITION 권한 취소  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 `VIEW DEFINITION`으로부터 엔드포인트 `Mirror7`에 대한 `ZArifin` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -117,7 +114,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>2. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 취소  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `PKomosinski` 및 `PKomosinski`가 `Shipping83`에 대해 `TAKE OWNERSHIP`을 부여한 모든 보안 주체로부터 끝점 `Shipping83`에 대한 `TAKE OWNERSHIP` 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `PKomosinski` 및 `PKomosinski`가 `Shipping83`에 대해 `TAKE OWNERSHIP`을 부여한 모든 보안 주체로부터 엔드포인트 `Shipping83`에 대한 `TAKE OWNERSHIP` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -127,8 +124,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [GRANT 끝점 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [DENY 끝점 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [DENY 엔드포인트 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   

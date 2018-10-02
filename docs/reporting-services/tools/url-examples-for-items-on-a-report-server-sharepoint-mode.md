@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273454"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839561"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  

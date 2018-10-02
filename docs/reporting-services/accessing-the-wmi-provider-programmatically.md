@@ -4,19 +4,16 @@ ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b70b61b0c9907aba61900c89f7941699f9e0cc75
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 11bbbfd015377186c97e4f8229de5cdbe8919b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839481"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>WMI공급자에 프로그래밍 방식으로 액세스
 

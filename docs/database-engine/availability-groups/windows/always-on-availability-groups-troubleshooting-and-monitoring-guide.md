@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32861698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841011"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 가용성 그룹 문제 해결 및 모니터링 가이드
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 
@@ -30,9 +27,9 @@ ms.locfileid: "32861698"
 ##  <a name="BKMK_SCENARIOS"></a> 문제 해결 시나리오  
  다음 표는 가용성 그룹에 대한 일반적인 문제 해결 시나리오에 대한 링크를 포함합니다. 구성, 클라이언트 연결, 장애 조치(failover) 및 성능과 같은 해당 시나리오 유형에 의해 분류되어 있습니다.  
   
-|시나리오|시나리오 유형|Description|  
+|시나리오|시나리오 유형|설명|  
 |--------------|-------------------|-----------------|  
-|[Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuration|가용성 그룹에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. 가용성 그룹을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 끝점이 없거나, 끝점에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.|  
+|[Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuration|가용성 그룹에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. 가용성 그룹을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.|  
 |[실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuration|파일 추가 작업으로 인해 보조 데이터베이스가 일시 중단되고 NOT SYNCHRONIZING 상태가 되었습니다.|  
 |[다중 서브넷 환경에서 가용성 그룹 수신기에 연결할 수 없음](http://support.microsoft.com/kb/2792139/en-us)|클라이언트 연결|가용성 그룹 수신기를 구성한 후 수신기를 ping하거나 응용 프로그램에서 연결할 수 없습니다.|  
 |[실패 자동 장애 조치(failover) 문제 해결](http://support.microsoft.com/kb/2833707)|장애 조치 |자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
@@ -44,7 +41,7 @@ ms.locfileid: "32861698"
 ##  <a name="BKMK_TOOLS"></a> 문제 해결에 유용한 도구  
  가용성 그룹을 구성 또는 실행하는 경우 다양한 도구는 서로 다른 유형의 문제를 진단하는 데 유용합니다. 다음 표에서 도구에 대한 유용한 정보에 대한 링크를 제공합니다.  
   
-|도구|Description|  
+|도구|설명|  
 |----------|-----------------|  
 |[Always On 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|알기 쉬운 인터페이스에서 한 눈에 보이는 가용성 그룹의 상태 보기를 보고합니다.|  
 |[Always On 정책](always-on-policies.md)|Always On 대시보드에서 사용합니다.|  
@@ -64,7 +61,7 @@ ms.locfileid: "32861698"
   
  이 아래 표는 가용성 그룹 솔루션의 상태를 모니터링하는 데 도움이 될 수 있는 항목으로 안내합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)|가용성 그룹에 대한 데이터 동기화 프로세스, 흐름 제어 게이트 및 가용성 그룹을 모니터링할 때 유용한 메트릭을 설명하고 RTO 및 RPO 메트릭을 수집하는 방법을 보여줍니다.|  
 |[가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|가용성 그룹 모니터링을 위한 도구의 정보를 제공합니다.|  
