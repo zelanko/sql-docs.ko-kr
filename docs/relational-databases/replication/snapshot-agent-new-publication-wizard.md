@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.configuresnapshotagent.f1
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2cf631650229841979ef2acd8ee648dea7f86241
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: aa6f51b354a0843b189e216ef7d690ab1ccc5f19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699331"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>스냅숏 에이전트(새 게시 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "37352645"
   
  매개 변수가 있는 필터를 사용하는 병합 게시의 경우 게시 스냅숏이 완료된 후 각 데이터 파티션의 스냅숏을 만들어야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **즉시 스냅숏 만들기** (병합 복제) 또는 **즉시 스냅숏을 만들고 구독 초기화에 사용할 수 있도록 유지합니다** (트랜잭션 복제)  
  새 게시 마법사가 완료된 후 즉시 스냅숏을 만들려면 이 확인란을 선택합니다. 스냅숏을 생성하기 전에 **게시 속성** 대화 상자에서 스냅숏 속성을 변경하거나 스냅숏 없이 구독자를 초기화하려면 이 확인란의 선택을 취소합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   

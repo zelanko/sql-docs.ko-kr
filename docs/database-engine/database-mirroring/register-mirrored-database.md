@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b61c469ddf764ab2db6d7c56a23d0d87ef7a563
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 551d71d427b9e7997082a8feda1b766b85bfe659
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837272"
 ---
 # <a name="register-mirrored-database"></a>미러된 데이터베이스 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "35312242"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **서버 인스턴스**  
  데이터베이스 미러링 모니터에 이미 저장된 연결이 있는 서버 인스턴스가 포함된 목록에서 서버 인스턴스를 선택하거나 **연결**을 클릭합니다. 나열된 서버 인스턴스에 대해 새 자격 증명을 지정하려면 **연결** 을 클릭하고 새 자격 증명을 사용하여 연결합니다.  
   

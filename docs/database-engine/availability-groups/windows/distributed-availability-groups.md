@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: ''
-caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09261368790624fcdd847cfc07a4928ab51e5506
-ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
+ms.openlocfilehash: 7ebe74f54dd33c3f31bc649eab9395e9f020b35f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40411063"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772391"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 두 WSFC 클러스터가 모두 동일한 도메인(트러스트된 도메인이 아님)에 가입된 경우 분산 가용성 그룹을 만들 때 별도의 작업을 수행할 필요가 없습니다. 동일한 도메인에 가입되지 않은 가용성 그룹 및 WSFC 클러스터의 경우, 도메인 독립 가용성 그룹에 대한 가용성 그룹을 만드는 방식과 같이 인증서를 사용하여 분산 가용성 그룹을 작동하도록 합니다. 분산 가용성 그룹에 대한 인증서를 구성하는 방법을 알아보려면 [도메인 독립 가용성 그룹 만들기](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)의 3-13 단계를 수행합니다.
 
-분산 가용성 그룹을 사용하는 경우 주 가용성 그룹 각각의 주 복제본에는 서로의 인증서가 있어야 합니다. 인증서를 사용하지 않는 끝점이 이미 있는 경우 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용하여 인증서 사용을 반영하도록 해당 끝점을 재구성합니다.
+분산 가용성 그룹을 사용하는 경우 주 가용성 그룹 각각의 주 복제본에는 서로의 인증서가 있어야 합니다. 인증서를 사용하지 않는 엔드포인트가 이미 있는 경우 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용하여 인증서 사용을 반영하도록 해당 엔드포인트를 재구성합니다.
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>분산 가용성 그룹 사용 시나리오
 

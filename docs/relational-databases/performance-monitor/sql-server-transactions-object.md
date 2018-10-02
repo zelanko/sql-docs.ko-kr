@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f28b5a581bf784f67ffdd1d90e84fb12a33c51c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3a3087a98bfd56a68313003103e92cab7eb64d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952530"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766161"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "32952530"
   
  이 표에서는 **SQLServer:Transactions** 카운터에 대해 설명합니다.  
   
-|SQL Server Transactions 카운터|Description|  
+|SQL Server Transactions 카운터|설명|  
 |--------------------------------------|-----------------|  
 |**Free Space in tempdb (KB)**|**tempdb**의 사용 가능한 공간(KB)입니다. 스냅숏 격리 수준 버전 저장소와 이 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에서 생성된 모든 새 임시 개체를 저장할 수 있도록 충분한 여유 공간이 있어야 합니다.|  
 |**Longest Transaction Running Time**|다른 현재 트랜잭션보다 오래 활성화된 트랜잭션이 시작된 후 경과한 시간(초)입니다. 이 카운터는 데이터베이스가 읽기 커밋된 스냅숏 격리 수준 이하일 때만 작업을 보여 주고 다른 수준일 때는 작업을 기록하지 않습니다.|  

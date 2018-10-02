@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3a805ba3dfecc03896af0cf0dbb28fa93e19151
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b59fcf947a283ef60f5dd34f60e2cf365092cfa7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738731"
 ---
 # <a name="image-device-information-settings"></a>이미지 장치 정보 설정
   다음 표는 IMAGE 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  

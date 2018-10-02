@@ -5,9 +5,7 @@ ms.date: 06/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, modifying
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 010c54983f897997239401acfd3b28a9585d1c28
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 802fe8653cc33582ee22edd59eea3fb37561e3d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689181"
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ ms.locfileid: "43099835"
   
 5.  **닫기**를 클릭합니다.  
   
-6.  **파일** 메뉴에서 *****테이블 이름 저장*을 클릭합니다.  
+6.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **CHECK 제약 조건을 수정하려면**  

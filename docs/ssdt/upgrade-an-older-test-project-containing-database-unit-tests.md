@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfe8116a8467a30fb90399b292847cf20e7010f7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 02978a329399612e22e952ff6c0be6201c48d32e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715071"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>데이터베이스 단위 테스트가 포함된 이전 테스트 프로젝트 업그레이드
 Visual Studio 2010에서 만들었고 데이터베이스 단위 테스트를 포함하는 이전 테스트 프로젝트를 업그레이드하여 새 SQL Server Data Tools 데이터베이스 단위 테스트 런타임 및 도구를 사용할 수 있습니다. 이전 프로젝트를 업그레이드한 후에는 프로젝트에 SQL Server 단위 테스트를 추가할 수 있습니다. 자세한 내용은 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)를 참조하세요.  

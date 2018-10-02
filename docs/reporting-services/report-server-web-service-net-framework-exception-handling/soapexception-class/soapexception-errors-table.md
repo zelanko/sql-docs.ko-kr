@@ -4,21 +4,18 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74fa5f7e857555edf8ebb30319a482617c7e47c7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2aec981adb3f0c1c71130dd1c60769ef89d3c6be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741411"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 오류 테이블
   보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 발생하는 오류를 기반으로 SOAP 예외 오류 및 오류 메시지를 생성합니다. 다음 표는 보고서 서버 웹 서비스의 **SoapException**을 통해 메서드에서 액세스할 수 있는 오류를 보여 줍니다. 예외를 throw하는 메서드별로 구성되어 있습니다.  

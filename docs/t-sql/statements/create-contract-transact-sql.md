@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTRACT_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - contracts [Service Broker], creating
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-caps.latest.revision: 48
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0bf3f0dc7d08d5b4caa31743a04829c43b78efc6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: ba861b5e0aa289f4ac7bd8a7f406f0f8a5958a91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713641"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ CREATE CONTRACT contract_name
  계약의 일부로 포함될 메시지 유형의 이름입니다.  
   
  SENT BY  
- 지정된 메시지 유형의 메시지를 보낼 수 있는 끝점을 지정합니다. 계약은 서비스에서 특정 대화를 소유하기 위해 사용할 수 있는 메시지를 문서화합니다. 대화마다 두 개의 엔드포인트가 있는데 *시작자* 엔드포인트는 대화를 시작한 서비스이고 *대상* 엔드포인트는 시작자가 연결하고 있는 서비스입니다.  
+ 지정된 메시지 유형의 메시지를 보낼 수 있는 엔드포인트를 지정합니다. 계약은 서비스에서 특정 대화를 소유하기 위해 사용할 수 있는 메시지를 문서화합니다. 대화마다 두 개의 엔드포인트가 있는데 *시작자* 엔드포인트는 대화를 시작한 서비스이고 *대상* 엔드포인트는 시작자가 연결하고 있는 서비스입니다.  
   
  INITIATOR  
  대화의 시작자만 지정된 메시지 유형의 메시지를 보낼 수 있음을 나타냅니다. 대화를 시작하는 서비스를 대화의 *시작자*라고 합니다.  
@@ -90,7 +87,7 @@ CREATE CONTRACT contract_name
   
  계약은 임시 개체가 아닐 수 있습니다. #로 시작하는 계약 이름은 허용되지만 영구 개체입니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버가 계약을 만들 수 있습니다.  
   
  기본적으로 계약의 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버에게는 계약에 대한 REFERENCES 권한이 있습니다.  

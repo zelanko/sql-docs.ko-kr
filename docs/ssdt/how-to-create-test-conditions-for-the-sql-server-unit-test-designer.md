@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681971"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기
 확장 가능한 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 클래스를 사용하여 새 테스트 조건을 만들 수 있습니다. 예를 들어 결과 집합의 열 또는 값 수를 확인하는 새 테스트 조건을 만들 수 있습니다.  
@@ -181,7 +178,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 |특성 매개 변수|위치|설명|  
 |-----------------------|------------|---------------|  
-|DisplayName|@shouldalert|"테스트 조건" 콤보 상자의 문자열을 식별합니다. 이 이름은 고유해야 합니다. 두 조건의 표시 이름이 동일한 경우 첫 번째로 발견된 조건이 사용자에게 표시되고 Visual Studio 오류 관리자에 경고가 표시됩니다.|  
+|DisplayName|1|"테스트 조건" 콤보 상자의 문자열을 식별합니다. 이 이름은 고유해야 합니다. 두 조건의 표시 이름이 동일한 경우 첫 번째로 발견된 조건이 사용자에게 표시되고 Visual Studio 오류 관리자에 경고가 표시됩니다.|  
 |ImplementingType|2|이 매개 변수는 해당 확장을 고유하게 식별하는 데 사용됩니다. 특성을 추가하려는 형식과 일치하도록 이 매개 변수를 변경해야 합니다. 이 예제에서는 **ResultSetColumnCountCondition** 유형을 사용하므로 **typeof(ResultSetColumnCountCondition)** 를 사용합니다. 유형이 **NewTestCondition**인 경우에는 **typeof(NewTestCondition)** 를 사용합니다.|  
   
 이 예에서는 두 개의 속성을 추가합니다. 사용자 지정 테스트 조건의 사용자는 ResultSet 속성을 사용하여 열 수를 확인할 결과 집합을 지정할 수 있습니다. 그런 다음 Count 속성을 사용하여 예상 열 수를 지정할 수 있습니다.  

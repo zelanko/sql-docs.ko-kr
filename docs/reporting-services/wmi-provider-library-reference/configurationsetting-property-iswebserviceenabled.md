@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - IsWebServiceEnabled
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0996f708ab1c8946a7e7ba573e5ff11bc997483
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f0fa4db9037c41e29fe79aacc3cc5e3143286ab9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694611"
 ---
 # <a name="configurationsetting-property---iswebserviceenabled"></a>ConfigurationSetting 속성 - IsWebServiceEnabled
   보고서 서버 웹 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.  

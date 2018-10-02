@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.packageconfigurationorganizer.f1
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408505"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718271"
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
@@ -264,7 +261,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  패키지 구성은 런타임 시 패키지 개체의 속성 값을 업데이트합니다. 패키지가 로드되면 구성의 값이 패키지 개발 시 설정한 값을 대체합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 여러 가지 구성 유형을 지원합니다. 예를 들어 여러 구성이 포함될 수 있는 XML 파일이나 단일 구성이 포함되는 환경 변수를 사용할 수 있습니다. 자세한 내용은 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **패키지 구성 설정**  
  패키지에 구성을 사용하려면 선택합니다.  
   
@@ -305,7 +302,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>패키지 구성 마법사 시작 페이지  
  **SSIS 구성 마법사** 를 사용하여 런타임에 패키지 및 패키지 개체의 속성을 업데이트하는 구성을 만들 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **이 페이지를 다시 표시 안 함**  
  다음에 마법사를 열 때 시작 페이지를 표시하지 않습니다.  
   
@@ -404,7 +401,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-objects-to-export-page"></a>내보낼 개체 선택 페이지  
  **대상 속성 선택 또는 내보낼 속성 선택** 페이지를 사용하여 구성에 포함할 개체 속성을 지정할 수 있습니다. 여러 속성을 선택하는 기능은 XML 구성 유형을 선택하는 경우에만 사용할 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **개체**  
  패키지 계층을 확장하고 내보낼 속성을 선택합니다.  
   
@@ -417,7 +414,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>마법사 완료 페이지  
  **마법사 완료** 페이지를 사용하여 구성의 이름을 지정하고 마법사에서 구성을 만드는 데 사용하는 설정을 볼 수 있습니다. 마법사를 완료하면 패키지의 모든 구성을 나열하는 **패키지 구성 도우미** 가 표시됩니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **구성 이름**  
  구성의 이름을 입력합니다.  
   
@@ -586,7 +583,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>패키지 구성 페이지  
  **패키지 구성** 페이지를 사용하여 패키지 구성을 편집할 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **구성 파일**  
  목록에서 파일을 선택하여 구성 파일의 내용을 편집합니다.  
   
@@ -622,7 +619,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>SSIS 패키지 배포 페이지  
  **SSIS 패키지 배포** 페이지를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 및 해당 종속성을 설치할 위치를 지정할 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **파일 시스템 배포**  
  파일 시스템에서 지정한 폴더에 패키지 및 종속성을 배포합니다.  
   
@@ -647,7 +644,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>설치 폴더 선택 페이지  
  **설치 폴더 선택** 페이지를 사용하여 패키지 및 패키지의 종속성을 설치할 파일 시스템 폴더를 지정할 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **Folder**  
  패키지 및 해당 패키지의 종속성을 복사할 경로 및 폴더를 지정합니다.  
   
@@ -663,7 +660,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>대상 SQL Server 지정 페이지  
  **대상 SQL Server 지정** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 패키지를 배포할 수 있는 옵션을 지정할 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **서버 이름**  
  패키지를 배포할 서버의 이름을 지정합니다.  
   

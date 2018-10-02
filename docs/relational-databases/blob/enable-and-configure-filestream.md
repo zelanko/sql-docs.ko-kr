@@ -5,23 +5,20 @@ ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 084994046941d960c8f18720e92f735cff92155c
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 84238231c3a36e4c29e8fead452feb201ab0f36e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36875071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851041"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +81,7 @@ ms.locfileid: "36875071"
 |-|-|-|-|-|  
 |RAID 수준|쓰기 성능|읽기 성능|내결함성|Remarks|  
 |RAID 5|보통|보통|최고|성능은 하나의 디스크 또는 JBOD보다 우수하지만 RAID 0 또는 스트라이프를 사용하는 RAID 5보다 떨어집니다.|  
-|RAID 0|최고|최고|InclusionThresholdSetting||  
+|RAID 0|최고|최고|없음||  
 |RAID 5 + 스트라이프|최고|최고|최고|가장 비용이 많이 드는 옵션입니다.|  
   
   

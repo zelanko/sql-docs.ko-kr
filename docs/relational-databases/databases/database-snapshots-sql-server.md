@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - static database views
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b8fc9abd9962414cc127d26ac25aacf65708789
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d411e71a12f47a6652597e13038de83bb191bd0d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856281"
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅숏(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "32932868"
 > [!NOTE]  
 >  데이터베이스 스냅숏은 스냅숏 백업, 트랜잭션의 스냅숏 격리 또는 스냅숏 복제와 관련이 없습니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [기능 개요](#FeatureOverview)  
   
@@ -50,7 +46,7 @@ ms.locfileid: "32932868"
   
 -   [데이터베이스 스냅숏 사전 요구 사항 및 제한 사항](#LimitationsRequirements)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="FeatureOverview"></a> 기능 개요  
  데이터베이스 스냅숏은 데이터 페이지 수준에서 작동합니다. 원본 데이터베이스의 페이지를 처음 수정하기 전에 원본 페이지는 원본 데이터베이스에서 스냅숏으로 복사됩니다. 스냅숏은 원본 페이지를 저장하여 스냅숏이 만들어질 때 상태 그대로 데이터 레코드를 유지합니다. 처음 수정하는 모든 페이지에 같은 프로세스가 반복됩니다. 사용자에게 데이터베이스 스냅숏은 변경되지 않는 것으로 보입니다. 데이터베이스 스냅숏의 읽기 작업은 원본 데이터 페이지의 위치에 관계없이 항상 원본 데이터 페이지에 액세스하기 때문입니다.  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720211"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 응용 프로그램에서 처리되는 응용 프로그램 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
@@ -106,7 +103,7 @@ ms.locfileid: "35332487"
 ## <a name="message-queue-task-editor-general-page"></a>메시지 큐 태스크 편집기(일반 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메시지 큐 태스크의 이름을 지정하고 설명하며 메시지 형식을 지정하고 태스크에서 메시지를 보내거나 받을지를 나타낼 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이름**  
  메시지 큐 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -130,7 +127,7 @@ ms.locfileid: "35332487"
 ## <a name="message-queue-task-editor-send-page"></a>메시지 큐 태스크 편집기(보내기 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **보내기** 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 메시지를 보내도록 메시지 큐 태스크를 구성할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **UseEncryption**  
  메시지 암호화 여부를 나타냅니다. 기본값은 **False**입니다.  
   
@@ -171,7 +168,7 @@ ms.locfileid: "35332487"
 ## <a name="message-queue-task-editor-receive-page"></a>메시지 큐 태스크 편집기(받기 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **받기** 페이지를 사용하여 메시지 큐 태스크가 MSMQ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) 메시지를 받도록 구성할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **RemoveFromMessageQueue**  
  메시지를 받은 후 큐에서 제거할지 여부를 나타냅니다. 기본적으로 이 값은 **False**로 설정되어 있습니다.  
   
@@ -282,7 +279,7 @@ ms.locfileid: "35332487"
 ## <a name="select-variables"></a>변수 선택
   **변수 선택** 대화 상자를 사용하여 메시지 큐 태스크의 메시지 보내기 작업에 사용할 변수를 지정할 수 있습니다. **사용 가능한 변수** 목록에는 메시지 큐 태스크 또는 해당 부모 컨테이너의 범위에 있는 시스템 및 사용자 정의 변수가 포함되어 있습니다. 이 태스크에서는 **선택한 변수** 목록의 변수를 사용합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 변수**  
  변수를 하나 이상 선택합니다.  
   

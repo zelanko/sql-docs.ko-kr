@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.facet.f1
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05517c1df6317c2d44e8ae57e43a605ba28b0db9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6636d2a7b186b364ff4521f32a2b7abe64ba977f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718531"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>패싯 속성 대화 상자, 일반 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 서버, 데이터베이스 또는 테이블과 같은 하나 이상의 대상 유형에 각 패싯을 적용할 수 있습니다. 이 페이지를 사용하여 이 패싯과 관련된 대상 유형을 볼 수 있습니다. 패싯의 속성은 패싯이 만들어질 때 정의되며 이 페이지를 사용하여 변경할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **설명**  
  패싯에 대한 일반적인 설명을 제공합니다.  
   

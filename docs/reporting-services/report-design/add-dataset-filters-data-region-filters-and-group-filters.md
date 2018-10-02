@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffc0cbb04ab32283c631a8c03a54e05264c19e66
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9435b891652c00391cd934cf739ba76ff20f4a82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779421"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 집합, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 집합을 사용하는 경우와 같이 데이터 집합 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  

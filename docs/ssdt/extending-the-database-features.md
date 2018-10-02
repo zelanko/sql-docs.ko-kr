@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42e420a042d0627faf5e2c436ff7ba0ea38a0a5c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0e1efe0db32b167214521e1af3b9a1e941480d2d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764261"
 ---
 # <a name="extending-the-database-features"></a>데이터베이스 기능 확장
 단위 테스트 및 데이터베이스 코드 분석과 같은 기능을 확장할 수 있도록 하는 기능 확장을 만들 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  

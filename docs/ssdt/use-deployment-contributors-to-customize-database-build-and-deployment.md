@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37fdcf6fdce41cf69a81eaea0d3ca3c9bd5c0c67
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 21a391b45abc89749db3ae2b7886f7b904b00e9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751161"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>빌드 및 배포 참가자를 사용하여 데이터베이스 빌드 및 배포 사용자 지정
 Visual Studio는 데이터베이스 프로젝트에 대한 빌드 및 배포 작업의 동작을 수정하기 위해 사용할 수 있는 확장성 지점을 제공합니다.  

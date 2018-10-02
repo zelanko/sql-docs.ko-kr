@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88b6bc5bafcc2fe3da77b55ac98d19ab7ec747e2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: addb3312def505802aab695301f7cca170eab3d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799671"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 파일 대상
   SSIS 패키지는 HDFS 파일 대상 구성 요소를 통해 HDFS 파일에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 텍스트, Avro 및 ORC입니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "35410705"
   
  ![HDFS 파일 대상 편집기](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS 파일 대상 편집기")  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **Hadoop 파일 대상 편집기** 대화 상자의 **일반** 탭에서 다음 옵션을 구성합니다.  
   
 |필드|설명|  

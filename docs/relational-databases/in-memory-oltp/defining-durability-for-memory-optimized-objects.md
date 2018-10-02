@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27681e9a1da0abf1d83e25061f99ae09a29452a0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa4546c1c4f8ae99715bb12513899d9d80d87ced
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750961"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체에 대한 내구성 정의
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,8 +38,7 @@ ms.locfileid: "43085287"
  지연된 내구성이 있는 트랜잭션을 메모리 최적화 테이블로 커밋하면 메모리 내 트랜잭션 로그가 디스크에 저장된 이후에만 트랜잭션이 내구성을 갖습니다. 지연된 내구성에 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.  
   
  다시 시작 내구성  
- 
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 충돌이나 계획된 종료 후에 다시 시작되면 메모리 최적화 내구성이 있는 테이블이 다시 인스턴스화되어 종료나 충돌 전의 상태로 복원됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 충돌이나 계획된 종료 후에 다시 시작되면 메모리 최적화 내구성이 있는 테이블이 다시 인스턴스화되어 종료나 충돌 전의 상태로 복원됩니다.  
   
  미디어 오류 내구성  
  실패했거나 손상된 디스크에 메모리 최적화 내구성이 있는 개체의 영구 복사본이 하나 이상 포함되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 기능은 메모리 최적화 테이블을 새 미디어에 복원합니다.  

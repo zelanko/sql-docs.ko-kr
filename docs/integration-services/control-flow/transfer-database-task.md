@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transferdatabasetask.f1
@@ -18,16 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21fc39c5ed71826f12d6034d0507d03e61a82ecd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e23db45cfe4dd389593ae71726af000b1404390a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403635"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830541"
 ---
 # <a name="transfer-database-task"></a>데이터베이스 전송 태스크
   데이터베이스 전송 태스크는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스를 전송합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 복사하여 전송하는 다른 태스크와 달리 데이터베이스 전송 태스크는 데이터베이스를 복사 또는 이동할 수 있습니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다.  
@@ -93,7 +90,7 @@ ms.locfileid: "35403635"
 ## <a name="transfer-database-task-editor-general-page"></a>데이터베이스 전송 태스크 편집기(일반 페이지)
   **데이터베이스 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 데이터베이스 전송 태스크를 명명 및 설명할 수 있습니다. 데이터베이스 전송 태스크에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 두 인스턴스 간에 복사 또는 이동합니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다.   
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이름**  
  데이터베이스 전송 태스크에 사용할 고유 이름을 입력합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -106,7 +103,7 @@ ms.locfileid: "35403635"
 ## <a name="transfer-database-task-editor-databases-page"></a>데이터베이스 전송 태스크 편집기(데이터베이스 페이지)
   **데이터베이스 전송 태스크 편집기** 대화 상자의 **데이터베이스** 페이지를 사용하여 데이터베이스 전송 태스크와 관련된 원본 및 대상 데이터베이스의 속성을 지정할 수 있습니다. 데이터베이스 전송 태스크에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 두 인스턴스 간에 복사 또는 이동합니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **SourceConnection**  
  목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>** 을 클릭하여 원본 서버에 대한 새 연결을 만듭니다.  
   
@@ -174,7 +171,7 @@ ms.locfileid: "35403635"
   
  이 대화 상자를 원본 서버의 데이터베이스 파일 이름 및 위치로 채우려면 먼저 **데이터베이스 전송 태스크 편집기** 대화 상자의 **데이터베이스** 페이지에서 **SourceConnection** 및 **SourceDatabaseName** 을 지정합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **원본 파일**  
  전송할 원본 서버의 데이터베이스 파일 이름입니다. **원본 파일** 은 읽기 전용입니다.  
   
@@ -193,7 +190,7 @@ ms.locfileid: "35403635"
   
  이 대화 상자를 원본 서버의 데이터베이스 파일 이름 및 위치로 자동으로 채우려면 먼저 **데이터베이스 전송 태스크 편집기**대화 상자의 **데이터베이스**페이지에서 **SourceConnection** , **SourceDatabaseName** 및 **SourceDatabaseFiles** 를 지정합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **대상 파일**  
  전송된 대상 서버의 데이터베이스 파일 이름입니다.  
   

@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,12 +19,12 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 539906b1a09838e43e34be96e4ee32daec19fab7
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 4d3f2de58bdbfb4f476710bb9bb629dcac3db940
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670041"
 ---
 # <a name="tutorial-using-templates-in-sql-server-management-studio"></a>자습서: SQL Server Management Studio에서 템플릿 사용
 이 자습서에서는 SSMS(SQL Server Management Studio)에서 사용할 수 있는 미리 빌드된 T-SQL(Transact-SQL) 템플릿을 소개합니다. 이 아티클에서는 다음과 같은 방법을 알아봅니다.

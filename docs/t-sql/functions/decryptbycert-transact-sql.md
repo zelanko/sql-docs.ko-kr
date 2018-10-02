@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DecryptByCert_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d94bc1ba7a11f9d934118ba649bff58e84b9fb3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: ff7cd9e82f2e70e39b02f10726acbae657ad670c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787094"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741201"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 ## <a name="remarks"></a>Remarks  
 이 함수는 인증서의 개인 키로 데이터의 암호를 해독합니다. 비대칭 키를 사용하는 암호화 변환에는 상당한 리소스가 사용됩니다. 따라서 개발자는 일상적인 사용자 데이터 암호화/암호 해독에 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 및 DECRYPTBYCERT의 사용을 피하는 것이 좋습니다.  
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 `DECRYPTBYCERT`는 인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseServerName Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23c3d5515635f6738e222d221a9d0ad0bb330c16
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 772d3aefc9d61c55edf42fb1fe8f3fa94e394bc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744351"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 속성 - DatabaseServerName
   보고서 서버 데이터베이스가 설치되어 있는 서버 이름을 지정합니다. 읽기/쓰기입니다.  

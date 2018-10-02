@@ -5,9 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 01e55085d117541e2ecb8d8c4ee585afec205b03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf13f7db56ff7fedd5252283a927f4daff0ec5fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664434"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +75,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
             **추가**  
             **백업 미디어** 드롭다운 목록에서 선택한 미디어 유형에 따라 **추가** 를 클릭하면 다음 대화 상자 중 하나가 열립니다. **백업 미디어** 목록 상자의 목록이 꽉 차면 **추가** 단추를 사용할 수 없습니다.
 
-            |미디어 유형|대화 상자|Description|    
+            |미디어 유형|대화 상자|설명|    
             |----------------|----------------|-----------------|    
             |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|    
             |**장치**|**백업 장치 선택**|이 대화 상자에서는 서버 인스턴스에 정의된 논리적 백업 장치의 목록에서 장치를 선택할 수 있습니다.|    

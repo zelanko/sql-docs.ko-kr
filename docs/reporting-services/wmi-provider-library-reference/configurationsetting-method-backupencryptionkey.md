@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb8ab2dbd86aef1b3b71d447a5b1ef21c2fd9894
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e08d76daea2e0fc1f8a9bea7dc1f8c1692dba53d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267274"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744711"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>ConfigurationSetting Method - BackupEncryptionKey
   지정된 보고서 서버 인스턴스에 대한 암호화 키를 백업합니다. 암호화 키는 암호로 암호화되어 저장됩니다.  
