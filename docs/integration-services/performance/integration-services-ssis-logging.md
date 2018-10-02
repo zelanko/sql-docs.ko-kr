@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d24a5685db73a91be95a3a82b93e752877c8ad7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b7a00dbd30f8cee08cb1667627c4b20c64eaef79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799111"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -283,7 +280,7 @@ ms.locfileid: "35407645"
 ###  <a name="container"></a> 컨테이너 창의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **컨테이너** 창을 사용하여 패키지 및 해당 컨테이너에 대해 로깅을 활성화할 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **SSIS 로그 구성**  
  패키지 및 해당 컨테이너에 대해 로깅을 활성화하려면 계층 뷰의 확인란을 선택합니다.  
   
@@ -298,7 +295,7 @@ ms.locfileid: "35407645"
 ###  <a name="provider"></a> 공급자 및 로그 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **공급자 및 로그** 탭을 사용하여 런타임 이벤트를 캡처하기 위한 로그를 생성 및 구성할 수 있습니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **공급자 유형**  
  목록에서 로그 공급자 유형을 선택합니다.  
   
@@ -322,7 +319,7 @@ ms.locfileid: "35407645"
 ###  <a name="detail"></a> 자세히 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **자세히** 탭을 사용하여 로깅에 사용할 이벤트와 로깅할 세부 정보를 지정할 수 있습니다. 선택한 정보는 패키지의 모든 로그 공급자에 적용됩니다. 예를 들어 일부 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 쓰고 다른 정보는 텍스트 파일에 쓰는 것은 불가능합니다.  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  **이벤트**  
  로깅할 이벤트를 설정 또는 해제합니다.  
   
@@ -412,7 +409,7 @@ ms.locfileid: "35407645"
   
 |로깅 수준|설명|  
 |-------------------|-----------------|  
-|InclusionThresholdSetting|로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
+|없음|로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
 |Basic|사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  
 |RuntimeLineage|데이터 흐름에서 계보 정보를 추적하는 데 필요한 데이터를 수집합니다. 이 계보 정보를 구문 분석하여 작업 간의 계보 관계를 매핑할 수 있습니다. ISV 및 개발자는 이 정보를 사용하여 사용자 지정 계보 매핑 도구를 빌드할 수 있습니다.|  
 |성능|성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.<br /><br /> **실행 성능** 보고서에는 패키지 데이터 흐름 구성 요소의 활성 시간 및 총 시간이 표시됩니다. 이 정보는 마지막 패키지 실행의 로깅 수준이 **성능** 또는 **자세히**로 설정된 경우에 사용할 수 있습니다. 자세한 내용은 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)을(를) 참조하세요.<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 뷰에는 각 실행 단계의 데이터 흐름 구성 요소에 대한 시작 시간과 종료 시간이 표시됩니다. 이 뷰에서는 패키지 실행의 로깅 수준이 **성능** 또는 **자세히**로 설정된 경우에만 해당 구성 요소에 대해 이 정보를 표시합니다.|  

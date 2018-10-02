@@ -5,22 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e9407e6c678945f6d4f483c4babbe4d4ce37cb0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798051"
 ---
 # <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
 
