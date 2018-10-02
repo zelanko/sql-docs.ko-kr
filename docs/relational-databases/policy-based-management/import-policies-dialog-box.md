@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.importpolicy.f1
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e672c7cfb95870236e6e6ed4601790fda6d0a87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 923d195e714030afa99424373aed1e9dc3bfa74b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851091"
 ---
 # <a name="import-policies-dialog-box"></a>정책 가져오기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 XML 파일로 저장된 하나 이상의 정책과 해당 참조 조건을 현재 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스로 가져올 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **가져올 파일**  
  XML 파일에서 정책을 가져오려면 파일의 경로와 이름을 입력하거나 찾아보기 단추(**...**)를 사용합니다.  
   

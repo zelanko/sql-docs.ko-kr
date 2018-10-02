@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72058a698cbf32e54d145f8747689f89a5e66288
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 80b646eb748e73ab01a12b463e3948f261c6b9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710361"
 ---
 # <a name="certification-by-sap"></a>SAP 인증
   SAP BW용 Microsoft Connector 1.1은 SAP으로부터 SAP NetWeaver와의 통합에 대한 인증을 받았습니다.  

@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 631f734e2ade09264c62bfb6392f2f7b3edd8fcd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 2883f607a56da0e30067180854c289625ae11dd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753913"
 ---
 # <a name="set-warning-thresholds"></a>경고 임계값 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.locfileid: "35312322"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  *서버 인스턴스 및 서버 인스턴스의 연결 상태*  
  *SYSTEM***\\***INSTANCE_NAME*형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
   

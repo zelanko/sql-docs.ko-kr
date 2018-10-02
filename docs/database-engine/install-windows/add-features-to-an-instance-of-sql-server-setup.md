@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e2239eae58e1116d4197c35c62e43c0730177638
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 509cc63dfc92991aa8db53b764a7eadd401ce37e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741031"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server 인스턴스에 기능 추가(설치 프로그램)
 

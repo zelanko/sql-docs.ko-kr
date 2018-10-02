@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eea70d193fb5f75249c59d6e1af8d9db904a085f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097054"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830741"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,8 +84,7 @@ ms.locfileid: "43097054"
 메모리 최적화 테이블을 데이터 수집에 사용합니다. 수집이 업데이트보다 주로 삽입으로 구성되고 메모리 내 OLTP 저장소의 데이터 공간이 중요한 경우 다음 중 하나를 수행합니다.
 
 - [을 수행하는 작업을 사용하여](../indexes/columnstore-indexes-overview.md)클러스터형 Columnstore 인덱스 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`가 있는 디스크 기반 테이블에 데이터를 정기적으로 일괄 오프로드합니다.
-- 
-            [temporal 메모리 최적화 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며, 데이터 이동이 시스템에 의해 관리됩니다.
+- [temporal 메모리 최적화 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며, 데이터 이동이 시스템에 의해 관리됩니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 샘플 리포지토리에는 temporal 메모리 최적화 테이블, 메모리 최적화 테이블 형식 및 고유하게 컴파일된 저장 프로시저를 사용하여 센서 데이터의 메모리 내 OLTP 저장소 공간을 관리하는 동시에 데이터 수집을 가속화하는 스마트 그리드 응용 프로그램이 포함되어 있습니다. 
 

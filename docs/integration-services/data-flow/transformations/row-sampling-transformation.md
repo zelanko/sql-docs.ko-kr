@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.rowsamplingtrans.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61c717d7bb96ecd7cfeb64e333890f11d9494cd0
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 650e41167a5016a4dc5e0defe03b11520d961c96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329787"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737871"
 ---
 # <a name="row-sampling-transformation"></a>행 샘플링 변환
   행 샘플링 변환은 임의로 선택된 입력 데이터 집합의 하위 집합을 얻는 데 사용합니다. 출력 샘플의 정확한 크기와 난수 생성기의 초기값을 지정할 수 있습니다.  
@@ -64,7 +61,7 @@ ms.locfileid: "35329787"
 ## <a name="row-sampling-transformation-editor-sampling-page"></a>행 샘플링 변환 편집기(샘플링 페이지)
   **행 샘플링 변환 편집기** 대화 상자를 사용하여 입력의 일부분을 지정된 행 수를 사용하는 샘플로 분할할 수 있습니다. 이 변환으로 인해 입력이 두 개의 별도 출력으로 나뉩니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **행 수**  
  입력에서 샘플로 사용할 행 수를 지정합니다.  
   

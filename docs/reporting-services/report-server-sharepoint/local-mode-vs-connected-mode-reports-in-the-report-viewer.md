@@ -4,16 +4,16 @@ ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bdb20cac5f65f9c8daddc81318342427c093439
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: a87fd73ab4517e5277f09eef2714b6ca89038ac4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682451"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>보고서 뷰어의 로컬 모드와 연결된 모드
 

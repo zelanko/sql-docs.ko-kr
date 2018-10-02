@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e2cc0bda94d980535c014c1f52cf83f9ee80910
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32860218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731561"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "32860218"
  다음 PowerShell 명령은 최근 15분의 모든 클러스터 노드에서 클러스터 로그를 생성하고 현재 디렉터리에 저장합니다. 관리자 권한으로 PowerShell 창에서 명령을 실행합니다.  
   
 ```powershell  
-Import-Modeul FailoverClusters   
+Import-Module FailoverClusters   
 Get-ClusterLog –TimeSpan 15 –Destination .  
 ```  
   

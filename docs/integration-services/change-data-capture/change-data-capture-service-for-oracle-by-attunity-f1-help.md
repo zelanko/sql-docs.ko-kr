@@ -5,21 +5,18 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa27601fae46e458df814e41f8547e4c8355e7ee
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8b9317c148b416525065862515b1ff384f4af0d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782272"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle CDC Service F1 도움말
   CDC Service 구성 콘솔을 사용하여 로컬 Oracle CDC Service를 정의, 업데이트 및 삭제합니다.  

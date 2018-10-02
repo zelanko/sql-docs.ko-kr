@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -18,17 +16,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99d72a5466996d39cf69da8b153dba0ef050b499
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846376"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ ms.locfileid: "43084423"
 ### <a name="bounding-box"></a>경계 상자  
  *경계 상자* 는 기하 평면에서 최상위 표의 경계입니다. 경계 상자 매개 변수는 기하 도형 표 공간 분할에서만 존재합니다. 이러한 매개 변수는 **공간 분할(tessellation) 구성표** 가 **지리 표**인 경우 사용할 수 없습니다.  
   
- 패널에는 경계 상자의 **(***X-min***,***Y-min***)** 및 **(***X-max***,***Y-max***)** 좌표가 표시됩니다. 기본 좌표 값은 없습니다. 따라서 **geometry** 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
+ 패널에는 경계 상자의 **(**_X-min_**,**_Y-min_**)** 및 **(**_X-max_**,**_Y-max_**)** 좌표가 표시됩니다. 기본 좌표 값은 없습니다. 따라서 **geometry** 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
   
  **X-min**  
  경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  

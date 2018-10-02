@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ab1050e8ab72b4169fa3f5cd41a907d8d81dd2a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 36437864963c6cadfd121d01b95369b3e2a85dd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619901"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>보고서 작성기 함수 - StDevP 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 숫자 값의 모집단 표준 편차를 반환합니다.  

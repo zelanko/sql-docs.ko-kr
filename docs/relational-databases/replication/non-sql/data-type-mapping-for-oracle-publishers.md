@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76e46f9c9a157261f8341243583e855a0681756d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739191"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,36 +30,36 @@ ms.locfileid: "37360185"
   
 |Oracle 데이터 형식|SQL Server 데이터 형식|대체 형식|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|예|  
-|BLOB|VARBINARY(MAX)|예|  
-|CHAR([1-2000])|CHAR([1-2000])|예|  
-|CLOB|VARCHAR(MAX)|예|  
-|DATE|DATETIME|예|  
-|FLOAT|FLOAT|아니요|  
-|FLOAT([1-53])|FLOAT([1-53])|아니요|  
-|FLOAT([54-126])|FLOAT|아니요|  
-|INT|NUMERIC(38)|예|  
-|INTERVAL|DATETIME|예|  
-|LONG|VARCHAR(MAX)|예|  
-|LONG RAW|IMAGE|예|  
-|NCHAR([1-1000])|NCHAR([1-1000])|아니요|  
-|NCLOB|NVARCHAR(MAX)|예|  
-|NUMBER|FLOAT|예|  
-|NUMBER([1-38])|NUMERIC([1-38])|아니요|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|예|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니요|  
-|RAW([1-2000])|VARBINARY([1-2000])|아니요|  
-|real|FLOAT|아니요|  
-|ROWID|CHAR(18)|아니요|  
-|TIMESTAMP|DATETIME|예|  
-|TIMESTAMP(0-7)|DATETIME|예|  
-|TIMESTAMP(8-9)|DATETIME|예|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니요|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니요|  
-|UROWID|CHAR(18)|아니요|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|예|  
+|BFILE|VARBINARY(MAX)|사용자 계정 컨트롤|  
+|BLOB|VARBINARY(MAX)|사용자 계정 컨트롤|  
+|CHAR([1-2000])|CHAR([1-2000])|사용자 계정 컨트롤|  
+|CLOB|VARCHAR(MAX)|사용자 계정 컨트롤|  
+|DATE|DATETIME|사용자 계정 컨트롤|  
+|FLOAT|FLOAT|아니오|  
+|FLOAT([1-53])|FLOAT([1-53])|아니오|  
+|FLOAT([54-126])|FLOAT|아니오|  
+|INT|NUMERIC(38)|사용자 계정 컨트롤|  
+|INTERVAL|DATETIME|사용자 계정 컨트롤|  
+|LONG|VARCHAR(MAX)|사용자 계정 컨트롤|  
+|LONG RAW|IMAGE|사용자 계정 컨트롤|  
+|NCHAR([1-1000])|NCHAR([1-1000])|아니오|  
+|NCLOB|NVARCHAR(MAX)|사용자 계정 컨트롤|  
+|NUMBER|FLOAT|사용자 계정 컨트롤|  
+|NUMBER([1-38])|NUMERIC([1-38])|아니오|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|사용자 계정 컨트롤|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니오|  
+|RAW([1-2000])|VARBINARY([1-2000])|아니오|  
+|real|FLOAT|아니오|  
+|ROWID|CHAR(18)|아니오|  
+|TIMESTAMP|DATETIME|사용자 계정 컨트롤|  
+|TIMESTAMP(0-7)|DATETIME|사용자 계정 컨트롤|  
+|TIMESTAMP(8-9)|DATETIME|사용자 계정 컨트롤|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|사용자 계정 컨트롤|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니오|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|사용자 계정 컨트롤|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니오|  
+|UROWID|CHAR(18)|아니오|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|사용자 계정 컨트롤|  
   
 ## <a name="considerations-for-data-type-mapping"></a>데이터 형식 매핑에 대한 고려 사항  
  Oracle 데이터베이스에서 데이터를 복제할 때는 다음 데이터 형식 문제를 고려하십시오.  

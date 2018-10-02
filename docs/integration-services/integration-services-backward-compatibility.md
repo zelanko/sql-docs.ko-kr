@@ -5,9 +5,7 @@ ms.date: 06/14/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0add9a7b19f425d862705af357e8b9c72865ec
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e48a39f307afc8a9c10d2d5b35184bb212db9a7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668952"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services의 이전 버전과의 호환성
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전 간의 변경 사항을 설명합니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 비롯한 기존 응용 프로그램의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  

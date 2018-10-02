@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9302e518ab06f4e7ac01d51e27bcdf7e6e6b5970
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748407"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +38,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 다음 표에서는 SQL Server에 설명 **Deprecated Features** 성능 개체에 대해 설명합니다.
 
-|**SQL Server, Deprecated Features 카운터**|Description|  
+|**SQL Server, Deprecated Features 카운터**|설명|  
 |-------------|-----------------|  
 |**사용법**|마지막 SQL Server 시작 이후의 기능 사용입니다.|
   
  다음 표에서는 SQL Server Deprecated Features 카운터 인스턴스에 대해 설명합니다.  
   
-|SQL Server Deprecated Features 카운터 인스턴스|Description|  
+|SQL Server Deprecated Features 카운터 인스턴스|설명|  
 |------------------------------------------------------|-----------------|  
 |임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|# 외에 다른 문자를 포함하지 않는 식별자가 발견되었습니다. 적어도 하나 이상의 추가 문자를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. `SELECT column_list FROM` *<function_name>*`()`으로 바꿉니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  

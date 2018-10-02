@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33a986a55104e770ea8058737b03187a7b4b7e99
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6a80cbbbca40a48c1469c84a5c7a4968770c5ee7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647861"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85a9cdf94dff3a45563c0f22cb715a228d969dcb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754361"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
   패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 이벤트 처리기, 패키지 및 프로젝트 수준의 연결 관리자 및 로그 공급자에 속성 식을 만들 수 있습니다.  

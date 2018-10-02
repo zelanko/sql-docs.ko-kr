@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
@@ -15,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1566b7b9a0fae03870acd6377cbf75c98c793edf
-ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
+ms.openlocfilehash: 525c9fc853a3ba4696e4e9aac5df6ac2776fc943
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46013418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844601"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>두 서버에서 동일한 대칭 키 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

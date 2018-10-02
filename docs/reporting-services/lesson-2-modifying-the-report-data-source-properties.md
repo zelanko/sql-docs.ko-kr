@@ -4,19 +4,16 @@ ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b9b1fdf1439544fe349cbeed2c50aa28e7f6def2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 692ae852147adcf8c51d2ca4c271a20f34baaba9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847281"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  

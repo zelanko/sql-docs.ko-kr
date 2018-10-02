@@ -5,9 +5,7 @@ ms.date: 7/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - hierarchyid
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Hierarchy data type
 - hierarchyid data type
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bccbbf08ea36d3bf146459fa7aeadc449b9d812d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ba71850b1a4c3b8ab3b09749d03205b441f443d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779971"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

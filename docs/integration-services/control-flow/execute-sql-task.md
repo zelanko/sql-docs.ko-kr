@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.executesqltask.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721771"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  

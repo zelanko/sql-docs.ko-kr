@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 822e02a83041aa07dd912c271719f63c91f24cd5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a6aa1d3f6417d91c43eb59ea40c773e7b2b2619
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058498"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715701"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoV
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 확장한 다음 **SQL Server 2016 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 **SQL 전체 텍스트 필터 데몬 시작 관리자(***인스턴스 이름***)** 를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
+2.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 **SQL 전체 텍스트 필터 데몬 시작 관리자(**_인스턴스 이름_**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 3.  대화 상자의 **로그온** 탭을 클릭한 다음 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스에서 시작한 프로세스를 실행할 계정을 선택하거나 입력합니다.  
   

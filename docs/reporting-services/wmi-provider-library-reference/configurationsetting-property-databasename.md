@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseName Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca0762f06560bc7f6e4d6050754105b8842572d0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7dcaf8dbc93d0f418d34f3b412616d59f3b98ae4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850881"
 ---
 # <a name="configurationsetting-property---databasename"></a>ConfigurationSetting 속성 - DatabaseName
   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다. 읽기 전용입니다.  

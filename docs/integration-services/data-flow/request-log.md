@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e62c02c5a833a11f2ffa4eba942f74a660325ad7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0cd73bf3ddd2982e3c663ef77d799cdcefc64c95
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829401"
 ---
 # <a name="request-log"></a>요청 로그
   **요청 로그** 대화 상자를 사용하여 샘플 데이터에 대해 SAP Netweaver BW 시스템에 요청하는 동안 기록된 이벤트를 확인할 수 있습니다. SAP BW 원본의 구성 문제를 해결해야 하는 경우 이 정보가 유용할 수 있습니다.  
@@ -45,7 +42,7 @@ ms.locfileid: "35405265"
     > [!NOTE]  
     >  **미리 보기** 를 클릭하면 **미리 보기** 대화 상자도 열립니다. 이 대화 상자에 대한 자세한 내용은 [Preview](../../integration-services/data-flow/preview.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **Time**  
  이벤트가 기록된 시간을 표시합니다.  
   

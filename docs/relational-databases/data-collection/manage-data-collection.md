@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - 데이터 컬렉션
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2405449dad69e386aa267f683c672533b3c02276
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1c181dc687f2e00ff566ca37ca0de7583cab121e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721781"
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

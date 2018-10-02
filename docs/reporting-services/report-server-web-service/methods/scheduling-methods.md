@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - schedules [Reporting Services], methods
 - reports [Reporting Services], scheduling
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cfd2df79b56b37cbd7bf1a0cac030ccf0df2e17b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 387be09d03396c0bacb4d282ff2b6abdbaa9c4d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856792"
 ---
 # <a name="scheduling-methods"></a>일정 예약 메서드
   이러한 메서드는 보고서 실행 및 전달을 위한 공유 일정을 만들고 관리하는 데 사용할 수 있으며 보고서 서버에서 사용하는 캐시 새로 고침 계획에도 사용할 수 있습니다.  

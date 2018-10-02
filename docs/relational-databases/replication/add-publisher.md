@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.addpublisher.f1
 helpviewer_keywords:
 - Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6866a96464b143a3e7dc5f8b917a2df919058066
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9fe9784b5d15b50403508142f934e3c09b3e7c5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37348695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748831"
 ---
 # <a name="add-publisher"></a>게시자 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **게시자 추가** 대화 상자를 사용하여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **추가**  
  추가할 게시자 유형을 선택하려면 클릭합니다. **서버에 연결** 대화 상자가 시작됩니다. 다음 옵션을 사용할 수 있습니다.  
   

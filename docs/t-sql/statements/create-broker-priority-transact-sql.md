@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE BROKER PRIORITY
@@ -25,21 +23,20 @@ dev_langs:
 helpviewer_keywords:
 - CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e5541f4761f5bca99f6285d79346911a2679c6a0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715681"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  우선 순위 수준을 정의하고 우선 순위 수준을 할당할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 결정하기 위한 조건 집합을 설정합니다. 우선 순위 수준은 대화 우선 순위에 지정된 계약 및 서비스 조합과 동일한 조합을 사용하는 모든 대화 끝점에 할당됩니다. 우선 순위 값의 범위는 1(낮음)에서 10(높음) 사이입니다. 기본값은 5입니다.  
+  우선 순위 수준을 정의하고 우선 순위 수준을 할당할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 결정하기 위한 조건 집합을 설정합니다. 우선 순위 수준은 대화 우선 순위에 지정된 계약 및 서비스 조합과 동일한 조합을 사용하는 모든 대화 엔드포인트에 할당됩니다. 우선 순위 값의 범위는 1(낮음)에서 10(높음) 사이입니다. 기본값은 5입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,46 +75,46 @@ FOR CONVERSATION
  기본값은 ANY입니다.  
   
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
- 대화 끝점에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
+ 대화 엔드포인트에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
   
  *LocalServiceName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자입니다. 현재 데이터베이스에 있는 서비스의 이름을 지정해야 합니다.  
   
  *LocalServiceName*  
  대화 우선 순위가 다음 항목에 적용될 수 있도록 지정합니다.  
   
--   시작자 서비스 이름이 *LocalServiceName*과 일치하는 모든 시작자 대화 끝점입니다.  
+-   시작자 서비스 이름이 *LocalServiceName*과 일치하는 모든 시작자 대화 엔드포인트입니다.  
   
--   대상 서비스 이름이 *LocalServiceName*과 일치하는 모든 대상 대화 끝점입니다.  
+-   대상 서비스 이름이 *LocalServiceName*과 일치하는 모든 대상 대화 엔드포인트입니다.  
   
  ANY  
- -   끝점에서 사용하는 로컬 서비스 이름에 관계없이 모든 대화 끝점에 대화 우선 순위가 적용될 수 있도록 지정합니다.  
+ -   엔드포인트에서 사용하는 로컬 서비스 이름에 관계없이 모든 대화 엔드포인트에 대화 우선 순위가 적용될 수 있도록 지정합니다.  
   
  기본값은 ANY입니다.  
   
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
- 대화 끝점에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
+ 대화 엔드포인트에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
   
  *RemoteServiceName*은 **nvarchar(256)** 형식의 리터럴입니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *RemoteServiceName*를 찾습니다. 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 대상 서비스는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 원격 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 있을 수 있습니다.  
   
  '*RemoteServiceName*'  
  대화 우선 순위가 다음 항목에 적용될 수 있도록 지정합니다.  
   
--   연결된 대상 서비스 이름이 *RemoteServiceName*과 일치하는 모든 시작자 대화 끝점입니다.  
+-   연결된 대상 서비스 이름이 *RemoteServiceName*과 일치하는 모든 시작자 대화 엔드포인트입니다.  
   
--   연결된 시작 서비스 이름이 *RemoteServiceName*과 일치하는 모든 대상 대화 끝점입니다.  
+-   연결된 시작 서비스 이름이 *RemoteServiceName*과 일치하는 모든 대상 대화 엔드포인트입니다.  
   
  ANY  
- 끝점과 연결된 원격 서비스 이름에 관계없이 모든 대화 끝점에 대화 우선 순위가 적용되도록 지정합니다.  
+ 엔드포인트와 연결된 원격 서비스 이름에 관계없이 모든 대화 엔드포인트에 대화 우선 순위가 적용되도록 지정합니다.  
   
  기본값은 ANY입니다.  
   
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
- 대화 우선 순위에 지정된 계약 및 서비스를 사용하는 모든 대화 끝점에 할당할 우선 순위를 지정합니다. *PriorityValue*는 1(가장 낮은 우선 순위)에서 10(가장 높은 우선 순위) 사이의 정수 리터럴이어야 합니다. 기본값은 5입니다.  
+ 대화 우선 순위에 지정된 계약 및 서비스를 사용하는 모든 대화 엔드포인트에 할당할 우선 순위를 지정합니다. *PriorityValue*는 1(가장 낮은 우선 순위)에서 10(가장 높은 우선 순위) 사이의 정수 리터럴이어야 합니다. 기본값은 5입니다.  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 끝점에 우선 순위 수준을 할당합니다. 우선 순위 수준은 끝점과 연관된 작업의 우선 순위를 제어합니다. 각 대화에는 두 개의 대화 끝점이 있습니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 엔드포인트에 우선 순위 수준을 할당합니다. 우선 순위 수준은 엔드포인트와 연관된 작업의 우선 순위를 제어합니다. 각 대화에는 두 개의 대화 엔드포인트가 있습니다.  
   
--   시작자 대화 끝점은 대화의 한 쪽을 시작자 서비스 및 시작자 큐와 연결합니다. 시작자 대화 끝점은 BEGIN DIALOG 문이 실행될 때 생성됩니다. 시작자 대화 끝점과 연관된 작업에는 다음이 포함됩니다.  
+-   시작자 대화 엔드포인트는 대화의 한 쪽을 시작자 서비스 및 시작자 큐와 연결합니다. 시작자 대화 엔드포인트는 BEGIN DIALOG 문이 실행될 때 생성됩니다. 시작자 대화 엔드포인트와 연관된 작업에는 다음이 포함됩니다.  
   
     -   시작자 서비스에서 보내기  
   
@@ -125,7 +122,7 @@ FOR CONVERSATION
   
     -   시작자 큐에서 다음 대화 그룹 가져오기  
   
--   대상 대화 끝점은 대화의 다른 한 쪽을 대상 서비스 및 큐와 연결합니다. 대상 대화 끝점은 대화를 사용하여 대상 큐에 메시지를 보낼 때 생성됩니다. 대상 대화 끝점과 연관된 작업에는 다음이 포함됩니다.  
+-   대상 대화 엔드포인트는 대화의 다른 한 쪽을 대상 서비스 및 큐와 연결합니다. 대상 대화 엔드포인트는 대화를 사용하여 대상 큐에 메시지를 보낼 때 생성됩니다. 대상 대화 엔드포인트와 연관된 작업에는 다음이 포함됩니다.  
   
     -   대상 큐에서 받기  
   
@@ -133,9 +130,9 @@ FOR CONVERSATION
   
     -   대상 큐에서 다음 대화 그룹 가져오기  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 끝점이 생성될 때 대화 우선 순위 수준을 할당합니다. 대화 끝점은 대화가 종료될 때까지 우선 순위 수준을 그대로 유지합니다. 새 우선 순위 또는 기존 우선 순위의 변경 사항은 기존 대화에 적용되지 않습니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 엔드포인트가 생성될 때 대화 우선 순위 수준을 할당합니다. 대화 엔드포인트는 대화가 종료될 때까지 우선 순위 수준을 그대로 유지합니다. 새 우선 순위 또는 기존 우선 순위의 변경 사항은 기존 대화에 적용되지 않습니다.  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 계약 및 서비스 조건이 끝점의 속성에 가장 일치하는 대화 우선 순위의 우선 순위 수준을 대화 끝점에 할당합니다. 다음 표에서는 일치 우선 순위를 보여 줍니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 계약 및 서비스 조건이 엔드포인트의 속성에 가장 일치하는 대화 우선 순위의 우선 순위 수준을 대화 엔드포인트에 할당합니다. 다음 표에서는 일치 우선 순위를 보여 줍니다.  
   
 |작업 계약|작업 로컬 서비스|작업 원격 서비스|  
 |------------------------|-----------------------------|------------------------------|  
@@ -150,7 +147,7 @@ FOR CONVERSATION
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 먼저 지정된 계약, 로컬 서비스 및 원격 서비스가 작업에 사용된 것과 일치하는 우선 순위를 찾습니다. 이러한 우선 순위를 찾지 못한 경우에는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]은 작업에 사용된 것과 일치하는 계약 및 로컬 서비스가 있고 원격 서비스가 ANY로 지정된 우선 순위를 찾습니다. 이는 우선 순위 표에 나열된 다양한 우선 순위 모두에 대해 계속 수행됩니다. 일치하는 항목이 발견되지 않으면 해당 작업에 기본 우선 순위 5가 할당됩니다.  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 끝점마다 개별적으로 우선 순위 수준을 할당합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 시작자와 대상 대화 끝점 모두에 우선 순위 수준을 할당하도록 하려면 두 끝점에 대화 우선 순위가 적용되는지 확인해야 합니다. 시작자 대화 끝점과 대상 대화 끝점이 각기 다른 데이터베이스에 있는 경우 각 데이터베이스에 대화 우선 순위를 만들어야 합니다. 대화의 두 대화 끝점에는 일반적으로 동일한 우선 순위 수준이 지정되지만 다른 우선 순위를 지정할 수도 있습니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 엔드포인트마다 개별적으로 우선 순위 수준을 할당합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 시작자와 대상 대화 엔드포인트 모두에 우선 순위 수준을 할당하도록 하려면 두 엔드포인트에 대화 우선 순위가 적용되는지 확인해야 합니다. 시작자 대화 엔드포인트와 대상 대화 엔드포인트가 각기 다른 데이터베이스에 있는 경우 각 데이터베이스에 대화 우선 순위를 만들어야 합니다. 대화의 두 대화 엔드포인트에는 일반적으로 동일한 우선 순위 수준이 지정되지만 다른 우선 순위를 지정할 수도 있습니다.  
   
  큐에서 메시지나 대화 그룹 식별자를 수신하는 작업에는 항상 우선 순위 수준이 적용됩니다. 우선 순위 수준은 또한 한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 다른 인스턴스로 메시지를 전송할 때도 적용됩니다.  
   
@@ -162,7 +159,7 @@ FOR CONVERSATION
   
 -   데이터베이스에 대화 우선 순위가 생성되어 있지 않은 경우에는 데이터베이스의 모든 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 작업에 기본 우선 순위 5가 할당됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  대화 우선 순위를 만들 수 있는 권한은 기본적으로 db_ddladmin 또는 db_owner 고정 데이터베이스 역할 및 sysadmin 고정 서버 역할의 멤버에게 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -198,7 +195,7 @@ CREATE BROKER PRIORITY SimpleContractDefaultPriority
 ```  
   
 ### <a name="c-setting-a-base-priority-level-for-a-database"></a>3. 데이터베이스의 기본 우선 순위 수준 설정  
- 두 특정 서비스의 대화 우선 순위를 정의한 다음 다른 모든 대화 끝점과 일치하는 대화 우선 순위를 정의합니다. 이는 항상 5인 기본 우선 순위를 대체하지 않지만 기본값이 할당되는 항목 수를 최소화합니다.  
+ 두 특정 서비스의 대화 우선 순위를 정의한 다음 다른 모든 대화 엔드포인트와 일치하는 대화 우선 순위를 정의합니다. 이는 항상 5인 기본 우선 순위를 대체하지 않지만 기본값이 할당되는 항목 수를 최소화합니다.  
   
 ```  
 CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/ClaimPriority]  

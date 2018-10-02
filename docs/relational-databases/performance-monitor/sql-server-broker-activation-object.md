@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Activation
 - Broker Activation object
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f9ada76376c27fb2b5e4ed207df9c225d570b4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da3301e99c06d4eda52814f03150065036006971
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851479"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server, Broker 활성화 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:BrokerActivation** 성능 개체에는 저장 프로시저 활성화에 대한 정보를 보고하는 성능 카운터가 포함되어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|SQL Server, Broker 활성화 카운터|Description|  
+|SQL Server, Broker 활성화 카운터|설명|  
 |-------------------------------------------|-----------------|  
 |**Stored Procedures Invoked/sec**|이 카운터는 인스턴스의 모든 큐 모니터에서 호출하는 초당 총 활성화 저장 프로시저 수를 보고합니다.|  
 |**Task Limit Reached**|이 카운터는 큐 모니터가 새 태스크를 시작했지만 해당 큐에 대한 최대 수의 작업이 이미 실행 중이기 때문에 시작하지 못한 총 횟수를 보고합니다.|  

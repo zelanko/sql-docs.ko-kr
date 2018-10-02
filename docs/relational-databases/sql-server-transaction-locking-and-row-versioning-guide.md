@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - lock compatibility matrix, [SQL Server]
 - lock granularity and hierarchies, [SQL Server]
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08b93402a40fc935269953e23825acaa56aa4213
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710711"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1062,8 +1058,7 @@ BEGIN TRANSACTION
 ```   
   
 ##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 행 버전 관리 기반 격리 수준 사용.  
- 
-  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 기존 격리 수준을 구현한 커밋된 읽기를 제공하여 행 버전 관리를 사용하는 문 수준 스냅숏을 제공합니다. 또한 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 트랜잭션 격리 수준인 스냅숏이 도입되어 행 버전 관리를 사용하는 트랜잭션 수준 스냅숏을 제공합니다.  
+ [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 기존 격리 수준을 구현한 커밋된 읽기를 제공하여 행 버전 관리를 사용하는 문 수준 스냅숏을 제공합니다. 또한 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 트랜잭션 격리 수준인 스냅숏이 도입되어 행 버전 관리를 사용하는 트랜잭션 수준 스냅숏을 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 행 버전 관리는 행을 수정하거나 삭제할 때 쓰기 시 복사 메커니즘을 호출하는 일반적인 방법입니다. 이렇게 하려면 트랜잭션을 실행하는 동안 트랜잭션의 일관성 있는 이전 상태가 요구되는 트랜잭션에서 이전 기존 행 버전을 사용할 수 있어야 합니다. 행 버전 관리는 다음 용도로 사용됩니다.  
   

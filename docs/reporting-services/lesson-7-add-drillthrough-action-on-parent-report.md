@@ -4,19 +4,16 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e145e9b8fbe2a98bd80775b58a8a97e460eb7247
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 56b19095ba0848b579fcea22b5f51a5b64e0609f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702611"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>7단원: 부모 보고서에 드릴스루 동작 추가
 웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 추가한 후에는 부모 보고서에 드릴스루 동작을 추가합니다.  

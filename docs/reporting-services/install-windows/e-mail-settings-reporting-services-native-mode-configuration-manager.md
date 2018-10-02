@@ -3,7 +3,6 @@ title: 전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89166ee73dcc1b01d35ca8475a5487d60eb0e81
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ccbf7b6e51cd3d58c309dd98ba0041049b76e760
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725081"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
 Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.

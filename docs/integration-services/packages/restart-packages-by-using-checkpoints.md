@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703201"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 전체 패키지를 다시 실행하지 않고 오류 발생 시점에서 실패한 패키지를 다시 시작할 수 있습니다. 패키지가 검사점을 사용하도록 구성된 경우 패키지 실행에 대한 정보는 검사점 파일에 기록됩니다. 실패한 패키지가 다시 실행될 때 검사점 파일은 오류 발생 지점에서 패키지를 다시 시작하는 데 사용됩니다. 패키지가 성공적으로 실행된 경우 검사점 파일은 삭제되고 다음에 패키지가 실행될 때 다시 만들어집니다.  

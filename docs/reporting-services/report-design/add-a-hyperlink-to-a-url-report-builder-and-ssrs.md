@@ -4,17 +4,16 @@ ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 756cde54f9379ad5caabedfe9b0adcace65b1605
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737741"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  의 페이지를 매긴 보고서에서 입력란, 이미지, 차트 및 계기에 하이퍼링크 동작을 추가하는 방법을 알아봅니다. 링크를 통해 다른 보고서, 보고서의 책갈피 또는 정적 또는 동적 URL로 이동할 수 있습니다. 

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f64d4b7355ba49076ce2cb55359abb5d4963817
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c37ad0c1486edfcd5e2defd10bf0e9b94c1de3ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812357"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 Windows 응용 프로그램 로그에 다양한 이벤트 메시지를 기록합니다. 이러한 메시지는 패키지가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  

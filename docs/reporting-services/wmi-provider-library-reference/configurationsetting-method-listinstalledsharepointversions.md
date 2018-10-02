@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - ListInstalledSharePointVersions method
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2a29d73639a811a3f79ce579f98138449a8dbf5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 88118ef5eb405d23a9b8dc23461ca797228a6d0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783561"
 ---
 # <a name="configurationsetting-method---listinstalledsharepointversions"></a>ConfigurationSetting 메서드 - ListInstalledSharePointVersions
   보고서 서버와 같은 컴퓨터에 설치되어 있는 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 버전을 나타내는 토큰 집합을 반환합니다.  

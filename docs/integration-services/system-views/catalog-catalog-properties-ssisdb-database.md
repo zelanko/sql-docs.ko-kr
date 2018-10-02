@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5de2d2b10c1def40790e590ead2d9b7c0c0d2ef7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7aaea76c93cdce4864c4a1e2491d542acee30b08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829449"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "35408185"
 |**VERSION_CLEANUP_ENABLED**|값이 `TRUE`이면 **MAX_PROJECT_VERSIONS**에 해당하는 개수의 프로젝트 버전만 카탈로그에 저장되고 다른 모든 프로젝트 버전은 삭제됩니다. 값이 **FALSE**이면 모든 프로젝트 버전이 카탈로그에 저장됩니다. 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업은 작업 정리를 수행합니다.|
 |||
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  

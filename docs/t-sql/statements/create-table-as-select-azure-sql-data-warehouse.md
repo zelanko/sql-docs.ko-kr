@@ -5,25 +5,20 @@ ms.date: 10/07/2016
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.service: sql-data-warehouse
-ms.suite: sql
-ms.component: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9270fa4799a92a1f2be3ef70e9246a7e8294dc2e
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 3e3e25cc061ab7b557047c962dc30f023769a9f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814671"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -120,7 +115,7 @@ SELECT 문은 CTAS와 CREATE TABLE 간의 기본적인 차이점입니다.
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 CTAS를 사용하려면 *select_criteria*에 참조된 임의의 개체에 대한 `SELECT` 권한이 필요합니다.
 
 테이블을 만들기 위한 권한은 CREATE TABLE의 [권한](https://msdn.microsoft.com/library/mt203953/#Permissions)을 참조하세요. 

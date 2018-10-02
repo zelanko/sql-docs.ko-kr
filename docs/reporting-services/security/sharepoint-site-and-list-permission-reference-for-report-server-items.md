@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c89daa9b9ede26b005480abdcfc2dfc2a675d065
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3b164b167de39a8a465e19b1f751ab22c9295c6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725951"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
   이 항목에서는 SharePoint 통합 모드로 실행되는 보고서 서버에 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 SharePoint의 사용 권한 참조를 제공합니다. 사용자 지정 권한 수준을 만드는 경우 이 항목은 사용할 권한을 선택하는 데 도움이 될 수 있습니다.  

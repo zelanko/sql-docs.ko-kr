@@ -5,9 +5,7 @@ ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aebf427b093a860122ace5c21f1a887dac331525
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 71f8cb6faeb5010cc39a05e2611753a04de812e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822431"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
@@ -183,7 +180,7 @@ ms.locfileid: "35331457"
   
  Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이름**  
  Foreach 루프 컨테이너에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘과 로그에서 레이블로 사용됩니다.  
   
@@ -497,7 +494,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 자습서인 간단한 ETL 패키지 만들기 자습서에는 Foreach 루프를 추가 및 구성하는 방법을 배울 수 있는 단원이 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **변수**  
  기존 변수를 선택하거나 **새 변수...** 를 클릭하여 새 변수를 만듭니다.  
   
@@ -518,7 +515,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>스키마 제한 대화 상자(ADO.NET)
 **스키마 제한** 대화 상자를 사용하여 Foreach ADO.NET 스키마 행 집합 열거자에 적용할 스키마 제한을 설정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **제한 사항**  
  스키마에 적용할 제약 조건을 선택합니다.  
   
@@ -533,7 +530,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 ## <a name="for-each-item-columns-dialog-box"></a>For Each Item 열 대화 상자
 **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **열**  
  열을 나열합니다.  
   
@@ -549,7 +546,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
 **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **열거**  
  서버를 확장한 다음 SMO 개체를 선택합니다.  
   

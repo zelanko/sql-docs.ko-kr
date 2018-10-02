@@ -5,10 +5,8 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b0ae7336f2b957d5cd846c0b5546bdaf2e3945ce
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 441eb998a0191c24678f0c68635778458e00208a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828991"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
 

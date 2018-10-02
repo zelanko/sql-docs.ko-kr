@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.sortcolumns.f1
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 616b99e272233b982535f82bdf78846e803c5ee1
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ce595fc0032ef8c1f498993f0953aa90117d73ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737381"
 ---
 # <a name="sort-columns"></a>열 정렬
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "37359605"
   
 2.  표의 두 번째 행에서 **열 이름** 열의 **연결 유형** 을 선택하고 **정렬 순서** 열에서 값을 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **상태**  
  정렬 기준으로 사용할 열의 이름입니다. 하나 이상의 열을 기준으로 정렬할 수 있습니다. **게시** 탭의 **현재 평균 성능** 또는 **현재 가장 낮은 성능** 열은 해당 값이 계산되는 방식 때문에 정렬 기준으로 사용할 수 없습니다.  
   

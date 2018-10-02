@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows application logs [Reporting Services]
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 45ab5d984fe98fd4358b17a482a0226caafcbf9b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 39a36a2c9c5a43c16d3ca54be9e32f81225eace4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708461"
 ---
 # <a name="windows-application-log"></a>Windows 응용 프로그램 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 이벤트 메시지를 Windows 응용 프로그램 로그에 기록합니다. 응용 프로그램 로그에 기록된 메시지 정보를 사용하여 로컬 시스템에서 실행되는 보고서 서버 응용 프로그램에서 생성된 이벤트를 확인할 수 있습니다.  

@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5697d440ccc3525b77c1593aac4defc7cb2157b7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 0317dea3113fafdf7f3cb9a43553103f3ba51c99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699611"
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
 
@@ -30,7 +27,7 @@ ms.locfileid: "35310882"
 
   이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
   
 ### <a name="domains-list"></a>도메인 목록  
  **도메인**  

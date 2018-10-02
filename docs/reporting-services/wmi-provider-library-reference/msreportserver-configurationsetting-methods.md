@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - MSReportServer_ConfigurationSetting Methods
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 002b1dd8ca01569f880e63eef975d70d1ab53db5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dbfa26b0f01ab75fbcaa1a6fba114ea5c5db56ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839161"
 ---
 # <a name="msreportserverconfigurationsetting-methods"></a>MSReportServer_ConfigurationSetting 메서드
   보고서 서버 WMI 공급자의 MSReportServer_ConfigurationSetting 클래스는 다음과 같은 공용 메서드를 제공 합니다.  

@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb25efefd5fc69a3a64f04208e5f32ef20387f4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ec98c02ff88a1d343b96f149bce4bebdb7aa707d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751624"
 ---
 # <a name="application-domains-for-report-server-applications"></a>보고서 서버 응용 프로그램의 응용 프로그램 도메인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램을 포함하는 단일 서비스로 구현됩니다. 각 응용 프로그램은 단일 보고 서버 프로세스 내 자체 응용 프로그램 도메인에서 실행됩니다. 대부분의 경우 응용 프로그램 도메인은 내부적으로 생성, 구성 및 관리됩니다. 그러나 보고서 서버 응용 프로그램 도메인에 대해 재활용 작업이 발생하는 방식을 이해하면 성능 또는 메모리 문제를 조사하거나 서비스 장애 문제를 해결하는 경우 도움이 될 수 있습니다.  

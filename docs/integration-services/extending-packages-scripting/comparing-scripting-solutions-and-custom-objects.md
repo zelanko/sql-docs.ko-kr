@@ -5,12 +5,8 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +15,15 @@ helpviewer_keywords:
 - SSIS Script task, vs. custom managed tasks
 - custom tasks [Integration Services], scripts
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca1ea2d62c611613a5a4610bd28c26216dfdd6eb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ba27959fa5c98b26bd6dc4fdf60d695829c7382d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35399805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653474"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>스크립팅 솔루션과 사용자 지정 개체 비교
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스크립트 태스크 또는 스크립트 구성 요소에서는 관리되는 사용자 지정 태스크 또는 데이터 흐름 구성 요소에서 사용할 수 있는 기능의 대부분을 구현할 수 있습니다. 다음은 개발자의 요구 사항에 적합한 태스크 유형을 선택할 때 고려할 사항입니다.  

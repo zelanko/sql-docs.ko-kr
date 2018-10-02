@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - UPPER function
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 143ef9dc765abedb487b4c2f2183e483ddb2d8ff
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4cd598161348d47b7c59781059fe2dbbe187e676
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409405"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686171"
 ---
 # <a name="upper-ssis-expression"></a>UPPER(SSIS 식)
   소문자를 대문자로 변환한 후에 문자 식을 반환합니다.  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2eb60419ef09d3cd9dc0cdec3b0a815af9e432d3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736891"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식에 **LoggingMode** 속성을 설정한 경우 이름인 Disabled 대신 숫자 값 2를 사용해야 합니다.  
@@ -461,7 +458,7 @@ ms.locfileid: "35408935"
   
 |DTSXMLDiffOptions의 이름|숫자 값|  
 |----------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
+|없음|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,7 +488,7 @@ ms.locfileid: "35408935"
   
 |DatabaseSelection의 이름|숫자 값|  
 |----------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
+|없음|0|  
 |All|1|  
 |시스템|2|  
 |사용자|3|  
@@ -501,7 +498,7 @@ ms.locfileid: "35408935"
   
 |TableSelection의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
+|없음|0|  
 |All|1|  
 |Specific|2|  
   
@@ -579,7 +576,7 @@ ms.locfileid: "35408935"
   
 |DTSForcedExecResult의 이름|숫자 값|  
 |------------------------------------------|-------------------|  
-|InclusionThresholdSetting|-1|  
+|없음|-1|  
 |성공|0|  
 |실패|1|  
 |Completion|2|  

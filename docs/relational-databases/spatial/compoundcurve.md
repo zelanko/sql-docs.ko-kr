@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 949696d81bea6b273f6be2314017499cad55b624
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 21d9af33cf8b131d9da5cc2c996f8bedfe4c9677
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080100"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681431"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "43080100"
   
 2.  **CircularString** 또는 **LineString** 인스턴스의 시퀀스는 연속적이어야 합니다.  
   
- **CompoundCurve** 가 여러 **CircularString** 및 **LineString** 인스턴스 시퀀스를 포함하는 경우 마지막 인스턴스를 제외한 모든 인스턴스의 종료 끝점은 시퀀스에 있는 다음 인스턴스의 시작 끝점이어야 합니다. 즉, 시퀀스에서 이전 인스턴스의 끝 점이 (4 3 7 2)인 경우 시퀀스에서 다음 인스턴스의 시작 점은 (4 3 7 2)여야 합니다. 점의 Z(높이) 및 M(측정값) 값도 동일해야 합니다. 두 점이 다른 경우 `System.FormatException` 이 발생합니다. **CircularString** 의 점은 Z 또는 M 값을 가지고 있지 않아도 됩니다. 이전 인스턴스의 종료 점에 대해 Z 또는 M 값이 지정되지 않은 경우 다음 인스턴스의 시작 점은 Z 또는 M 값을 포함할 수 없습니다. 이전 시퀀스의 종료 점이 (4 3)이면 다음 시퀀스의 시작 점은 (4 3)이어야 하지 (4 3 7 2)일 수는 없습니다. **CompoundCurve** 인스턴스의 모든 점은 Z 값을 가지고 있지 않거나 같은 Z 값을 가지고 있어야 합니다.  
+ **CompoundCurve** 가 여러 **CircularString** 및 **LineString** 인스턴스 시퀀스를 포함하는 경우 마지막 인스턴스를 제외한 모든 인스턴스의 종료 엔드포인트는 시퀀스에 있는 다음 인스턴스의 시작 엔드포인트가어야 합니다. 즉, 시퀀스에서 이전 인스턴스의 끝 점이 (4 3 7 2)인 경우 시퀀스에서 다음 인스턴스의 시작 점은 (4 3 7 2)여야 합니다. 점의 Z(높이) 및 M(측정값) 값도 동일해야 합니다. 두 점이 다른 경우 `System.FormatException` 이 발생합니다. **CircularString** 의 점은 Z 또는 M 값을 가지고 있지 않아도 됩니다. 이전 인스턴스의 종료 점에 대해 Z 또는 M 값이 지정되지 않은 경우 다음 인스턴스의 시작 점은 Z 또는 M 값을 포함할 수 없습니다. 이전 시퀀스의 종료 점이 (4 3)이면 다음 시퀀스의 시작 점은 (4 3)이어야 하지 (4 3 7 2)일 수는 없습니다. **CompoundCurve** 인스턴스의 모든 점은 Z 값을 가지고 있지 않거나 같은 Z 값을 가지고 있어야 합니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
  다음 그림에서는 유효한 **CompoundCurve** 형식을 보여 줍니다.  

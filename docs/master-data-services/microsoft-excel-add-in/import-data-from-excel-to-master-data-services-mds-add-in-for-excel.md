@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 311f0a7582c570d79cdd3b895eb6aa8d6d7d24d6
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f60def6beacaa2c213a0f78c9701c1cc3b51090d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668972"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능)
 

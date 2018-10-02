@@ -5,23 +5,19 @@ ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.component: in-memory-oltp
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30108d5e5444a09ff8889add5ac9fa46a13a911e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2ab8ab5fc572648840e2b4b5919ae0c3417a2a23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068154"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726211"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>메모리 최적화 테이블의 해시 인덱스 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -196,7 +192,7 @@ go
 | :-------- | ---------------: | ---------------: |  
 | IX_OrderSequence | 8 | 26 |  
 | ix_StatusCode | 65536 | 65536 |  
-| PK_SalesOrd_B14003... | @shouldalert | 8 |  
+| PK_SalesOrd_B14003... | 1 | 8 |  
   
 3개의 해시 인덱스에 대한 위의 결과 테이블을 해석해 보겠습니다.  
   

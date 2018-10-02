@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be325de5a80c6245b52f6c867bd841746cbbe797
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 924bc7c49dc6ed44230723c2bf16ecfd112c0658
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745711"
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ group by package_name, task_name, subcomponent_name, execution_path
 order by package_name, task_name, subcomponent_name, execution_path  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 권한  

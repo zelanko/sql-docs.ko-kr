@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e08d09bacbd4bdc6a03c89d258c2744a76296038
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 59dcb8932e2c1b4f2dcbe93d879a240743322bde
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404525"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856957"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>대상 선택(SQL Server 가져오기 및 내보내기 마법사)
  데이터 원본 및 연결하는 방법에 대한 정보를 제공하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **대상 선택**을 표시합니다. 이 페이지에서는 데이터 대상 및 연결하는 방법에 대한 정보를 제공합니다.

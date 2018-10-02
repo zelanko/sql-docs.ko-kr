@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - contained database, AlwaysOnAvailabilityGroups
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8226893f960bd0c1b64c589219121f323226766d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3a1252614ee29436ac15ba3e783e22a834abe0f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768649"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826971"
 ---
 # <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 포함된 데이터베이스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

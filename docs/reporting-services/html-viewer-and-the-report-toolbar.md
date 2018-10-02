@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f53e3459a1a52884995575dd0e19c6b237875a76
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 27c419320b1116194044cd6228246eef0c5d9fbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668341"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 서버의 요청에 따라 보고서를 표시하는 데 사용되는 HTML 뷰어를 제공합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  

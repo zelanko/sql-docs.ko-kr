@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 747ac0342b416caac84a3a6afa431a20da8899bf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1471714c99dc11b8367d73fd7327c3776dd3f1fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818631"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 구성 요소로, 특정 유형의 데이터 원본에서 데이터를 검색하고 보고서 디자인 및 보고서 처리를 지원하기 위한 추가 기능을 제공하도록 디자인되었습니다. 먼저 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 유형의 데이터 원본에서 데이터를 검색하고 수정할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] System.Data <xref:System.Data> 또는 타사 제공 구성 요소입니다.  

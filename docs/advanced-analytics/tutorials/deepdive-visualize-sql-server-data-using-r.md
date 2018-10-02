@@ -9,7 +9,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 923b8201b6948a93f0994306269c0d3338f54c2d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31202315"
@@ -39,21 +39,21 @@ ms.locfileid: "31202315"
     rxSetComputeContext(sqlCompute)
     ```
  
-3. 같은 데이터 원본을 사용하므로 결과는 정확히 같지만, 계산은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 수행됩니다. 그런 다음 결과가 로컬 워크스테이션에 반환되어 그려집니다.
+3. 같은 데이터 원본을 사용하므로 결과는 정확히 같지만, 계산은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 수행됩니다.  그런 다음 결과가 로컬 워크스테이션에 반환되어 그려집니다.
    
 ![히스토그램 결과](media/rsql-sue-histogramresults.jpg "히스토그램 결과")
 
-4. 또한, **rxCube** 함수를 호출하고 그 결과를 그릴 수도 있습니다. 예를 들어, 다음 예제는 **rxCube** 를 사용하여 *numTrans* 및 *numIntlTrans* 의 모든 조합에 대해 *fraudRisk*의 평균을 계산합니다.
+4. 또한, **rxCube** 함수를 호출하고 그 결과를 그릴 수도 있습니다.  예를 들어, 다음 예제는 **rxCube** 를 사용하여 *numTrans* 및 *numIntlTrans* 의 모든 조합에 대해 *fraudRisk*의 평균을 계산합니다.
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예제의 `F(numTrans):F(numIntlTrans)`는 `numTrans` 및 `numIntlTrans` 변수를 각 정숫값에 따라 범주 변수로 처리하는 것을 의미합니다.
+    그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예제의 `F(numTrans):F(numIntlTrans)`는 `_numTrans` 및 `numIntlTrans` 변수를 각 정숫값에 따라 범주 변수로 처리하는 것을 의미합니다.
   
     최솟값과 최댓값이 `sqlFraudDS` 데이터 원본에 추가되었으므로(`colInfo` 매개 변수를 사용해), 히스토그램에 자동으로 적용됩니다.
   
-5. **rxCube**는 기본적으로 *rxCube 개체*를 반환합니다. 이 개체는 교차 집계를 나타냅니다. 이 개체를 [rxResultsDF](https://d실행ocs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 함수를 사용해 R의 표준 그리기 함수 중 하나에서 쉽게 사용할 수 있는 데이터 프레임으로 결과를 변환할 수 있습니다.
+5. 기본 반환 값의 **rxCube** 는 *rxCube 개체*, 교차 집계를 나타냅니다. 그러나 [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 함수를 사용하여 R의 표준 그리기 함수 중 하나에서 쉽게 사용할 수 있는 데이터 프레임으로 결과를 변환할 수 있습니다.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -85,4 +85,4 @@ ms.locfileid: "31202315"
 
 ## <a name="previous-step"></a>이전 단계
 
-[R 스크립트 만들고 실행하기](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+[R 스크립트 만들기 및 실행](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

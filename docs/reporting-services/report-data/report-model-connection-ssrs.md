@@ -4,17 +4,16 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f82c17407e6b7861e597a34d92ee16751e8ad980
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6fb1b5f810af0385195ad1f2f6bec048152887e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264635"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856811"
 ---
 # <a name="report-model-connection-ssrs"></a>보고서 모델 연결(SSRS)
   보고서 모델의 데이터를 포함하려면 데이터 원본으로 보고서 모델을 기반으로 하는 데이터 집합이 있어야 합니다. 다른 보고서 데이터 원본과는 달리 보고서 모델용 데이터 확장 프로그램은 없습니다. 보고서 작성기에서는 보고서 서버에서 모델을 찾아 직접 선택하면 됩니다. 보고서 디자이너에서는 보고서 모델 URL을 지정합니다.  
