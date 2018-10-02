@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqllogship
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0dbdc7e2ccfdd2afc3e674100605a39d727bf5ec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5b1961f8ce9eadd34ece73f498d532428b50d001
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42787950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710961"
 ---
 # <a name="sqllogship-application"></a>sqllogship 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +59,16 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |level|설명|  
 |-----------|-----------------|  
 |0|추적 및 디버깅 메시지를 출력하지 않습니다.|  
-|@shouldalert|오류 처리 메시지를 출력합니다.|  
+|1|오류 처리 메시지를 출력합니다.|  
 |2|경고 및 오류 처리 메시지를 출력합니다.|  
 |**3**|정보 메시지, 경고 및 오류 처리 메시지를 출력합니다. 이것은 기본값입니다.|  
 |4|모든 디버깅 및 추적 메시지를 출력합니다.|  
   
  **–logintimeout** *timeout_value*  
- 서버 인스턴스 로그인에 할당된 제한 시간 값을 지정합니다. 기본값은 15초입니다. *timeout_value*는 **int**** 입니다.  
+ 서버 인스턴스 로그인에 할당된 제한 시간 값을 지정합니다. 기본값은 15초입니다. *timeout_value* 는 **int**_입니다._  
   
  **-querytimeout** *timeout_value*  
- 지정된 작업을 시작하는 데 할당된 제한 시간 값을 지정합니다. 기본값은 제한 시간 없음입니다. *timeout_value*는 **int**** 입니다.  
+ 지정된 작업을 시작하는 데 할당된 제한 시간 값을 지정합니다. 기본값은 제한 시간 없음입니다. *timeout_value* 는 **int**_입니다._  
   
 ## <a name="remarks"></a>Remarks  
  가능하면 백업, 복사 및 복원 작업을 사용하여 백업, 복사 및 복원을 수행하는 것이 좋습니다. 일괄 처리 작업 또는 다른 응용 프로그램에서 이러한 작업을 시작하려면 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 저장 프로시저를 호출하세요.  
