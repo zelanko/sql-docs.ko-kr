@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c0953156c0f3c002ea3f08ab7e18d6544eb667b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: de8aa400d6dfaa6f098ced68c8ed3ad01b435923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773631"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인
 SQL Server 단위 테스트를 사용하면 데이터베이스의 기준 상태를 설정하고 이후 데이터베이스 개체에 대해 수행하는 변경 내용을 확인할 수 있습니다.  

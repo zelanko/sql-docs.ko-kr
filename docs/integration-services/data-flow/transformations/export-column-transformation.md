@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cf82c10523a2d323e694ea56de205b3ecbb2ba8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 36f2797d6dd3870f352aba2fc409ec1086a0bd3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771611"
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
   열 내보내기 변환은 데이터 흐름에서 데이터를 읽어 파일에 삽입합니다. 예를 들어 데이터 흐름에 각 제품 사진과 같은 제품 정보가 포함되어 있으면 열 내보내기 변환을 사용하여 이미지를 파일에 저장할 수 있습니다.  
@@ -40,14 +37,14 @@ ms.locfileid: "35403865"
   
 |추가|잘라내기|파일 존재 여부|결과|  
 |------------|--------------|-----------------|-------------|  
-|False|False|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|True|False|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|False|True|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|True|True|아니요|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
-|False|False|예|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
-|False|True|예|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
-|True|False|예|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
-|True|True|예|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
+|False|False|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|True|False|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|False|True|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|True|True|아니오|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
+|False|False|사용자 계정 컨트롤|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
+|False|True|사용자 계정 컨트롤|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
+|True|False|사용자 계정 컨트롤|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
+|True|True|사용자 계정 컨트롤|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>열 내보내기 변환 구성  
  다음과 같은 방법으로 열 내보내기 변환을 구성할 수 있습니다.  
@@ -78,7 +75,7 @@ ms.locfileid: "35403865"
 ## <a name="export-column-transformation-editor-columns-page"></a>열 내보내기 변환 편집기(열 페이지)
   **열 내보내기 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 데이터 흐름에서 파일로 추출할 열을 지정할 수 있습니다. 열 내보내기 변환 시 데이터를 파일에 추가할 것인지, 아니면 기존 파일을 덮어쓸 것인지를 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **추출 열**  
  텍스트 또는 이미지 데이터를 포함하는 입력 열 목록에서 선택합니다. 모든 행에 **추출 열** 과 **파일 경로 열**에 대한 정의가 있어야 합니다.  
   
@@ -97,7 +94,7 @@ ms.locfileid: "35403865"
 ## <a name="export-column-transformation-editor-error-output-page"></a>열 내보내기 변환 편집기(오류 출력 페이지)
   **열 내보내기 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 방법을 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **입/출력**  
  출력의 이름을 확인합니다. 이름을 클릭하여 열을 포함할 뷰를 확장할 수 있습니다.  
   

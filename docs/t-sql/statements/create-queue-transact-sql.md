@@ -5,9 +5,7 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUEUE_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fc12318b9d19ec7d14d1d97e5c83276fedfe6c98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777471"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +168,7 @@ CREATE QUEUE <object>
 |message_body|**varbinary(max)**|메시지 내용입니다.|  
 |message_id|**uniqueidentifier**|메시지의 고유 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  큐를 만들 수 있는 권한은 기본적으로 ddl_admin 또는 db_owner 고정 데이터베이스 역할 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
  큐에 대한 REFERENCES 권한은 기본적으로 큐의 소유자, ddl_admin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
