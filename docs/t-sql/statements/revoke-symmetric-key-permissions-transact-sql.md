@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - permissions [SQL Server], symmetric keys
 - REVOKE statement, symmetric keys
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
-caps.latest.revision: 19
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 979cb0791822ca5ae0f01598f8bb546e5246e287
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8a99ce445bd9278bc6918c81dcbf13be32bcf696
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595571"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 대칭 키 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +115,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  대칭 키에 대한 CONTROL 권한 또는 데이터베이스에 대한 ALTER ANY SYMMETRIC KEY 권한이 필요합니다. AS 옵션을 사용하는 경우 지정한 보안 주체가 대칭 키를 소유해야 합니다.  
   
 ## <a name="examples"></a>예  

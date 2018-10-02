@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b012acc9fd4183c8255875d4df8dbcbc3b681ffa
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bfcf99a28a847097d943495c205d7d894bb388ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658471"
 ---
 # <a name="sort-transformation"></a>정렬 변환
   정렬 변환은 입력 데이터를 오름차순이나 내림차순으로 정렬하고 정렬된 데이터를 변환 출력에 복사합니다. 입력에 여러 가지 정렬을 적용할 수 있으며 각 정렬은 정렬 순서를 결정하는 숫자로 식별됩니다. 숫자가 가장 적은 열이 맨 먼저 정렬되고 그 다음 숫자의 정렬 열이 다음에 정렬됩니다. 예를 들어 **CountryRegion** 열이 정렬 순서 1이고 **City** 열이 정렬 순서 2인 경우 출력은 먼저 국가/지역별로 정렬된 다음 도시별로 정렬됩니다. 양수는 오름차순 정렬을 나타내고 음수는 내림차순 정렬을 나타냅니다. 정렬되지 않은 열의 정렬 순서는 0입니다. 정렬이 선택되지 않은 열은 정렬된 열과 함께 자동으로 변환 출력에 복사됩니다.  
@@ -63,7 +60,7 @@ ms.locfileid: "35405325"
 ## <a name="sort-transformation-editor"></a>정렬 변환 편집기
   **정렬 변환 편집기** 대화 상자를 사용하여 정렬할 열을 선택하고, 정렬 순서를 설정하고, 중복을 제거할지 여부를 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 입력 열**  
  확인란을 사용하여 정렬할 열을 지정합니다.  
   

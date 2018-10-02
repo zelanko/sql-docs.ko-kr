@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 helpviewer_keywords:
 - JSON
@@ -16,17 +14,17 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2cb582eaeaf2e88c344f18138ff43db5c3fd97c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a049e4b6d965f5eccc661414214585430a305290
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758571"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 끝점이 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다. 
+JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 엔드포인트가 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다. 
 
 SQL Server의 JSON 함수를 사용하면 NoSQL과 관계형 개념을 동일한 데이터베이스에서 결합할 수 있습니다. 이제 기본 관계형 열을 동일한 테이블에서 JSON 텍스트로 형식이 지정된 문서를 포함하는 열과 결합하여 관계형 구조로 JSON 문서를 구문 분석하고 가져오거나 관계형 데이터를 JSON 텍스트로 형식을 지정할 수 있습니다. 다음 비디오에서 JSON 함수가 SQL Server 및 Azure SQL 데이터베이스에서 관계형 및 NoSQL 개념을 연결하는 방법을 볼 수 있습니다.
 

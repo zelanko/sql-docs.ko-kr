@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10c4c8373dd34e07651f83bd13434a1043ab31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d16a701ee01d754c07577d44c4471477c297ba3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729091"
 ---
 # <a name="properties-window-management-studio"></a>속성 창(Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +29,9 @@ ms.locfileid: "33043200"
   
 속성 창에는 특정 속성의 필요 여부에 따라 다른 유형의 편집 필드가 표시됩니다. 회색으로 표시된 속성은 읽기 전용입니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
   
-|요소|Description|  
+|요소|설명|  
 |-----------|---------------|  
 |**개체 이름**|현재 선택한 개체가 나열됩니다. 활성 편집기 또는 디자이너의 개체만 표시됩니다.|  
 |**범주별**|선택한 개체에 대한 모든 속성과 속성 값을 범주별로 나열합니다. 범주를 축소하여 표시되는 속성의 수를 줄일 수 있습니다. 범주를 확장하거나 축소할 경우 범주 이름 왼쪽에 있는 더하기(+) 또는 빼기(-) 기호를 각각 사용합니다. 범주는 사전순으로 나열됩니다.|  

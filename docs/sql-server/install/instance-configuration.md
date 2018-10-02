@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -18,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764841"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ms.locfileid: "34772769"
   
  자세한 내용은 [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md)을 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  장애 조치(Failover) 클러스터 인스턴스만 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 장애 조치(Failover) 클러스터 인스턴스를 식별합니다.  
   
  기본 또는 명명된 인스턴스 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스와 명명된 인스턴스 중 설치할 항목을 결정할 때 다음 정보를 고려하십시오.  
@@ -117,7 +115,7 @@ ms.locfileid: "34772769"
   
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 시에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜에서 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 서버 배포를 담당하는 SharePoint 팜 관리자 또는 서비스 관리자에게 관리 권한을 부여해야 합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **서버 모드** - 서버 모드는 서버에 배포할 수 있는 Analysis Services 데이터베이스의 유형을 지정합니다. 서버 모드는 설치 중에 결정되며 나중에 수정할 수 없습니다. 각 모드는 함께 사용할 수 없습니다. 즉, 기존의 OLAP 및 테이블 형식 모델 솔루션을 모두 지원하려면 각각 서로 다른 모드에 맞게 구성된 두 개의 Analysis Services 인스턴스가 필요합니다.  
   
  **관리자 지정** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 서버 관리자를 한 명 이상 지정해야 합니다. 지정한 사용자 또는 그룹은 설치할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 서버 관리자 역할 멤버가 됩니다. 이러한 사용자 또는 그룹은 소프트웨어를 설치할 컴퓨터와 동일한 도메인의 Windows 도메인 사용자 계정이어야 합니다.  
@@ -281,7 +279,7 @@ ms.locfileid: "34772769"
 ### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 실행 고려 사항  
  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **BUILTIN\Administrators** 그룹이 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 로그인으로 프로비전되었으며 로컬 관리자 그룹의 멤버는 해당 관리자 자격 증명을 사용하여 로그인할 수 있었습니다. 그러나 높은 권한은 가급적 사용하지 않는 것이 좋으므로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 **BUILTIN\Administrators** 그룹이 로그인으로 프로비전되어 있지 않습니다. 따라서 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 동안 각 관리자에 대해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로그인을 만들고 이 로그인을 sysadmin 고정 서버 역할에 추가해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업(복제 에이전트 작업 포함)을 실행하는 데 사용되는 Windows 계정에 대해서도 이 작업을 수행해야 합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **보안 모드** - 설치에 사용할 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다.  
   
  **Windows 보안 주체 프로비전** - 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 Windows Builtin\Administrator 로컬 그룹이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 서버 역할에 배치되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 액세스 권한이 사실상 Windows 관리자에게 부여되었습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Builtin\Administrator 그룹은 sysadmin 서버 역할로 프로비전되지 않습니다. 대신 설치 중에 새 설치에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자를 명시적으로 프로비전해야 합니다.  

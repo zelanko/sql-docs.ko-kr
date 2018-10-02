@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
@@ -16,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 392a895cdedfc48cb759471b89e3e95a02699617
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cdb89a8aa0807e16e0e8f1fd62472f120beb7deb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679697"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 계산 용량 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.locfileid: "38035261"
 |값|설명|  
 |-----------|-----------------|  
 |0..1|없거나 1개|  
-|@shouldalert|정확히 1개|  
+|1|정확히 1개|  
 |1..\*|1개 이상|  
 |0..\*|없거나 1개 이상|  
 |1..2|1개 또는 2개|  

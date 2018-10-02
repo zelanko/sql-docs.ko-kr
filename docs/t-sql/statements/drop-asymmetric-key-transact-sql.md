@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP ASYMMETRIC KEY
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - deleting asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bb266c52467a3f1b8d74bece16a0b2450c9efaa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 7a859f8c7ce44cb830e10b1ce72a6d2ccbaede0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760383"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
   
  EKM(Extensible Key Management) 장치의 EKM 키에 비대칭 키를 매핑하고 REMOVE PROVIDER KEY 옵션을 지정하지 않으면 데이터베이스에서는 키가 삭제되지만 장치에서는 삭제되지 않으며 경고가 발생합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

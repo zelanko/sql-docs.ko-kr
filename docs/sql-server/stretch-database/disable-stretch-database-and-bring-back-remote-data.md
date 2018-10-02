@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, disabling
@@ -14,12 +12,12 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f4e69d4f94f1691a47736488a9c0b11c0c9fed19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dbfe0a9f6927e1dd62469c8d3e7c3be542cbda76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794811"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Stretch Database 비활성화 및 원격 데이터 다시 가져오기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

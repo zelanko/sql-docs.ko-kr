@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Word [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94ac6737ea68794ee0d5a3c547a2a8bd2b4dc28c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 40b52fd5c296ad95db7376e6a2c571b0203cf526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638398"
 ---
 # <a name="word-device-information-settings"></a>Word 장치 정보 설정
   다음 표는 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  

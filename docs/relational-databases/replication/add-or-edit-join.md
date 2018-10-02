@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc90397111e2a124744a677920c02c2ec64cbf0b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356105"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794581"
 ---
 # <a name="add-or-edit-join"></a>조인 추가 또는 편집
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "37356105"
 > [!IMPORTANT]  
 >  조인 필터는 테이블을 무제한 포함할 수 있지만 테이블 수가 많은 필터는 병합 처리 중 성능에 영향을 줄 수 있습니다. 5개 이상의 테이블을 가진 조인 필터를 생성하는 경우 다른 해결책을 고려하는 것이 좋습니다. 크기가 작거나, 변경될 가능성이 없거나, 기본적으로 조회 테이블에 해당하는 테이블은 필터링하지 마십시오. 구독자 간에 분할해야 하는 테이블 사이에서만 조인 필터를 사용합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  이 대화 상자는 3단계로 이루어진 프로세스를 통해 두 테이블 간에 조인 필터를 만듭니다. 조인 필터를 두 개 이상 만들려면 대화 상자를 두 번 이상 완료해야 합니다.  
   
 1.  **필터링된 테이블을 확인하고 조인된 테이블을 선택하십시오.**  

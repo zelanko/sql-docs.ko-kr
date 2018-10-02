@@ -5,19 +5,18 @@ ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 8979512a2ac2edeba8a5a6479fe0ef8bb6c3179a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608648"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Azure의 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결
 Windows 인증을 사용하여 온-프레미스/Azure 가상 머신과 Azure Files에서 Azure SSIS IR(Integration Runtime)과 동일한 가상 네트워크에 있는 데이터 원본과 파일 공유에 연결할 수 있습니다. Azure-SSIS IR에서 실행되는 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결하는 세 가지 방법은 다음과 같습니다.

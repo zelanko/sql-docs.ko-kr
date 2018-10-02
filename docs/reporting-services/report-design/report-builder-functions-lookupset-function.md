@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06b3c038e759f540a83d81c60c140904197a5a05
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c4ceb9cd36d27a5c9fe29e0d446a56baf6698489
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271638"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689541"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>보고서 작성기 함수 - LookupSet 함수
   이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름과 일치하는 값 집합을 반환합니다.  

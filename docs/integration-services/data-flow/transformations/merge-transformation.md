@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cadfce8fb92a6d297fad92e43b9d553d2ea910a4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795921"
 ---
 # <a name="merge-transformation"></a>병합 변환
   병합 변환은 두 개의 정렬된 데이터 집합을 단일 데이터 집합으로 결합합니다. 각 데이터 집합의 행은 해당 키 열의 값을 기반으로 출력에 삽입됩니다.  
@@ -80,7 +77,7 @@ ms.locfileid: "35402315"
 > [!IMPORTANT]  
 >  병합 변환에는 정렬된 데이터를 입력해야 합니다. 이러한 중요 요구 사항에 대한 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **출력 열 이름**  
  출력 열 이름을 지정합니다.  
   

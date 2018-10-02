@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], configuring
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eaa6e495f3f4df128541deb6024b0c915abe378a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4e46ce182bbd81ce28939ac9250306fe7ff7cb57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770119"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615341"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 추가(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +80,7 @@ ms.locfileid: "34770119"
   
 2.  ALTER AVAILABILITY GROUP 문의 ADD REPLICA ON 절을 사용하여 가용성 그룹에 새 보조 복제본을 추가합니다. ENDPOINT_URL, AVAILABILITY_MODE 및 FAILOVER_MODE 옵션은 ADD REPLICA ON 절에 필요합니다. 다른 복제본 옵션 BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE 및 SESSION_TIMEOUT은 선택 사항입니다. 자세한 내용은 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
-     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 끝점 URL이 `MyAG` 인 `COMPUTER04`에서 호스팅되는 기본 서버 인스턴스의 `TCP://COMPUTER04.Adventure-Works.com:5022'`라는 가용성 그룹에 새 복제본을 만듭니다. 이 복제본은 수동 장애 조치(Failover) 및 비동기 커밋 가용성 모드를 지원합니다.  
+     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 엔드포인트 URL이 `MyAG`인 `COMPUTER04`에서 호스팅되는 기본 서버 인스턴스의 `TCP://COMPUTER04.Adventure-Works.com:5022'`라는 가용성 그룹에 새 복제본을 만듭니다. 이 복제본은 수동 장애 조치(Failover) 및 비동기 커밋 가용성 모드를 지원합니다.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG ADD REPLICA ON 'COMPUTER04'   

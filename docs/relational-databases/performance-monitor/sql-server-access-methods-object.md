@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d384974e39066d0d1a150e2557872f6f1274be93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aad4951e60f45ae2b25fcaaac018a6671765390a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955628"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776131"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Access Methods 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "32955628"
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** 카운터에 대해 설명합니다.  
   
-|SQL Server Access Methods 카운터|Description|  
+|SQL Server Access Methods 카운터|설명|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|지연 및 삭제된 할당 단위를 정리하는 백그라운드 태스크에 의해 완료된 초당 일괄 처리 수입니다.|  
 |**AU cleanups/sec**|지연 및 삭제된 할당 단위를 정리하는 백그라운드 태스크에 의해 삭제된 초당 할당 단위 수입니다. 할당 단위를 삭제할 때마다 다중 일괄 처리가 필요합니다.|  

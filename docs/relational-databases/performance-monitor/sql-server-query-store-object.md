@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 527ad5bc399654bd69a05bbca4f801e7c6d643ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c849a405c3cfd343e1c63027ca314008abad37b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608059"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 쿼리 저장소 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "32951168"
   
  다음 표에서는 **SQLServer:Query Store**카운터에 대해 설명합니다.  
   
-|SQL Server 쿼리 저장소 카운터|Description|  
+|SQL Server 쿼리 저장소 카운터|설명|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU usage**|쿼리 저장소의 CPU 사용량을 나타냅니다.|  
 |**Query Store logical reads**|쿼리 저장소에서 수행된 논리적 읽기 수를 나타냅니다.|  
@@ -42,7 +38,7 @@ ms.locfileid: "32951168"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|쿼리 저장소 인스턴스|Description|  
+|쿼리 저장소 인스턴스|설명|  
 |--------------------------|-----------------|  
 |**_Total**|이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 쿼리 저장소의 정보입니다.|  
 |\<데이터베이스 이름>|이 데이터베이스에 대한 쿼리 저장소 정보입니다.|  

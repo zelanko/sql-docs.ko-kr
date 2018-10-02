@@ -6,26 +6,23 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1a3d2c0725035e4a985d44a8e06c69b47b3e2009
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620571"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
 다음 작업을 수행하여 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)](SSIS) Scale Out을 설정합니다. 
 
 > [!TIP]
-> 단일 컴퓨터에 Scale Out을 설치하는 경우 Scale Out 마스터 및 Scale Out 작업자 기능을 동시에 설치합니다. 이 기능을 동시에 설치하면 규모 확장 마스터에 연결하는 끝점이 자동으로 생성됩니다. 
+> 단일 컴퓨터에 Scale Out을 설치하는 경우 Scale Out 마스터 및 Scale Out 작업자 기능을 동시에 설치합니다. 이 기능을 동시에 설치하면 규모 확장 마스터에 연결하는 엔드포인트가 자동으로 생성됩니다. 
 
 * [규모 확장 마스터 설치](#InstallMaster)
 
@@ -107,7 +104,7 @@ Scale Out 작업자 기능을 설치하려면 [!INCLUDE[ssNoVersion_md](../../in
 
     ![서버 구성 2](media/server-config-2.PNG "서버 구성 2")
 
-3.  **Integration Services 규모 확장 작업자 구성** 페이지에서 규모 확장 마스터에 연결하는 끝점을 지정합니다. 
+3.  **Integration Services 규모 확장 작업자 구성** 페이지에서 규모 확장 마스터에 연결하는 엔드포인트를 지정합니다. 
 
     - **단일 컴퓨터** 환경의 경우 Scale Out 마스터와 Scale Out 작업자를 동시에 설치하면 엔드포인트가 자동으로 생성됩니다. 
 

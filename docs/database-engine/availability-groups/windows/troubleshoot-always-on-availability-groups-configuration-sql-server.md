@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: decd62a6c869191a28922efb6622b646d97108fc
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e5704c5bea3f1f89d304d412586d0c950f09a3d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770291"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 가용성 그룹 구성 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 끝점이 없거나, 끝점에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.  
+  이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사전 요구 사항을 충족하는지 확인합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다.  
@@ -38,10 +35,10 @@ ms.locfileid: "34770076"
 |-------------|-----------------|  
 |[Always On 가용성 그룹을 사용할 수 없음](#IsHadrEnabled)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 인스턴스를 사용할 수 없는 경우 해당 인스턴스는 가용성 그룹 만들기를 지원하지 않고 가용성 복제본을 호스팅할 수 없습니다.|  
 |[계정](#Accounts)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 실행되고 있는 계정을 올바르게 구성하기 위한 요구 사항에 대해 설명합니다.|  
-|[끝점](#Endpoints)|서버 인스턴스의 데이터베이스 미러링 끝점 관련 문제를 진단하는 방법에 대해 설명합니다.|  
-|[시스템 이름](#SystemName)|끝점 URL에서 서버 인스턴스의 시스템 이름을 지정하는 대안이 요약되어 있습니다.|  
+|[엔드포인트](#Endpoints)|서버 인스턴스의 데이터베이스 미러링 엔드포인트 관련 문제를 진단하는 방법에 대해 설명합니다.|  
+|[시스템 이름](#SystemName)|엔드포인트 URL에서 서버 인스턴스의 시스템 이름을 지정하는 대안이 요약되어 있습니다.|  
 |[네트워크 액세스](#NetworkAccess)|가용성 복제본을 호스팅하는 각 서버 인스턴스에서 TCP를 통해 다른 각 서버 인스턴스의 포트에 액세스할 수 있어야 한다는 요구 사항에 대해 설명합니다.|  
-|[끝점 액세스(SQL Server 오류 1418)](#Msg1418)|이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지에 대한 정보를 포함합니다.|  
+|[엔드포인트 액세스(SQL Server 오류 1418)](#Msg1418)|이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지에 대한 정보를 포함합니다.|  
 |[데이터베이스 조인 실패(SQL Server 오류 35250)](#JoinDbFails)|주 복제본 연결이 활성화되지 않아서 가용성 그룹에 대한 보조 데이터베이스 조인에 실패하는 원인과 해결 방법에 대해 설명합니다.|  
 |[읽기 전용 라우팅이 올바르게 작동하지 않음](#ROR)||  
 |[관련 작업](#RelatedTasks)|가용성 그룹 구성 문제를 해결하는 방법에 대해 설명하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 온라인 설명서에 있는 태스크 지향 항목 목록을 포함합니다.|  
@@ -57,18 +54,18 @@ ms.locfileid: "34770076"
   
     1.  파트너가 동일한 도메인 사용자 계정으로 실행되는 경우 올바른 사용자 로그인이 자동으로 두 **master** 데이터베이스에 모두 포함됩니다. 데이터베이스에 대한 간단한 보안 구성으로 권장됩니다.  
   
-    2.  두 서버 인스턴스가 서로 다른 계정으로 실행되는 경우, 원격 서버 인스턴스의 **master** 에 각 계정에 대한 로그인을 만들고 이 로그인에 해당 서버 인스턴스의 데이터베이스 미러링 끝점에 연결할 수 있는 CONNECT 권한을 부여해야 합니다. 자세한 내용은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정&#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)을 참조하세요.  
+    2.  두 서버 인스턴스가 서로 다른 계정으로 실행되는 경우, 원격 서버 인스턴스의 **master** 에 각 계정에 대한 로그인을 만들고 이 로그인에 해당 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 연결할 수 있는 CONNECT 권한을 부여해야 합니다. 자세한 내용은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정&#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)을 참조하세요.  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 끝점 인증을 위한 인증서를 사용해야 합니다. 서비스 계정에서 동일한 도메인의 도메인 계정을 사용 중인 경우 모든 복제본 위치의 각 서비스 계정에 연결 권한을 부여하거나, 인증서를 사용할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 합니다. 서비스 계정에서 동일한 도메인의 도메인 계정을 사용 중인 경우 모든 복제본 위치의 각 서비스 계정에 연결 권한을 부여하거나, 인증서를 사용할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
-##  <a name="Endpoints"></a> 끝점  
- 끝점을 올바르게 구성해야 합니다.  
+##  <a name="Endpoints"></a> 엔드포인트  
+ 엔드포인트를 올바르게 구성해야 합니다.  
   
-1.  가용성 복제본을 호스트할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스(각 *복제본 위치*)에 데이터베이스 미러링 끝점이 있는지 확인합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 끝점이 있는지 여부를 확인하려면 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 또는 [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
+1.  가용성 복제본을 호스트할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스(각 *복제본 위치*)에 데이터베이스 미러링 엔드포인트가 있는지 확인합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있는지 여부를 확인하려면 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 또는 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
   
 2.  포트 번호가 정확한지 확인합니다.  
   
-     서버 인스턴스의 데이터베이스 미러링 끝점과 현재 연결된 포트를 식별하려면 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
+     서버 인스턴스의 데이터베이스 미러링 엔드포인트와 현재 연결된 포트를 식별하려면 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
   
     ```  
     SELECT type_desc, port FROM sys.tcp_endpoints;  
@@ -77,7 +74,7 @@ ms.locfileid: "34770076"
   
 3.  설명하기 어려운 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 설치 문제의 경우 각 서버 인스턴스를 조사하여 올바른 포트에서 수신하고 있는지 확인하는 것이 좋습니다.  
   
-4.  끝점이 시작되었는지 확인합니다(STATE=STARTED). 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
+4.  엔드포인트가 시작되었는지 확인합니다(STATE=STARTED). 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
   
     ```  
     SELECT state_desc FROM sys.database_mirroring_endpoints  
@@ -85,7 +82,7 @@ ms.locfileid: "34770076"
   
      **state_desc** 열에 대한 자세한 내용은 [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)를 참조하세요.  
   
-     끝점을 시작하려면 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
+     엔드포인트를 시작하려면 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
   
     ```  
     ALTER ENDPOINT Endpoint_Mirroring   
@@ -95,9 +92,9 @@ ms.locfileid: "34770076"
     GO  
     ```  
   
-     자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
+     자세한 내용은 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
   
-5.  다른 서버에서 로그인할 경우 CONNECT 권한이 있는지 확인합니다. 끝점에 대한 CONNECT 권한이 있는 사용자를 파악하려면 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
+5.  다른 서버에서 로그인할 경우 CONNECT 권한이 있는지 확인합니다. 엔드포인트에 대한 CONNECT 권한이 있는 사용자를 파악하려면 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
   
     ```  
     SELECT 'Metadata Check';  
@@ -115,22 +112,22 @@ ms.locfileid: "34770076"
     ```  
   
 ##  <a name="SystemName"></a> System Name  
- 끝점 URL에서 서버 인스턴스의 시스템 이름에는 시스템을 명확하게 식별하는 모든 이름을 사용할 수 있습니다. 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소(가급적 고정 IP 주소)일 수 있습니다. 정규화된 도메인 이름을 사용하는 것이 좋습니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다.  
+ 엔드포인트 URL에서 서버 인스턴스의 시스템 이름에는 시스템을 명확하게 식별하는 모든 이름을 사용할 수 있습니다. 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소(가급적 고정 IP 주소)일 수 있습니다. 정규화된 도메인 이름을 사용하는 것이 좋습니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
 ##  <a name="NetworkAccess"></a> Network Access  
  가용성 복제본을 호스팅하는 각 서버 인스턴스에서 TCP를 통해 다른 각 서버 인스턴스의 포트에 액세스할 수 있어야 합니다. 이는 서버 인스턴스가 서로 트러스트하지 않는 다른 도메인(트러스트되지 않은 도메인)에 있을 경우 특히 유용합니다.  
   
-##  <a name="Msg1418"></a> 끝점 액세스(SQL Server 오류 1418)  
- 이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 메시지는 끝점 URL에 지정된 서버 네트워크 주소가 없거나 도달할 수 없음을 나타내며 네트워크 주소 이름을 확인한 후 명령을 다시 실행하도록 제안합니다.  
+##  <a name="Msg1418"></a> 엔드포인트 액세스(SQL Server 오류 1418)  
+ 이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 메시지는 엔드포인트 URL에 지정된 서버 네트워크 주소가 없거나 도달할 수 없음을 나타내며 네트워크 주소 이름을 확인한 후 명령을 다시 실행하도록 제안합니다.  
   
 ##  <a name="JoinDbFails"></a> 데이터베이스 조인 실패(SQL Server 오류 35250)  
  이 섹션에서는 주 복제본 연결이 활성화되지 않아서 가용성 그룹에 대한 보조 데이터베이스 조인에 실패하는 원인과 해결 방법에 대해 설명합니다.  
   
  **해결 방법:**  
   
-1.  방화벽 설정을 검사하여 주 복제본과 보조 복제본(기본적으로 포트 5022)을 호스팅하는 서버 인스턴스 사이의 끝점 포트 통신을 허용하는지 여부를 확인합니다.  
+1.  방화벽 설정을 검사하여 주 복제본과 보조 복제본(기본적으로 포트 5022)을 호스팅하는 서버 인스턴스 사이의 엔드포인트 포트 통신을 허용하는지 여부를 확인합니다.  
   
-2.  네트워크 서비스 계정에 끝점에 대한 연결 권한이 있는지 여부를 확인합니다.  
+2.  네트워크 서비스 계정에 엔드포인트에 대한 연결 권한이 있는지 여부를 확인합니다.  
   
 ##  <a name="ROR"></a> 읽기 전용 라우팅이 올바르게 작동하지 않음  
  다음 구성 값 설정을 확인하고 필요한 경우 수정합니다.  
@@ -148,9 +145,9 @@ ms.locfileid: "34770076"
   
 -   [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

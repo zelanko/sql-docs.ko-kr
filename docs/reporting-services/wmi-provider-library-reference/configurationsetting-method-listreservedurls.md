@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - ListReservedURLs method
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ffd7b11f95b8c6b9d6bf3a293426ac2b0e50395
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: afcc01873d84c2ea6643d4c388598618cfd0a23e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662271"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>ConfigurationSetting 메서드 - ListReservedURLs
   보고서 서버의 모든 응용 프로그램용으로 예약된 URL을 나열합니다.  

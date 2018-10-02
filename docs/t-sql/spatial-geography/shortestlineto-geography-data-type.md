@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ShortestLineTo_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9315aa918a5e006cea8c4d97dab1003cb08200a7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c495bd27ef5464b0fa56b94513c24eeb4641240e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689211"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "38038701"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 비교할 두 **geography** 인스턴스가 교차하지 않을 때 해당 테두리에 있는 끝점과 함계 **LineString** 인스턴스를 반환합니다. 반환된 **LineString**의 길이는 두 **geography** 인스턴스 사이의 최단 거리와 같습니다. 두 **geography** 인스턴스가 서로 교차할 경우 빈 **LineString** 인스턴스가 반환됩니다.  
+ 이 메서드는 비교할 두 **geography** 인스턴스가 교차하지 않을 때 해당 테두리에 있는 엔드포인트와 함계 **LineString** 인스턴스를 반환합니다. 반환된 **LineString**의 길이는 두 **geography** 인스턴스 사이의 최단 거리와 같습니다. 두 **geography** 인스턴스가 서로 교차할 경우 빈 **LineString** 인스턴스가 반환됩니다.  
   
 ## <a name="examples"></a>예  
   

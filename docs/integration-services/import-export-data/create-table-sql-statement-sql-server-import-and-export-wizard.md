@@ -5,23 +5,20 @@ ms.date: 02/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fffb77416f75da2cb6e496e01532efcc71f76830
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: dec571f93da2ca51aadc6a79a54090bcb0eab08d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601151"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
 **열 매핑** 대화 상자에서 **대상 테이블 만들기** 를 선택한 다음 **SQL 편집** 을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **테이블 생성 SQL 문** 대화 상자를 표시합니다. 이 페이지에서 마법사가 새 대상 테이블을 만들기 위해 실행하는 **CREATE TABLE** 명령을 검토하고 필요에 따라 사용자 지정합니다.

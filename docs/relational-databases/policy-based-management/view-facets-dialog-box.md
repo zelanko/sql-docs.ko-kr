@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e75ec5e1615aa45884cfa2c398d020c80c58a969
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 539377bcdd0cdfeef0beda152ea50a6b9bd95d74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951848"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653484"
 ---
 # <a name="view-facets-dialog-box"></a>패싯 보기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 패싯의 속성은 패싯을 만들 때 정의되며 이 대화 상자를 사용하여 변경할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **패싯**  
  현재 선택한 패싯의 이름입니다.  
   

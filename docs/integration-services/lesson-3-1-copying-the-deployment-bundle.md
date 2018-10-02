@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 152e4709c7998a5ba62b81eaf5383597c2c97e57
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5ef5f5304d9af3459c55e020cb0ca3a5fc8256e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611081"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>3-1단원 - 배포 번들 복사
 이 태스크에서는 배포 번들을 대상 컴퓨터에 복사합니다.  

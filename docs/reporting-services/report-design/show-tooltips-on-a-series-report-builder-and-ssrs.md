@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1189793eed303ee3ba8d82a1697a8438d7a1bce7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fee414cbb0e3ec81dba36b6d70262b5821a75696
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663231"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>계열에 도구 설명 표시(보고서 작성기 및 SSRS)
   차트에 있는 계열의 각 데이터 요소에 도구 설명을 추가하여 그룹 이름, 데이터 요소 값 또는 계열 합계에 대한 백분율 같은 데이터 요소에 대한 정보를 표시할 수 있습니다. 사용자가 렌더링된 페이지가 매겨진 보고서의 데이터 요소를 마우스로 가리키면 이 정보가 표시됩니다.  

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5492420f484892b172de6cdefde484469b1e7054
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: edb03a1a96661c1948f192dd6cf5343168bf7625
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620381"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>ConfigurationSetting 메서드 - ReencryptSecureInformation
   새 암호화 키를 생성하고 이 새 키를 사용하여 카탈로그에 있는 모든 보안 정보를 다시 암호화합니다.  

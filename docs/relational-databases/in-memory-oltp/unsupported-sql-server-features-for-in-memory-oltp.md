@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ff7be6404e25efc8cbba76d1825821903bf57ce
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: adb9e24e86f6552c9d08a5c495f4e04283eaa7f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628431"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,8 +64,7 @@ ms.locfileid: "43083756"
   
 - 메모리 최적화 테이블에 액세스하는 쿼리의 키 집합 및 동적 커서. 이러한 커서는 정적 및 읽기 전용으로 성능이 저하됩니다.  
   
-- 
-            **MERGE INTO***target*(여기서 *target*은 메모리 최적화 테이블)은 사용할 수 없습니다.
+- **MERGE INTO***target*(여기서 *target*은 메모리 최적화 테이블)은 사용할 수 없습니다.
     - **MERGE USING** *source*는 메모리 최적화 테이블에 대해 지원됩니다.  
   
 - ROWVERSION(TIMESTAMP) 데이터 형식은 지원되지 않습니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.

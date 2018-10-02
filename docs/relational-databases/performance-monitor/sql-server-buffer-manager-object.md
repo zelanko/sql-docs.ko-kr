@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc709ccddddbd80955cc1f5a27899495517db169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98f0146139670b83970ca073391f23c688cc2b44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654793"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Buffer Manager 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.locfileid: "32953518"
 ## <a name="buffer-manager-performance-objects"></a>버퍼 관리자 성능 개체  
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 성능 개체를 설명합니다.  
   
-|SQL Server Buffer Manager 카운터|Description|  
+|SQL Server Buffer Manager 카운터|설명|  
 |----------------------------------------|-----------------|  
 |**Background writer pages/sec**|복구 간격 설정을 적용하기 위해 플러시된 페이지 수입니다.| 
 |**버퍼 캐시 적중률**|디스크에서 읽지 않고 버퍼 캐시에서 찾은 페이지 비율을 나타냅니다. 이 비율은 마지막 몇 천 페이지 액세스에 대한 총 캐시 조회 수로 나눈 총 캐시 적중 수입니다. 시간이 많이 지나면 이 비율은 일정해집니다. 캐시에서 읽는 것이 디스크에서 읽는 것보다 비용이 적게 들기 때문에 이 비율을 높이는 것이 좋습니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용할 수 있는 메모리 양을 늘리거나 버퍼 풀 확장 기능을 사용하여 buffer cache hit ratio를 높일 수 있습니다.|  

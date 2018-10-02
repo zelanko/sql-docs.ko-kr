@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 961c9f7e093f61db909360f0dd7f8ac30f2d13e1
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: d2ebf81dcab52be193d1472f5f1dc4f4495aba50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711231"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>자습서: SQL Server Management Studio에서 개체 스크립팅
 이 자습서에서는 SSMS(SQL Server Management Studio) 내에서 발견되는 다양한 개체에 대한 T-SQL(Transact-SQL) 스크립트를 생성하는 방법을 설명합니다. 이 자습서에서는 다음 개체를 스크립팅하는 방법의 예제를 찾을 수 있습니다.

@@ -5,32 +5,29 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - outbound connections [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dac32f14673d4f6aa4adc65605451cbcfe26fd40
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 4afd51b971a0f1a00a65758b76edc449101fdf9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311702"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611271"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>데이터베이스 미러링 - 아웃바운드 연결에 대한 인증서 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 아웃바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계를 설명합니다. 아웃바운드 연결을 구성한 후 인바운드 연결을 설정할 수 있습니다.  
   
 > [!NOTE]  
->  서버 인스턴스의 모든 미러링 연결은 단일 데이터베이스 미러링 끝점을 사용하며 이러한 끝점을 만들 때는 서버 인스턴스의 인증 방법을 지정해야 합니다.  
+>  서버 인스턴스의 모든 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용하며 이러한 엔드포인트를 만들 때는 서버 인스턴스의 인증 방법을 지정해야 합니다.  
   
  아웃바운드 연결 구성은 대개 다음과 같은 단계로 진행됩니다.  
   
@@ -38,7 +35,7 @@ ms.locfileid: "35311702"
   
 2.  **master** 데이터베이스에서 서버 인스턴스의 암호화된 인증서를 만듭니다.  
   
-3.  서버 인스턴스의 인증서를 사용하여 해당 인스턴스의 끝점을 만듭니다.  
+3.  서버 인스턴스의 인증서를 사용하여 해당 인스턴스의 엔드포인트를 만듭니다.  
   
 4.  인증서를 파일에 백업한 다음 안전한 다른 시스템으로 복사합니다.  
   
@@ -89,18 +86,18 @@ ms.locfileid: "35311702"
   
      자세한 내용은 [sys.certificates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)를 참조하세요.  
   
-3.  서버 인스턴스마다 데이터베이스 미러링 끝점이 있는지 확인합니다.  
+3.  서버 인스턴스마다 데이터베이스 미러링 엔드포인트가 있는지 확인합니다.  
   
-     서버 인스턴스의 데이터베이스 미러링 끝점이 이미 있으면 서버 인스턴스에서 설정하는 다른 모든 세션에 해당 끝점을 다시 사용해야 합니다. 서버 인스턴스에 데이터베이스 미러링 끝점이 있는지 확인하고 해당 구성을 보려면 다음 문을 사용합니다.  
+     서버 인스턴스의 데이터베이스 미러링 엔드포인트가 이미 있으면 서버 인스턴스에서 설정하는 다른 모든 세션에 해당 엔드포인트를 다시 사용해야 합니다. 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있는지 확인하고 해당 구성을 보려면 다음 문을 사용합니다.  
   
     ```  
     SELECT name, role_desc, state_desc, connection_auth_desc, encryption_algorithm_desc   
        FROM sys.database_mirroring_endpoints;  
     ```  
   
-     끝점이 없으면 아웃바운드 연결에는 이 인증서를 사용하고 다른 시스템의 확인에는 이 인증서의 자격 증명을 사용하는 끝점을 만듭니다. 이 끝점은 서버 인스턴스가 참여하는 모든 미러링 세션에 사용되는 서버 차원의 끝점입니다.  
+     엔드포인트가 없으면 아웃바운드 연결에는 이 인증서를 사용하고 다른 시스템의 확인에는 이 인증서의 자격 증명을 사용하는 엔드포인트를 만듭니다. 이 엔드포인트는 서버 인스턴스가 참여하는 모든 미러링 세션에 사용되는 서버 차원의 엔드포인트입니다.  
   
-     예를 들어 HOST_A에 예제 서버 인스턴스의 미러링 끝점을 만들려면 다음 코드를 사용합니다.  
+     예를 들어 HOST_A에 예제 서버 인스턴스의 미러링 엔드포인트를 만들려면 다음 코드를 사용합니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -117,7 +114,7 @@ ms.locfileid: "35311702"
     GO  
     ```  
   
-     자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
+     자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-endpoint-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
 4.  인증서를 백업하고 다른 시스템에 복사합니다. 다른 시스템에서 인바운드 연결을 구성하는 데 이 인증서가 필요합니다.  
   
@@ -169,7 +166,7 @@ GO
  원하는 안전한 방법으로 인증서를 다른 시스템에 복사합니다. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
   
 > [!IMPORTANT]  
->  아웃바운드 연결을 설정한 후에는 다른 서버 인스턴스에 대해 각 서버 인스턴스에서 인바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)을 참조하세요.  
+>  아웃바운드 연결을 설정한 후에는 다른 서버 인스턴스에 대해 각 서버 인스턴스에서 인바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)을 참조하세요.  
   
  Transact-SQL 예제를 포함하여 미러 데이터베이스를 만드는 방법은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
   
@@ -185,7 +182,7 @@ GO
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   

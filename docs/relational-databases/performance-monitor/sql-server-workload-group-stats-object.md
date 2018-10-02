@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Workload Group Stats object
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a43ca9896a3215d41bac32e01c4d3793d7fee8d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38c6f791c6e7c5f247852737715afb63e2e2c67a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760501"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951348"
   
  각 활성 작업 그룹은 리소스 관리자 작업 그룹 이름과 동일한 인스턴스 이름으로 SQLServer:Workload Group Stats 성능 개체의 인스턴스를 만듭니다. 다음 표에서는 이 인스턴스에서 지원하는 카운터에 대해 설명합니다.  
   
-|카운터 이름|Description|  
+|카운터 이름|설명|  
 |------------------|-----------------|  
 |**Active parallel threads**|병렬 스레드 사용량의 현재 개수입니다.|  
 |**Active requests**|현재 작업 그룹에서 현재 실행 중인 요청 수로, 그룹 ID로 필터링된 sys.dm_exec_requests의 행 개수와 동일해야 합니다.|  

@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a48bdef127cb6148e5da1b5fb9b7e7e0f78779b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 075d2253f8662786952e0057042dd04351296aac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632741"
 ---
 # <a name="report-builder-functions---first-function"></a>보고서 작성기 함수 - First 함수
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  

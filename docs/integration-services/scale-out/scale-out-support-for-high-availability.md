@@ -6,20 +6,17 @@ ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3ab8635837723b99a559bffcd546ff99d27fe283
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 53fc11dc3735f1a27401164044c452a038c9c0ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594772"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '!='
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - '!= (not equal to)'
 - not equal to operator (!=)
 ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d649c41c4ad3e576dbd9dff93144828522f70899
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0eeea068573320773159bcc536735b032ecf1f16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658861"
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>같지 않음(Transact SQL) - 느낌표
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

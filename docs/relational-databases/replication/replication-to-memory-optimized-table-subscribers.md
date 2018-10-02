@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09dad738b4d94c79a3462c2886ba758c7c3f669d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1658039af7e81a8019a7b72f0338802bd30162b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603301"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,13 +25,11 @@ ms.locfileid: "37353145"
   
 ## <a name="two-configurations-are-required"></a>필요한 두 가지 구성  
   
--   
-            **메모리 최적화 테이블로의 복제를 지원하도록 구독자 데이터베이스 구성**  
+-   **메모리 최적화 테이블로의 복제를 지원하도록 구독자 데이터베이스 구성**  
   
      [sp_addsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 또는 [sp_changesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)을 사용하여 **@memory_optimized** 속성을 **true**로 설정합니다.  
   
--   
-            **메모리 최적화 테이블로의 복제를 지원하도록 아티클 구성**  
+-   **메모리 최적화 테이블로의 복제를 지원하도록 아티클 구성**  
   
      [sp_addarticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 사용하여 아티클의 `@schema_option = 0x40000000000` 옵션을 설정합니다.  
   

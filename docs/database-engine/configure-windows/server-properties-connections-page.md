@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6573c0a6b939104a5b0844bde1da07effc6d8f9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: faed832ea0ed4fa1dcc52232a36a22a6f848f5f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789371"
 ---
 # <a name="server-properties---connections-page"></a>서버 속성 - 연결 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "32867068"
  **Default connection options**  
  다음 표에서 설명하는 기본 연결 옵션을 지정합니다.  
   
-|구성 옵션|Description|  
+|구성 옵션|설명|  
 |--------------------------|-----------------|  
 |**지연된 제약 조건 검사 비활성화**|중간 또는 지연된 제약 조건 검사를 제어합니다.|  
 |**암시적 트랜잭션**|문 실행 시 트랜잭션을 암시적으로 실행할지 여부를 제어합니다.|  

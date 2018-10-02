@@ -6,9 +6,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34dfaa1d241c015ed94bc21997d9e6a3c8254339
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762631"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -1228,7 +1225,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |@shouldalert                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>4. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
@@ -2026,7 +2023,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |@shouldalert                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
@@ -2735,7 +2732,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |@shouldalert                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  

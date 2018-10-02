@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 452839bea162d97482724acee3584481737cc53a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 006370ef2f1d40f83c8ea50cfce15c13c4c33fb5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942578"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794961"
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>4단원: URL에서 가상 머신으로 데이터베이스 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +49,7 @@ Azure Blob 저장소에서 Azure 가상 머신의 SQL Server 2016 인스턴스�
   
 5.  개체 탐색기에서 데이터베이스 노드를 확장하고 AdventureWorks2014 데이터베이스가 복원되었는지 확인합니다(필요에 따라 노드 새로 고침).  
   
-    
-  ![가상 머신에서 SQL Server 2016으로 복원된 Adventure Works 2014 데이터베이스](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "가상 머신에서 SQL Server 2016으로 복원된 Adventure Works 2014 데이터베이스")  
+    ![가상 머신에서 SQL Server 2016으로 복원된 Adventure Works 2014 데이터베이스](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "가상 머신에서 SQL Server 2016으로 복원된 Adventure Works 2014 데이터베이스")  
   
 6.  개체 탐색기에서 AdventureWorks2014를 마우스 오른쪽 단추로 클릭하고 속성을 클릭합니다(완료되면 취소 클릭).  
   

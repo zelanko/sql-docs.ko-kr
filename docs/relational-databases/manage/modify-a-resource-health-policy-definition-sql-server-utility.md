@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65106ce68705f630b3955865b6967cfde0aae9a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a8c0dd9d00f3ba04879ec0c7d4fff16fccc819b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685541"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>리소스 상태 정책 정의 수정(SQL Server 유틸리티)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "32943398"
   
 2.  유틸리티 탐색기 탐색 창에서 **유틸리티 관리** 를 클릭하여 전역 모니터링 정책을 보거나 수정한 다음 유틸리티 탐색기 내용 창에서 **정책** 탭을 클릭합니다.  
   
-3.  유틸리티 탐색기 내용 창에서 화살표나 정책 설명을 클릭하여 **전역 데이터 계층 모니터링 정책 설정** 또는 **전역 관리되는 인스턴스 모니터링 정책 설정** 을 선택합니다.  
+3.  유틸리티 탐색기 내용 창에서 화살표나 정책 설명을 클릭하여 **전역 데이터 계층 모니터링 정책 설정** 또는 **전역 관리되는 인스턴스 모니터링 정책 설정**을 선택합니다.  
   
 4.  정책 설명 오른쪽에 있는 컨트롤을 사용하여 미달 사용 또는 초과 사용 정책 임계값을 설정합니다.  
   
