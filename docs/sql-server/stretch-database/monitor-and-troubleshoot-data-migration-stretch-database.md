@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, monitoring
@@ -14,12 +12,12 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2f8101891361a29b18f1f64cb59e3ffa20262f77
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bea5913c58f98b3631d4bac3e91c7f20b84c013
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816141"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>데이터 마이그레이션 모니터링 및 문제 해결(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +43,7 @@ ms.locfileid: "38023482"
   
 -   SQL Server 컴퓨터의 네트워크 연결을 확인합니다.  
   
--   Azure Firewall이 SQL Server의 원격 끝점 연결을 차단하지 않는지 확인합니다.  
+-   Azure Firewall이 SQL Server의 원격 엔드포인트 연결을 차단하지 않는지 확인합니다.  
   
 -   동적 관리 뷰 **sys.dm_db_rda_migration_status** 에서 최신 배치의 상태를 확인합니다. 오류가 발생한 경우 배치의 error_number, error_state 및 error_severity 값을 확인합니다.  
   
@@ -53,9 +51,8 @@ ms.locfileid: "38023482"
   
     -   SQL Server 오류 메시지의 내용에 대한 자세한 내용은 [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)를 참조하세요.  
   
- 
-   **Azure Firewall이 로컬 서버의 연결을 차단합니다.**  
-SQL Server가 원격 Azure 서버와 통신할 수 있도록 Azure 서버의 Azure Firewall 설정에 규칙을 추가해야 할 수 있습니다.  
+ **Azure Firewall이 로컬 서버의 연결을 차단합니다.**  
+ SQL Server가 원격 Azure 서버와 통신할 수 있도록 Azure 서버의 Azure Firewall 설정에 규칙을 추가해야 할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
