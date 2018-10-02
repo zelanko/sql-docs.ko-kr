@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9e2cb03070450920cae365f435ae871367ec704
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 812cb7c121735ea6246f3dbf993068dea5970b41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659181"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, Columnstore 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "33696606"
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** 카운터를 설명합니다.  
   
-|Columnstore 카운터|Description|  
+|Columnstore 카운터|설명|  
 |--------------------------|-----------------|  
 |**Delta Rowgroups Closed**|닫은 델타 행 그룹의 수입니다.|  
 |**Delta Rowgroups Compressed**|압축된 델타 행 그룹의 수입니다.|  

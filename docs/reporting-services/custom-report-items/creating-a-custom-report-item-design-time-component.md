@@ -4,21 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-report-items
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e42f36a6fbd827a6785e7266f9e74e2bb5b838df
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3b07cf939df0df0233ec0d7e91800eb1a16b4fa2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644861"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
   사용자 지정 보고서 항목 디자인 타임 구성 요소는 Visual Studio 보고서 디자이너 환경에서 사용할 수 있는 컨트롤입니다. 사용자 지정 보고서 항목 디자인 타임 구성 요소는 끌어서 놓기 작업이 가능하고 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 속성 브라우저와 통합되고 사용자 지정 속성 편집기를 제공하는 활성화된 디자인 화면을 제공합니다.  

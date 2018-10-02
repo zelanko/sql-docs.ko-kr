@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - size [SQL Server], backups
 - database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bcae233530af66b250f50c86047d1bff1ea9ca48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f20b2f1b29c6ba175237e2e4f47cb5cf6fa0a610
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771833"
 ---
 # <a name="full-database-backups-sql-server"></a>전체 데이터베이스 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "32920028"
   
 -   [전체 데이터베이스 백업을 사용하여 데이터베이스 복원](#RestoreDbBu)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="DbBuRMs"></a> 단순 복구 모델에서 데이터베이스 백업  
  단순 복구 모델에서는 각 백업 후 재해가 발생할 경우 데이터베이스가 잠재적 작업 손실 위험에 노출될 수 있습니다. 다음 백업이 시작되어 작업 손실 가능성이 다시 0이 되고 새 작업 손실 가능성 주기가 시작될 때까지 작업 손실 가능성은 업데이트를 수행할 때마다 커집니다. 시간의 경과에 따라 백업 사이의 작업 손실 가능성이 증가합니다. 다음 그림에서는 전체 데이터베이스 백업만 사용하는 백업 전략의 작업 손실 가능성을 보여 줍니다.  

@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 819a7acb18b47227411d7ccf1683deb2fc63a3d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 937aa251ea066df28ec6241fbd6061af96773f04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32862158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758131"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

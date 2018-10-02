@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1028e874fce10946f73dda095a1c047909b34e3d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d0d5b2101e4fb6ce80e2eb53f7d1f43137273cd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612031"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 집합에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  

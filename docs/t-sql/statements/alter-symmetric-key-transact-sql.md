@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SYMMETRIC KEY
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - cryptography [SQL Server], symmetric keys
 - ALTER SYMMETRIC KEY statement
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
-caps.latest.revision: 44
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2f026b584445243f46c996f415f9197da6c32d8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 54a0f54da0050828766749f7df09e7ffc7869640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781644"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800061"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +90,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 > [!NOTE]  
 >  RC4 알고리즘은 이전 버전과의 호환성을 위해서만 지원됩니다. 데이터베이스의 호환성 수준이 90 또는 100인 경우 새 자료는 RC4 또는 RC4_128로만 암호화할 수 있습니다. 이 옵션은 사용하지 않는 것이 좋습니다. 대신 AES 알고리즘 중 하나와 같은 새 알고리즘을 사용하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 RC4 또는 RC4_128을 사용하여 암호화된 자료는 모든 호환성 수준에서 해독할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  대칭 키에 대한 ALTER 권한이 필요합니다. 인증서 또는 비대칭 키를 통해 암호화를 추가하는 경우 해당 인증서 또는 비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다. 인증서 또는 비대칭 키를 통해 암호화를 삭제하는 경우 해당 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -5,25 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ffbb59250f7038ce235b959dd5ea183133d0bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790801"
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "35311952"
   
 -   각 파트너의 마지막으로 알려진 역할(주 서버 또는 미러 서버)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스 미러링을 모니터링하려면 서버 인스턴스의 **msdb** 데이터베이스에서 **sysadmin** 고정 서버 역할 또는 **dbm_monitor** 고정 데이터베이스 역할의 멤버여야 합니다. 파트너 서버 인스턴스 중 하나에서만 **sysadmin** 또는 **dbm_monitor** 의 멤버인 경우 모니터는 해당 파트너에만 연결될 수 있습니다. 즉, 모니터는 다른 파트너에서 정보를 검색할 수 없습니다.  
   
  서버 인스턴스에서 **dbm_monitor** 의 멤버인 경우에만 해당 서버 인스턴스에서 제한된 사용 권한을 갖게 됩니다. 사용자는 최신 상태 행만 볼 수 있습니다. **dbm_monitor** 권한을 사용하여 서버 인스턴스에 연결할 경우 데이터베이스 미러링 모니터는 사용자에게 제한된 사용 권한이 있다는 것을 알립니다.  

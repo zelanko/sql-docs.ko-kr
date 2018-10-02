@@ -5,9 +5,7 @@ ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WORKLOAD GROUP
@@ -19,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 586d6666f10571caaa0c9c94096d48e463206127
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: f2e423b4b6ed686f00c566a1462435f501f094bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779431"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ CREATE WORKLOAD GROUP group_name
   
  정렬되지 않은 분할된 테이블에서 인덱스 생성에 사용되는 메모리는 관련된 파티션 수에 비례합니다. 필요한 총 메모리가 리소스 관리자 작업 그룹 설정에서 지정한 쿼리당 제한(REQUEST_MAX_MEMORY_GRANT_PERCENT)을 초과하면 이 인덱스 생성이 실행되지 않을 수 있습니다. "default" 작업 그룹에서는 쿼리가 필요한 최소 메모리를 포함하는 쿼리당 제한을 초과하게 되므로 "default" 리소스 풀에 이러한 쿼리를 실행할 수 있는 총 메모리가 구성되어 있는 경우 사용자가 "default" 작업 그룹에서 같은 인덱스 생성을 실행할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

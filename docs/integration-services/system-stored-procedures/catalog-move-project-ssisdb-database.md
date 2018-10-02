@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44bc62ba806eae723a931f01e799980a22989926
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1e9343712dd16e57e69504cbf7324f941e224e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605921"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 데이터베이스
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +45,9 @@ catalog.move_project [ @source_folder = ] source_folder
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   이동할 프로젝트에 대한 READ 및 MODIFY 권한과 대상 폴더에 대한 CREATE_OBJECTS 권한  

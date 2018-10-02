@@ -3,17 +3,16 @@ title: 보고서 서버 서비스 계정 구성(SSRS 구성 관리자) | Microso
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9609112f55fcb9a63fe0fe68e7b92c442143542e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603011"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 예약된 보고서 처리와 구독 배달에 사용되는 백그라운드 처리 응용 프로그램, 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]를 포함하는 단일 서비스로 구현됩니다. 이 항목에서는 서비스 계정을 처음 구성하는 방법 Reporting Services 구성 도구를 사용하는 계정이나 암호를 수정하는 방법에 대해 설명합니다.  

@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9fbc998de972b49472bb581fc39b7634d3ed3ada
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: aa1298d938d4845be7e13688baf9a01d88812e66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400425"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765633"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>엔터티 트랜잭션 로그 유형 변경(Master Data Services)
 
@@ -32,7 +29,7 @@ ms.locfileid: "35400425"
 |--------------------------|-----------------|  
 |attribute|엔터티 변경 로그가 특성 수준에 저장됩니다.<br /><br /> 트랜잭션 로그는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서와 같이 저장됩니다.|  
 |멤버|엔터티 변경 로그가 행 수준에 저장됩니다.<br /><br /> 특성이 변경되면 새 행 수정이 트리거됩니다.<br /><br /> 행 트랜잭션 로그 유형을 사용할 때는 엔터티가 느리게 변경되는 차원 유형 4로 저장됩니다. 유형 2 구독 보기 및 유형 4(기록) 구독 뷰가 지원됩니다. 자세한 내용은 [구독 뷰 형식&#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)을 참조하세요.<br /><br /> 더 나은 성능을 제공합니다.|  
-|InclusionThresholdSetting|변경 로그가 저장되지 않습니다.<br /><br /> 최상의 성능을 제공합니다.|  
+|없음|변경 로그가 저장되지 않습니다.<br /><br /> 최상의 성능을 제공합니다.|  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  

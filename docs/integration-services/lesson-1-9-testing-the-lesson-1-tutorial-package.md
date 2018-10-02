@@ -5,22 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 842f9b1b2572183bc222749e7d0e850d5cb76ae9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8c1c48583a37a959a0922dc12ac72ef064e51c91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769501"
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>1-9단원 - 1단원 자습서 패키지 테스트
 이 단원에서는 다음 태스크를 수행했습니다.  

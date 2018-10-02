@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server], mirrored backups
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - media sets [SQL Server], mirrored backup media sets
 - backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 19a85e14df3eba30b21edee53c8ff5f3fe446cde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce1303c580bb8eabca7fa3fcdb15ed821ff827a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919458"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626301"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>미러된 백업 미디어 세트(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +37,13 @@ ms.locfileid: "32919458"
 > [!NOTE]  
 >  일반적인 미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)Enterprise Edition에서만 지원됩니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [미러된 미디어 세트 개요](#OverviewofMirroredMediaSets)  
   
 -   [백업 미러에 대한 하드웨어 요구 사항](#HardwareReqs)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="OverviewofMirroredMediaSets"></a> 미러된 미디어 세트 개요  
  미디어 미러링은 미디어 세트의 속성입니다. *미러된 미디어 세트* 는 미디어 세트의 여러 복사본(*미러*)으로 구성됩니다. 미디어 세트에는 미디어 패밀리가 하나 이상 포함되어 있으며 각각은 백업 장치에 해당합니다. 예를 들어 BACKUP DATABASE 문의 TO 절에 장치가 3개 나열되어 있으면 BACKUP에서는 장치당 하나씩 3개의 미디어 패밀리에 데이터를 분산합니다. 미디어 패밀리 및 미러의 수는 WITH FORMAT을 지정하는 BACKUP DATABASE 문으로 미디어 세트를 만들 때 정의됩니다.  

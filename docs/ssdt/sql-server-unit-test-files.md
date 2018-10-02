@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6683425c4965277e4bdd2f7fe3b00c28ad1652b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 091cfc33102d46b1a3507f64aa4327697ddf6d52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803191"
 ---
 # <a name="sql-server-unit-test-files"></a>SQL Server 단위 테스트 파일
 SQL Server 단위 테스트는 관리 코드에 대한 단위 테스트와 마찬가지로 테스트 프로젝트에 있습니다. **솔루션 탐색기**의 테스트 프로젝트 계층 구조에서 SQL Server 단위 테스트를 구성하는 항목을 볼 수 있습니다.  

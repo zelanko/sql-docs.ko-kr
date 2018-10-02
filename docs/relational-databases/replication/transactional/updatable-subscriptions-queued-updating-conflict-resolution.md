@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 81fd143338bc3e76f5f9ba2324cc7f60f91aff47
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9ea67ab144a87c2ad77cdaac725d36777cc281ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770761"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>업데이트할 수 있는 구독 - 지연 업데이트 충돌 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

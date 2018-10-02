@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed55836b8ff145202eaba91b70a11426b043b9c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 80266fb75780e3d1797c2609576ba84dc437d3f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618421"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43106977"
 |**성공**|**int**|1 = 성공, 0 = 실패. 예를 들어 값 1은 사용 권한 확인이 성공했음을 나타내고, 값 0은 확인이 실패했음을 나타냅니다.|23|사용자 계정 컨트롤|  
 |**TargetLoginName**|**int**|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 이름입니다.|42|사용자 계정 컨트롤|  
 |**TargetLoginSid**|**int**|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 SID(보안 ID)입니다.|43|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|전체 텍스트 이벤트에 대한 텍스트 정보입니다. 일반적으로 이 필드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 전체 텍스트 필터 데몬 프로세스간 연결에 대한 정보가 표시됩니다.|@shouldalert|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|전체 텍스트 이벤트에 대한 텍스트 정보입니다. 일반적으로 이 필드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 전체 텍스트 필터 데몬 프로세스간 연결에 대한 정보가 표시됩니다.|1|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   

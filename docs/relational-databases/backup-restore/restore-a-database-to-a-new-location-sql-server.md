@@ -5,9 +5,7 @@ ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 159436df1286717f2698b463a2645b6b4a58430d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 966c4fc90b73aea4dbc2c304a047238469b79c5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791747"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -162,7 +159,7 @@ ms.locfileid: "32922840"
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
   
-    |옵션|Description|  
+    |옵션|설명|  
     |------------|-----------------|  
     |*logical_file_name_in_backup*|백업 세트에 있는 데이터 또는 로그 파일의 논리적 이름을 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.<br /><br /> <br /><br /> 참고: 백업 세트에서 논리적 파일 목록을 가져오려면 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 사용합니다.|  
     |*operating_system_file_name*|*logical_file_name_in_backup*에 지정된 파일의 새 위치를 지정합니다. 파일이 이 위치로 복원됩니다.<br /><br /> *operating_system_file_name* 에서 복원 파일의 새 파일 이름을 지정합니다(선택 사항). 이 작업은 동일한 서버 인스턴스에 기존 데이터베이스의 복사본을 만들려는 경우에 필요합니다.|  

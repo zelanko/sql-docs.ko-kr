@@ -3,19 +3,18 @@ title: 구성 파일의 URL(SSRS 구성 관리자) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fc31fa09432f2710e21eb3328610eb8f0af15c5d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: eb3b8189c8a863b37d05334d1e2a12a8c447d20e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269092"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634611"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>구성 파일의 URL(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에 응용 프로그램 설정을 저장합니다. 이 파일에는 URL과 URL 예약, 두 가지에 대한 구성 설정이 포함됩니다. 이 두 구성 설정의 용도와 수정 규칙은 완전히 다릅니다. 구성 파일을 수정한 배포 튜닝에 익숙하다면 이 항목을 통해 각 URL 설정을 사용하는 방법을 보다 쉽게 이해할 수 있습니다.  

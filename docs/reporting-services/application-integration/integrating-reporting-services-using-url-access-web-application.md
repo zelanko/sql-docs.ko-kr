@@ -4,10 +4,7 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -18,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c60148777a2dff9b0ae35df549f690e5e32e9cef
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 936cc6417a1af8b38b548b321486d233fa086363
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281094"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800031"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - 웹 응용 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 URL 액세스는 네트워크를 통해 개별 보고서에 액세스할 수 있도록 특별히 디자인되었습니다. 이런 유형의 액세스는 보고서 보기와 탐색을 사용자 지정 웹 응용 프로그램으로 통합하는 데 알맞습니다. 웹 응용 프로그램에서 URL 액세스를 사용하려면 다음 작업을 수행할 수 있습니다.  

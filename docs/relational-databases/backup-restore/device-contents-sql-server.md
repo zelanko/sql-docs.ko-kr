@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 79c1ee905f52c20d1c8b099093e37e958996451c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686531"
 ---
 # <a name="device-contents-sql-server"></a>장치 내용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.locfileid: "32918668"
   
 -   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **미디어**  
  백업 정보가 저장되는 디스크 또는 테이프 세트입니다.  
   

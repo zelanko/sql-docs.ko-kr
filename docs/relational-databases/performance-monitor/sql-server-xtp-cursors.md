@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0da2434b2f8b50e06a667129d2de1076341a587e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66973437f02bf2005b01531dea14c2f6d8d47771
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595451"
 ---
 # <a name="sql-server-xtp-cursors"></a>SQL Server XTP 커서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "32951998"
   
  이 표에서는 **SQL Server XTP 커서** 카운터에 대해 설명합니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |**Cursor deletes/sec**|초당 커서 삭제 수입니다(평균).|  
 |**Cursor inserts/sec**|초당 커서 삽입 수입니다(평균).|  

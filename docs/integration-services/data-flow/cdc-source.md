@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsource.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa7e66d1f7c8a0cd2ad808d59508975b3ca0bb2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5b6d0f537db9195ff0afb9994f48ca14411dcf30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599301"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -138,7 +135,7 @@ use <cdc-enabled-database-name>
   
 3.  **CDC 원본 편집기**에서 **연결 관리자**를 클릭합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **ADO.NET 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. CDC에 사용할 수 있고 선택한 변경 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결해야 합니다.  
   
@@ -191,7 +188,7 @@ use <cdc-enabled-database-name>
   
 3.  **CDC 원본 편집기**에서 **열**을 클릭합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 외부 열의 목록입니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다. 원본에서 사용할 열을 선택합니다. 선택한 열이 선택 순서대로 **외부 열** 목록에 추가됩니다.  
   
@@ -213,7 +210,7 @@ use <cdc-enabled-database-name>
   
 3.  **CDC 원본 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   

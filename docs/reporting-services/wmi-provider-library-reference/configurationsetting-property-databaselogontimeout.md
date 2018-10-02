@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseLogonTimeout Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c4332dbac41d7bd69b0ed0dc9791b44f7d723d2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 250d954574f696a4731789c94a1e1c34c60f047e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782161"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>ConfigurationSetting 속성 - DatabaseLogonTimeout
   보고서 서버 데이터베이스에 대한 로그온 시도가 실패할 때까지 기다리는 시간(초)을 지정합니다. **0** 값은 무한 대기 시간을 나타냅니다. 읽기 전용입니다.  

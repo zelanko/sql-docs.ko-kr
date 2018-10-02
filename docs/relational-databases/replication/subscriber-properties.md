@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.configdistwizard.subscribers.f1
 helpviewer_keywords:
 - Subscriber Properties dialog box
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a38b712b520584f69acea3d065d226578097e059
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a84f6880cb0ef1ea41adc616718f167b165b767b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350361"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691241"
 ---
 # <a name="subscriber-properties"></a>구독자 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **에이전트에서 구독자 연결**  
  배포 에이전트 및 병합 에이전트가 배포자에서 구독자로 연결하는 컨텍스트로서, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이전 버전에만 적용됩니다.  
   

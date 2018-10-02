@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d00cc0e71565ed54dc6b99944e3fb6fac295695
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 18f080f9fd949add2be47f8dec6988036ca91508
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063812"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622451"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 Transact-SQL 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,8 +41,7 @@ ms.locfileid: "43063812"
 -   [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
     고유하게 컴파일된 저장 프로시저에서 변수를 **NOT NULL**로 선언할 수 있습니다. 일반적인 저장 프로시저에서 수행할 수 없습니다.  
   
- 
-            **AUTO_UPDATE_STATISTICS** 는 SQL Server 2016으로 시작하여 메모리 최적화 테이블의 경우 **ON** 일 수 있습니다. 자세한 내용은 [sp_autostats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)를 참조하세요.  
+ **AUTO_UPDATE_STATISTICS** 는 SQL Server 2016으로 시작하여 메모리 최적화 테이블의 경우 **ON** 일 수 있습니다. 자세한 내용은 [sp_autostats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)를 참조하세요.  
   
  [SET STATISTICS XML&#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md) ON은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다.  
   

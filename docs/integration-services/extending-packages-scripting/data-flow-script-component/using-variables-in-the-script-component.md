@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Script component [Integration Services], using variables
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a67c9d59dd2a9eccf6ac19e99dab860cf57d1279
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a21bdb4d878f49f78f514696e01dcbc8fbcc81eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649987"
 ---
 # <a name="using-variables-in-the-script-component"></a>스크립트 구성 요소에서 변수 사용
   변수에는 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../../integration-services/integration-services-ssis-variables.md)를 참조하세요.  

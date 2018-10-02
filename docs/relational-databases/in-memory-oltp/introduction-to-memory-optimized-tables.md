@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbe71d4b5b1f668651898b48d869ecfd4db8690e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 42903a7e5cd1edf652050cc45f78b620e27ad367
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803831"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,8 +94,7 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
   
 ##  <a name="rls"></a> 메모리 액세스에 최적화된 테이블의 행 수준 보안  
 
-
-            [행 수준 보안](../../relational-databases/security/row-level-security.md) 은 메모리 최적화 테이블에서 지원됩니다. 메모리 최적화 테이블에 행 수준 보안 정책을 적용하는 작업은 디스크 기반 테이블에서와 기본적으로 동일합니다. 단, 메모리 최적화 테이블의 경우에는 보안 조건자로 사용되는 인라인 테이블 반환 함수를 고유하게 컴파일해야 합니다(WITH NATIVE_COMPILATION 옵션을 사용하여 함수를 작성해야 함). 자세한 내용은 [행 수준 보안](../../relational-databases/security/row-level-security.md#Limitations) 항목의 [기능 간 호환성](../../relational-databases/security/row-level-security.md) 섹션을 참조하세요.  
+[행 수준 보안](../../relational-databases/security/row-level-security.md) 은 메모리 최적화 테이블에서 지원됩니다. 메모리 최적화 테이블에 행 수준 보안 정책을 적용하는 작업은 디스크 기반 테이블에서와 기본적으로 동일합니다. 단, 메모리 최적화 테이블의 경우에는 보안 조건자로 사용되는 인라인 테이블 반환 함수를 고유하게 컴파일해야 합니다(WITH NATIVE_COMPILATION 옵션을 사용하여 함수를 작성해야 함). 자세한 내용은 [행 수준 보안](../../relational-databases/security/row-level-security.md#Limitations) 항목의 [기능 간 호환성](../../relational-databases/security/row-level-security.md) 섹션을 참조하세요.  
   
  행 수준 보안에 반드시 필요한 여러 기본 제공 보안 함수가 메모리 내 테이블에 사용할 수 있도록 설정되었습니다. 자세한 내용은 [고유하게 컴파일된 모듈의 기본 제공 함수](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#bfncsp)를 참조하세요.  
   

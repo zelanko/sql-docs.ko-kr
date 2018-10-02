@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.agdashboard.agp2online.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dc3b221631d07291a4965f5bb37dca54f406703
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 14af3a13043a21691e38f5fa8226041fb797f975
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656371"
 ---
 # <a name="availability-group-is-offline"></a>가용성 그룹이 오프라인 상태임
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

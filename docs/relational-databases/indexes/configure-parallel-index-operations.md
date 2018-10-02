@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index parallel operations [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - MAXDOP index option, parallel index operations
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: babb2fdc459d983321343b0a5570d957ede2b62e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 27b81b026c2ab0683ef28fe9284e61d7096e49c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773291"
 ---
 # <a name="configure-parallel-index-operations"></a>병렬 인덱스 작업 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.locfileid: "43074350"
     |값|설명|  
     |-----------|-----------------|  
     |0|서버가 현재 시스템 작업에 따라 사용되는 CPU의 수를 결정하도록 지정합니다. 이 값은 기본값이며 권장 설정입니다.|  
-    |@shouldalert|병렬 계획이 생성되지 않습니다. 작업이 직렬로 실행됩니다.|  
+    |1|병렬 계획이 생성되지 않습니다. 작업이 직렬로 실행됩니다.|  
     |2-64|지정된 값으로 프로세서 수를 제한합니다. 현재 작업에 따라 지정된 것보다 적은 수의 프로세서가 사용될 수도 있습니다. 사용 가능한 CPU 수보다 더 큰 수를 지정하면 사용 가능한 실제 CPU 수가 사용됩니다.|  
   
 -   다음은 병렬 인덱스 실행 및 MAXDOP 인덱스 옵션이 적용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  

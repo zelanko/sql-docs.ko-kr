@@ -5,9 +5,7 @@ ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c82af9cec44819da0180cba00ea146c1a5a43408
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 256fd27b738070b1f18e77cd89b0fe8e75fbf952
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779641"
 ---
 # <a name="grant-transact-sql"></a>GRANT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,7 +171,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |계약|[GRANT Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |데이터베이스|[GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
 |데이터베이스 범위 자격 증명|[GRANT 데이터베이스 범위 자격 증명(Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
-|끝점|[GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
+|엔드포인트|[GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
 |전체 텍스트 카탈로그|[GRANT 전체 텍스트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
 |전체 텍스트 중지 목록|[GRANT 전체 텍스트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
 |함수|[GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  

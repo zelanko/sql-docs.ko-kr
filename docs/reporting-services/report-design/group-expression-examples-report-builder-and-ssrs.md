@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e12a7d045f628c67fb07ceb2b25189865723111
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: cc7b23b28005ad6ba362704cd33c4c591ba380a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768951"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>그룹 식 예(보고서 작성기 및 SSRS)
   데이터 영역에서 단일 필드를 기준으로 데이터를 그룹화하거나 그룹화할 데이터를 식별하는 보다 복잡한 식을 만들 수 있습니다. 복잡한 식에는 여러 필드 또는 매개 변수에 대한 참조, 조건문 또는 사용자 지정 코드가 포함됩니다. 데이터 영역에 대해 그룹을 정의할 때 이러한 식을 **그룹** 속성에 추가합니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  

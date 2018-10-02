@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
-caps.latest.revision: 2
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: c370bb68474c29d04615316ff7782ee1d532a561
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5426fcba665e799f64b3e139da4650b5068507e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642266"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ SQL Server XTP IO 관리자 성능 개체에는 메모리 내 OLTP IO 속도 관
 
 이 표에서는 **SQL Server XTP IO 관리자** 카운터에 대해 설명합니다.
 
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |**Insufficient Credits Waits/sec**|속도 개체에서 크레딧 부족으로 인한 대기하는 초당 크레딧 수입니다.|
 |**Io Issued/sec**|플러시 스레드에 의해 실행되는 초당 Io 횟수입니다.|

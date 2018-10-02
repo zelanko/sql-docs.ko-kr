@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7fc5893c782794a69a1bcd5ac41bfb3dae693337
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 665ffbd6b0a36bc38a0e7f88b7fbff035a5f2b0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800981"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 복제 오류를 해결하는 것은 트랜잭션 복제 작동 방법에 대한 기본적인 이해 없이는 불편을 느낄 수 있습니다. 게시를 만드는 첫 번째 단계는 스냅숏 에이전트가 스냅숏을 만들어 스냅숏 폴더에 저장하게 하는 것입니다. 다음으로 배포 에이전트가 스냅숏을 구독자에게 적용합니다. 

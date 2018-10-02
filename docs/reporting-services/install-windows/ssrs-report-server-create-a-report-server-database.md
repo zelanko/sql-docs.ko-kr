@@ -3,16 +3,15 @@ title: 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자) | Mi
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56e28b53911bb2364f3bceb5c09f5bb8009efd3e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768241"
 ---
 # <a name="create-a-report-server-database"></a>보고서 서버 데이터베이스 만들기
 

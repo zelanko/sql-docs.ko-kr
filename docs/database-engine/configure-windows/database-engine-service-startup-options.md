@@ -5,9 +5,7 @@ ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab08ae1055d18b036f34791cbb90ccc95071e16e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639961"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +49,14 @@ ms.locfileid: "32869738"
   
 ## <a name="list-of-startup-options"></a>시작 옵션 목록  
 ### <a name="default-startup-options"></a>기본 시작 옵션  
-|변수|Description|  
+|Options|설명|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master 데이터베이스 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf입니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.|  
 |**-e** *error_log_path*|오류 로그 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG입니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.|  
 |**-l**  *master_log_path*|master 데이터베이스 로그 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf입니다. 이 옵션을 지정하지 않으면 기존의 레지스트리 매개 변수가 사용됩니다.|  
   
 ### <a name="other-startup-options"></a>다른 시작 옵션   
-|변수 |Description|   
+|Options |설명|   
 |---------------------------|-----------------|  
 |**-c**|명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 시작 시간을 단축시킵니다. 일반적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 서비스 제어 관리자를 호출하여 서비스로 시작됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 명령 프롬프트에서 시작하는 경우 서비스로 시작되지 않으므로 **-c** 를 사용하여 이 단계를 건너뛸 수 있습니다.|  
 |**-f**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 최소 구성으로 시작합니다. 예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 최소 구성 모드로 시작하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 단일 사용자 모드로 실행됩니다. 자세한 내용은 뒷부분에 나오는 **-m** 에 대한 설명을 참조하세요.|  

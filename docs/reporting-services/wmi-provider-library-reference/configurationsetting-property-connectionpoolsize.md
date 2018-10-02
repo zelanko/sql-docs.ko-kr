@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - ConnectionPoolSize
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d214ee76cd49ba776e3b3bec973ea20918c18f5f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8495eb14d0e40e425d423da82dc3d38c6aaee9b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802579"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting 속성 - ConnectionPoolSize
   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 통신하기 위해 보고서 서버에서 사용하는 연결 풀 크기입니다. 읽기 전용입니다.  

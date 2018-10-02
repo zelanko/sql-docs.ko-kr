@@ -5,9 +5,7 @@ ms.date: 05/01/2016
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 24714cc5f1b11774527f26d100c9a2b92a5cd1e0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 472f70d3f522eabf5d0e901639683a6a9f9ef117
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697132"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +175,7 @@ WITH
   
  RECEIVE 문 또는 GET CONVERSATION GROUP 문에서 사용할 수 없는 큐를 지정하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류로 인해 이 문은 실패합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  큐를 변경할 수 있는 권한은 기본적으로 큐의 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

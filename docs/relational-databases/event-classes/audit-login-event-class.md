@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Login event class
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 653a934221932f052e183eb3427d36dbcbf56048
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f54d72072fffba837522a9bcbc53cdb0c12c2e6b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606906"
 ---
 # <a name="audit-login-event-class"></a>Audit Login 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "43068423"
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |**성공**|**int**|1 = 성공, 0 = 실패. 이 이벤트는 항상 성공을 표시합니다.|23|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|세미콜론으로 분리된 모든 설정 옵션 목록입니다.|@shouldalert|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|세미콜론으로 분리된 모든 설정 옵션 목록입니다.|1|사용자 계정 컨트롤|  
 |**GroupID**|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  

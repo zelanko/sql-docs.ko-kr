@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - resuming database mirroring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf75ec27f842024a116c0e48a7664f4752aaca40
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 51e19a1af0fc8e1764c66777cf58d580a70671b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776861"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

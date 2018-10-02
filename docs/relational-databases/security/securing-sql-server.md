@@ -5,9 +5,7 @@ ms.date: 01/31/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
@@ -21,12 +19,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 20aaf101e6a06dd856c043464f62108f05ced4ea
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c526b7c991f3df5eb33042e2d25f7152ae80887a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760801"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +110,7 @@ GO
 |내용|참조 항목|  
 |---------------------------|---------|  
 |다음에서 사용할 인증서 만들기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|  
-|데이터베이스 미러링에 인증서 사용|[데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|데이터베이스 미러링에 인증서 사용|[데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## <a name="application-security"></a>응용 프로그램 보안  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 방법에는 보안 클라이언트 응용 프로그램 작성이 포함됩니다.  

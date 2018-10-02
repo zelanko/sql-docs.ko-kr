@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a95174a68cd523835e58feb91aedc34b66805f4b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 32a56380f94cb03c4c871855edc56629f6334d42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651601"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
   새 인스턴스 마법사를 시작하면 CDC 데이터베이스 만들기 페이지가 열립니다. CDC 데이터베이스 만들기 페이지를 사용하여 새 CDC 인스턴스에 대한 정보를 제공하고 변경 데이터베이스를 새로 만들 수 있습니다.  
@@ -35,7 +32,7 @@ ms.locfileid: "35400965"
   
  SQL 서버에 연결 대화 상자에서 데이터를 입력하는 방법은 [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **Oracle CDC 인스턴스**  
  만들려는 CDC 인스턴스에 대한 다음 정보를 입력합니다.  
   

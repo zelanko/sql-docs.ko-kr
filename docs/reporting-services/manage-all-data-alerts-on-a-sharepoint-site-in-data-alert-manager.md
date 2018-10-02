@@ -4,7 +4,6 @@ ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
@@ -12,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5bde919caaf0480b6b3c0eb79f6327fb3ecd25fa
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: b60b6a004ce481d6b4566ca914b2c4b8bb7b451d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274041"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800113"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
 

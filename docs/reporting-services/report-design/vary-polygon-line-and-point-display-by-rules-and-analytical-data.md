@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10538"
@@ -19,12 +18,12 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 12f65c737b17c62c925a1b129a2d527ac849aeaf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 177889602a291e4eb2d6596a0b1e91926deb1f1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801590"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경
   지도 계층의 다각형, 선 및 점에 대한 표시 옵션은 계층에 대한 옵션을 설정하거나, 계층의 지도 요소에 대한 규칙을 설정하거나, 계층의 특정 포함된 지도 요소에 대한 옵션을 무시하여 제어됩니다.  

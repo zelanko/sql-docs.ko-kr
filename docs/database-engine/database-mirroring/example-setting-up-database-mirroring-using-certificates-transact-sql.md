@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a09eaa78f6a7845ececb1bc88d5faa1a77891d63
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: e320f6f0194f37a6836fd964bf69405bb01cf526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803597"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "35312232"
   
     2.  아웃바운드 연결에 대한 Host_B 구성  
   
-     이 데이터베이스 미러링 설정 단계에 대한 자세한 내용은 [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 사용합니다.  
+     이 데이터베이스 미러링 설정 단계에 대한 자세한 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 사용합니다.  
   
 2.  [인바운드 연결 구성](#ConfigureInboundConnections)  
   
@@ -57,7 +54,7 @@ ms.locfileid: "35312232"
   
     2.  인바운드 연결에 대한 Host_B 구성  
   
-     이 데이터베이스 미러링 설정 단계에 대한 자세한 내용은 [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)을 사용합니다.  
+     이 데이터베이스 미러링 설정 단계에 대한 자세한 내용은 [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)을 사용합니다.  
   
 3.  미러 데이터베이스 만들기  
   
@@ -85,7 +82,7 @@ ms.locfileid: "35312232"
     GO  
     ```  
   
-3.  인증서를 사용하여 서버 인스턴스에 대한 미러링 끝점을 만듭니다.  
+3.  인증서를 사용하여 서버 인스턴스에 대한 미러링 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -129,7 +126,7 @@ ms.locfileid: "35312232"
     GO  
     ```  
   
-3.  HOST_B 서버 인스턴스에 대한 미러링 끝점을 만듭니다.  
+3.  HOST_B 서버 인스턴스에 대한 미러링 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -155,7 +152,7 @@ ms.locfileid: "35312232"
   
 5.  안전한 복사 방법을 사용하여 C:\HOST_B_cert.cer을 HOST_A로 복사합니다.  
   
- 자세햔 내용은 [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 사용합니다.  
+ 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
   
  [&#91;주요 예제&#93;](#ExampleH2)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "35312232"
     GO  
     ```  
   
-4.  해당 원격 미러링 끝점에 대한 로그인에 CONNECT 권한을 부여합니다.  
+4.  해당 원격 미러링 엔드포인트에 대한 로그인에 CONNECT 권한을 부여합니다.  
   
     ```  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_B_login];  
@@ -219,7 +216,7 @@ ms.locfileid: "35312232"
     GO  
     ```  
   
-4.  해당 원격 미러링 끝점에 대한 로그인에 CONNECT 권한을 부여합니다.  
+4.  해당 원격 미러링 엔드포인트에 대한 로그인에 CONNECT 권한을 부여합니다.  
   
     ```  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_A_login];  
@@ -229,7 +226,7 @@ ms.locfileid: "35312232"
 > [!IMPORTANT]  
 >  자동 장애 조치(Failover)를 지원하는 보호 우선 모드에서 실행하려는 경우 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성하기 위해 같은 설정 단계를 반복해야 합니다. 미러링 모니터를 사용하는 경우 인바운드 연결을 설정하려면 두 파트너 모두에서 미러링 모니터에 대해 그리고 미러링 모니터에서 두 파트너 모두에 대해 로그인과 사용자를 설정해야 합니다.  
   
- 자세햔 내용은 [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)을 사용합니다.  
+ 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)을 참조하세요.  
   
  [&#91;주요 예제&#93;](#ExampleH2)  
   
@@ -274,9 +271,9 @@ ms.locfileid: "35312232"
   
 -   [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
@@ -287,8 +284,8 @@ ms.locfileid: "35312232"
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

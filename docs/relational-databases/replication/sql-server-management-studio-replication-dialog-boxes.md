@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8188e308b944d2a08fa127e908b28badfbb88de1
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: cfb9f9037e01afd0f67c338dfa77494ef316a3c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797211"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio 복제 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

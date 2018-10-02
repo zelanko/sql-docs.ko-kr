@@ -4,7 +4,6 @@ ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b3dc2372f9ac7ac531c6378610774b8b8ef7db
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b36a4528ac1a12ec1a59528e515530b1e009ba2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779671"
 ---
 # <a name="schedules"></a>일정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서의 처리와 배포를 쉽게 제어할 수 있도록 **공유 일정** 과 **보고서별 일정** 을 제공합니다. 이 두 일정 유형의 차이점은 일정의 정의, 저장 및 관리 방법에 있습니다. 두 일정 유형의 내부 구조는 동일합니다. 모든 일정은 되풀이 유형을 월별, 주별 또는 일별로 지정할 수 있습니다. 되풀이 유형 내에서 이벤트 발생 빈도에 대한 간격과 범위를 설정하세요. 되풀이 패턴의 유형과 되풀이 패턴이 지정되는 방식은 공유 일정을 만드는지 아니면 보고서별 일정을 만드는지 여부에 관계없이 동일합니다.

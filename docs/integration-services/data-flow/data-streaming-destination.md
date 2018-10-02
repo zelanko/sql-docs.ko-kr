@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc33ebe8c38299e8b3375cc6f19aec47d859c76f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771581"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
   **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은 **SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  

@@ -5,23 +5,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.configdbmsecurwiz.serviceaccounts.f1
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03cccabcffbf8d4fe95c492aaa2e9e63c58b42fb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 13e1a9e9b80263b3a1af9e1a9fc779bd339d8930
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312433"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641951"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>서비스 계정(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "35312433"
  모든 서버 인스턴스가 동일한 도메인 계정을 사용하거나 인증서 기반 인증을 사용하는 경우 필드를 비워 둡니다. **마침**을 클릭하기만 하면 마법사가 자동으로 현재 마법사 계정을 기반으로 계정을 구성합니다.  
   
 > [!IMPORTANT]  
->  서버 인스턴스의 데이터베이스 미러링 끝점에서 인증서를 사용하도록 구성되어 있는 경우에는 서비스 계정 필드를 비워 두어야 합니다.  
+>  서버 인스턴스의 데이터베이스 미러링 엔드포인트에서 인증서를 사용하도록 구성되어 있는 경우에는 서비스 계정 필드를 비워 두어야 합니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 구성하려면**  
   
@@ -38,7 +35,7 @@ ms.locfileid: "35312433"
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **주 서버**  
  주 서버 인스턴스의 서비스 계정을 지정합니다. 도메인 이름을 대문자로 입력합니다.  
   

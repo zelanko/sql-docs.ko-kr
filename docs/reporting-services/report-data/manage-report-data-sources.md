@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84743e8ca158ed17435c3c6da4c844972320bdf1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3e82acf2dba0fac879868951ce992193c3a1f645
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661261"
 ---
 # <a name="manage-report-data-sources"></a>보고서 데이터 원본 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서, 보고서 모델 및 데이터 기반 구독은 외부 데이터 원본에서 데이터를 검색합니다. 보고서 서버는 외부 데이터 원본에 연결하기 위해 보고서, 모델 또는 구독에 정의되어 있거나 참조된 데이터 원본 연결 정보를 사용합니다. 데이터 원본 연결 속성은 보고서 또는 모델을 만들 때 항상 함께 정의되지만 보고서 또는 모델이 보고서 서버에 게시된 후에 독립적으로 관리할 수 있습니다.  

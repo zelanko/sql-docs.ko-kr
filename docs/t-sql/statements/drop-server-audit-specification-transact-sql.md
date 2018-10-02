@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_SERVER_AUDIT_SPECIFICATION_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - DROP SERVER AUDIT SPECIFICATION statement
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 76fd59c37c37c884f97d6caf76bbd84c28826a47
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 5429eef67ea10a1303e98228ce9af9a3d867d988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941409"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603911"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  DROP SERVER AUDIT SPECIFICATION은 DROP 명령이 실행되기 전에 수집된 감사 데이터를 제외한 감사 사양의 메타데이터를 제거합니다. ALTER SERVER AUDIT SPECIFICATION을 사용하여 서버 감사 사양의 상태를 OFF로 설정해야 삭제할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  ALTER ANY SERVER AUDIT 권한이 있는 사용자는 서버 감사 사양을 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  

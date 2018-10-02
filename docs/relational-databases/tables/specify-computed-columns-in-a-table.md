@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e9b43dcd5d7d3e6f744ba2659c0ba4958e9c42a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3f8cb3a1a2ae171c386b9f8a0b9c18e06b3cc723
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627861"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -71,9 +68,9 @@ ms.locfileid: "43078740"
     > [!IMPORTANT]  
     >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 **nvarchar** 형식 열을 **int**형식 열과 결합할 경우 **수식에 표시된 대로 정수 형식을** nvarchar `('Prod'+CONVERT(nvarchar(23),ProductID))`로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
-5.  **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.  
+5.  **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요**를 선택하여 데이터를 지속할지 여부를 지정합니다.  
   
-6.  **파일** 메뉴에서 *****테이블 이름 저장*을 클릭합니다.  
+6.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>기존 열에 계산 열 정의를 추가하려면  
   

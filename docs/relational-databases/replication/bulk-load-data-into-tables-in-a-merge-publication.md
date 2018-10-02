@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - merge replication bulk loading [SQL Server replication]
 - sp_addtabletocontents
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9236014cf668cbd16ab3517ef6cd33c10eafa53d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: cc2ab453279e429f148f257f75f44f26c4e57287
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37348755"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781741"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>병합 게시에서 데이터를 테이블로 대량 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

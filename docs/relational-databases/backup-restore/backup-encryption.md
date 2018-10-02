@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4024cb96f79d8132dafb44046b084756d847c238
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2420e494a312f64ba84edbd9a77b26be2a53e33b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659332"
 ---
 # <a name="backup-encryption"></a>백업 암호화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +134,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
-|항목/태스크|Description|  
+|항목/태스크|설명|  
 |-----------------|-----------------|  
 |[암호화된 백업 만들기](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|암호화된 백업을 만드는 데 필요한 기본 단계에 대해 설명합니다.|  
 |[Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Azure 키 자격 증명 모음에서 키로 보호하는 암호화된 백업을 만드는 예제를 제공합니다.|  

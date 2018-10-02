@@ -5,9 +5,7 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Reduce_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e56c600d149f39b118c1cd53878eaacca454753
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: b3706237fdd673e4bcf42fbcc5e611e094fd1ebf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36256441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805621"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +88,7 @@ SELECT @g.Reduce(.75).ToString();
  LINESTRING (0 0, 24 0)
  ```  
   
- 반환된 각 인스턴스는 끝점 (0 0) 및 (24 0)을 포함합니다.  
+ 반환된 각 인스턴스는 엔드포인트 (0 0) 및 (24 0)을 포함합니다.  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>3. CompoundCurve에서 다양한 허용 오차 수준과 함께 Reduce() 사용  
  다음 예제에서는 **CompoundCurve** 인스턴스에서 두 가지 허용 오차 수준과 함께 `Reduce()`를 사용합니다.  
@@ -105,7 +102,7 @@ SELECT @g.Reduce(.75).ToString();
  이 예제에서는 두 번째 **SELECT** 문이 **LineString** 인스턴스를 반환합니다: `LineString(0 0, 16 0)`.  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>원래의 시작점과 끝점이 사라진 예 보기  
- 다음 예에서는 결과 인스턴스에서 원래의 시작점과 끝점이 유지되지 않을 수도 있는 경우를 보여 줍니다. 이러한 경우는 원래의 시작점과 끝점을 유지하면 잘못된 **LineString** 인스턴스가 생성되는 경우에 발생합니다.  
+ 다음 예에서는 결과 인스턴스에서 원래의 시작점과 엔드포인트가 유지되지 않을 수도 있는 경우를 보여 줍니다. 이러한 경우는 원래의 시작점과 끝점을 유지하면 잘못된 **LineString** 인스턴스가 생성되는 경우에 발생합니다.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  

@@ -3,7 +3,6 @@ title: 보고서 서버 URL 구성(SSRS 구성 관리자) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db96a1af36bea565d00587096dfdbbc925b1fedf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609701"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. 응용 프로그램을 사용하려면 먼저 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 응용 프로그램 URL에 대한 기본값을 제공합니다.  

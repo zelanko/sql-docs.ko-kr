@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae0ee26dfd95ef6f425b749e24b6e5d506ece235
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f9f38dcf89eaa5741edd537647553223c93ad5ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335567"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771527"
 ---
 # <a name="high-availability-support"></a>고가용성 지원
   Oracle CDC Service는 고가용성을 위해 디자인되었습니다. 다음 기능은 일부 고가용성 지원을 제공합니다.  

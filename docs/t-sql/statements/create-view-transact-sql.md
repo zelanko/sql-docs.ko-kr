@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d9ffdfee5a7347570fc6797d43dabc0beb9d4a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808461"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +148,7 @@ OR ALTER
  CREATE VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)의 항목을 암호화합니다. WITH ENCRYPTION을 사용하면 뷰가 SQL Server 복제의 일부로 게시되지 않도록 할 수 있습니다.  
   
  SCHEMABINDING  
- 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement*에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(*schema ***.*** object*)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
+ 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement*에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_**.**_object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
   
  SCHEMABINDING 절로 만든 뷰에서 사용하는 뷰 또는 테이블은 뷰가 삭제되거나 변경되어 스키마 바인딩이 더 이상 존재하지 않는 경우에만 삭제할 수 있습니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 또한 ALTER TABLE 문이 뷰 정의에 영향을 미치는 경우에는 스키마 바인딩이 있는 뷰에서 사용하는 테이블에서 이러한 문을 실행할 수 없습니다.  
   

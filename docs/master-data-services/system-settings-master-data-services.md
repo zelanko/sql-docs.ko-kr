@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9f4162789cf09c326b3b5d016e22bafed9fe790b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801701"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
 

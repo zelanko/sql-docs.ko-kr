@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 135f1778e8b2fd29b1e026d662d57795a763a269
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634771"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>5-2단원 - 패키지 구성 설정 및 구성
 이 작업에서는 프로젝트를 패키지 배포 모델로 변환하고 패키지 구성 마법사를 사용하여 패키지 구성을 설정합니다. 이 마법사를 사용하여 Foreach 루프 컨테이너의 **Directory** 속성에 대한 구성 설정을 포함하는 XML 구성 파일을 생성합니다. 런타임에 업데이트할 수 있는 새 패키지 수준 변수에서 Directory 속성 값을 제공합니다. 또한 테스트하는 동안 사용할 새로운 예제 데이터 폴더를 채웁니다.  

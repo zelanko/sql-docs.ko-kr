@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94f3340c0184142baefb5bde981e71a74e56b6a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e61e2c864cf0ac03a22d0ef7772c0ce8f83ecba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802601"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

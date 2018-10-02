@@ -5,9 +5,7 @@ ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca1571e89f1273e40f59fa8e680b8a0123efec19
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3a7c93c43a35f528030035e300624bacb4e72431
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690221"
 ---
 # <a name="excel-source"></a>Excel 원본
   Excel 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다.  
@@ -120,7 +117,7 @@ ms.locfileid: "35333067"
 ## <a name="excel-source-editor-columns-page"></a>Excel 원본 편집기(열 페이지)
   **Excel 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 외부 열의 목록을 표시합니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다.  
   
@@ -133,7 +130,7 @@ ms.locfileid: "35333067"
 ## <a name="excel-source-editor-error-output-page"></a>Excel 원본 편집기(오류 출력 페이지)
   **Excel 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **입력 또는 출력**  
  데이터 원본의 이름을 표시합니다.  
   

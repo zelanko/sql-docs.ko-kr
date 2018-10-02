@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7645c82b7e2062270fa83ea400d699bbd3195771
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 98c58da0ba018bc65d8459350f3f8e664587cdc9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657831"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>구독자 데이터에 외부 데이터 원본 사용(데이터 기반 구독)
   데이터 기반 구독에서는 외부 데이터 원본에서 데이터를 검색하는 쿼리 또는 명령에 의해 동적 구독 데이터가 제공됩니다. 데이터 기반 구독 처리 요구 사항을 만족하는 지원되는 모든 데이터 원본에서 구독 데이터를 검색할 수 있습니다. 쿼리 또는 명령 구문은 보고서 서버와 함께 설치되는 데이터 처리 확장 프로그램에 유효해야 합니다.  

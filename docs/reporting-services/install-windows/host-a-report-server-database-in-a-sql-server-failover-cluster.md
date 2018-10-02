@@ -3,17 +3,16 @@ title: SQL Server 장애 조치(Failover) 클러스터에서 보고서 서버 �
 ms.date: 03/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 21d0a7867e5a9d85fc36a9e305de77b00c9f5b95
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8fbd30c139c683eac89761d37686b1f0209e35c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664801"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>SQL Server 장애 조치(failover) 클러스터에서 보고서 서버 데이터베이스 호스팅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 장애 조치 클러스터링을 지원하므로 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 여러 디스크를 사용할 수 있습니다. 장애 조치 클러스터링은 보고서 서버 데이터베이스에 대해서만 지원되므로 보고서 서버 서비스를 장애 조치 클러스터의 일부로 실행할 수 없습니다.  

@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1709d7ca64eedf5e4f0dd170606082e7f99f3e31
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 50f98e5ba8905a3e97ca401b5ff49a87e9a2ecfc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736511"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>SQL Server 단위 테스트 결과 해석
 SQL Server 단위 테스트를 실행하면 테스트 결과가 자동으로 생성되어 디스크에 저장되고 **테스트 결과** 창에 요약됩니다. 테스트 실행을 시작하는 즉시 **테스트 결과** 창이 나타나고 테스트 실행 진행률이 표시됩니다. 여기에는 실행 중인 테스트 및 완료된 테스트가 포함됩니다.  

@@ -5,29 +5,26 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860f0f1d6dc774c7a009db193c2c84e940c6cc47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332497"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596201"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
-  변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 비동기 캡처 프로세스에서 선택한 끝점까지 변경 내용을 아직 다 처리하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
+  변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 비동기 캡처 프로세스에서 선택한 엔드포인트까지 변경 내용을 아직 다 처리하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
   
 > [!NOTE]  
->  제어 흐름에 대한 첫 번째 태스크는 변경 간격의 끝점을 계산하는 것입니다. 이 태스크에 대한 자세한 내용은 [변경 데이터의 간격 지정](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)을 참조하세요. 제어 흐름 디자인의 전체 프로세스에 대한 설명은 [데이터 캡처 변경&#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)을 참조하세요.  
+>  제어 흐름에 대한 첫 번째 태스크는 변경 간격의 엔드포인트를 계산하는 것입니다. 이 태스크에 대한 자세한 내용은 [변경 데이터의 간격 지정](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)을 참조하세요. 제어 흐름 디자인의 전체 프로세스에 대한 설명은 [데이터 캡처 변경&#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)을 참조하세요.  
   
 ## <a name="understanding-the-components-of-the-solution"></a>솔루션의 구성 요소 이해  
  이 항목에 설명된 솔루션에서는 다음과 같은 4개의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소를 사용합니다.  
@@ -73,7 +70,7 @@ ms.locfileid: "35332497"
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 제어 흐름에 For 루프 컨테이너를 추가합니다.  
   
-2.  간격의 끝점을 계산하는 SQL 실행 태스크를 For 루프 컨테이너에 연결합니다.  
+2.  간격의 엔드포인트를 계산하는 SQL 실행 태스크를 For 루프 컨테이너에 연결합니다.  
   
 3.  **For 루프 편집기**에서 다음 옵션을 선택합니다.  
   

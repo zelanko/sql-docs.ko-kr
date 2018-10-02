@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVICE_MASTER_KEY_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], modifying
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fefd6e921e9dbadae3ffb732d341550fffda0221
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651781"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +103,7 @@ ALTER SERVICE MASTER KEY
   
  SQL을 다른 컴퓨터로 이동하는 경우 동일한 서비스 계정을 사용하여 SMK를 해독해야 하며 SQL Server에서 컴퓨터 계정 암호화를 자동으로 해결합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

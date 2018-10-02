@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4bb9263e3066f8adca53250b4318f2b7e5e338c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082427"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803491"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -161,8 +157,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 - 메모리 최적화 테이블에서는 열에 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) 태그를 지정할 수 없습니다.
 
 
-- 
-            [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)는 메모리 최적화 테이블의 제약 조건과 함께 사용할 수 없습니다. 예를 들어 NEXT VALUE FOR 절에 DEFAULT 제약 조건을 만들 수 없습니다. SEQUENCE는 INSERT 및 UPDATE 문에서 사용할 수 있습니다.
+- [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)는 메모리 최적화 테이블의 제약 조건과 함께 사용할 수 없습니다. 예를 들어 NEXT VALUE FOR 절에 DEFAULT 제약 조건을 만들 수 없습니다. SEQUENCE는 INSERT 및 UPDATE 문에서 사용할 수 있습니다.
 
 
 ## <a name="c-administrative-maintenance"></a>3. 유지 관리

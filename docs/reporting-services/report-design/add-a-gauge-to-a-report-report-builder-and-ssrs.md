@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fec631be68196f8c5b5985c72a5dab9d19ee3159
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 198338824479dab5eb52d369c89a96b908dadbc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807401"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>보고서에 계기 추가(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 시각적 형식으로 데이터를 요약하려는 경우 계기 데이터 영역을 사용할 수 있습니다. 디자인 화면에 계기 데이터 영역을 추가한 후에는 보고서 데이터 집합 필드를 계기의 데이터 창으로 끌 수 있습니다.  

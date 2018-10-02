@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf0d35cd3838e2d57b8c862369f73e97d09ced32
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 936f4d6ecf91169f68542042f060dd6ec379372f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807462"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정
   기본 보안 설정으로 필요한 액세스 수준을 얻을 수 없는 경우 새 사용 권한 수준을 만들어 특정 보고서 서버 항목이나 작업에 대한 액세스 권한을 제공할 수 있습니다. 사용자 지정 보안 설정은 특정 보고서에 대한 액세스를 제한하려는 경우에 유용할 수 있습니다.  

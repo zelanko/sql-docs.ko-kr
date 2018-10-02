@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26e0b185a66be83ad649a5b6ccb88326c3421d32
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fc05bd786594cc70836bc6d39e86143d16089979
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617441"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  

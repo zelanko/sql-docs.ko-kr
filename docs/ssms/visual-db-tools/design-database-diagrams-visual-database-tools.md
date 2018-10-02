@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2fa73a0d25934117a4ae8a199e665e36f1a229d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e4dcaf21e561275e6379745f47c4eabd789c3965
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711911"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 디자인(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,13 +50,13 @@ ms.locfileid: "38981685"
 테이블 뷰에 대한 자세한 내용은 [다이어그램에 표시된 정보의 양 사용자 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)을 참조하세요.  
   
 ## <a name="relationships-in-a-database-diagram"></a>데이터베이스 다이어그램에서의 관계  
-데이터베이스 다이어그램의 각 관계는 세 가지 고유 기능인 끝점, 선 스타일 및 관련 테이블을 사용하여 나타낼 수 있습니다.  
+데이터베이스 다이어그램의 각 관계는 세 가지 고유 기능인 엔드포인트, 선 스타일 및 관련 테이블을 사용하여 나타낼 수 있습니다.  
   
-**끝점** 선의 끝점은 관계가 일 대 일 관계인지 일 대 다 관계인지를 나타냅니다. 관계의 한 끝점에 키가 있고 다른 끝점에 숫자 8이 있는 경우 이는 일 대 다 관계이며, 관계의 각 끝점에 키가 있는 경우 일 대 일 관계입니다.  
+**엔드포인트** 선의 엔드포인트는 관계가 일 대 일 관계인지 일 대 다 관계인지를 나타냅니다. 관계의 한 엔드포인트에 키가 있고 다른 엔드포인트에 숫자 8이 있는 경우 이는 일 대 다 관계이며, 관계의 각 엔드포인트에 키가 있는 경우 일 대 일 관계입니다.  
   
-**선 스타일** 선의 끝점이 아니라 선 자체는 외래 키 테이블에 데이터를 새로 추가하는 경우 DBMS(데이터베이스 관리 시스템)에서 관계에 대한 참조 무결성을 적용할지 여부를 나타냅니다. 선이 실선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용합니다. 그러나 선이 점선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용하지 않습니다.  
+**선 스타일** 선의 엔드포인트가 아니라 선 자체는 외래 키 테이블에 데이터를 새로 추가하는 경우 DBMS(데이터베이스 관리 시스템)에서 관계에 대한 참조 무결성을 적용할지 여부를 나타냅니다. 선이 실선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용합니다. 그러나 선이 점선으로 표시되면 외래 키 테이블에서 행을 추가하거나 수정할 때 DBMS에서 관계에 대한 참조 무결성을 적용하지 않습니다.  
   
-**관련 테이블** 관계 선은 한 테이블과 다른 테이블 사이에 외래 키 관계가 있음을 나타냅니다. 일 대 다 관계의 경우 외래 키 테이블은 선의 숫자 8 기호 옆에 있는 테이블입니다. 선의 두 끝점이 모두 같은 테이블에 연결되면 반사 관계입니다. 자세한 내용은 [반사 관계 그리기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)를 참조하세요.  
+**관련 테이블** 관계 선은 한 테이블과 다른 테이블 사이에 외래 키 관계가 있음을 나타냅니다. 일 대 다 관계의 경우 외래 키 테이블은 선의 숫자 8 기호 옆에 있는 테이블입니다. 선의 두 엔드포인트가 모두 같은 테이블에 연결되면 반사 관계입니다. 자세한 내용은 [반사 관계 그리기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  

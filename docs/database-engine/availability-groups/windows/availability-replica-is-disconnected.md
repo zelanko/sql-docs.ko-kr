@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.agdashboard.arp2connected.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d491f020902c675e3b574f3e7dba6213053c85e7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ab0bf137663677c3c9cb4087f1705639e0a04419
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662298"
 ---
 # <a name="availability-replica-is-disconnected"></a>가용성 복제본 연결 해제됨
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +46,14 @@ ms.locfileid: "34771009"
   
 -   암호화 유형 또는 알고리즘이 일치하지 않습니다.  
   
--   연결 끝점이 삭제되었거나 시작되지 않았습니다.  
+-   연결 엔드포인트가 삭제되었거나 시작되지 않았습니다.  
   
 -   전송 연결이 끊어졌습니다.  
   
 ## <a name="possible-solutions"></a>가능한 해결 방법  
  이 문제에 대한 해결 방법은 다음과 같습니다.  
   
--   주 복제본 및 보조 복제본 인스턴스의 데이터베이스 미러링 끝점 구성을 확인하여 일치하지 않는 구성을 업데이트합니다.  
+-   주 복제본 및 보조 복제본 인스턴스의 데이터베이스 미러링 엔드포인트 구성을 확인하여 일치하지 않는 구성을 업데이트합니다.  
   
 -   포트가 충돌하는 경우 포트 번호를 변경합니다.  
   

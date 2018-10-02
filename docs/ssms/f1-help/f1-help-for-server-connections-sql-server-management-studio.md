@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-f1
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - connections [SQL Server Management Studio]
 - Connect to Server dialog box
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a84882745a60e3a13c95072f1792e468d04a37cd
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1539e3ed4c75ccb7837f1ea16717b9af8c5f3f59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42774087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773927"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>서버 연결에 대한 F1 도움말(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

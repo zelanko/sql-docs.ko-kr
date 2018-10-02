@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.validate.validateandresynch.f1
 helpviewer_keywords:
 - Validate Subscription dialog box
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54dc3fda5905ae45bbfd4ade2ba2096ea7c232b6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 3aadc729667a5db3069b569df606fdd54012f2c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693851"
 ---
 # <a name="validate-subscription"></a>구독 유효성 검사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "37354915"
   
  또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 게시를 마우스 오른쪽 단추로 클릭하고 **모든 구독 유효성 검사**를 클릭하여 병합 게시에 대한 모든 구독의 유효성을 검사할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **마지막으로 유효성 검사를 시도한 날짜**  
  유효성 검사의 성공 여부에 상관없이 구독 유효성 검사가 포함된 마지막 병합 에이전트 세션의 날짜입니다.  
   

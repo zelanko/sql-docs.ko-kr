@@ -5,27 +5,22 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom data flow components [Integration Services], mapping data types
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06cc4eed1d3662cbcd7daca749dfda0e5416e19e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3560a83c6e292a5e3a46e97b5e34c3bac9eac894
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641801"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>데이터 흐름의 데이터 형식 작업
   Integration Services에서 사용자 지정 데이트 흐름 구성 요소를 개발할 때는 데이터를 데이터 흐름 버퍼에 복사하거나 데이터 흐름 버퍼에서 복사해 오고 값을 변환하는 방식으로 데이터 형식에 대한 작업을 지속적으로 수행하게 됩니다. 이 항목에서는 올바른 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 선택하고 데이터 형식에 대한 작업을 수행할 때 올바른 메서드를 사용할 수 있도록 유용한 정보를 제공합니다.  

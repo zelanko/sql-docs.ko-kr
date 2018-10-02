@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51d357bb7fdb953f279a196723dd72ad713b127f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b7e305cc2ceb178b0adb812d8215022f981d2c95
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763911"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SSDT(SQL Server Data Tools)에서는 Visual Studio 내의 모든 데이터베이스 개발 단계를 망라하는 선언적 유비쿼터스 모델을 도입함으로써 데이터베이스 개발 과정에 일대 변화를 주었습니다. SSDT Transact\-SQL 디자인 기능을 사용하여 데이터베이스를 빌드, 디버깅, 유지 관리 및 리팩터링할 수 있습니다. 데이터베이스 프로젝트를 사용하여 작업하거나 내부 또는 외부의 연결된 데이터베이스 인스턴스를 직접 사용할 수 있습니다.  

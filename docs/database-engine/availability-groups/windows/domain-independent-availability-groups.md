@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
-caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffd51f770d9f834ac89fc29cf4f7110e23638bf8
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: f17ff228c8cf71cc766c6f6fe43a6917577fe983
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788521"
 ---
 # <a name="domain-independent-availability-groups"></a>도메인 독립 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ AD DS 및 WSFC 종속성은 DBM(데이터베이스 미러링) 구성으로 이�
 
 Windows Server 2012 R2에서는 가용성 그룹과 함께 사용할 수 있는 특수한 형태의 Windows Server 장애 조치 클러스터인 [Active Directory 분리 클러스터](https://technet.microsoft.com/library/dn265970.aspx)를 도입했습니다. 이 유형의 WSFC에서는 노드가 동일한 Active Directory 도메인에 여전히 가입되어야 하지만, 이 경우 WSFC는 도메인이 아니라 DNS를 사용합니다. 도메인이 여전히 관련되어 있으므로 Active Directory 분리 클러스터에서도 도메인이 전혀 필요하지 않은 환경을 제공하지 않습니다.
 
-Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 클러스터)를 기반으로 하여 새로운 종류의 Windows Server 장애 조치 클러스터를 도입했습니다. 작업 그룹 클러스터를 사용하면 SQL Server 2016에서 AD DS가 필요하지 않은 WSFC에 기반하여 가용성 그룹을 배포할 수 있습니다. SQL Server에서는 데이터베이스 미러링 시나리오에서 인증서가 필요한 것처럼 끝점 보안에 인증서를 사용해야 합니다.  이런 유형의 가용성 그룹을 도메인 독립 가용성 그룹이라고 합니다. 기본 작업 그룹 클러스터가 있는 가용성 그룹을 배포하면 WSFC를 구성할 노드에 대해 다음과 같은 조합을 지원할 수 있습니다.
+Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 클러스터)를 기반으로 하여 새로운 종류의 Windows Server 장애 조치 클러스터를 도입했습니다. 작업 그룹 클러스터를 사용하면 SQL Server 2016에서 AD DS가 필요하지 않은 WSFC에 기반하여 가용성 그룹을 배포할 수 있습니다. SQL Server에서는 데이터베이스 미러링 시나리오에서 인증서가 필요한 것처럼 엔드포인트 보안에 인증서를 사용해야 합니다.  이런 유형의 가용성 그룹을 도메인 독립 가용성 그룹이라고 합니다. 기본 작업 그룹 클러스터가 있는 가용성 그룹을 배포하면 WSFC를 구성할 노드에 대해 다음과 같은 조합을 지원할 수 있습니다.
 - 노드가 도메인에 가입되어 있지 않습니다.
 - 모든 노드가 서로 다른 도메인에 가입되어 있습니다.
 - 노드가 도메인 가입 노드와 비도메인 가입 노드의 조합으로 혼합되어 있습니다.
@@ -89,7 +86,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
    GO
    ```
 
-4. 주 복제본이 될 인스턴스에서 보조 복제본을 인바운드 연결하고 주 복제본의 끝점을 보호하는 데 사용할 인증서를 만듭니다.
+4. 주 복제본이 될 인스턴스에서 보조 복제본을 인바운드 연결하고 주 복제본의 엔드포인트를 보호하는 데 사용할 인증서를 만듭니다.
 
    ```sql
    CREATE CERTIFICATE InstanceA_Cert 
@@ -106,14 +103,14 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
    ```
 
 6. InstanceB_Cert와 같은 인증서에 대해 적절한 이름을 사용하여 4단계와 5단계를 반복하여 각 보조 복제본에 대한 인증서를 만들고 백업합니다.
-7. 주 복제본에서 가용성 그룹의 각 보조 복제본에 대한 로그인을 만들어야 합니다. 이 로그인에는 도메인 독립 가용성 그룹에서 사용하는 끝점에 연결할 수 있는 권한이 부여됩니다. 예를 들어 InstanceB라는 복제본의 경우 다음과 같습니다.
+7. 주 복제본에서 가용성 그룹의 각 보조 복제본에 대한 로그인을 만들어야 합니다. 이 로그인에는 도메인 독립 가용성 그룹에서 사용하는 엔드포인트에 연결할 수 있는 권한이 부여됩니다. 예를 들어 InstanceB라는 복제본의 경우 다음과 같습니다.
 
    ```sql
    CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
    GO
    ```
 
-8. 각 보조 복제본에서 주 복제본에 대한 로그인을 만듭니다. 이 로그인에는 끝점에 연결할 수 있는 권한이 부여됩니다. 예를 들어 InstanceB라는 복제본의 경우 다음과 같습니다.
+8. 각 보조 복제본에서 주 복제본에 대한 로그인을 만듭니다. 이 로그인에는 엔드포인트에 연결할 수 있는 권한이 부여됩니다. 예를 들어 InstanceB라는 복제본의 경우 다음과 같습니다.
 
    ```sql
    CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
@@ -136,7 +133,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
    FROM FILE = 'Restore_path\InstanceB_Cert.cer'
    ```
 
-12. 복제본이 될 각 인스턴스에서 가용성 그룹이 사용할 끝점을 만듭니다. 가용성 그룹의 경우 끝점의 유형은 DATABASE_MIRRORING이어야 합니다. 끝점은 인증을 위해 해당 인스턴스에 대해 4단계에서 만든 인증서를 사용합니다. 인증서를 사용하여 끝점을 만드는 예제 구문은 다음과 같습니다. 사용자 환경과 관련된 적절한 암호화 방법 및 다른 옵션을 사용합니다. 사용 가능한 옵션에 대한 자세한 내용은 [CREATE ENDPOINT(Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.
+12. 복제본이 될 각 인스턴스에서 가용성 그룹이 사용할 엔드포인트를 만듭니다. 가용성 그룹의 경우 엔드포인트의 유형은 DATABASE_MIRRORING이어야 합니다. 엔드포인트는 인증을 위해 해당 인스턴스에 대해 4단계에서 만든 인증서를 사용합니다. 인증서를 사용하여 엔드포인트를 만드는 예제 구문은 다음과 같습니다. 사용자 환경과 관련된 적절한 암호화 방법 및 다른 옵션을 사용합니다. 사용 가능한 옵션에 대한 자세한 내용은 [CREATE ENDPOINT(Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.
 
    ```sql
    CREATE ENDPOINT DIAG_EP
@@ -151,14 +148,14 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
          )
    ```
 
-13. 9단계에서 해당 인스턴스에 만든 각 사용자에게 권한을 할당하여 끝점에 연결할 수 있습니다. 
+13. 9단계에서 해당 인스턴스에 만든 각 사용자에게 권한을 할당하여 엔드포인트에 연결할 수 있습니다. 
 
    ```sql
    GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
    GO
    ```
 
-14. 기본 인증서와 끝점 보안이 구성되었으면 기본 설정 방법을 사용하여 가용성 그룹을 만듭니다. 보조 복제본을 초기화하는 데 사용된 백업을 수동으로 백업, 복사 및 복원하거나 [자동 시드](automatically-initialize-always-on-availability-group.md)를 사용하는 것이 좋습니다. 마법사를 사용하여 보조 복제본을 초기화하면, 비도메인 가입 작업 그룹 클러스터를 사용할 때 작동하지 않을 수 있는 SMB(서버 메시지 블록) 파일이 사용됩니다.
+14. 기본 인증서와 엔드포인트 보안이 구성되었으면 기본 설정 방법을 사용하여 가용성 그룹을 만듭니다. 보조 복제본을 초기화하는 데 사용된 백업을 수동으로 백업, 복사 및 복원하거나 [자동 시드](automatically-initialize-always-on-availability-group.md)를 사용하는 것이 좋습니다. 마법사를 사용하여 보조 복제본을 초기화하면, 비도메인 가입 작업 그룹 클러스터를 사용할 때 작동하지 않을 수 있는 SMB(서버 메시지 블록) 파일이 사용됩니다.
 15. 수신기를 만드는 경우 이름과 IP 주소가 모두 DNS에 등록되어 있는지 확인합니다.
 
 ### <a name="next-steps"></a>다음 단계 

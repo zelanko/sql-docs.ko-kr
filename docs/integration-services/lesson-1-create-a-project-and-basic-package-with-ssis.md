@@ -5,22 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c3626fb6bb6c3ef42d465aa21e8eed9086c161d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608451"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
 
@@ -72,7 +68,7 @@ SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tool
 |플랫 파일 열|테이블 이름|열 이름|데이터 형식|  
 |--------------------|--------------|---------------|-------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
-|@shouldalert|DimCurrency|CurrencyAlternateKey|nchar (3)|  
+|1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|FactOnlineSales|FullDateAlternateKey|날짜|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   

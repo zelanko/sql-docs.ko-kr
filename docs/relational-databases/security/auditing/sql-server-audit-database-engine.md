@@ -5,9 +5,7 @@ ms.date: 11/21/2016
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -19,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d5bca5957618d53438f8a10be02ceb9b4e7fb28b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fce1dd4e7f8773d4fb7e80619d9511cc9680c244
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796911"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +111,7 @@ ms.locfileid: "43022852"
   
 4.  Windows **이벤트 뷰어**, **로그 파일 뷰어**또는 fn_get_audit_file 함수를 사용하여 감사 이벤트를 읽습니다.  
   
- 자세한 내용은 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 및 [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
+ 자세한 내용은 [서버 감사 및 서버 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 및 [서버 감사 및 데이터베이스 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
   
 ## <a name="considerations"></a>고려 사항  
  감사 시작 도중에 오류가 발생하면 서버가 시작되지 않습니다. 이 경우 명령줄에서 **–f** 옵션을 사용하면 서버를 시작할 수 있습니다.  

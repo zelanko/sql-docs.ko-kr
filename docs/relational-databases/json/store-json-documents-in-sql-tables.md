@@ -5,19 +5,17 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 03ffe17d11f571f7f5a6b718d20396cbe8694f88
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 55b8f8482af66b714ae7842c267930479a4c8586
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661221"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장
 SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON 문서를 구문 분석할 수 있는 네이티브 JSON 함수가 있습니다. 이제 JSON 문서를 SQL Server 또는 SQL Database에 저장하고 JSON 데이터를 NoSQL 데이터베이스에서처럼 쿼리할 수 있습니다. 이 문서에서는 JSON 문서를 SQL Server 또는 SQL Database에 저장하는 옵션에 대해 설명합니다.

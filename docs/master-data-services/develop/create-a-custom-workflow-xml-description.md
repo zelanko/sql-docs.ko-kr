@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: develop
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 16fa4c7e7ca6e694318fc387f3fef386ae40c41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27bcc991088135b95305842639f55b0dc389c4ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32890728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685701"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>사용자 지정 워크플로 만들기 - XML 설명
 
@@ -72,7 +66,7 @@ ms.locfileid: "32890728"
   
  다음 표에서는 이 XML에 포함되는 태그 일부에 대해 설명합니다.  
   
-|태그|Description|  
+|태그|설명|  
 |---------|-----------------|  
 |\<Type>|로드할 사용자 지정 워크플로 어셈블리를 식별하기 위해 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 유형** 입력란에 입력한 텍스트입니다.|  
 |\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **메시지에 멤버 데이터 포함** 확인란으로 제어하는 부울 값입니다. 값 1을 지정하면 \<MemberData> 섹션이 전송되고, 다른 값을 지정하면 \<MemberData> 섹션이 전송되지 않습니다.|  

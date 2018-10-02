@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - External Scripts object
 - SQLServer:External Scripts
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b66c9c49dda29bb87211f54713dce91c7dac479
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6eb921d6ebee88ce14ad30b0d2071941ec5f007
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665551"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 외부 스크립트 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "32950768"
   
  이 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **외부 스크립트** 카운터를 설명합니다.  
   
-|SQL Server 외부 스크립트 카운터|Description|  
+|SQL Server 외부 스크립트 카운터|설명|  
 |------------------------------------------|-----------------|  
 |**실행 오류**|외부 스크립트 실행 시 발생한 오류 수입니다.|  
 |**묵시적 인증. Logins**|묵시적 인증을 사용하여 인증된 위성 프로세스의 로그인 수입니다.|  
