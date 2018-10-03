@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SMTPServer
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ad05b67342147d7ee3829ce1496094ec75b00c3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f296a548075462c14782921446921bd9b3929151
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273913"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627011"
 ---
 # <a name="configurationsetting-property---smtpserver"></a>ConfigurationSetting 속성 - SMTPServer
   보고서 서버 구성 파일에서 SMTP 서버 속성을 가져옵니다. 읽기 전용입니다.  

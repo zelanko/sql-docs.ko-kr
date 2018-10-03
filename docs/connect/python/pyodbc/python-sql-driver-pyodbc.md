@@ -1,29 +1,26 @@
 ---
-title: Python SQL 드라이버 pyodbc | Microsoft Docs
+title: Python SQL 드라이버-pyodbc | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a747f9edc3a816d3b82eb22cb47aff6167638ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: effb73bb9edc1567848cd8ff700747049f54e5a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608942"
 ---
-# <a name="python-sql-driver---pyodbc"></a>Python SQL 드라이버 pyodbc
+# <a name="python-sql-driver---pyodbc"></a>Python SQL 드라이버 - pyodbc
 
-![아래쪽 화살표-Circled 다운로드](../../../ssdt/media/download.png)[Python에 대 한 SQL 드라이버를 설치 하려면](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원이](../../../ssdt/media/download.png)[for Python SQL 드라이버를 설치 하려면](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="getting-started"></a>시작
 

@@ -5,22 +5,19 @@ ms.date: 01/05/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 60fdefca0b30606ce6cb11ab8cd44f05188b59f6
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4eca1a4ebb1c8b943709fba4b96e5bda96ab7747
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637721"
 ---
 # <a name="business-rule-examples-master-data-services"></a>비즈니스 규칙의 예(Master Data Services)
 

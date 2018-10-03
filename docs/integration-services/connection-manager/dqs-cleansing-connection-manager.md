@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 939d4c323420e055f7e011c4b709a564b2a3bea1
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 16fa246472221eec453d5ab6f98e007173b5ffd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607732"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 정리 연결 관리자
   DQS 정리 연결 관리자를 사용하면 패키지에서 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 서버에 연결할 수 있습니다. DQS 정리 변환은 DQS 정리 연결 관리자를 사용합니다.  

@@ -1,13 +1,11 @@
 ---
-title: 데이터를 탐색 | Microsoft Docs
+title: 데이터 탐색 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data navigation [ADO]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - searching data [ADO]
 - navigating data [ADO]
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71f8c010f389929bc86e9d0f8569ffa8035b373a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8af8b499430c7048588a32f0f580a641e4aa72b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272102"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606643"
 ---
 # <a name="navigating-through-data"></a>데이터 탐색
-**레코드 집합** 다양 한 메서드 및 속성 결과 데이터 집합 탐색을 지원 합니다. 이 샘플에는 몇 가지 시나리오를 통해 이동 하 여이 기능을 살펴볼 **레코드 집합** 개체입니다.  
+**레코드 집합** 결과 데이터 집합을 탐색 하려면 다양 한 속성과 메서드를 지원 합니다. 샘플을 사용 하 여 몇 가지 시나리오를 안내 하 여이 기능을 살펴봅니다 **레코드 집합** 개체입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlps
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 395eb782b93042a3edaf5be464748b88f9964083
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600712"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,11 +69,11 @@ sqlps
  **-**  
  **-Command-** 는 **sqlps** 유틸리티가 표준 입력으로부터 입력을 읽도록 지정합니다.  
   
- *script_block* [ **-args***argument_array* ]  
+ *script_block* [ **-args**_인수\_배열_ ]  
  실행할 PowerShell 명령 블록을 지정합니다. 명령 블록은 중괄호 {}로 묶어야 합니다. *Script_block* 은 **sqlps** 유틸리티가 **PowerShell** 또는 다른 **sqlps** 유틸리티 세션에서 호출된 경우에만 지정할 수 있습니다. *argument_array* 는 *script_block*의 PowerShell 명령에 대한 인수를 포함하는 PowerShell 변수 배열입니다.  
   
  *string* [ *command_parameters* ]  
- 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. **"&{***command***}"** 형식을 사용합니다. 큰따옴표는 문자열을 나타내며 호출 연산자(&)는 **sqlps** 유틸리티가 명령을 실행하도록 합니다.  
+ 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. **"&{**_command_**}"** 형식을 사용합니다. 큰따옴표는 문자열을 나타내며 호출 연산자(&)는 **sqlps** 유틸리티가 명령을 실행하도록 합니다.  
   
  [ **-?** | **-Help** ]  
  **sqlps** 유틸리티 옵션의 구문 요약 정보를 표시합니다.  

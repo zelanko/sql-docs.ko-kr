@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6d8024a302d76ad01aa3044c675fc2a42c7c7ed
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 09ba18e3680579c7a09e4f51f3bfe3e083dda697
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278152"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611491"
 ---
-# <a name="fetchcomplete-event-ado"></a>FetchComplete 이벤트 (ADO)
-**FetchComplete** 이벤트 긴 비동기 작업의 모든 레코드에 검색 된 후 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+# <a name="fetchcomplete-event-ado"></a>FetchComplete 이벤트(ADO)
+**FetchComplete** 긴 비동기 작업의 모든 레코드에 검색 된 후 이벤트 라고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,18 +36,18 @@ FetchComplete pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>매개 변수  
  *pError*  
- [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. 경우에 발생 한 오류를 설명 하는 것의 값 **adStatus** 은 **adStatusErrorsOccurred**; 설정 되지 않은 그렇지 않은 경우.  
+ [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. 경우에 발생 한 오류에 설명 합니다 값 **adStatus** 됩니다 **adStatusErrorsOccurred**; 설정 되지 않은 고, 그렇지 합니다.  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다. 이 이벤트를 호출할 때이로 설정 된 **adStatusOK** 이벤트를 발생 시킨 작업에 성공 하면 또는 **adStatusErrorsOccurred** 작업이 실패 합니다.  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다. 이 매개 변수를로이 이벤트를 호출 하면 **adStatusOK** 이벤트를 발생 시킨 작업에 성공, 또는 **adStatusErrorsOccurred** 작업이 실패 합니다.  
   
- 이 이벤트를 반환 하기 전에이 매개 변수를 설정 **adStatusUnwantedEvent** 알림 메시지가 방지 하기 위해 합니다.  
+ 이 이벤트는 반환 하기 전에이 매개 변수를 설정 **adStatusUnwantedEvent** 후속 알림을 방지 하 합니다.  
   
  *pRecordset*  
- A **레코드 집합** 개체입니다. 레코드를 검색 된 개체입니다.  
+ A **레코드 집합** 개체입니다. 검색 된 레코드는 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하도록 **FetchComplete** 와 Microsoft Visual Basic, Visual Basic 6.0 이상이 필요 합니다.  
+ 사용 하도록 **FetchComplete** with Microsoft Visual Basic, Visual Basic 6.0 이상가 필요 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

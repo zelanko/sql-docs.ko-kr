@@ -5,25 +5,22 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42f181035f2fffff06540d060ed4a179ab88f806
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598171"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
 
@@ -50,7 +47,7 @@ ms.locfileid: "35329107"
 ##  <a name="Staging"></a> 데이터 준비  
  다음 표에서 각 보안 개체에는 이름의 일부로 "이름"이 있습니다. 이것은 엔터티를 만들 때 지정된 준비 테이블의 이름을 나타냅니다. 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
   
-|작업|보안 개체|사용 권한|  
+|작업|보안 개체|Permissions|  
 |------------|----------------|-----------------|  
 |리프 멤버 및 해당 특성을 만들고, 업데이트하고, 삭제합니다.|stg.name_Leaf|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |리프 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Leaf|CREATE 문을 실행하기 전에|  
@@ -64,7 +61,7 @@ ms.locfileid: "35329107"
   
 ##  <a name="rules"></a> 비즈니스 규칙에 대해 데이터 유효성 검사  
   
-|작업|보안 개체|사용 권한|  
+|작업|보안 개체|Permissions|  
 |------------|---------------|-----------------|  
 |비즈니스 규칙에 대해 데이터 버전의 유효성을 검사합니다.|mdm.udpValidateModel|CREATE 문을 실행하기 전에|  
   
@@ -72,7 +69,7 @@ ms.locfileid: "35329107"
   
 ##  <a name="Versions"></a> 버전 삭제  
   
-|작업|보안 개체|사용 권한|  
+|작업|보안 개체|Permissions|  
 |------------|----------------|-----------------|  
 |삭제할 버전의 ID 확인|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |모델의 버전 삭제|mdm.udpVersionDelete|CREATE 문을 실행하기 전에|  
@@ -81,7 +78,7 @@ ms.locfileid: "35329107"
   
 ##  <a name="Hierarchy"></a> 계층 멤버 권한 즉시 적용  
   
-|작업|보안 개체|사용 권한|  
+|작업|보안 개체|Permissions|  
 |------------|----------------|-----------------|  
 |멤버 권한 즉시 적용|mdm.udpSecurityMemberProcessRebuildModel|CREATE 문을 실행하기 전에|  
   
