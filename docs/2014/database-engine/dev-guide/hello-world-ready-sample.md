@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc2ba0e196fa2440152fe1bd7415feeeb6f4e079
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079643"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 예제
   Hello World Ready 예제는 간단한 World Ready CLR(공용 언어 런타임) 통합 기반 저장 프로시저 만들기, 배포 및 테스트와 관련된 기본 작업을 보여 줍니다. World Ready 구성 요소는 구성 요소의 원본 코드를 변경할 필요 없이 세계 곳곳의 다양한 시장에서 다양한 언어로 쉽게 지역화할 수 있습니다. 또한 이 예제에서는 저장 프로시저에 의해 동적으로 생성되고 클라이언트로 반환되는 레코드 및 출력 매개 변수를 통해 데이터를 반환하는 방법을 보여 줍니다. 이 예제는 Hello World 예제와 거의 동일하지만 훨씬 더 쉽고 안전하게 이 응용 프로그램을 지역화할 수 있습니다. 지역화된 텍스트를 변경하려면 다음을 수행해야 합니다.  

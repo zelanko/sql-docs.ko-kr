@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], dropping
 - index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4b7236dfc8a522561e3d9386a760f0493edf4ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d04911b52239ff9accc5d69ff1e1ddd21e5d50b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093453"
 ---
 # <a name="delete-an-index"></a>인덱스 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스를 삭제하는 방법에 대해 설명합니다.  

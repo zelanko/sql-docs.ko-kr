@@ -1,13 +1,11 @@
 ---
-title: 메서드 및 속성 예제 (VB) Index seek | Microsoft Docs
+title: Seek 메서드 및 인덱스 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661471"
 ---
-# <a name="seek-method-and-index-property-example-vb"></a>메서드 및 속성 예제 (VB) 인덱스 검색
-사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성과 함께 주어진 ***직원 ID***, 찾을 수 직원의 이름에는 ***직원*** Nwind.mdb 데이터베이스의 테이블입니다.  
+# <a name="seek-method-and-index-property-example-vb"></a>Seek 메서드 및 인덱스 속성 예제 (VB)
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 와 함께에서 속성을 지정 ***직원 ID***를 찾습니다 직원의 이름에는 ***직원*** Nwind.mdb 데이터베이스의 테이블입니다.  
   
 ```  
 'BeginSeekVB  
@@ -120,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Index 속성](../../../ado/reference/ado-api/index-property.md)   
+ [인덱스 속성](../../../ado/reference/ado-api/index-property.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], design and implementation
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e68cb306cf99d2765b4859382b0396d107a767c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f954925cc33bccb5706c5609d8d45359282fd159
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185523"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>BLOB(Binary Large Object) 데이터(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하면 데이터베이스 또는 원격 저장 장치에 파일 및 문서를 저장할 수 있습니다.  

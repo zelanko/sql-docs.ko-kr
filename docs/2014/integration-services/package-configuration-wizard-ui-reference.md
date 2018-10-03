@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160383"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>패키지 구성 마법사 UI 참조
   **패키지 구성 마법사** 를 사용하여 런타임에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 및 패키지 개체의 속성을 업데이트하는 구성을 만들 수 있습니다. 이 마법사는 **패키지 구성 도우미** 대화 상자에서 기존 구성을 수정하거나 새 구성을 추가하는 경우 실행됩니다. **패키지 구성 도우미** 대화 상자를 열려면 **의** SSIS **메뉴에서** 패키지 구성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]을 선택합니다. 자세한 내용은 [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)를 참조하세요.  

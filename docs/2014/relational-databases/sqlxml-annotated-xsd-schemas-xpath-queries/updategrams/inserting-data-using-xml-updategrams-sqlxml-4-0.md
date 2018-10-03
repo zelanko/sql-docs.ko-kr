@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -34,16 +32,15 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab1cdf64c965574d4b12716a3bccc80b2969d61a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95989f956f01039cec5bbbc3ab61417981a094f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053303"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
   Updategram은 레코드 인스턴스가 표시 되는 경우 삽입 작업을 나타냅니다 합니다  **\<후 >** 블록 아니라 해당  **\<전에 >** 블록입니다. Updategram은 레코드를 삽입 하는 경우에  **\<후 >** 데이터베이스로 블록입니다.  

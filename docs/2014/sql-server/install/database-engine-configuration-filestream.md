@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], about FILESTREAM
 ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82bf651e6242be7e1835caac7fd7d3419b51cf31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 190a6ce588ed40ab7cc9181476ca3730eeef34b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187700"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112973"
 ---
 # <a name="database-engine-configuration---filestream"></a>데이터베이스 엔진 구성 - Filestream
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 `varbinary(max)` BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  

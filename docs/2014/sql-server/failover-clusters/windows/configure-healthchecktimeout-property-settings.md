@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fea49e73ad3a29606f8642ca144ffd71033e490c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186449"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
   HealthCheckTimeout 설정은 SQL Server 리소스 DLL에서 반환 된 정보에 대 한 대기 해야 하는 밀리초 단위로 시간 길이 지정 하는 합니다 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 보고 하기 전에 저장 프로시저를 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI)으로 응답 하지 않습니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  

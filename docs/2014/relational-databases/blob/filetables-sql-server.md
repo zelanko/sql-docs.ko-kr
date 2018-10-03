@@ -5,8 +5,6 @@ ms.date: 07/06/2016
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], overview
@@ -17,12 +15,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3045c125db70625a6c706f14a53cb30333633f24
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9064fc889b784d94d333c8c488e07ae7785cc558
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188205"
 ---
 # <a name="filetables-sql-server"></a>FileTable(SQL Server)
   FileTable 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 파일 데이터에 대해 Windows 파일 네임스페이스 및 Windows 응용 프로그램과의 호환성을 지원합니다. FileTable을 통해 응용 프로그램이 해당 저장소 및 데이터 관리 구성 요소를 통합할 수 있으며, 구조화되지 않은 데이터 및 메타데이터에 대한 통합 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스(전체 텍스트 검색 및 의미 체계 검색 포함)가 제공됩니다.  

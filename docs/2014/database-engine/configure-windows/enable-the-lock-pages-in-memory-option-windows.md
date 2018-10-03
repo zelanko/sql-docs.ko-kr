@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64b922b5181ddb5fdab24b232864671d60457a97
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e331169f7477bfcb4a5ae926290664da50897b38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184963"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
   이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다.  

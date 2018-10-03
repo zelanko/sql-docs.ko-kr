@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e30e89de74cfd031229effc1bebedb5b32c896e1
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 19844f7fccb9e2578169f383b59bb34099de78a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083845"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166333"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>역할 만들기, 삭제 또는 수정(Management Studio)
   Reporting Services에서는 보고서 서버에 대한 액세스 수준을 정의한 미리 정의된 역할을 제공합니다. 보고서 서버에 액세스해야 하는 사용자나 그룹은 수행할 수 있는 태스크를 설명하는 역할을 통해 액세스합니다. 역할은 보고서 서버 전체에 대해 정의됩니다. 보고서 서버의 특정 부분에 대한 역할 정의를 다르게 하거나 환경에 따라 다르게 역할을 사용하도록 지정할 수 없습니다.  

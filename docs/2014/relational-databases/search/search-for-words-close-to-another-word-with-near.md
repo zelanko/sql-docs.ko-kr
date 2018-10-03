@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179730"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149023"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
   [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 함수에서 근접 단어(NEAR)를 사용하여 단어나 구를 검색할 수 있습니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 단어나 구를 순서에 관계 없이 검색하거나 지정한 순서로 검색할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 모두 지원 [일반 근접 단어](#Generic_NEAR)에 이제 사용 되지 및 [사용자 지정 근접 단어](#Custom_NEAR)의 새로운 기능인 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
@@ -92,7 +89,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>사용자 지정 근접 단어와 기타 단어 결합  
- 사용자 지정 근접 단어를 일부 다른 단어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 예를 들어:  
+ 사용자 지정 근접 단어를 일부 다른 단어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
   
@@ -177,7 +174,7 @@ GO
  자세한 내용은 이 항목의 뒷부분에 나오는 "[근접 검색에 대한 추가 고려 사항](#Additional_Considerations)"을 참조하십시오.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>일반 근접 단어와 기타 단어 결합  
- AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 일반 근접 단어를 다른 일반 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 예를 들어:  
+ AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 일반 근접 단어를 다른 일반 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  

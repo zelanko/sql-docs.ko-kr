@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - EQUAL_AREAS method
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187055"
 ---
 # <a name="discretization-methods-data-mining"></a>분할 방법(데이터 마이닝)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 마이닝 모델을 만드는 데 사용되는 일부 알고리즘은 특정 내용 유형이 있어야만 올바로 실행될 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 연속 열을 입력으로 사용할 수 없고 연속 값을 예측할 수 없습니다. 또한 일부 열에는 포함된 값이 너무 많아 알고리즘에서 모델을 만들기 위한 데이터 패턴을 쉽게 식별할 수 없습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 마이닝 모델을 만드는 데 사용되는 일부 알고리즘은 특정 내용 유형이 있어야만 올바로 실행될 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 연속 열을 입력으로 사용할 수 없고 연속 값을 예측할 수 없습니다. 또한 일부 열에는 포함된 값이 너무 많아 알고리즘에서 모델을 만들기 위한 데이터 패턴을 쉽게 식별할 수 없습니다.  
   
  이 경우 알고리즘을 사용하여 마이닝 모델을 생성할 수 있도록 열의 데이터를 분할할 수 있습니다. *분할* 은 가능한 상태의 수를 제한하기 위해 값을 버킷에 넣는 프로세스로서, 버킷 자체는 정렬된 불연속 값으로 처리됩니다. 숫자 및 문자열 열을 모두 분할할 수 있습니다.  
   

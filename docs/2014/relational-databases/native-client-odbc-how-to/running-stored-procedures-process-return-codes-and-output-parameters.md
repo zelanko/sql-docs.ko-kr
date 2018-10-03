@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 19a151435ec23ae2e445d80e510c5bca7b066e04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118720"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>반환 코드 및 출력 매개 변수 처리(ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 서버의 마지막 패킷으로 전송 되 고 때까지 응용 프로그램을 사용할 수 없는 반환 코드 및 출력 매개 변수를 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA를 반환 합니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults SQL_NO_DATA가 반환 될 때까지를 다음 결과로 이동 합니다.  

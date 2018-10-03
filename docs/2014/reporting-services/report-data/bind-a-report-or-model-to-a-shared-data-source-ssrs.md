@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1845c0e47462d2788f58d36914ad29d7f56318ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5f45b4f453780b1c3a0f87d6ec898650ffd8037
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100353"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>보고서 또는 모델을 공유 데이터 원본에 바인딩(SSRS)
   보고서나 모델을 테스트 서버에서 프로덕션 서버로 이동할 때와 같이 로컬 컴퓨터에 파일을 저장한 다음 이 파일을 다른 보고서 서버로 업로드해야 하는 경우가 있습니다. 보고서나 모델을 새 서버로 업로드하는 경우 새 보고서 서버에 저장된 공유 데이터 원본에 다시 바인딩해야 합니다. 보고서나 모델을 다시 바인딩하지 않으면 새 보고서 서버에서 액세스할 때 제대로 작동하지 않습니다.  

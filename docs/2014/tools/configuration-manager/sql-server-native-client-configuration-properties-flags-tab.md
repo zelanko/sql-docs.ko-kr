@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 59af121d-c8b9-4faa-91a1-b664f2c9b441
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4eb4544d79b0863ac43de992123945ec804fbf7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee61cc969c3510c71f975fb8f0934b835a55baa3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182903"
 ---
 # <a name="sql-server-native-client-configuration-properties-flags-tab"></a>SQL Server Native Client 구성 속성(플래그 탭)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 라이브러리 파일에서 제공하는 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버와 통신합니다. 이 페이지에서 SSL(Secure Sockets Layer)을 사용하여 암호화된 연결을 요청하도록 클라이언트 컴퓨터를 구성할 수 있습니다. 암호화된 연결을 설정할 수 없으면 연결되지 않습니다.  

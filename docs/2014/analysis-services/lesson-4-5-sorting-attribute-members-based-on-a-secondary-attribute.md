@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f199238c09be6409f9d8fe9266acd547738a0076
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049743"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>보조 특성을 기준으로 특성 멤버 정렬
   3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  

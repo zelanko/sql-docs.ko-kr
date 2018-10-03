@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b75bed7642e2075b0281cb9f19502ea2bb624b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177293"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>태스크 14: 제어 흐름에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행
   데이터를 MDS의 준비 테이블에 로드한 다음에는 준비 테이블의 데이터를 MDS 데이터베이스의 적합한 테이블로 로드하기 위해 해당 테이블과 연관된 저장 프로시저를 실행합니다. 이 저장 프로시저에는 전달해야 하는 두 개의 필수 매개 변수(LogFlag 및 VersionName)가 있습니다. LogFlag는 준비 프로세스 중 트랜잭션을 기록할지 여부를 지정하고, VersionName은 모델의 버전을 나타냅니다. 참조 [준비 된 저장 프로시저](http://msdn.microsoft.com/library/hh231028.aspx) 자세한 세부 정보에 대 한 항목입니다.  
@@ -40,7 +37,7 @@ ms.locfileid: "37260095"
   
 5.  사용 하는 **변수** 창에서 다음 설정을 사용 하 여 두 개의 새로운 변수를 추가 합니다. 표시 되지 않으면 합니다 **변수** 창에서 클릭 **SSIS** 메뉴를 클릭 **변수**합니다.  
   
-    |속성|데이터 형식|값|  
+    |이름|데이터 형식|값|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
     |VersionName|String|VERSION_1|  

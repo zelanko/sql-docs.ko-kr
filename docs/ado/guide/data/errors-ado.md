@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf945b2e206abd2a07b2fd4af2c67170f7742910
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713831"
 ---
-# <a name="errors-ado"></a>오류 (ADO)
-ADO 개체를 관련 된 모든 작업 공급자 오류가 하나 이상 생성할 수 있습니다. 하나 이상의 오류가 발생할 때마다 **오류** 개체에 배치 되는 **오류** 의 컬렉션은 **연결** 개체입니다. ADO 응용 프로그램에서 경고 및 오류 처리에 대 한 세부 정보를 참조 하십시오. [의 오류 처리](../../../ado/guide/data/error-handling.md)합니다.  
+# <a name="errors-ado"></a>오류(ADO)
+ADO 개체와 관련 된 모든 작업이 하나 이상의 공급자 오류를 생성할 수 있습니다. 하나 이상의 오류가 발생할 때마다 **오류** 개체에 배치 됩니다 합니다 **오류** 의 컬렉션을 **연결** 개체입니다. ADO 응용 프로그램에서 경고 및 오류를 처리 하는 방법에 대 한 자세한 내용은 참조 하세요 [오류 처리](../../../ado/guide/data/error-handling.md)합니다.  
   
- 응용 프로그램 오류는 별도 메커니즘에 의해 발생할 수 있습니다. 예를 들어 Visual Basic의 경우에 **Err** 개체 응용 프로그램 수준 오류에 포함 됩니다.
+ 별도 메커니즘을 통해 응용 프로그램 오류를 발생할 수 있습니다. 예를 들어, Visual Basic의 경우에 **Err** 개체는 응용 프로그램 수준 오류를 포함 합니다.

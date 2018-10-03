@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_sscanf_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 82aedab7b83cadd43ac649837ef848b8a8471613
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751681"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

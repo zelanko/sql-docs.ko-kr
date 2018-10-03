@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bee0273ba256ea6861b4259d48e377528c5e4eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16269f5c0d7b3d64c9639862995dee44146efb9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188703"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>메모, 도형 또는 기타 개체 기능은 브라우저에서 지원되지 않으며 표시되지 않거나 부분적으로만 표시될 수 있습니다.
   이 오류는 PowerPivot 필드 목록에서 PowerPivot 통합 문서에 슬라이서를 추가할 때 발생합니다.  

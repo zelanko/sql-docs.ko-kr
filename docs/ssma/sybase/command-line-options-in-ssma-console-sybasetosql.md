@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 53836564e705a5089d6ffc60586a1c90ff5021ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658161"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 콘솔의 명령줄 옵션(SybaseToSQL)
 Microsoft는 강력한 실행 하 고 SSMA 작업을 제어 하는 명령줄 옵션 집합을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  

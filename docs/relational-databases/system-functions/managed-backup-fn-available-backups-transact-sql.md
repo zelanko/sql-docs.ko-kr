@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smart_admin.fn_available_backups
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_available_backups
 - smart_admin.fn_available_backups
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040361"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769449"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

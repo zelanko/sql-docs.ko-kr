@@ -1,29 +1,26 @@
 ---
-title: XSD 주석 (SQLXML 4.0) | Microsoft Docs
+title: XSD 주석 (SQLXML 4.0) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, annotations listed
 - XSD schemas [SQLXML], annotations
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eeb6f6c72d6d453aaa2d656e725fd2b8ee5d9e45
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f873df18b11c3f1eef784e03f43a0cbcb0c9fcfc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096443"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 주석(SQLXML 4.0)
   다음 표에서는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 도입된 XSD 주석과 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에 도입된 XDR 주석을 비교하여 보여 줍니다.  

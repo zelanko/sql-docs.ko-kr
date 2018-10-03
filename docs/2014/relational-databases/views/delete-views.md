@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dropping views
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - views [SQL Server], deleting
 - removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9be8e2cbcb470078a6d41062d2d812d8164317dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e52ab35b0f75f80a6117995a353b66c320a5294
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085593"
 ---
 # <a name="delete-views"></a>뷰 삭제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 뷰를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  

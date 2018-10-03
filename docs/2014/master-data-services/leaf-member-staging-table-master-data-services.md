@@ -4,27 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - members staging table [Master Data Services]
 - database [Master Data Services], members staging table
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41c59703917460b06b3457cd013309f13e4b1288
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80aae166425e5e2d93a1f16ea296f3288eb25125
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184830"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185073"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>리프 멤버 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 리프 멤버 준비 테이블(stg.name_Leaf)을 사용하여 리프 멤버를 만들고, 업데이트하고, 비활성화하고, 삭제할 수 있습니다. 또한 리프 멤버에 대한 특성 값을 업데이트하기 위해 사용할 수도 있습니다.  

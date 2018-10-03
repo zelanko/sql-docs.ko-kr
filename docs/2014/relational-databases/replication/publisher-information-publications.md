@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 413478842bce1044749f055e893f73813dbb8df9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a1725843b5d893ea8ef6f884252a4b2f5cdd6d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152669"
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
   **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  

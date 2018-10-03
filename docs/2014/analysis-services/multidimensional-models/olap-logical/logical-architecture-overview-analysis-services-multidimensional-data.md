@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091453"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
   Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로드 및 쿼리 하는 통합 문서 내부의 Excel 또는 PowerPivot 데이터 모델에 사용 되는 SharePoint 용 powerpivot 설치 된 Analysis Services의 인스턴스를 가리킵니다.  

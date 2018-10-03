@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28c553c49a658be1882b48cc0b18a39a21b607ad
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 848034e40a4b3a7c98cd59eb7204c7f00b147b67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827391"
 ---
-# <a name="nextrecordset-method-example-vb"></a>NextRecordset 메서드 예제 (VB)
-사용 하 여이 예제는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드를 세 개의 개별 이루어진 복합 명령문을 사용 하는 레코드 집합의 데이터를 볼 **선택** 문.  
+# <a name="nextrecordset-method-example-vb"></a>NextRecordset 메서드 예제(VB)
+이 예제에서는 합니다 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 3 개의 별도 이루어진 복합 명령문을 사용 하는 레코드 집합의 데이터를 보는 방법 **선택** 문입니다.  
   
 ```  
 'BeginNextRecordsetVB  

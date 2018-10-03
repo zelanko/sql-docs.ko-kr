@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.condition.f1
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b64a97b0719f6040e1d14e4ad398bc29855eaaf
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 61aeebb9b0a3fa815d39d57fc9bcf536a14324de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085243"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지
   이 대화 상자를 사용하여 정책 기반 관리 조건을 만들거나 변경할 수 있습니다. 조건은 패싯과 관련하여 정책 기반 관리로 관리되는 대상의 허용되는 상태 집합을 지정하는 부울 식입니다. **식/필드** 상자에서 선택할 수 있는 속성은 사용되는 패싯에 따라 달라집니다. 조건과 패싯 및 정책 간의 관계는 [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)를 참조하세요.  

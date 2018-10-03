@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04313bde94237619abc90796e4c5ed9ec7630b5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfaad106f7d2671dad24de87c64e02859b021769
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138292"
 ---
 # <a name="sql-server-profiler"></a>SQL Server 프로파일러
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 풍부한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  

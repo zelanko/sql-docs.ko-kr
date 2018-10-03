@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6602ceccaf574827dfc49e4a90cd84c9422522b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159493"
 ---
 # <a name="view-event-session-data"></a>이벤트 세션 데이터 보기
   이 항목에서는 디스플레이 사용자 인터페이스를 사용하여 확장 이벤트 데이터를 확인하고 분석하는 방법에 대해 설명합니다.  

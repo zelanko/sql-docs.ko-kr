@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff8eccaf0e1c13c63d73eff20e7415c6872c967b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063093"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  

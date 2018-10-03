@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258779"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186703"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
   기본적으로 데이터를 테이블로 가져올 때 **bcp** 명령 및 BULK INSERT 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다. 예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다. **bcp** 명령 및 BULK INSERT 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.  

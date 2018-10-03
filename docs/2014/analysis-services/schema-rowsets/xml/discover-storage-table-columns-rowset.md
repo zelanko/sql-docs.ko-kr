@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 240230784860e9484ebc03ba6740eaf5d56387fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089073"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 행 집합
   SharePoint 또는 테이블 형식 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 수준 정보를 제공합니다.  
@@ -32,9 +29,9 @@ ms.locfileid: "37153154"
   
 |**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|예|테이블이 포함된 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|예|테이블이 포함된 큐브 또는 모델을 지정합니다.<br /><br /> `DISCOVER_STORAGE_TABLES` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
-|`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|예|측정값 그룹의 이름입니다.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|사용자 계정 컨트롤|테이블이 포함된 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|사용자 계정 컨트롤|테이블이 포함된 큐브 또는 모델을 지정합니다.<br /><br /> `DISCOVER_STORAGE_TABLES` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
+|`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|사용자 계정 컨트롤|측정값 그룹의 이름입니다.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||차원의 이름입니다.|  
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||특성의 이름입니다.|  
 |`TABLE_ID`|`DBTYPE_WSTR`||테이블 ID입니다.|  

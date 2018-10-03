@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e63241cfc502fc5b052af3b726b3f3b302a2587f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae1565a2690566f290d76b27ad0e8052072691ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266656"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053193"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Min 함수(보고서 작성기 및 SSRS)
   지정된 범위의 컨텍스트에서 식으로 지정되는 Null이 아닌 모든 숫자 값의 최소값을 반환합니다.  

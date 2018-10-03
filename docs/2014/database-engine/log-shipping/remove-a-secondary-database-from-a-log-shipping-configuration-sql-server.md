@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting secondary databases
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - secondary data files [SQL Server], removing
 - log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8f73209be5c4c99ce5ca10d454d8b1a36e382d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157843"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에서 보조 데이터베이스 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 로그 전달 보조 데이터베이스를 제거하는 방법에 대해 설명합니다.  

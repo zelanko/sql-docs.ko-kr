@@ -1,32 +1,29 @@
 ---
-title: DROP TABLE 명령을 | Microsoft Docs
+title: DROP TABLE 명령은 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - drop table command [ODBC]
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 657f175f52f7a098a2c026cf384fdf1b77f43484
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852301"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 명령
-데이터 소스와 지정 된 데이터베이스에서 테이블을 제거 하 고 디스크에서 삭제 합니다.  
+데이터 소스를 사용 하 여 지정 된 데이터베이스에서 테이블을 제거 하 고 디스크에서 삭제 합니다.  
   
- Visual FoxPro ODBC 드라이버는이 명령에 대 한 네이티브 Visual FoxPro 언어 구문을 지원합니다. 드라이버 관련 정보는 주의 참조 하세요.  
+ Visual FoxPro ODBC 드라이버는이 명령에 대 한 네이티브 Visual FoxPro 언어 구문을 지원합니다. 드라이버 관련 정보에 대 한 설명을 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,21 +34,21 @@ DROP TABLE TableName | FileName | ?
   
 ## <a name="settings"></a>설정  
  *TableName*  
- 디스크에서 삭제 하 고 데이터 소스와 지정 된 데이터베이스에서 제거 하는 테이블을 지정 합니다.  
+ 테이블 데이터 소스를 사용 하 여 지정 된 데이터베이스에서 제거 하 고 디스크에서 삭제 되도록 지정 합니다.  
   
  *FileName*  
- 디스크에서 삭제 하는 무료 테이블을 지정 합니다.  
+ 디스크에서 삭제 하려는 사용 가능한 테이블을 지정 합니다.  
   
  ?  
- 디스크에서 삭제 하 고 데이터 소스와 지정 된 데이터베이스에서 제거 하는 테이블을 선택할 수 있는 제거 대화 상자를 표시 합니다.  
+ 데이터 소스를 사용 하 여 지정 된 데이터베이스에서 제거 하 고 디스크에서 삭제 되도록 테이블을 선택할 수 있는 제거 대화 상자를 표시 합니다.  
   
-## <a name="remarks"></a>주의  
- DROP TABLE이 실행 되 면 모든 기본 인덱스, 기본값 및 테이블에 연결 된 유효성 검사 규칙도 제거 됩니다. DROP TABLE를 규칙 포함 하는 경우 데이터 소스와 지정 된 데이터베이스 또는 제거 하 고 해당 테이블과 연결 된 관계의 다른 테이블을도 영향을 줍니다. 이 테이블은 데이터베이스에서 제거 하는 경우는 규칙 및 관계가 유효 구분 됩니다.  
+## <a name="remarks"></a>Remarks  
+ DROP TABLE을 실행 하면 모든 기본 인덱스, 기본값 및 테이블에 연결 된 유효성 검사 규칙도 제거 됩니다. DROP TABLE은 해당 테이블에는 규칙이 있는 경우 데이터 소스를 사용 하 여 지정 된 데이터베이스를 제거 하 고 테이블에 연결 된 관계의 다른 테이블을도 영향을 줍니다. 데이터베이스에서 테이블 제거 되 면 규칙 및 관계와 유효한 없습니다.  
   
 ## <a name="driver-remarks"></a>드라이버 설명  
- 응용 프로그램의 데이터 원본에는 ODBC SQL 문을 DROP TABLE 보내면 Visual FoxPro ODBC 드라이버는 다음 표에 표시 된 구문을 사용 하 여 시각적 FoxProDROP TABLE 명령의 명령을 변환 합니다.  
+ 응용 프로그램의 데이터 원본에는 ODBC SQL 문을 DROP TABLE 보내면 Visual FoxPro ODBC 드라이버 명령은 다음 표에 표시 된 구문을 사용 하 여 Visual FoxProDROP 테이블 명령으로 변환 합니다.  
   
 |ODBC 구문|데이터 원본|Visual FoxPro 구문|  
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE *기본 테이블 이름*|데이터베이스 (.dbc 파일)|테이블 제거 *TableName* 삭제|  
-||사용 가능한 테이블 (.dbf 파일)의 디렉터리|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|
+||사용 가능한 테이블 (.dbf 파일)의 디렉터리|지울 *dbfName*<br /><br /> 지울 *cdxName*<br /><br /> 지울 *fptName*|

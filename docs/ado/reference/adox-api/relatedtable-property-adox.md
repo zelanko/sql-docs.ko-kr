@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,18 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedTable property [ADOX]
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8482cd8694058b1f3e4a29d0c1aed25640515d0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 31dba996b302f94a629956c20b50832c85c7909a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784431"
 ---
-# <a name="relatedtable-property-adox"></a>RelatedTable 속성 (ADOX)
+# <a name="relatedtable-property-adox"></a>RelatedTable 속성(ADOX)
 관련된 테이블의 이름을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
@@ -39,7 +36,7 @@ ms.locfileid: "35286809"
 ## <a name="remarks"></a>Remarks  
  기본값은 빈 문자열("")입니다.  
   
- 다음 외래 키가 있으면 **RelatedTable** 키가 포함 된 테이블의 이름입니다.  
+ 키가 외래 키를 한 다음 **RelatedTable** 키가 포함 된 테이블의 이름입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274659"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183483"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services와 인터넷 정보 서비스 함께 설치(SSRS 기본 모드)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](SSRS)와 IIS(인터넷 정보 서비스)를 같은 컴퓨터에 설치하고 실행할 수 있습니다. 사용하는 IIS 버전에 따라 해결해야 하는 상호 운용성 문제가 결정됩니다.  
@@ -32,7 +29,7 @@ ms.locfileid: "37274659"
   
 |IIS 버전|문제|Description|  
 |-----------------|------------|-----------------|  
-|IIS 6.0, 7.0, 8.0, 8.5|한 응용 프로그램을 대상으로 하는 요청이 다른 응용 프로그램에 받아들여집니다.<br /><br /> HTTP.SYS는 URL 예약에 대한 선행 규칙을 적용합니다. URL 예약이 다른 응용 프로그램의 URL 예약에 비해 약한 경우에는 가상 디렉터리 이름이 동일하며 포트 80을 함께 모니터링하는 응용 프로그램으로 전송된 요청이 의도한 대상에 도달하지 않을 수 있습니다.|상황에 따라 URL 예약 스키마의 다른 URL 끝점을 대체하는 등록된 끝점이 다른 응용 프로그램을 대상으로 하는 HTTP 요청을 받을 수 있습니다.<br /><br /> 보고서 서버 웹 서비스 및 보고서 관리자에 고유한 가상 디렉터리 이름을 사용하면 이러한 충돌이 발생하지 않도록 할 수 있습니다.<br /><br /> 이 시나리오에 대한 자세한 내용은 이 항목에 제공되어 있습니다.|  
+|IIS 6.0, 7.0, 8.0, 8.5|한 응용 프로그램을 대상으로 하는 요청이 다른 응용 프로그램에 받아들여집니다.<br /><br /> HTTP.SYS는 URL 예약에 대한 선행 규칙을 적용합니다. URL 예약이 다른 응용 프로그램의 URL 예약에 비해 약한 경우에는 가상 디렉터리 이름이 동일하며 포트 80을 함께 모니터링하는 응용 프로그램으로 전송된 요청이 의도한 대상에 도달하지 않을 수 있습니다.|상황에 따라 URL 예약 스키마의 다른 URL 엔드포인트를 대체하는 등록된 엔드포인트가 다른 응용 프로그램을 대상으로 하는 HTTP 요청을 받을 수 있습니다.<br /><br /> 보고서 서버 웹 서비스 및 보고서 관리자에 고유한 가상 디렉터리 이름을 사용하면 이러한 충돌이 발생하지 않도록 할 수 있습니다.<br /><br /> 이 시나리오에 대한 자세한 내용은 이 항목에 제공되어 있습니다.|  
   
 ## <a name="precedence-rules-for-url-reservations"></a>URL 예약에 대한 선행 규칙  
  IIS와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]간 상호 운용성 문제를 해결하려면 먼저 URL 예약 선행 규칙을 이해해야 합니다. 선행 규칙은 다음과 같이 일반화할 수 있습니다. 더 명시적으로 정의된 값이 있는 URL 예약이 해당 URL과 일치하는 요청을 가장 먼저 받습니다.  
@@ -50,8 +47,8 @@ ms.locfileid: "37274659"
 |http://123.234.345.456:80/reports|전송 되는 모든 요청을 받고 http://123.234.345.456/reports 또는 http://\<컴퓨터 이름 > / 경우 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있습니다.|  
 |http://+:80/reports|URL에 "reports" 가상 디렉터리 이름이 포함되어 있는 한 해당 컴퓨터에 대해 유효한 IP 주소 또는 호스트 이름으로 전송된 모든 요청을 받습니다.|  
 |http://123.234.345.456:80|지정 하는 모든 요청을 받습니다 http://123.234.345.456 또는 http://\<컴퓨터 이름 > 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있는 경우.|  
-|http://+:80|**모두 할당됨**에 매핑된 응용 프로그램 끝점에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
-|http://*:80|**모두 할당되지 않음**에 매핑된 응용 프로그램 끝점에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
+|http://+:80|**모두 할당됨**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
+|http://*:80|**모두 할당되지 않음**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
   
  'System.IO.FileLoadException: 파일이 다른 프로세스에서 사용되고 있으므로 프로세스에서 파일에 액세스할 수 없습니다 (예외가 발생한 HRESULT: 0x80070020)'.라는 오류 메시지가 표시되면 포트 충돌이 발생한 것입니다.  
   

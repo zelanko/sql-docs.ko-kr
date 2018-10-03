@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be402c290ef355f93147b7aa66d8055c054f52ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0560d4cc4b5aeaa0b96269e5ee1bbfe9c61e83c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118463"
 ---
 # <a name="expression-builder"></a>식 작성기
   **식 작성기** 대화 상자를 사용하여 변수를 나열하고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어에 포함된 함수, 유형 변환 및 연산자에 대한 참조를 기본적으로 제공하는 그래픽 사용자 인터페이스로 변수 값을 설정하는 식을 작성하거나 속성 식을 생성 및 편집할 수 있습니다.  

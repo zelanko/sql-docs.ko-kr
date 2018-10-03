@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8729cbeb075f31cd2b37a72aa97009f155eadd2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 015d961d2b6ae10e6594788707a6c3816062e357
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806969"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105923"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>쿼리를 프로젝트의 연결 정보로 연결
   쿼리를 연결 없이 만들었거나 특정 프로젝트에서 다른 프로젝트로 쿼리를 이동한 경우 해당 쿼리는 현재 프로젝트의 연결에 연결되지 않습니다.  

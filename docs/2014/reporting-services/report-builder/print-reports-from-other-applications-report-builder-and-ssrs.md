@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 380bebaa85da73108af8611ac537565dc5d91d00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b68fdf49527e83965a5c1a5c41ab185bdba0c463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278859"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185893"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>다른 응용 프로그램에서 보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 작성기는 다른 응용 프로그램에서 보고서를 쉽게 볼 수 있도록 내보내기 옵션을 제공합니다. `Export` 브라우저 또는 웹 기반 응용 프로그램에서 열면 보고서 위쪽에 표시 되는 보고서 도구 모음에서 사용할 수 있는 명령입니다. 보고서를 내보내면 다른 응용 프로그램에서 보고서가 표시됩니다. 예를 들어 보고서를 Excel로 내보내면 해당 보고서가 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]에서 열립니다. 응용 프로그램에 사용하려는 특정 인쇄 기능이 있는 경우에만 인쇄 목적으로 보고서를 내보내는 것이 좋습니다.  

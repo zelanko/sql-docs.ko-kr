@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 99ee6ff1b809612ed22d7a3b48532c8d0476a496
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56a0d3af834d19b1ec917d6f8c765c1e7755934f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146953"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 대상 사용자 지정 속성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], installing
 - SQL Server Installation Wizard, Report Server Installation Options page
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9afc4e179807d6cc10925d4fb4964cea857427d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185343"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 구성 옵션(SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **Reporting Services 구성** 페이지를 사용하여 보고서 서버의 설치 및 구성 방법을 지정할 수 있습니다. 사용 가능한 설치 옵션은 이전에 **기능 선택** 페이지에서 선택한 옵션과 보고서 서버 설치 시 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 로컬 인스턴스도 함께 설치하는지 여부에 따라 달라집니다.  

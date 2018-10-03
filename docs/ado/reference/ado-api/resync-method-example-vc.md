@@ -1,32 +1,29 @@
 ---
-title: 메서드 예제 (VC + +)를 다시 동기화 | Microsoft Docs
+title: Resync 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Resync method [ADO], VC++ example
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80a5e39daa31bd781fbeba0f2a3814fca05f5041
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: abd354021f589260304681ebc45634e7406e538d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649811"
 ---
-# <a name="resync-method-example-vc"></a>Resync 메서드 예제 (VC + +)
-사용 하 여 보여 주는이 예제는 [Resync](../../../ado/reference/ado-api/resync-method.md) 정적 레코드 집합에서 데이터를 새로 고치려면 메서드.  
+# <a name="resync-method-example-vc"></a>Resync 메서드 예제(VC++)
+이 예제에서는 합니다 [Resync](../../../ado/reference/ado-api/resync-method.md) 정적 레코드 집합에서 데이터 새로 고침 하는 방법.  
   
 ```  
 // Resync_Method_Sample.cpp  

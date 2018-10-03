@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c94cb6ed1092944fd19683e57d3f7b9265f495c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183360"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169023"
 ---
 # <a name="table-properties-ssas-tabular"></a>테이블 속성(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 테이블 속성에 대해 설명합니다. 여기에서 설명하는 테이블 속성은 원본에서 가져올 열을 지정할 수 있도록 하는 테이블 속성 편집 대화 상자의 테이블 속성과는 다릅니다.  

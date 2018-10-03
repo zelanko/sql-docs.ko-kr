@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80548c0ea7ba2b8bf8232a66daf709050f4cdc4f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185453"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
   유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 개별 인스턴스에 대한 사용 데이터, CPU 사용 기록, 파일 수준의 저장소 사용 세부 정보, 그리고 정책 임계값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 저장소 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  

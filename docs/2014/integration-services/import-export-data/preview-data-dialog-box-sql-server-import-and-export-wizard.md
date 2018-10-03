@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3e8996d2623fd8a3180646d354b46e6e06e6a9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a17a3d842b968f9edd0f4f226934c3644d3cb6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184983"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
   사용 합니다 **데이터 미리 보기** 쿼리를 대화 상자는는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 데이터 원본에 보내는 합니다. 또한 이 대화 상자를 사용하여 최대 200개의 샘플 데이터 행을 미리 볼 수 있습니다.  

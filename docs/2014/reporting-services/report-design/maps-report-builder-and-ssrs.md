@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
@@ -17,16 +15,15 @@ f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187963"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
   지리적 배경에 대해 비즈니스 데이터를 시각화하기 위해 보고서에 지도를 추가할 수 있습니다. 선택하는 지도 유형은 보고서에 나타낼 정보에 따라 다릅니다. 위치만 표시하는 지도, 지역의 세대 수에 따라 거품 크기가 달라지는 거품형 지도, 각 상점에서 이윤이 가장 높은 제품에 따라 표식 스타일이 달라지는 표식 지도 또는 상점 간 경로를 표시하는 선 지도 등을 추가할 수 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - status information [SQL Server], jobs
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, notification options
 - notifications [SQL Server], job status
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb89cfa76ee5b64634c8f5c35f8c1619a0185e0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7762daa362b73f981603f7d32a41b8084327e1f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185323"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 알림 옵션을 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업에 대한 알림을 운영자에게 전송할 수 있도록 하는 방법에 대해 설명합니다.  

@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 09/22/2018
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 78f1615e375dfeafbcf25a8b0466ed92fbcc16ea
-ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
+ms.openlocfilehash: dc525cfe16815b9c887f839aac98b1c0c360fc76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856891"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>(OracleToSQL) Oracle 용 SSMA의 새로운 기능
 이 문서에서는 Oracle 각 릴리스의 변경 내용에 대 한 SSMA를 나열 합니다.  

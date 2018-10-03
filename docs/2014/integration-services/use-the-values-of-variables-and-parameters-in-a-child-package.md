@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1c522a87bfd20608d1e42080ad9ff3d3ae10973
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055640"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>자식 패키지에서 변수 및 매개 변수의 값 사용
   이 절차에서는 부모 변수 구성 유형을 사용하는 패키지 구성을 만드는 방법에 대해 설명합니다. 이 구성 유형을 사용하여 부모 패키지에서 실행되는 자식 패키지가 부모 변수에 액세스하도록 설정할 수 있습니다.  

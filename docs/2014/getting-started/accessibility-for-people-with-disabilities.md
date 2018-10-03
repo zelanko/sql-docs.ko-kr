@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server documentation, accessibility features
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-caps.latest.revision: 32
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 089dd0a7c9ab492450865d849ab3c24bd4473ec3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b3b0c85dd8fc106edff636f5e217bf46e281b42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184453"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션
   [!INCLUDE[msCoName](../includes/msconame-md.md)]는 모든 사용자가 보다 편리하게 사용할 수 있는 제품과 서비스를 제공하기 위해 최선을 다하고 있습니다. 이 항목에서는 장애가 있는 사용자가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 제품군에 속하는 제품을 보다 쉽게 사용할 수 있도록 도와 주는 다음과 같은 기능, 제품 및 서비스에 대한 정보를 제공합니다.  

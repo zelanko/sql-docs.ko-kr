@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 43da85b3e7435bb3685090ae1f2e80830793b3f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec3d958d709b1b0307b4df9be8a3d05165d0a92a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150203"
 ---
 # <a name="item-level-tasks"></a>항목 수준의 태스크
   항목 수준 태스크는 보고서, 폴더, 보고서 모델, 리소스 또는 공유 데이터 원본과 관련된 사용 권한 모음입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 서버 사이트에 전체적으로 적용되는 시스템 수준 태스크도 있습니다. 자세한 내용은 [시스템 수준 태스크](tasks-and-permissions-system-level-tasks.md)를 참조하세요. 일반적인 사용 권한과 작업에 대 한 자세한 내용은 참조 하세요. [Tasks and Permissions](tasks-and-permissions.md)합니다.  

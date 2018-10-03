@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d3aecc41-4d79-49b2-a11c-7b2203fa79bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b828c70c0ca604277366cdff356f2e6e297a751c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185203"
 ---
 # <a name="display-the-query-window"></a>쿼리 창 표시
   여러 개의 쿼리 창을 열면 탭 문서 창으로 표시됩니다.  

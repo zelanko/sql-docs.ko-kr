@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 230294eb45aec198ba5fd0cde396749bd0897b14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39fdc04590f6a5656e902794f4965ef53f21bfad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154433"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>4단원: 오류 흐름 리디렉션 추가
   변환 프로세스에서 발생할 수 있는 오류를 처리하기 위해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 변환할 수 없는 데이터를 처리하는 방법을 구성 요소 단위 및 열 단위로 결정할 수 있습니다. 특정 열의 오류를 무시하거나 오류가 발생한 전체 행을 리디렉션하거나 또는 구성 요소 작동이 실패하도록 선택할 수 있습니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 모든 구성 요소는 오류 발생 시 작동이 실패하도록 구성되어 있습니다. 구성 요소 작동이 실패하면 이에 따라 패키지 실행이 실패하고 모든 후속 처리가 중지됩니다.  

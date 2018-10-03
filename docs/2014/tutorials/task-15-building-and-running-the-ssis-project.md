@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 844114cf513cf207aaefa2aa747d861c74368b80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b84614910a594c4496e1eba8b7c11cb2d5617d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050405"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>태스크 15: SSIS 프로젝트 작성 및 실행
   이 작업에서는 SSIS 프로젝트를 빌드하고 실행합니다. 64 비트 버전의 컴퓨터에 설치 하는 Excel 2010을 사용 하는 경우의 값을 설정 해야 **Run64BitRuntime** 하 **False** Excel 원본이 작동 하려면에 대 한 합니다.  

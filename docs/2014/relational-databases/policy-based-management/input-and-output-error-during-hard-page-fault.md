@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7c2ec7699102ff42443659592fc11f339da7d22e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e540ef6015fe002fad321620b34736a23434088d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049973"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
   이 규칙은 시스템 이벤트 로그에서 EventId 51을 검사합니다. 이 오류는 하드 페이지 폴트 중에 오류로 인해 발생합니다.  

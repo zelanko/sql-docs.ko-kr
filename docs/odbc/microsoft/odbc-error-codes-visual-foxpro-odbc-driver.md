@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error codes
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9ba3a447912b61b38fc8742cf9ac876c01f4197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904288"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605111"
 ---
-# <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 오류 코드 (Visual FoxPro ODBC 드라이버)
-다음 표에서 ODBC 오류 코드 SQLSTATE 값에 매핑된 Visual FoxPro 오류 코드를 나열 합니다. 매핑된 SQLSTATE 값에서 제공 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 및 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다. 때문에 다른 ODBC API의 다른 SQLSTATE 값 매핑된 **SQLExecDirect** 및 **SQLPrepare** Visual FoxPro 엔진에 액세스 하는 유일한 함수입니다.  
+# <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 오류 코드(Visual FoxPro ODBC 드라이버)
+다음 표에서 ODBC 오류 코드 SQLSTATE 값에 매핑된 Visual FoxPro 오류 코드를 나열 합니다. 매핑된 SQLSTATE 값을 가져오는 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 하 고 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다. 때문에 다른 SQLSTATE 값이 없는 다른 ODBC API에서 매핑됩니다 **SQLExecDirect** 하 고 **SQLPrepare** 은 Visual FoxPro 엔진에 액세스 하는 유일한 기능입니다.  
   
- ODBC 오류 코드에 대 한 자세한 내용은 참조 하십시오. [부록 a: ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)에 *ODBC Programmer's Reference*합니다.  
+ ODBC 오류 코드에 대 한 자세한 내용은 참조 하세요. [부록 a: ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)를 *ODBC 프로그래머 참조*합니다.  
   
 |SQLSTATE|Visual FoxPro 오류 코드|  
 |--------------|------------------------------|  

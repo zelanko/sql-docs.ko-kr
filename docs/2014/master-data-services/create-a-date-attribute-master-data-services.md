@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 87dba370e2bce35a1e1995269070821a424aae07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4eeebefcda3a1ecb542e33b2a4a59a46f302b303
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164904"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083743"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>날짜 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 날짜를 특성 값으로 입력할 수 있게 하려면 날짜 특성을 만듭니다.  

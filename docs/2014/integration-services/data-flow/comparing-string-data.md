@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c5c471942764076ac0c03044d1037c3600e83fc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100953"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
   문자열 비교는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 수행되는 여러 변환에서 중요한 부분이며, 변수의 식 및 속성 식 평가에도 사용됩니다. 예를 들어 정렬 변환에서는 데이터 집합의 값을 비교하여 데이터를 오름차순 또는 내림차순으로 정렬합니다.  

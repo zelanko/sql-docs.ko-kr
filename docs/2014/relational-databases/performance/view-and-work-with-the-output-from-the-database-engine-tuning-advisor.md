@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdb4e44e946ce4f46dc20d344693342162d81731
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116897"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
   데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)을 참조하세요.  

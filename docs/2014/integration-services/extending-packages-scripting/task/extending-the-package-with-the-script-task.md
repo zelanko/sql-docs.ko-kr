@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - scripts [Integration Services], about Script task with packages
 - SSIS Script task, about Script task
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b4fa549a03fd7f74baf98aa7aa489323da7b1ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50908fe5913a07760db26bcf039fd27eb6d062f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052603"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>스크립트 태스크를 사용하여 패키지 확장
   스크립트 태스크는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성되고 패키지 런타임에 컴파일 및 실행되는 사용자 지정 코드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 런타임 기능을 확장합니다. 스크립트 태스크를 사용하면 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 제공하는 태스크가 개발자의 요구 사항을 완전히 만족시키지 못하는 경우 사용자 지정 런타임을 손쉽게 개발할 수 있습니다. 스크립트 태스크에서는 필요한 모든 인프라 코드를 자동으로 작성하므로 개발자는 사용자 지정 처리에 필요한 코드에만 집중하면 됩니다.  
@@ -67,7 +64,7 @@ ms.locfileid: "37254555"
  [스크립트 태스크 예제](../../extending-packages-scripting-task-examples/script-task-examples.md)  
  스크립트 태스크의 가능한 용도 몇 가지를 보여 주는 간단한 예를 제공합니다.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]커뮤니티에서 선택된 된 솔루션 방문 뿐만 아니라는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조 합니다.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]커뮤니티에서 선택된 된 솔루션 방문 뿐만 아니라는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조 합니다.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 태스크](../../control-flow/script-task.md)   

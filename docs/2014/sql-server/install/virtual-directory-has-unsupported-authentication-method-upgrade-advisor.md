@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b707af2c203875553d614244c5bf6bbc87aaa4bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca6cfaa5047ea16a4a8f4380fdf2cf150d0967d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119643"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>가상 디렉터리에 지원되지 않는 인증 방법이 있음(업그레이드 관리자)
   업그레이드 관리자가 보고서 관리자 또는 보고서 서버 가상 디렉터리에서 지원되지 않는 인증 방법을 검색했습니다. 업그레이드를 지원하지 않는 인증 방법에는 익명, 다이제스트 및 .NET Passport가 있습니다.  

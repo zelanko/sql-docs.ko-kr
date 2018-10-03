@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb95317ceaac922602d1a6588013b83337466ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5426f8bcaca0ab9c0a9f1c92d8e701e15a8aa0f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080053"
 ---
 # <a name="select-objects-to-transfer"></a>전송할 개체 선택
   이 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전송 태스크를 통해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인스턴스 간에서 전송할 개체를 선택할 수 있습니다.  

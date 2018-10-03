@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e18c8c37eba48fa2732a07f4906137cdd299fdd3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a3300f448d9bc3df34369963cd4b697ada44211
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150549"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>실행 계정(SSRS 기본 모드)
   이 페이지를 사용하여 무인 모드 처리용으로 사용할 계정을 구성할 수 있습니다. 이 계정은 다음과 같이 다른 자격 증명 원본을 사용할 수 없는 특별한 환경에서 사용됩니다.  

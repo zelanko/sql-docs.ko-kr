@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9e6be682816d4a7572414d9e91d0840cc6417aa
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 03e6fd79540a4657f5f3d35ca7f3bfcff361d57d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761737"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +54,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  연결된 된 커밋 시간이 보다 큰 테이블을 변경 하는 cdc. < capture_instance > _CT의 행만 *start_time* 결과 집합에 포함 됩니다.  
   
- 이 인수에 값 NULL을 제공하면 쿼리 범위의 하위 끝점이 캡처 인스턴스에 대해 유효한 범위의 하위 끝점에 대응됩니다.  
+ 이 인수에 값 NULL을 제공하면 쿼리 범위의 하위 엔드포인트가 캡처 인스턴스에 대해 유효한 범위의 하위 엔드포인트에 대응됩니다.  
   
  *end_time*  
  합니다 **날짜/시간** 결과 집합에 포함할 변경 테이블 항목 범위의 상위 끝점을 나타내는 값입니다.  
@@ -75,7 +69,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
      있는 cdc.capture_instance_CT 변경 테이블의 행만 연결된 된 커밋 시간이 end_time 결과에 포함 된 보다 덜 엄격 하 게 설정 했습니다.  
   
- 이 인수에 값 NULL을 제공하면 쿼리 범위의 상위 끝점이 캡처 인스턴스에 대해 유효한 범위의 상위 끝점에 대응됩니다.  
+ 이 인수에 값 NULL을 제공하면 쿼리 범위의 상위 엔드포인트가 캡처 인스턴스에 대해 유효한 범위의 상위 엔드포인트에 대응됩니다.  
   
  <row_filter_option> ::= { all | all update old }  
  결과 집합에 반환되는 메타데이터 열 및 행의 내용을 제어하는 옵션입니다.  

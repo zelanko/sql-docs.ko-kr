@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f719a4dd11234a361856dcf170eebcd3856f66c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be8768c5d638904240cc1499a594b0d2c8a97aa7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323613"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128883"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>1단원: Market Basket 마이닝 구조 만들기
   이 단원에서는 고객이 동시에 구입하는 경향이 있는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품을 예측할 수 있는 마이닝 구조를 만듭니다. 마이닝 구조 및 데이터 마이닝에 해당 역할을 사용 하 여 잘 모르는 경우 [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)합니다.  

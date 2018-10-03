@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 1418 (Database Engine error)
 ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57562759b19de4ab8c56b4183c424d6409ae50ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7abc0b4dea4df1637b4ba9456dee6a897184f20a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135173"
 ---
 # <a name="mssqlserver1418"></a>MSSQLSERVER_1418
     
@@ -33,10 +30,10 @@ ms.locfileid: "37409202"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBM_PARTNERNOTFOUND|  
-|메시지 텍스트|서버 네트워크 주소 "%.*ls"에 연결할 수 없거나 주소가 없습니다. 네트워크 주소 이름을 확인하고 로컬과 원격 끝점에 대한 포트가 작동하는지 확인하십시오.|  
+|메시지 텍스트|서버 네트워크 주소 "%.*ls"에 연결할 수 없거나 주소가 없습니다. 네트워크 주소 이름을 확인하고 로컬과 원격 엔드포인트에 대한 포트가 작동하는지 확인하세요.|  
   
 ## <a name="explanation"></a>설명  
- 지정된 서버 네트워크 주소에 연결할 수 없거나 주소가 존재하지 않으므로 서버 네트워크 끝점이 응답하지 않았습니다.  
+ 지정된 서버 네트워크 주소에 연결할 수 없거나 주소가 존재하지 않으므로 서버 네트워크 엔드포인트가 응답하지 않았습니다.  
   
 > [!NOTE]  
 >  기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제에서는 모든 포트를 차단합니다.  
@@ -56,20 +53,20 @@ ms.locfileid: "37409202"
   
 -   주 서버 인스턴스에 방화벽이 설정되어 있지 않은지 확인합니다.  
   
--   **sys.database_mirroring_endpoints** 카탈로그 뷰의 **state** 또는 **state_desc** 열을 사용하여 파트너에서 끝점이 시작되었는지 확인합니다. 끝점이 시작되지 않았으면 ALTER ENDPOINT 문을 실행하여 시작합니다.  
+-   **sys.database_mirroring_endpoints** 카탈로그 뷰의 **state** 또는 **state_desc** 열을 사용하여 파트너에서 엔드포인트가 시작되었는지 확인합니다. 엔드포인트가 시작되지 않았으면 ALTER ENDPOINT 문을 실행하여 시작합니다.  
   
--   주 서버 인스턴스가 해당 데이터베이스 미러링 끝점에 할당된 포트에서 수신하고 있는지, 미러 서버 인스턴스가 해당 포트에서 수신하고 있는지 확인합니다. 자세한 내용은 이 항목의 뒤에 나오는 "포트 가용성 확인"을 참조하십시오. 파트너가 할당된 포트에서 수신하고 있지 않으면 다른 포트에서 수신하도록 데이터베이스 미러링 끝점을 수정합니다.  
+-   주 서버 인스턴스가 해당 데이터베이스 미러링 엔드포인트에 할당된 포트에서 수신하고 있는지, 미러 서버 인스턴스가 해당 포트에서 수신하고 있는지 확인합니다. 자세한 내용은 이 항목의 뒤에 나오는 "포트 가용성 확인"을 참조하십시오. 파트너가 할당된 포트에서 수신하고 있지 않으면 다른 포트에서 수신하도록 데이터베이스 미러링 엔드포인트를 수정합니다.  
   
     > [!IMPORTANT]  
     >  보안이 잘못 구성된 경우 일반적인 설치 오류 메시지가 발생할 수 있습니다. 일반적으로 서버 인스턴스는 잘못된 연결 요청에 응답하지 않고 이를 삭제합니다. 호출자에게는 미러 데이터베이스가 없거나 상태가 잘못되었거나, 사용 권한이 올바르지 않는 등의 여러 가지 이유로 보안 구성 오류가 발생한 것처럼 표시될 수 있습니다.  
   
 ### <a name="using-the-error-log-file-for-diagnosis"></a>진단을 위해 오류 로그 파일 사용  
- 오류 로그 파일만 검사할 수 있는 경우가 있습니다. 이 경우 데이터베이스 미러링 끝점의 TCP 포트에 대한 오류 메시지 26023이 오류 로그에 포함되어 있는지 확인합니다. 심각도 16인 이 오류는 데이터베이스 미러링 끝점이 시작되지 않았음을 나타낼 것입니다. **sys.database_mirroring_endpoints**에서 끝점 상태를 시작됨으로 표시하는 경우에도 이 메시지가 표시될 수 있습니다.  
+ 오류 로그 파일만 검사할 수 있는 경우가 있습니다. 이 경우 데이터베이스 미러링 엔드포인트의 TCP 포트에 대한 오류 메시지 26023이 오류 로그에 포함되어 있는지 확인합니다. 심각도 16인 이 오류는 데이터베이스 미러링 엔드포인트가 시작되지 않았음을 나타낼 것입니다. **sys.database_mirroring_endpoints**에서 엔드포인트 상태를 시작됨으로 표시하는 경우에도 이 메시지가 표시될 수 있습니다.  
   
  발생한 문제를 해결한 후 주 서버에서 ALTER DATABASE *database_name* SET PARTNER 문을 다시 실행합니다.  
   
 ### <a name="verifying-port-availability"></a>포트 가용성 확인  
- 네트워크에서 데이터베이스 미러링 세션을 구성할 때는 각 서버 인스턴스의 데이터베이스 미러링 끝점이 데이터베이스 미러링 프로세스에만 사용되도록 하십시오. 데이터베이스 미러링 끝점에 할당된 포트에서 다른 프로세스가 수신할 경우 다른 서버 인스턴스의 데이터베이스 미러링 프로세스에서 해당 끝점에 연결할 수 없습니다.  
+ 네트워크에서 데이터베이스 미러링 세션을 구성할 때는 각 서버 인스턴스의 데이터베이스 미러링 엔드포인트가 데이터베이스 미러링 프로세스에만 사용되도록 하세요. 데이터베이스 미러링 엔드포인트에 할당된 포트에서 다른 프로세스가 수신할 경우 다른 서버 인스턴스의 데이터베이스 미러링 프로세스에서 해당 엔드포인트에 연결할 수 없습니다.  
   
  Windows 기반 서버가 수신하고 있는 모든 포트를 표시하려면 **netstat** 명령 프롬프트 유틸리티를 사용합니다. **netstat** 구문은 Windows 운영 체제의 버전에 따라 달라집니다. 자세한 내용은 해당 운영 체제 설명서를 참조하십시오.  
   
@@ -97,7 +94,7 @@ ms.locfileid: "37409202"
   
 ## <a name="see-also"></a>관련 항목  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   

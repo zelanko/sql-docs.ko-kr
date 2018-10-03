@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c1dfbb97a7b02ebaaa82369f7d1883ad4d2eb299
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057653"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>데이터 영역 렌더링(보고서 작성기 및 SSRS)
   모든 보고서 항목에 적용되는 일반적인 렌더링 동작 이외에도 데이터 영역에는 고유한 페이지 매김 및 렌더링 동작이 추가로 적용됩니다. 데이터 영역과 관련된 렌더링 규칙에는 데이터 영역을 늘리는 방법, 모퉁이 셀이나 머리글 셀 같은 특수 셀의 렌더링 방법, 오른쪽에서 왼쪽으로 읽어야 하는 자료에 대한 데이터 영역의 렌더링 방법 등이 포함됩니다. 이 항목에서는 데이터 영역의 여러 부분이 어떻게 렌더링되는지 설명합니다.  

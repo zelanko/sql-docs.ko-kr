@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f27dbcf0375f7acc1e478cce2cd148b5efc03ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183493"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열
   보고서에 데이터를 포함하려면 데이터 연결 및 데이터 집합을 만듭니다. 데이터 연결에는 외부 데이터 원본에 액세스하는 방법에 대한 정보가 포함됩니다. 데이터 집합에는 데이터 연결을 사용하여 포함할 데이터를 지정하는 쿼리 명령이 포함됩니다.  

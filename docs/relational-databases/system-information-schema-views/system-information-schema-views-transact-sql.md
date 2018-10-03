@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,12 +19,12 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 155073a76c84f7f90af44386f63a2b90a2144bb8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9e158719bde4c5259af66a2a768259ca5eb49951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727931"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>시스템 정보 스키마 뷰 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ ms.locfileid: "43022598"
   
  또한 일부 뷰는 문자 데이터 또는 이진 데이터 등의 다른 클래스의 데이터에 대한 참조를 포함합니다.  
   
- 정보 스키마 뷰를 참조할 경우 `INFORMATION_SCHEMA` 스키마 이름이 포함된 정규화된 이름을 사용해야 합니다. 예를 들어:  
+ 정보 스키마 뷰를 참조할 경우 `INFORMATION_SCHEMA` 스키마 이름이 포함된 정규화된 이름을 사용해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT  

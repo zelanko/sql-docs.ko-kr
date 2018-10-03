@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database access
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
-caps.latest.revision: 11
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7971df050304f242e79abcc7e26bdb5d31e5fb09
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058343"
 ---
 # <a name="granting-access-to-a-database"></a>데이터베이스에 대한 액세스 권한 부여
   현재 Mary는 이 인스턴스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 액세스할 수 있지만 데이터베이스에 액세스할 수 있는 권한은 없습니다. Mary에게 데이터베이스 사용자의 권한을 부여할 때까지 Mary는 자신의 기본 데이터베이스인 **TestData** 에도 액세스할 수 없습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], system health session
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system_health session [SQL Server extended events]
 - system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
-caps.latest.revision: 15
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: cf223a6b352b8e1f2b9dd2e1d241214a1859a2e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e42fca332cf488d9a88494bb3e0eb11eca413965
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151253"
 ---
 # <a name="use-the-systemhealth-session"></a>system_health 세션 사용
   system_health 세션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 기본적으로 포함된 확장 이벤트 세션입니다. 이 세션은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 시작될 때 자동으로 시작되며 성능에 별다른 영향을 주지 않고 실행됩니다. 이 세션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 성능 문제를 해결하는 데 사용할 수 있는 시스템 데이터를 수집합니다. 따라서 이 세션은 중지하거나 삭제하지 않는 것이 좋습니다.  

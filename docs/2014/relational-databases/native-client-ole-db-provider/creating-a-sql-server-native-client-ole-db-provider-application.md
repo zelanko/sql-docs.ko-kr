@@ -1,28 +1,25 @@
 ---
-title: SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기 | Microsoft Docs
+title: SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, application creation
 - applications [SQL Server Native Client]
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 769c151f6b115065b62b2b3b4f7d9fc61b408463
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f2476ebb3997db16c8ffebdd0aac2d6eebe9a68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182693"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기
   만들기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 응용 프로그램에 이러한 단계가 포함 됩니다.  
@@ -34,7 +31,7 @@ ms.locfileid: "37426802"
 3.  결과 처리  
   
 > [!NOTE]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 사용 하 여 암호화 해야 자격 증명을 유지 해야 합니다 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [the Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

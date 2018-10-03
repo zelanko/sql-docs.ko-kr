@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0924e829729039aec7221a8faeeff37a9e830310
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058763"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
   원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 저장소를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ADOMD.NET
 ms.assetid: abaf33aa-db55-43bf-8f30-15547559be1d
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ff460d496b1ef148b5da7e0dbada2835fb1328c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 659acdede9841d36d3a1acc9b2519b97ee06ca86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055063"
 ---
 # <a name="developing-with-adomdnet"></a>ADOMD.NET를 사용하여 개발
   ADOMD.NET은는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 와 통신 하도록 설계 된.NET Framework 데이터 공급자 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. TCP/IP 또는 HTTP 연결을 사용하여 XML for Analysis 사양에 맞는 SOAP 요청 및 응답을 송수신하는 XML for Analysis 프로토콜을 통해 분석 데이터 원본과 통신합니다. 명령은 MDX(Multidimensional Expressions), DMX(Data Mining Extensions), ASSL(Analysis Services Scripting Language) 또는 제한된 SQL 구문을 통해 전송될 수 있으며 결과가 반환되지 않을 수도 있습니다. ADOMD.NET 개체 모델을 사용하여 분석 데이터, KPI(핵심 성과 지표) 및 마이닝 모델을 쿼리 및 조작할 수 있습니다. ADOMD.NET을 사용하면 OLE DB 호환 스키마 행 집합을 검색하거나 ADOMD.NET 개체 모델을 사용하여 메타데이터를 보고 작업할 수도 있습니다.  

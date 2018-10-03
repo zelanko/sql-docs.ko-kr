@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1a2d072a648d58d77b41cf94b7bd9bc55c8482b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131694"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>데이터베이스 미러링 및 데이터베이스 스냅숏(SQL Server)
   가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업을 오프로드할 수 있습니다. 미러 데이터베이스를 보고 용도로 사용하려면 미러 데이터베이스에서 데이터베이스 스냅숏을 만들고 클라이언트 연결 요청을 가장 최근의 스냅숏으로 지정할 수 있습니다. 데이터베이스 스냅숏은 스냅숏이 만들어진 시점에 존재하던 원본 데이터베이스의 정적, 읽기 전용, 트랜잭션 일치 스냅숏입니다. 미러 데이터베이스에서 데이터베이스 스냅숏을 만들려면 데이터베이스가 동기화된 미러링 상태여야 합니다.  

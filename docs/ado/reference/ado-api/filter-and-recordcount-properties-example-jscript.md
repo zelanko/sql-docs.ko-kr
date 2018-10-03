@@ -1,13 +1,11 @@
 ---
-title: 필터 및 RecordCount 속성 예제 (JScript) | Microsoft Docs
+title: Filter 및 RecordCount 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623981"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>필터 및 RecordCount 속성 예제 (JScript)
-이 예제는 **레코드 집합** Northwind 데이터베이스 및 다음 사용 하 여 회사 테이블에는 [필터](../../../ado/reference/ado-api/filter-property.md) 문자로 시작 CompanyName 필드에는 표시 되는 레코드를 제한 하는 속성 4. 잘라내기, 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣고로 저장 **붙여 넣고 FilterJS.asp**합니다.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 및 RecordCount 속성 예제 (JScript)
+이 예제에서는 **Recordset** Northwind 데이터베이스 및 다음 사용 하 여 회사 테이블에는 [필터](../../../ado/reference/ado-api/filter-property.md) 문자로 시작 CompanyName 필드 해당 위치에 표시 되는 레코드를 제한 하는 속성 4. 잘라내기 하 고 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여으로 저장 **붙여 넣고 FilterJS.asp**합니다.  
   
 ```  
 <!-- BeginFilterJS -->  

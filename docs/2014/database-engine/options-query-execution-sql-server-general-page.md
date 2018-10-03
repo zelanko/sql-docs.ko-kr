@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152991"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>옵션 (쿼리 실행-SQL Server-일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리를 실행하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 사항은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴에서 **쿼리 옵션** 을 클릭하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 창에서 마우스 오른쪽 단추를 클릭한 다음 **쿼리 옵션**을 선택합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37167154"
  **일괄 처리 구분 기호**  
  [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 일괄 처리로 구분하는 데 사용할 단어를 입력합니다. 기본값은 GO입니다.  
   
- **기본적으로 SQLCMD 모드로 새 쿼리 열기**  
+ **기본적으로 SQLCMD 모드로 새 쿼리를 엽니다.**  
  SQLCMD 모드로 새 쿼리를 열려면 이 확인란을 선택합니다. SQLCMD 모드에 대한 자세한 내용은 [쿼리 편집기로 SQLCMD 스크립트 편집](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)을 참조하세요.  
   
  이 옵션을 선택할 경우 다음과 같은 제한 사항에 유의해야 합니다.  

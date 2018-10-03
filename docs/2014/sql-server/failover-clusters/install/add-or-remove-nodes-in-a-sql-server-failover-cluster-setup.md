@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f128cd0135c4e2a88d4bf1f5cbda7b84e5bb4ef8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 111d5b219280537d72e21873091a591634b8afa8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082213"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치)
   이 절차에 따라 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 노드를 관리할 수 있습니다.  

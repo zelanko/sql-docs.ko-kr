@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Language Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 738403bedd7a9da120e5ba706eabe4848f7e1e2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ce2de9ae87ac0c4d22a179f25bbf7ff047e7633
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126068"
 ---
 # <a name="language-element-assl"></a>Language 요소(ASSL)
   부모 요소의 언어 식별자를 포함합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37293245"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|정수|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
   
  **카디널리티**  
   
@@ -65,7 +62,7 @@ ms.locfileid: "37293245"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md)를 [차원](../objects/dimension-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md)를 [MiningStructure](../objects/miningstructure-element-assl.md), [번역](../objects/translation-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Language` 요소는 부모 요소에서 사용하는 기본 언어 식별자 또는 `Translation` 요소의 특정 언어 식별자를 포함합니다. 언어는 LCID(로캘 ID) 코드를 사용하여 정의해야 합니다. 예를 들어 영어(미국)를 지정하려면 LCID 1033을 사용합니다.  

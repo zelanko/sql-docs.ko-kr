@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 61
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c2c31258da39fa8aa7481432dad1286c8278bf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184373"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>기본 테이블 보고서 만들기(SSRS 자습서)
   이 자습서에 따라 기본 테이블 보고서를 만드는 데는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 보고서 디자이너를 사용 하 여 데이터베이스입니다. 또한 보고서 작성기나 보고서 마법사를 사용하여 보고서를 만들 수 있습니다. 이 자습서에서는 보고서 프로젝트를 만들고, 연결 정보를 설정하고, 쿼리를 정의하고, 테이블 데이터 영역을 추가하고, 필드를 그룹화하거나 필드 합계를 구하고, 보고서를 미리 보는 방법을 배웁니다.  
@@ -38,7 +35,7 @@ ms.locfileid: "37196813"
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스.  자세한 내용은 [(SQL Server 2012 용 Adventure Works) SQL Server 2012 용 Adventure Works](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).합니다. 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제 데이터베이스 및 샘플 코드 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]를 참조 하세요 [데이터베이스 및 예제 개요](http://go.microsoft.com/fwlink/?LinkId=110391) CodePlex 웹 사이트에서.  
   
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]을 참조하세요.  
+-   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 을 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]입니다.  
   

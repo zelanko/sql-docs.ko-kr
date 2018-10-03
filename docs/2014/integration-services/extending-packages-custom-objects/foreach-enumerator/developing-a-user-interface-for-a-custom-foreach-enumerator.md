@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom user interface [Integration Services], custom foreach enumerators
 - custom foreach enumerators [Integration Services], developing custom user interface
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cba9c34f0e296f43ff09b8a2f29ac54e6107c55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95223c47925b55edbe9357cd04387fd54185a9f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088873"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>사용자 지정 ForEach 열거자의 사용자 인터페이스 개발
   기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공한 후 Foreach 열거자에 대한 사용자 지정 사용자 인터페이스를 만들 수 있습니다. 사용자 지정 사용자 인터페이스를 만들지 않을 경우 사용자는 속성 창에서만 새 사용자 지정 Foreach 열거자를 구성할 수 있습니다.  

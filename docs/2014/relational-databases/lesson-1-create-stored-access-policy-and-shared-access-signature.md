@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 708c347e587d19ebfb7c2f24e94fd59db0289c52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124083"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>2단원. 컨테이너에 정책 만들기 및 SAS(공유 액세스 서명) 키 생성
   이 단원에서는 Blob 컨테이너에서 정책을 만들고 SAS키를 생성하는 방법을 배웁니다.  

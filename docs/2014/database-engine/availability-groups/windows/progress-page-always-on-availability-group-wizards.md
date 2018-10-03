@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.progress.f1
@@ -18,16 +16,15 @@ f1_keywords:
 - sql12.swb.adddatabasewizard.progress.f1
 - sql12.swb.failoverwixard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de5c8d19326015da6371cc3796c752d9f80f5842
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130843"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>진행률 페이지(AlwaysOn 가용성 그룹 마법사)
   이 대화 상자를 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 실행 중인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]마법사의 진행률을 볼 수 있습니다. 진행률 표시줄에는 마법사에서 수행 중인 단계의 상대적 진행률이 표시됩니다.  

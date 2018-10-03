@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfeaf04ca7eb8a07637c295a5aa80cc02bedd58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e73545b8417b92abf57747441b49531736ecdd48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120819"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 연결 관리자 편집기
   **SAP BW 연결 관리자 편집기** 를 사용하여 SAP Netweaver BW 버전 7 시스템에 연결하는 데 사용할 속성을 지정할 수 있습니다.  

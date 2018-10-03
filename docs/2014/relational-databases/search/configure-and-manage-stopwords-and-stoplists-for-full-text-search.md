@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4024ffd9bee842173998fed81c9bbf80152fa530
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126803"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
   전체 텍스트 인덱스가 너무 확장되지 않도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 검색에 도움이 되지 않지만 자주 사용되는 문자열을 무시하는 메커니즘이 있습니다. 이렇게 무시된 문자열을 *중지 단어*라고 합니다. 인덱스를 만드는 동안 전체 텍스트 엔진은 전체 텍스트 인덱스에서 중지 단어를 생략합니다. 즉, 전체 텍스트 쿼리는 중지 단어에서 검색하지 않습니다.  

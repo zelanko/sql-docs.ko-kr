@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - process data option [Analysis Services]
@@ -21,19 +19,18 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9bb9ae4163f139af76b1e746267a9d60c70d026f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049503"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>처리 옵션 및 설정(Analysis Services)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리하는 경우 각 개체에 대해 발생하는 처리 유형을 제어하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리하는 경우 각 개체에 대해 발생하는 처리 유형을 제어하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
   
  처리 설정을 지정하면 처리되는 개체 및 이러한 개체를 처리하는 데 사용되는 방법을 제어할 수 있습니다. 일부 처리 설정은 배치 처리 작업에 주로 사용됩니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](batch-processing-analysis-services.md)를 참조하세요.  
   

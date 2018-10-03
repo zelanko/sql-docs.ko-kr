@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.preview.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8038724a68f190f50b8a0c0621fc6d850c12e784
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 397ba8b585b595878d4323e7a3523721c74b8163
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083553"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>다중 플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 페이지를 사용하여 첫 번째로 선택한 원본 파일의 내용을 정의할 때 해당 내용을 열로 구분해서 볼 수 있습니다.  

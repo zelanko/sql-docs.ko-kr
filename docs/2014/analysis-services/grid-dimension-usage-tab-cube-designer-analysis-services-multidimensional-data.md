@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180023"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>표(차원 용도 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너에서 **차원 용도** 탭의 **표** 창을 사용하여 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 각 차원 관계는 표에 셀로 표시되며 측정값 그룹과 차원은 각각 열과 행에 표시됩니다.  

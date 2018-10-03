@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 118493cdd526a8c62add06ca78c803ebac6540c1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 981b0b57debf6e1916adb65620feca7025bd3803
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063493"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
-  
-            [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 메모리 최적화 테이블에 대한 완전한 내구성을 제공합니다. 메모리 최적화 테이블을 변경한 트랜잭션을 커밋할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하면 (디스크 기반 테이블과 마찬가지로) 기본 저장소를 사용할 수 있는 경우 변경 내용이 영구적이 됩니다(데이터베이스 다시 시작 유지). 내구성의 두 가지 주요 구성 요소는 트랜잭션 로깅 및 디스크상 저장소에 데이터 변경 내용 저장입니다.  
+  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 메모리 최적화 테이블에 대한 완전한 내구성을 제공합니다. 메모리 최적화 테이블을 변경한 트랜잭션을 커밋할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하면 (디스크 기반 테이블과 마찬가지로) 기본 저장소를 사용할 수 있는 경우 변경 내용이 영구적이 됩니다(데이터베이스 다시 시작 유지). 내구성의 두 가지 주요 구성 요소는 트랜잭션 로깅 및 디스크상 저장소에 데이터 변경 내용 저장입니다.  
   
 ## <a name="transaction-log"></a>트랜잭션 로그  
  디스크 기반 테이블 또는 메모리 최적화 내구성이 있는 테이블에 대한 모든 변경은 하나 이상의 트랜잭션 로그 레코드에 캡처됩니다. 트랜잭션이 커밋될 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 트랜잭션이 커밋된 응용 프로그램 또는 사용자 세션과 통신하기 전에 디스크에 트랜잭션과 관련된 로그 레코드를 씁니다. 이렇게 하면 트랜잭션에 의한 변경 사항이 내구성을 가집니다. 메모리 최적화 테이블에 대한 트랜잭션 로그는 디스크 기반 테이블에서 사용되는 동일한 로그 스트림과 완전히 통합되어 있습니다. 이러한 통합에 따라 기존 트랜잭션 로그 백업, 복구 및 복원 작업이 추가 단계를 필요로 하지 않고 계속 수행될 수 있습니다. 그러나 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]가 작업의 트랜잭션 처리량을 크게 증가시킬 수 있으므로 트랜잭션 로그 저장소가 증가한 IO 요구 사항을 처리할 수 있도록 적절하게 구성되어 있는지 확인해야 합니다.  
@@ -47,8 +43,7 @@ ms.locfileid: "40393058"
 ## <a name="populating-data-and-delta-files"></a>데이터 및 델타 파일 채우기  
  데이터 및 델타 파일은 오프 라인 검사점이라는 백그라운드 스레드에 의해 채워집니다. 이 스레드는 메모리 최적화 테이블에서 커밋된 트랜잭션에 의해 생성되는 트랜잭션 로그 레코드를 읽고 삽입된 행과 삭제된 행에 대한 정보를 해당 데이터 및 델타 파일에 추가합니다. 검사점이 완료되면 데이터/인덱스 페이지가 임의 I/O로 플러시되는 디스크 기반 테이블과 달리 메모리 최적화 테이블은 계속해서 백그라운드 작업으로 지속됩니다. 트랜잭션을 삭제하거나 이전 트랜잭션에 의해 삽입된 모든 행을 업데이트하기 때문에 여러 개의 델타 파일이 액세스됩니다. 삭제 정보는 항상 델타 파일의 끝에 추가됩니다. 예를 들어, 커밋 타임스탬프가 600인 트랜잭션은 한 행을 삽입하고 아래 그림처럼 150, 250 및 450의 커밋 타임스탬프를 갖는 트랜잭션에 의해 삽입된 행을 삭제합니다. 모두 4번의 파일 I/O 작업(삭제된 행에 3번, 새로 삽입된 행에 1번)이 해당 델타 및 데이터 파일에 대한 추가 전용 작업입니다.  
   
- 
-            ![메모리 최적화 테이블의 로그 레코드를 읽습니다.](../../database-engine/media/read-logs-hekaton.gif "Read log records for memory-optimized tables.")  
+ ![메모리 최적화 테이블의 로그 레코드를 읽습니다.](../../database-engine/media/read-logs-hekaton.gif "Read log records for memory-optimized tables.")  
   
 ## <a name="accessing-data-and-delta-files"></a>데이터 및 델타 파일 액세스  
  데이터 및 델타 파일 쌍은 다음이 발생할 때 액세스됩니다.  
@@ -60,8 +55,7 @@ ms.locfileid: "40393058"
  작업은 하나 이상의 데이터 및 델타 파일 쌍을 병합하고 새로운 데이터 및 델타 파일 쌍을 만듭니다.  
   
  충돌 복구 동안  
- 
-            [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 다시 시작하거나 데이터베이스가 다시 온라인이 되면 데이터 및 델타 파일 쌍을 사용하여 메모리 최적화 데이터가 채워집니다. 델타 파일은 해당 데이터 파일에서 행을 읽을 때 삭제된 행에 대한 필터의 역할을 합니다. 각 데이터 및 델타 파일 쌍은 서로 독립적이기 때문에 이러한 파일은 메모리에 데이터를 채우는 데 걸리는 시간을 줄이기 위해 병렬로 로드됩니다. 데이터가 메모리로 로드되면 메모리 내 OLTP 엔진은 메모리 최적화 데이터가 완전하도록 검사점 파일에 아직 포함되지 않은 활성 트랜잭션 로그 레코드를 적용합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 다시 시작하거나 데이터베이스가 다시 온라인이 되면 데이터 및 델타 파일 쌍을 사용하여 메모리 최적화 데이터가 채워집니다. 델타 파일은 해당 데이터 파일에서 행을 읽을 때 삭제된 행에 대한 필터의 역할을 합니다. 각 데이터 및 델타 파일 쌍은 서로 독립적이기 때문에 이러한 파일은 메모리에 데이터를 채우는 데 걸리는 시간을 줄이기 위해 병렬로 로드됩니다. 데이터가 메모리로 로드되면 메모리 내 OLTP 엔진은 메모리 최적화 데이터가 완전하도록 검사점 파일에 아직 포함되지 않은 활성 트랜잭션 로그 레코드를 적용합니다.  
   
  복원 작업 동안  
  메모리 내 OLTP 검사점 파일이 데이터베이스 백업에서 만들어진 다음 하나 이상의 트랜잭션 로그 백업이 적용됩니다. 충돌 복구와 마찬가지로 메모리 내 OLTP 엔진은 데이터를 병렬로 메모리로 로드하여 복구 시간에 미치는 영향을 최소화합니다.  

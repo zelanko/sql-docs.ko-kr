@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69a70992fa827601ed06d19d59db34c6c8a880ad
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 694e149053f456729f0a4a1a62265f0659386fa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176973"
 ---
 # <a name="create-a-policy-based-management-policy"></a>정책 기반 관리 정책 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 정책을 만드는 방법에 대해 설명합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -15,16 +13,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnComputedColumnSpec
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0d778299c253eb1ef8282c1621ae2948d17e491
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120305"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
   열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  

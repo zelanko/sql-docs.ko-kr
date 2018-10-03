@@ -1,14 +1,11 @@
 ---
-title: CLR 어셈블리 카탈로그 뷰 (Transact SQL) | Microsoft Docs
+title: CLR 어셈블리 카탈로그 뷰 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], catalog views
 - CLR assembly catalog views
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4cc6a507be611b843da3554aed3a7d74e963837c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 25dff969ec44ad8e584b0776abefb014f934af89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33175985"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601162"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR 어셈블리 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +34,8 @@ ms.locfileid: "33175985"
 |[sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|[sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|  
 |[sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

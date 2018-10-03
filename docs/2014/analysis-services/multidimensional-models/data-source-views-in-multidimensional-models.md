@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e11f6d77229b81bd2ccb3fb6eebad16da7731ce8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271869"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126113"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>다차원 모델의 데이터 원본 뷰
   DSV(데이터 원본 뷰)는 추상화된 관계형 데이터 원본으로서 다차원 프로젝트에서 이 데이터 원본을 사용하여 큐브와 차원을 만들 수 있습니다. DSV의 목적은 프로젝트에 사용된 데이터 구조를 제어하고 기본 데이터 원본과 관계없이 작업할 수 있도록 하는 것입니다. 예를 들어 원래 데이터 원본을 직접 수정하지 않고 열의 이름을 바꾸거나 열을 연결할 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82965dd45ba5152aea9d6ec5751de9dfbf7cf232
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 860102dff3b20bd42da048dbd33960c8f936cea1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120255"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS 카탈로그 만들기
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 프로젝트를 배포 하기 전에 합니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 서버를 포함 해야 합니다는 `SSISDB` 카탈로그입니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치 프로그램에서 카탈로그를 자동으로 만들지 않으므로 다음 지침에 따라 카탈로그를 수동으로 만들어야 합니다.  

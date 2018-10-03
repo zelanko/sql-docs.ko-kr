@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a6c3b3624fc06f650179610778b75de5ef63cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cab26a21658c3573a3bdfab58a50500a7245397e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184414"
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
   변수는 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 동적으로 값을 설정하고 프로세스를 제어하는 데 사용됩니다. 선행 제약 조건에서 변수를 사용하여 다른 태스크로의 데이터 흐름 방향을 제어할 수도 있습니다. 다음과 같은 다양한 용도로 변수를 사용할 수 있습니다.  

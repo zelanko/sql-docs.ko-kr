@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d23cf7a0b557b4bbc687514b120af7a93cbf375
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c9bce266836e1181c1d619d89985d9d461729e83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183003"
 ---
 # <a name="new-system-role-management-studio"></a>새 시스템 역할(Management Studio)
   이 페이지를 사용하여 시스템 수준의 역할 정의를 만들 수 있습니다. 시스템 역할 정의는 보고서 서버 전체에 적용되는 시스템 수준 태스크 집합을 지정합니다.  
@@ -29,7 +26,7 @@ ms.locfileid: "39083030"
 > [!NOTE]  
 >  역할 정의는 기본 모드로 실행되는 보고서 서버에만 사용되며 보고서 서버가 SharePoint 통합 모드로 구성된 경우 이 페이지를 사용할 수 없습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>변수  
  **이름**  
  역할 정의의 이름을 입력합니다. 역할 정의 이름은 보고서 서버 네임스페이스 내에서 고유해야 합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ORDER BY clause [Visual Database Tools]
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4461cc5149f3417d86469b5cba32bd5b74887c76
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 14f9efc4b93aedd4bacb757912e82a954c2fff72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078483"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>ORDER BY를 사용하여 정렬(Visual Database Tools)
   ORDER BY 절을 사용하면 반환된 행에 있는 하나 이상의 열을 기준으로 쿼리 결과를 정렬할 수 있습니다. 조건 정보 창에서 옵션을 선택하여 ORDER BY 절을 정의할 수 있습니다.  

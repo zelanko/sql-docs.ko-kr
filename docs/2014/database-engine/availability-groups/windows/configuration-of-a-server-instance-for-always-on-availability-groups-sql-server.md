@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], about
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7299c2b22e06ee572a6ff41f556528b4c4d32b3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69852072277587415839455468d4eb71d9a4f1c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183313"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 서버 인스턴스 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원할 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스 구성 요구 사항에 대한 정보를 제공합니다.  
@@ -38,32 +35,32 @@ ms.locfileid: "37319313"
  가용성 복제본  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 특정 인스턴스에 의해 호스팅되고 가용성 그룹에 속하는 각 가용성 데이터베이스의 로컬 복사본을 유지 관리하는 가용성 그룹 인스턴스화입니다. 가용성 복제본에는 *주 복제본* 과 1-4개의 *보조 복제본*이라는 두 가지 유형이 있습니다. 지정된 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스는 단일 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 다른 노드에 있어야 합니다.  
   
- [데이터베이스 미러링 끝점](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
- SQL Server는 SQL Server 개체인 끝점을 사용하여 네트워크를 통해 통신할 수 있습니다. 데이터베이스 미러링 및/또는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 참여하려면 서버 인스턴스에 특수 전용 끝점이 필요합니다. 서버 인스턴스의 모든 미러링 및 가용성 그룹 연결은 동일한 데이터베이스 미러링 끝점을 사용합니다. 데이터베이스 미러링 끝점은 다른 서버 인스턴스로부터 이러한 연결을 받는 데만 사용되는 특별한 용도의 끝점입니다.  
+ [데이터베이스 미러링 엔드포인트](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ SQL Server는 SQL Server 개체인 엔드포인트를 사용하여 네트워크를 통해 통신할 수 있습니다. 데이터베이스 미러링 및/또는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 참여하려면 서버 인스턴스에 특수 전용 엔드포인트가 필요합니다. 서버 인스턴스의 모든 미러링 및 가용성 그룹 연결은 동일한 데이터베이스 미러링 엔드포인트를 사용합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 이러한 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다.  
   
 ##  <a name="ConfigSI"></a> AlwaysOn 가용성 그룹을 지원 하도록 서버 인스턴스를 구성 하려면  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하려면 서버 인스턴스가 가용성 그룹을 호스팅하는 WSFC 장애 조치(Failover) 클러스터의 노드에 있어야 하고, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 이 설정되어 있어야 하며, 데이터베이스 미러링 끝점을 보유하고 있어야 합니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하려면 서버 인스턴스가 가용성 그룹을 호스팅하는 WSFC 장애 조치(Failover) 클러스터의 노드에 있어야 하고, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]이 설정되어 있어야 하며, 데이터베이스 미러링 엔드포인트를 보유하고 있어야 합니다.  
   
 1.  하나 이상의 가용성 그룹에 참여할 모든 서버 인스턴스에서 AlwaysOn 가용성 그룹 기능을 사용하도록 설정합니다. 특정 서버 인스턴스에서는 특정 가용성 그룹에 대한 단일 가용성 복제본만 호스팅할 수 있습니다.  
   
-2.  서버 인스턴스에 데이터베이스 미러링 끝점이 있는지 확인합니다.  
+2.  서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있는지 확인합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **AlwaysOn 가용성 그룹을 사용 하도록 설정 하려면**  
   
 -   [AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
- **데이터베이스 미러링 끝점이 있는지 여부를 확인하려면**  
+ **데이터베이스 미러링 엔드포인트가 있는지 여부를 확인하려면**  
   
 -   [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
- **데이터베이스 미러링 끝점을 만들려면**  
+ **데이터베이스 미러링 엔드포인트를 만들려면**  
   
 -   [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
@@ -92,7 +89,7 @@ ms.locfileid: "37319313"
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 가용성 그룹: 상호 운용성 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

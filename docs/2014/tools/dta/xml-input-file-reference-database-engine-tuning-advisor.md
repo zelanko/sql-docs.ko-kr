@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - input file reference [Database Engine Tuning Advisor]
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dfcae2c6d18b295919a3b843efe2edd95062d01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183490"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126193"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 입력 파일 참조(데이터베이스 엔진 튜닝 관리자)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 XML 입력 파일을 사용하여 데이터베이스를 튜닝할 수 있습니다. 이 XML 파일은 튜닝 세션에 사용할 데이터베이스, 테이블, 작업 파일 또는 테이블 및 튜닝 옵션을 지정합니다. 또한 이 파일을 사용하면 "가정(what-if)" 분석을 수행하기 위한 사용자 지정 구성을 지정할 수 있습니다.  

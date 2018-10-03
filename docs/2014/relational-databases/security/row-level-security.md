@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row level security described
@@ -18,12 +16,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 344497fea67a2bfdadf66095056ac9e909d945a2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017486"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188553"
 ---
 # <a name="row-level-security"></a>행 수준 보안
   행 수준 보안(RLS)을 통해 고객은 쿼리(예: 그룹 멤버십 또는 실행 컨텍스트)를 실행하는 사용자의 특징을 기반으로 데이터베이스 테이블의 행에 대한 액세스를 제어할 수 있습니다. 행 수준 보안에 출시 되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 합니다. 이 기능에 대한 최신 설명을 보려면 최신 설명서에서 [행 수준 보안](https://msdn.microsoft.com/library/dn765131.aspx) 을 참조하세요.  

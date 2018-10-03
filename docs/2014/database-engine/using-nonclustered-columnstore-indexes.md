@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182502"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>비클러스터형 columnstore 인덱스 사용
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 비클러스터형 columnstore 인덱스를 사용하기 위한 주요 태스크를 설명합니다.  
@@ -40,7 +38,7 @@ ms.locfileid: "37157024"
 ##  <a name="change"></a> 비클러스터형 Columnstore 인덱스에 데이터를 변경 합니다.  
  테이블에 비클러스터형 columnstore 인덱스를 만든 후에는 해당 테이블에서 데이터를 직접 수정할 수 없습니다. INSERT, UPDATE, DELETE 또는 MERGE를 사용한 쿼리는 실패하며 오류 메시지를 반환합니다. 테이블에서 데이터를 추가하거나 수정하려면 다음 중 하나를 수행합니다.  
   
--   Columnstore 인덱스를 사용 하지 않도록 설정 합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예를 들어:  
+-   Columnstore 인덱스를 사용 하지 않도록 설정 합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -48,7 +46,7 @@ ms.locfileid: "37157024"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Columnstore 인덱스를 삭제, 테이블을 업데이트 하 고 CREATE COLUMNSTORE INDEX를 사용 하 여 columnstore 인덱스를 다시 만듭니다. 예를 들어:  
+-   Columnstore 인덱스를 삭제, 테이블을 업데이트 하 고 CREATE COLUMNSTORE INDEX를 사용 하 여 columnstore 인덱스를 다시 만듭니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

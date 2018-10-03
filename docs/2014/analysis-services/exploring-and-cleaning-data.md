@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080473"
 ---
 # <a name="exploring-and-cleaning-data"></a>데이터 탐색 및 지우기
   데이터 준비는 데이터 정리보다 훨씬 많이 수행됩니다. 데이터가 준비되는 방식은 결과가 결국 해석되는 방식에도 영향을 미칩니다. 데이터 준비는 다음과 같은 태스크로 이루어집니다.  

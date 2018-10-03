@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 949576715472f5ad5ff99425635c9ad1d29a9823
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 9a8d346e3cc4a2ddc718d9e2758ec02caa458a8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152774"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632710"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant를 실행 하기 위한 모범 사례
 이 문서에서는 설치, 평가 및 마이그레이션에 대 한 몇 가지 모범 사례 정보를 제공 합니다.

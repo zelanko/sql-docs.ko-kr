@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Getrows method [ADO], VC++ example
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4af181439ea74b0f55f49e97f19e955eec517
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 254cb5e6ca4572b0a38ea5f5b6beaab1a78162d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695156"
 ---
-# <a name="getrows-method-example-vc"></a>GetRows 메서드 예제 (VC + +)
-사용 하 여이 예제는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 행에서 지정 된 수를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하 고 결과 데이터 배열을 채우는 합니다. **GetRows** 메서드는 수의 행 보다 작으면 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가을 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. GetRowsOK 함수는이 절차를 실행 하려면 필요 합니다.  
+# <a name="getrows-method-example-vc"></a>GetRows 메서드 예제(VC++)
+이 예제에서는 합니다 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 지정된 된 수의 행을 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 결과 데이터를 사용 하 여 배열을 채우는 합니다. **GetRows** 메서드는 행의 수가 미만 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. GetRowsOK 함수는이 절차를 실행 하려면 필요 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -249,5 +246,5 @@ Pedro Afonso, 12/24/1990
   
 ## <a name="see-also"></a>관련 항목  
  [BOF, EOF 속성 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [(ADO) 메서드](../../../ado/reference/ado-api/getrows-method-ado.md)   
+ [GetRows 메서드 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

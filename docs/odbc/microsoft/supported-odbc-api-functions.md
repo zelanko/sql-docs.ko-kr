@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bf4b187b4439f6c8739940c657a4d44f44bd0d6
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715211"
 ---
-# <a name="supported-odbc-api-functions"></a>지원 되는 ODBC API 함수
+# <a name="supported-odbc-api-functions"></a>지원되는 ODBC API 함수
 사용할 수 있는 기능을 드라이버에서 응용 프로그램에 알리기 위해 평준화의 목적은입니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버는 모든 핵심 및 수준 1 함수를 지원합니다.  
   
  함수 및 문법에 대 한 적합성 수준에 대 한 자세한 내용은 참조 하세요. [적합성 수준](../../odbc/reference/develop-app/conformance-levels.md) 에 *ODBC 프로그래머 참조*합니다.  

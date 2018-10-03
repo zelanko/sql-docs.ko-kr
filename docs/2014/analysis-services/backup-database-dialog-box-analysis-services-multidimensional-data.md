@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067323"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>데이터베이스 백업 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **데이터베이스 백업** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백업 파일(.abf) 형식을 사용하는 백업 파일에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 백업할 수 있습니다.  

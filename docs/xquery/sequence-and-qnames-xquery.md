@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - QName [XQuery]
 - predefined namespaces [XML in SQL Server]
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f3c1b32f4fc987c22dfe4660525f5e45d341bbd9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777281"
 ---
 # <a name="sequence-and-qnames-xquery"></a>시퀀스 및 QName(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

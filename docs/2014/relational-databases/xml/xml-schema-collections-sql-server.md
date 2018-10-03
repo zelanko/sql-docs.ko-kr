@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7be770bfbcde0f21197d3edfbe3a5c69bebec816
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054739"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
   항목에 설명 된 대로 [xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)를 통해 XML 데이터의 기본 저장소를 제공 하는 SQL Server는 `xml` 데이터 형식입니다. 열 또는 변수와 XSD 스키마를 필요에 따라 연결할 수 있습니다 `xml` XML 스키마 컬렉션을 통해 형식입니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
@@ -114,7 +111,7 @@ ms.locfileid: "43889919"
   
 -   MODELGROUP  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   **SomeAttribute** 는 ATTRIBUTE 구성 요소입니다.  
   

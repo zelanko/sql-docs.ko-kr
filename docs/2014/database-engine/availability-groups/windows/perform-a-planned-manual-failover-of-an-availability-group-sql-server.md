@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.manualfailover.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7072e55d4c756be1bb0121e1e58abeb460b6760f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155348"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>가용성 그룹의 계획된 수동 장애 조치(Failover) 수행(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 데이터 손실 없이 수동 장애 조치(failover)를 수행하는 방법(*계획된 수동 장애 조치(failover)*)에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 장애 조치(failover)와 같은 계획 수동 장애 조치(failover)를 수행하면 보조 복제본이 주 역할로 전환되며 동시에 이전 주 복제본은 보조 역할로 전환됩니다.  

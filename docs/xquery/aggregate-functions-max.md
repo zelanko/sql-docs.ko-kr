@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - max function [XQuery]
 - fn:max function
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a53b02bc682bf7b3c918a02d5a16dc326ca3a594
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 814d8b0d33c55bd6aac77965d19a403ee7aec0c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625151"
 ---
-# <a name="aggregate-functions---max"></a>집계 함수-max
+# <a name="aggregate-functions---max"></a>집계 함수 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   원자 값의 시퀀스에서 반환 *$arg*를 하나씩 값의 다른 모든 보다 큽니다.  

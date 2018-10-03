@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184663"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>색 선택 대화 상자(보고서 작성기 및 SSRS)
   **색 선택** 대화 상자를 사용하여 데이터 영역이나 입력란 내의 단일 셀 또는 여러 셀의 배경에 대한 색 옵션을 지정하거나 차트의 색 옵션을 지정할 수 있습니다.  

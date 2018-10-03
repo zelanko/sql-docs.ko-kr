@@ -1,14 +1,11 @@
 ---
-title: sp_help_targetserver (Transact SQL) | Microsoft Docs
+title: sp_help_targetserver (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 236a10fd52508781e503cc2844a49315fe57422e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252223"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747431"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +42,13 @@ sp_help_targetserver
   
 ## <a name="arguments"></a>인수  
  [ **@server_name=** ] **'***server_name***'**  
- 정보를 반환하는 대상이 되는 서버의 이름입니다. *server_name* 은 **nvarchar (30)**, 기본값은 NULL입니다.  
+ 정보를 반환하는 대상이 되는 서버의 이름입니다. *server_name* 은 **nvarchar(30)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 경우 *server_name* 를 지정 하지 않으면 **sp_help_targetserver** 이 결과 집합을 반환 합니다.  
+ 하는 경우 *server_name* 지정 하지 않으면 **sp_help_targetserver** 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -63,12 +59,12 @@ sp_help_targetserver
 |**enlist_date**|**datetime**|지정된 서버의 포함 목록 날짜입니다.|  
 |**last_poll_date**|**datetime**|서버가 작업에 대해 마지막으로 폴링된 날짜입니다.|  
 |**상태**|**int**|지정된 서버의 상태입니다.|  
-|**unread_instructions**|**int**|서버가 명령을 읽지 않았는지의 여부를 결정합니다. 모든 행을 다운로드 한 경우이 열은 **0**합니다.|  
+|**unread_instructions**|**int**|서버가 명령을 읽지 않았는지의 여부를 결정합니다. 이 열은 모든 행을 다운로드 한 경우 **0**합니다.|  
 |**local_time**|**datetime**|마스터 서버가 마지막으로 폴링한 대상 서버의 로컬 시간을 기준으로 하는 대상 서버의 로컬 날짜 및 시간입니다.|  
 |**enlisted_by_nt_user**|**nvarchar(100)**|대상 서버에 참여하는 Microsoft Windows 사용자입니다.|  
 |**poll_interval**|**int**|대상 서버가 작업을 다운로드하고 작업 상태를 업로드하기 위해 마스터 SQLServerAgent 서비스를 폴링하는 빈도(초)입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -95,12 +91,12 @@ EXEC dbo.sp_help_targetserver N'SEATTLE2' ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysdownloadlist &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [dbo.sysdownloadlist &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 2016-10-18
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183360"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
   이 페이지를 사용하여 보고서 서버의 시스템 속성을 설정할 수 있습니다. 시스템 속성을 설정하는 데에는 여러 가지 방법이 있습니다. 이 도구는 그래픽 사용자 인터페이스를 제공하므로 코드를 작성하지 않고도 속성을 설정할 수 있습니다.  

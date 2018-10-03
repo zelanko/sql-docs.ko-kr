@@ -1,14 +1,11 @@
 ---
-title: sys.syslogins (Transact SQL) | Microsoft Docs
+title: sys.syslogins (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslogins_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924ae2b530c719085e21d7b045e4a872255b3009
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 599781eb8d06ac08a1c13af1b17523b56b39cf2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755204"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,18 +59,18 @@ ms.locfileid: "33221734"
 |**isntname**|**int**|1 = 로그인이 Windows 사용자 또는 그룹입니다.<br /><br /> 0 = 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인입니다.|  
 |**isntgroup**|**int**|1 = 로그인이 Windows 그룹입니다.|  
 |**isntuser**|**int**|1 = 로그인이 Windows 사용자입니다.|  
-|**sysadmin**|**int**|1 = 로그인이의 멤버는 **sysadmin** 서버 역할입니다.|  
-|**securityadmin**|**int**|1 = 로그인이의 멤버는 **securityadmin** 서버 역할입니다.|  
-|**serveradmin**|**int**|1 = 로그인이의 멤버는 **serveradmin** 고정된 서버 역할입니다.|  
-|**setupadmin**|**int**|1 = 로그인이의 멤버는 **setupadmin** 고정된 서버 역할입니다.|  
-|**processadmin**|**int**|1 = 로그인이의 멤버는 **processadmin** 고정된 서버 역할입니다.|  
-|**diskadmin**|**int**|1 = 로그인이의 멤버는 **diskadmin** 고정된 서버 역할입니다.|  
-|**dbcreator**|**int**|1 = 로그인이의 멤버는 **dbcreator** 고정된 서버 역할입니다.|  
-|**bulkadmin**|**int**|1 = 로그인이의 멤버는 **bulkadmin** 고정된 서버 역할입니다.|  
+|**sysadmin**|**int**|1 = 로그인이 소속은 **sysadmin** 서버 역할입니다.|  
+|**securityadmin**|**int**|1 = 로그인이 소속은 **securityadmin** 서버 역할입니다.|  
+|**serveradmin**|**int**|1 = 로그인이 소속은 **serveradmin** 고정된 서버 역할입니다.|  
+|**setupadmin**|**int**|1 = 로그인이 소속은 **setupadmin** 고정된 서버 역할입니다.|  
+|**processadmin**|**int**|1 = 로그인이 소속은 **processadmin** 고정된 서버 역할입니다.|  
+|**diskadmin**|**int**|1 = 로그인이 소속은 **diskadmin** 고정된 서버 역할입니다.|  
+|**dbcreator**|**int**|1 = 로그인이 소속은 **dbcreator** 고정된 서버 역할입니다.|  
+|**bulkadmin**|**int**|1 = 로그인이 소속은 **bulkadmin** 고정된 서버 역할입니다.|  
 |**loginname**|**nvarchar(128)**|사용자의 로그인 이름입니다. 이전 버전과의 호환성을 위해 제공됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183523"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  

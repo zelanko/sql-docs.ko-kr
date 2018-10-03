@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6594ff2add077ca516cd3f4bf0380cc1af201f6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184303"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅숏으로 되돌리기
   온라인 데이터베이스의 데이터가 손상되면 일부 경우 데이터베이스를 손상 발생 이전의 데이터베이스 스냅숏으로 되돌리는 작업이 백업에서 온라인 데이터베이스를 복원하는 방법에 대한 대체 방법이 될 수 있습니다. 예를 들어 데이터베이스 되돌리기 작업은 테이블 삭제와 같은 최근의 심각한 사용자 오류 발생 전의 상황으로 돌아가는 데 유용할 수 있습니다. 그러나 스냅숏을 만든 후의 모든 변경 내용은 손실됩니다.  
@@ -50,7 +47,7 @@ ms.locfileid: "37252615"
   
  데이터베이스를 되돌리기 전에 다음 제한 사항을 고려합니다.  
   
--   되돌리기는 미디어 복구용으로 사용할 수 없습니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 데이터베이스 스냅숏은 데이터베이스 파일의 불완전한 복사본이므로 데이터베이스나 데이터베이스 스냅숏이 손상된 경우 스냅숏에서 되돌릴 수 없는 경우가 많습니다. 가능하다고 해도 손상된 경우에는 되돌리기를 수행해도 문제가 해결되지 않습니다. 따라서 데이터베이스를 보호하려면 정기적으로 백업하고 복원 계획을 테스트해야 합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
+-   되돌리기는 미디어 복구용으로 사용할 수 없습니다. . 데이터베이스 스냅숏은 데이터베이스 파일의 불완전한 복사본이므로 데이터베이스나 데이터베이스 스냅숏이 손상된 경우 스냅숏에서 되돌릴 수 없는 경우가 많습니다. 가능하다고 해도 손상된 경우에는 되돌리기를 수행해도 문제가 해결되지 않습니다. 따라서 데이터베이스를 보호하려면 정기적으로 백업하고 복원 계획을 테스트해야 합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
   
     > [!NOTE]  
     >  데이터베이스 스냅숏을 만든 시점까지 원본 데이터베이스를 복원해야 하는 경우 전체 복구 모델을 사용하고 이 작업을 수행할 수 있는 백업 정책을 구현합니다.  

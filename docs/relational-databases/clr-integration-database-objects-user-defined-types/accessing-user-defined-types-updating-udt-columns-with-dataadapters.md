@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -22,18 +20,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bdb8993d93c438dcfc47dd28c3ac90cfd5fcc0d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 96c6b56673b7423629821f588eafb7a6f46591f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358225"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657421"
 ---
-# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>사용자 정의 형식 액세스-DataAdapters로 UDT 열 업데이트
+# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>사용자 정의 형식 액세스 - DataAdapters로 UDT 열 업데이트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   사용자 정의 형식 (Udt)를 사용 하 여 지원 되는 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter** 검색 하 고 데이터를 수정 합니다.  
   

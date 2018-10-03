@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c340afc52dbd60f4accb1da7d3883e62d36974f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 053af2980857e1bde0ea4b3812b64a276ee9e171
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157263"
 ---
 # <a name="multilinestring"></a>MultiLineString
   A `MultiLineString` 0 개 이상의 컬렉션인 `geometry` 하거나 **geographyLineString** 인스턴스.  
@@ -36,7 +33,7 @@ ms.locfileid: "37288529"
   
 -   그림 1은 단순 `MultiLineString` 인스턴스에 두 네 끝점이 경계인 `LineString` 요소입니다.  
   
--   그림 2는 `MultiLineString` 요소의 끝점만 교차하므로 단순한 `LineString` 인스턴스입니다. 경계는 두 개의 겹치지 않는 끝점입니다.  
+-   그림 2는 `MultiLineString` 요소의 엔드포인트만 교차하므로 단순한 `LineString` 인스턴스입니다. 경계는 두 개의 겹치지 않는 엔드포인트입니다.  
   
 -   그림 3은 해당 `MultiLineString` 요소 중 하나의 내부가 교차하므로 단순하지 않은 `LineString` 인스턴스입니다. 이 경계의 `MultiLineString` 인스턴스는 4 개의 끝점입니다.  
   

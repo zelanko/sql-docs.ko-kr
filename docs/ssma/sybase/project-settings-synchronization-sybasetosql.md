@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fcdcfc8d113bca42a9f042e8e6196d3de55b8e7e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 0a221d5c24606707ba9876e0980e6c28d2dacc67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834421"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>프로젝트 설정(동기화)(SybaseToSQL)
 [동기화] 페이지의 **프로젝트 설정** 대화 상자에는 SSMA를 테이블 및 저장된 프로시저와 같은 데이터베이스 개체를 로드 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c728fec6573dbcfd36bcc973c1fddbf7ffbe1b45
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: daaec371cae5f224201c7e4660574ec5734c90fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183283"
 ---
 # <a name="sequence-container"></a>시퀀스 컨테이너
   시퀀스 컨테이너는 패키지 제어 흐름의 하위 집합인 제어 흐름을 정의합니다. 시퀀스 컨테이너는 패키지를 여러 개의 별도 제어 흐름으로 그룹화하며, 각 제어 흐름에는 전체 패키지 제어 흐름 내에서 실행되는 하나 이상의 태스크 및 컨테이너가 포함됩니다.  

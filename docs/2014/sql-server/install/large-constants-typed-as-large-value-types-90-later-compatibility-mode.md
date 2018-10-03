@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary constants
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - character string constants
 - PATINDEX function
 ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 59f9afc3c8f083da2c1d3934d5aea5b541c6c527
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a12a0972ee754c8f9070122902a64c3e92eb05f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185283"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>호환성 모드 90 이상에서 큰 상수는 큰 값 유형으로 처리됩니다.
   업그레이드 관리자가 큰 상수를 검색했습니다. 크기가 8,000바이트 이상인 문자열 상수와 이진 상수는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 큰 개체 데이터 형식으로 처리됩니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 큰 문자, 유니코드 및 이진 상수가 큰 값 유형으로 처리됩니다.  

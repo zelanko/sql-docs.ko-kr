@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - sp_addarticle
 - articles [SQL Server replication], adding
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b110e9f73dd774a3a30b8545d19dc432a9ec59c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a46975d15b9e1aecaabf704d34a749f157b1f74d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189930"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084933"
 ---
 # <a name="define-an-article"></a>아티클 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 아티클을 정의하는 방법에 대해 설명합니다.  
@@ -62,7 +59,7 @@ ms.locfileid: "37189930"
   
 #### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
   
-1.   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 마우스 오른쪽 단추로 클릭합니다.  
   

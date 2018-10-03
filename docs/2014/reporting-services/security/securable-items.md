@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - securable items [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5a4982fc77e6a039e0f639e8ac0cac093d971370
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50c898ebd6f6add1c1358c37d3320bf5e7334271
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251665"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188813"
 ---
 # <a name="securable-items"></a>보안 개체 항목
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 보안을 사용하여 보고서 서버에 저장되어 있는 항목에 대한 액세스를 제어합니다. 사용자에게 보고서 서버 액세스 권한을 부여할 때는 일반적으로 다음과 같이 역할 할당 쌍을 만듭니다.  

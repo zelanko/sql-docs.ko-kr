@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 469a17c909e6b59289dc165c0327e040b2a8503f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158653"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>변경 내용 추적 그룹에 특성 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값의 변경 내용을 추적하려는 경우 변경 내용 추적 그룹에 특성을 추가합니다.  

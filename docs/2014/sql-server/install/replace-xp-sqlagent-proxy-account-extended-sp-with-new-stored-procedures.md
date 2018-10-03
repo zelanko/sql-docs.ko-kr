@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - xp_sqlagent_proxy_account
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cd609cca3f8197986799a7c9630d35eeaa57d41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 320c7c719752a08f5b41531d7861646aa9ffe423
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181163"
 ---
 # <a name="replace-usage-of-the-xpsqlagentproxyaccount-extended-stored-procedure-with-new-stored-procedures"></a>xp_sqlagent_proxy_account 확장 저장 프로시저를 새로운 저장 프로시저로 대체합니다.
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 여러 프록시를 지원합니다. 새로운 저장 프로시저 집합을 사용하여 이러한 프록시를 정의할 수 있습니다. 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 저장 프로시저에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 항목을 참조하십시오.  

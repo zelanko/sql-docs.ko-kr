@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 14735ce5e7f70dbd25e76749c96c3a15916e35de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8778beb7a62fed255d0e3ce754679b2a03b6f163
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179313"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>보고서 서버의 SPN(서비스 사용자 이름) 등록
   상호 인증에 Kerberos 프로토콜을 사용하는 네트워크에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 배포하는 경우 도메인 사용자 계정으로 실행되도록 보고서 서버 서비스 SPN(서비스 사용자 이름)을 구성하려면 보고서 서버 서비스에 대한 SPN을 만들어야 합니다.  

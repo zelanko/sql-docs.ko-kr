@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.errorhandling.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89fd32ff708586c21df9d77b020ae6215b30c850
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f36c00689d372f407fd4f1d062a937be390f5f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121063"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>플랫 파일 원본 편집기(오류 출력 페이지)
   **플랫 파일 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열의 속성을 설정할 수 있습니다.  

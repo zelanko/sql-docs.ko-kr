@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Activation
 - Broker Activation object
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7799c0ebb5dce481da8257bf74700d2fe40caeee
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7972d0c7a944020d28131717d1d827e874ca0b72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103073"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server, Broker 활성화 개체
   **SQLServer:BrokerActivation** 성능 개체에는 저장 프로시저 활성화에 대한 정보를 보고하는 성능 카운터가 포함되어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  

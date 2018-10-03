@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8f383e8c1a8fbf16d10d4f8633d1e05a385cd74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d70223df27f8f75c6e3a4d354d8f57f9ee8f150a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124985"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>위치 경로에 노드 테스트 지정(SQLXML 4.0)
   노드 테스트는 위치 단계에서 선택되는 노드 유형을 지정합니다. 모든 축(`child`, `parent`, `attribute` 또는 `self`)에는 주 노드 유형이 있습니다. 에 대 한 합니다 `attribute` 축의 주 노드 유형은입니다  **\<특성 >** 합니다. 에 대 한 합니다 `parent`, `child`, 및 `self` 축 주 노드 유형은입니다  **\<요소 >** 합니다.  

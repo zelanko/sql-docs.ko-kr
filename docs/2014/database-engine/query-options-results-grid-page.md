@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088093"
 ---
 # <a name="query-options-results-grid-page"></a>쿼리 옵션 결과(표 형태 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다.  
@@ -30,19 +27,19 @@ ms.locfileid: "37312293"
  **결과 집합에 쿼리 포함**  
  결과 집합의 일부로 쿼리 텍스트를 반환합니다.  
   
- **복사 하거나 결과 저장할 때 열 머리글 포함**  
+ **결과를 복사하거나 저장할 때 열 머리글 포함**  
  결과를 클립보드에 복사하거나 파일에 저장할 때 열 머리글(제목)을 포함합니다. 저장하거나 복사한 결과 데이터에 열 머리글 없이 데이터만 포함하려면 이 확인란의 선택을 취소합니다.  
   
  **실행 후 결과 삭제**  
  화면에 표시한 후 쿼리 결과를 삭제하여 메모리를 확보합니다.  
   
- **별도 탭에 결과 표시**  
+ **별도의 탭에 결과 표시**  
  쿼리 문서 창의 아래쪽 대신 새로운 문서 창에 결과 집합을 표시합니다.  
   
  **쿼리 실행 후 결과 탭으로 전환**  
  자동으로 화면 포커스를 결과 집합에 둡니다.  
   
- **최대 검색 문자 수**  
+ **검색한 최대 문자 수**  
  **비-XML 데이터**:  
   
  1에서 65535 사이의 숫자를 입력하여 각 셀에 표시될 최대 문자 수를 지정합니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - views [SMO]
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2a948a11658f72235566c09b7a28953b26590d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7898003a6d3a6057b9982e1b130ca6cf4c559aaa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150484"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072103"
 ---
 # <a name="creating-altering-and-removing-views"></a>뷰 생성, 변경 및 제거
   SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 뷰는 <xref:Microsoft.SqlServer.Management.Smo.View> 개체로 표시됩니다.  

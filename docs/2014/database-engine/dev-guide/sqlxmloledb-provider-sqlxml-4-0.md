@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - providers [SQLXML], SQLXMLOLEDB Provider
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - data providers [SQLXML], SQLXMLOLEDB Provider
 ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
-caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77981acb574ea77d795a28e8244f7a081970602d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16b6e0b4408902a2c68d043629883df40cd3b089
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184670"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120657"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자(SQLXML 4.0)
   SQLXMLOLEDB 공급자는 ADO를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 기능을 제공하는 OLE DB 공급자입니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - validating versions [Master Data Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - versions [Master Data Services], validating
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8b40c03711cea6e6bf840bdb9ce63fa9cf6e302a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c937e0d78b4c3e9ee1e2c0ab68d32d840173ae7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187373"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>비즈니스 규칙에 대해 버전 유효성 검사(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 버전의 유효성을 검사하여 모델 버전의 모든 멤버에 비즈니스 규칙을 적용할 수 있습니다.  

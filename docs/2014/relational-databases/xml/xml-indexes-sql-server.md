@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc49d265969735e375b579b2f819ebbe1648bd8b
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106963"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
   XML 인덱스를 만들 수 있습니다 `xml` 데이터 형식 열입니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 응용 프로그램에서 XML 인덱스를 활용할 수 있습니다.  
@@ -96,7 +93,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   기본 테이블의 기본 키. 기본 테이블의 기본 키는 기본 테이블과 백 조인을 위한 기본 XML 인덱스에 복제되고 해당 기본 테이블의 기본 키에 있는 최대 열 수는 15개로 제한됩니다.  
   
- 이 노드 정보는 지정된 쿼리에 대해 XML 결과를 계산 및 구성하는 데 사용됩니다. 최적화를 위해 태그 이름과 노드 유형 정보는 정수 값으로 인코딩되고 경로 열에서는 같은 인코딩을 사용합니다. 또한 경로는 경로 접미사가 알려져 있는 경우에만 경로에 일치할 수 있도록 반대 순서로 저장됩니다. 예를 들어:  
+ 이 노드 정보는 지정된 쿼리에 대해 XML 결과를 계산 및 구성하는 데 사용됩니다. 최적화를 위해 태그 이름과 노드 유형 정보는 정수 값으로 인코딩되고 경로 열에서는 같은 인코딩을 사용합니다. 또한 경로는 경로 접미사가 알려져 있는 경우에만 경로에 일치할 수 있도록 반대 순서로 저장됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   `//ContactRecord/PhoneNumber` - 마지막 두 단계만 알려져 있는 경우  
   

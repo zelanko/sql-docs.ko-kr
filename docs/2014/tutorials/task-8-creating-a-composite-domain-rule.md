@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c8779496e3e352a59477cf10f12a13011c5c6b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19b4922446f564435970fbb7f0422a3c98de48df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151963"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>태스크 8: 복합 도메인 규칙 만들기
   이 작업에 대 한 규칙을 만듭니다는 **Address Validation** 복합 도메인입니다. 도메인 간 규칙을 정의: 경우 **도시** 됩니다 **Los Angeles**, **상태** 여야 합니다 **CA** 여기서 **City** 및 **상태** 는 두 개의 도메인입니다.  

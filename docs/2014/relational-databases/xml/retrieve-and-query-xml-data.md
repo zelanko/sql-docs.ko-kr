@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ce925276bae931526d5c36b10337f98bcf96fe3
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d946b09b1887381190cac0619ef33d0bb21e5832
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179283"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML 데이터 검색 및 쿼리
   이 항목에서는 XML 데이터를 쿼리할 때 지정해야 하는 쿼리 옵션에 대해 설명합니다. 또한 XML 인스턴스가 데이터베이스에 저장될 때 보존되지 않는 인스턴스의 일부분에 대해 설명합니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "43889829"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 인스턴스의 내용을 보존하지만 XML 데이터 모델에서 중요하다고 간주되지 않는 XML 인스턴스의 측면은 보존하지 않습니다. 즉, 검색된 XML 인스턴스는 서버에 저장된 인스턴스와 다를 수 있지만 동일한 정보를 포함한다는 의미입니다.  
   
 ### <a name="xml-declaration"></a>XML 선언  
- 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 예를 들어:  
+ 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -82,7 +79,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 결과의 네임스페이스 접두사는 다를 수 있습니다. 예를 들어:  
+ 결과의 네임스페이스 접두사는 다를 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

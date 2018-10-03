@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ede4638b1b6c6bf9d75be8c57b2c4c68f78ebfc4
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 1c4b128dc548780350d76c758543a852895118e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851721"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>전역 설정(로깅)(SybaseToSQL)
 사용 된 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 기술 지원 서비스를 사용 하는 경우에 이러한 설정을 변경할는 있습니다.  

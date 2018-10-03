@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789281"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 및 DefinedSize 속성 예제 (VC + +)
-사용 하 여이 예제는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 된 크기 및 필드의 실제 크기를 표시 합니다.  
+이 예제에서는 합니다 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 크기와 필드의 실제 크기를 표시 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -132,16 +129,16 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **저장소 이름: Eric 읽기 설명서**  
+ **저장소 이름: Eric 읽기 책**  
 **정의 된 크기: 40**  
 **실제 크기: 19**  
 **저장소 이름: Barnum**  
 **정의 된 크기: 40**  
 **실제 크기: 8**  
-**저장소 이름: 뉴스 및 Brews**  
+**저장소 이름: 뉴스 및 맥주**  
 **정의 된 크기: 40**  
 **실제 크기: 12**  
-**저장소 이름: Doc-U-매트: 품질 세탁 및 설명서**  
+**저장소 이름: Doc-U-Mat: 품질 세탁 및 온라인 설명서**  
 **정의 된 크기: 40**  
 **실제 크기: 36**  
 **저장소 이름: Fricative Bookshop**  

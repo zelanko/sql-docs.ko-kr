@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0372befbf0c69beaf036228d97e217766f99d480
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633513"
 ---
-# <a name="attributes-property-example-vc"></a>특성 속성 예제 (VC + +)
-이 예제에서는 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 을 빈 문자열입니다. 이 경우 사용자는 데이터가 적용 되지 않은 레코드와 위치 데이터 알 수 없는 레코드 구별할 수 있습니다.  
+# <a name="attributes-property-example-vc"></a>Attributes 속성 예제(VC++)
+이 예제에서는 합니다 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 빈 문자열입니다. 이런 경우, 사용자 위치 데이터는 알 수 없는 레코드 및 레코드를 데이터에 적용 되지 않습니다 구별할 수 있습니다.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -207,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 속성 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [Attributes 속성 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

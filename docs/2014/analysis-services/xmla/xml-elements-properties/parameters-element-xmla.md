@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Parameters Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Parameters element
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87836c6ca9f33c100b3ba10ba91379370e787773
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b9c3d0d642ad7248d87e7cc17aaa17953bf6aec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134053"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 요소(XMLA)
   [Execute](parameter-element-xmla.md) 메서드에서 사용하는 [Parameter](../xml-elements-methods-execute.md) 요소의 컬렉션을 포함합니다.  
@@ -56,8 +53,8 @@ ms.locfileid: "37158864"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

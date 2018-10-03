@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8eeed38c323bb447d7d20b993898873448e3a8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2ba2ef38d52ff1f8152145ce8c1c3290b426209
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691001"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 사용자에 대 한 ODBC 드라이버&#39;가이드
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- Oracle 사용자 가이드에 대 한 ODBC 드라이버를 통해 액세스할 수 있는 설치 도움말을 보완 하기 위한 용도가 [ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  
+ ODBC Driver for Oracle 사용자 가이드를 통해 액세스할 수 있는 설치 도움말을 보완 하기 위해 것은 [ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

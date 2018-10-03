@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd6e01f8fbacfae69e81d3779e0e1fc8b54182c7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 09677c9fe2ebd023f10176435fffa1d35945f18a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117573"
 ---
-# <a name="date-and-time-improvements-ole-db"></a>날짜 및 시간 기능 향상 (OLE DB)
+# <a name="date-and-time-improvements-ole-db"></a>날짜 및 시간 기능 향상(OLE DB)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. 에 대 한 개요는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 지원 새 날짜 및 시간 데이터 형식에 대 한 참조 [날짜 및 시간 기능 향상](../native-client/features/date-and-time-improvements.md)합니다. 샘플을 보려면 [사용 하 여 향상 된 날짜 및 시간 기능 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)합니다.  
   
- 날짜 및 시간 데이터 형식에 대 한 일반적인 내용은 참조 하세요. [datetime &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)합니다.  
+ 날짜 및 시간 데이터 형식에 대 한 자세한 내용을 보려면 [datetime &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
@@ -35,10 +32,10 @@ ms.locfileid: "37410722"
  [메타 데이터 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
  DBBINDING 구조, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset` 및 I`ColumnsInfo::GetColumnInfo`에 대한 정보가 포함되어 있습니다. OLE DB 스키마 행 집합의 업데이트에 대한 정보도 제공합니다.  
   
- [바인딩 및 변환 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [바인딩 및 변환&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  기존 데이터 형식 및 새로운 데이터 형식에 대한 서버와 클라이언트 간 변환 규칙을 설명합니다.  
   
- [대량 복사 변경 사항으로 향상 된 날짜 및 시간 형식에 대 한 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
+ [향상 된 날짜 및 시간 형식에 대 한 복사본의 변경 내용을 대량 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  대량 복사 작업을 지원하는 날짜/시간 기능 향상에 대해 설명합니다.  
   
  [날짜 및 시간 기능 향상을 위한 OLE DB API 지원](ole-db-api-support-for-date-and-time-enhancements.md)  

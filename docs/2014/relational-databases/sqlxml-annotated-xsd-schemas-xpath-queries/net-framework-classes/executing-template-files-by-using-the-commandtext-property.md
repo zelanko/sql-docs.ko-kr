@@ -1,14 +1,12 @@
 ---
-title: CommandText 속성을 사용 하 여 템플릿 파일 실행 | Microsoft Docs
+title: CommandText 속성을 사용 하 여 템플릿 파일 실행 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b74755c73982bb4ed0380209b34278e68b2309e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 655c12a8b3f055adb6dc61164046e3059216ed19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082473"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
   이 예제는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정할 수 있습니다 하는 방법을 보여 줍니다. CommandText 값으로 SQL 또는 XPath 쿼리를 지정 하지 않고 값으로 파일 이름을 지정할 수 있습니다. 다음 예제에서는 CommandType 속성 SqlXmlCommandType.TemplateFile로 지정 됩니다.  

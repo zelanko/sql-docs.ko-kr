@@ -5,7 +5,6 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
@@ -21,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a63d4596b89a927d0b6f3fe47387ad9652f48985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067065"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
   하나를 사용 합니다 **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 및 합니다 DAC정의등록하는기존데이터베이스의개체를설명하는데이터계층응용프로그램(DAC)정의스크립팅`msdb` 시스템 데이터베이스 (**마스터** 에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  

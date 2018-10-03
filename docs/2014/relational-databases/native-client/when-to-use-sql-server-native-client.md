@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, about SQL Server Native Client ODBC driver
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], about SQL Server Native Client
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bfeee539be2afb80596f5638bc0420616cfc95ae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 913ae98f67c5c8a9b919416b5596502df8c80faa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087383"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>SQL Server Native Client를 사용하는 경우
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하는 데 사용할 수 있는 한 가지 기술입니다.  다른 데이터 액세스 기술의 내용은 참조 하세요. [데이터 액세스 기술 로드맵](http://go.microsoft.com/fwlink/?LinkID=179186)  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하는 데 사용할 수 있는 한 가지 기술입니다.  다른 데이터 액세스 기술에 대한 자세한 내용은 [데이터 액세스 기술 로드맵](http://go.microsoft.com/fwlink/?LinkID=179186) 참조  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 응용 프로그램의 데이터 액세스 기술로 사용할지 여부를 결정할 때는 여러 요인을 고려해야 합니다.  
   

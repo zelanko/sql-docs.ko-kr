@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a28d61cd262fb348e839055ea0f0d443187bf75
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46f9cc26759470630c51cd50521f7c3705791939
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131733"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>프로덕션 환경에서 Analysis Services 프로젝트 및 데이터베이스 작업
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 개발하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 배포한 다음에는 배포된 데이터베이스의 개체 변경 방법을 결정해야 합니다. 보안 역할, 분할 및 저장소 설정과 관련된 변경 내용 등 특정 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 변경할 수 있습니다. 특성 추가나 사용자 정의 계층과 같은 기타 설정은 프로젝트 모드나 온라인 모드의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서만 변경할 수 있습니다.  

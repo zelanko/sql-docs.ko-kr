@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], connections
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - default server instances
 - analyzing system [Upgrade Advisor], connections
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
-caps.latest.revision: 30
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba6652a172e06c64018243acd01a6d60dcced47b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5259f12613a67d94f704d9c6d170e09f2ee5f17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181620"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125393"
 ---
 # <a name="connection-parameters"></a>연결 매개 변수
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 특정 서버 유형을 분석하려면 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스가 자동으로 선택됩니다. 이 선택 항목을 변경할 수 있지만 업그레이드 관리자에서 분석할 인스턴스는 한 번에 하나만 선택할 수 있습니다. 인증이 필요한 서버 유형을 포함한 경우 인증 모드와 자격 증명을 입력해야 합니다.  

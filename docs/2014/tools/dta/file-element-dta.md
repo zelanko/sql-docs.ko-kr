@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - File element
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cf6b51bf7f6d4f90a8a575326beb457e42e5d99
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d74a576ea8d966d5c1a2c802eb42049c33a94b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097713"
 ---
 # <a name="file-element-dta"></a>File 요소(DTA)
   작업 파일을 지정합니다. 작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 작업 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트(.sql) 또는 추적 파일(.trc)이 될 수 있습니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
@@ -43,7 +40,7 @@ ms.locfileid: "37159764"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string` 데이터 형식을 사용하여 작업 파일의 디렉터리 경로를 지정할 수 있습니다. 예를 들어:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> 서버에서 지정하는 길이 제한이 적용됩니다.|  
+|**데이터 형식 및 길이**|`string` 데이터 형식을 사용하여 작업 파일의 디렉터리 경로를 지정할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> 서버에서 지정하는 길이 제한이 적용됩니다.|  
 |**기본값**|없음|  
 |**발생 빈도**|다른 작업 유형이 지정되지 않은 경우 한 번만 지정해야 합니다. **Workload**부모에 대해 **EventString**, **File** 또는 **Database** 자식 요소를 지정해야 하지만 한 유형만 사용할 수 있습니다. 예를 들어 **File** 요소로 작업을 지정할 경우 동일한 XML 입력 파일에서 **Database** 요소로 작업을 지정할 수 없습니다.|  
   

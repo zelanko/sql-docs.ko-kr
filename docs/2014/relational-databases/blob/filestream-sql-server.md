@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c2c5e8841a866eb82d9c844b1eccf60c09555ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1db3c3efe332eb65504c9476a569ec54b49cc1a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087243"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
   FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 응용 프로그램은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  

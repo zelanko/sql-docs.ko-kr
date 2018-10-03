@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], deadlocks
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afc7eb593d226a71e761b1197fb1bab6eeb13517
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176583"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  

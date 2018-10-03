@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d000c77263a0448ff838bff42a5020b86a299a72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089663"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식을 설정 하는 경우는 `LoggingMode` 속성을 설정한 이름인 Disabled 대신 숫자 값 2를 사용 해야 합니다.  
@@ -461,7 +458,7 @@ ms.locfileid: "37221833"
   
 |DTSXMLDiffOptions의 이름|숫자 값|  
 |----------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
+|없음|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,7 +488,7 @@ ms.locfileid: "37221833"
   
 |DatabaseSelection의 이름|숫자 값|  
 |----------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
+|없음|0|  
 |All|1|  
 |시스템|2|  
 |사용자|3|  
@@ -501,7 +498,7 @@ ms.locfileid: "37221833"
   
 |TableSelection의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
+|없음|0|  
 |All|1|  
 |Specific|2|  
   
@@ -579,7 +576,7 @@ ms.locfileid: "37221833"
   
 |DTSForcedExecResult의 이름|숫자 값|  
 |------------------------------------------|-------------------|  
-|InclusionThresholdSetting|-1|  
+|없음|-1|  
 |성공|0|  
 |실패|1|  
 |Completion|2|  

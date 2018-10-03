@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - domain controllers
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - network service accounts
 - local service accounts
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cc2ec39bee7f9a64d75ccf4753220f69693155b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 640f0f30991307a56112270d0619f6ea0380021e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126815"
 ---
 # <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>도메인 컨트롤러에서 SQL Server 2008로 업그레이드하기 위한 서비스 계정 요구 사항
   업그레이드 관리자의 인스턴스를 발견 했습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 로컬 서비스나 네트워크 서비스 계정으로 실행 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 도메인 컨트롤러입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도메인 컨트롤러에 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]가 설치되어 있으면 로컬 서비스 계정 또는 네트워크 서비스 계정 권한으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행할 수 없습니다.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a17c8f404d99d4b701eafb536aaa595a4039bc9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3f4f27d074ff01f02cc05c165e8acb1ea109198
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129243"
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 행 집합
   하나 이상의 성능 카운터의 값을 반환합니다. 초당 디스크 읽기 수 및 CPU 사용량(%) 등의 시간별 사용량에 대한 정보를 반환하는 카운터는 지원하지 않습니다.  

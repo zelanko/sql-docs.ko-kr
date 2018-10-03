@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], checkouts
 - checkouts [SQL Server Management Studio]
 - checking out files
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183789"
 ---
 # <a name="manage-checkouts"></a>체크 아웃 관리
   파일이 원본 제어에 추가된 후에 파일을 수정할 수 있으려면 먼저 체크 아웃해야 합니다. 파일을 원본 제어에서 체크 아웃할 경우 원본 제어 공급자는 로컬 디스크에서 최신 버전의 복사본을 만들고 파일의 읽기 전용 특성을 제거합니다. 경우에 따라서는 파일을 체크 아웃하지 않고 편집해야 할 수 있습니다. 파일을 체크 아웃 하지 않고 파일을 편집 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Checked-In 파일 편집](../../2014/database-engine/edit-checked-in-files.md)합니다.  

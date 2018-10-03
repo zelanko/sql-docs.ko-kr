@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourcePermissions Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSourcePermissions element
 ms.assetid: 6e1cfbec-65b9-4942-a628-f7f7c891e35f
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42f330e28ac9a8bd349660550cee84df075121f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18cecfd7cb246e37694a55893762a5675988d983
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188735"
 ---
 # <a name="datasourcepermissions-element-assl"></a>DataSourcePermissions 요소(ASSL)
   컬렉션을 포함 [DataSourcePermission](../objects/datasourcepermission-element-assl.md) 와 관련 된 요소를 [DataSource](../data-type/datasource-data-type-assl.md) 데이터 형식입니다.  
@@ -50,8 +47,8 @@ ms.locfileid: "37321183"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

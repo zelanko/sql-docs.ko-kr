@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL job step
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 925d8a66a6764f70381e5d22871e1a5b4ef88e68
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a0cb55f71c38a0911b38b52fea426f0e09f47fef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076283"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계를 만드는 방법에 대해 설명합니다.  

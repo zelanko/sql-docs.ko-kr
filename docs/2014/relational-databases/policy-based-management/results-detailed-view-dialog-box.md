@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
 - sql12.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 268d240d151c09c8677dd58e900a06944deae1bb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c304f672ddcead8ac2077f27d02b65033c4b1b77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143433"
 ---
 # <a name="results-detailed-view-dialog-box"></a>결과 자세히 보기 대화 상자
   **정책 실행** 대화 상자를 사용하여 정책을 실행하고 **실행**을 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  

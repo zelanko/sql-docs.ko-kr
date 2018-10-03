@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4be22e7a2e81ff8c5eeac83d25c7361cc1833078
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161885"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
   쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  

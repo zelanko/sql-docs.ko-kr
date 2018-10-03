@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d9857c5d646cf40b77a75736dadb32a990db8e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc1101225eae5fd02eec2ee7c29e8ca21a778370
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188223"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
   이 항목에서는 서식 파일에 대해 설명합니다. 필드가 데이터 파일에 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛸 수 있습니다. 건너뛴 열이 Null을 허용하거나 기본값을 가질 경우에만 데이터 파일에 테이블의 열 수보다 적은 수의 필드가 있을 수 있습니다.  

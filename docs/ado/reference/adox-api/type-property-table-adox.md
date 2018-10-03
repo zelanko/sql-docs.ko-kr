@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,18 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 869f6036b50fc810a770650bcf310bb50422291b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6ab64be1e48790bdb03a805c5cb4e81f74ab3fc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718851"
 ---
-# <a name="type-property-table-adox"></a>Type 속성 (테이블) (ADOX)
+# <a name="type-property-table-adox"></a>Type 속성(테이블)(ADOX)
 테이블의 유형을 나타냅니다.  
   
 ## <a name="return-values"></a>반환 값  
@@ -41,8 +38,8 @@ ms.locfileid: "35287252"
  [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [카탈로그 ActiveConnection 속성 예제 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [테이블 형식 속성 예제 (VB) 연결 Close 메서드](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Catalog ActiveConnection 속성 예제 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Connection Close 메서드, Table Type 속성 예제 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Type 속성 (열) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Type 속성 (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [Type 속성 (키) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
