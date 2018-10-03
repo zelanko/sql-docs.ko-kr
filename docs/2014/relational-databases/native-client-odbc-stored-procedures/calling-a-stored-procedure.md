@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ec1897886a968f15eb67210f060399225317b55
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 02109baf2edfe26280ad773d90426181ccf4ffc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052543"
 ---
 # <a name="calling-a-stored-procedure"></a>저장 프로시저 호출
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 모두 ODBC CALL 이스케이프 시퀀스를 지원 하며 [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) 문을 실행 하기 위한 저장 프로시저는 ODBC CALL 이스케이프 시퀀스는 기본 방법입니다. ODBC 구문을 사용하면 응용 프로그램에서는 저장 프로시저의 반환 코드를 검색할 수 있고 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터 간 RPC(원격 프로시저 호출) 전송을 위해 원래 개발된 프로토콜을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 최적화됩니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
@@ -42,11 +39,11 @@ ms.locfileid: "39083416"
   
  프로시저는 0개 이상의 매개 변수를 가질 수 있고 값(구문 시작에 나오는 선택적 매개 변수 표식인 ?=로 표시됨)을 반환할 수도 있습니다. 매개 변수가 입력 또는 입/출력 매개 변수인 경우 리터럴 또는 매개 변수 표식을 사용할 수 있습니다. 매개 변수가 출력 매개 변수인 경우에는 출력을 알 수 없기 때문에 매개 변수 표식을 사용해야 합니다. 매개 변수 표식을 사용 하 여 바인딩되어야 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 프로시저 호출 하기 전에 문이 실행 됩니다.  
   
- 입력 및 입/출력 매개 변수는 프로시저 호출에서 생략할 수 있습니다. 매개 변수 없이 괄호만 지정하여 프로시저를 호출하면 드라이버는 첫 번째 매개 변수에 기본값을 사용하도록 데이터 원본에 지시합니다. 예를 들어:  
+ 입력 및 입/출력 매개 변수는 프로시저 호출에서 생략할 수 있습니다. 매개 변수 없이 괄호만 지정하여 프로시저를 호출하면 드라이버는 첫 번째 매개 변수에 기본값을 사용하도록 데이터 원본에 지시합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  {**호출** * * procedure_name **()**}  
   
- 프로시저에 매개 변수가 없으면 프로시저가 실패할 수 있습니다. 괄호 없이 프로시저를 호출하면 드라이버는 아무 매개 변수 값도 보내지 않습니다. 예를 들어:  
+ 프로시저에 매개 변수가 없으면 프로시저가 실패할 수 있습니다. 괄호 없이 프로시저를 호출하면 드라이버는 아무 매개 변수 값도 보내지 않습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  {**call** *procedure_name*}  
   

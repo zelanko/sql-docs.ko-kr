@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e787c487e2fb03619346de73234427c3499ef5f4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681751"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +55,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  연결된 된 커밋 시간이 보다 엄격 하 게 큰 테이블을 변경 하는 cdc. < capture_instance > _CT의 행만 *start_time* 결과 집합에 포함 됩니다.  
   
- 이 인수에 값 NULL을 제공하면 쿼리 범위의 하위 끝점이 캡처 인스턴스에 대해 유효한 범위의 하위 끝점에 대응됩니다.  
+ 이 인수에 값 NULL을 제공하면 쿼리 범위의 하위 엔드포인트가 캡처 인스턴스에 대해 유효한 범위의 하위 엔드포인트에 대응됩니다.  
   
  *end_time*  
  합니다 **날짜/시간** 결과 집합에 포함할 변경 테이블 항목 범위의 상위 끝점을 나타내는 값입니다.  
@@ -76,7 +70,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
      값이 있는 테이블을 변경 하는 cdc. < capture_instance > _CT의 행만 \_ \_$start_lsn 및 해당 커밋 시간이 미만 **start_time** 결과 집합에 포함 됩니다.  
   
- 이 인수에 값 NULL을 제공하면 쿼리 범위의 상위 끝점이 캡처 인스턴스에 대해 유효한 범위의 상위 끝점에 대응됩니다.  
+ 이 인수에 값 NULL을 제공하면 쿼리 범위의 상위 엔드포인트가 캡처 인스턴스에 대해 유효한 범위의 상위 엔드포인트에 대응됩니다.  
   
  *< row_filter_option >* :: = {모든 | 마스크를 사용 하 여 모든 | merge를 사용 하 여 모든}  
  결과 집합에 반환되는 행과 메타데이터 열의 내용을 제어하는 옵션입니다. 다음 옵션 중 하나를 사용할 수 있습니다.  

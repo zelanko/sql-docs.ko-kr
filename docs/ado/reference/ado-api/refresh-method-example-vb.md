@@ -1,32 +1,29 @@
 ---
-title: 메서드 예제 (VB) 새로 고침 | Microsoft Docs
+title: Refresh 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADO], Visual Basic example
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56d9bcbb317c1c8a450a09d1ef2775d0b769cef4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 90fecd4dcb60907137aecdbe4cbfb792e9dc4c23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801341"
 ---
-# <a name="refresh-method-example-vb"></a>메서드 예제를 (VB)를 새로 고칩니다.
-사용 하 여 보여 주는이 예제는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 를 새로 고치려면 메서드는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 저장된 프로시저에 대 한 컬렉션 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
+# <a name="refresh-method-example-vb"></a>Refresh 메서드 예제(VB)
+이 예제에서는 합니다 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 새로 고침 하는 방법의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 저장된 프로시저에 대 한 컬렉션 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체.  
   
 ```  
 'BeginRefreshVB  
@@ -125,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh 메서드(ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

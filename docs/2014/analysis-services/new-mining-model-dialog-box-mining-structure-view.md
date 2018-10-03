@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.createrelatedmodel.f1
 ms.assetid: 7729e98e-6296-4ad9-b73c-fb0f29f4c54e
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c03d62fb6196cadb79cb5e16c06483e7efbe174e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059353"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>새 마이닝 모델 대화 상자(마이닝 구조 뷰)
   **새 마이닝 모델** 대화 상자를 사용하여 마이닝 구조에 새 마이닝 모델을 추가할 수 있습니다.  

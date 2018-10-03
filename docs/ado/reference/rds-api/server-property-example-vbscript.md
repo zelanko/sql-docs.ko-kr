@@ -1,35 +1,32 @@
 ---
-title: 서버 속성 (VBScript) 예제 | Microsoft Docs
+title: 서버 속성 예제 (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d50633d3214f69a46b7de0112a0f3548d622db7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ccb6bd2b61350c71f44b1580b790ec66cdfff89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288832"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599742"
 ---
-# <a name="server-property-example-vbscript"></a>서버 속성 (VBScript) 예제
+# <a name="server-property-example-vbscript"></a>Server 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- 다음 코드를 설정 하는 방법을 보여 줍니다는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 디자인의 매개 변수 시간과 SQLOLEDB 공급자를 사용 하 여 데이터 인식 컨트롤에 바인딩합니다. 잘라내기 일반 ASP 문서에이 코드를 붙여 넣고 이름을 **ServerDesignVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 다음 코드를 설정 하는 방법을 보여 줍니다는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 매개 변수 디자인에 시간 및 SQLOLEDB 공급자를 사용 하 여 데이터 인식 컨트롤에 바인딩합니다. 일반적인 ASP 문서에이 코드를 붙여 넣습니다. 잘라내기 및 이름을 **ServerDesignVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -93,7 +90,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- 다음 예제에서는의 필요한 매개 변수를 설정 하는 방법을 보여 줍니다. **.rds입니다 DataControl** 런타임 시. 이 예제를 테스트 하려면 잘라내기 및 일반 ASP 문서에이 코드를 붙여 고 이름을 **ServerRuntimeVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 다음 예제에서는 필요한 매개 변수를 설정 하는 방법을 보여 줍니다 **rds. DataControl** 런타임 시. 이 예제를 테스트 하려면 잘라내기 및 일반 ASP 문서에이 코드를 붙여 고 이름을 **ServerRuntimeVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  

@@ -1,13 +1,11 @@
 ---
-title: 저장 프로시저 속성 (JScript) 예 | Microsoft Docs
+title: 저장 프로시저 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c22bf12eb688212fb8541f32080442dcdcb9d4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 204b39f91e12970d3e853f21926e9dc34de0a0f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758861"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (JScript)
-사용 하 여이 예제는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md), 및 [방향](../../../ado/reference/ado-api/direction-property.md) 저장된 프로시저를 실행 하는 속성입니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **ActiveConnectionJS.asp**합니다.  
+이 예제에서는 합니다 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)를 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)를 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md), 및 [방향](../../../ado/reference/ado-api/direction-property.md) 저장된 프로시저를 실행 하는 속성입니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **ActiveConnectionJS.asp**합니다.  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -178,13 +175,13 @@ BODY {
   
 ## <a name="see-also"></a>관련 항목  
  [ActiveCommand 속성 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout 속성 (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [CommandType 속성 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Direction 속성](../../../ado/reference/ado-api/direction-property.md)   
- [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)   
- [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [매개 변수 개체](../../../ado/reference/ado-api/parameter-object.md)   
+ [레코드 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Size 속성(ADO 매개 변수)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

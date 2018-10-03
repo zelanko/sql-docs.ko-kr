@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca66e49fb768e3742155c77f4f922299b38c5f4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf4a0a0e566e79ad9c248f5b368f98c1f99dc328
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049314"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>가용성 그룹의 Microsoft Azure에 대한 SQL Server 관리되는 백업 설정
   이 항목은 AlwaysOn 가용성 그룹에 참여하는 데이터베이스를 위해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하는 방법에 대한 자습서입니다.  

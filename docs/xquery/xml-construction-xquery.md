@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -25,16 +20,15 @@ helpviewer_keywords:
 - XML [SQL Server], construction
 - XQuery, XML construction
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8043e2187ccb1eca7dea58507451113da45429a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814381"
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -589,7 +583,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>계산된 생성자 사용  
- 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 이 경우 생성할 노드 유형을 나타내는 키워드를 지정합니다. 다음 키워드만 지원됩니다.  
+ . 이 경우 생성할 노드 유형을 나타내는 키워드를 지정합니다. 다음 키워드만 지원됩니다.  
   
 -   element  
   

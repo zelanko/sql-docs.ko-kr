@@ -1,14 +1,11 @@
 ---
-title: sys.fn_servershareddrives (Transact SQL) | Microsoft Docs
+title: sys.fn_servershareddrives (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_servershareddrives
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - names [SQL Server], shared drives
 - sys.fn_serversharedrives function
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72c5f0af9d3e32b76b3ea3bbad91fc680528a469
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a9fe23ad67b8a8cc4e687badf8ef6f75d9363e3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702321"
 ---
 # <a name="sysfnservershareddrives-transact-sql"></a>sys.fn_servershareddrives(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +46,16 @@ fn_servershareddrives()
 ```  
   
 ## <a name="tables-returned"></a>반환된 테이블  
- 현재 서버가 클러스터형 서버인 경우 **fn_servershareddrives** 공유 드라이브의 이름을 반환 합니다.  
+ 현재 서버가 클러스터형 서버인 **fn_servershareddrives** 공유 드라이브의 드라이브 이름을 반환 합니다.  
   
- 현재 서버 인스턴스가 클러스터형된 서버가 아닌 경우 **fn_servershareddrives** 는 빈 행 집합을 반환 합니다.  
+ 현재 서버 인스턴스가 클러스터형된 서버가 아닌 경우 **fn_servershareddrives** 빈 행 집합을 반환 합니다.  
   
-## <a name="remarks"></a>주의  
- `fn_servershareddrives`는 이 클러스터형 서버가 사용하는 공유 드라이브의 목록을 반환합니다. 이러한 공유 드라이브와 동일한 클러스터 그룹에 속한는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스입니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스도 이 드라이브에 종속됩니다.  
+## <a name="remarks"></a>Remarks  
+ `fn_servershareddrives`는 이 클러스터형 서버가 사용하는 공유 드라이브의 목록을 반환합니다. 이러한 공유 드라이브와 동일한 클러스터 그룹에 속해야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스입니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스도 이 드라이브에 종속됩니다.  
   
  이 함수는 사용자가 사용할 수 있는 드라이브를 식별하는 데 유용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -79,7 +75,7 @@ SELECT * FROM fn_servershareddrives();
   
  n  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
  [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [sys.fn_virtualservernodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  

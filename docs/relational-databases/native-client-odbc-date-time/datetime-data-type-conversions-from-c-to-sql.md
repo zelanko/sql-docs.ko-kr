@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 430b8f3d0184e41a2882b867b64bf2ce3dbfc0cf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c75f80d190926044fdffd80a9b0b75ad225246a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706684"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>날짜/시간 데이터 형식을 C에서 SQL로 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,8 +32,8 @@ ms.locfileid: "43084556"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|@shouldalert|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|@shouldalert|@shouldalert|1,7|1,5,7|1,13|1,13|  
+|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
+|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
 |SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|해당 사항 없음|해당 사항 없음|1,10,11|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  

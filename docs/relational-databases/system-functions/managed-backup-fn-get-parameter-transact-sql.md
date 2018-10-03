@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smart_admin.fn_get_parameter_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_get_parameter
 - smart_admin.fn_get_parameter
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2420c689dff7e344c06a6667c15e08d3d4769872
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a3fca21870bda4a5a47ba4a8d898939a5f09f6a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596343"
 ---
 # <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

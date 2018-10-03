@@ -5,21 +5,18 @@ ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 810d5e7f43c97ccc99494073aefb3b26965bd0a5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42787113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687043"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -5,9 +5,7 @@ ms.date: 7/7/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 250ea8227a4bd045883322ba2fec3e923336a5e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcfe2b2f594eebef121ec56d43ca6eac4cdcb293
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824131"
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +31,13 @@ ms.locfileid: "33076829"
   
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 처음 시작하고 **파일** 메뉴에서 **새 추적**을 선택하면 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정할 수 있는 **서버에 연결** 대화 상자가 표시됩니다.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 시작 메뉴에서 SQL Server Profiler를 시작하려면  
--  Windows 클릭 **시작** 아이콘 또는 키를 눌러 Windows 키 및 "SQL Server Profiler 17"을 입력 하기 시작 합니다. 경우는 **SQL Server Profiler 17** 타일에는 다음이 표시 되 면 클릭 합니다.   
+-  Windows를 클릭 **시작** 아이콘 또는 키를 눌러는 Windows 키를 "SQL Server Profiler 17"을 입력 하기 시작 합니다. 경우는 **SQL Server Profiler 17** 타일에는 다음이 표시 되 면 클릭 합니다.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자에서 SQL Server Profiler를 시작하려면  
 -  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **도구** 메뉴에서 **SQL Server Profiler**를 클릭합니다.  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server Profiler를 시작 하려면  
- 시작할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의 여러 위치에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 시작하면 시작 지점의 연결 컨텍스트, 추적 템플릿 및 필터 컨텍스트가 로드됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 각 SQL Server 프로파일러 세션을 자체 인스턴스에서 시작 되며 프로파일러를 종료 하는 경우 실행을 계속 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+ 시작할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의 여러 위치에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 시작하면 시작 지점의 연결 컨텍스트, 추적 템플릿 및 필터 컨텍스트가 로드됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 각 SQL Server Profiler 세션 자체 인스턴스를 시작 및 종료 하는 경우 실행을 계속 Profiler [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>도구 메뉴에서 SQL Server Profiler를 시작하려면  
 -  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **SQL Server Profiler**를 클릭합니다.  
 

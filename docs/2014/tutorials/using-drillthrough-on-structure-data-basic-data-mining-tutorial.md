@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec32e6f46f63c6de342b6b4cab63bb8e6556bfb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053049"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>구조 데이터에 드릴스루 사용(기본 데이터 마이닝 자습서)
   광고 캠페인의 일부로 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 메일러를 보내는 잠재 고객 34 ~ 40 시대에 인구 통계. 마케팅 부서에에서 자전거를 구매한 고객 에게도 메일러를 보내려고 하고자 했습니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 연수가 5 년 전 합니다. 이 단원에서는 오래 전에 자전거를 구매한 고객을 식별하고 그들의 연락처 정보를 검색합니다. 이 정보는 모델에 포함되어 있지 않지만 구조에는 포함되어 있습니다. 연락처 정보를 검색하려면 먼저 구조에 대해 드릴스루를 사용할 수 있는지 확인한 다음 드릴스루를 사용하여 대상 고객의 이름과 주소를 확인합니다.  

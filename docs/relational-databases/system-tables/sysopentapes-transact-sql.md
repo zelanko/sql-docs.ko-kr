@@ -1,14 +1,11 @@
 ---
-title: sysopentapes (Transact SQL) | Microsoft Docs
+title: sysopentapes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysopentapes
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - backup media [SQL Server], sysopentapes system table
 - sysopentapes system table
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6f368356df76c68594443ac5a981ebf8f20bec2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7ebbaef020fe1bc45b625d255523769bb1c54a4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677841"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33260386"
   현재 열려 있는 각 테이프 장치에 대해 한 행을 포함합니다. 이 보기에 저장 되는 **마스터** 데이터베이스입니다.  
   
 > [!IMPORTANT]  
->  이 시스템 테이블은 이전 버전과의 호환성을 위해 뷰로 포함됩니다. 대신를 사용 하 여는 [sys.dm_io_backup_tapes &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 동적 관리 뷰.  
+>  이 시스템 테이블은 이전 버전과의 호환성을 위해 뷰로 포함됩니다. 대신 사용 합니다 [sys.dm_io_backup_tapes &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 동적 관리 뷰.  
   
 > [!NOTE]  
 >  삭제할 수 없습니다는 **sysopentapes** 보기.  
@@ -44,9 +40,9 @@ ms.locfileid: "33260386"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**openTape**|**nvarchar(64)**|열려 있는 테이프 장치의 물리적 파일 이름입니다. 열기 및 테이프 장치를 해제 하는 방법에 대 한 자세한 내용은 참조 [백업 &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md) 및 [복원 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)합니다.|  
+|**openTape**|**nvarchar(64)**|열려 있는 테이프 장치의 물리적 파일 이름입니다. 열고 테이프 장치를 해제 하는 방법에 대 한 자세한 내용은 참조 하세요. [백업 &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md) 하 고 [복원 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
   

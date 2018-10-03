@@ -5,9 +5,7 @@ ms.date: 03/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.TSQLExpandPortal.f1
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 884282956655e8fe44083a72bc66277e499990b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 13f8153d681ce4992726f17375cf98c8c5ab9cff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605871"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,15 +58,15 @@ ms.locfileid: "43063656"
 ## <a name="multipart-names"></a>다중 부분 이름  
  다른 지침이 없으면 데이터베이스 개체 이름에 대한 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조는 다음 형식과 같이 네 부분으로 된 이름으로 구성됩니다.  
   
-*server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
+*server_name* **.**[*database_name*]**.**[*schema_name*]**.**_object\_name_  
   
- | *database_name***.**[* schema_name *]**.***object_name*  
+ | _database\_name_**.**[_schema\_name_]**.**_object\_name_  
   
- | *schema_name ***.*** object_name*  
+ | _schema\_name_**.**_object\_name_  
   
- | *object_name*  
+ | _object\_name_  
   
-*server_name*  
+_server\_name_  
 연결된 서버 이름 또는 원격 서버 이름을 지정합니다.  
   
 *database_name*  

@@ -1,13 +1,11 @@
 ---
-title: 모두, LockType, 및 EditMode 속성 예제 (VC + +) | Microsoft Docs
+title: CursorType, LockType, EditMode 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726a7b346052cd847c599f4389480007b6698999
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277372"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696361"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>모두, LockType, 및 EditMode 속성 예제 (VC + +)
-이 예제에서는 설정 된 [모두](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성 열기 전에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 또한의 값을 표시는 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건에서 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType, EditMode 속성 예제 (VC + +)
+이 예제에서는 설정 합니다 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 열기 전에 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 값도 표시 합니다 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -161,12 +158,12 @@ void PrintComError(_com_error &e) {
   
   **AddNew 후:**   
  **EditMode = adEditAdd**  
-**후 업데이트:**   
+**업데이트 후:**   
  **EditMode = adEditNone**  
-**후 편집:**   
+**Edit 후:**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>관련 항목  
- [모두 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [CursorType 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType 속성 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

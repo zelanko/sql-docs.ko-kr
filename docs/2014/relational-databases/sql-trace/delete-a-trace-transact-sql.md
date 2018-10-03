@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], deleting
 - removing traces
 - deleting traces
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e255ab5d72c8d7d0cfd935ba971b7f1c409ee38a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1262232a7fdc42c443f624aca8334dce1e48a3f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055653"
 ---
 # <a name="delete-a-trace-transact-sql"></a>추적 삭제(Transact-SQL)
   이 항목에서는 저장 프로시저를 사용하여 추적을 삭제하는 방법에 대해 설명합니다.  

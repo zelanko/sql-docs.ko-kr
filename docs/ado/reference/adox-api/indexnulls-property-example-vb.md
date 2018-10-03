@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - IndexNulls property [ADOX], Visual Basic example
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11141a152d680ff843387de3a5998aff007eef06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688131"
 ---
-# <a name="indexnulls-property-example-vb"></a>IndexNulls 속성 예제 (VB)
-이 예제에서는 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드에서는 새 인덱스를 만들고의 값을 설정 **IndexNulls** (목록 1 이라는 목록 상자)에서 사용자 입력에 기반 합니다. 그런 다음 **인덱스** 에 추가 되는 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반는 **직원** 테이블 및 **레코드 집합** 열릴 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블와는 **Null** 인덱싱된 필드의 값입니다. 설정에 따라이 새 레코드의 표시 여부는 **IndexNulls** 속성입니다.  
+# <a name="indexnulls-property-example-vb"></a>IndexNulls 속성 예제(VB)
+이 예제에서는 합니다 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 새 인덱스를 만들고 값을 설정 **IndexNulls** (list1 목록 상자)에서 사용자 입력을 기반으로 합니다. 그런 다음, **인덱스** 에 추가 됩니다 합니다 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반으로 **직원** 테이블 및 **레코드 집합** 열려 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블을 사용 하 여를 **Null** 인덱싱된 필드의 값입니다. 설정에 따라 새 레코드가 표시 되는지 여부를 **IndexNulls** 속성입니다.  
   
 ```  
 ' BeginIndexNullsVB  

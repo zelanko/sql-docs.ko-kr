@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee48eae5ae58a6d82ed93a6d678518ce304d7a63
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: b57cf80e34b98bd3015fd17ef327a7f415c90ec8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052943"
 ---
 # <a name="select-source-dialog-box"></a>원본 선택 대화 상자
   이 대화 상자를 사용하여 실행할 정책의 원본을 선택할 수 있습니다. 정책이 포함된 하나 이상의 XML 파일을 선택하려면 **파일**을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 정책을 실행하려면 **서버**를 선택합니다.  

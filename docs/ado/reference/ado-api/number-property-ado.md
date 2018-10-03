@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,18 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2547f22251d9137dc8ca57e8ed29f7aa36251267
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 38135d1afa2fbdf680a7f2c1f89ddcbe513484f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803041"
 ---
-# <a name="number-property-ado"></a>Number 속성 (ADO)
+# <a name="number-property-ado"></a>Number 속성(ADO)
 고유 하 게 식별 하는 숫자를 나타냅니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  

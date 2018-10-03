@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b64202ccd2b5f420eceeb0287407656dde1cefe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051344"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>데이터 원본 뷰 만들기(기본 데이터 마이닝 자습서)
   데이터 원본 뷰는 데이터 원본을 기반으로 하고, 마이닝 구조에 사용할 수 있는 데이터 하위 집합을 정의합니다. 데이터 원본 뷰를 사용하여 열을 추가하고 계산 열 및 집계를 만들고 명명된 뷰를 추가할 수도 있습니다. 데이터 원본 뷰를 사용하면 원래 데이터 원본을 수정하지 않고도 프로젝트와 관련된 테이블을 선택하고 테이블 간의 관계를 설정하며 데이터 구조를 수정할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  

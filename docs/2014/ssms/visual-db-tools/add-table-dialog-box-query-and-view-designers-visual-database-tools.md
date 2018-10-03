@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.query.addtable
 - vdtsql.chm:65565
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b940ced1cb071b688867fc9ef41ca5fcd73e5e9
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c48943a14c4b49a58b60e25a954cda04bf2dbad8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813181"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052223"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)
   이 대화 상자를 사용하여 쿼리나 뷰에 테이블, 뷰, 사용자 정의 함수 또는 동의어를 추가할 수 있습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66bd7f7e6bc67856a3c5f6e231a2c554a3eb4b29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057463"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
   Oracle 게시자에서의 게시는 일반 스냅숏 및 트랜잭션 게시가 만들어지는 것과 같은 방식으로 만들어지지만 Oracle 게시자에서 게시를 만들려면 먼저 다음 단계(1, 3, 4단계는 이 항목에서 자세히 설명)를 수행해야 합니다.  

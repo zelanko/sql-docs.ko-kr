@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersionInfo
@@ -17,22 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8be469a7f4a9f1b316b881ea884f7fbabc955dfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3b4d8e565aa1494e4e68a0243eb470bd7efe90b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935088"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661801"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   버전이 존재하는지 여부, 전체 LocalDB 버전 번호(빌드 및 릴리스 번호 포함)와 같이 지정한 SQL Server Express LocalDB 버전에 대한 정보를 반환합니다.  
   
- 형태로 반환 하는 정보는 **구조체** 라는 **LocalDBVersionInfo**, 있으며 그 다음 정의 합니다.  
+ 형식으로 반환 되는 정보를 **구조체** 라는 **LocalDBVersionInfo**, 다음 정의는.  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -72,7 +68,7 @@ HRESULT LocalDBGetVersionInfo(
  [출력] LocalDB 버전에 대한 정보를 저장하는 버퍼입니다.  
   
  *dwVersionInfoSize*  
- [입력] 크기를 유지는 *VersionInfo* 버퍼입니다.  
+ [입력] 크기를 유지 합니다 *VersionInfo* 버퍼입니다.  
   
 ## <a name="returns"></a>반환 값  
  S_OK  
@@ -90,12 +86,12 @@ HRESULT LocalDBGetVersionInfo(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
-## <a name="details"></a>세부 정보  
- 도입 도입한 이유는 **구조체** 크기 인수 (*lpVersionInfoSize*)의 서로 다른 버전을 반환 하는 API를 사용 하도록 설정 하는 것은 **LocalDBVersionInfostruct**, 효과적으로 및 이전 버전과 호환성을 사용 하도록 설정 합니다.  
+## <a name="details"></a>설명  
+ 미치는 근거 합니다 **구조체** 크기 인수 (*lpVersionInfoSize*)의 서로 다른 버전을 반환 하는 API를 사용 하도록 설정 하는 것은 **LocalDBVersionInfostruct**효과적으로, 앞으로 및 이전 버전과 호환성을 사용 하도록 설정 합니다.  
   
- 경우는 **구조체** 크기 인수 (*lpVersionInfoSize*)가 알려진된 버전의 크기와 일치 하는 **LocalDBVersionInfostruct**, 해당 버전의는  **구조체** 반환 됩니다. 그렇지 않으면 LOCALDB_ERROR_INVALID_PARAMETER가 반환됩니다.  
+ 경우는 **구조체** 크기 인수 (*lpVersionInfoSize*)가 알려진된 버전의 크기와 일치 합니다 **LocalDBVersionInfostruct**을 해당 버전의는  **구조체** 반환 됩니다. 그렇지 않으면 LOCALDB_ERROR_INVALID_PARAMETER가 반환됩니다.  
   
- 일반적인 예 **LocalDBGetVersionInfo** API 사용법은 다음과 같습니다.  
+ 일반적인 예로 **LocalDBGetVersionInfo** API 사용법은 다음과 같습니다.  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -103,10 +99,10 @@ LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Express LocalDB 헤더 및 버전 정보](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

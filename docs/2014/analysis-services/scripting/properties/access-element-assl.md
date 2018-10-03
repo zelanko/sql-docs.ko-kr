@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Access Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ba7c322fdd7c48a7a61262ea7aa891ae5fe4167
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60fbf476e1d884cce28dd674ab16d3bda001a3a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051843"
 ---
 # <a name="access-element-assl"></a>Access 요소(ASSL)
   에 지정 된 액세스 수준을 나타냅니다는 [CellPermission](../objects/cellpermission-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37314733"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37314733"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CellPermission](../objects/cellpermission-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

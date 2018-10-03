@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e2be9250c77c23e00a302d57f0148507f0db41bb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2248d0f0d342b39a5d8ec816b4faf9ab097bf30d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600672"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +34,7 @@ ms.locfileid: "38041631"
  에 원자성 유형 이름도 사용할 수도 있습니다는 **로 캐스팅** XQuery 식입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 **인스턴스의** 하 고 **로 캐스팅** 에서는 Sequencetype의 XQuery 식이 부분적으로 지원 됩니다.  
   
 ## <a name="instance-of-operator"></a>instance of 연산자  
- 합니다 **인스턴스의** 지정한 식의 값의 동적 또는 런타임 형식을 확인 하려면 연산자를 사용할 수 있습니다. 예를 들어:  
+ 합니다 **인스턴스의** 지정한 식의 값의 동적 또는 런타임 형식을 확인 하려면 연산자를 사용할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
   
@@ -333,7 +327,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 -   에 대 한는 **processing-instruction()** 하 고 **document-node()** 시퀀스 형식이 인수가 없는 형태만 허용 됩니다. 예를 들어 `processing-instruction()`은 사용할 수 있지만 `processing-instruction('abc')`은 사용할 수 없습니다.  
   
 ## <a name="cast-as-operator"></a>cast as 연산자  
- 합니다 **로 캐스팅** 식 값을 특정 데이터 형식으로 변환할 수 있습니다. 예를 들어:  
+ 합니다 **로 캐스팅** 식 값을 특정 데이터 형식으로 변환할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
   

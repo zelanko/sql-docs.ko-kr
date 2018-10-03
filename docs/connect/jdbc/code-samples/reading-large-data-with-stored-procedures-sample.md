@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f02c6f338ed7901813abd13b68bec97cf0e31645
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9dff36847a6c03a300209427fae5a20d1ffea206
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644229"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>저장 프로시저로 큰 데이터 읽기 샘플
 

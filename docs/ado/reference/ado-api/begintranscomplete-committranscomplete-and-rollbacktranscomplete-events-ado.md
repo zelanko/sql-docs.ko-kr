@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,25 +20,24 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773451"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete, CommitTransComplete, 및 RollbackTransComplete 이벤트 (ADO)
-이러한 이벤트에서 연결 된 작업 후 호출 되는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체가 실행을 완료 합니다.  
+이러한 이벤트에서 연결된 된 작업 후 호출 되는 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 실행이 완료 합니다.  
   
--   **BeginTransComplete** 이후에 호출 됩니다는 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 작업 합니다.  
+-   **BeginTransComplete** 후 호출 되는 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 작업 합니다.  
   
--   **CommitTransComplete** 이후에 호출 됩니다는 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 작업 합니다.  
+-   **CommitTransComplete** 후 호출 되는 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 작업 합니다.  
   
--   **RollbackTransComplete** 이후에 호출 됩니다는 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 작업 합니다.  
+-   **RollbackTransComplete** 후 호출 되는 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 작업 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,23 +50,23 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>매개 변수  
  *TransactionLevel*  
- A **긴** 새 트랜잭션 수준을 포함 하는 값은 **BeginTrans** 이 이벤트를 발생 시키는 합니다.  
+ A **긴** 의 새 트랜잭션 수준을 포함 하는 값을 **BeginTrans** 이 이벤트를 발생 시킨 합니다.  
   
  *pError*  
- [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. EventStatusEnum 값이 발생 한 오류를 설명 **adStatusErrorsOccurred**; 그렇지 않으면 설정 되지 않은 것입니다.  
+ [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. EventStatusEnum의 값이 발생 한 오류를 설명 **adStatusErrorsOccurred**; 설정 되지 않은 그렇지 않은 경우.  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다. 이 매개 변수 설정 되어 이러한 이벤트 중 하나가 호출 되 면 **adStatusOK** 이벤트를 발생 시킨 작업에 성공 하면 또는 **adStatusErrorsOccurred** 작업이 실패 합니다.  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다. 이 매개 변수를로 이러한 이벤트 중 하나가 호출 될 때 **adStatusOK** 이벤트를 발생 시킨 작업에 성공, 또는 **adStatusErrorsOccurred** 작업이 실패 합니다.  
   
- 이러한 이벤트는이 매개 변수를 설정 하 여 알림 메시지가 방지할 수 **adStatusUnwantedEvent** 전에 이벤트를 반환 합니다.  
+ 이러한 이벤트를이 매개 변수를 설정 하 여 후속 알림을 방지할 수 있습니다 **adStatusUnwantedEvent** 전에 이벤트를 반환 합니다.  
   
  *pConnection*  
- **연결** 이 이벤트가 발생 한 개체입니다.  
+ 합니다 **연결** 이 이벤트가 발생 한 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
  Visual c + +에서 여러 **연결** 동일한 이벤트 처리 메서드를 공유할 수 있습니다. 메서드를 사용 하 여 반환 된 **연결** 이벤트를 발생 시킨 개체를 결정 하는 개체입니다.  
   
- 경우는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성 **adXactCommitRetaining** 또는 **adXactAbortRetaining**, 커밋 또는 트랜잭션을 롤백 후 새 트랜잭션을 시작 합니다. 사용 하 여 **BeginTransComplete** 이벤트를 모두 무시 하지만 첫 번째 트랜잭션 시작 이벤트입니다.  
+ 경우는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성이 **adXactCommitRetaining** 또는 **adXactAbortRetaining**, 새 트랜잭션을 커밋 또는 트랜잭션 롤백 후 시작 합니다. 사용 된 **BeginTransComplete** 이벤트를 모두 무시 하지만 첫 번째 트랜잭션 시작 이벤트입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

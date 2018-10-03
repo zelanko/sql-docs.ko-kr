@@ -1,14 +1,11 @@
 ---
-title: log_shipping_monitor_secondary (Transact SQL) | Microsoft Docs
+title: log_shipping_monitor_secondary (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_secondary_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24542f230eceaf4da58bb10728448ba7cd07c478
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b29942520092a39f218cf7673930682afe78f660
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263554"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772671"
 ---
 # <a name="logshippingmonitorsecondary-transact-sql"></a>log_shipping_monitor_secondary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "33263554"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**secondary_server**|**sysname**|보조 인스턴스의 이름에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성의 합니다.|  
+|**secondary_server**|**sysname**|보조 인스턴스의 이름을 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성에서 합니다.|  
 |**secondary_database**|**sysname**|로그 전달 구성의 보조 데이터베이스의 이름입니다.|  
 |**secondary_id**|**uniqueidentifier**|로그 전달 구성의 보조 서버의 ID입니다.|  
 |**primary_server**|**sysname**|로그 전달 구성의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 주 인스턴스 이름입니다.|  
@@ -55,11 +51,11 @@ ms.locfileid: "33263554"
 |**last_restored_latency**|**int**|로그 백업이 주 서버 또는 데이터베이스에서 생성되어 보조 서버 또는 데이터베이스에서 복원될 때까지 경과한 시간(분)입니다.<br /><br /> 초기 값은 NULL입니다.|  
 |**history_retention_period**|**int**|지정된 보조 데이터베이스에서 로그 전달 기록 레코드가 삭제되기까지 보관되는 기간(분)입니다.|  
   
-## <a name="remarks"></a>주의  
- 보조 서버와 관련 된 정보는 보조 서버에 저장 됩니다 및 원격 모니터 서버에 저장 될 뿐만 아니라 해당 **log_shipping_monitor_secondary** 테이블입니다.  
+## <a name="remarks"></a>Remarks  
+ 보조 서버와 관련 된 정보가의 보조 서버에도 저장 됩니다 및 원격 모니터 서버에 저장 될 뿐만 아니라 해당 **log_shipping_monitor_secondary** 테이블입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>관련 항목  
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [sp_add_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   

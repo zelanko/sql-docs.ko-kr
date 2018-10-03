@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be38956ee55ba42c02cfe8002ef1b3937aff665
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735525"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>2 단계: 기본 목록 상자를 초기화 합니다.
-전역 레코드 및 레코드 집합 개체를 선언 하려면 (일반) (선언) form1에 다음 코드를 삽입:  
+# <a name="step-2-initialize-the-main-list-box"></a>2단계: 기본 목록 상자 초기화
+전역 레코드 및 레코드 집합 개체를 선언 하려면 (일반) (선언) form1에 다음 코드를 삽입 합니다.  
   
 ```  
 Option Explicit  
@@ -30,10 +27,10 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- 이 코드에서는이 시나리오에서는 나중에 사용할 수 있는 레코드와 레코드 집합 개체에 대 한 전역 개체 참조를 선언 합니다.  
+ 이 코드는이 시나리오에서는 나중에 사용할 레코드 및 레코드 집합 개체에 대 한 전역 개체 참조를 선언 합니다.  
   
-## <a name="to-connect-to-a-url-and-populate-lstmain"></a>URL에 연결 하 고 lstMain 채우기  
- Form1 폼을 로드 이벤트 처리기에 다음 코드를 삽입 합니다.  
+## <a name="to-connect-to-a-url-and-populate-lstmain"></a>URL에 연결한 lstMain 채우기  
+ Form1에 대 한 폼 로드 이벤트 처리기에 다음 코드를 삽입 합니다.  
   
 ```  
 Private Sub Form_Load()  
@@ -49,9 +46,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. Record 개체 `grec`는 ActiveConnection로 지정 된 URL로 열립니다. URL이 있으면 열. 이미 존재 하지 않는 경우 자동으로 만들어집니다. 교체 해야 하는 "http://servername/foldername/" 된 환경에서 유효한 URL입니다.  
+ 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. 레코드 개체 `grec`는 ActiveConnection로 지정 된 URL로 열립니다. URL에서 볼 수 있으면 열; 아직 존재 하지 않는 경우 만들어집니다. 교체 해야 하는 "http://servername/foldername/" 환경에서 올바른 URL을 사용 하 여 합니다.  
   
- 레코드 집합 개체 `grs`, 레코드의 자식에서 열릴 `grec`합니다. 그런 다음 `lstMain` URL에 게시 된 리소스의 파일 이름으로 채워집니다.  
+ 레코드 집합 개체 `grs`, 레코드의 자식에 대해 열려 `grec`합니다. 그런 다음 `lstMain` URL에 게시 된 리소스 파일 이름으로 채워집니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   

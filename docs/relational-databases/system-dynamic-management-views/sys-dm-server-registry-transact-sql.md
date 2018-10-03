@@ -1,12 +1,10 @@
 ---
-title: sys.dm_server_registry (Transact SQL) | Microsoft Docs
+title: sys.dm_server_registry (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_registry_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4207ee898acec0d0f5f2f00594835ffcef40e9d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467260"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788621"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +34,12 @@ ms.locfileid: "34467260"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|레지스트리 키 이름입니다. Null을 허용합니다.|  
-|value_name|**nvarchar(256)**|키 값 이름이며 이것은에 표시 된 항목의 **이름** 레지스트리 편집기의 열입니다. Null을 허용합니다.|  
-|value_data|**sql_variant**|키 데이터의 값이며 에 표시 된 값이 고 **데이터** 지정된 된 항목에 대 한 레지스트리 편집기의 열입니다. Null을 허용합니다.|  
+|value_name|**nvarchar(256)**|키 값 이름이며 에 표시 된 항목이이 **이름을** 레지스트리 편집기의 열입니다. Null을 허용합니다.|  
+|value_data|**sql_variant**|키 데이터의 값이며 에 표시 된 값을 **데이터** 지정된 된 항목에 대 한 레지스트리 편집기의 열입니다. Null을 허용합니다.|  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -92,7 +89,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_server_services &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

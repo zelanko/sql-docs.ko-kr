@@ -5,24 +5,21 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4f67ce40623a69dfaa7fbfc0c6f64486a8a25bbc
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 4e70d30aaaef2d256f2dcff38b1d5989e1f6e5f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784811"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -49,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@configname=** ] **'***option_name***'**  
+ [ **@configname=** ] **'**_option\_name_**'**  
  구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ **@configvalue=** ] **'**_value_**'**  
  새로운 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
   
  **'hadoop connectivity'**  

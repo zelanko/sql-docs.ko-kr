@@ -1,32 +1,29 @@
 ---
-title: 지원 메서드 예제 (VB) | Microsoft Docs
+title: Supports 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0424b37399e3abb2c2333e8bc6928d2cfde9156
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282512"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830611"
 ---
-# <a name="supports-method-example-vb"></a>메서드 예제 (VB)를 지원합니다.
-사용 하 여이 예제는 [지원](../../../ado/reference/ado-api/supports-method.md) 레코드 집합에서 지 원하는 옵션을 표시 하는 메서드를 다른 커서 유형으로 열입니다. DisplaySupport 절차는이 절차를 실행 하려면 필요 합니다.  
+# <a name="supports-method-example-vb"></a>Supports 메서드 예제(VB)
+이 예제에서는 합니다 [지원](../../../ado/reference/ado-api/supports-method.md) 레코드 집합에서 지 원하는 옵션을 표시 하는 메서드를 다른 커서 유형으로 열입니다. DisplaySupport 절차는이 절차를 실행 하려면 필요 합니다.  
   
 ```  
 'BeginSupportsVB  

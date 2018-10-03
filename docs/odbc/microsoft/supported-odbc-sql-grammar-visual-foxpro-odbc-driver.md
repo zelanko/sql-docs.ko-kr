@@ -1,13 +1,11 @@
 ---
-title: ODBC SQL 문법을 (Visual FoxPro ODBC 드라이버)를 지원 합니다. | Microsoft Docs
+title: ODBC SQL 문법 (Visual FoxPro ODBC 드라이버)를 지원 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native Visual FoxPro language syntax [ODBC]
@@ -18,25 +16,24 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 - FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7eccb1bbdb86ded6b949756b4e5762a83a59fc0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906918"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751021"
 ---
-# <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>지원 되는 ODBC SQL 문법 (Visual FoxPro ODBC 드라이버)
-Microsoft Visual FoxPro ODBC 드라이버가 다음을 지원합니다.  
+# <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>지원되는 ODBC SQL 문법(Visual FoxPro ODBC 드라이버)
+Microsoft Visual FoxPro ODBC 드라이버는 다음을 지원합니다.  
   
 -   모든 SQL 문 및 ODBC 최소 SQL 문법 절  
   
--   ODBC 핵심 SQL 문법 쿼리에서 SQL 문을 추가  
+-   ODBC 핵심 SQL 문법에서에서 추가 SQL 문  
   
- 다음 표에서 ODBC SQL 문법을 수준에 따라 드라이버에서 지 원하는 항목을 나열 합니다.  
+ 다음 표에서 ODBC SQL 문법의 수준에 따라 드라이버에서 지 원하는 항목을 나열 합니다.  
   
 |Level|요소|항목|  
 |-----------|--------------|----------|  
@@ -45,7 +42,7 @@ Microsoft Visual FoxPro ODBC 드라이버가 다음을 지원합니다.
 ||식|단순 (예: A > B + C)|  
 ||데이터 형식|CHAR, VARCHAR, 또는 LONG VARCHAR|  
   
- Visual FoxPro ODBC 드라이버는 지원 되는 ODBC SQL 문법을 외에도 다음 Visual FoxPro 명령에 대 한 완전 한 네이티브 Visual FoxPro 언어 구문을 지원:  
+ Visual FoxPro ODBC 드라이버는 지원 되는 ODBC SQL 문법, 외에도 다음 Visual FoxPro 명령에 대 한 완전 한 네이티브 Visual FoxPro 언어 구문을 지원합니다.  
   
  [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   

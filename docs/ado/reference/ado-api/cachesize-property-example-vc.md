@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CacheSize property [ADO], VC++ example
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d388e259545c86dfa5ad700de1b192ec071d132f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276222"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802911"
 ---
-# <a name="cachesize-property-example-vc"></a>CacheSize 속성 예제 (VC + +)
-사용 하 여이 예제는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 작업에 대 한 성능 차이 표시 하는 속성 집합과 30 개의 레코드가 캐시 없는 수행 합니다.  
+# <a name="cachesize-property-example-vc"></a>CacheSize 속성 예제(VC++)
+이 예제에서는 합니다 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 작업에 대 한 성능 차이 표시 하는 속성 30 개의 레코드가 캐시 하지 않고 사용 하 여 수행 합니다.  
   
 ```  
 // CacheSize_Property_Sample.cpp  

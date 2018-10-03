@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Installing client,Licensing
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: de32849e59f0244baa62a5e7784b3ec2f26aacac
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a5b55065790b63c2fb63803f70bf00d56e704cb5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763981"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>MySQL용 SSMA 클라이언트 설치(MySQLToSQL)
 SSMA MySQL 클라이언트에 대 한 다음 작업을 수행 하는 프로그램 파일로 구성 됩니다.  

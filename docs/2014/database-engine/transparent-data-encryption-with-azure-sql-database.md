@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TDE, SQL Database
@@ -16,20 +14,19 @@ ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0f5a78b0045e004b17c09bc9e87863179e38eee5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049783"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 투명 한 데이터 암호화 (미리 보기)는 응용 프로그램을 변경할 필요 없이 데이터베이스, 연결 된 백업 및 미사용 트랜잭션 로그 파일의 실시간 암호화 및 해독을 수행 하 여 악의적인 활동의 위협 으로부터 보호할 수 있습니다.  
   
  TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 저장소를 암호화합니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에서 데이터베이스 암호화 키는 기본 제공 서버 인증서로 보호됩니다. 기본 제공 서버 인증서는 각 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 서버에 대해 고유합니다. GeoDR 관계에 있는 데이터베이스는 각 서버에서 다른 키로 보호됩니다. 두 개의 데이터베이스가 동일한 서버에 연결된 경우에는 동일한 기본 제공 인증서를 공유합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 적어도 90일마다 이러한 인증서를 자동으로 회전시킵니다. TDE에 대한 일반적인 설명은 [투명한 데이터 암호화&#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 는 TDE와의 Azure 주요 자격 증명 모음 통합을 지원하지 않습니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 주요 자격 증명 모음의 비대칭 키를 사용할 수 있습니다. 자세한 내용은 [Key Vault에서 비대칭 키를 사용 하 여 예제 a: 투명 한 데이터 암호화](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)합니다.  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 는 TDE와의 Azure 주요 자격 증명 모음 통합을 지원하지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 주요 자격 증명 모음의 비대칭 키를 사용할 수 있습니다. 자세한 내용은 [Key Vault에서 비대칭 키를 사용 하 여 예제 a: 투명 한 데이터 암호화](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)합니다.  
   
 ||  
 |-|  

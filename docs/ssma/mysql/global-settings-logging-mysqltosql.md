@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 12f1dc140fca2376727f72c0e582686621775d4a
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396159"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720431"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>전역 설정(로깅)(MySQLToSQL)
 사용 된 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 기술 지원 서비스를 사용 하는 경우에 이러한 설정을 변경할는 있습니다.  

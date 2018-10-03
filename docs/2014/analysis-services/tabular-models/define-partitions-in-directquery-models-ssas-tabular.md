@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054050"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>파티션 및 DirectQuery 모드(SSAS 테이블 형식)
   이 섹션에서는 DirectQuery 모델에서 파티션을 사용하는 방법에 대해 설명합니다. 테이블 형식 모델의 파티션에 대한 일반적인 정보는 [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)을 참조하세요.  

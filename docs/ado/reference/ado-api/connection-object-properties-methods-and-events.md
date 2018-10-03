@@ -6,22 +6,19 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a414ffc7fea1a269024a56dedd7221c2f5c5fda1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744031"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>연결 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -33,17 +30,17 @@ ms.locfileid: "35276952"
   
  [ConnectionTimeout 속성](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
   
- [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [CursorLocation 속성](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
  [DefaultDatabase 속성](../../../ado/reference/ado-api/defaultdatabase-property.md)  
   
- [오류 컬렉션](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [Errors 컬렉션](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
  [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
- [Mode 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [모드 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [공급자 속성](../../../ado/reference/ado-api/provider-property-ado.md)  
   
@@ -67,7 +64,7 @@ ms.locfileid: "35276952"
 ## <a name="events"></a>이벤트  
  [BeginTransComplete, CommitTransComplete, 및 RollbackTransComplete 이벤트](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete와 연결 끊기 이벤트](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete 및 Disconnect 이벤트](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [ExecuteComplete 이벤트](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   

@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 07ce12d67eca0719c8062cdb6568e618baf592d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608371"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조(MySQLToSQL)
 이 섹션에서는 MySQL에 대 한 도움말 항목에 대 한 SQL Server Migration Assistant (SSMA)를 포함 합니다.  

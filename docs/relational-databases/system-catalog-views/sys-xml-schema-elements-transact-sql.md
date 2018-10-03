@@ -1,14 +1,11 @@
 ---
-title: sys.xml_schema_elements (Transact SQL) | Microsoft Docs
+title: sys.xml_schema_elements (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.xml_schema_elements
@@ -20,21 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_elements catalog view
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c21c0a2aaa70e520fcda65acc72316f1c6414519
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed5c7efe1c5adacba99b74ab40e2978a51ba7517
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716691"
 ---
 # <a name="sysxmlschemaelements-transact-sql"></a>sys.xml_schema_elements(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  형식이 XML 스키마 구성 요소의 각 행을 반환 **symbol_space** 의 **E**합니다.  
+  형식인 XML 스키마 구성 요소 마다 한 행을 반환 **symbol_space** 의 **E**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,11 +46,11 @@ ms.locfileid: "33221424"
 |**is_final_restriction**|**bit**|1 = 제한 유형 인스턴스로의 대체가 허용되지 않습니다.<br /><br /> 0 = 제한 유형 인스턴스에서 대체가 (기본값)|  
 |**default_value**|**nvarchar (4000)**|요소의 기본값입니다. 기본값을 제공하지 않으면 NULL입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML 스키마 &#40;XML 유형 시스템&#41; 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [XML 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;SQL 트랜잭션&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

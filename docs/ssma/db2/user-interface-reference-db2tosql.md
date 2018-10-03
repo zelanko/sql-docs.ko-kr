@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db926dc3bfa43450f4a483aec551513567dac52b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393693"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771449"
 ---
 # <a name="user-interface-reference-db2tosql"></a>사용자 인터페이스 참조 (DB2ToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2입니다.  

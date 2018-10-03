@@ -1,40 +1,37 @@
 ---
-title: 스트림 명령 | Microsoft Docs
+title: 스트림을 명령 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f37202ccd4586d3a485f18d070c0af0434a303
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35269972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798583"
 ---
 # <a name="command-streams"></a>명령 스트림
-ADO에서 지정 된 문자열 형식에 대 한 명령 입력 지원 왔지만 **CommandText** 속성입니다. 대신 ado 2.7 이상을 사용할 수도 있습니다 정보의 스트림입니다 명령 입력에 대 한 스트림을 지정 하 여는 **CommandStream** 속성입니다. ADO를 할당할 수 **스트림** 개체나 지 원하는 COM 개체 **IStream** 인터페이스입니다.  
+ADO를 문자열 형식으로 지정 하 여 명령 입력 지원 왔지만 합니다 **CommandText** 속성입니다. 대신 2.7 이상 ADO를 사용 하 여 사용할 수도 있습니다 정보 스트림을 명령 입력에 대 한이 스트림에 할당 하 여 합니다 **CommandStream** 속성입니다. ADO를 할당할 수 있습니다 **Stream** 개체나 COM을 지 원하는 모든 개체 **IStream** 인터페이스입니다.  
   
- 명령 스트림의 콘텐츠 단순히에서 전달 됩니다 ADO 공급자에 공급자 스트림에이 기능을 사용 하 여 명령 입력을 지원 해야 합니다. 예를 들어 SQL Server는 XML 서식 파일 또는 TRANSACT-SQL에 대 한 OpenXML 확장 형식으로의 쿼리를 지원합니다.  
+ 명령 스트림의 내용은 간단히에서 전달 됩니다 ADO 공급자에 공급자에 명령 입력 스트림에서이 기능이 작동 하기 위해 지원 해야 합니다. 예를 들어, SQL Server XML 템플릿 또는 TRANSACT-SQL로 OpenXML 확장 형식의 쿼리를 지원합니다.  
   
- 스트림에 대 한 세부 정보는 공급자에 의해 해석 해야, 있으므로 설정 하 여 명령 언어를 지정 해야는 **언어** 속성입니다. 값 **언어** 공급자에 의해 정의 되는 GUID를 포함 하는 문자열입니다. 에 대 한 유효한 값에 대 한 내용은 **언어** 공급자가 지원 공급자 설명서를 참조 하십시오.  
+ 설정 하 여 명령 스트림의 세부 정보 공급자가 해석할 해야 하기 때문에 지정 해야 합니다 **언어** 속성입니다. 변수의 **언어** 공급자에 정의 된 GUID를 포함 하는 문자열입니다. 에 대 한 유효한 값에 대 한 자세한 **언어** 공급자가 지원 공급자 설명서를 참조 하세요.  
   
 ## <a name="xml-template-query-example"></a>XML 서식 파일 쿼리 예제  
  다음 예에서는 VBScript에서 Northwind 데이터베이스에 기록 됩니다.  
   
- 첫째, 초기화 하 고 열은 **스트림** 쿼리 스트림이 포함 하는 데 사용할 개체:  
+ 첫째, 초기화 하 고 엽니다는 **Stream** 쿼리 스트림을 포함 하는 데 사용할 개체:  
   
 ```  
 Dim adoStreamQuery  
@@ -42,9 +39,9 @@ Set adoStreamQuery = Server.CreateObject("ADODB.Stream")
 adoStreamQuery.Open  
 ```  
   
- 쿼리 스트림의 내용을 XML 서식 파일 쿼리 됩니다.  
+ 쿼리 스트림의 내용을 XML 템플릿을 쿼리 됩니다.  
   
- 서식 파일 쿼리에 sql로 식별 되는 XML 네임 스페이스에 대 한 참조가 필요:의 접두사는 \<sql:query > 태그입니다. SQL SELECT 문은 XML 서식 파일의 내용으로 포함 되며 다음과 같이 문자열 변수에 할당 됩니다.  
+ 템플릿 쿼리가 sql 식별 된 XML 네임 스페이스에 대 한 참조가 필요: 접두사는 \<sql:query > 태그입니다. SQL SELECT 문은 XML 서식 파일의 콘텐츠로 포함 이며 다음과 같은 문자열 변수에 할당 됩니다.  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -52,14 +49,14 @@ sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>
 </ROOT>"  
 ```  
   
- 스트림에 문자열을 다음으로 기록:  
+ 그런 다음 문자열을 스트림에 쓸:  
   
 ```  
 adoStreamQuery.WriteText sQuery, adWriteChar  
 adoStreamQuery.Position = 0  
 ```  
   
- AdoStreamQuery에 할당 된 **CommandStream** ADO의 속성 **명령** 개체:  
+ AdoStreamQuery에 할당 합니다 **CommandStream** ado 속성 **명령** 개체:  
   
 ```  
 Dim adoCmd  
@@ -67,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- 명령 언어를 지정 **언어**, SQL Server OLE DB 공급자 명령 스트림 해석 방법을 나타냅니다. 공급자 관련 GUID로 지정 된 언어:  
+ 명령 언어를 지정 **언어**, SQL Server OLE DB 공급자 명령 스트림 해석 해야 하는 방법을 나타냅니다. 공급자별 GUID로 지정 된 언어:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

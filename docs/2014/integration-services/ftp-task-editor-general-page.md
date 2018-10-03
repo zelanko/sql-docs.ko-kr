@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97f8761af335319cbd205eca3c57d4f6874e5829
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054203"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 태스크 편집기(일반 페이지)
   **FTP 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 통신하는 FTP 서버에 연결하는 FTP 연결 관리자를 지정할 수 있습니다. 또한 FTP 태스크를 명명 및 설명할 수 있습니다.  

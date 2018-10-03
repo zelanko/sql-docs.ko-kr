@@ -1,33 +1,30 @@
 ---
-title: 추가 ODBC SQL 문법을 지원 | Microsoft Docs
+title: 추가 지원 되는 ODBC SQL 문법 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6381f13176e34322db6c5d8649ea348ec1e73673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675491"
 ---
-# <a name="additional-supported-odbc-sql-grammar"></a>추가 지원 되는 ODBC SQL 문법
-ODBC 드라이버는 핵심 및 확장 ODBC 2.5 문법에 최소 ODBC 2.5 문법 및 다음 절은 완전히 지원합니다. 파일로 이동 하 여 추가 정보를 표시할 수 있습니다는 [ALTER TABLE 문을](../../odbc/microsoft/alter-table-statement.md), [상관 관계 이름을](../../odbc/microsoft/correlation-names.md), 및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목입니다.  
+# <a name="additional-supported-odbc-sql-grammar"></a>추가 지원되는 ODBC SQL 문법
+ODBC 드라이버는 코어 및 ODBC 2.5 확장 문법에서 최소 ODBC 2.5 문법 및 다음 절 완전히 지원합니다. 이동 하 여 추가 정보를 표시할 수 있습니다 합니다 [ALTER TABLE 문을](../../odbc/microsoft/alter-table-statement.md)를 [상관 관계 이름을](../../odbc/microsoft/correlation-names.md), 및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목입니다.  
   
--   근사 숫자 리터럴 (코어)  
+-   대략적인 숫자 리터럴 (코어)  
   
 -   [ALTER TABLE 문의](../../odbc/microsoft/alter-table-statement.md) (코어)  
   
@@ -37,7 +34,7 @@ ODBC 드라이버는 핵심 및 확장 ODBC 2.5 문법에 최소 ODBC 2.5 문법
   
 -   [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) (확장)  
   
--   [조건자 사이의](../../odbc/microsoft/between-predicate.md) (코어)  
+-   [BETWEEN 조건자](../../odbc/microsoft/between-predicate.md) (코어)  
   
 -   [CREATE INDEX 문](../../odbc/microsoft/create-index-statement.md)  
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad06192d664ed3c4d4f3a2c8e94696f30dd5724d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 13fb698d9a5be2e8fc949ad793cf19ac2aae97b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791871"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>테이블 반환 매개 변수 설명자 필드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.locfileid: "43078145"
   
 ## <a name="remarks"></a>Remarks  
   
-|속성|위치|형식|Description|  
+|이름|위치|형식|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|테이블 반환 매개 변수의 서버 유형 이름입니다.<br /><br /> SQLBindParameter에 대 한 호출에서 테이블 반환 매개 변수 형식 이름을 지정 하면 항상 ANSI 응용 프로그램으로 작성 된 응용 프로그램에도 유니코드 값으로 지정 해야 합니다. 매개 변수에 사용 된 값 *StrLen_or_IndPtr* SQL_NTS 또는 문자열 길이의 sizeof(WCHAR) 곱한 이름 이어야 합니다.<br /><br /> 테이블 반환 매개 변수 형식 이름을 지정 된 경우 SQLSetDescField를 통해 응용 프로그램 방식으로 따르는 리터럴을 사용 하 여 지정할 수 있습니다 빌드됩니다. ODBC 드라이버 관리자에서 필요한 모든 유니코드 변환을 수행합니다.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME(읽기 전용)|IPD|SQLTCHAR*|유형이 정의된 카탈로그입니다.|  
@@ -41,7 +39,7 @@ ms.locfileid: "43078145"
   
  매개 변수 포커스가 테이블 반환 매개 변수로 설정된 경우 다음 문 특성과 설명자 헤더 필드가 테이블 반환 매개 변수에 적용됩니다.  
   
-|속성|위치|형식|Description|  
+|이름|위치|형식|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> APD의 SQL_DESC_ARRAY_SIZE와 같습니다.|APD|SQLUINTEGER|테이블 반환 매개 변수에 대한 버퍼 배열의 배열 크기입니다. 이 값은 버퍼에 포함될 최대 행 수이거나 행의 버퍼 크기입니다. 테이블 반환 매개 변수 값 자체는 버퍼에 포함될 수 있는 것보다 많거나 적은 행을 포함할 수 있습니다. 기본값은 1입니다.<br /><br /> 참고: SQL_SOPT_SS_PARAM_FOCUS가 기본값인 0으로 설정 하는 경우 SQL_ATTR_PARAMSET_SIZE는 문을 참조 및 매개 변수 집합 수를 지정 합니다. SQL_SOPT_SS_PARAM_FOCUS가 테이블 반환 매개 변수의 서수로 설정된 경우 테이블 반환 매개 변수를 참조하며 테이블 반환 매개 변수에 대해 매개 변수 집합당 행 수를 지정합니다.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|기본값은 SQL_PARAM_BIND_BY_COLUMN입니다.<br /><br /> 행 단위 바인딩을 선택하려면 이 필드를 테이블 반환 매개 변수 행 집합에 바인딩될 버퍼 인스턴스나 구조의 길이로 설정합니다. 이 길이에는 바인딩된 모든 열과 구조 또는 버퍼의 패딩에 대한 공간이 포함되어야 합니다. 이렇게 하면 바인딩된 열의 주소가 지정된 길이로 증가할 때 결과가 다음 행에 있는 동일한 열의 시작 부분을 가리킵니다. 사용 하는 경우는 **sizeof** ANSI c에서 연산자를이 동작이 유지 됩니다.|  

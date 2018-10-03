@@ -8,18 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8035d1c2b1c162408cf1770ac284ef98ba0cf9b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7ff2b4de1cccd3011f00c3cf67aec20d06848f25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612172"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>비즈니스 연속성 및 데이터베이스 복구-SQL Server on Linux
 

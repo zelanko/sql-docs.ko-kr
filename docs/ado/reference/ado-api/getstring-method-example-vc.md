@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a301175045bbe323c00b7b17b6217aaec9f7b74f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6e3692410379c6ef87ec2da4b40f09b0d498a187
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815591"
 ---
-# <a name="getstring-method-example-vc"></a>GetString 메서드 예제 (VC + +)
-이 예제에서는 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드.  
+# <a name="getstring-method-example-vc"></a>GetString 메서드 예제(VC++)
+이 예제에서는 합니다 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드.  
   
- 데이터 액세스 문제를 디버깅 하는 하 고 원하는 경우 약간의 현재 내용을 인쇄는 빠르고 간단한 방법 가정 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+ 데이터 액세스 문제를 디버깅 하 고 작은의 현재 내용을 인쇄 하는 빠르고 간단한 방법을 원합니다 가정 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
 ## <a name="example"></a>예제  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3eb6bbc5a3c08ca8668219dd3a11354c2fed2ca8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056513"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 실행 태스크의 매개 변수 및 반환 코드
   SQL 문과 저장된 프로시저를 자주 사용 `input` 매개 변수를 `output` 매개 변수 및 반환 코드입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 SQL 실행 태스크는 `Input`, `Output` 및 `ReturnValue` 매개 변수 유형을 지원합니다. 사용할를 `Input` 입력된 매개 변수의 형식을 `Output` 출력 매개 변수에 대 한 및 `ReturnValue` 에 대 한 코드를 반환 합니다.  
@@ -49,16 +46,16 @@ ms.locfileid: "39083895"
 -   [구성 매개 변수 및 반환 코드에는 SQL 실행 태스크 편집기](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> 매개 변수 이름 및 표식 사용  
- SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 합니다 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자 유형을 사용 하려면 SQL 명령에서는 형식에서 매개 변수 표식을  **\@varParameter**OLE DB 연결 유형에 물음표 (?) 매개 변수가 필요 하지만, 표식입니다.  
+ SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자 유형을 사용하려면 SQL 명령에서 **\@varParameter** 형식의 매개 변수 표식을 사용해야 하지만 OLE DB 연결 형식에는 물음표(?) 매개 변수 표식을 사용해야 합니다.  
   
- 변수와 매개 변수 간 매핑에 매개 변수 이름으로 사용할 수 있는 이름도 연결 관리자 유형에 따라 달라집니다. 예를 들어 합니다 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자 유형을 사용 하 여 사용자 정의 이름을 사용 하는 \@ 접두사, OLE DB 연결 관리자 유형에 필요한 매개 변수 이름과 0부터 시작 하는 서 수의 숫자 값을 사용 하는 반면.  
+ 변수와 매개 변수 간 매핑에 매개 변수 이름으로 사용할 수 있는 이름도 연결 관리자 유형에 따라 달라집니다. 예를 들어 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자 유형에는 \@ 접두사가 있는 사용자 정의 이름을 사용하지만 OLE DB 연결 관리자 유형에는 0부터 시작하는 서수의 숫자 값을 매개 변수 이름으로 사용해야 합니다.  
   
  다음 표에서는 SQL 실행 태스크가 사용할 수 있는 연결 관리자 유형에 대한 SQL 명령 요구 사항을 요약합니다.  
   
 |연결 형식|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<매개 변수 이름>|\@\<매개 변수 이름>|SELECT FirstName, LastName, 제목에서 Person.Contact 여기서 ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<매개 변수 이름>|\@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 및 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +148,7 @@ ms.locfileid: "39083895"
   
 -   ADO 연결 형식에서는 Param1 및 Param2와 같은 임의의 두 매개 변수 이름을 사용할 수 있지만 이러한 매개 변수는 매개 변수 목록에서의 서수 위치에 따라 매핑되어야 합니다.  
   
--   합니다 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 형식에서는 매개 변수 이름을 \@parmMinProductID 및 \@parmMaxProductID 합니다.  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 형식에서는 매개 변수 이름 \@parmMinProductID 및 \@parmMaxProductID를 사용합니다.  
   
 ##  <a name="Stored_procedures"></a> 매개 변수를 사용 하 여 저장된 프로시저를 사용 하 여  
  저장 프로시저를 실행하는 SQL 명령도 매개 변수 매핑을 사용할 수 있습니다. 매개 변수 표식 및 매개 변수 이름 사용 방법에 대한 규칙은 매개 변수가 있는 쿼리에 대한 규칙에서와 마찬가지로 SQL 실행이 사용하는 연결 관리자 유형에 따라 달라집니다.  

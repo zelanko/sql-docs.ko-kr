@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,18 +14,17 @@ helpviewer_keywords:
 - fn:local-name-from-QName function
 - local-name-from-QName function
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bcccc438f64b31405b4234e0817878d9a11cf56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061361"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798851"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>QName의 로컬 이름 QNames 관련 함수
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>QNames 관련 함수 - local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정 된 QName의 로컬 부분을 나타내는 ncname을 반환 *$arg*합니다. 결과 빈 시퀀스 *$arg* 빈 시퀀스입니다.  

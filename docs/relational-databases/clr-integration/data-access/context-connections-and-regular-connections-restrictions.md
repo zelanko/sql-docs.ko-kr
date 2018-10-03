@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e3f290a689cc1914548204e95a3a690d045a7d4
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 800ec59fb837b167b1bcbffc61ddf7e8ce695849
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641793"
 ---
-# <a name="context-connections-and-regular-connections---restrictions"></a>컨텍스트 연결 및 일반 연결-제한 사항
+# <a name="context-connections-and-regular-connections---restrictions"></a>컨텍스트 연결 및 일반 연결 - 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 컨텍스트 및 일반 연결을 통한 코드 실행과 관련된 제한 사항을 설명합니다.  
   

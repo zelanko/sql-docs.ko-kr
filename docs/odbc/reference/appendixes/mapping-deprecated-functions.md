@@ -1,13 +1,11 @@
 ---
-title: 매핑 사용 되지 않는 함수와 | Microsoft Docs
+title: 사용 되지 않는 함수와 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,23 +15,22 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818374"
 ---
-# <a name="mapping-deprecated-functions"></a>사용 되지 않는 함수와 매핑
-이 섹션에서는 어떻게 사용 되지 않는 함수를 설명 ODBC 3으로 매핑되는 *.x* ODBC 3의 이전 버전과 호환성을 보장 하기 위해 드라이버 관리자 *.x* 드라이버는 ODBC 2와 함께 사용 됩니다. *x* 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑이 수행합니다. 때문에 각 ODBC 2. *x* 함수는 다음 목록에는 해당 ODBC 3에 매핑된 *.x* ODBC 3에서 호출 된 경우 작동 *.x* 드라이버에서 ODBC 3 *.x*드라이버는 ODBC 2를 구현 하지 않아도 됩니다. *x* 함수입니다.  
+# <a name="mapping-deprecated-functions"></a>사용되지 않는 함수 매핑
+이 섹션에서는 설명 하는 방법을 사용 되지 않는 함수는 ODBC 3으로 매핑됩니다 *.x* ODBC 3의 이전 버전과 호환성을 보장 하기 위해 드라이버 관리자 *.x* ODBC 2를 사용 하 여 사용 되는 드라이버. *x* 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑을 수행합니다. 때문에 각 ODBC 2. *x* 함수를 다음 목록에는 해당 ODBC 3 매핑되 *.x* 는 ODBC 3에서 호출 된 경우 함수 *.x* 드라이버는 ODBC 3 *.x*드라이버는 ODBC 2를 구현 하지 않아도 됩니다. *x* 함수입니다.  
   
- 매핑 목록에는 드라이버는 ODBC 3 때 트리거되는 *.x* 드라이버 및 드라이버 매핑 중인 함수를 지원 하지 않습니다.  
+ 드라이버는 ODBC 3 경우 목록에서 매핑이 트리거됩니다 *.x* 드라이버 및 드라이버 매핑되는 함수를 지원 하지 않습니다.  
   
- 다음 표에서 ODBC 3에 도입 된 모든 중복 된 기능 *.x*합니다.  
+ 다음 표에서 ODBC 3에 도입 된 기능을 모든 중복된 *.x*합니다.  
   
 |ODBC 2입니다. *x* 함수|ODBC 3 *.x* 함수|  
 |-------------------------|-------------------------|  
@@ -45,7 +42,7 @@ ms.locfileid: "32914108"
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** 와 *옵션* SQL_DROP의|**SQLFreeHandle**|  
+|**SQLFreeStmt** 사용 하 여는 *옵션* SQL_DROP의|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -55,9 +52,9 @@ ms.locfileid: "32914108"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 하지만이 함수는 ODBC 2에 존재 하지 않기 *.x*, Open Group 및 ISO 표준에 있습니다.  
+ [1]에이 함수는 ODBC 2에 존재 하지 않았던 *.x*, Open Group 및 ISO 표준에는 것입니다.  
   
- [2] ODBC 1.0 함수입니다.  
+ [2]는 ODBC 1.0 함수입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

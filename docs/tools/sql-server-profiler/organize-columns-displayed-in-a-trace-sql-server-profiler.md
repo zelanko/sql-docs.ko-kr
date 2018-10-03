@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38a7e0a75dc850b5f4ef883d44c6ceb4d426b651
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f7e3f2a66fd4963de77fa3545247f9d81690ddec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734541"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>표시된 열 추적으로 구성(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "37980965"
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
-|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   그룹화하려는 열을 하나만 선택하여 추적 이벤트를 그룹화하고 집계합니다. 그룹화할 데이터 열을 하나만 선택하는 경우 추적 창에는 데이터 열의 값을 기준으로 그룹화된 이벤트가 표시되고 그 아래에서 모든 이벤트가 축소됩니다. 그룹화를 위해 선택한 데이터 열에서 이벤트의 왼쪽에 더하기 기호(**+**)가 나타나고 그 아래에 축소된 이벤트 수가 괄호로 묶여 이벤트의 오른쪽에 나타납니다. 그룹화를 위해 **EventClass** 데이터 열을 선택한 경우 추적 창 표 형태가 나타나는 방법을 보여 줍니다. 모든 이벤트는 **EventClass** 데이터 열 아래에 구성됩니다. 이벤트를 모두 보려면 더하기 기호를 클릭하여 확장하고 해당 유형의 모든 이벤트 클래스를 표시합니다.  

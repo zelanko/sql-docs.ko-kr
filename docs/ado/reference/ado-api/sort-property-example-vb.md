@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770091"
 ---
-# <a name="sort-property-example-vb"></a>정렬 속성 예제 (VB)
-사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성은 **레코드 집합** 에서 파생 된 ***작성자*** 의 테이블 ***Pubs*** 데이터베이스입니다. 보조 유틸리티 루틴 각 행을 출력합니다.  
+# <a name="sort-property-example-vb"></a>Sort 속성 예제(VB)
+이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성을 **레코드 집합** 에서 파생 된를 ***작성자*** 목차 합니다 ***Pubs*** 데이터베이스입니다. 보조 유틸리티 루틴을 각 행을 출력합니다.  
   
 ```  
 'BeginSortVB  
@@ -107,7 +104,7 @@ End Sub
 'EndSortVB  
 ```  
   
- 이 지정한 제목 및 지정 된 내용을 인쇄 하는 보조 유틸리티 루틴 **레코드 집합**합니다.  
+ 이 지정 된 제목 및 지정 된 콘텐츠를 인쇄 하는 보조 유틸리티 루틴 **레코드 집합**합니다.  
   
 ```  
 Attribute VB_Name = "Sort"  

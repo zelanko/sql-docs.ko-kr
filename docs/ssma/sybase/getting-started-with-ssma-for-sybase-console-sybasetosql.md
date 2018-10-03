@@ -4,28 +4,22 @@ ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sybase Console,Launching SSMA Console
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853801"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase 콘솔 (SybaseToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 콘솔 응용 프로그램 Sybase 용 SSMA 시작 절차를 설명 합니다. 또한 여기에 나열 된 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  

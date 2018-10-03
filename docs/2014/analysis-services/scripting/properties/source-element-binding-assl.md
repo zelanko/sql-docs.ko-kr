@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (Binding)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 1032558c-7546-4ca7-888d-8139df23cb62
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54257415a19530a82b27e759dea03a4e41dcb0cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2600803402d87e880ad479be660de98ff5d32f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061333"
 ---
 # <a name="source-element-binding-assl"></a>Source 요소(바인딩)(ASSL)
   부모 요소가 바인딩된 데이터의 원본을 식별합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37257245"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|참조 데이터 형식 표에서|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
  **데이터 형식 및 길이**  
@@ -76,7 +73,7 @@ ms.locfileid: "37257245"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AggregationInstance](../objects/aggregationinstance-element-assl.md), [AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md), [큐브](../objects/cube-element-assl.md)를 [DataItem](../data-type/dataitem-data-type-assl.md), [차원](../objects/dimension-element-assl.md)합니다 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [MeasureGroup](../objects/group-element-assl.md)하십시오 [MeasureGroupDimension](../data-type/dimension-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [파티션 ](../objects/partition-element-assl.md)하십시오 [ProactiveCaching](../objects/proactivecaching-element-assl.md)합니다.|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Source` 요소의 경우 `Binding` 요소에서 허용되는 파생된 `DataItem` 데이터 형식은 `DataItem` 요소의 부모에 따라 달라집니다.  

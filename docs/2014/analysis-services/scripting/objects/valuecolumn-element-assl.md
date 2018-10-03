@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ValueColumn Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ValueColumn element
 ms.assetid: 6c2d6822-8ecc-46df-9fa9-bb92ac716c36
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7279cb1f8f9bc5a7dc8c9e564081a227edc32f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 876d5efb4d4b84e8f42cfd3c360258c8cb67d865
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048144"
 ---
 # <a name="valuecolumn-element-assl"></a>ValueColumn 요소(ASSL)
   부모 요소의 값을 제공하는 열을 식별합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37231903"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  경우는 [NameColumn](namecolumn-element-assl.md) 요소의 `DimensionAttribute` 지정 된 경우 동일 `DataItem` 값이 기본값으로 사용 됩니다는 `ValueColumn` 요소입니다. 경우는 `NameColumn` 요소의 `DimensionAttribute` 지정 하지 않으면 및 [KeyColumns](../collections/keycolumns-element-assl.md) 컬렉션 `DimensionAttribute` 하나를 포함 [KeyColumn](keycolumn-element-assl.md) 문자열을 사용 하 여 키 열을 나타내는 요소 동일한 데이터 형식 `DataItem` 값에 대 한 기본 값으로 사용 되는 `ValueColumn` 요소입니다.  

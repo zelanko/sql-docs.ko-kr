@@ -3,47 +3,41 @@ title: Azure SQL DB (AccessToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d61eab04dffa1723c6d77a118033eee535a917e2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 57a745385de80a3040897310ddc5b43b1301ea86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717481"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL)에 연결
-SQL Azure 대화 상자에 연결을 사용 하 여 마이그레이션할 SQL Azure 데이터베이스에 연결 합니다.  
+마이그레이션하려는 SQL Azure 데이터베이스에 연결할 SQL Azure 대화 상자에 연결을 사용 합니다.  
   
-이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **SQL Azure에 연결**합니다. 이 명령은 이전에 연결한 경우 **SQL Azure에 다시 연결 합니다.**  
+이 대화 상자에 액세스 하는 **파일** 메뉴에서 **SQL Azure 연결**합니다. 이전에 연결한 경우에 명령입니다 **SQL Azure 다시 연결 합니다.**  
   
 ## <a name="options"></a>변수  
 **서버 이름**  
   
-선택 하거나 SQL Azure에 연결 하기 위한 서버 이름을 입력 합니다.  
+선택 하거나 SQL Azure 연결 하기 위한 서버 이름을 입력 합니다.  
   
 **데이터베이스 백업**  
   
-선택, 입력 또는 **찾아보기** 데이터베이스 이름입니다.  
+선택, 입력 하거나 **찾아보기** 데이터베이스 이름입니다.  
   
 > [!IMPORTANT]  
-> Access 용 SSMA는 SQL Azure에서 master 데이터베이스에 연결을 지원 하지 않습니다.  
+> Access 용 SSMA는 SQL Azure master 데이터베이스에 연결을 지원 하지 않습니다.  
   
 **사용자 이름**  
   
-SSMA는 SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 하십시오  
+SSMA가 SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
 **암호**  
   
@@ -51,22 +45,22 @@ SSMA는 SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 �
   
 **Encrypt**  
   
-SSMA는 SQL Azure에 암호화 된 연결을 권장합니다.  
+SSMA는 SQL Azure 암호화 된 연결을 권장합니다.  
   
-## <a name="create-azure-database"></a>Azure 데이터베이스 만들기  
+## <a name="create-azure-database"></a>Azure Database 만들기  
 새 azure 데이터베이스를 만들려면 다음 단계를 수행 합니다.  
   
-1.  SQL Azure 대화 상자에는 연결에 있는 찾아보기 단추를 클릭  
+1.  SQL Azure 대화 상자에 연결에 있는 찾아보기 단추를 클릭  
   
-2.  데이터베이스가 없으면 두 메뉴 항목 표시  
+2.  데이터베이스가 없는 경우 두 개의 메뉴 항목 표시  
   
-    1.  **(데이터베이스를 찾을 수 없음)**  사용 하지 않도록 설정 되 고 항상 회색으로 표시 되는지를  
+    1.  **(데이터베이스를 찾을 수 없음)**  사용 하지 않도록 설정 하 고 항상 회색으로 표시  
   
-    2.  **새 데이터베이스 만들기** 항상 활성화 되어, SQL Azure 계정에서 새 azure 데이터베이스를 만들 수 있도록 합니다. 이 메뉴 항목을 클릭 하면 만들 azure 데이터베이스 대화 상자는 데이터베이스 이름 및 크기를 사용 합니다.  
+    2.  **새 데이터베이스 만들기** 는 항상 사용 되며 SQL Azure 계정에서 새 azure 데이터베이스를 만들 수 있도록 합니다. 이 메뉴 항목을 클릭 하면 만드는 azure 데이터베이스 대화 상자는 데이터베이스 이름 및 크기를 사용 하 여 표시 합니다.  
   
-3.  데이터베이스 생성 시이 두 매개 변수는 입력으로 제공 됩니다.  
+3.  데이터베이스 생성 시이 두 매개 변수는 입력으로 지정 됩니다.  
   
     1.  **데이터베이스 이름:** 데이터베이스 이름을 입력 합니다.  
   
-    2.  **데이터베이스 크기:** SQL Azure 계정에서 만들어야 하는 데이터베이스 크기를 선택 합니다.  
+    2.  **데이터베이스 크기:** SQL Azure 계정에 생성 해야 하는 데이터베이스 크기를 선택 합니다.  
   

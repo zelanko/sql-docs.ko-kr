@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_gettypename
@@ -17,17 +15,16 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e00a0bc4178cc8ac607366e9d80377954c14d3ae
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743201"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,15 +68,15 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|모두|**datetime**|  
 |**SQLBITN**|모두|**bit-null**|  
 |**SQLBIT**|모두|**bit**|  
-|**SQLBIGCHAR**|아니오|**char**|  
-|**SQLCHARACTER**|아니오|**char**|  
-|**SQLBIGVARCHAR**|아니오|**varchar**|  
-|**SQLVARCHAR**|아니오|**varchar**|  
+|**SQLBIGCHAR**|아니요|**char**|  
+|**SQLCHARACTER**|아니요|**char**|  
+|**SQLBIGVARCHAR**|아니요|**varchar**|  
+|**SQLVARCHAR**|아니요|**varchar**|  
 |**SQLTEXT**|모두|**text**|  
-|**SQLBIGBINARY**|아니오|**binary**|  
-|**SQLBINARY**|아니오|**이진**|  
-|**SQLBIGVARBINARY**|아니오|**Varbinary**|  
-|**SQLVARBINARY**|아니오|**Varbinary**|  
+|**SQLBIGBINARY**|아니요|**binary**|  
+|**SQLBINARY**|아니요|**이진**|  
+|**SQLBIGVARBINARY**|아니요|**Varbinary**|  
+|**SQLVARBINARY**|아니요|**Varbinary**|  
 |**SQLIMAGE**|모두|**이미지**|  
 |**SQLINTN**|모두|**int-null**|  
 |**SQLDATETIMN**|모두|**datetime-null**|  
@@ -94,8 +91,8 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|모두|**smallmoney**|  
 |**SQLFLT4**|모두|**실제**|  
 |**SQLUNIQUEID**|모두|**uniqueidentifier**|  
-|**SQLNCHAR**|아니오|**Nchar**|  
-|**SQLNVARCHAR**|아니오|**Nvarchar**|  
+|**SQLNCHAR**|아니요|**Nchar**|  
+|**SQLNVARCHAR**|아니요|**Nvarchar**|  
 |**SQLNTEXT**|모두|**ntext**|  
 |**SQLVARIANT**|모두|**sql_variant**|  
 |**SQLINT8**|모두|**Bigint**|  

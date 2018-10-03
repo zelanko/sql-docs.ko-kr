@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version number supported [ODBC]
 - interoperability [ODBC], version number supported
 ms.assetid: 6eccacdf-b837-4b66-bd48-ba31771acecb
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05629fd8d944ed62325a3af5a18d8431c49e1aa2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03678023990fc15d03c73501f331ecc302f6b892
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696201"
 ---
 # <a name="version-number"></a>버전 번호
-각각 서로 다른 기능 ODBC의 여러 버전이 있습니다. 응용 프로그램을 호출 하 여 특정 드라이버 및 ODBC 버전 드라이버 관리자 지원 확인 **SQLGetInfo** SQL_ODBC_VER 및 SQL_DRIVER_ODBC_VER 옵션입니다.
+다양 한 기능을 사용 하 여 각 ODBC의 여러 버전이 있습니다. 응용 프로그램이 ODBC 드라이버 관리자는 특정 드라이버 지원 호출 하 여 결정 **SQLGetInfo** SQL_ODBC_VER 및 SQL_DRIVER_ODBC_VER 옵션을 사용 하 여 합니다.

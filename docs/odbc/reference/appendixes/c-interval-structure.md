@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f3a2c8f0e3ad967b3c0b7b02255774c2603a1b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685721"
 ---
 # <a name="c-interval-structure"></a>C 간격 구조
-에 나열 된 각 C 간격 데이터 형식의 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 섹션은 동일한 구조를 사용 하 여 간격 데이터를 포함 시키십시오. 때 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** 은, 드라이버 SQL_INTERVAL_STRUCT 구조에 데이터를 반환 합니다.를 호출 하 여 지정 된 값을 사용 하 여는 C 데이터 형식에 대 한 응용 프로그램 (에 대 한 호출에서 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**) SQL_INTERVAL_STRUCT의 내용을 해석 하려면 정보를 표시 하 고는 *interval_type* 구조의 필드는 *enum* C 형식에 해당 하는 값입니다. 드라이버 읽지 않는 *interval_type* 간격의 유형을 결정 하도록 필드; SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 매개 변수 데이터 구조를 사용 하면 드라이버를 사용 하 여 APD의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에 의해 지정 된 값, SQL_INTERVAL_STRUCT의 내용을 해석 응용 프로그램의 값을 설정 하는 경우에는  *interval_type* 필드 값을 다른 값입니다.  
+에 나열 된 각 C 간격 데이터 형식 합니다 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션 간격 데이터를 포함 하도록 동일한 구조를 사용 합니다. 때 **SQLFetch**를 **SQLFetchScroll**, 또는 **SQLGetData** 는, 드라이버 SQL_INTERVAL_STRUCT 구조로 데이터를 반환 합니다.를 호출 하 여 지정 된 값을 사용 합니다 C 데이터 형식에 대 한 응용 프로그램 (에 대 한 호출에서 **SQLBindCol**를 **SQLGetData**, 또는 **SQLBindParameter**) SQL_INTERVAL_STRUCT의 내용을 해석 하려면 을 채웁니다 합니다 *interval_type* 구조체의 필드를 *열거형* C 형식에 해당 하는 값입니다. 드라이버 읽지 않는지 확인 합니다 *interval_type* 간격의 형식을 확인 하려면 필드; SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 매개 변수 데이터 구조를 사용 하면 드라이버를 사용 하 여 APD의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에서 지정 된 값, SQL_INTERVAL_STRUCT의 내용을 해석 응용 프로그램의 값을 설정 하는 경우에는  *interval_type* 필드 값을 다른 값입니다.  
   
  이 구조는 다음과 같이 정의 됩니다.  
   
@@ -73,4 +70,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- *interval_type* 필드는 SQL_INTERVAL_STRUCT의 응용 프로그램에 구조 공용 구조체에 유지 되 나타내고 구조체의 멤버에 관련 된도 합니다. *interval_sign* 필드에 SQL_FALSE 값 필드를 유도 하는 간격 서명 되지 않은 경우에 SQL_TRUE 인 경우 선행 필드 음수입니다. 선행 필드 자체의 값은 항상 값에 상관 없이 서명 된 *interval_sign*합니다. *interval_sign* 필드를 부호 비트로 역할입니다.
+ 합니다 *interval_type* 필드는 SQL_INTERVAL_STRUCT의 응용 프로그램 구조는 공용 구조체에 저장 된 나타내며 구조체의 멤버는 관련도 합니다. 합니다 *interval_sign* 필드는 필드를 유도 하는 간격 서명 되어 있지 않으면 SQL_FALSE 값에는 SQL_TRUE 인 경우 선행 필드 음수입니다. 선행 필드 자체의 값은 항상 값에 관계 없이 서명 *interval_sign*합니다. 합니다 *interval_sign* 를 부호 비트로 필드는 역할입니다.

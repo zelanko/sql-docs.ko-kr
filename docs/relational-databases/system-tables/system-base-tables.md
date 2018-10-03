@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6804649b60a1617def415ce35113685ef43902f5
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833631"
 ---
 # <a name="system-base-tables"></a>시스템 기본 테이블
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,10 +75,10 @@ ms.locfileid: "39102211"
 |**sys.sysremsvcbinds**|모든 데이터베이스에 있습니다. 각 원격 서비스 바인딩에 대한 행을 포함합니다.|  
 |**sys.sysconvgroup**|모든 데이터베이스에 있습니다. Service Broker의 각 서비스 인스턴스에 대한 행을 포함합니다.|  
 |**sys.sysxmitqueue**|모든 데이터베이스에 있습니다. 각 Service Broker 전송 큐에 대한 행을 포함합니다.|  
-|**sys.sysdesend**|모든 데이터베이스에 있습니다. Service Broker 대화의 각 송신 끝점에 대한 행을 포함합니다.|  
-|**sys.sysdercv**|모든 데이터베이스에 있습니다. Service Broker 대화의 각 수신 끝점에 대한 행을 포함합니다.|  
-|**sys.sysendpts**|에 존재 합니다 **마스터** 데이터베이스에 해당 합니다. 서버에 생성된 각 끝점에 대한 행을 포함합니다.|  
-|**sys.syswebmethods**|에 존재 합니다 **마스터** 데이터베이스에 해당 합니다. 서버에 생성된 SOAP 기반 HTTP 끝점에 정의된 각 SOAP 메서드에 대한 행을 포함합니다.|  
+|**sys.sysdesend**|모든 데이터베이스에 있습니다. Service Broker 대화의 각 송신 엔드포인트에 대한 행을 포함합니다.|  
+|**sys.sysdercv**|모든 데이터베이스에 있습니다. Service Broker 대화의 각 수신 엔드포인트에 대한 행을 포함합니다.|  
+|**sys.sysendpts**|에 존재 합니다 **마스터** 데이터베이스에 해당 합니다. 서버에 생성된 각 엔드포인트에 대한 행을 포함합니다.|  
+|**sys.syswebmethods**|에 존재 합니다 **마스터** 데이터베이스에 해당 합니다. 서버에 생성된 SOAP 기반 HTTP 엔드포인트에 정의된 각 SOAP 메서드에 대한 행을 포함합니다.|  
 |**sys.sysqnames**|모든 데이터베이스에 있습니다. 4바이트 ID 토큰에 대한 각 정규화된 이름 또는 네임스페이스에 대한 행을 포함합니다.|  
 |**sys.sysxmlcomponent**|모든 데이터베이스에 있습니다. 각 행은 XML 스키마 구성 요소를 나타냅니다.|  
 |**sys.sysxmlfacet**|모든 데이터베이스에 있습니다. XML 유형 정의의 각 XML 패싯(제한)에 대한 행을 포함합니다.|  

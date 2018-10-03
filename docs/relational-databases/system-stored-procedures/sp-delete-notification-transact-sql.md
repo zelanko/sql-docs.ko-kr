@@ -1,14 +1,11 @@
 ---
-title: sp_delete_notification (Transact SQL) | Microsoft Docs
+title: sp_delete_notification (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_notification
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c435c6cdb754cd7ed0220cf53cd05dcdcdf6b157
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3b2c202ae0336884b801160569c62ad469d22aa1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243138"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758521"
 ---
 # <a name="spdeletenotification-transact-sql"></a>sp_delete_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +43,22 @@ sp_delete_notification
   
 ## <a name="arguments"></a>인수  
  [ **@alert_name=** ] **'***alert***'**  
- 경고의 이름입니다. *경고* 은 **sysname**, 기본값은 없습니다.  
+ 경고의 이름입니다. *경고* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@operator_name=** ] **'***operator***'**  
- 운영자의 이름입니다. *연산자* 은 **sysname**, 기본값은 없습니다.  
+ 운영자의 이름입니다. *연산자* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  알림을 제거하는 경우 알림만 제거되며 경고 및 운영자는 그대로 유지됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 이 저장된 프로시저를 실행 하려면 사용자에 게 부여 해야 합니다는 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 이 저장된 프로시저를 실행 하려면 사용자에 부여 해야 합니다 **sysadmin** 고정된 서버 역할입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `François Ajenstat` 경고가 발생하는 경우 운영자 `Test Alert`에게 보낸 알림을 제거합니다.  
@@ -77,7 +73,7 @@ EXEC dbo.sp_delete_notification
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_alert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   

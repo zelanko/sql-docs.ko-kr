@@ -1,14 +1,11 @@
 ---
-title: sys.conversation_groups (Transact SQL) | Microsoft Docs
+title: sys.conversation_groups (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conversation_groups_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_groups catalog view
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 432db08c0334b776f86a3785a0b423b9f576445b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 01e6e1d47061f445d7aa7d53fb548a2ebfcaefd6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763018"
 ---
 # <a name="sysconversationgroups-transact-sql"></a>sys.conversation_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "33178067"
 |**service_id**|**int**|이 그룹에 있는 대화에 대한 서비스의 식별자입니다. NULL을 허용하지 않습니다.|  
 |**is_system**|**bit**|시스템 인스턴스인지 여부를 나타냅니다. NULL을 허용합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
   

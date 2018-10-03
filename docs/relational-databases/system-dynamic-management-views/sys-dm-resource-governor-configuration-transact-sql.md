@@ -1,12 +1,10 @@
 ---
-title: sys.dm_resource_governor_configuration (Transact SQL) | Microsoft Docs
+title: sys.dm_resource_governor_configuration (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_resource_governor_configuration_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_configuration dynamic management view
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bccb033127cf295efc5f5980e37a6313e35fd6e0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: b36a4c07d37ba55a9cd4e4573d144f19259f2cfe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832421"
 ---
 # <a name="sysdmresourcegovernorconfiguration-transact-sql"></a>sys.dm_resource_governor_configuration(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +34,11 @@ ms.locfileid: "34466399"
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|리소스 관리자에서 현재 사용하는 분류자 함수의 ID입니다. 사용되는 함수가 없으면 0 값을 반환합니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 이 새 요청을 분류 하는 데 사용 하는 함수와 규칙을 사용 하 여 이러한 요청을 적절 한 작업 그룹에 라우팅합니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.|  
-|is_reconfiguration_pending|**bit**|ALTER RESOURCE GOVERNOR RECONFIGURE 문으로 그룹 또는 풀을 변경했는지 여부 및 인-메모리 구성에 적용되지 않았는지 여부를 나타냅니다. 반환되는 값은 다음 중 하나입니다.<br /><br /> 0 - 재구성 문이 필요 없습니다.<br /><br /> 1 - 보류 중인 구성 변경 내용을 적용하려면 재구성 문이나 서버 재시작이 필요합니다.<br /><br /> **참고:** 반환 되는 값은 항상 0 리소스 관리자를 사용 하지 않도록 설정 합니다.<br /><br /> Null을 허용하지 않습니다.|  
+|classifier_function_id|**int**|리소스 관리자에서 현재 사용하는 분류자 함수의 ID입니다. 사용되는 함수가 없으면 0 값을 반환합니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 이 함수는 새 요청을 분류 하는 데 사용 됩니다 하 고 규칙을 사용 하 여 적절 한 작업 그룹에 이러한 요청을 라우팅합니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.|  
+|is_reconfiguration_pending|**bit**|ALTER RESOURCE GOVERNOR RECONFIGURE 문으로 그룹 또는 풀을 변경했는지 여부 및 인-메모리 구성에 적용되지 않았는지 여부를 나타냅니다. 반환되는 값은 다음 중 하나입니다.<br /><br /> 0 - 재구성 문이 필요 없습니다.<br /><br /> 1 - 보류 중인 구성 변경 내용을 적용하려면 재구성 문이나 서버 재시작이 필요합니다.<br /><br /> **참고:** 반환 되는 값은 항상 0 Resource Governor를 사용 하지 않도록 설정 합니다.<br /><br /> Null을 허용하지 않습니다.|  
 |max_outstanding_io_per_volume|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 볼륨당 미해결 I/O의 최대 개수입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 동적 관리 뷰는 인-메모리 구성을 표시합니다. 저장된 구성 메타데이터를 보려면 해당 카탈로그 뷰를 사용합니다.  
   
  다음 예에서는 리소스 관리자 구성의 인-메모리 값과 저장된 메타데이터 값을 가져와서 비교하는 방법을 보여 줍니다.  
@@ -65,10 +62,10 @@ sys.dm_resource_governor_configuration;
 go  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.resource_governor_configuration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  

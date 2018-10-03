@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c2f818240cac81bfad9dfc26a59ed4f11935ce2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d70cf7e3fe370556a3be480a561c9ca9733ed6aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602831"
 ---
-# <a name="value-property-example-vc"></a>값 속성 예제 (VC + +)
-이 예제에서는 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체에 대 한 필드 및 속성 값을 표시 하 여는 ***직원*** 테이블입니다.  
+# <a name="value-property-example-vc"></a>Value 속성 예제(VC++)
+이 예제에서는 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성과 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 에 대 한 필드 및 속성 값을 표시 하 여 개체를 ***직원*** 테이블입니다.  
   
 ```  
 // BeginValueCpp.cpp  
@@ -175,5 +172,5 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>관련 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [속성 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 속성(ADO)](../../../ado/reference/ado-api/value-property-ado.md)

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregateFunction Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregateFunction element
 ms.assetid: 880b6bd0-d62a-4221-831c-39f748ee84f2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2eccf4ca6e41ffba52424c4f45edb71c9c1c46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c40f1767de94515d11229e5dce13f6cb94c9334
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261209"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055313"
 ---
 # <a name="aggregatefunction-element-assl"></a>AggregateFunction 요소(ASSL)
   사용 하는 집계 함수의 유형을 정의 [측정값](../objects/measure-element-assl.md) 요소입니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37261209"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[측정값](../objects/measure-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  

@@ -1,13 +1,11 @@
 ---
-title: 실행 하 고, Requery 메서드 예제 (VB)의 선택을 취소 | Microsoft Docs
+title: Execute, requery, Clear 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9f877a63f05fd6fd8d31623b8e79aa1bac4464c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 11fe5ef40e06772c38390096363903113a28bd46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684511"
 ---
-# <a name="execute-requery-and-clear-methods-example-vb"></a>실행, Requery, 및 메서드 예제 (VB)를 지웁니다.
-이 예제에서는 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 에 현재 데이터를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [지우기](../../../ado/reference/ado-api/clear-method-ado.md) 의 내용을 삭제 하는 메서드는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. (의 **오류** 컬렉션을 통해 액세스 되는 **연결** 의 개체는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand 및 PrintOutput 절차는이 절차를 실행 하려면 필요 합니다.  
+# <a name="execute-requery-and-clear-methods-example-vb"></a>실행, requery, Clear 메서드 예제 (VB)
+이 예제에서는 합니다 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 의 현재 데이터를 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [선택을 취소](../../../ado/reference/ado-api/clear-method-ado.md) 내용의 선택을 취소 하는 방법은 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. (는 **오류** 을 통해 컬렉션에 액세스를 **연결** 의 개체를 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand 및 PrintOutput 절차는이 프로시저를 실행 하도록 필요 합니다.  
   
 ```  
 'BeginExecuteVB  
@@ -173,7 +170,7 @@ End Sub
   
 ## <a name="see-also"></a>관련 항목  
  [Clear 메서드 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error 개체](../../../ado/reference/ado-api/error-object.md)   
  [Execute 메서드 (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)   

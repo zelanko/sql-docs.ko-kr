@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e2f060ce868f55b9d919aa437b5109c7b272673b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 253b4e2178f7a3e2e20d3b1263f83ff184d3b9c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051003"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services의 이전 버전과의 호환성
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전 간의 변경된 동작에 대해 설명합니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 포함하는 사용자 지정 응용 프로그램의 작동을 중단시키는 것으로 알려진 근본적인 제품 변경 사항에 대해 설명합니다.  

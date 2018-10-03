@@ -1,14 +1,11 @@
 ---
-title: sp_fulltext_semantic_register_language_statistics_db (Transact SQL) | Microsoft Docs
+title: sp_fulltext_semantic_register_language_statistics_db (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3d7c6df327cb5b61408701fe3a03515e31ed508
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 577a587f601dc19d3c3ee652ee09a1fbe23a4001
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691361"
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ GO
   
 ##  <a name="Arguments"></a> 인수  
  [ @dbname =] '*database_name*'  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 대해 등록할 의미 체계 언어 통계 데이터베이스의 이름입니다. 데이터베이스가 연결되어 있어야 합니다. *a s e _* 은 **sysname**, NULL이 아닐 수도 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 대해 등록할 의미 체계 언어 통계 데이터베이스의 이름입니다. 데이터베이스가 연결되어 있어야 합니다. *database_name* 됩니다 **sysname**, NULL 되지 않을 수 있습니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -78,11 +74,11 @@ GO
  자세한 내용은 [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)을 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
- 인스턴스에 설치 된 의미 체계 언어 통계 데이터베이스에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 카탈로그 뷰를 쿼리 [sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)합니다.  
+ 인스턴스에 설치 되어 있는 의미 체계 언어 통계 데이터베이스에 대 한 자세한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 카탈로그 뷰를 쿼리 [sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)합니다.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -93,7 +89,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

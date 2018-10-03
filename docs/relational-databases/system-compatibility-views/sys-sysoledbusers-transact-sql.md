@@ -1,14 +1,11 @@
 ---
-title: sys.sysoledbusers (Transact SQL) | Microsoft Docs
+title: sys.sysoledbusers (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysoledbusers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysoledbusers system table
 - sys.sysoledbusers compatibility view
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9bed55c42d7d656f53e24acb1d859658666ce901
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71d04ef07053eb893a98d654424eb49b61f0c7e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809141"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +40,13 @@ ms.locfileid: "33220844"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|서버의 SID(보안 ID 번호)입니다.|  
-|**rmtloginame**|**nvarchar(** 128 **)**|원격 로그인의 이름입니다 **loginsid** 연결에 대해 매핑한 **rmtservid**합니다.|  
+|**rmtloginame**|**nvarchar(** 128 **)**|원격 로그인의 이름입니다 **loginsid** 연결에 대 한 매핑됩니다 **rmtservid**합니다.|  
 |**rmtpassword**|**nvarchar(** 128 **)**|NULL을 반환합니다.|  
 |**loginsid**|**varbinary(** 85 **)**|매핑될 로컬 로그인의 SID입니다.|  
 |**상태**|**smallint**|1인 경우 매핑에 사용자의 자격 증명을 사용해야 합니다.|  
 |**changedate**|**datetime**|매핑 정보가 마지막으로 변경된 날짜입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

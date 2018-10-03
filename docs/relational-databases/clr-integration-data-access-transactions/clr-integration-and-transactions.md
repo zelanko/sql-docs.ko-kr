@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ADO.NET [CLR integration]
@@ -16,20 +14,19 @@ helpviewer_keywords:
 - System.Transactions namespace
 - transactions [CLR integration]
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f928519eb9a94d59210c826311d187c717edf054
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 23c97a9640195689a9e980f695163cc03841f672
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356155"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667941"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 통합 및 트랜잭션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-   **System.Transactions** 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. **System.Transactions** 및 ADO.NET은 작동 함께 확장 하 고 관리 되는 응용 프로그램에서 로컬 및 분산 트랜잭션의 사용을 간소화 합니다.  
+  **System.Transactions** 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. **System.Transactions** 및 ADO.NET은 작동 함께 확장 하 고 관리 되는 응용 프로그램에서 로컬 및 분산 트랜잭션의 사용을 간소화 합니다.  
   
 > [!NOTE]  
 >  CLR UDP(사용자 정의 프로시저)는 해당 프로시저가 실행되는 서버에 대한 연결(루프백 연결)을 설정할 수 없으며 동일한 트랜잭션에 참여할 수도 없습니다. 이러한 작업을 시도하면 연결 시도가 차단되고 제어가 다시 UDP로 전달되지 않습니다. 이 경우 UDP에서 시간 초과 오류(메시지 1206)가 발생합니다.  

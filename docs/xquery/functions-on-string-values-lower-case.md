@@ -4,36 +4,30 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - lower-case Function (XQuery)
 - lower-case
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
-caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c789ef6513193ba6fb0eeac2d8268e92fc23396c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 575b1d04e221f6b222838520d73226a7e23608c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767831"
 ---
-# <a name="functions-on-string-values---lower-case"></a>문자열 값-lower-case 함수
+# <a name="functions-on-string-values---lower-case"></a>문자열 값 함수 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Lower-case 함수 변환의 각 문자에 *$arg* 를 해당 소문자로 동일 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 소문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 코드 포인트 표준에 대한 매핑과 같지 않습니다.  
+  Lower-case 함수에서 각 문자를 변환 *$arg* 를 해당 소문자로 동일 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 소문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 코드 포인트 표준에 대한 매핑과 같지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,13 +43,13 @@ fn:lower-case($arg as xs:string?) as xs:string
 |용어|정의|  
 |*$arg*|소문자로 변환할 문자열 값입니다.|  
   
-## <a name="remarks"></a>주의  
- 하는 경우의 값 *$arg* 가 비어 있는 경우 길이가 0 인 문자열이 반환 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 경우 값 *$arg* 는 비어 있는 경우 길이가 0 인 문자열 반환 됩니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>1. 문자열을 대문자로 변경  
- 다음 예에서는 변경 입력된 문자열 ' abcDEF! @4'를 소문자로 합니다.  
+ 다음 예제에서는 입력된 문자열을 변경 ' abcDEF! @4' 소문자로 합니다.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -130,7 +124,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

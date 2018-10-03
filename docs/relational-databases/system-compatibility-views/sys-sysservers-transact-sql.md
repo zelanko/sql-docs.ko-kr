@@ -1,14 +1,11 @@
 ---
-title: sys.sysservers (Transact SQL) | Microsoft Docs
+title: sys.sysservers (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysservers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysservers system table
 - sys.sysservers compatibility view
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a052eecd27de7767f721bc71a070eb00dad99220
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232831"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608079"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +55,22 @@ ms.locfileid: "33232831"
 |**querytimeout**|**int**|서버에 대한 쿼리의 제한 시간 설정입니다.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = 서버가 원격 서버입니다.<br /><br /> 0 = 서버가 연결된 서버입니다.|  
-|**rpc**|**bit**|1 = **sp_serveroption@rpc** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 = **sp_serveroption@rpc** 로 설정 **false** 또는 **오프**합니다.|  
-|**pub**|**bit**|1 = **sp_serveroption@pub** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 = **sp_serveroption@pub** 로 설정 **false** 또는 **오프**합니다.|  
-|**sub**|**bit**|1 = **sp_serveroption@sub** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 = **sp_serveroption@sub** 로 설정 **false** 또는 **오프**합니다.|  
-|**dist**|**bit**|1 = **sp_serveroption@dist** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 = **sp_serveroption@dist** 로 설정 **false** 또는 **오프**합니다.|  
-|**dpub**|**bit**|1 = **sp_serveroption@dpub** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 = **sp_serveroption@dpub** 로 설정 **false** 또는 **오프**합니다.|  
-|**rpcout**|**bit**|1 =  **sp_serveroption@rpc 아웃** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 =  **sp_serveroption@rpc 아웃** 로 설정 **false** 또는 **오프**합니다.|  
-|**dataaccess**|**bit**|1 =  **sp_serveroption@data 액세스** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 =  **sp_serveroption@data 액세스** 로 설정 **false** 또는 **오프**합니다.|  
-|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation 호환** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 =  **sp_serveroption@collation 호환** 로 설정 **false** 또는 **오프**합니다.|  
-|**system**|**bit**|1 = **sp_serveroption@system** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 = **sp_serveroption@system** 로 설정 **false** 또는 **오프**합니다.|  
-|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote 데이터 정렬** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 =  **sp_serveroption@remote 데이터 정렬** 로 설정 **false** 또는 **오프**합니다.|  
-|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy 스키마 유효성 검사** 로 설정 **true** 또는 **에**합니다.<br /><br /> 0 =  **sp_serveroption@lazy 스키마 유효성 검사** 로 설정 **false** 또는 **오프**합니다.|  
+|**rpc**|**bit**|1 = **sp_serveroption@rpc** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 = **sp_serveroption@rpc** 로 설정 **false** 하거나 **해제**합니다.|  
+|**pub**|**bit**|1 = **sp_serveroption@pub** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 = **sp_serveroption@pub** 로 설정 **false** 하거나 **해제**합니다.|  
+|**sub**|**bit**|1 = **sp_serveroption@sub** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 = **sp_serveroption@sub** 로 설정 **false** 하거나 **해제**합니다.|  
+|**dist**|**bit**|1 = **sp_serveroption@dist** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 = **sp_serveroption@dist** 로 설정 **false** 하거나 **해제**합니다.|  
+|**dpub**|**bit**|1 = **sp_serveroption@dpub** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 = **sp_serveroption@dpub** 로 설정 **false** 하거나 **해제**합니다.|  
+|**rpcout**|**bit**|1 =  **sp_serveroption@rpc 초과** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 =  **sp_serveroption@rpc 초과** 로 설정 **false** 하거나 **해제**합니다.|  
+|**dataaccess**|**bit**|1 =  **sp_serveroption@data 액세스** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 =  **sp_serveroption@data 액세스** 로 설정 **false** 하거나 **해제**합니다.|  
+|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation 호환** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 =  **sp_serveroption@collation 호환** 로 설정 **false** 하거나 **해제**합니다.|  
+|**system**|**bit**|1 = **sp_serveroption@system** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 = **sp_serveroption@system** 로 설정 **false** 하거나 **해제**합니다.|  
+|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote 데이터 정렬을** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 =  **sp_serveroption@remote 데이터 정렬을** 로 설정 **false** 하거나 **해제**합니다.|  
+|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy 스키마 유효성 검사** 로 설정 **true** 하거나 **에서**합니다.<br /><br /> 0 =  **sp_serveroption@lazy 스키마 유효성 검사** 로 설정 **false** 하거나 **해제**합니다.|  
 |**collation**|**sysname**|서버 데이터 정렬에서 설정한 대로  **sp_serveroption@collation 이름**합니다.|  
 |**nonsqlsub**|bit|0 = 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스입니다.<br /><br /> 1 = 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 아닙니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

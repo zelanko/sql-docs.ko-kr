@@ -1,14 +1,11 @@
 ---
-title: log_shipping_monitor_error_detail (Transact SQL) | Microsoft Docs
+title: log_shipping_monitor_error_detail (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_error_detail_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7c41916a3ce32eacc974debb2a82e6c24a2c41a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5e0228072bee91f96e816a1d0f369f85fa486728
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770332"
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +45,15 @@ ms.locfileid: "33261602"
 |**원본(source)**|**nvarchar**|오류 메시지 또는 이벤트의 원본입니다.|  
 |**help_url**|**nvarchar**|오류에 대한 자세한 내용을 참조할 수 있는 URL(사용 가능한 경우)입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 테이블은 로그 전달 에이전트에 대한 오류 세부 정보를 포함합니다. 각 오류는 예외 시퀀스로 기록됩니다. 각 에이전트 세션에 여러 개의 오류(시퀀스)가 있을 수 있습니다.  
   
- 주 서버와 관련 된 정보에 주 서버에 저장 된 원격 모니터 서버에 저장 될 뿐만 아니라 해당 **log_shipping_monitor_error_detail** 테이블 및 보조 서버와 관련 된 정보 보조 서버에 저장 됩니다는 **log_shipping_monitor_error_detail** 테이블입니다.  
+ 주 서버와 관련 된 정보에서 주 서버에 저장 됩니다 원격 모니터 서버에 저장 되는 것 외에도 해당 **log_shipping_monitor_error_detail** 테이블 및 보조 서버와 관련 된 정보 또한의 보조 서버에 저장 된 해당 **log_shipping_monitor_error_detail** 테이블입니다.  
   
- 에이전트 세션을 식별 하려면 열을 사용 하 여 **agent_id**, **agent_type**, 및 **session_id**합니다. 정렬할 **log_time** 오류가 기록 된 순서로 표시 합니다.  
+ 에이전트 세션을 식별 하려면 열을 사용 **agent_id**하십시오 **agent_type**, 및 **session_id**합니다. 정렬할 **log_time** 에 기록 된 순서 대로 오류를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>관련 항목  
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.suggestdatatypes.f1
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 800785911f28de3398dba1e26c01351be67459ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a1706a252ae9e70d214b4231442a201dfac88c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058373"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>열 유형 제안 대화 상자 UI 참조
   **열 유형 제안** 대화 상자를 사용하여 파일 내용의 샘플링을 기반으로 플랫 파일 연결 관리자에 있는 열의 데이터 형식과 길이를 식별할 수 있습니다.  

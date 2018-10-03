@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ecaf020aaef33580142c7f6dde3fb6eba57b7cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830111"
 ---
-# <a name="createrecordset-method-example-vb"></a>CreateRecordset 메서드 예제 (VB)
-만들 수는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 열 정보를 지정 합니다. 데이터를 삽입할 수 있습니다는 **레코드 집합** 개체가; 기본 행 집합 버퍼에 삽입 합니다.  
+# <a name="createrecordset-method-example-vb"></a>CreateRecordset 메서드 예제(VB)
+만들 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 열 정보를 지정 합니다. 데이터를 삽입할 수 있습니다 합니다 **레코드 집합** 개체; 기본 행 집합 버퍼를 삽입 합니다.  
   
- 다음 코드 예제에서는 정의 하는 방법을 보여 줍니다.는 **레코드 집합** 를 사용 하 여는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체입니다. 이를 수행할 수도 있습니다는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
+ 다음 코드 예제에서는 정의 하는 방법을 보여 줍니다.는 **Recordset** 를 사용 하 여는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체입니다. 이를 수행할 수도 있습니다는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
 ```  
 'BeginRsDefineShapeVB  

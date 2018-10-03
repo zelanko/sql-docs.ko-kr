@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -17,12 +15,12 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 79b362d7f9f4d0ba59b1d47d7f8e241b5d43a394
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 45138bfb48a675b4e99fe7050cbddd25119c2cbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061793"
 ---
 # <a name="join-a-role"></a>역할 조인
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인 및 데이터베이스 사용자에 역할을 할당하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 역할을 사용하면 사용 권한을 효율적으로 관리할 수 있습니다. 역할에 사용 권한을 할당하고 사용자와 로그인을 역할에 추가하거나 제거합니다. 역할을 사용하면 각 사용자의 사용 권한을 개별적으로 유지 관리할 필요가 없습니다.  

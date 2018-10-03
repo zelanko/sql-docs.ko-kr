@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calculations [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef953f375269917a7cab7d00a15def6acfb375e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 587aad74e5a29810d645aad401243cceb9ca6193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051323"
 ---
 # <a name="calculations"></a>새 명명된 집합
   MDX (Multidimensional Expressions) 식 또는 스크립트에 있는 큐브에 계산된 멤버, 명명된 된 집합 또는 범위 할당을 정의 하는 데 사용 되는 계산은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 계산을 사용하면 큐브의 데이터가 아니라 큐브의 다른 부분, 다른 큐브 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 외부의 정보까지도 참조할 수 있는 식에 의해 정의된 개체를 추가할 수 있습니다. 또한 계산을 사용하면 큐브의 기능을 확장하여 비즈니스 인텔리전스 응용 프로그램의 융통성과 성능을 높일 수 있습니다. 스크립팅 계산에 대 한 자세한 내용은 참조 하세요. [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892)합니다. MDX 쿼리 및 계산과 관련 된 성능 문제에 대 한 자세한 내용은 참조는 [SQL Server 2005 Analysis Services 성능 가이드](http://go.microsoft.com/fwlink/?LinkId=81621)합니다.  

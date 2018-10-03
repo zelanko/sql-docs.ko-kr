@@ -1,31 +1,28 @@
 ---
-title: Ruby Driver for SQL Server | Microsoft Docs
+title: SQL Server 용 ruby 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8eca6928d28a3126346afc477b8e9c644d09b8c2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 3f11f3b474bdfb224fff8f563bf04bb30c0b99d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699656"
 ---
-# <a name="ruby-driver-for-sql-server"></a>SQL Server에 대 한 ruby 드라이버
+# <a name="ruby-driver-for-sql-server"></a>SQL Server용 Ruby 드라이버
 
-![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[SQL에 대 한 Ruby 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[SQL 용 Ruby 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Windows, Linux 또는 Mac.에서 Ruby를 사용 하 여 SQL 데이터베이스에 연결할 수 있습니다.   
+Windows, Linux 또는 Mac.에서 Ruby를 사용 하 여 SQL Database에 연결할 수 있습니다.   
   
 ## <a name="getting-started"></a>시작  
 * [1단계: Ruby 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-ruby-development.md)  
@@ -39,6 +36,6 @@ Windows, Linux 또는 Mac.에서 Ruby를 사용 하 여 SQL 데이터베이스�
 [Azure Ruby 개발자 센터](https://azure.microsoft.com/develop/ruby/)  
   
 ## <a name="samples"></a>샘플
-* [Ruby macOS on 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
-* [Ubuntu Ruby 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL)에 대 한 Ruby 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
+* [MacOS에서 Ruby를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
+* [Ubuntu에 Ruby를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL)에 Ruby를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)

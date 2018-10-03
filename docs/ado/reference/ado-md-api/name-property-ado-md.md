@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,25 +20,24 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07a54616c2dd16a3a1c7582cbfe36c31ca0bef09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5c6c9ba7f2981fd4162f93f37e6ad0eb2cbae882
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756771"
 ---
-# <a name="name-property-ado-md"></a>Name 속성 (ADO MD)
+# <a name="name-property-ado-md"></a>Name 속성(ADO MD)
 개체의 이름을 나타냅니다.  
   
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** 읽기 전용입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 검색할 수 있습니다는 **이름** 을 참조할 수 있습니다를 개체 이름으로 직접 서 수 참조를 사용 하 여 개체의 속성입니다. 예를 들어 경우 `cdf.CubeDefs(0).Name` "Bobs 비디오 Store"를 생성 합니다.이를 참조할 수 있습니다 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 으로 `cdf.CubeDefs("Bobs Video Store")`합니다.  
+ 검색할 수 있습니다 합니다 **이름을** 지나면 참조할 수 있습니다 개체 이름으로 직접 서 수 참조를 사용 하 여 개체의 속성입니다. 예를 들어 경우 `cdf.CubeDefs(0).Name` "Bobs 비디오 Store"를 생성 합니다.이를 참조할 수 있습니다 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 으로 `cdf.CubeDefs("Bobs Video Store")`입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -51,7 +48,7 @@ ms.locfileid: "35284722"
 |[Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
 ## <a name="see-also"></a>관련 항목  
- [카탈로그 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [ADO MD caption 속성](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
+ [Catalog 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [Caption 속성 (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description 속성 (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName 속성(ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)

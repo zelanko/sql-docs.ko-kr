@@ -6,35 +6,32 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd1ab20fbd539a0e944060837d1e32c8655b5e1f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2db82bb76ab58782682a612983bca3d7c4fccfe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701731"
 ---
-# <a name="streams-and-persistence"></a>스트림 및 지 속성
-[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [저장](../../../ado/reference/ado-api/save-method.md) 메서드 저장소 또는 *계속 되 면*, **레코드 집합** 파일인 및 [열고](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드 복원은 **레코드 집합** 파일에 해당 합니다.  
+# <a name="streams-and-persistence"></a>스트림 및 지속성
+합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [저장](../../../ado/reference/ado-api/save-method.md) 메서드 저장소 또는 *지속 되 면*, **레코드 집합** 파일인 및 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드를 복원 합니다 **레코드 집합** 해당 파일에서.  
   
- 2.7 이상을 ADO와는 **저장** 및 **열려** 메서드 유지할 수는 **레코드 집합** 에 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 도 개체입니다. 이 기능은 원격 데이터 서비스 (RDS) 및 ASP Active Server Pages () 사용 하 여 작업할 때 특히 유용 합니다.  
+ 2.7 이상 ADO를 사용 하 여는 **저장** 및 **열려** 메서드를 유지할 수 있습니다를 **레코드 집합** 에 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체도 합니다. 이 기능은 원격 데이터 서비스 (RDS) 및 ASP Active Server Pages ()를 사용 하 여 작업할 때 특히 유용 합니다.  
   
- 지 속성 사용할 수 있는 방법을 자체적으로 ASP 페이지에 대 한 자세한 내용은 현재 ASP 설명서를 참조 합니다.  
+ 지 속성 사용할 수 있는 방법을 자체적으로 ASP 페이지에 대 한 자세한 내용은 현재 ASP 설명서를 참조 하세요.  
   
- 다음은 몇 가지 시나리오를 보여 주는 방법을 **스트림** 개체 및 지 속성을 사용할 수 있습니다.  
+ 다음은 몇 가지 시나리오를 보여 주는 방법을 **Stream** 개체, 지 속성을 사용할 수 있습니다.  
   
 ## <a name="scenario-1"></a>시나리오 1  
- 이 시나리오는 단순히 저장 한 **레코드 집합** 파일을 이동한 다음에 **스트림**합니다. 다른 파티션으로 지속형된 스트림의 다음 열었을 **레코드 집합**합니다.  
+ 이 시나리오를 간단히 저장을 **레코드 집합** 파일로 이동한 다음에 **Stream**합니다. 다른 지속형된 스트림의 다음 열릴 **레코드 집합**합니다.  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -54,7 +51,7 @@ rs2.Open stm
 ```  
   
 ## <a name="scenario-2"></a>시나리오 2  
- 지속 되 면이 시나리오는 **레코드 집합** 에 **스트림** XML 형식에서입니다. 그런 다음 읽어는 **스트림** 검사, 조작 또는 표시할 수 있는 문자열에 있습니다.  
+ 이 시나리오에서 지속 되는 **레코드 집합** 에 **Stream** XML 형식으로 합니다. 읽을 합니다 **Stream** 검사, 조작 또는 표시 되는 문자열에 있습니다.  
   
 ```  
 Dim rs As ADODB.Recordset  
@@ -80,7 +77,7 @@ strRst = stm.ReadText(adReadAll)
 ```  
   
 ## <a name="scenario-3"></a>시나리오 3  
- ASP 코드 유지 보여 주는 예제 코드는 **레코드 집합** 에 직접 XML로는 **응답** 개체:  
+ ASP 코드 유지 보여 주는 예제 코드를 **레코드 집합** 에 직접 XML로 된 **응답** 개체:  
   
 ```  
 ...  
@@ -104,9 +101,9 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>시나리오 4  
- 이 시나리오에서는 ASP 코드의 내용을 씁니다.는 **레코드 집합** ADTG 형태로 표시 클라이언트에 있습니다. [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 연결이 끊긴 만드는 데이 데이터를 사용할 수 **레코드 집합**합니다.  
+ 이 시나리오에서는 ASP 코드는의 내용을 씁니다 합니다 **레코드 집합** 클라이언트로 ADTG 형식. 합니다 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 여 연결이 끊어진 만들려면이 데이터를 사용할 수 있습니다 **Recordset**합니다.  
   
- RDS에 새 속성 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md)를 생성 하는.asp 페이지를 가리키는 **레코드 집합**합니다. 즉, 한 **레코드 집합** 개체 없이 얻을 수 RDS 서버 쪽을 사용 하 여 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체나 비즈니스 개체를 작성 하는 사용자입니다. RDS 프로그래밍 모델을 훨씬 간단해 집니다.  
+ RDS에 새 속성 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md)를 생성 하는.asp 페이지를 가리킵니다 합니다 **레코드 집합**합니다. 즉, 한 **레코드 집합** 서버 쪽을 사용 하 여 RDS 하지 않고 개체를 가져올 수 있습니다 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체나 비즈니스 개체를 작성 하는 사용자입니다. 이 RDS 프로그래밍 모델을 크게 간소화합니다.  
   
  서버 쪽 코드, 이름 http://server/directory/recordset.asp:  
   
@@ -151,7 +148,7 @@ rs.Save response, adPersistADTG
 </HTML>  
 ```  
   
- 개발자는을 사용 하 여 사용할 수도 **레코드 집합** 클라이언트에서 개체:  
+ 개발자 옵션도 사용 하는 **레코드 집합** 클라이언트에서 개체:  
   
 ```  
 ...  
@@ -166,5 +163,5 @@ function GetRs()
   
 ## <a name="see-also"></a>관련 항목  
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [레코드 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)

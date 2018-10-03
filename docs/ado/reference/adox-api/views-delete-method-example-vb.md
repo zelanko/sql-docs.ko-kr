@@ -1,32 +1,29 @@
 ---
-title: 뷰 삭제 메서드 예제 (VB) | Microsoft Docs
+title: Views Delete 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADOX]
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44f4fc8e6b20daf215a9ef16bd1bc86dd49946f7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: aa9b979ed90ffcc5df73968fd784b31bc044282a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811611"
 ---
-# <a name="views-delete-method-example-vb"></a>뷰 삭제 (VB) 메서드 예제
-다음 코드에서는 사용 하는 [삭제](../../../ado/reference/adox-api/delete-method-adox-collections.md) 카탈로그에서 뷰를 삭제 하는 메서드.  
+# <a name="views-delete-method-example-vb"></a>Views Delete 메서드 예제(VB)
+다음 코드를 사용 하는 방법을 보여 줍니다 합니다 [삭제](../../../ado/reference/adox-api/delete-method-adox-collections.md) 카탈로그에서 뷰를 삭제 하는 방법입니다.  
   
 ```  
 ' BeginDeleteViewVB  

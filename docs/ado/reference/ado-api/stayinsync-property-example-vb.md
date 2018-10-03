@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3c5ec82ff3481ab8e6adf11a41f61aa149fe604
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4ff9e4c7f1903a187869f15573893d9f7d0c2fe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851693"
 ---
-# <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제 (VB)
-이 예제에서는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성에 액세스 하는 중 행을 계층적 용이 하 게 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+# <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제(VB)
+이 예제에서는 하는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 계층적 구조에서 액세스할 행을 용이 하 게 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
- 외부 루프에는 각 저자의 성과 이름, 상태 및 식별 표시 됩니다. 추가 된 **레코드 집합** 에서 각 행이 검색에 대 한는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 자동으로 할당 하 고 **rstTitleAuthor** 여는 **StayInSync**  속성 때마다 부모 **레코드 집합** 새 행으로 이동 합니다. 내부 루프에는 추가 된 레코드 집합의 각 행에서 4 개의 필드가 표시 됩니다.  
+ 외부 루프는 각 저자의 성 및 이름, 상태 및 식별을 표시합니다. 추가 된 **레코드 집합** 에서 각 행이 검색에 대 한 합니다 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 자동으로 할당 하 고 **rstTitleAuthor** 여는 **StayInSync**  속성 때마다 부모 **레코드 집합** 새 행으로 이동 합니다. 내부 루프에는 추가 된 레코드 집합의 각 행에서 4 개의 필드가 표시 됩니다.  
   
 ```  
 'BeginStayInSyncVB  
@@ -94,6 +91,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync 속성](../../../ado/reference/ado-api/stayinsync-property.md)

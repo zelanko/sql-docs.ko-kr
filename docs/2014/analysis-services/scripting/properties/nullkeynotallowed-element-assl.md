@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NullKeyNotAllowed Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d17edc031d66282b433571b18ef1c32cf6e09bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054573"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>NullKeyNotAllowed 요소(ASSL)
   결정 하는 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 처리 엔진이 처리 도중 발생 한 null 키 오류를 처리 합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37165274"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  Null 값이 허용되지 않는 키 열에 Null 값이 발견되면 Null 키 오류가 발생하고 처리하는 동안 해당 레코드를 삭제합니다. 경우에이 오류가 발생 하는 반면를 [NullProcessing](nullprocessing-element-assl.md) 요소를 `DataItem` 의 상위 항목을 `ErrorConfiguration` 부모 요소가로 설정 되어 *오류*합니다.  

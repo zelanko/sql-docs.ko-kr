@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a22eb09d21e1ef63a52ae7248fd6fa2a54832c15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049293"
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
   처음 스키마를 생성한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 큐브 및 차원 정의를 변경하고 스키마 생성 마법사를 다시 실행할 수 있습니다. 마법사는 주제 영역 데이터베이스 및 연결된 데이터 원본 뷰에서 스키마를 업데이트하여 변경 내용을 반영하고 다시 생성될 테이블의 현재 데이터를 가능한 범위까지 보존합니다. 처음 스키마를 생성한 후 테이블을 변경하면 스키마 생성 마법사가 다음 규칙에 따라 가능한 경우 해당 변경 내용을 유지합니다.  

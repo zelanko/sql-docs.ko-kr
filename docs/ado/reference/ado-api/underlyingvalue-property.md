@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,32 +15,31 @@ f1_keywords:
 helpviewer_keywords:
 - UnderlyingValue property
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f0548dd9c42e18b988cc848ebd214dd191f8489
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836071"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 속성
-현재 값을 표시 한 [필드](../../../ado/reference/ado-api/field-object.md) 데이터베이스의 개체입니다.  
+현재 값을 나타내는 [필드](../../../ado/reference/ado-api/field-object.md) 데이터베이스의 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 반환 된 **Variant** 의 값을 나타내는 값은 **필드**합니다.  
+ 반환을 **Variant** 의 값을 나타내는 값을 **필드**합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여는 **UnderlyingValue** 속성 데이터베이스에서 현재 필드 값을 반환 합니다. 필드 값에는 **UnderlyingValue** 속성은 트랜잭션이 게 표시 되 고 다른 트랜잭션에 의해 최근 업데이트의 결과 얻을 수 있는 값입니다. 다를 수 있습니다이 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 원래 반환 된 값을 반영 하는 속성은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+ 사용 된 **UnderlyingValue** 속성을 데이터베이스에서 현재 필드 값을 반환 합니다. 필드 값을 **UnderlyingValue** 속성은 트랜잭션이에 표시 되 고 다른 트랜잭션에 의해 최근 업데이트의 결과 얻을 수 있는 값입니다. 다를 수 있습니다이 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 원래 반환 된 값을 반영 하는 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
- 이것은 사용 하 여 비슷합니다는 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드를 되지만 **UnderlyingValue** 속성은 현재 레코드에서 특정 필드에 대 한 값만을 반환 합니다. 이 동일 값는 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 사용 하 여 대체는 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성.  
+ 사용 하 여 비슷합니다는 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드를 하지만 **UnderlyingValue** 속성은 현재 레코드에서 특정 필드의 값만 반환 합니다. 동일 하는 값을 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 사용 하 여 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성.  
   
- 이 속성을 사용 하는 경우는 **OriginalValue** 속성을 일괄 처리 업데이트에서 발생 하는 충돌을 해결할 수 있습니다.  
+ 이 속성을 사용 하는 경우는 **OriginalValue** 속성인 일괄 업데이트에서 발생 하는 충돌을 해결할 수 있습니다.  
   
 ## <a name="record"></a>레코드  
- 에 대 한 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체의 경우이 속성은 앞에 추가 하는 필드에 대 한 채워지지 [업데이트](../../../ado/reference/ado-api/update-method.md) 호출 됩니다.  
+ 에 대 한 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체를이 속성 앞에 추가 하는 필드에 대 한 빈 됩니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 라고 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)  

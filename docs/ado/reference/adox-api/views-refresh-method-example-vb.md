@@ -1,32 +1,29 @@
 ---
-title: 뷰 새로 메서드 예제 (VB) | Microsoft Docs
+title: Views Refresh 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85e27ad969b46e08ec980227b5fa939ee894907
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 123d7abe3248868295e8433d75d9e2a935cdc58d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830641"
 ---
-# <a name="views-refresh-method-example-vb"></a>뷰는 메서드 예제를 (VB)를 새로 고칩니다.
-다음 코드에서는 새로 고치는 방법을 보여 줍니다.는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 하기 전에 반드시 지정 해야 [보기](../../../ado/reference/adox-api/view-object-adox.md) 에서 개체는 **카탈로그** 액세스할 수 있습니다.  
+# <a name="views-refresh-method-example-vb"></a>Views Refresh 메서드 예제(VB)
+다음 코드를 새로 고치는 방법을 보여 줍니다 합니다 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 하기 전에 반드시 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 에서 개체를 **카탈로그** 액세스할 수 있습니다.  
   
 ```  
 ' BeginViewsRefreshVB  

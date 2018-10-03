@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,18 +14,17 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c017eb7dfbf21c2793474ae12deb4936212e085f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749658"
 ---
-# <a name="path-expressions---specifying-node-test"></a>경로 식-노드 테스트 지정
+# <a name="path-expressions---specifying-node-test"></a>경로 식 - 노드 테스트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   경로 식의 축 단계는 다음 구성 요소를 포함합니다.  
@@ -53,7 +49,7 @@ ms.locfileid: "38058303"
 >  XQuery 경로 식에 지정된 노드 이름은 Transact-SQL 쿼리와 같은 데이터 정렬 구분 규칙이 적용되지 않고 항상 대/소문자를 구분합니다.  
   
 ## <a name="node-name-as-node-test"></a>노드 테스트로서의 노드 이름  
- 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 예를 들어:  
+ 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   attribute 축은 특성만 포함할 수 있습니다. 따라서 특성 노드는 attribute 축의 주 노드 종류입니다.  
   

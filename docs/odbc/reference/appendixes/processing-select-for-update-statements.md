@@ -1,13 +1,11 @@
 ---
-title: UPDATE 문에 대 한 선택 처리 | Microsoft Docs
+title: SELECT FOR UPDATE 문 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], select for update statements
 - cursor library [ODBC], statement processing
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ede999422f6b52112356aa7c9c4b7715eafb96c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f54d31426773f294a4a23f059c9f906d430056f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721761"
 ---
-# <a name="processing-select-for-update-statements"></a>UPDATE 문에 대 한 SELECT를 처리합니다.
+# <a name="processing-select-for-update-statements"></a>SELECT FOR UPDATE 문 처리
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 상호 운용성을 극대화 응용 프로그램을 실행 하 여 위치 지정된 update 문을 사용 하 여 업데이트 되는 결과 집합을 생성 해야는 **업데이트에 대 한 선택** 문. 커서 라이브러리에 필요 하지 않으면이 있지만 대부분의 데이터 원본 위치 지정된 update 문을 지원에 필요 합니다.  
+ 응용 프로그램은 실행 하 여 위치 지정된 update 문을 사용 하 여 업데이트 되는 결과 집합을 생성 하는 데 최대 상호 운용성을 위해 한 **업데이트에 대 한 선택** 문입니다. 커서 라이브러리를 요구 하지 않습니다 하지만 대부분의 데이터 원본 위치 지정된 update 문을 지원에서 필요 합니다.  
   
- 커서 라이브러리에서 열을 무시는 **FOR UPDATE** 절은 **SELECT FOR UPDATE** 문과 문을 드라이버에 전달 하기 전에이 절을 제거 합니다. 에 커서 라이브러리를 이전 섹션에서 언급 한 제한 사항 함께 SQL_ATTR_CONCURRENCY 문 특성을 컨트롤 결과의 열 집합 여부를 업데이트할 수 있습니다.
+ 커서 라이브러리에 있는 열을 무시를 **에 대 한 업데이트** 절을 **SELECT FOR UPDATE** 문과 문을 드라이버에 전달 하기 전에이 절을 제거 하는 것입니다. 커서 라이브러리에 SQL_ATTR_CONCURRENCY 문 특성을 이전 섹션에서 설명한 제한 함께 컨트롤 집합을 결과에서 열 수 있는지 여부를 업데이트할 수 있습니다.
