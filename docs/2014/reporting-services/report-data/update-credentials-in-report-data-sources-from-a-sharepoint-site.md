@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7baa85677ba354e1afda7d25e15ad3409a3c9723
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 520fa769b019121932a138aceed8e337f07804e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157684"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065180"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
   이 항목에서는 SharePoint 문서 라이브러리에 저장된 공유 데이터 원본 및 보고서에 포함된 데이터 원본을 업데이트하는 방법에 대해 설명합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - text columns [ODBC]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ODBC data-at-execution
 - image columns [ODBC]
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0e03c12fe94755e42c5838a66c85242cae59a62
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416252"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076746"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>실행 시 데이터 및 text, ntext 또는 image 열
   ODBC 실행 시 데이터는 응용 프로그램에서 바인딩된 열 또는 매개 변수에 있는 대량의 데이터를 사용할 수 있도록 하는 기능입니다. 매우 큰를 검색할 때 **텍스트**를 **ntext**, 또는 **이미지** 열 응용 프로그램 못할 단순히 큰 버퍼를 할당, 버퍼로 열 바인딩 및 인출 행입니다. 매우 큰 업데이트할 때 **텍스트**를 **ntext**, 또는 **이미지** 열 응용 프로그램 못할 단순히 큰 버퍼를 할당, SQL에서 매개 변수 표식에 바인딩하지 문을 다음 문을 실행 합니다. 이러한 경우 응용 프로그램 사용 해야 합니다 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 하거나 [SQLPutData](../native-client-odbc-api/sqlputdata.md) 해당 실행 시 데이터 옵션을 사용 하 여 합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], creating
 - database creation [SQL Server], SQL Server Management Studio
 - creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01654b68d386de2fa69106627159e1bce47b0b14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88367f2c01be6ba0cf6edaf2760d3f1e8f2c9482
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073233"
 ---
 # <a name="create-a-database"></a>데이터베이스 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스를 만드는 방법에 대해 설명합니다.  

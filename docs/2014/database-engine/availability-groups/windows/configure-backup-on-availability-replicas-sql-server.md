@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073013"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>가용성 복제본에 백업 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 보조 복제본에 백업을 구성하는 방법에 대해 설명합니다.  

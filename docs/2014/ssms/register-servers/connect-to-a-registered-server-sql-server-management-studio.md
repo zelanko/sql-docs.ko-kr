@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Registered Servers [SQL Server], connections
 - connections [SQL Server], registered servers
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e81045a78a6e05f8eb33e819c65de1b14daf2a63
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0c6093c5c2b4da57e8cb51e3e42fa7f1c96a8373
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813889"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070523"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>등록된 서버에 연결(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 등록된 서버에 연결하는 방법에 대해 설명합니다. 서버가 실행 중이 아니거나 네트워크에서 찾을 수 없는 경우 등록된 서버는 오류를 표시합니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72d896e4d8e7b098729fb65c7b2d21ff81df96fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072023"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>차원(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에 있는 **차원** 창을 사용하여 계층 및 특성을 포함한 큐브 차원을 보고 편집할 수 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2de7c1d89f528598efe52b48f0291f0125ac384b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67c20bbe5841f7db1a0260550643279ae16a05f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070573"
 ---
 # <a name="union-all-transformation"></a>UNION ALL 변환
   UNION ALL 변환은 여러 개의 입력을 하나의 출력으로 결합합니다. 예를 들어 5개 플랫 파일 원본의 출력이 UNION ALL 변환의 입력이 되어 하나의 출력으로 결합될 수 있습니다.  

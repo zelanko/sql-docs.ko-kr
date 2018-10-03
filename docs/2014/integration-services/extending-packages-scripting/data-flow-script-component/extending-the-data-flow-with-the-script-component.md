@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Script component [Integration Services]
 - data flow [Integration Services], components
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 393c4c4ffb5882b982f3a696c1fa4e625ff5b1ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0475bbe29899e6e282104610cdc2a6c96701ff82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071863"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>스크립트 구성 요소를 사용하여 데이터 흐름 확장
   스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성되고 패키지 런타임에 컴파일 및 실행되는 사용자 지정 코드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름 기능을 확장합니다. 스크립트 구성 요소를 사용하면 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 제공하는 원본, 변환 및 대상이 개발자의 요구 사항을 완전히 만족시키지 못하는 경우 사용자 지정 데이터 흐름 원본, 변환 또는 대상을 손쉽게 개발할 수 있습니다. 필요한 입력 및 출력으로 구성 요소를 구성한 후에는 이 구성 요소에서 필요한 모든 인프라 코드를 자동으로 작성하므로 개발자는 사용자 지정 처리에 필요한 코드에만 집중하면 됩니다.  

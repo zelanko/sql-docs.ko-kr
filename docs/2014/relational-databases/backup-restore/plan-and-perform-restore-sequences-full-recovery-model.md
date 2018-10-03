@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restore sequences [SQL Server], planning for
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e697caee867c78da3c9e3e02bf6e2ee149a6a7f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064123"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>복원 시퀀스 계획 및 수행(전체 복구 모델)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 일반적으로 전체 복구 모델을 사용하는 복원 시퀀스를 계획하고 수행하는 방법에 대해 설명합니다. *복원 시퀀스* 는 하나 이상의 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문의 시퀀스입니다. 일반적으로 복원 시퀀스는 복원 중인 데이터베이스, 파일 및/또는 페이지의 내용을 초기화하고(데이터 복사 단계), 기록된 트랜잭션을 롤포워드하고(다시 실행 단계), 커밋되지 않은 트랜잭션을 롤백합니다(실행 취소 단계).  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - SecureConnectionLevel
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SecureConnectionLevel property
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae2fe910ea69330198158b661eb13f283746fe6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44db8007a7b8abfed99d65c93037dd647cc4cb41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074449"
 ---
 # <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>SecureConnectionLevel 속성(WMI MSReportServer_ConfigurationSetting)
   RSReportServer.config 파일에 지정된 보안 연결 수준을 반환합니다. 읽기 전용입니다.  

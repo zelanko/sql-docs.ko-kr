@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.calculatedmemberbuilderdialog.f1
 ms.assetid: 73b89a9f-f403-4ab8-99f7-e3ceb870c260
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b2df3f9bdb11a344d332a50580a992680118afa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c11d690ce6e240d9054da37ff9b85632b0d831ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077273"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>계산 멤버 작성기 대화 상자(Analysis Services - 다차원 데이터)
   **의** 계산 멤버 작성기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 계산 멤버를 작성할 수 있습니다.  

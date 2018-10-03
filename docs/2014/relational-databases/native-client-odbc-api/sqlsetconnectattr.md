@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070591"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 SQL_ATTR_CONNECTION_TIMEOUT의 설정을 무시합니다.  
@@ -94,7 +91,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
  연결 풀링을 사용할 경우 sql_copt_ss_ansi_npw는 SQLSetConnectAttr 아니라 연결 문자열에서 설정 되어야 합니다. 연결 풀링을 사용할 경우 연결이 설정된 후 이 특성을 변경하려고 시도하면 자동으로 실패합니다.  
   
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 `Readonly` 및 `ReadWrite`입니다. 예를 들어:  
+ 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 `Readonly` 및 `ReadWrite`입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  연결을 설정한 후 응용 프로그램이 사용 하 여이 특성 쿼리할 수 있습니다 [SQLGetConnectAttr](sqlgetconnectattr.md) 장애 조치 파트너의 id를 확인할 수 있습니다. 주 서버에 장애 조치(failover) 파트너가 없는 경우 이 속성은 빈 문자열을 반환합니다. 이를 통해 지능형 응용 프로그램은 가장 최근에 확인된 백업 서버를 캐시할 수 있지만 이러한 응용 프로그램은 연결이 처음 설정될 때(또는 풀링된 경우 다시 설정될 때)만 정보가 업데이트되므로 장시간 연결에서는 정보가 최신 상태가 아닐 수 있음에 주의해야 합니다.  
   
- 자세한 내용은 [Using Database Mirroring](../native-client/features/using-database-mirroring.md)합니다.  
+ 자세한 내용은 [데이터베이스 미러링 사용](../native-client/features/using-database-mirroring.md)을 참조하세요.  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY를 사용하면 서버 로그인 시 액세스를 확인하는 데 Windows 인증이 사용됩니다. 드라이버의 일부로 제공 되는 사용자 식별자와 암호 값을 무시 Windows 인증을 사용 하는 경우 **SQLConnect**하십시오 [SQLDriverConnect](sqldriverconnect.md), 또는 [SQLBrowseConnect](sqlbrowseconnect.md)처리 합니다.  
@@ -191,7 +188,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  MARS에 대 한 자세한 내용은 참조 하세요. [Multiple Active Result Sets를 사용 하 여 &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)합니다.  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 응용 프로그램이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들어:  
+ 응용 프로그램이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068793"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 프로필 탭(마이닝 모델 뷰어
   **Microsoft 시퀀스 클러스터링 뷰어**의 **클러스터 프로필** 탭에는 각 클러스터에 포함된 시퀀스가 색으로 지정되어 표시됩니다.  

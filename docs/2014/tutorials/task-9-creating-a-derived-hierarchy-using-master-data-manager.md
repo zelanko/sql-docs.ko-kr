@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22aba36efffe3b4e15d358e6077bb6b58e7aa328
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076883"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>태스크 9: 마스터 데이터 관리자를 사용하여 파생 계층 만들기
   이 작업에서는 마스터 데이터 관리자를 사용하여 파생 계층을 만듭니다. 이 파생된 계층의 도메인 기반 특성 관계에서 파생 됩니다 합니다 **공급 업체** 하 고 **상태** 엔터티.  

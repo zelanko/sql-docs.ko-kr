@@ -1,28 +1,25 @@
 ---
-title: 지침 및 SQLXML에서 diffgram에 대 한 제한 사항 | Microsoft Docs
+title: 지침 및 SQLXML에 Diffgram의 제한 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfbf7661184dce2c1e4ab957622e95361950cb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2adbd116b818086e13adacd5e88d3923b53f81ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074979"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>SQLXML에서 DiffGram에 대한 지침 및 제한 사항
   SQLXML 4.0에서 DiffGram을 사용할 때는 다음 사항을 기억해야 합니다.  

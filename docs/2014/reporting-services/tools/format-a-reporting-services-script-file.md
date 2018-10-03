@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f54fb06c849655b8fbb7c60fd2b20117dff610f7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e6cf79410e521490a7a2deadd02f5d1181b51fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063153"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services 스크립트 파일 형식 지정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트는 WSDL(Web Service Description Language)을 기반으로 하는 프록시에 대해 작성된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 코드 파일로, Reporting Services SOAP API를 정의합니다. 스크립트 파일은 확장명이 .rss인 유니코드 또는 UTF-8 텍스트 파일로 저장됩니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 187b3de9fe21bae7636939e6d222e99006cc3194
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068944"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services 액세스를 허용하도록 Windows 방화벽 구성
   네트워크에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 사용할 수 있도록 만드는 데 필수적인 첫 번째 단계는 방화벽에서 포트를 차단 해제해야 할지 여부를 결정하는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  
@@ -42,7 +39,7 @@ ms.locfileid: "37282259"
   
  하지만 기본 인스턴스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] TCP 포트 2383에서 수신 대기를 구성할 수 있습니다 다른 고정된 포트에서 수신 하도록 서버를 서버에이 형식에 연결: \<서버 이름 >:\<portnumber >.  
   
- 하나의 TCP 포트만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 사용할 수 있습니다. 여러 네트워크 카드 또는 여러 IP 주소가 있는 컴퓨터에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 컴퓨터에 할당되거나 컴퓨터의 별칭을 가진 모든 IP 주소에 대해 하나의 TCP 포트에서 수신 대기합니다. 여러 포트 요구 사항이 있는 경우 HTTP 액세스에 대해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 구성하는 것이 좋습니다. 그런 다음 선택한 포트에서 여러 HTTP 끝점을 설정할 수 있습니다. [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
+ 하나의 TCP 포트만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 사용할 수 있습니다. 여러 네트워크 카드 또는 여러 IP 주소가 있는 컴퓨터에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 컴퓨터에 할당되거나 컴퓨터의 별칭을 가진 모든 IP 주소에 대해 하나의 TCP 포트에서 수신 대기합니다. 여러 포트 요구 사항이 있는 경우 HTTP 액세스에 대해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 구성하는 것이 좋습니다. 그런 다음 선택한 포트에서 여러 HTTP 엔드포인트를 설정할 수 있습니다. [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   

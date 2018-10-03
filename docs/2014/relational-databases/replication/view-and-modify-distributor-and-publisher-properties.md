@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - modifying replication properties, Distributors
 - Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c05df52ed3a2c505417574db89d0050aa1239df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84b8655494daca0f3c9203775304710591a4081e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069723"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 배포자 및 게시자 속성을 보고 수정하는 방법에 대해 설명합니다.  

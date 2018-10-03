@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitiondesigner.writebackenabledisable.f1
 ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7c5265987b846425aff4069a723804f009a013e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6682d8ced6b80e12aea783857da548498641ddd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069350"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>쓰기 저장 대화 상자 (Analysis Services-Multidimensional Data) 사용-사용 안 함
   **쓰기 저장 사용/사용 안 함** 대화 상자를 사용하면 큐브의 측정값 그룹에 대해 쓰기 저장을 사용하거나 사용하지 않도록 설정할 수 있습니다. 측정값 그룹에 대해 쓰기 저장을 설정하면 쓰기 저장 파티션이 정의되고 해당 측정값 그룹에 대한 쓰기 저장 테이블이 생성됩니다. 측정값 그룹에 대해 쓰기 저장을 해제하면 쓰기 저장 파티션이 제거되지만 예기치 않은 데이터 손실을 방지하기 위해 쓰기 저장 테이블은 삭제되지 않습니다. 다음 작업을 수행하면 **쓰기 저장 사용/사용 안 함** 대화 상자가 표시됩니다.  

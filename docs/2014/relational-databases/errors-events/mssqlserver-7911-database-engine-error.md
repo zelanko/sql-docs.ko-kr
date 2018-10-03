@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7911 (Database Engine error)
 ms.assetid: dd8390f3-0f77-4fb2-ba94-631a56e42bc6
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39e32ca27fdbcb085b9f0e7e626a61e8dd061fe0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: dbb5a12fdcb3c326957d719882feec4fe948190c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064073"
 ---
 # <a name="mssqlserver7911"></a>MSSQLSERVER_7911
     
@@ -39,6 +36,6 @@ ms.locfileid: "37418792"
  이 메시지는 IAM(Index Allocation Map) 페이지의 단일 페이지 슬롯 배열에서 페이지 할당이 취소되었음을 나타내는 REPAIR의 정보 메시지입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- InclusionThresholdSetting  
+ 없음  
   
   

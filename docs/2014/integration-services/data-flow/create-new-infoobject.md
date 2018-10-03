@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28bcbf4e05302ca7b3d5deda1fb9a49ad4ba25a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afb148143e11ca77f87fe071cef165d60f3bdb7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070068"
 ---
 # <a name="create-new-infoobject"></a>새 InfoObject 만들기
   **새 InfoObject 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoObject를 만들 수 있습니다.  

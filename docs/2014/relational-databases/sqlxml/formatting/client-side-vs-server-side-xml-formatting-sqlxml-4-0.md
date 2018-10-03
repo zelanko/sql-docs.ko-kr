@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02875dd402a294e8598e62a5bee5e65f5b344f6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c64b28dba868344ed30c02f4ea9869caf241168a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076033"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정(SQLXML 4.0)
   이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  

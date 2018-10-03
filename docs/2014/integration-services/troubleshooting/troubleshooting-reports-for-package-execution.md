@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85b549f35c9b6ac2feb41c41fb482f3eead61ccb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23cc199958a43fc9056a7a5dc1b83f691ae15523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063740"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>패키지 실행 보고서 문제 해결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 카탈로그에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 모니터링하고 문제를 해결하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 특히 이 두 가지 패키지 보고서는 패키지 실행 상태를 보고 실행 실패 원인을 파악하는 데 도움이 됩니다.  

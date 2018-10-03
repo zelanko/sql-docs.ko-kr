@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - '*= join'
 - joins [SQL Server]
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 579565320855694166f57039402e3fbef14183d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064903"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>외부 조인 연산자 *= 및 =* 호환성 모드 90 이상에서 지원 되지 않습니다
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>호환성 모드 90 이상에서는 외부 조인 연산자 *= 및 =* 가 지원되지 않습니다.
   업그레이드 관리자 외부 조인 연산자의 사용을 발견 했습니다. * = 및 =\*합니다. 호환성 모드가 90 이상일 때는 이러한 연산자가 지원되지 않습니다. 업그레이드할 때 사용자 데이터베이스는 호환성 모드를 유지합니다. 이러한 연산자를 사용하는 문은 실패합니다.  
   
 ## <a name="component"></a>구성 요소  

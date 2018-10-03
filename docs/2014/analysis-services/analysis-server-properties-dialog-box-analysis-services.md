@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260036"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078063"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>분석 서버 속성 대화 상자(Analysis Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **Analysis Server 속성** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 일반, 언어/데이터 정렬 및 보안 설정을 지정할 수 있습니다. **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성**을 선택하여 **Analysis Server 속성** 대화 상자를 표시할 수 있습니다. **Analysis Server 속성** 대화 상자에는 다음 속성이 있습니다.  

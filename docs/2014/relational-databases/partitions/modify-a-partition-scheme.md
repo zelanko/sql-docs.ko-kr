@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5d7d36bd056eddde8b7754b8fd9b5b8ae6a864f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15118d2bec00582a22577230183b486c13bb031d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063233"
 ---
 # <a name="modify-a-partition-scheme"></a>파티션 구성표 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 분할된 테이블에 추가되는 다음 파티션을 보관할 파일 그룹을 지정하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파티션 구성표를 수정할 수 있습니다. 이렇게 하려면 파일 그룹에 NEXT USED 속성을 할당합니다. 빈 파일 그룹이나 파티션이 이미 있는 파일 그룹에 NEXT USED 속성을 할당할 수 있습니다. 즉, 파일 그룹에 한 개 이상의 파티션을 보관할 수 있습니다.  

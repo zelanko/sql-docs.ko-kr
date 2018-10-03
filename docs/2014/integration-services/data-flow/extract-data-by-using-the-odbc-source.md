@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26a3efe2d36bd4c912b1b95fa2c00ab597dc44c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f702490cd4137e2a791c796e6b126da247648813
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069337"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
   이 절차에서는 ODBC 원본을 사용하여 데이터를 추출하는 방법을 설명합니다. ODBC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  

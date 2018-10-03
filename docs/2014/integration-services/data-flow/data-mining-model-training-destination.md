@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bb23745ab0858cb598fd668d5f066f0e247d817
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171014"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068963"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
   데이터 마이닝 모델 학습 대상은 데이터 마이닝 모델 알고리즘을 통해 대상에서 수신하는 데이터를 전달함으로써 데이터 마이닝 모델을 학습합니다. 동일 데이터 마이닝 구조를 기반으로 모델을 작성한 경우에는 하나의 대상에서 여러 데이터 마이닝 모델의 성향을 습득할 수 있습니다. 자세한 내용은 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 및 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)를 참조하세요.  

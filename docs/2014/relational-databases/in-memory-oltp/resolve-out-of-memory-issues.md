@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4df9c58eb7832438253fc39bf6c68e8268ff2671
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067413"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 방법으로 더 많은 메모리를 사용합니다. 필요 증가에 따라 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대해 설치하고 할당한 메모리의 양이 불충분해질 수 있습니다. 이 경우 메모리가 부족해질 수 있습니다. 이 항목에서는 OOM 상황에서 복구하는 방법을 설명합니다. 여러 OOM 상황을 방지하는 데 도움이 될 수 있는 지침은 [메모리 사용량 모니터링 및 문제 해결](monitor-and-troubleshoot-memory-usage.md) 을 참조하세요.  
@@ -87,7 +84,7 @@ ms.locfileid: "40394544"
 #### <a name="free-up-existing-memory"></a>기존 메모리 확보  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>필수적이지 않은 메모리 액세스에 최적화된 테이블 행을 삭제하고 가비지 수집 대기  
- 메모리 액세스에 최적화된 테이블에서 필수적이지 않은 행을 제거할 수 있습니다. 가비지 수집기는 이러한 행에 사용되는 메모리를 사용 가능한 메모리로 되돌립니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 메모리 내 OLTP 엔진은 가비지 행을 적극적으로 수집합니다. 그러나 장기 실행 트랜잭션으로 인해 가비지가 수집되지 않을 수 있습니다. 예를 들어, 5분간 실행되는 트랜잭션이 있는 경우 트랜잭션이 활성 상태인 동안 수행되는 업데이트/삭제 작업으로 생성된 모든 행 버전에 대해 가비지 수집이 수행되지 않을 수 있습니다.  
+ 메모리 액세스에 최적화된 테이블에서 필수적이지 않은 행을 제거할 수 있습니다. 가비지 수집기는 이러한 행에 사용되는 메모리를 사용 가능한 메모리로 되돌립니다. . 메모리 내 OLTP 엔진은 가비지 행을 적극적으로 수집합니다. 그러나 장기 실행 트랜잭션으로 인해 가비지가 수집되지 않을 수 있습니다. 예를 들어, 5분간 실행되는 트랜잭션이 있는 경우 트랜잭션이 활성 상태인 동안 수행되는 업데이트/삭제 작업으로 생성된 모든 행 버전에 대해 가비지 수집이 수행되지 않을 수 있습니다.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>디스크 기반 테이블로 하나 이상의 행 이동  
  다음 TechNet 문서에는 메모리 최적화 테이블에서 디스크 기반 테이블로 행을 이동하는 방법이 나와 있습니다.  

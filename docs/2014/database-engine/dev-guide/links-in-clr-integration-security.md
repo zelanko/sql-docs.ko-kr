@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-access links [CLR integration]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - invocation links [CLR integration]
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32974fc138cb5bcd444af18d0854c7a07d8fdcad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067204"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 통합 보안의 링크
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 코드 조각이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 관리 언어 중 하나로 상호 호출하는 방법을 설명합니다. 개체 간의 이러한 관계를 링크라고 합니다.  

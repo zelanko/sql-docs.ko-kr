@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066353"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>새 전체 텍스트 중지 목록(일반 페이지)
   이 대화 상자를 사용하여 전체 텍스트 중지 목록을 만들 수 있습니다. *중지 목록은* *중지 단어*라고 하는 일반적으로 사용되는 단어 집합으로, 중지 목록을 사용하는 테이블에 대한 전체 텍스트 인덱싱에서 생략됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)를 참조하세요.  

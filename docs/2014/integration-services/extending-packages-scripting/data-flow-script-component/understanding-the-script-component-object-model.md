@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076023"
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
   [코딩 and Debugging the Script Component]에 설명 된 대로 (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, 스크립트 구성 요소 프로젝트에 세 개의 프로젝트 항목이 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077583"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
   다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 개수를 보여 줍니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
@@ -97,7 +94,7 @@ ms.locfileid: "37296043"
 |테이블당 REFERENCES 수|253|253|  
 |테이블당 행 수|사용 가능한 저장소로 제한|사용 가능한 저장소로 제한|  
 |데이터베이스당 테이블 수<br /><br /> 참고: 데이터베이스 개체는 테이블, 뷰, 저장된 프로시저, 사용자 정의 함수, 트리거, 규칙, 기본값 및 제약 조건 같은 개체를 포함 합니다. 한 데이터베이스에서 모든 개체 수의 합계는 2,147,483,647을 초과할 수 없습니다.|데이터베이스의 개체 수로 제한|데이터베이스의 개체 수로 제한|  
-|분할된 테이블 또는 인덱스당 파티션 수|1,000<br /><br /> **\*\* 중요 \* \* ** 1,000 개 이상의 파티션이 있는 테이블 또는 인덱스를 만드는 32 비트 시스템에서 가능 하지만 지원 되지 않습니다.|15,000|  
+|분할된 테이블 또는 인덱스당 파티션 수|1,000<br /><br /> **\*\* 중요 \* \***  1,000 개 이상의 파티션이 있는 테이블 또는 인덱스를 만드는 32 비트 시스템에서 가능 하지만 지원 되지 않습니다.|15,000|  
 |인덱싱되지 않은 열의 통계|30,000|30,000|  
 |SELECT 문당 테이블 수|사용 가능한 리소스로만 제한|사용 가능한 리소스로만 제한|  
 |테이블당 트리거 수<br /><br /> 참고: 데이터베이스 개체는 테이블, 뷰, 저장된 프로시저, 사용자 정의 함수, 트리거, 규칙, 기본값 및 제약 조건 같은 개체를 포함 합니다. 한 데이터베이스에서 모든 개체 수의 합계는 2,147,483,647을 초과할 수 없습니다.|데이터베이스의 개체 수로 제한|데이터베이스의 개체 수로 제한|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server Agent
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Agent, starting
 - command prompt utilities [SQL Server], sqlagent90
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17db77a81855e408e0ad263ae59b5ab06d40673d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e5f021e48aa2fc2c5d8cbb15a77dfe5e173d080
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066581"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 응용 프로그램
   **sqlagent90** 응용 프로그램을 사용하면 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 시작할 수 있습니다. 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 통해 또는 응용 프로그램에서 SQL-DMO 메서드를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에이전트를 실행해야 합니다. **에이전트를 진단하거나 주 지원 공급자가 지정하는 경우에만 명령 프롬프트에서** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 실행할 수 있습니다.  

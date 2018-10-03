@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6609ffe7c70169a2c261ca6103eeb74d34a62533
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 236f883056ccfd7c66701f5126b313ccbe2361b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074563"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Teradata 연결 형식(SSRS)
   보고서에 Teradata 관계형 데이터베이스의 데이터를 포함하려면 Teradata 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 .NET Managed Provider for Teradata 데이터 처리 확장 프로그램을 기반으로 합니다.  
