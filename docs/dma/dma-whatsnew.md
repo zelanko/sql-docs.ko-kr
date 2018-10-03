@@ -5,24 +5,21 @@ ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 188c19f173e8c53995d84a74ecc04d1cac9eae92
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655661"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 이 문서는 각 릴리스에 추가의 도우미 DMA (Data Migration)를 나열합니다.

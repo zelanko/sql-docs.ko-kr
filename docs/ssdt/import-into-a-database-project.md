@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af8ee2d569c44d19e518c1dafacddb958c66cc88
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716051"
 ---
 # <a name="import-into-a-database-project"></a>데이터베이스 프로젝트로 가져오기
 가져오기를 사용하여 라이브 데이터베이스 또는 .dacpac의 새 개체로 프로젝트를 채우거나 프로젝트의 기존 개체를 스크립트의 새 정의로 업데이트할 수 있습니다. 이러한 세 경로 사이에는 아래 설명과 같이 주목할 몇 가지 동작 차이가 있습니다.  

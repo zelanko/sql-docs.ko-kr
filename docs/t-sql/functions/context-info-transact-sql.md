@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTEXT_INFO_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - session context information [SQL Server]
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f3d572bee6b06ef8cb1573759ec12e68f9e6ec9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a45a442eec592d70eb776e68c5bcc7fed50a8683
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792194"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713501"
 ---
 # <a name="contextinfo--transact-sql"></a>CONTEXT_INFO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ CONTEXT_INFO()
 ## <a name="remarks"></a>Remarks  
 MARS(Multiple Active Result Sets) 기능을 사용하면 응용 프로그램이 같은 시간에 같은 연결에서 여러 일괄 처리 또는 요청을 실행할 수 있습니다. MARS 연결 일괄 처리 중 하나가 SET CONTEXT_INFO를 실행하는 경우 `CONTEXT_INFO` 함수가 SET 문과 동일한 일괄 처리에서 실행하면 `CONTEXT_INFO` 함수는 새 컨텍스트 값을 반환합니다. `CONTEXT_INFO` 함수가 다른 연결 일괄 처리 중 하나 이상을 실행하는 경우 `CONTEXT_FUNCTION`은 SET 문을 실행한 일괄 처리를 완료한 후에 해당 일괄 처리가 시작되지 않으면 새 값을 반환하지 않습니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 특별한 권한이 필요하지 않습니다. 다음 시스템 보기는 컨텍스트 정보를 저장하지만 이러한 보기를 직접 쿼리하려면 SELECT 및 VIEW SERVER STATE 권한이 필요합니다.
 - **sys.dm_exec_requests**
 - **sys.dm_exec_sessions**

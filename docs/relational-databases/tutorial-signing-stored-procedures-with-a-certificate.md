@@ -4,26 +4,21 @@ ms.custom: ''
 ms.date: 08/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
 ms.topic: quickstart
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2adac6728e7c288a50d525a0760a98a26c5b2b2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: cb9a7a9ddb5bba961b6d0df54cab4fdcf91ed1a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43021087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738141"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

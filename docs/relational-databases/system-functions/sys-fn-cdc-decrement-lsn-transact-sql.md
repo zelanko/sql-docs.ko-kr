@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_decrement_lsn (Transact SQL) | Microsoft Docs
+title: sys.fn_cdc_decrement_lsn (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_decrement_lsn
 - sys.fn_cdc_decrement_lsn_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_decrement_lsn
 - sys.fn_cdc_decrement_lsn
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0cc85998b26b17619343317369a8afb832b32f94
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2bfbe04376b71401694eb8bea025b8418cfea643
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636541"
 ---
 # <a name="sysfncdcdecrementlsn-transact-sql"></a>sys.fn_cdc_decrement_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +44,16 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
   
 ## <a name="arguments"></a>인수  
  *lsn_value*  
- LSN 값 *lsn_value* 은 **binary (10)** 합니다.  
+ LSN 값 *lsn_value* 됩니다 **binary(10)로 표현**합니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **binary(10)**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수에 의해 반환된 LSN은 지정된 값보다 항상 작으며 두 값 사이에는 LSN 값이 존재할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **공용** 데이터베이스 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **공용** 데이터베이스 역할.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `sys.fn_cdc_decrement_lsn`을 사용하여 최대 LSN 값보다 작은 LSN 값을 갖는 변경 데이터 행을 반환하는 쿼리에서 LSN 상한을 설정합니다.  
@@ -74,7 +68,7 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.fn_cdc_increment_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
  [sys.fn_cdc_get_min_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys.fn_cdc_get_max_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   

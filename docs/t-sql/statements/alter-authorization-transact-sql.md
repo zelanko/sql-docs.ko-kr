@@ -5,9 +5,7 @@ ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AUTHORIZATION_TSQL
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], permissions
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-caps.latest.revision: 84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17a1a2ca4a20ac6f505ff61ec8d3c25158145050
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6855f45379f113f91c54b46e3d1c77a913c853f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730711"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,7 +133,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
 |CONTRACT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
 |DATABASE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지. 자세한 내용은 아래의 [데이터베이스에 대한 ALTER AUTHORIZATION](#AlterDB) 섹션 참조하세요.|    
-|ENDPOINT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|엔드포인트|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
 |FULLTEXT CATALOG|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
 |FULLTEXT STOPLIST|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
 |MESSAGE TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
@@ -192,7 +189,7 @@ ALTER AUTHORIZATION ON
 |CONTRACT, MESSAGE TYPE 또는 SERVICE|시스템 엔터티의 소유권을 변경할 수 없습니다.|    
 |SYMMETRIC KEY|전역 임시 키의 소유권을 변경할 수 없습니다.|    
 |CERTIFICATE 또는 ASYMMETRIC KEY|이러한 엔터티의 소유권을 역할이나 그룹에 이전할 수 없습니다.|    
-|ENDPOINT|보안 주체는 로그인이어야 합니다.|    
+|엔드포인트|보안 주체는 로그인이어야 합니다.|    
   
 ## <a name="AlterDB"></a> 데이터베이스에 대한 ALTER AUTHORIZATION  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -325,8 +322,8 @@ ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;
 GO    
 ```    
     
-### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>4. 끝점의 소유권을 SQL Server 로그인에게 이전    
- 다음 예에서는 `CantabSalesServer1` 끝점의 소유권을 `JaePak`에게 이전합니다. 끝점은 서버 수준의 보안 개체이므로 서버 수준 보안 주체에게만 소유권을 이전할 수 있습니다.    
+### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>4. 엔드포인트의 소유권을 SQL Server 로그인에게 이전    
+ 다음 예에서는 `CantabSalesServer1` 엔드포인트의 소유권을 `JaePak`에게 이전합니다. 엔드포인트는 서버 수준의 보안 개체이므로 서버 수준 보안 주체에게만 소유권을 이전할 수 있습니다.    
     
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지    
     

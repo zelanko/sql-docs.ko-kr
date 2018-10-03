@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoroption_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b3bb6500d4d1bc29859c428820d28ec48d6aa72
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659051"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ sp_cursoroption cursor, code, value
  *코드*  
  커서 반환 값의 여러 요인을 규정하는 데 사용됩니다. *코드* 다음 중 하나 필요로 **int** 값을 입력 합니다.  
   
-|값|속성|Description|  
+|값|이름|Description|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|지정된 특정 텍스트 또는 이미지 열에 대해 실제 데이터가 아닌 텍스트 포인터를 반환합니다.<br /><br /> TEXTPTR_ONLY 텍스트 포인터를으로 사용할 수 있도록 *핸들* 사용 하 여 업데이트 하거나 나중에 선택적으로 검색할 수 있는 blob 개체에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 DBLIB 기능 (예: [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 또는 DBLIB DBWRITETEXT)입니다.<br /><br /> "0" 값을 할당하면 선택 목록에 있는 모든 텍스트 및 이미지 열이 데이터가 아닌 텍스트 포인터를 반환합니다.|  
 |0x0002|CURSOR_NAME|에 지정 된 이름을 할당 *값* 커서입니다. 이 통해 ODBC를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_cursoropen을 통해 연 커서에 UPDATE/DELETE 문을 배치 합니다.<br /><br /> 문자열은 원하는 문자나 유니코드 데이터 형식으로 지정할 수 있습니다.<br /><br /> 이후 [!INCLUDE[tsql](../../includes/tsql-md.md)] 위치 지정된 UPDATE/DELETE 문은 운영 기본적으로 포함 된 커서의 첫 번째 행에 sp_cursor SETPOSITION 위치 지정된 UPDATE/DELETE 문을 실행 하기 전에 커서를 사용 해야 합니다.|  

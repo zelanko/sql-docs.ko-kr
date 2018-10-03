@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fde932df4d3eaa8e9ae3cceb2f28b6511dfb32d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667921"
 ---
 # <a name="manual-commit-mode"></a>수동 커밋 모드
-*수동 커밋 모드로* 응용 프로그램에 명시적으로 호출 하 여 트랜잭션을 완료 해야 **SQLEndTran** 커밋하거나 롤백 합니다. 이 대부분의 관계형 데이터베이스에 대 한 기본 트랜잭션 모드입니다.  
+*수동 커밋 모드로* 응용 프로그램에 명시적으로 호출 하 여 트랜잭션을 완료 해야 합니다 **SQLEndTran** 커밋하거나 롤백할 합니다. 대부분의 관계형 데이터베이스에 대 한 기본 트랜잭션 모드입니다.  
   
- ODBC의 트랜잭션은 명시적으로 초기화할 필요가 없습니다. 대신 트랜잭션이 데이터베이스에서 응용 프로그램이 시작 될 때마다 암시적으로 시작 합니다. 데이터 원본을 명시적 트랜잭션 시작이 필요한 경우 드라이버를 제공 해야 때마다 응용 프로그램에는 트랜잭션 필요 문을 실행 하 고 현재 트랜잭션이 없습니다.
+ ODBC의 트랜잭션을 명시적으로 시작할 수 없습니다. 대신 트랜잭션 데이터베이스에서 응용 프로그램이 시작 될 때마다 암시적으로 시작 합니다. 데이터 원본에서 명시적 트랜잭션을 시작에 필요한 경우 드라이버를 제공 해야 응용 프로그램 트랜잭션이 필요한 문을 실행할 때마다 현재 트랜잭션이 없습니다.

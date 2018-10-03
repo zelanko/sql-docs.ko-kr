@@ -5,9 +5,7 @@ ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
@@ -22,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e24074aadcd449fc4dfb17e41d398fbab9563d7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 39dd5cf772bebf66f8d2a5e827badf4ef0981b66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43086112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708741"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,8 +39,7 @@ ms.locfileid: "43086112"
   
  Elastic Database 쿼리 시나리오의 경우 외부 원본은 분할된 데이터베이스 맵 관리자(Azure SQL Database의) 또는 원격 데이터베이스(Azure SQL Database의)입니다.  외부 데이터 원본을 만든 후 [sp_execute_remote &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md)를 사용합니다. 자세한 내용은 참조 [Elastic Database 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)를 참조하세요.  
 
-  Azure Blob Storage 외부 데이터 원본은 
-`BULK INSERT` 및 `OPENROWSET` 구문을 지원하며, Azure Blob Storage for PolyBase와는 다릅니다.
+  Azure Blob Storage 외부 데이터 원본은 `BULK INSERT` 및 `OPENROWSET` 구문을 지원하며, Azure Blob Storage for PolyBase와는 다릅니다.
     
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -212,7 +209,7 @@ RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수
 
 |Hadoop 연결|기본 Resource Manager 포트|
 |-------------------|-----------------------------|
-|@shouldalert|50300|
+|1|50300|
 |2|50300|
 |3|8021|
 |4|8032|

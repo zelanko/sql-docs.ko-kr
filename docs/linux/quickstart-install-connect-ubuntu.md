@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 0741669f8a35125ad1a7312c4a014f1fba0c291a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2632b10aaf69701f93e51c1c945523300307789a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712335"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656691"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>SQL Server를 설치 하는 빠른 시작: Ubuntu에서 데이터베이스를 만들고
 

@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63233be39af3f6edfa46102d56446bd42cc185b1
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a144bbde1537e167c82b63389be83c72f55a6346
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742411"
 ---
 # <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>5-3단원 - Directory 속성 구성 값 수정
 이 태스크에서는 패키지 수준 변수 `User::varFolderName`의 Value 속성에 대해 SSISTutorial.dtsConfig 파일에 저장된 구성 설정을 수정합니다. 이 변수는 Foreach 루프 컨테이너의 Directory 속성을 업데이트합니다. 수정된 값은 이전 태스크에서 만들어진 **New Sample Data** 폴더를 가리킵니다. 구성 설정을 수정하고 패키지를 실행하면 Directory 속성은 원래 패키지에서 구성된 디렉터리 값 대신 구성 파일에서 채워진 값을 사용하여 변수를 통해 업데이트됩니다.  

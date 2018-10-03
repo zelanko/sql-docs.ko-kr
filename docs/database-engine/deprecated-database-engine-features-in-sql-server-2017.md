@@ -4,29 +4,25 @@ ms.custom: ''
 ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: ''
-caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 28b20fd2d3b5e02e1880e6dacd7bf048de1bafd2
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 666ff4eeb05aa7dd913706cad19e8f3047453eb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739263"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +144,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |테이블 압축|VarDecimal 저장소 형식의 사용|VarDecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 저장소 형식 대신 데이터 압축을 사용하는 것이 좋습니다.|VarDecimal 저장소 형식|200|  
 |테이블 압축|sp_db_vardecimal_storage_format 프로시저의 사용|VarDecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 저장소 형식 대신 데이터 압축을 사용하는 것이 좋습니다.|sp_db_vardecimal_storage_format|201|  
 |테이블 압축|sp_estimated_rowsize_reduction_for_vardecimal 프로시저의 사용|대신 데이터 압축 및 sp_estimate_data_compression_savings 프로시저를 사용합니다.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|테이블 힌트|UPDATE 또는 DELETE 문의 FROM 절에 NOLOCK 또는 READUNCOMMITTED 지정|FROM 절에서 NOLOCK 또는 READUNCOMMITTED 테이블 참고를 제거합니다.|UPDATE 또는 DELETE의 NOLOCK 또는 READUNCOMMITTED|@shouldalert|  
+|테이블 힌트|UPDATE 또는 DELETE 문의 FROM 절에 NOLOCK 또는 READUNCOMMITTED 지정|FROM 절에서 NOLOCK 또는 READUNCOMMITTED 테이블 참고를 제거합니다.|UPDATE 또는 DELETE의 NOLOCK 또는 READUNCOMMITTED|1|  
 |테이블 힌트|WITH 키워드를 사용하지 않고 테이블 힌트 지정|WITH를 사용합니다.|WITH가 없는 테이블 힌트|8|  
 |테이블 힌트|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointer|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|없음|UPDATETEXT 또는 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  

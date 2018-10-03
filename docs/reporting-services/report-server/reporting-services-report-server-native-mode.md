@@ -4,7 +4,6 @@ ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c80762b7abee1913cd7f671f8fd676bd49d57618
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 43917e9d51aecb545421e9462526fc435bf19d37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713151"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
   기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 응용 프로그램 서버로 실행됩니다.  

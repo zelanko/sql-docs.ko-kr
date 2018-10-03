@@ -1,13 +1,11 @@
 ---
-title: 연결 속성 예 (VC + +) | Microsoft Docs
+title: 연결 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f9e382f7a01a83a0c301b1cf83266950755e441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3190e622790c1c9e58e26e18c1a963b14db1afab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277052"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655673"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VC + +)
-이 예제에서는 여러 가지를 사용 하 여는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 열고는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 연결 제한 시간을 설정 하는 속성 및 [상태](../../../ado/reference/ado-api/state-property-ado.md) 연결의 상태를 확인할 속성입니다. 우편 번호 함수는이 절차를 실행 하려면 필요 합니다.  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VC + +)
+이 예제를 사용 하 여 여러 가지 방법을 보여 줍니다는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 열려는 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체. 또한 사용 하 여는 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 연결 시간 제한 기간을 설정 하는 속성 및 [상태](../../../ado/reference/ado-api/state-property-ado.md) 연결의 상태를 확인할 속성입니다. GetState 함수는이 절차를 실행 하려면 필요 합니다.  
   
 > [!NOTE]
->  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 또는 **통합 보안 = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
+>  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 하거나 **Integrated Security = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
   
 ```  
 // ConnectionStringSampleCpp.cpp  

@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_RULE_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - removing roles
 - dropping roles
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 90b20120924d67e474688d0de4efcbd3cd8dd6d4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 17a6075b5a1cc6e49ac894f41f5d8267294d60ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723741"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
   
  DROP RULE 문은 CHECK 제약 조건에 적용되지 않습니다. CHECK 제약 조건 삭제 방법은 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하십시오.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  DROP RULE을 실행하려면 최소한 규칙이 속한 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

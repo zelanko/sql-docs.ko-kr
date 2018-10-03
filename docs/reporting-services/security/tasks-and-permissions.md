@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d678ada03e625086f54365718b68a0bf63103957
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4793fef2ab0460c5adce81aa418130681ccdabfc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279419"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709331"
 ---
 # <a name="tasks-and-permissions"></a>태스크 및 권한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *태스크* 는 사용자 또는 관리자가 수행할 수 있는 동작을 말하며 태스크는 미리 정의됩니다. 태스크는 사용자 지정할 수 없으며 프로그래밍 방식이나 도구를 통해 제공된 태스크를 수정할 수 없습니다. 모두 25가지의 태스크가 있습니다. 이러한 태스크는 역할 기반 보안에서 사용할 수 있는 전체 작업 집합을 구성합니다. "보고서 보기", "보고서 관리", "보고서 서버 속성 관리" 등과 같은 태스크가 있습니다.  

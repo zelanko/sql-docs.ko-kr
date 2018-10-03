@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0881a10fa739b6a6539c12af6f29c78934c315a9
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: d6a73f88a0c1bc0ab2235241f7801c8fbc0f8328
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40392363"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660341"
 ---
 # <a name="assessment-report-accesstosql"></a>평가 보고서 (AccessToSQL)
 평가 보고서 창에 데이터베이스 개체의 변환 결과 보여 줍니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 마이그레이션 프로젝트의 비용과 복잡성을 예측할 수 있습니다.  

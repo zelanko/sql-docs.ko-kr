@@ -5,9 +5,7 @@ ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ALTER SERVER CONFIGURATION statement
 - setting process affinity
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 72
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9124ec354c325e01b71542be7a7c00d8e3c51775
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 0782f5739bb6ed86dfa2d58e0e84ce2ea496802f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713901"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -255,7 +252,7 @@ SQLDUMPEREDUMPFLAGS
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  이 문은 DDL  트리거를 지원하지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  프로세스 선호도에 대해 ALTER  SETTINGS  권한이 필요하고, 진단 로그 및 장애 조치(failover)  클러스터 속성 옵션에 대해 ALTER  SETTINGS  및 VIEW  SERVER  STATE  권한이 필요하며,  HADR  클러스터 컨텍스트 옵션에 대해 CONTROL  SERVER  권한이 필요합니다.  
   
  버퍼 풀 확장 옵션을 위해서는 ALTER SERVER STATE 권한이 필요합니다.  

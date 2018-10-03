@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: af52d18e2978f8645bce689481f68121a164c160
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664247"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>프로젝트 설정(시스템 개체 로드)(OracleToSQL)
 시스템 개체 로드 페이지의 **프로젝트 설정** 대화 상자는 Oracle 시스템 개체 SSMA 변환 및 로드를 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

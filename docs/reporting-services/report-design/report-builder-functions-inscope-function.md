@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e64cfce888b627824256b0100eda5718c7e53567
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0b8400a287f3ec2ac6e0cabb59df255336f8ef92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277119"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741081"
 ---
 # <a name="report-builder-functions---inscope-function"></a>보고서 작성기 함수 - InScope 함수
   항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.  

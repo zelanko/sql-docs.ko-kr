@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d1fd1a96d3e472c01eb899c12976e0980fa2dff
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 883cf52d51acc280fae37ce918f476e757fd34ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723252"
 ---
 # <a name="system-role-properties-management-studio"></a>시스템 역할 속성(Management Studio)
   시스템 역할 페이지를 사용하여 보고서 서버에 현재 정의되어 있는 시스템 역할 정의를 볼 수 있습니다. 시스템 역할 정의에는 개별 항목이 아닌 전체 사이트에 대해 수행되는 태스크의 명명된 모음이 포함됩니다. 역할 정의는 사용자나 그룹에 할당되어 역할 할당을 만듭니다. 역할 정의의 태스크는 사용자나 그룹이 수행할 수 있는 태스크를 지정합니다.  

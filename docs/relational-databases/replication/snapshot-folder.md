@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.replicationutilities.specifysnapshotfolder.f1
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b33c884032c7d804cfe0ae82ae59b0f39cb6bb7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: b2ad52310599d178fd5bf52bab0edd08c2886f2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714851"
 ---
 # <a name="snapshot-folder"></a>스냅숏 폴더
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "37350235"
   
  스냅숏 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요. 복제를 구현하기 전에 복제 에이전트에서 스냅숏 폴더에 연결할 수 있는지 테스트합니다. 각 에이전트에서 사용할 계정으로 로그온한 다음 스냅숏 폴더에 액세스해 봅니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **Snapshot folder**  
  스냅숏 파일을 저장할 폴더의 경로를 입력합니다.  
   

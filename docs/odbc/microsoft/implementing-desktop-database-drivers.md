@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], implementing
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4de328f3185597a81fa7a61ce2d23a5e5f0bf1c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645881"
 ---
 # <a name="implementing-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버 구현
-ODBC 데이터 원본 관리자 온라인 도움말의 지침 및 구현 하 고 Microsoft ODBC 데스크톱 데이터베이스 드라이버를 설정 하는 방법에 대 한 기술 정보를 찾을 수 있습니다. 드라이버 설치가 루틴 중이 파일에 액세스할 수는 [Microsoft ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  
+지침 및 기술 참고 사항 구현 및 Microsoft ODBC 데스크톱 데이터베이스 드라이버를 설정 하는 방법에 대 한 ODBC 데이터 원본 관리자 온라인 도움말에 있습니다. 드라이버 설치 루틴에서 하는 동안이 파일에 액세스할 수 합니다 [Microsoft ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -36,7 +33,7 @@ ODBC 데이터 원본 관리자 온라인 도움말의 지침 및 구현 하 고
   
 -   [하드웨어 및 소프트웨어 요구 사항](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [데스크톱 데이터베이스 드라이버와 함께 설명자](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [데스크톱 데이터베이스 드라이버를 사용 하 여 설명자](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [데스크톱 데이터베이스 드라이버에 대한 진단](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

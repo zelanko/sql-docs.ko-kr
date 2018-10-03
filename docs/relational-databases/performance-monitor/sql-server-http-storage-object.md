@@ -4,30 +4,26 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f7914f1478689d089341016117a70ece8785a6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 693c1338c031729eea45131c0229e4be4eda637c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721231"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:HTTP_STORAGE_OBJECT** 성능 개체는 Microsoft Azure Storage 계정을 모니터링하는 성능 카운터로 구성됩니다. [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 기능을 사용하여 Microsoft Azure Storage BLOB에 데이터베이스 파일을 저장할 수 있습니다. 이 성능 개체는 각 Windows Azure Storage 계정을 다른 드라이브로 처리합니다.  
   
-|카운터 이름|Description|  
+|카운터 이름|설명|  
 |------------------|-----------------|  
 |**Read Bytes/sec**|읽기 작업 중 HTTP 저장소에서 초당 전송되는 데이터의 양입니다.|  
 |**Write Bytes/sec**|쓰기 작업 중 HTTP 저장소에서 초당 전송되는 데이터의 양입니다.|  

@@ -1,14 +1,11 @@
 ---
-title: sp_addumpdevice (Transact SQL) | Microsoft Docs
+title: sp_addumpdevice (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbf23913e95b53e490d55099cde44b5ab60d3141
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649861"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,40 +49,40 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="arguments"></a>인수  
  [ **@devtype=** ] **'***device_type***'**  
- 백업 장치의 유형입니다. *device_type* 은 **varchar (20)** 이며 기본값은 없고 수는 다음 값 중 하나 여야 합니다.  
+ 백업 장치의 유형입니다. *device_type* 됩니다 **varchar(20)"** 이며 기본값은 없고 수 다음 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**disk**|백업 장치로서의 하드 디스크 파일입니다.|  
 |**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 장치입니다.<br /><br /> 참고: 테이프 백업 장치에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
   
  [  **@logicalname =** ] **'***logical_name***'**  
- BACKUP 및 RESTORE 문에서 사용되는 백업 장치의 논리적 이름입니다. *logical_name* 은 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+ BACKUP 및 RESTORE 문에서 사용되는 백업 장치의 논리적 이름입니다. *logical_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
  [  **@physicalname =** ] **'***physical_name***'**  
- 백업 장치의 물리적 이름입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 장치에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 은 **nvarchar (260)**, 기본값이 없는 값을 NULL 일 수 없습니다.  
+ 백업 장치의 물리적 이름입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 장치에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 됩니다 **nvarchar(260)**, 기본값은 없습니다 값을 NULL 일 수 없습니다.  
   
  원격 네트워크 위치에서 백업 장치를 만드는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 해당 이름이 원격 컴퓨터에 대해 적절한 쓰기 기능을 갖고 있어야 합니다.  
   
- 이 매개 변수가 Windows에 의해 로컬 테이프 장치에 할당 된 실제 이름 이어야 합니다 테이프 장치를 추가 하는 경우 예를 들어  **\\ \\. \TAPE0** 컴퓨터에서 첫 번째 테이프 장치에 대 한 합니다. 테이프 장치는 원격 방식으로는 사용할 수 없으며 반드시 서버 컴퓨터에 연결되어야 합니다. 숫자 또는 알파벳이 아닌 문자를 포함한 이름은 앞뒤로 따옴표를 사용해야 합니다.  
+ 이 매개 변수 Windows;에 의해 로컬 테이프 장치에 할당 된 물리적 이름 이어야 테이프 장치를 추가 하는 경우 예를 들어  **\\ \\. \TAPE0** 컴퓨터의 첫 번째 테이프 장치에 대 한 합니다. 테이프 장치는 원격 방식으로는 사용할 수 없으며 반드시 서버 컴퓨터에 연결되어야 합니다. 숫자 또는 알파벳이 아닌 문자를 포함한 이름은 앞뒤로 따옴표를 사용해야 합니다.  
   
 > [!NOTE]  
 >  이 프로시저에서는 지정한 물리적 이름을 카탈로그에 입력합니다. 장치에 액세스하거나 장치를 만들지는 않습니다.  
   
  [ **@cntrltype =** ] **'***controller_type***'**  
- 더 이상 사용되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새로 사용 하 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
+ 더 이상 사용되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새 사용 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
   
  [ **@devstatus =** ] **'***device_status***'**  
- 더 이상 사용되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새로 사용 하 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
+ 더 이상 사용되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새 사용 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- **sp_addumpdevice** 백업 장치를 추가 하는 **sys.backup_devices** 카탈로그 뷰에 있습니다. 그런 다음 BACKUP 및 RESTORE 문에서 해당 장치를 논리적으로 참조할 수 있습니다. **sp_addumpdevice** 물리적 장치에 대 한 액세스를 수행 하지 않습니다. BACKUP 또는 RESTORE 문을 수행하는 경우에만 지정한 장치에 액세스합니다. 논리적 백업 장치를 만들면 "TAPE =" 또는 "DISK =" 절 대신 장치 이름을 사용하여 장치 경로를 지정할 수 있으므로 BACKUP 및 RESTORE 문이 간단해집니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_addumpdevice** 백업 장치를 추가 합니다 **sys.backup_devices** 카탈로그 뷰에 있습니다. 그런 다음 BACKUP 및 RESTORE 문에서 해당 장치를 논리적으로 참조할 수 있습니다. **sp_addumpdevice** 물리적 장치에 대 한 액세스를 수행 하지 않습니다. BACKUP 또는 RESTORE 문을 수행하는 경우에만 지정한 장치에 액세스합니다. 논리적 백업 장치를 만들면 "TAPE =" 또는 "DISK =" 절 대신 장치 이름을 사용하여 장치 경로를 지정할 수 있으므로 BACKUP 및 RESTORE 문이 간단해집니다.  
   
  소유권 및 사용 권한 문제가 디스크 또는 파일 백업 장치 사용을 방해하는 경우가 있습니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 Windows 계정에 대해 적절한 파일 사용 권한을 부여하십시오.  
   
@@ -94,11 +90,11 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  드라이브 제조업체가 권장하는 특정 테이프 드라이브에 대해서는 권장되는 테이프만 사용하십시오. DAT(디지털 오디오 테이프) 드라이브를 사용하는 경우 컴퓨터 등급 DAT 테이프(DDS: 디지털 데이터 저장소)를 사용하십시오.  
   
- **sp_addumpdevice** 트랜잭션 내에서 실행 될 수 없습니다.  
+ **sp_addumpdevice** 트랜잭션 내에서 실행할 수 없습니다.  
   
- 사용 하 여 장치를 삭제 하려면 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 또는[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)합니다.  
+ 장치를 삭제 하려면 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 하거나[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **diskadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  디스크에 대한 쓰기 권한이 필요합니다.  
@@ -148,7 +144,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

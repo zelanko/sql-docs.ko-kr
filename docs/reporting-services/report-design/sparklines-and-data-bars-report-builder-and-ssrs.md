@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ef2ccd0ea5c57d73656b0811cd468a7ab727711
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710821"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대(보고서 작성기 및 SSRS)
   스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 보통 텍스트와 인라인으로 표시됩니다.   
