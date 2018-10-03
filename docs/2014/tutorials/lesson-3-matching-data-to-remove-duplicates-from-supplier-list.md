@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f244dc7d62f19967aae7ee3bc32a634008fcc94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c5074a670fa1ab1c6a837f06b5cd27b21707400
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265795"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139600"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>3단원: 데이터 일치로 공급자 목록에서 중복 항목 제거
   기술 자료에 일치 정책을 만들어서 일치 작업 수행을 위한 기술 자료를 준비합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있습니다. 일치 정책은 하나 이상의 일치 규칙으로 구성됩니다. 규칙은 일치 프로세스에 관련된 도메인을 식별하고 일치 판단 시 각 도메인 값의 가중치를 지정합니다. 이 규칙에 도메인 값이 정확히 일치하는 항목이어야 하는지, 또는 유사하면 되는지 여부와 유사성 수준을 지정합니다. 도메인 일치 항목이 일치 프로세스의 필수 구성 요소인지 여부도 지정합니다. 각 규칙을 따로 테스트하고 샘플 데이터에 대해 전제 정책을 테스트할 수 있습니다. 테스트 과정에서 일치 점수가 클러스터(그룹)의 DQS 구성에 지정된 **최소 레코드 점수** 임계값보다 큰 레코드가 표시됩니다. 만족할 때까지 정책의 규칙을 계속 조정할 수 있습니다.  

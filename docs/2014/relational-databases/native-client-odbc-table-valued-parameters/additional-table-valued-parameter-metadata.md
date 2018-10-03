@@ -1,27 +1,24 @@
 ---
-title: 추가 테이블 반환 매개 변수 메타 데이터 | Microsoft Docs
+title: 추가 테이블 반환 매개 변수 메타 데이터 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), catalog functions to retrieve metadata
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f28c5baf528a975b987c68e81543932b63dc5761
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141525"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>추가 테이블 반환 매개 변수 메타데이터
   테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하려면 응용 프로그램 SQLProcedureColumns를 호출 합니다. 테이블 반환 매개 변수에 대 한 SQLProcedureColumns 단일 행을 반환 합니다. 두 개의 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-특정 열인 SS_TYPE_CATALOG_NAME 및 ss_type_schema_name은 테이블 반환 매개 변수와 연결 된 테이블 형식에 대 한 스키마 및 카탈로그 정보를 제공에 추가 되었습니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버별 열 앞에, 그리고 ODBC 자체에서 지정한 모든 열 뒤에 표시됩니다.  

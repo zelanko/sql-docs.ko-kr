@@ -1,12 +1,10 @@
 ---
-title: 커서에 대 한 SQL 문 생성 | Microsoft Docs
+title: 커서에 대 한 SQL 문 생성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], statement construction
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2911415122307216afc5f6ff7d41a8f54e46f059
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407481"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228763"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 서버 커서를 사용 하 여 ODBC 사양에 정의 된 커서 기능을 구현 합니다. ODBC 응용 프로그램을 사용 하 여 커서 동작을 제어 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) 다른 문 특성을 설정할 수 있습니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  

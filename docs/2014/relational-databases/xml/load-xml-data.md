@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37926d5ec10cfb5bc92de83e75d4d317d9123047
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 43c1286077b940516ca849fb3ad7ec847ba04ed5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153689"
 ---
 # <a name="load-xml-data"></a>XML 데이터 로드
-  XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 예를 들어:  
+  XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 [n]text 또는 image 열에 데이터가 있으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용하여 테이블을 가져올 수 있습니다. ALTER TABLE 문을 사용하여 열 유형을 XML로 바꿉니다.  
   
@@ -47,7 +44,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>텍스트 인코딩  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 XML 데이터를 유니코드(UTF-16)로 저장합니다. 서버에서 검색된 XML 데이터는 UTF-16 인코딩으로 출력됩니다. 다른 인코딩이 필요한 경우 검색된 데이터에서 필요한 변환을 수행해야 합니다. 일부 경우 XML 데이터는 다른 인코딩으로 표시될 수 있습니다. 이 경우 데이터를 로드하는 동안 주의해야 합니다. 예를 들어:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 XML 데이터를 유니코드(UTF-16)로 저장합니다. 서버에서 검색된 XML 데이터는 UTF-16 인코딩으로 출력됩니다. 다른 인코딩이 필요한 경우 검색된 데이터에서 필요한 변환을 수행해야 합니다. 일부 경우 XML 데이터는 다른 인코딩으로 표시될 수 있습니다. 이 경우 데이터를 로드하는 동안 주의해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   XML 텍스트가 유니코드(UCS-2, UTF-16)인 경우 문제 없이 이를 XML 열, 변수 또는 매개 변수에 할당할 수 있습니다.  
   
@@ -65,14 +62,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>문자열 인코딩 비호환성  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기 창에서 XML을 문자열 리터럴로 복사 및 붙여 넣는 경우 [N]VARCHAR 문자열 인코딩이 호환되지 않는 경우가 발생할 수 있습니다. 이것은 해당 XML 인스턴스의 인코딩에 따라 달라집니다. 대부분의 경우 XML 선언을 제거해야 할 수 있습니다. 예를 들어:  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기 창에서 XML을 문자열 리터럴로 복사 및 붙여 넣는 경우 [N]VARCHAR 문자열 인코딩이 호환되지 않는 경우가 발생할 수 있습니다. 이것은 해당 XML 인스턴스의 인코딩에 따라 달라집니다. 대부분의 경우 XML 선언을 제거해야 할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema …  
 ```  
   
- 그런 다음 해당 XML 인스턴스를 유니코드 인스턴스로 만들기 위해 N을 포함시켜야 합니다. 예를 들어:  
+ 그런 다음 해당 XML 인스턴스를 유니코드 인스턴스로 만들기 위해 N을 포함시켜야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 -- Assign XML instance to a variable.  

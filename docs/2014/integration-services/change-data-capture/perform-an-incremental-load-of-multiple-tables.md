@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e37bc0b02d796d2f29ea21011b632a496f0e5b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cab69f68fe040600722d22c31ea8a356610e61c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204683"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>여러 테이블의 증분 로드 수행
   [변경 데이터 캡처를 사용하여 증분 로드 개선](change-data-capture-ssis.md)항목의 다이어그램에서는 한 테이블에서만 증분 로드를 수행하는 기본 패키지를 보여 줍니다. 그러나 한 테이블을 로드하는 작업은 여러 테이블을 증분 로드하는 작업만큼 일반적이지 않습니다.  
@@ -39,15 +36,15 @@ ms.locfileid: "37193563"
   
 1.  부모 패키지를 만듭니다.  
   
-2.  제어 흐름에서 SQL 실행 태스크나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식을 사용하여 끝점을 계산합니다.  
+2.  제어 흐름에서 SQL 실행 태스크나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식을 사용하여 엔드포인트를 계산합니다.  
   
-     끝점을 계산하는 방법의 예는 [변경 데이터의 간격 지정](specify-an-interval-of-change-data.md)을 참조하세요.  
+     엔드포인트를 계산하는 방법의 예는 [변경 데이터의 간격 지정](specify-an-interval-of-change-data.md)을 참조하세요.  
   
 3.  필요한 경우 For 루프 컨테이너를 사용하여 선택한 기간에 대한 변경 데이터가 준비될 때까지 실행을 지연합니다.  
   
      이러한 For 루프 컨테이너의 예는 [변경 데이터의 준비 여부 확인](determine-whether-the-change-data-is-ready.md)을 참조하세요.  
   
-4.  여러 패키지 실행 태스크를 사용하여 로드할 각 테이블에 대해 자식 패키지를 실행합니다. 부모 패키지 변수 구성을 사용하여 부모 패키지에서 계산된 끝점을 각 자식 패키지에 전달합니다.  
+4.  여러 패키지 실행 태스크를 사용하여 로드할 각 테이블에 대해 자식 패키지를 실행합니다. 부모 패키지 변수 구성을 사용하여 부모 패키지에서 계산된 엔드포인트를 각 자식 패키지에 전달합니다.  
   
      자세한 내용은 [패키지 실행 태스크](../control-flow/execute-package-task.md) 및 [자식 패키지에서 변수 및 매개 변수의 값 사용](../use-the-values-of-variables-and-parameters-in-a-child-package.md)을 참조하세요.  
   
@@ -61,7 +58,7 @@ ms.locfileid: "37193563"
   
 3.  각 자식 패키지에서 단일 데이터 흐름 태스크를 사용하여 변경 데이터를 로드하고 대상에 적용합니다. 다음 단계에 설명된 대로 데이터 흐름을 구성합니다.  
   
-    1.  데이터 흐름에서 원본 구성 요소를 사용하여 선택한 끝점 범위에 포함되는 변경 테이블의 변경 내용을 쿼리합니다.  
+    1.  데이터 흐름에서 원본 구성 요소를 사용하여 선택한 엔드포인트 범위에 포함되는 변경 테이블의 변경 내용을 쿼리합니다.  
   
          변경 테이블을 쿼리하는 방법의 예는 [변경 데이터 검색 및 이해](retrieve-and-understand-the-change-data.md)를 참조하세요.  
   
@@ -80,9 +77,9 @@ ms.locfileid: "37193563"
   
 1.  단일 패키지를 만듭니다.  
   
-2.  제어 흐름에서 SQL 실행 태스크나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식을 사용하여 끝점을 계산합니다.  
+2.  제어 흐름에서 SQL 실행 태스크나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식을 사용하여 엔드포인트를 계산합니다.  
   
-     끝점을 계산하는 방법의 예는 [변경 데이터의 간격 지정](specify-an-interval-of-change-data.md)을 참조하세요.  
+     엔드포인트를 계산하는 방법의 예는 [변경 데이터의 간격 지정](specify-an-interval-of-change-data.md)을 참조하세요.  
   
 3.  필요한 경우 For 루프 컨테이너를 사용하여 선택한 간격에 대한 변경 데이터가 준비될 때까지 실행을 지연합니다.  
   
@@ -94,7 +91,7 @@ ms.locfileid: "37193563"
   
 5.  여러 데이터 흐름 태스크를 사용하여 각 원본 테이블에서 변경 데이터를 로드하고 대상에 적용합니다. 다음 단계에 설명된 대로 각 데이터 흐름 태스크를 구성합니다.  
   
-    1.  각 데이터 흐름에서 원본 구성 요소를 사용하여 선택한 끝점 범위에 포함되는 변경 테이블의 변경 내용을 쿼리합니다.  
+    1.  각 데이터 흐름에서 원본 구성 요소를 사용하여 선택한 엔드포인트 범위에 포함되는 변경 테이블의 변경 내용을 쿼리합니다.  
   
          변경 테이블을 쿼리하는 방법의 예는 [변경 데이터 검색 및 이해](retrieve-and-understand-the-change-data.md)를 참조하세요.  
   

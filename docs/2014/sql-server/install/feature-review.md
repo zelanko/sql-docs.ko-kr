@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b9293aeb938a5898ab80f94f4b3879e381b4848
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9d6407d98bccb62f54443a8a8d1f5b61a093c7c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182663"
 ---
 # <a name="feature-review"></a>기능 검토
   기능 검토 페이지는 현재 준비되어 있고 앞으로 구성되어 이미지 완료 단계의 끝에 완성될 여러 가지 기능이 포함된 읽기 전용 목록입니다. 기능 목록은 이미지 준비 단계에서 선택되며 이미지 완료 단계에서는 수정할 수 없습니다. 준비 인스턴스에는 표시된 기능뿐만 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client도 포함됩니다.  

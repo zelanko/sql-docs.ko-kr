@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9bce95fa12e7f5437d6d1f3872470a57114b76d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180345"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>CellSet을 사용하여 데이터 검색
   <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체에서는 분석 데이터 검색에 필요한 상호 작용 기능과 유연성을 제공합니다. <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 데이터의 원래 차원을 유지하는 기록 데이터 및 메타데이터의 메모리 내 캐시입니다. 또한 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 연결된 상태뿐 아니라 연결이 끊어진 상태에서도 이동할 수 있습니다. 연결이 끊어진 상태에서도 이동할 수 있으므로 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 순서에 상관 없이 데이터와 메타데이터를 보는 데 사용할 수 있으며 가장 종합적인 데이터 검색 개체 모델을 제공합니다. 이에 반해 연결이 끊어진 상태에서 이동하는 기능 때문에 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 오버헤드가 많아서 가장 느리게 채워지는 ADOMD.NET 데이터 검색 개체 모델입니다.  

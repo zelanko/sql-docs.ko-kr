@@ -1,26 +1,23 @@
 ---
-title: 향상 된 날짜 및 시간 형식을 이전 버전 SQL Server (ODBC)를 사용 하 여 동작 | Microsoft Docs
+title: 향상 된 날짜 및 시간 형식을 이전 버전 SQL Server (ODBC)를 사용 하 여 동작 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91052172849df1cd0234fe73cd39130d4568f131
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184199"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
   이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 응용 프로그램이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
@@ -42,8 +39,8 @@ ms.locfileid: "37422962"
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(7)|SQL_C_TIME|실패 - 시간 리터럴이 잘못되었습니다.|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|실패 - 시간 리터럴이 잘못되었습니다.|확인 (1)|  
-||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|확인|확인 (1)|  
-||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|확인|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
+||datetime2(3)|SQL_C_TYPE_TIMESTAMP|확인|확인 (1)|  
+||datetime2(7)|SQL_C_TYPE_TIMESTAMP|확인|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
 |Smalldatetime|Date|SQL_C_TYPE_DATE|확인|확인|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|확인|확인|  

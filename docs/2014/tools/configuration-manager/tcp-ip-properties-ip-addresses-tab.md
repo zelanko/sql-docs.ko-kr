@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fcccefeda97346c43fd70b41653f2f125816adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136213"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP IP 속성 (IP 주소 탭)
   **TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
@@ -33,7 +30,7 @@ ms.locfileid: "37187597"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스는 들어오는 연결을 1443번 포트에서 수신합니다. 보안상의 이유 또는 클라이언트 응용 프로그램 요구 사항으로 인해 포트를 변경할 수 있습니다. 기본적으로 SQL Server Express를 비롯한 명명된 인스턴스는 동적 포트에서 수신하도록 구성됩니다. 정적 포트를 구성하려면 **TCP 동적 포트** 상자를 비워 놓고 **TCP 포트** 상자에 사용 가능한 포트 번호를 제공합니다. 방화벽에서 포트를 여는 방법은 온라인 설명서에서 SQL Server 액세스를 허용하도록 Windows 방화벽 구성을 참조하십시오.  
   
 ## <a name="dynamic-ports"></a>동적 포트  
- 시작 시 동적 포트에서 수신하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 운영 체제에서 사용 가능한 포트를 확인하고 해당 포트의 끝점을 엽니다. 들어오는 연결은 연결할 포트 번호를 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때마다 포트 번호가 변경될 수 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 포트를 모니터링하고 들어오는 연결을 해당 인스턴스의 현재 포트로 보내는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 제공합니다. 동적 포트를 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작할 때 포트 번호가 변경되어 방화벽 설정을 변경해야 할 수 있으므로 방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하는 것이 복잡해집니다. 방화벽을 통한 연결 문제를 방지하려면 정적 포트를 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성하십시오.  
+ 시작 시 동적 포트에서 수신하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 운영 체제에서 사용 가능한 포트를 확인하고 해당 포트의 엔드포인트를 엽니다. 들어오는 연결은 연결할 포트 번호를 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때마다 포트 번호가 변경될 수 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 포트를 모니터링하고 들어오는 연결을 해당 인스턴스의 현재 포트로 보내는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 제공합니다. 동적 포트를 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작할 때 포트 번호가 변경되어 방화벽 설정을 변경해야 할 수 있으므로 방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하는 것이 복잡해집니다. 방화벽을 통한 연결 문제를 방지하려면 정적 포트를 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성하십시오.  
   
 ## <a name="options"></a>변수  
  **활성**  

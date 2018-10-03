@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 115
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229973"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   합니다 `sqlcmd` 유틸리티를 사용 하면 입력 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트의 명령 프롬프트에서 파일 **쿼리 편집기** SQLCMD 모드에서 Windows 스크립트 파일에서 또는의 운영 체제 (Cmd.exe) 작업 단계는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업입니다. 이 유틸리티는 ODBC를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 일괄 처리를 실행합니다.  
@@ -569,7 +566,7 @@ ms.locfileid: "37303443"
   
  `:EXIT(query)`  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -595,7 +592,7 @@ ms.locfileid: "37303443"
   
  쿼리를 포함하는 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  
   
- `sqlcmd` 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 `sqlcmd`가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어:  
+ `sqlcmd` 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 `sqlcmd`가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -656,7 +653,7 @@ ms.locfileid: "37303443"
  `:connect $(myservername) $(myusername)`  
   
  [**:**] **!!**  \< *명령*>  
- 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 예를 들어:  
+ 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `:!! Dir`  
   

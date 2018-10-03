@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24348462faa76777b279576c105c312b333b83f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187288"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>데이터 원본 뷰 찾아보기(데이터 마이닝 마법사)
   **데이터 원본 뷰 찾아보기** 대화 상자를 사용하여 마법사의 **데이터 원본 뷰 선택** 페이지에서 선택한 데이터 원본 뷰를 볼 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128263"
 ---
 # <a name="upload-file-page-report-manager"></a>파일 업로드 페이지(보고서 관리자)
   파일 업로드 페이지를 사용하여 파일을 파일 시스템에서 보고서 서버 데이터베이스로 게시할 수 있습니다. 업로드된 파일은 보고서 서버 폴더 계층 구조의 항목으로 표시됩니다.  
@@ -46,7 +43,7 @@ ms.locfileid: "39083035"
   
 2.  도구 모음에서 **파일 업로드**를 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>변수  
  **업로드할 파일**  
  파일 시스템에서 복사할 파일의 정규화된 경로를 표시합니다.  
   

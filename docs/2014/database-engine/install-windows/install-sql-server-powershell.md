@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5ad01757b050d6beb491e1f0b2878ab124f5d8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 961f5793732dcfabd19b07f0a22b467591a980c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203243"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 선택 했는지 검색 하는 경우 설치 프로그램이 중지 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 구성 요소를 사용 하지만 Windows PowerShell 2.0 포함 하는 기능이 설치 되어 있지 않습니다. Windows 관리 프레임워크를 사용하여 PowerShell을 설치하고 설치 프로그램을 다시 실행해야 합니다.  

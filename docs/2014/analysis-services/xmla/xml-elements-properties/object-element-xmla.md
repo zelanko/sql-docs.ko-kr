@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Object Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4fb7e25b9e813487b612bbd6269c2f080d85f5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178753"
 ---
 # <a name="object-element-xmla"></a>Object 요소(XMLA)
   부모 요소에 사용되는 개체 참조를 포함합니다.  
@@ -54,8 +51,8 @@ ms.locfileid: "37229583"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|상위 항목 또는 부모: [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1: 한 번만 나타날 수 있는 선택적 요소입니다.<br /><br /> 상위 항목 또는 부모: 다른 모든 &#124; 1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

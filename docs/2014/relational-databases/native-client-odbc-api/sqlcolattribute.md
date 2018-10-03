@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca244662cf8924ac033004dde92b5de4df41ccf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204923"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   사용할 수 있습니다 `SQLColAttribute` 준비 되거나 실행 ODBC 문에 대 한 결과 집합 열의 특성을 검색 하려면. 호출 `SQLColAttribute` 에서 준비 된 문을 원인에 대 한 왕복 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 문 실행을 호출 하므로의 일부로 결과 집합 열 데이터를 받는 `SQLColAttribute` 완료 되 면 **SQLExecute** 하거나 **SQLExecDirect** 않습니다 서버 왕복은 포함 되지 않습니다.  

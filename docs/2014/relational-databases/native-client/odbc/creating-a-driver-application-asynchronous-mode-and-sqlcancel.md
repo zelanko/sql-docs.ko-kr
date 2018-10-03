@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - asynchronous operations [SQL Server Native Client]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - ODBC applications, asynchronous operations
 - SQL Server Native Client ODBC driver, asynchronous mode
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2fe0ea7b8f608dbf5fa6ba78f4440c5027ac254f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174913"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>비동기 모드와 SQLCancel
   일부 ODBC 함수는 동기적 또는 비동기적으로 작동할 수 있습니다. 응용 프로그램에서는 문 핸들이나 연결 핸들에 대해 비동기 작업을 설정할 수 있습니다. 연결 핸들에 대해 비동기 작업 옵션을 설정하면 연결 핸들의 모든 문 핸들에도 적용됩니다. 응용 프로그램에서는 다음 문을 사용하여 비동기 작업을 설정하거나 해제합니다.  

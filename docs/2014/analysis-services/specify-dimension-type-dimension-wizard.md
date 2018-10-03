@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155863"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>차원 유형 지정(차원 마법사)
   **차원 유형 지정** 페이지를 사용하여 차원 유형을 정의하고 선택한 차원 유형과 관련된 특수 특성 유형을 차원에 추가할 수 있습니다.  

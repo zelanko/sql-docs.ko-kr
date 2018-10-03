@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148553"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>저장 프로시저 관련 사용 권한 부여(Analysis Services)
   저장 프로시저 또는 어셈블리 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 로 작성 된 외부 루틴이 며를 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의 기능을 확장 하는.NET 프로그래밍 언어로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 개발자는 어셈블리를 사용하여 언어 간 통합, 예외 처리, 버전 관리 지원, 배포 지원 및 디버깅 지원을 이용할 수 있습니다.  

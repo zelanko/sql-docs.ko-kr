@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e5e774a598ca45bf340d8f42f1bfd5b5faa9f5c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b271da0d9abc35d9733c257452b5f9eb2e317942
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205485"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 사용자가 자신과 동일한 데이터를 사용 중인지 확인하려는 경우 해당 사용자에게 바로 가기 쿼리 파일을 메일로 보낼 수 있습니다. 워크시트를 저장하고 전자 메일로 보내는 대신 쿼리를 공유해야 합니다.  

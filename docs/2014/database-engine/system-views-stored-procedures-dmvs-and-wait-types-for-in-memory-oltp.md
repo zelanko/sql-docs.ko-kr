@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d886a95b0cb62ad2217478873e85fb2db5d7bb
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 04b2d0fdd00d9f3001ce1687744a9ecd992f44dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144623"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 시스템 보기, 저장 프로시저, DMV 및 대기 형식
   이 항목은 메모리 내 OLTP를 지원하는 많은 데이터베이스 개체에 대한 간략한 설명과 링크를 제공합니다.  

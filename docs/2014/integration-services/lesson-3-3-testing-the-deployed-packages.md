@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 347b7a25b447f4f41be0dbeb2936d67a29db4102
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41107206bbe8fe8948bc6c2fb3d17ea761add869
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173053"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>3단계: 배포된 패키지 테스트
   이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 배포한 패키지를 테스트합니다.  

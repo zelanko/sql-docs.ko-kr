@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - scenarios [CLR integration]
@@ -18,23 +16,22 @@ helpviewer_keywords:
 - database objects [CLR integration], samples
 - managed code [SQL Server], samples
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
-caps.latest.revision: 43
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2f3ecd38a359da8fa7a3042821742493a82073f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126879"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합에 대한 사용 시나리오 및 예
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 CLR(공용 언어 런타임) 통합의 프로그래밍 기능을 알아보는 데 사용할 수 있는 예제 응용 프로그램, 패키지 예제 및 여러 코딩 예제가 포함되어 있습니다.  
   
  이러한 샘플 및 추가 자료를 구현 합니다. 전체 Visual Studio 프로젝트에 대 한 방문 [Microsoft SQL Server 커뮤니티 프로젝트 및 codeplex 샘플](http://go.microsoft.com/fwlink/?LinkID=193935)합니다.  
   
-|속성|Description|  
+|이름|Description|  
 |----------|-----------------|  
 |[CLR UDF에서 네이티브 코드 액세스](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|데이터베이스의 어셈블리에 있는 사용자 정의 함수에서 네이티브(비관리) C++ 코드의 함수를 호출하는 방법을 보여 줍니다.|  
 |[배열 매개 변수 예제](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하여 데이터베이스에 행 집합을 만들거나 업데이트 또는 삭제하는 방법을 보여 줍니다. 이 작업은 UDT를 사용하여 수행합니다.|  

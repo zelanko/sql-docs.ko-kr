@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - virtual directories [Reporting Services]
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 085eaf6b8b21462f675d2eca2033cbf8cfa4efa3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a142d7532c94f1ec9a3ed797d7e7a1db0e5d863d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214703"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], Url은 보고서 서버 웹 서비스에 액세스 하 여 보고서 관리자를 사용 합니다. 응용 프로그램을 사용하려면 먼저 웹 서비스와 보고서 관리자마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 응용 프로그램 URL에 대한 기본값을 제공합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37230603"
 |부분|Description|  
 |----------|-----------------|  
 |호스트 이름|TCP/IP 네트워크는 IP 주소를 사용하여 네트워크에 있는 장치를 고유하게 식별합니다. 물리적 IP 주소는 컴퓨터에 설치된 네트워크 어댑터 카드당 한 개가 있습니다. IP 주소가 호스트 헤더로 확인되면 호스트 헤더를 지정할 수 있습니다. 보고서 서버를 회사 네트워크에 배포하는 경우 컴퓨터의 네트워크 이름을 사용할 수 있습니다.|  
-|포트|TCP 포트는 장치의 끝점입니다. 보고서 서버는 지정된 포트에서 요청을 수신합니다.|  
+|포트|TCP 포트는 장치의 엔드포인트입니다. 보고서 서버는 지정된 포트에서 요청을 수신합니다.|  
 |가상 디렉터리|포트는 종종 여러 웹 서비스나 응용 프로그램에서 공유할 수 있습니다. 따라서 보고서 서버 URL에는 요청을 가져오는 응용 프로그램에 해당하는 가상 디렉터리가 항상 포함되어야 합니다. 같은 IP 주소와 포트를 수신하는 각각의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 대해 고유한 가상 디렉터리 이름을 지정해야 합니다.|  
 |SSL 설정|이전에 컴퓨터에 설치한 기존 SSL 인증서를 사용하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 URL을 구성할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../security/configure-ssl-connections-on-a-native-mode-report-server.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.|  
   
@@ -62,10 +59,10 @@ ms.locfileid: "37230603"
 >  기본 URL 예약을 사용하면 유효한 호스트 이름이 URL에 사용됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구는 변형된 호스트 이름을 특정 보고서 서버 인스턴스로 확인할 수 있는 구문을 사용하여 HTTP.SYS에 URL 예약을 만듭니다. URL 예약에 대 한 자세한 내용은 참조 하세요. [에 대 한 URL 예약 및 등록 &#40;SSRS 구성 관리자&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)합니다.  
   
 ## <a name="server-side-permissions-on-a-report-server-url"></a>보고서 서버 URL에 대한 서버 쪽 사용 권한  
- 각 URL 끝점에 대한 사용 권한은 보고서 서버 서비스 계정에 배타적으로 부여됩니다. 따라서 이 계정만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL로 전송된 요청을 받아들일 수 있습니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 서비스 ID를 구성할 경우 해당 계정에 대한 DACL(Discretionary Access Control List)이 생성되어 유지 관리됩니다. 서비스 계정을 변경하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구가 새 계정 정보를 선택하기 위해 만든 모든 URL 예약을 업데이트합니다. 자세한 내용은 [URL 예약 구문 &#40;SSRS 구성 관리자&#41;](url-reservation-syntax-ssrs-configuration-manager.md)합니다.  
+ 각 URL 엔드포인트에 대한 사용 권한은 보고서 서버 서비스 계정에 배타적으로 부여됩니다. 따라서 이 계정만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL로 전송된 요청을 받아들일 수 있습니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 서비스 ID를 구성할 경우 해당 계정에 대한 DACL(Discretionary Access Control List)이 생성되어 유지 관리됩니다. 서비스 계정을 변경하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구가 새 계정 정보를 선택하기 위해 만든 모든 URL 예약을 업데이트합니다. 자세한 내용은 [URL 예약 구문 &#40;SSRS 구성 관리자&#41;](url-reservation-syntax-ssrs-configuration-manager.md)합니다.  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>보고서 서버 URL로 전송된 클라이언트 요청 인증  
- 기본적으로 URL 끝점에서 지원되는 인증 유형은 Windows 인증으로 이는 기본 보안 확장 프로그램입니다. 사용자 정의 또는 폼 인증 공급자를 구현하는 경우 보고서 서버에서 인증 설정을 수정해야 합니다. 선택적으로 네트워크에 사용된 인증 하위 시스템과 일치하도록 Windows 인증 설정을 변경할 수도 있습니다. 자세한 내용은 [보고서 서버를 사용 하 여 인증](../security/authentication-with-the-report-server.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+ 기본적으로 URL 엔드포인트에서 지원되는 인증 유형은 Windows 인증으로 이는 기본 보안 확장 프로그램입니다. 사용자 정의 또는 폼 인증 공급자를 구현하는 경우 보고서 서버에서 인증 설정을 수정해야 합니다. 선택적으로 네트워크에 사용된 인증 하위 시스템과 일치하도록 Windows 인증 설정을 변경할 수도 있습니다. 자세한 내용은 [보고서 서버를 사용 하 여 인증](../security/authentication-with-the-report-server.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [URL 구성 &#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)  

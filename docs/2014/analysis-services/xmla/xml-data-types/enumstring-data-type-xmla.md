@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EnumString Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea4f9057c05d7be5a5f8d8591d27460540a377fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb075a8c659fe264dbed7dd68654d1fb84fdf7a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210246"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 데이터 형식(XMLA)
   지정된 열거자에 대한 명명된 상수 집합을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -49,15 +46,15 @@ ms.locfileid: "37224033"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|`string`|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
-|자식 요소|InclusionThresholdSetting|  
-|파생 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
+|자식 요소|없음|  
+|파생 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  XMLA(XML for Analysis)는 열거형을 사용하여 문자열 값을 확인 가능한 설정 집합으로 제한합니다. `EnumString`은 표준 XML `string` 데이터 형식을 사용합니다. 명명된 상수 각각에 대한 특정 값은 열거자 정의로 지정됩니다. 추가 하 여 정의 된 열거자를 [DISCOVER_ENUMERATORS](../../schema-rowsets/xml/discover-enumerators-rowset.md) 스키마 행 집합을 사용 하 여 검색할 수 있습니다는 [검색](../xml-elements-methods-discover.md) 메서드에 discover_enumerators 요청 유형을 합니다.  

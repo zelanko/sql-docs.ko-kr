@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DiscretizationMethod property
 - EQUAL_AREAS method
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195563"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>신경망 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   데이터 마이닝 모델을 만들려면 먼저 데이터 마이닝 마법사를 사용하여 새 데이터 원본 뷰를 기반으로 새 마이닝 구조를 만들어야 합니다. 이 태스크에서는 마법사를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘 기반의 마이닝 구조를 만들고 이와 동시에 관련 마이닝 모델을 만듭니다.  

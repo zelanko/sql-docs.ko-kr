@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ErrorConfiguration Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorConfiguration element
 ms.assetid: 5e350f5f-3a14-49b4-80c0-208c61f336d5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a93464ed9f6d2708246e8d04c833b9261b7c71fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 730f48adee4d459c453f49f742f611f6d985771e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191753"
 ---
 # <a name="errorconfiguration-element-xmla"></a>ErrorConfiguration 요소(XMLA)
   하는 동안 발생할 수 있는 오류를 처리 하기 위한 설정을 지정 된 [일괄 처리](../xml-elements-commands/batch-element-xmla.md) 또는 [프로세스](../xml-elements-commands/process-element-xmla.md) 작업 합니다.  
@@ -61,8 +58,8 @@ ms.locfileid: "37169284"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

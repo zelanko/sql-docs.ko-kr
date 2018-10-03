@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 27
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dad90bd2040e5101f373441650f8f69ebf3b426b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0d0487ca83b3168506aec529d7cc6d24f2cea4d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213283"
 ---
 # <a name="install-master-data-services"></a>MDS(Master Data Services) 설치
   다음 워크플로에서는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]을 설치하고 구성하는 방법에 대한 개요를 제공합니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치는 3단계로 수행되는 프로세스입니다.  

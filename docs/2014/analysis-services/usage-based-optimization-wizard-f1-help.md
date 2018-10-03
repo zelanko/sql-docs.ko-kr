@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.f1
 helpviewer_keywords:
 - Usage-Based Optimization Wizard
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e01a630552f70586b3444394e143dc6978153d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7ef284a927504bb4c7567d8700a8b15d63c92be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190803"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>사용 빈도 기반 최적화 마법사 F1 도움말
   사용 빈도 기반 최적화 마법사는 출력 면에서 집계 디자인 마법사와 유사하며 파티션에 대한 집계를 디자인하는 데 사용됩니다. 그러나 사용 빈도 기반 최적화 마법사는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 쿼리 로그에 기록된 쿼리의 특정 사용 패턴을 기반으로 집계를 디자인합니다. 집계를 사용하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 각 쿼리에 대해 기본 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산된 합계를 검색할 수 있으므로 성능이 향상됩니다.  

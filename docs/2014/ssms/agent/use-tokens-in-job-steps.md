@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa43bd29d20b7ddedd7c5968f5b4341e11713541
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222793"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 스크립트에 토큰을 사용할 수 있습니다. 작업 단계를 작성할 때 토큰을 사용하면 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성이 있습니다. 작업 단계 스크립트에 토큰을 삽입하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 시스템에서 해당 작업 단계를 실행하기 전에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트가 런타임 시 토큰을 바꿉니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 토큰 구문이 변경되었습니다. 그러므로 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 이스케이프 매크로 사용 및 토큰을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 업데이트에 대해서는 다음에 나오는 "토큰 사용 이해", "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰 및 매크로" 및 "매크로를 사용하도록 작업 단계 업데이트" 섹션에서 설명합니다. 또한 대괄호를 사용하여 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 에이전트 작업 단계 토큰을 호출한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문(예: "`[DATE]`")이 변경되었습니다. 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 예를 들어:  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 토큰 구문이 변경되었습니다. 그러므로 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 이스케이프 매크로 사용 및 토큰을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 업데이트에 대해서는 다음에 나오는 "토큰 사용 이해", "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰 및 매크로" 및 "매크로를 사용하도록 작업 단계 업데이트" 섹션에서 설명합니다. 또한 대괄호를 사용하여 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 에이전트 작업 단계 토큰을 호출한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문(예: "`[DATE]`")이 변경되었습니다. 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
 >   
 >  `$(ESCAPE_` *매크로 이름* `(DATE))`  
   

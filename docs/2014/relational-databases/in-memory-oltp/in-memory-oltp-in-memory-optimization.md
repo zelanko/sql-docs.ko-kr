@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf1b1d02ac8e36795703d233feb152339bd775eb
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0893a32d31c4f64d99503fce7e64ccdd325cea7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138513"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]의 새로운 기능인 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 로 OLTP 데이터베이스 응용 프로그램 성능이 상당히 개선될 수 있습니다. 
-            [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔진에 통합된 메모리 최적화 데이터베이스 엔진으로 OLTP에 최적화되어 있습니다.  
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]의 새로운 기능인 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 로 OLTP 데이터베이스 응용 프로그램 성능이 상당히 개선될 수 있습니다. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔진에 통합된 메모리 최적화 데이터베이스 엔진으로 OLTP에 최적화되어 있습니다.  
   
 |||  
 |-|-|  
@@ -49,8 +45,7 @@ ms.locfileid: "40395982"
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 에서 개선하는 프로그래밍 패턴으로는 동시성, 지점 검색, 많은 삽입 및 업데이트가 사용되는 작업 및 저장 프로시저의 비즈니스 논리가 있습니다.  
   
- 
-            [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 통합되어 메모리 최적화 테이블과 디스크 기반 테이블을 모두 같은 데이터베이스에 넣을 수 있으며 두 형식의 테이블을 모두 쿼리할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 통합되어 메모리 최적화 테이블과 디스크 기반 테이블을 모두 같은 데이터베이스에 넣을 수 있으며 두 형식의 테이블을 모두 쿼리할 수 있습니다.  
   
  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에 대해 지원되는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]노출 영역이 제한됩니다.  
   

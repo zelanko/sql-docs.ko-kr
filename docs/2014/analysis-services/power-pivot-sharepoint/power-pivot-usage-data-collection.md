@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187483"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 사용 데이터 컬렉션
   사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다. PowerPivot 사용 현황 데이터 수집을 구성 하는 방법에 대 한 자세한 내용은 이벤트 참조 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
@@ -43,7 +40,7 @@ ms.locfileid: "37304693"
   
  **참고:** 사용 데이터 컬렉션이 설정되었는지 확인합니다. 확인하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동합니다. 자세한 내용은 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
   
- ![구성 요소 및 사용 현황 데이터 수집의 프로세스입니다. ] (../media/gmni-usagedata.gif "구성 요소 및 사용 현황 데이터 수집의 프로세스.")  
+ ![구성 요소 및 사용 현황 데이터 수집의 프로세스입니다. ](../media/gmni-usagedata.gif "구성 요소 및 사용 현황 데이터 수집의 프로세스.")  
   
 |단계|Description|  
 |-----------|-----------------|  

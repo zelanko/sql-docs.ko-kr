@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyNotFound Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e8a2233797d3d9ddeecc91d5c2b5f096866d624
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156603"
 ---
 # <a name="keynotfound-element-assl"></a>KeyNotFound 요소(ASSL)
   지정 하는 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 참조 무결성 오류가 발생할 때 응답 합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37281809"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  참조 무결성 오류는 종속 테이블의 외래 키 값과 일치하는 항목이 부모 테이블에 없는 경우에 발생합니다. 이러한 오류는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]가 팩트 테이블에서 해당 차원의 차원 테이블에 존재하지 않는 외래 키 값을 참조하는 차원을 처리하는 경우 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]가 파티션에 포함된 차원의 주 차원 테이블에서 연결된 다른 차원 테이블에 존재하지 않는 키 값을 참조할 때 해당 파티션을 처리하는 경우에 발생합니다. 부모 자식 계층 및 부모 특성이 있는 차원의 경우 파티션에 포함된 차원의 주 차원 테이블이 동일한 차원 테이블에 존재하지 않는 키 값을 참조하는 경우에도 참조 무결성 오류가 발생할 수 있습니다.  

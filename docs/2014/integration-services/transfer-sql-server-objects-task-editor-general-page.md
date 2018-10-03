@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.general.f1
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25997b954a31c1c9326e53c409a9926e85a846fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c626f2bf1f1c886b432091636f37554720e9969c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142843"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>SQL Server 개체 전송 태스크 편집기(일반 페이지)
   **SQL Server 개체 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)를 참조하십시오.  

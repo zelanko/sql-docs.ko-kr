@@ -1,26 +1,23 @@
 ---
-title: 메모리 (ODBC)의 모든 값을 사용 하 여 테이블 반환 매개 변수로 데이터 전송 | Microsoft Docs
+title: 메모리 (ODBC)의 모든 값을 사용 하 여 테이블 반환 매개 변수로 데이터 전송 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2e154cbbba13ac1eb017a90fbb6abd7b0532b50
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214453"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>모든 값을 메모리에 로드하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
   이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 반환 매개 변수를 보여 주는 다른 샘플을 보려면 [테이블 반환 매개 변수 &#40;ODBC&#41;](table-valued-parameters-odbc.md)합니다.  

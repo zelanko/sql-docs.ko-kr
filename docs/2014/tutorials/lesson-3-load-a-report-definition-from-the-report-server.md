@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17d53c7a49afc61d3e43606ac3f805a5b21e6bd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208153"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>3 단원: 보고서 서버에서 보고서 정의 로드 합니다.
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>3단원: 보고서 서버에서 보고서 정의 로드
   프로젝트를 만들고 RDL 스키마에서 클래스를 생성하면 보고서 서버에서 보고서 정의를 로드할 준비가 됩니다.  
   
 ### <a name="to-load-a-report-definition"></a>보고서 정의를 로드하려면  

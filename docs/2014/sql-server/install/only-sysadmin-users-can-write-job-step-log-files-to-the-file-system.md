@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job step log files [SQL Server Agent]
 - log files [SQL Server Agent]
 - writing job step log files
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b31dace7b76d068187b495d6e63517967a6c0f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cb21caf909303fb751d9d616ef67efbac355425
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166233"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>sysadmin 사용자만 작업 단계 로그 파일을 파일 시스템에 기록할 수 있습니다.
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 선택적으로 각 작업 단계에 대한 로그를 기록합니다.  

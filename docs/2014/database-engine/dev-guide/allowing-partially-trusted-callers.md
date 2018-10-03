@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - AllowPartiallyTrustedCallers attribute
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222968"
 ---
 # <a name="allowing-partially-trusted-callers"></a>부분적으로 신뢰할 수 있는 호출자 허용
   코드 라이브러리 공유는 CLR(공용 언어 런타임) 통합에서의 일반적인 시나리오입니다. 이 경우 사용자 정의 형식, 저장 프로시저, 사용자 정의 함수, 사용자 정의 집계, 트리거 또는 유틸리티 클래스가 포함된 어셈블리를 다른 어셈블리나 응용 프로그램에서 액세스하는 경우가 많습니다. 여러 응용 프로그램에서 공유할 코드 라이브러리는 강력한 이름으로 서명되어야 합니다.  

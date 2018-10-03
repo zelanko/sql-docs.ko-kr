@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], Visual Database Tools
 - Visual Database Tools [SQL Server], queries
 - parameters [SQL Server], queries
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8969363ad3b30fb430f5cbe04e7b0f644582cc9b
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c677215024dbb5a0a862fba3e9fd3232190dd453
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213993"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>매개 변수를 사용하여 쿼리(Visual Database Tools)
   매번 서로 다른 입력으로 응용 프로그램에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  

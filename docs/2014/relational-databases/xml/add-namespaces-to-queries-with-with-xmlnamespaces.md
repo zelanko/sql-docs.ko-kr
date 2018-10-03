@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTS XSINIL directive
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67ca4f1a0663b83eb4fe9cb1abfa2a1b609e2c56
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: b9689a0e46abbcba53e7c9765e9d327df4ef220a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172473"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
   [WITH XMLNAMESPACES(Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) 는 다음과 같은 방식으로 네임스페이스 URI를 지원합니다.  
@@ -221,7 +218,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 이전 쿼리에서 **query()** 및 **exist()** 메서드는 모두 해당 프롤로그에서 같은 네임스페이스를 선언합니다. 예를 들어:  
+ 이전 쿼리에서 **query()** 및 **exist()** 메서드는 모두 해당 프롤로그에서 같은 네임스페이스를 선언합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

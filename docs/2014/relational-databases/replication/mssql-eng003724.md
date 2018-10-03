@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG003724 error
 ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec8993766740639ac6f5c14dd4eca3b0c1943247
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62c5300561cf70462402692d03f53f2de860781a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131183"
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
     
@@ -40,7 +37,7 @@ ms.locfileid: "37329493"
  데이터베이스의 개체가 복제되면 **sysarticles** 시스템 테이블(스냅숏 및 트랜잭션 게시의 경우) 또는 **sysmergearticles** 시스템 테이블(병합 게시의 경우)에 복제된 상태로 표시됩니다. 복제된 개체를 삭제하려고 하면 이 오류가 발생합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 데이터베이스 개체를 삭제하기 전에 복제되지 않았는지 확인합니다. 예를 들어:  
+ 데이터베이스 개체를 삭제하기 전에 복제되지 않았는지 확인합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   게시 데이터베이스에서 오류가 발생한 경우 개체를 삭제하기 전에 게시에서 해당 아티클을 삭제합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   

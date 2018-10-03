@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service [Integration Services], remote instance
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Integration Services service, remote instance
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfe4822aeb7746926dc2ea558ea78aa136e6e991
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eff4eb190c8225cf1d45f184515ccc5244a3a7ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222773"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>원격 Integration Services 서버에 연결(SSIS 서비스)
     
@@ -46,7 +43,7 @@ ms.locfileid: "37199733"
   
 3.  **서버 유형** 목록에서 **Integration Services** 를 선택합니다.  
   
-4.   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
+4.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 인스턴스에 국한되지 않습니다. Integration Services 서버가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  

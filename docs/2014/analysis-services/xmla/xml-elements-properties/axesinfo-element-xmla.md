@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AxesInfo Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - AxesInfo element
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93ad2eb9d35384831cb952d140be267e75a7647d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bde7feb88ad570665200c1c3357bbba4127a963
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178410"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178493"
 ---
 # <a name="axesinfo-element-xmla"></a>AxesInfo 요소(XMLA)
   컬렉션을 포함 [AxisInfo](axisinfo-element-xmla.md) 요소를 부모에 의해 포함 된 축 메타 데이터를 나타내는 [OlapInfo](olapinfo-element-xmla.md) 요소입니다.  
@@ -54,8 +51,8 @@ ms.locfileid: "37178410"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

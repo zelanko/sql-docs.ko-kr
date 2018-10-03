@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UnaryOperator Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - UnaryOperator element
 ms.assetid: 4dc9cfbe-6f8b-42bc-8d3a-42f48ca5d299
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d8d0edb8231a27a2eb52241298d29ed271f86d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb3c90fe9387d0f7eb7f5ae24fbad185f15bd1d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225233"
 ---
 # <a name="unaryoperator-element-xmla"></a>UnaryOperator 요소(XMLA)
   부모를 나타내는 특성 멤버의 단항 연산자를 포함 [특성](attribute-element-xmla.md) 요소입니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37306093"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37306093"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Attribute](attribute-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `UnaryOperator` 요소는 부모 `Attribute` 요소에서 정의하는 특성 멤버의 단항 연산자를 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tempdb [SQL Server], size
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4d247156e4e37786e5822ed0ce3397c1cad7e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181470"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220503"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>업그레이드 프로세스 중에 모든 데이터 및 로그 파일에 자동 증가 기능이 설정되어 있는지 확인합니다.
   업그레이드 관리자가 자동 증가로 설정되지 않은 데이터 또는 로그 파일을 검색했습니다. 새로운 기능과 향상 된 사용자 데이터베이스에 대 한 추가 디스크 공간이 필요 하며 **tempdb** 시스템 데이터베이스입니다. 모든 사용자 데이터 및 로그 파일에 대해 autogrow를 ON으로 설정 좋습니다 리소스 업그레이드 및 후속 프로덕션 작업 중에 크기 증가 수용할 수 있도록 하며 **tempdb** 업그레이드 하기 전에 데이터 및 로그 파일입니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179650"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181793"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>새 역할 할당: 역할 할당 편집 페이지(보고서 관리자)
   새 역할 할당 또는 역할 할당 편집 페이지를 사용하여 보고서 서버 항목 및 작업에 대한 권한을 부여할 수 있습니다. 보고서 서버에 액세스해야 하는 각 사용자에게는 액세스의 수준을 정의하는 역할 할당이 필요합니다. 루트 노드 또는 특정 보고서, 모델, 폴더, 리소스 또는 공유 데이터 원본에 대해 역할 할당을 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보안은 항목에 적용하는 역할 할당을 통해 적용됩니다. 역할 할당에 따라 역할 정의가 그룹이나 사용자에 대응되며 각 역할 정의는 그룹이나 사용자가 특정 항목과 관련하여 수행할 수 있는 태스크를 식별합니다.  

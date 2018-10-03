@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156043"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
   데이터 기반 구독을 정의하려면 먼저 구독 데이터를 제공하는 데이터 원본이 있어야 합니다. 이 단계에서는 이 자습서에 사용되는 구독 데이터를 저장할 소규모 데이터베이스를 만듭니다. 나중에 구독을 처리할 때 보고서 서버에서는 이 데이터를 검색하여 보고서 출력, 배달 옵션 및 보고서 표시 형식을 사용자 지정하는 데 사용합니다.  

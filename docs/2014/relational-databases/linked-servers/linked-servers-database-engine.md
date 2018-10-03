@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], linked servers
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bcb1df0fdccee488bfdfeaae99f16f567618afd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa47617e59e750fba5ea3d985781ca5510eb455b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256659"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193163"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스 외부의 OLE DB 데이터 원본에 대해 명령을 실행할 수 있도록 연결된 서버를 구성합니다. 일반적으로 연결된 서버는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 다른 인스턴스 또는 Oracle과 같은 다른 데이터베이스 제품에 있는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]문을 실행할 수 있도록 구성됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access 및 Excel을 포함한 많은 유형의 OLE DB 데이터 원본을 연결된 서버로 구성할 수 있습니다. 연결된 서버에는 다음과 같은 이점이 있습니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37256659"
   
 -   다양한 데이터 원본을 유사하게 처리할 수 있습니다.  
   
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 사용하거나 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 문을 사용하여 연결된 서버를 구성할 수 있습니다. OLE DB Provider에 따라 필요한 매개 변수의 유형과 개수가 크게 다릅니다. 예를 들어 일부 공급자는 [sp_addlinkedsrvlogin&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)인스턴스 외부의 OLE DB 데이터 원본에 대해 명령을 실행할 수 있도록 연결된 서버를 구성합니다. 일부 OLE DB Provider는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 통해 OLE DB 원본에서 데이터를 업데이트하도록 허용합니다. 다른 일부 공급자는 읽기 전용 데이터 액세스만 제공합니다. 각 OLE DB Provider에 대한 자세한 내용은 해당 OLE DB Provider에 대한 설명서를 참조하십시오.  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 사용하거나 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 문을 사용하여 연결된 서버를 구성할 수 있습니다. OLE DB Provider에 따라 필요한 매개 변수의 유형과 개수가 크게 다릅니다. 예를 들어 일부 공급자는 [sp_addlinkedsrvlogin&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)인스턴스 외부의 OLE DB 데이터 원본에 대해 명령을 실행할 수 있도록 연결된 서버를 구성합니다. 일부 OLE DB Provider는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 통해 OLE DB 원본에서 데이터를 업데이트하도록 허용합니다. 다른 일부 공급자는 읽기 전용 데이터 액세스만 제공합니다. 각 OLE DB Provider에 대한 자세한 내용은 해당 OLE DB Provider에 대한 설명서를 참조하십시오.  
   
 ## <a name="linked-server-components"></a>연결된 서버 구성 요소  
  연결된 서버 정의는 다음과 같은 개체를 지정합니다.  
@@ -50,7 +47,7 @@ ms.locfileid: "37256659"
   
  *OLE DB Provider* 는 특정 데이터 원본과 상호 작용하고 관리하는 DLL입니다. *OLE DB 데이터 원본* 은 OLE DB를 통해 액세스할 수 있는 특정 데이터베이스를 식별합니다. 연결된 서버 정의를 통해 쿼리되는 데이터 원본은 일반적으로 데이터베이스이지만 OLE DB Provider에는 여러 파일 및 파일 형식이 존재합니다. 여기에는 텍스트 파일, 스프레드시트 데이터 및 전체 텍스트 내용의 검색 결과가 포함됩니다.  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(PROGID: SQLNCLI11)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 공식적인 OLE DB 공급자입니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(PROGID: SQLNCLI11)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 공식적인 OLE DB 공급자입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리는 필수 OLE DB 인터페이스를 구현하는 모든 OLE DB Provider에서 실행되도록 디자인되었습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider와 다른 특정 공급자에 대해서만 테스트되었습니다.  

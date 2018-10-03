@@ -1,12 +1,10 @@
 ---
-title: 준비 된 실행 | Microsoft Docs
+title: 준비 된 실행 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deferred statement preparation
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb164a8aef2cba749d4b9b22ee873a1638ea9108
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 508d4083549cf1c6db6209be08d23b3fad054845
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207943"
 ---
 # <a name="prepared-execution"></a>준비된 실행
   ODBC API에서는 반복적인 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 실행과 관련한 구문 분석 및 컴파일 오버헤드를 줄이는 한 가지 방법으로 준비된 실행을 정의합니다. 응용 프로그램은 SQL 문이 포함된 문자열을 작성한 다음 두 단계로 실행합니다. 호출한 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360) 를 구문 분석 하 고 하 여 실행 계획으로 컴파일된 문이 한 번의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 그런 다음 호출 **SQLExecute** 준비 된 실행 계획의 각 실행에 대 한 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 응용 프로그램에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  

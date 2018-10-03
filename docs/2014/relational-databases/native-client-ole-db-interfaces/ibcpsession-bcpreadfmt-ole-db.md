@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPReadFmt (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa0f1501955db61889bb437e545cda95dfe8b31f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141147"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt(OLE DB)
   서식 파일에서 각 열의 서식 정보를 읽습니다.  
@@ -38,11 +35,11 @@ const wchar_t *pwszFormatFile);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 합니다 **BCPReadFmt** 데이터 파일의 데이터 형식을 지정 하는 서식 파일에서 데이터를 읽기 위한 메서드를 사용 합니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. 지 원하는 서식 파일 버전을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 BCP는 6.0 이상 버전.  
+ **BCPReadFmt** 메서드는 데이터 파일의 데이터 형식을 지정하는 서식 파일에서 데이터를 읽을 때 사용됩니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. 지 원하는 서식 파일 버전을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 BCP는 6.0 이상 버전.  
   
- 후는 **BCPReadFmt** 메서드 형식 값을 읽고을 적절 하 게 호출 합니다 [ibcpsession:: Bcpcolumns](ibcpsession-bcpcolumns-ole-db.md) 하 고 [ibcpsession:: Bcpcolfmt](ibcpsession-bcpcolfmt-ole-db.md) 메서드. 따라서 사용자가 서식 파일의 구문을 분석하여 메서드를 호출할 필요가 없습니다.  
+ **BCPReadFmt** 메서드는 형식 값을 읽은 후 [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) 및 [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) 메서드를 적절히 호출합니다. 따라서 사용자가 서식 파일의 구문을 분석하여 메서드를 호출할 필요가 없습니다.  
   
- 서식 파일을 저장 하려면 호출을 [ibcpsession:: Bcpwritefmt](ibcpsession-bcpwritefmt-ole-db.md) 메서드. 에 대 한 호출을 **BCPReadFmt** 메서드는 저장 된 서식을 참조할 수 있습니다. 대량 복사 유틸리티 또는 (**bcp**)에서 참조할 수 있는 파일에서 사용자 정의 데이터 형식을 저장할 수는 **BCPReadFmt** 메서드.  
+ 서식 파일을 저장하려면 [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) 메서드를 호출합니다. **BCPReadFmt** 메서드를 호출할 때 저장된 형식을 참조할 수 있습니다. 또한 대량 복사 유틸리티(**bcp**)로 사용자 정의 데이터 형식을 **BCPReadFmt** 메서드가 참조할 수 있는 파일에 저장할 수 있습니다.  
   
  `BCP_OPTION_DELAYREADFMT` 의 값을 *eOption* 의 매개 변수 [ibcpsession:: Bcpcontrol](ibcpsession-bcpcontrol-ole-db.md) ibcpsession:: Bcpreadfmt의 동작을 수정 합니다.  
   
@@ -55,13 +52,13 @@ const wchar_t *pwszFormatFile);
  메서드가 성공했습니다.  
   
  E_FAIL  
- 자세한 정보 사용에 대 한 공급자 관련 오류가 발생 합니다 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스입니다.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스를 사용하세요.  
   
  E_OUTOFMEMORY  
  메모리 부족 오류가 발생했습니다.  
   
  E_UNEXPECTED  
- 예기치 않은 메서드가 호출되었습니다. 예를 들어 합니다 [ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md) 메서드가이 메서드를 호출 하기 전에 호출 되지 않았습니다.  
+ 예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   

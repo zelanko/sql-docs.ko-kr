@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 13
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d28d430ee7401fcdf248d6a5d13da558519a71ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196813"
 ---
-# SQL Server 2014 개발자 참조
+# <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 개발자 참조
   다음 기능과 기술을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하는 응용 프로그램을 개발할 수 있습니다.  
   
-## 프로그래밍 참조 섹션  
+## <a name="programming-reference-sections"></a>프로그래밍 참조 섹션  
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [공용 언어 런타임 &#40;CLR&#41; 통합 프로그래밍 개요](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [네이티브 XML](http://technet.microsoft.com/library/ms191274.aspx)  
@@ -62,7 +59,7 @@ ms.locfileid: "37192903"
   
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [Reporting Services 개발자 가이드](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
-## 관련 프로그래밍 자료  
+## <a name="other-programming-resources"></a>관련 프로그래밍 자료  
  데이터 액세스 응용 프로그램을 개발하기 위해서는 다음 기술을 하나 이상 사용해야 합니다.  
   
  [Visual Studio에서 데이터 액세스](http://go.microsoft.com/fwlink/?LinkId=129902)  

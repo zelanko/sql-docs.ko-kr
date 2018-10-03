@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 582fd0ee38209100ee46eca124d105e44034d016
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66a8adfa8d9e060f316062e033be23ba8f5dbbc4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186823"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 함께 제공되는 모든 COM 기반 해결 프로그램은 업데이트 충돌을 처리하고 표시가 된 곳에서 삽입 및 삭제 충돌도 처리합니다. 모든 해결 프로그램은 열 추적을 처리하며 대부분의 경우 행 추적도 처리합니다. 이러한 해결 프로그램 및 다른 모든 COM 기반 해결 프로그램은 처리할 수 있는 충돌 유형을 선언하며 병합 에이전트는 다른 모든 충돌 유형에 대해 기본 해결 프로그램을 사용합니다.  
@@ -33,7 +30,7 @@ ms.locfileid: "37242343"
   
  다음 표에서는 특정 해결 프로그램의 특성을 설명합니다.  
   
-|속성|필수 입력|Description|주석|  
+|이름|필수 입력|Description|주석|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가산성 충돌 해결 프로그램|합계할 행 이름입니다. **int**, **smallint**, **numeric**과 같은 산술 데이터 형식이어야 합니다.|충돌 시 적용되는 내용은 우선 순위 값으로 결정합니다. 지정된 열의 값은 원본 및 대상 열 값의 합계로 설정됩니다. 하나를 NULL로 설정하면, 모두 다른 열의 값으로 설정됩니다.|업데이트 충돌 및 열 추적만 지원합니다.|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 평균 충돌 해결 프로그램|평균할 열 이름입니다. **int**, **smallint**, **numeric**과 같은 산술 데이터 형식이어야 합니다.|충돌 시 적용되는 내용은 우선 순위 값으로 결정합니다. 결과 열 값은 원본 및 대상 열 값의 평균으로 설정됩니다. 하나를 NULL로 설정하면, 모두 다른 열의 값으로 설정됩니다.|업데이트 충돌 및 열 추적만 지원합니다.|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86ac24e1c67d062a0b9d0c2b9d2963bd9b8a479d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148003"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>콜 센터 모델에 대한 예측 만들기(중급 데이터 마이닝 자습서)
   교대조, 전화 상담원 수, 호출 및 서비스 등급에 대한 몇 가지 사항을 배웠으므로 이제 비즈니스 분석 및 계획에 사용할 수 있는 일부 예측 쿼리를 만들 준비가 되었습니다. 먼저 탐구 모델에서 일부 예측을 만들어 몇 가지 가정을 테스트합니다. 다음으로 로지스틱 회귀 모델을 사용하여 대량 예측을 만듭니다.  

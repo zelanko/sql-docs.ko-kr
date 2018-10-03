@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting hierarchies
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
-caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183983"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>사용자 정의 계층 추가 또는 삭제
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 차원 디자이너에 있는 **차원 구조** 탭의 차원에서 사용자 정의 계층을 추가하거나 제거할 수 있습니다.  

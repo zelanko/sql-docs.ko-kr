@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3953936761ac031a352ef17544e4818c276ab54a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143651"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>1단원: Windows Azure 저장소 계정 및 컨테이너 만들기
   Windows Azure 저장소에 SQL Server 데이터 파일을 저장하려면 먼저 Windows Azure 저장소 계정, BLOB 컨테이너 및 공유 액세스 서명을 만들어야 합니다. 1단원에서는 Windows Azure 관리 포털에 로그인하여 저장소 계정, BLOB 컨테이너 및 공유 액세스 서명을 만드는 과정을 단계별로 안내합니다.  

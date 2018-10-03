@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191743"
 ---
 # <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
   테이블 형식 모델에서 관계는 두 데이터 테이블 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
@@ -50,7 +47,7 @@ ms.locfileid: "37314543"
 ##  <a name="what"></a> 이점  
  관계는 각 테이블에 있는 하나 이상의 열에 기반을 둔 두 데이터 테이블 간의 연결입니다. 관계가 어떤 점에서 유용한지 궁금하다면 여러분이 기업에서 고객 주문 데이터를 추적하는 업무를 담당하고 있다고 가정해 보십시오. 관계를 사용하면 다음과 같은 구조를 지닌 단일 테이블에서 모든 데이터를 추적할 수 있습니다.  
   
-|CustomerID|속성|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
+|CustomerID|이름|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -60,7 +57,7 @@ ms.locfileid: "37314543"
   
 ### <a name="customers"></a>고객  
   
-|[CustomerID]|속성|EMail|  
+|[CustomerID]|이름|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  

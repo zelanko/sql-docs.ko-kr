@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 23f76cbefd4bd9c944928e2875dc59fe6f177955
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5236962c79175c67eabc854652394e73128bf834
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185370"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148833"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>7단원: KPI(핵심 성과 지표) 정의
   이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 KPI(핵심 성과 지표)를 정의하는 방법을 배웁니다. KPI는 비즈니스를 측정하는 서버 쪽 계산을 정의하기 위한 프레임워크를 제공하며 결과 정보의 표시 방식을 표준화합니다. KPI는 보고서, 포털 및 대시보드에 표시할 수 있으며 데이터 액세스 API, [!INCLUDE[msCoName](../includes/msconame-md.md)] 도구 및 타사 도구를 통해 표시할 수 있습니다. KPI는 정규 측정값 및 기타 MDX(Multidimensional Expressions) 식에 대한 메타데이터 래퍼입니다. 자세한 내용은 [다차원 모델의 KPI&#40;핵심 성과 지표&#41;](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)를 참조하세요.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - UpgradeAdvisorWizardCmd utility
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
-caps.latest.revision: 25
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150773"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>업그레이드 관리자 실행(명령 프롬프트)
   사용 된 **UpgradeAdvisorWizardCmd** 명령 프롬프트에서 업그레이드 관리자를 실행 하는 유틸리티입니다. XML 형식, 또는 쉼표로 구분된 값을 사용하는 파일로 결과를 받을 수 있습니다.  
@@ -60,10 +57,10 @@ where <server_info> is any combination of the following:
  **-인스턴스** *instance_name*  
  분석할 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 매개 변수를 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 검색되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대한 값은 MSSQLSERVER입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
- **-ASInstance***이름  *  
+ **-ASInstance***이름*   
  분석할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 값을 지정하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 검색되지 않습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대한 값은 MSSQLServerOLAPService입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
- **-RSInstance***서버  *  
+ **-RSInstance***서버*   
  분석할 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 값을 지정하지 않으면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 검색되지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 기본 인스턴스에 대한 값은 ReportServer입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
  **-SqlUser** *login_id*  

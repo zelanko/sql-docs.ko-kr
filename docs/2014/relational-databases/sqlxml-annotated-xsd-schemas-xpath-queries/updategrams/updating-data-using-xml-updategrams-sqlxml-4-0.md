@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a8ab9c6c57f2cb9aecfdbe15b2ea2e6cbeb9887
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251745"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222845"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
   기존 데이터를 업데이트할 때 둘 다 지정 해야 하는  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 에 지정 된 요소를  **\<하기 전에 >** 하 고  **\<후 >** 블록 원하는 변경 내용을 설명 합니다. Updategram에 지정 된 요소를 사용 합니다  **\<하기 전에 >** 데이터베이스의 기존 레코드를 식별 하는 블록입니다. 해당 요소는  **\<후 >** 블록의 레코드 업데이트 작업을 실행 한 후 표시 되는 방법을 나타냅니다. Updategram은이 정보를 통해 일치 하는 SQL 문의 만듭니다는  **\<후 >** 블록입니다. 그런 다음 Updategram은 이 문을 사용하여 데이터베이스를 업데이트합니다.  

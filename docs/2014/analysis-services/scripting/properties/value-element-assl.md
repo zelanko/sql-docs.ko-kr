@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bdf16f2f9ce7415d396cf5f4110fd3127e04774
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d338b8607d8515bf89183eeadd24252c55af8fc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218193"
 ---
 # <a name="value-element-assl"></a>Value 요소(ASSL)
   부모 요소의 값을 포함합니다.  
@@ -50,7 +47,7 @@ ms.locfileid: "37201993"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  
@@ -64,7 +61,7 @@ ms.locfileid: "37201993"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [주석](../objects/annotation-element-assl.md), [Kpi](../objects/kpi-element-assl.md)를 [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md)합니다 [ServerProperty](../objects/serverproperty-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Value` 요소는 부모 개체와 연결된 값을 포함합니다. `Value` 요소의 필요한 값은 다음 표와 같이 부모 요소에 따라 달라집니다.  

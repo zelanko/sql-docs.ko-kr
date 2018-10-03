@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef7898589335192022fa83095f19a72ee4549798
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209503"
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 집합에 대한 캐시를 미리 로드할 수 있습니다.  
@@ -90,7 +87,7 @@ ms.locfileid: "37253915"
   
 8.  **다음**을 클릭합니다.  
   
-9. 구독자 데이터를 검색하는 쿼리나 명령을 지정합니다. 처리하는 데 시간이 오래 걸리는 쿼리에 대해 제한 시간 값을 늘립니다(옵션). 예를 들어:  
+9. 구독자 데이터를 검색하는 쿼리나 명령을 지정합니다. 처리하는 데 시간이 오래 걸리는 쿼리에 대해 제한 시간 값을 늘립니다(옵션). 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     Select * from UserInfo  

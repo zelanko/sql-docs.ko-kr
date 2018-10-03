@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166103"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 연결 유형(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint PowerPivot 갤러리에 게시된 PowerPivot 통합 문서에서 데이터를 검색할 수 있습니다.  

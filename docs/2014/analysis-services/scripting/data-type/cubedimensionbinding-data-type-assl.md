@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimensionBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimensionBinding data type
 ms.assetid: 7288e345-4a3e-4197-82e9-9daa38f6e928
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e511f26166e7f8457b2423df2bd3030e695edde1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8fc7a97ebe67e9461a085e6bafe076216f36d63e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153231"
 ---
 # <a name="cubedimensionbinding-data-type-assl"></a>CubeDimensionBinding 데이터 형식(ASSL)
   바인딩을 나타내는 파생된 데이터 형식을 정의 [차원](../objects/dimension-element-assl.md)를 [측정값](../objects/measure-element-assl.md), 또는 [MiningModel](../objects/miningmodel-element-assl.md) 큐브 차원에 대 한 요소입니다.  
@@ -53,13 +50,13 @@ ms.locfileid: "37157344"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[바인딩](binding-data-type-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[CubeDimensionID](../properties/id-element-assl.md)하십시오 [CubeID](../properties/cubeid-element-assl.md)를 [DataSourceID](../properties/datasourceid-element-assl.md), [필터](../properties/filter-element-trace-assl.md)|  
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218183"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>테이블 가져오기 마법사 참조(SSAS)
   이 섹션에서는 **테이블 가져오기 마법사**에 대한 도움말을 제공합니다. 이 마법사를 사용하여 다양한 데이터 원본에서 데이터를 가져올 수 있습니다. 모델 디자이너에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

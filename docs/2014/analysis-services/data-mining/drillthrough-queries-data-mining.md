@@ -4,37 +4,34 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AllowDrillThrough property
 - drillthrough [Analysis Services]
 - drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f49320313875576cad06168564344e4837ce03b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f2371008e76b6315edb24cb92134fcca014a498
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149593"
 ---
 # <a name="drillthrough-queries-data-mining"></a>드릴스루 쿼리(데이터 마이닝)
   *드릴스루 쿼리* 를 사용하면 마이닝 모델로 쿼리를 전송하여 기본 사례 또는 구조 데이터에서 세부 사항을 검색할 수 있습니다. 드릴스루는 모델 학습에 사용된 사례와 모델 테스트에 사용된 사례를 비교해서 보거나 사례 데이터에서 추가 정보를 확인하려는 경우에 유용합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 다음과 같은 두 가지 드릴스루 옵션을 제공합니다.  
   
--    **모델 사례**로 드릴스루  
+-   **모델 사례**로 드릴스루  
   
      모델 사례로의 드릴스루는 의사 결정 트리의 분기 또는 클러스터와 같은 모델의 특정 패턴에서 이동하여 개별 사례에 대한 자세한 정보를 보려는 경우에 사용됩니다.  
   
--    **구조 사례**로 드릴스루  
+-   **구조 사례**로 드릴스루  
   
      구조 사례로의 드릴스루는 구조에 모델에서 사용할 수 없는 정보가 포함된 경우에 사용됩니다. 예를 들어 고객 연락처 정보가 구조에 포함되어 있더라도 클러스터링 모델에 해당 데이터는 사용하지 않을 것입니다. 그러나 모델을 작성한 후 특정 클러스터로 그룹화된 고객에 대한 연락처 정보를 검색할 수 있습니다.  
   

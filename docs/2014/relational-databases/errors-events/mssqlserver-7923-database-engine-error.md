@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7923 (Database Engine error)
 ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69771147c2409413fae69c052ab908b7e90468d5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e8dc32ad3061f4991cc38a136e2346e5087a93d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181343"
 ---
 # <a name="mssqlserver7923"></a>MSSQLSERVER_7923
     
@@ -39,6 +36,6 @@ ms.locfileid: "37426402"
  DBCC CHECKALLOC 명령의 정보 메시지입니다. 테이블의 모든 할당 단위에 대한 할당 정보 목록을 포함하며 이 목록의 맨 위에 테이블 이름 및 ID가 표시됩니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- InclusionThresholdSetting  
+ 없음  
   
   

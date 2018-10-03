@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bbe4aa41c05d384a29935d80e39862c1264a254
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96e4cf621a1c0f7f701012ed479797fc450d1533
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131573"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>최대 파일 업로드 크기 구성(SharePoint용 PowerPivot)
   PowerPivot 통합 문서에 많은 데이터가 포함되어 SharePoint 업로드에 대해 허용되는 최대 파일 크기가 초과되는 경우가 많습니다. 이 상한을 초과하는 파일을 업로드하려고 하면 SharePoint에서  

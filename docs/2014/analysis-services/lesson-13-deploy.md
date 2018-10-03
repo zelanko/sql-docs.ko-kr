@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181040"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196233"
 ---
 # <a name="lesson-14-deploy"></a>14단원: 배포
   이 단원에서는 테이블 형식 모드로 실행되는 Analysis Services의 배포 서버 인스턴스를 지정하고 배포할 모델의 이름을 지정하여 배포 속성을 구성합니다. 그 다음에는 모델을 해당 인스턴스에 배포합니다. 모델을 배포한 후 사용자는 보고 클라이언트 응용 프로그램을 사용하여 모델에 연결할 수 있습니다. 자세한 내용은 [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)를 참조하세요.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c8b90fde2ce956600f4935007bc6800030586a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5fd239a71c551c9fc3d5be3dd5fe0ae5aa772308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144713"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>위치 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하여 원하는 파일을 포함하는 폴더를 찾고 선택할 수 있습니다. 이 대화 상자에서는 호출하는 대화 상자로 선택한 폴더의 경로를 반환합니다. 다음과 같은 방법으로 이 대화 상자에 액세스할 수 있습니다.  

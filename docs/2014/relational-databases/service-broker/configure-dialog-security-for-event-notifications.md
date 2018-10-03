@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e129d7b64d079104a2378fb24dcc0419dd4e8647
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 754cec388eb6eb6ce30ae600b23a9397cc84f205
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191403"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>이벤트 알림에 대한 대화 보안 구성
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성해야 합니다. 대화 보안은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 의 높은 수준의 대화 보안 모델에 따라 수동으로 구성해야 합니다. 높은 수준의 보안 모델은 원격 서버와 주고 받는 메시지의 암호화 및 암호 해독을 가능하게 합니다. 이벤트 알림은 한 방향으로 전송되지만 오류와 같은 다른 메시지는 반대 방향으로도 반환됩니다.  
@@ -73,9 +70,9 @@ ms.locfileid: "37266219"
 |**master** 데이터베이스에 대한 마스터 키가 없으면 [마스터 키를 만듭니다](/sql/t-sql/statements/create-master-key-transact-sql).|**master** 데이터베이스에 대한 마스터 키가 없으면 마스터 키를 만듭니다.|  
 |데이터베이스를 인증하는[인증서를 만듭니다](/sql/t-sql/statements/create-certificate-transact-sql) .|데이터베이스를 인증하는 인증서를 만듭니다.|  
 |대상 서버가 액세스할 수 있는 파일에[인증서를 백업합니다](/sql/t-sql/statements/backup-certificate-transact-sql) .|원본 서버가 액세스할 수 있는 파일에 인증서를 백업합니다.|  
-|[끝점을 만들고](/sql/t-sql/statements/create-endpoint-transact-sql)합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|끝점을 만들고 합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|  
+|[엔드포인트를 만들고](/sql/t-sql/statements/create-endpoint-transact-sql)합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|엔드포인트를 만들고 합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|  
 |[로그인을 만들고](/sql/t-sql/statements/create-login-transact-sql)대상 서버의 로그인을 지정합니다.|로그인을 만들고 원본 서버의 로그인을 지정합니다.|  
-|대상 인증자 로그인에 끝점에 대한[CONNECT 권한을 부여합니다](/sql/t-sql/statements/grant-transact-sql) .|원본 인증자 로그인에 끝점에 대한 CONNECT 권한을 부여합니다.|  
+|대상 인증자 로그인에 엔드포인트에 대한[CONNECT 권한을 부여합니다](/sql/t-sql/statements/grant-transact-sql) .|원본 인증자 로그인에 엔드포인트에 대한 CONNECT 권한을 부여합니다.|  
 |[사용자를 만들고](/sql/t-sql/statements/create-user-transact-sql)대상 인증자 로그인을 지정합니다.|사용자를 만들고 원본 인증자 로그인을 지정합니다.|  
   
  **5단계: 서버 수준의 인증에 대한 인증서를 공유하고 이벤트 알림을 만듭니다.**  

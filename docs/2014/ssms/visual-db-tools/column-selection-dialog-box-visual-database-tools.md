@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d925d1ded18b507148004fb6d47708fb4a28061d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 13baa153f92d3edbbee204f1d526e4b744d201d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168753"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>열 선택 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 데이터베이스 다이어그램에서 테이블에 대한 사용자 지정 보기를 변경할 수 있습니다. 사용자 지정 보기에는 사용자가 지정한 열 속성만 표시됩니다.  

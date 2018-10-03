@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7021ff628c0b5da5b95c0eacf141596ecf63e41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143323"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>웹 사이트 만들기 대화 상자(Master Data Services 구성 관리자)
   **웹 사이트 만들기** 대화 상자를 사용하여 로컬 컴퓨터에서 새 웹 사이트를 만들 수 있습니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 웹 사이트를 만든 경우 해당 사이트는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램으로 구성된 루트 응용 프로그램이 있는 로컬 컴퓨터의 IIS(인터넷 정보 서비스)에 추가됩니다. 또한 새 응용 프로그램 풀이 만들어지고 웹 응용 프로그램이 해당 응용 프로그램 풀에 배치됩니다.  

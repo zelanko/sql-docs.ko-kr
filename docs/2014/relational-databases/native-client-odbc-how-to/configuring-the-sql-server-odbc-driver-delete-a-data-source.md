@@ -1,26 +1,23 @@
 ---
-title: 데이터 원본 (ODBC)를 삭제 합니다. | Microsoft Docs
+title: 데이터 원본 (ODBC)를 삭제 합니다. | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415192"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144093"
 ---
 # <a name="delete-a-data-source-odbc"></a>데이터 원본 삭제(ODBC)
   ODBC 관리자를 프로그래밍 방식으로 사용 하 여 데이터 원본을 삭제할 수 있습니다 (사용 하 여 [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), 또는 (경우 파일 데이터 원본 이름) 파일을 삭제 하 여 합니다.  

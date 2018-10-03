@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 500fa6a1e1ffe437d5c8faa0da99653c54d4228e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140206"
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 스키마 행 집합
   다음 OLE DB 스키마 행 집합은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자가 지원합니다. 사용 하 여는 `DISCOVER_ENUMERATORS` 포함 된 행 집합을 [검색](../../xmla/xml-elements-methods-discover.md) 특정 데이터 원본 공급자는 행 집합을 지원 하는지 여부를 확인 하는 메서드.  

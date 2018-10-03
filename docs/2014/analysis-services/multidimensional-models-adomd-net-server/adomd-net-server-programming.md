@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8b5c1f71f794b1bb947a4f1840f6ea1c6b990aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 22cbeffa7a313c043467c8ff95074ac7ed87b500
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140234"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 서버 프로그래밍
   ADOMD.NET의 ADOMD.NET 서버 구성 요소는 `Microsoft.AnalysisServices.AdomdServer` 네임스페이스(msmgdsrv.dll) 안에 있습니다. 이러한 서버 구성 요소를 사용 하 여 사용자 지정 MDX (Multidimensional Expressions) 함수 및 인스턴스에서 실행 되는 저장된 프로시저를 만듭니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 서버 개체는 큐브 및 마이닝 모델을 쿼리하고 지정된 컨텍스트에서 식을 평가하는 기능을 제공합니다. 사용자 지정 함수 및 저장 프로시저를 만들면 실행 속도가 빨라지고 중앙 집중식 배포가 가능하며 관리가 용이해집니다.  

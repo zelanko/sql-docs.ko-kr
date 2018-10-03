@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.addreference.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add Reference dialog box
 ms.assetid: 457958c4-6baa-474d-99a0-34c195ceba09
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0593f8a598894bbe08fb4657c980b208d8f29a64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2a44c1f7a37cc7e7e010ea15c72d35255b443e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244082"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174183"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>참조 추가 대화 상자(Analysis Services - 다차원 데이터)
   **의** 참조 추가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 개발 프로젝트에 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 어셈블리 또는 다른 프로젝트에 대한 참조를 추가할 수 있습니다. **솔루션 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트의 **어셈블리** 폴더를 마우스 오른쪽 단추로 클릭한 다음 상황에 맞는 메뉴에서 **새 어셈블리 참조**를 선택하여 **참조 추가** 대화 상자를 표시할 수 있습니다.  

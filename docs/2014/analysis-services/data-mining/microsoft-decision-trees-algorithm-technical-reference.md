@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74dd3b1548eae75da210259d81c711348da713f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183410"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190583"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지원하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  
@@ -153,7 +150,7 @@ ms.locfileid: "37183410"
  *SCORE_METHOD*  
  분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
-|ID|속성|  
+|ID|이름|  
 |--------|----------|  
 |1|Entropy|  
 |3|Bayesian with K2 Prior|  
@@ -166,7 +163,7 @@ ms.locfileid: "37183410"
  *SPLIT_METHOD*  
  노드를 분할하는 데 사용되는 메서드를 결정합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
-|ID|속성|  
+|ID|이름|  
 |--------|----------|  
 |1|**Binary:** 특성의 실제 값 수에 관계없이 트리가 두 개의 분리로 분할됨을 나타냅니다.|  
 |2|**Complete:** 트리에서 특성 값 수만큼의 분할을 만들 수 있음을 나타냅니다.|  

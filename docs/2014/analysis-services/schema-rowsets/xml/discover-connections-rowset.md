@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02c834a399f2dc6056831f2d4f84b65deb5ba503
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3718045bc6fdcc6d83fd862bbf1f45dce96492dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171473"
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS 행 집합
   서버에서 현재 열린 연결에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
@@ -34,17 +31,17 @@ ms.locfileid: "37194303"
   
 |열 이름|유형 표시기|Restrictions|Description|  
 |-----------------|--------------------|------------------|-----------------|  
-|`CONNECTION_ID`|`DBTYPE_I4`|예|연결을 식별하는 고유 번호입니다.|  
-|`CONNECTION_USER_NAME`|`DBTYPE_WSTR`|예|연결 사용자 이름입니다.|  
-|`CONNECTION_IMPERSONATED_USER_NAME`|`DBTYPE_WSTR`|예|나중에 사용하도록 예약되어 있습니다. Analysis Services는 항상 CONNECTION_IMPERSONATED_USER_NAME 값으로 NULL을 반환합니다.|  
-|`CONNECTION_HOST_NAME`|`DBTYPE_WSTR`|예|연결을 시작한 컴퓨터의 이름입니다.|  
+|`CONNECTION_ID`|`DBTYPE_I4`|사용자 계정 컨트롤|연결을 식별하는 고유 번호입니다.|  
+|`CONNECTION_USER_NAME`|`DBTYPE_WSTR`|사용자 계정 컨트롤|연결 사용자 이름입니다.|  
+|`CONNECTION_IMPERSONATED_USER_NAME`|`DBTYPE_WSTR`|사용자 계정 컨트롤|나중에 사용하도록 예약되어 있습니다. Analysis Services는 항상 CONNECTION_IMPERSONATED_USER_NAME 값으로 NULL을 반환합니다.|  
+|`CONNECTION_HOST_NAME`|`DBTYPE_WSTR`|사용자 계정 컨트롤|연결을 시작한 컴퓨터의 이름입니다.|  
 |`CONNECTION_HOST_APPLICATION`|`DBTYPE_WSTR`||연결을 시작한 응용 프로그램의 이름입니다.|  
 |`CONNECTION_START_TIME`|`DBTYPE_DBTIMESTAMP`||연결이 시작된 서버 UTC 날짜 및 시간입니다.|  
-|`CONNECTION_ELAPSED_TIME_MS`|`DBTYPE_I8`|예|연결이 시작된 이후에 경과된 시간(밀리초)입니다.|  
+|`CONNECTION_ELAPSED_TIME_MS`|`DBTYPE_I8`|사용자 계정 컨트롤|연결이 시작된 이후에 경과된 시간(밀리초)입니다.|  
 |`CONNECTION_LAST_COMMAND_START_TIME`|`DBTYPE_DBTIMESTAMP`||마지막 명령의 실행이 시작된 서버 UTC 날짜 및 시간입니다.|  
 |`CONNECTION_LAST_COMMAND_END_TIME`|`DBTYPE_DBTIMESTAMP`||마지막 명령의 실행을 마친 서버 UTC 날짜 및 시간입니다.|  
-|`CONNECTION_LAST_COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`|예|마지막 명령 실행이 끝난 이후에 경과된 시간(밀리초)입니다.|  
-|`CONNECTION_IDLE_TIME_MS`|`DBTYPE_I8`|예|연결이 시작된 이후의 유휴 시간(밀리초)입니다.|  
+|`CONNECTION_LAST_COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`|사용자 계정 컨트롤|마지막 명령 실행이 끝난 이후에 경과된 시간(밀리초)입니다.|  
+|`CONNECTION_IDLE_TIME_MS`|`DBTYPE_I8`|사용자 계정 컨트롤|연결이 시작된 이후의 유휴 시간(밀리초)입니다.|  
 |`CONNECTION_BYTES_SENT`|`DBTYPE_I8`||연결이 시작된 이후에 연결이 보낸 누적 바이트 수입니다.|  
 |`CONNECTION_DATA_BYTES_SENT`|`DBTYPE_I8`||연결이 시작된 이후에 연결이 보낸 누적 데이터 바이트 수입니다.<br /><br /> 연결 내에서 압축된 데이터 이동입니다. 이 값은 보낸 확장 데이터를 나타냅니다.|  
 |`CONNECTION_BYTES_RECEIVED`|`DBTYPE_I8`||연결이 시작된 이후에 연결이 받은 누적 바이트 수입니다.|  

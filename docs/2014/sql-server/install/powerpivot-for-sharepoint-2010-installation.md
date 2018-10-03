@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: db5a6400ee6191c6be328857ea44365238adcab6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e44342686c8de426032a3f0147b867d6eb1b19e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202953"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>SharePoint 2010용 PowerPivot 설치
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]는 SharePoint에 게시하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 쿼리 처리 및 관리 제어를 제공하는 서버 구성 요소의 모음입니다. 서비스에는 Analysis Services 엔진 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스가 포함됩니다.  

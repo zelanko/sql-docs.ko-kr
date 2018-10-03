@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Attribute pane formats [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - formats [Analysis Services], Attribute pane
 - modifying Attribute pane format
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f11320a90742a987d1c4daf331219c722cd77ddf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49ee4726c0270f69122b50d61a2066ec0c165e60
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177979"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>차원 디자이너에서 트리, 목록 또는 표 형태로 특성 보기
   이 절차에서는 차원 디자이너의 특성 표시 방식을 변경하는 방법을 설명합니다.  
