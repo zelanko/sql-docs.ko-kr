@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], CLR event category
 - SQL Server event classes, CLR event category
 - CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 533ed6c436de4090a4a627be279ce91d207069a8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1ff98dd89bd634e715075ac122d34bd5c0ba9c6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648031"
 ---
 # <a name="clr-event-category"></a>CLR 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "43078516"
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |**성공**|**int**|어셈블리 로드의 성공(1) 또는 실패(0) 여부를 나타냅니다.|23|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|로드가 성공한 경우 "Assembly Load Succeeded" 그렇지 않으면 "Assembly Load Failed"입니다.|@shouldalert|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|로드가 성공한 경우 "Assembly Load Succeeded" 그렇지 않으면 "Assembly Load Failed"입니다.|1|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
