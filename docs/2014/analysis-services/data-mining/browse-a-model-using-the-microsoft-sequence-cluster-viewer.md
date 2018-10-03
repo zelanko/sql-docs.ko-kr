@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - sequence [Analysis Services]
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5571c8bc684a8d57f8696b3a5630170679c1cf63
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229473"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시퀀스 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 경로, 즉 *시퀀스*를 따라 연결할 수 있는 이벤트가 포함된 데이터 탐색 시 사용되는 시퀀스 분석 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)을 참조하세요.  

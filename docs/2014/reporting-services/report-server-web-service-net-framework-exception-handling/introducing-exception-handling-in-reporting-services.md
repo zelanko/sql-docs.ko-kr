@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], exception handling
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Report Server Web service, exception handling
 - XML Web service [Reporting Services], exception handling
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3c4ff1e27ada53361879335d90daeac5fc4f21be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03bade736ae1a52942d42a7b1b675077a3ba6e7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220003"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Reporting Services의 예외 처리 소개
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램이 보고서 서버 웹 서비스에서 처리할 수 없는 요청을 보낼 경우 이 서비스는 SOAP 예외를 클라이언트에 반환합니다. 보고서 서버 웹 서비스에서 throw된 예외에 대한 처리는 개발하는 응용 프로그램에서 중요한 부분입니다. 이러한 처리를 통해 오류 발생 시 사용자에게 유용한 정보를 반환할 수 있기 때문입니다.  

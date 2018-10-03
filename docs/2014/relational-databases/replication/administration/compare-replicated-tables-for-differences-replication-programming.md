@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tablediff utility
 - comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7c9f726c85c7b1334eaedd8c7c331872497e28b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3748c28fe790000dc01b73fddea01e00e9ef1b54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216063"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>복제된 테이블의 차이점 비교(복제 프로그래밍)
   아티클 유효성 검사는 게시자 및 구독자에서 테이블 아티클의 게시된 데이터가 일치하지 않는지 여부를 확인하는 데 사용됩니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../validate-replicated-data.md)를 참조하세요. 그러나 유효성 검사를 통해서는 성공 또는 실패 정보만 반환되고 원본 테이블과 대상 테이블의 차이점에 대한 정보는 제공되지 않습니다. **tablediff** 명령 프롬프트 유틸리티는 두 테이블 간의 세부 차이점 정보를 반환하며 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 생성하여 구독이 게시자의 데이터와 일치하게 할 수도 있습니다.  

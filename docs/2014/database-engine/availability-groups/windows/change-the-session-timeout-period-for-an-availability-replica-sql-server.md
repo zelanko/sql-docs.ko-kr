@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], session timeout
 - session timeout [SQL Server]
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56ecfa1e977f4d788a60fc687c2cb5ca5fd894c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ecb5aca2a8e9c4e41eeb78b5558bef5d3d9a4ff0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224143"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>가용성 복제본에 대한 세션 제한 시간 변경(SQL Server)
   이 항목에서는 AlwaysOn 가용성 복제본의 세션 제한 시간을 사용 하 여 구성 하는 방법에 설명 합니다 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]하십시오 [!INCLUDE[tsql](../../../includes/tsql-md.md)], 또는 PowerShell을 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]입니다. 세션 제한 시간은 가용성 복제본이 연결이 실패한 것으로 간주되기 전에 연결된 복제본에서 ping 응답을 받기 위해 기다리는 최대 시간(초)을 제어하는 복제본 속성입니다. 기본적으로 복제본은 ping 응답을 받기 위해 10초 동안 기다립니다. 이 복제본 속성은 지정된 보조 복제본과 가용성 그룹의 주 복제본 사이의 연결에만 적용됩니다. 세션 제한 시간에 대한 자세한 내용은 [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  

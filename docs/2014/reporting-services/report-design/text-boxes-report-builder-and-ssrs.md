@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10134"
@@ -15,16 +13,15 @@ f1_keywords:
 - "10120"
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ec2d4d435145a86e5f14e8110e40ef03d4c4a1cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19c2f599a00548ed85853720c0aad86d38950c74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222523"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>입력란(보고서 작성기 및 SSRS)
   일반적으로 입력란은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint 같이 화면상에서 텍스트가 들어 있는 독립 실행형 상자로 인식되는 경우가 많습니다. 보고서 작성기에도 이와 같은 입력란이 있으며, 여기에는 제목, 설명 및 레이블이나 식 기반의 동적 텍스트와 같은 리터럴 텍스트를 표시할 수 있습니다. 그러나 테이블 또는 행렬(테이블릭스 데이터 영역)의 모든 셀에는 보고서의 독립 실행형 입력란과 같은 방법으로 서식을 지정할 수 있는 입력란도 포함되어 있습니다.  

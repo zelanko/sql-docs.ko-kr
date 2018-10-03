@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5aac2ad5d164757a330bb5a5784bb6c99fb48fb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbd837c0dc28e1c083a14c21614d174580eb7b0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219923"
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
   SMO에서 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체는 `Microsoft.SqlServer.Management.Smo.Broker` 네임스페이스에 있기 때문에 Microsoft.SqlServer.Smo.dll에 대한 참조가 필요합니다. 클래스 정보를 지원하려면 Microsoft.SqlServer.ServiceBrokerEnum.dll에 대한 참조도 필요합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37210863"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceQueue> 개체는 메시지를 보내기 전과 메시지가 수신된 후 메시지를 저장합니다. 이 개체는 서비스 간의 비동기 통신을 지원하며 같은 대화 그룹의 메시지를 자동으로 잠그는 등의 기타 유용한 기능을 제공합니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> 개체는 대화에 대한 주소 지정 가능 끝점인 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 서비스를 나타냅니다. [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지는 한 서비스에서 다른 서비스로 전송됩니다. 서비스는 메시지를 보관할 큐를 지정하고 대상이 될 수 있는 서비스에 계약을 지정합니다.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService> 개체는 대화에 대한 주소 지정 가능 엔드포인트인 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 서비스를 나타냅니다. [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지는 한 서비스에서 다른 서비스로 전송됩니다. 서비스는 메시지를 보관할 큐를 지정하고 대상이 될 수 있는 서비스에 계약을 지정합니다.  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 개체는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)]가 원격 서비스와의 통신 시 사용하는 보안 및 인증 설정을 나타냅니다.  
   

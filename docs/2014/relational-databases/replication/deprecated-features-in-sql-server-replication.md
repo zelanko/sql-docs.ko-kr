@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server replication]
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
-caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eaed6b7988f9a0ea6f63fc8858c564adfb753bbd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e76f53f2a3163c69310d31dd03796ee694d9bc8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228960"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 복제에서 사용되지 않는 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 복제 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 사용되지 않는 기능을 새 응용 프로그램에서 사용하면 안 됩니다.  
@@ -30,8 +27,8 @@ ms.locfileid: "37278739"
   
 |기능|Description|  
 |-------------|-----------------|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 끝점이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]현재 버전의 두 주요 버전 내에 있는 경우에는 복제가 지원됩니다. 따라서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 대한 복제를 지원하지 않습니다.|  
-|[!INCLUDE[ssEW](../../includes/ssew-md.md)]|각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 끝점이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]현재 버전의 두 주요 버전 내에 있는 경우에는 복제가 지원됩니다. 따라서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 복제를 지원하지 않습니다.|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 버전의 두 주요 버전 내에 있는 경우에는 복제가 지원됩니다. 따라서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 대한 복제를 지원하지 않습니다.|  
+|[!INCLUDE[ssEW](../../includes/ssew-md.md)]|각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 버전의 두 주요 버전 내에 있는 경우에는 복제가 지원됩니다. 따라서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 복제를 지원하지 않습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제의 이전 버전과의 호환성](replication-backward-compatibility.md)  

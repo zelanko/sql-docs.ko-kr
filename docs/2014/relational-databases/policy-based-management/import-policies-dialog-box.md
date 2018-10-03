@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.importpolicy.f1
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: de3e57c1d1e0072ef4ceb489a79191525b3260d0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1749393d106393078e2239d755bc757b2aba1448
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225743"
 ---
 # <a name="import-policies-dialog-box"></a>정책 가져오기 대화 상자
   이 대화 상자를 사용하여 XML 파일로 저장된 하나 이상의 정책과 해당 참조 조건을 현재 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스로 가져올 수 있습니다.  

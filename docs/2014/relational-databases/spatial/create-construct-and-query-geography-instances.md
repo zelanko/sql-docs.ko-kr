@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea4dc0a27743e62f0a13f866895cd7fe0ed0ae79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fdb6d7b2c5649908b31a958238572aa6b8b0285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218319"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
   지리 공간 데이터 형식인 `geography`는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원 (둥근 표면) 데이터를 저장 합니다.  

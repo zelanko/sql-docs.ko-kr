@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 29a9177685d94be437574e90a44a46a2391bcba7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2427b5d40c0e088b50965ac30d891f493bdde99f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227993"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하는 경우 SharePoint 모드에서 보고서 서버를 지원하기 위해 PowerShell cmdlet이 설치됩니다. cmdlet은 세 가지 범주의 기능을 포함합니다.  
@@ -86,7 +83,7 @@ ms.locfileid: "37311369"
   
 3.  **SharePoint 관리 셸**을 클릭합니다.  
   
- cmdlet의 명령줄 도움말을 보려면 PowerShell 명령 프롬프트에서 PowerShell ‘Get-Help’ 명령을 사용합니다. 예를 들어:  
+ cmdlet의 명령줄 도움말을 보려면 PowerShell 명령 프롬프트에서 PowerShell ‘Get-Help’ 명령을 사용합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   

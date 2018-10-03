@@ -4,35 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d418e75aa451c14db6010f6cb3673cd8c3a74bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a7e165afc901b82d73f11f04fbb2c2cbb5402ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224893"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 요소(CSDLBI)
   `AssociationSet` 요소는 연결을 정의하는 복합 유형입니다. CSDLBI 데이터 모델에서 연결은 두 테이블 간의 관계입니다.  
   
- 모델의 고유 관계별로 `AssociationSet`를 지정해야 합니다. `AssociationSet`는 `Association` 요소를 사용하여 끝점을 정의합니다. 또한 `AssociationSet` 요소는 데이터 모델에서 관계와 사용법에 대한 메타데이터도 정의합니다.  
+ 모델의 고유 관계별로 `AssociationSet`를 지정해야 합니다. `AssociationSet`는 `Association` 요소를 사용하여 엔드포인트를 정의합니다. 또한 `AssociationSet` 요소는 데이터 모델에서 관계와 사용법에 대한 메타데이터도 정의합니다.  
   
 ## <a name="applicable-attributes"></a>적용 가능한 특성  
  다음 표는 `AssociationSet` 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|State|예|연결이 활성인지 여부를 나타내는 문자열입니다. 값은 State 요소에 따라 정의됩니다.|  
+|State|사용자 계정 컨트롤|연결이 활성인지 여부를 나타내는 문자열입니다. 값은 State 요소에 따라 정의됩니다.|  
 |숨김|아니요|관계가 표시되는지 여부를 나타내는 부울 값입니다. 기본적으로 Hidden은 모든 관계가 모델에 표시됨을 의미하는 `false`입니다.|  
   
 ## <a name="state-element"></a>State 요소  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionPermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionPermission element
 ms.assetid: e06efbda-64fd-4dca-a2b5-c8ffbf21512c
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 058a86c54c714dd2244fc45f26cfa53fe503327d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 416755e486ce7acadb1ff43926aeeb4b50a56c04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225973"
 ---
 # <a name="dimensionpermission-element-assl"></a>DimensionPermission 요소(ASSL)
   특정에 속하는 권한을 정의 [역할](role-element-assl.md) 특정 데이터베이스 차원 또는 큐브 차원에 대 한 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37322803"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이||  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 한 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  

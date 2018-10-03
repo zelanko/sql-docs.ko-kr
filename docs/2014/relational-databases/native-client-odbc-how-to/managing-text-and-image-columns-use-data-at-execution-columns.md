@@ -1,26 +1,23 @@
 ---
-title: 실행 시 데이터 열 (ODBC)를 사용 하 여 | Microsoft Docs
+title: 실행 시 데이터 열 (ODBC)을 사용 하 여 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 219f6b5ed42835441970156897fe16f818e7c6a0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c63ff8eada8123e3bb7dfab5f8761f66ba2d2ec7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227133"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>실행 시 데이터 열 사용(ODBC)
     

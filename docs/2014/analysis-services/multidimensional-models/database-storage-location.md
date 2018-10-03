@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], storage location
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62d463a424c1e5245a7b5f5a36e9d7a99fe7c9e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216543"
 ---
 # <a name="database-storage-location"></a>데이터베이스 저장소 위치
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 특정 데이터베이스를 서버 데이터 폴더 외부에 두어야 하는 경우가 종종 있습니다. 대개 성능 향상이나 저장소 확장과 같은 비즈니스 요구 사항에 따라 특정 데이터베이스를 서버 데이터 폴더 외부에 둡니다. 이러한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA는 `DbStorageLocation` 데이터베이스 속성을 사용하여 데이터베이스 위치를 로컬 디스크나 네트워크 장치에 지정할 수 있습니다.  

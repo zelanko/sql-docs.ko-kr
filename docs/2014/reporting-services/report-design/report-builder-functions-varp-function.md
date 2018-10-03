@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 64764a82da2b41401631c1eeb31a7f0928df4e3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a85a61213c4b24fe0a6df3e90ccf6280f65cee3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268909"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217613"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>VarP 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 숫자 값의 모집단 분산을 반환합니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e018bf778a877ed62612e631951ca92258aaec0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218945"
 ---
 # <a name="translations-in-multidimensional-models"></a>다차원 모델의 번역
   다국어 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 번역을 사용 하 여 수행 됩니다. 번역에는 다국어로 제공할 수 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 속성의 언어 식별자와 바인딩이 포함됩니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대해 번역을 정의하여 지정한 언어로 해당 데이터베이스의 캡션과 설명을 제공할 수 있습니다. 번역에 대 한 자세한 내용은 참조 하세요. [큐브 번역](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)합니다.  

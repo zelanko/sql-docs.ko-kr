@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f71c5ace41744221c740fc9c024124d2387ba527
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7b01e23f282f4b39043f23e70a98dab633806090
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228961"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
   `IRow` 인터페이스를 사용하여 결과 집합에 있는 단일 행의 열에 직접 액세스할 수 있습니다. 따라서 `IRow`는 행이 한 개인 결과 집합에서 열을 검색하는 데 효과적입니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37425912"
   
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을 변경 L"(local)에서" L"(local)를\\\name", 여기서 name은 명명된 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 삭제합니다.  
   

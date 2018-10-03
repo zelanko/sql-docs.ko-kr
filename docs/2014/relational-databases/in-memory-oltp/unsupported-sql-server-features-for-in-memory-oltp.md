@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d46187b7f92fb9bb02bb693b51bd13bcd12da1f6
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216674"
 ---
 # <a name="supported-sql-server-features"></a>지원되는 SQL Server 기능
   이 항목에서는 메모리 최적화 개체와 함께 사용할 수 있거나 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대해 설명합니다.  
@@ -110,7 +107,7 @@ ms.locfileid: "40394747"
   
 |데이터베이스|허용함|Description|  
 |---------------|-------------|-----------------|  
-|사용자 데이터베이스, 모델 및 msdb|아니오|데이터베이스 간 쿼리 및 트랜잭션은 지원되지 않습니다.<br /><br /> 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스하는 쿼리와 트랜잭션은 시스템 데이터베이스 master(읽기 전용 액세스) 및 tempdb를 제외하고 다른 데이터베이스에 액세스할 수 없습니다.|  
+|사용자 데이터베이스, 모델 및 msdb|아니요|데이터베이스 간 쿼리 및 트랜잭션은 지원되지 않습니다.<br /><br /> 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스하는 쿼리와 트랜잭션은 시스템 데이터베이스 master(읽기 전용 액세스) 및 tempdb를 제외하고 다른 데이터베이스에 액세스할 수 없습니다.|  
 |리소스 데이터베이스 및 tempdb|사용자 계정 컨트롤|단일 사용자 데이터베이스를 제외하고 리소스 데이터베이스 및 tempdb를 사용하는 데이터베이스 간 트랜잭션에는 제한 사항이 없습니다.|  
 |master|읽기 전용|메모리 내 OLTP 및 master 데이터베이스와 관련된 데이터베이스 간 트랜잭션은 master 데이터베이스에 대한 쓰기가 포함된 경우 커밋에 실패합니다. master 데이터베이스에서 읽기만 하고 하나의 사용자 데이터베이스만 사용하는 데이터베이스 간 트랜잭션은 허용됩니다.|  
   

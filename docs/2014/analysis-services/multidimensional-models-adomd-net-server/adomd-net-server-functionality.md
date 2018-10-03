@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - functionality [ADOMD.NET]
 - ADOMD.NET, functionality
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8463ec4804e1ba7ada8ea4e781a34495f5a0d94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 247be53e3811e721d05733320372caf7f1350032
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225023"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET Server 기능
   모든 ADOMD.NET 서버 개체는 서버의 데이터 및 메타데이터에 대해 읽기 전용 액세스를 제공하므로 ADOMD.NET 서버 개체 모델을 사용하여 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 이 서버 개체 모델은 스키마 행 집합을 지원하지 않습니다.  

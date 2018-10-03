@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 37f20171007715cc4be89feeb1dcbef34ba797ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc22c30c6aace8c1d67a4ff92b26deeb56e42a86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189130"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217873"
 ---
 # <a name="configure-sql-server-error-logs"></a>SQL Server 오류 로그 구성
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그의 재활용 방법을 확인하거나 수정하는 방법에 대해 설명합니다.  

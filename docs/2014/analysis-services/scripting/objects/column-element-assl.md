@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Column Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Column element
 ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 474e094335c22ca1a715b48715e968c7dd13f515
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 314e5077f4212e2095d822e0e00d5028ca127a1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218783"
 ---
 # <a name="column-element-assl"></a>Column 요소(ASSL)
   부모 요소와 연결된 열의 컬렉션에 있는 열을 설명합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37312433"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이||  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티||  
   
 |상위 항목 또는 부모|데이터 형식|  
@@ -77,7 +74,7 @@ ms.locfileid: "37312433"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[열](../collections/columns-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="see-also"></a>관련 항목  
  [개체 &#40;ASSL&#41;](objects-assl.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef62942c8dd9e2bf47522b4fa17f9ecfd3011561
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228549"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>비즈니스 규칙에 여러 조건 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 더 복잡한 규칙을 원할 경우 여러 **AND** 또는 **OR** 조건을 비즈니스 규칙에 추가합니다.  

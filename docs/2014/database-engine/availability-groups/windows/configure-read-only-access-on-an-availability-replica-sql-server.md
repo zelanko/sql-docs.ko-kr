@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c6da139e873434bec21e7dd053094ff0a5eeff7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ab31817941f6f57634990f39cf4b55aa3672daf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218263"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
   기본적으로 주 복제본에 대한 읽기/쓰기 및 읽기 전용 액세스가 모두 허용되며 AlwaysOn 가용성 그룹의 보조 복제본에 대한 연결은 허용되지 않습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 가용성 복제본에 대한 연결 액세스를 구성하는 방법에 대해 설명합니다.  

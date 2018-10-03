@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5440574013fe2d15a833fb9758e896d361060050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224483"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>예측 모델 사용자 지정 및 처리(중급 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 모델을 만들고 시간 데이터를 분석하는 방법에 영향을 주는 여러 매개 변수를 제공합니다. 이러한 속성을 변경하면 마이닝 모델이 예측을 수행하는 방식에 큰 영향을 줄 수 있습니다.  

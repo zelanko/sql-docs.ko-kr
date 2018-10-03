@@ -1,12 +1,10 @@
 ---
-title: 명령 구문 | Microsoft Docs
+title: 명령 구문 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], command syntax
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c8b0f5c1798d0547bf7a1acc6ef97c93660cd89
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 00ab769ee2051edc499d586ab7d5ee1fa47dd854
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226743"
 ---
 # <a name="command-syntax"></a>명령 구문
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBGUID_SQL 매크로로 지정 된 명령 구문을 인식 합니다. 에 대 한는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 지정자를 나타냅니다 모두 유효함을 ODBC SQL, ISO의 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 올바른 구문입니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  

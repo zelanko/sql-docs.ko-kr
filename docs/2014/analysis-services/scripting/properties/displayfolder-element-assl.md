@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DisplayFolder Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73de197b50ebd3636cb97e6a011fee1e8c3a71af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220103"
 ---
 # <a name="displayfolder-element-assl"></a>DisplayFolder 요소(ASSL)
   부모 요소를 나열할 폴더를 지정합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 응용 프로그램 개발자와 관리자에 대 한 여러 요소를 시각적으로 범주화 표시 폴더의 사용을 지원할 수 있습니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37293203"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37293203"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CalculationProperty](../objects/calculationproperty-element-assl.md), [계층](../objects/hierarchy-element-assl.md)합니다 [Kpi](../objects/kpi-element-assl.md)를 [측정값](../objects/measure-element-assl.md), [번역](../objects/translation-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  보다 큰 큐브에는 수백 개의 측정값과 계층이 있을 수 있습니다. `DisplayFolder` 속성은 클라이언트의 사용자 모양을 정의합니다. `DisplayFolder` 속성의 값은 다음 옵션 중 하나를 포함할 수 있습니다.  

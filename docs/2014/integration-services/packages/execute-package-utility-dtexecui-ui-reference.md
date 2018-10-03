@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217433"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>패키지 실행 유틸리티(DtExecUI) UI 참조
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 열 수 있는이 사용자 인터페이스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 입력 하 여 `dtexecui` 명령 프롬프트를 사용 하 여 패키지를 실행 하지 않아도 됩니다 합니다 **DTExec** 명령 프롬프트 도구입니다.  

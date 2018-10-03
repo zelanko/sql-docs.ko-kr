@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 - breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227093"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 데이터베이스 엔진 기능의 주요 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 응용 프로그램, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
@@ -46,7 +43,7 @@ ms.locfileid: "40394339"
 |ALTER TABLE|ALTER TABLE 문에는 두 부분(schema.object)으로 구성된 테이블 이름만 허용됩니다. 이제 다음 형식을 사용 하 여 테이블 이름을 지정 하는 컴파일 시 오류 117 실패 합니다.<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 이전 버전에서는 server.database.schema.table 형식을 지정할 경우 오류 4902가 반환되었습니다. 그러나 .database.schema.table 또는 ..schema.table 형식을 지정하면 작업이 성공했습니다. 이 문제를 해결하려면 네 부분으로 구성된 접두사를 사용하지 않아야 합니다.|  
 |메타데이터 찾아보기|이제 FOR BROWSE 또는 SET NO_BROWSETABLE ON을 사용하여 뷰를 쿼리하면 기본 개체의 메타데이터가 아니라 뷰의 메타데이터가 반환됩니다. 현재 이 동작은 메타데이터를 찾아보는 다른 방법과 일치합니다.|  
 |SOUNDEX|데이터베이스 호환성 수준 110에서는 SOUNDEX 함수가 새 규칙을 구현하므로 이 함수에서 계산된 값과 이전 호환성 수준에서 계산된 값이 달라질 수 있습니다. 호환성 수준 110으로 업그레이드한 후 SOUNDEX 함수를 사용하는 인덱스, 힙 또는 CHECK 제약 조건을 다시 작성해야 할 수 있습니다. 자세한 내용은 [SOUNDEX&#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)를 참조하세요.
- 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+ .|  
 |실패한 DML 문에 대한 행 개수 메시지|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 [!INCLUDE[ssDE](../includes/ssde-md.md)]은 DML 문이 실패할 경우 클라이언트에 RowCount가 0인 TDS DONE 토큰을 지속적으로 보냅니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 실패한 문이 TRY-CATCH 블록에 포함되어 있고 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 의해 자동으로 매개 변수가 지정되거나 TRY-CATCH 블록이 실패한 문과 동일한 수준에 있지 않은 경우 잘못된 값 -1이 클라이언트에 보내집니다. 예를 들어 TRY-CATCH 블록에서 저장 프로시저를 호출할 경우 프로시저의 DML 문이 실패하면 클라이언트는 잘못된 값 -1을 받게 됩니다.<br /><br /> 이 잘못된 동작이 적용되는 응용 프로그램에서는 오류가 발생합니다.|  
 |SERVERPROPERTY (‘Edition’)|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 인스턴스의 설치된 제품 버전입니다. 이 속성 값을 사용하여 설치된 제품에서 지원하는 기능 및 최대 CPU 수와 같은 제한을 확인합니다.<br /><br /> 설치된 Enterprise 버전에 따라 ‘Enterprise Edition’ 또는 ‘Enterprise Edition: 코어 기반 라이선스’를 반환할 수 있습니다. Enterprise 버전은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 단일 인스턴스별 최대 계산 용량에 따라 다릅니다. 계산 용량 제한에 대 한 자세한 내용은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]를 참조 하세요 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)합니다.|  
 |CREATE LOGIN|합니다 `CREATE LOGIN WITH PASSWORD = '` *암호* `' HASHED` 옵션에서 만든 해시와 함께 사용할 수 없습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 또는 이전 버전입니다.|  

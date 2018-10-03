@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - performance [Analysis Services], replays
 - traces [Analysis Services]
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03745df066851279d45d5d6dbd8a536e32025cf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac14bba7dfaca206794e79f622137b12cbae218f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218103"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>재생에 대한 프로파일러 추적 만들기(Analysis Services)
   사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 필요한 이벤트를 수집해야 합니다. 이러한 이벤트의 컬렉션을 초기화하려면 **추적 속성** 대화 상자의 **이벤트 선택** 탭에서 적합한 이벤트 클래스를 선택해야 합니다. 예를 들어 Query Begin 이벤트 클래스가 선택된 경우 쿼리를 포함한 이벤트가 수집되고 재생에 사용됩니다. 또한 추적 파일에는 원래 트랜잭션 시퀀스로 분산 환경에서 서버 트랜잭션 재생을 지원하는 데 충분한 정보가 포함됩니다.  

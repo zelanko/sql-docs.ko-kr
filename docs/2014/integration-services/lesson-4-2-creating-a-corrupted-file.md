@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226603"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
   변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  

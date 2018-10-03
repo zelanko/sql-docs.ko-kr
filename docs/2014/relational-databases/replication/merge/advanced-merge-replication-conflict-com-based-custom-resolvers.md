@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9809787b2a674b176bd7ef21a1091aecdd106d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8519b2e1a54854fc90ffbcf9253a9f4007538cea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217583"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   사용자 지정 해결 프로그램은 기본 해결 메커니즘보다 더 높은 유연성을 제공하며 복제된 데이터를 사용하여 응용 프로그램에 필요한 비즈니스 논리를 구현할 수 있습니다. COM 기반 사용자 지정 해결 프로그램은 DLL(동적 연결 라이브러리)이며 **ICustomResolver** COM 인터페이스, 해당 메서드 및 속성, 그리고 충돌 해결을 위해 특별히 디자인된 다른 지원 인터페이스 및 유형 정의를 구현합니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ImpersonationInfoSecurity Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4aaf5aee83f6aa6102aeeb9488ddb7a75c4af540
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224914"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity 요소(ASSL)
   제공 되는 보안 자격 증명에 변경 된 경우를 나타내는 읽기 전용 값이 포함 된 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) 데이터 형식입니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37189190"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -57,7 +54,7 @@ ms.locfileid: "37189190"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  

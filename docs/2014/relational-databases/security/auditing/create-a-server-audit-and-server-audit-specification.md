@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLAUDIT.FILTER.F1
@@ -19,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b11a16c7ff45906b1ac0f5ca3e7a3e85bf199407
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023620"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219620"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>서버 감사 및 서버 감사 사양 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 서버 감사 및 서버 감사 사양을 만드는 방법에 대해 설명합니다. *인스턴스 또는* 데이터베이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 감사 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 시스템에서 발생하는 추적 이벤트 및 로깅 이벤트가 포함됩니다. *SQL Server Audit* 개체는 사용자가 모니터링하려는 서버 또는 데이터베이스 수준 동작 및 동작 그룹에 대한 하나의 인스턴스를 수집합니다. 감사는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 수준으로 존재합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스별로 여러 개의 감사를 가질 수 있습니다. *서버 감사 사양* 개체는 감사에 속해 있습니다. 서버 감사 사양과 감사는 모두 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 범위에서 생성되므로 감사당 하나의 서버 감사 사양을 만들 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)을 참조하세요.  

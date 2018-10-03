@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 81db67b6450e7b259d84b647ffe2173024a7430f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df8a54eb3f130da611c5ad79bcb411fe8318da88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220013"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
   이 섹션에서는 보고서 작성기 및 보고서 디자이너 설명서에 사용된 주요 개념을 간략하게 정의합니다. 특정 단어 또는 용어에 대한 정의를 보려면 [용어집&#40;보고서 작성기&#41;](../report-builder/glossary-report-builder.md)을 참조하세요.  

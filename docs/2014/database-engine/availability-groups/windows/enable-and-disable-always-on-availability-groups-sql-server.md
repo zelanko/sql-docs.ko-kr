@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cfcbdb8e61941a651539bd545b5067a1df5b63a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cafc562581a5f34bf9b59b1ff7cde1c679abd726
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185360"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228645"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 활성화 및 비활성화(SQL Server)
   먼저 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하도록 설정해야만 서버 인스턴스에서 가용성 그룹을 사용할 수 있습니다. 가용성 그룹을 만들고 구성하려면 먼저 하나 이상의 가용성 그룹에 대한 가용성 복제본을 호스팅할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 사용하도록 설정해야 합니다.  
@@ -255,9 +252,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 |-NoServiceRestart 매개 변수가 지정되었는지 여부|-Force 매개 변수가 지정되었는지 여부|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 다시 시작되었는지 여부|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
 |아니요|아니요|기본적으로 선택되어 있지만 cmdlet에서 다음과 같이 묻는 메시지가 표시됩니다.<br /><br /> **이 작업을 완료하려면 '<instance_name>' 서버 인스턴스에 대한 SQL Server 서비스를 다시 시작해야 합니다. 계속하시겠습니까?**<br /><br /> **[Y] 예  [N] 아니요  [S] 일시 중단  [?] 도움말(기본값 "Y"):**<br /><br /> **N** 또는 **S**를 지정하면 서비스가 다시 시작되지 않습니다.|  
-|아니요|예|서비스가 다시 시작됩니다.|  
-|예|아니요|서비스가 다시 시작되지 않습니다.|  
-|예|예|서비스가 다시 시작되지 않습니다.|  
+|아니요|사용자 계정 컨트롤|서비스가 다시 시작됩니다.|  
+|사용자 계정 컨트롤|아니요|서비스가 다시 시작되지 않습니다.|  
+|사용자 계정 컨트롤|사용자 계정 컨트롤|서비스가 다시 시작되지 않습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClientSettings Class
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ClientSettings class
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: da1d9bacbf2ac0da7b7e2964613e3502255c12a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14460f26dccd1e268461acd3bfb7e4a4e380c584
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223093"
 ---
 # <a name="clientsettings-class"></a>ClientSettings 클래스
   합니다 [ClientSettings 클래스](clientsettings-class.md) 나타냅니다 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에서 설정 합니다.  

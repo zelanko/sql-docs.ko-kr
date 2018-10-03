@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.termlookup.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5d09acf4a96b0380e9c6c587044bf9d5bede55c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 355b736066084ed0a30a72c2d3b30010a8277674
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217315"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>용어 조회 변환 편집기(용어 조회 탭)
   **용어 조회 변환 편집기** 대화 상자의 **용어 조회** 탭을 사용하여 입력 열을 참조 테이블의 조회 열로 매핑하고 각 출력 열의 별칭을 제공할 수 있습니다.  

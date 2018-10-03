@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningModel Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningModel element
 ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ba98443b953f4107b209dd06af74349a81bb2a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b6661d5718e36913fd9f706bd1912912e0b17fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221363"
 ---
 # <a name="miningmodel-element-assl"></a>MiningModel 요소(ASSL)
   단일 데이터 마이닝 모델을 정의합니다.  
@@ -66,8 +63,8 @@ ms.locfileid: "37224543"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

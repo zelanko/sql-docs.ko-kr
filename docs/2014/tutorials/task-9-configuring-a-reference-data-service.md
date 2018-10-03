@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a743fd3fe576296a67072762cdfa3a186584cd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23832b226bb9408ab4e5b2fbb50718e1ead710b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217293"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>태스크 9: 참조 데이터 서비스 구성
   이 작업에서는 Microsoft Azure Marketplace에서 참조 데이터 서비스를 사용하도록 DQS를 구성합니다. 다음 태스크를 구성 합니다 **Address Validation** 이 서비스를 사용 하는 도메인입니다. 런타임에 정리 작업을 하는 동안 DQS의 값을 전달의 도메인을 **Address Validation** 도메인을 정리 하는 것에 대 한 서비스입니다. 참조 [Configure DQS to Use Reference Data](http://msdn.microsoft.com/library/hh213070.aspx) 대 한 자세한 내용은 합니다.  

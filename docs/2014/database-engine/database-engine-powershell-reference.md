@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
-caps.latest.revision: 7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 17424e5a629a4161760c35d5dcc24b80aaf9c2bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41131b63817ababfe20e171185f0c27dc5f0ca06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222303"
 ---
 # <a name="database-engine-powershell-reference"></a>데이터베이스 엔진 PowerShell 참조
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 일반적인 작업을 수행하는 데 사용할 수 있는 여러 가지 Windows PowerShell 2.0 cmdlet이 포함되어 있습니다. 또한 쿼리 식과 URN(Uniform Resource Name)을 SQL Server PowerShell 경로로 변경하거나 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 하나 이상의 개체를 지정하는 데 사용할 수 있습니다.  

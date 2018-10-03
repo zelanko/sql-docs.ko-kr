@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d322af3b867b4b76a555674e18aca3e1d8822b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad83198d31fb2733e0bcc15c5a6a2d19a2b9189
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224493"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>priority boost 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 우선 순위 높임 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **우선 순위 높임** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 같은 컴퓨터에 있는 다른 프로세스보다 더 높은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 또는 Windows 2008 R2 일정 우선 순위에서 실행될 것인지 여부를 지정할 수 있습니다. 이 옵션을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 2008 또는 Windows Server 2008 R2 스케줄러에서 우선 순위 13으로 실행됩니다. 기본값인 0으로 설정하면 우선 순위 7이 사용됩니다.  

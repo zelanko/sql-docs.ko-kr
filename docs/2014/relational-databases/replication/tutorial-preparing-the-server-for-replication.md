@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d6d757969acb1509641a74cc1c528bc717e01bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323943"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228243"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>자습서: 복제용 서버 준비
   복제 토폴로지를 구성하려면 보안을 계획해야 합니다. 이 자습서에서는 데이터 복제의 첫 단계인 배포를 구성하는 방법과 복제 토폴로지의 보안을 강화하는 방법을 보여 줍니다. 다른 자습서를 사용하기 전에 먼저 이 자습서를 완료해야 합니다.  

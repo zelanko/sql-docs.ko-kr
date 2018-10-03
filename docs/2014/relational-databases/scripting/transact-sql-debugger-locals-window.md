@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.locals
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cbb7999d887e0bf0e5163e8934be0cde6316c10
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6e79bed7775a55d52382d38eb44f6711ed1050c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221313"
 ---
 # <a name="locals-window"></a>지역 창
   **지역** 창에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거의 현재 범위에 있는 지역 식에 대한 정보가 표시됩니다. 범위는 **호출 스택** 창에서 선택한 현재 호출 스택 프레임으로 설정됩니다. 지역 식을 표시하려면 디버그 모드여야 합니다.  

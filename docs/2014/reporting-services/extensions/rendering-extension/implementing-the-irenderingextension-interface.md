@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e7bd0228b5eaf02b51313414cbd8ebab48f14522
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227273"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension 인터페이스 구현
   렌더링 확장 프로그램은 실제 데이터와 결합된 보고서 정의에서 결과를 가져오고 결과 데이터를 사용 가능한 형식으로 렌더링합니다. 결합된 데이터의 변환과 형식 지정은 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>을 구현하는 CLR(공용 언어 런타임) 클래스를 사용하여 수행됩니다. 이것은 개체 모델을 뷰어, 프린터 또는 기타 출력 대상에서 사용할 수 있는 출력 형식으로 변환합니다.  

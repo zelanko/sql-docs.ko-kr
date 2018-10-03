@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - e-mail [SMO]
 - Database Mail [SMO]
 - mail [SMO]
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df48338975af6de44979a9169ecad35321dd1fa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fcf6e57ed33e0799ae61610fdb15bd59aea45de8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221573"
 ---
 # <a name="using-database-mail"></a>데이터베이스 메일 사용
   SMO에서 데이터베이스 메일 하위 시스템은 <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 속성에서 참조되는 <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> 개체로 표시됩니다. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 개체를 사용하여 데이터베이스 메일 하위 시스템을 구성하고 프로필 및 메일 계정을 관리할 수 있습니다. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 개체가 속한는 `Server` 개체는 메일 계정의 범위가 서버 수준에서 임을 의미 합니다.  

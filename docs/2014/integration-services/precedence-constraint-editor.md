@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 573ce289579e0d239585f5f4b0f6292a6145b0ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c321d7a3850cf91b996262265492b88a6773f446
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217303"
 ---
 # <a name="precedence-constraint-editor"></a>선행 제약 조건 편집기
   **선행 제약 조건 편집기** 대화 상자를 사용하여 선행 제약 조건을 구성할 수 있습니다.  

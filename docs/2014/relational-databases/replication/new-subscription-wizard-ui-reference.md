@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4bf637b0f4171521300dc73a34053f7ece0ce89b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6915fe649656b62093ddd953ed07d9cb9d3567c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222373"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>새 구독 마법사(UI 참조)
   이 섹션에서는 새 구독 마법사의 다음 페이지에 대한 정보를 제공합니다.  

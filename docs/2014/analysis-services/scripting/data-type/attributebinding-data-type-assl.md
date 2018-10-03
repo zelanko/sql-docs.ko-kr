@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5330fe2694c8d15b2e2fa1354a8deddbaaff269
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229033"
 ---
 # <a name="attributebinding-data-type-assl"></a>AttributeBinding 데이터 형식(ASSL)
   에 대 한 바인딩을 나타내는 파생된 데이터 형식을 정의 [특성](../objects/attribute-element-assl.md) 요소입니다.  
@@ -51,13 +48,13 @@ ms.locfileid: "37279749"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[바인딩](binding-data-type-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[AttributeID](../properties/id-element-assl.md)하십시오 [서](../properties/ordinal-element-assl.md), [형식](../properties/type-element-binding-assl.md)|  
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   

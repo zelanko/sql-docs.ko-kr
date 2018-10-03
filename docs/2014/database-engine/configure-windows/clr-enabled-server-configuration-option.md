@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8eee4ca485f4bb48a4f2cb42ec728f20a7848509
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a796426f02c2ad9c0878c212c51eb0e90cfce8bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219383"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled 서버 구성 옵션
   clr enabled 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 어셈블리를 실행할 수 있는지 여부를 지정합니다. clr enabled 옵션은 다음 값을 제공합니다.  

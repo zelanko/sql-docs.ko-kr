@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229853"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 집합의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -89,7 +86,7 @@ ms.locfileid: "37298813"
   
  캐시를 파일로 저장할 경우의 추가 이점은 다음과 같습니다.  
   
--   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은 ***[캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)***을 참조하세요.***  
+-   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은*** [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)***을 참조하세요.***  
   
 -   패키지와 함께 캐시 파일을 배포합니다. ***그러면 데이터를 여러 컴퓨터에서 사용할 수 있습니다.*** 자세한 내용은 [조회 변환에 대한 캐시 만들기 및 배포](create-and-deploy-a-cache-for-the-lookup-transformation.md)를 참조하세요.  
   

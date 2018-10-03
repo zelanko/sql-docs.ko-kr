@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RollbackTransaction Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - RollbackTransaction command
 ms.assetid: 40e7dc00-656f-412f-97f0-d05bf7caa196
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eaaf3d92849e0d2ddb7f94686bb30e627d3abcb7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ae78f589c1c85713c751a737d6fb93fac9efeda
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218823"
 ---
 # <a name="rollbacktransaction-element-xmla"></a>RollbackTransaction 요소(XMLA)
   인스턴스로 현재 세션에서 트랜잭션을 롤백합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -50,8 +47,8 @@ ms.locfileid: "37300803"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37300803"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `RollbackTransaction` 명령은 현재 세션에서 `BeginTransaction` 요소를 사용하여 명시적으로 정의된 모든 활성 트랜잭션을 롤백합니다. 활성 트랜잭션이 없으면 오류가 발생합니다. 활성 트랜잭션이 있으면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스가 모든 활성 트랜잭션을 롤백하면서 현재 세션의 트랜잭션 참조 수를 0으로 줄입니다.  

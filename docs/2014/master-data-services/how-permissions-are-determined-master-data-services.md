@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f640fb20e950dc576c57e0faad71dcad0cd55a09
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217829"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>사용 권한이 결정되는 방식(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 보안을 구성하는 가장 손쉬운 방법은 사용자가 멤버로 속한 그룹에 모델 개체 사용 권한을 할당하는 것입니다.  

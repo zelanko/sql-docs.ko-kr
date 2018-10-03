@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-caps.latest.revision: 5
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5ba084d6912d7f60b124b28ea8635aa37d8259f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222293"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>컴퓨터에 보고서 저장(보고서 작성기)
   보고서 작성기에서 컴퓨터에 보고서 정의를 저장할 수 있습니다. 그러나 보고서 정의가 컴퓨터에 저장되는 경우 다른 사용자는 해당 보고서를 볼 수 없으며 공유 데이터 원본을 참조하거나 이미지, 하위 보고서 등의 보고서 항목을 외부에 저장하는 보고서가 실행되지 않을 수 있습니다. 보고서 서버나 SharePoint 사이트에 보고서를 저장하는 것이 좋습니다.  

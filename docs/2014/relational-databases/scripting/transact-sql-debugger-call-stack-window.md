@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a1812a3f332fbac3d66522a609a32f9d4c4389f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2f69398562a11c466d3772389c326b32cb6e6cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220738"
 ---
 # <a name="call-stack-window"></a>호출 스택 창
   **호출 스택** 창에는 호출 스택의 모듈, 모듈에 전달되는 매개 변수의 값 및 데이터 형식이 표시됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈은 저장 프로시저, 함수 및 트리거를 포함합니다. 호출 스택을 표시하려면 디버그 모드여야 합니다.  

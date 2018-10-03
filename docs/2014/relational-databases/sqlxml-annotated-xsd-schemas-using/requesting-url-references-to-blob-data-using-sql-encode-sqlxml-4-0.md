@@ -1,14 +1,12 @@
 ---
-title: 'BLOB 데이터를 사용 하 여 sql에 대 한 URL 참조 요청: 인코딩 (SQLXML 4.0) | Microsoft Docs'
+title: 'BLOB 데이터를 사용 하 여 sql에 대 한 URL 참조 요청: 인코딩 (SQLXML 4.0) | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql:encode
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - BLOBs, URL references
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9bbcd45a0984a0c34a5759d5ec9774c211354b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4606102f0870e0e6b448f2a55c263fc066afcecd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229709"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode를 사용하여 BLOB 데이터에 대한 URL 참조 요청(SQLXML 4.0)
   주석이 추가된 XSD 스키마에서 특성(또는 요소)이 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 BLOB 열에 매핑된 경우 XML 내의 Base 64 인코딩 형식으로 데이터가 반환됩니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2895efa338745f8935674ff42620c1f8d6272652
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ecfb2355272ac511e8ccf440f759d01f30f31cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226263"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 관리 도구 업그레이드
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서의 업그레이드가 지원됩니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구 및 관리 구성 요소(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 데이터베이스 메일, 유지 관리 계획, XPStar 및 XPWeb) 업그레이드를 위한 지원 및 동작에 대해 설명합니다.  

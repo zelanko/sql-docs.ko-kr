@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributePermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00abbc7be0b8efa045074773ee6e2a3526192694
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227963"
 ---
 # <a name="attributepermissions-element-assl"></a>AttributePermissions 요소(ASSL)
   개인에 대 한 특성 권한의 컬렉션을 포함 [역할](../objects/role-element-assl.md) 의 특정 차원에서 요소를 [큐브](../objects/cube-element-assl.md) 요소입니다.  
@@ -50,8 +47,8 @@ ms.locfileid: "37249043"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

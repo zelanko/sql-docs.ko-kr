@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Analysis Services Scripting Language Reference
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - scripts [Analysis Services Scripting Language]
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd9fbcce8769deb49168e734542fe5296c5672f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 275399c0396370075bb0e6911fda6c24980481f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226153"
 ---
 # <a name="analysis-services-scripting-language-assl-reference"></a>ASSL(Analysis Services Scripting Language) 참조
   응용 프로그램이 통신할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML 명령 및 개체 설명을 사용 합니다. ASSL(Analysis Services Scripting Language)은 이 XML 언어의 개체 정의 언어 부분을 나타냅니다.  

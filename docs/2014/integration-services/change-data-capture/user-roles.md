@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc2db9d3a5df677cd1d687d2c5431c7db4affad0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b62f749bf308684a5d47386011339505b8a23bb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222893"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity에 대한 사용자 역할
   이 섹션에서는 Attunity Oracle CDC Service의 사용자 역할에 대해 설명합니다. 여기서 설명하는 역할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할, Windows 역할 또는 Oracle 데이터베이스 역할입니다.  

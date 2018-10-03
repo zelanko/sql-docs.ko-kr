@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f2be8da8092248ccb49a7db54b9d41367cea2c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac74d361758cda8ec0b345b93e542d96c709e586
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227795"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>추적 템플릿 속성(이벤트 선택 탭)
   **추적 템플릿 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 추적 템플릿에 포함할 이벤트 클래스와 데이터 열을 표시, 편집 또는 지정할 수 있습니다.  

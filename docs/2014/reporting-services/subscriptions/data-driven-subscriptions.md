@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f33cf9021864e141b51c10d357fd53f379b3f567
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217399"
 ---
 # <a name="data-driven-subscriptions"></a>데이터 기반 구독
   데이터 기반 구독을 통해 런타임에 외부 데이터 원본에서 검색되는 동적 구독 데이터를 사용할 수 있습니다. 데이터 기반 구독에서는 구독이 정의될 때 사용자가 지정한 정적 텍스트와 기본값을 사용할 수도 있습니다. 데이터 기반 구독을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  

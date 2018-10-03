@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2909079aa87638386db1398af6f62c10f96f66b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223797"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office용 SQL Server 데이터 마이닝 추가 기능
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office용 데이터 마이닝 추가 기능은 Excel의 데이터를 사용하여 예측, 권장 또는 탐색을 위한 분석 모델을 작성할 수 있도록 지원하는 일련의 간단한 예측 분석 도구 집합입니다.  

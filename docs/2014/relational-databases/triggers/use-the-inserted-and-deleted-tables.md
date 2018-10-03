@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
@@ -20,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220947"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted 및 deleted 테이블 사용
   DML 트리거 문은 두 개의 특수 테이블(inserted 및 deleted 테이블)을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 메모리에 상주하는 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 이 테이블에서 데이터를 직접 수정하거나 CREATE INDEX와 같은 DDL(데이터 정의 언어) 작업을 수행할 수 없습니다.  
@@ -76,7 +74,7 @@ ms.locfileid: "37427642"
   
  INSERT, UPDATE 또는 DELETE 문에서 INSTEAD OF 트리거가 있는 뷰를 참조할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 대해 직접 동작을 수행하는 대신 트리거를 호출합니다. 뷰에 대해 작성된 inserted 및 deleted 테이블의 정보 형식이 기본 테이블에 있는 데이터 형식과 다른 경우에도 트리거는 inserted 및 deleted 테이블에 있는 정보를 사용하여 기본 테이블에서 요청된 동작을 구현하는 데 필요한 문을 작성해야 합니다.  
   
- 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블의 형식은 뷰에 대해 정의된 SELECT 문의 선택 목록과 일치합니다. 예를 들어:  
+ 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블의 형식은 뷰에 대해 정의된 SELECT 문의 선택 목록과 일치합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 USE AdventureWorks2012;  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7f3885bc443bbd47388a7bc3453dc9130aa6aa09
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 680c60a40e1c8ebfb99896d0857fddfc28174c20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220033"
 ---
 # <a name="data-sources-and-connection-methods"></a>데이터 원본 및 연결 메서드
   이러한 메서드를 사용하여 데이터 원본 연결 및 자격 증명을 설정하고 관리할 수 있습니다.  

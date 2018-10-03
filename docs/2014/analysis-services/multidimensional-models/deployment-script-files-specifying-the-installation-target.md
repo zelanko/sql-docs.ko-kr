@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - deploying [Analysis Services], installation targets
 - modifying installation targets
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a779e6ecbc32316d6d22ef8f270d9d0d2af6738e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e8ecad7b3d9df0974d7f7548438f2464d75fd35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225073"
 ---
 # <a name="specifying-the-installation-target"></a>설치 대상 지정
-  합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 설치 대상 정보를 읽습니다.는 \< *프로젝트 이름을*>.deploymenttargets 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 및에 지정 된 서버를 사용 합니다 **배포** 페이지의 * \<프로젝트 이름 >* **속성 페이지** 대화 상자를 \< *프로젝트 이름*>.targets 파일입니다.  
+  합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 설치 대상 정보를 읽습니다.는 \< *프로젝트 이름을*>.deploymenttargets 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 및에 지정 된 서버를 사용 합니다 **배포** 페이지의  *\<프로젝트 이름 >* **속성 페이지** 대화 상자를 \< *프로젝트 이름*>.targets 파일입니다.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>배포를 위한 설치 대상 수정  
  일부 경우에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 페이지에 지정된 것과 다른 데이터베이스 또는 **인스턴스에** 프로젝트를 배포해야 할 수 있습니다. 예를 들어 배포 전에 테스트를 위해 서버에 프로젝트를 배포한 다음 테스트를 마친 후에 프로덕션 서버에 배포할 수 있습니다. 또한 네트워크 로드 균형 조정 클러스터의 여러 프로덕션 서버나 준비 서버(staging server) 및 프로덕션 서버에 완료되고 테스트를 마친 프로젝트를 배포할 수 있습니다.  

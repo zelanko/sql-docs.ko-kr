@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], report history
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - snapshots [Reporting Services], URL access
 - snapshots [Reporting Services], rendering report history
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b065fa70d102ff86c25aa0fffb78cfa4993cd284
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8b857d0aab5cc64255e3d041d58fdc7ab398358
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272579"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216623"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
   *rs:Snapshot* 매개 변수를 제공하고 이 값을 유효한 스냅숏 ID로 설정하여 보고서 기록 스냅숏을 기반으로 한 보고서를 렌더링할 수 있습니다. 매개 변수 값은 ISO(국제 표준화 기구) 8601 표준을 기반으로 하여 YYYY-MM-DDTHH:MM:SS 형식으로 사용합니다.  

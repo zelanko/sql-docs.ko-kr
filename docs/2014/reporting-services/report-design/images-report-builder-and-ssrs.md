@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4fcb1a4246968e0f42b99ec5c0c596b8d7d36b2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff2a701c3425fce737c75c6fb0b6bc01698d8277
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227143"
 ---
 # <a name="images-report-builder-and-ssrs"></a>이미지(보고서 작성기 및 SSRS)
   이미지는 보고서에 포함되어 있거나, 데이터베이스에 저장되어 있거나, 보고서 서버에 저장되어 있거나, 웹의 기타 위치에 저장되어 있는 이미지에 대한 참조를 포함하는 보고서 항목입니다. 이미지는 데이터 행이 반복되는 그림이 될 수 있습니다 특정 보고서 항목의 배경으로 이미지를 사용할 수도 있습니다.  

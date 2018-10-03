@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reserved keywords
 ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5969fdcd95f0168dad587552bc114f874a3feeef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb9f8956108b07fdc6561c5ef8582e7510240434
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282579"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226994"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>예약 키워드 다음에 나오는 콜론을 제거합니다.
   업그레이드 관리자가 예약 키워드 뒤에서 콜론(:)이 포함된 스크립트를 감지했습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 구문이 무시되고 문이 성공적으로 실행되지만 이제는 데이터베이스 호환성 모드가 100 이상으로 설정된 경우 이 구문 때문에 문이 실패합니다.  

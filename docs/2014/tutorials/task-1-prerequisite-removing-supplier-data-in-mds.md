@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7cf9ccd921ecdef56560e712415604355b97b2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227703"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>태스크 1(필수): MDS에서 공급자 데이터 제거
   이 작업에서는 MDS에 저장된 공급자 데이터를 제거합니다. 이전 단원에서는 **MDS Excel 추가 기능** 을 사용하여 데이터를 수동으로 업로드했습니다. 이 단원에서 만드는 SSIS 패키지는 데이터를 MDS에 자동으로 업로드합니다. 따라서 SSIS 패키지를 테스트하기 전에 MDS에서 공급자 데이터를 제거하고, 파생 계층을 제거하고, 공급자 및 상태 엔터티를 제거하고 포함된 데이터 없이 공급자 엔터티를 만들어야 합니다.  

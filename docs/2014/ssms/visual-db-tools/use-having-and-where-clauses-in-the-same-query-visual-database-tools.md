@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - WHERE clause, search criteria
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d2fb449a9f3fd677a9a42511f7cb82da9ee55d7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 57b266d8b5e825e784a74e25e5801b7bd9f0cc22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221923"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
   경우에 따라서는 HAVING 절을 사용하여 그룹 전체에 조건을 적용하기 전에 WHERE 절을 사용하여 그룹에서 개별 행을 제외해야 할 수도 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70afd9ea708a82e45ba10e90022224c6ffdc088a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229513"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
   전체 텍스트 인덱스를 만들 때는 인덱싱된 열에 대한 열 수준 언어를 지정해야 합니다. 지정된 언어의 [단어 분리기 및 형태소 분석기](configure-and-manage-word-breakers-and-stemmers-for-search.md) 는 인덱싱된 열에 대한 전체 텍스트 쿼리에 사용됩니다. 전체 텍스트 인덱스를 만들기 위해 열 언어를 선택할 때 고려할 몇 가지 사항이 있습니다. 이러한 고려 사항은 전체 텍스트 엔진으로 텍스트를 토큰화한 다음 인덱싱하는 방법과 관련이 있습니다.  

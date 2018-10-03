@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217813"
 ---
 # <a name="data-import-master-data-services"></a>데이터 가져오기(Master Data Services)
   데이터 모델을 만든 후 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 데이터를 추가할 수 있습니다 및 데이터에 변경 된 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스입니다.   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 준비 표, 저장 프로시저 및 마스터 데이터 관리자를 사용할 수 있습니다.  

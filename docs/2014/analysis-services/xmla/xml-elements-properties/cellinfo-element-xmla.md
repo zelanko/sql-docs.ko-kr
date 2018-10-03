@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CellInfo Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 693495e50c78760cd130df6d12f359d96c5c0807
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176390"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216526"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 요소(XMLA)
   부모에 의해 포함 된 셀 메타 데이터를 나타냅니다 [OlapInfo](olapinfo-element-xmla.md) 요소입니다.  
@@ -54,8 +51,8 @@ ms.locfileid: "37176390"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

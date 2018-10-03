@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216343"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사)
   사용 합니다 **데이터 원본 선택** 복사 하려는 데이터의 원본을 지정 하는 페이지입니다.  

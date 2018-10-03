@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0404175f22e6edcb80e4179083555d23acf7db1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169076"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224663"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
   이 항목에서는 복제 프로그래밍 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 병합 아티클에 대한 비즈니스 논리 처리기를 구현하는 방법에 대해 설명합니다.  

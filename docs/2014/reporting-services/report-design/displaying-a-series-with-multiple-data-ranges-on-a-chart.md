@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 153a7dfafea308c57dd933de633a016871e32e6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221133"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>차트에 데이터 범위가 여러 개 있는 계열 표시(보고서 작성기 및 SSRS)
   차트는 최소 계열 값과 최대 계열 값을 사용하여 축 배율을 계산합니다. 차트 계열에 두 개 이상의 데이터 범위가 포함되어 있으면 데이터 요소가 가려지고 몇 개의 데이터 요소만 차트에서 쉽게 볼 수 있습니다. 예를 들어 보고서에서 한 달 간의 하루 총 판매량을 표시한다고 가정합니다.  

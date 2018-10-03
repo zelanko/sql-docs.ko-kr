@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218033"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 인터페이스
   IMDEmbedded 인터페이스는 포함된 PowerPivot 데이터베이스 또는 테이블 형식 model 데이터베이스를 관리하는 데 사용되는 공용 인터페이스입니다. 이 인터페이스는 `IPersistStream` 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
@@ -108,7 +105,7 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA의 가능한 값은 다음과 같습니다.  
   
-|속성|값|정의|  
+|이름|값|정의|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|포함된 데이터베이스를 사용할 수 없습니다.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|현재 응용 프로그램에 포함된 데이터베이스가 포함되어 있습니다.|  

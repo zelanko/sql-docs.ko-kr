@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bffe276292dc64731e6114df52b6dd0317fb04a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fe22e706e8083ad14c278e6f38d160600838cd81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224093"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>저장 프로시저 실행(RPC 구문 사용) 및 반환 코드와 출력 매개 변수 처리(OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 응용 프로그램에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 `IMultipleResults::GetResult`에서 DB_S_NORESULT를 반환할 때 또는 `IMultipleResults` 인터페이스가 완전히 릴리스될 때 중 먼저 발생하는 시기에 출력 매개 변수 데이터를 사용할 수 있습니다.  
@@ -54,7 +51,7 @@ ms.locfileid: "37408202"
   
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 저장 프로시저를 만듭니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을 변경 L"(local)에서" L"(local)를\\\name", 여기서 name은 명명된 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 두 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 저장 프로시저를 삭제합니다.  
   
@@ -397,6 +394,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

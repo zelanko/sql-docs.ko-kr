@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 856834aa8c29ebaba0661012383d52ad30e3ad59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa6994d4bcf01cc1de7036a45d52a7a090af80b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218175"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server Data Tools의 배포 및 버전 지원(SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 다음과 같은 시나리오를 지원합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37313235"
   
  보고서는 보고서 디자이너에서 미리 보기로 렌더링되거나 보고서 서버에 배포되기 전에 빌드됩니다.  
   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **프로젝트 속성** 대화 상자에서 구성 속성을 설정합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **프로젝트 속성** 대화 상자에서 구성 속성을 설정합니다.  
   
  빌드 및 배포 속성에는 다음이 포함됩니다.  
   
@@ -49,7 +46,7 @@ ms.locfileid: "37313235"
   
 -   TargetServerVersion은 TargetServerURL 속성에 지정된 대상 보고서 서버에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 예상 버전을 식별하는 배포 속성입니다.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대화 상자에서 이전 버전의 **프로젝트 속성** 를 지정할 경우 보고서는 이전 버전으로 자동으로 되돌아가지 않습니다. 마찬가지로 보고서 서버 프로젝트는 두 가지 다른 버전인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보고서를 포함할 수 있습니다. 보고서 서버 프로젝트가 배포될 경우 프로젝트의 모든 보고서는 TargetServerVersion에 지정된 버전으로 변환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대화 상자에서 이전 버전의 **프로젝트 속성** 를 지정할 경우 보고서는 이전 버전으로 자동으로 되돌아가지 않습니다. 마찬가지로 보고서 서버 프로젝트는 두 가지 다른 버전인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보고서를 포함할 수 있습니다. 보고서 서버 프로젝트가 배포될 경우 프로젝트의 모든 보고서는 TargetServerVersion에 지정된 버전으로 변환됩니다.  
   
  둘 이상의 프로젝트 구성을 프로젝트에 추가할 수 있으며 각 구성은 다른 버전의 보고서 서버에 배포하는 것과 같은 다양한 시나리오에 사용됩니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md) 및 [프로젝트 속성 페이지 대화 상자](project-property-pages-dialog-box.md)를 참조하세요.  
   

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3cdeffdbde5e492ad6f457071d5b11f2947c61d0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: b110a029003f4d7a9036022f8c25150840b45e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219563"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>SQL Server 유틸리티에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 연결하려면 먼저 UCP(유틸리티 제어 지점)를 만들어야 합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)를 참조하세요.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8f06b51dd7c6431a7ccddbdb9e7427cbc40cab
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6a19834bc54a75e685782b0d73aadf0070bdff62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227713"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
   집계 함수를 사용하면 테이블의 모든 값을 요약할 수 있습니다. 예를 들어, `titles` 테이블의 책 전체에 대한 가격 합계를 표시하는 다음과 같은 쿼리를 만들 수 있습니다.  

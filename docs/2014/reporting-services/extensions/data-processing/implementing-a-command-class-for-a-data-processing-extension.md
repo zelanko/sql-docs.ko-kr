@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], commands
 - Command class
 - commands [Reporting Services]
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 26ab43be385f0e07b2b9c071b1ce59c846a58a6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 497844361f6b6cb47765448ea62022af237ed8c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222343"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Command 클래스 구현
   **Command** 개체는 요청을 작성하고 이를 데이터 원본에 전달합니다. 명령 텍스트는 텍스트 및 XML을 비롯하여 다양한 구문 형식을 취할 수 있습니다. 결과가 반환될 경우 **Command** 개체는 **DataReader** 개체 형태로 결과를 반환합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1988ea03795dd8eee6d86844560935ed44b30d3
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 983e01046fd90fbaf8d9ff680492f1b385435f61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222273"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 팜에 도메인 계정이 필요함(업그레이드 관리자)
   팜 환경용으로 구성되는 SharePoint 제품에서는 도메인 계정을 사용해야 합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.addreference.f1
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-caps.latest.revision: 27
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f549130cc2781fddc7480a523ee895400e4155e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d857a936c0c1a25ff54f4b51aa6511a101e96b2d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223293"
 ---
 # <a name="add-reference-dialog-box"></a>참조 추가 대화 상자
   **참조 추가** 대화 상자를 사용하여 사용자 지정 어셈블리 또는 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 구성 요소에 대한 참조를 보고서에 추가할 수 있습니다. 어셈블리 참조를 추가한 후에는 어셈블리 또는 구성 요소의 클래스나 메서드에 대한 정규화된 참조를 포함하는 식 또는 포함된 사용자 지정 코드를 작성할 수 있습니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) 또는 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요.  

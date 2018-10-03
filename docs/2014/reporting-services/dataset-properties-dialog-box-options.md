@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7018038707462c2cf32a733b31cf66d25a275bfb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81a50aa53c41ee0db4b6e9d97f2b96ca58e2649c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228043"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>데이터 집합 속성 대화 상자, 옵션
   선택 **옵션** 에 **집합 속성** 데이터 정렬 옵션 및 쿼리에 대 한 부분합 같은 데이터 옵션을 변경 하려면 대화 상자. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)을(를) 참조하세요.  
