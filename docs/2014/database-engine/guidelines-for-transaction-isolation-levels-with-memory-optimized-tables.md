@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 456922a60eb0d5544c2cdb7992979fea59c3da66
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050042"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션 격리 수준에 대한 지침
   대부분의 경우 트랜잭션 격리 수준을 지정해야 합니다. 메모리 최적화 테이블에 대한 트랜잭션 격리는 디스크 기반 테이블과 다릅니다.  
@@ -100,8 +97,7 @@ COMMIT
   
      이 가정을 사용하는 응용 프로그램 패턴의 예로 새 행을 찾을 때까지 WHILE 루프를 사용하여 테이블을 폴링하는 경우를 들 수 있습니다. 루프가 반복될 때마다 쿼리는 데이터베이스에 있는 최신 업데이트를 참조합니다.  
   
-     
-            **지침:** 응용 프로그램에서 테이블에 쓰여진 최신 행을 가져오기 위해 메모리 최적화 테이블을 폴링해야 하는 경우 폴링 루프를 트랜잭션 범위 밖으로 이동합니다.  
+     **지침:** 응용 프로그램에서 테이블에 쓰여진 최신 행을 가져오기 위해 메모리 최적화 테이블을 폴링해야 하는 경우 폴링 루프를 트랜잭션 범위 밖으로 이동합니다.  
   
      다음은 이 가정을 사용하는 응용 프로그램 패턴의 예입니다. 새 행을 찾을 때까지 WHILE 루트를 사용하여 테이블을 폴링합니다. 루프가 반복될 때마다 쿼리는 데이터베이스에 있는 최신 업데이트에 액세스합니다.  
   

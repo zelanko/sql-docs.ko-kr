@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e17baf04677e0f87e24ed0f4bd891361f146acf5
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8c9cfd87578b2ffaaefb8b46b340f76f74b373ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794571"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,41 +43,41 @@ ms.locfileid: "37357815"
 |**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**Boolean, Nullable\<Boolean>**|  
-|**char**|InclusionThresholdSetting|InclusionThresholdSetting|  
-|**cursor**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**char**|없음|없음|  
+|**cursor**|없음|없음|  
 |**date**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
 |**datetime**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
-|**datetime2**|InclusionThresholdSetting|**DateTime, Nullable\<DateTime>**|  
+|**datetime2**|없음|**DateTime, Nullable\<DateTime>**|  
 |**DATETIMEOFFSET**|**없음**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<10 진수 >**|  
 |**float**|**SqlDouble**|**Double, Nullable\<Double>**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
-|**image**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|없음|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|없음|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|없음|  
+|**image**|없음|없음|  
 |**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal, Nullable\<10 진수 >**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
-|**ntext**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**ntext**|없음|없음|  
 |**numeric**|**SqlDecimal**|**Decimal, Nullable\<10 진수 >**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** 더 적합 한 데이터 전송 및 액세스 하 고 **SQLString** 더 적합 한 문자열 작업을 수행 합니다.|**String, Char[]**|  
 |**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char[], Nullable\<char>**|  
 |**real**|**그러나 SqlSingle** (범위 **SqlSingle**, 보다 크면 **실제**)|**Single, Nullable\<Single>**|  
-|**rowversion**|InclusionThresholdSetting|**Byte[]**|  
+|**rowversion**|없음|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, Nullable\<Int16>**|  
 |**smallmoney**|**SqlMoney**|**Decimal, Nullable\<10 진수 >**|  
-|**sql_variant**|InclusionThresholdSetting|**개체**|  
-|**table**|InclusionThresholdSetting|InclusionThresholdSetting|  
-|**text**|InclusionThresholdSetting|InclusionThresholdSetting|  
-|**time**|InclusionThresholdSetting|**TimeSpan, Nullable\<TimeSpan>**|  
-|**timestamp**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**sql_variant**|없음|**개체**|  
+|**table**|없음|없음|  
+|**text**|없음|없음|  
+|**time**|없음|**TimeSpan, Nullable\<TimeSpan>**|  
+|**timestamp**|없음|없음|  
 |**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid, Nullable\<Guid>**|  
-|**사용자 정의 type(UDT)**|InclusionThresholdSetting|동일한 어셈블리 또는 종속 어셈블리의 사용자 정의 형식에 바인딩된 동일한 클래스입니다.|  
+|**사용자 정의 type(UDT)**|없음|동일한 어셈블리 또는 종속 어셈블리의 사용자 정의 형식에 바인딩된 동일한 클래스입니다.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
-|**varchar**|InclusionThresholdSetting|InclusionThresholdSetting|  
-|**xml**|**SqlXml**|InclusionThresholdSetting|  
+|**varchar**|없음|없음|  
+|**xml**|**SqlXml**|없음|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Out 매개 변수로 자동 데이터 형식 변환  
  CLR 메서드를 사용 하 여 입력된 매개 변수를 표시 하 여 호출 코드나 프로그램 정보를 반환할 수는 **아웃** 한정자 (Microsoft Visual C#) 또는  **\<나타내야 > ByRef** (Microsoft Visual Basic) 입력된 매개 변수에서 CLR 데이터 형식 인지 합니다 **System.Data.SqlTypes** 네임 스페이스 및 호출 프로그램에 해당 하는 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입력된 매개 변수로 입력 데이터 형식 변환을 자동으로 수행 CLR 메서드가 데이터 형식을 반환 합니다.  

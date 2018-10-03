@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - QueryBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4a268248d730711dc7fb64500445c04fd6146d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71e00b6810d777563855f3016d9fa129010a08ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059653"
 ---
 # <a name="querybinding-data-type-assl"></a>QueryBinding 데이터 형식(ASSL)
   연결을 나타내는 파생된 데이터 형식을 정의 [데이터 원본](../objects/datasource-element-assl.md) 요소를 [QueryDefinition](../properties/querydefinition-element-assl.md) 요소입니다.  
@@ -51,13 +48,13 @@ ms.locfileid: "37169674"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[TabularBinding](binding-data-type-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[DataSourceID](../properties/id-element-assl.md), [QueryDefinition](../properties/querydefinition-element-assl.md)|  
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   

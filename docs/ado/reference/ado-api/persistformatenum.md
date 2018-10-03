@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - PersistFormatEnum enumeration [ADO]
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9aa6ce5a4341c85f7763d407b0d39599b24d9441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 851106109d195ae6f5d6f66d3944e486d58504c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753641"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
-저장 하는 형식을 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+저장할 형식을 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adPersistADTG**|0|Microsoft Advanced 데이터 테이블 그램 (ADTG) 형식을 나타냅니다.|  
-|**adPersistADO**|1|ADO의 Extensible Markup Language (XML) 형식 사용될지를 나타냅니다. 이 값 adPersistXML 동일 이며 이전 버전과 호환성에 대 한 포함 합니다.|  
+|**adPersistADTG**|0|Microsoft 고급 데이터 테이블 그램 (ADTG) 형식을 나타냅니다.|  
+|**adPersistADO**|1|ADO의 Extensible Markup Language (XML) 형식으로 사용 됨을 나타냅니다. 이 값은 adPersistXML 동일 이며 이전 버전과 호환성에 대 한 포함 합니다.|  
 |**adPersistXML**|1|Extensible Markup Language (XML) 형식을 나타냅니다.|  
-|**adPersistProviderSpecific**|2|공급자가 유지할 나타냅니다는 **레코드 집합** 자체 형식을 사용 하 여 합니다.|  
+|**adPersistProviderSpecific**|2|공급자가 유지 함을 나타냅니다 합니다 **레코드 집합** 자체 형식을 사용 하 여 합니다.|  
   
-## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  Package: **com.ms.wfc.data**  
   
 |상수|  

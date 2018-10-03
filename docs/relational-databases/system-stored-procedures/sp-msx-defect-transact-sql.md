@@ -1,14 +1,11 @@
 ---
-title: sp_msx_defect (Transact SQL) | Microsoft Docs
+title: sp_msx_defect (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffce49260f39c04665ec570e92a37e1783077dbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843351"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +44,9 @@ sp_msx_defect [@forced_defection =] forced_defection
   
 ## <a name="arguments"></a>인수  
  [  **@forced_defection =**] *forced_defection*  
- 강제 제거 마스터 SQLServerAgent 손실 된 경우에 영구적으로 복구할 수 없을 정도로 손상으로 인해 발생 여부를 지정 **msdb** 데이터베이스나 아니요 **msdb** 데이터베이스 백업 합니다. *forced_defection*은 **비트**, 기본값은 **0**를 강제로 제거할 발생 않아야 함을 나타냅니다. 값이 **1** 하면 강제 제거 합니다.  
+ 마스터 SQLServerAgent가 영구적으로 복구할 수 없을 정도로 손상 손실 경우 강제 것인지 여부를 지정 **msdb** 데이터베이스에 없거나 **msdb** 데이터베이스 백업 합니다. *forced_defection*은 **비트**, 기본값은 **0**를 강제로 제거할 수 없음을 발생 않아야 함을 나타냅니다. 값이 **1** 지정 하면 강제 제거 합니다.  
   
- 실행 하 여 제거를 강제로 후 **sp_msx_defect**의 멤버는 **sysadmin** 마스터 SQLServerAgent에서 고정된 서버 역할 제거를 완료 하려면 다음 명령을 실행 해야 합니다.  
+ 실행 하 여 강제로 적용 한 후 **sp_msx_defect**의 멤버는 **sysadmin** 마스터 SQLServerAgent에서 고정된 서버 역할 제거를 완료 하려면 다음 명령을 실행 해야 합니다:  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -60,15 +56,15 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  때 **sp_msx_defect** 제대로 완료 되 면 메시지가 반환 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_msx_enlist &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87af6785855f81abcffe57e3672e59fcf00b5e2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055003"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>필터링된 모델 테스트(기본 데이터 마이닝 자습서)
   확인 했으므로 했으므로 합니다 `TM_Decision_Tree` 모델은 가장 정확한, 모델의 요구에 맞게 사용자 지정할는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 타겟 메일링 캠페인입니다. 특히, 마케팅 부서의 male 및 female 고객 사이 차이가 있는지 알고 싶습니다. 정보를 광고 하는 데 잡지를 결정 하는 데 도움이 수 및 제품 하도록 메일 기능을 합니다.  

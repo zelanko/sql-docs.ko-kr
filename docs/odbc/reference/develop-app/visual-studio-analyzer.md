@@ -1,35 +1,32 @@
 ---
-title: Visual Studio Analyzer | Microsoft Docs
+title: Visual Studio 분석기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], about Visual Studio Analyzer
 - Visual Studio Analyzer [ODBC]
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e88d1b727dfadf153f8dea9d85bccd27db03e830
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba8ec656bf5cd2bfb479c6268705149ece207d2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797312"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  
->  Visual Studio Analyzer에 대 한 지원 (Visual Studio Analyzer 이전 버전의 Visual Studio에만 포함 되었습니다.) Windows 8 부터는 제거 되었습니다. 다른 방법은 문제 해결 메커니즘 BID 추적을 사용 합니다.  
+>  Visual Studio Analyzer에 대 한 지원 (Visual Studio Analyzer 이전 버전의 Visual Studio에만 포함 되었습니다.) Windows 8부터 제거 되었습니다. 문제 해결 메커니즘 대신 BID 추적을 사용 합니다.  
   
- Microsoft® Visual Studio™ 분석기는 ODBC 응용 프로그램의 상위 수준 보기를 제공합니다. 개발자는 평가 하 고 분석, 구조, 성능 및 상호 작용 아닌 구성 요소 또는 코드 관점에서 응용 프로그램의 관점에서 디버깅할 수입니다. Visual Studio 분석기에 의해 수집 된 정보는 일종의 응용 프로그램의 두 가지 구성 요소 간의 상호 작용을 나타내는 이벤트의 형태로 표현 합니다. 이벤트 함수 호출 및 연결, 데이터베이스 쿼리 및 트랜잭션 같은 함수에서 반환 값으로 구성 될 수 있습니다.  
+ Microsoft® Visual Studio™ 분석기는 ODBC 응용 프로그램의 상위 수준 보기를 제공합니다. 개발자 평가 하 고 분석 하 고 구조, 성능 및 응용 프로그램의 관점에서는 아닌 구성 요소 또는 코드 관점에서 상호 작용을 디버그할 수 있습니다. Visual Studio 분석기에 의해 수집 된 정보는 일종의 응용 프로그램의 두 구성 요소 간의 상호 작용을 나타내는 이벤트 형식에서입니다. 함수 호출 및 반환 된 함수, 연결, 데이터베이스 쿼리, 트랜잭션 등의 이벤트를 구성할 수 있습니다.  
   
- 이 섹션에는 다음 항목 포함 되어 있습니다.  
+ 이 섹션에서는 다음 항목을 포함합니다.  
   
 -   [Visual Studio 분석기 사용](../../../odbc/reference/develop-app/enabling-visual-studio-analyzer.md)

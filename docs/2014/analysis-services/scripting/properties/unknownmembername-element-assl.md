@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UnknownMemberName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - UnknownMemberName element
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c788574586a20ef44f0206d07bb21389cfd0308
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b49ed9cb27a482993cabdf78df53e90f55a749ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048733"
 ---
 # <a name="unknownmembername-element-assl"></a>UnknownMemberName 요소(ASSL)
   차원의 알 수 없는 멤버에 대한 캡션을 차원의 기본 언어로 포함합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37306493"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Dimension](../objects/dimension-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `UnknownMemberName` 요소의 값은 알 수 없는 멤버에 사용되는 캡션을 제공합니다. 알 수 없는 멤버의 멤버 ID는 *Dimension*.UnknownMember입니다. 여기서 *Dimension* 은 차원의 고유한 이름이며 변경할 수 없습니다.  

@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679641"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   선언 되지 않은 매개 변수에 대 한 메타 데이터가 포함 된 결과 집합 반환을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 에 사용 되는 각 매개 변수를 고려 합니다  **\@tsql** 일괄 처리에서 선언 되지 있지만  **\@params**합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. 프로시저가 빈 경우 결과 집합을 반환 합니다  **\@tsql** 입력된 일괄 처리 매개 변수가 없는에 선언 된 항목을 제외한  **\@params**합니다.  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (***n***)** 하거나 **nvarchar (max)** 합니다.  
+ [  **\@tsql =** ] **'**_TRANSACT-SQL\_batch_**'**  
+ 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
   
- [  **\@params =** ] **N'***매개 변수***'**  
- \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql과 비슷하게 작동 합니다. *매개 변수* 될 수 있습니다 **nvarchar (***n***)** 하거나 **nvarchar (max)** 합니다.  
+ [  **\@params =** ] **N'**_매개 변수_**'**  
+ \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql과 비슷하게 작동 합니다. *매개 변수* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
   
  에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열인 *Transact SQL_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. TRANSACT-SQL 문 또는 문의 일괄 처리에 매개 변수가 없는 경우 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   하는 경우 입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에서 선언 된 매개 변수 이름이 같은 지역 변수를 선언 \@매개 변수입니다.  
   
--   문이 임시 테이블을 참조 하는 경우.  
+- 문이 임시 테이블을 참조 하는 경우.
   
  하는 경우 \@tsql 이외의 선언 된 매개 변수가 \@매개 변수, 프로시저 빈 결과 집합을 반환 합니다.  
   
@@ -171,7 +167,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     경우 E (\@p) = \@p와 TT (\@p) 경우 즉, 존재 \@p가 2 단계 시작 부분에 나열 된 인수 식 중 하나에 직접, 형식 추론 알고리즘의 데이터 형식을 유추 \@TT (p \@p). 예를 들어:  
+     경우 E (\@p) = \@p와 TT (\@p) 경우 즉, 존재 \@p가 2 단계 시작 부분에 나열 된 인수 식 중 하나에 직접, 형식 추론 알고리즘의 데이터 형식을 유추 \@TT (p \@p). 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -219,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E에 암시적 변환이 가장 작은 수를 생성 하는 데이터 형식 (\@p)을 선택 합니다. 특정 데이터 형식이 E에 대 한 데이터 형식을 생성 하는 경우 (\@p) TT와 다른 (\@p), 형식 추론 알고리즘 E의 데이터 형식에서의 추가 암시적 변환 되도록 것으로 간주 (\@p)를 TT (\@p).  
   
-     예를 들어:  
+     이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

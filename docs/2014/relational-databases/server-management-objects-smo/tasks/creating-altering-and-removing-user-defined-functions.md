@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0960e46b83b191745169fde64f68f30fa2fc5c64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ced5a796739ea508440fea9ddbb645443fdda786
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054503"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>사용자 정의 함수 생성, 변경 및 제거
   합니다 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 에서 사용자 정의 함수를 프로그래밍 방식으로 관리할 수 있는 기능을 제공 하는 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 사용자 정의 함수는 입력 및 출력 매개 변수를 지원하며 테이블 열에 대한 직접 참조도 지원합니다.  
@@ -42,7 +39,7 @@ ms.locfileid: "37246273"
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBUserDefFuncs1](SMO How to#SMO_VBUserDefFuncs1)]  -->  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Visual C#에서 스칼라 사용자 정의 함수 만들기  
- 이 코드 예제에서는 만들고에 입력 하는 스칼라 사용자 정의 함수를 제거 하는 방법을 보여 줍니다 <xref:System.DateTime> 개체 매개 변수와 정수 반환 형식에서 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]합니다. 사용자 정의 함수가 생성 된 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek`을 참조하세요. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
+ 이 코드 예제에서는 만들고에 입력 하는 스칼라 사용자 정의 함수를 제거 하는 방법을 보여 줍니다 <xref:System.DateTime> 개체 매개 변수와 정수 반환 형식에서 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]합니다. 사용자 정의 함수가 생성 된 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek` 을 참조하세요. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
   
 ```  
 {  
@@ -78,7 +75,7 @@ ms.locfileid: "37246273"
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>PowerShell에서 스칼라 사용자 정의 함수 만들기  
- 이 코드 예제에서는 만들고에 입력 하는 스칼라 사용자 정의 함수를 제거 하는 방법을 보여 줍니다 <xref:System.DateTime> 개체 매개 변수와 정수 반환 형식에서 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]합니다. 사용자 정의 함수가 생성 된 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek`을 참조하세요. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
+ 이 코드 예제에서는 만들고에 입력 하는 스칼라 사용자 정의 함수를 제거 하는 방법을 보여 줍니다 <xref:System.DateTime> 개체 매개 변수와 정수 반환 형식에서 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]합니다. 사용자 정의 함수가 생성 된 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek` 을 참조하세요. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
