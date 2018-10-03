@@ -2,11 +2,9 @@
 title: sys.dm_resource_governor_external_resource_pools (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2018
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
 ms.reviewer: ''
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_external_resource_pools_TSQL
@@ -21,12 +19,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 80beafc8a281f7f4af71484acfa01ed0016b7de2
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c6dde8b57112785bde5377d77cdb1d57f2767e3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624151"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

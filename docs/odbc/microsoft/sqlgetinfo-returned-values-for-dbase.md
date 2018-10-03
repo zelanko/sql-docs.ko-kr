@@ -1,13 +1,11 @@
 ---
-title: DBASE에 대 한 반환 값 SQLGetInfo | Microsoft Docs
+title: DBASE에 대 한 SQLGetInfo 반환 값 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b1d662dd351f8b5a0d0d178b1ed24d2fdd645da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616681"
 ---
-# <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo dBASE에 대 한 반환 값
-다음 표에서 C 언어 #에 대 한 defines는 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #에 대 한 defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 된 값에 대 한 자세한 내용은 **SQLGetInfo**, 참조는 *ODBC Programmer's Reference*합니다.  
+# <a name="sqlgetinfo-returned-values-for-dbase"></a>dBASE에 대한 SQLGetInfo 반환 값
+다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 *ODBC 프로그래머 참조*합니다.  
   
 > [!NOTE]  
->  여기서 **SQLGetInfo** 세로 막대 32 비트 비트 마스크를 반환 (&#124;) 비트 OR를 나타냅니다.  
+>  여기서 **SQLGetInfo** 세로 막대 32 비트 비트 마스크를 반환 합니다 (&#124;)는 비트 OR를 나타냅니다.  
   
 |InfoType|반환 값|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|모든 설정|  
+|SQL_AGGREGATE_FUNCTIONS|모두 설정|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|다중 값|  
 |SQL_ASYNC_MODE|0|  
@@ -85,8 +82,8 @@ ms.locfileid: "32904948"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" Odbc.ini 드라이버 키워드를 사용 하는 경우|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (이에 따라 다름 데이터 원본)|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" Odbc.ini DRIVER 키워드가 사용 되는 경우|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (이에 따라 달라 집니다 데이터 원본입니다.)|  
 |SQL_DATABASE_NAME|현재 데이터베이스 디렉터리|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"DBASE"|  
@@ -94,10 +91,10 @@ ms.locfileid: "32904948"
 |SQL_DDL_INDEX|다중 값|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|드라이버 관리자에서 처리 됩니다.|  
-|SQL_DRIVER_HENV|드라이버 관리자에서 처리 됩니다.|  
-|SQL_DRIVER_HLIB|드라이버 관리자에서 처리 됩니다.|  
-|SQL_DRIVER_HSTMT|드라이버 관리자에서 처리 됩니다.|  
+|SQL_DRIVER_HDBC|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HENV|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HLIB|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HSTMT|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* 빌드 날짜를 지정)|  
@@ -114,8 +111,8 @@ ms.locfileid: "32904948"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (한정자 값이 반환 혼합에서 Windows NT 디렉터리를 찾을 수 있도록 합니다.)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (억음 악센트)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (한정자 반환 됨 대/소문자 혼합된에서 Windows NT 디렉터리를 찾을 수 있도록 합니다.)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"'" (따옴표 다시)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -123,7 +120,7 @@ ms.locfileid: "32904948"
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (알 수 없거나 해당 사항이 제한)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (제한 알 수 없거나 적용할 수 없음)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  

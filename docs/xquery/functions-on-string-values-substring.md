@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - substring function [XQuery]
 - fn:substring function
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bf01599d3144ca6eb3ebbfa74435ab16b25176a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e31fb80768b6d8b025589d97ffbb635c36aa5556
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628691"
 ---
-# <a name="functions-on-string-values---substring"></a>문자열 값 함수-substring
+# <a name="functions-on-string-values---substring"></a>문자열 값 함수 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   값 부분을 반환 합니다 *$sourceString*값으로 표시 되는 위치에서 시작 *$startingLoc를* 의 값이 지정 된 문자 수에 대 한 계속 *$ 길이*입니다.  

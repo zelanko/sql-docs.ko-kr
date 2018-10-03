@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97338d3bb892cde9e8fb4e7653f59e1b4973b30f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e874babc1effc7bda625de1664e51a27599b115a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082992"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612691"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>ODBC 드라이버 성능 데이터 프로파일링 - 장기 실행 쿼리 기록
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "43082992"
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>장기 실행 쿼리 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 및 장기 실행 쿼리 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 합니다. 예를 들어:  
+1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 및 장기 실행 쿼리 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     C:\\Odbcqry.log  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - availability_group_listeners_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3ce9f05f546fe9ad9a1d22d17424fe8f06482499
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2e0075fed6695ffa106891843c4f42106e1bfc74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625711"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ ms.locfileid: "37989365"
 |**dns_name**|**nvarchar(63)**|가용성 그룹 수신기에 대해 구성된 네트워크 이름(호스트 이름)입니다.|  
 |**port**|**int**|가용성 그룹 수신기에 대해 구성된 TCP 포트 번호입니다.<br /><br /> NULL = 수신기가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에 구성되어서 포트 번호가 가용성 그룹에 추가되지 않았습니다. 포트 pleaseuse 수정 LISTENER 옵션을 추가 하는 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|  
 |**is_conformant**|**bit**|이 IP 구성이 규칙에 부합하는지 여부를 나타내며 다음 중 하나입니다.<br /><br /> 1 = 수신기가 규칙에 부합함. IP(인터넷 프로토콜) 주소 사이에 "OR" 관계만 있습니다. *와 호환 되는* 포함 모든가 만든 IP 구성의 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 예를 들어 WSFC 장애 조치(Failover) 클러스터 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서 만든 IP 구성을 ALTER AVAILABILITY GROUP tsql 문을 사용하여 수정할 수 있는 경우에도 IP 구성은 규칙에 부합하는 것으로 한정됩니다.<br /><br /> 0 = 수신기가 규칙에 부합하지 않음. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 사용하여 구성할 수 없고 WSFC 클러스터 내에서 직접 정의된 IP 주소를 나타냅니다.|  
-|**ip_configuration_string_from_cluster**|**nvarchar(max)**|이 수신기에 대한 클러스터 IP 구성 문자열(있는 경우)입니다. NULL = 수신기에 가상 IP 주소가 없음. 예를 들어:<br /><br /> IPv4 주소: `65.55.39.10`합니다.<br /><br /> IPv6 주소:  `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
+|**ip_configuration_string_from_cluster**|**nvarchar(max)**|이 수신기에 대한 클러스터 IP 구성 문자열(있는 경우)입니다. NULL = 수신기에 가상 IP 주소가 없음. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> IPv4 주소: `65.55.39.10`합니다.<br /><br /> IPv6 주소:  `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>보안  
   

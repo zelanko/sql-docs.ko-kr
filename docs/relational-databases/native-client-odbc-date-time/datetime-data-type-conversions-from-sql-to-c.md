@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4133ce5044ceaf20dddafe6599456c415d085ed6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ed4e0738b9473295157c88fb7ee54804a5ebd75d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598541"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>날짜/시간 데이터 형식을 SQL에서 C로 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,8 +32,8 @@ ms.locfileid: "43069821"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_TYPE_DATE|확인|12|13|12|13,23|14|16|16|  
 |SQL_SS_TIME2|12|8|15|확인|10,23|17|16|16|  
 |SQL_TYPE_TIMESTAMP|18|7,8|확인|7|23|19|16|16|  
@@ -47,7 +44,7 @@ ms.locfileid: "43069821"
 |기호|의미|  
 |------------|-------------|  
 |확인|변환 문제가 발생하지 않습니다.|  
-|@shouldalert|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
+|1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
 |2|선행 공백과 후행 공백이 무시됩니다.|  
 |3|문자열이 날짜, 시간, 표준 시간대 또는 표준 시간대 오프셋으로 구문 분석되고 소수 자릿수 초에 대해 9자리까지 허용합니다. 표준 시간대 오프셋이 구문 분석되는 경우 시간이 클라이언트 표준 시간대로 변환됩니다. 이 변환 중에 오류가 발생 하는 경우 SQLSTATE 22018 및 "Datetime 필드 오버플로" 메시지가 포함 된 진단 레코드가 생성 됩니다.|  
 |4|값이 유효한 날짜, 타임스탬프 또는 타임스탬프 오프셋 값이 아니면 SQLSTATE 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  

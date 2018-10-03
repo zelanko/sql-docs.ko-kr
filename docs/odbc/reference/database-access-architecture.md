@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC]
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69217d94191a51c6b413699337278480a4d4f6a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42fc1d3880e01c435e7991fb5781d0f815a83db5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908118"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612292"
 ---
 # <a name="database-access-architecture"></a>데이터베이스 액세스 아키텍처
-ODBC의 개발에 질문 중 하나가 표준화를 위한 데이터베이스 액세스 아키텍처의 어느 부분이 되었습니다. 프로그래밍 인터페이스는 이전 섹션에서 설명한 SQL-SQL, SQL 포함 된 모듈 및 Cli-은이 아키텍처의 한 부분일 뿐입니다. 사실, 않았기 때문에 ODBC가 개인용 컴퓨터-> 기반 응용 프로그램 미니 컴퓨터 및 Dbms 메인프레임을 연결 하는 데 주로 사용, 또한 다양 한 네트워크 구성 요소 중 일부는 표준화 될 수 없습니다.  
+ODBC의 개발에서 질문 중 하나를 표준화 하는 데이터베이스 액세스 아키텍처의 어느 부분 이었습니다. 이전 섹션에서 설명 하는 인터페이스를 프로그래밍 하는 SQL-SQL, SQL에 포함 된 모듈 및 Cli-이 아키텍처의 일부입니다. 사실, 않았기 때문에 미니 컴퓨터 및 메인프레임 Dbms 개인용 컴퓨터 기반 응용 프로그램에 연결할 ODBC 주로 의도도 다양 한 네트워크 구성 요소 중 일부는으로 표준화 될 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

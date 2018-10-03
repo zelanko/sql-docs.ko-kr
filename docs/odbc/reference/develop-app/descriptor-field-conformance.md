@@ -1,13 +1,11 @@
 ---
-title: 설명자 필드 규칙 | Microsoft Docs
+title: 설명자 필드 적합성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,33 +13,32 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911848"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642311"
 ---
-# <a name="descriptor-field-conformance"></a>설명자 필드 규칙
-다음 표에서이 잘 정의 된 각 ODBC 설명자 헤더 필드의 규칙 수준과 보여 줍니다.  
+# <a name="descriptor-field-conformance"></a>설명자 필드 적합성
+다음 표에서이 방법이 잘 정의 된 각 ODBC 설명자 헤더 필드의 규칙 수준은 보여 줍니다.  
   
-|함수|규칙 수준|  
+|기능|적합성 수준|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|핵심|  
 |SQL_DESC_ARRAY_SIZE|핵심|  
-|SQL_DESC_ARRAY_STATUS_PTR|코어 (용 APD, IPR, 및 IRD); 수준 1 ()|  
+|SQL_DESC_ARRAY_STATUS_PTR|코어 (APD, IPR, 및 IRD); 수준 1 ()|  
 |SQL_DESC_BIND_OFFSET_PTR|핵심|  
 |SQL_DESC_BIND_TYPE|핵심|  
 |SQL_DESC_COUNT|핵심|  
 |SQL_DESC_ROWS_PROCESSED_PTR|핵심|  
   
- 다음 표는 각 ODBC 설명자 레코드 필드에서이 잘 정의의 규칙 수준과를 나타냅니다.  
+ 다음 표에서이 방법이 잘 정의 된 각 ODBC 설명자 레코드 필드의 규칙 수준은 보여 줍니다.  
   
-|함수|규칙 수준|  
+|기능|적합성 수준|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|수준 2|  
 |SQL_DESC_BASE_COLUMN_NAME|핵심|  
@@ -50,8 +47,8 @@ ms.locfileid: "32911848"
 |SQL_DESC_CATALOG_NAME|수준 2|  
 |SQL_DESC_CONCISE_TYPE|핵심|  
 |SQL_DESC_DATA_PTR|핵심|  
-|SQL_DESC_DATETIME_INTERVAL_ 코드|코어 [1]|  
-|SQL_DESC_DATETIME_INTERVAL_ 정밀도|코어 [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ 코드|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ 전체 자릿수|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|핵심|  
 |SQL_DESC_FIXED_PREC_SCALE|핵심|  
 |SQL_DESC_INDICATOR_PTR|핵심|  
@@ -77,6 +74,6 @@ ms.locfileid: "32911848"
 |SQL_DESC_UNSIGNED|핵심|  
 |SQL_DESC_UPDATABLE|핵심|  
   
- [이러한 레코드 필드에 대 한 지원 되는 1]은 드라이버는 해당 데이터 형식을 지원 하는 경우에 필요 합니다.  
+ [이러한 레코드 필드에 대 한 지원 되는 1]는 드라이버는 해당 데이터 형식을 지원 하는 경우에 필요 합니다.  
   
- [2] 핵심 수준 규칙에 대 한 드라이버 SQL_PARAM_INPUT을 지원 해야 합니다. 수준 2 인터페이스 규칙에 대 한 드라이버 및 지원 해야 SQL_PARAM_INPUT_OUTPUT SQL_PARAM_OUTPUT 합니다.
+ [2] 핵심 수준 규칙에 대 한 드라이버 SQL_PARAM_INPUT을 지원 해야 합니다. 수준 2 인터페이스 적합성을 위해 SQL_PARAM_INPUT_OUTPUT 및 SQL_PARAM_OUTPUT 드라이버 지원도 해야 합니다.

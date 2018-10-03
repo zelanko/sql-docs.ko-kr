@@ -5,30 +5,27 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
 - functions [ODBC], scalar
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: acaab68fab32c25ab101f65ccd196abe7ebceef2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631861"
 ---
-# <a name="appendix-e-scalar-functions"></a>부록 e: 스칼라 함수
-ODBC이 부록의이 내용의 해당 섹션에서 제공 되는 이러한 함수 형식의 각각에 대 한 세부 정보가 포함 된 다음과 같은 유형의 스칼라 함수를 지정 합니다. 함수 설명에 관련 된 구문을 포함합니다.  
+# <a name="appendix-e-scalar-functions"></a>부록 E: 스칼라 함수
+ODBC이이 부록의 해당 섹션에 제공 된 이러한 함수 형식을 각각에 대 한 자세한 정보를 사용 하 여 다음과 같은 유형의 스칼라 함수를 지정 합니다. 함수 설명에는 연결 된 구문 포함 됩니다.  
   
- 이 부록의 내용에는 다음 항목이 포함 되어 있습니다.  
+ 이 부록에는 다음 항목에 있습니다.  
   
 -   [문자열 함수](../../../odbc/reference/appendixes/string-functions.md)  
   
@@ -42,11 +39,11 @@ ODBC이 부록의이 내용의 해당 섹션에서 제공 되는 이러한 함�
   
 -   [SQL-92 CAST 함수](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- 함수가 데이터 원본에 따른 특정 경우가 많기 때문에 ODBC 스칼라 함수에서 반환 값에 대 한 데이터 형식을 필요 하지 않습니다. 응용 프로그램 데이터 형식 변환을 강제 실행 가능 하면 CONVERT 스칼라 함수를 사용 해야 합니다.  
+ 함수는 데이터 소스별 경우가 많기 때문에 ODBC 스칼라 함수에서 반환 값에 대 한 데이터 형식을 위임 하지 않습니다. 응용 프로그램 데이터 형식 변환에 적용할 가능한 CONVERT 스칼라 함수를 사용 해야 합니다.  
   
-## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC 및 SQL 92 스칼라 함수  
- 이 부록의 내용 테이블에는 s Q l-92에 맞게 ODBC 3.0에서 추가 된 기능이 포함 됩니다. ODBC에 정의 된 특정 유형의 스칼라 함수에 대 한 추가 된 이러한 함수는 각 섹션에 표시 됩니다.  
+## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC 및 SQL-92 스칼라 함수  
+ 이 부록의 표에서 SQL-92에 맞게 ODBC 3.0에서 추가 된 함수를 포함 합니다. ODBC에 정의 된 대로 특정 유형의 스칼라 함수에 대 한 추가 이러한 함수는 각 섹션에 표시 됩니다.  
   
- ODBC 및 SQL 92의 스칼라 함수를 다르게 분류합니다. ODBC 스칼라 함수 인수; 유형별로 분류 반환 값을 분류 하는 SQL 92 합니다. 예를 들어 함수 추출으로 분류 됩니다 timedate 함수 ODBC에 필드 추출 인수 datetime 키워드 며 추출 원본 인수는 날짜/시간 또는 간격 식 때문입니다. SQL 92 반면에 추출으로 분류 스칼라 함수를 숫자 반환 값은 숫자입니다.  
+ ODBC 및 SQL-92 다르게 해당 스칼라 함수를 분류 합니다. ODBC 스칼라 함수 인수 형식으로 분류 SQL-92 반환 값으로 분류합니다. 예를 들어, EXTRACT 함수 timedate 함수로 의해 분류 ODBC 필드 추출 인수는 datetime 키워드 이므로 추출 원본 인수는 datetime 또는 간격 식입니다. SQL-92와 다른 한편으로 추출으로 분류 숫자 스칼라 함수인 경우 반환 값은 숫자입니다.  
   
- 응용 프로그램에 스칼라 함수를 호출 하 여 드라이버가 지 원하는 결정할 수 **SQLGetInfo**합니다. 정보 유형이 ODBC 및 SQL 92 분류 스칼라 함수에 대 한 포함 됩니다. 이러한 분류가 다르기 때문에 일부 스칼라 함수에 대 한 지원 ODBC 및 s Q l 92와 일치 하지 않는 정보 유형이에 표시 될 수 있습니다. 예를 들어 ODBC에서 추출에 대 한 지원은 SQL_TIMEDATE_FUNCTIONS 정보 유형을;로 표시 됩니다. 반면에 SQL 92에서 추출에 대 한 지원 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 정보 유형으로 표시 됩니다.
+ 응용 프로그램에서 드라이버를 호출 하 여 지원 되는 스칼라 함수를 확인할 수 있습니다 **SQLGetInfo**합니다. 정보 유형 ODBC 및 SQL-92 분류 스칼라 함수에 대 한 포함 됩니다. 이러한 분류 다른 이기 때문에 일부 스칼라 함수에 대 한 지원 정보 유형 해당 하지 않는 ODBC 및 SQL-92에에서 표시 될 수 있습니다. 예를 들어 ODBC에서 추출에 대 한 지원을 나타난 SQL_TIMEDATE_FUNCTIONS 정보 형식 반면에 SQL-92에 추출에 대 한 지원은 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 정보 형식으로 표시 됩니다.

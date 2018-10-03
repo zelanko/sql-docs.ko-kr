@@ -4,30 +4,24 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Server connection file validation
 - Server connection files
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4fc3a59ab26ba7e4c0fbb6a034b3533cdb34d1c1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bf218f229ad8f97e1bdcda086f19bd7517896873
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608621"
 ---
-# <a name="creating-the-server-connection-files-mysqltosql"></a>서버 연결 파일 (MySQLToSQL) 만들기
-별도 서버 연결 파일 또는 스크립트 파일의 서버 섹션에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일 및 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
+# <a name="creating-the-server-connection-files-mysqltosql"></a>서버 연결 파일 만들기(MySQLToSQL)
+스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
   
 **예:**  
   
@@ -91,11 +85,11 @@ ms.locfileid: "34776279"
 </sql-azure>  
 ```  
   
-## <a name="server-connection-file-validation"></a>서버 연결에 대 한 파일 유효성 검사  
-사용자가 서버 연결 파일 스키마 정의 파일에 대해 유효성을 검사할 쉽게 수 **'M2SSConsoleScriptServersSchema.xsd'** '스키마' 폴더에서 사용할 수 있습니다.  
+## <a name="server-connection-file-validation"></a>서버 연결 파일 유효성 검사  
+사용자 스키마 정의 파일에 대해 자신의 서버 연결 파일을 쉽게 확인할 수 있습니다 **'M2SSConsoleScriptServersSchema.xsd'** 'Schemas' 폴더에서 사용할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에 다음 단계는 [SSMA 콘솔 실행 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 (MySQL)를 실행합니다.](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

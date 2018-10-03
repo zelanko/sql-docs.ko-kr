@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_mailitems_sp (Transact SQL) | Microsoft Docs
+title: sysmail_delete_mailitems_sp (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca730dc633f8aad10aa79fd34bb7e94870a48076
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650785"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +42,21 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
 ## <a name="arguments"></a>인수  
  [ **@sent_before=** ] **'***sent_before***'**  
- 날짜와으로 제공 된 시간 까지의 전자 메일을 삭제는 *sent_before* 인수입니다. *sent_before* 은 **datetime** 기본값으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
+ 날짜 및 시간으로 제공 된 최대 전자 메일을 삭제 합니다 *sent_before* 인수입니다. *sent_before* 됩니다 **datetime** 기본적으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
   
  [ **@sent_status=** ] **'***sent_status***'**  
- 지정 된 형식의 전자 메일을 삭제 *sent_status*합니다. *sent_status* 은 **varchar(8)** 이며 기본값은 없습니다. 유효한 항목은 **전송**, **보내지 않은**, **다시 시도**, 및 **실패**합니다. NULL은 모든 상태를 나타냅니다.  
+ 지정 된 형식의 전자 메일을 삭제 *sent_status*합니다. *sent_status* 됩니다 **varchar(8)** 기본값은 없습니다. 유효한 항목은 **전송**를 **보내지 않은**를 **을 다시 시도**, 및 **실패**합니다. NULL은 모든 상태를 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- 데이터베이스 메일 메시지 및 첨부 파일에 저장 됩니다는 **msdb** 데이터베이스입니다. 방지 하기 위해 메시지를 주기적으로 삭제 해야 **msdb** 예상 보다 더 크게 증가 하 고 조직의 문서 보존 프로그램 준수 하도록 합니다. 사용 하 여 **sysmail_delete_mailitems_sp** 저장 프로시저를 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 특정 형식으로 지정 된 전자 메일만 삭제할 수 있습니다는 **sent_status** 인수입니다. 인수에 대해 제공 해야 **@sent_before** 또는 **@sent_status**합니다. 사용 하 여 모든 메시지를 삭제 하려면  **@sent_before getdate () =** 합니다.  
+## <a name="remarks"></a>Remarks  
+ 데이터베이스 메일 메시지 및 첨부 파일에 저장 되는 **msdb** 데이터베이스입니다. 메시지를 방지 하려면에 주기적으로 삭제 해야 **msdb** 예상 보다 커지는 및 조직의 문서 보존 프로그램 사용을 준수 하도록 합니다. 사용 된 **sysmail_delete_mailitems_sp** 저장 프로시저를 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 특정 형식으로 지정 된 전자 메일만 삭제할 수 있습니다 합니다 **sent_status** 인수입니다. 인수에 대해 제공 해야 합니다 **@sent_before** 하거나 **@sent_status**합니다. 모든 메시지를 삭제 하려면 사용 하 여  **@sent_before getdate () =** 합니다.  
   
- 전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도의 해당 항목은 삭제 되지 않습니다 **sysmail_event_log**합니다. 사용 하 여 [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 를 로그에서 항목을 삭제 합니다.  
+ 전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도의 해당 항목은 삭제 되지 않습니다 **sysmail_event_log**합니다. 사용 하 여 [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 로그에서 항목을 삭제 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 기본적으로이 저장된 프로시저는 실행에 대 한 구성원에 게 부여 해제는 **sysadmin** 고정된 서버 역할 및 **DatabaseMailUserRole**합니다. 멤버는 **sysadmin** 고정된 서버 역할에서 모든 사용자가 보낸 전자 메일을 삭제 하려면이 절차를 실행할 수 있습니다. 멤버 **DatabaseMailUserRole** 해당 사용자가 보내는 전자 메일만 삭제할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 기본적으로이 저장된 프로시저는 실행에 대 한 멤버에 게 부여 해제 합니다 **sysadmin** 고정된 서버 역할 및 **DatabaseMailUserRole**합니다. 멤버는 **sysadmin** 고정된 서버 역할에서 모든 사용자가 보낸 전자 메일을 삭제 하는이 절차를 실행할 수 있습니다. 멤버인 **DatabaseMailUserRole** 해당 사용자가 보낸 전자 메일만 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -92,7 +88,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
