@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], defaults
 - default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0708836299d1c436caf9c70b6727dfd2345014cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98f50eb8fb9d45c782eb1c134464141a041e30d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194183"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 열에 입력되는 기본값을 지정할 수 있습니다. 기본값이 지정되지 않은 상태에서 사용자가 열을 빈 채로 두면 다음과 같은 결과가 발생합니다.  

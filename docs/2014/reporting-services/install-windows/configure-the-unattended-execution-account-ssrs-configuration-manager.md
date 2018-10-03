@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0cba2bc68d83c2d0b986324e2efa7f882bac6e76
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16a92441dd7e3088b6be0f8235f6719b6bc7cdb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192533"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  

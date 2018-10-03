@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b232859f61efbfb6de2a0c27fb34af8cb99252c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 054d67de8b05d7f3b913ade660902c764cab9b08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183860"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206833"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>기본 Reporting Services 배달 확장 프로그램 변경
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 설정을 수정하여 구독 정의 페이지의 **배달 방법** 목록에 표시될 배달 확장 프로그램을 결정할 수 있습니다. 예를 들어, 구성을 수정하여 사용자가 새 구독을 만들었을 때 전자 메일 배달 대신 기본적으로 파일 공유 전달을 선택할 수 있습니다. 또한 배달 확장 프로그램이 사용자 인터페이스에 나열되는 순서를 변경할 수 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e9ba66baccbaa7278766c0464851cbc9224e6dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200523"
 ---
 # <a name="copy-package-objects"></a>패키지 개체 복사
   이 항목에서는 한 패키지 내에서 또는 패키지 간에 제어 흐름 항목, 데이터 흐름 항목 및 연결 관리자를 복사하는 방법에 대해 설명합니다.  

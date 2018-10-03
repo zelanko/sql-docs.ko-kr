@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1fc46b6f7827143c3fdd523970fd5748a28aeb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201313"
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
   데이터 흐름 구성 요소가 열 데이터에 변환을 적용하거나, 원본에서 데이터를 추출하거나, 데이터를 대상으로 로드할 때 오류가 발생할 수 있습니다. 오류는 주로 예기치 않은 데이터 값으로 인해 발생합니다. 예를 들어 열에 숫자 대신 문자열이 포함되었기 때문에 데이터 변환이 실패하거나, 열의 데이터 형식은 숫자인데 데이터가 날짜여서 데이터베이스 열에 대한 삽입 작업이 실패하거나, 열 값이 0이어서 식 계산이 실패하고 잘못된 수치 연산이 발생할 수 있습니다.  

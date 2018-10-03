@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23702f53f7e34d7f0bfc11e2248383fc6a3d76f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebab5de453d383b20e55e52ec3d57b10cfaebcf9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200871"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>웹 구성 페이지(Master Data Services 구성 마법사)
   **웹 구성** 페이지를 사용하여 새 웹 사이트를 만들거나 새 웹 사이트 또는 웹 응용 프로그램을 만들 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 선택한 후 해당 응용 프로그램의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 지정하고 Data Quality Services를 사용하도록 설정할 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Date Property (ClientNetLibInfo Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Date property
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b6c6d2450e9774b87ff9bc9ad3e4f69d3d180706
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f52dd47852c8c1608517132be06bd79ea55cd08a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199243"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리 파일의 날짜를 가져옵니다.  

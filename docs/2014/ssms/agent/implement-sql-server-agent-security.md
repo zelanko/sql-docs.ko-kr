@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - security [SQL Server Agent]
 - security [SQL Server], SQL Server Agent
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1b945b42542948a52c0bec32de41afbf7ce664c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210803"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server 에이전트 보안 구현
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하면 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시에 의해 결정된 각 작업 단계를 수행하는 데 필요한 사용 권한만 있는 보안 컨텍스트에서 각 작업 단계를 실행할 수 있습니다. 특정 작업 단계의 사용 권한을 설정하려면 필요 사용 권한을 가진 프록시를 만든 다음 해당 프록시를 작업 단계에 할당하십시오. 프록시는 둘 이상의 작업 단계에 대해 지정할 수 있습니다. 동일 사용 권한이 필요한 작업 단계에 대해서는 동일한 프록시를 사용합니다.  

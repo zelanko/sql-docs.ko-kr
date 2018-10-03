@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
-caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ae9989f2ca04e0d0beb2d246fbea4d47fcf3a6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f230705afab21f6e2b4090d5576dd786714a8d0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201813"
 ---
 # <a name="database-requirements-master-data-services"></a>데이터베이스 요구 사항(MDS(Master Data Services))
   모든 마스터 데이터는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 저장됩니다. 이 데이터베이스를 호스팅하는 컴퓨터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스를 실행해야 합니다.  

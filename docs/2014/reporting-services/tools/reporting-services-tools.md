@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 73
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2942373c9732ea1233788ef23061c42433d2baa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 859959ec966c9a3c3141f3fb962668e141d14175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200549"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  

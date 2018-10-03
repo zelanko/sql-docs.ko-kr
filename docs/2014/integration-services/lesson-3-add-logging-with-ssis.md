@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4ad03f67a8a386b3c42697d1060910c277580c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dc2b824ef3fb3b1809bf685b3b5b8409ca1f805
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196923"
 ---
 # <a name="lesson-3-adding-logging"></a>3단원: 로깅 추가
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 태스크 및 컨테이너 이벤트 추적을 제공하여 패키지 실행을 모니터링하고 문제를 해결할 수 있는 로깅 기능이 포함되어 있습니다. 로깅 기능은 융통성이 있으므로 패키지 수준 또는 패키지 내의 개별 태스크와 컨테이너에서 사용할 수 있습니다. 로깅하려는 이벤트를 선택하고 단일 패키지에 대해 여러 개의 로그를 만들 수 있습니다.  

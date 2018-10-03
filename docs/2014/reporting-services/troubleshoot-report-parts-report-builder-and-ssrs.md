@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce472be61a85aa1adfad529c38cd74c8dcd9d17a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e43bbb27fc94d9fc7a32fb95b90e0b4e2cd53bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189323"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>보고서 파트 문제 해결(보고서 작성기 및 SSRS)
   다음은 보고서 파트로 작업할 때 도움이 되는 정보입니다  

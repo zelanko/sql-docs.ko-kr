@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085085"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202893"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>공유 데이터 원본 만들기, 삭제 및 수정(보고서 관리자)
   공유 데이터 원본은 데이터 원본에 대한 연결 속성을 지정합니다. 많은 보고서, 모델 또는 데이터 기반 구독에서 사용되는 데이터 원본이 있는 경우 여러 위치에서 같은 연결 정보를 유지 관리해야 하는 오버헤드를 없애기 위해 공유 데이터 원본을 만드십시오.  

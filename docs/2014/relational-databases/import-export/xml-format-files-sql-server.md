@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba4a93e79d9b2a602101b25944d251ea9c5b54
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201043"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 *테이블에 데이터를 대량으로 가져오는 데 사용할* XML 형식 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 작성하기 위한 구문을 정의하는 XML 스키마를 제공합니다. XML 서식 파일은 XSDL(XML Schema Definition Language)에 정의되어 있는 이 스키마에 충실해야 합니다. XML 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  

@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192875"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
   이 예제에서는 `bcp_bind` 및 `bcp_sendrow`를 사용하여 프로그램 변수에서 SQL Server로 데이터를 대량 복사하는 대량 복사 함수의 사용 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
- **보안 정보** 가능 하면 Windows 인증을 사용 합니다. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 사용 하 여 암호화 해야 자격 증명을 유지 해야 합니다 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)합니다.  
+ **보안 정보** 가능 하면 Windows 인증을 사용 합니다. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [the Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>프로그램 변수에서 직접 대량 복사 함수를 사용하려면  
   

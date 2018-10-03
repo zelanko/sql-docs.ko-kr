@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - partitioning data [data mining]
 - mining models, testing
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5984bbbaa3dc2bb55ce8f20a59dd5132de0ca72a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209893"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>데이터 샘플링(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 파티션 데이터 마법사](media/dmc-partition.gif "데이터 마이닝 리본의 데이터 분할 마법사")  
@@ -36,7 +33,7 @@ ms.locfileid: "37178970"
  모델을 학습하고 테스트하기 위해 적합한 종류의 데이터를 만드는 것은 데이터 마이닝에서 중요한 부분이지만 적합한 도구 없이는 힘든 작업입니다. 마법사는 층별 샘플링을 수행하여 학습 및 테스트 집합의 균형이 잘 잡히도록 합니다.  
   
 ## <a name="random-sampling-and-oversampling"></a>무작위 샘플링 및 과다 샘플링  
- 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 무작위 샘플링은 모델을 테스트하는 데 사용하는 데이터가 모델을 만드는 데 사용하는 데이터를 잘 나타내는지 확인할 수 있는 가장 좋은 방법입니다. Excel 또는 외부 데이터 원본에 저장된 데이터를 무작위로 샘플링할 수 있습니다.  
+ . 무작위 샘플링은 모델을 테스트하는 데 사용하는 데이터가 모델을 만드는 데 사용하는 데이터를 잘 나타내는지 확인할 수 있는 가장 좋은 방법입니다. Excel 또는 외부 데이터 원본에 저장된 데이터를 무작위로 샘플링할 수 있습니다.  
   
  무작위 샘플링 옵션을 사용 하는 경우는 **샘플 데이터** 마법사에서 자동으로 학습 및 테스트 데이터 집합을 만들고 하 고 나중에 참조할 수에 대 한 개별 Excel 워크시트로 출력 합니다.  
   

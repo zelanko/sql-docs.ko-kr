@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7dd333cdbe730380c91e032bd92859d2afc78d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6593b3d209ba04019c4b7e485cb25f2f35312dce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201823"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable의 필수 구성 요소를 사용하도록 설정
   FileTable을 만들고 사용하기 위한 필수 구성 요소를 사용하도록 설정하는 방법에 대해 설명합니다.  

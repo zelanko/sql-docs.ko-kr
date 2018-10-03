@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245702"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198533"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>파티션 마법사 F1 도움말(Analysis Services - 다차원 데이터)
   파티션 마법사를 사용하여 측정값 그룹에 대한 파티션을 큐브에 정의할 수 있습니다. 기본적으로 큐브의 각 측정값 그룹에 대해 단일 파티션이 정의됩니다. 그러나 파티션이 크면 액세스 및 처리 성능이 저하될 수 있습니다. 각각 측정값 그룹의 일부 데이터를 포함하는 여러 파티션을 만들면 측정값 그룹의 액세스 및 처리 성능을 향상시킬 수 있습니다.  

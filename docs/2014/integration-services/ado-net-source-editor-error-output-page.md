@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-caps.latest.revision: 13
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d593b46462f8ca4e4c02431d234ae2aa4f29c197
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259069"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191263"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 원본 편집기(오류 출력 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

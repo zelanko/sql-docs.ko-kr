@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9a19c05387c61e96573ec9525d8e0cab2eb7c8ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211711"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 구성 파일
   RSReportDesigner.config 파일에는 보고서 디자이너에 사용할 수 있는 렌더링 및 데이터 처리 확장 프로그램에 대한 설정이 저장됩니다. 데이터 처리 확장 프로그램 정보에 저장 되는 `Data` 요소입니다. 렌더링 확장 프로그램 정보는 `Render` 요소에 저장됩니다. `Designer` 요소는 보고서 디자이너에 사용된 쿼리 작성기를 열거합니다.  

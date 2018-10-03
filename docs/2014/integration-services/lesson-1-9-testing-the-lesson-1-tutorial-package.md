@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5dc22149aab9dfd9d458ed8cd4ec958794d973b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba98c694b99eb1ab81836a5d1f23a5cd4ea0d545
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193399"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197003"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>9단계: 1단원 자습서 패키지 테스트
   이 단원에서는 다음 태스크를 수행했습니다.  

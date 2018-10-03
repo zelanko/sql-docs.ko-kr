@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableNotifications Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - TableNotifications element
 ms.assetid: 650f307d-1f11-47ce-9d0e-19cf3b1835b7
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e474472b2b55132667b7ec424d392fccb936d93c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48bb3295144c554e9c1aca297ddcffd19f2a247a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197903"
 ---
 # <a name="tablenotifications-element-xmla"></a>TableNotifications 요소(XMLA)
   [NotifyTableChange](tablenotification-element-xmla.md) 명령에서 사용하는 [TableNotification](../xml-elements-commands/notifytablechange-element-xmla.md) 요소의 컬렉션을 포함합니다.  
@@ -54,8 +51,8 @@ ms.locfileid: "37284049"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

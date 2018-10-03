@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209813"
 ---
 # <a name="content-queries-data-mining"></a>내용 쿼리(데이터 마이닝)
   내용 쿼리는 마이닝 모델의 내부 통계와 구조에 대한 정보를 추출하는 한 방법입니다. 내용 쿼리는 때때로 뷰어에서 쉽게 사용할 수 없는 세부 정보를 제공할 수 있습니다. 내용 쿼리의 결과를 사용하여 다른 용도로 사용할 정보를 프로그래밍 방식으로 추출할 수도 있습니다.  

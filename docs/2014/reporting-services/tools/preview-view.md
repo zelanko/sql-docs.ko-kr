@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206773"
 ---
 # <a name="preview-view"></a>미리 보기 뷰
   **미리 보기** 뷰를 사용하여 렌더링된 보고서를 표시할 수 있습니다. 보고서를 미리 보는 경우 보고서 디자이너가 로컬 컴퓨터에서 보고서를 실행하여 미리 보기에 표시합니다. 미리 보기 모드에서는 보고서 전체를 처리합니다. 보고서에 복잡한 쿼리나 많은 양의 데이터가 있는 경우 처음 볼 때 미리 보기를 완료하는데 몇 분 정도 걸릴 수 있습니다. 보고서의 형식에만 영향을 미치는 후속 변경 내용의 경우 미리 보기 기능에서는 캐시된 데이터를 사용합니다.  

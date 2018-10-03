@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e72536c0e5922949650f8bb1ecb6008e75a20dc3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3d6c9b42b89b20e2a4f72f1cf78a0a67c4f77c64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194723"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>드라이버 성능 데이터 프로파일링(ODBC)
   이 예제에서는 성능 통계를 기록하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 관련 옵션을 보여 줍니다. 샘플 파일을 만듭니다: odbcperf.log 성능 데이터 로그 파일 및 (SQLPERF 구조는 Odbcss.h에 정의 됨). SQLPERF 데이터 구조에서 직접 성능 데이터를 표시를 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
@@ -44,7 +41,7 @@ ms.locfileid: "37432522"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>드라이버 성능 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG 및 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 합니다. 예를 들어:  
+1.  호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG 및 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     "C:\\Odbcperf.log"  

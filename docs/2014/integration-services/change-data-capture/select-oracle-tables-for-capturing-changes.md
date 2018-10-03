@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bff65efbe755045a46721436d3b058725b9ed31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02807f264d967d59a1fd0f02c5b43bb76df09aa7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199763"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>변경 내용을 캡처할 Oracle 테이블 선택
   이 대화 상자를 사용하여 CDC 인스턴스에 포함되는 테이블을 선택할 수 있습니다. 선택된 테이블은 새 인스턴스 마법사의 **테이블 및 열 선택** 페이지의 목록에 추가됩니다. 이 대화 상자에서 다음과 같은 작업을 수행할 수 있습니다.  

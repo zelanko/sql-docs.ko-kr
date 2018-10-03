@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84f8cf4caad7b08be1d3e88197c2c3240a3ad95e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: b712c37d064d9eb345642272d69e599438ca4cd4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208213"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
   인수는 **도구** 메뉴에서 외부 도구가 시작될 때 Studio 환경에서 값을 제공하는 변수입니다. **외부 도구** 대화 상자를 사용하여 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다.  

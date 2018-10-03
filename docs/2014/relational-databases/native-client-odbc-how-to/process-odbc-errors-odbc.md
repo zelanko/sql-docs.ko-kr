@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5299054716b644b5b6271dcc72d9e596e78da1cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192943"
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
   ODBC 메시지를 검색 하려면 두 개의 ODBC 함수 호출 수: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 하 고 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)합니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 `SQLGetDiagField`를 사용하여 검색해야 합니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fec14c2f0d051259b45125c50c008f9850d02ad3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39d5c0e2a09926c87669f537710cc44df76b30c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200753"
 ---
 # <a name="publish-reports"></a>보고서 게시
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]게시할 수 있습니다 하거나 모든 보고서 및 공유 데이터 원본을 보고서 서버에 보고서 서버 프로젝트에서 프로젝트를 배포 하 여, 단일 보고서를 게시할 수 있습니다. 보고서를 게시하기 전에 대상 보고서 서버의 URL을 지정해야 합니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)을 참조하세요.  

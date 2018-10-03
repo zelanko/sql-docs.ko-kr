@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e92cd06e9abec7966824da0cc48d5bdb63419911
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 069e826198810ea80374969f9f9b75f628d474c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259479"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192463"
 ---
 # <a name="server-properties-processors-page"></a>서버 속성(프로세서 페이지)
   이 페이지를 사용하여 프로세서 옵션을 확인하거나 수정할 수 있습니다. 프로세서 선호도 설정은 프로세서가 두 개 이상 설치되어 있는 경우에만 활성화됩니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de9b80a9406078a6f5d4ad3a16add7c02f4bde5a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196243"
 ---
 # <a name="designing-assemblies"></a>어셈블리 디자인
   이 항목에서는 어셈블리를 디자인할 때 고려해야 할 다음 요소들에 대해 설명합니다.  

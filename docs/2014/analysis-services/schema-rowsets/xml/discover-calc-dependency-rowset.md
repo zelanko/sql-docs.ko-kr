@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88e423e248293e537dba5d90e8d688b826cb5244
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199053"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 행 집합
   계산 간 종속성과 해당 계산에서 참조하는 개체에 대한 보고서입니다. 클라이언트 응용 프로그램에 이 정보를 사용하여 복잡한 수식과 관련된 문제를 보고하거나 관련 개체가 삭제 또는 수정될 때 경고할 수 있습니다. 행 집합을 사용하여 측정값 또는 계산 열에 사용된 DAX 식을 추출할 수도 있습니다.  
@@ -34,9 +31,9 @@ ms.locfileid: "37297243"
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|예|종속성 분석이 요청된 개체를 포함하는 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> `DISCOVER_DEPENDENCY_CALC` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
-|`OBJECT_TYPE`|`DBTYPE_WSTR`|예|종속성 분석이 요청된 개체의 유형을 나타냅니다. 개체의 유형은 다음 중 하나여야 합니다.<br /><br /> -   `ACTIVE_RELATIONSHIP`: 활성 관계<br />-   `CALC_COLUMN`: 계산 된 열<br />-   `HIERARCHY`: 계층<br />-   `MEASURE`: 측정값<br />-   `RELATIONSHIP`: 관계<br />-   `KPI`: KPI (핵심 성과 지표)<br /><br /> `DISCOVER_DEPENDENCY_CALC` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
-|`QUERY`|`DBTYPE_WSTR`|예|[!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]에서 만든 테이블 형식 모델의 경우 해당 쿼리 또는 식에 대한 종속성 그래프를 표시하도록 DAX 쿼리 또는 식을 포함할 수 있습니다. QUERY 제한은 DAX 쿼리에 사용되는 개체를 결정하는 방법을 클라이언트 응용 프로그램에 제공합니다.<br /><br /> `QUERY` 제한은 DMV 쿼리의 XMLA 또는 WHERE 절에 지정할 수 있습니다. 자세한 내용은 "예" 섹션을 참조하십시오.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|사용자 계정 컨트롤|종속성 분석이 요청된 개체를 포함하는 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> `DISCOVER_DEPENDENCY_CALC` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
+|`OBJECT_TYPE`|`DBTYPE_WSTR`|사용자 계정 컨트롤|종속성 분석이 요청된 개체의 유형을 나타냅니다. 개체의 유형은 다음 중 하나여야 합니다.<br /><br /> -   `ACTIVE_RELATIONSHIP`: 활성 관계<br />-   `CALC_COLUMN`: 계산 된 열<br />-   `HIERARCHY`: 계층<br />-   `MEASURE`: 측정값<br />-   `RELATIONSHIP`: 관계<br />-   `KPI`: KPI (핵심 성과 지표)<br /><br /> `DISCOVER_DEPENDENCY_CALC` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
+|`QUERY`|`DBTYPE_WSTR`|사용자 계정 컨트롤|[!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]에서 만든 테이블 형식 모델의 경우 해당 쿼리 또는 식에 대한 종속성 그래프를 표시하도록 DAX 쿼리 또는 식을 포함할 수 있습니다. QUERY 제한은 DAX 쿼리에 사용되는 개체를 결정하는 방법을 클라이언트 응용 프로그램에 제공합니다.<br /><br /> `QUERY` 제한은 DMV 쿼리의 XMLA 또는 WHERE 절에 지정할 수 있습니다. 자세한 내용은 "예" 섹션을 참조하십시오.|  
 |`TABLE`|`DBTYPE_WSTR`||종속성 정보가 생성된 개체를 포함하는 테이블의 이름입니다.|  
 |`OBJECT`|`DBTYPE_WSTR`||종속성 정보가 생성된 개체의 이름입니다. 개체가 측정값 또는 계산된 열인 경우 측정값의 이름을 사용합니다. 개체가 관계인 경우 관계에 참가하는 열이 포함된 테이블(또는 큐브 차원)의 이름을 사용합니다.|  
 |`EXPRESSION`|`DBTYPE_WSTR`||종속성을 찾는 개체를 포함하는 수식입니다.|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206169"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>일반 속성 페이지, 보고서(보고서 관리자)
   보고서의 일반 속성 페이지를 사용하여 보고서 정의의 이름을 바꾸거나 보고서 정의를 이동, 삭제 또는 대체할 수 있을 뿐만 아니라 링크된 보고서도 만들 수 있습니다. 보고서를 만들거나 수정한 사람 및 내용이 변경된 시간에 대한 자세한 내용이 페이지 맨 위에 표시됩니다.  
@@ -35,7 +32,7 @@ ms.locfileid: "39084655"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>변수  
  **이름**  
  보고서의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ * \< >  
   

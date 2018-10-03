@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74cc7160d66909523628c173e4b80db4045a90e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 956316eb83291f71932c0ee70460274090b7069d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193373"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>추적 파일 속성(이벤트 선택 탭)
   **추적 파일 템플릿 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적의 열 속성을 보거나 추적에서 데이터 열을 제거할 수 있습니다.  

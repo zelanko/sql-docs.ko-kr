@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d64224c1b7489895ff0d9dca00a3841be0ed0bbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203303"
 ---
 # <a name="cubeattribute-data-type-assl"></a>CubeAttribute 데이터 형식(ASSL)
   연결 된 특성을 나타내는 기본 데이터 형식을 정의 [큐브](../objects/cube-element-assl.md) 요소입니다.  
@@ -53,14 +50,14 @@ ms.locfileid: "37319353"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|InclusionThresholdSetting|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|기본 데이터 형식|없음|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[AggregationUsage](../properties/aggregationusage-element-assl.md), [주석](../collections/annotations-element-assl.md), [AttributeHierarchyEnabled](../properties/enabled-element-assl.md)하십시오 [AttributeHierarchyOptimizedState](../properties/state-element-assl.md), [ AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeID](../properties/id-element-assl.md)|  
 |파생 요소|[특성](../objects/attribute-element-assl.md) ([특성](../collections/attributes-element-assl.md) 모음인 [CubeDimension](dimension-data-type-assl.md))|  
   

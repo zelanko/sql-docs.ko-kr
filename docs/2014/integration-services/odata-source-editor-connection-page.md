@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3ae477a34a296ade90fb50dde0a600cf81ac18a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203973"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 원본 편집기(연결 페이지)
   **OData 원본 편집기** 대화 상자의 **연결** 페이지를 사용하여 OData 원본의 OData 연결 관리자를 선택할 수 있습니다. 또한 이 페이지에서 컬렉션 또는 리소스 경로와 쿼리 옵션을 지정하여 OData 원본에서 검색해야 하는 데이터를 나타낼 수 있습니다. OData 원본에 대한 자세한 내용은 [OData Source](data-flow/odata-source.md)을 참조하십시오.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d14fe6f8cbfae7370c0b02626f54758d4159d83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192253"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>3 단원: Market Basket 마이닝 구조 처리
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>3단원: Market Basket 마이닝 구조 처리
   이 단원에서는 사용할 합니다 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 문을 vAssocSeqLineItems 및 vAssocSeqOrders를 합니다 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 샘플 데이터베이스를 처리할 마이닝 구조 및 마이닝 모델을 만든 [1 단원: Market Basket 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) 하 고 [Lesson 2: Adding Mining Models to Market Basket 마이닝 구조](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)합니다.  
   
  마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 마이닝 모델을 처리하면 마이닝 구조에서 정의한 데이터가 사용자가 선택한 데이터 마이닝 알고리즘을 통해 전달됩니다. 이 알고리즘에서는 경향 및 패턴을 검색한 다음 마이닝 모델에 이 정보를 저장합니다. 따라서 마이닝 모델은 실제 원본 데이터 대신 알고리즘에서 발견한 정보를 포함합니다. 마이닝 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)합니다.  

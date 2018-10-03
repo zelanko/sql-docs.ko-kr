@@ -1,12 +1,10 @@
 ---
-title: 'Irow:: Open 및 ISequentialStream을 사용 하 여 BLOB 데이터 인출 | Microsoft Docs'
+title: IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -14,21 +12,20 @@ helpviewer_keywords:
 - ISequentialStream interface
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7604022093a63dd536648fd43a3370ac21c05fcb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211363"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출
-  **Irow:: Open** 만 DBGUID_STREAM 및 DBGUID_NULL 개체 유형의 열을 지원 합니다.  
+  **IRow::Open**은 DBGUID_STREAM 및 DBGUID_NULL 개체 유형만 열 수 있습니다.  
   
- 다음 함수는 **irow:: Open** 하 고 **ISequentialStream** 큰 데이터를 인출 합니다.  
+ 다음 함수는 **IRow::Open** 및 **ISequentialStream**을 사용하여 대형 데이터를 인출합니다.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -79,7 +76,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 큰 데이터 바인딩된 하거나 사용 하 여 검색할 수는 **ISequentialStream** 인터페이스입니다. 바인딩된 열에서 상태 플래그는 DBSTATUS_S_TRUNCATED를 설정하여 데이터가 잘렸음을 나타냅니다.  
+ 큰 데이터는 **ISequentialStream** 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그는 DBSTATUS_S_TRUNCATED를 설정하여 데이터가 잘렸음을 나타냅니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [IRow를 사용하여 BLOB 데이터 인출](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  

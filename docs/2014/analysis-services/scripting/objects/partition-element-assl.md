@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Partition Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition element
 ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c298ec80f1bb1f17d97e36f2ce93b6efbf924508
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ad06de27b07ab58df2d5357b960906093daa5f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198803"
 ---
 # <a name="partition-element-assl"></a>Partition 요소(ASSL)
   정의 된 [MeasureGroup](group-element-assl.md) 요소나는 아웃 아웃오브 라인 파티션 바인딩을 [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) 요소입니다.  
@@ -77,12 +74,12 @@ ms.locfileid: "37209973"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  
 |------------------------|---------------|  
-|[측정값 그룹](group-element-assl.md)|InclusionThresholdSetting|  
+|[측정값 그룹](group-element-assl.md)|없음|  
 |[MeasureGroupBinding](../data-type/binding-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -94,7 +91,7 @@ ms.locfileid: "37209973"
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
 |[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md)합니다 [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md)를 [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [주석](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)합니다 [CurrentStorageMode](../properties/storagemode-element-assl.md), [설명을](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md)를 [ID](../properties/id-element-assl.md)합니다 [LastProcessed](../properties/lastprocessed-element-assl.md)를 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [이름](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md)하십시오 [ProcessingPriority](../properties/processingpriority-element-assl.md), [ RemoteDatasourceID](../properties/datasourceid-element-assl.md), [조각을](../properties/slice-element-assl.md), [소스](../properties/source-element-binding-assl.md)를 [상태](../properties/state-element-assl.md)를 [StorageLocation](../properties/storagelocation-element-assl.md), [ StorageMode](../properties/storagemode-element-assl.md), [형식](../properties/type-element-partition-assl.md)|  
-|[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|InclusionThresholdSetting|  
+|[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소는 DeploymentMode 값 2(테이블 형식 서버 모드)에서 다음과 같은 조건을 충족해야 합니다.  

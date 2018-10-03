@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching rows
@@ -16,26 +14,25 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 243d57b5e42e2c4ecebec6ce1e05d3061baa0a2c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: faf887ab5e03d2d0ca8702dc9bd35d0ba094ece4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205143"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>IRow를 사용하여 단일 행 인출
-  합니다 **IRow** 인터페이스의 구현을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 성능을 향상 시키기 위해 간소화 됩니다. **IRow** 단일 행 개체의 열에 직접 액세스할 수 있습니다. 명령 실행의 결과 정확히 하나의 행을 생성는 미리 알고 있으면 **IRow** 해당 행의 열을 검색 합니다. 결과 집합에 여러 행을 포함 하는 경우 **IRow** 첫 번째 행만 표시 됩니다.  
+  합니다 **IRow** 인터페이스의 구현을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 성능을 향상 시키기 위해 간소화 됩니다. **IRow**를 사용하여 단일 행 개체의 열에 직접 액세스할 수 있습니다. 명령 실행의 결과로 정확히 하나의 행이 생성된다는 것을 미리 알고 있는 경우 **IRow**는 해당 행의 열을 검색합니다. 결과 집합에 여러 행이 포함되는 경우 **IRow**는 첫 번째 행만 노출합니다.  
   
- 합니다 **IRow** 구현 행의 모든 탐색을 허용 하지 않습니다. 한 가지 경우를 제외하고 행의 각 열은 한 번만 액세스할 수 있습니다. 한 가지 예외는 열 크기를 찾기 위해 열에 한 번 액세스하고 데이터를 인출하기 위해 다시 액세스할 수 있다는 점입니다.  
+ **IRow** 구현에서는 행을 탐색할 수 없습니다. 한 가지 경우를 제외하고 행의 각 열은 한 번만 액세스할 수 있습니다. 한 가지 예외는 열 크기를 찾기 위해 열에 한 번 액세스하고 데이터를 인출하기 위해 다시 액세스할 수 있다는 점입니다.  
   
 > [!NOTE]  
->  **Irow:: Open** 만 DBGUID_STREAM 및 DBGUID_NULL 개체 유형의 열을 지원 합니다.  
+>  **IRow::Open**은 DBGUID_STREAM 및 DBGUID_NULL 개체 유형만 열 수 있습니다.  
   
- 사용 하 여 행 개체를 가져올 **icommand:: Execute** 메서드를 IID_IRow를 전달 되어야 합니다. 합니다 **IMultipleResults** 인터페이스를 사용 하 여 여러 결과 집합을 처리할 수 있어야 합니다. **IMultipleResults** 지원 **IRow** 하 고 **IRowset**합니다. **IRowset** 대량 작업에 사용 됩니다.  
+ **ICommand::Execute** 메서드를 사용하여 행 개체를 가져오려면 IID_IRow를 전달해야 합니다. 여러 결과 집합을 처리하려면 **IMultipleResults** 인터페이스를 사용해야 합니다. **IMultipleResults**는 **IRow** 및 **IRowset**을 지원합니다. **IRowset**은 대량 작업에 사용합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

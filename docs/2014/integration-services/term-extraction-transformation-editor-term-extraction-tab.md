@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.termextraction.f1
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd4e143757f39e82ff3f8180960fd495de4cd2db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d7fe7077d77bfaad6333405c82a0ce353160840
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195823"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>용어 추출 변환 편집기(용어 추출 탭)
   **용어 추출 변환 편집기** 대화 상자의 **용어 추출** 탭을 사용하여 추출할 텍스트가 포함된 텍스트 열을 지정합니다.  

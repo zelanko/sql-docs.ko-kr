@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1fc4229cdddc1d2b7411020ac11b0748b7935afb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb2a9c0ebdc6616940f09c2b8770dbefa6ca15e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201273"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^(배타적 비트 OR)(SSIS 식)
   두 정수 값의 배타적 비트 OR 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트 중 하나가 0이고 다른 비트가 1이면 해당 결과 비트는 1로 설정됩니다. 두 비트가 모두 0 또는 1이면 해당 결과 비트는 0으로 설정됩니다.  

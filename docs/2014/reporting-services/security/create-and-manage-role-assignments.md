@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 947216cb426750807e99b48ae2e691a5903ed3a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211013"
 ---
 # <a name="create-and-manage-role-assignments"></a>역할 할당 생성 및 관리
   *역할 할당* 은 사용자 또는 그룹이 특정 보고서 서버 항목에 액세스하거나 작업을 수행할 수 있는지 여부를 결정하는 보안 정책입니다. 역할 할당은 단일 사용자 또는 그룹 계정 이름과 하나 이상의 역할 정의로 구성됩니다.  

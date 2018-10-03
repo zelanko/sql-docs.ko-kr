@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, about SQL Server Management Objects
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9e25977778aaf98af4aad46329e5fb3400d8651
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 57cc3c9cdde3c13b47fe9719f26630e7def55484
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192664"
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
   처음 사용할 때 필요한 정보를 포함 하는이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). SMO 섹션은 개발자를 대상으로 합니다. 다음 목록을 참조하면 SMO 개체 계층 구조, SMO에서 프로그램을 작성하기 위해 준비하는 방법, 여러 다른 언어로 SMO 프로그램을 작성하는 방법을 비롯하여 일반적인 프로그래밍 작업과 특정 프로그래밍 태스크에 대한 정보를 쉽게 찾아볼 수 있습니다.  

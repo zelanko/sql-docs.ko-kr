@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parallel queries [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - number of processors for parallel queries
 - max degree of parallelism option
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05af3dbd8a05ebe91822eb6bc68481a4c60ca38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 336c34d5fa04f09ea907c7ce61620d7ae034a9fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201773"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
   이 항목에서는 구성 하는 방법에 설명 합니다 `max degree of parallelism` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 최적 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. `max degree of parallelism` 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병렬 실행 계획 쿼리, 인덱스 데이터 정의 언어 (DDL) 작업 및 정적 커서와 키 집합 커서 채우기를 고려합니다.  

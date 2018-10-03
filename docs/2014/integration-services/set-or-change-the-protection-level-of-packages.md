@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94d29f4e488e68c5fda2549b793a26770480e30a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 766a0c03bc47527d27fec6e50f2525284a6bdd0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204153"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>패키지 보호 수준 설정 또는 변경
   패키지 내용과 패키지에 포함된 중요한 값(예: 암호)에 대한 액세스를 제어하려면 `ProtectionLevel` 속성의 값을 설정합니다. 프로젝트에 포함된 패키지는 프로젝트 생성을 위해 프로젝트와 보호 수준이 동일해야 합니다. 프로젝트에서 `ProtectionLevel` 속성을 변경한 경우 패키지에 대한 프록시 설정을 수동으로 업데이트해야 합니다.  

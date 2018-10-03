@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a353d633287ad4b535a88b9ba76fa403a20c9e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195813"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>일반(데이터베이스 디자이너)(Analysis Services - 다차원 데이터)
   **일반** 탭을 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경할 수 있습니다.  

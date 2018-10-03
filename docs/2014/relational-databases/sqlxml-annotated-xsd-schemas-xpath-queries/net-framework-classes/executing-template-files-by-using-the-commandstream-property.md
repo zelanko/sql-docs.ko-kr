@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - templates [SQLXML], SQLXML Managed Classes
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d149b40acdc7fc81c79f8800787d093636753d39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 442d6a8d355a11d53f5eb6728b7a0f207e37de6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199049"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream 속성을 사용하여 템플릿 파일 실행
   이 예제에서는 SqlXmlCommand 개체의 CommandStream 속성을 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정할 수 있습니다 하는 방법을 보여 줍니다. 이 응용 프로그램에는 FileStreamobject 명령 파일에 대해 열리고 파일 스트림은 실행 되는 CommandStream으로 할당 됩니다.  

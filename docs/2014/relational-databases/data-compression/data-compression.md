@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204943"
 ---
 # <a name="data-compression"></a>Data Compression
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] rowstore 테이블 및 인덱스에 대 한 행 및 페이지 압축을 지원 하 고 columnstore 테이블 및 인덱스에 대 한 columnstore 및 columnstore 보관 압축을 지원 합니다.  
@@ -122,7 +119,7 @@ ms.locfileid: "37320413"
   
  보관 압축을 추가하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 를 사용하세요.  
   
- 예:  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -138,7 +135,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  보관 압축을 제거하고 데이터를 columnst또는e 압축으로 복원하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 를 사용하세요.  
   
- 예:  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 ALTER TABLE ColumnstoreTable1   

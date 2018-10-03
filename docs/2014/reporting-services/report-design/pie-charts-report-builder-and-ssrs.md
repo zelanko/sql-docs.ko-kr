@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 578042b4ce8b5892b62916f5d41f271e5081271e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef8697edeccd92bf34e22c96a168c19b380f6fb3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203313"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>원형 차트(보고서 작성기 및 SSRS)
   원형 차트와 도넛형 차트는 데이터를 전체에 대한 비율로 표시합니다. 원형 차트는 그룹 간의 비교에 가장 일반적으로 사용됩니다. 원형 및 도넛형 차트는 피라미드형 및 깔때기형 차트와 마찬가지로 셰이프 차트라고 하는 차트 그룹으로 이루어집니다. 셰이프 차트에는 축이 없습니다. 셰이프 차트에 숫자 필드를 배치하면 차트에서 각각의 값이 전체 합계에 대해 차지하는 비율이 계산됩니다. 셰이프 차트에 대한 자세한 내용은 [셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  

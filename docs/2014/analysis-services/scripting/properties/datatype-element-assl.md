@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c3981344d0425c46ef283fa8792de942d6193b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191043"
 ---
 # <a name="datatype-element-assl"></a>DataType 요소(ASSL)
   연결된 요소의 데이터 형식을 정의합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37231873"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37231873"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DataItem](../data-type/dataitem-data-type-assl.md), [측정값](../objects/measure-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `DataType` 값은 `System.Data.OleDb.OleDbType` 열거형으로 정의됩니다. 하지만 다음 표의 열거형 값만 `DataType` 요소에서 유효합니다.  

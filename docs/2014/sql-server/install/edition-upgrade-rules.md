@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 77c4d751-4fea-4e69-a7c8-ab8fc0dbadb2
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 913a59dfdb266e896944fa3537a11a55f35cb82b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72ae58366746bf0eb53878d14b65eff0272e0b52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203663"
 ---
 # <a name="edition-upgrade-rules"></a>버전 업그레이드 규칙
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설치 작업이 완료 되기 전에 컴퓨터 구성의 유효성을 검사 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 SCC(시스템 구성 검사기)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 컴퓨터를 검색합니다. SCC는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성공적인 설치 작업을 방해하는 조건이 있는지 확인합니다. 설치 프로그램이 버전 업그레이드를 시작하기 전에 SCC는 각 항목의 상태를 검색합니다. 그런 다음 검색 결과를 필수 조건과 비교하고 차단 문제 해결을 위한 지침을 제공합니다.  

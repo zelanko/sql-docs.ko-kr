@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, scheduling
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b54fbc57e05cb92803213b53f1203f89b692aac
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: deef45ad1f173b4da056a203de198c4b2c40ce7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200163"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>일정을 만들고 작업에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 일정 예약이란 사용자 개입 없이 작업을 실행할 조건을 정의하는 것입니다. 작업에 대한 새로운 일정을 만들거나 기존 일정을 작업에 연결하여 작업이 자동으로 실행되도록 예약할 수 있습니다.  

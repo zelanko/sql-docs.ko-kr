@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44b24dc04a66538e57db696ba7620e61e7114719
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196343"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>처리 요구 사항 및 고려 사항(데이터 마이닝)
   이 항목에서는 데이터 마이닝 개체를 처리할 때 유의해야 할 몇 가지 기술적 고려 사항에 대해 설명합니다. 처리의 정의와 처리가 데이터 마이닝에 적용되는 방식에 대한 일반적인 설명은 [데이터 마이닝 개체 처리](processing-data-mining-objects.md)를 참조하세요.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197333"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201013"
 ---
 # <a name="linear-regression-model-query-examples"></a>선형 회귀 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 내용 쿼리는 회귀 수식에 대한 추가 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 모델에 맞는지 여부를 알려 줍니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  

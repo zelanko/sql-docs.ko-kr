@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189770"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>디자인 창(마이닝 모델 예측 뷰)
   **디자인** 창에는 데이터 마이닝 예측을 작성할 때 사용할 수 있는 예측 쿼리 작성기가 있습니다. 데이터 원본 뷰에서 입력 데이터의 테이블을 사용하는 예측 쿼리를 디자인하여 대량 예측을 생성하거나 개별 값을 제공할 수 있는 단일 예측 쿼리를 만들 수 있습니다.  
@@ -86,10 +83,10 @@ ms.locfileid: "37316033"
  원본 테이블에서 파생된 열 목록에서 열을 선택합니다. **원본** 에서 **예측 함수**를 선택한 경우 여기에는 선택한 마이닝 모델에 사용할 수 있는 예측 함수가 포함되어 있습니다.  
   
  **그룹**  
- **및/또는** 열과 함께 사용하여 식을 그룹화할 수 있습니다. `(expr1 Or expr2) And expr3`)을 입력합니다.  
+ **및/또는** 열과 함께 사용하여 식을 그룹화할 수 있습니다. `(expr1 Or expr2) And expr3`) 을 입력합니다.  
   
  **및/또는**  
- 논리적 쿼리를 만드는 데 사용합니다. `(expr1 Or expr2) And expr3`)을 입력합니다.  
+ 논리적 쿼리를 만드는 데 사용합니다. `(expr1 Or expr2) And expr3`) 을 입력합니다.  
   
  **조건/인수**  
  열에 적용되는 조건 또는 사용자 식을 지정합니다. 마이닝 모델 및 입력 테이블을 포함하는 테이블에서 셀로 열을 끌 수 있습니다.  

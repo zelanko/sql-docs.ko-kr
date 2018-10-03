@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - PROBABILITY_VARIANCE column
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 403ab773012d9e9370959bd7094db51f9785e8d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193753"
 ---
 # <a name="classified-columns-data-mining"></a>분류된 열(데이터 마이닝)
   분류된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 생성하게 됩니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  

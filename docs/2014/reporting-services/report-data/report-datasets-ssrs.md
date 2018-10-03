@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201503"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>보고서에 데이터 추가(보고서 작성기 및 SSRS)
   보고서에 데이터를 추가하려면 데이터 집합을 만듭니다. 각 데이터 집합은 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 집합에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 집합을 검색하는 데 필요한 정보가 포함됩니다.  

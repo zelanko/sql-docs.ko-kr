@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ccba6c40a826925651e33c85cc842cdf86eb7dfe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e03e9a63017db0dc719c8b82a8755c25150ded7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204833"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>연결(Excel용 MDS 추가 기능)
   데이터를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에 다운로드하려면 먼저 연결을 만들어야 합니다. 연결은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스가 연결할 MDS 데이터베이스를 확인하는 방법입니다.  
@@ -35,7 +32,7 @@ ms.locfileid: "37225603"
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>자동으로 연결 및 자주 사용되는 데이터 로드  
  항상 동일한 서버에 연결하고 동일한 데이터 집합을 로드하려는 경우 연결 및 필터 정보를 포함하는 바로 가기 쿼리 파일을 만들 수 있습니다. 쿼리 파일에 대한 자세한 내용은 [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](shortcut-query-files-mds-add-in-for-excel.md)을 참조하세요.  
   
-## <a name="data-quality-services"></a>데이터베이스 엔진 서비스  
+## <a name="data-quality-services"></a>Data Quality Services  
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에는 데이터를 MDS 저장소에 게시하기 전에 일치하는지 확인할 수 있게 해주는 Data Quality Services 기능이 있습니다. 연결을 설정할 때는 DQS 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 동일 인스턴스에 MDS 데이터베이스로 설치된 경우 리본 메뉴에 DQS 단추를 표시할 수 있습니다. DQS_Main 데이터베이스가 인스턴스에 없으면 이러한 단추가 표시되지 않으며 데이터 품질 기능을 사용할 수 없습니다.  
   
 ## <a name="troubleshooting-connections"></a>연결 문제 해결  

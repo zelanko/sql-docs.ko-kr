@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11be818da421f02ec07b13c632c4fcda87652442
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211409"
 ---
 # <a name="task-6-setting-synonyms"></a>태스크 6: 동의어 설정
   이 작업에서는 **Country** 도메인의 **USA**및 **United States** 두 도메인 값을 동의어로 설정하고 **United States** 를 선행 값으로 설정합니다. **Country** 도메인을 만들 때 **선행 값 사용** 옵션을 선택했기 때문에 **Country** 도메인의 모든 **USA** 값은 United States가 선행 값이므로 **United States** 로 출력됩니다. 자세한 내용은 [도메인 값 변경](http://msdn.microsoft.com/library/hh510408.aspx) 을 참조하십시오.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4189c70c8e4cf9e3d2fce378dbbb039ae2c0c601
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7937c507eda266669ba2040d202dac66559a242d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191363"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 AlwaysOn 정책 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 작동 상태를 확인하는 방법에 대해 설명합니다. AlwaysOn 정책 기반 관리에 대 한 정보를 참조 하세요 [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  

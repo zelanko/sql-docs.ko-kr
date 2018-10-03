@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30dc761707ec02843bcc296bdb3cc7408c33a554
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196273"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>큐브 및 차원 속성 검토
   큐브를 정의한 후에는 큐브 디자이너를 사용하여 결과를 검토할 수 있습니다. 다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 큐브 구조를 검토합니다.  
@@ -34,7 +31,7 @@ ms.locfileid: "37241743"
   
 3.  큐브 디자이너에 있는 **큐브 구조** 탭의 **차원** 창에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브의 큐브 차원을 검토합니다.  
   
-     솔루션 탐색기에서 볼 수 있듯이 데이터베이스 수준에서는 차원이 3개만 만들어졌지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에는 5개의 큐브 차원이 있습니다. Date 데이터베이스 차원이 팩트 테이블의 다른 날짜 관련 팩트를 기반으로 세 개의 개별 날짜 관련 큐브 차원에 대한 기초로 사용되므로 큐브에는 데이터베이스보다 차원이 많이 있습니다. 이러한 날짜 관련 차원을 *롤플레잉 차원*이라고 합니다. 세 개의 날짜 관련 큐브 차원을 사용하여 각 제품 판매와 관련된 세 개의 개별 팩트 즉, 제품 주문 날짜, 주문 이행 기한 및 주문 출하 날짜에 따라 큐브의 차원을 지정할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 여러 큐브 차원에 단일 데이터베이스 차원을 다시 사용하여 간단하게 차원을 관리하고, 디스크 공간을 덜 사용하고, 전체 처리 시간을 줄일 수 있습니다.  
+     솔루션 탐색기에서 볼 수 있듯이 데이터베이스 수준에서는 차원이 3개만 만들어졌지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에는 5개의 큐브 차원이 있습니다. Date 데이터베이스 차원이 팩트 테이블의 다른 날짜 관련 팩트를 기반으로 세 개의 개별 날짜 관련 큐브 차원에 대한 기초로 사용되므로 큐브에는 데이터베이스보다 차원이 많이 있습니다. 이러한 날짜 관련 차원을 *롤플레잉 차원*이라고 합니다. 세 개의 날짜 관련 큐브 차원을 사용하여 각 제품 판매와 관련된 세 개의 개별 팩트 즉, 제품 주문 날짜, 주문 이행 기한 및 주문 출하 날짜에 따라 큐브의 차원을 지정할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 여러 큐브 차원에 단일 데이터베이스 차원을 다시 사용하여 간단하게 차원을 관리하고, 디스크 공간을 덜 사용하고, 전체 처리 시간을 줄일 수 있습니다.  
   
 4.  **큐브 구조** 탭의 **차원** 창에서 **Customer**를 확장한 후 **Customer 편집** 을 클릭하여 차원 디자이너에서 이 차원을 엽니다.  
   

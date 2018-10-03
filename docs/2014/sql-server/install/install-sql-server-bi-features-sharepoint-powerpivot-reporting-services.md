@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85ded5847bbb2bc1c32336e999b3579925a4e930
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5088c22fed14e099f77f1ddcc1b7158f9e6f04f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202783"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint와 함께 SQL Server BI 기능 설치(PowerPivot 및 Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint의 BI (비즈니스 인텔리전스) 기능을 사용 하도록 설정 하려면 Microsoft SharePoint 팜과 통합 될 수 있습니다. 이러한 기능에 포함 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 팜에 대 한 데이터 액세스 합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 만들어지고 SharePoint 라이브러리에서 액세스되는 통합 문서를 위한 데이터 엔진입니다. 저장 한 후에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 SharePoint에 사용할 수 것에 대 한 데이터 소스로 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서입니다.  

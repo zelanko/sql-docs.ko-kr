@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084085"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201343"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   합니다 `SSISDB` 카탈로그는 작업에 대 한 중심점 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 프로젝트를 배포한는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -64,7 +61,7 @@ ms.locfileid: "39084085"
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
--   \@ 첫 번째 문자로 사용할 수 없습니다는 뒤에 있는 문자를 사용할 수 있지만 \@합니다.  
+-   \@를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 \@를 사용할 수 있습니다.  
   
 -   이름의 길이는 1자에서 128자 사이여야 합니다.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "39084085"
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
--   \@ 첫 번째 문자로 사용할 수 없습니다는 뒤에 있는 문자를 사용할 수 있지만 \@합니다.  
+-   \@를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 \@를 사용할 수 있습니다.  
   
 -   이름의 길이는 1자에서 128자 사이여야 합니다.  
   

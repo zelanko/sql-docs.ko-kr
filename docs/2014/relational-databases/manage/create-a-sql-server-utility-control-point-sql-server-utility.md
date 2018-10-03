@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6b326cf19dde95a0b942a85c1d25bd6ac4a9456
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189273"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
   엔터프라이즈에서는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 있으며 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티가 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 데이터 계층 응용 프로그램을 관리할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에는 UCP(유틸리티 제어 지점)가 하나씩 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 위한 새 UCP를 만들어야 합니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 응용 프로그램은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 멤버이며 단일 UCP에 의해 관리됩니다.  

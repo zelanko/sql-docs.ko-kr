@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - triggers [SQL Server], about triggers
@@ -16,12 +14,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 20b01c270ee9ac74ff1b76cf32df21ace98d51d8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d99c70928dfc1d3de2ff02499c0b33a173cf888a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195143"
 ---
 # <a name="dml-triggers"></a>DML 트리거
   DML 트리거는 트리거에 정의된 테이블 또는 뷰에 영향을 주는 DML(데이터 조작 언어) 이벤트가 실행될 때 자동으로 적용되는 특별한 유형의 저장 프로시저입니다. DML 이벤트에는 INSERT, UPDATE 또는 DELETE 문이 포함됩니다. DML 트리거를 사용하여 비즈니스 규칙과 데이터 무결성을 적용하고, 다른 테이블을 쿼리하고, 복잡한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함할 수 있습니다. 트리거 및 트리거를 시작하는 문은 트리거 내에서 롤백할 수 있는 단일 트랜잭션으로 처리됩니다. 디스크 공간 부족 등의 심각한 오류가 발견되면 전체 트랜잭션이 자동으로 롤백됩니다.  

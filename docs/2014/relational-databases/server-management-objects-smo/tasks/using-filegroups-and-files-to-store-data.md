@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - filegroups [SMO]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - files [SMO], about files
 - storage [SMO]
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd05be78281375f75cca679b3cdbfcb269a984c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95edb24e7b26ef6cb80d7a0d707f89b6eb79c7da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196453"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>파일 그룹 및 파일을 사용하여 데이터 저장
   데이터 파일은 데이터베이스 파일을 저장하는 데 사용됩니다. 데이터 파일은 파일 그룹으로 다시 세분됩니다. <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 속성이 있습니다. 해당 컬렉션의 각 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 속성이 있습니다. 이 속성은 데이터베이스에 속하는 모든 데이터 파일을 포함하는 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 컬렉션을 참조합니다. 파일 그룹은 주로 데이터베이스 개체 저장에 사용되는 파일을 그룹화하는 데 사용됩니다. 데이터베이스 개체를 여러 파일에 분산시키는 한 가지 이유는 성능을 높일 수 있다는 점입니다. 특히 파일이 서로 다른 디스크 드라이브에 저장된 경우 매우 유용합니다.  

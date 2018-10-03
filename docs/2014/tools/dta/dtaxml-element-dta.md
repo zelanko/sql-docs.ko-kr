@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d460721fd138c0629322687b1160b8c75cdd0cfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d567c422299809f04be97c8db298aadecc22dde8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177140"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192223"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 요소(DTA)
   데이터베이스 엔진 튜닝 관리자 XML 입력 또는 출력 파일의 핵심 요소인 **DTAXML** 에는 데이터베이스 엔진 튜닝 관리자가 생성하는 튜닝 입력 및 튜닝 출력을 설명하는 모든 요소가 포함되어 있습니다.  
@@ -58,7 +55,7 @@ ms.locfileid: "37177140"
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|InclusionThresholdSetting|  
+|**부모 요소**|없음|  
 |**자식 요소**|[DTAInput 요소 &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` 요소 (참조 [데이터베이스 엔진 튜닝 관리자 XML 스키마](http://schemas.microsoft.com/sqlserver/) 정보용)|  
   
 ## <a name="remarks"></a>Remarks  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 2d71ba53-1684-4da0-8da4-fb75033c971b
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86a5e07518097e01509f24f2969580dec7ba0c34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d7b2bbf4a3acf952e665d9d5c1acde85905e647
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201563"
 ---
 # <a name="datasourceid-element-assl"></a>DataSourceID 요소(ASSL)
   하 게 식별 하는 [DataSource](../objects/datasource-element-assl.md) 부모 요소와 연결 된 요소입니다.  
@@ -50,8 +47,8 @@ ms.locfileid: "37263589"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|컨텍스트에 따라 다름|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37263589"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimensionBinding](../data-type/binding-data-type-assl.md)합니다 [DimensionBinding](../data-type/dimensionbinding-data-type-assl.md)를 [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)를 [QueryBinding](../data-type/querybinding-data-type-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [TableBinding](../data-type/tablebinding-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  AMO(Analysis Management Object) 개체 모델에서 `DataSourceID`의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.CubeDimensionBinding>, <xref:Microsoft.AnalysisServices.DimensionBinding>, <xref:Microsoft.AnalysisServices.MeasureGroupBinding>, <xref:Microsoft.AnalysisServices.QueryBinding>, <xref:Microsoft.AnalysisServices.DataSourceView> 및 <xref:Microsoft.AnalysisServices.TableBinding>입니다.  

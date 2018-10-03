@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], PowerShell cmdlets
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09fbe31747ef722775a0156939f02fb49103fd22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db840abbf4caed344a1be055afd6432b4d2b18e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209483"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell은 시스템 관리를 위해 특별히 설계된 태스크 기반 명령줄 셸이자 스크립팅 언어입니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 배포, 관리 및 모니터링할 수 있도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 PowerShell cmdlet 집합을 제공합니다.  
@@ -55,8 +52,8 @@ ms.locfileid: "37231973"
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하지 않도록 설정합니다.|`Path`, `InputObject` 또는 `Name` 매개 변수에 지정된 서버 인스턴스( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]버전이어야 함)|  
 |`Enable-SqlAlwaysOn`|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 지원하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하도록 설정합니다. 에 대 한 지원에 대 한 자세한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [필수 조건, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지원하는 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]버전|  
-|`New-SqlHadrEndPoint`|서버 인스턴스에서 새 데이터베이스 미러링 끝점을 만듭니다. 이 끝점은 주 데이터베이스와 보조 데이터베이스 간에 데이터를 이동하는 데 필요합니다.|다음의 모든 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
-|`Set-SqlHadrEndpoint`|기존 데이터베이스 미러링 끝점의 속성(예: 이름, 상태 또는 인증 속성)을 변경합니다.|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 지원하고 데이터베이스 미러링 끝점이 부족한 서버 인스턴스|  
+|`New-SqlHadrEndPoint`|서버 인스턴스에서 새 데이터베이스 미러링 엔드포인트를 만듭니다. 이 엔드포인트는 주 데이터베이스와 보조 데이터베이스 간에 데이터를 이동하는 데 필요합니다.|다음의 모든 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|`Set-SqlHadrEndpoint`|기존 데이터베이스 미러링 엔드포인트의 속성(예: 이름, 상태 또는 인증 속성)을 변경합니다.|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하고 데이터베이스 미러링 엔드포인트가 부족한 서버 인스턴스|  
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   

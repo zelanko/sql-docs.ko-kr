@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - wildcard components [XML]
 - content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c4fcc16bf573a5931a569da8d47372b9d6b1841
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 930fe318d47212ff52fea572974d501cc316c1ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888420"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193393"
 ---
 # <a name="wildcard-components-and-content-validation"></a>와일드카드 구성 요소 및 콘텐츠 유효성 검사
   와일드카드 구성 요소는 콘텐츠 모델에 나타나는 형식의 유연성을 향상시키는 데 사용됩니다. 이러한 구성 요소는 XSD 언어에서 다음과 같은 방식으로 지원됩니다.  

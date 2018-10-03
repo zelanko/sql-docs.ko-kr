@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClientNetworkProtocolProperty Class
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ClientNetworkProtocolProperty class
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c2a30253bad6e0750ff67a57f5071d992248ed7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fcd2cd01622d63943d998baeb2b0da078bb3134d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206903"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 클래스
   [ClientNetworkProtocolProperty 클래스](clientnetworkprotocolproperty-class.md) 는 클라이언트 네트워크 프로토콜의 속성을 나타냅니다.  

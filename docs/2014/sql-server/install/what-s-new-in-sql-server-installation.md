@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, what's new
 - SQL Server, what's new
 - SQL Server, installing
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
-caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41721eea4f1e4b58f5d1e6a1d6ae99bbebc71ff5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92e363dacc893931073fb53e64db539ecb8b1775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206174"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 설치의 새로운 기능
   Windows Vista는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 지원되는 운영 체제가 아닙니다. [!INCLUDE[win7](../../includes/win7-md.md)] 및 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제의 경우에는 최소 요구 사항이 서비스 팩 1입니다. 운영 체제 요구 사항에 대 한 자세한 내용은 참조 하세요. [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)합니다.  

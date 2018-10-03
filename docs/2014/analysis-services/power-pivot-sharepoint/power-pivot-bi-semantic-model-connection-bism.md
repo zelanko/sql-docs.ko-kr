@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7816d4cebb8ad8344c240a7c5a32229e0b07105f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253015"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191593"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 의미 체계 모델 연결(.bism)
   BI 의미 체계 모델 연결 (.bism)은 Excel을 연결 하는 이식 가능한 연결 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 데이터베이스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모드의 인스턴스. Office 데이터 연결(.odc) 파일에 대해 잘 알고 있다면 .bism 연결 파일을 정의하여 사용하는 것이 얼마나 간편한지를 알 수 있습니다.  

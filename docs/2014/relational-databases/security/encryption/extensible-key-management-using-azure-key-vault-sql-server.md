@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EKM, with key vault
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Key Management with key vault
 - Transparent Data Encryption, using EKM and key vault
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: 37
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ecd049528577ff5da601bf37fda3e8b356acb0e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 677da53a1bc27c4e64a91f04d242635fe2df4471
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192163"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
   합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Key Vault 서비스를 활용 하 여 암호화를 [확장 가능 키 관리 &#40;EKM&#41; ](extensible-key-management-ekm.md) 보호 하기 위해 공급자 해당 암호화 키입니다.  
@@ -162,7 +159,7 @@ ms.locfileid: "37305433"
 2.  설치를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 대 한 자격 증명을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설정 및 관리 하기 위해 key vault를 사용 하려면 관리자 로그인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 시나리오입니다.  
   
     > [!IMPORTANT]  
-    >  합니다 **IDENTITY** 인수의 `CREATE CREDENTIAL` 키 자격 증명 모음 이름이 필요 합니다. **비밀** 인수의 `CREATE CREDENTIAL` 필요 합니다 * \<클라이언트 ID >* (하이픈 없이) 및 * \<비밀 >* 전달할 사이 공백을 없이 함께.  
+    >  합니다 **IDENTITY** 인수의 `CREATE CREDENTIAL` 키 자격 증명 모음 이름이 필요 합니다. **비밀** 인수의 `CREATE CREDENTIAL` 필요 합니다  *\<클라이언트 ID >* (하이픈 없이) 및  *\<비밀 >* 전달할 사이 공백을 없이 함께.  
   
      다음 예제에서 **클라이언트 ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`)는 하이픈이 제거되어 문자열 `EF5C8E094D2A4A769998D93440D8115D` 로 입력되어 있으며 **암호** 는 문자열 *SECRET_sysadmin_login*으로 표현되었습니다.  
   
@@ -227,7 +224,7 @@ ms.locfileid: "37305433"
 1.  데이터베이스 로드 동안 키 자격 증명 모음 EKM에 액세스할 때 사용할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 자격 증명을 만듭니다.  
   
     > [!IMPORTANT]  
-    >  합니다 **IDENTITY** 인수의 `CREATE CREDENTIAL` 키 자격 증명 모음 이름이 필요 합니다. **비밀** 인수의 `CREATE CREDENTIAL` 필요 합니다 * \<클라이언트 ID >* (하이픈 없이) 및 * \<비밀 >* 전달할 사이 공백을 없이 함께.  
+    >  합니다 **IDENTITY** 인수의 `CREATE CREDENTIAL` 키 자격 증명 모음 이름이 필요 합니다. **비밀** 인수의 `CREATE CREDENTIAL` 필요 합니다  *\<클라이언트 ID >* (하이픈 없이) 및  *\<비밀 >* 전달할 사이 공백을 없이 함께.  
   
      다음 예제에서 **클라이언트 ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`)는 하이픈이 제거되어 문자열 `EF5C8E094D2A4A769998D93440D8115D` 로 입력되어 있으며 **암호** 는 문자열 *SECRET_DBEngine*으로 표현되었습니다.  
   

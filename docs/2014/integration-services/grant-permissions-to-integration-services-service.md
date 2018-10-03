@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0c2caa68-7834-4ea0-bd77-4f3a7c86d634
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4de544925778a159fd16deb54833b1d94cf5d232
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4785dbeb300838a5a765798cd7a4330d09bdaf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158614"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200653"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>Integration Services 서비스에 사용 권한 부여
   이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 설치하면 기본적으로 Users 그룹의 모든 사용자에게 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대한 액세스 권한이 부여되었지만 현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치하면 사용자에게 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대한 액세스 권한이 부여되지 않습니다. 이 서비스에는 기본적으로 보안이 적용됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 설치된 후 관리자가 서비스에 대한 액세스 권한을 부여해야 합니다.  

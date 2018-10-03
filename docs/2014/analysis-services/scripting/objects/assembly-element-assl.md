@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Assembly Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Assembly element [ASSL]
 ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38c14744eaebba8e618c7c200341c447393ce773
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e242f0fe6af48330207c78d8af848cb8b46a6707
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151444"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198633"
 ---
 # <a name="assembly-element-assl"></a>Assembly 요소(ASSL)
   나타냅니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리나와 연결 된 COM 동적 연결 라이브러리 (DLL)는 [Server](server-element-assl.md) 요소 또는 [데이터베이스](database-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37151444"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[ClrAssembly](../data-type/assembly-data-type-assl.md), [ComAssembly](../data-type/comassembly-data-type-assl.md)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37151444"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[어셈블리](../collections/assemblies-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Assembly>합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0797d22b66a40c0cf13fcd9c394d0072827b8e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cb150e2bf076c6cef4e05d626b71eaab05d64a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197215"
 ---
 # <a name="partitions-ssas-tabular"></a>파티션(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 파티션 대화 상자를 사용하여 만든 파티션은 모델 작업 영역 데이터베이스에 적용됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하여 배포된 model 데이터베이스에 대해 파티션을 추가로 만들고 관리할 수 있습니다.  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 파티션 관리자 대화 상자를 사용하여 모델 제작 중에 만든 파티션을 설명합니다. 배포된 모델의 파티션을 만들고 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  

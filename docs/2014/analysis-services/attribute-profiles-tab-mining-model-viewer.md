@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.profiles.f1
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdfd3f5d3e9fbf433f4c041a156adb31a4264fc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c216ce257c513d59a5007637ca4a5642104306f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194543"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>특성 프로필 탭(마이닝 모델 뷰어)
   **특성 프로필** 탭을 사용하여 Naive Bayes 모델 상태의 입력 값 분포가 결과 특성의 각 상태에 주는 영향을 확인할 수 있습니다. 값의 분포는 색이 지정된 히스토그램으로 표시되고 모든 분포가 표 형식으로 제공되므로 보다 쉽게 값을 비교할 수 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB error handling, return codes
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - FAILED macro
 - errors [OLE DB], return codes
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00082a5c6053d8b9f0319c26ae8d72302c14d218
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7a84ad46068260524a2e6232ca668da445447529
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207423"
 ---
 # <a name="return-codes"></a>반환 코드
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 응용 프로그램 개발자가 의도한 것이 아닐 수 있습니다.  
   
- OLE DB 반환 코드에 대 한 자세한 내용은 참조 하세요. [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)합니다.  
+ OLE DB 반환 코드에 대한 자세한 내용은 [반환 코드(OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)를 참조하십시오.  
   
  경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수가 S_OK를 성공 하는 함수를 반환 합니다.  
   

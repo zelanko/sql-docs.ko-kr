@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.configsecondarydbs.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47afad65db4f1de79bb1da395ce9954772929179
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2647d65f91fff3c21a63a7b2e21dcd0d144e00c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189687"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
   이 항목에서는 AlwaysOn 가용성 그룹에서 보조 데이터베이스를 준비 하는 방법을 설명 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], 또는 PowerShell입니다. 보조 데이터베이스를 준비하려면 (1) RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업과 후속 로그 백업을 보조 복제본을 호스트하는 각 서버 인스턴스로 복원하고 (2) 복원된 데이터베이스를 가용성 그룹에 조인하는 두 단계를 수행해야 합니다.  

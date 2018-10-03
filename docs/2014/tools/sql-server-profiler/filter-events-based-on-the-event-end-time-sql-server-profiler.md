@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event end times [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d319f09716ec35cc0af52414c0f8c76f63a9248
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23c9ca00077d64fe72f775d343640a15dfc38f50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194383"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>이벤트 종료 시간 기반의 이벤트 필터링(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 종료 시간을 기반으로 추적 이벤트를 필터링하는 방법을 설명합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205863"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
   합니다 **bcp** 의 인스턴스 간에 데이터를 대량 복사 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자가 지정한 형식의 데이터 파일. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
@@ -147,7 +144,7 @@ ms.locfileid: "39310300"
 |RAW|코드 페이지 간 변환이 일어나지 않습니다. 변환이 일어나지 않으므로 가장 빠른 옵션입니다.|  
 |*code_page*|850과 같은 특정 코드 페이지 번호입니다.<br /><br /> **\*\* 중요 \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 코드 페이지 65001(utf (u t F-8 인코딩)를 지원 하지 않습니다.|  
   
- `-d` *Database_name*  
+ `-d` *database_name*  
  연결할 데이터베이스를 지정합니다. bcp.exe는 기본적으로 사용자의 기본 데이터베이스에 연결됩니다. 하는 경우 `-d` *database_name* 및 세 부분으로 된 이름을 (*database_name.schema.table*bcp.exe에 첫 번째 매개 변수로 전달 되)를 지정 하면 지정할 수 없으므로 오류가 발생 합니다 데이터베이스 이름을 두 번 사용 합니다. 하는 경우 *database_name* 시작 하이픈 (-) 또는 슬래시 (/) 사이 공백의 추가 하지 마십시오 `-d` 및 데이터베이스 이름입니다.  
   
  **-e** *err_file*  

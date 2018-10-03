@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a78f615493ad531b8607abb0764891ffcb2805f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194483"
 ---
 # <a name="polygon"></a>Polygon
   `Polygon` 은 외부 경계 링과 0 개 이상의 내부 링을 정의 하는 요소의 시퀀스로 저장 하는 2 차원 표면입니다.  

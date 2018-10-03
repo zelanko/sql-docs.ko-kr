@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac0560032be47e1934eb111a13511cf579d63fe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210173"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>스키마 생성 마법사 사용(Analysis Services)
   스키마 생성 마법사는 스키마를 생성하는 동안 제한된 정보만 사용합니다. 스키마 생성 마법사가 관계형 스키마를 생성하기 위해 필요한 대부분의 정보는 프로젝트에서 이미 만들었던 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브와 차원으로부터 추출됩니다. 또한 주제 영역 데이터베이스 스키마가 생성되는 방법과 스키마의 개체 이름이 지정되는 방법을 사용자 지정할 수 있습니다.  

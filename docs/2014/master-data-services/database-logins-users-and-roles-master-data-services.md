@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database [Master Data Services], logins
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 782f38cbc78ed0eefa1366a3fb17d9c6d0d94c62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208993"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>데이터베이스 로그인, 사용자 및 역할(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 데이터베이스를 호스팅하는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 자동으로 설치되는 로그인, 사용자 및 역할이 포함되어 있습니다. 이러한 로그인, 사용자 및 역할은 수정하면 안 됩니다.  

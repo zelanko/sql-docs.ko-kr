@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - AMO, classes
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd6c9c67a9f1f98cab59669ef9dc1aaaed18063b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196413"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 개념 및 개체 모델
   이 항목에서는 정의의 Analysis Management Objects (AMO), 다른 도구 및 아키텍처에서 제공 하는 라이브러리와 AMO의 관계 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 및 AMO의 모든 주요 개체의 개념을 설명 합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203483"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 예측 가능한 특성의 가능한 각 상태를 사용 하 여 입력된 특성의 가능한 각 상태를 결합 하 고 학습 데이터를 사용 하 여 확률을 계산 합니다. 나중에 이러한 확률을 분류 또는 회귀에 사용하여 입력 특성을 기반으로 예측 특성의 결과를 예측할 수 있습니다.  

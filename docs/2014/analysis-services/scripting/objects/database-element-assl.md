@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Database Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database element
 ms.assetid: c3bc7eaf-ed0d-4395-a3b7-8d9cfacfe911
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56efc69c0e8f7f0e3e008aa5ea769774ee5014af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46166d77185836c65fe1d026255620dfb87c1f66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191033"
 ---
 # <a name="database-element-assl"></a>Database 요소(ASSL)
   정의 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
@@ -74,8 +71,8 @@ ms.locfileid: "37332823"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

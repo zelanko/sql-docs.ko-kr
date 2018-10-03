@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15ead723c73da69d9dd8e6f41b1bf5533eb3c313
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bf36beb01ee7d31b78e6bdf06921bc460bcbbad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199213"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스 및 이러한 인스턴스의 개체를 관리하기 위한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 스크립팅 환경을 지원합니다. 또한 스크립팅 환경과 매우 유사한 환경에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 XQuery를 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작성 및 실행할 수 있습니다.  
@@ -61,7 +58,7 @@ ms.locfileid: "37284799"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트 파일은 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 대화형으로 코딩됩니다. 이 파일은 나중에 다음 환경 중 하나에서 열 수 있습니다.  
   
--    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에 파일을 열 수 있습니다.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에 파일을 열 수 있습니다.  
   
 -   사용 하 여는 **-i * input_file* 매개 변수를 사용 하 여 파일을 실행 합니다 `sqlcmd` 유틸리티입니다.  
   

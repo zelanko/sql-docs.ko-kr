@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193663"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
   동작에는 여러 유형이 있을 수 있으므로 동작을 만들려면 이러한 유형을 고려해야 합니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
@@ -46,7 +43,7 @@ ms.locfileid: "37319453"
   
  유형은 실행할 동작의 종류입니다. <xref:Microsoft.AnalysisServices.Action> 은 추상 클래스이므로 이 동작을 실행하려면 파생 클래스 중 하나를 사용해야 합니다. 두 가지 동작, 드릴스루와 보고는 미리 정의되어 있는데 해당 파생 클래스로 각각 <xref:Microsoft.AnalysisServices.DrillThroughAction> 및 <xref:Microsoft.AnalysisServices.ReportAction>을 참조하세요. 나머지 동작은 <xref:Microsoft.AnalysisServices.StandardAction> 클래스에서 처리됩니다.  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 동작은 클라이언트 응용 프로그램에 제공되어 사용될 수 있는 저장 MDX 문입니다. 즉, 동작은 서버에 정의되고 저장되는 클라이언트 명령입니다. 동작에는 클라이언트 응용 프로그램에서 MDX 문을 표시하고 처리해야 하는 시기 및 방법을 지정하는 정보도 들어 있습니다. 작업이 지정하는 동작은 작업의 정보를 매개 변수로 사용하여 응용 프로그램을 시작하거나 작업이 제공하는 조건을 기반으로 정보를 검색할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 동작은 클라이언트 응용 프로그램에 제공되어 사용될 수 있는 저장 MDX 문입니다. 즉, 동작은 서버에 정의되고 저장되는 클라이언트 명령입니다. 동작에는 클라이언트 응용 프로그램에서 MDX 문을 표시하고 처리해야 하는 시기 및 방법을 지정하는 정보도 들어 있습니다. 작업이 지정하는 동작은 작업의 정보를 매개 변수로 사용하여 응용 프로그램을 시작하거나 작업이 제공하는 조건을 기반으로 정보를 검색할 수 있습니다.  
   
  업무용 사용자는 동작을 통해 분석 결과에 대한 작업을 수행할 수 있습니다. 동작을 저장하여 다시 사용하면 비즈니스 인텔리전스 응용 프로그램을 큐브 범위 밖으로 확장할 수 있으므로 최종 사용자가 데이터를 표시하는 일반적인 분석 이상의 작업을 수행할 수 있으며 발견된 문제와 결함을 해결할 수 있습니다. 동작은 클라이언트 응용 프로그램을 복잡한 데이터 렌더링 도구에서 기업 운영 체제의 필수 부분으로 바꿀 수 있습니다. 최종 사용자는 데이터를 작업용 응용 프로그램의 입력 항목으로 보내는 작업에 초점을 맞추는 대신 의사 결정 과정을 "마무리"할 수 있습니다. 분석 데이터를 의사 결정으로 변환하는 이 기능은 성공적인 비즈니스 인텔리전스 응용 프로그램에 매우 중요합니다.  
   

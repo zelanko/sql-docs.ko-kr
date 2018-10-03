@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb5b70541c6fb01f04be891bfda72acb55d9e7c0
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211143"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
   합니다 `xml` 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](type-directive-in-for-xml-queries.md) 클라이언트와 서버에서 처리할 FOR XML 쿼리에 의해 반환 된 XML을 사용 하도록 설정 합니다.  
@@ -86,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>내부 FOR XML 쿼리 결과를 외부 쿼리에 xml 유형 인스턴스로 반환  
- 중첩 된 작성할 수 있습니다 `FOR XML` 으로 내부 쿼리 결과가 반환 됩니다 여기서 쿼리는 `xml` 외부 쿼리할 형식입니다. 예를 들어:  
+ 중첩 된 작성할 수 있습니다 `FOR XML` 으로 내부 쿼리 결과가 반환 됩니다 여기서 쿼리는 `xml` 외부 쿼리할 형식입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SELECT Col1,   

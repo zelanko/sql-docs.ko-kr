@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f308a9c890c36b5948c0f2c8a8468350c2e7cf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb0912afd99c7a4859ca4750a3ba1b66fdecd5f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205721"
 ---
 # <a name="memberref-element-csdlbi"></a>MemberRef 요소(CSDLBI)
   MemberRef 요소는 참조 대상인 속성의 이름을 식별합니다.  
@@ -28,18 +25,18 @@ ms.locfileid: "37265269"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 MemberRef 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|속성|예|MemberRef 요소에 포함된 속성의 이름입니다.|  
+|이름|사용자 계정 컨트롤|MemberRef 요소에 포함된 속성의 이름입니다.|  
   
 ## <a name="memberrefs-element"></a>MemberRefs 요소  
  MemberRefs는 각 멤버가 MemberRef 요소에 포함된 멤버 컬렉션을 정의하는 복합 유형입니다.  
   
  다음 표는 MemberRefs 유형의 요소와 특성을 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|MemberRef|예|멤버 참조가 포함된 문자열입니다.|  
+|MemberRef|사용자 계정 컨트롤|멤버 참조가 포함된 문자열입니다.|  
   
 ## <a name="example"></a>예제  
  **테이블 형식**  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc97beba507789ef821b8f69faa6f5db85822a00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209793"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 설치를 구성할 수 있습니다. 파일 전용 설치 옵션을 사용하여 보고서 서버를 설치한 경우, 이를 사용할 수 있으려면 먼저 구성 관리자를 사용해서 서버를 구성해야 합니다. 기본 구성 설치 옵션을 사용하여 보고서 서버를 설치한 경우에는 구성 관리자를 사용하여 설치 중에 지정된 설정을 확인하거나 수정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하면 로컬 또는 원격 보고서 서버 인스턴스를 구성할 수 있습니다.  
@@ -79,7 +76,7 @@ ms.locfileid: "37220783"
   
 -   보고서 서버 서비스 계정 구성. 이 계정은 설치 중에 처음 구성되지만 암호를 업데이트하거나 다른 계정을 사용하려는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수정할 수 있습니다.  
   
--   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 Url을 통해 액세스 합니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 끝점에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 응용 프로그램에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
+-   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 Url을 통해 액세스 합니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 엔드포인트에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 응용 프로그램에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
   
 -   보고서 서버 데이터베이스 만들기 및 구성. 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 내부 저장소로 사용하는 상태 비저장 서버입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 데이터베이스에 대한 연결을 만들고 구성할 수 있습니다. 사용하려는 내용이 이미 포함되어 있는 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다.  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212093"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
   하위 SELECT 식은 바깥쪽 외부 SELECT가 실행되는 큐브 공간을 제한하는 데 사용되는 중첩 SELECT 식입니다. 하위 SELECT를 사용하면 모든 계산이 실행되는 새로운 공간을 정의할 수 있습니다.  

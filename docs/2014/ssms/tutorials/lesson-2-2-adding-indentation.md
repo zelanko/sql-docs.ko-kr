@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 263133d047117e2dd8eb9b77105e8a97c94b3ef5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207983"
 ---
 # <a name="adding-indentation"></a>들여쓰기 추가
   쿼리 편집기를 사용하여 한 단계로 여러 코드 섹션을 들여쓸 수 있으며 들여쓰기 크기도 변경할 수 있습니다.  

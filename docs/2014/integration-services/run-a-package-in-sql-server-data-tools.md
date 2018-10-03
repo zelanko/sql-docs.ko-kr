@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - SQL Server Integration Services packages, running
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49b831eefc250762673ec240c60766c6259ac38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a0d9551f4ad6984ec67bc51e636144195f20b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211213"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 실행
   패키지는 개발, 디버깅 및 테스팅이 이루어지는 동안 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 일반적으로 실행됩니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행하는 경우 패키지는 항상 즉시 실행됩니다.  

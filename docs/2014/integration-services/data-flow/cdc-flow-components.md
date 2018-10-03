@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c825f11187fceb63373cb053ffd2f650b25834f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195633"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
   SSIS 개발자는 Attunity for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 의 변경 데이터 캡처 구성 요소를 통해 CDC를 사용하고 CDC 패키지의 복잡성을 줄일 수 있습니다.  

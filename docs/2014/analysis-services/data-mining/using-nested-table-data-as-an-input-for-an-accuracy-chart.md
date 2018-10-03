@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - nested tables
 - adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53b61da97453d2572f14062a9f471de1fc63aab4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196693"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용
   외부 데이터를 사용하여 마이닝 모델의 정확도를 테스트할 때 마이닝 모델에 중첩 테이블이 포함되어 있으면 외부 데이터에도 사례 테이블 및 연결된 중첩 테이블이 포함되어 있어야 합니다.  

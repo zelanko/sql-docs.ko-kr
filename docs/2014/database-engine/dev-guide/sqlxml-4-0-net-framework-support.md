@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, .NET Framework
 - XML [SQLXML]
 - .NET Framework [SQLXML]
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aff4606952d56a95194dd5b6076ecb877fa1253f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26a8b502a4de1909d5ceeedffe17fe1a3f50c0da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203133"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 .NET Framework 지원
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 XML 데이터에 액세스하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 환경으로 데이터를 가져와서 처리한 후 업데이트를 다시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 보내는 응용 프로그램을 작성하는 데 사용할 수 있는 기능을 지원합니다. 이 섹션에서는 .NET Framework 지원 기능에 대해 설명하고 이러한 기능의 사용 예를 보여 줍니다.  

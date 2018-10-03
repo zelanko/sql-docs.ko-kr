@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClassifiedColumns Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38436c97f74adef2af6d5645aea6547682740894
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e2624c2d944af873fe6a34cbd9ca3684050bf92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209833"
 ---
 # <a name="classifiedcolumns-element-assl"></a>ClassifiedColumns 요소(ASSL)
   분류 되는 관련 열의 컬렉션을 포함 합니다 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) 요소입니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37286049"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

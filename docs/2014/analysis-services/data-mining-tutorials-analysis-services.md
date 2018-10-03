@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 497e3ce3b374a40c26238758cab7b03cb9835c77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8e454e12f3e3c9f4c341406596771276f120a83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165704"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197693"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>데이터 마이닝 자습서(Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쉽게 정교한 데이터 마이닝 솔루션을 만들 수 있도록 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 도구를 사용하여 관계형 또는 큐브 데이터를 사용하는 데이터 마이닝 모델을 디자인, 생성 및 관리할 수 있습니다. 데이터 마이닝 모델에 대한 클라이언트 액세스를 관리하고 여러 클라이언트에서 예측 쿼리를 생성할 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192143"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>데이터 원본 속성 페이지(보고서 관리자)
   데이터 원본 속성 페이지를 사용하여 현재 보고서를 외부 데이터 원본에 연결하는 방법을 정의할 수 있습니다. 보고서에 원래 게시된 데이터 원본 연결 정보는 무시할 수 있습니다. 보고서에 여러 데이터 원본이 사용되는 경우 속성 페이지에 각 데이터 원본에 대한 고유한 섹션이 있습니다. 데이터 원본은 보고서에 정의된 순서대로 나열됩니다.  

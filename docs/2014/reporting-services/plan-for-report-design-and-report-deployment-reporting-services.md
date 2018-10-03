@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5bd53bceaae8b1a898aecf94cc05818653498904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ddb62344608d0fbd44376c0d6180dc973d3202a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209183"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>보고서 디자인 및 보고서 배포 계획(Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 작성 및 보고서 배포에 대 한 몇 가지 방법을 제공 합니다. 이 항목에서는 보고서 작성 환경과 보고서 서버가 함께 작동하도록 계획할 수 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 요소에서 지원되는 보고서 정의에 대한 개요를 보여 줍니다. 보고서 정의는 RDL(Report Definition Language) 또는 RDLC(Report Definition Language for Clients)로 작성된 XML 파일입니다. 각 보고서 정의는 파일의 첫 부분에 나열되어 있는 특정 스키마 버전을 따릅니다.  

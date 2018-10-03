@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5c547623597e72e4c6ae144baed226dbf88af60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194913"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 프로젝트 변환 마법사
   **Integration Services 프로젝트 변환 마법사** 는 프로젝트를 프로젝트 배포 모델로 변환합니다.  
   
 > [!NOTE]  
->  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)을 참조하세요.  
+>  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)을 참조하세요.  
   
  **수행 작업**  
   

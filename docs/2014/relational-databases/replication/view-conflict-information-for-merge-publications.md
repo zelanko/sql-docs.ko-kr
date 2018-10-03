@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - sp_helpmergearticleconflicts
 ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48225870d89fc6bf39355957187fac84a704093d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0f36e74462b8237a3661748d137f67d3bad13ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194283"
 ---
 # <a name="view-conflict-information-for-merge-publications-replication-transact-sql-programming"></a>병합 게시에 대한 충돌 정보 보기(복제 Transact-SQL 프로그래밍)
   병합 복제의 충돌을 해결하는 과정에서 무시되는 행의 데이터는 충돌 테이블에 기록됩니다. 복제 저장 프로시저를 사용하여 이 충돌 데이터를 프로그래밍 방식으로 볼 수 있습니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  

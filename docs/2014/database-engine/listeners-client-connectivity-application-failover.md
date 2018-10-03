@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3bf28d011f1b1387bfbf04358d4575232c768d6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200333"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 클라이언트 연결 및 응용 프로그램 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
@@ -138,7 +135,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="BypassAGl"></a> 가용성 그룹 수신기 무시  
  가용성 그룹 수신기에서 장애 조치(Failover) 리디렉션 및 읽기 전용 라우팅을 지원하지만 클라이언트 연결에서 해당 기능을 사용할 필요는 없습니다. 클라이언트 연결에서 가용성 그룹 수신기에 연결하는 대신 SQL Server의 인스턴스를 직접 참조할 수도 있습니다.  
   
- SQL Server의 인스턴스에서 가용성 그룹 수신기를 사용하거나 다른 인스턴스 끝점을 사용하여 연결이 로그인되는지 여부는 관계가 없습니다.  SQL Server 인스턴스는 대상 데이터베이스의 상태를 확인하고 가용성 그룹의 구성과 인스턴스에 대한 데이터베이스의 현재 상태를 기반으로 연결을 허용하거나 허용하지 않습니다.  예를 들어 클라이언트 응용 프로그램이 SQL Server 포트의 인스턴스에 직접 연결하고 가용성 그룹에 호스팅된 대상 데이터베이스에 연결하고 대상 데이터베이스가 기본 온라인 상태인 경우 연결이 성공합니다.  대상 데이터베이스가 오프라인 상태이거나 전환 상태이면 데이터베이스 연결이 실패합니다.  
+ SQL Server의 인스턴스에서 가용성 그룹 수신기를 사용하거나 다른 인스턴스 엔드포인트를 사용하여 연결이 로그인되는지 여부는 관계가 없습니다.  SQL Server 인스턴스는 대상 데이터베이스의 상태를 확인하고 가용성 그룹의 구성과 인스턴스에 대한 데이터베이스의 현재 상태를 기반으로 연결을 허용하거나 허용하지 않습니다.  예를 들어 클라이언트 응용 프로그램이 SQL Server 포트의 인스턴스에 직접 연결하고 가용성 그룹에 호스팅된 대상 데이터베이스에 연결하고 대상 데이터베이스가 기본 온라인 상태인 경우 연결이 성공합니다.  대상 데이터베이스가 오프라인 상태이거나 전환 상태이면 데이터베이스 연결이 실패합니다.  
   
  보조 복제본이 하나만 있고 사용자 연결을 허용하는 않는 경우 데이터베이스 미러링을 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]로 마이그레이션하는 동안 응용 프로그램에서 데이터베이스 미러링 연결 문자열을 지정할 수 있습니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 [가용성 그룹에 데이터베이스 미러링 연결 문자열 사용](#DbmConnectionString)을 참조하세요.  
   

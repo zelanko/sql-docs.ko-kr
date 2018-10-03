@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f4227b819597573d51b9720006fe6536f774103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197983"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>2단계: Foreach 루프 컨테이너 추가 및 구성
   이 태스크에서는 플랫 파일 폴더를 통해 루핑하고 1단원에서 사용한 것과 같은 데이터 흐름 변환을 각 플랫 파일에 적용합니다. 제어 흐름에 Foreach 루프 컨테이너를 추가하고 구성하여 이 작업을 수행합니다.  
@@ -65,7 +62,7 @@ ms.locfileid: "37312003"
   
      이 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.   [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   

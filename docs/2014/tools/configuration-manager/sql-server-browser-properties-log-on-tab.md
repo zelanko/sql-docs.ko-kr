@@ -1,25 +1,22 @@
 ---
-title: SQL Server Browser 속성 (로그온 탭) | Microsoft Docs
+title: SQL Server Browser 속성(로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c77871ec-c2f4-4e4a-9a10-5aeb4ae70507
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacd58650b9c86a455714cfc464b9b995396a83e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 685911d9efb0b43b9b0d111e5d45a341c5436a13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273779"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210513"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server Browser 속성(로그온 탭)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 프로그램은 서버에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다.  

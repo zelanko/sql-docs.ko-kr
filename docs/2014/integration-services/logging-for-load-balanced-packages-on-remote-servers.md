@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], remote packages
 ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a8aae457611e43419c75a348541e7dbd1ca004
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 679554db4855b9d30d8ca3e8ae54f8756667baed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194563"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>원격 서버의 로드 균형 조정된 패키지 로깅
   모든 자식 패키지가 동일한 로그 공급자를 사용하고 동일한 대상에 쓰는 경우 관리자가 보다 쉽게 여러 서버에서 실행되는 모든 자식 패키지에 대한 로그를 관리할 수 있습니다. 모든 자식 패키지에 공통된 로그 파일을 만드는 한 가지 방법은 SQL Server 로그 공급자에 이벤트를 기록하도록 자식 패키지를 구성하는 것입니다. 모든 패키지가 동일한 데이터베이스, 동일한 서버 및 서버의 동일한 인스턴스를 사용하도록 구성할 수 있습니다.  

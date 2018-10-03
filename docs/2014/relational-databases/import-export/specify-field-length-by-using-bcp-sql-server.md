@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202873"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp를 사용하여 필드 길이 지정(SQL Server)
   필드 길이는 데이터를 문자 형식으로 표시하는 데 필요한 최대 문자 수를 나타냅니다. 데이터가 네이티브 형식으로 저장된 경우에는 필드 길이를 쉽게 알 수 있습니다. 예를 들어 `int` 데이터 형식의 길이는 4바이트입니다. 접두사 길이로 0을 지정한 경우는 **bcp** 명령은 필드 길이, 기본 필드 길이 및 필드 길이가 데이터 저장소에 포함 된 데이터 파일의 영향에 대해 묻는 메시지를 표시 합니다 `char` 데이터입니다.  

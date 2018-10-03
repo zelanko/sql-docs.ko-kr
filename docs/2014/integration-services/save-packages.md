@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 567efb17fb672be6a82fd0f47b52d8919ea81095
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8f7b354b70f5e936a7d2953fbbcbbfbd7695114
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193433"
 ---
 # <a name="save-packages"></a>패키지 저장
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만든 패키지를 파일 시스템에 XML 파일(.dtsx 파일)로 저장합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 msdb 데이터베이스나 패키지 저장소에 패키지 XML 파일의 복사본을 저장할 수도 있습니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리하는 파일 시스템 위치에 있는 폴더를 나타냅니다.  

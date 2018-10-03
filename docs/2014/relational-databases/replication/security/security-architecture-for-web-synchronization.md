@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 17b8ebfa534b5b6cb9605fa5088cec2e30b607ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fecb188c4a793c2742e28d7b1c76193b901ba0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190563"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>웹 동기화를 위한 보안 아키텍처
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용하여 웹 동기화 보안 구성을 세밀하게 제어할 수 있습니다. 이 항목에서는 웹 동기화 구성에 포함할 수 있는 포괄적인 구성 요소 목록과 구성 요소 간 연결에 대한 정보를 제공합니다. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  

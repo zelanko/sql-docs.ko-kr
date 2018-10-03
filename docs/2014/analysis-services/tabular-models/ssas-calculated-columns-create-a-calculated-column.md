@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.as.daxref.CreataCalculatedColumn.f1
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b88ac967733abd8cb8c29089435552039f1c55d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca7b73e08941d42ceccd1ff3dab04a686b120d98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201403"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>계산 열 만들기(SSAS 테이블 형식)
   계산 열을 사용하면 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 유효한 수식을 만든 다음 ENTER 키를 누르면 계산 열의 각 행에서 값이 계산되어 채워집니다. 그런 다음 다른 데이터 열과 마찬가지로 보고 또는 분석 응용 프로그램에 계산 열을 추가할 수 있습니다. 이 항목에서는 모델 디자이너의 DAX 수식 입력줄을 사용하여 새 계산 열을 만드는 방법에 대해 설명합니다.  

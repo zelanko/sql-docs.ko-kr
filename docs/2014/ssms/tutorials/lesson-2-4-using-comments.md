@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30c866f193da8492d0c379f0de4ac748cab76c8b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f09d6099ea9c80e9ce237e3462cec93fa66626b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206603"
 ---
 # <a name="using-comments"></a>주석 사용
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 스크립트의 일부를 쉽게 주석으로 처리할 수 있습니다.  

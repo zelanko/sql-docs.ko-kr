@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eea7cee81892b7ffb5ce35d747c54b413ceb1d62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 043ae99502b8f1f128ca892dbfe4e3f84c4af14d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252625"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191843"
 ---
 # <a name="look-up-rfc-destination"></a>RFC 대상 조회
   **RFC 대상 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 RFC 대상을 조회할 수 있습니다. 사용할 수 있는 RFC 대상 목록이 표시될 때 원하는 대상을 선택하면 관련 옵션이 필요한 값으로 채워집니다.  

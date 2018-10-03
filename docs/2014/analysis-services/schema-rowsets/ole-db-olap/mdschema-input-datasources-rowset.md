@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDSCHEMA_INPUT_DATASOURCES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MDSCHEMA_INPUT_DATASOURCES rowset
 ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aedd2980b6c51872a9d78d6d1c2cbbecc84d7ec4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa2f372c4facb1b2e51561bbd82a8e35fe8ed134
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210033"
 ---
 # <a name="mdschemainputdatasources-rowset"></a>MDSCHEMA_INPUT_DATASOURCES 행 집합
   데이터베이스 내에 정의된 데이터 원본을 설명합니다.  

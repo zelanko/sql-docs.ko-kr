@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a85b29827973522684820600f3a93b19c58200
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208223"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
   **토폴로지 구성** 페이지를 사용하여 새 노드 추가, 노드 삭제, 기존 노드 간 새 연결 추가와 같은 일반적인 구성 태스크를 수행할 수 있습니다. 이 마법사의 **게시** 페이지에서 선택한 노드는 디자인 화면에 표시됩니다. 구성 옵션을 지정하려면 노드, 연결 또는 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.  

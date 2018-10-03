@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-caps.latest.revision: 100
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd10fc638ed7a1d9c42b926190eebc0df5dd37b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156540"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204803"
 ---
 # <a name="install-integration-services"></a>Integration Services 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 비롯한 구성 요소 중 일부 또는 전체를 설치하는 한 개의 설치 프로그램을 제공합니다. 설치 프로그램을 통해 한 개의 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소와 함께 설치하거나 단독으로 설치할 수 있습니다.  

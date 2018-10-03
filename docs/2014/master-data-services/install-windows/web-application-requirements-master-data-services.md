@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0e371ceef793daea080e3a588f6b87161083a6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208483"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 응용 프로그램 요구 사항(MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 응용 프로그램입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 만 Internet Explorer (IE) 7 이상을 사용할 수 있습니다. IE 7 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  

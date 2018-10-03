@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b01d05d497691d2790b9423265cf420f236065f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197253"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>SharePoint용 PowerPivot 업그레이드
   이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 구체적인 단계는 사용자 환경에서 현재 실행 중인 SharePoint 버전에 따라 달라 집니다 및 SharePoint 추가 기능에 대 한 PowerPivot 포함 (**spPowerPivot.msi**).  
@@ -248,7 +245,7 @@ Get-PowerPivotSystemService
   
  **Windows 파일 탐색기**:  
   
-1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 대한 **Bin** 폴더로 이동합니다. 예를 들면 `C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\bin`입니다.  
+1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 대한 **Bin** 폴더로 이동합니다. 예를 들면 `C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\bin`과 같습니다.  
   
 2.  `msmdsrv.exe`를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual Basic [SMO]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, programming
 - SMO [SQL Server], programming
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a92ff5f60136d910632ead2aefbcc5023a387a3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 225701627364056264109b7ec7c4f0f30edae2a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198393"
 ---
 # <a name="creating-smo-programs"></a>SMO 프로그램 만들기
   SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체의 일반적인 프로그래밍에는 메서드 실행, 속성 설정 및 컬렉션 조작과 같이 모든 개체가 공유하는 공통적인 영역이 포함됩니다.  

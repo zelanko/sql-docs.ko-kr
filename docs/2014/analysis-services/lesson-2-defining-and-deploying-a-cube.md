@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 077d422f47fa62083420713b580100afcccf1712
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e7984c2bfa0ca9c654d5f6a3e9bc75a66bc34c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189813"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>2단원: 큐브 정의 및 배포
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 데이터 원본 뷰를 정의하면 초기 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 정의할 준비가 됩니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 데이터 원본 뷰를 정의하면 초기 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 정의할 준비가 됩니다.  
   
  큐브 마법사를 사용하여 단일 패스에서 큐브와 차원을 정의할 수 있습니다. 또는 하나 이상의 차원을 정의한 다음 큐브 마법사를 사용하여 이러한 차원을 사용하는 큐브를 정의할 수 있습니다. 복잡한 솔루션을 디자인하는 경우 일반적으로 차원을 정의하는 작업부터 시작합니다. 자세한 내용은 [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md) 또는 [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)를 참조하세요.  
   

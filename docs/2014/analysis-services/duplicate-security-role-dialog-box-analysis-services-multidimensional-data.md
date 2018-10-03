@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.duplicaterole.f1
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02aaae2b8f2b067f8c728220522294e93f295a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194553"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Analysis Services 중복 보안 역할 대화 상자(Analysis Services - 다차원 데이터)
   사용 된 **Analysis Services 중복 보안 역할- \<데이터베이스 이름 >- \<y from role name >** 대화 상자 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 기존 역할을 복제할는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스. 개체 탐색기에서 역할을 마우스 오른쪽 단추로 클릭하고 **복제**를 선택하면 **역할 복제** 대화 상자를 표시할 수 있습니다.  

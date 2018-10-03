@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], modifying
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - databases [Analysis Services], deleting
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 949767979720880225431bb2e0c928623822ee23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bcb8d635721a31429f387d135ed7b0bbf7112d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196783"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Analysis Services 데이터베이스 수정 또는 삭제
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 배포하기 전에 그리고 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 배포한 후에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터베이스의 이름과 설명을 변경할 수 있습니다. 또한 환경에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 추가 설정을 조정할 수 있습니다.  

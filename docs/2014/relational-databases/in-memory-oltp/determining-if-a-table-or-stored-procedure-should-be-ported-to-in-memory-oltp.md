@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194143"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 수집기를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다. 트랜잭션 성능 분석 보고서에는 응용 프로그램에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
