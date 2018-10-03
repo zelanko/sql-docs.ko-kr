@@ -1,13 +1,11 @@
 ---
-title: 유형의 드라이버 | Microsoft Docs
+title: 드라이버 종류 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e75e5827becd5457d0e310ca5ec0cc2a13259be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619691"
 ---
-# <a name="types-of-drivers"></a>유형의 드라이버
+# <a name="types-of-drivers"></a>드라이버 형식
 ODBC 드라이버는 다음과 같이 분류할 수 있습니다.  
   
 -   **32 비트 ODBC 2입니다.**  
@@ -34,35 +31,35 @@ ODBC 드라이버는 다음과 같이 분류할 수 있습니다.
   
     -   ODBC 2만 내보냅니다 *.x* 함수입니다.  
   
-    -   ODBC 2에서 보여 줍니다. *x* 동작 변경 내용에 대 한 동작입니다.  
+    -   ODBC 2를 보여 줍니다. *x* 동작 변경 내용에 대 한 동작입니다.  
   
--   **ISO 및 Open 그룹 규격 드라이버** 32 비트 드라이버입니다.  
+-   **ISO 및 열린 그룹 규격 드라이버** 32 비트 드라이버입니다.  
   
-    -   Open Group 또는 ISO CLI 문서에서 설명 하는 모든 함수를 내보냅니다. ODBC에서 사용 되지 않는 함수 중 몇 가지도 포함 됩니다.  
+    -   Open Group 또는 ISO CLI 문서에 나와 있는 모든 함수를 내보냅니다. ODBC에서 사용 되지 않는 함수 중 일부를이 포함 됩니다.  
   
-    -   동작 변경 내용에 대 한 ODBC 3.0 동작을 수행 합니다.  
+    -   동작 변경 내용에 대 한 ODBC 3.0 동작을 보여 줍니다.  
   
     -   ODBC 3.0 드라이버 관리자를 통해 반드시 이동 하지 않습니다.  
   
 -   **ODBC 3.0 드라이버** 32 비트 드라이버입니다.  
   
-    -   사용 되지 않는 함수와 뺀 ODBC 3.0에 있는 함수만 내보냅니다.  
+    -   ODBC 3.0에서 뺀 값에 있는 함수만을 내보냅니다 함수를 사용 되지 않습니다.  
   
-    -   ODBC 2 현상이 수 있습니다. *x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 동작 변경 내용에 대해 ODBC 3.0 동작 합니다.  
+    -   ODBC 2를 나타내는 수 있습니다. *x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 동작 변경 내용에 대해 ODBC 3.0 동작 합니다.  
   
 -   **ODBC 3.5 (또는 이후 버전) ANSI 드라이버** 32 비트 드라이버입니다.  
   
-    -   사용 되지 않는 함수와 뺀 ODBC 3.5에 있는 함수만 내보냅니다.  
+    -   빼기 ODBC 3.5에 있는 함수만을 내보냅니다 함수를 사용 되지 않습니다.  
   
-    -   ODBC 2 현상이 수 있습니다. *x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 ODBC 3.0 동작 또는 동작 변경 내용에 대해 ODBC 3.5 동작 합니다.  
+    -   ODBC 2를 나타내는 수 있습니다. *x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 ODBC 3.0 동작 또는 동작 변경 내용에 대해 ODBC 3.5 동작 합니다.  
   
--   **ODBC 3.5 또는 그 이상의 유니코드 드라이버** 32 비트 드라이버입니다.  
+-   **ODBC 3.5 (또는 이상) 유니코드 드라이버** 32 비트 드라이버입니다.  
   
     -   ODBC 3.5 ANSI 드라이버의 모든 기능을 지원합니다.  
   
     -   모든 ODBC 문자열 Api의 유니코드 버전을 내보냅니다.  
   
-    -   저장 하 고 데이터 원본에 대해 유니코드 데이터를 처리할 수 있습니다.  
+    -   저장 하 고 데이터 원본에 유니코드 데이터를 처리할 수 있습니다.  
   
 > [!NOTE]  
->  16 비트 ODBC 드라이버는 ODBC 3와 직접 작동 하지 않습니다. *x* 드라이버 관리자입니다. 그러나 이후에 3까지 썽크는 2.0 ODBC 드라이버 관리자를 사용 하는 16 비트 드라이버에 대 한 같습니다. *x* 드라이버 관리자입니다.
+>  16 비트 ODBC 드라이버는 ODBC 3와 직접 작동 하지 않습니다. *x* 드라이버 관리자입니다. 그러나 이후에 3까지 썽크를 2.0 ODBC 드라이버 관리자를 사용 하 여 작동 하는 16 비트 드라이버에 대 한 가능한 것입니다. *x* 드라이버 관리자입니다.

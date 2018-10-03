@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fa7e2dbf687c9d07bad1e9052b7fd2eeede1e4f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623731"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)
-이 예제에서는 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 동안 변경 된 레코드를 데이터 원본으로 사용 하는 경우 메시지를 표시 하 여 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 업데이트 합니다.  
+이 예제에서는 합니다 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 중에 변경 된 레코드를 데이터 원본으로 사용 하는 경우 메시지를 표시 하 여 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리 업데이트 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -198,27 +195,27 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **데이터가 변경 되었습니다!**  
+ **데이터가 변경 되었습니다.**  
 **ID 제목: PS1372**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
-**데이터가 변경 되었습니다!**  
-**제목 ID: p s 2091**  
+**데이터가 변경 되었습니다.**  
+**ID 제목: PS2091**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
-**데이터가 변경 되었습니다!**  
+**데이터가 변경 되었습니다.**  
 **ID 제목: PS2106**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
-**데이터가 변경 되었습니다!**  
+**데이터가 변경 되었습니다.**  
 **ID 제목: PS3333**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
-**데이터가 변경 되었습니다!**  
+**데이터가 변경 되었습니다.**  
 **ID 제목: PS7777**  
 **현재 값: self_help**   
 **원래 값: 심리학**   

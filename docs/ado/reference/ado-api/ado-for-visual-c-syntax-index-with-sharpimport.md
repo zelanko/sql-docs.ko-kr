@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 88843691166fab6300f2a2f4a092b25ce9552ac3
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 75fc5d3ac1aecebca938e55c29a80bf5270bbd4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616296"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import Visual c + + 구문 인덱스에 대 한 ADO
 이 인덱스를 기준으로 Microsoft Visual c + + ADO 언어 참조에 대 한 상호 참조 및 **#import** 지시문입니다.  
