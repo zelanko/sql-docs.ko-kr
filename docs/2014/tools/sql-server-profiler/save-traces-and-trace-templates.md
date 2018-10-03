@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46806b60627ad5f7631bb23d565dc1e36d0ef3b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80781d3b32ef33fa844c5df96f837aaa14ba06c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159604"
 ---
 # <a name="save-traces-and-trace-templates"></a>추적 및 추적 템플릿 저장
   추적 파일의 저장과 추적 템플릿의 저장을 구분하는 것은 중요합니다. 추적 파일 저장은 캡처된 데이터를 지정한 장소로 저장하는 것이며 추적 템플릿 저장은 지정한 데이터 열, 이벤트 클래스 또는 필터 등의 추적 정의를 저장하는 것입니다.  
@@ -45,7 +42,7 @@ ms.locfileid: "37255835"
 > [!NOTE]  
 >  추적 데이터를 테이블에 캡처하는 것은 파일에 캡처하는 것보다 느립니다. 그러므로 추적 데이터를 파일에 캡처해 추적 파일을 열고 추적을 추적 테이블로 저장하는 것이 좋습니다.  
   
- 추적 파일을 사용할 때 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적 정의가 아니라 캡처한 이벤트 데이터를 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적(\**.trc) 파일로 저장합니다. 이 확장명은 추적 파일이 저장될 때 지정한 다른 확장명에 관계없이 자동으로 파일 끝에 추가됩니다. 예를 들어 **Trace.dat**라는 추적 파일을 지정하면 이렇게 만든 파일은 **Trace.dat.trc**로 저장됩니다.  
+ 추적 파일을 사용할 때 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적 정의가 아니라 캡처한 이벤트 데이터를 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적(\*.trc) 파일로 저장합니다. 이 확장명은 추적 파일이 저장될 때 지정한 다른 확장명에 관계없이 자동으로 파일 끝에 추가됩니다. 예를 들어 **Trace.dat** 라는 추적 파일을 지정하면 이렇게 만든 파일은 **Trace.dat.trc** 로 저장됩니다.  
   
 > [!IMPORTANT]  
 >  SHOWPLAN, ALTER TRACE 또는 VIEW SERVER STATE 권한이 있는 사용자는 실행 계획 출력에 캡처된 쿼리를 볼 수 있습니다. 이러한 쿼리에는 암호 같은 중요한 정보가 포함되어 있을 수 있습니다. 따라서 **db_owner** 고정 데이터베이스 역할의 멤버나 **sysadmin** 고정 서버 역할의 멤버 같이 중요한 정보를 볼 지위에 있는 사용자에게만 이러한 권한을 부여하는 것이 좋습니다. 또한 실행 계획 파일을 저장하거나 실행 계획 관련 이벤트가 포함된 파일을 추적할 때는 NTFS 파일 시스템이 적용된 위치만 사용하고 중요한 정보를 볼 지위에 있는 사용자에게만 해당 위치에 대한 액세스 권한을 부여하는 것이 좋습니다.  

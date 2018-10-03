@@ -4,27 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
-caps.latest.revision: 3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113701"
 ---
-# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드 (SSAS 2014)에서 DAX 수식 호환성
+# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
 Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 사용에 대 한 다른 사용자 지정 수식을 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 측면에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드로 배포 하는 경우 일부의 제한이 있습니다 사용할 수 있는 수식입니다. 이 항목에서는 이러한 차이점의 개요를 제공, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  
   
 이 항목에서 사용 하 여 용어 *메모리 내 모델에서는* 호스트 테이블 형식 모드에서 실행 되는 Analysis Services 서버의 메모리에 캐시 된 데이터를 완벽 하 게 되는 테이블 형식 모델을 가리킵니다. 사용 하 여 *DirectQuery 모델* 작성 하거나 DirectQuery 모드로 배포 된 테이블 형식 모델을 가리킵니다. DirectQuery 모드에 대 한 자세한 내용은 [DirectQuery 모드 (SSAS 테이블 형식)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)합니다.  

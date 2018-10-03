@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1879e9ec4f2a6decf4168e7c49a5e81d3a043d29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251515"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154713"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>분류 행렬 탭(마이닝 정확도 차트 뷰)
   **분류 행렬** 탭에서는 **열 매핑** 탭의 모델 표에서 선택한 각 모델에 대한 분류 행렬을 표시합니다. 분류 행렬은 **열 매핑** 탭에서 선택한 예측 가능한 열이 연속 열이 아닌 경우에만 사용할 수 있습니다. 에 대 한 자세한 설명은 합니다 **분류표** 탭을 참조 하십시오 [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md).  

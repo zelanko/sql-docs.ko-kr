@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7dda9f7469adb205fad6a3aeee4714ab5ee19da4
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889629"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075823"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
   사용 하 여 오버플로 열의 데이터 주소를 지정 하는 방법을 보여 주는이 예제는 `XMLTEXT` 지시문을 `SELECT` EXPLICIT 모드를 사용 하 여 문을 합니다.  
@@ -170,7 +167,7 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 예를 들어:  
+ `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SELECT 1 AS Tag,  

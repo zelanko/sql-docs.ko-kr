@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 60c593878f3c40094995a4d7b905d0bb59ff1a24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 841bdd13dfbc1fe7ca29a4eb3f3dbe757a28c36c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224453"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>보고서 서버에 액세스할 수 있도록 방화벽 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 응용 프로그램과 게시된 보고서는 IP 주소, 포트 및 가상 디렉터리를 지정하는 URL을 통해 액세스할 수 있습니다. Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 보고서를 요청한 후 빈 웹 페이지가 나타나거나 원격 클라이언트 컴퓨터에서 보고서 관리자를 열었을 때 빈 페이지가 나타나면 포트가 닫힌 것입니다.  
@@ -36,7 +33,7 @@ ms.locfileid: "37292173"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 지침에서는 사용자가 이미 서비스 계정을 구성했고 보고서 서버 데이터베이스를 만들었으며 보고서 서버 웹 서비스 및 보고서 관리자에 대한 URL을 구성했다고 가정합니다. 자세한 내용은 [Reporting Services 기본 모드 보고서 서버를 관리](manage-a-reporting-services-native-mode-report-server.md)합니다.  
   
- 로컬 웹 브라우저에서 로컬 보고서 서버 인스턴스에 연결하여 보고서 서버에 액세스할 수 있는지도 확인해야 합니다. 이 단계에서는 사용 가능한 설치가 있는지 확인합니다. 포트를 열기 전에 설치가 올바르게 구성되어 있는지 확인해야 합니다. Windows Server에서 이 단계를 완료하려면 보고서 서버 사이트를 신뢰할 수 있는 사이트에 추가해야 합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ 로컬 웹 브라우저에서 로컬 보고서 서버 인스턴스에 연결하여 보고서 서버에 액세스할 수 있는지도 확인해야 합니다. 이 단계에서는 사용 가능한 설치가 있는지 확인합니다. 포트를 열기 전에 설치가 올바르게 구성되어 있는지 확인해야 합니다. Windows Server에서 이 단계를 완료하려면 보고서 서버 사이트를 신뢰할 수 있는 사이트에 추가해야 합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 ## <a name="opening-ports-in-windows-firewall"></a>Windows 방화벽에서 포트 열기  
  Windows 방화벽 버전마다 다른 지침이 적용됩니다.  
@@ -47,11 +44,11 @@ ms.locfileid: "37292173"
   
 2.  **고급 설정**을 클릭합니다.  
   
-3.   **인바운드 규칙**을 클릭합니다.  
+3.  **인바운드 규칙**을 클릭합니다.  
   
 4.  **동작** 창의 **새 규칙** 을 클릭합니다 **.**  
   
-5.   **포트** 의 **규칙 종류**를 클릭합니다.  
+5.  **포트** 의 **규칙 종류**를 클릭합니다.  
   
 6.  **다음**을 클릭합니다.  
   
@@ -69,7 +66,7 @@ ms.locfileid: "37292173"
   
 13. **다음**을 클릭합니다.  
   
-14.  **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
+14. **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
   
 15. **마침**을 클릭합니다.  
   

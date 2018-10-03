@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
-caps.latest.revision: 134
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226273"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 데이터베이스 엔진 기능의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
@@ -34,7 +31,7 @@ ms.locfileid: "37193963"
 ## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>동작 변경 내용 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>메타데이터 검색  
- 향상 된 기능을 [!INCLUDE[ssDE](../includes/ssde-md.md)] 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SQLDescribeCol SQLDescribeCol의 이전 버전에서 반환 하는 것 보다 예상된 결과 대 한 한 보다 정확한 설명의 얻을에 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타 데이터 검색](../relational-databases/native-client/features/metadata-discovery.md)합니다.  
+ 향상 된 기능을 [!INCLUDE[ssDE](../includes/ssde-md.md)] 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SQLDescribeCol SQLDescribeCol의 이전 버전에서 반환 하는 것 보다 예상된 결과 대 한 한 보다 정확한 설명의 얻을에 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타데이터 검색](../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   
  합니다 [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) 바뀝니다 쿼리를 실제로 실행 하지 않고 응답 형식을 결정 하기 위한 옵션 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)하십시오 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), 및 [sys.dm _ exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)합니다.  
   

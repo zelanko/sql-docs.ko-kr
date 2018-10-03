@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170413"
 ---
 # <a name="creating-a-user-defined-type"></a>사용자 정의 형식 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 설치할 수 있는 UDT(사용자 정의 형식)를 만들려면 먼저 Visual C# 또는 Visual Basic과 같은 지원되는 .NET Framework 프로그래밍 언어 중 하나에서 UDT를 만들기 위한 사양에 맞는 클래스를 만들어야 합니다. 그런 다음 클래스를 DLL(동적 연결 라이브러리)로 컴파일하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 또한 Visual Studio를 사용하여 UDT를 만들고 배포할 수도 있습니다.  

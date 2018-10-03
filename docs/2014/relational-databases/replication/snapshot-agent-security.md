@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.SSA.f1
 helpviewer_keywords:
 - Snapshot Agent Security dialog box
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc8da9eb8c223ea7a8cc1dd6b9a2a7dd35a9fdee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 476ca2bc3c82e7551472cf61fe0cb5138b91b545
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130053"
 ---
 # <a name="snapshot-agent-security"></a>스냅숏 에이전트 보안
   **스냅숏 에이전트 보안** 대화 상자를 사용하여 다음을 지정할 수 있습니다.  

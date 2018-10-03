@@ -1,26 +1,23 @@
 ---
-title: 개요 (SMO) | Microsoft Docs
+title: 개요 (SMO) | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164503"
 ---
 # <a name="overview-smo"></a>개요(SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 응용 프로그램을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
@@ -49,9 +46,9 @@ ms.locfileid: "37315663"
   
 -   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
--   SOAP 요청을 관리하기 위한 HTTP 끝점. 자세한 내용은 [Implementing Endpoints](tasks/implementing-endpoints.md)합니다.  
+-   SOAP 요청을 관리하기 위한 HTTP 엔드포인트. 자세한 내용은 [Implementing Endpoints](tasks/implementing-endpoints.md)합니다.  
   
--   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 작업](../native-client/features/working-with-snapshot-isolation.md)합니다.  
+-   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 사용](../native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
 -   XML 스키마 컬렉션, XML 인덱스 및 XML 데이터 형식으로 XML 데이터의 유효성 검사와 저장 기능 제공. 자세한 내용은 [XML 스키마 컬렉션 &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) 하 고 [Using XML Schemas](tasks/using-xml-schemas.md).  
   
@@ -148,7 +145,7 @@ ms.locfileid: "37315663"
   
  **끝점**  
   
- SOAP 및 데이터베이스 미러링 요청은 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 끝점으로 처리됩니다.  
+ SOAP 및 데이터베이스 미러링 요청은 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 엔드포인트로 처리됩니다.  
   
  **스냅숏 격리/행 수준 버전 관리**  
   

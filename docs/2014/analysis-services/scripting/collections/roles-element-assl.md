@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Roles Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Roles element
 ms.assetid: 4191b7ce-bae4-4200-8550-3904420efafd
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6227c72cc4fdd20b8c739bcb6019a83fbaaaa58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33af9f6cb9ff1d85bdd9de200b66cfb0784fa432
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168173"
 ---
 # <a name="roles-element-assl"></a>Roles 요소(ASSL)
   부모 요소 아래에 정의된 [Role](../objects/role-element-assl.md) 요소의 컬렉션을 포함합니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37295583"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

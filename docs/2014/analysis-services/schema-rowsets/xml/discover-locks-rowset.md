@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_LOCKS rowset
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4458d9dac98fd35d54ff35c0d1d524a92b576ba5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5ce108c5fb7dc7c9f89bc7ed370b5779c89caff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196933"
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 행 집합
   서버에서 현재 고정된 잠금에 대한 정보를 제공합니다.  

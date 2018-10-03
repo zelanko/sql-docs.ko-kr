@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f88f534d36ec72d81527f3e2093660c56ce9e141
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140729"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 변환
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 패키지의 데이터 흐름에서 데이터를 집계, 병합, 배포 및 수정하는 구성 요소입니다. 변환은 조회 작업을 수행하고 예제 데이터 집합을 생성할 수도 있습니다. 이 섹션에서는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에 포함되는 변환과 이러한 변환의 작동 방식에 대해 설명합니다.  

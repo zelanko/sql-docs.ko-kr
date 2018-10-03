@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ed85590cfc766b1db7eb97a3c373c0cf967f2a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7fe82be443271e1d679e5da6f0db95dc418cd99
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188643"
 ---
 # <a name="manipulating-data-mdx"></a>데이터 조작(MDX)
   MDX를 사용하여 다양한 방법으로 데이터를 조작할 수 있습니다. 다음 항목은 MDX 언어에서 데이터 조작의 보다 발전된 개념 중 일부를 다룬 것입니다.  

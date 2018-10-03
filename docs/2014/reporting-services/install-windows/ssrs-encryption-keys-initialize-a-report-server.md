@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fec18c65310311e51baf5c3d8a2d6939d4cac5f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e6dd33dab83157d9436184411f7af323e339030f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181943"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>보고서 서버 초기화(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 초기화된 서버는 보고서 서버 데이터베이스의 데이터를 암호화하고 해독할 수 있는 서버입니다. 보고서 서버 작업을 위해서는 초기화가 필요합니다. 초기화는 보고서 서버 서비스가 처음 시작될 때 발생합니다. 또한 보고서 서버를 기존 배포에 참여시키거나 복구 프로세스의 일환으로 키를 수동으로 다시 만들 때도 발생합니다. 암호화 키를 사용하는 방법과 이유에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md) 및 [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)을 참조하세요.  
@@ -51,8 +48,7 @@ ms.locfileid: "37232593"
 5.  보고서 서버 서비스는 보고서 서버 데이터베이스에 다시 연결한 후 3단계에서 저장한 공개 키 및 설치 식별자 값에 대칭 키를 추가합니다. 보고서 서버 서비스는 대칭 키를 저장하기 전에 해당 공개 키를 사용하여 대칭 키를 암호화합니다. 대칭 키가 저장되면 보고서 서버는 초기화되어 사용 가능한 상태가 된 것입니다.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>확장 배포를 위해 보고서 서버 초기화  
- 
-            [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 여러 보고서 서버 인스턴스 간에 단일 보고서 서버 데이터베이스를 공유하는 스케일 아웃 배포 모델을 지원합니다. 스케일 아웃 배포에 참여하기 위해 보고서 서버는 대칭 키 복사본을 만들어 공유 데이터베이스에 저장해야 합니다. 해당 데이터베이스를 사용하는 서버에서는 단일 대칭 키를 사용해도 각 보고서 서버는 키의 자체 복사본을 보유합니다. 각 복사본은 공개 키를 사용하여 해당 소유자로 고유하게 암호화되므로 서로 다릅니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 여러 보고서 서버 인스턴스 간에 단일 보고서 서버 데이터베이스를 공유하는 스케일 아웃 배포 모델을 지원합니다. 스케일 아웃 배포에 참여하기 위해 보고서 서버는 대칭 키 복사본을 만들어 공유 데이터베이스에 저장해야 합니다. 해당 데이터베이스를 사용하는 서버에서는 단일 대칭 키를 사용해도 각 보고서 서버는 키의 자체 복사본을 보유합니다. 각 복사본은 공개 키를 사용하여 해당 소유자로 고유하게 암호화되므로 서로 다릅니다.  
   
  스케일 아웃 배포를 위해 보고서 서버를 초기화하는 처음 몇 단계는 단일 서버 및 데이터베이스 조합에 대한 초기화를 설명하는 처음 3단계와 동일합니다.  
   

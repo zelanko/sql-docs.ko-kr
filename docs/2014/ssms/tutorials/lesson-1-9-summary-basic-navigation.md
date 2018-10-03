@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73986197b15ad4994b05f1c9bf6a044aa2fc8d4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086483"
 ---
 # <a name="summary-basic-navigation"></a>요약: 기본 탐색
   개인적인 취향과 작업 요구 사항에 맞게 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 디자인 화면을 사용자 지정할 수 있습니다.  

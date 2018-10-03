@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd0f70d1ce76e3bcb4ed244e765cbeeb2fc44a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193773"
 ---
 # <a name="amo-data-mining-classes"></a>AMO 데이터 마이닝 클래스
   데이터 마이닝 클래스는 데이터 마이닝 개체를 만들고, 수정하고, 삭제하고, 처리하는 데 사용됩니다. 데이터 마이닝 개체 작업에는 데이터 마이닝 구조 만들기, 데이터 마이닝 모델을 만들기 및 모델 처리가 포함됩니다.  

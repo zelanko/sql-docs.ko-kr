@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2494008022e095cebe40c0436d47a5e933bbde62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108194"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>IIS(인터넷 정보 서비스) 8.0에서 Analysis Services에 대한 HTTP 액세스 구성
-  이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 끝점을 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
+  이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 엔드포인트를 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
   
 -   클라이언트 액세스가 인터넷 또는 엑스트라넷 연결을 통해 이루어집니다(설정할 수 있는 포트에 대한 제한 사항 있음)  
   
@@ -34,9 +31,9 @@ ms.locfileid: "37204473"
   
 -   Windows 통합 보안 인증이 아닌 다른 인증 방법이 필요합니다. 특히 HTTP 액세스에 대한 Analysis Services를 구성할 때 익명 연결과 기본 인증을 사용할 수 있습니다. 다이제스트, 폼 및 ASP.NET 인증은 지원되지 않습니다. HTTP 액세스를 사용하도록 설정하는 기본 이유 중 하나가 바로 기본 인증을 사용하기 위한 것입니다. 자세한 내용은 [Microsoft BI 인증 및 ID 위임](http://go.microsoft.com/fwlink/?LinkId=286576)(영문)을 참조하세요.  
   
- 지원되는 모든 Analysis Services 버전 또는 에디션에 대한 HTTP 액세스를 구성하여 테이블 형식 모드 또는 다차원 모드로 실행되도록 할 수 있습니다. 로컬 큐브는 예외입니다. HTTP 끝점을 통해 로컬 큐브에 연결할 수는 없습니다.  
+ 지원되는 모든 Analysis Services 버전 또는 에디션에 대한 HTTP 액세스를 구성하여 테이블 형식 모드 또는 다차원 모드로 실행되도록 할 수 있습니다. 로컬 큐브는 예외입니다. HTTP 엔드포인트를 통해 로컬 큐브에 연결할 수는 없습니다.  
   
- HTTP 액세스 설정은 설치 후 작업입니다. HTTP 액세스를 위해 Analysis Services를 구성하려면 Analysis Services가 이미 설치되어 있어야 합니다. Analysis Services 관리자는 HTTP 액세스를 허용하기 위해 먼저 Windows 계정에 사용 권한을 부여해야 합니다. 또한 서버를 구성하기 전에 설치가 유효한지 검사하여 완전히 작동하는지 확인하는 것이 좋습니다. HTTP 액세스를 구성한 후에는 TCP/IP를 통해 HTTP 끝점과 서버의 일반 네트워크 이름을 모두 사용할 수 있습니다. HTTP 액세스를 설정한다고 해서 다른 데이터 액세스 방법을 사용할 수 없는 것은 아닙니다.  
+ HTTP 액세스 설정은 설치 후 작업입니다. HTTP 액세스를 위해 Analysis Services를 구성하려면 Analysis Services가 이미 설치되어 있어야 합니다. Analysis Services 관리자는 HTTP 액세스를 허용하기 위해 먼저 Windows 계정에 사용 권한을 부여해야 합니다. 또한 서버를 구성하기 전에 설치가 유효한지 검사하여 완전히 작동하는지 확인하는 것이 좋습니다. HTTP 액세스를 구성한 후에는 TCP/IP를 통해 HTTP 엔드포인트와 서버의 일반 네트워크 이름을 모두 사용할 수 있습니다. HTTP 액세스를 설정한다고 해서 다른 데이터 액세스 방법을 사용할 수 없는 것은 아닙니다.  
   
  MSMDPUMP 구성을 계속 진행할 때 client-to-IIS, IIS-to-SSAS의 두 가지 연결을 고려할 수 있습니다. 이 문서의 지침은 IIS-SSAS에 대한 것입니다. 클라이언트 응용 프로그램에서 IIS에 연결하려면 먼저 추가 구성이 필요할 수 있습니다. SSL을 사용할 것인지 또는 바인딩을 구성하는 방법과 같은 사항은 이 문서에서 다루지 않습니다. IIS에 대한 자세한 내용은 [웹 서버(IIS)](http://technet.microsoft.com/library/hh831725.aspx) 를 참조하세요.  
   
@@ -57,9 +54,9 @@ ms.locfileid: "37204473"
 -   [구성 테스트](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> 개요  
- MSMDPUMP는 IIS에 로드되는 ISAPI 확장 프로그램으로, 로컬 또는 원격 Analysis Services 인스턴스에 대한 리디렉션을 제공합니다. 이 ISAPI 확장을 구성하여 Analysis Services 인스턴스에 대한 HTTP 끝점을 만들 수 있습니다.  
+ MSMDPUMP는 IIS에 로드되는 ISAPI 확장 프로그램으로, 로컬 또는 원격 Analysis Services 인스턴스에 대한 리디렉션을 제공합니다. 이 ISAPI 확장을 구성하여 Analysis Services 인스턴스에 대한 HTTP 엔드포인트를 만들 수 있습니다.  
   
- 각 HTTP 끝점에 대해 하나의 가상 디렉터리를 만들고 구성해야 합니다. 각 끝점에는 연결하려는 각 Analysis Services 인스턴스에 대한 고유 MSMDPUMP 파일 집합이 필요합니다. 이 파일 집합의 구성 파일은 각 HTTP 끝점에 사용되는 Analysis Services 인스턴스의 이름을 지정합니다.  
+ 각 HTTP 엔드포인트에 대해 하나의 가상 디렉터리를 만들고 구성해야 합니다. 각 엔드포인트에는 연결하려는 각 Analysis Services 인스턴스에 대한 고유 MSMDPUMP 파일 집합이 필요합니다. 이 파일 집합의 구성 파일은 각 HTTP 엔드포인트에 사용되는 Analysis Services 인스턴스의 이름을 지정합니다.  
   
  IIS에서 MSMDPUMP는 TCP/IP를 통해 Analysis Services OLE DB 공급자를 사용하여 Analysis Services에 연결합니다. 클라이언트 요청이 도메인 트러스트 외부에서 시작될 수 있지만 네이티브 연결이 이뤄지려면 Analysis Services와 IIS가 동일한 도메인 또는 트러스트된 도메인에 있어야 합니다.  
   
@@ -112,7 +109,7 @@ ms.locfileid: "37204473"
 >  원격 Analysis Services 서버에 대한 클라이언트 연결을 허용하도록 Windows 방화벽에서 포트를 차단 해제해야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 ##  <a name="bkmk_copy"></a> 1단계: 웹 서버의 폴더로 MSMDPUMP 파일 복사  
- 사용자가 만드는 각 HTTP 끝점에는 고유 MSMDPUMP 파일 집합이 있어야 합니다. 이 단계에서는 Analysis Services 프로그램 폴더에서 새 가상 디렉터리 폴더(IIS를 실행하는 컴퓨터의 파일 시스템에 만드는 폴더)로 MSMDPUMP 실행 파일, 구성 파일 및 리소스 폴더를 복사합니다.  
+ 사용자가 만드는 각 HTTP 엔드포인트에는 고유 MSMDPUMP 파일 집합이 있어야 합니다. 이 단계에서는 Analysis Services 프로그램 폴더에서 새 가상 디렉터리 폴더(IIS를 실행하는 컴퓨터의 파일 시스템에 만드는 폴더)로 MSMDPUMP 실행 파일, 구성 파일 및 리소스 폴더를 복사합니다.  
   
  드라이브는 NTFS 파일 시스템용으로 포맷되어야 합니다. 사용자가 만든 폴더의 경로에 공백을 포함해서는 안 됩니다.  
   
@@ -133,7 +130,7 @@ ms.locfileid: "37204473"
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> 2단계: IIS에 응용 프로그램 풀 및 가상 디렉터리 만들기  
- 다음으로 응용 프로그램 풀과 펌프에 대한 끝점을 만듭니다.  
+ 다음으로 응용 프로그램 풀과 펌프에 대한 엔드포인트를 만듭니다.  
   
 #### <a name="create-an-application-pool"></a>응용 프로그램 풀 만들기  
   
@@ -187,7 +184,7 @@ ms.locfileid: "37204473"
   
  사용자에게 Windows 사용자 계정이 없으면 프로덕션 환경에서 익명 인증을 사용할 수도 있지만, [익명 인증 사용(IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)문서에서 설명하는 대로 호스트 시스템에서 권한을 잠그는 방식으로 모범 사례를 따르는 것이 좋습니다. 계정 액세스 수준을 더 줄이려면 상위 웹 사이트가 아닌 가상 디렉터리에 인증을 설정해야 합니다.  
   
- 익명을 사용하도록 설정되어 있으면 HTTP 끝점에 대한 사용자 연결이 익명 사용자로 연결하도록 허용됩니다. 개별 사용자 연결을 감사할 수 없으며 사용자 ID를 사용하여 모델에서 데이터를 선택할 수도 없습니다. 익명을 사용하면 모델 디자인에서 데이터 새로 고침 및 액세스에 이르기까지 모든 요소에 영향을 줍니다. 그러나 사용자가 시작할 수 있는 Windows 사용자 로그인을 가지고 있지 않으면 익명 계정을 사용할 수밖에 없습니다.  
+ 익명을 사용하도록 설정되어 있으면 HTTP 엔드포인트에 대한 사용자 연결이 익명 사용자로 연결하도록 허용됩니다. 개별 사용자 연결을 감사할 수 없으며 사용자 ID를 사용하여 모델에서 데이터를 선택할 수도 없습니다. 익명을 사용하면 모델 디자인에서 데이터 새로 고침 및 액세스에 이르기까지 모든 요소에 영향을 줍니다. 그러나 사용자가 시작할 수 있는 Windows 사용자 로그인을 가지고 있지 않으면 익명 계정을 사용할 수밖에 없습니다.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>인증 유형 설정 및 스크립트 맵 추가  
   
@@ -291,7 +288,7 @@ ms.locfileid: "37204473"
   
  **AMO를 사용하여 연결 테스트**  
   
- 서버 이름을 끝점의 URL로 대체하여, AMO를 통해 HTTP 액세스를 프로그래밍 방식으로 테스트할 수 있습니다. 자세한 내용은 [포럼 게시물(도메인/포리스트 및 방화벽 경계에서 HTTPS를 통해 SSAS 2008 R2 데이터베이스를 동기화하는 방법)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e)을 참조하세요.  
+ 서버 이름을 엔드포인트의 URL로 대체하여, AMO를 통해 HTTP 액세스를 프로그래밍 방식으로 테스트할 수 있습니다. 자세한 내용은 [포럼 게시물(도메인/포리스트 및 방화벽 경계에서 HTTPS를 통해 SSAS 2008 R2 데이터베이스를 동기화하는 방법)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e)을 참조하세요.  
   
  기본 인증을 사용한 HTTP(S) 액세스에 대한 구문을 보여 주는 연결 문자열의 예  
   

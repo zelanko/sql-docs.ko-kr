@@ -3,17 +3,17 @@ title: SQL Server 기계 학습 인터넷 액세스가 없는 R 및 Python 구�
 description: 오프 라인 상태 이거나 연결이 끊긴 Machine Learning R 및 Python 설치 SQL Server 인스턴스에서 격리 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150553"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server 기계 학습의 R 및 Python 인터넷 액세스 없이 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 
 
 5. 계속 다음의 설치를 완료 하려면 화면의 지시 합니다.
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>누적 업데이트를 적용 합니다.
+
+데이터베이스 엔진 및 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용 하는 것이 좋습니다. 누적 업데이트는 설치 프로그램을 통해 설치 됩니다. 
+
+1. 기본 인스턴스를 시작 합니다. SQL Server의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
+
+  + SQL Server 2017 초기 릴리스
+  + SQL Server 2016의 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 sp2
+
+2. 인터넷 연결된 장치에서의 SQL Server 버전에 대 한 누적 업데이트 목록으로 이동 합니다.
+
+  + [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 실행 파일을 다운로드 하려면 최신 누적 업데이트를 선택 합니다.
+
+4. R 및 Python에 대 한 해당 CAB 파일을 가져옵니다. 다운로드 링크를 참조 하세요 [CAB 인스턴스를 SQL Server 데이터베이스 내 분석에 누적 업데이트에 대 한 다운로드](sql-ml-cab-downloads.md)합니다.
+
+5. 모든 파일, 실행 파일 및 오프 라인 컴퓨터의 같은 폴더에 CAB 파일을 전송 합니다.
+
+6. 설치 프로그램을 실행합니다. 라이선스 조건에 동의 하 고 기능 선택 페이지의 누적 업데이트 적용 되는 기능을 검토 합니다. Machine learning 기능을 포함 하 여 현재 인스턴스에 대해 설치 된 모든 기능에 표시 됩니다.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. R 및 Python 배포에 대 한 라이선스 조건에 동의 하 여 마법사를 진행 합니다. 설치 하는 동안 업데이트 된 CAB 파일이 포함 된 폴더 위치를 선택 하 라는 메시지가 표시 됩니다.
+
 ## <a name="post-install-configuration"></a>설치 후 구성
 
 설치가 완료 되 면 서비스를 다시 시작 후 다음 스크립트 실행을 사용 하도록 설정 하려면 서버를 구성 합니다.
@@ -108,30 +136,6 @@ SQL Server 2017의 Machine Learning Services 또는 SQL Server 2016 R Services�
 
 + [설치 확인](sql-machine-learning-services-windows-install.md#verify-installation) (SQL Server 2016에 대 한 클릭 [여기](sql-r-services-windows-install.md#verify-installation)).
 + [필요에 따라 추가 구성을](sql-machine-learning-services-windows-install.md#additional-configuration) (SQL Server 2016에 대 한 클릭 [여기](sql-r-services-windows-install.md#bkmk_FollowUp)).
-
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>통합 설치 업그레이드
-
-통합 설치는 실패한 인스턴스 설치에 패치나 업데이트를 적용하여 기존 문제를 해결하는 기능을 말합니다. 이 방법은 설치를 수행할 때 동시에 SQL Server가 업데이트되므로 이후에 별도로 다시 시작할 필요가 없는 장점이 있습니다.
-
-서비스 업데이트는 업데이트 된 SQL Server를 다운로드 하 여 적용 되는 서버에 인터넷 액세스가 없는 경우 설치 관리자 및 해당 버전의 언어 관련 CAB 파일입니다. 
-
-1. 기본 인스턴스를 시작 합니다. 통합 설치 업그레이드는 이러한 버전의 SQL Server에서 지원 됩니다.
-
-  + SQL Server 2017 초기 릴리스
-  + SQL Server 2016의 초기 릴리스
-  + SQL Server 2016 SP1
-  + SQL Server 2016 SP 2
-
-2. 지정 된 누적 업데이트에 대 한 업데이트 된 버전을의 SQL Server 설치 관리자를 가져옵니다. Machine learning (R 및 Python) 기능에 모든 업데이트가 함께 기본 데이터베이스 엔진 인스턴스의 누적 업데이트입니다.
-
-  + [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. R 및 Python에 대 한 해당 CAB 파일을 가져옵니다. 다운로드 링크를 참조 하세요 [CAB 인스턴스를 SQL Server 데이터베이스 내 분석에 누적 업데이트에 대 한 다운로드](sql-ml-cab-downloads.md)합니다.
-
-4. 설치 프로그램을 실행 동일한 폴더에서 모든 파일을 배치 합니다. 설치 하는 동안 업데이트 된 CAB 파일에 대 한 폴더 위치를 선택 하 라는 메시지가 표시 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

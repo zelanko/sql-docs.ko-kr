@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configurelogs.errorlog.f1
 helpviewer_keywords:
 - Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb208e39b64a619315c1d33947e86876990f3a17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f73e63e7e7d7d9f0a95b8b7d31b2ed7b995f0520
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090903"
 ---
 # <a name="log-file-viewer-f1-help"></a>로그 파일 뷰어 F1 도움말
   로그 파일 뷰어는 다양한 구성 요소의 로그 정보를 표시합니다. 로그 파일 뷰어를 연 다음 **로그 선택** 창을 사용하여 표시할 로그를 선택할 수 있습니다. 각 로그는 해당 로그 유형에 적합한 열을 표시합니다.  

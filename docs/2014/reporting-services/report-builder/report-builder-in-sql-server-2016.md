@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10428"
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 29
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261929"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209543"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014의 보고서 작성기
   보고서 작성기는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Microsoft Office 환경에서 작업하는 것을 선호하는 비즈니스 사용자를 위한 보고서 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. 보고서 작성기에서 보고서를 미리 보거나 다른 사람이 보고서를 실행할 수 있도록 보고서 서버 또는 SharePoint 통합 모드의 보고서 서버에 게시할 수 있습니다.  

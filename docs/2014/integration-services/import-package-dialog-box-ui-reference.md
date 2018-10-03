@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.importpackage.f1
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e34f7c697df4b7c9ba183adfdf71753e47bf6619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7bb152f19bd2ed5e482cff2e57806c1653ef415
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227733"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>패키지 가져오기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 가져오기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 가져오고 해당 패키지의 보호 수준을 설정 또는 수정할 수 있습니다.  

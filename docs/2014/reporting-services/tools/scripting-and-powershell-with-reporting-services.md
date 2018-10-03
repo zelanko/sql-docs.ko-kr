@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
 - scripting [Reporting Services]
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 949ceb6b2aff0dd393cfa0c58e91355f20f4c741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166523"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 다양 한 범위의 rs.exe 명령줄 유틸리티, SharePoint 모드 보고서 서버용 PowerShell cmdlet을 포함 하 여이 활용 하 여 스크립트를 통해 개발 및 관리 시나리오를 지원 합니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 모두 네이티브 PowerShell에서 개체 모델 및 SharePoint 모드입니다.  
@@ -64,7 +61,7 @@ ms.locfileid: "37212543"
   
 ## <a name="rsexe-scripting-samples"></a>RS.exe 스크립팅 샘플  
   
--   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)입니다.  
+-   [보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)  
   
 -   추가 스크립트, 응용 프로그램 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.  
   

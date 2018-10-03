@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.setordering.f1
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56eac43752ad8528f3bb5989b0a3014573b6288e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197963"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>특성 순서 지정(비즈니스 인텔리전스 마법사)
   **특성 순서 지정** 페이지를 사용하여 선택한 차원 내 특성의 순서 특성 및 순서 조건을 지정할 수 있습니다.  

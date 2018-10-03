@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - orphaned users [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ac7577269daca9d8d5974c3a98ade1a681d6d79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167643"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하려면 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 사용자에게 있어야 합니다. 이 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 사용자 연결이 허용되는지 여부를 확인하는 인증 프로세스에서 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 인스턴스에서 로그인에 표시 되는 **sys.server_principals** 카탈로그 뷰 및 **sys.syslogins** 호환성 보기.  

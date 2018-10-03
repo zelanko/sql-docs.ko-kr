@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167945"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 도입된 고가용성 재해 복구 솔루션인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]을 사용하려면 WSFC(Windows Server 장애 조치(Failover) 클러스터링)가 필요합니다. 또한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하는 데 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링이 필요하지 않더라도 FCI(장애 조치(Failover) 클러스터링 인스턴스)를 사용하여 가용성 그룹의 가용성 복제본을 호스팅할 수 있습니다. 각 클러스터링 기술의 역할과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 환경을 디자인하는 데 고려해야 할 사항을 알고 있어야 합니다.  
@@ -66,11 +63,11 @@ ms.locfileid: "37267149"
   
 ||FCI 내의 노드|가용성 그룹 내의 복제본|  
 |-|-------------------------|-------------------------------------------|  
-|**WSFC 클러스터 사용**|예|예|  
+|**WSFC 클러스터 사용**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
 |**보호 수준**|인스턴스|데이터베이스|  
 |**저장소 유형**|Shared|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 저장소를 공유하지 않는 반면 FCI가 호스트하는 복제본은 해당 FCI가 요구하는 대로 공유 저장소 솔루션을 사용합니다. 저장소 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
 |**저장소 솔루션**|직접 연결됨, SAN, 탑재 지점, SMB|노드 유형에 따라 다름|  
-|**읽기 가능한 보조 복제본**|아니요*|예|  
+|**읽기 가능한 보조 복제본**|아니요*|사용자 계정 컨트롤|  
 |**적용할 수 있는 장애 조치(Failover) 정책 설정**|WSFC 쿼럼<br /><br /> FCI별<br /><br /> 가용성 그룹 설정**|WSFC 쿼럼<br /><br /> 가용성 그룹 설정|  
 |**장애 조치(Failover)가 실행된 리소스**|서버, 인스턴스 및 데이터베이스|데이터베이스만|  
   

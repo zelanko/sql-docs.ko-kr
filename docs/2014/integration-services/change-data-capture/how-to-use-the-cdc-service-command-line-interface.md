@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06af063cb1b56d0296726d32cc45b95268e120fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd2285c4a63d45a0b0a5a5206ebc7fa1119f67b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155213"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>CDC Service 명령줄 인터페이스를 사용하는 방법
   Oracle CDC Service 프로그램인 xdbcdcsvc.exe는 일반적으로 Oracle CDC Windows 서비스를 실행하지만 명령줄에서 직접 이 프로그램을 호출하여 Oracle CDC Windows 서비스를 만들거나 삭제할 수 있습니다.  

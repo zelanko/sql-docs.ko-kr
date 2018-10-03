@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-caps.latest.revision: 35
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 364328b3ce519b849b4e7a0c6c7a725f1c24a14b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ffea1dbde4e4d124fb71438d4f3a7ca8b81248d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225153"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>플랫 파일 연결 관리자 편집기(고급 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 Integration Services가 플랫 파일에 있는 데이터를 읽고 쓰는 방법을 지정하는 속성을 설정할 수 있습니다. 사용자는 플랫 파일에 있는 열 이름을 바꿀 수 있고 파일의 각 열에 대해 데이터 형식 및 구분 기호를 포함하는 속성을 설정할 수 있습니다.  

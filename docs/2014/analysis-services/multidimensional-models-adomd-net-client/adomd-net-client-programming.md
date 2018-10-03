@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7e514ff56aa305a6ddae9e5a88bc85c253649d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154073"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 클라이언트 프로그래밍
   ADOMD.NET 클라이언트 구성 요소는 `Microsoft.AnalysisServices.AdomdClient` 네임스페이스(microsoft.analysisservices.adomdclient.dll) 안에 있습니다. 이러한 클라이언트 구성 요소가 클라이언트에 대 한 기능 및 분석 데이터 저장소에서 데이터를 쉽게 쿼리 메타 데이터를 중간 계층 응용 프로그램 제공와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  

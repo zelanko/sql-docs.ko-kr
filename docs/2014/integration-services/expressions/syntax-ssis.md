@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fc62fbd298f5559dff9dc5d944bd668a17a79bd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189303"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 구문은 C 언어와 C# 언어에서 사용하는 구문과 유사합니다. 식별자(열과 변수), 리터럴, 연산자, 함수 등의 요소가 식에 포함됩니다. 이 항목에서는 각 식 요소에 적용되는 식 계산기 구문의 고유 요구 사항을 요약해서 보여 줍니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "39082975"
 ## <a name="identifiers"></a>식별자  
  식은 열 식별자와 변수 식별자를 포함할 수 있습니다. 열은 데이터 원본에서 시작되거나 데이터 흐름에서 변환으로 만들어질 수 있습니다. 식은 계보 식별자를 사용하여 열을 참조할 수 있습니다. 계보 식별자는 패키지 요소를 고유하게 식별하는 번호입니다. 식에서 참조된 계보 식별자는 파운드(#) 접두사를 포함해야 합니다. 예를 들어 계보 식별자 138은 #138을 사용하여 참조합니다.  
   
- 식은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 제공하는 시스템 변수와 사용자 지정 변수를 포함할 수 있습니다. 식에서 참조 된 변수를 포함 해야 합니다는 \@ 접두사입니다. 예를 들어 합니다 `Counter` 변수를 사용 하는 참조 \@카운터입니다. \@ 문자 변수 이름의 일부가 아닙니다.;만 나타냅니다 식 계산기의 식별자는 변수입니다. 자세한 내용은 [식별자&#40;SSIS&#41;](identifiers-ssis.md)를 참조하세요.  
+ 식은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 제공하는 시스템 변수와 사용자 지정 변수를 포함할 수 있습니다. 식에서 참조된 변수는 \@ 접두사를 포함해야 합니다. 예를 들어 `Counter` 변수는 \@Counter를 사용하여 참조합니다. \@ 문자는 변수 이름의 일부가 아니라 식 계산기에 해당 변수를 식별하는 역할만 합니다. 자세한 내용은 [식별자&#40;SSIS&#41;](identifiers-ssis.md)를 참조하세요.  
   
 ## <a name="literals"></a>리터럴  
  식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식에 사용된 문자열 리터럴은 따옴표로 묶어야 합니다. 숫자 및 부울 리터럴은 따옴표를 사용하지 않습니다. 식 언어에는 자주 이스케이프되는 문자에 대한 이스케이프 시퀀스가 포함되어 있습니다. 자세한 내용은 [리터럴&#40;SSIS&#41;](numeric-string-and-boolean-literals.md)을 참조하세요.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8c7c1f0d0e7044e39d24c6acb9f7abfbc1f3e90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b36b2dd74087c91ed753ed040af787ba3a8effc4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175182"
 ---
 # <a name="replication-agents"></a>복제 에이전트
   복제는 "에이전트"라는 여러 개의 독립 실행형 프로그램을 사용하여 변경 내용 추적 및 데이터 배포와 연관된 태스크를 수행합니다. 이 설명서 섹션에는 다음 복제 에이전트에 대한 매개 변수 참조가 포함되어 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - validation [CLR integration]
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - invoking UDT methods
 - indexes [CLR integration]
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
-caps.latest.revision: 66
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee6c24bbf6017604d4999964478d3d19a763fb64
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107373"
 ---
 # <a name="clr-user-defined-types"></a>CLR 사용자 정의 형식
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 .NET Framework CLR(공용 언어 런타임)에서 만든 어셈블리에 대해 프로그래밍되는 데이터베이스 개체를 만들 수 있습니다. CLR에서 제공하는 풍부한 프로그래밍 모델을 활용할 수 있는 데이터베이스 개체에는 트리거, 저장 프로시저, 함수, 집계 함수 및 형식이 있습니다.  

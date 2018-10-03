@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], architecture
 - architecture [CLR integration]
 ms.assetid: 05e4b872-3d21-46de-b4d5-739b5f2a0cf9
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4ecea20b8ec2cb42d6945e14ea0777166a37d9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c361cb95f8da933b108591c5524f032750362f8d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183637"
 ---
 # <a name="architecture-of-clr-integration"></a>CLR 통합 아키텍처
   .NET Framework CLR(공용 언어 런타임)과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 통합을 사용하면 데이터베이스 프로그래머가 Visual C#, Visual Basic .NET, 및 Visual C++와 같은 언어를 사용할 수 있습니다. 프로그래머가 이러한 언어를 사용하여 작성할 수 있는 비즈니스 논리의 종류에는 함수, 저장 프로시저, 트리거, 데이터 형식, 집계 등이 포함됩니다.  

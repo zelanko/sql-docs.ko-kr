@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61519602a7387c11b1374c827628c7063a499ed8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101513"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>유틸리티 대시보드(SQL Server 유틸리티)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 대시보드에서 데이터를 보려면 "Utility<UCP_Name>\\(ComputerName\UCP)"라고 표시된 유틸리티 탐색기 트리의 최상위 노드를 선택합니다. 대시보드에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 응용 프로그램의 요약과 세부 데이터가 포함됩니다. 대시보드의 데이터를 새로 고치려면 유틸리티 탐색기 트리에서 최상위 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  

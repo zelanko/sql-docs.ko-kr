@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server collations [SQL Server]
 - collations [SQL Server], server
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d26e7d3569d069c01cf75459cb4cb898587d2f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78e69d6fab18f466d6d75f0ab89b43d0d7ae683e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140173"
 ---
 # <a name="set-or-change-the-server-collation"></a>서버 데이터 정렬 설정 또는 변경
   서버 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 설치된 모든 시스템 데이터베이스와 새로 만든 사용자 데이터베이스의 기본 데이터 정렬로 적용됩니다. 서버 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 과정에서 지정됩니다. 자세한 내용은 [Collation and Unicode Support](collation-and-unicode-support.md)을(를) 참조하세요.  
@@ -36,7 +33,7 @@ ms.locfileid: "37176070"
   
 -   모든 사용자 데이터베이스를 삭제합니다.  
   
--   **setup** 명령의 SQLCOLLATION 속성에 새 데이터 정렬을 지정하여 master 데이터베이스를 다시 작성합니다. 예를 들어:  
+-   **setup** 명령의 SQLCOLLATION 속성에 새 데이터 정렬을 지정하여 master 데이터베이스를 다시 작성합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   

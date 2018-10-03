@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095553"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>기본 모드 보고서 서버 확장 배포 구성(SSRS 구성 관리자)
   Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 스케일 아웃 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.  
@@ -40,8 +37,7 @@ ms.locfileid: "37296073"
   
  Reporting Services는 Microsoft Cluster Services 클러스터에 참여하지 않습니다. 그러나 장애 조치(Failover) 클러스터의 일부인 데이터베이스 엔진 인스턴스에 보고서 서버 데이터베이스를 만들 수는 있습니다.  
   
- 
-            **스케일 아웃 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
+ **스케일 아웃 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
   
 -   검토 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 인스턴스를 설치 하는 방법에 대 한 지침은 온라인 설명서.  
   
@@ -114,8 +110,7 @@ ms.locfileid: "37296073"
 3.  스케일 아웃 배포 페이지에서 클릭 하 고 배포에 조인 되기를 기다리고 있는 보고서 서버 인스턴스를 선택 **서버 추가**합니다.  
   
     > [!NOTE]  
-    >  
-            **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
+    >  **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
     >   
     >  **해결 방법:** 첫 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업하고 이 키를 두 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 복원합니다. 그런 다음 두 번째 서버를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 조인합니다.  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Surface Area Configuration Tool
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - compatibility [Reporting Services]
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8bf37ee58a365fdd2135e91d4d71e1818c407d1
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393685"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156733"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   다음 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 대한 이전 버전과의 호환성 정보를 다룹니다. 여기에는 사용되지 않는 기능, 사용 중단 기능, 주요 변경, 기능 변경 등에 대한 정보가 포함됩니다.  

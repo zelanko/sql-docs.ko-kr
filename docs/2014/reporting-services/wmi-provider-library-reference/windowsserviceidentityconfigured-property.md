@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - WindowsServiceIdentityConfigured
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8411e99eed9eb5d26d7d74122b71fcd03d572a27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc50326b1ac8788344c6d8fa00b8d7187d17ca11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189833"
 ---
 # <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityConfigured 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 Windows 서비스를 실행하도록 마지막으로 구성된 ID를 반환합니다. 읽기 전용입니다.  

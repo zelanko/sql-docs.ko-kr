@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126473"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **도구 모음** 에 있는 기능을 사용하여 큐브 또는 해당 개체를 디자인하거나 찾아보는 동안, 또는 MDX 쿼리를 만드는 동안 일반적인 작업을 수행할 수 있습니다. 디자인 타임과 쿼리 뷰에 공통적인 작업에는 사용자 컨텍스트 설정, 개체 처리 및 기본 언어 설정 등이 있습니다.  

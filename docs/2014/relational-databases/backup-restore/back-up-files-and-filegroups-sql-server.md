@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: daf6011e57279d9142fe5ff0828872d80c197954
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105573"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>파일 및 파일 그룹 백업(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파일 및 파일 그룹을 백업하는 방법에 대해 설명합니다. 데이터베이스 크기와 성능 요구 사항으로 인해 전체 데이터베이스 백업이 불가능할 경우 이를 대신하여 파일 백업을 만들 수 있습니다. *파일 백업* 에는 하나 이상의 파일(또는 파일 그룹)에 있는 모든 데이터가 포함됩니다. 파일 백업에 대한 자세한 내용은 [전체 파일 백업&#40;SQL Server&#41;](full-file-backups-sql-server.md) 및 [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)을 참조하세요.  

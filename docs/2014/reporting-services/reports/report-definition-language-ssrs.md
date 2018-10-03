@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 93fa1ac42172b4750db5e5dd385925f657fdfdd3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e84a24256dfdfe493a96786ca08cb640a8975b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065603"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37262049"
   
  스키마는 RDL 요소를 포함 하는 예를 들어 `ReportParameters`, 복합 형식인 `ReportParametersType`합니다. 규칙에 따라 요소의 복합 형식을의 이름인 요소 다음의 단어로 `Type`합니다. A `ReportParameters` 요소에 포함 될 수는 `Report` 요소 (복합 형식)를 포함할 수 있습니다 `ReportParameter` 요소입니다. A `ReportParameterType` 는 다음 값 중 하나에 될 수 있는 단순 유형: `Boolean`, `DateTime`, `Integer`를 `Float`, 또는 `String`합니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
   
- RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.http://servername/reportserver/reportdefinition.xsd  
+ RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다. http://servername/reportserver/reportdefinition.xsd  
   
 ##  <a name="bkmk_Creating_RDL"></a> RDL 만들기  
  개방형이고 확장 가능한 RDL의 특성 덕분에 XML 스키마를 기반으로 RDL을 생성하는 다양한 도구와 응용 프로그램을 작성할 수 있습니다.  

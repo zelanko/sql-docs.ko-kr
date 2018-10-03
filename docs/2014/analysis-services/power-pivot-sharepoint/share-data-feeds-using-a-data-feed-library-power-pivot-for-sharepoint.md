@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ac02a4f06eb66528d68ba42b3036d0837f308d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178553"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>데이터 피드 라이브러리를 사용하여 데이터 피드 공유(SharePoint용 PowerPivot)
   데이터 피드는 Atom 연결 형식으로 데이터를 노출하는 서비스 또는 응용 프로그램에서 생성되는 XML 데이터 스트림입니다. 데이터 피드는 응용 프로그램 간에 데이터를 전송하고 클라이언트측 뷰어에게 데이터를 전송하는 데 점점 더 많이 사용되고 있습니다. 데이터 피드를 PowerPivot for SharePoint 배포에서에서 채우는 데 사용 되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 Atom 인식 응용 프로그램 또는 서비스입니다.  

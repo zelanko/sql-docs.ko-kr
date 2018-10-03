@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179580"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159523"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의(보고서 작성기 및 SSRS)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX 쿼리를 매개 변수화하려면 쿼리 매개 변수를 쿼리에 추가해야 합니다. MDX 쿼리 디자이너에서 필터를 지정하여 디자인 모드와 쿼리 모드 모두에서 쿼리 매개 변수를 추가할 수 있습니다. 쿼리 매개 변수를 사용하여 쿼리를 정의하면 Reporting Services에서 자동으로 보고서 매개 변수 및 데이터 집합을 만들어 올바른 값 목록을 제공합니다. 따라서 사용자는 쿼리에 직접 전달되는 값을 지정할 수 있습니다.  

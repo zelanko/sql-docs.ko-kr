@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatcher.general.f1
 helpviewer_keywords:
 - WMI Event Watcher Task Editor
 ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11182f04706d6d5ae76cffcbc645315f55776395
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b284f16b082c174b0e3f335819fd11e6800f24f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189313"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 이벤트 감시자 태스크 편집기(일반 페이지)
   **WMI 이벤트 감시자 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 WMI 이벤트 감시자 태스크의 이름을 지정하고 설명할 수 있습니다.  

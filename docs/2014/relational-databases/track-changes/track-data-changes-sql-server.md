@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af4d06242048038bd73429a2f10e517e30d77e9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190643"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 응용 프로그램에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. 에디션의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처 및 변경 내용 추적을 지 원하는 보면 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -72,11 +69,11 @@ ms.locfileid: "37307553"
 |기능|변경 데이터 캡처|변경 내용 추적|  
 |-------------|-------------------------|---------------------|  
 |**추적된 변경 내용**|||  
-|DML 변경|예|예|  
+|DML 변경|사용자 계정 컨트롤|사용자 계정 컨트롤|  
 |**추적된 정보**|||  
-|기록 데이터|예|아니요|  
-|열 변경 여부|예|예|  
-|DML 유형|예|예|  
+|기록 데이터|사용자 계정 컨트롤|아니요|  
+|열 변경 여부|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|DML 유형|사용자 계정 컨트롤|사용자 계정 컨트롤|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  변경 데이터 캡처는 DML 변경이 적용되었다는 사실과 변경된 실제 데이터 모두를 캡처하여 사용자 테이블에 대한 기록 변경 정보를 제공합니다. 트랜잭션 로그를 읽고 시스템에 대한 영향이 적은 비동기 프로세스를 사용하여 변경을 캡처합니다.  
@@ -104,11 +101,11 @@ ms.locfileid: "37307553"
   
 |열 유형|변경 테이블에 변경 내용이 캡처되는지 여부|제한 사항|  
 |--------------------|---------------------------------------|-----------------|  
-|스파스 열|예|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
+|스파스 열|사용자 계정 컨트롤|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
 |계산 열|아니요|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
-|XML|예|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
-|timestamp|예|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
-|BLOB 데이터 형식|예|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  
+|XML|사용자 계정 컨트롤|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
+|timestamp|사용자 계정 컨트롤|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
+|BLOB 데이터 형식|사용자 계정 컨트롤|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>변경 데이터 캡처 및 기타 SQL Server 기능  
  이 섹션에서는 다음 기능으로 변경 데이터 캡처와 상호 작용하는 방법에 대해 설명합니다.  

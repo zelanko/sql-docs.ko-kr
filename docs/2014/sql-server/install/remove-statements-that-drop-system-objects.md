@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - drop system objects [SQL Server]
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7bb577db82aae98356481657faa9bd76a0ab2a82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1f355b9e13bb85f1bc91d9626e27d6ee3fafa15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153725"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>시스템 개체를 삭제하는 문을 제거합니다.
   업그레이드 관리자가 시스템 개체를 삭제하는 문을 검색했습니다. 확장 저장 프로시저를 비롯한 시스템 개체는 읽기 전용 **리소스** 데이터베이스(mssqlsystemresource)에 배포되므로 삭제할 수 없습니다. 응용 프로그램을 수정하여 시스템 개체에 대한 EXECUTE 권한을 취소하거나 거부합니다.  

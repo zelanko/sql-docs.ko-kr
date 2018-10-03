@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, errors
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - ODBC error handling, message types
 - errors [ODBC], types
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3012d1e13de482dbcf173191bfd75dae9599b7c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069893"
 ---
 # <a name="error-messages"></a>오류 메시지
   반환 된 메시지의 텍스트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 배치 됩니다 합니다 *MessageText* 의 매개 변수 **SQLGetDiagRec**합니다. 오류의 원본은 메시지 헤더에 표시됩니다.  

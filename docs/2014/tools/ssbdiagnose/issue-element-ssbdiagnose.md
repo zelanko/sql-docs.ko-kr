@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39b279a22da8c75573aa0cad2dc50d7f85e46a74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54109bc479d06833aeee6af803c39e8ac7873ec7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195183"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 요소(ssbdiagnose)
   **ssbdiagnose** 유틸리티가 발견한 문제를 보고합니다. **ssbdiagnose** XML 출력 파일에는 보고되는 문제 당 하나의 Issue 요소가 포함됩니다.  
@@ -65,7 +62,7 @@ ms.locfileid: "37175205"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[DiagnosticInformation 요소 &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**자식 요소**|InclusionThresholdSetting|  
+|**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  
  이 요소는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 구성을 분석할 때 오류가 발견되었으며 마스터 키가 없는 데이터베이스에 대해 1102 오류를 보고합니다.  

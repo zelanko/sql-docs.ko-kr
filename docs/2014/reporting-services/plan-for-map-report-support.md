@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105885"
 ---
 # <a name="plan-for-map-report-support"></a>지도 보고서 지원 계획
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 공간 데이터 원본을 사용 하는 지도 보고서를 지원 합니다. 공간 데이터는 SQL Server 데이터베이스, ESRI 셰이프 파일 또는 Reporting Services나 보고서 작성기에 설치된 지도 갤러리에서 가져올 수 있습니다. 지도에 Bing 지도 타일 배경을 표시할 수도 있습니다. 보고서 작성자는 공간 데이터나 Bing 지도 타일을 런타임에 검색되는 동적 스타일 또는 보고서 정의에 포함된 정적 스타일로 지정하는 보고서를 만들 수 있습니다.  

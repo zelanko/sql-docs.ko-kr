@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - report server database
 - databases [Reporting Services], creating
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 913ec99d330f1eb62cbc1a27572296856c28f48b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b18b94289516d1ba38be392a13438e3a38029c4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206273"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **기본 모드** 에서는 보고서 서버 메타데이터 및 개체를 저장하기 위해 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 사용합니다. 한 데이터베이스는 주 저장소로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스의 이름은 `reportserver` 및 `reportservertempdb`입니다. 이 두 데이터베이스는 "보고서 서버 데이터베이스" 또는 "보고서 서버 카탈로그"로 통칭됩니다.  

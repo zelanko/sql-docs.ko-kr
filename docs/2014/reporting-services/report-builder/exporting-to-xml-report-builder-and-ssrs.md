@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 11bb46bc593a95811c56a5489fd5489ca72ca917
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116403"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML로 내보내기(보고서 작성기 및 SSRS)
   XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램으로 전송할 수 있습니다.  
@@ -88,7 +85,7 @@ ms.locfileid: "37223273"
   
  변수의 값은 다음과 같습니다.  
   
-|속성|값|  
+|이름|값|  
 |----------|-----------|  
 |보고서|Report.DataElementName|  
 |ReportURL|서버의 보고서를 가리키는 URL 인코딩된 절대 URL|  

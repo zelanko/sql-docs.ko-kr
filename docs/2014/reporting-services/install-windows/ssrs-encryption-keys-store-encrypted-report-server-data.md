@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19434a73f39e0701479f754b5af5dbe9ab4d8030
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186080"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149093"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>암호화된 보고서 서버 데이터 저장(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 암호화된 값을 보고서 서버 데이터베이스와 구성 파일에 저장합니다. 암호화된 대부분의 값은 보고서에 데이터를 제공하는 외부 데이터 원본에 액세스하기 위한 자격 증명입니다. 이 항목에서는 암호화된 값, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용되는 암호화 기능 및 사용자가 알아야 할 기타 저장되는 기밀 데이터 유형에 대해 설명합니다.  

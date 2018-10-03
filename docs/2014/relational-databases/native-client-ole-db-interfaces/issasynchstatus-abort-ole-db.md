@@ -1,12 +1,10 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft Docs'
+title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::Abort (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5711cdcdcedb409330ae1b70591d9fe08db961e1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3d161786019750aae9740ce42ab0a15464b0dfc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160873"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
   비동기적으로 실행 중인 작업을 취소합니다.  

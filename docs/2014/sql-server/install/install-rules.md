@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SCC
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, System Configuration Check page
 - SCC [SQL Server]
 ms.assetid: 168c0445-5651-42fc-91f4-d9f27d9e2281
-caps.latest.revision: 49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df13e2ac5e6caf247f633e7f59ac397b2c5d22c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6105444259697caa655145c40f795469a9b6304f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127442"
 ---
 # <a name="install-rules"></a>설치 규칙
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설치 작업이 완료 되기 전에 컴퓨터 구성의 유효성을 검사 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 SCC(시스템 구성 검사기)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 컴퓨터를 검색합니다. SCC는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성공적인 설치 작업을 방해하는 조건이 있는지 확인합니다. 설치 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작하기 전에 SCC는 각 항목의 상태를 검색합니다. 그런 다음 검색 결과를 필수 조건과 비교하고 차단 문제 해결을 위한 지침을 제공합니다.  

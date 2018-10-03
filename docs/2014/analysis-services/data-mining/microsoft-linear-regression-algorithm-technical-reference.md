@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106073"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 선형 회귀 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 여러 쌍의 연속 특성을 모델링하는 데 최적화된 특수한 버전의 Microsoft 의사 결정 트리 알고리즘입니다. 이 항목에서는 알고리즘의 구현을 설명하고, 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  

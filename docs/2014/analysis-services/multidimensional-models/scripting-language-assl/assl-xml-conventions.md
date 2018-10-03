@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112813"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
   ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad1970ad7112910b190ee75974248405e0269646
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119413"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>GEOMETRY, GEOGRAPHY 및 HIERARCHYID의 클라이언트 쪽 사용에 대한 경고
   공간 데이터 형식을 포함하는 **Microsoft.SqlServer.Types.dll**어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 사용자 지정 응용 프로그램에서는 특정 조건에 해당될 때 오류가 발생할 수 있습니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 062ac00c7bf4e884f3f066549bed39dc938d1209
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0410e7662358bcbe7f89bb16d7a5c62e9e48438c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147123"
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 리소스 풀은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타냅니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 각 리소스 풀에는 하나 이상의 작업 그룹이 포함될 수 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고 세션은 작업 그룹에 할당된 리소스를 사용하여 실행해야 합니다.  

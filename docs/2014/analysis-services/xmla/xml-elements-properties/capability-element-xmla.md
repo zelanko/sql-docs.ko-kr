@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Capability Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Capability element
 ms.assetid: 544a733e-77fc-48a0-8f92-9cd1fdbcf824
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5b14b43b41f74c05d433c599b18486c5737b27c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c6fd189a44ec34283e87cd220f2c582f982ffa9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105343"
 ---
 # <a name="capability-element-xmla"></a>Capability 요소(XMLA)
   부모 [ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md) 머리글 요소에서의 프로토콜 기능에 대한 지원을 나타냅니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37201893"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37201893"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Capability` 요소는 이진 또는 압축과 같은 특정 기능이 SOAP 요청의 SOAP 헤더에 `ProtocolCapabilities` 머리글 요소를 포함하는 응용 프로그램에 의해 지원되는지, 아니면 SOAP 응답의 SOAP 헤더에 `ProtocolCapabilities` 머리글 요소를 포함하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 의해 지원되는지를 나타냅니다. `Capability` 요소의 값은 지원될 기능의 이름입니다.  

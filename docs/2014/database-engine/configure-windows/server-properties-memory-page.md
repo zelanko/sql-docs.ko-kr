@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86b1356a28f817f96cdd597d748909799c6cce2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e9d0a6b6322c0a8a02c02ba53748e769bf9f656
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069843"
 ---
 # <a name="server-properties-memory-page"></a>서버 속성(메모리 페이지)
   이 페이지를 사용하여 서버 메모리 옵션을 확인하거나 수정할 수 있습니다. **최소 서버 메모리** 를 0으로 설정하고 **최대 서버 메모리** 를 2147483647MB로 설정하면 운영 체제 및 기타 응용 프로그램에서 현재 사용하고 있는 메모리에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 메모리가 항상 최적화됩니다. 컴퓨터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로드가 변경됨에 따라 할당되는 메모리도 달라집니다. 아래에 지정된 최소값과 최대값을 설정하여 이 동적 메모리 할당을 추가로 제한할 수 있습니다.  

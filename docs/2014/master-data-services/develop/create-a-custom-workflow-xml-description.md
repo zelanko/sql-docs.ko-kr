@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a153070edf64c6dd8ef796a25309949c67abe558
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e8edbfcc8637b1c7246f4a06470eeafcd0d67724
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149603"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>사용자 지정 워크플로 XML 설명(Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 메서드는 워크플로 시작 시 SQL Server MDS Workflow Integration Service가 호출합니다. 이 메서드는 워크플로 비즈니스 규칙을 트리거한 항목에 대한 메타데이터 및 데이터를 XML 블록으로 받습니다. 워크플로 처리기를 구현하는 예제 코드는 [사용자 지정 워크플로 예제&#40;Master Data Services&#41;](create-a-custom-workflow-example.md)를 참조하세요.  

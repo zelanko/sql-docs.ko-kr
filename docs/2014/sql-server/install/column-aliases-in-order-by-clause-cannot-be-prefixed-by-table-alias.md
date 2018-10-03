@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], columns
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb0c12c4112383599b3f6ec67c7a097563a5944c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc1b7dc07b959a3ce1ff9ae4c1e82ece0c900431
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175623"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 절의 열 별칭에 접두사로 테이블 별칭을 붙일 수 없습니다.
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 ORDER BY 절의 열 별칭에 접두사로 테이블 별칭을 붙일 수 없습니다.  

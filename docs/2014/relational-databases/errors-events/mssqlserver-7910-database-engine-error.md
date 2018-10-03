@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7910 (Database Engine error)
 ms.assetid: 017a0113-2b17-40b3-a419-30bbc43d46b8
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3121c45b9abdf5d9985bfcbcca7f360430a7c63
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 427223e6c11d47091741e032dc79b0ecafef1d00
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130213"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
     
@@ -39,6 +36,6 @@ ms.locfileid: "37415862"
  이 메시지는 페이지가 IAM(Index Allocation Map) 페이지의 단일 페이지 슬롯 배열에 할당되었음을 나타내는 REPAIR의 정보 메시지입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- InclusionThresholdSetting  
+ 없음  
   
   

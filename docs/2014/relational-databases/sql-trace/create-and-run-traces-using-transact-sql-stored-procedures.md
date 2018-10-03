@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92d4cc3a62f6e9c5f180b6263bd36918fe0d9d87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47f101377730c6a71408b0414d8d645b3db1ef51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179553"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
   SQL 추적을 사용한 추적 프로세스는 추적을 만들고 실행하는 데 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용할지 아니면 시스템 저장 프로시저를 사용할지에 따라 달라집니다.  

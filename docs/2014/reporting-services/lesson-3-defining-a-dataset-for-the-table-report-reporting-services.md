@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-caps.latest.revision: 50
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086543"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
   데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  

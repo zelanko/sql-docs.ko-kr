@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, objects
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95e2277f9d618dfc13c4fe93ea6a565550ec1e87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d83728b33a4cbf0ce76eea3c577302c7d7ffaf25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082853"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 개체 및 개체 특징
   ASSL(Analysis Services Scripting Language)의 개체는 개체 그룹, 상속, 명명, 확장 및 처리에 관한 특정 지침을 따릅니다.  

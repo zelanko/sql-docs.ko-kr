@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DatabasePermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DatabasePermissions element
 ms.assetid: c4ce0da3-f7ba-4f11-8cd8-236c32992aaf
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad3ab49b481a7411d2dd818e5acfa019e7ea9382
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d92f794ecf77eabf1faf555fecb35040993937f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092173"
 ---
 # <a name="databasepermissions-element-assl"></a>DatabasePermissions 요소(ASSL)
   컬렉션을 포함 [DatabasePermission](../objects/databasepermission-element-assl.md) 와 관련 된 요소를 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37157294"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

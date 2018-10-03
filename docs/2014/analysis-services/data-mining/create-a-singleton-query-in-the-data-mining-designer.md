@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 917efe321e2e43779e28cb7f707a9dadaeb8a7cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196053"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>데이터 마이닝 디자이너에서 단일 쿼리 작성
   단일 쿼리는 단일 사례에 대한 예측을 만들려는 경우 유용합니다. 단일 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  

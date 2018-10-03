@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
-caps.latest.revision: 48
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4aa8b85c3b5c92b38f50bbfac850d4a69ed2d4c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e8c6381aaf8afd848831c8599c4534a77b179e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084793"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>태스크 또는 컨테이너의 속성 설정
   **속성** 창을 사용하여 태스크 및 컨테이너의 속성을 대부분 설정할 수 있습니다. 태스크 컬렉션의 속성과 **속성** 창을 사용해서 설정하기에 너무 복잡한 속성은 예외입니다. 예를 들어 Foreach 루프 컨테이너에서 사용되는 열거자는 **속성** 창에서 구성할 수 없습니다. 이러한 복잡한 속성을 설정하려면 태스크 또는 컨테이너 편집기를 사용해야 합니다. 대부분의 태스크 및 컨테이너 편집기에는 여러 개의 노드가 포함되어 있으며, 각 노드에는 관련 속성이 들어 있습니다. 노드의 이름은 노드에 들어 있는 속성의 내용을 나타냅니다.  

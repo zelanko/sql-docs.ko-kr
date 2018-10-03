@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35458ecc9e5c7482365ce53fefd32558d04872ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98194dfc8ac2bfcfecc1d60e14f8bacd17c45113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144473"
 ---
 # <a name="configure-data-viewer-general-tab"></a>데이터 뷰어 구성(일반 탭)
   데이터 뷰어에서는 패키지를 실행하는 동안 두 개의 데이터 흐름 구성 요소를 연결하는 경로를 통해 이동하면서 데이터를 표시합니다.  

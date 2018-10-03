@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - synchronization [SQL Server replication], schedules
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b0c837ec8abafa79f6ed27303a69fad62e1c36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b4ee585d23cceaf15acc6c904ce783f21e9f08d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087533"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동기화 일정을 지정하는 방법에 대해 설명합니다. 구독을 만드는 경우 구독에 대한 복제 에이전트를 실행하는 시기를 제어하는 동기화 일정을 정의할 수 있습니다. 일정 매개 변수를 지정하지 않으면 기본 일정이 사용됩니다.  

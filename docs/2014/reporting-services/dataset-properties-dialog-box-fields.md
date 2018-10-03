@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.fields.f1
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
-caps.latest.revision: 36
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ad672dfa5e9161e781d2caf975e5511126924c2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2300dc39ec07b25fe79586846929de3954b5631
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128408"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>데이터 집합 속성 대화 상자, 필드
   **데이터 집합 속성** 대화 상자에서 **필드** 를 선택하여 보고서 데이터 집합의 필드 컬렉션을 변경할 수 있습니다. 필드 목록은 자동으로 채워지지만 **필드** 를 사용하여 쿼리와 계산 필드를 추가, 편집 및 삭제할 수도 있습니다.  

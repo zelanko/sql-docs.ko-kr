@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AdvancedProperties Property (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f477d7d7c385a717b292820049698c21cc834955
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83cee30cb86c28933e3a86a9e8a75e8dc3c4f71a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138420"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 속성(SqlService 클래스)
   `SqlService` 개체에 대한 고급 속성이 포함된 개체 참조의 배열을 가져옵니다.  

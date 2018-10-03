@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa5904d3244cbd19642ce84bebce414f4c7f0c30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 475c77650179648642aead8275040b894ccc4b40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125323"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
   **SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
@@ -162,11 +159,11 @@ ms.locfileid: "37272429"
   
  *SQLdiag_application_name* 은 특정 **SQLdiag** 서비스 인스턴스를 시작하거나 중지하는 데 사용할 수 있습니다.  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  **SQLDIAG START /A**  *SQLdiag_application_name*  
   
- 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 예를 들어:  
+ 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  **SQLDIAG /R /A** *SQLdiag_application_name*  
   
@@ -225,16 +222,16 @@ ms.locfileid: "37272429"
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** 서비스를 시작하거나 중지합니다. **STOP_ABORT** 는 현재 수행하고 있는 진단 정보 수집을 완료하지 않고 가능한 빨리 서비스를 강제 종료합니다.  
   
- 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 예를 들어:  
+ 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  **SQLDIAG START**  
   
- 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 예를 들어:  
+ 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  **SQLDIAG START /A** *SQLdiag_application_name*  
   
 ## <a name="security-requirements"></a>보안 요구 사항  
-  **SQLdiag** 명령줄 인수를 지정하여 일반 모드에서 **SQLdiag** 를 실행하지 않을 경우 **SQLdiag** 를 실행하는 사용자는 Windows **Administrators** 그룹의 멤버이면서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 멤버여야 합니다. 기본적으로 **SQLdiag** 에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증도 지원합니다.  
+ **SQLdiag** 명령줄 인수를 지정하여 일반 모드에서 **SQLdiag** 를 실행하지 않을 경우 **SQLdiag** 를 실행하는 사용자는 Windows **Administrators** 그룹의 멤버이면서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 멤버여야 합니다. 기본적으로 **SQLdiag** 에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증도 지원합니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
  **SQLdiag** 를 실행할 때 성능에 주는 영향은 수집하도록 구성한 진단 데이터의 종류에 따라 다릅니다. 예를 들어 **추적 정보를 수집하도록** SQLdiag [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 구성한 경우 추적할 이벤트 클래스를 많이 선택할수록 서버 성능에 더 많은 영향을 줍니다.  

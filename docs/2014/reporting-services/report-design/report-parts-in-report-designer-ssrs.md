@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5b50efbb6879866d459a775f2c6a0f9ffd86228f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a04fb5ec226f346e9fe5fa2259361c1a29230ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182793"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>보고서 디자이너의 보고서 파트(SSRS)
   보고서 디자이너에서 프로젝트에 테이블, 차트 및 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트* 로 게시할 수 있습니다.  

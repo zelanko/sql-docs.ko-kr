@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CellOrdinal Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CellOrdinal element
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e8e0413afb58ae448a053e9eab20d77a1b36096
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c1c46936acfe909f3655b09737bb595bebb6b22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133477"
 ---
 # <a name="cellordinal-element-xmla"></a>CellOrdinal 요소(XMLA)
   의해 업데이트 될 셀 큐브 내에서 서 수 위치를 포함 한 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) 명령입니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37245373"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Long|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37245373"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Cell](cell-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `CellOrdinal` 요소는 `UpdateCells` 명령에 의해 업데이트될 셀을 식별합니다.  

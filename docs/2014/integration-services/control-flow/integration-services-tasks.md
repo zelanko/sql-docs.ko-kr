@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53bfe70f668309e4d8a8f6651f3dcafe0d810a8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a87a28e1e39959868b1a39c897b8b67716227466
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111851"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 태스크
   태스크는 패키지 제어 흐름에서 수행되는 작업 단위를 정의하는 제어 흐름 요소입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 두 개 이상의 태스크로 구성되어 있습니다. 패키지에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다.  

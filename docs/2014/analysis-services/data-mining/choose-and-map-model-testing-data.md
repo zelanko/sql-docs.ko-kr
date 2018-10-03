@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining accuracy charts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - input column mapping [Analysis Services]
 - mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3007674d37281d8bf328ba92f81428c8729cc7f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166361"
 ---
 # <a name="choose-and-map-model-testing-data"></a>모델 테스트 데이터 선택 및 매핑
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 정확도 차트를 만들려면 모델을 테스트하는 데 사용할 데이터를 선택하고 데이터를 모델에 매핑해야 합니다.  

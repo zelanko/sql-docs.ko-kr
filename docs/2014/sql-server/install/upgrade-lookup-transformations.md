@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation and upgrading
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-caps.latest.revision: 16
 author: mashamsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8da8551b85948f27f1e657cb70c4bb1140c5314b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182623"
 ---
 # <a name="upgrade-lookup-transformations"></a>조회 변환 업그레이드
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 경우 새로운 조회 변환 기능을 활용하도록 패키지를 수정하는 것이 좋습니다. 새로운 조회 변환에서는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]에서 사용할 수 있는 캐싱 유형 및 데이터 출력 옵션을 지원합니다. 에 대 한 자세한 내용은 추가 캐싱 및 데이터 출력을 참조 하세요 [조회 변환이](../../integration-services/data-flow/transformations/lookup-transformation.md)합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0d882d85e2dcb8c0b8b03d1981912d669afb9a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068813"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   데이터 정리는 데이터 원본의 데이터 품질을 분석하고, 시스템의 제안을 수동으로 승인/거부하고, 데이터를 변경하는 프로세스입니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 정리에는 데이터가 기술 자료의 지식을 준수하는 정도를 분석하는 컴퓨터 기반 프로세스이며, 데이터 정리가 정확히 원하는 대로 수행되는지 보장하기 위해 데이터 관리자가 컴퓨터 기반 프로세스 결과를 검토하고 수정할 수 있게 해주는 대화형 프로세스입니다.  

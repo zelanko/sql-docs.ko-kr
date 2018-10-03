@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f9fac39f0b11bdc2bbf14b054bfe8947bf767906
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e6e59b2562928d22a3d9e0b74830d630d77728d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072013"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가(보고서 작성기 및 SSRS)
   특정 차트 종류를 사용할 때 그리기 효과를 지정하여 차트의 시각적 효과를 높일 수 있습니다. 이러한 그리기 효과는 차트의 계열에만 적용됩니다. 다른 차트 요소에는 그리기 효과가 아무런 영향을 주지 않습니다.  

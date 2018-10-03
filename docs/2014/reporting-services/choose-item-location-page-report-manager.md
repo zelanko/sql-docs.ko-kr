@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260520"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121508"
 ---
 # <a name="choose-item-location-page-report-manager"></a>항목 위치 선택 페이지(Report Manager)
   항목 위치 선택 페이지를 사용하여 새 링크된 보고서 또는 새 모델의 폴더를 선택할 수 있습니다. 특정 사용자 그룹에 대해 링크된 보고서 또는 모델을 만드는 경우 이 사용자 그룹이 사용하는 다른 보고서 및 모델이 포함된 폴더에 이 항목을 넣을 수 있습니다. 이미 존재하는 폴더 중에서 내용 추가 권한이 있는 폴더를 선택해야 합니다.  

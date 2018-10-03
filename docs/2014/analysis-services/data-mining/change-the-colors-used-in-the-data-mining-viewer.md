@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 000f5b89eb918654f740e2c34eb60be484d3073c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6152b183e00ca429efb817b9b19cdc0a7a1f77c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225103"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>데이터 마이닝 뷰어에서 사용되는 색 변경
   데이터 마이닝 뷰어에서 데이터 계열, 노드 또는 클러스터를 표시하는 데 사용되는 색을 변경할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하여 이 작업을 수행할 수 있습니다. 설정을 변경한 후에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 보는 모든 모델에 색 선택이 적용되지만 새 색을 보기 위해서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 닫고 뷰어에서 모델을 다시 열어야 합니다.  

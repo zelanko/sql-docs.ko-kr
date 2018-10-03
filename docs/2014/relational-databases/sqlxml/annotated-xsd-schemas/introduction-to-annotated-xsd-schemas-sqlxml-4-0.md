@@ -1,14 +1,12 @@
 ---
-title: 주석이 추가 된 XSD 스키마 (SQLXML 4.0) 소개 | Microsoft Docs
+title: 주석이 추가 된 XSD 스키마 (SQLXML 4.0) 소개 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 257b27033dfce5f9011da2786fdc7482a046b4d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d988713949f29671294f3897f62d2e0a2fb8677
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189523"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
   XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰를 만들 수 있습니다. 그런 다음 XPath(XML Path Language) 쿼리를 사용하여 뷰를 쿼리할 수 있습니다. 이는 CREATE VIEW 문을 사용하여 뷰를 만들고 뷰에 대해 SQL 쿼리를 지정하는 것과 유사합니다.  

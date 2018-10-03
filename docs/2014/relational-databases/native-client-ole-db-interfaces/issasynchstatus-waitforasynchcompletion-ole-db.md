@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - WaitForAsynchCompletion method
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10fa772517ac96f59510245ab25ef0e5a05438d8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089979"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion(OLE DB)
   비동기적으로 실행 중인 작업이 완료되거나 제한 시간이 초과될 때까지 대기합니다.  
@@ -58,21 +55,21 @@ HRESULT WaitForAsynchCompletion(
 >  위에 나열된 반환 코드 값 외에도 **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 코어 OLEDB **ICommand::Execute** 및 **IDBInitialize::Initialize** 메서드에서 반환하는 반환 코드 값을 지원합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 제한 시간 값(밀리초)이 경과하거나 보류 중인 작업이 완료될 때까지 값을 반환하지 않습니다. **Command** 개체에는 제한 시간이 초과되기 전까지의 쿼리 실행 시간(초)을 제어하는 **CommandTimeout** 속성이 있습니다. 합니다 **CommandTimeout** 와 함께 사용 하는 경우 속성은 무시 됩니다 **issasynchstatus:: Waitforasynchcompletion** 메서드.  
+ **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 제한 시간 값(밀리초)이 경과하거나 보류 중인 작업이 완료될 때까지 값을 반환하지 않습니다. **Command** 개체에는 제한 시간이 초과되기 전까지의 쿼리 실행 시간(초)을 제어하는 **CommandTimeout** 속성이 있습니다. **CommandTimeout** 속성을 **ISSAsynchStatus::WaitForAsynchCompletion** 메서드와 함께 사용하면 이 속성이 무시됩니다.  
   
  비동기 작업의 경우 제한 시간 속성이 무시됩니다. **ISSAsynchStatus::WaitForAsynchCompletion** 의 제한 시간 매개 변수는 컨트롤이 호출자에게 반환되기 전까지의 최대 경과 시간을 지정합니다. 제한 시간이 만료되면 DB_S_ASYNCHRONOUS가 반환됩니다. 제한 시간을 지정해도 비동기 작업이 취소되지 않습니다. 응용 프로그램이 제한 시간 내에 완료되지 않은 비동기 작업을 취소해야 할 경우 응용 프로그램은 제한 시간에 도달할 때까지 기다린 다음 DB_S_ASYNCHRONOUS가 반환되면 작업을 명시적으로 취소해야 합니다.  
   
 > [!NOTE]  
->  OLE DB Service Component를 사용 하는 반환 될 수은 때 응용 프로그램을 호출 해야 하므로 [issasynchstatus:: Getstatus](issasynchstatus-getstatus-ole-db.md) S_OK 또는 DB_S_ASYNCHRONOUS가 반환 되는 경우 완료 여부를 확인 하려면.  
+>  OLE DB Service Component를 사용하는 경우 DB_S_ASYNCHRONOUS 대신 S_OK가 반환될 수 있으므로 S_OK 또는 DB_S_ASYNCHRONOUS가 반환되는 경우 응용 프로그램은 [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) 를 호출하여 완료 여부를 확인해야 합니다.  
   
  *dwMillisecTimeOut* 값이 INFINITE로 설정되면 작업이 완료될 때까지 **ISSAsynchStatus::WaitForAsynchCompletion** 메서드가 차단됩니다. *dwMillisecTimeOut* 값이 0으로 설정되면 보류 중인 작업의 상태와 함께 메서드가 즉시 반환됩니다. 작업이 완료되기 전에 제한 시간이 만료되면 DB_S_ASYNCHRONOUS가 반환됩니다.  
   
  제한 시간이 만료되기 전에 작업이 완료되면 반환되는 HRESULT는 작업이 반환하는 HRESULT(작업이 동기적으로 수행된 경우 반환되는 HRESULT)입니다.  
   
- 또한 SSPROP_ISSAsynchStatus 속성이 DBPROPSET_SQLSERVERROWSET 속성 집합에 추가되었습니다. 지 원하는 공급자는 [ISSAsynchStatus](issasynchstatus-ole-db.md) 인터페이스는 VARIANT_TRUE 값을 사용 하 여이 속성을 구현 해야 합니다.  
+ 또한 SSPROP_ISSAsynchStatus 속성이 DBPROPSET_SQLSERVERROWSET 속성 집합에 추가되었습니다. [ISSAsynchStatus](issasynchstatus-ole-db.md) 인터페이스를 지원하는 공급자는 VARIANT_TRUE 값을 사용하여 이 속성을 구현해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [비동기 작업을 수행](../native-client/features/performing-asynchronous-operations.md)   
+ [비동기 작업 수행](../native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
   
   

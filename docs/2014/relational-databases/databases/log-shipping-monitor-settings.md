@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8485174c8880e90ac609cef9060bb194aae875c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7508fc2e571927df7ce4ffa4ea5a1411ba526322
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168865"
 ---
 # <a name="log-shipping-monitor-settings"></a>로그 전달 모니터 설정
   이 페이지를 사용하여 로그 전달 모니터 서버의 속성을 구성하고 수정할 수 있습니다.  

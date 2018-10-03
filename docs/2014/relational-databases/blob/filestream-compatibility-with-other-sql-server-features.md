@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 287392869ef22492f0f3b5ac850ec4ecd58515ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175786"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084633"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
   FILESTREAM 데이터는 파일 시스템에 있으므로 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 기능과 함께 FILESTREAM을 사용할 경우 몇 가지 고려 사항, 지침 및 제한 사항에 대해 설명합니다.  

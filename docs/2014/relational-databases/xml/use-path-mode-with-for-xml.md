@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - column names [SQL Server]
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cc9478d0c4deed830c23eae4d4a425a1fc112f9
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 3dc982de67c3fc1ddd874b38c1e14eec49d3b0af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220583"
 ---
 # <a name="use-path-mode-with-for-xml"></a>FOR XML에서 PATH 모드 사용
   [FOR XML을 사용하는 XML 생성](for-xml-sql-server.md)항목에 설명된 대로 PATH 모드를 사용하면 요소와 특성을 간단하게 혼합할 수 있고 추가 중첩을 간단하게 도입하여 복잡한 속성을 표시할 수 있습니다. FOR XML EXPLICIT 모드 쿼리를 사용하여 행 집합에서 해당 XML을 생성할 수 있지만 PATH 모드를 사용할 경우 복잡해지기 쉬운 EXPLICIT 모드 쿼리의 대안을 찾을 수 있습니다. **XML** 유형 인스턴스를 반환하는 중첩 FOR XML 쿼리 및 TYPE 지시어 작성 기능과 함께 PATH 모드를 사용하면 보다 간편하게 쿼리를 작성할 수 있습니다.  

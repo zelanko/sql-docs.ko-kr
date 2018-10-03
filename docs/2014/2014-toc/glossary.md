@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -16,28 +15,26 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-caps.latest.revision: 1952
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085533"
 ---
-# 용어 설명
+# <a name="glossary"></a>용어 설명
   
   
-## 용어  
+## <a name="terms"></a>용어  
   
 |용어|정의|  
 |----------|----------------|  
@@ -323,7 +320,7 @@ ms.locfileid: "37164334"
 |제어 흐름|태스크를 수행하는 연결된 제어 흐름 요소의 그룹입니다.|  
 |control-break 보고서(control-break report)|사용자 정의 그룹 또는 중단의 데이터를 요약하는 보고서입니다. 다른 데이터가 발견되면 새 그룹이 트리거됩니다.|  
 |흐름 제어 언어|트리거, 저장 프로시저 및 일괄 처리에서 SQL 문 및 문 블록의 실행 흐름을 제어하는 Transact-SQL 키워드입니다.|  
-|대화 끝점(conversation endpoint)|대화에 참여하는 파티를 나타내는 개체입니다.|  
+|대화 엔드포인트(conversation endpoint)|대화에 참여하는 파티를 나타내는 개체입니다.|  
 |대화 그룹(conversation group)|연관된 Service Broker 대화의 그룹입니다. 동일 대화 그룹의 메시지는 한 번에 하나의 서비스 프로그램에서만 처리할 수 있습니다.|  
 |대화 핸들(conversation handle)|대화를 고유하게 정의하는 핸들입니다.|  
 |볼록 집합(convex hull)|유클리드 평면 또는 유클리드 공간에 X를 포함하는 가장 작은 볼록 집합입니다.|  
@@ -560,8 +557,8 @@ ms.locfileid: "37164334"
 |암호화|권한이 없는 사용자가 읽지 못하도록 읽을 수 있는 데이터(일반 텍스트)를 코딩된 형태(암호화 텍스트)로 변환하는 프로세스입니다.|  
 |암호화 키(encryption key)|데이터를 암호화하고 해독하기 위해 암호화 알고리즘과 함께 사용되는 비트 문자열입니다.|  
 |끝 단면(end cap)|선과 같이 연결되지 않은 끝이 포함된 경로에서 선의 끝을 나타냅니다. 평평한 단면, 둥근 단면, 정사각형 단면 및 삼각형 단면과 같은 네 개의 끝 단면 스타일 중 하나를 사용하여 선의 각 끝이 표시되는 방식을 변경할 수 있습니다.|  
-|끝점|동기화 공급자와 관련 복제본입니다.|  
-|끝점 매퍼(endpoint mapper)|동적 끝점의 데이터베이스를 유지 관리하고 클라이언트에서 인터페이스/개체 UUID 쌍을 로컬 동적 끝점에 매핑할 수 있도록 하는 RPC(원격 프로시저 호출) 서버의 서비스입니다.|  
+|엔드포인트(endpoint)|동기화 공급자와 관련 복제본입니다.|  
+|엔드포인트 매퍼(endpoint mapper)|동적 엔드포인트의 데이터베이스를 유지 관리하고 클라이언트에서 인터페이스/개체 UUID 쌍을 로컬 동적 엔드포인트에 매핑할 수 있도록 하는 RPC(원격 프로시저 호출) 서버의 서비스입니다.|  
 |큐에 넣기(enqueue)|항목을 큐에 넣는 것을 의미합니다.|  
 |등록(enroll)|SQL Server 인스턴스를 유틸리티 제어 지점에서 관리하는 SQL Server 인스턴스의 집합에 추가하는 것을 의미합니다.|  
 |등록(enrollment)|인증서를 요청, 수신 및 설치하는 프로세스입니다.|  
@@ -1435,7 +1432,7 @@ ms.locfileid: "37164334"
 |서비스|특정 시스템 기능을 수행하여 다른 프로그램을 지원하는 프로그램, 루틴 또는 프로세스입니다.|  
 |Service Broker|개발자가 확장 가능하고 안정적인 데이터베이스 응용 프로그램을 작성할 수 있도록 도와 주는 기술입니다.|  
 |서비스 연결 지점(service connection point)|시스템 관리자가 사용자와 그룹에 대한 CLM(Certificate Lifecycle Manager) 관리 권한을 정의할 수 있는 Active Directory 노드입니다.|  
-|서비스 사용자(service principal)|Kerberos 피어 투 피어 통신 내 끝점 노드의 서비스 엔터티와 연결되는 전역적으로 고유한 이름입니다.|  
+|서비스 사용자(service principal)|Kerberos 피어 투 피어 통신 내 엔드포인트 노드의 서비스 엔터티와 연결되는 전역적으로 고유한 이름입니다.|  
 |서비스 사용자 이름(service principal name)|클라이언트가 서비스 인스턴스를 고유하게 식별하는 이름입니다. 대개 호스트의 DNS 이름에서 만들어집니다. SPN은 클라이언트와 특정 서비스를 호스팅하는 서버 간의 상호 인증 프로세스에서 사용됩니다.|  
 |서비스 프로그램(service program)|Service Broker 기능을 사용하는 프로그램입니다.  서비스 프로그램은 Transact-SQL 저장 프로시저, SQLCLR 저장 프로시저 또는 외부 프로그램일 수 있습니다.|  
 |세션|연결이 활성화되어 있고 통신이 발생할 수 있는 기간을 말합니다. 기능 단위 간의 데이터 통신에서는 연결의 설정, 유지 관리 및 해제 중에 발생하는 모든 작업을 의미하기도 합니다.|  

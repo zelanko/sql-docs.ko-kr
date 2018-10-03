@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd6b99c23bd2a8ef82597025c402f0f881c13982
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 142a22e07a9abf5a87e63268910de35ff95b79ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216283"
 ---
 # <a name="debugging-control-flow"></a>제어 흐름 디버깅
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 기능과의 제어 흐름 문제를 해결 하는 데 사용할 수 있는 도구가 포함 됩니다는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지 있습니다.  

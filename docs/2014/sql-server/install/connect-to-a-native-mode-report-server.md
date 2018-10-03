@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
 helpviewer_keywords:
 - report servers [Reporting Services], configuring
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27b2d2d93d83057fd2de408b4a0cb61dd1cd0771
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb8a192a2d33e2068be75f0acd19fb76166f0705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078433"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>기본 모드 보고서 서버에 연결
   이 대화 상자를 사용 하 여 로컬 또는 원격으로 연결할 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 인스턴스. 이 도구를 사용 하 여 이전 버전의에 연결할 수 없습니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버. 한 번에 하나의 인스턴스에만 연결할 수 있습니다.  

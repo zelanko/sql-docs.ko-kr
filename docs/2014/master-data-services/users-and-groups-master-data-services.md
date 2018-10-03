@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73db25d4dca461782e6e648642158c25b6163ddf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 301b570ca52780222c97091db6b8fe6ec138e452
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154203"
 ---
 # <a name="users-and-groups-master-data-services"></a>사용자 및 그룹(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에 액세스하려면 사용자에게 Windows 도메인 계정이나 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 가 설치된 서버 컴퓨터의 계정이 있어야 합니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에 대한 액세스 권한을 부여하려면 다음 중 하나를 수행합니다.  

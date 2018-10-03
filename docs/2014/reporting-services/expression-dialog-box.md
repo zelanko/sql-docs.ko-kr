@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-caps.latest.revision: 63
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 747943591907b1025250e3554270e9dda14d3e51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2ec18b03081d3469e9187db6043ba27406389b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207683"
 ---
 # <a name="expression-dialog-box"></a>식 대화 상자
   사용 된 **식** 쓸 대화 상자 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 식이 보고서 항목 속성입니다. 식을 사용하여 색, 글꼴 및 테두리를 비롯한 여러 속성을 설정할 수 있습니다. 런타임에 보고서 처리기는 식을 계산하고 그 결과로 속성의 값을 대체합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a2894baa94f9787a38d2c7c49f0f6e330a3537c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3556cc270d3ab28e3ad9d0ec1dc6a58737db31e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069973"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법에 대해 설명합니다. 데이터베이스를 새 디렉터리 경로로 이동하거나 동일한 서버 인스턴스 또는 다른 서버 인스턴스에 데이터베이스의 복사본을 만들 수 있습니다.  

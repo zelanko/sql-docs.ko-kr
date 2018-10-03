@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dqs administration
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2dd08fce2cc93b62d323aee669f9e5e8b49dffa5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df11b61a3369823d89b9e1b48b5540d9495d1b73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077723"
 ---
 # <a name="dqs-administration"></a>dqs 관리
   DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 사용하면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 여러 DQS 활동을 관리하고, DQS 활동과 관련된 서버 수준의 속성을 구성하고, 참조 데이터 서비스 설정을 구성하고, DQS 로그 설정을 구성할 수 있습니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  

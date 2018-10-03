@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationDesign Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationDesign element
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfebce28ae08d0d76fa851b9d9df3ded8f6c28fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 430035dd83cf137cb80a5db5d159da027014e6c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075293"
 ---
 # <a name="aggregationdesign-element-assl"></a>AggregationDesign 요소(ASSL)
   데이터베이스의 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의합니다.  
@@ -57,8 +54,8 @@ ms.locfileid: "37200093"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

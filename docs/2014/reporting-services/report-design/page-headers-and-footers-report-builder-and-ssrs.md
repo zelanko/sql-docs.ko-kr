@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -23,16 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328904"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098443"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에서 각기 실행되는 머리글과 바닥글을 포함할 수 있습니다. 머리글과 바닥글에는 정적 텍스트, 이미지, 선, 사각형, 테두리, 배경색, 배경 이미지 및 식이 들어갈 수 있습니다. 식에는 단 하나의 데이터 집합과 데이터 집합을 범위로 포함하는 집계 함수 호출이 있는 보고서용 데이터 집합 필드 참조가 포함됩니다.  
@@ -61,9 +58,9 @@ ms.locfileid: "37328904"
   
 |식에서의 지원 여부|ReportItems 집계|데이터 집합 집계(범위는 데이터 집합의 이름이어야 함)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|보고서 본문에 있는 입력란|예|아니요|  
-|&PageNumber|예|아니요|  
-|&TotalPages|예|아니요|  
+|보고서 본문에 있는 입력란|사용자 계정 컨트롤|아니요|  
+|&PageNumber|사용자 계정 컨트롤|아니요|  
+|&TotalPages|사용자 계정 컨트롤|아니요|  
 |집계 함수|예 예:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|예 예:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |페이지에 있는 항목의 필드 컬렉션|간접적임. 예:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|예 예:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |데이터 바인딩된 이미지|간접적임. 예: `=ReportItems!TXT_Photo.Value`|예 예:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

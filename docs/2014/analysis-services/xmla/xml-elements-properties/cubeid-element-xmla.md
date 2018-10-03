@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeID Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeID element
 ms.assetid: 9dba605a-c45e-4730-827b-b7c55c8110da
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c0734e6a78b6bcec849f0d9db9a04785f370e88
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7f70759df30cc3a8ee568456ca3225cbcfda207
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314613"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116213"
 ---
 # <a name="cubeid-element-xmla"></a>CubeID 요소(XMLA)
   부모 요소에서 개체 참조를 포함하는 큐브를 식별합니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37314613"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
   
 ## <a name="cardinality"></a>카디널리티  
   
@@ -68,7 +65,7 @@ ms.locfileid: "37314613"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Object](object-element-xmla.md), [ParentObject](parentobject-element-xmla.md), [Source](source-element-xmla.md), [Target](../xml-elements-properties/target-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
   

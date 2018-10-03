@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.columns.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d0007a98a02da095887aa0faedb12ba629f5e01
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f65e6e5dd0561960c36eea953b39b71906981fa9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118733"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>플랫 파일 원본 편집기(열 페이지)
   **플랫 파일 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  

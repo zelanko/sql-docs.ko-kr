@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b51b0760a4b81020f0180f9aabb6cdf58e5d2fb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29bb70b8f1acabc94798a4a86b52e9e0b149cd97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102708"
 ---
 # <a name="projects-sql-server-management-studio"></a>프로젝트(SQL Server Management Studio)
   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 프로젝트는 데이터베이스 관리 및 개발을 위해 함께 저장할 수 있는 논리적으로 연관된 스크립트 및 파일 모음입니다.  

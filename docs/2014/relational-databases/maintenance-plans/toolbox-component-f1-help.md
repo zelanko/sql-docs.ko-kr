@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 869bbc88b10c5b1c561dd7fa9f085c5296aaf16f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103180"
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
   **도구 상자** 에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트에 사용할 다양한 항목이 표시됩니다. **도구 상자** 는 **보기** 메뉴에서 열 수 있으며 원하는 경우 이 창을 도킹할 수 있습니다. 창을 도킹하면 **도구 상자** 를 열린 채로 고정하거나 **자동 숨기기** 를 설정하여 사용하지 않을 때 숨길 수 있습니다.  

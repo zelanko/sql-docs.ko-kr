@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96480e0303dbb3176ea9fd17b14536e84d9006c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5418cadc533b5253e15f8677753dd0213319ef0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077801"
 ---
 # <a name="browsing-the-deployed-cube"></a>배포된 큐브 찾아보기
   다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브를 찾아봅니다. 분석할 때 여러 차원 간에 측정값을 비교하므로 Excel 피벗 테이블을 사용하여 데이터를 찾습니다. 피벗 테이블을 사용하면 Internet Sales가 특정 기간, 고객 인구 통계 및 제품 라인에 표시될 때 어떻게 변경되는지 볼 수 있도록 고객, 날짜 및 제품 정보를 각각 다른 축에 배치할 수 있습니다.  

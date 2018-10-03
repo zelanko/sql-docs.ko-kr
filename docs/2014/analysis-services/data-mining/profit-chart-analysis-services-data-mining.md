@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 898f0d6fe8dacfb2ec2a8148297d7bd5c0eeb949
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d19bba4a48e47e7fc0f7fff1cc5765b7cfac9bc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171713"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>수익 차트(Analysis Services - 데이터 마이닝)
   수익 차트는 마이닝 모델 사용과 관련된 예상 수익성을 표시합니다. 예를 들어 비즈니스 시나리오에서 회사가 어떤 고객에게 연락해야 하는지 예측하는 모델을 가정하겠습니다. 이 경우 수익 차트 정보에 타겟 메일링 캠페인 수행 비용을 추가합니다. 그런 다음 완성된 차트에서 고객에게 무작위로 연락하는 시나리오와 비교하여 고객을 올바르게 타게팅할 때 예상되는 수익을 확인할 수 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e6dee0ca1def1283bb74597076873187f7fde23c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe8a6be944df0de60117edc1f800c38a449125e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175133"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>프로덕션 서버 튜닝 로드 줄이기
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 튜닝 관리자는 쿼리 최적화 프로그램을 사용하여 작업을 분석하고 튜닝 권장 사항을 작성합니다. 프로덕션 서버에서 이러한 분석을 수행하면 서버 부하가 가중되어 튜닝 세션 중에 서버 성능이 저하될 수 있습니다. 프로덕션 서버 외에 추가로 테스트 서버를 사용하면 튜닝 세션 중에 서버 부하에 미치는 영향을 줄일 수 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - performance counters [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4edbe5037b638b7bdd17de77b849bd64df27d398
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6547d1e5ce67245ce749c2ad492399631373b908
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156293"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, 데이터베이스 복제본
   **SQLServer: 데이터베이스 복제본** 성능 개체는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹의 보조 데이터베이스에 대한 정보를 보고하는 성능 카운터를 포함합니다. 이 개체는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서만 유효합니다.  

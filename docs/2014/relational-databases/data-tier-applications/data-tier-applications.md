@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
@@ -17,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0e6ef62d46d8e597ad57450b7d121027c69adcb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816699"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214733"
 ---
 # <a name="data-tier-applications"></a>의
   DAC(데이터 계층 응용 프로그램)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  

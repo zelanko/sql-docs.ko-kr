@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - serialization
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], XML serialization
 - XmlSerializer class
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b59c013a9a21aaa50465acd5a565eda5c1e0653
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183173"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 XML 직렬화
   XML 직렬화는 다음과 같은 두 가지 시나리오에서 필요합니다.  

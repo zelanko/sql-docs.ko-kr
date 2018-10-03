@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hash indexes
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51c68f8d566948dd1fc1583ff36650366f50169b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094369"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스 사용 지침
   인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 데이터에 효율적으로 액세스하는 데 사용됩니다. 올바른 인덱스를 지정하면 쿼리 성능을 크게 개선할 수 있습니다. 예를 들어, 다음 쿼리를 살펴보세요.  
@@ -75,8 +72,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |색인 검색은 모든 테이블 행을 검색합니다.|사용자 계정 컨트롤|예|사용자 계정 컨트롤|  
 |같음 조건자(=)의 인덱스 검색.|사용자 계정 컨트롤<br /><br /> (전체 키 필요)|예 <sup>1</sup>|사용자 계정 컨트롤|  
 |같지 않음 조건자의 인덱스 검색 (>, <, \<=, > =, BETWEEN).|아니요(인덱스 검색의 결과)|예 <sup>1</sup>|사용자 계정 컨트롤|  
-|인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다.|아니오|예|사용자 계정 컨트롤|  
-|인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다.|아니오|아니오|사용자 계정 컨트롤|  
+|인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다.|아니요|예|사용자 계정 컨트롤|  
+|인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다.|아니요|아니요|사용자 계정 컨트롤|  
   
  이 표에서 테이블에서 "예"는 인덱스가 요청을 적절히 처리할 수 있음을 의미하며 "아니요"는 인덱스를 사용하여 요청을 충족할 수 없음을 의미합니다.  
   

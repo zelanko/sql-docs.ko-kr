@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113672"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>테이블 표시 대화 상자(Analysis Services - 다차원 데이터)
   **의** 테이블 표시 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브 또는 마이닝 구조와 연결된 데이터 원본 뷰에서 테이블을 포함시킬 수 있습니다. 다음과 같은 방법으로 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 이 대화 상자를 표시할 수 있습니다.  

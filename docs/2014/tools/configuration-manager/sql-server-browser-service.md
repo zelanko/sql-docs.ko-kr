@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 59
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2d51f7278957cd4246700cbcb872c9ec6ff51d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255815"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204813"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 서비스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
@@ -33,7 +30,7 @@ ms.locfileid: "37255815"
   
 -   올바른 서버 인스턴스에 연결  
   
--   DAC(관리자 전용 연결) 끝점에 연결  
+-   DAC(관리자 전용 연결) 엔드포인트에 연결  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 서비스(sqlbrowser)는 [!INCLUDE[ssAS](../../includes/ssas-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에 대해 인스턴스 이름과 버전 번호를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 설치됩니다.  
   

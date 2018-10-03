@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0af799acbf0c498797564f2c057532a4964db0ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101323"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
   sqlncli.h에 정의되어 있는 `SSVARIANT` 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB 공급자의 DBTYPE_SQLVARIANT 값에 해당합니다.  
   
- `SSVARIANT`는 판별 구조체입니다. Vt 멤버의 값에 따라 소비자는 읽을 멤버를 확인할 수 있습니다. vt 값에 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다. `SSVARIANT` 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 하세요. [유형 표시기](http://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
+ `SSVARIANT`는 판별 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 `SSVARIANT` 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 하세요. [유형 표시기](http://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
   
 ## <a name="remarks"></a>Remarks  
  DataTypeCompat==80인 경우, 여러 `SSVARIANT` 하위 유형이 문자열이 됩니다. 예를 들면 다음 vt 값이 `SSVARIANT`에 VT_SS_WVARSTRING으로 나타납니다.  
@@ -76,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |NCharVal|해당하는 OLE DB 유형 표시기 없음|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|지원 합니다 `nchar` 하 고 **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (`SHORT`) 문자열에 대 한 실제 길이 지정 *pwchNCharVal* 지점입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (`SHORT`) 문자열에 대 한 최대 길이 지정 *pwchNCharVal* 지점입니다.<br /><br /> *pwchNCharVal* (`WCHAR` \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *rgbReserved*를 *dwReserved*, 및 *pwchReserved*합니다.|  
 |CharVal|해당하는 OLE DB 유형 표시기 없음|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|지원 합니다 `char` 하 고 **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (`SHORT`)는 문자열에 대 한 실제 길이 지정 *pchCharVal* 지점입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (`SHORT`) 하는 문자열의 최대 길이 지정 *pchCharVal* 지점입니다.<br /><br /> *pchCharVal* (`CHAR` \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용되지 않은 멤버:<br /><br /> *rgbReserved*하십시오 *dwReserved*, 및 *pwchReserved*합니다.|  
 |BinaryVal|해당하는 OLE DB 유형 표시기 없음|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|지원 합니다 `binary` 하 고 **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (`SHORT`)는 데이터에 대 한 실제 길이 지정 *prgbBinaryVal* 지점입니다.<br /><br /> *sMaxLength* (`SHORT`)는 데이터에 대 한 최대 길이 지정 *prgbBinaryVal* 지점입니다.<br /><br /> *prgbBinaryVal* (`BYTE` \*) 이진 데이터에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *dwReserved*합니다.|  
-|알려지지 않은 유형|UNUSED|UNUSED|UNUSED|UNUSED|  
+|UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
 ## <a name="see-also"></a>관련 항목  

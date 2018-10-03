@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187240"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067409"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>옵션 (쿼리 실행: SQL Server: 고급 페이지)
+# <a name="options-query-executionsql-serveradvanced-page"></a>옵션(쿼리 실행:SQL Server:고급 페이지)
   SET 명령을 사용할 때 이용할 수 있는 몇 가지 옵션이 있습니다. 이 페이지를 사용하면 SQL Server 쿼리 편집기에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 실행에 대한 **set** 옵션을 지정할 수 있습니다. 설정한 옵션은 다른 코드 편집기에는 영향을 주지 않습니다. 이러한 옵션의 변경 사항은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴 또는 **쿼리 창의 바로 가기 메뉴에서** 쿼리 옵션 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 클릭하고 **실행**에서 **고급**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
 ## <a name="options"></a>변수  

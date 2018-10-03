@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d93967a9f35c7c6817326293f6b2dd12e23780e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed0ba22087a12f08e7a951a89a7ca989bb6487f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110601"
 ---
 # <a name="neural-network-model-query-examples"></a>신경망 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 신경망 모델에 대한 내용 쿼리에서는 숨겨진 계층 수와 같은 모델 메타데이터를 검색할 수 있습니다. 또한 예측 쿼리는 입력에 따른 분류를 제안하고 선택적으로 각 분류에 대한 확률을 제공할 수 있습니다.  

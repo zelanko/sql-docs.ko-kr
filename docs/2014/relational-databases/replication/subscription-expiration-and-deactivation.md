@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distributors [SQL Server replication], distribution retention period
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], deactivation
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8ffb9785ae609d72e49fed4c91e7c983bbff35d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d4841078f3b32c2fb3303cc7922eb01a2e4030d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079583"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>구독 만료 및 비활성화
   지정된 *보존 기간*내에 동기화되지 않는 구독을 비활성화하거나 만료할 수 있습니다. 동작은 복제 유형 및 초과한 보존 기간에 따라 달라집니다.  
@@ -46,7 +43,7 @@ ms.locfileid: "37227203"
      밀어넣기 구독이 만료되면 완전히 제거되지만 끌어오기 구독은 그렇지 않습니다. 끌어오기 구독은 구독자에서 정리해야 합니다. 자세한 내용은 [Delete a Pull Subscription](delete-a-pull-subscription.md)을(를) 참조하세요.  
   
 ## <a name="merge-replication"></a>병합 복제  
- 병합 복제는 게시 보존 기간([sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 **@retention** 및 **@retention_period_unit** 매개 변수)을 사용합니다. 구독이 만료되면 구독에 대한 메타데이터가 제거되므로 구독을 다시 초기화해야 합니다. 다시 초기화되지 않은 구독은 게시자에서 실행되는 **만료된 구독 정리** 작업에 의해 삭제됩니다. 기본적으로 이 작업은 매일 실행됩니다. 이 작업을 통해 게시 보존 기간의 2배에 해당하는 기간 동안 동기화되지 않은 모든 밀어넣기 구독이 제거됩니다. 예를 들어:  
+ 병합 복제는 게시 보존 기간([sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 **@retention** 및 **@retention_period_unit** 매개 변수)을 사용합니다. 구독이 만료되면 구독에 대한 메타데이터가 제거되므로 구독을 다시 초기화해야 합니다. 다시 초기화되지 않은 구독은 게시자에서 실행되는 **만료된 구독 정리** 작업에 의해 삭제됩니다. 기본적으로 이 작업은 매일 실행됩니다. 이 작업을 통해 게시 보존 기간의 2배에 해당하는 기간 동안 동기화되지 않은 모든 밀어넣기 구독이 제거됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   게시의 보존 기간이 14일이면 14일 이내에 동기화되지 않은 구독은 만료될 수 있습니다.  
   

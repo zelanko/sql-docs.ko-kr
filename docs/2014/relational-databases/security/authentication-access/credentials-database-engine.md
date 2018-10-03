@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - principals [SQL Server], credentials
@@ -23,12 +21,12 @@ ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d1a5247e5a6260b77ca3ea5349d6620fec9698dc
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144543"
 ---
 # <a name="credentials-database-engine"></a>자격 증명(데이터베이스 엔진)
   자격 증명은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]외부의 리소스에 연결하는 데 필요한 인증 정보(자격 증명)가 포함된 레코드입니다. 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 내부적으로 사용됩니다. 대부분의 자격 증명에는 Windows 사용자 이름 및 암호가 들어 있습니다.  

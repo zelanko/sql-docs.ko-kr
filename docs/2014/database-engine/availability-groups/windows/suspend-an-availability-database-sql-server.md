@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.suspenddatamove.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], suspending a database
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f84be22ffdfe9375edd632c34e832d18488fea1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108093"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc765cfceb8e52d3fbb578e3c3b6f212f28a3291
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cd620197e78c70f4d351d3dcb69dc5cf4459296
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116983"
 ---
 # <a name="query-builder"></a>쿼리 작성기
   **쿼리 작성기** 대화 상자를 사용하여 SQL 실행 태스크, OLE DB 원본 및 대상, 조회 변환에서 사용할 쿼리를 만들 수 있습니다.  

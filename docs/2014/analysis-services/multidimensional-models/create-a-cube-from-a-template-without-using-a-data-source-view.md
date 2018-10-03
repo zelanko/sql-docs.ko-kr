@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104893"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>데이터 원본 뷰를 사용하지 않고 템플릿에서 큐브 만들기
   데이터 원본 뷰를 사용하지 않고 큐브를 만들려면 큐브 마법사의 첫 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성** 을 선택하십시오. 나중에 스키마 생성 마법사를 사용하여 큐브의 구조 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 바탕으로 데이터 원본 뷰에 대한 관계형 스키마를 생성할 수 있습니다. 스키마 생성 방법에 대한 자세한 내용은 [스키마 생성 마법사&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)를 참조하세요.  
   
 ## <a name="selecting-the-build-method"></a>생성 방법 선택  
- 큐브 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성**을 클릭합니다. 기존 큐브 템플릿을 사용하여 큐브를 생성하려면 **큐브 템플릿 사용** 확인란을 선택합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 템플릿을 사용하지 않으면 수동으로 옵션을 설정해야 합니다.  
+ 큐브 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성**을 클릭합니다. 기존 큐브 템플릿을 사용하여 큐브를 생성하려면 **큐브 템플릿 사용** 확인란을 선택합니다. . 템플릿을 사용하지 않으면 수동으로 옵션을 설정해야 합니다.  
   
  큐브 템플릿에는 사전 정의된 측정값, 측정값 그룹, 차원, 계층 및 특성이 포함되어 있습니다. 템플릿을 선택한 경우 마법사는 템플릿에서 개체 정의를 다음 페이지 설정 옵션의 기본으로 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 표준 큐브의 여러 템플릿과 함께 설치됩니다. 또한 서버 관리자가 사용자 조직의 데이터에 맞게 디자인된 전용 큐브 또는 차원 템플릿을 추가할 수도 있습니다.  
   

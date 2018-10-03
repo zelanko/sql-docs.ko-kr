@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c64ba9da7884b1ccb82dd31480d60638c8d952ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e687fd8c7fcd7c21f8aac9b546492a8f9bd4a644
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077243"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
   PowerShell에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 관리하는 데 권장되는 방법은 `sqlps` 모듈을 Windows PowerShell 2.0 환경으로 가져오는 것입니다. 이 모듈은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅인 및 관리 효율성 어셈블리를 로드하고 등록합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [SQL Server], triggers
@@ -16,12 +14,12 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f7af76abbae4408a177961636a3decd94b61ea6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 35fdba2dff5f4b68040007c8c5d21c127bd1548c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113773"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL 트리거에 대한 정보 가져오기
   이 섹션에 나열된 카탈로그 뷰를 사용하여 DDL 트리거에 대한 정보를 가져올 수 있습니다.  

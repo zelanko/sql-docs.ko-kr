@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.integrity.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f232b12ff76f933f1d5a0a4c64632ddefc5e697
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5385aec450862a1f09dad45d94376f6f17a8d13a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145943"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>데이터베이스 무결성 검사 태스크(유지 관리 계획)
   **데이터베이스 무결성 검사 태스크** 대화 상자를 사용하면 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 사용자 및 시스템 테이블, 데이터베이스 인덱스의 할당 및 구조적 무결성을 검사할 수 있습니다. `DBCC` 를 실행하면 데이터베이스의 모든 무결성 문제가 보고되므로 시스템 관리자나 데이터베이스 소유자가 나중에 이 문제들을 처리할 수 있습니다.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd751224b24583cf5426194d7b4fc5074349bdfd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306155"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121753"
 ---
-# <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Backup to Windows Azure 관리 되는 SQL Server 문제 해결
+# <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결
   이 항목에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 작업 중 발생할 수 있는 오류를 해결하는 데 사용할 수 있는 태스크 및 도구에 대해 설명합니다.  
   
 ## <a name="overview"></a>개요  

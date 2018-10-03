@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190273"
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
   다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
@@ -52,7 +49,7 @@ ms.locfileid: "37265419"
   
 -   First Nonempty Child  
   
--   InclusionThresholdSetting  
+-   없음  
   
  이 옵션은 일반 집계 함수로 측정값을 변경 되지 않습니다: `Sum`, `Min`를 `Max`, `Count`, 또는 `Distinct``Count`합니다.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "37265419"
 |LastNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 마지막 자식의 값으로 계산됩니다.|  
 |최대값|표준 최대 집계 함수가 적용됩니다.|  
 |최소값|표준 최소 집계 함수가 적용됩니다.|  
-|InclusionThresholdSetting|집계가 적용되지 않습니다.|  
+|없음|집계가 적용되지 않습니다.|  
 |SUM|표준 합계 함수가 적용됩니다.|  
   
  마법사를 완료하면 기존의 모든 반가산적 동작을 덮어씁니다.  

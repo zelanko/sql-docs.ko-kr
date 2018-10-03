@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40d01901ff90c22d4286e59c5d0589b07ad424a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084593"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>태스크 8: 조건부 분할 변환을 추가하여 정리 출력 분할
   이 변환에서는 데이터 흐름에 조건부 분할 변환을 추가합니다. 조건부 분할 변환은 데이터 내용에 따라 각 행을 서로 다른 출력으로 라우팅할 수 있습니다. 이 자습서를 사용 합니다 **레코드 상태** DQS 정리 변환에서 출력 열입니다. 이 자습서에서는 수정 레코드 또는 수정된 레코드만 MDS 서버에 업로드합니다. 따라서 경우 확인 합니다 **레코드 상태** 는 **수정** 또는 **수정 됨**, 레코드를 MDS에 업로드 하기 전에 레코드를 결합 하 고 합니다.  

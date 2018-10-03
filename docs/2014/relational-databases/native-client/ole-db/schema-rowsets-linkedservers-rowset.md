@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60930ce7a43066c9041dfdaa92e0c4be254d78ae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159093"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 행 집합(OLE DB)
-  합니다 **LINKEDSERVERS** 행 집합에 참여할 수 있는 조직 데이터 원본을 열거 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리 합니다.  
+  **LINKEDSERVERS** 행 집합은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리에 참여할 수 있는 조직 데이터 원본을 열거합니다.  
   
  **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
@@ -40,6 +37,6 @@ ms.locfileid: "37422402"
  행 집합은 SRV_NAME을 기준으로 정렬되며 SRV_NAME에서 하나의 제한이 지원됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [스키마 행 집합 지원 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [스키마 행 집합 지원&#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

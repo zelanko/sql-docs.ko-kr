@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0281fea7db32674296b21ba9e3d38cf6ea3c9d0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171093"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>테이블 형식 모델 솔루션 배포(SSAS 테이블 형식)
   테이블 형식 모델 프로젝트를 제작한 후에는 사용자가 보고 클라이언트 응용 프로그램을 사용하여 모델을 찾아볼 수 있도록 프로젝트를 배포해야 합니다. 이 항목에서는 사용자 환경에서 테이블 형식 모델 솔루션을 배포할 때 사용할 수 있는 다양한 속성과 메서드에 대해 설명합니다.  

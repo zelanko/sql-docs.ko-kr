@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sp_recompile
@@ -17,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73fffe17fac4c26ca8c9951306d4a7e3c489bcd3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e65b458f81e6a09b31d7be2bdffa40547e3c215
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172145"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098213"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이 작업을 수행 하는 방법은 세 가지가 있습니다: `WITH RECOMPILE` 프로시저 정의 또는 프로시저를 호출할 때 옵션을 `RECOMPILE` 쿼리 힌트를 사용 하 여 또는 개별 문에 `sp_recompile` 시스템 저장 프로시저. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  

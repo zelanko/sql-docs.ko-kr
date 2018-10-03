@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2e0d51e1c3268fd7399467f22fb833e77f14131
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349885"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076006"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
   CLR(공용 언어 런타임)은 관리 코드에 대해 코드 액세스 보안이라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. 자세한 내용은 .NET Framework 소프트웨어 개발 키트의 "코드 액세스 보안" 섹션을 참조하십시오.  
@@ -45,7 +42,7 @@ ms.locfileid: "37349885"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 호스트 정책 수준 권한 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호스트 정책 수준에서 어셈블리에 부여하는 코드 액세스 보안 권한 집합은 어셈블리를 만들 때 지정된 권한 집합에 의해 결정됩니다. 세 가지 권한 집합을 가지: `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` (사용 하 여 지정 된 **PERMISSION_SET** 옵션을[CREATE ASSEMBLY &#40;Transact SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fixedpolicy 시스템 어셈블리 및 사용자 어셈블리에 대 한 사용자 지정 정책에 대 한 합니다.  
   
@@ -110,10 +107,10 @@ ms.locfileid: "37349885"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|실행 전용|실행 및 외부 리소스 액세스|제한 없음(P/Invoke 포함)|  
-|`Programming model restrictions`|예|예|제한 없음|  
-|`Verifiability requirement`|예|예|아니요|  
+|`Programming model restrictions`|사용자 계정 컨트롤|사용자 계정 컨트롤|제한 없음|  
+|`Verifiability requirement`|사용자 계정 컨트롤|예|아니요|  
 |`Local data access`|예|예|예|  
-|`Ability to call native code`|아니오|아니요|예|  
+|`Ability to call native code`|아니오|아니요|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 통합 보안](clr-integration-security.md)   

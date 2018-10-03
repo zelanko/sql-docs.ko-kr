@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
 - snapshot replication [SQL Server], compressed snapshots
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34a397f4c6597751d50aa676f07d42cc694e9c39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be1415b0f31e79baed84545ea623c84151f5c251
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148113"
 ---
 # <a name="compressed-snapshots"></a>압축 스냅숏
   스냅숏을 느린 네트워크를 통해 전송하거나 이동식 미디어에 저장할 때 압축하지 않은 스냅숏이 너무 커서 해당 미디어에 모두 저장할 수 없는 경우 스냅숏 파일을 압축하는 것이 좋습니다. 위와 같은 상황에서는 스냅숏 파일을 압축하는 것이 유용하지만 압축으로 인해 스냅숏 생성과 적용에 더 많은 시간이 걸립니다.  

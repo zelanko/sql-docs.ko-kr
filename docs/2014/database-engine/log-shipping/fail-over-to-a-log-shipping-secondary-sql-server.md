@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - primary databases [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efe42f33e2e4f40f6fa73edc0918b0181216b27a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149653"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>로그 전달 보조 데이터베이스로 장애 조치(Failover)(SQL Server)
   로그 전달 보조 데이터베이스로 장애 조치(Failover)는 주 서버 인스턴스에서 오류가 발생하거나 유지 관리가 필요한 경우에 유용합니다.  

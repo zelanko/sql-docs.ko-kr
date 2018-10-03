@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_SESSIONS rowset
 ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b9c137aafe16ad999bba5213afaaf92c15e1c35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eee5bc20e5b0bf2e48b45703a3236fe56aad94aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082863"
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS 행 집합
   서버에서 현재 열려 있는 세션에 대한 리소스 사용량 및 작업 정보를 제공합니다.  

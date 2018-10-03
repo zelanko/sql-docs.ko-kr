@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring recovery interval [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - maximum number of minutes per database recovery
 - recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1654938c5a7fa344361af04549917b82dde2d02f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18da33b5827fa6f06b9cf84659259e40d08a29ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175793"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 복구 간격 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **복구 간격** 옵션은 데이터베이스를 복구하는 데 필요한 시간의 상한값을 정의합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 이 옵션에 지정된 값을 사용하여 지정된 데이터베이스에 대해 [자동 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md) 을 실행하는 대략적인 빈도를 결정합니다.  

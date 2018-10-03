@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59cf6254c290982e8d9c38cbf1ebb77680f12c13
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 892ea8d21d03eafc21a98ec6799aa840fddf96a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094563"
 ---
 # <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
   일반적인 데이터 마이닝 프로젝트의 목표는 마이닝 모델을 사용하여 예측을 수행하는 것입니다. 예를 들어 서버의 특정 클러스터에 대해 예상 작동 중단 시간의 양을 예측하거나, 고객의 세그먼트가 광고 캠페인에 응답할 가능성이 있는지 여부를 표시하는 점수를 생성할 수 있습니다. 이러한 작업을 모두 수행하기 위해 예측 쿼리를 만들 수 있습니다.  

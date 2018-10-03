@@ -3,118 +3,60 @@ title: 포함 된 R 및 Python (SQL Server Machine Learning)에 대 한 NYC Taxi
 description: 뉴욕 시 택시 샘플 데이터를 다운로드 하 고 데이터베이스를 만들기 위한 지침입니다. R을 포함 하는 방법을 보여 주는 SQL Server 자습서에서 데이터를 사용 하 고 Python에서 SQL Server 저장 프로시저 및 T-SQL 함수입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 700720f7538467dc3edc38414544eb2c402437a6
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712756"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232577"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>SQL Server에 대 한 NYC Taxi 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server에서 데이터베이스 내 분석에 대 한 R 및 Python을 사용 하는 방법에 대 한 자습서에 대 한 시스템을 준비 합니다.
+이 문서에서는 SQL Server에서 데이터베이스 내 분석에 대 한 R 및 Python 자습서에 대 한 샘플 데이터를 가져오는 방법을 설명 합니다.
 
-이 연습에서는 샘플 데이터, 환경, 준비에 대 한 PowerShell 스크립트를 다운로드 하 고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 여러 자습서에 사용 되는 파일입니다. 완료 된 경우는 **NYCTaxi_Sample** 데이터베이스가 실습 데모 데이터를 제공 하 고 로컬 인스턴스에에서 사용할 수 있습니다. 
+데이터에서 시작 합니다 [NYC 택시 및 리무진 수수료](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) 공용 데이터 집합입니다. 데모 데이터베이스에 대 한 데이터 집합의 스냅숏 및 사용 가능한 데이터의 1% 캡처된 걸렸습니다. 시스템 데이터베이스 백업 파일에는 약간 넘는 90MB, 기본 데이터 테이블의 1.7 백만 행을 제공 합니다.
+
+이 문서의 단계를 완료 했으면 합니다 **NYCTaxi_Sample** 데이터베이스가 실습 데모 데이터를 제공 하 고 로컬 인스턴스에에서 사용할 수 있습니다. 데이터베이스 이름 이어야 합니다 **NYCTaxi_Sample** 수정 하지 않을 데모 스크립트를 실행 하려는 경우.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-인터넷에 연결, PowerShell 및 컴퓨터의 로컬 관리자 권한이 해야 합니다. 있어야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 도구를 개체 만들기를 확인 합니다.
+인터넷에 연결, 컴퓨터 및 데이터베이스 엔진 인스턴스에 대해 로컬 관리자 권한이 필요합니다.
 
-## <a name="download-nyc-taxi-demo-data-and-scripts-from-github"></a>NYC Taxi 데이터 및 스크립트를 Github에서 다운로드
+도움이 될 수 있습니다 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 도구를 개체 만들기를 확인 합니다.
 
-1.  Windows PowerShell 명령 콘솔을 엽니다.
-  
-    사용 된 **관리자 권한으로 실행** 대상 디렉터리를 만들거나 지정된 된 대상에 파일을 작성 하는 옵션입니다.
-  
-2.  *DestDir* 매개 변수 값을 로컬 디렉터리로 변경하여 다음 PowerShell 명령을 실행합니다. 여기서 사용한 기본값은 **TempRSQL**입니다.
-  
-    ```ps
-    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
-    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
-    ```
-  
-    *DestDir* 에 지정한 폴더가 존재하지 않을 경우 PowerShell 스크립트를 통해 생성됩니다.
-  
-    > [!TIP]
-    > 오류가 발생 하는 PowerShell 스크립트의 실행 정책을 일시적으로 설정할 수 있습니다 **무제한** Bypass 인수를 사용 하 여 현재 세션에 변경 내용을 범위 지정이 연습에 대해서만 합니다.
-    >   
-    >````
-    > Set\-ExecutionPolicy Bypass \-Scope Process
-    >````
-    > 이 명령을 실행해도 구성이 변경되지는 않습니다.
-  
-    인터넷 연결에 따라 다운로드하는 데 시간이 걸릴 수도 있습니다.
-  
-3.  모든 파일을 다운로드 한 PowerShell 스크립트를 열립니다는 *DestDir* 폴더입니다. PowerShell 명령 프롬프트에서 다음 명령을 실행하고 다운로드된 파일을 검토합니다.
-  
-    ```
-    ls
-    ```
-  
-    **Results:**
-  
-    ![PowerShell 스크립트로 다운로드한 파일 목록](media/rsql-devtut-filelist.png "PowerShell 스크립트로 다운로드한 파일 목록")
+## <a name="download-demo-database"></a>데모 데이터베이스를 다운로드 합니다.
 
-## <a name="create-nyctaxisample-database"></a>NYCTaxi_Sample 데이터베이스 만들기
+샘플 데이터베이스는 Microsoft에서 호스트 되는 백업 파일입니다. 파일 다운로드 링크를 클릭할 때 즉시 시작 합니다. 
 
-PowerShell 스크립트를 다운로드 한 파일 중 표시 (**RunSQL_SQL_Walkthrough.ps1**)는 데이터베이스를 만들고 데이터 대량 로드 합니다. 스크립트가 수행하는 작업은 다음과 같습니다.
+파일 크기는 약 90입니다.
 
-+ 아직 설치 되지 않은 경우 SQL Native Client 및 SQL 명령줄 유틸리티를 설치 합니다. 이 유틸리티는 **bcp**를 사용하여 데이터베이스에 데이터를 대량 로드하는 데 필요합니다.
+1. 클릭 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 데이터베이스 백업 파일을 다운로드 합니다.
 
-+ 데이터베이스 및 테이블 만들기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 데이터 소스를.csv 파일 로부터 대량 삽입 합니다.
+2. C:\Program files\Microsoft SQL server\mssql.-인스턴스-name\MSSQL\Backup 폴더로 파일을 복사 합니다.
 
-+ 여러 SQL 함수 및 여러 자습서에 사용 되는 저장된 프로시저를 만듭니다.
+3. Management studio에서 마우스 오른쪽 단추로 클릭 **데이터베이스** 선택한 **복원 파일 및 파일 그룹**합니다.
 
-### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>신뢰할 수 있는 Windows id를 사용 하는 스크립트를 수정 합니다.
+4. 입력 *NYCTaxi_Sample* 데이터베이스 이름으로 합니다.
 
-스크립트에는 기본적으로 SQL Server 데이터베이스 사용자 로그인 및 암호를 가정합니다. Db_owner Windows 사용자 계정이 있는 경우 Windows id 개체를 만드는 데 사용할 수 있습니다. 이렇게 하려면 엽니다 `RunSQL_SQL_Walkthrough.ps1` 코드 편집기에서 추가 **`-T`** bcp에 bulk insert 명령 (줄 238):
+5. 클릭 **장치의** 백업 파일을 선택 하려면 파일 선택 페이지를 엽니다. 클릭 **추가** NYCTaxi_Sample.bak를 선택 합니다.
 
-```text
-bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
-```
-
-### <a name="run-the-script-to-create-objects"></a>개체를 만드는 스크립트를 실행 합니다.
-
-관리자 PowerShell 명령 프롬프트를 사용 하 여 C:\tempRSQL에서, 다음 명령을 실행 합니다.
-  
-```ps
-.\RunSQL_SQL_Walkthrough.ps1
-```
-다음 정보를 입력 하 라는 메시지가 표시 됩니다.
-
-- 서버 인스턴스의 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 가 설치 되었습니다. 기본 인스턴스의 경우에서 컴퓨터 이름으로 간단히이 수 있습니다.
-
-- 데이터베이스 이름입니다. 이 자습서에서는 스크립트 가정 `NYCTaxi_Sample`합니다.
-
-- 사용자 이름 및 사용자 암호입니다. 이러한 값에 대 한 SQL Server 데이터베이스 로그인을 입력 합니다. 또는 신뢰할 수 있는 Windows id를 수락 하는 스크립트를 수정한 경우 이러한 값을 비어 두려면 Enter 키를 누릅니다. Windows id 연결에 사용 됩니다.
-
-- 이전 단원에서 다운로드 한 샘플 데이터에 대 한 정규화 된 파일 이름입니다. 예: `C:\tempRSQL\nyctaxi1pct.csv`
-
-이러한 값을 제공한 후 스크립트를 즉시 실행 됩니다. 스크립트 실행의 모든 자리 표시자 이름 중는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 사용자의 입력을 사용 하도록 업데이트 됩니다.
+6. 선택 합니다 **복원** 확인란을 클릭 하 고 **확인** 데이터베이스를 복원 합니다.
 
 ## <a name="review-database-objects"></a>데이터베이스 개체를 검토 합니다.
    
-스크립트 실행이 완료 되 면 데이터베이스 개체의 존재를 확인 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다. 데이터베이스, 테이블, 함수 및 저장된 프로시저 표시 됩니다.
+데이터베이스 개체의 존재를 확인 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다. 데이터베이스, 테이블, 함수 및 저장된 프로시저 표시 됩니다.
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-> [!NOTE]
-> 데이터베이스 개체가 이미 있는 경우에는 다시 만들 수 없습니다.
->   
-> 테이블이 이미 있는 경우 데이터가 추가되며 덮어쓰지 않습니다. 따라서 스크립트를 실행하기 전에 기존 개체를 모두 삭제해야 합니다.
-
 ### <a name="objects-in-nyctaxisample-database"></a>NYCTaxi_Sample 데이터베이스의 개체
 
-다음 표에서 NYC Taxi 데모 데이터베이스에서 생성 되는 개체를 보여 줍니다. 만 한 PowerShell 스크립트를 실행 하면 되지만 (`RunSQL_SQL_Walkthrough.ps1`), 해당 스크립트에 개체를 만들 데이터베이스의 다른 SQL 스크립트를 호출 합니다. 각 개체를 만드는 데 사용 되는 스크립트에 대 한 설명에 언급 된 합니다.
+다음 표에서 NYC Taxi 데모 데이터베이스에서 생성 되는 개체를 보여 줍니다.
 
 |**개체 이름**|**개체 유형**|**설명**|
 |----------|------------------------|---------------|
@@ -132,9 +74,9 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 유효성 검사 단계로, 데이터가 업로드 되었는지 확인 하는 쿼리를 실행 합니다.
 
-1. 데이터베이스에서 개체 탐색기에서 확장을 **NYCTaxi_Sample** 데이터베이스를 백업할, 테이블 폴더를 엽니다.
+1. 개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭 합니다 **NYCTaxi_Sample** 데이터베이스 및 새 쿼리를 시작 합니다.
 
-2. 마우스 오른쪽 단추로 클릭 합니다 **dbo.nyctaxi_sample** 선택한 **상위 1000 개의 행 선택** 일부 데이터를 반환 합니다.
+2. 실행할 **`select * from dbo.nyctaxi_sample`** 모든 1.7 백만 행을 반환 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

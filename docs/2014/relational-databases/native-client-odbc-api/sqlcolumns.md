@@ -1,28 +1,25 @@
 ---
-title: SQLColumns | Microsoft Docs
+title: SQLColumns | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe12091ae639be7a2fd1c3a430d866b14d522693
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181323"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 합니다 *CatalogName*, *TableName*, 또는 *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  

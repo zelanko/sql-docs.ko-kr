@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a57ba4393c23920b98a407176de51034715a54c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cce805ea589a3795a5d617a1d2e01274f8a2fc0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174623"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 복제 구성(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 및 AlwaysOn 가용성 그룹을 구성하는 과정은 7단계로 구성됩니다. 각 단계에 대해서는 다음 섹션에서 자세하게 설명합니다.  
@@ -211,7 +208,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
--   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   

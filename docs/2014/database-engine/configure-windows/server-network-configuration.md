@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 798ba8646da29796e11f6391a3132afc22c99732
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab0d7678ec07f3819bf7dd6b9b949f4c2d11229d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111693"
 ---
 # <a name="server-network-configuration"></a>서버 네트워크 구성
   서버 네트워크 구성 태스크에는 프로토콜 사용, 프로토콜에 사용되는 포트 또는 파이프 수정, 암호화 구성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스 구성, 네트워크상에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 표시 또는 숨기기, SPN(서버 보안 주체 이름) 등록 등이 있습니다. 대개 사용자는 서버 네트워크 구성을 변경할 필요가 없습니다. 특별한 네트워크 요구 사항이 있을 경우에만 서버 네트워크 프로토콜을 다시 구성합니다.  

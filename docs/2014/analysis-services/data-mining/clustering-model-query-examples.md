@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200633"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087493"
 ---
 # <a name="clustering-model-query-examples"></a>클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 대한 메타데이터를 검색하거나, 분석 시 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들 수 있습니다. 또는 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 각 유형의 쿼리는 서로 다른 정보를 제공합니다. 예를 들어 내용 쿼리는 발견된 클러스터에 대한 추가 세부 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 속해 있을 가능성이 가장 높은 클러스터를 알려 줍니다.  
@@ -287,7 +284,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- 이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다.  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
+ 이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다. [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
   
  PredictCaseLikelihood 함수에 의해 반환되는 값은 확률이므로 항상 0과 1 사이이며 임의의 결과를 나타내는 경우 값이 .5입니다. 그러므로 점수가 .5 미만인 경우 해당 모델이 제공될 경우 예측 사례가 나타날 가능성이 별로 없음을 의미하고 점수가 .5 이상인 경우에는 예측 사례가 해당 모델에 적합하지 않은 경우보다 나타날 가능성이 높음을 의미합니다.  
   
@@ -364,7 +361,7 @@ NATURAL PREDICTION JOIN
   
  기본적으로 결과는 확률 순으로 순위가 지정됩니다. 결과를 통해 Cluster 2의 확률이 매우 낮지만 그래도 Cluster 2가 새 데이터 요소에 가장 적합하다는 것을 알 수 있습니다.  
   
- **참고** 추가 열 `$DISTANCE`는 데이터 요소에서 클러스터까지의 거리를 나타냅니다. 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 Scalable EM 클러스터링을 사용하여 여러 개의 클러스터를 각 데이터 요소에 할당하고 가능한 클러스터의 순위를 지정합니다.  그러나 K-Means 알고리즘을 사용하여 클러스터링 모델을 만드는 경우 각 데이터 요소에 한 개의 클러스터만 할당할 수 있으므로 이 쿼리는 한 개의 행만 반환합니다.  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수를 사용하여 기본 구조의 열을 포함할 수 있습니다. EM 클러스터링과 K-means 클러스터링의 차이점에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)를 참조하세요.  
+ **참고** 추가 열 `$DISTANCE`는 데이터 요소에서 클러스터까지의 거리를 나타냅니다. 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 Scalable EM 클러스터링을 사용하여 여러 개의 클러스터를 각 데이터 요소에 할당하고 가능한 클러스터의 순위를 지정합니다.  그러나 K-Means 알고리즘을 사용하여 클러스터링 모델을 만드는 경우 각 데이터 요소에 한 개의 클러스터만 할당할 수 있으므로 이 쿼리는 한 개의 행만 반환합니다. [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수를 사용하여 기본 구조의 열을 포함할 수 있습니다. EM 클러스터링과 K-means 클러스터링의 차이점에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)를 참조하세요.  
   
  [맨 위로 이동](#bkmk_top2)  
   

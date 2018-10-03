@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - Reporting Services WMI Provider
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - WMI provider [Reporting Services]
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4938b39c182258ac4a764fc71defa21c6fa0d05b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3fa997f50f170ae74ce52bf5663bfa4be4f5b1ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189983"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI 공급자 액세스
   Reporting Services WMI 공급자는 스크립팅을 통해 기본 모드 보고서 서버 인스턴스를 관리하기 위해 두 WMI 클래스를 제공합니다.  
@@ -74,7 +71,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>사용 가능한 메서드 및 속성 쿼리  
- Reporting Services WMI 클래스 중 하나에서 사용할 수 있는 메서드 및 속성을 보려면 Get-WmiObject의 결과를 Get-Member 명령으로 전달합니다. 예를 들어:  
+ Reporting Services WMI 클래스 중 하나에서 사용할 수 있는 메서드 및 속성을 보려면 Get-WmiObject의 결과를 Get-Member 명령으로 전달합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, bulk copy
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server Native Client]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef27718464b59f29d28c61a1fb9fb97566e32d74
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102193"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
   ODBC 표준에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 직접 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전의 인스턴스에 연결되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 수행하는 DB-Library 함수를 지원합니다. 이 드라이버 관련 확장은 대량 복사 함수를 사용하는 기존 DB-Library 응용 프로그램에 대해 편리한 업그레이드 경로를 제공합니다. 특별한 대량 복사 지원은 다음 파일에 포함되어 있습니다.  

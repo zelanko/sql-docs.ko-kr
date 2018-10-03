@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProcessingMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 550b19dc291818052b954b476d3673fd717d38ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148603"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode 요소(ASSL)
   인스턴스에서 인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37273789"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[큐브](../objects/cube-element-assl.md)하십시오 [차원](../objects/dimension-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `ProcessingMode`의 `Cube` 값은 큐브의 기본값을 제공하며 각 파티션에 대해 `ProcessingMode`를 설정하여 이 기본값을 덮어쓸 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [AMO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - AMO, data sources
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55c1b94f30b21b71a6290e7b782e2eeb411d14f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0235bfcba38e803933fdbf2eb67802df506c0130
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067139"
 ---
 # <a name="amo-fundamental-classes"></a>AMO 기본 클래스
   AMO(Analysis Management Objects) 작업은 기본 클래스에서 시작합니다. 이러한 클래스를 통해 응용 프로그램에 사용할 나머지 개체의 환경을 설정합니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다.  

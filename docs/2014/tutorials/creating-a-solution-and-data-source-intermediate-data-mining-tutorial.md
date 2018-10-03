@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad99c202d858bbdf5de47a21fe26070328e2de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119633"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>솔루션 및 데이터 원본 만들기(중급 데이터 마이닝 자습서)
   데이터 마이닝을 사용 하려면 먼저 만들어야에서 프로젝트 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 템플릿을 사용 하 여 **Analysis Services 다차원 및 데이터 마이닝 프로젝트**합니다. 템플릿을 열면 데이터 원본, 마이닝 구조 및 마이닝 모델뿐 아니라 마이닝 구조에서 다차원 데이터를 사용하는 경우 큐브도 포함하여 데이터 마이닝에 필요할 수 있는 모든 스키마가 디자이너로 로드됩니다.  

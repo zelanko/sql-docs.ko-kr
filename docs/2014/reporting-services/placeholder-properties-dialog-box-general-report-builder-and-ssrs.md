@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bceb733247e806f9e03803797c831561662229d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171163"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>자리 표시자 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **자리 표시자 속성** 대화 상자를 사용하여 입력란 내 자리 표시자의 값, 도구 설명 및 태그 옵션을 변경할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **레이블**  
+ **Label**  
  자리 표시자의 레이블을 입력합니다. 레이블은 디자인 화면에만 표시됩니다.  
   
  **Value**  

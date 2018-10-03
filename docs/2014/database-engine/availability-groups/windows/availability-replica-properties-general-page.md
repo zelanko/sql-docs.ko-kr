@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29b53d91b1d60752a9e7ecea5d9d020ab6ab3d70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149873"
 ---
 # <a name="availability-replica-properties-general-page"></a>가용성 복제본 속성(일반 페이지)
   이 대화 상자를 사용하여 가용성 복제본의 속성을 확인할 수 있습니다.  
@@ -98,8 +95,8 @@ ms.locfileid: "37237413"
 > [!NOTE]  
 >  세션 제한 시간은 자동 장애 조치(failover)를 발생시키지 않습니다.  
   
- **끝점 URL**  
- 데이터 동기화를 위해 주 복제본과 보조 복제본 간의 연결에 사용되는 사용자 지정 데이터베이스 미러링 끝점의 문자열 표현입니다. 끝점 URL의 구문에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ **엔드포인트 URL**  
+ 데이터 동기화를 위해 주 복제본과 보조 복제본 간의 연결에 사용되는 사용자 지정 데이터베이스 미러링 엔드포인트의 문자열 표현입니다. 엔드포인트 URL의 구문에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

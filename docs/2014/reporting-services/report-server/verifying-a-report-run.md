@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - report processing [Reporting Services], verifying execution
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be05b7ef8ffde732d6bdd85fb17be6aa25683134
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e8bddd67dca8a97d0279b002784c74e9666e5a15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076523"
 ---
 # <a name="verifying-a-report-run"></a>보고서 실행 확인
   보고서 처리 상태에 대한 정보를 보려면 로그 파일을 사용하거나 보고서 관리자에서 보고서와 함께 표시되는 상태 정보를 참조할 수 있습니다.  

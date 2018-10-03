@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - statistical semantic search [SQL Server]
 - statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f00453d8540953beb1db7978c80a807a235a620
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59e94ef56028c80da3fd04432a2b23997c91a8e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215653"
 ---
 # <a name="semantic-search-sql-server"></a>의미 체계 검색(SQL Server)
   통계 의미 체계 검색은 통계적으로 관련성이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 키 구 *를 추출한 다음 인덱싱하여*데이터베이스에 저장된 구조화되지 않은 문서를 깊이 있게 검색하는 기능입니다. 그런 다음 이 키 구를 사용하여 *유사하거나 관련된 문서*를 식별한 후 인덱싱합니다.  

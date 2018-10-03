@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.preview.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4e257676ff8a20cbc29e80cde49998c67a07aee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0368fefac4c927ee1f1483ba433feb13b3c1dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182790"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125183"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 노드를 사용하여 원본 파일의 내용을 테이블 형식으로 볼 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Warning Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Warning element
 ms.assetid: a34a6caa-4b68-486b-8f50-cdc124c65888
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ace514fd6a35fb376846c659ef64b9a40d1c116d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f0dfa8e3cc45291a32885674fe5f77145aca2f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079893"
 ---
 # <a name="warning-element-xmla"></a>Warning 요소(XMLA)
   인스턴스에서 반환 된 경고에 대 한 정보가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -56,8 +53,8 @@ ms.locfileid: "37215753"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -65,7 +62,7 @@ ms.locfileid: "37215753"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[메시지](message-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="attributes"></a>특성  
   

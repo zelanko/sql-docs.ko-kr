@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - cluster security policy
 ms.assetid: 38afa421-2599-404f-8ba6-172668c6325e
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 071114e6a263a1bd956a6a8b2e240920070f8a9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b392222b8b55cc846dca66d20f70355d6778195
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185830"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162793"
 ---
 # <a name="cluster-security-policy"></a>클러스터 보안 정책
   클러스터 보안 정책 페이지를 사용하여 장애 조치(Failover) 클러스터 인스턴스의 보안 정책을 구성할 수 있습니다.  

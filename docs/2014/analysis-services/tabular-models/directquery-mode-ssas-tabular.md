@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b0badf00027259bb2203828e075a8d009deb8d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 183719983a6ea95ab545888d009d5226fe24b7dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106503"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 모드(SSAS 테이블 형식)
   Analysis Services를 사용하면 *DirectQuery 모드*를 통해 관계형 데이터베이스 시스템에서 직접 데이터 및 집계를 검색하여 테이블 형식 모델에서 데이터를 검색하고 보고서를 만들 수 있습니다. 이 항목에서는 메모리에만 있는 표준 테이블 형식 모델과 관계형 데이터 원본을 쿼리할 수 있는 테이블 형식 모델 간의 차이점을 소개하고 DirectQuery 모드에서 사용할 모델을 제작하고 배포하는 방법에 대해 설명합니다.  

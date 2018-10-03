@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], elements
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10b125c2dccff68b95ce5bd7578cb052d83d5311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 300dbf1bc32d6113349eab5fbc1fad4511a92d4c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092823"
 ---
 # <a name="control-flow"></a>제어 흐름
   패키지는 제어 흐름과 하나 이상의 데이터 흐름(선택적)으로 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 패키지의 구조를 제공하는 컨테이너, 기능을 제공하는 태스크 및 실행 개체, 컨테이너, 태스크를 정렬된 제어 흐름으로 연결하는 선행 제약 조건 등 3가지 유형의 제어 흐름 요소를 제공합니다.  

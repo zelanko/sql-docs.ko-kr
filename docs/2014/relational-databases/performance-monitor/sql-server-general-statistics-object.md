@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 48b8df37c64ea017445f1e44cd6e03603708fa86
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: db96a90e9621949c528ea707be08beb5002177fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067863"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, General Statistics 개체
   **의** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 현재 연결 수 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하고 연결을 끊은 초당 사용자 수와 같은 서버 차원의 일반적 동작을 모니터링하는 카운터를 제공합니다. 이 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 많은 수의 클라이언트가 연결하고 해제하는 대규모의 OLTP(온라인 트랜잭션 처리) 유형의 시스템에서 작업할 때 유용합니다.  

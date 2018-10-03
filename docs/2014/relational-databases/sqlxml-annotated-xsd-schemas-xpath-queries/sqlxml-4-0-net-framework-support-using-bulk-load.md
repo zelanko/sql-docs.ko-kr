@@ -1,14 +1,12 @@
 ---
-title: .NET 환경에서 SQLXML 대량 로드를 사용 하 여 | Microsoft Docs
+title: .NET 환경에서 SQLXML 대량 로드를 사용 하 여 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], XML Bulk Load
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8133a762b1bc0f687529ee375bd8e9c5699051b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b832f6d92b847ee823a350559dbc54fd35a13ec2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175883"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 환경에서 SQLXML 대량 로드 사용
   이 항목에서는 .NET 환경에서 XML 대량 로드 기능을 사용하는 방법에 대해 설명합니다. XML 대량 로드에 대 한 자세한 내용은 [XML 데이터의 대량 로드 수행 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)합니다.  
@@ -144,7 +141,7 @@ ms.locfileid: "37307483"
 9. 앞에서 만든 테이블에 XML을 로드하려면 프로젝트를 빌드하고 실행합니다.  
   
     > [!NOTE]  
-    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 예를 들어:  
+    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     c:\>tlbimp xblkld4.dll  

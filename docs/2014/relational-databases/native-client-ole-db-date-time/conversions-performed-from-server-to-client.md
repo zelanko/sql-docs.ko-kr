@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c1ec005ab299a8be40e977ccf6a3a8f318591b86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167205"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
   이 항목에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성된 클라이언트 응용 프로그램 간에 수행되는 날짜 및 시간 변환에 대해 설명합니다.  
@@ -32,8 +29,8 @@ ms.locfileid: "37430862"
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1,7|확인|-|-|1|1,3|1,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Time|5,6,7|-|9|확인|6|3,6|5,6|-|확인 (VT_BSTR)|확인|확인|4|4|  
-|Smalldatetime|7|8|9,10|10|확인|3|7|-|7 (VT_DATE)|확인|확인|4|4|  
-|DATETIME|5,7|8|9,10|10|확인|3|7|-|7 (VT_DATE)|확인|확인|4|4|  
+|Smalldatetime|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
+|DATETIME|5,7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
@@ -65,6 +62,6 @@ ms.locfileid: "37430862"
 |13|문자열이 ISO 리터럴로 구문 분석되고 대상 형식으로 변환됩니다. 실패하면 문자열이 OLE 날짜 리터럴(여기에도 시간 구성 요소가 포함되어 있음)로 구문 분석되고 OLE 날짜(DBTYPE_DATE)에서 대상 형식으로 변환됩니다. 대상이 DBTYPE_DATE 또는 DBTYPE_DBTIMESTAMP가 아닌 경우 문자열은 날짜/시간 리터럴 구문을 준수해야 합니다. 이 경우에 ISO 형식 구문 분석이 성공하려면 날짜/시간 또는 시간 리터럴이 사용되어야 합니다. OLE 구문 분석이 성공하려면 문자열이 OLE가 인식할 수 있는 구문을 준수해야 합니다. 문자열을 구문 분석할 수 없는 경우 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 범위를 벗어나는 구성 요소 값이 있으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [바인딩 및 변환 &#40;OLE DB&#41;](conversions-ole-db.md)  
+ [바인딩 및 변환&#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

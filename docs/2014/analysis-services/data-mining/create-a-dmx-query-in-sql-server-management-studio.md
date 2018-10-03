@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Analysis Services], queries
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fb9c89a18eb5336199edf9b64cdfa61255b75b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101413"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio에서 DMX 쿼리 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 마이닝 모델 및 마이닝 구조에 대해 예측 쿼리, 내용 쿼리 및 데이터 정의 쿼리를 작성하는 데 유용한 기능 집합이 있습니다.  

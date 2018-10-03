@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291399"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218153"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio)
   복제본을 가용성 그룹에 추가 마법사를 사용하여 기존 AlwaysOn 가용성 그룹에 새 보조 복제본을 쉽게 추가할 수 있습니다.  
@@ -42,13 +39,13 @@ ms.locfileid: "37291399"
   
 -   보조 복제본을 추가하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 호스트 인스턴스가 기존 복제본과 동일한 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터 내의 다른 클러스터 노드에 있는지 확인합니다. 또한 이 서버 인스턴스가 다른 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사전 요구 사항과 일치하는지도 확인합니다. 자세한 내용은 [AlwaysOn 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
--   가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 끝점을 가지고 있지 않은 경우, 마법사가 끝점을 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 끝점 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 끝점을 만들 수는 없습니다. 이 경우 가용성 그룹에 복제본 추가 마법사를 시작하기 전에 데이터 미러링 끝점을 수동으로 만드는 것이 좋습니다.  
+-   가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 엔드포인트를 가지고 있지 않은 경우, 마법사가 엔드포인트를 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만들 수는 없습니다. 이 경우 가용성 그룹에 복제본 추가 마법사를 시작하기 전에 데이터 미러링 엔드포인트를 수동으로 만드는 것이 좋습니다.  
   
      `To use certificates for a database mirroring endpoint:`  
   
      [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
-     [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+     [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   **전체 초기 데이터 동기화를 사용하기 위한 사전 요구 사항**  
   
@@ -65,7 +62,7 @@ ms.locfileid: "37291399"
 ####  <a name="Permissions"></a> Permissions  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
- 가용성 그룹에 복제본 추가 마법사에서 데이터베이스 미러링 끝점을 관리할 수 있도록 하려면 CONTROL ON ENDPOINT 권한도 필요합니다.  
+ 가용성 그룹에 복제본 추가 마법사에서 데이터베이스 미러링 엔드포인트를 관리할 수 있도록 하려면 CONTROL ON ENDPOINT 권한도 필요합니다.  
   
 
   
@@ -85,7 +82,7 @@ ms.locfileid: "37291399"
     |탭|간단한 설명|  
     |---------|-----------------------|  
     |**복제본**|이 탭에서는 새 보조 복제본을 호스팅할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정할 수 있습니다.|  
-    |**끝점**|이 탭에서는 각 새 보조 복제본에 대한 기존 데이터베이스 미러링 끝점(있는 경우)을 확인할 수 있습니다. 이 끝점이 서버 계정에서 Windows 인증을 사용하는 서버 인스턴스에 없는 경우 마법사가 끝점을 자동으로 만들도록 시도합니다. **참고:** 는 수동 서버 인스턴스를 하려면 먼저 변경 마법사를 계속 해야 하는 서버 인스턴스를 비-도메인 사용자 계정으로 실행 하는 경우. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.|  
+    |**엔드포인트**|이 탭에서는 각 새 보조 복제본에 대한 기존 데이터베이스 미러링 엔드포인트(있는 경우)를 확인할 수 있습니다. 이 엔드포인트가 서버 계정에서 Windows 인증을 사용하는 서버 인스턴스에 없는 경우 마법사가 엔드포인트를 자동으로 만들도록 시도합니다. **참고:** 는 수동 서버 인스턴스를 하려면 먼저 변경 마법사를 계속 해야 하는 서버 인스턴스를 비-도메인 사용자 계정으로 실행 하는 경우. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.|  
     |**백업 기본 설정**|이 탭에서는 현재 설정을 수정하려는 경우 가용성 그룹 전체에 대한 백업 기본 설정을 지정하고 개별 가용성 복제본에 대한 백업 우선 순위를 지정할 수 있습니다.|  
   
 6.  **초기 데이터 동기화 선택** 페이지에서 새 보조 복제본을 만들고 가용성 그룹에 조인할 방법을 선택합니다. 다음 옵션 중 하나를 선택합니다.  
@@ -115,7 +112,7 @@ ms.locfileid: "37291399"
   
      선택이 완료되었으면 필요에 따라 스크립트를 클릭하여 마법사에서 실행할 단계에 대한 스크립트를 만들 수 있습니다. 새 가용성 그룹을 만들어 구성하려면 **마침**을 클릭합니다.  
   
-9. **진행률** 페이지에 가용성 그룹을 만들기 위한 단계(끝점 구성, 가용성 그룹 만들기 및 가용성 그룹에 보조 복제본 조인)의 진행 상태가 표시됩니다.  
+9. **진행률** 페이지에 가용성 그룹을 만들기 위한 단계(엔드포인트 구성, 가용성 그룹 만들기 및 가용성 그룹에 보조 복제본 조인)의 진행 상태가 표시됩니다.  
   
 10. 이러한 단계가 완료되면 **결과** 페이지에 각 단계의 결과가 표시됩니다. 단계가 모두 성공하면 새 가용성 그룹이 완전히 구성됩니다. 단계에서 오류가 발생한 경우 구성을 수동으로 완료해야 할 수 있습니다. 주어진 오류의 원인에 대한 자세한 내용을 보려면 **결과** 열에서 연결된 "오류" 링크를 클릭합니다.  
   

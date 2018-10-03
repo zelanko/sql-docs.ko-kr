@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 50da5a57968a7304c206f2aceb2efc24239600b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0d0682e33e72686abd41e03e7936c557db740b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173113"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시(보고서 작성기 및 SSRS)
   보고서에는 보고서 데이터 창에 기본적으로 표시되지 않는 자동 생성 데이터 집합(숨겨진 데이터 집합이라고도 함)이 포함될 수도 있습니다. 이러한 데이터 집합은 다음과 같은 방법으로 생성됩니다.  

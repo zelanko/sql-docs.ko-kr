@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLFetchScroll function
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2228bb8fcbc7237fabfb0239c62f512b9a223d28
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095773"
 ---
 # <a name="fetching-result-data"></a>결과 데이터 인출
   ODBC 응용 프로그램에는 결과 데이터를 인출하기 위한 세 가지 옵션이 있습니다.  

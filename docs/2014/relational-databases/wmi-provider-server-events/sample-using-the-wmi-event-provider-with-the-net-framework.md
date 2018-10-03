@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ec2511bd6f2e1f184dd2123750bcda02a50f59cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03aa0ccec4f42832e47fcf5b819b69a5c14987b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144383"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플:.NET Framework를 사용 하 여 WMI 이벤트 공급자 사용
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플: .NET Framework에서 WMI 이벤트 공급자 사용
   다음 예에서는 WMI 이벤트 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 설치 인스턴스에서 발생하는 모든 DDL 이벤트에 대한 이벤트 데이터를 반환하는 응용 프로그램을 C#으로 만듭니다.  
   
 ## <a name="example"></a>예제  

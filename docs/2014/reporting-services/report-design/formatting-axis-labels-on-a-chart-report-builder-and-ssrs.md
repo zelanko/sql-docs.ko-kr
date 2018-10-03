@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10148"
@@ -27,16 +25,15 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 66ea4ea030bc3c80d9155a25737ec1828c97982c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181700"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185393"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
   좌표 기반 차트 종류(세로 막대형, 가로 막대형, 영역형, 점, 꺾은선형 및 범위형)에는 데이터 관계를 범주화하고 표시하는 데 사용되는 두 개의 축이 있습니다. 각 축에는 다양한 유형의 서식이 지정됩니다.  
@@ -81,7 +78,7 @@ ms.locfileid: "37181700"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>차트가 축 레이블을 계산하는 방법의 예  
  다음 표에는 세로 막대형 차트에 표시될 샘플 판매 데이터가 있습니다. 이름 필드는 범주 그룹 영역에 추가되고 수량 필드는 값 역에 추가됩니다.  
   
-|속성|수량|  
+|이름|수량|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

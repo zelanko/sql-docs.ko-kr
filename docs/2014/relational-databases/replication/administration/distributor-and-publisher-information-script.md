@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Publishers [SQL Server replication], information scripts
 - Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 917781041798660d5ca9fc0cde33ffd3c80911f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8999be5356a1d4901ce0c918530451b32ee262c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313766"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170213"
 ---
 # <a name="distributor-and-publisher-information-script"></a>배포자 및 게시자 정보 스크립트
   이 스크립트는 시스템 테이블 및 복제 저장 프로시저를 사용하여 배포자 및 게시자의 개체에 대한 일반적인 질문에 대해 응답할 수 있습니다. 스크립트는 "현재 상태로" 사용할 수 있으며 사용자 지정 스크립트의 기준도 제공할 수 있습니다. 스크립트를 사용자 환경에서 실행하려면 다음 두 가지를 수정해야 합니다.  

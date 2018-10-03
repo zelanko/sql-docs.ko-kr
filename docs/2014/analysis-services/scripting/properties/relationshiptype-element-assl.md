@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RelationshipType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3cc0ca0577b63e655c42c9b8bdcb19b1a67cb538
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271599"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096713"
 ---
 # <a name="relationshiptype-element-assl"></a>RelationshipType 요소(ASSL)
   나타냅니다 여부에 대 한 멤버 관계를 [AttributeRelationship](../objects/attributerelationship-element-assl.md) 변경할 수 있습니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37271599"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AttributeRelationship](../objects/attributerelationship-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

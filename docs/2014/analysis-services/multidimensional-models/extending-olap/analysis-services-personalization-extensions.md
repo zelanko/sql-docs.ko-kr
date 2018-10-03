@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff8ef3d5455693d19ec82b0a5905939671c03037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171664"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164863"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 이와 같이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 목표를 달성할 수 있도록 하는 기능을 제공 하는 개인 설정 확장 프로그램:  

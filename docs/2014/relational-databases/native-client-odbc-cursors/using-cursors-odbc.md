@@ -1,12 +1,10 @@
 ---
-title: 커서 사용 (ODBC) | Microsoft Docs
+title: 커서 사용 (ODBC) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - cursors [ODBC]
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee00b752236032b7123eb557e82bed12de8ecb00
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084043"
 ---
 # <a name="using-cursors-odbc"></a>커서 사용(ODBC)
   ODBC는 다음을 허용하는 커서 모델을 지원합니다.  

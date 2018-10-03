@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ExceptionMessageBox class, about ExceptionMessageBox class
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - exceptions [SQL Server]
 - messages [SQL Server], exception message box
 ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21882b1f6bb6233723a0ee7b60c7c7682abd5fa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e2417978fa053d2d6cb030149993a54013faa75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148673"
 ---
 # <a name="exception-message-box-programming"></a>예외 메시지 상자 프로그래밍
   예외 메시지 상자는와 함께 설치 되 고 사용 되는 프로그래밍 인터페이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그래픽 구성 요소입니다. 예외 메시지 상자는 지원 가능한 관리 어셈블리로, 응용 프로그램에서 이를 사용하면 메시징 환경을 더욱 효율적으로 제어할 수 있을 뿐 아니라 나중에 참조할 수 있도록 오류 메시지 내용을 저장하고 메시지에 대한 도움말을 찾는 옵션을 사용자에게 제공할 수 있습니다. 예외 메시지 상자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제외한 모든 버전의 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에서 설치되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 구성 요소가 설치되어 있는 컴퓨터에서 추가 구성 없이 사용할 수 있습니다.  

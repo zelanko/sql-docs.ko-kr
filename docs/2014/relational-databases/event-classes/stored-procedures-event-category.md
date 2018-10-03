@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server event classes, Stored Procedures event category
 - event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10b7991639dc3e6e029d78db432764b2decd0bee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 673a0a8fe6616fabd5661aa2c88406a196af9ea3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158173"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 이벤트 범주
   **Stored Procedures** 이벤트 범주는 일반 저장 프로시저 이벤트를 포함합니다.  

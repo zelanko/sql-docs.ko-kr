@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f12f91e51383607d9bbcb8dc8ce2807c71ee289
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149833"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>클라이언트 응용 프로그램에서 연결(Analysis Services)
   Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 응용 프로그램을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  

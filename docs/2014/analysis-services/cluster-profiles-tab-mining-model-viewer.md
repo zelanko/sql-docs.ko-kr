@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1b3e9bc36c75e0786f0e7de4799fd54f13120ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 663b12f2e83de016d3f1799536b8a3ed674ef544
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196083"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>클러스터 프로필 탭(마이닝 모델 뷰어)
   **클러스터 프로필** 탭을 사용하여 알고리즘이 클러스터링 모델 내에서 발견한 클러스터를 전체적으로 볼 수 있습니다. 이 탭에는 각 클러스터에서의 특성 분포와 함께 각 특성이 표시됩니다.  

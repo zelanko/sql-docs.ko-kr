@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML AUTO [SQL Server]
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
-caps.latest.revision: 15
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 578222ffcdfe7d9b73205e64528441a8300f1959
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 068346ed0adb5c74d5e892d25c2cc7b93fc57871
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096763"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>FOR XML AUTO 쿼리는 호환성 모드 90 이상에서 파생 테이블 참조를 반환합니다.
   데이터베이스 호환성 수준이 90 이상으로 설정되어 있으면 AUTO 모드에서 실행되는 FOR XML 쿼리는 파생 테이블 별칭에 대한 참조를 반환합니다. 호환성 수준이 80으로 설정되어 있으면 FOR XML AUTO 쿼리는 파생 테이블을 정의하는 기본 테이블에 대한 참조를 반환합니다.  

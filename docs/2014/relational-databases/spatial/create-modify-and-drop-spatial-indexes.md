@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122353"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
   공간 인덱스의 열에 특정 작업을 수행할 보다 효율적으로 수를 `geometry` 또는 `geography` 데이터 형식 (한 *공간 열*). 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSMS.XEDISPLAY.GROUPING.F1
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Extended Events Dialog Box
 ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92fc98d32c8fe021af008dcd1058f6e43fc2fdd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0bfce6c45fcfefd214511c994b3d87fd34bf8282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150613"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>새 세션 대화 상자를 사용하여 확장 이벤트 세션 만들기
   새 세션 대화 상자에서는 데이터를 캡처, 표시 및 분석하는 확장 이벤트 세션을 정의할 수 있습니다. 새 세션 대화 상자에는 모든 확장 이벤트 기능이 표시됩니다.  

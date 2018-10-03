@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoas.connectionproperties.f1
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f6c58a56f1ea702da8ece6d21462ee192e969a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148703"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>서버에 연결(연결 속성 페이지) Analysis Services
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 연결하거나 [!INCLUDE[ssAS](../includes/ssas-md.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssAS](../includes/ssas-md.md)]등록 시에만 이 대화 상자에 나타납니다.  

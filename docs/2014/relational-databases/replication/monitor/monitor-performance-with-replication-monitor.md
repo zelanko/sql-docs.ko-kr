@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Distribution Agent, monitoring
 - monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3472892b4206bac55e7db7eb263f3e78b3170c5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264479"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086493"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터를 사용하여 다음 방법으로 트랜잭션 복제 및 병합 복제의 성능을 모니터링할 수 있습니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: 38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6a14942e60e38405fa24f9b49e7a4ca34d72991
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225064"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>소프트 NUMA를 사용하도록 SQL Server 구성(SQL Server)
 최신 프로세서는 소켓당 여러 개에서 많은 코어를 가지고 있습니다. 일반적으로 각 소켓은 단일 NUMA 노드로 표시됩니다. SQL Server 데이터베이스 엔진은 여러 내부 구조를 분할하며 NUMA 노드에 따라 서비스 스레드를 분할합니다. NUMA (SOFT-NUMA) 일반적으로 하드웨어 NUMA 노드 분할에 소프트웨어를 사용 하 여 소켓 당 10 개 이상의 코어를 포함 하는 프로세서를 사용 하 여 확장성 및 성능 증가 합니다.   

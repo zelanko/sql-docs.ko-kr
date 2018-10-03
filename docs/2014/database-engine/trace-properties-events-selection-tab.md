@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 033cde8c84edc6ceb7b0fb9686e31b6ce98ef1c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129453"
 ---
 # <a name="trace-properties-events-selection-tab"></a>추적 속성(이벤트 선택 탭)
   **추적 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적된 이벤트 및 데이터 열의 속성을 확인하거나 지정할 수 있습니다.  

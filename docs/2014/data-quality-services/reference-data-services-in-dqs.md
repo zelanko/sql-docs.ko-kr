@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ab94654466cf739f1ee4db7d842223b1f3a31aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a8aa68ed49127f73aeb2244ab2dcb999c65c4b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149763"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
   참조 데이터는 신뢰할 수 있는 공용 도메인에서 또는 고급 상용 콘텐츠 공급자를 통해 사용할 수 있는 관련 또는 분류된 전역 데이터(엔터프라이즈의 경계를 벗어남)의 정확하고 완전한 집합을 의미합니다.  

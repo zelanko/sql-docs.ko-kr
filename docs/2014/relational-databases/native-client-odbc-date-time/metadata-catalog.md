@@ -1,27 +1,24 @@
 ---
-title: 카탈로그 메타 데이터 | Microsoft Docs
+title: 메타 데이터 카탈로그 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57a57a1df129f3d8afa07fe2359c8f794e4786a1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff7f94a0daf7ebd62286aa033c63780e25221e85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136133"
 ---
 # <a name="catalog-metadata"></a>카탈로그 메타데이터
   이 항목에서는 `SQLColumns` 및 `SQLProcedureColumns`에서 반환하는 열 메타데이터와 `SQLGetTypeInfo`에서 반환하는 데이터 형식 메타데이터에 대해 설명합니다.  

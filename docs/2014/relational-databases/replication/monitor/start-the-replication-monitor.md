@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, starting
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca5d409c49ba6361045ddd6a0412f20feb6af715
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc5946fffd3c7417aa3afa04eeecfe01123d9fcc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107209"
 ---
 # <a name="start-the-replication-monitor"></a>복제 모니터 시작
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]나 명령 프롬프트에서 복제 모니터를 시작할 수 있습니다. 복제 모니터를 시작한 후 모니터링할 하나 이상의 게시자를 추가합니다. 자세한 내용은 [복제 모니터에서 게시자 추가 및 제거](add-and-remove-publishers-from-replication-monitor.md)를 참조하세요.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdcf9d6be713b77c2fd7f3a43872026eebce5c50
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b5f05d5ccf1125544ddb59b77c2a6e542be852a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127893"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
   메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 디스크 기반 테이블과 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 지원되는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 노출 영역을 지원하지 않습니다. 지원되지 않는 기능 중 하나를 사용하려고 하면 서버에서 오류가 반환됩니다.  
@@ -38,7 +35,7 @@ ms.locfileid: "40395600"
 ## <a name="databases-that-use-in-memory-oltp"></a>메모리 내 OLTP를 사용하는 데이터베이스  
  다음 표에는 메모리 내 OLTP 데이터베이스와 관련된 오류 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드가 나열되어 있습니다.  
   
-|형식|속성|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |옵션|AUTO_CLOSE|데이터베이스 옵션 AUTO_CLOSE=ON은 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
 |옵션|ATTACH_REBUILD_LOG|CREATE 데이터베이스 옵션 ATTACH_REBUILD_LOG는 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
@@ -49,7 +46,7 @@ ms.locfileid: "40395600"
 ## <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블  
  다음 표에서는 메모리 최적화 테이블과 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|형식|속성|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |기능|ON|파일 그룹이나 파티션 구성표에는 메모리 액세스에 최적화된 테이블을 배치할 수 없습니다. `CREATE TABLE` 문에서 ON 절을 제거합니다.|  
 |데이터 형식|*데이터 형식 이름*|표시된 데이터 형식이 지원되지 않습니다. 지원되는 데이터 형식 중 하나로 형식을 바꿉니다. 자세한 내용은 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)합니다.|  
@@ -87,7 +84,7 @@ ms.locfileid: "40395600"
 ## <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스  
  다음 표에서는 메모리 최적화 테이블의 인덱스와 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|형식|속성|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |기능|필터링된 인덱스|필터링된 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 생략 된 `WHERE` 인덱스 사양에서 절.|  
 |기능|UNIQUE|고유 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 인덱스 사양에서 `UNIQUE` 인수를 제거합니다.|  
@@ -101,7 +98,7 @@ ms.locfileid: "40395600"
 ## <a name="nonclustered-hash-indexes"></a>비클러스터형 해시 인덱스  
  다음 표에서는 비클러스터형 해시 인덱스와 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|형식|속성|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |옵션|ASC/DESC|비클러스터형 해시 인덱스가 정렬되지 않습니다. 인덱스 키 사양에서 `ASC` 및 `DESC` 키워드를 제거합니다.|  
   
@@ -202,7 +199,7 @@ ms.locfileid: "40395600"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 액세스하는 트랜잭션  
  다음 표에서는 메모리 최적화 테이블에 액세스하는 트랜잭션과 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|형식|속성|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |기능|저장점(savepoint)|메모리 최적화 테이블에 액세스하는 트랜잭션에서 명시적인 저장점을 만드는 작업은 지원되지 않습니다.|  
 |기능|바운드 트랜잭션|바운드 세션은 메모리 최적화 테이블에 액세스하는 트랜잭션에 참여할 수 없습니다. 프로시저를 실행하기 전에 세션을 바인딩하지 마십시오.|  

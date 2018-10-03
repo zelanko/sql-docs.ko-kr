@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.generatechangescript
 - vdtsql.chm:65544
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e44403c04ab248353149fb3c507c797b4068a73
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: fab36387f9eac719190186d3257dc3426677bf96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179183"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>변경 스크립트 저장 대화 상자(Visual Database Tools)
   이 대화 상자에는 테이블을 마지막으로 저장한 후에 변경한 내용에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트가 표시됩니다. 이 대화 상자를 사용하여 선택한 위치에 텍스트 파일로 스크립트를 저장할 수도 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.Summary.f1
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067883"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>마법사를 사용하여 확장 이벤트 세션을 만들기(개체 탐색기)
   서버의 이벤트를 손쉽게 선택하고 캡처할 수 있도록 확장 이벤트에는 확장 이벤트 세션을 만드는 단계를 안내해 주는 새 세션 마법사가 포함되어 있습니다. 새 세션 마법사에는 대부분의 확장 이벤트 기능이 표시됩니다. [새 세션 대화 상자](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) 에서는 데이터를 캡처, 표시 및 분석하는 확장 이벤트 세션을 정의할 수 있습니다. 새 세션 대화 상자에는 모든 확장 이벤트 기능이 표시됩니다.  

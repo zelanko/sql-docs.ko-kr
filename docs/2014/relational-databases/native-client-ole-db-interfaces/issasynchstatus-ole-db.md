@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - ISSAsynchStatus interface
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a112c19d78c4d59b68ea5896109f88a101aaad13
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115023"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus(OLE DB)
   **ISSAsynchStatus** 에 대 한 지원을 노출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비동기 작업입니다. 이 인터페이스는 선택적 인터페이스이며 핵심 OLE DB 인터페이스인 **IDBAsynchStatus**에서 상속됩니다. **ISSAsynchStatus** 는 **IDBAsynchStatus** 에서 상속된 **Abort**및 **GetStatus** 메서드 이외에도 비동기 작업이 완료되거나 제한 시간이 초과될 때까지 대기하는 데 사용되는 새 메서드를 제공합니다.  
@@ -40,7 +37,7 @@ ms.locfileid: "37413412"
   
  다음 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 비동기적인 실행을 사용할 수 있습니다.  
   
--   **Icommand:: Execute**  
+-   **ICommand::Execute**  
   
 -   **IOpenRowset::OpenRowset**  
   

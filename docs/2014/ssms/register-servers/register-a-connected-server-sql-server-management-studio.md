@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8642792984041c225aa0a3179abf5fc275c30f7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 69590fd24ddad600074cc5feedc06badabb2399b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225623"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 서버를 등록하는 방법에 대해 설명합니다. 서버를 등록하면 자주 액세스하는 서버에 대한 연결 정보를 저장할 수 있습니다. 개체 탐색기에서 연결하기 전이나 연결할 때 서버를 등록할 수 있습니다.  

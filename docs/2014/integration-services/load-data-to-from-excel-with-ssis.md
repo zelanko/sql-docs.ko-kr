@@ -5,20 +5,18 @@ ms.date: 04/10/2018
 ms.prod: sql-server-2014
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: ''
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88615f87b31b1c95cd9afc9dc8d915df2995267c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098522"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
@@ -51,7 +49,7 @@ Microsoft Access 2016 *런타임*이 아닌 Access 데이터베이스 엔진 201
 
 컴퓨터에 32비트 버전의 Office가 이미 설치되어 있는 경우 32비트 버전의 구성 요소를 설치해야 합니다. 또한 32비트 모드에서 SSIS 패키지를 실행하거나 가져오기 및 내보내기 마법사의 32비트 버전을 실행하는지 확인해야 합니다.
 
-Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 예를 들어:
+Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

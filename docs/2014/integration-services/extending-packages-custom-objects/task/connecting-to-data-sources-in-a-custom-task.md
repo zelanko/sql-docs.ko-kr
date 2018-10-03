@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - connections [Integration Services], external data sources
 - SSIS custom tasks, external data sources
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 091dc8ad646f1893dfdf5eb57b5f8b63f34caf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ff4f311a69022be575253622bbb35d0ff3a76cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080573"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>사용자 지정 태스크에서 데이터 원본에 연결
   태스크는 연결 관리자를 통해 외부 데이터 원본에 연결하여 데이터를 검색하거나 저장합니다. 디자인 타임에 연결 관리자는 논리적 연결을 나타내며 서버 이름 및 인증 속성과 같은 주요 정보를 설명합니다. 런타임에 태스크에서는 연결 관리자의 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 메서드를 호출하여 데이터 원본에 대한 실제 연결을 설정합니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], stopping
 - stopping traces
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9df984950c730b94527811f9f2ea3cca3ff220d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b51fa35e63cd4c6445108136f62fde6e20515fce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204853"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>추적 중지(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 실행 중인 추적을 중지하는 방법에 대해 설명합니다.  

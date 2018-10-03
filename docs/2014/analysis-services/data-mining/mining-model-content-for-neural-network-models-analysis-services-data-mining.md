@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218703"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>신경망 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 Microsoft 신경망 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -193,7 +190,7 @@ ms.locfileid: "37280459"
  신경망 모델의 경우 항상 비어 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
- 신경망 모델의 학습 목적은 입력에서 중간점 및 중간점에서 끝점으로의 각 전환과 연결된 가중치를 확인하는 것입니다. 따라서 모델의 입력 계층은 주로 모델을 작성하는 데 사용된 실제 값을 저장하기 위해 존재합니다. 숨겨진 계층은 계산된 가중치를 저장하며 입력 특성에 대한 포인터를 제공합니다. 출력 계층은 예측 가능한 값을 저장하며 숨겨진 계층의 중간점에 대한 포인터를 제공합니다.  
+ 신경망 모델의 학습 목적은 입력에서 중간점 및 중간점에서 엔드포인트로의 각 전환과 연결된 가중치를 확인하는 것입니다. 따라서 모델의 입력 계층은 주로 모델을 작성하는 데 사용된 실제 값을 저장하기 위해 존재합니다. 숨겨진 계층은 계산된 가중치를 저장하며 입력 특성에 대한 포인터를 제공합니다. 출력 계층은 예측 가능한 값을 저장하며 숨겨진 계층의 중간점에 대한 포인터를 제공합니다.  
   
 ##  <a name="bkmk_NodeIDs"></a> 노드 이름 및 ID 사용  
  신경망 모델의 노드 이름은 노드 유형에 대한 추가 정보를 제공하므로 이를 통해 숨겨진 계층과 입력 계층의 관계 및 출력 계층과 숨겨진 계층의 관계를 쉽게 이해할 수 있습니다. 다음 표에서는 각 계층의 노드에 할당되는 ID의 규칙을 보여 줍니다.  

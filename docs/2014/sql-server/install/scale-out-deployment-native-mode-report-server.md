@@ -4,35 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151804"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099943"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>확장 배포(기본 모드 보고서 서버)
-  사용 된 **스케일 아웃 배포** 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 대 한 초기화 상태를 보거나 보고서 서버 스케일 아웃 배포에 조인 하는 Configuration Manager입니다. 
-            *스케일 아웃 배포* 는 단일 보고서 서버 데이터베이스를 공유하는 두 개 이상의 보고서 서버 인스턴스를 말합니다.  
+  사용 된 **스케일 아웃 배포** 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 대 한 초기화 상태를 보거나 보고서 서버 스케일 아웃 배포에 조인 하는 Configuration Manager입니다. *스케일 아웃 배포* 는 단일 보고서 서버 데이터베이스를 공유하는 두 개 이상의 보고서 서버 인스턴스를 말합니다.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
  *초기화된 보고서 서버* 는 보고서 서버 데이터베이스에 저장된 중요한 데이터를 암호화 및 해독할 수 있는 서버입니다(저장된 자격 증명 및 연결 문자열은 암호화되어 데이터베이스에 저장됨). 보고서 서버 작업을 위해서는 보고서 서버 초기화가 필요합니다.  
   
- 
-            *스케일 아웃 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
+ *스케일 아웃 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
   
 -   서버 클러스터에 있는 여러 보고서 서버의 부하 분산을 위한 선행 조건. 여러 보고서 서버의 부하를 분산하려면 먼저 같은 보고서 서버 데이터베이스를 공유하도록 구성해야 합니다.  
   
@@ -70,8 +65,7 @@ ms.locfileid: "37151804"
      이미 스케일 아웃 배포에 하위 보고서 서버인 경우 이 페이지를 사용하여 노드를 추가하거나 제거할 수 있습니다.  
   
  **초기화**  
- 스케일 아웃 배포에 보고서 서버를 추가하려면 **초기화** 를 클릭합니다. 이 단계에서는 공유 보고서 서버 데이터베이스의 대칭 키를 사용하도록 보고서 서버를 구성합니다. 
-            **초기화** 를 사용하여 보고서 서버 인스턴스를 스케일 아웃 배포에 추가하거나 마이그레이션 또는 설치 문제를 해결할 수 있습니다.  
+ 스케일 아웃 배포에 보고서 서버를 추가하려면 **초기화** 를 클릭합니다. 이 단계에서는 공유 보고서 서버 데이터베이스의 대칭 키를 사용하도록 보고서 서버를 구성합니다. **초기화** 를 사용하여 보고서 서버 인스턴스를 스케일 아웃 배포에 추가하거나 마이그레이션 또는 설치 문제를 해결할 수 있습니다.  
   
  보고서 서버 인스턴스는 공유 보고서 서버 데이터베이스 연결이 이미 구성된 경우에만 사용할 수 있습니다. 또한 보고서 서버 데이터베이스를 사용하도록 이미 초기화된 보고서 서버를 초기화해야 합니다.  
   

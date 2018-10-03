@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - aggregate queries [SQL Server]
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19aca7390b0e7b56b9fecf568bb17820777dc680
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8671fb9fe3de95d4480f7f293668dd124d2cc3a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127924"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>집계 쿼리에서 열 작업(Visual Database Tools)
   집계 쿼리를 만드는 경우 [쿼리 및 뷰 디자이너](visual-database-tools.md) 에서는 특정 가정을 만들어 유효한 쿼리를 만들 수 있도록 합니다. 예를 들어 집계 쿼리를 만들 때 출력할 데이터 열을 표시하면 쿼리 및 뷰 디자이너가 이 열을 자동으로 GROUP BY 절의 일부로 만들기 때문에 요약에서 개별 행의 내용을 실수로 표시할 염려가 없습니다.  

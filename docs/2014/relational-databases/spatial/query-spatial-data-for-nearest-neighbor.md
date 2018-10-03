@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 361c4e6fe070170163b5e14f1b061467bab96186
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c70c341317648f6d981f40b38d39d2f2ab4b533
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227145"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164723"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>가장 인접한 항목의 공간 데이터 쿼리
   공간 데이터에 사용되는 일반적인 쿼리는 가장 인접한 항목 쿼리입니다. 가장 인접한 항목 쿼리는 특정 공간 개체에 가장 가까운 공간 개체를 찾는 데 사용됩니다. 예를 들어 웹 사이트에 대한 상점 로케이터는 고객 위치와 가장 가까운 상점 위치를 찾아야 하는 경우가 많습니다.  

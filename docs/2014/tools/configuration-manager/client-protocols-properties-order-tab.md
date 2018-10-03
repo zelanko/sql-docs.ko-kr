@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 548618493dda207f0afdd75f25f8fe8a9b684f3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ac11110cb5f59886105443e0a6730f1396c0393
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091539"
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
   **클라이언트 프로토콜 속성** 대화 상자의 **순서** 페이지를 사용하여 클라이언트 프로토콜을 확인하고 설정할 수 있습니다.  
