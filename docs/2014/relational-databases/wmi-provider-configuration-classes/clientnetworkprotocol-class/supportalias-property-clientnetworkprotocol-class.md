@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SupportAlias Property (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SupportAlias property
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bd18c837ca94878887bdf30fc0412dddff59cb83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bfb677ba05bc5303c706d65dd2dda70eb67d23d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082573"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 속성(ClientNetworkProtocol 클래스)
   현재 네트워크에 지정 된 프로토콜 여부를 지정 하는 부울 속성을 가져옵니다 합니다 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md) 별칭을 지원 합니다.  

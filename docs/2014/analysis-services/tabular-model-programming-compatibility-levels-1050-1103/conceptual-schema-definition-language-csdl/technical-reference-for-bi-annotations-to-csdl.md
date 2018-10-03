@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e0a166f1c81b9e010d7e9cfd7a0547c3a4b9c72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094193"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>CSDL용 BI 주석에 대한 기술 참조
   이 섹션에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 나타내는 데 사용되는 CSDL의 요소, 특성 및 속성을 보여 줍니다. 일부 요소는 새로 추가된 요소이고, 나머지는 BI 확장을 지원하도록 주석이 추가되거나 확장된 요소입니다.  

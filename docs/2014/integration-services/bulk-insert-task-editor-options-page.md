@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 105c9b66e82c4c5dee12bbe8f54d60b960032a70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146323"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>대량 삽입 태스크 편집기(옵션 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **옵션** 페이지를 사용하여 대량 삽입 작업에 대한 옵션을 설정할 수 있습니다. 대량 삽입 태스크는 대량의 데이터를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블 또는 뷰로 복사합니다.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e056baf1edf447b0ed321406af12f9260dfcdd12
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48442ba8e5d17a652f60aaebb24040345bda474f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055393"
 ---
 # <a name="property-element-csdlbi"></a>Property 요소(CSDLBI)
   CSDLBI의 Property 요소는 비즈니스 인텔리전스 데이터 모델을 지원하여 CSDL Property 요소에 대한 추가 기능을 제공하는 복합 유형입니다.  
@@ -28,10 +25,10 @@ ms.locfileid: "37280039"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 CSDLBI Property 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |내용|아니요|요청의 LCID를 포함하는 문자열입니다.|  
-|DefaultAggregationFunction|예|다른 기능을 지정하지 않고 특성으로 계산할 때 사용해야 하는 집계 기능을 지정하는 문자열입니다.<br /><br /> 이 특성을 지정하지 않으면 모델에 대한 기본 집계가 사용됩니다(일반적으로 SUM).|  
+|DefaultAggregationFunction|사용자 계정 컨트롤|다른 기능을 지정하지 않고 특성으로 계산할 때 사용해야 하는 집계 기능을 지정하는 문자열입니다.<br /><br /> 이 특성을 지정하지 않으면 모델에 대한 기본 집계가 사용됩니다(일반적으로 SUM).|  
 |GroupingBehavior|아니요|쿼리 결과를 그룹화하는 방법을 지정하는 값입니다. 이 특성의 내용은 TGroupingBehavior 단순 유형에 따라 정의됩니다(아래 표 참조).|  
 |OrderBy|아니요|해당 속성 값의 정렬 순서를 정의하는 모델 내 다른 속성에 대한 참조입니다.<br /><br /> 두 속성의 값이 일대일로 매핑되어야 합니다. 그러지 않으면 정렬 동작이 정의되지 않습니다.<br /><br /> 이 요소를 생략하면 값을 기준으로 속성이 정렬됩니다.|  
 |안정성|아니요|새로 고침 작업 사이에 속성 값의 안정성을 지정하는 특성입니다.<br /><br /> 이 특성은 사용자가 설정하지 않으며 불안정한 값에 대해서만 디자인 타임 환경에서 내보냅니다. 이 특성은 행 번호가 포함된 열과, NOW() 또는 RAND()와 같이 확정되지 않은 결과를 생성하는 특정 수식이 포함된 열에 항상 적용됩니다.<br /><br /> Stabilitysimple 유형을 설명하는 아래 표에 이 특성의 값이 나열되어 있습니다.|  

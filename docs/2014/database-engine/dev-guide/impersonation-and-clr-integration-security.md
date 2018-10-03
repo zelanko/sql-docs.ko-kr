@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - user impersonation [CLR integration]
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2695445caee79ee2248a6855bb36349b6ff5f644
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088063"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>가장 및 CLR 통합 보안
   관리 코드에서 외부 리소스를 액세스할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 루틴이 실행되고 있는 현재 실행 컨텍스트를 자동으로 가장하지 않습니다. `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리의 코드에서는 현재 실행 컨텍스트를 명시적으로 가장할 수 있습니다.  

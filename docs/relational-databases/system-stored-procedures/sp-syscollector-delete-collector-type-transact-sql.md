@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_delete_collector_type (Transact SQL) | Microsoft Docs
+title: sp_syscollector_delete_collector_type (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6161667473e001fe596d073f8f16aa1022bd969
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738321"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +43,21 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
 ## <a name="arguments"></a>인수  
  [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- 수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier** 경우 값이 있어야 하 고 *이름* 은 NULL입니다.  
+ 수집기 유형의 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier** 경우 값이 있어야 하 고 *이름* NULL입니다.  
   
  [ **@name =** ] **'***name***'**  
- 수집기 유형의 이름입니다. *이름* 은 **sysname** 경우 값이 있어야 하 고 *collector_type_uid* 은 NULL입니다.  
+ 수집기 유형의 이름입니다. *이름* 됩니다 **sysname** 하는 경우 값이 있어야 하 고 *collector_type_uid* NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  어느 *collector_type_uid* 또는 *이름* 해야 값, 둘 다 NULL 일 수 없습니다.  
   
  이 수집기 형식의 컬렉션 항목이 있으면 이 프로시저에서 오류가 발생됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **dc_admin** (EXECUTE 권한 있음)와이 프로시저를 실행 하는 고정된 데이터베이스 역할.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **dc_admin** (EXECUTE 권한 있음)와이 프로시저를 실행 하려면 고정된 데이터베이스 역할.  
   
 ## <a name="example"></a>예제  
  이 예에서는 일반 T-SQL 쿼리 수집기 형식을 삭제합니다.  
@@ -72,7 +68,7 @@ GO
 EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   

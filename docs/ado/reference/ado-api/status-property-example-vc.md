@@ -1,32 +1,29 @@
 ---
-title: 상태 속성 예제 (VC + +) | Microsoft Docs
+title: Status 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 107eb797ac6c7ffbc0ee461e27c4747211b1f614
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8848497ed90909079b9c0142bc570f00466110b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281992"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851463"
 ---
-# <a name="status-property-example-vc"></a>상태 속성 예제 (VC + +)
-사용 하 여이 예제는 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 합니다.  
+# <a name="status-property-example-vc"></a>Status 속성 예제(VC++)
+이 예제에서는 합니다 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 하는 속성입니다.  
   
 ```  
 // BeginStatusCpp.cpp  

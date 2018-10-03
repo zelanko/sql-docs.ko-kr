@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e8da941588b466aeaf690214dfee836718569a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110065"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
   **sqlmaint** 유틸리티는 하나 이상의 데이터베이스에서 지정한 유지 관리 작업을 수행합니다. **sqlmaint** 를 사용하여 DBCC 검사를 실행하고 데이터베이스 및 트랜잭션 로그를 백업하고 통계를 업데이트하고 인덱스를 다시 만들 수 있습니다. 모든 데이터베이스 유지 관리 작업은 지정된 텍스트 파일, HTML 파일 또는 전자 메일 계정으로 보낼 수 있는 보고서를 만듭니다. **sqlmaint** 는 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 만든 데이터베이스 유지 관리 계획을 실행합니다. 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유지 관리 계획을 실행하려면 [dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)를 사용합니다.  
@@ -206,8 +203,7 @@ dbname_log_yyyymmddhhmm.BAK
  디스크 백업의 경우 백업을 만든 후 시간 간격이 \<*time_period*>를 초과하면 백업 디렉터리에 있는 모든 백업 파일을 삭제하도록 지정합니다.  
   
  **-CrBkSubDir**  
- 디스크 백업의 경우 *-UseDefDir*도 지정했으면 [ **backup_path** ] 디렉터리나 기본 백업 디렉터리에 하위 디렉터리를 만들도록 지정합니다. 하위 디렉터리의 이름은 **-D**에 지정된 데이터베이스 이름을 사용하여 생성됩니다. 
-  **-CrBkSubDir** 을 사용하면 *backup_path* 매개 변수를 변경할 필요 없이 다른 데이터베이스의 모든 백업을 별도의 하위 디렉터리에 쉽게 넣을 수 있습니다.  
+ 디스크 백업의 경우 *-UseDefDir*도 지정했으면 [ **backup_path** ] 디렉터리나 기본 백업 디렉터리에 하위 디렉터리를 만들도록 지정합니다. 하위 디렉터리의 이름은 **-D**에 지정된 데이터베이스 이름을 사용하여 생성됩니다. **-CrBkSubDir** 을 사용하면 *backup_path* 매개 변수를 변경할 필요 없이 다른 데이터베이스의 모든 백업을 별도의 하위 디렉터리에 쉽게 넣을 수 있습니다.  
   
  **backup_path**  
  디스크 백업의 경우 기본 백업 디렉터리에 백업 파일을 만들도록 지정합니다. 둘 다 지정한 경우**UseDefDir** 이 *backup_path* 보다 우선 적용됩니다. 기본 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설정을 사용하는 경우 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup입니다.  

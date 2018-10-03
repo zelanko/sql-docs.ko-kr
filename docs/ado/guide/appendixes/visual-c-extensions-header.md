@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d4b5c823cb992d6b3895740d4c227ae82b30c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4dd004d781f267fdc9872dbab32fefe4352558cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270152"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741291"
 ---
-# <a name="visual-c-extensions-header"></a>Visual c + + 확장 헤더
-다음 헤더 **icrsint.h**, 클라이언트가에서 필드를 검색 하도록 허용 하는 인터페이스에 자세히 설명 된 **레코드 집합** 에서 파생 된 클래스에 정의 된 변수로 **CADORecordBinding**. 에 액세스 하려면 각 필드에 대 한 ADO 바인딩 매크로 지정 해야 합니다.  
+# <a name="visual-c-extensions-header"></a>Visual C++ 확장 헤더
+다음 헤더를 **icrsint.h**, 클라이언트가에서 필드를 검색 하도록 허용 하는 인터페이스에 자세히 설명 된 **레코드 집합** 에서 파생 된 클래스에 정의 된 변수로 **CADORecordBinding**. 액세스 하려는 각 필드에 대 한 ADO 바인딩을 매크로 지정 해야 합니다.  
   
 ```  
 #ifndef _ICRSINT_H_  

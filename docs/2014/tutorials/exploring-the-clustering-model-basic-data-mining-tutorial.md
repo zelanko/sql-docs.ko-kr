@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35cbe12526fbd8ead78132f8560368b62e50aa61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147773"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>클러스터링 모델 탐색(기본 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 경우 비슷한 특징을 가진 클러스터로 그룹화 하는 클러스터링 알고리즘입니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  

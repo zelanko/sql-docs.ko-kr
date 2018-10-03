@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 08b61386de48d83b9d845d57dd831fff68b9ee2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a393a77951d28b8960c268745b3f02f500d563b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168323"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드
   이전에 구성한 DQS 인스턴스에 SQL Server 업데이트(패치, 핫픽스 또는 누적 업데이트)를 설치한 후에 **upgrade** 명령줄 매개 변수로 DQSInstaller.exe 파일을 실행하여 DQS 데이터베이스를 업그레이드해야 할 수 있습니다. 그렇지 않으면 Data Quality 클라이언트를 사용하여 Data Quality Server에 연결하려고 할 때 다음과 같은 오류 메시지가 나타날 수 있습니다.  

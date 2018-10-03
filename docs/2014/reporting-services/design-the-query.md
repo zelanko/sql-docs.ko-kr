@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8eae5e75ec1573faf906b359c7a3314fb513887c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159343"
 ---
 # <a name="design-the-query"></a>쿼리 디자인
   보고서 마법사의 쿼리 디자인 페이지를 사용하여 쿼리를 수동으로 입력하거나 쿼리 작성기에서 대화형으로 쿼리를 작성하거나 다른 보고서에서 쿼리를 가져오는 방법을 통해 쿼리를 만들 수 있습니다.  

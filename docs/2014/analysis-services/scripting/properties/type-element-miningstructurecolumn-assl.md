@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (MiningStructureColumn)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: ce999716-9487-4348-bc42-270a2026a452
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30ce9327fb28e9f452e643ded604f2a8dd72a084
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea27ce8418922be1e92200aa3426b280fac76ace
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148613"
 ---
 # <a name="type-element-miningstructurecolumn-assl"></a>Type 요소(MiningStructureColumn)(ASSL)
   형식을 포함 합니다 [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37304243"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37304243"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

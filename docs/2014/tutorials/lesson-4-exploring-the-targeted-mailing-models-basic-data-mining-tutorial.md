@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147321"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>4단원: 타겟 메일링 모델 탐색(기본 데이터 마이닝 자습서)
   프로젝트의 모델이 처리되면 이러한 모델을 탐색하여 관심 있는 추세를 찾아볼 수 있습니다. 숫자만 보는 경우 패턴이 복잡하고 어려울 수 있기 때문에 SQL Server 데이터 마이닝은 데이터를 조사하고 알고리즘이 데이터 내에서 발견한 규칙과 관계를 이해하는 데 도움을 주는 몇 가지 시각적 도구를 제공합니다. 또한 다양한 정확도 테스트를 사용하여 데이터 집합의 유효성을 검사하거나 모델을 배포하기 전에 성능이 가장 뛰어난 모델을 찾을 수 있습니다.  

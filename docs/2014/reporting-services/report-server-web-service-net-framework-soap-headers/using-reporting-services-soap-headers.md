@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SOAP [Reporting Services], headers
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7a8a563b9265fa53e55c8625fd5123aa90cda23b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 247233e90e5fa35cbaacd905d208f07f15e850bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083863"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Reporting Services SOAP 헤더 사용
   SOAP를 사용한 웹 서비스 메서드와의 통신은 표준 형식을 따릅니다. 이 형식의 일부는 XML 문서로 인코딩되는 데이터입니다. XML 문서는 루트 **Envelope** 요소로 구성되고, 이것은 다시 필수 **Body** 요소와 선택적 **Header** 요소로 구성됩니다. **Body** 요소는 메시지 관련 데이터를 포함합니다. 선택적 **Header** 요소는 특정 메시지와 직접 관련되지 않은 추가 정보를 포함할 수 있습니다. **Header** 요소의 각 자식 요소를 SOAP 헤더라고 합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067923"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
   *기능 선택* 도구와 입력 처리 및 분석을 위해 관리 하기 쉬운 크기로 줄이는 데 사용할 수 있는 기법을 설명 하기 위해 데이터 마이닝에서 일반적으로 사용 하는 용어입니다. 기능 선택은 뿐 아니라 *카디널리티 감소가*, 즉, 모델 뿐만 아니라 특성, 즉 선택 빌드할 때 고려할 수 있는 특성의 수에는 임의의 또는 미리 정의 된 구분 나아가 분석가 또는 모델링 도구가 적극적으로 선택 하거나 분석의 유용성을 기반으로 특성을 삭제 합니다.  

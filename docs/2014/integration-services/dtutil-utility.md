@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e565c0750db83191273c66978ae1b1816d1c1d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149173"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   합니다 **dtutil** 명령 p1ompt 유틸리티를 사용 하 여 관리 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 저장소 유형은 `/SQL`, `/FILE` 및 `/DTS` 옵션으로 식별됩니다.  

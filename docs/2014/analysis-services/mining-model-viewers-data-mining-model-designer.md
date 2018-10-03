@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7890360221f3adae73efef7a58ae1179e19760a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293633"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152810"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>마이닝 모델 뷰어(데이터 마이닝 모델 디자이너)
   **마이닝 모델 뷰어** 탭을 사용하여 마이닝 구조에 포함된 마이닝 모델을 탐색할 수 있습니다.  

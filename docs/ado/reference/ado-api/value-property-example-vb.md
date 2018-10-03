@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 008ac421a9b99f6d0365f84556609ba52b37f0fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282732"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758761"
 ---
-# <a name="value-property-example-vb"></a>값 속성 예제 (VB)
-이 예제에서는 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체에 대 한 필드 및 속성 값을 표시 하 여는 ***직원*** 테이블입니다.  
+# <a name="value-property-example-vb"></a>Value 속성 예제(VB)
+이 예제에서는 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성과 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 에 대 한 필드 및 속성 값을 표시 하 여 개체를 ***직원*** 테이블입니다.  
   
 ```  
 'BeginValueVB  
@@ -106,5 +103,5 @@ End Sub
   
 ## <a name="see-also"></a>관련 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [속성 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 속성(ADO)](../../../ado/reference/ado-api/value-property-ado.md)

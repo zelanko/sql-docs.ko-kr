@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dbe4128fb05732af795ff689c56c78a5066e862
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086443"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM을 사용하여 데이터를 증분식으로 주고받기(ODBC)
   이 예제에서는 FILESTREAM 기능을 사용하여 SQLPutData 및 SQLGetData로 데이터를 증분식으로 주고받는 방법을 보여 줍니다.  

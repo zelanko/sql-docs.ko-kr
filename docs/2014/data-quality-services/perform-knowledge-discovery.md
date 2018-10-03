@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 172dfee131d4452e2d3adae7a3e8854591a8c0a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076053"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
   이 항목에서는 기술 자료 검색을 통해 기술 자료를 구축하는 방법에 대해 설명합니다. 검색 프로세스에서 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )는 컴퓨터 기반 프로세스를 통해 예제 데이터 원본의 데이터를 분석해서 얻은 정보를 기술 자료에 추가합니다. 이러한 정보는 기술 자료 검색 작업의 **도메인 값 관리** 단계 또는 도메인 관리 작업에서 수정하고 개선할 수 있습니다.  

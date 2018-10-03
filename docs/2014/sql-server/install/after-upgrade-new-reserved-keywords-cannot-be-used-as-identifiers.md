@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keywords [SQL Server], after upgrade
 - keywords [SQL Server], reserved
 - keywords [SQL Server]
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc7569837d0442b23e16c365ea1076b734f23892
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1a4078161203f335c295a660e7bd4e8e3e18ea0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150443"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>업그레이드 후 새 예약 키워드는 식별자로 사용할 수 없습니다.
   업그레이드 관리자가 예약 키워드 사용을 감지했습니다. 예약 키워드는 구분 기호로 구분하지 않는 한 식별자나 개체 이름으로 사용될 수 없습니다.  

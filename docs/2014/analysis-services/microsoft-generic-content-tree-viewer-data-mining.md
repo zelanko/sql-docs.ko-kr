@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.contentviewer.f1
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85c2cccfe0d5b578c0faa359ca3c276b654aaa21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dff4254252523096b187bb2894782fe9eea523be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066960"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 일반 콘텐츠 트리 뷰어(데이터 마이닝)
   **Microsoft 일반 콘텐츠 트리 뷰어** 에는 표준화된 HTML 테이블 형식으로 데이터 마이닝 모드의 콘텐츠에 대한 세부 정보가 표시됩니다. 이 뷰는 모델의 기본 구조뿐만 아니라 계수, 값 분포 등에 대한 세부 정보를 표시하기 때문에 유용합니다.  

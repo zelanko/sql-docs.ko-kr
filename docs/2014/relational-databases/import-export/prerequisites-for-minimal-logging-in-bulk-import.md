@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimal logging [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 956b1af15c2356225d9429bccad6a8d1f4f515e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 858789f7954d21c59db3d7221f23d1f429e1c5dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172804"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072223"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
   전체 복구 모델을 사용하는 데이터베이스의 경우 대량 가져오기로 수행되는 모든 행 삽입 작업이 트랜잭션 로그에 기록됩니다. 전체 복구 모델을 사용할 경우 많은 양의 데이터를 가져오면 트랜잭션 로그가 빨리 채워질 수 있습니다. 이와 달리 단순 복구 모델 또는 대량 로그 복구 모델에서 대량 가져오기 작업의 로깅을 최소화하면 대량 가져오기 작업에 의해 로그 공간이 채워질 가능성이 줄어듭니다. 또한 최소 로깅은 전체 로깅보다 효율적입니다.  

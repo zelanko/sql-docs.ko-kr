@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - mirror database [SQL Server]
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
-caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154943"
 ---
 # <a name="database-mirroring-sql-server"></a>데이터베이스 미러링(SQL Server)
     
@@ -209,7 +206,7 @@ ms.locfileid: "37233893"
   
  또 다른 예로 서버 인스턴스가 자동 장애 조치 있는 보호 우선 모드에서 실행 중인 둘 이상의 데이터베이스에 대해 주 서버가 된다고 가정합니다. 서버 인스턴스가 실패하면 모든 데이터베이스는 해당하는 각 미러 데이터베이스에 대해 자동으로 장애 조치(Failover)를 수행합니다.  
   
- 서버 인스턴스가 파트너 및 미러링 모니터 두 가지 모두로 작동하도록 설정하는 경우 데이터베이스 미러링 끝점이 두 역할을 모두 지원해야 합니다. 자세한 내용은 [데이터베이스 미러링 끝점&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)) 또한 리소스 충돌을 줄이기 위해 시스템에 충분한 리소스가 있어야 합니다.  
+ 서버 인스턴스가 파트너 및 미러링 모니터 두 가지 모두로 작동하도록 설정하는 경우 데이터베이스 미러링 엔드포인트가 두 역할을 모두 지원해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)) 또한 리소스 충돌을 줄이기 위해 시스템에 충분한 리소스가 있어야 합니다.  
   
 > [!NOTE]  
 >  미러된 데이터베이스는 서로 독립적이므로 여러 데이터베이스에 대한 장애 조치를 하나의 그룹으로 처리할 수 없습니다.  
@@ -223,7 +220,7 @@ ms.locfileid: "37233893"
  자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 일시 중지 및 재개&#40;SQL Server&#41;](database-mirroring-sql-server.md)을 참조하세요.  
   
 ##  <a name="SettingUpDbmSession"></a> 데이터베이스 미러링 세션 설정  
- 미러링 세션을 시작하려면 먼저 데이터베이스 소유자 또는 시스템 관리자가 미러 데이터베이스를 만들고 끝점과 로그인을 설정해야 하며 경우에 따라서는 인증서를 만들고 설정해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)을 참조하세요.  
+ 미러링 세션을 시작하려면 먼저 데이터베이스 소유자 또는 시스템 관리자가 미러 데이터베이스를 만들고 엔드포인트와 로그인을 설정해야 하며 경우에 따라서는 인증서를 만들고 설정해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)을 참조하세요.  
   
 ##  <a name="InterOp"></a> 다른 데이터베이스 엔진 기능과의 상호 운용성 및 공존성  
  데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
@@ -252,8 +249,8 @@ ms.locfileid: "37233893"
  [데이터베이스 미러링 중에 발생 가능한 오류](possible-failures-during-database-mirroring.md)  
  데이터베이스 미러링 세션에서 오류를 발생시킬 수 있는 물리적 문제, 운영 체제 문제 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제(하드 오류 및 소프트 오류 포함)에 대해 설명합니다. 미러링 시간 제한 메커니즘이 소프트 오류에 대처하는 방식에 대해서도 설명합니다.  
   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
- 데이터베이스 미러링 끝점의 작동 방법에 대해 설명합니다.  
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)  
+ 데이터베이스 미러링 엔드포인트의 작동 방법에 대해 설명합니다.  
   
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
  데이터베이스 미러링을 설정하기 위한 사전 요구 사항, 권장 사항 및 단계에 대한 항목을 제공합니다.  
@@ -281,13 +278,13 @@ ms.locfileid: "37233893"
   
  **Transact-SQL 사용**  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&amp;#40;SQL Server&amp;#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   
--   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
@@ -329,7 +326,7 @@ ms.locfileid: "37233893"
 -   [데이터베이스 미러링 제거&#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)   
  [자동 페이지 복구 &#40;가용성 그룹 및 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [데이터베이스 미러링: 상호 운용성 및 공존성&#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4bf03ddd4bfbc75a24f68bd4c046ea3eb9d58dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f577d48d14790ca946348ccff030f4ff31d9c2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169723"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>기본 MDX 쿼리(MDX)
   기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  

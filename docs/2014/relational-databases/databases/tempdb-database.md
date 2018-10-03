@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - temporary stored procedures [SQL Server]
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81d2bf84e758ccfd8664408a760e77700a323e0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141063"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
   **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
@@ -68,33 +65,33 @@ ms.locfileid: "37154334"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|사용자 계정 컨트롤|  
+|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
+|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
+|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
+|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
+|ARITHABORT|OFF|사용자 계정 컨트롤|  
 |AUTO_CLOSE|OFF|아니요|  
-|AUTO_CREATE_STATISTICS|ON|예|  
+|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
 |AUTO_SHRINK|OFF|아니요|  
-|AUTO_UPDATE_STATISTICS|ON|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
+|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
 |CHANGE_TRACKING|OFF|아니요|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
+|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
 |데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
 |DB_CHAINING|ON|아니요|  
 |ENCRYPTION|OFF|아니요|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|사용자 계정 컨트롤|  
+|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
+|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
 |READ_COMMITTED_SNAPSHOT|OFF|아니요|  
 |RECOVERY|SIMPLE|아니요|  
-|RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|ENABLE_BROKER|예|  
+|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
+|Service Broker 옵션|ENABLE_BROKER|사용자 계정 컨트롤|  
 |TRUSTWORTHY|OFF|아니요|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조하세요.  

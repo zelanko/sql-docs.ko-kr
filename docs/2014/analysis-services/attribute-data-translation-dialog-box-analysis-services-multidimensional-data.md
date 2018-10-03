@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117375"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>특성 데이터 번역 대화 상자(Analysis Services - 다차원 데이터)
   **특성 데이터 번역** 대화 상자를 사용하여 번역 캡션 데이터가 포함된 열을 설정하고 번역된 데이터에 사용할 데이터 정렬 및 정렬 순서를 설정할 수 있습니다. 다음을 수행하여 **특성 데이터 번역** 대화 상자를 표시할 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClrAssembly Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClrAssembly data type
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 63809f3dd903878baf5eabf1642430fbe0d9aa8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9171832bac6653e7c1d86915ae006c65022668a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159253"
 ---
 # <a name="clrassembly-data-type-assl"></a>ClrAssembly 데이터 형식(ASSL)
   나타내는 파생된 데이터 형식을 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 와 연결 된 어셈블리를 [데이터베이스](../objects/database-element-assl.md) 또는 [Server](../objects/server-element-assl.md) 요소  
@@ -51,7 +48,7 @@ ms.locfileid: "37235583"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[어셈블리](../objects/assembly-element-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8171edaa6e2265191ae4611fea79dd018b43022c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117883"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
   이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  

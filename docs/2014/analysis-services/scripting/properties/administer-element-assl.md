@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Administer Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Administer element
 ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29b09b2f28512600496a4d461f34994dc1bf177e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 682c65420383bcd3db70d1c477781c7db1193334
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149303"
 ---
 # <a name="administer-element-assl"></a>Administer 요소(ASSL)
   연결 된 사용 권한 관리 권한이 포함 되는지 여부를 나타내는 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37229693"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DatabasePermission](../objects/databasepermission-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Administer` 요소는 사용자가 지정된 데이터베이스에서만 관리 기능을 수행할 수 있는지 여부를 나타냅니다. 서버 관리자 역할은 인스턴스에 포함된 모든 데이터베이스에서 관리 기능을 수행할 수 있습니다.  

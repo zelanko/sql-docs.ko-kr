@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b2e8b7f78e7dc64bc3649270e279b740b041abb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b246e9d0badb30027d2971437ebdde5f0d1effde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066603"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 자습서: 간단한 ETL 패키지 만들기
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)는 고성능 데이터 통합 솔루션을 추출, 변환 및 데이터 웨어하우징을 위한 ETL (로드) 패키지를 포함 하 여 빌드하기 위한 플랫폼입니다. SSIS에는 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사, FTP 작업과 같은 워크플로 함수를 수행하고 SQL 문을 실행하며 전자 메일 메시지를 보내기 위한 태스크, 데이터 추출 및 로드를 위한 데이터 원본과 대상, 데이터 삭제, 집계, 병합 및 복사를 위한 변환, 패키지 실행 및 저장을 관리하기 위한 관리 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델 프로그래밍을 위한 API(응용 프로그래밍 인터페이스)가 포함됩니다.  

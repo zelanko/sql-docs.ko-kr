@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6f76df07880af743623692ffcff924093e0ce9ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105504"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구를 찾고 시작하는 방법
   이 자습서에서는 보고서 서버를 구성하고 보고서 서버 내용 및 작업을 관리하며 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 이 자습서를 통해 새 사용자는 각 도구를 찾고 여는 방법을 이해할 수 있습니다. 도구에 익숙한 경우 이동할 수 있습니다 도움이 되는 다른 자습서를 사용 하 여에 대 한 중요 한 기술을 배우게 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다. 다른 자습서에 대 한 자세한 내용은 참조 하세요. [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  

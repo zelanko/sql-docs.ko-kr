@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09aec1da2c7e9001585b0793b12f0faf89feaf27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8222ba19948adcd65090bfcccaa75b3ddd49a55d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120703"
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 행 집합
   서비스가 시작된 이후의 개체별 리소스 사용량을 제공합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c23360f7a57e110c5cf50bb01406b51f166c5950
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8fbf203ad7928de8b9d6e4919f9b1d44b5f5cd45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141118"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 대상 복구 시간을 설정하거나 변경하는 방법에 대해 설명합니다. 기본적으로 대상 복구 시간은 0이고, 데이터베이스에서는 *복구 간격* 서버 옵션에 의해 제어되는 **자동 검사점** 을 사용합니다. 대상 복구 시간을 0보다 큰 값으로 설정하면 데이터베이스에서 *간접 검사점* 을 사용하고 이 데이터베이스에 대한 복구 시간의 상한을 설정합니다.  

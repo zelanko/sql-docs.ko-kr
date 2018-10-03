@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.sqleditor
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fdf5df86b2c2f3806b571eccd6991f2ef123cda
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5cbde2fecd83feab7752795eec5866e0548f31e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139923"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 편집기(Visual Database Tools)
   SQL 편집기를 사용하면 기존의 저장 프로시저, 함수, 트리거 및 SQL 스크립트를 편집할 수 있습니다. 이러한 개체 중 하나를 열면 이 창이 나타납니다. 데이터 원본에 대해 실행할 새 SQL 문을 만들려면 쿼리 디자이너의 [SQL 창](visual-database-tools.md) 을 사용합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.histogram.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18ca631b742ad8d1029205cf12a0e0c3b62151cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7db265d2f7c3e2de1c13646323f2698b7b3299a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087133"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>데이터 뷰어 구성(히스토그램 탭)
   **데이터 뷰어 구성** 대화 상자의 **히스토그램** 탭을 사용하여 표시할 열을 지정할 수 있습니다. 히스토그램은 특정 숫자 열의 데이터 값을 값의 분산으로 표시합니다. 차트는 한 버퍼의 내용만 반영합니다.  

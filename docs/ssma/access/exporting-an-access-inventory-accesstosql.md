@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases
 - Access databases, exporting metadata
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746451"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access 인벤토리 (AccessToSQL) 내보내기
 Access 데이터베이스를 여러 개 있고 깨달음을로 마이그레이션하려면 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 프로젝트의 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 검토 하 고 데이터베이스 및 마이그레이션하려면 해당 데이터베이스 내의 개체가 결정 인벤토리 메타 데이터를 쿼리할 수 있습니다. 이 인벤토리 사용 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  

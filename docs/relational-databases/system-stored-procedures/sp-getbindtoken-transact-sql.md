@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getbindtoken
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b662989e6b98b18c73c75baf381844b6b2dbc1f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d3636ce2bb082d4686d0895716fb10567b5dc750
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853411"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  없음  
   
 ## <a name="remarks"></a>Remarks  
- 저장된 프로시저가 활성화 된 트랜잭션 내부에서 실행 될 경우에 sp_getbindtoken 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들어:  
+ 저장된 프로시저가 활성화 된 트랜잭션 내부에서 실행 될 경우에 sp_getbindtoken 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -70,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Sp_getbindtoken을 사용 하 여 열린 트랜잭션 내부에 분산된 트랜잭션 연결을 등록할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 같은 토큰이 반환 합니다. 예를 들어:  
+ Sp_getbindtoken을 사용 하 여 열린 트랜잭션 내부에 분산된 트랜잭션 연결을 등록할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 같은 토큰이 반환 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 USE AdventureWorks2012;  

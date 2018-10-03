@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Me.Value references
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-caps.latest.revision: 111
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2e13cebd7697f2ff497ad0f288333e517c9e575d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bc91211f646129ca0686ae5d8bffe2371ba0a57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076123"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 응용 프로그램, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때나 사용자 지정 스크립트 또는 보고서에서 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
@@ -42,7 +39,7 @@ ms.locfileid: "37327623"
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services의 주요 변경 내용  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>SharePoint 모드 서버 참조에 SharePoint 사이트가 필요함  
- URL 경로에 가상 디렉터리 이름을 사용하여 보고서 서버로 직접 이동하거나 보고서 서버를 직접 참조할 수 없습니다. 예를 들어:  
+ URL 경로에 가상 디렉터리 이름을 사용하여 보고서 서버로 직접 이동하거나 보고서 서버를 직접 참조할 수 없습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `http://<Server name>/ReportServer`  
   

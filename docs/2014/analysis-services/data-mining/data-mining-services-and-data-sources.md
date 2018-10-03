@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090973"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
   데이터 마이닝을 사용하려면 SQL Server Analysis Services 인스턴스에 대한 연결이 필요합니다. 큐브의 데이터는 데이터 마이닝에 필요하지 않으며 관계형 원본을 사용하는 것이 권장되지만 데이터 마이닝에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 제공하는 구성 요소를 사용합니다.  
@@ -27,7 +24,7 @@ ms.locfileid: "37297473"
  이 항목에서는 데이터 마이닝 모델을 생성, 처리, 배포 또는 쿼리하기 위해 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결할 때 필요한 정보를 제공합니다.  
   
 ## <a name="data-mining-services"></a>데이터 마이닝 서비스  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
   
 -   클라이언트로부터 수신한 문 구문 분석  
   
@@ -52,9 +49,9 @@ ms.locfileid: "37297473"
   
 |포트|Description|  
 |----------|-----------------|  
-|2383| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
-|2382| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
-|서버 시작 시 동적으로 할당됩니다.| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
+|2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
+|2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
+|서버 시작 시 동적으로 할당됩니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
   
  이 서비스에서 사용된 포트를 제어하는 방법은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
-caps.latest.revision: 31
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155794"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166963"
 ---
 # <a name="select-the-data-source"></a>데이터 원본 선택
   보고서 마법사의 데이터 원본 선택 페이지를 사용하여 보고서의 데이터 원본을 정의할 수 있습니다.  

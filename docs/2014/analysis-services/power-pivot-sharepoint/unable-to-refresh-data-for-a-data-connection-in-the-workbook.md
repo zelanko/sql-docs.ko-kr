@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4deeeaae2bb08d9f1e2b4c434ec262d0fb7bd679
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077493"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
   Excel Services는 PowerPivot 서버에 연결 요청을 제출하고 이 요청이 실패하는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  

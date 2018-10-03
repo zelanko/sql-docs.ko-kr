@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e627b0cec731afa34d12397c90d13fe0ddabdd33
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156073"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
   복제 충돌 뷰어를 사용하면 복제 동기화를 수행하는 동안 발생한 모든 충돌을 볼 수 있습니다. 충돌은 게시자와 구독자 또는 두 구독자 등 두 위치에서 같은 데이터를 동시에 변경할 때 발생합니다. 복제는 아티클을 만들 때 선택한 충돌 해결 프로그램을 사용하여 충돌을 자동으로 해결합니다. 그러나 필요한 경우 복제 충돌 뷰어를 사용하여 충돌 해결에 다른 해결 방법을 선택할 수 있습니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  

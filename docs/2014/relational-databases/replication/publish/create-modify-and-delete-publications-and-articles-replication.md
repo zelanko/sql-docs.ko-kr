@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c362d75076a5d52a9696717cc866a4e7d195c5da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df06bcf5a5f1d43dff50009166279e6b2658790e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145433"
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>게시 및 아티클 만들기, 수정 및 삭제(복제)
   이 설명서 섹션에는 게시 생성 및 아티클 정의와 관련된 태스크에 대한 절차 정보가 포함되어 있습니다.  

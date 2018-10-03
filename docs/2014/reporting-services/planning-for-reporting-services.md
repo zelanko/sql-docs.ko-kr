@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e720586f448512342d88dc695988ce9afb90b56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adc4c6ea2cc33fe9c0c911b75c74a4232963fe2e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100383"
 ---
 # <a name="planning"></a>계획
   다음 항목을 통해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 더 잘 이해할 수 있습니다. 사용자의 요구에 가장 적합한 방식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 환경을 설치 및 구성하는 방법을 자세히 알아보십시오.  

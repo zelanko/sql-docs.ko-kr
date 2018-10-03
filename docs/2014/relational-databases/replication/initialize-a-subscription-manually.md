@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - manual subscription initialization [SQL Server replication]
 - subscriptions [SQL Server replication], initializing
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ab3c97535b9d65d7a79b16fb0eeedc98bdd6a7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aaa09ef5afcd5bf889d0685631734a69624b8c09
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148783"
 ---
 # <a name="initialize-a-subscription-manually"></a>수동 구독 초기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다. 구독을 초기화하는 데는 일반적으로 초기 스냅숏이 사용되지만 스키마 및 초기 데이터가 이미 구독자에 있는 경우에는 스냅숏을 사용하지 않고 게시에 대한 구독을 초기화할 수 있습니다.  

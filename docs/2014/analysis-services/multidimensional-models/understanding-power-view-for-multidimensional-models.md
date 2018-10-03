@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288059"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169013"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
   이 문서에서는 Microsoft SQL Server 2014의 다차원 모델용 Power View 기능에 대해 설명하고, 조직에서 다차원 모델용 Power View를 구현하려고 하는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
@@ -221,11 +218,11 @@ ms.locfileid: "37288059"
   
  DISCOVER_CSDL_METADATA 요청에는 다음과 같은 제한이 있습니다.  
   
-|속성|필수|Description|  
+|이름|필수|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|예|카탈로그\데이터베이스 이름입니다.|  
+|CATALOG_NAME|사용자 계정 컨트롤|카탈로그\데이터베이스 이름입니다.|  
 |PERSPECTIVE_NAME|큐브에 둘 이상의 큐브 뷰가 포함된 경우 필수, 큐브가 하나뿐이고 기본 큐브 뷰가 있는 경우 선택적|다차원 데이터베이스의 큐브 이름 또는 큐브 뷰 이름입니다.|  
-|VERSION|예|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
+|VERSION|사용자 계정 컨트롤|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
   
  반환되는 CSDL 출력 문서에서는 모델을 네임스페이스, 포함 엔터티, 연결 및 속성으로 나타냅니다.  
   

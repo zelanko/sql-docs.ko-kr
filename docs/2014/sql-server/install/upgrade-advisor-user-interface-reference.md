@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user interface reference [Upgrade Advisor]
 - SQL Server Upgrade Advisor, user interface reference
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
-caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09cc0df077b51e02cc65edc244dfac8c03518fc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 57259e3608dfe58df5ce88ca5a4009c8c3ec0241
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159047"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>업그레이드 관리자 사용자 인터페이스 참조
   이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자입니다. 이러한 항목은 F1 키를 눌러 또는 클릭 하 여 업그레이드 관리자 마법사에서 사용할 수 있습니다 **도움말** 마법사 페이지 및 대화 상자.  

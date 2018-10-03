@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27dc4236fa3455ce9993451bf105cc1a2bcbb80c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053503"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]테이블을 관리하는 방법에 대해 설명합니다. 주의 대상 페이지에 대한 정보를 유지 관리하는 데 사용되는 **suspect_pages** 테이블은 복원이 필요한지 여부를 결정하는 데 사용됩니다. [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 테이블은 [msdb 데이터베이스](../databases/msdb-database.md)에 상주합니다.  

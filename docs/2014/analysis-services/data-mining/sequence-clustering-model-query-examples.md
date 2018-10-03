@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8ab6d3d16cff232107a4e2467d5a7d71dd59e8b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118123"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>시퀀스 클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 저장된 정보에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 사용자가 제공한 새 데이터를 기반으로 예측을 만드는 예측 쿼리를 만들 수 있습니다. 시퀀스 클러스터링 모델의 경우 내용 쿼리는 일반적으로 발견된 클러스터나 해당 클러스터 내의 전환에 대한 추가 정보를 제공합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -219,7 +216,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
  시퀀스 클러스터링 모델에 대한 예측 쿼리에서는 다른 클러스터링 모델에서 사용되는 예측 함수를 상당수 사용할 수 있습니다. 또한 특수한 예측 함수인 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)를 사용하여 권장 구성을 생성하거나 다음 상태를 예측할 수 있습니다.  
   
 ###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 다음 상태 예측  
-  [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
+ [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
   
  다음 예제 쿼리는 상위 5개의 예측과 해당 확률을 반환하는 단일 예측 쿼리입니다. 해당 모델에는 중첩 테이블이 포함되어 있으므로 예측을 만들 때는 중첩 테이블 `[v Assoc Seq Line Items]`를 열 참조로 사용해야 합니다. 또한 입력 값을 지정할 때는 중첩된 SELECT 문에 표시된 것과 같이 사례 테이블 및 중첩 테이블 열을 모두 조인해야 합니다.  
   

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,42 +13,41 @@ f1_keywords:
 helpviewer_keywords:
 - User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 206d8fb122b9c2f28370a56f3a4acaeabebf111b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3acdea5ae284b2e9a0ac9c28fe8430a11de8fbd4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287372"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823639"
 ---
-# <a name="user-object-adox"></a>사용자 개체 (ADOX)
+# <a name="user-object-adox"></a>사용자 개체(ADOX)
 보안된 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.  
   
 ## <a name="remarks"></a>Remarks  
- [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. **사용자** 에 대 한 컬렉션은 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹의 사용자만 나타냅니다.  
+ 합니다 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. 합니다 **사용자** 에 대 한 컬렉션을 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹의 사용자만을 나타냅니다.  
   
- 속성, 컬렉션, 및의 메서드는 **사용자** 개체를 할 수 있습니다.  
+ 속성, 컬렉션 및의 메서드를 사용 하 여는 **사용자** 개체를 할 수 있습니다.  
   
--   사용 하 여 사용자를 식별 된 [이름](../../../ado/reference/adox-api/name-property-adox.md) 속성입니다.  
+-   사용 하 여 사용자를 식별 합니다 [이름을](../../../ado/reference/adox-api/name-property-adox.md) 속성입니다.  
   
--   사용자에 대 한 암호를 변경 하는 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드.  
+-   사용 하 여 사용자에 대 한 암호를 변경 합니다 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드.  
   
--   사용자가 읽을 있는지 확인 쓰기 또는 삭제 된 권한은 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 및 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드.  
+-   사용자가 읽을 있는지 여부를 결정 쓰기 또는 삭제 권한을 합니다 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 하 고 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드.  
   
--   사용자와 속해 있는 그룹 액세스는 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md) 컬렉션입니다.  
+-   사용자가 속한 그룹에 사용 하 여 액세스 합니다 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md) 컬렉션입니다.  
   
--   사용 하 여 공급자별 속성에 액세스는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
+-   공급자별 속성에 액세스 합니다 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
   
--   확인 된 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 사용자에 대 한 합니다.  
+-   확인 합니다 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 사용자에 대 한 합니다.  
   
- 이 섹션에는 다음 항목 포함 되어 있습니다.  
+ 이 섹션에서는 다음 항목을 포함합니다.  
   
 -   [User 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [그룹 컬렉션 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
+ [Groups 컬렉션 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

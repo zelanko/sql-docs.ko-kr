@@ -6,36 +6,33 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f45ec72f864c719091adc04a88e181a41124b76
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 83b8334b4891d0b12cac59030ebf7fced871c5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773381"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>계층적 레코드 집합 (예:)의 행에 액세스
-다음 예제에서는 단계 행 하는 데 필요한을 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md):
+다음 예제에서는 단계 액세스 행 하는 데 필요한을 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md):
 
-1.  **레코드 집합** 에서 개체는 **작성자** 및 **titleauthor** 작성자 id 관련 된 테이블
+1.  **레코드 집합** 에서 개체를 **작성자** 하 고 **titleauthor** 작성자 id와 관련 된 테이블
 
-2.  외부 루프에는 각 저자의 성과 이름, 상태 및 식별 표시 됩니다.
+2.  외부 루프는 각 저자의 성 및 이름, 상태 및 식별을 표시합니다.
 
-3.  추가 된 **레코드 집합** 에서 각 행이 검색에 대 한는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 할당 된 *rstTitleAuthor*합니다.
+3.  추가 된 **레코드 집합** 에서 각 행이 검색에 대 한 합니다 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 할당 *rstTitleAuthor*합니다.
 
-4.  에 추가 된 각 행에서 4 개의 필드를 표시 하는 안쪽 루프 **레코드 집합**합니다.
+4.  에 추가 된 각 행에서 4 개의 필드를 표시 하는 내부 루프 **레코드 집합**합니다.
 
- [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성이 **false** 설명을 위해 볼 수 있도록 장 변경 내용을 명시적으로 외부 루프의 각 반복 합니다. 코드 예제를 보다 효율적으로 만들 할당은 한 번만 수행 있도록 2 단계에서 첫 번째 줄 앞 3 단계에서 할당을 이동할 수 있습니다. 다음 설정의 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 **true**있도록 *rstTitleAuthor* 됩니다 암시적으로 자동으로 변경 및 해당 장 때마다 *rst* 새 행으로 이동 합니다.
+ 합니다 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성이로 설정 된 **false** 설명을 위해 볼 수 있도록 장의 변경 내용을 명시적으로 바깥쪽 루프의 각 반복 합니다. 코드 예제에서는 보다 효율적인 할당 한 번만 수행 됩니다 있도록 2 단계에서 첫 번째 줄 전에 3 단계에서 할당을 이동할 수 있습니다. 설정한 합니다 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 **true**되도록 *rstTitleAuthor* 자동으로 암시적으로 바뀌어 해당 장 때마다 *rst* 새 행으로 이동 합니다.
 
 ## <a name="example"></a>예제
 
@@ -72,4 +69,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>관련 항목
- [데이터 개요 셰이핑](../../../ado/guide/data/data-shaping-overview.md) [개체 필드](../../../ado/reference/ado-api/field-object.md) [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [정식 문법을](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 데이터를 셰이핑 OLE DB에 대 한 서비스 (ADO 서비스 공급자) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) [데이터 모양 지정에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md) [APPEND 절 셰이프](../../../ado/guide/data/shape-append-clause.md) [명령에서 셰이프 일반](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md) [응용 프로그램 기능에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md) [개체를 필드](../../../ado/reference/ado-api/field-object.md) [컬렉션 (ADO)를 필드](../../../ado/reference/ado-api/fields-collection-ado.md) [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 데이터 셰이핑 OLE DB에 대 한 서비스 (ADO 서비스 공급자) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [데이터 셰이프에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md) [셰이프 APPEND 절](../../../ado/guide/data/shape-append-clause.md) [명령에서 셰이프 일반적인](../../../ado/guide/data/shape-commands-in-general.md) [셰이프 COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)

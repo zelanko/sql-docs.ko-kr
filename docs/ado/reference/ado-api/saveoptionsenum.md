@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - SaveOptionsEnum enumeration [ADO]
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739e06a2038a61c821fd9acf779ec70df9621b16
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 288168b2a4b47c8a73612bd89a6f1987e2808475
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281542"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788767"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-파일을 만들지, 덮어쓸에서 저장할 때 지정 된 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다. 일 수 있습니다 **adSaveCreateNotExist** 또는 **adSaveCreateOverWrite**...  
+파일을 생성 또는 덮어쓸에서 저장 하는 경우 지정 된 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다. 값이 될 수 있습니다 **adSaveCreateNotExist** 하거나 **adSaveCreateOverWrite**...  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adSaveCreateNotExist**|1|기본. 으로 지정한 파일이 있으면 새 파일을 만듭니다는 *FileName* 매개 변수가 이미 존재 하지 않습니다.|  
-|**adSaveCreateOverWrite**|2|데이터를 현재 열려 있는 파일을 덮어씁니다 **스트림** 개체를 지정 하는 파일의 *Filename* 매개 변수가 이미 있습니다. 으로 지정한 파일이 있으면는 *Filename* 매개 변수가 없는, 새 파일이 생성 됩니다.|  
+|**adSaveCreateNotExist**|1|기본. 파일을 지정 하 여 새 파일을 만듭니다는 *FileName* 매개 변수가 이미 존재 하지 않습니다.|  
+|**adSaveCreateOverWrite**|2|현재 열려에서 데이터를 사용 하 여 파일을 덮어씁니다 **Stream** 개체를 지정 하는 파일을 *Filename* 매개 변수가 이미 있습니다. 하 여 파일을 지정 합니다 *Filename* 매개 변수가 없는 경우, 새 파일이 만들어집니다.|  
   
-## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  이러한 상수는 ADO/wfc 필요가 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  

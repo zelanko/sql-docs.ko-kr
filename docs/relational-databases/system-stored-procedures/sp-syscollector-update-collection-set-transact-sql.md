@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_set (Transact SQL) | Microsoft Docs
+title: sp_syscollector_update_collection_set (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702741"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,47 +57,47 @@ sp_syscollector_update_collection_set
   
 ## <a name="arguments"></a>인수  
  [ **@collection_set_id =** ] *collection_set_id*  
- 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 경우 값이 있어야 하 고 *이름* 은 NULL입니다.  
+ 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 됩니다 **int** 하는 경우 값이 있어야 하 고 *이름* NULL입니다.  
   
  [  **@name =** ] '*이름*'  
- 컬렉션 집합의 이름입니다. *이름* 은 **sysname** 경우 값이 있어야 하 고 *collection_set_id* 은 NULL입니다.  
+ 컬렉션 집합의 이름입니다. *이름* 됩니다 **sysname** 하는 경우 값이 있어야 하 고 *collection_set_id* NULL입니다.  
   
  [ **@new_name =** ] '*new_name*'  
- 컬렉션 집합의 새 이름입니다. *new_name* 은 **sysname**를 사용 하는 경우 빈 문자열일 수 없습니다. *new_name* 고유 해야 합니다. 현재 컬렉션 집합 이름의 목록을 보려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
+ 컬렉션 집합의 새 이름입니다. *new_name* 됩니다 **sysname**, 및을 사용 하는 경우에 빈 문자열일 수 없습니다. *new_name* 고유 해야 합니다. 현재 컬렉션 집합 이름의 목록을 보려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
   
  [  **@target =** ] '*대상*'  
  나중에 사용하도록 예약되어 있습니다.  
   
  [  **@collection_mode =** ] *collection_mode*  
- 사용할 데이터 컬렉션의 유형입니다. *collection_mode* 은 **smallint** 다음 값 중 하나일 수 있습니다.  
+ 사용할 데이터 컬렉션의 유형입니다. *collection_mode* 됩니다 **smallint** 다음 값 중 하나일 수 있습니다.  
   
  0 - 캐시된 모드. 데이터 컬렉션과 업로드가 별도의 일정에 속해 있습니다. 연속 컬렉션을 위해 캐시된 모드를 지정합니다.  
   
  1 - 캐시되지 않은 모드. 데이터 컬렉션과 업로드가 같은 일정에 속해 있습니다. 임시 컬렉션이나 스냅숏 컬렉션을 위해 캐시되지 않은 모드를 지정합니다.  
   
- 캐시 되지 않은 모드에서 캐시 된 모드 (0)로 변경할 경우 지정 해야 하거나 *schedule_uid* 또는 *schedule_name*합니다.  
+ 캐시 되지 않은 모드에서 캐시 된 모드 (0)를 변경 하는 경우 지정 해야 하거나 *schedule_uid* 하거나 *schedule_name*합니다.  
   
  [ **@days_until_expiration=** ] *days_until_expiration*  
- 수집된 데이터가 관리 데이터 웨어하우스에 저장되는 일 수입니다. *days_until_expiration* 은 **smallint**합니다. *days_until_expiration* 0 또는 양의 정수 여야 합니다.  
+ 수집된 데이터가 관리 데이터 웨어하우스에 저장되는 일 수입니다. *days_until_expiration* 됩니다 **smallint**합니다. *days_until_expiration* 0 또는 양의 정수 여야 합니다.  
   
  [ **@proxy_id =** ] *proxy_id*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 고유 식별자입니다. *proxy_id* 은 **int**합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 고유 식별자입니다. *proxy_id* 됩니다 **int**합니다.  
   
  [ **@proxy_name =** ] '*proxy_name*'  
- 프록시 이름입니다. *proxy_name* 은 **sysname** 이며 null을 허용 합니다.  
+ 프록시 이름입니다. *proxy_name* 됩니다 **sysname** 이며 null을 허용 합니다.  
   
  [ **@schedule_uid** =] '*schedule_uid*'  
- 일정을 가리키는 GUID입니다. *schedule_uid* 은 **uniqueidentifier**합니다.  
+ 일정을 가리키는 GUID입니다. *schedule_uid* 됩니다 **uniqueidentifier**합니다.  
   
- 얻으려고 *schedule_uid*, sysschedules 시스템 테이블을 쿼리 합니다.  
+ 가져오려고 *schedule_uid*, sysschedules 시스템 테이블을 쿼리 합니다.  
   
- 때 *collection_mode* 0으로 설정 *schedule_uid* 또는 *schedule_name* 지정 해야 합니다. 때 *collection_mode* 1로 설정 되어 *schedule_uid* 또는 *schedule_name* 지정 해도 무시 됩니다.  
+ 때 *collection_mode* 0으로 설정 됩니다 *schedule_uid* 하거나 *schedule_name* 지정 해야 합니다. 때 *collection_mode* 1로 설정 됩니다 *schedule_uid* 하거나 *schedule_name* 지정 하면 무시 됩니다.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- 일정의 이름입니다. *schedule_name* 은 **sysname** 이며 null을 허용 합니다. 를 지정 하는 경우 *schedule_uid* NULL 이어야 합니다. 얻으려고 *schedule_name*, sysschedules 시스템 테이블을 쿼리 합니다.  
+ 일정의 이름입니다. *schedule_name* 됩니다 **sysname** 이며 null을 허용 합니다. 를 지정 하는 경우 *schedule_uid* NULL 이어야 합니다. 가져오려고 *schedule_name*, sysschedules 시스템 테이블을 쿼리 합니다.  
   
  [  **@logging_level =** ] *logging_level*  
- 로깅 수준입니다. *logging_level* 은 **smallint** 다음 값 중 하나를 사용 합니다.  
+ 로깅 수준입니다. *logging_level* 됩니다 **smallint** 다음 값 중 하나를 사용 하 여:  
   
  0 - 실행 정보 및 다음 항목을 추적하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 이벤트 기록  
   
@@ -121,22 +117,22 @@ sp_syscollector_update_collection_set
   
  2 - 수준 1 로깅 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 세부 이벤트 정보  
   
- 에 대 한 기본값 *logging_level* 는 1입니다.  
+ 에 대 한 기본값 *logging_level* 1입니다.  
   
  [  **@description =** ] '*설명*'  
- 컬렉션 집합에 대한 설명입니다. *설명* 은 **nvarchar (4000)** 합니다.  
+ 컬렉션 집합에 대한 설명입니다. *설명을* 됩니다 **nvarchar(4000)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_update_collection_set은 msdb 시스템 데이터베이스의 컨텍스트 내에서 실행되어야 합니다.  
   
  어느 *collection_set_id* 또는 *이름* 해야 값, 둘 다 NULL 일 수 없습니다. 이러한 값을 확인하려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
   
- 컬렉션 집합을 실행 중인 경우 업데이트할 수 있습니다 *schedule_uid* 및 *설명*합니다. 컬렉션 집합을 중지 하려면 사용 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)합니다.  
+ 컬렉션 집합을 실행 중인 경우만 업데이트할 수 있습니다 *schedule_uid* 하 고 *설명*합니다. 컬렉션 집합을 중지 하려면 사용 하 여 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin 또는 dc_operator(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버여야 합니다. dc_operator는 이 저장 프로시저를 실행할 수 있지만 이 역할의 멤버가 변경할 수 있는 속성은 제한적입니다. 다음 속성은 dc_admin만 변경할 수 있습니다.  
   
 -   @new_name  
@@ -195,10 +191,10 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo.sysschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo.sysschedules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

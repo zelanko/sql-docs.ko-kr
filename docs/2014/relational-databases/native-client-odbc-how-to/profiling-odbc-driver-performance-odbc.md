@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 951ffdf09a7ba8c048aef40b07a27127f51dacb8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072233"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>ODBC 드라이버 성능 프로파일링 방법 도움말 항목(ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에는 드라이버의 성능을 프로파일링하기 위한 두 개의 드라이버 관련 옵션이 있습니다.  

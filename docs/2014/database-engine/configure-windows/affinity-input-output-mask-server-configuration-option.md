@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a2a4e3c41e98be8f39a39e37aee968532e2d9d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101553"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>선호도 입력-출력 마스크 서버 구성 옵션
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 및 Windows Server 2003에서는 멀티태스킹을 수행하기 위해 경우에 따라 여러 프로세서 사이에 프로세스 스레드를 이동하기도 합니다. 운영 체제 측면에서는 효율적이지만 각 프로세서 캐시에 데이터가 반복적으로 다시 로드되어 시스템 로드가 많은 경우 이로 인해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 저하될 수 있습니다. 프로세서를 특정 스레드에 할당하면 프로세서가 다시 로드되지 않으므로 이러한 조건에서도 성능을 향상시킬 수 있습니다. 스레드와 프로세서 간의 이러한 연결을 프로세서 선호도라고 합니다.  

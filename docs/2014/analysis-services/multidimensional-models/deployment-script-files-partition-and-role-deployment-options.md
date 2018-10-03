@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - modifying role deployments
 - modifying partition deployments
 ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28be72efd82f72662bada57062d2e69e558793e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14a547098cf72ac4b4f1c49044aba1bb2f024adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055534"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>파티션 및 역할 배포 옵션 지정
   합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 파티션 및 역할 배포 옵션을 읽습니다 합니다 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 때 사용 하 여 파티션 및 역할 배포 옵션을 현재 프로젝트를 \< *프로젝트 이름*>.deploymentoptions 파일이 생성 됩니다. 이러한 구성 설정에 대한 자세한 내용은 [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md)를 참조하십시오.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 45
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111243"
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 및 키 생성용 MSCAPI( *Microsoft Cryptographic API* ) 공급자를 사용하여 EKM( *Extensible Key Management* )과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  

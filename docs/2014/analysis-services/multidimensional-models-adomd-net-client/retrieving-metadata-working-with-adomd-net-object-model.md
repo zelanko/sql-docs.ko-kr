@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - object model (client) [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46a34a3885d0db0f80fd683e2cec74b68d26797c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156543"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>ADOMD.NET 개체 모델 사용
   ADOMD.NET에서는 분석 데이터 원본에 들어 있는 큐브 및 하위 개체를 보기 위한 개체 모델을 제공합니다. 하지만 개체 모델을 통해 특정 분석 데이터 원본의 모든 메타데이터를 사용할 수 있는 것은 아닙니다. 개체 모델을 통해서는 클라이언트 응용 프로그램에서 사용자가 대화형으로 명령을 생성할 수 있도록 하기 위해 표시하기에 가장 유용한 정보에만 액세스할 수 있습니다. 제공되는 메타데이터의 복잡성이 줄어들기 때문에 ADOMD.NET 개체 모델은 보다 사용하기 쉽습니다.  

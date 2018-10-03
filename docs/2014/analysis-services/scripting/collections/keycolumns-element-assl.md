@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyColumns Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyColumns element
 ms.assetid: 03f3ad21-25cb-4afd-9287-cbf942ac1ad9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88df5fa8590bf3f049632abb8137e62e959a67fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5c699f95d91cdb48d780875d8f9190114d4b7a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151614"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152644"
 ---
 # <a name="keycolumns-element-assl"></a>KeyColumns 요소(ASSL)
   컬렉션을 포함 [KeyColumn](../objects/column-element-assl.md) 부모 개체에 대 한 요소를 정의 합니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37151614"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|1-n: 두 번 이상 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

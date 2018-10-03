@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReadSourceData Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ReadSourceData element
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38e24d324a6f29b55cfb8bf0b55289e2139bfb85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c341162a62eb74dc0b07863959e0e5318daf0a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166516"
 ---
 # <a name="readsourcedata-element-assl"></a>ReadSourceData 요소(ASSL)
   어떻게 고유한 이름을 결정에 포함 된 계층에 대해 생성 되는 [CubePermission](../objects/cubepermission-element-assl.md)합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37194193"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubePermission](../objects/cubepermission-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

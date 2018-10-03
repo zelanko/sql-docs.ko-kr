@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30e43cf70e0d9d374b1727727877da8b87a4e8ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bf6d22a2cbe6111f9cce1a3be446c507969ca82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158423"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>ODBC 원본 편집기(오류 출력 페이지)
   **ODBC 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  

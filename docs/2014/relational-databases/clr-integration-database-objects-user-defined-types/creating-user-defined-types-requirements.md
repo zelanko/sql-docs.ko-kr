@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UDTs [CLR integration], requirements
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350075"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057553"
 ---
 # <a name="user-defined-type-requirements"></a>사용자 정의 형식 요구 사항
   사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 설계 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services], backing up
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - files [Reporting Services], restoring
 - files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4a9dab1a33be25bc730409c356f44f7cb191749d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 573ea25fdbb617f079fb71c08057294c5568d95c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092493"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 백업 및 복원 작업
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용되는 모든 데이터 파일에 대해 간략히 설명하고 이러한 파일을 백업하는 시기와 방법을 설명합니다. 보고서 서버 데이터베이스 파일에 대한 백업 및 복원 계획을 세우는 것이 복구 전략에서 가장 중요한 부분입니다. 그러나 복구 전략이 복잡할수록 보고서 암호화 키, 사용자 지정 어셈블리 또는 확장 프로그램, 구성 파일, 보고서 및 모델 원본 파일 등의 백업이 포함됩니다.  

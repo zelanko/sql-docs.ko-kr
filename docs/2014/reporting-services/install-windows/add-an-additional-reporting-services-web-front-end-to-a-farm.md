@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23cc2e96cd055dd94462a4e4ec3540c76e87b1ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4563f67c5198d12c91329f141b8061c84600f0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161783"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>팜에 추가 Reporting Services 웹 프런트 엔드 추가
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에는 응용 프로그램 서버와 WFE(웹 프런트 엔드) 서버에 필요한 구성 요소가 포함됩니다. 이 항목은 구독, 데이터 경고 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능에서 사용하는 응용 프로그램 페이지를 포함하여 WFE 서버에 필요한 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]구성 요소 설치에 대해 설명합니다. WFE에 필요한 기본 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 SharePoint 2010 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치하는 것입니다.  
@@ -60,7 +57,7 @@ ms.locfileid: "37327193"
 |SharePoint 2010 제품 준비 도구 실행|SharePoint 2010 설치 미디어가 있어야 합니다. 준비 도구는 설치 미디어의 **PrerequisiteInstaller.exe** 입니다.|  
 |SharePoint 2010 제품 설치|1) 선택 합니다 **팜을** 설치 유형입니다.<br /><br /> 2) 선택 **완료** 서버 유형에 대 한 합니다.<br /><br /> 3) 기존 SharePoint 팜에 SharePoint 2010 SP1이 설치되어 있으면 설치가 완료된 후 SharePoint 제품 구성 마법사를 실행하지 마세요. SharePoint 제품 구성 마법사를 실행하기 전에 SharePoint SP1을 설치해야 합니다.|  
 |SharePoint Server 2010 SP1 설치|기존 SharePoint 팜에 SharePoint 2010 SP1이 설치 된 다운로드 하 고에서 SharePoint 2010 SP1을 설치 하는 경우:[http://support.microsoft.com/kb/2460045](http://go.microsoft.com/fwlink/p/?linkID=219697)합니다.<br /><br /> SharePoint 2010 SP1에 대한 자세한 내용은 [Office 2010 SP1 및 SharePoint 2010 SP1을 설치할 때의 알려진 문제](http://support.microsoft.com/kb/2532126)를 참조하십시오.|  
-|SharePoint 제품 구성 마법사를 실행하여 팜에 서버 추가|1)에 **Microsoft SharePoint 2010 제품** 프로그램 그룹에서 클릭 **Microsoft SharePoint 2010 제품 구성 마법사**합니다.<br /><br /> 2)는 **서버 팜에 연결** 페이지 선택 **기존 팜에 연결** 클릭 **다음**합니다.<br /><br /> 3)는 **구성 데이터베이스 설정 지정** 페이지에서 구성 데이터베이스의 이름 및 기존 팜에 사용 되는 데이터베이스 서버의 이름을 입력 합니다. **다음**을 클릭합니다.<br />**\*\* 중요 \* \* ** 다음과 비슷한 오류 메시지가 표시 되 고 권한이 확인의 SQL Server 네트워크 구성에 대 한 어떤 프로토콜이 활성화 되었는지 확인 한 다음 **Sql Server Configuration Manager**합니다. "데이터베이스 서버에 연결 하지 못했습니다. 데이터베이스 존재 하 고 Sql server 이며 서버에 액세스 하는 적절 한 권한이 있는지 확인 합니다. "<br />**\*\* 중요 \* \* ** 페이지를 표시 하는 경우 **서버 팜 제품 및 패치 상태**, 페이지의 정보를 검토 하 고 계속 하기 전에 필요한 파일을 사용 하 여 서버를 업데이트 해야 합니다. 사용 하 여 서버를 팜에 조인 합니다.<br /><br /> 4)는 **팜 보안 설정 지정** 페이지에 팜 암호를 입력 하 고 클릭 **다음**합니다. 확인 페이지에서 **다음** 을 클릭하여 마법사를 실행합니다.<br /><br /> 5) 클릭 **다음** 실행 하는 **팜 구성 마법사**합니다.|  
+|SharePoint 제품 구성 마법사를 실행하여 팜에 서버 추가|1)에 **Microsoft SharePoint 2010 제품** 프로그램 그룹에서 클릭 **Microsoft SharePoint 2010 제품 구성 마법사**합니다.<br /><br /> 2)는 **서버 팜에 연결** 페이지 선택 **기존 팜에 연결** 클릭 **다음**합니다.<br /><br /> 3)는 **구성 데이터베이스 설정 지정** 페이지에서 구성 데이터베이스의 이름 및 기존 팜에 사용 되는 데이터베이스 서버의 이름을 입력 합니다. **다음**을 클릭합니다.<br />**\*\* 중요 \* \***  다음과 비슷한 오류 메시지가 표시 되 고 권한이 확인의 SQL Server 네트워크 구성에 대 한 어떤 프로토콜이 활성화 되었는지 확인 한 다음 **Sql Server Configuration Manager**합니다. "데이터베이스 서버에 연결 하지 못했습니다. 데이터베이스 존재 하 고 Sql server 이며 서버에 액세스 하는 적절 한 권한이 있는지 확인 합니다. "<br />**\*\* 중요 \* \***  페이지를 표시 하는 경우 **서버 팜 제품 및 패치 상태**, 페이지의 정보를 검토 하 고 계속 하기 전에 필요한 파일을 사용 하 여 서버를 업데이트 해야 합니다. 사용 하 여 서버를 팜에 조인 합니다.<br /><br /> 4)는 **팜 보안 설정 지정** 페이지에 팜 암호를 입력 하 고 클릭 **다음**합니다. 확인 페이지에서 **다음** 을 클릭하여 마법사를 실행합니다.<br /><br /> 5) 클릭 **다음** 실행 하는 **팜 구성 마법사**합니다.|  
 |서버가 SharePoint 팜에 추가되었는지 확인|1) SharePoint 중앙 관리의 **시스템 설정** 그룹에서 **이 팜의 서버 관리** 를 클릭합니다.<br /><br /> 2) 새 서버가 추가되었고 상태가 올바른지 확인합니다.<br /><br /> 3) WFE 역할에서이 서버를 제거 하려면 클릭 **서버의 서비스 관리** 서비스를 중지 하 고 **Microsoft SharePoint Foundation 웹 응용 프로그램**합니다.|  
 |설치 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010 제품에 추가 합니다.|추가 기능을 설치하는 방법은 여러 가지가 있습니다. 다음 단계는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 사용합니다. 추가 기능 설치에 대 한 자세한 내용은 참조 하세요. [설치 또는 SharePoint 용 Reporting Services 추가 기능에 제거 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다. 실행 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치:<br /><br /> 1) **설치 역할** 페이지에서 **SQL Server 기능 설치**를 선택합니다.<br /><br /> 2)는 **기능 선택** 페이지에서 **Reporting Services 추가 기능에 SharePoint 제품용**<br /><br /> 3) 클릭 **다음** 설치 옵션을 완료 하려면 다음 여러 페이지에 있습니다.<br /><br /> 설치 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 참조 하세요 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |새 서버가 작동하는지 확인합니다.|1) SharePoint 중앙 관리의 **시스템 설정** 그룹에서 **이 팜의 서버 관리** 를 클릭합니다.<br /><br /> 2) 새 서버가 목록에 있는지 확인합니다.|  

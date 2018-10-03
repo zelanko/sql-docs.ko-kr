@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - registering assemblies
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], creating
 - assemblies [Analysis Services]
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22351d69fc7b2a7f229980607ae5b8dab6f0499b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68f748ce1df9f1ae28600539759433188d534036
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118423"
 ---
 # <a name="creating-stored-procedures"></a>저장 프로시저 만들기
   모든 저장 프로시저는 CLR(공용 언어 런타임) 또는 COM(구성 요소 개체 모델) 클래스와 연결되어야 사용할 수 있습니다. 클래스는 서버에 설치 되어야 합니다-의 형태로 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® 동적 연결 라이브러리 (DLL)-서버 또는 어셈블리로 등록 하 고는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  

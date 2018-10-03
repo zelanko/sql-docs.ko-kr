@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ad07ccba62df7054f4ec19e0713192154ad62db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 957657e71103b248cdafb645bf44a68a9b486a53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169093"
 ---
 # <a name="perspectives-ssas-tabular"></a>큐브 뷰(SSAS 테이블 형식)
   테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 응용 프로그램의 관점에서 파악할 수 있습니다.  

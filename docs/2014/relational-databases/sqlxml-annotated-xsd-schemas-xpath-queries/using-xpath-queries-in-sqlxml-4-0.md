@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50586aca145c18a29cb260c71de578a060f08f36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c3f09dc7aca21e3ca56d86e340f083ea7b26251
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158303"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0의 XPath 쿼리 사용
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 주석이 추가된 XSD 스키마를 사용하면 데이터베이스에 저장된 관계형 데이터의 XML 뷰를 만들 수 있습니다. XPath 언어의 하위 집합을 사용하면 주석이 추가된 XSD 스키마로 만든 XML 뷰에 대해 쿼리를 수행할 수 있습니다.  

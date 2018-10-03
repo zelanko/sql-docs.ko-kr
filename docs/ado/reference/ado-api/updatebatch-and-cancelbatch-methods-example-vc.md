@@ -1,13 +1,11 @@
 ---
-title: UpdateBatch 및 CancelBatch 방법 예 (VC + +) | Microsoft Docs
+title: UpdateBatch 및 CancelBatch 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4182bc62fcc289a689d1eeb25999d19f40b3dd69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bb4929b8d89ad5ef2d60fa623777a739002af72f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784381"
 ---
-# <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 및 CancelBatch 방법 예 (VC + +)
-이 예제에서는 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드와 함께 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드.  
+# <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 및 CancelBatch 메서드 예제(VC++)
+이 예제에서는 합니다 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드와 함께 합니다 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드.  
   
 ```  
 // BeginUpdateBatchCpp.cpp  

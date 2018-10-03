@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5fd8c345a0f5b1cafdf675fa5ed57b857d9714b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9a260261a2078ac732c9b3eba2b0c1a9f335cf4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165889"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치
   Excel Services 또는 SharePoint용 PowerPivot이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 PowerPivot을 설치하는 경우, PowerPivot 관리 대시보드의 모든 기본 제공 보고서에 액세스하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 PowerPivot 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다.  

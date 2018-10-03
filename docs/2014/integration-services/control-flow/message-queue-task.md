@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31175748ef4f7998eae15dcd2a2c03e878abe071
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165153"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 응용 프로그램에서 처리되는 응용 프로그램 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  

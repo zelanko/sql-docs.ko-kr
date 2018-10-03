@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
-caps.latest.revision: 7
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: dca19f18df157756625b2335b2e38439c34d4f5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26ab900e8a043399191e8c26314d47e48dd3e1a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137383"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>1단원: Windows Azure 저장소 개체 만들기
   클라우드 저장소에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업을 만들려면 먼저 저장소 계정을 만든 다음 blob 컨테이너를 만들어야 합니다. 1단원에서는 Windows Azure 관리 포털에 로그인하여 저장소 계정과 blob 컨테이너를 만드는 과정을 단계별로 안내합니다.  

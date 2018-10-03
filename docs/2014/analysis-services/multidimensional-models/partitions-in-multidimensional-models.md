@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7491322b775cca1a6cf65b667ffd979aa723af0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8caec3620a5f7c0df1e3a5d0558272b1a2fb7bfa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164193"
 ---
 # <a name="partitions-in-multidimensional-models"></a>다차원 모델의 파티션
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 *파티션* 은 로드된 팩트 데이터의 실제 저장소를 측정값 그룹에 제공합니다. 각 측정값 그룹에 대해 단일 파티션이 자동으로 만들어지지만 더욱 효율적으로 처리하고 쿼리 성능이 빨라지도록 데이터를 추가로 분할하는 추가 파티션을 만드는 것이 일반적입니다.  

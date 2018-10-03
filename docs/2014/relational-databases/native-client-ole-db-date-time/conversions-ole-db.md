@@ -1,28 +1,25 @@
 ---
-title: 바인딩 및 변환 (OLE DB) | Microsoft Docs
+title: 바인딩 및 변환 (OLE DB) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB]
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709fb4abec2e8de8aa845aaddb1418f5c9d957e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 16ea4eb3954af5f1095331d05912c1faa0ff9525
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144903"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>바인딩 및 변환(OLE DB)
   이 섹션에서는 `datetime` 값과 `datetimeoffset` 값 사이의 변환 방법에 대해 설명합니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
@@ -72,6 +69,6 @@ ms.locfileid: "37407993"
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB를 사용하여 작성된 클라이언트 응용 프로그램 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [날짜 및 시간 기능 향상 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

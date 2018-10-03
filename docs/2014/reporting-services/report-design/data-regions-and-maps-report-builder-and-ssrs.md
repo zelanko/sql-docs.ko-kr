@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a130b04ab18fc22bf1a028cea38d093e4b48f24c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ba57dbed0ebbd2ad2b6e9e5c5996334d68c2dd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114133"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>데이터 영역 및 지도(보고서 작성기 및 SSRS)
   데이터 영역은 보고서 데이터 집합에 있는 데이터를 표시하는 보고서의 개체입니다. 보고서 데이터는 테이블, 행렬 또는 목록에 숫자 및 텍스트로 표시되거나, 차트 또는 계기에 그래픽으로 표시되거나, 지도에 지리적 배경을 바탕으로 표시될 수 있습니다. 테이블, 행렬 및 목록은 모두 데이터 집합의 모든 데이터를 표시하기 위해 필요에 따라 확장되는 *테이블릭스* 데이터 영역을 기반으로 합니다. 테이블릭스 데이터 영역은 정적 행과 열 및 동적 행과 열이 모두 포함된 여러 행 및 열 그룹을 지원합니다. 차트는 여러 계열 및 범주 그룹을 다양한 차트 형식으로 표시하고, 계기는 데이터 집합의 단일 값 또는 집계 값을 표시합니다. 또한 지도는 공간 데이터를 데이터 집합에서 집계한 데이터를 기반으로 모양이 변하는 지도 요소로 표시합니다.  

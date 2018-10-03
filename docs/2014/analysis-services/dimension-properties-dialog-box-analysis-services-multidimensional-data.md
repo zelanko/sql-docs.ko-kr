@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.dimensionproperties.f1
 helpviewer_keywords:
 - Dimension Properties dialog box
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d73fa2387255a1bba847a2cff30eaa68c518077
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb71a47263b98100b37707b369ff1c89ad62d282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101473"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>차원 속성 대화 상자(Analysis Services - 다차원 데이터)
   **의** 차원 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 차원 속성을 설정할 수 있습니다. 개체 탐색기에서 차원을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하면 **차원 속성**대화 상자가 표시됩니다.  

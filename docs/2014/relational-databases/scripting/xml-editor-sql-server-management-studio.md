@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4d6fedddf4b99d2f8ef068cc1212972b6a25fe2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166293"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
   XML 스키마, ADO.NET 데이터 집합 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  

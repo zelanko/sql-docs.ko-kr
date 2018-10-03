@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0b328642f0a409bdf6a915f4a6063e34e5e7b2cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69f989fd4714aaafed94f1b8a9fb3ad077cc7cf8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272439"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065723"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>보고서 디자인 팁(보고서 작성기 및 SSRS)
   다음 팁을 사용하면 보고서를 디자인하는 데 도움이 됩니다.  

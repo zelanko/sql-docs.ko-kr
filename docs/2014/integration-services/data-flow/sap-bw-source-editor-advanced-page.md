@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e227f0a3c19385f8b6eaedd747dbe63895b19298
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67e45ef54da3d79d877882c94ee34fcaf0814514
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100713"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 원본 편집기(고급 페이지)
   **SAP BW 원본 편집기** 의 **고급** 페이지를 사용하여 문자열 변환 규칙과 제한 시간을 지정하고 특정 요청 ID의 상태를 다시 설정할 수 있습니다.  

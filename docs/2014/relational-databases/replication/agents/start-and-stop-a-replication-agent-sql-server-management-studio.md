@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], stopping
 - agents [SQL Server replication], starting
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70011cb38e22d94b72eb41ccb01f10a7739c05d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27760ba8e445660e1215bf2e23b922b1a783b553
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100185"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>복제 에이전트 시작 및 중지(SQL Server Management Studio)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]와 복제 모니터에 있는 **작업** 폴더 및 **복제** 폴더에서 에이전트를 시작하고 중지합니다. 다음 에이전트 및 작업을 시작하고 중지할 수 있습니다.  

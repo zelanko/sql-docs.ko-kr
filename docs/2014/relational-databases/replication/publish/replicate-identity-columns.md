@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - transactional replication, identity range management
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
-caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089855"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
   열에 IDENTITY 속성을 할당하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 ID 열을 포함하는 테이블에 순차적 개수대로 삽입되는 새 행을 자동으로 생성합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  

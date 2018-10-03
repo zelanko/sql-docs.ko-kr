@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - XML for Analysis, objects
 - XMLA, objects
 ms.assetid: 768188ef-85d4-432a-9390-be05c835137f
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fdaa8cc81b642212c6aa404a8b6d39e3872c743
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e60cc807677b563361dbeea06c2f6b45ab468049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149373"
 ---
 # <a name="objects-xmla"></a>개체(XMLA)
   XMLA(XML for Analysis) 프로토콜은 `Discover` 및 `Execute`와 같은 두 메서드를 사용하여 응용 프로그램이 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 정보에 액세스할 수 있는 표준 방법을 제공합니다. 이 두 메서드는 SOAP(Simple Object Access Protocol) 프로토콜을 통해 호출되므로 XML로 입력을 받고 출력을 전달합니다.  

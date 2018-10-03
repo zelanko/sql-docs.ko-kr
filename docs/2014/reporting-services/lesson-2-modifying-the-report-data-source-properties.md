@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159623"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   이 단원에서는 보고서 관리자를 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다. 다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
@@ -91,11 +88,11 @@ ms.locfileid: "37175246"
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.   **확인**을 클릭합니다.  
+4.  **확인**을 클릭합니다.  
   
 ##  <a name="bkmk_add_reportparameter"></a> 보고서 매개 변수를 추가 하 고 보고서를 다시 게시 하려면  
   
-1.   **보고서 데이터** 창에서 **새로 만들기** 를 클릭한 후 **매개 변수...** 를 클릭합니다.  
+1.  **보고서 데이터** 창에서 **새로 만들기** 를 클릭한 후 **매개 변수...** 를 클릭합니다.  
   
 2.  **이름**에서 `OrderNumber`을 입력합니다.  
   

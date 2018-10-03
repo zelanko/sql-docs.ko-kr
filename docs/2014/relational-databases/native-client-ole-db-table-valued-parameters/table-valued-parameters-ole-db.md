@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, table-valued parameters
 - table-valued parameters (OLE DB)
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebc5cdc62ba75183fcfc074fb0fd5fec5202709f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e9c58b1837eb017a3cc51652ff404b37690b3849
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158933"
 ---
 # <a name="table-valued-parameters-ole-db"></a>테이블 반환 매개 변수(OLE DB)
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 테이블 반환 매개 변수 지원에 대해 설명합니다. 추가 개요 정보를 참조 하세요 [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)합니다. 샘플을 보려면 [테이블 반환 매개 변수 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)합니다.  
@@ -45,12 +42,12 @@ ms.locfileid: "37432572"
   
 -   [OLE DB 테이블 반환 매개 변수 형식 지원](ole-db-table-valued-parameter-type-support.md)  
   
--   [OLE DB 테이블 반환 매개 변수 형식 지원 &#40;메서드&#41;](ole-db-table-valued-parameter-type-support-methods.md)  
+-   [OLE DB 테이블 반환 매개 변수 형식 지원&#40;Methods&#41;](ole-db-table-valued-parameter-type-support-methods.md)  
   
--   [OLE DB 테이블 반환 매개 변수 형식 지원 &#40;속성&#41;](ole-db-table-valued-parameter-type-support-properties.md)  
+-   [OLE DB 테이블 반환 매개 변수 형식 지원&#40;Properties&#41;](ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)   
- [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

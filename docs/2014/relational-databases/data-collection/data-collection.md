@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2071c4d13fdaa26787c98dd3bc01123f235bacb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2c1579155bade7c2ddb3e3831e10ae1943cfd1f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141243"
 ---
 # <a name="data-collection"></a>데이터 컬렉션
   데이터 수집기는 다양한 데이터 집합을 수집하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소입니다. 데이터 컬렉션은 항상 실행되거나 사용자 정의 일정에 따라 실행됩니다. 데이터 수집기는 관리 데이터 웨어하우스로 알려진 관계형 데이터베이스에 수집한 데이터를 저장합니다.  

@@ -1,14 +1,11 @@
 ---
-title: sys.xml_schema_facets (Transact SQL) | Microsoft Docs
+title: sys.xml_schema_facets (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.xml_schema_facets
@@ -20,21 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_facets catalog view
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec4d2b255b570aec0170f98027eb12313d32f547
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34370bd923a2ea6ccd66964ff9499de740171e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684111"
 ---
 # <a name="sysxmlschemafacets-transact-sql"></a>sys.xml_schema_facets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Xml 유형 정의의 패싯 (제한) 당 하나의 행을 반환 (에 해당 **sys.xml_types**).  
+  Xml 형식 정의의 패싯 (제한) 당 하나의 행을 반환 (해당 **sys.xml_types**).  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,11 +41,11 @@ ms.locfileid: "33220544"
 |**is_fixed**|**bit**|1 = 패싯에 미리 지정된 고정 값이 있습니다.<br /><br /> 0 = 고정 값이 (기본값)|  
 |**value**|**nvarchar (4000)**|패싯의 미리 지정된 고정 값입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML 스키마 &#40;XML 유형 시스템&#41; 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [XML 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;SQL 트랜잭션&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

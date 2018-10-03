@@ -1,34 +1,31 @@
 ---
-title: 불일치 예제 (VB) | Microsoft Docs
+title: CompareBookmarks 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff4e2c8c1e66ac7240e188e06ede5bb1295814de
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 99aadf2d532c6e42b2638aab34d19289617e7d38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705179"
 ---
-# <a name="comparebookmarks-method-example-vb"></a>불일치 예제 (VB)
-이 예제에서는 [불일치](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드. 책갈피의 상대 값은 특정 책갈피는 어떤 방식으로든 특별 한 경우가 아니면 필요 하지 않습니다.  
+# <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks 메서드 예제(VB)
+이 예제에서는 합니다 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드. 책갈피의 상대 값은 특정 책갈피를 소유자가 없는 경우 특별 한 경우가 아니면 필요 하지 않습니다.  
   
- 임의 행의 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 파생 된는 ***작성자*** 테이블 검색의 대상으로 합니다. 그런 다음 대상으로 하는 기준으로 각 행의 위치를 표시 합니다.  
+ 임의 행을 지정는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 파생 된 합니다 ***작성자*** 테이블 검색을 대상으로 합니다. 그런 다음 대상으로 하는 기준으로 각 행의 위치를 표시 합니다.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -137,6 +134,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [불일치 메서드 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+ [CompareBookmarks 메서드 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

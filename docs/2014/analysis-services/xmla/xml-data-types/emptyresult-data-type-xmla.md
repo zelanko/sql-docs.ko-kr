@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EmptyResult Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc22612f18faa91e6cd668c022f036aadb9ef176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088549"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 데이터 형식(XMLA)
   나타내는 파생된 데이터 형식을 정의 [루트](../xml-elements-properties/root-element-xmla.md) 에서 데이터를 반환 하지 않는 요소를 [검색](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드 호출 합니다.  
@@ -53,14 +50,14 @@ ms.locfileid: "37257159"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[결과 집합](resultset-data-type-xmla.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
-|자식 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
+|자식 요소|없음|  
 |파생 요소|[root](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

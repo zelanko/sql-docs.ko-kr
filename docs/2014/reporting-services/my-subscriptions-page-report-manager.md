@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177620"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165963"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>내 구독 페이지(보고서 관리자)
   내 구독 페이지를 사용하여 모든 구독을 한 곳에서 확인할 수 있습니다. 이 페이지에서는 소유한 모든 구독을 액세스하고 수정 또는 삭제할 수 있습니다. 사용자는 자신이 만든 구독만 소유합니다. 다른 사용자가 정의한 구독에는 액세스할 수 없을 뿐 아니라 사용하지만 소유하지 않는 구독(예: 다른 사용자가 정의한 기존 구독에 자신의 이름이 추가된 경우)에도 액세스할 수 없습니다. 이 페이지에서 구독을 만들 수는 없습니다. 구독을 만드는 방법에 대 한 자세한 내용은 참조는 [새 구독 또는 구독 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)합니다.  

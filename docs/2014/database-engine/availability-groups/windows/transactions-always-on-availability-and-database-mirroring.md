@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6014fcc072e9ce6d85fffc62d76f5ba51f341556
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101373"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대해 지원되지 않는 데이터베이스 간 트랜잭션(SQL Server)
   데이터베이스 간 트랜잭션 또는 분산 트랜잭션은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에서 지원되지 않습니다. 이는 다음과 같은 이유로 인해 트랜잭션 원자성/무결성을 보장할 수 없기 때문입니다.  

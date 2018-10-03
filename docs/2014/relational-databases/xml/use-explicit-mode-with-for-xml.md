@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58e0ac44e282d6d2de4b989cd0e0940aa3b6866c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: e5972f4dfb9ad47b4017acf36df45098c11eceb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889699"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086385"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
   [FOR XML을 사용하는 XML 생성](../xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  

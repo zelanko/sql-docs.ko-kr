@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3be65edb0300b2ab47f22784cb7b109372062e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130643"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>관계 삭제(SSAS 테이블 형식)
   다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계가 사용 되는 방법에 대 한 자세한 내용은 [관계 &#40;&AMP;#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)합니다.  

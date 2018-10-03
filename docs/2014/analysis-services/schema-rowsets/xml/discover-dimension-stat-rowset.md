@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d70382117367762dc35a6d02663f54436ea63bb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39ae0bed8c0e0ff7eb272062b79b870dfb31157e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094983"
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 행 집합
   차원이 포함된 데이터베이스 이름, 차원 이름, 해당 특성 및 각 특성의 멤버 수를 비롯한 차원에 대한 정보를 제공합니다. 테이블 형식 모델에서 이 항목은 테이블에 있는 열과 각 열에 있는 값의 수에 해당합니다.  

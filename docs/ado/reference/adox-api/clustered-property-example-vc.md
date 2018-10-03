@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 091bef85e3312507c3924d216e65e125956c4bce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0df3ce437d97f2111aa4f980ce926b1fdaccbded
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827584"
 ---
-# <a name="clustered-property-example-vc"></a>Clustered 속성 예제 (VC + +)
-이 예제에서는 [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. Microsoft Jet 데이터베이스는 클러스터형된 인덱스, 지원 하지 않으므로이 예제는 반환 되는 참고 **False** 에 대 한는 **Clustered** 에 모든 인덱스의 속성은 *Northwind* 데이터베이스입니다.  
+# <a name="clustered-property-example-vc"></a>Clustered 속성 예제(VC++)
+이 예제에서는 합니다 [클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. Microsoft Jet 데이터베이스에이 예제에서는 반환은 클러스터형된 인덱스를 지원 하지 않습니다 **False** 에 대 한 합니다 **클러스터형** 의 모든 인덱스의 속성을 *Northwind* 데이터베이스입니다.  
   
 ```  
 // BeginClusteredCpp.cpp  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - building database objects [CLR integration], debugging
 - common language runtime [SQL Server], debugging
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 45
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3876977fec397d9f053b750c4cfdae39ef5a50ec
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: b1cc46a4f9f4e6897971f45d8947c3eff6f830f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072243"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR 데이터베이스 개체 디버깅
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터베이스의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 개체 디버깅을 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디버깅에서 중요한 점은, 설치 및 사용이 쉽고 SQL Server 디버거를 Microsoft Visual Studio 디버거와 통합할 수 있다는 것입니다. 또한 디버깅이 여러 언어에서 작동합니다. 사용자는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 CLR 개체로 매끄럽게 한 단계씩 코드를 실행할 수 있으며 그 반대의 경우도 가능합니다. 관리되는 데이터베이스 개체를 디버깅할 때는 SQL Server Management Studio의 Transact-SQL 디버거를 사용할 수 없지만 Visual Studio의 디버거를 사용하여 개체를 디버깅할 수 있습니다. Visual Studio의 관리되는 데이터베이스 개체 디버깅은 서버에서 실행 중인 루틴에서 "step into" 및 "step over" 문과 같은 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거는 디버깅하는 동안 중단점을 설정하고, 호출 스택을 검사하고, 변수를 검사하고, 변수 값을 수정할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍 또는 디버깅에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37354365"
   
 1.  Microsoft Visual Studio를 열고 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로젝트를 만든 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스에 대한 연결을 설정합니다.  
   
-2.  새 형식을 만듭니다. **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭, 선택 **추가** 고 **새 항목...** **새 항목 추가** 창에서 **저장 프로시저**에 **사용자 정의 함수**를 **사용자 정의 형식**, ** 트리거**하십시오 **집계**, 또는 **클래스**합니다. 새 형식의 원본 파일의 이름을 지정 하 고 클릭 **추가**합니다.  
+2.  새 형식을 만듭니다. **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭, 선택 **추가** 고 **새 항목...** **새 항목 추가** 창에서 **저장 프로시저**에 **사용자 정의 함수**를 **사용자 정의 형식**,  **트리거**하십시오 **집계**, 또는 **클래스**합니다. 새 형식의 원본 파일의 이름을 지정 하 고 클릭 **추가**합니다.  
   
 3.  새 형식의 코드를 텍스트 편집기에 추가합니다. 저장 프로시저의 예제 코드는 이 항목의 뒷부분에 나오는 섹션을 참조하십시오.  
   

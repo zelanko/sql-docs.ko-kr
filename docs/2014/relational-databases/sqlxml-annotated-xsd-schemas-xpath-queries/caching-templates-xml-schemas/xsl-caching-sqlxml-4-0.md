@@ -1,30 +1,27 @@
 ---
-title: XSL 캐싱 (SQLXML 4.0) | Microsoft Docs
+title: XSL 캐싱 (SQLXML 4.0) | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
 - cache [SQLXML]
 - XSL caching [SQLXML]
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64256db5e8cb147c47e28852bb3589e8732bf9c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff1d92a054d85c52e5b69044a2c25da31eb35705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256015"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166733"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 캐싱(SQLXML 4.0)
   XSL 스타일시트를 캐시하면 성능이 향상됩니다. XSL 스타일시트를 처음 캐시할 때 XSL 캐싱이 ON으로 설정되어 있으면 XSL 스타일시트가 메모리에 유지되므로 후속 처리의 성능이 향상됩니다. 기본 설정은 ON입니다.  
@@ -45,7 +42,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
  캐시된 XSL 스타일시트가 사용될 때마다 XSL 파일을 새로 고쳐야 하는지 확인하기 위해 템플릿 파일의 수정 시간이 검사됩니다. 왜냐하면 캐시 복사본보다 디스크 복사본이 최신이기 때문입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [템플릿 캐싱은 &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
- [스키마 캐싱 &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+ [서식 파일을 캐싱을 &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
+ [스키마 캐시 &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
   
   

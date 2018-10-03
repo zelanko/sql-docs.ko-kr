@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155453"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Add Report Server Content Types to a Library (Reporting Services in SharePoint Integrated Mode)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 데이터 원본 (.rsds) 파일, 보고서 모델 (.smdl) 및 보고서 작성기 보고서 정의 (.rdl) 파일을 관리 하는 데 사용 되는 미리 정의 된 SharePoint 콘텐츠 형식을 제공 합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.  

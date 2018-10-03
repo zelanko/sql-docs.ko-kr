@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90042bb67b29b86941055ed0689a4c7043bfdd6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090322"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>측정값(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에서 **측정값** 창을 사용하여 측정값 그룹 및 멤버를 조작할 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 69210fcc9a629384bf231d020cff6be755913f29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fa879258a588c944c9d4c35954845cde767e626
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182720"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103663"
 ---
 # <a name="enabling-logging-programmatically"></a>프로그래밍 방식으로 로깅 설정
   런타임 엔진에서는 패키지의 유효성 검사 및 실행 중에 이벤트 관련 정보를 캡처하는 데 사용할 수 있는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 개체의 컬렉션을 제공합니다. <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 개체는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package> 및 <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> 개체를 비롯하여 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 개체에서 사용할 수 있습니다. 개별 컨테이너나 패키지 전체에 대해 로깅 기능을 사용하도록 설정할 수 있습니다.  

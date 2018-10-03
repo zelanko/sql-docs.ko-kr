@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - GUID regenerating [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - copying packages
 - regenerating package GUID
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2be515df284d420790350c6be6fcc609666bcd56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2b9179a6c94c6bffd0a7ebc9f5c9b1bb2897605
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156673"
 ---
 # <a name="reuse-of-package-objects"></a>패키지 개체 다시 사용
   다시 사용하려는 자주 사용되는 패키지 기능입니다. 예를 들어 태스크 집합을 만든 경우 항목을 모두 그룹으로 다시 사용하거나 다른 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에서 만든 연결 관리자와 같은 단일 항목을 다시 사용하려고 할 수 있습니다.  

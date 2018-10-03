@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping schema [SQLXML], security
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - security [SQLXML], annotated schemas
 - XSD schemas [SQLXML], security
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4834255ba7f6024c484c8142ccfb4d18a9e6f44c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b46c996c7b89be06558d3ad4b43e1c1bca6aa370
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162329"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>주석 스키마 보안 고려 사항(SQLXML 4.0)
   다음은 주석 스키마를 사용하기 위한 보안 지침입니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37325673"
   
 -   주석을 사용하여 명시적 매핑을 지정하면 테이블 이름 및 열 이름과 같은 데이터베이스 정보가 공개됩니다. 따라서 이러한 스키마가 공개되지 않도록 해야 합니다.  
   
--   재귀(`max-depth` 주석을 더 높은 값으로 설정하여 지정)를 사용하여 매핑 스키마에 대해 지정한 특정 쿼리는 실행하는 데 오랜 시간이 걸릴 수 있습니다. 필요에 따라 초 단위로 명령 시간 제한 속성을 설정 하 여 제한 시간을 지정할 수 있습니다. 예를 들어:  
+-   재귀(`max-depth` 주석을 더 높은 값으로 설정하여 지정)를 사용하여 매핑 스키마에 대해 지정한 특정 쿼리는 실행하는 데 오랜 시간이 걸릴 수 있습니다. 필요에 따라 초 단위로 명령 시간 제한 속성을 설정 하 여 제한 시간을 지정할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140353"
 ---
 # <a name="linked-measure-groups"></a>연결된 측정값 그룹
   연결된 측정값 그룹은 동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스 내에 있는 다른 큐브의 또 다른 측정값 그룹을 기반으로 합니다. 측정값 집합을 다시 사용하려는 경우 여러 큐브에서 연결된 측정값 그룹과 해당 데이터 값을 사용할 수 있습니다.  

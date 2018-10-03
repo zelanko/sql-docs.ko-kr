@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-caps.latest.revision: 5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32202ce456a45f34e2a2179c80a806bf0ffbf52c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16a9636cda0a0f390decd4215c897d033b282eaf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077093"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>태스크 1: 데이터 품질 프로젝트 만들기
   이 작업에서는 이 자습서의 앞 부분에서 만든 Suppliers 기술 자료에 대해 Excel 파일에서 공급자 데이터를 정리하기 위한 데이터 품질 프로젝트를 만듭니다.  

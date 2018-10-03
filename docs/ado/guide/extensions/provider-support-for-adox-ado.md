@@ -6,62 +6,59 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADOX provider support [ADO]
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac3d27c685cba755635f3ab9d111fe69b7d2067e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6f346779d3a4c8cb43e2b30347ebf6b198d9015
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803281"
 ---
-# <a name="provider-support-for-adox-ado"></a>ADOX (ADO)에 대 한 공급자 지원
-ADOX의 특정 기능은 OLE DB 데이터 공급자에 따라 지원 되지 않습니다. ADOX는 완전히 지원 되는 [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)합니다. 지원 되지 않는 기능으로는 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), 또는 [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) 됩니다 다음 표에 나와 있습니다. ADOX 다른 Microsoft OLE DB 공급자가 지원 되지 않습니다.  
+# <a name="provider-support-for-adox-ado"></a>ADOX에 대한 공급자 지원(ADO)
+ADOX의 특정 기능은 OLE DB 데이터 공급자에 따라 지원 되지 않습니다. ADOX에서 완전히 지원 되는 [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)합니다. 지원 되지 않는 기능을 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)의 [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), 또는 [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) 됩니다 다음 테이블에 나열 합니다. ADOX 다른 Microsoft OLE DB 공급자가 지원 되지 않습니다.  
   
 ## <a name="microsoft-ole-db-provider-for-sql-server"></a>Microsoft OLE DB Provider for SQL Server  
   
-|개체 또는 컬렉션|제한 사항|  
+|개체 또는 컬렉션|사용 제한|  
 |--------------------------|-----------------------|  
-|**테이블** 컬렉션|속성은 기존 개체를 참조할 때 개체가 만들어지기 전에 읽기/쓰기가 가능 하지만 읽기 전용입니다.|  
+|**테이블** 컬렉션|속성은 기존 개체를 참조할 때 개체를 생성 하기 전에 읽기/쓰기가 가능 하지만 읽기 전용입니다.|  
 |**뷰** 컬렉션|**뷰** 지원 되지 않습니다.|  
-|**프로시저** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
-|**프로시저** 개체|**명령** 속성이 지원 되지 않습니다.|  
-|**키** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
+|**프로시저** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
+|**프로시저** 개체|합니다 **명령** 속성이 지원 되지 않습니다.|  
+|**키** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
 |**사용자가** 컬렉션|**사용자가** 지원 되지 않습니다.|  
 |**그룹** 컬렉션|**그룹** 지원 되지 않습니다.|  
   
 ## <a name="microsoft-ole-db-provider-for-odbc"></a>ODBC용 Microsoft OLE DB 공급자  
   
-|개체 또는 컬렉션|제한 사항|  
+|개체 또는 컬렉션|사용 제한|  
 |--------------------------|-----------------------|  
-|**카탈로그** 개체|**만들기** 메서드가 지원 되지 않습니다.|  
-|**테이블** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다. 속성은 기존 개체를 참조할 때 개체가 만들어지기 전에 읽기/쓰기가 가능 하지만 읽기 전용입니다.|  
-|**프로시저** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
-|**프로시저** 개체|**명령** 속성이 지원 되지 않습니다.|  
-|**인덱스** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
-|**키** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
+|**카탈로그** 개체|합니다 **만들기** 메서드가 지원 되지 않습니다.|  
+|**테이블** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다. 속성은 기존 개체를 참조할 때 개체를 생성 하기 전에 읽기/쓰기가 가능 하지만 읽기 전용입니다.|  
+|**프로시저** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
+|**프로시저** 개체|합니다 **명령** 속성이 지원 되지 않습니다.|  
+|**인덱스** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
+|**키** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
 |**사용자가** 컬렉션|**사용자가** 지원 되지 않습니다.|  
 |**그룹** 컬렉션|**그룹** 지원 되지 않습니다.|  
   
 ## <a name="microsoft-ole-db-provider-for-oracle"></a>Oracle용 Microsoft OLE DB 공급자  
   
-|개체 또는 컬렉션|제한 사항|  
+|개체 또는 컬렉션|사용 제한|  
 |--------------------------|-----------------------|  
-|**카탈로그** 개체|**만들기** 메서드가 지원 되지 않습니다.|  
-|**테이블** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다. 속성은 기존 개체를 참조할 때 개체가 만들어지기 전에 읽기/쓰기가 가능 하지만 읽기 전용입니다.|  
-|**뷰** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
-|**보기** 개체|**명령** 속성이 지원 되지 않습니다.|  
-|**프로시저** 개체|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
-|**프로시저** 개체|**명령** 속성이 지원 되지 않습니다.|  
-|**인덱스** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
-|**키** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
+|**카탈로그** 개체|합니다 **만들기** 메서드가 지원 되지 않습니다.|  
+|**테이블** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다. 속성은 기존 개체를 참조할 때 개체를 생성 하기 전에 읽기/쓰기가 가능 하지만 읽기 전용입니다.|  
+|**뷰** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
+|**보기** 개체|합니다 **명령** 속성이 지원 되지 않습니다.|  
+|**프로시저** 개체|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
+|**프로시저** 개체|합니다 **명령** 속성이 지원 되지 않습니다.|  
+|**인덱스** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
+|**키** 컬렉션|**Append** 하 고 **삭제** 메서드가 지원 되지 않습니다.|  
 |**사용자가** 컬렉션|**사용자가** 지원 되지 않습니다.|  
 |**그룹** 컬렉션|**그룹** 지원 되지 않습니다.|

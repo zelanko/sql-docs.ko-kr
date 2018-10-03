@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164293"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
@@ -45,8 +42,7 @@ ms.locfileid: "37218303"
 >  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007용 데이터 마이닝 추가 기능과 같은 일부 클라이언트를 사용하면 인스턴스에 대한 연결을 사용하지만 마이닝 구조 및 모델을 세션 기간 동안만 서버에 저장하는 세션 마이닝 모델 및 마이닝 구조를 만들 수도 있습니다. 이러한 모델도 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장된 구조 및 모델과 같이 여전히 클라이언트를 통해 관리할 수 있지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스와의 연결을 끊은 후에는 개체가 유지되지 않습니다.  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>SQL Server Data Tools에서 데이터 마이닝 개체 관리  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 데이터 마이닝 개체를 쉽게 만들고, 찾아보고, 편집할 수 있는 여러 기능을 제공합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 데이터 마이닝 개체를 쉽게 만들고, 찾아보고, 편집할 수 있는 여러 기능을 제공합니다.  
   
  다음 링크에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 데이터 마이닝 개체를 수정하는 방법에 대한 정보를 제공합니다.  
   

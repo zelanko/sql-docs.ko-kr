@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164873"
 ---
-# SQL Server 트랜잭션 로그 아키텍처 및 관리
+# <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다. 트랜잭션 로그는 데이터베이스의 주요 구성 요소이며 시스템 오류가 발생할 경우 데이터베이스를 다시 일관된 상태로 만들려면 트랜잭션 로그가 필요할 수 있습니다. 이 지침에서는 트랜잭션 로그의 물리적 및 논리적 아키텍처에 대한 정보를 제공합니다. 아키텍처를 이해하면 트랜잭션 로그를 보다 효율적으로 관리할 수 있습니다.  
@@ -82,7 +79,7 @@ ms.locfileid: "37301343"
   
  로그에 물리 로그 파일이 여러 개 있으면 논리 로그는 모든 물리 로그 파일을 거친 후 첫 번째 물리 로그 파일의 시작 부분으로 순환됩니다.  
   
-### 로그 잘림  
+### <a name="log-truncation"></a>로그 잘림  
  로그가 가득 차지 않도록 하기 위해 로그 잘림은 필수적입니다. 로그 잘림은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 논리 트랜잭션 로그에서 비활성 가상 로그 파일을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 트랜잭션 로그로 채워지게 됩니다. 단, 로그를 자르기 전에 검사점 작업을 수행해야 합니다. 검사점은 현재 메모리 내의 수정된 페이지(더티 페이지라고 함)와 메모리의 트랜잭션 로그 정보를 디스크에 기록합니다. 검사점을 수행하면 트랜잭션 로그의 비활성 부분은 재사용 가능으로 표시됩니다. 그런 후에는 로그 잘림으로 비활성 부분에 대한 공간을 확보할 수 있습니다. 검사점에 대한 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
   
  다음 그림에서는 잘림 전과 후의 트랜잭션 로그를 보여 줍니다. 첫 번째 그림은 잘림이 수행되지 않은 트랜잭션 로그를 보여 줍니다. 현재 논리 로그에서 4개의 가상 로그 파일을 사용하고 있습니다. 논리 로그는 첫 번째 가상 로그 파일의 앞에서 시작하고 가상 로그 4에서 끝납니다. MinLSN 레코드는 가상 로그 3에 있습니다. 가상 로그 1과 가상 로그 2에는 비활성 로그 레코드만 포함되어 있습니다. 이러한 레코드는 자를 수 있습니다. 가상 로그 5는 사용하지 않았으며 현재 논리 로그에 포함되지 않습니다.  
@@ -117,15 +114,15 @@ ms.locfileid: "37301343"
   
  복원해야 하는 로그 백업의 수를 제한하려면 데이터를 정기적으로 백업해야 합니다. 예를 들어 주별 전체 데이터베이스 백업과 일별 차등 데이터베이스 백업을 예약할 수 있습니다.  
   
-### 로그 체인  
+### <a name="the-log-chain"></a>로그 체인  
  로그 백업의 연속 시퀀스를 *로그 체인*이라고 합니다. 로그 체인은 데이터베이스의 전체 백업으로 시작합니다. 일반적으로 데이터베이스를 처음 백업할 때나 단순 복구 모델에서 전체 또는 대량 로그 복구 모델로 전환한 후에만 새 로그 체인이 시작됩니다. 전체 데이터베이스 백업을 만들 때 기존 백업 집합을 덮어쓰도록 선택하지 않으면 기존 로그 체인이 그대로 유지됩니다. 로그 체인이 그대로 유지되면 미디어 세트의 전체 데이터베이스 백업에서 데이터베이스를 복원한 후 모든 후속 로그 백업을 복구 지점까지 복원할 수 있습니다. 복구 지점은 마지막 로그 백업의 끝이나 로그 백업의 특정 복구 지점일 수 있습니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
  데이터베이스를 오류 발생 시점까지 복원하려면 로그 체인이 온전해야 합니다. 즉 트랜잭션 로그 백업의 연속적인 시퀀스가 오류 발생 지점까지 이어져야 합니다. 이 로그 시퀀스가 시작되는 위치는 복원 중인 데이터 백업의 유형인 데이터베이스, 부분 또는 파일에 따라 달라집니다. 데이터베이스 또는 부분 백업의 경우 로그 백업의 시퀀스는 데이터베이스 또는 부분 백업의 끝 지점에서 이어져야 합니다. 파일 백업 집합의 경우 로그 백업의 시퀀스는 전체 파일 백업 집합의 시작 지점에서 이어져야 합니다. 자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   
-### 로그 백업을 복원하려면  
+### <a name="restore-log-backups"></a>로그 백업을 복원하려면  
  로그 백업을 복원하면 현재 데이터베이스를 로그 백업 작업이 시작된 시점의 데이터베이스 상태와 정확히 일치하도록 다시 만들기 위해 트랜잭션 로그에 기록된 변경 내용을 롤포워드합니다. 데이터베이스를 복원하는 경우 복원하는 전체 데이터베이스 백업 이후 또는 복원하는 첫 번째 파일 백업의 시작 부분에서 만든 로그 백업을 복원해야 합니다. 일반적으로 가장 최근의 데이터나 차등 백업을 복원하고 나면 복구 지점에 이를 때까지 일련의 로그 백업을 복원한 다음 데이터베이스를 복구해야 합니다. 이때까지 완료되지 않은 트랜잭션은 모두 롤백되며 복구가 완료되면 데이터베이스는 온라인 상태가 됩니다. 데이터베이스가 복구된 후에는 더 이상의 백업을 복원할 수 없습니다. 자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   
-## 더 보기  
+## <a name="additional-reading"></a>더 보기  
  트랜잭션 로그에 대한 자세한 내용은 다음 기사 및 책을 참조하십시오.  
   
  [Paul Randall, "SQL Server의 로깅 및 복구 이해"](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  

@@ -1,35 +1,32 @@
 ---
-title: 연결 속성 (VBScript) 예제 | Microsoft Docs
+title: Connect 속성 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730751"
 ---
-# <a name="connect-property-example-vbscript"></a>연결 속성 (VBScript) 예제
+# <a name="connect-property-example-vbscript"></a>Connect 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- 이 코드에서는 설정 하는 방법을 보여 줍니다.는 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 디자인 타임에 속성:  
+ 이 코드를 설정 하는 방법을 보여 줍니다 합니다 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 디자인 타임에 속성:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287402"
 </OBJECT>  
 ```  
   
- 설정 하는 방법을 보여 주는 다음 예제는 **연결** VBScript 코드에서 런타임 시 속성입니다.  
+ 다음 예제에서는 설정 하는 방법을 보여 줍니다 합니다 **Connect** VBScript 코드에서 런타임에 속성입니다.  
   
- 이 예제를 테스트 하려면 잘라내어 붙여 사이 코드는 \<본문 > 및 \</본문 > 일반 HTML 태그를에서 문서화 하 고 이름을 **ConnectVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 이 예제를 테스트 하려면에서 잘라내기 및 붙여넣기 사이의 코드를 \<본문 > 및 \</b > 일반 HTML 태그를에서 문서화 하 고 이름을 **ConnectVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
   
 ```  
 <!-- BeginConnectVBS -->  

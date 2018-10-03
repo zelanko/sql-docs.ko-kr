@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_map_lsn_to_time (Transact SQL) | Microsoft Docs
+title: sys.fn_cdc_map_lsn_to_time (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_map_lsn_to_time_TSQL
 - sys.fn_cdc_map_lsn_to_time
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - sys.fn_cdc_map_lsn_to_time
 - fn_cdc_map_lsn_to_time
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2352312d37f65dece606616734423ba609c8d923
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 64f5763284ec35caee46565ec596e72870b5631f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756791"
 ---
 # <a name="sysfncdcmaplsntotime-transact-sql"></a>sys.fn_cdc_map_lsn_to_time(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  날짜 및 시간 값을 반환 된 **tran_end_time** 열에는 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 시스템 테이블에 지정 된 로그 시퀀스 번호 (LSN). 이 함수를 사용하여 변경 테이블의 날짜 범위에 LSN 범위를 체계적으로 매핑할 수 있습니다.  
+  날짜 및 시간 값을 반환 합니다 **tran_end_time** 열에는 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 시스템 테이블에는 지정한 LSN (로그 시퀀스 번호)입니다. 이 함수를 사용하여 변경 테이블의 날짜 범위에 LSN 범위를 체계적으로 매핑할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,15 +44,15 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
   
 ## <a name="arguments"></a>인수  
  *lsn_value*  
- 대조할 LSN 값입니다. *lsn_value* 은 **binary (10)** 합니다.  
+ 대조할 LSN 값입니다. *lsn_value* 됩니다 **binary(10)로 표현**합니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **datetime**  
   
-## <a name="remarks"></a>주의  
- 변경이 커밋된 기준 시간을 결정 하려면이 함수를 사용할 수는 **__ $start_lsn** 값이 변경 데이터의 행에 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ 변경이 커밋된를 기반으로 하는 시간을 확인 하려면이 함수를 사용할 수 있습니다 합니다 **__ $start_lsn** 값에 변경 데이터의 행을 반환 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -74,7 +68,7 @@ SELECT sys.fn_cdc_map_lsn_to_time(@max_lsn);
 GO   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [cdc.lsn_time_mapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

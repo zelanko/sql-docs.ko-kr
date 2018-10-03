@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153686"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
   AlwaysOn 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
@@ -100,8 +97,8 @@ ms.locfileid: "37228513"
   
 |복제본|커밋 모드|초기 역할|보조 역할에 대한 연결 액세스|주 역할에 대한 연결 액세스|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|동기|주|InclusionThresholdSetting|읽기/쓰기|  
-|Replica2|동기|보조|InclusionThresholdSetting|읽기/쓰기|  
+|Replica1|동기|주|없음|읽기/쓰기|  
+|Replica2|동기|보조|없음|읽기/쓰기|  
 |Replica3|비동기|보조|읽기 전용만|읽기/쓰기|  
 |Replica4|비동기|보조|읽기 전용만|읽기/쓰기|  
   

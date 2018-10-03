@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.vs.customizecom.f1
 - vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a6da50e082247e611952539b1ac9c1c65ed124c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1636d8a99cd337afc1c2ec28f2463455a7b9ff98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158413"
 ---
 # <a name="customize-commands-page"></a>사용자 지정(명령 페이지)
   이 대화 상자를 사용하여 도구 모음과 메뉴에서 명령을 추가하거나 제거할 수 있을 뿐만 아니라 도구 모음 단추 또는 메뉴 명령에 사용되는 이미지를 변경할 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **명령** 을 클릭하면 **명령**페이지에 액세스할 수 있습니다.  

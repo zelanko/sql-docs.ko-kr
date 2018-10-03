@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b622708d0e8e8eaeedf75488146fc09018348c51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 404fdbe10430e09ad2be96ec31b45c4bbf563260
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159613"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 대상 편집기(고급 페이지)
   **SAP BW 대상 편집기**의 **고급** 페이지를 사용하여 패키지 크기 및 제한 시간 정보와 같은 고급 설정을 지정할 수 있습니다.  

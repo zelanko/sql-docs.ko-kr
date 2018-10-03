@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cef267dbb770c0ccb39ea40143ce9591f915db5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 993f5cc3cba13e9a7d2c6380f719d5e7b24ca0a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140563"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services 서버에서 실행 중인 패키지 보기 및 중지
   `SSISDB` 데이터베이스 사용자에 게 표시 되지 않는 내부 테이블에 실행 기록을 저장 합니다. 그러나 공용 뷰 쿼리를 통해 이 데이터베이스에서 필요한 정보를 얻을 수 있습니다. 또한 이 데이터베이스는 패키지와 관련된 일반적인 태스크를 수행하기 위해 호출할 수 있는 저장 프로시저를 제공합니다.  

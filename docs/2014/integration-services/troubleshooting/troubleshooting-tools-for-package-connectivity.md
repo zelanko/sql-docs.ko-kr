@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15f2e78fd2a3cbc88f1d3668fde27c5cdb88924
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e8059fcb984b4b2d6450cefaa20e5e01e06fb0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178080"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051203"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>패키지 연결 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 패키지와 패키지가 데이터를 추출 및 로드하는 데이터 원본 간 연결 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  

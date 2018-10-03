@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b3268898498ff33273eba4aca0c67315001bce6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161453"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server 사용 조건 정보 (SSCM)
   합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]소프트웨어 사용 조건 로컬 컴퓨터에 복사 됩니다 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일에 기록 됩니다. %ProgramFiles%\Microsoft SQL Server\110\License Terms\ 또는 %ProgramFiles (x86) %\Microsoft SQL Server\110\License 조건\\합니다.  
   
  버전 및 언어가 같은 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다.  
   
- 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 예를 들어:  
+ 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   License_DEV_ENU.txt: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer, 영어 버전  
   

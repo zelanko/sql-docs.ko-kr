@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164393"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>파티션(데이터베이스 복원 대화 상자)(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] **데이터베이스 복원** 대화 상자의 **파티션** 페이지를 사용하여 로컬 파티션을 복원할 위치를 지정하고 원격 파티션 복원 여부와 원격 파티션 복원 시 사용할 원격 백업 파일을 지정할 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Status Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Status element
 ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5f67c4f94e5817d36f54d5d54465425c7837119
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6cf06314f27a8a9a302520c91f96d70d64854746
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101933"
 ---
 # <a name="status-element-assl"></a>Status 요소(ASSL)
   상태 표시기를 반환 하는 MDX (Multidimensional Expressions) 식을 포함 한 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37247293"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37247293"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Kpi](../objects/kpi-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Status` 요소는 MDX 식을 포함합니다.  

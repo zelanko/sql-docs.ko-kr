@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 959706458a4b529252d8a45c80aae99f377b9531
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166313"
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
   내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  

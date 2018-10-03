@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87780d4f33a3e7674778880423f66ac6369ead5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152523"
 ---
 # <a name="find-and-replace"></a>찾기 및 바꾸기
   **찾기 및 바꾸기** 대화 상자를 사용하여 파일 내에서 텍스트를 찾을 수 있으며 필요하면 다른 텍스트로 바꿀 수 있습니다. 대화 상자를 여는 방법에 따라 **찾기 및 바꾸기** 대화 상자에 표시되는 옵션이 조금씩 다릅니다. 찾기 옵션만 있고 바꾸기 옵션은 없는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 찾기** 를 클릭합니다. 찾기 옵션과 바꾸기 옵션이 모두 있는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 바꾸기** 를 클릭합니다.  

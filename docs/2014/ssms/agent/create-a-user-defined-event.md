@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent alerts, user-defined events
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - custom events [SQL Server Agent]
 - international considerations [SQL Server], alerts
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b96e6966afd08b03b086ca61f6e827c1c38c96ef
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9b1a099543f7161c672037c57985ccee69906d99
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146233"
 ---
 # <a name="create-a-user-defined-event"></a>사용자 정의 이벤트 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 미리 정의된 이벤트 이외의 이벤트를 모니터링하려는 경우 사용자 정의 이벤트를 만들 수 있습니다. 각 사용자 정의 이벤트에 심각도 수준을 할당할 수도 있습니다.  

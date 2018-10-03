@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.levelnamingtemplatedialog.f1
 helpviewer_keywords:
 - Level Naming Template dialog box
 ms.assetid: 96cad715-213e-4eac-9003-130a2f5fc985
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89d70fcd6092b2ef06e8b28c97a5935f8fb17f88
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4b0a858c3e87aa657f02d106f6e6db453ee0cb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088333"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>수준 명명 템플릿 대화 상자(Analysis Services - 다차원 데이터)
   **의** 수준 명명 템플릿 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원의 부모 특성에 대한 수준 명명 템플릿을 생성할 수 있습니다. 수준 명명 템플릿에 대한 자세한 내용은 [NamingTemplate 요소&#40;ASSL&#41;](scripting/properties/namingtemplate-element-assl.md)를 참조하세요. 표시할 수 있습니다 합니다 **수준 명명 템플릿** 줄임표 단추를 클릭 하 여 대화 상자 (**...** )에 `NamingTemplate` 특성에 대 한 번역의 값을 **번역 세부 정보** 창에서를 **번역** 탭 **차원 디자이너**.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - adding code
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 75f7f2490adbf85d9d4796a8492d00b9685de423
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35b3e47ea475da9e135368ca65f94dfff1943883
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183950"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155083"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>보고서에 코드 추가(SSRS)
   모든 식에서 고유한 사용자 지정 코드를 호출할 수 있습니다. 다음과 같은 두 가지 방법으로 코드를 제공할 수 있습니다.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managedbackup.configure.f1
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d09c001bc7c267b2235377a1312609ee8b7b3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165603"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>관리되는 백업 구성(SQL Server Management Studio) 
   합니다 **Managed Backup** 대화 상자를 사용 하면 구성할 수 있습니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 인스턴스에 대 한 기본값입니다. 이 항목에서는이 대화 상자를 사용 하 여 구성 하는 방법을 설명 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 의 기본 인스턴스 및 작업을 수행할 때는 고려해 야 하는 옵션을 설정 합니다. 때 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성 이후 만들어진 모든 새 데이터베이스에 인스턴스에 대해 설정이 적용 됩니다.  

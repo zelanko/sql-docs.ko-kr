@@ -1,14 +1,11 @@
 ---
-title: sp_update_category (Transact SQL) | Microsoft Docs
+title: sp_update_category (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07e44e12193e506146e299bd57f84b02c802856
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255749"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670521"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +44,28 @@ sp_update_category
   
 ## <a name="arguments"></a>인수  
  [ **@class =**] **'***class***'**  
- 업데이트할 범주의 클래스입니다. *클래스*은 **varchar(8)**, 기본값은 없고 수와 이러한 값 중 하나 여야 합니다.  
+ 업데이트할 범주의 클래스입니다. *클래스*됩니다 **varchar(8)** 이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**경으십시오**|경고 범주를 업데이트합니다.|  
 |**JOB**|작업 범주를 업데이트합니다.|  
 |**연산자**|연산자 범주를 업데이트합니다.|  
   
  [ **@name =**] **'***old_name***'**  
- 범주의 현재 이름입니다. *old_name*은 **sysname**, 기본값은 없습니다.  
+ 범주의 현재 이름입니다. *old_name*됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@new_name =**] **'***new_name***'**  
- 범주의 새 이름입니다. *new_name*은 **sysname**, 기본값은 없습니다.  
+ 범주의 새 이름입니다. *new_name*됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
- **sp_update_category** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_update_category** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
-## <a name="permissions"></a>Permissions  
- 이 저장된 프로시저를 실행 하려면 사용자에 게 부여 해야 합니다는 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 이 저장된 프로시저를 실행 하려면 사용자에 부여 해야 합니다 **sysadmin** 고정된 서버 역할입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 작업 범주의 이름을 `AdminJobs`에서 `Administrative Jobs`로 바꿉니다.  
@@ -85,7 +81,7 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   

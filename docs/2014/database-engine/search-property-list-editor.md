@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
-caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148943"
 ---
 # <a name="search-property-list-editor"></a>검색 속성 목록 편집기
   이 대화 상자를 사용하여 검색 속성 목록에서 검색 속성을 추가하거나 삭제할 수 있습니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], objects
 ms.assetid: 7f3d55c7-cccb-4ad0-b6cb-3a2c9992dd68
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 415cbc4527d21e6bd14945bf911bb6d6a67f5e38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 836e476a5962ab16d7e1313e227025d46a23a840
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160843"
 ---
 # <a name="dimension-objects-analysis-services---multidimensional-data"></a>차원 개체(Analysis Services - 다차원 데이터)
   단순 <xref:Microsoft.AnalysisServices.Dimension> 개체는 기본 정보, 특성 및 계층으로 구성되어 있습니다. 기본 정보에는 차원의 이름, 차원의 유형, 데이터 원본, 저장소 모드 등이 포함됩니다. 특성은 차원의 실제 데이터를 정의합니다. 특성이 반드시 계층에 속할 필요는 없지만 계층은 특성으로 만들어집니다. 계층은 순서가 지정된 수준 목록을 만들고 사용자가 차원을 탐색할 수 있는 방법을 정의합니다.  

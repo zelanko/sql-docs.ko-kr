@@ -5,39 +5,36 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603cb680e2986d484074a43d14f56de210da0b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d5aa94062f90154126fb18c3658adb39bb1d5c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909538"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689751"
 ---
 # <a name="processing-sql-statements"></a>SQL 문 처리
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- ODBC 커서 라이브러리는 다음을 제외한 드라이버를 직접 모든 SQL 문에 전달합니다.  
+ 모든 SQL 문에 다음을 제외한 드라이버에 직접 전달 하는 ODBC 커서 라이브러리:  
   
--   배치 update 및 delete 문  
+-   배치 업데이트 및 delete 문  
   
--   **업데이트에 대 한 선택** 문  
+-   **SELECT FOR UPDATE** 문  
   
 -   일괄 처리 된 SQL 문  
   
- 실행 위치 지정된 update 및 delete 문을를 호출 하는 행에 커서를 배치 **SQLGetData** 해당 행에 대 한 커서 라이브러리는 행을 식별 하는 검색 된 문을 생성 합니다.  
+ 실행 위치 지정된 update 및 delete 문을를 호출 하는 행에 커서를 놓고 **SQLGetData** 해당 행에 대 한 커서 라이브러리는 행 식별 하는 검색된 문을 생성 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

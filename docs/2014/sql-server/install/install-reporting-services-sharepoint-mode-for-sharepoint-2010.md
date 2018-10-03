@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 624f7347d4fdcbdf617e314ba398455b3f4b8126
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159453"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010용 Reporting Services SharePoint 모드 설치
   이 항목의 절차에서는 SharePoint 모드에서 Reporting Services 보고서 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2010 중앙 관리를 사용하는 SQL Server 설치 마법사 및 추가 구성 태스크가 포합됩니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드는 등 기존 설치에 대한 개별 절차를 위해 사용할 수도 있습니다. 추가 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하 여 기존 팜에 서버를 볼 [팜에 추가 보고서 서버를 추가 &#40;SSRS 확장&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 하 고 [추가 Reporting Services 웹 추가 팜에 프런트 엔드](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)합니다.  
@@ -88,7 +85,7 @@ ms.locfileid: "37313173"
   
 8.  **설치 역할** 페이지에서 **SQL Server 기능 설치** 를 클릭합니다.  
   
-      **다음**을 클릭합니다.  
+     **다음**을 클릭합니다.  
   
      ![설치 역할을 위한 SQL Server 기능 설치](../../../2014/sql-server/install/media/rs-setuprole.gif "설치 역할을 위한 SQL Server 기능 설치")  
   
@@ -249,7 +246,7 @@ ms.locfileid: "37313173"
 
   
 ### <a name="activate-the-file-sync-feature"></a>파일 동기화 기능 활성화  
- 사용자가 게시된 보고서 항목을 SharePoint 문서 라이브러리에 직접 자주 업로드하는 경우 보고서 서버 파일 동기화 기능이 유용합니다. 파일 동기화 기능은 보고서 서버 카탈로그를 문서 라이브러리의 항목과 자주 동기화합니다. 자세한 내용은 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)를 참조하세요.  
+ 사용자가 게시된 보고서 항목을 SharePoint 문서 라이브러리에 직접 자주 업로드하는 경우 보고서 서버 파일 동기화 기능이 유용합니다. 파일 동기화 기능은 보고서 서버 카탈로그를 문서 라이브러리의 항목과 자주 동기화합니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5aca6380229e55ed29c99ea51592e1e618ce0058
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730281"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
-여는 옵션을 지정는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다. 값은 OR 연산으로 결합할 수 있습니다.  
+열기에 대 한 옵션을 지정 하는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다. OR 연산을 사용 하 여 값을 결합할 수 있습니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adOpenStreamAsync**|1|열립니다는 **스트림** 비동기 모드의 개체입니다.|  
-|**adOpenStreamFromRecord**|4|내용을 식별 하는 *소스* 매개 변수를 이미 열려 있는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 기본 동작은 처리할 *소스* 직접 트리 구조에서 노드를 가리키는 URL로 합니다. 해당 노드와 연결 된 기본 스트림이 열립니다.|  
-|**adOpenStreamUnspecified**|-1|기본. Opening 지정는 **스트림** 기본 옵션으로는 개체입니다.|  
+|**adOpenStreamAsync**|1|열립니다는 **Stream** 비동기 모드의 개체입니다.|  
+|**adOpenStreamFromRecord**|4|콘텐츠를 식별 하는 *소스* 매개 변수는 이미 열려 있어야 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 기본 동작을 처리 하는 것 *원본* 트리 구조에서 노드로 직접 가리키는 url입니다. 해당 노드와 연결 된 기본 스트림이 열려 있습니다.|  
+|**adOpenStreamUnspecified**|-1|기본. 열기를 지정 합니다 **Stream** 기본 옵션이 포함 된 개체입니다.|  
   
-## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  이러한 상수는 ADO/wfc 필요가 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  

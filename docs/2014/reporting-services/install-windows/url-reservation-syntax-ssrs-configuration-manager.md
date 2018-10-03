@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8984f0a1057bfa7eb3cb9cf2372de75e7da36852
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153803"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 예약 구문(SSRS 구성 관리자)
   이 항목에서는 보고서 서버 웹 서비스 및 보고서 관리자에서 사용하는 URL 문자열 부분에 대해 설명합니다. 내부적으로 저장되는 URL 문자열의 구조는 브라우저 창의 주소 표시줄에 입력하는 URL과는 다릅니다. URL 예약 문자열은 URL을 구성할 때 Reporting Services 구성 도구의 결과 창 및 RSReportServer.config 파일에 표시됩니다. URL 문자열이 정의되는 방식을 알면 URL 예약 문제를 해결하거나 HTTP.SYS를 쿼리하여 서버에 정의된 내부 URL 문자열 예약을 보는 경우 도움이 됩니다.  

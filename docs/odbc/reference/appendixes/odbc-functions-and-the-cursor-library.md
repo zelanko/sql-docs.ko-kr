@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d23c8ae55bd77d5baf0d8ce11a30f3bc09c2648e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79911ddc901575571d791d2b31a7287ab1b2b915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814041"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 함수 및 커서 라이브러리
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- ODBC 커서 라이브러리는 연결을 사용 하도록 구성 되어 드라이버 관리자 드라이버 대신 커서 라이브러리에 함수를 호출 합니다. 커서 라이브러리는 함수를 실행 또는 지정된 된 드라이버에서 호출 합니다.  
+ ODBC 커서 라이브러리는 연결을 사용할 때 드라이버 관리자 드라이버에서 대신 커서 라이브러리에서 함수를 호출 합니다. 커서 라이브러리 함수를 실행 또는 지정된 된 드라이버에서 호출 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

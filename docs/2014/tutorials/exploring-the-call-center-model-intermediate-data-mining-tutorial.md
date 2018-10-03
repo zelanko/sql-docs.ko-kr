@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 76f84b51c7572d9ff16f5bc03979686349a94b82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110033"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>콜 센터 모델 탐색(중급 데이터 마이닝 자습서)
   지금까지 탐구 모델을 작성했으므로 이제 이 모델을 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 제공되는 다음과 같은 도구로 데이터에 대해 보다 자세한 정보를 알 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Event Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Event element
 ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119bc279e1313e0b7b8bd0790c631b8e9a896428
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 417035dadf738cd6f1302da6a543bf46e9c4b8c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067627"
 ---
 # <a name="event-element-assl"></a>Event 요소(ASSL)
   정의 `Event` 의 일부로 캡처할를 [추적](trace-element-assl.md) 요소입니다.  
@@ -51,8 +48,8 @@ ms.locfileid: "37233883"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|1-n: 두 번 이상 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

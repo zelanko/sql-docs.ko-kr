@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 735d471cdfb847a56cb4b30857a097d8acd7e8b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd373f8080878a69200706a7d53d2dd92f9ad160
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134117"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>KPI 만들기 및 관리(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 KPI(핵심 성과 지표)를 만들거나 편집하거나 삭제하는 방법을 설명합니다. KPI를 만들려면 KPI의 기본 값으로 평가되는 측정값을 선택합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  

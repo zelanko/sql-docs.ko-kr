@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 654ea55f3b285409dab5e3f1cf178b8ff7818bcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153053"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>분석 데이터 원본에서 메타데이터 검색
   메타데이터는 분석 데이터를 검색하고 사용하는 응용 프로그램에 중요합니다. 관계형 데이터 원본에서 데이터를 검색할 때는 데이터의 차원을 예측할 수 있습니다. 이는 중첩된 데이터 집합을 사용하는 경우라도 마찬가지입니다. 관계형 데이터베이스의 결과 집합은 일반적으로 2차원 구조이거나 스칼라 구조이기 때문입니다. 그러나 분석 데이터 원본에서 검색된 데이터는 중첩이 많은 계층 구조로 구성되어 차원이 다양할 수 있습니다.  

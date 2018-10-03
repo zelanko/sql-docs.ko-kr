@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
 - sql12.swb.linkedserver.properties.security.f1
@@ -19,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152042"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  

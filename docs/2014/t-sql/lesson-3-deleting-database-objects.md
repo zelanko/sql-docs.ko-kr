@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting database objects
@@ -14,12 +12,12 @@ ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 703b55a8991d0f0dc025a206c24680f6b0bb8f30
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 20ef93f1860e5819c45ea23a893d3ff2acd14e1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133915"
 ---
 # <a name="lesson-3-deleting-database-objects"></a>3단원: 데이터베이스 개체 삭제
   이 단원에서는 1단원과 2단원에서 만든 개체를 제거한 다음 데이터베이스를 삭제합니다.  

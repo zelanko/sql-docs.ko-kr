@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f726306b53f896176de23726fc17cdc3a6b2d53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fba1fff373ad7d9ea4371715bcc2ca2b72a38477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148313"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>패키지에서 연결 관리자 추가, 삭제 또는 공유
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 관계형 데이터베이스와 같은 다른 데이터 원본에 연결 하기 위한 다양 한 연결 관리자를 포함 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 및 CSV 및 XML 형식의 파일입니다. 패키지 수준 또는 프로젝트 수준에서 연결 관리자를 만들 수 있습니다. 프로젝트 수준에서 만든 연결 관리자는 프로젝트의 모든 패키지에 사용할 수 있습니다. 반면, 패키지 수준에서 만든 연결 관리자는 해당하는 특정 패키지에 사용할 수 있습니다.  

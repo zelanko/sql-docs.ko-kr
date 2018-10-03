@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - File Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef9527346b0627d6ba414f9535c00e22a4d59ea6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169823"
 ---
 # <a name="file-element-assl"></a>File 요소(ASSL)
   구성 하는 파일 중 하나를 정의 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) 요소입니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37155355"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-n: 두 번 이상 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -57,7 +54,7 @@ ms.locfileid: "37155355"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[파일](../collections/files-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  부모에 해당 하는 요소가 `Files` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  

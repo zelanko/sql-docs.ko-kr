@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 606d3e19334e37ee418d4e99472845d24344d452
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148093"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>데이터 원본 및 바인딩(SSAS 다차원)
   큐브, 차원 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 데이터 원본에 바인딩될 수 있습니다. 데이터 원본은 다음 개체 중 하나일 수 있습니다.  

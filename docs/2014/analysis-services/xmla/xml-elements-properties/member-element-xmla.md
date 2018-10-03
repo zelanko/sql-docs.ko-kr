@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Member Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Member element
 ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 318a54528ed5f9d22f0925ff10e0596413e47043
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ab24b02a46a5e6416018d9f77c733b0d3de7153
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168973"
 ---
 # <a name="member-element-xmla"></a>Member 요소(XMLA)
   부모 [Members](members-element-xmla.md) 또는 [Tuple](tuple-element-xmla.md) 요소의 단일 멤버를 나타냅니다.  
@@ -70,8 +67,8 @@ ms.locfileid: "37217933"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

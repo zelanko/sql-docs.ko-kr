@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.generatesqlscript.f1
 helpviewer_keywords:
 - Generate SQL Script dialog box
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06b729ec2c9ff938b09a0faebb6d90d043cdaf0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49d5e5b25c150d8ce2b3cf2bdb0485bbe91cb32b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276699"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155483"
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL 스크립트 생성(복제 개체)
   복제 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 복제에서는 복제 개체를 스크립팅할 수 있는 다음 두 개의 대화 상자를 제공합니다.  

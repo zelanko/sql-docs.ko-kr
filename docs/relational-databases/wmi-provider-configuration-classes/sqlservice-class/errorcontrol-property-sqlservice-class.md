@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ErrorControl Property (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - ErrorControl property
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e787de01cbcde080706d4a3bd569fb365cc17394
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc70c05346bd246dc5a8b46ae1477eb65305f0b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751701"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -63,10 +59,10 @@ object.ErrorControl [= value]
  Unknown  
  심각도를 알 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 값은 오류가 발생할 때 시작 프로그램에서 수행하는 동작을 나타냅니다. 모든 오류는 컴퓨터 시스템에 기록됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

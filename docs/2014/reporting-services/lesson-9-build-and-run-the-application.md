@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de1213901f7cc9c743d76727ac65320507b0fab5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ea204b4e7b9d066a2b4f7de6063c095d02967d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096463"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 응용 프로그램을 빌드하고 실행합니다.  
@@ -34,11 +31,9 @@ ms.locfileid: "37214823"
   
 2.  마우스를 **이름** 열 아래의 행 위로 가져갑니다. 마우스 커서에 손 모양 기호가 표시됩니다.  
   
-3.  
-              **이름** 열에서 값을 클릭합니다. 자식 보고서가 필터링된 해당 데이터와 함께 표시됩니다.  
+3.  **이름** 열에서 값을 클릭합니다. 자식 보고서가 필터링된 해당 데이터와 함께 표시됩니다.  
   
-4.  
-              **ReportViewer**도구 모음에서 **부모 보고서로 돌아가기** 아이콘을 클릭하여 다시 **부모** 보고서로 이동합니다.  
+4.  **ReportViewer**도구 모음에서 **부모 보고서로 돌아가기** 아이콘을 클릭하여 다시 **부모** 보고서로 이동합니다.  
   
      ![ssrs에서 ReportViewer를 사용 하 여 드릴스루](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs ReportViewer를 사용 하 여 드릴스루 합니다.")  
   

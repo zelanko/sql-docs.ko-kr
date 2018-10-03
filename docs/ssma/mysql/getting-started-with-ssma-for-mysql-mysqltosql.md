@@ -4,30 +4,24 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Getting started, MySQL metadata explorer
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a6ab8bdc69707374eaff1600db78abbca3ea41be
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679671"
 ---
-# <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>(MySQLToSQL) MySQL 용 SSMA 시작
+# <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA 시작(MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL 사용 하 여 신속 하 게 MySQL 데이터베이스 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환, SQL Server 또는 Azure SQL DB에 결과 스키마를 업로드 및 MySQL에서 SQL Server 또는 Azure SQL DB에 데이터를 마이그레이션할 수 있습니다.  
   
 이 항목에서는 설치 프로세스를 소개 하 고 SSMA 사용자 인터페이스에 익숙해질 수 있도록 돕습니다.  

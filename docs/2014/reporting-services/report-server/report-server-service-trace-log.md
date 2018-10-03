@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161933"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대 한 세부 정보가 포함 된 ASCII 텍스트 파일, 서비스, 보고서 관리자 및 백그라운드 처리에 보고서 서버 웹에서 수행 하는 포함 하 여 작업 합니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다.  
@@ -56,7 +53,7 @@ ms.locfileid: "37270279"
 ##  <a name="bkmk_trace_configuration_settings"></a> 추적 구성 설정  
  추적 로그 동작은 구성 파일 **ReportingServicesrService.exe.config**에서 관리됩니다. 구성 파일은 다음 폴더 경로에 있습니다.  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`을 참조하세요.  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin` 을 참조하세요.  
   
  다음 예에서는 `RStrace` 설정의 XML 구조를 보여 줍니다. 에 대 한 값 `DefaultTraceSwitch` 로그에 추가 되는 정보의 종류를 결정 합니다. 제외 하 고는 `Components` 특성에 대 한 값 `RStrace` 구성 파일에서 동일 합니다.  
   

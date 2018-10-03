@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.downlevelagents.merge.f1
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3459455dc24ebbdc6beb3b619f4cad8f2406423e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a3f6a4f3e96e3dc73ffca93393359a3cd40654a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095233"
 ---
 # <a name="publication-information-agents-merge-publication"></a>게시 정보, 에이전트(병합 게시)
   **에이전트** 탭은 선택한 게시에 대한 스냅숏 에이전트의 요약 정보를 표시합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7ec9327a35e9ba110dd9d93db53c50b5c130f6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61dbea86eabc0395b2f314f170aa97c5067880fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163565"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>데이터베이스 엔진 PowerShell에서 인증 관리
   기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소는 Windows 인증을 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 연결합니다. PowerShell 가상 드라이브를 정의 하거나 또는 지정 하 여 SQL Server 인증을 사용할 수 있습니다 합니다 `–Username` 하 고 `–Password` 에 대 한 매개 변수 `Invoke-Sqlcmd`합니다.  

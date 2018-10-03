@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c3d6c8984efb4620844ca30ece3116fcd268997
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8bc3dd8ccacf4348002f0a9ca45a63632f7cb08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148563"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)
   비즈니스 논리 처리기를 사용하여 병합 구독이 동기화될 때 사용자 지정 비즈니스 논리를 호출할 수 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  

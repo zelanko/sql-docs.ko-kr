@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqlserveragentjobtask.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - jobs [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead21855d754a9e5b48572e5576b311db5b32983
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3a35e4d6fe44dcb70c6ddeeea34780ca638f390
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128013"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>SQL Server 에이전트 작업 실행 태스크
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 SQL Server의 인스턴스에 정의된 작업을 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스입니다. Transact-SQL 문과 ActiveX 스크립트를 실행하는 작업을 만들거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 복제 유지 관리 태스크를 수행하거나 패키지를 실행할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 모니터링하고 경고가 발생하도록 작업을 구성할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 일반적으로 반복해서 수행하는 태스크를 자동화하는 데 사용됩니다. 자세한 내용은 [작업 구현](../../ssms/agent/implement-jobs.md)을 참조하세요.  

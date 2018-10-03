@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, SPNs
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f05dae7c8fcd27ca1138ad316fa6a683e4219a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 35d602969e0d34fc9ce1af4e796a0bc4fe612cc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155443"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원 
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터는 모든 프로토콜에서 상호 인증을 지원하도록 SPN(서비스 사용자 이름)이 확장되었습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 SPN은 Active Directory에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 기본 SPN이 등록된 경우 TCP를 사용하는 Kerberos에 대해서만 지원되었습니다.  

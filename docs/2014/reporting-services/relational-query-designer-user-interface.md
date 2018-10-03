@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47fd572aad6fd135aa4563fda63fa4f36c32e45f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccde5a1c4b79a5c67182789af7c54e2142156ad5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160463"
 ---
 # <a name="relational-query-designer-user-interface"></a>관계형 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]에서 보고서 데이터 집합에 대해 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  

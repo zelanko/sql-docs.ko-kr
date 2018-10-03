@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server], related features
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 655e4079fdd1bbdeaea6dd99fd5c36a0cac7f762
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180140"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155573"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다. 이러한 기능에는 파일 복원 및 데이터베이스 시작, 온라인 복원 및 비활성 인덱스, 데이터베이스 미러링, 증분 복원 및 전체 텍스트 인덱스가 포함됩니다.  

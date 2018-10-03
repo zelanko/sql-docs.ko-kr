@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b92bb0b217ba9d6511bb4b5f26ae68a834bd6935
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1af27b0571ef073a5ada2937b93b6cc0487974d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143750"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010에서 PowerPivot 데이터 새로 고침
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터 새로 고침은 예약된 서버 쪽 작업으로서, 외부 데이터 원본을 쿼리하여 콘텐츠 라이브러리에 저장된 Excel 2010 통합 문서의 포함된 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터를 업데이트합니다.  

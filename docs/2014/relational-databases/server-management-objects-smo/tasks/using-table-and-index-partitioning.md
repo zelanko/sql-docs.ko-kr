@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - partitions [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], SMO
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db31f674605b1cf1c75351e6241ff6aed2b282c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f98d4337dbd5a43adf1e83d80b24b8286193e19d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166113"
 ---
 # <a name="using-table-and-index-partitioning"></a>테이블 및 인덱스 분할 사용
   제공한 저장 알고리즘을 사용 하 여 데이터를 저장할 수 있습니다 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)합니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  

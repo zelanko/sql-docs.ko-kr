@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - thresholds [SQL Server]
 - blocked process threshold option
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c8208b51bd017aff5c2b4bf0092625926852af2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3901c87ebc217427e8d48f1cd299ba6831fa93b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148693"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold 서버 구성 옵션
   **blocked process threshold** 옵션을 사용하여 차단된 프로세스 보고서가 생성되는 임계값을 초 단위로 지정할 수 있습니다. 0에서 86,400 사이의 임계값을 설정할 수 있습니다. 기본적으로 차단된 프로세스 보고서는 생성되지 않습니다. 시스템 태스크 또는 검색할 수 있는 교착 상태를 생성하지 않는 리소스를 기다리는 태스크의 경우 이 이벤트가 생성되지 않습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_control
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46e834874b35e81791f027b380ab2f905bc8fbde
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426422"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145243"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 대량 복사에 대한 다양한 제어 매개 변수의 기본 설정을 변경합니다.  
@@ -66,7 +63,7 @@ iValue
   
  호출 하는 경우에 시퀀스 오류가 발생 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` 호출한 후 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` 및 bcp_writefmt 합니다.  
   
- 자세한 내용은 [메타 데이터 검색](../native-client/features/metadata-discovery.md)합니다.  
+ 자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
   
  BCPFILECP  
  *iValue* 데이터 파일에 대 한 코드 페이지 번호를 포함 합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.  

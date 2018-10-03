@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1f75d750dd507eddc21b6541f719c41294511dc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 79bd2fdf07b568706621823182776cf540320e06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856071"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,14 +35,14 @@ ms.locfileid: "43104463"
 |대상 -><br /><br /> 보낸 사람|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|@shouldalert|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|@shouldalert<br /><br /> 날짜|  
-|DBTIME|-|@shouldalert|@shouldalert|1,7|1,7|1,7|1,5, 7|1,10|1,10|@shouldalert<br /><br /> Time(0)|  
-|DBTIME2|-|1,3|@shouldalert|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|@shouldalert<br /><br /> Time(7)|  
+|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> 날짜|  
+|DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
+|DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
-|VARIANT|@shouldalert|@shouldalert|@shouldalert|1,10|1,10|1,10|1,10|해당 사항 없음|해당 사항 없음|1,10|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|해당 사항 없음|해당 사항 없음|1,10|  
 |SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|해당 사항 없음|해당 사항 없음|1,16|  
 |BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
@@ -58,7 +54,7 @@ ms.locfileid: "43104463"
 |------------|-------------|  
 |-|변환이 지원되지 않습니다. 바인딩을 iaccessor:: Createaccessor 호출 될 때 유효성이 검사 되는 경우에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 됩니다 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |해당 사항 없음|이 오류에는 이 작업을 적용할 수 없습니다.|  
-|@shouldalert|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
+|1|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
 |2|시간 필드가 무시됩니다.|  
 |3|소수 자릿수 초가 0이어야 하며 그렇지 않으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  
 |4|날짜 구성 요소가 무시됩니다.|  

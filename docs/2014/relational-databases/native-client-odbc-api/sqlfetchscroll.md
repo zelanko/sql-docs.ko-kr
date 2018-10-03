@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLFetchScroll function
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fa4b974c834581158c6bf60e4abecfb51b9e8c7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9ee2297f01ef2cc0a4dc94beca66939bf6ae9030
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145653"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **SQLFetchScroll** 응용 프로그램에 하나의 데이터 행 집합을 반환 합니다. 행 집합의 크기를 사용 하 여 설정 됩니다 [SQLSetStmtAttr](sqlsetstmtattr.md)합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음 제한 사항이 있는 모든 정의 된 인출 명령 (예: SQL_FETCH_RELATIVE)을 지원 합니다.  

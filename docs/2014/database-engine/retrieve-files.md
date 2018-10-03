@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file retrieval
 - file retrieval [SQL Server]
 - retrieving files
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a80eacec347cd3ff95570ae6f6f96291cda0d9e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149543"
 ---
 # <a name="retrieve-files"></a>파일 검색
   소스 제어 프로젝트를 연 후에 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원본 제어 저장소에서 프로젝트가 상주하는 로컬 디렉터리로 프로젝트 파일의 로컬 복사본을 검색할 수 있습니다.  

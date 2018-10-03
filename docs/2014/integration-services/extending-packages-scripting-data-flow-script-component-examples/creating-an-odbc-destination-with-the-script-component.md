@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], destination components
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd7f28c40a98d06de9d4caaf0a09beea6ee0bcee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbc851400b31cca972311c35aa589c6cd1990b2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150995"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 일반적으로 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 대상 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC를 사용하여 ODBC 대상에 데이터를 저장합니다. 그러나 단일 패키지에서 사용할 임시 ODBC 대상을 만들 수도 있습니다. 이 임시 ODBC 대상을 만들려면 다음 예와 같이 스크립트 구성 요소를 사용합니다.  

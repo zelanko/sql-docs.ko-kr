@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6be0d20a2e1171275c3a1ef05d83383a10b763
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771841"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField 구현
-**SQLGetDiagRec** 및 **SQLGetDiagField** 드라이버 관리자와 각 드라이버에 의해 구현 됩니다. 드라이버 관리자 및 각 드라이버에는 각 환경, 연결, 문 및 설명자 핸들에 대 한 진단 레코드를 유지 하 고 사용 핸들 또는 핸들이 해제 될 하는 다른 함수를 호출 하는 경우에 이러한 레코드를 비울 합니다.  
+**SQLGetDiagRec** 하 고 **SQLGetDiagField** 드라이버 관리자와 각 드라이버에 의해 구현 됩니다. 드라이버 관리자 및 각 드라이버 각 환경, 연결, 문 및 설명자 핸들에 대 한 진단 레코드를 유지 하 고 핸들 또는 핸들 해제가 사용 하 여 다른 함수를 호출할 경우에 이러한 레코드를 해제 합니다.  
   
- 드라이버 관리자와 각 드라이버에 대 한 순위에 따라 첫 번째 상태 레코드를 결정 해야 하지만 [상태 레코드의 시퀀스](../../../odbc/reference/develop-app/sequence-of-status-records.md), 드라이버 관리자 레코드의 마지막 시퀀스를 결정 합니다.  
+ 드라이버 관리자와 각 드라이버의 순위에 따라 첫 번째 상태 레코드를 확인 해야 하지만 [상태 레코드의 시퀀스](../../../odbc/reference/develop-app/sequence-of-status-records.md), 드라이버 관리자는 최종 레코드 시퀀스를 결정 합니다.  
   
- **SQLGetDiagRec** 및 **SQLGetDiagField** 자신에 대 한 진단 레코드를 게시 하지 마십시오.  
+ **SQLGetDiagRec** 하 고 **SQLGetDiagField** 자신에 대 한 진단 레코드를 게시 하지 마십시오.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

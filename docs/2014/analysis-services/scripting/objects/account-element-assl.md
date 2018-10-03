@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Account Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 262ba3be01879770a734ab7334782e26aa04b364
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321175"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109053"
 ---
 # <a name="account-element-assl"></a>Account 요소(ASSL)
   내의 계정 유형에 대 한 세부 정보를 포함 한 [데이터베이스](database-element-assl.md) 요소입니다.  
@@ -53,8 +50,8 @@ ms.locfileid: "37321175"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

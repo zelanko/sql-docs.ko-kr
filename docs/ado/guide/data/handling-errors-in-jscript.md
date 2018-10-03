@@ -1,13 +1,11 @@
 ---
-title: Jscript에서 오류 처리 | Microsoft Docs
+title: JScript 오류 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcebaef8a36961a5c28af4eee80fca4d088b9ed5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838861"
 ---
-# <a name="handling-errors-in-jscript"></a>Jscript에서 오류 처리
-Microsoft® JScript® 코드를 확인 해야 합니다는 **Count** 의 속성은 **연결** 개체의 **오류** 컬렉션입니다. 값 0 보다 큰 경우 컬렉션을 반복 하 고 다른 언어에서 마찬가지로 값을 출력 합니다.  
+# <a name="handling-errors-in-jscript"></a>JScript로 오류 처리
+Microsoft® JScript® 코드를 확인 해야 합니다는 **개수** 의 속성을 **연결** 개체의 **오류** 컬렉션. 값이 0 보다 크면 컬렉션을 반복 하 고 다른 언어에서 마찬가지로 값을 인쇄 합니다.  
   
 ```  
 <!-- BeginErrorExampleJS -->  

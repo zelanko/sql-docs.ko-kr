@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving tables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], moving
 - filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 597ed7b2207302ff897f255479c6183ef44b255d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65af75296064cd33e1c057126754339499f8b93f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070383"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 현재 파일 그룹에서 다른 파일 그룹으로 기존 인덱스를 이동하는 방법을 설명합니다.  
@@ -102,7 +99,7 @@ ms.locfileid: "37285169"
   
 8.  **확인**을 클릭합니다.  
   
-  **인덱스 속성 –**  **저장소** *저장소* 페이지에서 다음 정보를 사용할 수 있습니다.  
+ **인덱스 속성 –**  **저장소** *저장소* 페이지에서 다음 정보를 사용할 수 있습니다.  
   
  **파일 그룹**  
  지정한 파일 그룹에 인덱스를 저장합니다. 목록에는 표준(행) 파일 그룹만 표시됩니다. 목록에서는 기본적으로 데이터베이스의 PRIMARY 파일 그룹이 선택됩니다.  

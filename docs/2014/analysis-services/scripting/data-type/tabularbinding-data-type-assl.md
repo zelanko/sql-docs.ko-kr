@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TabularBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TabularBinding data type
 ms.assetid: 24587e34-20be-4693-81d8-038a6fc4e8ee
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5771c76262719264ad2f0a869c92c5d3ce011ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1c0f3b5c78a507c815c08781a09bdd9b7f7c8f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285969"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139943"
 ---
 # <a name="tabularbinding-data-type-assl"></a>TabularBinding 데이터 형식(ASSL)
   테이블 또는 큐브 차원과 같은 테이블 형식 항목에 대한 바인딩을 나타내는 추상 파생 데이터 형식을 정의합니다.  
@@ -55,8 +52,8 @@ ms.locfileid: "37285969"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
-|자식 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
+|자식 요소|없음|  
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc50aeca7098561cc429e9e67df8aa06fa323fda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148303"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 장치 정보 설정
   다음 표는 PDF 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d64d6e7fa360bc66324cfbaaaf97548144234e0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3bffdc944c10a534cffd58a6b9931165f556432b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145383"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>전체 텍스트 쿼리 성능 향상
   다음은 전체 텍스트 쿼리 성능 향상에 도움이 될 권장 사항 목록입니다.  

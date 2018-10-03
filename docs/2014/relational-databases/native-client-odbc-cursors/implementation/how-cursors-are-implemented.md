@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - cursors [ODBC], about ODBC cursors
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80b3df4fd3b4e6e515de68b8e5f1a7af034bdb42
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c92391b1d8874da3a8901ccc5c6245e48334241
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155723"
 ---
 # <a name="how-cursors-are-implemented"></a>커서 구현 방법
   ODBC 응용 프로그램은 SQL 문을 실행하기 전에 문 특성을 하나 이상 설정하여 커서의 동작을 제어합니다. ODBC에는 커서의 특징을 지정하는 다음 두 가지 방법이 있습니다.  

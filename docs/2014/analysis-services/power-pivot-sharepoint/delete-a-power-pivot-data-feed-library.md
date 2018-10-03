@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97d24fef5f6477703c192026dd1b77e243b862ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 933a0e9c2eaca4fe55748938737fc8f30d965c5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154213"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>PowerPivot 데이터 피드 라이브러리 삭제
   데이터 피드 라이브러리를 삭제하려면 사이트 소유자여야 합니다. 라이브러리에 항목이 포함되어 있는 경우 이 항목도 라이브러리와 함께 삭제됩니다.  

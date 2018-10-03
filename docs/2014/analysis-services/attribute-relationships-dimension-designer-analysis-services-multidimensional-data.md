@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.f1
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca3bbc6b9967ae1a4ec90965b51171aee54feb26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 978a14c59c92328add341427c990b4f9b14b8f79
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150313"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **특성 관계** 탭을 사용하여 선택한 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.  

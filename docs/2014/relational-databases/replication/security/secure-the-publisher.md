@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], security
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7927726090824cfbf8d3e3881385c86e74e6a34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe1ff9c4c0b9eec12d2e7ec0ac0d3325e9e0c91d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315599"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146463"
 ---
 # <a name="secure-the-publisher"></a>게시자 보안 설정
   게시자에 연결하는 복제 에이전트는 다음과 같습니다.  

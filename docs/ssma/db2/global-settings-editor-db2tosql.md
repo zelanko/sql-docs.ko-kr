@@ -4,33 +4,27 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 879c4c268a0052a9450c3ba056aa0a5898c722a8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a03a18bb5231ebf40c91a6cc94b0bb78aa536c16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716581"
 ---
 # <a name="global-settings-editor-db2tosql"></a>전역 설정 (편집기) (DB2ToSQL)
-편집기 페이지를 사용 하 여 **전역 설정** 코드 편집기 창에 대 한 설정을 지정 하려면 대화 상자.  
+편집기 페이지를 사용 합니다 **전역 설정** 대화 상자에서 코드 편집기 창에 대 한 설정을 지정 합니다.  
   
-편집기 설정에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정**, 클릭 **GUI** 선택 고 왼쪽된 창 맨 아래에 **편집기**합니다.  
+편집기 설정에 액세스할 수는 **도구** 메뉴에서 **전역 설정**, 클릭 **GUI** 선택 고 왼쪽된 창 맨 아래에 **편집기**.  
   
 ## <a name="options"></a>변수  
 **줄 번호 표시**  
 코드 편집기 창에서 줄 번호를 표시 하려면 선택한 **True**합니다.  
   
-이 설정을 변경 하면 코드 편집기 창을 선택 하는 경우 디스플레이를 업데이트 현재 개체를 다시 선택 해야 합니다.  
+이 설정을 변경 하면 코드 편집기 창을 선택 하면 표시 내용을 업데이트 하려면 현재 개체를 다시 선택 해야 합니다.  
   

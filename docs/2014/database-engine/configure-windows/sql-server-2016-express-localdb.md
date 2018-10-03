@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158953"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 실행 모드는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 프로그램 개발자를 대상으로 합니다. `LocalDB` 설치를 시작 하는 데 필요한 파일의 최소 집합을 복사 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. 한 번 `LocalDB` 가 설치 되어 개발자가 연결을 시작 특수 연결 문자열을 사용 하 여 합니다. 에 연결 하 고 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라는 자동으로 만들어지고 시작 복잡 하거나 시간이 오래 걸리는 구성 태스크 없이 데이터베이스를 사용 하도록 응용 프로그램을 사용 하도록 설정 합니다. 개발자 도구는 개발자가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 제공할 수 있습니다. 인스턴스의 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` 사용 하 여 관리 되는 `SqlLocalDB.exe` 유틸리티입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 대신 사용 해야는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 되지 않는 사용자 인스턴스 기능입니다.  
@@ -91,7 +88,7 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|속성|"LocalDBApp1"|  
+|이름|"LocalDBApp1"|  
 |버전|\<현재 버전>|  
 |공유 이름|""|  
 |소유자|"\<Windows 사용자>"|  

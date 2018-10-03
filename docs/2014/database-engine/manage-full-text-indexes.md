@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066813"
 ---
 # <a name="manage-full-text-indexes"></a>전체 텍스트 인덱스 관리
      
@@ -40,7 +37,7 @@ ms.locfileid: "37243113"
     |----------|-----------------|  
     |**일반**|전체 텍스트 인덱스의 기본 속성을 표시합니다. 이러한 속성으로는 데이터베이스 이름, 테이블 이름 및 전체 텍스트 키 열의 이름과 같이 변경할 수 없는 많은 속성과 여러 가지 수정 가능한 속성이 있습니다. 수정 가능한 속성은 다음과 같습니다.<br /><br /> **전체 텍스트 인덱스 중지 목록**<br /><br /> **전체 텍스트 인덱싱 설정**<br /><br /> **변경 내용 추적**<br /><br /> **검색 속성 목록**<br /><br /> <br /><br /> 자세한 내용은 [전체 텍스트 인덱스 속성&#40;일반 페이지&#41;](full-text-index-properties-general-page.md)을 참조하세요.|  
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 속성&#40;열 페이지&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)을 참조하세요.|  
-    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../relational-databases/indexes/indexes.md)를 참조하세요.<br /><br /> **\*\* 중요 \* \* ** 종료 한 후 합니다 **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든된 일정이 SQL Server 에이전트 작업 (시작 대 한 증분 테이블 채우기 연관된*database_name*.* table_name*).|  
+    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../relational-databases/indexes/indexes.md)를 참조하세요.<br /><br /> **\*\* 중요 \* \***  종료 한 후 합니다 **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든된 일정이 SQL Server 에이전트 작업 (시작 대 한 증분 테이블 채우기 연관된*database_name*. *table_name*).|  
   
 6.  변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

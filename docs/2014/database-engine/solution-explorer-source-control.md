@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual SourceSafe
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - file source control services [SQL Server]
 - VSS [Visual SourceSafe]
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41ced86e6aa0ab2674a89333a472fb476c369563
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820609"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154983"
 ---
 # <a name="solution-explorer-source-control"></a>솔루션 탐색기 원본 제어
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 솔루션 탐색기는 별도 소스 제어 시스템에 통합할 수 있습니다. 솔루션 또는 프로젝트가 원본 제어 시스템에 통합된 경우 프로젝트에서 스크립트 및 쿼리에 대한 파일 액세스와 버전을 제어할 수 있습니다.  

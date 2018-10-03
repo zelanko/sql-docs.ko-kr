@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachitemcolumns.f1
 helpviewer_keywords:
 - For Each Item Columns dialog box
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71e11decb974d09bd38769a716352d433e898bcb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 432d348d2c224d3be1f24966da5e3793e7cc5db8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093853"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>For Each Item 열 대화 상자 UI 참조
   **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  

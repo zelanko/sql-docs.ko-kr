@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4d128ae77c4a8a80817bc3e19a715f4c31992d55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101693"
 ---
 # <a name="device-contents-sql-server"></a>장치 내용(SQL Server)
   이 대화 상자를 사용하여 백업 정보를 확인할 수 있습니다. 이 정보에는 장치, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  

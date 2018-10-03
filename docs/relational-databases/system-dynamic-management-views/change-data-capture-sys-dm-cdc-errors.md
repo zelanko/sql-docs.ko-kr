@@ -1,12 +1,10 @@
 ---
-title: sys.dm_cdc_errors (Transact SQL) | Microsoft Docs
+title: sys.dm_cdc_errors (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_errors_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 488e9eb3695dea1eada4b57d092451d40131f419
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ed8c72e0114804780cd3ee090b536eb28135e628
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468604"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743271"
 ---
 # <a name="change-data-capture---sysdmcdcerrors"></a>변경 데이터 캡처-sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +46,13 @@ ms.locfileid: "34468604"
 |**begin_lsn**|**nvarchar(23)**|오류가 발생한 시점에 처리 중이었던 트랜잭션의 시작 LSN 값입니다.<br /><br /> 0 = 로그 검색 세션 내에서 오류가 발생하지 않았습니다.|  
 |**sequence_value**|**nvarchar(23)**|오류가 발생한 시점에 처리 중이었던 행의 LSN 값입니다.<br /><br /> 0 = 로그 검색 세션 내에서 오류가 발생하지 않았습니다.|  
   
-## <a name="remarks"></a>주의  
- **sys.dm_cdc_errors** 는 이전 32 개의 세션에 대 한 오류 정보를 포함 합니다.  
+## <a name="remarks"></a>Remarks  
+ **sys.dm_cdc_errors** 이전 32 개의 세션에 대 한 오류 정보를 포함 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 쿼리하려면 VIEW DATABASE STATE 권한이 필요는 **sys.dm_cdc_errors** 동적 관리 뷰. 동적 관리 뷰 사용 권한에 대 한 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)합니다.  
+## <a name="permissions"></a>사용 권한  
+ 쿼리하려면 VIEW DATABASE STATE 권한이 필요 합니다 **sys.dm_cdc_errors** 동적 관리 뷰. 동적 관리 뷰에 사용 권한에 대 한 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_cdc_log_scan_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
  [sys.dm_repl_traninfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
   

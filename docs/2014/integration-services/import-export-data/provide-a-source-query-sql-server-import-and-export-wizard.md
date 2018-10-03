@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d85fb5d22f88e363c3cc6fd07cf0b7c757911d83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3abb49fa9e2e73ae5c610b5e940a6deba5079d62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069863"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>원본 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
   **원본 쿼리 지정** 페이지를 사용하여 데이터 원본에서 대상으로 복사할 데이터를 생성하는 SQL 문을 입력할 수 있습니다.  

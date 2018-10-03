@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.definecolumncollation
 - vdtsql.chm:65561
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db1b76788ea1dbd931eb021f9f3da270d57abfdf
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c48d4fc1d475a07dc9133173418c6474a87f9cab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070423"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>데이터 정렬 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 열의 데이터 정렬 순서를 지정할 수 있습니다. 열의 데이터 정렬 순서는 열의 값을 다른 열이나 상수 값과 비교하는 모든 작업에 사용됩니다. 이 순서는 SUBSTRING 및 CHARINDEX 등과 같은 일부 문자열 함수의 동작에도 영향을 줍니다. 열의 데이터 정렬 순서 설정이 미치는 영향에 대한 전체 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명서를 참조하십시오.  

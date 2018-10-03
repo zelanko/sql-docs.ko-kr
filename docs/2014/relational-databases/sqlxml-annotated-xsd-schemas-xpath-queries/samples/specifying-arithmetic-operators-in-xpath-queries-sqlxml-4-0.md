@@ -1,14 +1,12 @@
 ---
-title: (SQLXML 4.0) XPath 쿼리에 산술 연산자 지정 | Microsoft Docs
+title: (SQLXML 4.0) XPath 쿼리에 산술 연산자 지정 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - arithmetic operators
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], arithmetic operators
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 389c249203416041831edec0f910a661f695805d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b35cdaf8c531b484b9747ecaca672db4476641d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156970"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 산술 연산자 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 산술 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  

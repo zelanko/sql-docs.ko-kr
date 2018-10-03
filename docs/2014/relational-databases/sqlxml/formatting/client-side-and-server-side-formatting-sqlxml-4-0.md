@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - formats [SQLXML]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - XML formatting [SQLXML]
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e0fd037296160e16c1b92c44688e7ecc612eb6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3db4b0c18725c9378d3c0d6e13833a26ffe8f941
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164314"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107067"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 서식 지정(SQLXML 4.0)
   SQLXML에서는 두 가지 방법으로 XML 문서에 서식을 지정할 수 있습니다.  

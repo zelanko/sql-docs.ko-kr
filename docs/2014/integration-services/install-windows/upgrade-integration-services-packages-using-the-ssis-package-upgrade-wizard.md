@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cccc4857558d90f25b9b246391a66fdd81d46bdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 783a4313f4f204f80b5efbefd3a377056addfe5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071833"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만들어진 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 형식으로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 과정을 돕는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 제공합니다. 원래 패키지를 백업하도록 마법사를 구성할 수 있으므로 업그레이드에 문제가 있을 경우 원래 패키지를 계속 사용할 수 있습니다.  

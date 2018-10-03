@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.f1
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c338840ee08404d9d8ed797bb8468bcd9f06ed67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c2f29259028ad15605f3f71e1eba87f353e795b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067582"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>동작(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **동작** 탭을 사용하여 선택한 큐브에 대한 드릴스루 작업 및 보고 작업을 포함한 작업을 보고 편집할 수 있습니다.  

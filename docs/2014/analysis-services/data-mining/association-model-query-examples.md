@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - association rules
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad20cca3b87a3d3b94bef48dcdf94c55cf30a282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173614"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117385"
 ---
 # <a name="association-model-query-examples"></a>연결 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 규칙과 항목 집합에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 데이터에서 발견된 연결을 사용하여 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 연결 모델에서 예측은 일반적으로 규칙을 기반으로 하여 권장 구성을 생성하는 데 사용되고, 내용에 대한 쿼리는 일반적으로 항목 집합 간의 관계를 탐색합니다. 모델에 대한 메타데이터를 검색할 수도 있습니다.  

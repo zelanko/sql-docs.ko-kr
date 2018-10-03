@@ -1,34 +1,31 @@
 ---
-title: 입력 속성 예제 (속성) (VB) | Microsoft Docs
+title: 속성 예제 (속성) (VB)를 입력 합니다. | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Type property [property] [ADO], Visual Basic example
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12928988a338ca26a220b3418637cdd237c452f0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 487f32fa2ec374d08589766b75ce97a1b35e2aac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779291"
 ---
-# <a name="type-property-example-property-vb"></a>형식 속성 예제 (속성) (VB)
-이 예제에서는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다. 모델의 이름 및 컬렉션의 형식과 같은 나열 하기 위한 유틸리티입니다 [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등입니다.  
+# <a name="type-property-example-property-vb"></a>Type 속성 예제(속성)(VB)
+이 예제에서는 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다. 같은 이름 및 컬렉션의 형식을 나열 하는 유틸리티의 모델 이기 [속성](../../../ado/reference/ado-api/properties-collection-ado.md)를 [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등입니다.  
   
- 열 필요가 없습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 액세스 하려면 해당 **속성** 컬렉션; 존재 발휘 때는 **레코드 집합** 개체가 인스턴스화될 합니다. 그러나 설정는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient** 여러 동적 속성을 추가 하는 **레코드 집합** 개체의 **속성** 컬렉션을 만드는 예제를 약간 더 흥미롭습니다. 를 위해 명시적으로 사용 된 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성에 액세스 하는 각 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다.  
+ 열 필요가 없습니다를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 액세스 하려면 해당 **속성** 컬렉션 존재에 나올 때 합니다 **레코드 집합** 개체를 인스턴스화할 합니다. 그러나 설정 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient** 여러 동적 속성을 추가 합니다 **레코드 집합** 개체의 **속성** 컬렉션을 좀 더 흥미로운 예제를 수행 합니다. 그림의 일부만 명시적으로 사용 합니다 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성에 액세스 하는 각 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다.  
   
 ```  
 'BeginTypePropertyVB  
@@ -152,5 +149,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [속성 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)

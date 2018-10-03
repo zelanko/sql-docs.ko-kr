@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual Basic [SMO]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 114cc7d651318a0c3892427a54fefb3c5f6bb781
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 893245a2716ad51b4204d6974f81147e2d51a4dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142023"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
   SMO 개체를 사용하는 프로그래밍 관련 태스크에는 백업, 통계 모니터링, 복제, 인스턴스 개체 관리, 구성 옵션 설정 등 특정 기능이 있는 프로그램에만 필요한 복잡한 작업이 포함됩니다.  
@@ -54,7 +51,7 @@ ms.locfileid: "37274409"
 |[동의어 사용](using-synonyms.md)|SMO에서 동의어를 만드는 방법에 대해 설명합니다.|  
 |[메시지 사용](using-messages.md)|시스템 메시지를 사용하는 방법과 고유의 사용자 정의 메시지를 정의하는 방법에 대해 설명합니다.|  
 |[전체 텍스트 검색 구현](implementing-full-text-search.md)|SMO에서 전체 텍스트 검색 카탈로그와 인덱스를 구현하는 방법에 대해 설명합니다.|  
-|[끝점 구현](implementing-endpoints.md)|데이터베이스 미러링, SOAP 요청 및 Service Broker에 대한 페이로드를 처리하는 끝점을 만드는 방법에 대해 설명합니다.|  
+|[엔드포인트 구현](implementing-endpoints.md)|데이터베이스 미러링, SOAP 요청 및 Service Broker에 대한 페이로드를 처리하는 엔드포인트를 만드는 방법에 대해 설명합니다.|  
 |[통계 생성 및 업데이트](../../statistics/statistics.md)|SMO에서 데이터베이스에 통계를 설정하고 이를 모니터링하는 방법에 대해 설명합니다.|  
 |[이벤트 추적 및 재생](tracing-and-replaying-events.md)|SMO에서 `Trace` 및 `Replay` 개체를 사용하여 이벤트를 추적하고 재생하는 방법에 대해 설명합니다.|  
   

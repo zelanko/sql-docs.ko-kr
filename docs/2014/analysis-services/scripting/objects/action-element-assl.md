@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Action Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48a07020a2c4b8bb2fbc79c5c3d67697a30760d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166443"
 ---
 # <a name="action-element-assl"></a>Action 요소(ASSL)
   사용 가능한 동작에 대 한 정보를 포함 한 [큐브](cube-element-assl.md) 요소 또는 [관점](perspective-element-assl.md) 요소입니다.  
@@ -52,7 +49,7 @@ ms.locfileid: "37196013"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  
@@ -65,7 +62,7 @@ ms.locfileid: "37196013"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[동작](../collections/actions-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Action>합니다.  

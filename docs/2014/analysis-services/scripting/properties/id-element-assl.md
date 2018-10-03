@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ID element
 ms.assetid: ea3ce0f4-9084-45d0-8150-73afb7005af2
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c323bd71865d0dd09bf724373ece03d83e7608ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71de55c773ce75ec75b38b774ad0a5e8ec35ed9b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209943"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170263"
 ---
 # <a name="id-element-assl"></a>ID 요소(ASSL)
   부모 요소의 ID(고유 식별자)를 포함합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37209943"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(최대 100자)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37209943"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[동작](../objects/action-element-assl.md), [집계](../objects/aggregation-element-assl.md)를 [AggregationDesign](../objects/aggregationdesign-element-assl.md)를 [어셈블리](../objects/assembly-element-assl.md)를 [큐브](../objects/cube-element-assl.md), [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md)를 [데이터베이스](../objects/database-element-assl.md)를 [DataSource](../objects/datasource-element-assl.md)를 [DataSourceView](../objects/datasourceview-element-assl.md), [차원 ](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)를 [계층](../objects/hierarchy-element-assl.md)를 [Kpi](../objects/kpi-element-assl.md)를 [수준](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [측정값](../objects/measure-element-assl.md)를 [MeasureGroup](../objects/group-element-assl.md)를 [MeasureGroupBinding](../data-type/binding-data-type-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md), [ MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md)합니다 [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)를 [파티션](../objects/partition-element-assl.md), [권한](../data-type/permission-data-type-assl.md), [관점](../objects/perspective-element-assl.md)합니다 [역할](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [추적](../objects/trace-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  모든 주요 개체에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 `ID` 요소가 속성으로. `ID` 요소 값에는 다음과 같은 제한 사항이 있습니다.  

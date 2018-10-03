@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a2e66a3537b62658458357a642a76d6e283abb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143763"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn 게시 데이터베이스 유지 관리(SQL Server)
   이 항목에서는 AlwaysOn 가용성 그룹을 사용할 경우 게시 데이터베이스 유지 관리와 관련하여 특별히 고려해야 할 사항에 대해 설명합니다.  

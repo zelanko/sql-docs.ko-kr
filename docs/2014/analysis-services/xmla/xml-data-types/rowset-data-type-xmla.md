@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Rowset Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c4ce1858e8274e5ae964c497972b4f2b082a712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279449"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170123"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 데이터 형식(XMLA)
   나타내는 파생된 데이터 형식을 정의 [루트](../xml-elements-properties/root-element-xmla.md) 에서 테이블 형식 데이터를 반환 하는 요소는 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드 호출.  
@@ -55,13 +52,13 @@ ms.locfileid: "37279449"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[결과 집합](resultset-data-type-xmla.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[행](../xml-elements-properties/row-element-xmla.md)|  
 |파생 요소|[root](../xml-elements-properties/root-element-xmla.md)|  
   

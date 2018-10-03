@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - InvalidXmlCharacters Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - InvalidXmlCharacters element
 ms.assetid: 92b1210c-1075-4f2f-a2c4-dfdc6d7e5c05
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a3735beb602045bc4789d716bdf1cb5968af06f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0832f4138adc3f278af0d735b70251590fb3ba41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059645"
 ---
 # <a name="invalidxmlcharacters-element-assl"></a>InvalidXmlCharacters 요소(ASSL)
   원본 데이터에 있는 잘못된 XML 문자에 대한 처리 방식을 지정합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37229673"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  

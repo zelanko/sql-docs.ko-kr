@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.incrementalupdate.f1
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22d7038fa3d8f07c5b32e35c5cb39e0d8db95766
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 354ec6968698dc5b6a7bbca8ffcd33a34db4389d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066283"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>증분 업데이트 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 증분 업데이트 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 측정값 그룹과 파티션을 증분 업데이트할 때 사용할 설정을 정의할 수 있습니다. **처리** 대화 상자에서 **개체 목록** 표의 **설정** 열에 있는 **구성** 을 클릭하여 **증분 업데이트** 대화 상자를 표시할 수 있습니다.  

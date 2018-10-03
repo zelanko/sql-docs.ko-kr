@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articles.f1
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e1bc1d8da2b6090861d9fdf1bf82bf7df3a7b96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23b060d50a3d19b017f9207d1747b7caf5d1cf62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162693"
 ---
 # <a name="articles"></a>아티클
   **아티클** 페이지에서 게시에 아티클로 포함할 데이터베이스 개체를 지정할 수 있습니다. 하나 이상의 다른 데이터베이스 개체에 종속된 데이터베이스 개체를 게시하는 경우 참조된 개체를 모두 게시해야 합니다. 예를 들어 테이블에 종속된 뷰를 게시하는 경우 테이블도 게시해야 합니다.  

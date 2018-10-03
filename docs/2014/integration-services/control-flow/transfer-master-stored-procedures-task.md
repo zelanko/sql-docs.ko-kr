@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b89788698662245d69cb8b209286e1e5dd2f93a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150233"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크
   master 저장 프로시저 전송 태스크는 **인스턴스의** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 간에 하나 이상의 사용자 정의 저장 프로시저를 전송합니다. **master** 데이터베이스에서 저장 프로시저를 전송하려면 프로시저 소유자가 dbo여야 합니다.  

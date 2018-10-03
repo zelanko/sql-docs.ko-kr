@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hiding system objects
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - objects [SQL Server], hiding
 - Object Explorer, hiding objects
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c04c87d7ba3d4ed9bd7099bb6c6272b902a50dfd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c6e524f58374dbe20a6af152430fc711203902fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094073"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>개체 탐색기에서 시스템 개체 숨기기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 시스템 개체를 숨기는 방법에 대해 설명합니다. 개체 탐색기의 **데이터베이스** 노드에는 시스템 데이터베이스와 같은 시스템 개체가 있습니다. **도구**/**옵션** 페이지를 사용하여 시스템 개체를 숨길 수 있습니다. 시스템 함수 및 시스템 데이터 형식과 같은 일부 시스템 개체는 이 설정의 영향을 받지 않습니다.  

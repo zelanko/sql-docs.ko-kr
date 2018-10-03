@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Report Viewer Web Part [Reporting Services]
 - Documents Web Part [Reporting Services]
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 697726db338c9165bdd909b0c324ecf52a472013
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f4722a2b338b0187bdd93cb9501e626c42acf02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166893"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>필터 또는 문서 웹 파트 연결(SharePoint 통합 모드의 Reporting Services)
   SharePoint 제품을 사용하는 경우 필터 웹 파트 또는 문서 웹 파트와 보고서 뷰어 웹 파트가 포함된 대시보드나 웹 파트 페이지를 만들 수 있습니다. 선택한 버전은 [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]입니다. 또한 지원되는 버전은 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] 또는 [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007입니다. 필터 웹 파트를 연결하면 필터 웹 파트의 필터 값을 선택하여 같은 페이지의 매개 변수가 있는 보고서에 해당 값을 보낼 수 있습니다. 문서 웹 파트를 연결하면 문서 라이브러리의 보고서를 클릭하여 인접 보고서 뷰어 웹 파트의 보고서를 볼 수 있습니다.  

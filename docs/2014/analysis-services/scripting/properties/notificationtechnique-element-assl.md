@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NotificationTechnique Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e661b47c5344b0094daef53102aada68a6b6aad9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8dc05b03286785e2d06d5595897a263a294ae97e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139506"
 ---
 # <a name="notificationtechnique-element-assl"></a>NotificationTechnique 요소(ASSL)
   지정 여부 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 외부 클라이언트 응용 프로그램이 알림을 처리할지 또는 합니다.  
@@ -55,7 +52,7 @@ ms.locfileid: "37213913"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ProactiveCachingBinding](../data-type/binding-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

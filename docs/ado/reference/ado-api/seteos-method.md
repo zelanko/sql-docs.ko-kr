@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - SetEOS method [ADO]
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8821b58e5e111ad879c34f0d3d8177404945a72f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e0db8c7972d6b647cdd021d43dbb3cdee1ba0452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678531"
 ---
 # <a name="seteos-method"></a>SetEOS 메서드
-다음 위치를 스트림의 끝을 설정 합니다.  
+스트림의 끝에 있는 위치를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,12 +35,12 @@ Stream.SetEOS
 ```  
   
 ## <a name="remarks"></a>Remarks  
- **SetEOS** 의 값이 업데이트는 [EOS](../../../ado/reference/ado-api/eos-property.md) 현재 함으로써 속성 [위치](../../../ado/reference/ado-api/position-property-ado.md) 스트림의 끝입니다. 모든 바이트 또는 현재 위치를 다음 문자는 잘립니다.  
+ **SetEOS** 의 값을 업데이트 합니다 [EOS](../../../ado/reference/ado-api/eos-property.md) 속성을 현재 수행 [위치](../../../ado/reference/ado-api/position-property-ado.md) 스트림의 맨 끝입니다. 모든 바이트 또는 현재 위치를 다음 문자는 잘립니다.  
   
- 때문에 [쓰기](../../../ado/reference/ado-api/write-method.md), [WriteText](../../../ado/reference/ado-api/writetext-method.md), 및 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) 기존에서 모든 추가 값을 잘라내지 않습니다 **스트림** 개체를 이러한을 잘라낼 수 있습니다 새 스트림 끝 위치를 설정 하 여 문자 또는 바이트 **SetEOS**합니다.  
+ 때문에 [작성할](../../../ado/reference/ado-api/write-method.md)를 [WriteText](../../../ado/reference/ado-api/writetext-method.md), 및 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) 기존에 다른 값을 잘라내지 않습니다 **Stream** 개체를 이러한 잘라낼 수 있습니다 새 스트림 끝 위치를 설정 하 여 문자 또는 바이트 **SetEOS**합니다.  
   
 > [!CAUTION]
->  설정한 경우 **EOS** 스트림의 실제 끝 이전 위치로 새 후 모든 데이터는 손실 됩니다 **EOS** 위치입니다.  
+>  설정 하는 경우 **EOS** 스트림의 실제 종료 되기 전에 위치로 새 후 모든 데이터는 손실 됩니다 **EOS** 위치 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

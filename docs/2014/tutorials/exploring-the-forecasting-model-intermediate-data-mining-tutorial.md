@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3e41c8060a007e52af23c0637c744e72f0d1fb4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ff9743774a9c05f4369cb2d24fde592bf011225
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167770"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151017"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>예측 모델 탐색(중급 데이터 마이닝 자습서)
   사용 하 여 결과 탐색할 수는 예측 마이닝 모델을 작성 했으므로 이제는 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 뷰어를 두 개의 탭이 있습니다: **차트** 하 고 **모델**합니다.  

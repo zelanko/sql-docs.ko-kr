@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - server objects [AMO]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc100d99d3e125c22c04aac8cf092646f2b0cfa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168993"
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 기본 개체 프로그래밍
   기본 개체는 일반적으로 단순하고 간단한 개체입니다. 이러한 개체는 대개 만들어지고 인스턴스화된 후 더 이상 필요하지 않게 되면 사용자가 개체와의 연결을 끊습니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다. AMO 기본 개체 중 유일하게 복잡한 개체는 <xref:Microsoft.AnalysisServices.DataSourceView>로, 이 개체는 세부 정보가 있어야 데이터 원본 뷰를 나타내는 추상 모델을 빌드할 수 있습니다.  

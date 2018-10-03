@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163473"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  

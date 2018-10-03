@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e02a5f91994d0002873984a6e77db53169d024e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080353"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
   SQL Server 에이전트 서비스를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 작업을 예약하여 필요한 순서 및 시간에 실행할 수 있습니다. 예약된 태스크를 사용하면 정기적으로 또는 예측 가능한 주기에 따라 프로세스가 자동으로 실행되도록 할 수 있습니다. 비즈니스 활동을 수행하지 않는 시간 동안 큐브 처리 등의 관리 태스크가 실행되도록 예약할 수 있습니다. 또한 SQL Server 에이전트 작업 내에 작업 단계를 만들어 태스크 실행 순서를 지정할 수 있습니다. 예를 들어 큐브를 처리한 다음 큐브 백업을 수행할 수 있습니다.  

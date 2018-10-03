@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.file.close.f1
@@ -14,16 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 541cf32d4db920733fb32edd503a4e205f2175d6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 85c5987c8fdc5589ca3130ce908febea0fe04433
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143525"
 ---
 # <a name="save-changes"></a>변경 내용 저장
   **예**를 클릭하지 않으면 나열된 항목의 변경 내용이 저장되지 않는다는 경고가 표시됩니다.  
