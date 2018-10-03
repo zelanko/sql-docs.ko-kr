@@ -5,21 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43268b60d23a32c688363790a732a3ebff66cf8a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808671"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |값|설명|  
 |-----------|-----------------|  
-|0|InclusionThresholdSetting<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
+|0|없음<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
 |1|Basic<br /><br /> 사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  
 |2|성능<br /><br /> 성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.|  
 |3|자세히<br /><br /> 사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다. <br />사용자 지정 이벤트는 Integration Services 태스크에 의해 기록되는 이벤트를 포함합니다. 자세한 내용은 [사용자 지정된 로깅 메시지](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)를 참조하세요.|  
@@ -137,9 +134,9 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 및 MODIFY 권한  

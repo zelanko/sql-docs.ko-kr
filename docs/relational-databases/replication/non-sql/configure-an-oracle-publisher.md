@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 617477c76066d9711c79543ab28580add5740487
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 0489d3d1486cb447a16b9658a17c0e6f4d9f41f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825191"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

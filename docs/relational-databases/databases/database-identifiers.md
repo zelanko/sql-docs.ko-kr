@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - Transact-SQL identifiers
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05720095973966ed18aee8c97f9f23ec4e717e40
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 890a00fe6203df89bf0c74875d306b072009215d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813861"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

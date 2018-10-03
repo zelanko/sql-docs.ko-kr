@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.httpconnection.server.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 594cd95d41140f647a163f62c7e3a371e5fb25ec
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 84303bf8084f745a052e4057351fa29a231d6dc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824710"
 ---
 # <a name="http-connection-manager"></a>HTTP 연결 관리자
   HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 웹 서비스 태스크에서는 이 연결 관리자가 사용됩니다.  
@@ -63,7 +60,7 @@ ms.locfileid: "35329807"
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](../../integration-services/control-flow/web-service-task.md)를 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **서버 URL**  
  서버의 URL을 입력합니다.  
   
@@ -101,7 +98,7 @@ ms.locfileid: "35329807"
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](../../integration-services/control-flow/web-service-task.md)를 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **프록시 사용**  
  HTTP 연결 관리자에서 프록시 서버를 통해 연결하도록 할지 여부를 지정합니다.  
   

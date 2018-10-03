@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - VERIFYSIGNEDBYCERT
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4fae181e54ac8b11644c2c8185b9ca203a39c5c4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: e62eb628a41fc58f96aee84761c9390852f4a81a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818351"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ## <a name="remarks"></a>Remarks  
  **VerifySignedBycert**는 지정한 인증서의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  인증서에 대한 VIEW DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

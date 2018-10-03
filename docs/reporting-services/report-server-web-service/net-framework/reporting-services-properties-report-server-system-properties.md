@@ -4,22 +4,19 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4d49b97eba1684e7b3ad50209cf2fee2fbfb64f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b90ac3252dc0ed8072405064d825424b55aeb102
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808711"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 속성 - 보고서 서버 시스템 속성
   다음 시스템 속성 이름은 예약되어 있습니다. 동일한 이름의 사용자 정의 속성을 만들 수 없습니다. 이러한 속성 중 상당수는 웹 서비스 메서드를 사용하여 읽거나 수정할 수 있습니다.  

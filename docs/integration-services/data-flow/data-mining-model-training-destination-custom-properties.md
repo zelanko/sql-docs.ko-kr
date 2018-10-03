@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4d032c5cd57d17f1e4cff4177626cf7c7292447
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f7e2c9daf0e9bfdd070102aee93a762c16db5149
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825571"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>데이터 마이닝 모델 학습 대상 사용자 지정 속성
   데이터 마이닝 모델 학습 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

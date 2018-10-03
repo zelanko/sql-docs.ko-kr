@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing report history
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 373128872f32b3e8727db8f3059475bcd8dac12a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 752ea88b7b980ec27af03b60d9b8480f391b6114
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823155"
 ---
 # <a name="limit-report-history-report-manager"></a>보고서 기록 제한(보고서 관리자)
   보고서 기록은 시간에 따라 만든 보고서 스냅숏의 모음입니다. 요청 시 보고서 기록을 만들거나 스냅숏이 만들어져 보고서 기록에 추가되는 빈도를 예약할 수 있습니다.  

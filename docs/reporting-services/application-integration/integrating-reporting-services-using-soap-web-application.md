@@ -4,10 +4,7 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
 - impersonation [Reporting Services]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78da917a51e524aa842639661befbb15d88a658d
-ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
+ms.openlocfilehash: ad273d61c480211e50ad86122a4616a212804f4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46361986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830204"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>SOAP를 사용하여 Reporting Services 통합 - 웹 응용 프로그램
   Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 응용 프로그램에 엔터프라이즈 보고 기능을 제공할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램에서 SOAP API에 액세스하는 것과 동일한 방법으로 웹 응용 프로그램에서 보고서 서버 웹 서비스에 액세스합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 보고서 서버 웹 서비스의 속성 및 메서드를 표시하는 프록시 클래스를 생성할 수 있으며 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 응용 프로그램을 빌드할 수도 있습니다.  
