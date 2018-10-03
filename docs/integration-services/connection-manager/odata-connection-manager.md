@@ -4,25 +4,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 9
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6a3fbd4cc0f1865559f4f4b64987aa906b2839
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4ec5760d6f62c045b1985aad534c7447f75f59c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667281"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
  OData 연결 관리자를 사용하여 OData 데이터 원본에 연결합니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 데이터 원본에 연결하고 서비스에서 데이터를 사용합니다. 자세한 내용은 [OData Source](../../integration-services/data-flow/odata-source.md)를 참조하십시오.  
@@ -72,7 +69,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
 ## <a name="odata-connection-manager-editor"></a>OData 연결 관리자 편집기
   **OData 연결 관리자 편집기** 대화 상자를 사용하여 OData 데이터 원본에 연결을 추가하거나 기존 연결을 편집할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **연결 관리자 이름**  
  연결 관리자의 이름입니다.  
   

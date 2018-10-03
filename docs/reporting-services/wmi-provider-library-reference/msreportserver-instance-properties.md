@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - MSReportServer_Instance Properties
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3b4c913042d21f03a8674ed121d732066eefb10
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c7e8f3fe4b47045a38d76b425b02d456ca6f97f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659551"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 속성
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  

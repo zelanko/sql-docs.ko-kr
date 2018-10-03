@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 541310addcd1b9fec25038e962197a1b06eea34a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b9687226caec47161fb42038994be279a89becc4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659581"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>방법: 쿼리를 사용하여 기존 테이블 편집
 Transact\-SQL 쿼리를 작성하여 테이블 또는 테이블 데이터의 정의를 편집할 수 있습니다. 테이블의 데이터를 보거나 비주얼 환경에서 입력하려면 [연결된 데이터베이스 개발](../ssdt/connected-database-development.md)에 설명된 대로 데이터 편집기를 사용합니다.  
