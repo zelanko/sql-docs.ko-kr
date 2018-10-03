@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], international data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL pane [Visual Database Tools]
 - multiple language support [SQL Server], Query and View Designer
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0e08dfcd8c87ece10ee8a741a9f0ba1737b5423
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 258a3bb5ea5cc113dcb27215444fcaa064651ef2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146353"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>쿼리 및 뷰 디자이너에 국가별 데이터 사용(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md)는 모든 언어 및 모든 Windows 운영 체제 버전에서 사용할 수 있습니다. 다음 지침은 이러한 상황에서 나타나는 차이점을 요약한 것이며, 국가별 응용 프로그램에서 데이터를 관리하는 방법에 대해 설명합니다.  

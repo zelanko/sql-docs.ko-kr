@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142093"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell를 사용한 데이터 준비(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,9 +265,9 @@ GitHub 리포지토리에서 파일을 다운로드하면 다음과 같습니다
 
 데이터는 각 여정의 요금 및 지불된 팁 금액을 비롯하여 2013년 17,300만 개별 여정의 레코드를 포함하는 뉴욕시 택시 데이터 집합의 대표 샘플링입니다. 데이터를 보다 쉽게 사용하기 위해 Microsoft 데이터 과학 팀이 다운샘플링을 수행하여 데이터의 1%만 얻었습니다.  이 데이터는 Azure의 공용 Blob 저장소 컨테이너에 .CSV 형식으로 공유됩니다. 원본 데이터에는 350MB 이하의 압축되지 않은 파일입니다.
 
-+ 공용 데이터 집합: [NYC 택시 및 리무진 수수료] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ 공용 데이터 집합: [NYC 택시 및 리무진 수수료](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [NYC Taxi 데이터 집합에서 Azure ML 모델을 작성합니다.] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [NYC Taxi 데이터 집합은 Azure ML 모델을 토대로](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/)합니다.
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell 및 R 스크립트 파일
 

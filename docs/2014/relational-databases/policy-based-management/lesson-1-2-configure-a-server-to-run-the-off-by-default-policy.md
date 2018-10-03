@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1aa6dfabe09541fd60809c337b296cb417ffd1b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82cf55e1fa3fa9bda5a625ef89335a9f81ed5505
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147883"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Off By Default 정책을 실행하도록 서버 구성
   이제 Off By Default라는 정책이 만들어졌습니다. 이 태스크에서는 서버가 이 정책의 요구 사항을 준수하는지 여부를 확인합니다.  

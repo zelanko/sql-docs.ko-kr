@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - manual joins [SQL Server]
 - joins [SQL Server], manual
 - joins [SQL Server], creating
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 765af19e12c8a702681a02e0042bf1886ba654ef
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 16d371fda3a18a748714db88aa345aa739cbed9b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148333"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
   쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](visual-database-tools.md)는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], roles
 - roles [SQL Server], replication
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f70f4e11bec18bb713fa04b01b912d476701b4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c57fa5ea252aa66e14628d49529970ceab7eb64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146415"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   복제는 사용자의 로그인이 매핑된 역할에 따라 해당 사용자가 수행할 수 있는 동작을 제한합니다. 복제는 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 및 PAL(게시 액세스 목록)에 있는 로그인에 대해 특정 사용 권한을 허가합니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server]
 - service master key [SQL Server], about service master key
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
-caps.latest.revision: 17
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bf45a708f34ed5a22e733287e3ec240817e91a9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ea074466c8075b7fb1746b7d3eb8741425b44c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147333"
 ---
 # <a name="service-master-key"></a>인스턴스에서 해당 인스턴스를 위해 생성되는 SMK(
   서비스 마스터 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 계층의 루트이며 처음으로 다른 키를 암호화해야 할 때 자동으로 생성됩니다. 기본적으로 서비스 마스터 키는 Windows 데이터 보호 API 및 로컬 컴퓨터 키를 사용하여 암호화됩니다. 서비스 마스터 키는 이 키를 만든 Windows 서비스 계정이나 서비스 계정 이름 및 암호에 대한 액세스를 갖고 있는 보안 주체만 열 수 있습니다.  

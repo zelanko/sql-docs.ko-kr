@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06e4e89e974476f2864b219f6030110afc213470
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143443"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 유형을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보낼 수 있습니다. 이 프로세스는 두 부분으로 구성되어 있습니다.  

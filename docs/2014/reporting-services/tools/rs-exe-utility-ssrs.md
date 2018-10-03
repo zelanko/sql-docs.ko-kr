@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255465"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141843"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -81,7 +78,7 @@ ms.locfileid: "37255465"
  (필요한 경우 `-u` 지정) 사용 하려면 암호를 지정 합니다 `-u` 인수입니다. 이 값은 대/소문자를 구분합니다.  
   
  `-e`  
- 스크립트가 실행되어야 하는 대상 SOAP 끝점을 지정합니다(옵션). 유효한 값은 다음과 같습니다.  
+ 스크립트가 실행되어야 하는 대상 SOAP 엔드포인트를 지정합니다(옵션). 유효한 값은 다음과 같습니다.  
   
 -   Mgmt2010  
   
@@ -91,7 +88,7 @@ ms.locfileid: "37255465"
   
 -   Exec2005  
   
- 값이 지정되지 않은 경우 Mgmt2005가 끝점으로 사용됩니다. SOAP 끝점에 대 한 자세한 내용은 참조 하세요. [보고서 서버 웹 서비스 끝점](../report-server-web-service/methods/report-server-web-service-endpoints.md)합니다.  
+ 값이 지정되지 않은 경우 Mgmt2005가 엔드포인트로 사용됩니다. SOAP 끝점에 대 한 자세한 내용은 참조 하세요. [보고서 서버 웹 서비스 끝점](../report-server-web-service/methods/report-server-web-service-endpoints.md)합니다.  
   
  `-l` *time_out*  
  서버에 대한 연결 제한 시간이 초과하기 전까지의 시간(초)을 지정합니다(옵션). 기본값은 60초입니다. 시간 제한 값을 지정하지 않으면 이 기본값이 사용됩니다. 값을 `0`으로 지정하면 연결 시간 제한이 없습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importregisteredservers.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], importing
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1a7dd2c53c5d0d1ca0d672f1911593953659c2f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a4dd698de7fd49c54a2bc6003af0fd82fd07f4c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143752"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 가져오기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 저장된 등록된 서버 정보를 가져오는 방법에 대해 설명합니다. 등록된 서버 파일을 내보냈다가 다시 가져오면 등록된 서버에 있는 동일한 서버로 여러 컴퓨터를 쉽게 구성할 수 있습니다. 이 작업은 여러 곳에 위치한 컴퓨터에서 다수의 서버를 관리할 때나 경험이 적은 사용자를 위해 기본 연결 설정을 구성하려는 경우에 유용합니다.  
