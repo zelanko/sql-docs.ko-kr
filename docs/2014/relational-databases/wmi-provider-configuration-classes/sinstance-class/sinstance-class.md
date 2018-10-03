@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SInstance Class
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SInstance class
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7d7762136db6fa4aa3ea3d6b5e730d927823c8df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 601b485c4a7dbd8a15347da63ae7d298cb8e800a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084382"
 ---
 # <a name="sinstance-class"></a>SInstance 클래스
   [SInstance 클래스](sinstance-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 나타냅니다.  

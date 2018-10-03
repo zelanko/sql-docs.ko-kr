@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084045"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093823"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
   이 자습서에서는 두 종류의 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 배웁니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -344,10 +341,10 @@ ms.locfileid: "39084045"
   
 1.  보고서 데이터 창에서 **매개 변수**를 확장합니다.  
   
-2.  마우스 오른쪽 단추로 클릭 \@ProductProductCategoryName을 클릭 하 고 **매개 변수 속성**합니다.  
+2.  \@ProductProductCategoryName을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**을 클릭합니다.  
   
     > [!NOTE]  
-    >  \@ 이름 옆의 문자 매개 변수임을 나타냅니다.  
+    >  이름 옆에 있는 \@ 문자는 이것이 매개 변수임을 나타냅니다.  
   
 3.  **일반** 탭에서 **숨김**을 클릭합니다.  
   

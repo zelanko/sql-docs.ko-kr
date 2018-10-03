@@ -3,8 +3,6 @@ title: WideWorldImporters 데이터-SQL 예제 데이터베이스를 생성 합�
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -12,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ace1f771ef3a77a6f7db0072442affe181d7872
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b0fd90b553aaefad61d9285f8630650b2b38763d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810541"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +67,7 @@ WideWorldImportersDW 성능 테스트에 대 한 데이터 크기를 늘리는 �
 
 ### <a name="procedure-details"></a>프로시저 세부 정보
 
-#### <a name="name"></a>속성
+#### <a name="name"></a>이름
 
     Application.Configuration_PopulateLargeSaleTable
 

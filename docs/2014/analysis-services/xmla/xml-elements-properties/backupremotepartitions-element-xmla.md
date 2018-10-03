@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - BackupRemotePartitions Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - BackupRemotePartitions element
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7cc7ccb441995d1c4aa3b22cccefcdc5224e486
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e18d01ec48264d735a111bc002ca92b08c7b374
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108191"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>BackupRemotePartitions 요소(XMLA)
   확인 여부를 부모 [백업](../xml-elements-commands/backup-element-xmla.md) 명령 개체에 연결 된 원격 파티션을 백업할 합니다.  
@@ -61,7 +58,7 @@ ms.locfileid: "37200073"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[백업](../xml-elements-commands/backup-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `BackupRemotePartitions`가 `True`로 설정되면 `Locations` 명령에 하나 이상의 `Location` 요소를 포함하는 `Backup` 요소가 포함되어야 합니다. 그렇지 않으면 오류가 발생합니다. 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  

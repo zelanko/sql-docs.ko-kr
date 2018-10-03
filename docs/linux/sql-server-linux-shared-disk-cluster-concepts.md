@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a89ce0acb22bf60dd05372a9cc7f7d28bb7fa3b1
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 14d54a9e004364db783a4462d9e941f0e513a292
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659811"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Linux의 SQL Server 장애 조치 클러스터 인스턴스
 

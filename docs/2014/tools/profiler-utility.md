@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0580ed282771deab06c6d3e2d5b7c52999562d17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ec9ce68b6c1838507cbb139130a4bcf7bf986ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128301"
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
   **profiler** 유틸리티는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구를 실행합니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 응용 프로그램 시작 방법을 제어할 수 있습니다.  
@@ -64,7 +61,7 @@ ms.locfileid: "37268089"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 사용자 로그인 ID입니다. 로그인 ID는 대/소문자를 구분합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]을 참조하세요.  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)] 을 참조하세요.  
   
  **/P** *password*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 암호를 지정합니다. 사용자가 원하는 대로 지정할 수 있습니다.  
@@ -85,7 +82,7 @@ ms.locfileid: "37268089"
  프로파일러를 시작할 때 로드할 추적 테이블을 지정합니다. 데이터베이스, 사용자나 스키마 및 테이블을 지정해야 합니다.  
   
  **/T"** *template_name* **"**  
- 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 예를 들어:  
+ 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 /T "standard"  

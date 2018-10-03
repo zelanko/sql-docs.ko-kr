@@ -5,19 +5,17 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622ad290a00a58c3fb0d0e4003e291a7ba77d3b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421112"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059733"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일 및 문서를 저장하는 데 사용할 수 있는 옵션을 설명하고 비교합니다.  
@@ -49,12 +47,12 @@ ms.locfileid: "37421112"
   
 |기능|파일 서버 및 데이터베이스 솔루션|FILESTREAM 솔루션|FileTable 솔루션|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**단일화된 관리 태스크**|아니요|예|**예**|  
-|**단일 서비스 집합**: 검색, 보고, 쿼리 등|아니요|예|**예**|  
-|**통합 보안 모델**|아니요|예|**예**|  
-|**FILESTREAM 데이터의 현재 위치 업데이트**|예|아니요|**예**|  
+|**단일화된 관리 태스크**|아니요|사용자 계정 컨트롤|**예**|  
+|**단일 서비스 집합**: 검색, 보고, 쿼리 등|아니요|사용자 계정 컨트롤|**예**|  
+|**통합 보안 모델**|아니요|사용자 계정 컨트롤|**예**|  
+|**FILESTREAM 데이터의 현재 위치 업데이트**|사용자 계정 컨트롤|아니요|**예**|  
 |**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|아니요|아니요|**예**|  
-|**Windows 응용 프로그램 호환성**|예|아니요|**예**|  
+|**Windows 응용 프로그램 호환성**|사용자 계정 컨트롤|아니요|**예**|  
 |**파일 특성에 대한 관계형 액세스**|아니요|아니요|**예**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 및 RBS(Remote BLOB Store) 비교  

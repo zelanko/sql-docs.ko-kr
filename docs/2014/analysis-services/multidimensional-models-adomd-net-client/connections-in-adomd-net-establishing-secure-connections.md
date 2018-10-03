@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b77fefaad8ac573e526412f1c81be3969743a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180860"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178213"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>ADOMD.NET에서 보안 연결 설정
   ADOMD.NET에서 연결을 사용하는 경우 연결에 사용되는 보안 메서드는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>의 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 메서드를 호출할 때 사용되는 연결 문자열의 `ProtectionLevel` 속성 값에 따라 결정됩니다.  
@@ -53,10 +50,10 @@ ms.locfileid: "37180860"
   
 |ProtectionLevel 값|TCP 연결 사용 여부|결과|  
 |---------------------------|------------------------------|-------------|  
-|`None`|예|인증되지 않은 연결을 지정합니다.<br /><br /> 공급자에서 TCP 스트림을 요청하지만 해당 스트림을 요청하는 사용자에 대해 수행되는 인증 형식이 없습니다.|  
-|`Connect`|예|인증된 연결을 지정합니다.<br /><br /> 공급자에서 TCP 스트림을 요청한 후 해당 스트림을 요청하는 사용자의 보안 컨텍스트가 서버에 대해 인증됩니다.<br /><br /> -인증에 성공 하는 경우 아무런 다른 동작이 발생 합니다.<br />-인증에 실패 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 다차원 데이터 원본에서 연결이 끊어지고 예외가 throw 됩니다.<br /><br /> 인증이 성공 또는 실패한 후 연결을 인증하는 데 사용된 보안 컨텍스트는 삭제됩니다.|  
-|`Pkt Integrity` 또는 `PktIntegrity`|예|서명된 연결을 지정합니다.<br /><br /> 공급자에서 TCP 스트림을 요청한 후 해당 스트림을 요청하는 사용자의 보안 컨텍스트가 서버에 대해 인증됩니다.<br /><br /> -인증에 성공 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체가 기존 TCP 스트림을 닫은 서명 된 TCP 스트림을 열어서 모든 요청을 처리 합니다. 데이터 또는 메타데이터에 대한 각 요청은 연결을 여는 데 사용된 보안 컨텍스트를 사용하여 인증됩니다. 또한 각 패킷은 TCP 패킷의 페이로드가 변경되지 않았음을 보장하기 위해 디지털 서명됩니다.<br />-인증에 실패 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 다차원 데이터 원본에서 연결이 끊어지고 예외가 throw 됩니다.|  
-|`Pkt Privacy` 또는 `PktPrivacy`|예|암호화된 연결을 지정합니다. **참고:** 설정 하지 않으면 암호화 된 연결을 지정할 수도 있습니다는 `ProtectionLevel` 연결 문자열에는 속성입니다. <br /><br /> 공급자에서 TCP 스트림을 요청한 후 해당 스트림을 요청하는 사용자의 보안 컨텍스트가 서버에 대해 인증됩니다.<br /><br /> -인증에 성공 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체가 기존 TCP 스트림을 닫은 후 열어서 암호화 된 TCP 스트림을 모든 요청을 처리 합니다. 데이터 또는 메타데이터에 대한 각 요청은 연결을 여는 데 사용된 보안 컨텍스트를 사용하여 인증됩니다. 또한 각 TCP 패킷의 페이로드는 공급자와 다차원 데이터 원본에서 지원되는 최고 수준의 암호화 방법을 사용하여 암호화됩니다.<br />-인증에 실패 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 다차원 데이터 원본에서 연결이 끊어지고 예외가 throw 됩니다.|  
+|`None`|사용자 계정 컨트롤|인증되지 않은 연결을 지정합니다.<br /><br /> 공급자에서 TCP 스트림을 요청하지만 해당 스트림을 요청하는 사용자에 대해 수행되는 인증 형식이 없습니다.|  
+|`Connect`|사용자 계정 컨트롤|인증된 연결을 지정합니다.<br /><br /> 공급자에서 TCP 스트림을 요청한 후 해당 스트림을 요청하는 사용자의 보안 컨텍스트가 서버에 대해 인증됩니다.<br /><br /> -인증에 성공 하는 경우 아무런 다른 동작이 발생 합니다.<br />-인증에 실패 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 다차원 데이터 원본에서 연결이 끊어지고 예외가 throw 됩니다.<br /><br /> 인증이 성공 또는 실패한 후 연결을 인증하는 데 사용된 보안 컨텍스트는 삭제됩니다.|  
+|`Pkt Integrity` 또는 `PktIntegrity`|사용자 계정 컨트롤|서명된 연결을 지정합니다.<br /><br /> 공급자에서 TCP 스트림을 요청한 후 해당 스트림을 요청하는 사용자의 보안 컨텍스트가 서버에 대해 인증됩니다.<br /><br /> -인증에 성공 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체가 기존 TCP 스트림을 닫은 서명 된 TCP 스트림을 열어서 모든 요청을 처리 합니다. 데이터 또는 메타데이터에 대한 각 요청은 연결을 여는 데 사용된 보안 컨텍스트를 사용하여 인증됩니다. 또한 각 패킷은 TCP 패킷의 페이로드가 변경되지 않았음을 보장하기 위해 디지털 서명됩니다.<br />-인증에 실패 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 다차원 데이터 원본에서 연결이 끊어지고 예외가 throw 됩니다.|  
+|`Pkt Privacy` 또는 `PktPrivacy`|사용자 계정 컨트롤|암호화된 연결을 지정합니다. **참고:** 설정 하지 않으면 암호화 된 연결을 지정할 수도 있습니다는 `ProtectionLevel` 연결 문자열에는 속성입니다. <br /><br /> 공급자에서 TCP 스트림을 요청한 후 해당 스트림을 요청하는 사용자의 보안 컨텍스트가 서버에 대해 인증됩니다.<br /><br /> -인증에 성공 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체가 기존 TCP 스트림을 닫은 후 열어서 암호화 된 TCP 스트림을 모든 요청을 처리 합니다. 데이터 또는 메타데이터에 대한 각 요청은 연결을 여는 데 사용된 보안 컨텍스트를 사용하여 인증됩니다. 또한 각 TCP 패킷의 페이로드는 공급자와 다차원 데이터 원본에서 지원되는 최고 수준의 암호화 방법을 사용하여 암호화됩니다.<br />-인증에 실패 하는 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 다차원 데이터 원본에서 연결이 끊어지고 예외가 throw 됩니다.|  
   
 ### <a name="using-windows-integrated-security-for-the-connection"></a>연결에 Windows 통합 보안 사용  
  Windows 통합 보안은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 가장 높은 보안 수준으로 설정할 수 있는 방법입니다. Windows 통합 보안은 인증 프로세스 동안 사용자 이름 또는 암호 같은 보안 자격 증명을 노출하지 않고 대신 현재 실행 중인 프로세스의 보안 식별자를 사용하여 ID를 설정합니다. 대부분의 클라이언트 응용 프로그램에서 이 보안 식별자는 현재 로그온한 사용자의 ID를 나타냅니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Perspectives Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Perspectives element
 ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35a1667a7df5f33bd4d6b3aa4f0621882b8819f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c7e1de8744e0e6a1379aeab6ca8953169de2972
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171483"
 ---
 # <a name="perspectives-element-assl"></a>Perspectives 요소(ASSL)
   컬렉션을 포함 [관점](../objects/perspective-element-assl.md) 와 관련 된 요소를 [큐브](../objects/cube-element-assl.md) 요소입니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37224115"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

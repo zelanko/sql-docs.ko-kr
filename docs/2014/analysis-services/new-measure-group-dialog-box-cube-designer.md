@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuregroupdialog.f1
 helpviewer_keywords:
 - New Measure Group dialog box
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 385e3c2fb01a251c954d6b4e630127f3f1892fdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bb52bd24211d889a0ecdac915033bd2f702976f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103713"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>새 측정값 그룹 대화 상자(큐브 디자이너)
   **의** 새 측정값 그룹 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 큐브 디자이너에서 새 측정값 그룹을 큐브에 추가할 수 있습니다. 다음과 같은 방법으로 **새 측정값 그룹** 대화 상자를 표시할 수 있습니다.  

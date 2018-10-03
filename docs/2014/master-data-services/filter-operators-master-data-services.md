@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9bf8765f1b64a908e9a799823d5272a7c29300da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a07aa1bb575b190208baf7dc4860b642cffadfa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062973"
 ---
 # <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
   멤버 목록을 필터링할 때 다음과 같은 연산자를 사용할 수 있습니다.  

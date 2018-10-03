@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.miningmodelproperties.f1
 helpviewer_keywords:
 - Mining Model Properties dialog box
 ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 142f9d3dde90037ce8de0c442a7032efdb9631f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179933"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>마이닝 모델 속성 대화 상자(Analysis Services - 데이터 마이닝)
   **의** 마이닝 모델 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 마이닝 모델 속성을 설정할 수 있습니다. **개체 탐색기** 에서 마이닝 모델을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 **마이닝 모델 속성**대화 상자를 표시할 수 있습니다.  

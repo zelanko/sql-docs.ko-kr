@@ -1,14 +1,11 @@
 ---
-title: sys.sysdevices (Transact SQL) | Microsoft Docs
+title: sys.sysdevices (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdevices
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.sysdevices compatibility view
 - sysdevices system table
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bf1a22fae1c4c8f69edf843c1a126844abdd1190
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: be4c586e3a3bdf4387601d1221bd7afeab852677
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595301"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +46,8 @@ ms.locfileid: "33219984"
 |**cntrltype**|**smallint**|컨트롤러 종류입니다.<br /><br /> 0 = CD-ROM이 아닌 데이터베이스 파일<br /><br /> 2 = 디스크 백업 파일<br /><br /> 3 - 4 = 디스켓 백업 파일<br /><br /> 5 = 테이프 백업 파일<br /><br /> 6 = 명명된 파이프 파일|  
 |**phyname**|**nvarchar(260)**|물리적 파일의 이름입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,1 +1,1 @@
-<Token>SQL Operations Studio(미리 보기)</Token>
+Azure Data Studio

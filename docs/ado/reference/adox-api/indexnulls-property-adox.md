@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - IndexNulls property [ADOX]
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d32b88053acacbcd9a7c184668f46ee6660022b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0bf43d2a0c2a2c8006df0513d4643fb4c0363506
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615911"
 ---
-# <a name="indexnulls-property-adox"></a>IndexNulls 속성 (ADOX)
-인덱스 필드에 null 값을 가진 레코드 인덱스 항목 여부를 나타냅니다.  
+# <a name="indexnulls-property-adox"></a>IndexNulls 속성(ADOX)
+인덱스 필드에 null 값이 있는 레코드 인덱스 항목이 있는지 여부를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) 값입니다. 기본값은 **adIndexNullsDisallow**합니다.  

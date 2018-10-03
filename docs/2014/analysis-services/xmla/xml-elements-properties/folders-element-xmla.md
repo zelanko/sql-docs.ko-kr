@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Folders Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Folders element
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 00d90fd45456a0b672c12cdd44706e63011cbb28
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e8097a5499f1d8d34d9dd5dd53726bf02a4b098
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174353"
 ---
 # <a name="folders-element-xmla"></a>Folders 요소(XMLA)
   [Restore](folder-element-xmla.md) 또는 [Synchronize](location-element-xmla.md) 명령을 실행하는 동안 부모 [Location](../xml-elements-commands/restore-element-xmla.md) 요소에서 사용되는 [Folder](../xml-elements-commands/synchronize-element-xmla.md) 요소의 컬렉션을 포함합니다.  
@@ -55,7 +52,7 @@ ms.locfileid: "37148534"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|없음(컬렉션)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

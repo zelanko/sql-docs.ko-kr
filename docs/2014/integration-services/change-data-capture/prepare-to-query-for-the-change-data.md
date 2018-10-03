@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88f2dd6e5caf6cf5b601f07ca826d85808f9e6f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173253"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>변경 데이터에 대한 쿼리 준비
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 세 번째이자 마지막 태스크는 변경 데이터 쿼리를 준비하고 데이터 흐름 태스크를 추가하는 것입니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "37248813"
 >  제어 흐름에 대한 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 이 태스크에 대한 자세한 내용은 [변경 데이터의 준비 여부 확인](determine-whether-the-change-data-is-ready.md)을 참조하세요. 제어 흐름 디자인의 전체 프로세스에 대한 설명은 [데이터 캡처 변경&#40;SSIS&#41;](change-data-capture-ssis.md)을 참조하세요.  
   
 ## <a name="design-considerations"></a>디자인 고려 사항  
- 변경 데이터를 검색하려면 간격의 끝점을 입력 매개 변수로 받아 지정한 간격에 대한 변경 데이터를 반환하는 Transact-SQL 테이블 반환 함수를 호출합니다. 데이터 흐름의 원본 구성 요소에서 이 함수를 호출합니다. 이 원본 구성 요소에 대한 자세한 내용은 [변경 데이터 검색 및 이해](retrieve-and-understand-the-change-data.md)를 참조하세요.  
+ 변경 데이터를 검색하려면 간격의 엔드포인트를 입력 매개 변수로 받아 지정한 간격에 대한 변경 데이터를 반환하는 Transact-SQL 테이블 반환 함수를 호출합니다. 데이터 흐름의 원본 구성 요소에서 이 함수를 호출합니다. 이 원본 구성 요소에 대한 자세한 내용은 [변경 데이터 검색 및 이해](retrieve-and-understand-the-change-data.md)를 참조하세요.  
   
  OLE DB 원본, ADO 원본 및 ADO NET 원본을 비롯하여 가장 자주 사용되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본 구성 요소는 테이블 반환 함수에 대한 매개 변수 정보를 파생시킬 수 없습니다. 따라서 대부분의 원본은 매개 변수가 있는 함수를 직접 호출할 수 없습니다.  
   

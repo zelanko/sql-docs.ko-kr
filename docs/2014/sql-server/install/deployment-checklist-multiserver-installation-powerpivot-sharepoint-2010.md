@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae1d09ddc1df0d4ff33808c92b708f92b4f4820c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181269"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>SharePoint 2010 용 PowerPivot의 다중 서버 설치 배포 검사 목록:
   이 검사 목록을 추가 하기 위한 단계를 안내 합니다 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 를 처음부터 작성 하는 3 계층 SharePoint 2010 팜에 SharePoint 용입니다. 3계층 팜에는 데이터베이스, 응용 프로그램 및 웹 계층이 포함되어 있습니다. 추가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SQL Server 설치 프로그램 설치를 실행 해야이 토폴로지와 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램 계층. Powerpivot 프로그램은 웹 응용 프로그램 솔루션 배포 하는 경우 웹 계층에 있지만 사후 설치 태스크로만 추가 됩니다. 웹 계층이나 데이터 계층에는 배포 단계는 있지만 별도로 수행해야 하는 설치 단계는 없습니다. 수행 해야 하는 유일한 설치 단계를 설치 하는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램 서버에서.  

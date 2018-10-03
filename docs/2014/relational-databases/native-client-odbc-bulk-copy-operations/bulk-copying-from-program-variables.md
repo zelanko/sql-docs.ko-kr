@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d2e24f18efd321f5f56211be4dd0230be7cc39e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 55b1df99038e95f1e3a9a1c609caf1fe8ce982e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080603"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
   프로그램 변수에서 직접 대량 복사를 수행할 수 있습니다. 행 및 호출에 대 한 데이터를 저장할 변수를 할당 한 후 [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 대량 복사를 시작 하려면 호출 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 위치와 연결 될 프로그램 변수의 서식을 지정 하기 위해 각 열에 대 한 열이 있습니다. 각 변수에 데이터를 사용 하 여 호출 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 서버로 데이터 행 하나를 보내려고 합니다. 변수를 채우고 호출 하는 과정을 반복할 **bcp_sendrow** 서버로 보낸 모든 행을 될 때까지 호출 [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 작업이 완료 되도록 합니다.  

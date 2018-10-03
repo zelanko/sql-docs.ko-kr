@@ -3,17 +3,17 @@ title: SQL Server의 독립 실행형 R Server 또는 Machine Learning Server �
 description: 독립 실행형 R 서버 개요를 소개 하 고 SQL Server 설치 프로그램에서 Machine Learning Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240031"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176433"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (독립 실행형) 및 SQL server에서 Machine Learning Server (독립 실행형)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server 독립 실행형 R Server 또는 SQL Server와 독립적으로 실행
 이 기능은 SQL Server 2016에서 이라고 **R Server (독립 실행형)** 이며 R 전용입니다. SQL Server 2017에서 라고 **Machine Learning Server (독립 실행형)** R 및 Python 모두 포함 합니다.  
 
 > [!Note]
-> 독립 실행형 서버는 기능적으로 비 SQL 브랜드 버전의 SQL Server 설치 프로그램에서 설치 하는 대로 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 원격 실행을 포함 하 여 동일한 사용자 시나리오를 지원 합니다. 운영 화 및 웹 서비스와 RevoScaleR 및 revoscalepy 함수의 전체 컬렉션입니다.
+> 독립 실행형 서버는 기능적으로 비 SQL 브랜드 버전의 SQL Server 설치 프로그램에서 설치 하는 대로 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 원격 실행을 포함 하 여 동일한 사용자 시나리오를 지원 합니다. 운영 화 및 웹 서비스 및 R 및 Python 라이브러리의 전체 모음입니다.
 
 ## <a name="components"></a>구성 요소
 

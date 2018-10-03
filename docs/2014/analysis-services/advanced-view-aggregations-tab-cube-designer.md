@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.aggregations.advanced.f1
 ms.assetid: 23c095dd-f47a-4d6b-8d22-b49bbb954bcb
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7bd3d3ca3d80eb6b630344f17b3f2cf9e845033
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12fcc899eb4cb60b6616949c51c44419cc5a20ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177000"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104703"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>고급 뷰(집계 탭, 큐브 디자이너)
   집계 디자이너의 **고급 뷰** 를 사용하여 집계 디자인과 개별 집계를 수동으로 만들고 수정할 수 있습니다. 이 뷰는 고급 사용자만 사용해야 합니다.  

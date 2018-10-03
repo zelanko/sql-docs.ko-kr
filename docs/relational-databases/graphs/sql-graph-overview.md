@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: graphs
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: ''
-caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
-ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
+ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47058902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695903"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 그래프 처리
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 노드 및에 지 테이블로 저장 됩니다.  
 
 ### <a name="query-language-extensions"></a>쿼리 언어 확장  
-새 `MATCH` 절 패턴 일치 및 graph 통해 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH` 함수 패턴 일치를 위해 ASCII art 스타일 구문을 사용 합니다. 예를 들어:  
+새 `MATCH` 절 패턴 일치 및 graph 통해 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. `MATCH` 함수 패턴 일치를 위해 ASCII art 스타일 구문을 사용 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
 
 ```   
 -- Find friends of John

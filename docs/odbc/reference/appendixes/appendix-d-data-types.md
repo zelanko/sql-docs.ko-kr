@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], defined
@@ -15,30 +13,29 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bea62ceaba74b56087ecbb8fa28c8a0108426380
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfaecb5b3705e2c5affe8c2cda3e42eeaddf4156
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669381"
 ---
-# <a name="appendix-d-data-types"></a>부록 d: 데이터 형식
-ODBC에는 두 가지 데이터 형식 정의: SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식에는 데이터 원본에 저장 된 데이터의 데이터 형식을 나타냅니다. C 데이터 형식에는 응용 프로그램 버퍼에 저장 된 데이터의 데이터 형식을 나타냅니다.  
+# <a name="appendix-d-data-types"></a>부록 D: 데이터 형식
+ODBC 데이터 형식의 두 집합 정의: SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식에는 데이터 원본에 저장 된 데이터의 데이터 형식을 나타냅니다. C 데이터 형식에는 응용 프로그램 버퍼에 저장 된 데이터의 데이터 형식을 나타냅니다.  
   
- SQL 데이터 형식은 sql-92 표준에 따라 각 DBMS에 의해 정의 됩니다. Sql-92 표준에 지정 된 각 SQL 데이터 형식에 대 한 ODBC 형식 식별자가 이미 정의 되어는 **#define** ODBC 함수에 인수로 전달 하거나 결과 집합의 메타 데이터의 반환 값을 합니다. 유일한 SQL 92 ODBC에서 지원 되지 않는 데이터 형식 (ODBC SQL_BIT 형식이 각기 다른 특징이) 비트, BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE, 및 NATIONAL_CHARACTER는 합니다. 드라이버는 ODBC SQL 데이터 형식 식별자 및 드라이버별 SQL 데이터 형식 식별자에 데이터 원본에 따른 특정 SQL 데이터 형식에 매핑합니다. SQL 데이터 형식은 구현 설명자의 SQL_DESC_CONCISE_TYPE 필드에 지정 됩니다.  
+ SQL 데이터 형식은 SQL-92 표준에 따라 각 DBMS에 의해 정의 됩니다. SQL-92 표준에 지정 된 각 SQL 데이터 형식에 대 한 ODBC 정의 되는 형식 식별자를 **#define** ODBC 함수에 인수로 전달 되거나 결과 집합의 메타 데이터에서 반환 되는 값입니다. 전용 SQL-92 데이터 형식이 ODBC에서 지원 되지 않습니다 되며 비트 (ODBC SQL_BIT 형식이 서로 다른 특성), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE, NATIONAL_CHARACTER 합니다. 드라이버는 ODBC SQL 데이터 형식 식별자 및 드라이버별 SQL 데이터 형식 식별자를 데이터 소스 관련 SQL 데이터 형식을 매핑하는 일을 담당 합니다. SQL 데이터 형식 구현 설명자의 SQL_DESC_CONCISE_TYPE 필드에 지정 됩니다.  
   
- ODBC C 데이터 형식 및 해당 ODBC 형식 식별자가 정의합니다. 응용 프로그램에 적절 한 C 유형 식별자를 전달 하 여 결과 집합 데이터를 수신할 버퍼의 C 데이터 형식을 지정 된 *TargetType* 인수에 대 한 호출에 **SQLBindCol** 또는  **SQLGetData**합니다. 적절 한 C 형식 식별자를 전달 하 여 문 매개 변수를 포함 하는 버퍼의 C 형식을 지정 된 *ValueType* 인수에 대 한 호출에 **SQLBindParameter**합니다. C 데이터 형식은 응용 프로그램 설명자의 SQL_DESC_CONCISE_TYPE 필드에 지정 됩니다.  
+ ODBC C 데이터 형식 및 해당 ODBC 형식 식별자를 정의합니다. 응용 프로그램에서 적절 한 C 형식 식별자를 전달 하 여 결과 집합 데이터를 받을 버퍼의 C 데이터 형식을 지정 합니다 *TargetType* 호출에서 인수 **SQLBindCol** 또는  **SQLGetData**합니다. 적절 한 C 형식 식별자를 전달 하 여 문 매개 변수를 포함 하는 버퍼의 C 형식을 지정 합니다 *ValueType* 호출에서 인수 **SQLBindParameter**합니다. 응용 프로그램 설명자를 SQL_DESC_CONCISE_TYPE 분야에서 C 데이터 형식 지정 됩니다.  
   
 > [!NOTE]  
 >  드라이버 관련 C 데이터 형식은 없습니다.  
   
- 각 SQL 데이터 형식을 ODBC C 데이터 형식에 해당합니다. 데이터 원본에서 데이터를 반환 하기 전에 드라이버 지정된 된 C 데이터 형식으로 변환 합니다. 데이터 원본에 데이터를 보내기 전에 드라이버 지정된 된 C 데이터 형식에서 변환 합니다.  
+ 각 SQL 데이터 형식은 ODBC C 데이터 형식에 해당 합니다. 데이터 원본에서 데이터를 반환 하기 전에 드라이버 지정된 된 C 데이터 형식으로 변환 합니다. 데이터 원본에 데이터를 보내기 전에 드라이버 지정된 된 C 데이터 형식에서 변환 합니다.  
   
- 이 부록의 내용에는 다음 항목이 포함 되어 있습니다.  
+ 이 부록에는 다음 항목에 있습니다.  
   
 -   [데이터 형식 식별자 사용](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
   

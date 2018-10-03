@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8b7987e5d3934e28357587eb625e4701d7acf24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174383"
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 행 집합
   서버에 열려 있는 연결의 현재 실행 중이거나 마지막으로 실행된 명령에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
@@ -34,7 +31,7 @@ ms.locfileid: "37157324"
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`SESSION_SPID`|`DBTYPE_I4`|예|세션 ID입니다.|  
+|`SESSION_SPID`|`DBTYPE_I4`|사용자 계정 컨트롤|세션 ID입니다.|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||세션이 시작된 이후에 실행된 명령 수입니다.|  
 |`COMMAND_START_TIME`|`DBTYPE_DBTIMESTAMP`||마지막 명령이 시작된 날짜 및 시간(서버 UTC 시간으로 표시)입니다.|  
 |`COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`||명령이 시작된 이후에 경과된 시간(밀리초)입니다.|  

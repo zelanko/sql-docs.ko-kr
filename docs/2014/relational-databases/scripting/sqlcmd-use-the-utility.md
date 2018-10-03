@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8f481d395f05a50884a0ff2c03d89eb4dc1c622
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86ddad2fe62bcd84c55cd97d3765dc898db8e39f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108253"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd 유틸리티 사용
   `sqlcmd` 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 스크립트의 임시 대화형 실행과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립팅 태스크의 자동화를 위한 명령줄 유틸리티입니다. `sqlcmd`를 대화형으로 사용하거나 `sqlcmd`를 사용하여 실행할 스크립트 파일을 작성하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 이해해야 합니다. 일반적으로 `sqlcmd` 유틸리티는 다음과 같은 방법으로 사용됩니다.  
@@ -107,7 +104,7 @@ ms.locfileid: "37309543"
     >  `sqlcmd` 유틸리티에서 지원하는 옵션 목록을 보려면 `sqlcmd -?`를 실행하십시오.  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd를 사용하여 대화형으로 Transact-SQL 문 실행  
- `sqlcmd` 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. 대화형으로 실행 하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용 하 여 `sqlcmd`를 사용 하지 않고 유틸리티를 실행 합니다 **-Q**를 **-q**, **-Z**, 또는 **-i** 옵션을 지정 하는 모든 파일이 나 쿼리를 입력 합니다. 예를 들어:  
+ `sqlcmd` 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. 대화형으로 실행 하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용 하 여 `sqlcmd`를 사용 하지 않고 유틸리티를 실행 합니다 **-Q**를 **-q**, **-Z**, 또는 **-i** 옵션을 지정 하는 모든 파일이 나 쿼리를 입력 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -122,7 +119,7 @@ ms.locfileid: "37309543"
 ## <a name="quoted-strings"></a>따옴표 붙은 문자열  
  따옴표 두 개를 연속으로 입력하여 문자열 내에 따옴표를 삽입하는 예외적인 경우를 제외하고 따옴표로 묶인 문자는 추가적인 전처리 없이 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 문자 시퀀스를 하나의 따옴표로 처리합니다. 변환은 서버에서 발생합니다. 스크립팅 변수 역시 문자열 내에서는 단순한 문자로 처리됩니다.  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `sqlcmd`  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3700a2e2d7b96a572fd8c72210a5d287ca56cf6e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23dd47489f2e0697a1bbb6a74e4187c93108afb6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112062"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 시작(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 지원하도록 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 구성하고, 가용성 그룹을 만들고 관리하고 모니터링하기 위한 단계를 소개합니다.  
@@ -41,7 +38,7 @@ ms.locfileid: "37237643"
 ||단계|링크|  
 |------|----------|-----------|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하도록 설정합니다.** 가용성 그룹에 참여할 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능을 사용하도록 설정해야 합니다.<br /><br /> **필수 조건:** 호스트 컴퓨터는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드여야 합니다.<br /><br /> 다른 필수 조건에 대한 자세한 내용은 [AlwaysOn 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)에서 "SQL Server 인스턴스 필수 조건 및 제한 사항"을 참조하세요.|[AlwaysOn 가용성 그룹 활성화 및 비활성화](enable-and-disable-always-on-availability-groups-sql-server.md)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**데이터베이스 미러링 끝점을 만듭니다(없는 경우).** 각 서버 인스턴스에 [데이터베이스 미러링 끝점](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)이 있는지 확인합니다. 서버 인스턴스는 이 끝점을 사용하여 다른 서버 인스턴스에서의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결을 수신합니다.|데이터베이스 미러링 끝점이 있는지 여부를 확인하려면 [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)<br /><br /> **Windows 인증의 경우** :  데이터베이스 미러링 끝점을 만들려면 다음을 사용합니다.<br /><br /> [새 가용성 그룹 마법사](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **인증서 인증의 경우:** 데이터베이스 미러링 끝점을 만들려면 다음을 사용합니다. <br />                    [Transact-SQL](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**데이터베이스 미러링 엔드포인트를 만듭니다(없는 경우).** 각 서버 인스턴스에 [데이터베이스 미러링 엔드포인트](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)가 있는지 확인합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결을 수신합니다.|데이터베이스 미러링 엔드포인트가 있는지 여부를 확인하려면 [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)<br /><br /> **Windows 인증의 경우:** 데이터베이스 미러링 엔드포인트를 만들려면 다음을 사용합니다.<br /><br /> [새 가용성 그룹 마법사](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **인증서 인증의 경우:** 데이터베이스 미러링 엔드포인트를 만들려면 다음을 사용합니다. <br />                    [Transact-SQL](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   

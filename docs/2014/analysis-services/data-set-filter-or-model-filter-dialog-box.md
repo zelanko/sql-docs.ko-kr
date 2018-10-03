@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187320"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119303"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>데이터 집합 필터 또는 모델 필터 대화 상자
   이 대화 상자를 사용하면 데이터 집합에 적용할 수 있는 필터를 작성할 수 있습니다.  데이터 집합은 테스트에 사용되는 외부 데이터 집합이나 마이닝 모델의 사례 데이터일 수 있습니다. 이 대화 상자의 이름은 필터가 외부 데이터 집합용인지, 아니면 마이닝 모델용인지에 따라 달라집니다.  
@@ -45,7 +42,7 @@ ms.locfileid: "37187320"
 |-----------|-----------------|  
 |**및/또는**|여러 조건을 조인할 연산자를 선택합니다.|  
 |**마이닝 구조 열**|데이터 원본을 선택한 다음 표의 연속되는 줄을 클릭하여 데이터 원본의 열을 추가하려면 클릭합니다.<br /><br /> 표의 첫 번째 줄은 데이터 원본 뷰를 지정합니다. 데이터 원본 뷰를 선택하면 **마이닝 구조 열** 에 테이블 아이콘이 표시되고 **값** 필드에 이 데이터 원본에 대해 정의한 모든 조건의 조합이 표시됩니다.<br /><br /> 데이터 원본을 선택하면 **마이닝 구조 열** 상자에 데이터 원본에 있는 개별 열이 포함된 드롭다운 목록이 제공됩니다.|  
-|**같음**|목록에서 연산자를 선택합니다.|  
+|**연산자**|목록에서 연산자를 선택합니다.|  
 |**Value**|테이블의 경우 **값** 필드에는 데이터 원본에 적용된 모든 필터의 조합이 표시됩니다. 입력란 오른쪽에 있는 작성 **(…)** 단추를 클릭하여 **필터** 대화 상자를 열고 조건을 작성할 수도 있습니다.|  
   
  **식**  

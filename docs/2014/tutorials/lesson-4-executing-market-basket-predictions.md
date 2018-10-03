@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb490ee36b9b1a3aff3d0477451d9534309b347a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177503"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>4 단원: Market Basket 예측 실행
+# <a name="lesson-4-executing-market-basket-predictions"></a>4단원: Market Basket 예측 실행
   이 단원에서는 사용 하 여 DMX `SELECT` 에서 만든 연결을 기반으로 예측을 만드는 문을 모델링 [단원 2: Adding Mining Models to Market Basket 마이닝 구조](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)합니다. 예측 쿼리는 DMX `SELECT` 문을 사용하고 `PREDICTION JOIN` 절을 추가하여 만들어집니다. 예측 조인의 구문에 대 한 자세한 내용은 참조 [선택에서 &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)합니다.  
   
  합니다 **SELECT FROM \<모델 > PREDICTION JOIN** 형태의 `SELECT` 문을 세 부분이 있습니다.:  

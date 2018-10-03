@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e209d9047dce2ec1452a36d702abc2da4afeedd1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 023a38a1d3b5c09fc7e1447ecd026d133abca1db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166504"
 ---
 # <a name="setting-tool-options-and-layout"></a>도구 옵션 및 레이아웃 설정
   시작할 때 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스)에 표시되는 사항, 사용되는 글꼴 및 인터페이스 사용법을 가장 잘 지원하는 기타 도구 기능을 구성하는 옵션을 설정할 수 있습니다. 이 페이지의 연습을 통해 사용자가 설정할 수 있는 옵션과 해당 옵션을 설정하는 방법에 익숙해질 수 있습니다.  

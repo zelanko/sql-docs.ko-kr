@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - opening connections
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d7bf4529df77545cf2d0acf69af5d0b570ef750
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a338d1902440fe6489b7c4c91176899999aa25fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172023"
 ---
 # <a name="establishing-connections-in-adomdnet"></a>ADOMD.NET에서 연결 설정
   ADOMD.NET을 사용 하 여 합니다 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체와 같은 분석 데이터 원본 연결을 열려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다. 연결이 더 이상 필요하지 않으면 명시적으로 연결을 닫아야 합니다.  

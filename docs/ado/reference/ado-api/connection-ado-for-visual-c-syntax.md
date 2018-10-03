@@ -1,13 +1,11 @@
 ---
-title: 연결 (Visual c + + 구문에 대 한 ADO) | Microsoft Docs
+title: (Visual c + + 구문에 대 한 ADO) 연결 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Connection collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 661fc6283829948ac8c7186df5653d7ca35fd289
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 356713d24cd4e37014884cf39aa903267d5378b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276932"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603921"
 ---
-# <a name="connection-ado-for-visual-c-syntax"></a>(ADO Visual c + + 구문에 대 한) 연결
+# <a name="connection-ado-for-visual-c-syntax"></a>연결(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  
   
 ```  

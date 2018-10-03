@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_details (Transact SQL) | Microsoft Docs
+title: fn_syscollector_get_execution_details (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4336b2bd20dbfb49996f6eb4edd5826533215b89
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 032b424c0ac7706962d17520b47d6b8ec447a536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230105"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845163"
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>인수  
  *log_id*  
- 실행 로그의 고유한 로컬 식별자입니다. *log_id* 은 **int**합니다.  
+ 실행 로그의 고유한 로컬 식별자입니다. *log_id* 됩니다 **int**합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -64,11 +60,11 @@ fn_syscollector_get_execution_details ( log_id )
 |databytes|**image**|반환 값을 식별하는 바이트 배열입니다.|  
 |message|**nvarchar**|이벤트에 대한 설명 및 이벤트 관련 정보입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  에 대 한 SELECT 권한이 필요 **dc_operator**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [에서 패키지 로깅 SQL Server 데이터 도구를 사용 하도록 설정](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
+## <a name="see-also"></a>관련 항목  
+ [에서 패키지 로깅 사용 SQL Server 데이터 도구](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

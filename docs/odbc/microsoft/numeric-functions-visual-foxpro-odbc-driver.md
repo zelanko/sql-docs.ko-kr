@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC numeric functions [ODBC]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - numeric functions [ODBC]
 - FoxPro ODBC driver [ODBC], numeric functions
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f577938577be95c7e2c506dbb542a2224f5929e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902098"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654415"
 ---
-# <a name="numeric-functions-visual-foxpro-odbc-driver"></a>숫자 함수 (Visual FoxPro ODBC 드라이버)
-다음 표에서 설명; Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 숫자 함수 Visual FoxPro 문법 동일한 기능에 대 한 ODBC 구문을 다를 경우 해당 Visual FoxPro 나열 됩니다.  
+# <a name="numeric-functions-visual-foxpro-odbc-driver"></a>숫자 함수(Visual FoxPro ODBC 드라이버)
+다음 표에서 Visual FoxPro ODBC 드라이버;에서 지원 되는 ODBC 숫자 함수를 설명 합니다. 동일한 함수에 대 한 Visual FoxPro 문법 ODBC 구문을 다를 경우에 해당 Visual FoxPro 나열 됩니다.  
   
 |ODBC 문법|Visual FoxPro 문법|  
 |------------------|---------------------------|  
@@ -46,16 +43,16 @@ ms.locfileid: "32902098"
 |LOG10 *(float_exp)*||  
 |MOD *(integer_exp1 integer_exp2)*||  
 |PI *)*||  
-|라디안 *(numeric_exp)*|DTOR *(numeric_exp)*|  
+|RADIANS *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
-|ROUND *(numeric_exp, integer_exp)*||  
-|SIGN *(numeric_exp)*||  
+|ROUND *(numeric_exp를 integer_exp)*||  
+|로그인 *(numeric_exp)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
   
  다음 숫자 함수 지원 되지 않습니다.  
   
- 전원 *(numeric_exp, integer_exp)*  
+ 전원 *(numeric_exp를 integer_exp)*  
   
- TRUNCATE *(numeric_exp, integer_exp)*
+ TRUNCATE *(numeric_exp를 integer_exp)*

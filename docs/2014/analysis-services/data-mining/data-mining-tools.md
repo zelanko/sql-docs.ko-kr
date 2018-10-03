@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], tools
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
-caps.latest.revision: 47
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 810210c6c04cc0830c8c1586d82cb18c0ed5a02e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179090"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171553"
 ---
 # <a name="data-mining-tools"></a>데이터 마이닝 도구
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음 도구가 있습니다.  
@@ -75,7 +72,7 @@ ms.locfileid: "37179090"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 데이터 마이닝 태스크 및 변환  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 마이닝을 지원하는 많은 구성 요소가 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 예를 들어:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   데이터 집합이 새 고객으로 업데이트될 때마다 모델을 자동으로 업데이트하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
   
@@ -83,7 +80,7 @@ ms.locfileid: "37179090"
   
 -   매개 변수에서 전달된 모델을 자동으로 생성합니다.  
   
- 그러나 다른 프로세스에 대한 입력으로 패키지 워크플로에서 데이터 마이닝을 사용할 수도 있습니다. 예를 들어:  
+ 그러나 다른 프로세스에 대한 입력으로 패키지 워크플로에서 데이터 마이닝을 사용할 수도 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   모델에서 생성된 확률 값을 사용하여 텍스트 마이닝 또는 다른 분류 태스크에 대한 점수에 가중치를 부여합니다.  
   

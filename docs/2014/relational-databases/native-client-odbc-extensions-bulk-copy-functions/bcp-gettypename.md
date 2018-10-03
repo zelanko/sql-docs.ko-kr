@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_gettypename
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086813"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   지정한 BCP 유형 토큰의 SQL 유형 이름을 반환합니다.  
@@ -92,26 +89,26 @@ fIsMaxType
 |`SQLAOPMIN`|모두|**Min**|  
 |`SQLAOPMAX`|모두|**Max**|  
 |`SQLDATETIM4`|모두|**smalldatetime**|  
-|`SQLMONEY4`|모두|**Smallmoney**|  
+|`SQLMONEY4`|모두|**smallmoney**|  
 |`SQLFLT4`|모두|**실제**|  
 |`SQLUNIQUEID`|모두|**uniqueidentifier**|  
 |`SQLNCHAR`|아니요|**Nchar**|  
 |`SQLNVARCHAR`|아니요|**Nvarchar**|  
-|`SQLNTEXT`|모두|**Ntext**|  
+|`SQLNTEXT`|모두|**ntext**|  
 |`SQLVARIANT`|모두|**sql_variant**|  
 |`SQLINT8`|모두|**Bigint**|  
-|`SQLCHARACTER`|예|**varchar(max)**|  
-|`SQLBIGCHAR`|예|**varchar(max)**|  
-|`SQLBIGVARCHAR`|예|**varchar(max)**|  
-|`SQLVARCHAR`|예|**varchar(max)**|  
-|`SQLBINARY`|예|**varbinary(max)**|  
-|`SQLBIGBINARY`|예|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|예|**varbinary(max)**|  
-|`SQLVARBINARY`|예|**varbinary(max)**|  
-|`SQLNCHAR`|예|**nvarchar(max)**|  
-|`SQLNVARCHAR`|예|**nvarchar(max)**|  
-|`SQLXML`|예|**Xml**|  
-|`SQLUDT`|모두|**Udt**|  
+|`SQLCHARACTER`|사용자 계정 컨트롤|**varchar(max)**|  
+|`SQLBIGCHAR`|사용자 계정 컨트롤|**varchar(max)**|  
+|`SQLBIGVARCHAR`|사용자 계정 컨트롤|**varchar(max)**|  
+|`SQLVARCHAR`|사용자 계정 컨트롤|**varchar(max)**|  
+|`SQLBINARY`|사용자 계정 컨트롤|**varbinary(max)**|  
+|`SQLBIGBINARY`|사용자 계정 컨트롤|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|사용자 계정 컨트롤|**varbinary(max)**|  
+|`SQLVARBINARY`|사용자 계정 컨트롤|**varbinary(max)**|  
+|`SQLNCHAR`|사용자 계정 컨트롤|**nvarchar(max)**|  
+|`SQLNVARCHAR`|사용자 계정 컨트롤|**nvarchar(max)**|  
+|`SQLXML`|사용자 계정 컨트롤|**Xml**|  
+|`SQLUDT`|모두|**udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
  날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -21,35 +19,34 @@ helpviewer_keywords:
 - HelpContext property [ADO]
 - HelpFile property [ADO]
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 708ce57e129ed84dcbafa837916c299a76739e0d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 059bb0e945875d36582d08f8018bad485475639d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704941"
 ---
-# <a name="helpcontext-helpfile-properties"></a>HelpContext, 도움말 파일 속성
-도움말 파일 및 관련 된 항목을 나타냅니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
+# <a name="helpcontext-helpfile-properties"></a>HelpContext, HelpFile 속성
+도움말 파일 및 연결 된 항목을 나타냅니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
   
 ## <a name="return-values"></a>반환 값  
   
--   **HelpContextID** 로 컨텍스트 ID를 반환는 **긴** 도움말 파일의 항목에 대 한 값입니다.  
+-   **HelpContextID** 컨텍스트 ID를 반환 된 **긴** 도움말 파일의 항목에 대 한 값.  
   
--   **HelpFile** 반환은 **문자열** 는 도움말 파일의 전체 경로가으로 계산 되는 값입니다.  
+-   **HelpFile** 반환 된 **문자열** 도움말 파일의 전체 경로가으로 계산 되는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 도움말 파일을 지정 하는 경우는 **HelpFile** 속성에는 **HelpContext** 속성은 자동으로 식별 하는 도움말 항목을 표시 하는 데 사용 합니다. 를 사용할 수 없는 관련 도움말 항목 경우는 **HelpContext** 0을 반환 하는 속성 및 **HelpFile** 길이가 0 인 문자열을 반환 하는 속성 ("").  
+ 도움말 파일에 지정 된 경우는 **HelpFile** 속성을 **HelpContext** 속성 자동으로 식별 하는 도움말 항목을 표시 하는 데 사용 됩니다. 를 사용할 수 있는 관련 도움말 항목이 없으면를 **HelpContext** 0을 반환 하는 속성 및 **HelpFile** 길이가 0 인 문자열을 반환 하는 속성 ("").  
   
 ## <a name="applies-to"></a>적용 대상  
  [Error 개체](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description 속성](../../../ado/reference/ado-api/description-property.md)   
  [Number 속성 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source 속성(ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)
