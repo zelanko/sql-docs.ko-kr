@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40247ddc15093f8510545f51113f77e2a0d0e51f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ccc38600559c931e1ce3cd59708b47e581de2557
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075856"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706571"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -28,8 +25,7 @@ ms.locfileid: "43075856"
   
 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 고유하게 컴파일된 저장 프로시저가 아닌 저장 프로시저를 의미합니다. 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 interop 액세스라고 합니다.  
 
-
-            [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 메모리 최적화 테이블을 직렬 모드 대신 병렬로 스캔할 수 있습니다.
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 메모리 최적화 테이블을 직렬 모드 대신 병렬로 스캔할 수 있습니다.
 
 메모리 액세스에 최적화된 테이블은 고유하게 컴파일된 저장 프로시저를 사용하여 액세스할 수도 있습니다. 고유하게 컴파일된 저장 프로시저는 성능이 중요한 OLTP 작업에 권장됩니다.  
   
@@ -71,8 +67,7 @@ ms.locfileid: "43075856"
   
 - [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) 데이터베이스 옵션을 ON으로 설정합니다.  
   
-
-            [자동 커밋 모드](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)에서 실행되는 쿼리에서 액세스하는 메모리 최적화 테이블에는 격리 수준 테이블 힌트가 필요하지 않습니다.  
+[자동 커밋 모드](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)에서 실행되는 쿼리에서 액세스하는 메모리 최적화 테이블에는 격리 수준 테이블 힌트가 필요하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

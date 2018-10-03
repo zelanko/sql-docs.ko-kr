@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d872a8d5027820c389dbd139e80403ac268496e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: bcc81f40de9abe1c59226c7bae2e8df2ecf68cb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697242"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 재배포
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

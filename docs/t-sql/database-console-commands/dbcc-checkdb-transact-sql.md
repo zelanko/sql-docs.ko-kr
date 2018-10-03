@@ -5,9 +5,7 @@ ms.date: 12/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKDB_TSQL
@@ -34,16 +32,15 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 78cf2eae42192abf6b926b753595ed26cf4190bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988497"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705451"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -220,7 +217,7 @@ DBCC CHECKDB 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnov
 |State|설명|    
 |-----------|-----------------|    
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
-|@shouldalert|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
+|1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
 |2|응급 모드 데이터베이스 복구 중에 오류가 발생했습니다.|    
 |3|메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
 |4|어설션 또는 액세스 위반이 감지되었습니다.|    

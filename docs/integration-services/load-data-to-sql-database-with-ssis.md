@@ -4,22 +4,20 @@ description: SSIS(SQL Server Integration Services) 패키지를 만들어 다양
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 8151b4e46e3a36eebc54642075aeb9b8648ac927
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40411859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705501"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
 

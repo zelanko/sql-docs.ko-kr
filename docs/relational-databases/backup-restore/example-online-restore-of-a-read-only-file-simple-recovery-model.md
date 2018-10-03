@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restore sequences [SQL Server], online
 - online restores [SQL Server], simple recovery model
 - simple recovery model [SQL Server], RESTORE examples
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a09aae333a7cb9f7b1698bb44fabd66eebe169e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ee8bc7c94494645d0c5e72afb84542e2fb7c605
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706862"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>예제: 읽기 전용 파일의 온라인 복원(단순 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
