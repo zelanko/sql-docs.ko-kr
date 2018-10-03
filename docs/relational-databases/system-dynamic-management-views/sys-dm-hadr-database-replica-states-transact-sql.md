@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5542402e7f81ff86812a152d9bf538265ba77a5c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 534134ddd778c500622af210301826c83863480f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637777"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "38000845"
 |**redo_rate**|**bigint**|로그 레코드는 다시 실행 되는 크기 (KB)에서 지정된 된 보조 데이터베이스에서 속도 평균 초당 합니다.|  
 |**filestream_send_rate**|**bigint**|FILESTREAM 파일이 보조 복제본으로 전송되는 속도(KB/초)입니다.|  
 |**end_of_log_lsn**|**numeric(25,0)**|로그 LSN의 로컬 끝입니다. 주 데이터베이스와 보조 데이터베이스의 로그 캐시에 있는 마지막 로그 레코드에 해당하는 실제 LSN입니다. 기본 복제본에서 보조 행은 보조 복제본이 주 복제본에 전송한 최근 진행 메시지의 로그 LSN의 끝을 반영합니다.<br /><br /> **end_of_log_lsn** 0으로 채워진 로그-블록 ID를 반영 합니다. 실제 로그 시퀀스 번호가 아닙니다. 자세한 내용은 [LSN 열 값 이해](#LSNcolumns)이 항목의 뒷부분에 나오는.|  
-|**last_commit_lsn**|**Numeric(25,0)**|트랜잭션 로그의 마지막 커밋 레코드에 해당하는 실제 로그 시퀀스 번호입니다.<br /><br /> 주 데이터베이스에서 처리된 마지막 커밋 레코드에 해당합니다. 보조 데이터베이스에 대한 행에 보조 복제본이 주 복제본에 전송한 로그 시퀀스 번호가 표시됩니다.<br /><br /> 보조 데이터베이스에서 다시 실행된 마지막 커밋 레코드입니다.|  
+|**last_commit_lsn**|**numeric(25,0)**|트랜잭션 로그의 마지막 커밋 레코드에 해당하는 실제 로그 시퀀스 번호입니다.<br /><br /> 주 데이터베이스에서 처리된 마지막 커밋 레코드에 해당합니다. 보조 데이터베이스에 대한 행에 보조 복제본이 주 복제본에 전송한 로그 시퀀스 번호가 표시됩니다.<br /><br /> 보조 데이터베이스에서 다시 실행된 마지막 커밋 레코드입니다.|  
 |**last_commit_time**|**datetime**|마지막 커밋 레코드에 해당하는 시간입니다.<br /><br /> 보조 데이터베이스에서 이 시간은 주 데이터베이스의 시간과 동일합니다.<br /><br /> 주 복제본에서 각 보조 데이터베이스 행에는 해당 보조 데이터베이스를 호스팅하는 보조 복제본이 주 복제본에 다시 보고된 시간이 표시됩니다. 주 데이터베이스 행과 지정된 된 보조 데이터베이스 행 간 시간 차이 나타냅니다 약 복구 지점 목표를 (RPO)를 다시 실행 프로세스 되 고 주 복제본에 진행률 다시 보고 된 것으로 가정 보조 복제본입니다.|  
 |**low_water_mark_for_ghosts**|**bigint**|주 데이터베이스에서 고스트 정리에 사용되는 하위 워터마크를 나타내는 데이터베이스에 대한 일정하게 증가하는 번호입니다. 시간이 지나도 이 번호가 증가하지 않으면 고스트 정리가 수행되지 않은 것을 의미합니다. 정리할 고스트 행을 결정하기 위해 주 복제본은 주 복제본을 포함한 모든 가용성 복제본에서 이 데이터베이스에 대한 이 열의 최소값을 사용합니다.|  
 |**secondary_lag_seconds**|**bigint**|뒤에 있는 보조 복제본을 주 복제본을 동기화 하는 동안 시간 (초) 수입니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  

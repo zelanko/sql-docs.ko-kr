@@ -1,34 +1,31 @@
 ---
-title: 지원 되는 데이터 형식 (ODBC Driver for Oracle) | Microsoft Docs
+title: 지원 되는 데이터 형식 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f6e80b887659679992091a32faf2763d71d9f6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620461"
 ---
-# <a name="supported-data-types-odbc-driver-for-oracle"></a>지원 되는 데이터 형식 (ODBC Driver for Oracle)
+# <a name="supported-data-types-odbc-driver-for-oracle"></a>지원되는 데이터 형식(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- Oracle에 대 한 ODBC 드라이버는 모든 Oracle 7.3 데이터 형식을 지원합니다. 그러나 여기에 나열 된 새 열고 Oracle8 데이터 형식 지원 하지 않습니다.  
+ Oracle 용 ODBC 드라이버는 모든 Oracle 7.3 데이터 형식을 지원합니다 그러나 여기에 나열 된 새 열고 Oracle8 데이터 형식 지원 되지 않습니다.  
   
 |데이터 형식|Oracle 7.3|열고 Oracle8|  
 |---------------|----------------|-------------|  
@@ -50,4 +47,4 @@ ms.locfileid: "32903908"
 |MLSLABEL|지원되지 않습니다.|지원되지 않습니다.|  
   
 > [!NOTE]  
->  VARCHAR 열에 허용 되는 크기에 대 한 자세한 내용은 참조 [VARCHAR 열 크기](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 이 가이드의 합니다.
+>  VARCHAR 열 크기를 허용 하는 방법에 대 한 자세한 내용은 참조 [VARCHAR 열 크기](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 이 가이드에서.

@@ -1,13 +1,11 @@
 ---
-title: SQLGetDiagRec 및 SQLGetDiagField를 사용 하 여 | Microsoft Docs
+title: SQLGetDiagRec 및 SQLGetDiagField 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 555bc3ba25ba895b54384acb8772a4b4293e61c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916038"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626041"
 ---
-# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField를 사용 하 여
-응용 프로그램 호출 **SQLGetDiagRec** 또는 **SQLGetDiagField** 진단 정보를 검색 합니다. 이러한 함수는 환경, 연결, 문 또는 설명자 핸들에 동의 하 고 진단 마지막 해당 핸들을 사용 하는 함수 반환 합니다. 특정 핸들에 기록 하는 진단 해당 핸들을 사용 하는 새 함수를 호출할 때 삭제 됩니다. 함수가 여러 진단 레코드를 반환 하는 경우 응용 프로그램에서는 이러한 함수를 여러 번; 상태 레코드의 총 수를 호출 하 여 검색 **SQLGetDiagField** SQL_DIAG_NUMBER 옵션 헤더 레코드 (레코드 0)에 대 한 합니다.  
+# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField 사용
+응용 프로그램 호출 **SQLGetDiagRec** 하거나 **SQLGetDiagField** 진단 정보를 검색 합니다. 이러한 함수는 환경, 연결, 문 또는 설명자 핸들을 수락 하 고 마지막으로 해당 핸들을 사용 하는 함수에서 진단을 반환 합니다. 특정 핸들을 로그온 진단 해당 핸들을 사용 하 여 새 함수를 호출할 때 삭제 됩니다. 함수가 여러 진단 레코드를 반환 하는 경우 응용 프로그램에서는 이러한 함수를 여러 번; 상태 레코드의 총 수를 호출 하 여 검색 됩니다 **SQLGetDiagField** SQL_DIAG_NUMBER 옵션을 사용 하 여 헤더 레코드 (레코드 0)에 대 한 합니다.  
   
- 호출 하 여 개별 진단 필드를 검색 하는 응용 프로그램 **SQLGetDiagField** 검색할 필드를 지정 하 고 있습니다. 특정 진단 필드 핸들의 특정 유형에 의미가 없습니다. 진단 필드와 해당 의미가 나와의 목록에 대 한 참조는 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명 합니다.  
+ 응용 프로그램 호출 하 여 개별 진단 필드를 검색할 **SQLGetDiagField** 검색할 필드를 지정 합니다. 특정 진단 필드 핸들의 특정 형식에 대 한 의미를 갖지 않습니다. 진단 필드 및 해당 의미의 목록을 참조 하세요. 합니다 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명 합니다.  
   
- 호출 하 여 SQLSTATE, 원시 오류 코드 및 단일 호출에서 진단 메시지를 검색 하는 응용 프로그램 **SQLGetDiagRec**; **SQLGetDiagRec** 헤더 레코드에서 정보를 검색 하는 데 사용 될 수 없습니다.  
+ 호출 하 여 SQLSTATE, 원시 오류 코드 및 단일 호출에서 진단 메시지를 검색 하는 응용 프로그램 **SQLGetDiagRec**; **SQLGetDiagRec** 헤더 레코드에서 정보를 검색에 사용할 수 없습니다.  
   
- 예를 들어 다음 코드는 SQL 문에 대 한 사용자 요청 하 고이 실행 합니다. 진단 정보는 반환 된 경우 호출 **SQLGetDiagField** 상태 레코드의 수를 얻을 수 및 **SQLGetDiagRec** 된 SQLSTATE, 원시 오류 코드 및 진단 메시지를 가져오려는 레코드가 있습니다.  
+ 예를 들어, 다음 코드는 SQL 문에 대 한 라는 메시지 하 고 실행 합니다. 모든 진단 정보를 반환 하는 경우 호출 **SQLGetDiagField** 상태 레코드의 번호를 가져오려면 및 **SQLGetDiagRec** 에서 SQLSTATE, 원시 오류 코드 및 진단 메시지를 가져오려면 기록 합니다.  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

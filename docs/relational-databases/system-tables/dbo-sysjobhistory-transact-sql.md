@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobhistory (Transact SQL) | Microsoft Docs
+title: dbo.sysjobhistory (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobhistory_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab9fbfb6a574f8f6c91ee15789c67cac204d5f3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334274"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658811"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ ms.locfileid: "34334274"
 |**server**|**sysname**|작업이 실행된 서버의 이름입니다.|  
   
   ## <a name="example"></a>예제
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 변환 된 **run_time** 및 **run_duration** 더 많은 사용자에 게 친숙 형식으로 열입니다.  스크립트 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 변환 합니다 **run_time** 및 **run_duration** 자세한 사용자 친숙 한 형식으로 열입니다.  스크립트를 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.
  
  ```sql
  SET NOCOUNT ON;

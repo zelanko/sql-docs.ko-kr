@@ -5,9 +5,7 @@ ms.date: 04/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXT_INDEX_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: 110
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c92d948cac44c58dfc6558fec62db5e19a3562a0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670279"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -176,7 +173,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용자는 전체 텍스트 카탈로그에 대한 REFERENCES 권한과 테이블 뷰 또는 인덱싱된 뷰에 대한 ALTER 권한을 가지거나 sysadmin 고정 서버 역할, db_owner 또는 db_ddladmin 고정 데이터베이스 역할의 멤버여야 합니다.  
   
  SET STOPLIST가 지정된 경우 사용자가 지정된 중지 목록에 대한 REFERENCES 권한이 있어야 합니다. 이 사용 권한은 STOPLIST 소유자가 부여할 수 있습니다.  

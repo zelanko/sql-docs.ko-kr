@@ -1,35 +1,32 @@
 ---
-title: ADOX 코드 예제에서는 Microsoft Visual Basic | Microsoft Docs
+title: Microsoft Visual Basic의 ADOX 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADOX code examples, Visual Basic
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f8ca2fab56a9fef224040dd0dcfa56163d8877b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645751"
 ---
-# <a name="adox-code-examples-in-microsoft-visual-basic"></a>ADOX 코드 예제에서는 Microsoft Visual Basic
-이러한 항목 ADOX를 사용 하는 방법을 이해 하는 예제 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual Basic을 사용 하 여 기록 됩니다.  
+# <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic의 ADOX 코드 예제
+이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual Basic을 사용 하 여 기록 됩니다.  
   
 > [!NOTE]
->  End Sub를 하위에서 전체 코드 예제에서는 코드 편집기에 붙여 넣습니다. 예제에서는 부분 예제를 사용 하거나 단락 서식을 분실 한 경우 올바르게 실행 되지 않을 수 있습니다.  
+>  End Sub를 하위에서 전체 코드 예제를에서는 코드 편집기에 붙여넣습니다. 예제 부분 예제를 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35284668"
   
 -   [Indexes Append 메서드 예제(VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [키 추가 방법, 키 형식, RelatedColumn, RelatedTable, 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Keys Append 메서드, 키 유형, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Procedures Append 메서드 예제(VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   
@@ -71,9 +68,9 @@ ms.locfileid: "35284668"
   
 -   [Command 및 CommandText 속성 예제(VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
   
--   [Command 속성, 매개 변수 컬렉션 예제 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Command 속성을 매개 변수 컬렉션 예제 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [CommandText 속성이 뷰 컬렉션 예제 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [CommandText 속성을 보기 컬렉션 예제 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
   
 -   [DateCreated 및 DateModified 속성 예제(VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
   
@@ -83,11 +80,11 @@ ms.locfileid: "35284668"
   
 -   [IndexNulls 속성 예제(VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
   
--   [키 유형, RelatedColumn, RelatedTable, and UpdateRule 속성, 키 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [키 유형, RelatedColumn, RelatedTable 및 UpdateRule 속성, 키 Append 메서드 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Name 속성, 열 및 테이블 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Name 속성, Columns 및 Tables Append 메서드 예제 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [NumericScale 및 전체 자릿수 속성 예제 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
+-   [NumericScale 및 Precision 속성 예제 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
 -   [ParentCatalog 속성 예제(VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)  
   
@@ -95,7 +92,7 @@ ms.locfileid: "35284668"
   
 -   [SortOrder 속성 예제(VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
   
--   [테이블 형식 속성을 연결 닫기 방법 예 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [Table Type 속성을 Connection Close 메서드 예제 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>컬렉션  
   

@@ -4,7 +4,6 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10428"
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91b33f6aabc245bd79ff48b1202f20d71ae9293d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269649"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690963"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016의 보고서 작성기
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 Visual Studio의 보고서 디자이너를 사용하는 대신 독립 실행형 환경에서 작업하려는 비즈니스 사용자가 페이지를 매긴 보고서를 작성하는 데 사용할 수 있는 도구입니다.  페이지를 매긴 보고서를 디자인할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 지정하는 보고서 정의를 만듭니다. 보고서를 실행하면 보고서 처리기는 지정된 보고서 정의를 가져와 데이터를 검색한 다음 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 에서 보고서를 미리 볼 수 있으며, 기본 모드 또는 SharePoint 통합 모드에서 다른 사람이 보고서를 실행할 수 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 보고서를 게시할 수 있습니다.  

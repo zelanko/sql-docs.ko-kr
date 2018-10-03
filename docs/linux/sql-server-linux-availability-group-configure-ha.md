@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621081"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해
 
@@ -68,6 +66,8 @@ ms.locfileid: "39082715"
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>AG 만들기
+
+이 섹션의 예에서는 TRANSACT-SQL을 사용 하 여 가용성 그룹을 만드는 방법을 설명 합니다. SQL Server Management Studio 가용성 그룹 마법사를 사용할 수도 있습니다. 마법사를 사용 하 여 AG를 만들 때 AG에 복제본을 조인 하는 경우 오류가 반환 됩니다. 이 문제를 해결 하려면 권한을 부여 `ALTER`, `CONTROL`, 및 `VIEW DEFINITIONS` 모든 복제본에서 AG에서 pacemaker를 합니다. 주 복제본에서 권한을 부여 되 면 마법사를 통해 하지만 제대로 작동 하려면 모든 복제본에 대 한 권한 부여 HA에 대 한 AG에 노드를 연결 합니다.
 
 자동 장애 조치를 보장 하는 고가용성 구성에 대 한 AG에 3 개 이상의 복제본에 필요 합니다. 고가용성을 지원할 수 있습니다 다음 구성 중 하나:
 
@@ -192,6 +192,13 @@ Linux에서 고가용성에 대 한 AG를 만듭니다. 사용 된 [CREATE AVAIL
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>보조 복제본 AG에 조인
 
+Pacemaker 표시할지 `ALTER`, `CONTROL`, 및 `VIEW DEFINITION` 모든 복제본에서 가용성 그룹에 대 한 권한. 사용 권한을 부여 하려면 가용성 그룹에 추가 된 후에 즉시 가용성 그룹 주 복제본에서 각 보조 복제본에 만든 후 다음 TRANSACT-SQL 스크립트를 실행 합니다. 스크립트를 실행 하기 전에 대체 `<pacemakerLogin>` pacemaker 사용자 계정의 이름입니다.
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 다음 TRANSACT-SQL 스크립트를 명명 된 AG에 SQL Server 인스턴스를 조인 `ag1`합니다. 사용자 환경에 대해 스크립트를 업데이트합니다. 보조 복제본을 호스팅하는 각 SQL Server 인스턴스의 AG에 조인 하려면 다음 TRANSACT-SQL을 실행 합니다.
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >클러스터를 구성 하 고를 클러스터 리소스로 AG를 추가한 후에 AG 리소스를 장애 조치할 Transact SQL을 사용할 수 없습니다. Linux의 SQL Server 클러스터 리소스 연계 되지 않습니다와 긴밀 하 게 운영 체제에는 서버 장애 조치 클러스터 (WSFC (Windows) 같습니다. SQL Server 서비스를 클러스터의 현재 상태 인식 없습니다. 모든 오케스트레이션은 클러스터 관리 도구를 통해 수행 됩니다. RHEL 또는 Ubuntu에서 사용 하 여 `pcs`입니다. SLES에서 사용 하 여 `crm`입니다. 
 
 >[!IMPORTANT]
->AG는 클러스터 리소스를 경우 알려진된 문제로 현재 릴리스에서 비동기 복제본에 데이터 손실이 있는 강제 장애 조치 작동 하지 않습니다. 이 향후 릴리스에서 수정 될 예정입니다. 동기 복제본으로 수동 또는 자동 장애 조치 성공합니다. 
+>AG는 클러스터 리소스를 경우 알려진된 문제로 현재 릴리스에서 비동기 복제본에 데이터 손실이 있는 강제 장애 조치 작동 하지 않습니다. 이 향후 릴리스에서 수정 될 예정입니다. 동기 복제본으로 수동 또는 자동 장애 조치 성공합니다.
 
 
 ## <a name="next-steps"></a>다음 단계

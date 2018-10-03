@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveCommand property [ADO], VC++ example
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 906bf36756aea9f76a800ab586f3d356d0887723
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00eaea347c379a64863b095a17f9518e5d1897a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274932"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632221"
 ---
-# <a name="activecommand-property-example-vc"></a>ActiveCommand 속성 예제 (VC + +)
-이 예제에서는 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성입니다.  
+# <a name="activecommand-property-example-vc"></a>ActiveCommand 속성 예제(VC++)
+이 예제에서는 합니다 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성입니다.  
   
- 서브루틴 제공할지는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 **ActiveCommand** 속성을 사용 하는 명령 텍스트 및 매개 변수를 만든 표시는 **레코드 집합**합니다.  
+ 서브루틴을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다 **ActiveCommand** 속성은 명령 텍스트와 생성 매개 변수를 표시 하려면 사용 합니다 **레코드 집합**합니다.  
   
 ## <a name="example"></a>예제  
   

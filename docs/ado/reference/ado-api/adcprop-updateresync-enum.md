@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_UPDATERESYNC_ENUM [ADO]
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44358b333ce099281197512ec23f58b3a11f575a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: afaadf62c38c318c759be1c452ff0953ba19c7d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615581"
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
-지정 여부는 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드 뒤 암시적 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 작업 그리고 있다면 해당 작업의 범위입니다.  
+지정 여부는 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드 뒤에 암시적 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 작업 그렇다면 해당 작업의 범위.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adResyncAll**|15|호출 **Resync** 다른 ADCPROP_UPDATERESYNC_ENUM 멤버의 조합 된 값을 사용 합니다.|  
-|**adResyncAutoIncrement**|1|기본. 자동으로 증가 되거나 Microsoft Jet 일련 번호 필드 또는 Microsoft SQL Server Id 열 등과 같이 데이터 소스에서 생성 된 열에 대 한 새 id 값을 검색 하려고 시도 합니다.|  
-|**adResyncConflicts**|2|호출 **Resync** 동시성 충돌이 발생 하 여 업데이트 또는 삭제 작업이 실패 하는 모든 행에 대 한 합니다.|  
-|**adResyncInserts**|8|호출 **Resync** 성공적으로 삽입 된 모든 행에 대 한 합니다. 그러나 자동 증분 열 값 재 동기화 되지 않습니다. 대신, 새로 삽입된 된 행의 내용은 다시 동기화 되 고 기존 기본 키 값에 따라 합니다. 기본 키가 자동 증가 하는 값을 **Resync** 의도 한 행의 콘텐츠를 검색 하지 않습니다. 자동 증분 기본 키 값을 자동으로 증가 하는 경우에 대 한 호출 **UpdateBatch** 조합 된 값을 가진 **adResyncAutoIncrement** + **adResyncInserts**.|  
+|**adResyncAll**|15|호출 **Resync** 결합된 한 다른 모든 ADCPROP_UPDATERESYNC_ENUM 멤버 값을 사용 하 여 합니다.|  
+|**adResyncAutoIncrement**|1|기본. 자동으로 증가 되거나 Microsoft Jet 일련 번호 필드 등 Microsoft SQL Server Id 열 데이터 원본에 의해 생성 되는 열에 대 한 새 id 값을 검색 하려고 시도 합니다.|  
+|**adResyncConflicts**|2|호출 **Resync** 동시성 충돌로 인해 업데이트 또는 삭제 작업이 실패 하는 모든 행에 대 한 합니다.|  
+|**adResyncInserts**|8|호출 **Resync** 성공적으로 삽입 되는 모든 행에 대 한 합니다. 그러나 자동 증분 열 값 재 동기화 되지 않습니다. 대신, 새로 삽입된 된 행의 내용은 기존 기본 키 값에 따라 다시 동기화 합니다. 기본 키가 자동 증가 값을 **Resync** 의도 한 행의 콘텐츠를 검색 하지 않습니다. 자동 증분 기본 키 값을 자동으로 증가 하는 것에 대 한 호출 **UpdateBatch** 결합 된 값을 가진 **adResyncAutoIncrement** + **adResyncInserts**.|  
 |**adResyncNone**|0|호출 하지 않습니다 **Resync**합니다.|  
 |**adResyncUpdates**|4|호출 **Resync** 성공적으로 업데이트 된 모든 행에 대 한 합니다.|  
   

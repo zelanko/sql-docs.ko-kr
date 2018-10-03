@@ -1,13 +1,11 @@
 ---
-title: 업데이트 및 CancelUpdate 메서드 예제 (VC + +) | Microsoft Docs
+title: Update 및 CancelUpdate 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], VC++ example
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93a9f0c959e1e6c271e611a0ab94150317e9c45a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8094271c765b9e211f724b7c18a72862f70a1d04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615951"
 ---
-# <a name="update-and-cancelupdate-methods-example-vc"></a>업데이트 및 CancelUpdate 메서드 예제 (VC + +)
-이 예제에서는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드와 함께 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
+# <a name="update-and-cancelupdate-methods-example-vc"></a>Update 및 CancelUpdate 메서드 예제(VC++)
+이 예제에서는 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드와 함께 합니다 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
   
 ```  
 // Update_CancelUpdate_Methods_Sample.cpp  

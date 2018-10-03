@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, using with Visual C++
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15fcf82b5a1ce0edd3b20d1784bfd8f4f61a5dd1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5c01c1b764ad09243ce20d25997036c38d167b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634871"
 ---
-# <a name="using-ado-with-microsoft-visual-c"></a>Microsoft Visual c + +와 함께 ADO 사용
-Visual c + +와 함께 ADO 사용에 대 한 내용은 다음 섹션을 참조 합니다.  
+# <a name="using-ado-with-microsoft-visual-c"></a>Microsoft Visual C++으로 ADO 사용
+ADO를 사용 하 여 Visual c + +에 대 한 내용은 다음 섹션을 참조 합니다.  
   
 -   [Visual C++ ADO 프로그래밍](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
   
@@ -40,8 +37,8 @@ Visual c + +와 함께 ADO 사용에 대 한 내용은 다음 섹션을 참조 �
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Visual c + + 구문 인덱스에 대 한 COM ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [ADO #import 인 Visual c + + 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Microsoft Visual Basic ADO를 사용 하 여](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [스크립트 언어와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
+ [COM에 대 한 Visual c + + 구문 인덱스용 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [#Import Visual c + + 구문 인덱스에 대 한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Microsoft Visual Basic로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [스크립팅 언어와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [ADO의 Visual C++ 확장](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)

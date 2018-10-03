@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
@@ -17,16 +15,15 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog
 - sql.data.tools.importscriptwizard.fileselection
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 17471823dcc3e77d23423fda3c81dbe8c958ab89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673261"
 ---
 # <a name="how-to-create-a-new-database-project"></a>방법: 새 데이터베이스 프로젝트 만들기
 새 데이터베이스 프로젝트를 만들고 기존 데이터베이스, .sql 스크립트 파일 또는 데이터 계층 응용 프로그램(.dacpac)에서 데이터베이스 스키마를 가져올 수 있습니다. 그런 다음 연결된 데이터베이스 개발에 사용할 수 있는 것과 동일한 비주얼 디자이너 도구(Transact\-SQL 편집기, 테이블 디자이너)를 호출하여 오프라인 데이터베이스 프로젝트를 변경하고 변경 내용을 다시 프로덕션 데이터베이스에 게시할 수 있습니다. 변경 내용을 스크립트로 저장하여 나중에 게시할 수도 있습니다. **프로젝트 속성** 창을 사용하면 대상 플랫폼을 SQL Azure를 포함한 다른 버전의 SQL Server로 변경할 수 있습니다.  

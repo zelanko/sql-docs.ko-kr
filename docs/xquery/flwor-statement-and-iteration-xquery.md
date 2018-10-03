@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -27,16 +22,15 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: 44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9ca8e71d1f71ba6416c08586e5613d129ad35d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe062b9d42dcedfc9c357f5af10ae19c2298acdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656321"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 문 및 반복(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -104,13 +98,13 @@ where ProductModelID=7
   
 -   `$Step`은 반복기 변수입니다.  
   
--   [경로 식](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, 입력된 시퀀스를 생성 합니다. 이 시퀀스는 첫 번째 <`Location`> 요소 노드의 <`step`> 요소 노드 자식에 대한 시퀀스입니다.  
+-   합니다 [경로 식](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, 입력된 시퀀스를 생성 합니다. 이 시퀀스는 첫 번째 <`Location`> 요소 노드의 <`step`> 요소 노드 자식에 대한 시퀀스입니다.  
   
 -   조건부 절 `where`(옵션)는 사용되지 않습니다.  
   
 -   `return` 식은 <`step`> 요소의 문자열 값을 반환합니다.  
   
- [string 함수 (XQuery)](../xquery/data-accessor-functions-string-xquery.md) 의 문자열 값을 검색 하는 데 사용 되는 <`step`> 노드.  
+ 합니다 [string 함수 (XQuery)](../xquery/data-accessor-functions-string-xquery.md) 문자열 값을 검색 하는 데 사용 되는 <`step`> 노드.  
   
  다음은 결과의 일부입니다.  
   
@@ -149,9 +143,9 @@ SELECT @x.query('
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 다른 유형의 시퀀스는 허용되지 않습니다. 특히 원자성 값과 노드가 혼합된 시퀀스는 허용되지 않습니다.  
   
- 반복이과 함께 자주 사용 되는 [XML 생성](../xquery/xml-construction-xquery.md) 다음 쿼리에서와 같이 XML 변환에서 구문 형식을 지정 합니다.  
+ 반복이 함께 자주 사용 되는 [XML 생성](../xquery/xml-construction-xquery.md) 다음 쿼리에서와에서 같이 XML 변환에서 구문 형식을 지정 합니다.  
   
- AdventureWorks 샘플 데이터베이스에서에 저장 된 제조 지침의 **지침** 의 열은 **Production.ProductModel** 테이블이 다음과 같은 형식:  
+ AdventureWorks 샘플 데이터베이스에서에 저장 된 제조 지침 합니다 **지침** 열을 **Production.ProductModel** 테이블 같은 형식이:  
   
 ```  
 <Location LocationID="10" LaborHours="1.2"   
@@ -197,7 +191,7 @@ where ProductModelID=7
   
 -   FLWOR 문은 특정 제품에 대한 <`Location`> 요소의 시퀀스를 검색합니다.  
   
--   [데이터 함수 (XQuery)](../xquery/data-accessor-functions-data-xquery.md) 특성으로 대신 텍스트 노드로 결과 XML에 추가할 수는 각 특성의 값을 추출 하는 데 사용 됩니다.  
+-   합니다 [data 함수 (XQuery)](../xquery/data-accessor-functions-data-xquery.md) 없으므로 특성으로 대신 텍스트 노드로 결과 XML에 추가할 수는 각 특성의 값을 추출 하는 데 사용 됩니다.  
   
 -   RETURN 절의 식은 원하는 XML을 생성합니다.  
   
@@ -254,7 +248,7 @@ where ProductModelID=7
   
  이전 쿼리에서 다음을 유의하십시오.  
   
--   `where` 키워드를 사용 하는 **count ()** 의 수를 계산 하는 함수 <`step`> 자식 요소에 각 작업 센터 위치입니다.  
+-   `where` 키워드를 사용 합니다 **count ()** 의 수를 계산 하는 함수 <`step`> 자식 요소에 각 작업 센터 위치입니다.  
   
 -   `return` 식은 반복 결과로부터 원하는 XML을 생성합니다.  
   
@@ -301,7 +295,7 @@ SELECT @x.query('
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   `for` 식 정의 `$Loc` 및 $`FirstStep` 변수입니다.  
+-   합니다 `for` 식이 정의 `$Loc` 및 $`FirstStep` 변수입니다.  
   
 -   `two`의 값이 `/ManuInstructions/Location`의 값에 종속되는 경우 `$FirstStep in $Loc/Step[1]` 식, `$FirstStep`과 `$Loc`은 상호 관련됩니다.  
   
@@ -316,7 +310,7 @@ Manu step 1 at Loc 1
 Manu step 1 at Loc 2  
 ```  
   
- 다음 쿼리는 형식화 된 Instructions 열에 대해 지정 된다는 점을 제외 하 고 마찬가지로 **xml** 열에서의 **ProductModel** 테이블입니다. [XML 생성 (XQuery)](../xquery/xml-construction-xquery.md) 원하는 XML을 생성 하는 데 사용 됩니다.  
+ 다음 쿼리는 형식화 된 Instructions 열에 대해 지정 된다는 점을 제외 하 고 마찬가지로 **xml** 열에서의 합니다 **ProductModel** 테이블입니다. [XML 생성 (XQuery)](../xquery/xml-construction-xquery.md) 원하는 XML을 생성 하는 데 사용 됩니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -336,9 +330,9 @@ WHERE ProductModelID=7
   
 -   `for` 절은 두 개의 변수 `$WC`와 `$S`를 정의합니다. `$WC`와 관련된 식은 자전거 제품 모델을 제조하는 작업 센터 위치의 시퀀스를 생성합니다. `$S` 변수에 할당되는 경로 식은 `$WC`에 있는 각 작업 센터 위치 시퀀스에 대한 단계의 시퀀스를 생성합니다.  
   
--   Return 문을 XML을 생성 한 <`Step`> 제조 단계가 포함 된 요소 및 **LocationID** 그 특성으로 합니다.  
+-   Return 문이 있는 XML을 생성 한 <`Step`> 제조 단계를 포함 하는 요소 및 **LocationID** 를 특성으로 합니다.  
   
--   **기본 요소 네임 스페이스 선언** 결과 XML의 모든 네임 스페이스 선언이 최상위 요소에 나타나도록 XQuery 프롤로그에 사용 됩니다. 따라서 결과가 더 읽기 쉬워집니다. 기본 네임 스페이스에 대 한 자세한 내용은 참조 [XQuery의 네임 스페이스 처리](../xquery/handling-namespaces-in-xquery.md)합니다.  
+-   합니다 **기본 요소 네임 스페이스 선언** 결과 XML에서 모든 네임 스페이스 선언이 최상위 요소에 나타나도록 XQuery 프롤로그에 사용 됩니다. 따라서 결과가 더 읽기 쉬워집니다. 기본 네임 스페이스에 대 한 자세한 내용은 참조 하세요. [XQuery의 네임 스페이스 처리](../xquery/handling-namespaces-in-xquery.md)합니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -360,7 +354,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>order by 절 사용  
- XQuery에서는 FLWOR 식의 `order by` 절을 사용하여 정렬이 수행됩니다. 정렬 식에 전달 되는 `order by` 절 형식이 적합 되는 값을 반환 해야 합니다는 **gt** 연산자입니다. 각 정렬 식의 결과는 한 항목의 단일 시퀀스여야 합니다. 기본적으로 정렬은 오름차순으로 수행됩니다. 각 정렬 식에 대해 선택적으로 오름차순이나 내림차순을 지정할 수 있습니다.  
+ XQuery에서는 FLWOR 식의 `order by` 절을 사용하여 정렬이 수행됩니다. 정렬 식에 전달 된 `order by` 절 형식이에 적합 한 값을 반환 해야 합니다는 **gt** 연산자. 각 정렬 식의 결과는 한 항목의 단일 시퀀스여야 합니다. 기본적으로 정렬은 오름차순으로 수행됩니다. 각 정렬 식에 대해 선택적으로 오름차순이나 내림차순을 지정할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 XQuery를 구현하여 수행된 문자열 값을 정렬하는 비교는 항상 이진 유니코드 코드 포인트 데이터 정렬을 사용하여 수행됩니다.  
@@ -381,7 +375,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- [원자화 (XQuery)](../xquery/atomization-xquery.md) 의 원자성 값을 검색 하는 프로세스는 <`number`> 요소에 전달 하기 전에 `order by`합니다. 사용 하 여 식을 작성할 수는 **data ()** 함수가 있지만 필요 하지 않습니다.  
+ 합니다 [원자화 (XQuery)](../xquery/atomization-xquery.md) 의 원자성 값을 검색 하는 프로세스는 <`number`> 요소에 전달 하기 전에 `order by`입니다. 사용 하 여 식을 작성할 수 있습니다 합니다 **data ()** 함수 있지만 필요 하지 않습니다.  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -540,7 +534,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   `order by`에서는 빈 최소값, 빈 최대값 및 데이터 정렬 키워드가 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   
