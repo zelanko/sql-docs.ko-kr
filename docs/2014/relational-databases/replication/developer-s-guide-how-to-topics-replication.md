@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
-caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: fc3eeb21918886c1b738891b7b0453cbc5712212
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a35601af505e440eb986c7576c0c1c258421476
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177263"
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>개발자 가이드: 방법 도움말 항목(복제)
   이 항목에서는 복제 관련 태스크를 프로그래밍 방식으로 수행하는 방법에 대한 정보를 제공합니다.  

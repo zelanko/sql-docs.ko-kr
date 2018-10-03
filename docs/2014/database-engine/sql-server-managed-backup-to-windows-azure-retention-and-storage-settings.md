@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76d7a8453cec686311f478a439af926ab0e5c690
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be69309ebf3f52246fd9ea5cb0fbc72edcdaa42e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207613"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204599"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Windows Azure에 대한 SQL Server 관리되는 백업 - 보존 및 저장소 설정
   이 항목에서는 구성 하는 기본 단계를 설명 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 인스턴스에 대 한 기본 설정을 구성 하는 데이터베이스에 대 한 합니다. 이 항목에서는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 서비스를 일시 중지하고 다시 시작하는 데 필요한 단계에 대해 설명합니다.  

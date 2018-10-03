@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.objects.f1
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 189da98d8c0fd6f9a114ea6213185db363539117
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c8cfc6a1f16e03025a1560b09918518c9b2575b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219633"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053233"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>SQL Server 개체 전송 태스크 편집기(개체 페이지)
   **SQL Server 개체 전송 태스크 편집기** 대화 상자의 **개체** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 테이블, 뷰, 저장 프로시저 및 사용자 정의 함수와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 복사할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)를 참조하십시오.  

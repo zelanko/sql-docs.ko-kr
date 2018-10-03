@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLTables function
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
-caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d918f1c64350e3a43976e2e13d1dd02f21620e6a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111494"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables는 정적 서버 커서에 대해 실행할 수 있습니다. SQLTables 업데이트 가능한 (동적 또는 키 집합) 커서에서 실행 하려고 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  

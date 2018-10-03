@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28e14076113b89c980756d42ddc126f75792d1a4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704441"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *Methodname*  
  호출할 OLE 개체의 메서드 이름입니다.  
   
- *returnvalue***출력**   
+ *returnvalue***출력**  
  OLE 개체 메서드의 반환 값입니다. 지정되는 경우 반드시 적절한 데이터 형식의 지역 변수이어야 합니다.  
   
  로컬 변수를 지정 하거나 단일 값을 반환 하는 메서드 *returnvalue*, 메서드를 반환 하는 로컬 변수에 값을 반환 하거나 지정 하지 마세요 *returnvalue*를 반환 하는 메서드는 단일 열 단일 행 결과 집합으로 클라이언트에 값을 반환 합니다.  

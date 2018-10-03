@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ee6ca6856de4bb5c4b920f19645db00dd9e64df
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: e2d6833165def5c73ebe15ec77cf23cffb1c1a3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717381"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
 
@@ -53,7 +50,7 @@ ms.locfileid: "35333677"
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 사용 권한  
   
-|그룹 또는 계정 이름|사용 권한|  
+|그룹 또는 계정 이름|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
 |관리자|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
@@ -61,7 +58,7 @@ ms.locfileid: "35333677"
   
 ###### <a name="webconfig-permissions"></a>Web.config 사용 권한  
   
-|그룹 또는 계정 이름|사용 권한|  
+|그룹 또는 계정 이름|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
 |관리자|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  

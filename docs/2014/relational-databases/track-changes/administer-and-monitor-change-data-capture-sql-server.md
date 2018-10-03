@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebc75d5750d77ac4166375f47b1301d7686f1a99
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 619ec50247a2e3c5189b55f9243bb88d1a2b759b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057333"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
   이 항목에서는 변경 데이터 캡처를 관리 및 모니터링하는 방법에 대해 설명합니다.  

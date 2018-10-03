@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e7b2ed1c1664f3841ed2671a7d32bb2dacb1d20
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a54558b4e7b104f7d33e33b14393bf845c576712
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784961"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>테이블, 행렬 또는 목록 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 데이터 영역은 보고서 데이터 집합에 있는 데이터를 표시합니다. 데이터 영역에는 테이블, 행렬, 목록, 차트 및 계기가 있습니다. 한 데이터 영역을 다른 데이터 영역 안에 중첩시키려면 각 데이터 영역을 개별적으로 추가한 다음 자식 데이터 영역을 부모 데이터 영역 안으로 끕니다.  

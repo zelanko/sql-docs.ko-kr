@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, transactions
@@ -17,23 +15,22 @@ helpviewer_keywords:
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be4fa798483927e89f7154d371caaa1f59d73ee7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061101"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 사용할 수는 **itransactionjoin:: Jointransaction** 분산 트랜잭션에 참여 하는 방법은 Microsoft Distributed Transaction Coordinator (MS DTC)에 의해 조정 됩니다.  
   
- MS DTC는 클라이언트가 여러 데이터 저장소에 대한 둘 이상의 연결에서 통합 트랜잭션을 시작하거나 통합 트랜잭션에 참가하는 데 사용할 수 있는 COM 개체를 제공합니다. 트랜잭션을 시작 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 MS DTC를 사용 하 여 **ITransactionDispenser** 인터페이스입니다. 합니다 **BeginTransaction** 소속 **ITransactionDispenser** 분산된 트랜잭션 개체에 대 한 참조를 반환 합니다. 이 참조가 전달 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하 여 **JoinTransaction**합니다.  
+ MS DTC는 클라이언트가 여러 데이터 저장소에 대한 둘 이상의 연결에서 통합 트랜잭션을 시작하거나 통합 트랜잭션에 참가하는 데 사용할 수 있는 COM 개체를 제공합니다. 트랜잭션을 시작 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 MS DTC를 사용 하 여 **ITransactionDispenser** 인터페이스입니다. **ITransactionDispenser**의 **BeginTransaction** 멤버는 분산 트랜잭션 개체에 대한 참조를 반환합니다. 이 참조가 전달 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하 여 **JoinTransaction**합니다.  
   
- MS DTC는 분산 트랜잭션에 대해 비동기 커밋 및 중단을 지원합니다. 소비자에 대 한 알림 비동기 트랜잭션 상태를 구현 합니다 **ITransactionOutcomeEvents** 인터페이스 및 인터페이스를 MS DTC 트랜잭션 개체에 연결 합니다.  
+ MS DTC는 분산 트랜잭션에 대해 비동기 커밋 및 중단을 지원합니다. 비동기 트랜잭션 상태에 대한 알림을 제공하려면 소비자는 **ITransactionOutcomeEvents** 인터페이스를 구현하고 이 인터페이스를 MS DTC 트랜잭션 개체에 연결합니다.  
   
  분산 트랜잭션의 경우 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 구현 **itransactionjoin:: Jointransaction** 다음과 같은 매개 변수입니다.  
   

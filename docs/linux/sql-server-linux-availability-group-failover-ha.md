@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e993478f3ae593c2829a9e2cf39d46527a909a77
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1fe1a785314b30e0f6027c845da5ac2b34692966
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086095"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796721"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux에서 always On 가용성 그룹 장애 조치
 
@@ -120,13 +118,13 @@ ms.locfileid: "39086095"
 
 1. AG 리소스가 관리 되지 않도록 클러스터에서 더 이상 확인 합니다. 
 
-      - 대상 클러스터 노드에 리소스를 관리 되지 않는 모드로 설정 합니다. 이 명령은 리소스 에이전트 중지 리소스 모니터링 및 관리에 신호를 보냅니다. 예를 들어: 
+      - 대상 클러스터 노드에 리소스를 관리 되지 않는 모드로 설정 합니다. 이 명령은 리소스 에이전트 중지 리소스 모니터링 및 관리에 신호를 보냅니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - 관리 되지 않는 모드로 리소스 모드를 설정 하려는 시도가 실패 하면 리소스를 삭제 합니다. 예를 들어:
+      - 관리 되지 않는 모드로 리소스 모드를 설정 하려는 시도가 실패 하면 리소스를 삭제 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
       ```bash
       sudo pcs resource delete <resourceName>

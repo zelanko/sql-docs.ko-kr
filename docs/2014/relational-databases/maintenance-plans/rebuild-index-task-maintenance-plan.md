@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 237b9b7ef70b2cc258d57507a7a7e0bd28ef26c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103475"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>인덱스 다시 작성 태스크(유지 관리 계획)
   **인덱스 다시 작성 태스크** 대화 상자를 사용하여 데이터베이스에 있는 테이블의 인덱스를 새 채우기 비율로 다시 만들 수 있습니다. 채우기 비율은 향후 확장을 수용하기 위해 각 인덱스 페이지에 남겨 둘 빈 공간을 결정합니다. 데이터를 테이블에 추가할 때는 채우기 비율이 유지되지 않으므로 사용 가능한 공간이 꽉 찹니다. 데이터 및 인덱스 페이지를 다시 구성하면 사용 가능한 공간을 다시 확보할 수 있습니다.  

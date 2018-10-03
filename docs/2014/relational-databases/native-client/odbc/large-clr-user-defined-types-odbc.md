@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6c2d2463600effd7e7d8868a3a198edf746bc5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3f6695b6f5d77b506147fa6d9f6aa0b77e1978ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152763"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 SQL Server Native Client의 ODBC 변경 내용에 대해 설명합니다.  

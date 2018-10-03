@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a931367813e3fb474bba65648d5d93fbc02af10a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 40055e2138c419eed82f4d4dabd1bfa37b3c6644
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265687"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704201"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다양한 용어를 사용하여 사용자에게 표시되는 초기 정의, 게시된 보고서 및 표시된 보고서를 비롯한 여러 상태의 페이지가 매겨진 보고서를 설명합니다.  

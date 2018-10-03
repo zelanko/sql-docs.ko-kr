@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4d1f9287227b3e37fd05b97d77c242173c68f2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197415"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
   보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  

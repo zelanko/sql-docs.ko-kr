@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39c6316a6e256cf7dab161d57a032b777dfac09a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163633"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터를 보호하기 위해 중요한 데이터만 보호하거나 패키지의 모든 데이터를 보호하는 패키지 수준을 설정할 수 있습니다. 또한 패키지 데이터를 암호 또는 사용자 키로 암호화하거나 데이터베이스를 사용하여 암호화할 수도 있습니다. 패키지 보호 수준은 반드시 정적이지 않으며 패키지의 수명 주기 동안 변경됩니다. 즉, 개발 과정에서 설정하는 보호 수준과 배포 과정에서 설정하는 보호 수준이 서로 다른 경우가 자주 있습니다.  

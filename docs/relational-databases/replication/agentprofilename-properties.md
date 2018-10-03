@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.profiles.perfprofileprops.f1
 helpviewer_keywords:
 - Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec61ac6e4f1cae2a0339d3a9f6fc2478a4d4036b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: b45f374ecc0768c87052974b9d6c0eae575c0031
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813511"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **에이전트 프로필 속성** 대화 상자를 사용하여 프로필의 각 에이전트 매개 변수에 대해 지정된 값을 보고 사용자 정의 프로필의 값을 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
  프로필의 이름입니다.  
   

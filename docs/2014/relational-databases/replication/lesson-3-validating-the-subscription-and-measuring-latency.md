@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
-caps.latest.revision: 11
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: beb76874d66e6808b2ec0e31bbdf22624d73edab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44d38b8d67163f053ffe98586f5338f4fd2ae949
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200201"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>3단원: 구독 유효성 검사 및 대기 시간 측정
   이 단원에서는 추적 프로그램 토큰을 사용하여 구독자에 변경 내용이 복제되는지 확인하고 대기 시간, 즉 게시자에서 변경한 내용이 구독자에게 표시될 때까지 걸리는 시간을 확인합니다. 이 단원을 수행하려면 이전 단원인 [2단원: 트랜잭션 게시에 구독 만들기](lesson-2-creating-a-subscription-to-the-transactional-publication.md)를 완료해야 합니다.  

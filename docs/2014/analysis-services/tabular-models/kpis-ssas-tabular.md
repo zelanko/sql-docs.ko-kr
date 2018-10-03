@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2082afaf4928ffd563b064ac7aba84c973edb2c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104623"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI(SSAS 테이블 형식)
   테이블 형식 모델에서 *KPI*(핵심 성과 지표)는 측정값 또는 절대값으로 정의된 *대상* 값에 대해 *기본* 측정값으로 정의된 값의 성능을 측정하는 데 사용됩니다. 이 항목은 테이블 형식 모델 작성자에게 테이블 형식 모델에서 KPI에 대한 기본적인 이해를 제공합니다.  

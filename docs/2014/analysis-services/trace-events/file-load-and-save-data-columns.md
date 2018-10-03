@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a2be1023518327e28861cffbcd1406f8f1650c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d12e2c8dabcf013d35d0f11f7b0761f63bf469c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099663"
 ---
 # <a name="file-load-and-save-data-columns"></a>File Load and Save 데이터 열
   File Load and Save 이벤트 범주에는 다음 이벤트 클래스가 있습니다.  

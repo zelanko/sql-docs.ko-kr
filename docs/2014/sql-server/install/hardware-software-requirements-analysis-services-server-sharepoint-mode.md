@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb86ca0a-518c-4c61-ae78-7680c57fae1f
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bd9afb97eae82bdb3bfe63859e9081dca5586b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c405862dfb13bf8db1a619f052e6ca9206f1f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167750"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint 모드의 Analysis Services 서버 하드웨어 및 소프트웨어 요구 사항(SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] SharePoint 2010 및 SharePoint 2013을 모두 지원합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013은 SharePoint 서버에 설치할 수 있지만 SharePoint 팜 외부에서 실행 합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010은 SharePoint 2010 팜의 응용 프로그램 서버에서 실행 되 고 SharePoint 기능과 인프라를 사용 하 여 서버 작업을 지원 합니다. 설치 하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 버전의 SharePoint 사용에 대 한는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사. 설치 후 다음을 완료합니다.  

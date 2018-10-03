@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 34d6c6eb60d48edad7d00a4baf890814dab8a016
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186203"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 유틸리티 문제 해결
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 문제 해결에는 SQL Server 인스턴스를 UCP에 등록하는 작업의 실패 해결, UCP에서 관리되는 인스턴스 목록 뷰에 회색 아이콘으로 표시되는 실패한 데이터 수집 문제 해결, 성능 병목 현상 완화, 리소스 상태 문제 해결 등이 포함됩니다. 로 식별 되는 리소스 상태 문제를 완화 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP를 참조 하세요 [SQL Server 리소스 상태 문제 해결 &#40;SQL Server 유틸리티&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)합니다.  

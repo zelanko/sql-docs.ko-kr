@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7e734e0492d677b166b862836f3c3785d8d74c3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bd42fe5402c9da251464cfedf670478c4b0d6358
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730251"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
   용어 추출 변환은 변환 입력 열의 텍스트에서 용어를 추출한 후 용어를 변환 출력 열에 기록합니다. 변환은 영어 텍스트에서만 작동되며 자체 영어 사전과 영어에 대한 언어적 정보가 사용됩니다.  
@@ -189,7 +186,7 @@ ms.locfileid: "35401575"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>용어 추출 변환 편집기(용어 추출 탭)
   **용어 추출 변환 편집기** 대화 상자의 **용어 추출** 탭을 사용하여 추출할 텍스트가 포함된 텍스트 열을 지정합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 입력 열**  
  확인란을 사용하여 용어 추출에 사용할 단일 텍스트 열을 선택합니다.  
   
@@ -205,7 +202,7 @@ ms.locfileid: "35401575"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>용어 추출 변환 편집기(제외 탭)
   **용어 추출 변환 편집기** 대화 상자의 **제외** 탭을 사용하여 제외 테이블에 대한 연결을 설정하고 제외 용어를 포함하는 열을 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **제외 용어 사용**  
  제외 용어를 포함하는 열을 지정하여 용어 추출 중 특정 용어를 제외할지 여부를 나타냅니다. 용어를 제외하기로 선택하는 경우 다음 원본 속성을 지정해야 합니다.  
   
@@ -227,7 +224,7 @@ ms.locfileid: "35401575"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>용어 추출 변환 편집기(고급 탭)
   **용어 추출 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 빈도, 길이 및 단어 또는 구 추출 여부와 같은 추출에 대한 속성을 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **명사**  
  변환에서 개별 명사만 추출하도록 지정합니다.  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 10/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d6c205ece4af38512525e3b89abd69298484516
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089695"
 ---
 # <a name="model-database"></a>model 데이터베이스
   **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
@@ -53,32 +50,32 @@ ms.locfileid: "37242883"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|예|  
-|AUTO_CREATE_STATISTICS|ON|예|  
-|AUTO_SHRINK|OFF|예|  
-|AUTO_UPDATE_STATISTICS|ON|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|사용자 계정 컨트롤|  
+|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
+|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
+|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
+|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
+|ARITHABORT|OFF|사용자 계정 컨트롤|  
+|AUTO_CLOSE|OFF|사용자 계정 컨트롤|  
+|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_SHRINK|OFF|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
 |CHANGE_TRACKING|OFF|아니요|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 예<br /><br /> 예|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
+|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 예<br /><br /> 사용자 계정 컨트롤|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
 |DB_CHAINING|OFF|아니요|  
 |ENCRYPTION|OFF|아니요|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|CHECKSUM|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
-|READ_COMMITTED_SNAPSHOT|OFF|예|  
-|RECOVERY|에 따라 달라 집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|예|  
-|RECURSIVE_TRIGGERS|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
+|PAGE_VERIFY|CHECKSUM|사용자 계정 컨트롤|  
+|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
+|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
+|READ_COMMITTED_SNAPSHOT|OFF|사용자 계정 컨트롤|  
+|RECOVERY|에 따라 달라 집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|사용자 계정 컨트롤|  
+|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
 |Service Broker 옵션|DISABLE_BROKER|아니요|  
 |TRUSTWORTHY|OFF|아니요|  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, transactions
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b63f0690a0126a091879ee934f377a7c62e5036
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ade18b71fa83c7acbb16cb7facd19dd3de61a2e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392876"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176953"
 ---
 # <a name="transactions-in-odbc"></a>ODBC의 트랜잭션
   ODBC의 트랜잭션은 연결 수준에서 관리됩니다. 응용 프로그램에서는 트랜잭션이 완료되면 해당 연결에서 모든 문 핸들을 통해 완료한 모든 작업을 커밋하거나 롤백합니다. 응용 프로그램에서는 트랜잭션을 커밋하거나 롤백할 때 COMMIT 또는 ROLLBACK 문을 전송하는 대신 [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) 을 호출해야 합니다.  

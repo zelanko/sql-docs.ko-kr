@@ -4,36 +4,30 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:data function
 - data function [XQuery]
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74f8e5b5df2b8a6a95766576bdf5a1c8d83a4027
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 949286cef32dd3c6c9e55e1ad34504afffc20989
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734052"
 ---
-# <a name="data-accessor-functions---data-xquery"></a>데이터 접근자 함수 (XQuery) 데이터
+# <a name="data-accessor-functions---data-xquery"></a>데이터 접근자 함수 - data(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  지정 된 각 항목에 대 한 형식화 된 값을 반환 *$arg*합니다.  
+  지정 된 각 항목에 대 한 형식화 된 값을 반환 합니다 *$arg*합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +40,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  형식화된 값이 반환되는 항목의 시퀀스입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  형식화된 값에는 다음이 적용됩니다.  
   
 -   원자 값의 형식화된 값은 원자 값입니다.  
@@ -63,19 +57,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   특성 노드가 XML 스키마 유형으로 형식화된 경우 해당 형식화된 값은 그에 따라 형식화된 값입니다.  
   
--   특성 노드가 형식화 되지 않은 경우 해당 형식화 된 값은의 인스턴스로 반환 되는 문자열 값과 동일 **xdt: untypedatomic**합니다.  
+-   특성 노드가 형식화 되지 하는 경우 해당 형식화 된 값은 인스턴스가 반환 되는 문자열 값과 동일 **xdt: untypedatomic**합니다.  
   
--   요소 노드가 형식화 되지 않은 경우 해당 형식화 된 값은의 인스턴스로 반환 되는 문자열 값과 동일 **xdt: untypedatomic**합니다.  
+-   요소 노드가 형식화 되지 않은, 하는 경우 해당 형식화 된 값은 인스턴스의 반환 되는 문자열 값과 동일 **xdt: untypedatomic**합니다.  
   
  형식화된 요소 노드에는 다음이 적용됩니다.  
   
--   요소에 단순 콘텐츠 형식의 **data ()** 요소의 형식화 된 값을 반환 합니다.  
+-   요소에 간단한 내용 유형을 **data ()** 요소의 형식화 된 값을 반환 합니다.  
   
--   노드가 xs: anytype를 포함 하 여 복합 형식의 경우 **data ()** 정적 오류를 반환 합니다.  
+-   노드가 xs: anytype과 포함 하는 복합 형식의 경우 **data ()** 정적 오류를 반환 합니다.  
   
- 사용 하 여 있지만 **data ()** 함수는 지정 하는 다음 예에서 같이 자주 선택적는 **data ()** 함수 쿼리 가독성을 명시적으로 증가 합니다. 자세한 내용은 참조 [XQuery 기초](../xquery/xquery-basics.md)합니다.  
+ 사용 합니다 **data ()** 함수는 지정 하는 다음 예와에서 같이 자주 선택적 합니다 **data ()** 함수에는 명시적으로 쿼리 가독성이 향상. 자세한 내용은 [XQuery 기초](../xquery/xquery-basics.md)합니다.  
   
- 지정할 수 없으며 **data ()** 에 생성 된 XML에는 다음과 같이 합니다.  
+ 지정할 수 없습니다 **data ()** 에서 생성 된 XML에 다음과에서 같이 합니다.  
   
 ```  
 declare @x xml  
@@ -84,10 +78,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
+ 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>1. data() XQuery 함수를 사용하여 노드의 형식화된 값 추출  
- 다음 쿼리를 보여 줍니다. 방법을 **data ()** 함수는 특성, 요소, 텍스트 노드 값을 검색 하는 데 사용 됩니다.  
+ 다음 쿼리를 보여 줍니다 하는 방법을 **data ()** 함수를 사용 하는 특성, 요소 및 텍스트 노드는 값을 검색 합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -112,7 +106,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- 앞서 언급 했 듯이 **data ()** 특성을 생성 하는 경우 함수는 선택적입니다. 지정 하지 않는 경우는 **data ()** 함수를 암시적으로 가정 합니다. 다음 쿼리에서는 이전 쿼리와 동일한 결과를 생성합니다.  
+ 언급 했 듯이 합니다 **data ()** 함수는 특성을 생성 하는 경우 선택 사항입니다. 지정 하지 않으면 경우는 **data ()** 함수를 암시적으로 가정 합니다. 다음 쿼리에서는 이전 쿼리와 동일한 결과를 생성합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -133,7 +127,7 @@ WHERE ProductModelID = 19
   
  다음 예에서는 인스턴스를 보여 줍니다.는 **data ()** 함수는 필요 합니다.  
   
- 다음 쿼리에서 **$pd / p1: specifications / Material** 반환 된 <`Material`> 요소입니다. 또한 **데이터 ($pd/p1: specifications/Material)** 때문에 문자 xdt: untypedatomic로 형식화 된 데이터를 반환 <`Material`>은 형식화 되지 않습니다. 입력이 형식화 된 경우, 결과 **data ()** 로 형식화 **xdt: untypedatomic**합니다.  
+ 다음 쿼리에서 **$pd / p1:Specifications 자재 /** 반환 된 <`Material`> 요소. 또한 **데이터 ($pd/p1:Specifications 자재 /)** 때문에 문자 xdt: untypedatomic로 형식화 된 데이터를 반환 <`Material`>은 형식화 되지 않습니다. 입력이 형식화 된 경우, 결과 **data ()** 로 형식화 됩니다 **xdt: untypedatomic**합니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -157,7 +151,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 다음 쿼리에서 **data($pd/p1:Features/wm:Warranty)** 때문에 정적 오류를 반환 <`Warranty`> 복합 유형 요소입니다.  
+ 다음 쿼리에서 **data($pd/p1:Features/wm:Warranty)** 때문에 정적 오류를 반환 합니다 <`Warranty`> 복합 형식 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -174,7 +168,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

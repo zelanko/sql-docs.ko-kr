@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimension data type
 ms.assetid: 128ac790-65a1-4e35-b909-8dba2a61b24c
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02ef89f5dac200450faf8151a71aeae703e8b35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3ea688681749a2b22f8c457fb9a5eb8ee39d8eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059535"
 ---
 # <a name="cubedimension-data-type-assl"></a>CubeDimension 데이터 형식(ASSL)
   차원과 큐브 간의 관계를 나타내는 기본 데이터 형식을 정의합니다.  
@@ -58,14 +55,14 @@ ms.locfileid: "37220326"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|InclusionThresholdSetting|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|기본 데이터 형식|없음|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[AllMemberAggregationUsage](../properties/aggregationusage-element-assl.md), [주석](../collections/annotations-element-assl.md), [특성](../collections/attributes-element-assl.md)를 [DimensionID](../properties/id-element-assl.md), [계층](../collections/hierarchies-element-assl.md)합니다 [HierarchyUniqueNameStyle](../properties/hierarchyuniquenamestyle-element-assl.md), [ID](../properties/id-element-assl.md)를 [MemberUniqueNameStyle](../properties/memberuniquenamestyle-element-assl.md)합니다 [이름](../properties/name-element-assl.md), [표시](../properties/visible-element-assl.md), [번역](../collections/translations-element-assl.md)|  
 |파생 요소|[차원](../objects/dimension-element-assl.md) ([차원](../collections/dimensions-element-assl.md) 모음인 [큐브](../objects/cube-element-assl.md))|  
   

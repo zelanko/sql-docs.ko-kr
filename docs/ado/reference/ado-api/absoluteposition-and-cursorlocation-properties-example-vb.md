@@ -1,13 +1,11 @@
 ---
-title: AbsolutePosition 및 앞 속성 예제 (VB) | Microsoft Docs
+title: AbsolutePosition 및 CursorLocation 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], Visual Basic example
 - CursorLocation property [ADO], Visual Basic example
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 030bee4e180a9f419cedc81eaa31e7f15deb1ee1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a22afb8e59d692ae4fae010adc819cd930b8ab46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770847"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 및 앞 속성 예제 (VB)
-이 예제에서는 방법을 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 사용 하 여 **AbsolutePosition** 클라이언트 커서를 커서를 설정 하 여 속성입니다.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 및 CursorLocation 속성 예제 (VB)
+이 예제에서는 하는 방법을 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수는 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 사용 합니다 **AbsolutePosition** 클라이언트 커서에 커서를 설정 하 여 속성입니다.  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -97,5 +94,5 @@ End Sub
   
 ## <a name="see-also"></a>관련 항목  
  [AbsolutePosition 속성 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [앞 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
+ [CursorLocation 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - startup options [SQL Server]
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b76df2fc563c8170e176bb69d8d6a1e9e3209c98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062003"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
   시작 옵션은 시작하는 동안 필요한 특정 파일 위치를 지정하고 일부 서버 차원의 조건을 지정합니다. 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 문제가 발생하거나 예외적인 문제가 발생하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객 지원 서비스에서 시작 옵션을 사용하도록 지시하는 경우가 아니면 시작 옵션을 지정할 필요가 없습니다.  

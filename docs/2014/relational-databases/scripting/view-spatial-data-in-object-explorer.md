@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de527a4961ac3ba297929bc8fb9b808681c6c3ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ee4f695a68bc8838e7c594fd250fc37fd85da80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135333"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>개체 탐색기에서 공간 데이터 보기
   쿼리 편집기의 **공간 데이터 결과** 창은 공간 데이터 결과와 **결과** 창에 표 형식으로 표시되는 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. **공간 데이터 결과** 창에 공간 데이터를 표시하려면 쿼리 결과에서 기하 도형 또는 지리 데이터가 포함된 적어도 하나 이상의 공간 데이터 열이 있어야 합니다.  

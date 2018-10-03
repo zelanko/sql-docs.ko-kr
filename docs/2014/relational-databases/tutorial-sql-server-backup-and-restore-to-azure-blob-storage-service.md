@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 856ff3ec55236b8216c04fbffeb4f5abed6dbc5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65015ec9175bc1e09b97486794f7bdd44d1c1038
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056133"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service
   SQL Server 백업 및 Windows Azure Blob 저장소 서비스로 복원 시작 자습서를 시작합니다. 이 자습서는 Windows Azure Blob 저장소 서비스에서 백업을 작성하고 복원하는 방법을 이해하도록 도와 줍니다.  

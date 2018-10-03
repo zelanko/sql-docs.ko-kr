@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, update modes
 - subscriptions [SQL Server replication], updatable
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87f7b847ebca61f710a6381b80e82f1defa34154
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbe5d710c29f8f63a1ee09eab322b23f74dbe2ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057903"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 업데이트된 트랜잭션 구독에 대한 업데이트 모드를 전환하는 방법에 대해 설명합니다. 새 구독 마법사를 사용하여 업데이트할 수 있는 구독에 대한 모드를 지정합니다. 이 마법사를 사용할 때 모드를 설정하는 방법은 [끌어오기 구독 속성 보기 및 수정](../view-and-modify-pull-subscription-properties.md)을 참조하세요.  

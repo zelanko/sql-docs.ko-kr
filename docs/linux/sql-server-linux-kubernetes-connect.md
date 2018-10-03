@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d13f89a1297d21c882075821a681886dc95c4c76
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: 6092f15fe64c96ed004d352408ae6cdac034def9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049593"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852161"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>SQL Server Always On 가용성 그룹에서 kubernetes에 연결
 
@@ -55,7 +53,7 @@ kubectl get services
 
 SQL 인증을 사용 하 여 주 복제본에 연결 하려면 사용 합니다 `sa` 계정, 값 `sapassword` , 만든 비밀 및이 IP 주소에서 합니다.
 
-예를 들어:
+이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```cmd
 sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source properties
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c04c4da84040c97656c956698b4e66bd5a6a5862
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2757c13236b871eccc91066e064924c27cc19a93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056813"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
   공유 데이터 원본은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 여러 보고서, 모델 및 데이터 기반 구독에서 참조할 수 있는 데이터 원본 연결 속성의 집합입니다. 공유 데이터 원본을 사용하면 시간이 지나면서 자주 변경되는 데이터 원본 속성을 쉽게 관리할 수 있습니다. 사용자 계정 또는 암호가 변경되거나 데이터베이스를 다른 서버로 이동하는 경우 한 위치에서 연결 정보를 업데이트할 수 있습니다.  
@@ -38,7 +35,7 @@ ms.locfileid: "37258109"
   
 |부분|Description|  
 |----------|-----------------|  
-|속성|보고서 서버 폴더 계층 내에서 항목을 식별하는 이름입니다.|  
+|이름|보고서 서버 폴더 계층 내에서 항목을 식별하는 이름입니다.|  
 |Description|폴더 내용을 볼 때 보고서 관리자에 항목과 함께 표시되는 설명입니다.|  
 |연결 형식|데이터 원본과 함께 사용되는 데이터 처리 확장 프로그램입니다. 보고서 서버에 배포된 데이터 처리 확장 프로그램만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.|  
 |연결 문자열|데이터베이스에 대한 연결 문자열입니다. 자세한 정보 및 자주 사용 되는 데이터 원본에 연결 문자열의 예를 보려면 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.|  

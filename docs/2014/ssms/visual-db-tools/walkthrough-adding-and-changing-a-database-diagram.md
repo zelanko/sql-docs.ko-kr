@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f30616dd6f9ee51b929a98740a3d4c4ed320d7bb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808009"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195523"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
   이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  

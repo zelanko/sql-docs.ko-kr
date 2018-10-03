@@ -5,9 +5,7 @@ ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SPATIAL INDEX
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3ff094713faa5a399030b5470aa5af7df60371b7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d5b34fc92c70e01941bbdea6ef110a8af4a11e26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790304"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620031"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -553,7 +550,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
 ## <a name="additional-remarks-about-creating-indexes"></a>인덱스 작성에 대한 추가 주의 사항  
  인덱스를 작성하는 방법은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)에서 "주의 사항" 섹션을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용자에게 테이블 또는 뷰에 대한 ALTER 권한이 있거나 sysadmin 고정 서버 역할, db_ddladmin 및 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  

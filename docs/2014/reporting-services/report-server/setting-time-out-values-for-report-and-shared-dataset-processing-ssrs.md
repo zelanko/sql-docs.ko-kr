@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - report processing [Reporting Services], time-outs
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4794c4a2b6c9207cb48573bb481499fa402f3b29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166263"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정(SSRS)
   제한 시간 값을 지정하여 시스템 리소스 사용 방식에 대해 제한을 설정할 수 있습니다. 보고서 서버는 다음 두 가지 제한 시간 값을 지원합니다.  

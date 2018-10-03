@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153103"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>보고서 서버에서 사용자 지정 확장 프로그램이 검색됨(업그레이드 관리자)
   업그레이드 관리자가 구성 파일에서 사용자 지정 확장 프로그램 설정을 검색했으며, 이는 데이터 처리, 배달, 렌더링, 보안 또는 인증을 위한 하나 이상의 사용자 지정 확장이 사용자 설치에 포함되어 있음을 나타냅니다. 업그레이드 관리자는 업그레이드된 보고서 서버와 함께 확장 프로그램 구성 설정을 이동합니다. 그러나 사용자 지정 확장 프로그램이 기존 보고서 서버 설치 폴더에 설치되어 있으면 업그레이드 프로세스 중 해당 사용자 지정 확장 프로그램에 대한 어셈블리 파일이 새 설치 폴더로 이동되지 않습니다. 이 경우 업그레이드가 완료된 후 어셈블리 파일을 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 폴더로 이동해야 합니다.  

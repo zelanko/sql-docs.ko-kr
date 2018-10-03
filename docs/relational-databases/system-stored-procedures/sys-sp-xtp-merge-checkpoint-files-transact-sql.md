@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 11/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_merge_checkpoint_files_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bc2c91d93ad24147fa288ffb8164823f4f8a84c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9121485ddbe3f4fd72bf40b4518a7af8b196fa23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979425"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725411"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +57,10 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  에 표시 된 대로 데이터 파일에 대 한 트랜잭션 (bigint) 상한 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)합니다. 트랜잭션 ID 값이 잘못된 경우 오류가 생성됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 및 db_owner 고정 데이터베이스 역할이 필요합니다.  

@@ -4,19 +4,16 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a657b8e85c82c62943e6095ad73b0392f9995e2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9766b511d5dfce57dd91a4f19466249e00ad7ad8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816321"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>1단원: 새 웹 사이트 만들기
 이 단원에서는 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만드는 방법을 배웁니다.  

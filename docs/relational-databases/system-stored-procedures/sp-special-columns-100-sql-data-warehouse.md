@@ -6,8 +6,6 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 618b2e1a0fafdec18b1e040d255f636640e8acf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e9fc8ed13d62ec1417c5a5326053ef3af02fa06a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774301"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -70,7 +68,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  사용하고 있는 ODBC 버전입니다. *ODBCVer* 됩니다 **int (** 4 **)**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이점에 대 한 자세한 내용은 ODBC 버전 3.0 ODBC SQLSpecialColumns 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   

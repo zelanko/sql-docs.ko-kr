@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving registered server or server group
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 347909a9152299c3df702330abe779d84b8d98ec
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cf2338492b9e7d1dcfe4fe2b53202dc4721ffc61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070443"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>등록된 서버 및 등록된 서버 그룹 이동(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  

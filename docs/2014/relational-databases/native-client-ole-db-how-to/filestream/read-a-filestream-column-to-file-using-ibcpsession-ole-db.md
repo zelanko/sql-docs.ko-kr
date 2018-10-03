@@ -1,38 +1,35 @@
 ---
-title: IBCPSession (OLE DB)를 사용 하 여 파일에 FILESTREAM 열 읽기 | Microsoft Docs
+title: IBCPSession을 사용하여 파일에 대한 FILESTREAM 열 읽기(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2298503d85090cebc234fcaedc39bb9fee61cf4b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412872"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203693"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession을 사용하여 파일에 대한 FILESTREAM 열 읽기(OLE DB)
   이 예제에서는 IBCPSession 인터페이스를 사용하여 파일에 대한 filestream 열을 읽고 서식 파일을 씁니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)합니다.  
+ Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>예제  
  INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  다음 예제 중 하나를 사용하여 이 예제에서 읽어들이는 테이블을 만듭니다.  
   
--   [ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용 하 여 FILESTREAM 열에 데이터 보내기 &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload를 사용 하 여 FILESTREAM 열에 데이터 보내기 &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   

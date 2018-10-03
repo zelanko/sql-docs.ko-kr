@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e327cdbb99d05f5001b5252d5d636051408f23
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 09d5469922aeda20aa0b579ef7ba9558fc2b3165
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699451"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -160,7 +156,7 @@ SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.324
 SELECT @g.ToString(), @g.STLength();
 ```
 
-**CircularString** 인스턴스를 사용하여 원형 조각을 저장하려면 각 선 세그먼트에 세 개의 점을 사용해야 합니다.  중간 점을 알 수 없으면 다음 조각과 같이 선 세그먼트의 끝점을 계산하거나 따옴표로 묶어야 합니다.  
+**CircularString** 인스턴스를 사용하여 원형 조각을 저장하려면 각 선 세그먼트에 세 개의 점을 사용해야 합니다.  중간 점을 알 수 없으면 다음 조각과 같이 선 세그먼트의 엔드포인트를 계산하거나 따옴표로 묶어야 합니다.  
 
 ```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');

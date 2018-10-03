@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - tutorials [Data Mining]
 - neural network model [Analysis Services]
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93946e13e9836aef4cd10bc39ec964e7f8c0d531
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bbfd2344b46e015e26d2dba393aea689329949c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108823"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>5단원: 신경망 및 로지스틱 회귀 모델 작성(중급 데이터 마이닝 자습서)
   

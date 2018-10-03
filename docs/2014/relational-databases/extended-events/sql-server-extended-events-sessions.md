@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - xe
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6c00a184eccb1139652edf39dbedd349eaeb100
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051363"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 이벤트 세션은 확장 이벤트 엔진을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 생성됩니다. 확장 이벤트 세션의 다음과 같은 요소는 확장 이벤트 인프라 및 일반적인 프로세스를 파악할 수 있는 컨텍스트를 제공합니다.  
@@ -54,7 +51,7 @@ ms.locfileid: "37287239"
   
  다음 그림에서는 세션 내용, 그리고 패키지와 세션 간의 관계를 보여 줍니다.  
   
- ![세션에서의 개체 공존 및 공유] (../../database-engine/media/xesessions.gif "Object co-existance and sharing in sessions")  
+ ![세션에서의 개체 공존 및 공유](../../database-engine/media/xesessions.gif "Object co-existance and sharing in sessions")  
   
  위 그림을 보면 다음과 같은 사실을 알 수 있습니다.  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199409"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
   **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 사용하는 SQL Server 프로세스의 메모리 양(MB)을 다시 구성할 수 있습니다. 이 메모리는 SQL Server Memory Manager가 관리합니다.  

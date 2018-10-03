@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f69c92b0624f6553f92d59a5ef38e00973f9116
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842451"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

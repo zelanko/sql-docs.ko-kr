@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b620e82d60741758890d37e3434ce5b611515f99
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131473"
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 행 집합
   서버에 의해 할당된 다양한 개체에 대한 DISCOVER_MEMORYUSAGE 통계를 반환합니다.  
@@ -39,15 +36,15 @@ ms.locfileid: "37304583"
 |-----------------|--------------------|-----------------|-----------------|  
 |`MemoryID`|`DBTYPE_UI8`||메모리를 식별 하는 번호입니다.|  
 |`MemoryName`|`DBTYPE_WSTR`||메모리를 소유하는 개체의 이름입니다.|  
-|`SPID`|`DBTYPE_UI4`|예|메모리를 할당한 세션입니다. 0은 특정 세션에 연결되지 않은 메모리를 나타냅니다.|  
+|`SPID`|`DBTYPE_UI4`|사용자 계정 컨트롤|메모리를 할당한 세션입니다. 0은 특정 세션에 연결되지 않은 메모리를 나타냅니다.|  
 |`CreationTime`|`DBTYPE_DBTIMESTAMP`||"개체가 만들어진 시간"이나 "메모리가 할당된 시간"입니다.|  
-|`BaseObjectType`|`DBTYPE_UI4`|예|개체의 유형을 설명하는 숫자입니다. BaseObjectType이 동일한 개체의 유형은 동일합니다.|  
-|`MemoryUsed`|`DBTYPE_UI8`|예|개체의 현재 크기로서, 개체에 사용하려고 할당한 메모리보다 작습니다.|  
+|`BaseObjectType`|`DBTYPE_UI4`|사용자 계정 컨트롤|개체의 유형을 설명하는 숫자입니다. BaseObjectType이 동일한 개체의 유형은 동일합니다.|  
+|`MemoryUsed`|`DBTYPE_UI8`|사용자 계정 컨트롤|개체의 현재 크기로서, 개체에 사용하려고 할당한 메모리보다 작습니다.|  
 |`MemoryAllocated`|`DBTYPE_UI8`||개체에 사용하려고 할당한 메모리 양으로서, 개체에 실제로 사용되는 메모리 양보다 큽니다.|  
 |`MemoryAllocBase`|`DBTYPE_UI8`||개체 자체에 대해 처음에 할당된 바이트 수입니다(개체 내용에 대한 추가 할당 제외).|  
 |`MemoryAllocFromAlloc`|`DBTYPE_UI8`||이 개체의 내용에 대해 할당되는 메모리입니다.|  
 |`ElementCount`|`DBTYPE_UI4`||컨테이너 개체의 경우 해당 개체에 포함된 개체 수입니다.|  
-|`Shrinkable`|`DBTYPE_BOOL`|예|메모리가 축소 가능(메모리 가중으로 인해 삭제 가능)한지 여부를 나타내는 부울입니다. true이면 메모리가 축소 가능하며, false이면 축소 불가능합니다.|  
+|`Shrinkable`|`DBTYPE_BOOL`|사용자 계정 컨트롤|메모리가 축소 가능(메모리 가중으로 인해 삭제 가능)한지 여부를 나타내는 부울입니다. true이면 메모리가 축소 가능하며, false이면 축소 불가능합니다.|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||이 개체의 전체 경로를 식별하는 문자열입니다.|  
 |`ObjectID`|`DBTYPE_WSTR`||개체를 식별하는 문자열입니다. 이 개체의 전체 경로 문자열로 표시 됩니다: (ObjectParentPath + '.' + ObjectId).|  
   

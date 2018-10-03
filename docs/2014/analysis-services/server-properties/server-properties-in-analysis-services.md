@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201863"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Analysis Services에서 서버 속성 구성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정할 수 있는 자체 구성 속성이 있습니다.  

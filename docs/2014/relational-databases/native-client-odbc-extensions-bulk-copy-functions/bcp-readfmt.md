@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_readfmt
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbf545e694ac6d5368a4abf23aba6ca0a6d32119
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109133"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   지정한 형식 파일에서 데이터 파일 형식 정의를 읽어 옵니다.  
@@ -60,7 +57,7 @@ szFormatFile
   
  서식 파일을 저장 하려면 호출 [bcp_writefmt](bcp-writefmt.md)합니다. 에 대 한 호출 `bcp_readfmt` 저장 된 서식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](bcp-init.md)합니다.  
   
- 또는 대량 복사 유틸리티 (**bcp**)에서 참조할 수 있는 파일에서 사용자 정의 데이터 형식을 저장할 수 `bcp_readfmt`입니다. 에 대 한 자세한 내용은 합니다 **bcp** 유틸리티 및 구조의 **bcp** 데이터 형식으로 파일을 참조 하세요 [대량 데이터 가져오기 및 내보내기의 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ 또는 대량 복사 유틸리티 (**bcp**)에서 참조할 수 있는 파일에서 사용자 정의 데이터 형식을 저장할 수 `bcp_readfmt`입니다. 에 대 한 자세한 내용은 **bcp** 의 구조 및 유틸리티 **bcp** 데이터 서식 파일을 참조 하십시오. [대량 데이터 가져오기 및 내보내기의 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  `BCPDELAYREADFMT` 의 값을 *eOption* 의 매개 변수 [bcp_control](bcp-control.md) bcp_readfmt의 동작을 수정 합니다.  
   

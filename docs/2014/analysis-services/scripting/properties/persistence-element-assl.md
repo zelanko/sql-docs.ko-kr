@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Persistence Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5e5ce2407b13d343d0490807dac5bdec0aede15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186423"
 ---
 # <a name="persistence-element-assl"></a>Persistence 요소(ASSL)
   바인딩된 원본 데이터의 어떤 부분이 동적 부분과 지정 된 빈도 사용 하 여 업데이트 확인을 확인 합니다 [RefreshPolicy](refreshpolicy-element-assl.md) 요소입니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37330293"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionBinding](../data-type/binding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

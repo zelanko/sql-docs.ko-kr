@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178463"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약(SharePoint용 PowerPivot)
   SharePoint 사이트에 게시한 Excel 통합 문서 내의 PowerPivot 데이터가 자동으로 업데이트되도록 데이터 새로 고침을 예약할 수 있습니다.  

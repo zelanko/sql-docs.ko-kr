@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144193"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 테이블에 대해 전체 텍스트 쿼리를 실행하려면 먼저 데이터베이스 관리자가 해당 테이블에 대한 전체 텍스트 인덱스를 만들어야 합니다. 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열 데이터 형식 중 하나일 수 있습니다: `char`, `varchar`, `nchar`, `nvarchar`를 `text`를 `ntext`, `image`를 `xml`, 또는 `varbinary(max)` 및 FILESTREAM 합니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.  
@@ -52,7 +49,7 @@ ms.locfileid: "37158024"
   
  전체 텍스트 쿼리는 대/소문자를 구분하지 않습니다. 예를 들어 "Aluminum" 또는 "aluminum"을 검색하면 동일한 결과가 반환됩니다.  
   
- 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 예를 들어:  
+ 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   e-비즈니스 - 웹 사이트에서 제품 검색:  
   

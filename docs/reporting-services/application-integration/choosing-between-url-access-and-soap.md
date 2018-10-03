@@ -4,17 +4,16 @@ ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22664247911d791c74f4b280aa264272d345851a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: db4bea93fb172bc47665e993e3185d29841be758
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783463"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Reporting Services에서 URL 액세스와 SOAP 중 선택
 

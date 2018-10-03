@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DeleteEncryptedInformation method
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cba6c73ba6a02d33ea63407e2ff40a633b64ccd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d6e9ed6c7aa3cf1ac103c157f0084c4c6863167
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081453"
 ---
 # <a name="deleteencryptedinformation-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptedInformation 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스에서 암호화된 정보를 삭제합니다.  

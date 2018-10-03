@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - drillthrough actions [Analysis Services]
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084683"
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
   동작이란 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작하는 동작입니다. 작업은 선택한 항목을 매개 변수로 응용 프로그램을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -115,7 +112,7 @@ parametervalue1
 & ...  
 ```  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

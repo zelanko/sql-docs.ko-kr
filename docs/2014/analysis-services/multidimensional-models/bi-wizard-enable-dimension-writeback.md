@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - dimensions [Analysis Services], modifying
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e7ee13d4fdfa021e050c4357dc8796289a3cd4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9236bfbd945386aa249291b490ad41680a3ff5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171653"
 ---
 # <a name="enable-dimension-writeback"></a>차원 쓰기 저장(writeback) 설정
   큐브나 차원에 차원 쓰기 저장 기능을 추가하면 수동으로 차원 구조와 멤버를 수정할 수 있습니다. 쓰기 가능 차원에 대한 업데이트는 차원 테이블에 직접 기록됩니다. 이 기능은 차원의 `WriteEnabled` 속성 설정을 변경합니다.  

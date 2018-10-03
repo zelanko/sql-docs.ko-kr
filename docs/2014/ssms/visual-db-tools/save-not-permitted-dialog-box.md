@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.table.tablerecreatenosave.f1
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba93400584d7f2fa338e2acb6fdd3468b835cc54
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3a7b7de396360fe029ad1b19ce06d628f6128dc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817929"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206613"
 ---
 # <a name="save-not-permitted-dialog-box"></a>저장(허용되지 않음) 대화 상자
   **저장** (허용되지 않음) 대화 상자는 변경한 내용을 적용하려면 나열된 테이블을 삭제한 다음 다시 만들어야 하므로 변경 내용 저장이 허용되지 않음을 경고합니다.  

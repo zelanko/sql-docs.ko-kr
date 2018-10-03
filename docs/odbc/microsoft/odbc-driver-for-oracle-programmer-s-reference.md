@@ -1,29 +1,26 @@
 ---
-title: ODBC Driver for Oracle 프로그래머&#39;s 참조 | Microsoft Docs
+title: ODBC Driver for Oracle 프로그래머가&#39;참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f68964557d5878b4575a1a6a9592514b3abe8cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b3373566d002d75856c13b725150f9202aef5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900942"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751141"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 프로그래머&#39;s 참조
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 프로그래머가&#39;참조
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -45,14 +42,14 @@ ms.locfileid: "32900942"
   
 -   [키 집합 커서 사용 제한 사항](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [저장 프로시저를 for Oracle ODBC 드라이버](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Oracle 용 ODBC 드라이버 저장 프로시저](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
 -   [Oracle 오류 메시지에 대 한 ODBC 드라이버](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [ODBC 받는 규칙 수준](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [ODBC 적합성 수준](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
 -   [API 함수](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   
--   [지원 되는 데이터 형식](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
+-   [지원되는 데이터 형식](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [데이터 형식 매핑](../../odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md)

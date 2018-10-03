@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29a8577ee503668dd3bae72441155abc5977073a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b424c87993de202f0164a1e407cda5a203bed6d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284209"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159795"
 ---
 # <a name="mining-structure-columns"></a>마이닝 구조 열
   마이닝 구조를 만들 때 외부 데이터 열을 선택한 다음 데이터가 모델링에 사용되는 방법을 지정하여 마이닝 구조의 열을 정의합니다. 따라서 마이닝 구조 열이 데이터 원본의 데이터 복사본보다 많으며 마이닝 구조 열에 따라 원본 데이터가 마이닝 모델에 사용되는 방법이 정의됩니다. 데이터를 분할하는 방법을 결정하는 속성과 데이터 값을 분산하는 방법을 설명하는 속성을 할당할 수 있습니다.  

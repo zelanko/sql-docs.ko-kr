@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f74b11b9032285bf45bc8b7705953adf6d58f04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8610024c3eb0b3460883fc5eeddb80f057aff86b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096413"
 ---
 # <a name="holdoutactualsize-element"></a>HoldoutActualSize 요소
   후 처리를 테스트 집합이 들어 있는 홀드 아웃 파티션의 실제 크기를 나타냅니다는 [MiningStructure](../objects/miningstructure-element-assl.md) 요소입니다. 데이터 집합의 나머지 사례는 학습에 사용됩니다. 이 속성은 읽기 전용입니다.  
@@ -55,7 +52,7 @@ ms.locfileid: "37297283"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  에 대 한 값 `HoldoutActualSize` 값에 대 한 원본 데이터에 따라 달라 집니다 [HoldoutMaxCases](holdoutmaxcases-element.md)를 [HoldoutMaxPercent](holdoutmaxpercent-element.md), 및 [HoldoutSeed](holdoutseed-element.md)합니다. 따라서 `HoldoutActualSize`에 대한 값은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 나머지 구조를 처리한 후에 사용할 수 있습니다.  

@@ -1,14 +1,12 @@
 ---
-title: 사용 되지 않은 데이터를 사용 하 여 sql:overflow 검색-필드 (SQLXML 4.0) | Microsoft Docs
+title: 사용 되지 않은 데이터를 사용 하 여 sql:overflow 검색-필드 (SQLXML 4.0) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b22aca6d379a4670cc44de1b07f6e18c8a26d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d07153f80cc1b6dfdc8383e33a8668b63364ad8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190000"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119513"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field를 사용하여 사용되지 않은 데이터 검색(SQLXML 4.0)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석 스키마를 사용하여 데이터베이스에서 데이터를 검색할 때는 `sql:overflow-field` 특성을 지정하여 오버플로 데이터가 저장되어 있는 테이블 열을 식별할 수 있습니다. 합니다 `sql:overflow-field` 특성에 지정할 수 있습니다  **\<요소 >** 합니다.  

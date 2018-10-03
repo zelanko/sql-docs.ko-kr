@@ -6,23 +6,20 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cdd7e27cfba54215f3f2eda52c9132c0b366325
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 96effd7670d22461f6c347c9220f7a3c26b7f611
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088015"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624521"
 ---
 # <a name="project-oriented-offline-database-development"></a>프로젝트 기반 오프라인 데이터베이스 개발
 이 섹션에서는 데이터베이스 프로젝트를 작성, 빌드, 디버깅 및 게시하는 데 사용할 수 있는 SSDT(SQL Server Data Tools)의 기능에 대해 설명합니다.  

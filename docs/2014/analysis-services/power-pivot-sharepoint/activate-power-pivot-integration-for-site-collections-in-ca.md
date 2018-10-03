@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65de843b178d965be7cef17cace971275abba8e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e22c18ef92fbc82401bb9f8294e42971fcdb41c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141683"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>중앙 관리에서 사이트 모음에 대해 PowerPivot 기능 통합 활성화
   기존 팜 설치 옵션을 사용하여 SQL Server SharePoint용 PowerPivot을 설치한 경우 특정 사이트 모음에 대해 PowerPivot 기능 통합을 활성화해야 합니다. 새 서버 옵션을 사용해 SharePoint용 PowerPivot을 설치한 경우에는 SQL Server 설치 프로그램에서 배포를 구성할 때 루트 사이트 모음에 대해 PowerPivot 기능 통합을 이미 활성화했기 때문에 이 태스크를 건너뛰어도 됩니다.  

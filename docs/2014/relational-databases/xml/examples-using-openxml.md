@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b568b8098445a202b638151df729ac17638de09a
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: f08cf0902bb58164957fde69ad49aec8f1d4155c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106893"
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
   이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](specify-metaproperties-in-openxml.md)을 참조하세요.  
@@ -445,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 예를 들어:  
+ 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   다음은 문서의 **Customer** 노드 수를 반환하는 쿼리입니다. WITH 절이 지정되지 않았으므로 OPENXML은 Edge 테이블을 반환합니다. SELECT 문은 Edge 테이블을 쿼리합니다.  
   
@@ -526,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>8. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
- XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들어:  
+ XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 DECLARE @h int  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef26babe0f79bf3343c26748c560b6a7a41ba164
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9a21072b90c0e263e4ac561bdad23aea8f0b1fd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084583"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
   메모리 최적화 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 메모리 최적화 테이블에서 행은 8,060바이트를 초과할 수 없습니다. 메모리 최적화 테이블의 크기를 알면 컴퓨터 메모리가 충분한지 이해하는 데 도움이 됩니다.  
@@ -120,14 +117,14 @@ ms.locfileid: "40392407"
   
  200보다 큰 시간의 경우 테이블에 다음 행이 포함됩니다.  
   
-|속성|City|  
+|이름|City|  
 |----------|----------|  
 |John|베이징|  
 |Jane|프라하|  
   
  그러나 시작 시간이 100인 활성 트랜잭션은 다음 버전의 테이블을 참조합니다.  
   
-|속성|City|  
+|이름|City|  
 |----------|----------|  
 |John|파리|  
 |Jane|프라하|  

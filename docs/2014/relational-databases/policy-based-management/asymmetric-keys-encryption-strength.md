@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbcdda76b13780788550e57211871d1ebbc79fad
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5ae63bcc83ffd43f12c275b373343136d8625a61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142203"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>비대칭 키 암호화의 강도
   이 규칙은 비대칭 키가 1024비트 이상 강도의 암호화를 사용하여 만들어졌는지 검사합니다.  

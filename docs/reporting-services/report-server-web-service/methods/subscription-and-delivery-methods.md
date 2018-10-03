@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - reports [Reporting Services], delivering
 - delivery [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 813611b6ca76ba8b7d4b070f236fdb98590e85b5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c99f34b46a6f809cee76985b3db99a88e46326f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785221"
 ---
 # <a name="subscription-and-delivery-methods"></a>구독 및 배달 메서드
   다음 메서드를 사용하여 카탈로그 항목의 구독 및 배달을 만들고 관리할 수 있습니다.  

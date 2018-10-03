@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 538b54cde0de7a49ff151f2f978346a2d8767317
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9552bd8fac2012ead7359f38776d368b85e0dbd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196673"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>서버 그룹에 Analysis Services 등록
   Analysis Services 서버 인스턴스의 수가 많은 경우 Management Studio에서 서버 그룹을 만들어 서버 관리 작업을 손쉽게 수행할 수 있습니다. 서버 그룹의 용도는 관리 작업 영역 내에서 서로 관련이 있는 서버를 하나의 그룹으로 묶는 데 있습니다. 예를 들어 Analysis Services 인스턴스 10개를 관리하는 업무를 맡았다고 가정해 보겠습니다. 서버 모드, 가동 시간 기준 또는 부서나 영역별로 인스턴스를 그룹화하면 특성이 동일한 인스턴스를 더 쉽게 확인하고 인스턴스에 연결할 수 있습니다. 또한 서버 사용 방식을 쉽게 기억할 수 있도록 설명 정보를 추가할 수 있습니다.  

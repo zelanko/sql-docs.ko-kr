@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYMKEYPROPERTY_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - SYMKEYPROPERTY
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 573bd8a22667add786fa539387c91c2a8a897a69
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 36e608b8167a5cd42a0f7c32035ad822eab461d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786444"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681791"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="return-types"></a>반환 형식  
  **sql_variant**  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  대칭 키에 대한 일부 사용 권한이 필요하며 대칭 키에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다.  
   
 ## <a name="examples"></a>예  

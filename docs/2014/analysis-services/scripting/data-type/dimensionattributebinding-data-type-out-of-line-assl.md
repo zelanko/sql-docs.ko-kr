@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionAttributeBinding Data Type (out-of-line)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DimensionAttributeBinding data type
 ms.assetid: d8ec77a9-749f-4b08-8d56-8b6514a70248
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34e2f45189a92397bd0afcbde2e504fa82d83604
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d649dcfc5070d0c60a2ab3cea421e5c8b0c328b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187090"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197766"
 ---
 # <a name="dimensionattributebinding-data-type-out-of-line-assl"></a>DimensionAttributeBinding 데이터 형식(아웃오브 라인)(ASSL)
   차원에 있는 특성의 아웃오브 라인 바인딩을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -53,13 +50,13 @@ ms.locfileid: "37187090"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[바인딩](binding-data-type-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[AttributeID](../properties/id-element-assl.md), [DatabaseID](../../xmla/xml-elements-properties/id-element-xmla.md)를 [DimensionID](../properties/dimensionid-element-assl.md)를 [KeyColumns](../collections/columns-element-assl.md)를 [NameColumn](../objects/column-element-assl.md), [번역](../collections/translations-element-assl.md)|  
 |파생 요소|[바인딩](../../xmla/xml-elements-properties/binding-element-xmla.md) ([바인딩을](../collections/attributes-element-assl.md) Analysis (XMLA)에 대 한 xml 컬렉션 [일괄 처리](../../xmla/xml-elements-commands/batch-element-xmla.md) 하 고 [프로세스](../../xmla/xml-elements-commands/process-element-xmla.md) 명령)|  
   

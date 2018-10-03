@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed422c1db365ffecbdd405e400c521605d1cf9cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 633bc51ed0ce4c25e30c2fd78ee7845c075cd094
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177033"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services 이전 버전과의 호환성
   이 섹션의 항목에서는  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]버전 간의 변경된 동작에 대해 설명합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37261949"
 |[SQL Server 2014에서에서 사용 되지 않는 Analysis Services 기능](deprecated-analysis-services-features-in-sql-server-2014.md)|이전 버전과의 호환성을 위해 현재 버전에 유지되었지만 나중 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 제거될 기능을 설명합니다.|  
 |[SQL Server 2014에서에서 지원 되지 않는 Analysis Services 기능](discontinued-analysis-services-functionality-in-sql-server-2014.md)|이전 버전의  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 있지만 나중 버전에서 제거된 기능을 설명합니다.|  
 |[SQL Server 2014의에서 기능을 서비스의 주요 변경 내용 분석](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)|이 릴리스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 도입되어 잠재적으로 모델을 손상할 수 있는 코드 변경 내용 또는 이전 버전의 소프트웨어에서 만든 스크립트 또는 사용자 지정 응용 프로그램에 대해 설명합니다.|  
-|[기능의 SQL Server 2014에서에서 Analysis services 동작 변경](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|이 릴리스에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 동작이 다른 기존 기능에 대해 설명합니다. 일반적인 예로 기본값을 새 값이나 다른 값으로 변경, 이전에 허용되던 작업 또는 구성 허용 안 함, 업그레이드 중 손실된 설정 또는 구성을 수동으로 변경하거나 바꾸어야 하는 요구 사항 도입 등을 들 수 있습니다.<br /> 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+|[기능의 SQL Server 2014에서에서 Analysis services 동작 변경](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|이 릴리스에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 동작이 다른 기존 기능에 대해 설명합니다. 일반적인 예로 기본값을 새 값이나 다른 값으로 변경, 이전에 허용되던 작업 또는 구성 허용 안 함, 업그레이드 중 손실된 설정 또는 구성을 수동으로 변경하거나 바꾸어야 하는 요구 사항 도입 등을 들 수 있습니다.<br /> .|  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 및 Business Intelligence의 새로운 기능](what-s-new-in-analysis-services.md)   

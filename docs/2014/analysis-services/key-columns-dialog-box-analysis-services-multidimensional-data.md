@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
 helpviewer_keywords:
 - DataItem Collection dialog box
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fbd5ef14875e11cef4144286d82c2b733f4fa2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049059"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>키 열 대화 상자(Analysis Services - 다차원 데이터)
   **키 열** 대화 상자를 사용하여 특성의 **KeyColumns** 속성을 변경할 수 있습니다. 자세한 내용은 [특성의 KeyColumn 속성 수정](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)을 참조하세요.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52db8610999add505d5aa5e524a2d68b72886ce0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271069"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185083"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트를 관리할 수 있습니다. XEvent 하위 폴더는 SQLSERVER 드라이브 아래에 있습니다. 다음 방법 중 하나를 사용하여 이 폴더에 액세스할 수 있습니다.  

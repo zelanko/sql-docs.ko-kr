@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetUnattendedExecutionAccount method
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 92f925ed208afed519b3a23991d1fa3332c6efd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 159bd5e43a9079fe431d921f8275da7a721b5392
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181693"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>SetUnattendedExecutionAccount 메서드(WMI MSReportServer_ConfigurationSetting)
   무인 모드로 보고서를 실행하는 데 사용되는 계정을 지정합니다.  

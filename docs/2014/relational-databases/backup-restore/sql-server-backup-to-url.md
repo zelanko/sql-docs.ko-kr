@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065123"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
   이 항목에서는 Windows Azure Blob 저장소 서비스를 백업 대상으로 사용하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
@@ -120,7 +117,7 @@ ms.locfileid: "40393928"
   
 -   `RETAINDAYS`와 `EXPIREDATE` 백업 세트 옵션 지정은 지원되지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL- ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL- ‘ https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
   
 ###  <a name="Support"></a> Backup/Restore 문 지원  
   

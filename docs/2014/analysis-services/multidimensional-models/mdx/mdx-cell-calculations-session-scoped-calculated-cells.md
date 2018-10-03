@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1df213e83122d3d93a57c2bbdd131741043ffe7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136463"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>세션 범위 계산 셀 만들기
     

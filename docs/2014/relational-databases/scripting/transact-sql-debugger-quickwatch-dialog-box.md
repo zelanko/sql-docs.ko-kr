@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7810c99c06ed78131a70135f48056c1eeb8b2a6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00f54c136441050a5e6e460e7578789f41a569d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162713"
 ---
 # <a name="quickwatch-dialog-box"></a>간략한 조사식 대화 상자
   **간략한 조사식** 대화 상자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버깅할 때 변수나 매개 변수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식의 데이터 형식 및 값을 빨리 볼 수 있습니다. **조사식** 창에 식을 추가하여 여러 식을 조사할 수도 있습니다.  

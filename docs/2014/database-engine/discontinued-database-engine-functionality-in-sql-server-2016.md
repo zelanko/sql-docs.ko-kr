@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - FASTFIRSTROW hint
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
-caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 648ff85c3061bc7d20408eaae7a14748650e5886
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135293"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37218043"
   
 |범주|지원되지 않는 기능|대체 기능|  
 |--------------|--------------------------|-----------------|  
-|Backup 및 Restore 메서드|**백업 {데이터베이스 &#124; LOG} WITH PASSWORD** 및 **백업 {데이터베이스 &#124; LOG} WITH MEDIAPASSWORD** 은 지원 되지 않습니다. **복원 {데이터베이스 &#124; 로그} [MEDIA] PASSWORD를 사용 하 여**계속 되지 않습니다.|InclusionThresholdSetting|  
+|Backup 및 Restore 메서드|**백업 {데이터베이스 &#124; LOG} WITH PASSWORD** 및 **백업 {데이터베이스 &#124; LOG} WITH MEDIAPASSWORD** 은 지원 되지 않습니다. **복원 {데이터베이스 &#124; 로그} [MEDIA] PASSWORD를 사용 하 여**계속 되지 않습니다.|없음|  
 |Backup 및 Restore 메서드|**RESTORE {DATABASE &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG}...... RESTRICTED_USER를 사용 하 여**|  
 |호환성 수준|호환성 수준 80|데이터베이스를 호환성 수준 90 이상으로 설정해야 합니다.|  
 |구성 옵션|`sp_configure 'user instance timeout'` 및 `'user instances enabled'`|Local Database 기능을 사용합니다. 자세한 내용은 참조 하세요. [SqlLocalDB 유틸리티](../tools/sqllocaldb-utility.md)|  
@@ -73,7 +70,7 @@ ms.locfileid: "37218043"
 |쿼리 힌트|`FASTFIRSTROW` 힌트|`OPTION (FAST` *n* `)`합니다.|  
 |원격 서버|`sp_addserver`를 사용하여 새 원격 서버를 만드는 기능은 더 이상 사용되지 않습니다. 'local' 옵션을 사용한 `sp_addserver`는 계속 사용할 수 있습니다. 업그레이드 중에 보존되었거나 복제로 만들어진 원격 서버는 사용할 수 있습니다.|연결된 서버를 사용하여 원격 서버를 대체합니다.|  
 |보안|`sp_dropalias`|별칭을 사용자 계정 및 데이터베이스 역할의 조합으로 대체해야 합니다. 사용 하 여 `sp_dropalias` 업그레이드 된 데이터베이스에서 별칭을 제거 합니다.|  
-|보안|버전 매개 변수 **PWDCOMPARE** 로그인 값을 나타내는 이전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000이 이제 중단 됩니다.|InclusionThresholdSetting|  
+|보안|버전 매개 변수 **PWDCOMPARE** 로그인 값을 나타내는 이전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000이 이제 중단 됩니다.|없음|  
 |SMO의 Service Broker 프로그래밍 기능|**Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** 클래스는 더 이상 **Microsoft.SqlServer.Management.Smo.IObjectPermission** 인터페이스를 구현하지 않습니다.||  
 |SET 옵션|`SET DISABLE_DEF_CNST_CHK`|없음|  
 |시스템 테이블|sys.database_principal_aliases|별칭 대신 역할을 사용해야 합니다.|  

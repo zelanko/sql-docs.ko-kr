@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - queries [SQL Server], results
 - aggregate queries [SQL Server]
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d9ee3580f51a866fd7a39a094c5149bc8834420
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6c273146c35ea66dc59a5b088724b6da7b8db338
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180853"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>쿼리 결과 요약(Visual Database Tools)
   집계 쿼리를 만들 때 특정 논리 원칙이 적용됩니다. 예를 들어, 요약 쿼리에서는 개별 행의 내용을 표시할 수 없습니다. 쿼리 및 뷰 디자이너를 사용하면 [다이어그램 창](visual-database-tools.md) 및 [조건 창](criteria-pane-visual-database-tools.md) 의 동작에 따라 이러한 원칙을 준수할 수 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29c01064646de4f80bd11f6a7536d895368b6e52
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: c5411043ae54d4082cd4d1b2c194b48ae9d78b65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34811967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626841"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,12 +54,12 @@ ms.locfileid: "34811967"
   
 |이벤트/작업|확장 이벤트|SQL Server 프로파일러|Distributed Replay|시스템 모니터|작업 모니터|Transact-SQL|오류 로그|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|추세 분석|예|예||예||||  
+|추세 분석|사용자 계정 컨트롤|예||사용자 계정 컨트롤||||  
 |캡처한 이벤트 재생||예(단일 컴퓨터에서)|예(여러 컴퓨터에서)|||||  
-|임시 모니터링||예|||예|예|예|  
-|경고 생성||||예||||  
-|그래픽 인터페이스|예|예||예|예||예|  
-|사용자 지정 응용 프로그램에서 사용|예|예*||||예||  
+|임시 모니터링||사용자 계정 컨트롤|||예|예|사용자 계정 컨트롤|  
+|경고 생성||||사용자 계정 컨트롤||||  
+|그래픽 인터페이스|사용자 계정 컨트롤|예||예|예||사용자 계정 컨트롤|  
+|사용자 지정 응용 프로그램에서 사용|사용자 계정 컨트롤|예*||||사용자 계정 컨트롤||  
   
  * [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 시스템 저장 프로시저 사용  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data definition language [SQL Server]
 - DDL statements [SQL Server]
 - DML triggers, removing DDL operations
 ms.assetid: e49ba7d5-787f-4052-b985-b699195d982b
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5963a4e51a5bb7e8a78206f02513388dae8f85be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe6aa8c12e6132fa44380158585bd13a7c313548
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188233"
 ---
 # <a name="remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers"></a>DML 트리거 내부의 inserted 및 deleted 테이블에 대한 DDL 작업을 제거합니다.
   CREATE INDEX와 같은 데이터 정의 언어 (DDL) 문, DML 트리거 내부의 inserted 및 deleted 테이블에서 수행할 수 없습니다. 그러나 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 inserted 및 deleted 테이블에 대해 일부 DDL 문이 허용됩니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "inserted 및 deleted 테이블 사용"을 참조하십시오.  

@@ -5,25 +5,22 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - full-text catalogs [SQL Server], database mirroring
 - catalogs [SQL Server], database mirroring
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
-caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81473b303657b6cec10ae1640830e9ea367a644c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 5df730b72c6adc7f13fd2770e88654934e7753ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656721"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>데이터베이스 미러링 및 전체 텍스트 카탈로그(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

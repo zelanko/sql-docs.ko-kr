@@ -1,12 +1,10 @@
 ---
-title: 프로시저 | Microsoft Docs
+title: 프로시저 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - statements [ODBC], stored procedures
 - ODBC applications, stored procedures
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0dc145646ea93081301b20f8e04fb5840bed78a8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f429edc79227c815142dd0800363fcde8f20c6f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158964"
 ---
 # <a name="procedures"></a>절차
   저장 프로시저란 하나 이상의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 포함하는 미리 컴파일된 실행 개체입니다. 저장 프로시저는 입/출력 매개 변수를 가질 수 있으며 정수 반환 코드를 반환할 수도 있습니다. 응용 프로그램에서는 카탈로그 함수를 사용하여 사용 가능한 저장 프로시저를 열거할 수 있습니다.  

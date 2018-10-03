@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 55
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082803"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>다차원 model 데이터베이스(SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 역할의 모음입니다. 필요에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 데이터 마이닝 구조 및 데이터베이스에 사용자 정의 기능을 추가하기 위한 방법을 제공하는 사용자 지정 어셈블리가 포함될 수 있습니다.  

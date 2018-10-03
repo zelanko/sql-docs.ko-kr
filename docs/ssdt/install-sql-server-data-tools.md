@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.package.stub
 ms.assetid: 6f8616cb-9119-42c3-a9b1-936e088763e7
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2df3214ce5ae02e4feb076f77e66b153c4d2abdb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3a847748b0f0025402da1feb794f5c441ea2a3f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088025"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773571"
 ---
 # <a name="install-sql-server-data-tools"></a>SQL Server Data Tools 설치
 이 항목에서는 SQL Server Data Tools 설치 방법을 설명합니다. SQL Server Data Tools 다운로드 페이지([최신 SQL Server Data Tools 설치](http://go.microsoft.com/fwlink/?LinkID=616714))에서 SQL Server Data Tools로 업데이트할 수 있습니다.  

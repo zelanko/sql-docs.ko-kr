@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b28ce6368f6158ad8630010a113268dcad9e2b7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7cf922fb0182c2905ac855daef0f90cd80ddf55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173683"
 ---
 # <a name="test-an-action"></a>동작 테스트
   큐브 디자이너의 브라우저 보기를 사용하여 동작을 테스트합니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후에 동작을 테스트하려면 먼저 큐브를 처리해야 합니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  

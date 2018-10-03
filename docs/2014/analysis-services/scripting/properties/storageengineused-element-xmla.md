@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StorageEngineUsed Element
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d90cf84fec5d2a8dedc889cae096a5b414a1eb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197883"
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 요소(XMLA)
   현재 데이터베이스 유형에 대해 설명하는 읽기 전용 값을 포함합니다.  
@@ -72,7 +69,7 @@ ms.locfileid: "37203964"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -80,7 +77,7 @@ ms.locfileid: "37203964"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[database](../objects/database-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

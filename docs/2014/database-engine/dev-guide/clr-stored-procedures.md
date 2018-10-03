@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -22,22 +20,21 @@ helpviewer_keywords:
 - output parameters [CLR integration]
 - tabular results
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
-caps.latest.revision: 74
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db6d1dd298cba3960189c3983ab9d4781113d569
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0949b6fddf1755da48dd7922a4fbda50d4b2787
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112053"
 ---
 # <a name="clr-stored-procedures"></a>CLR 저장 프로시저
   저장 프로시저는 스칼라 식에서 사용할 수 없는 루틴입니다. 스칼라 함수와 달리 저장 프로시저는 테이블 형식의 결과와 메시지를 클라이언트에 반환하고 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문을 호출하고 출력 매개 변수를 반환할 수 있습니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../../relational-databases/clr-integration/clr-integration-overview.md)합니다.  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>CLR 저장 프로시저에 대한 요구 사항  
- CLR (공용 언어 런타임), 저장된 프로시저의 클래스에 공용 정적 메서드로 구현 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리입니다. 정적 메서드는 void로 선언되거나 정수 값을 반환할 수 있습니다. 정적 메서드가 정수 값을 반환하는 경우 반환되는 정수는 프로시저의 반환 코드로 취급됩니다. 예를 들어:  
+ CLR (공용 언어 런타임), 저장된 프로시저의 클래스에 공용 정적 메서드로 구현 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리입니다. 정적 메서드는 void로 선언되거나 정수 값을 반환할 수 있습니다. 정적 메서드가 정수 값을 반환하는 경우 반환되는 정수는 프로시저의 반환 코드로 취급됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -153,7 +150,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  `SqlPipe.Send(string)`를 사용하여 메시지를 클라이언트 응용 프로그램에 보낼 수 있습니다. 메시지 텍스트는 8000자로 제한되며 8000자를 초과하면 잘립니다.  
   
 ###### <a name="returning-tabular-results"></a>테이블 형식 결과 반환  
- 쿼리 결과를 직접 클라이언트로 보내려면 `Execute` 메서드 오버로드 중 하나를 `SqlPipe` 개체에 사용합니다. 이 방법이 결과 집합을 가장 효율적으로 클라이언트에 반환하는 방법입니다. 그 이유는 데이터가 관리되는 메모리에 복사되지 않고 네트워크 버퍼로 전송되기 때문입니다. 예를 들어:  
+ 쿼리 결과를 직접 클라이언트로 보내려면 `Execute` 메서드 오버로드 중 하나를 `SqlPipe` 개체에 사용합니다. 이 방법이 결과 집합을 가장 효율적으로 클라이언트에 반환하는 방법입니다. 그 이유는 데이터가 관리되는 메모리에 복사되지 않고 네트워크 버퍼로 전송되기 때문입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  [C#]  
   

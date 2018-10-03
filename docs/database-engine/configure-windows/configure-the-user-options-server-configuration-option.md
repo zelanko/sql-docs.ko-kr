@@ -5,25 +5,22 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b355563ee256302279575440b6cf59ef5c0c9c3b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c5f451036360acdbf2b986b84d5631af75386d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670171"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "32868608"
   
 -   다음 표에서는 **user options**에 따른 구성 값을 나열하고 설명합니다. 모든 구성 값은 서로 호환 됩니다. 예를 들어 ANSI_NULL_DFLT_ON 및 ANSI_NULL_DFLT_OFF는 동시에 설정할 수 없습니다.  
   
-    |값|Configuration|Description|  
+    |값|Configuration|설명|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|중간 또는 지연된 제약 조건 검사를 제어합니다.|  
     |2|IMPLICIT_TRANSACTIONS|dblib 네트워크 라이브러리 연결의 경우 문 실행 시 트랜잭션을 암시적으로 시작할지 여부를 제어합니다. IMPLICIT_TRANSACTIONS 설정은 ODBC 또는 OLEDB 연결에 영향을 주지 않습니다.|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3bbf97217d94ffa128b8cba59e3cec51d34d6c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec0b3ead95fe196f75b003d2fd844bbf2520ced9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092513"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  

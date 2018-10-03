@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.scatterplot.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1015e87db60ba8d7aaac41292f0253cfe7cc3b25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5369cadb43cd49bc8dfa045282e5716d0dd04744
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189023"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>데이터 뷰어 구성(산점도 탭)
   **데이터 뷰어 구성** 대화 상자의 **산점도(x,y)** 탭을 사용하여 서로에 대해 표시할 두 열을 지정할 수 있습니다. 분산형 차트는 두 숫자 열의 데이터 값을 서로에 대해 표시합니다. 각 데이터 레코드는 산점도의 한 점으로 표시됩니다. 차트는 한 버퍼의 내용만 반영합니다.  

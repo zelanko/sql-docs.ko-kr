@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calculations [Analysis Services], creating
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5fb0e877f6eb37811f141579f2ef25a716d95a68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7f71384b89be479d8388e4af8e897f384f2b141
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198703"
 ---
 # <a name="calculations-in-multidimensional-models"></a>다차원 모델의 계산
   큐브 디자이너의 **계산** 탭을 사용하여 계산 멤버, 명명된 집합 및 기타 MDX(Multidimensional Expression) 계산을 만들 수 있습니다.  

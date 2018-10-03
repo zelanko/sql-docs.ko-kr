@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160703"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 키를 사용하여 데이터, 자격 증명 및 서버 데이터베이스에 저장된 연결 정보의 보안을 유지할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 *대칭* 과 *비대칭*등, 두 종류의 키가 있습니다. 대칭 키는 동일한 암호를 사용하여 데이터를 암호화하고 해독합니다. 비대칭 키는 한 암호를 사용하여 데이터를 암호화하고( *공개* 키라고 함) 다른 암호를 사용하여 데이터를 해독합니다( *개인* 키라고 함).  

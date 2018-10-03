@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding attributes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - attributes [Analysis Services], adding
 - manual attribute creation [Analysis Services]
 ms.assetid: 25826ba1-2b38-4b34-bd3a-7eba116093ae
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25bbd679cd27aafd2fb71986aac1991556b3c890
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c45184e5be13193dc8b77924bc05debdc1911361
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189665"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>차원에 특성 추가
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자동으로 또는 수동으로 차원에 특성을 추가할 수 있습니다.  

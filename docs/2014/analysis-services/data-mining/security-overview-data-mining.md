@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d7432450357e77875695983f65661f0e645c7a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85a208cdc973cf4e54bb0a68020182d41eb798f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149623"
 ---
 # <a name="security-overview-data-mining"></a>보안 개요(데이터 마이닝)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 보안은 여러 수준에서 설정해야 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 보안은 여러 수준에서 설정해야 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
   
 ##  <a name="bkmk_Architecture"></a> 보안 아키텍처  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 액세스 인증에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 인증을 사용하는 방법을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스의 기본 보안 아키텍처에 대한 자세한 내용은 다음 리소스를 참조하십시오.  
