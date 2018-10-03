@@ -5,34 +5,31 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af6a98b3e1a7848fa242dfceb890c472e1d16f74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817681"
 ---
 # <a name="outer-join-escape-sequence"></a>외부 조인 이스케이프 시퀀스
-ODBC는 외부 조인에 대 한 이스케이프 시퀀스를 사용 합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
+ODBC는 외부 조인 이스케이프 시퀀스를 사용합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
   
 ```  
 {oj outer-join}  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  BNF 표기법의 구문은 다음과 같습니다.  
   
  *ODBC 외부-조인-이스케이프* :: =  
@@ -53,4 +50,4 @@ ODBC는 외부 조인에 대 한 이스케이프 시퀀스를 사용 합니다. 
   
  *ODBC esc 종결자* :: =}  
   
- 이 문의 부분 사용할 수를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_OJ_CAPABILITIES 정보 유형을 사용 합니다. 외부 조인에 대 한 *검색 조건* 간에 지정 된 조인 조건에만 있어야 합니다. *테이블 이름*합니다.
+ 이 문은 부분 지를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_OJ_CAPABILITIES 정보 형식을 사용 하 여 합니다. 외부 조인을 *검색 조건을* 간에 지정 된 조인 조건에만 있어야 합니다. *테이블 이름*합니다.

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.is.upgradewizard.ssisupgradewizard.f1
@@ -18,16 +16,15 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0595f04bd99e2cab2ef71694d170392fd505b76
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829491"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 패키지 업그레이드 마법사 F1 도움말
   SSIS 패키지 업그레이드 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](으)로 만든 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 현재 릴리스에 대한 패키지 형식으로 업그레이드할 수 있습니다.  
@@ -38,7 +35,7 @@ ms.locfileid: "35329187"
 
 ## <a name="ssis-upgrade-wizard"></a>SSIS 업그레이드 마법사
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이 페이지를 다시 표시 안 함**  
  다음에 마법사를 열 때 시작 페이지를 표시하지 않습니다.  
  
@@ -145,7 +142,7 @@ ms.locfileid: "35329187"
   
 -   [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **새 공급자 이름을 사용하도록 연결 문자열 업데이트**  
  연결 문자열이 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]현재 버전의 다음 공급자에 대해 다음 이름을 사용하도록 업데이트합니다.  
   
@@ -194,7 +191,7 @@ ms.locfileid: "35329187"
 ## <a name="select-packages-page"></a>[패키지 선택] 페이지
   **패키지 선택** 페이지를 사용하여 업그레이드할 패키지를 선택할 수 있습니다. 이 페이지에는 마법사의 **원본 위치 선택** 페이지에서 지정한 위치에 저장된 패키지가 나열됩니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **기존 패키지 이름**  
  업그레이드할 하나 이상의 패키지를 선택합니다.  
   
@@ -213,14 +210,14 @@ ms.locfileid: "35329187"
 ## <a name="complete-the-wizard-page"></a>[마법사 완료] 페이지
   **마법사 완료** 페이지를 사용하여 선택한 패키지 업그레이드 옵션을 검토하고 확인할 수 있습니다. 이는 뒤로 돌아가 이 마법사 세션의 옵션을 변경할 수 있는 마지막 마법사 페이지입니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **옵션 요약**  
  마법사에서 선택한 업그레이드 옵션을 검토합니다. 옵션을 변경하려면 **뒤로** 를 클릭하여 이전 마법사 페이지로 돌아갑니다.
  
 ## <a name="upgrading-the-packages-page"></a>[패키지 업그레이드] 페이지
   **패키지 업그레이드** 페이지를 사용하여 패키지 업그레이드의 진행률을 보고 업그레이드 프로세스를 중단할 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사는 선택된 패키지를 하나씩 업그레이드합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **메시지 창**  
  업그레이드 프로세스 중 진행 메시지 및 요약 정보를 표시합니다.  
   

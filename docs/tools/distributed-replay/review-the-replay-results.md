@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bf4c08dee623e659e04e3be97f8e015daa57aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073960"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822211"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ ms.locfileid: "33073960"
 ## <a name="column-descriptions-for-result-trace"></a>결과 추적의 열에 대한 설명  
  다음 표에서는 결과 추적 데이터의 열에 대해 설명합니다.  
   
-|데이터 열 이름|데이터 형식|Description|열 ID|  
+|데이터 열 이름|데이터 형식|설명|열 ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|이벤트 클래스의 이름입니다.|1|  
 |EventSequence|**bigint**|공급자 오류 및 내부 오류와 경고의 경우 오류나 경고에 해당하는 캡처 이벤트 순서입니다.<br /><br /> 다른 모든 이벤트 클래스의 경우 원래 추적 데이터의 이벤트 순서입니다.|2|  

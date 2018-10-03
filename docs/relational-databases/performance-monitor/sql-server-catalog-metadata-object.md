@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Catalog Metadata
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
-caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 484dc0c7be3b7ca67c3645e6b8f088839d4bf631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f92f446ebd8d3f8efdd2c3ff8e62ec46c55b60a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826041"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, 카탈로그 메타데이터 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32950508"
 다음 표에서는 SQL Server **Catalog Metadata** 성능 개체에 대해 설명합니다.
 
 
-|**SQL Server 카탈로그 메타데이터 카운터**|Description|  
+|**SQL Server 카탈로그 메타데이터 카운터**|설명|  
 |-------------|-----------------|  
 |**Cache Entries Count**|카탈로그 메타데이터 캐시의 항목 수입니다.|
 |**Cache Entries Pinned Count**|고정된 카탈로그 메타데이터 캐시 항목의 수입니다.|

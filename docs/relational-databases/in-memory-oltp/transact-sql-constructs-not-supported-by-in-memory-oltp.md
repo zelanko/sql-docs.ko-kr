@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f2a22884910fc6686a957a43af53cd40dcf3ada
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8ca94f7ef5ed0c6f070424c47aee10c7848a061d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822451"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,8 +66,7 @@ ms.locfileid: "43063895"
 |기능|EVENT NOTIFICATION|해당 DLL 작업에 대한 서버 또는 데이터베이스 이벤트 알림이 있는 경우 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저를 만들거나 삭제할 수 없습니다. CREATE TABLE 또는 DROP TABLE과 CREATE PROCEDURE 또는 DROP PROCEDURE에 대한 서버 및 데이터베이스 이벤트 알림을 제거합니다.|  
 |기능|FileTable|메모리 액세스에 최적화된 테이블을 파일 테이블로 만들 수 없습니다. **AS FileTable** 문에서 **CREATE TABLE** 인수를 제거합니다.|  
 |연산|기본 키 열의 업데이트|메모리 최적화 테이블의 기본 키 열과 테이블 형식을 업데이트할 수 없습니다. 기본 키를 업데이트해야 하는 경우 기존 열을 삭제하고 업데이트된 기본 키가 있는 새 열을 삽입합니다.|  
-|연산|CREATE  INDEX|
-            **CREATE TABLE** 문 또는 **ALTER TABLE** 문을 사용하여 메모리 최적화 테이블의 인덱스를 인라인으로 지정해야 합니다.|  
+|연산|CREATE  INDEX|**CREATE TABLE** 문 또는 **ALTER TABLE** 문을 사용하여 메모리 최적화 테이블의 인덱스를 인라인으로 지정해야 합니다.|  
 |연산|CREATE FULLTEXT INDEX|전체 텍스트 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다.|  
 |연산|스키마 변경|메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저는 특정 스키마 변경을 지원하지 않습니다.<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상: ALTER TABLE, ALTER PROCEDURE 및 sp_rename 작업이 지원됩니다. 예를 들어 확장된 속성 추가와 같은 다른 스키마 변경은 지원되지 않습니다.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE 및 ALTER PROCEDURE 작업은 지원됩니다. sp_rename을 포함한 다른 스키마 변경은 지원되지 않습니다.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: 스키마 변경은 지원되지 않습니다. 메모리 최적화 테이블 또는 고유하게 컴파일된 저장 프로시저의 정의를 변경하려면 먼저 개체를 삭제한 후 원하는 정의로 다시 만듭니다.| 
 |연산|TRUNCATE TABLE|TRUNCATE 작업은 메모리 최적화 테이블에서 지원되지 않습니다. 테이블에서 모든 행을 제거하려면 **DELETE FROM***table*을 사용하여 모든 행을 삭제하거나 테이블을 삭제하고 다시 만듭니다.|  

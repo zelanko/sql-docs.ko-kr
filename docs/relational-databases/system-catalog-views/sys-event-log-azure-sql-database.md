@@ -5,9 +5,6 @@ ms.date: 06/10/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: ''
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - event_log
@@ -24,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e6433496d1807317cfa2591dc453d6115f2a7cc
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 29ef6eaf427a0ab8ee2a3b040f2a4255079eecdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826351"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "44089969"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들어:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 이벤트에 대 한 **End_time** 은 항상 정확 하 게 5 분 이상 해당 **start_time** 같은 행에 있습니다. 집계 되지 않는 이벤트에 대 한 **start_time** 하 고 **end_time** 실제 UTC 날짜 및 이벤트의 시간과 같습니다.|  
 |**event_category**|**nvarchar(64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 가능한 값 목록은 합니다.|  
 |**event_type**|**nvarchar(64)**|이벤트의 유형입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 가능한 값 목록은 합니다.|  

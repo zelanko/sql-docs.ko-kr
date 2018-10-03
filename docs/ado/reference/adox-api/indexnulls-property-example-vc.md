@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a401cd927223e38a21ce496ed771cd0e56248635
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f83c87cc62ddbdd7fa7019595e5f7aeeed9a43b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836001"
 ---
-# <a name="indexnulls-property-example-vc"></a>IndexNulls 속성 예제 (VC + +)
-이 예제에서는 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드에서는 새 인덱스를 만들고의 값을 설정 **IndexNulls** 사용자 입력에 기반 합니다. 그런 다음 **인덱스** 에 추가 되는 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반는 **직원** 테이블 및 **레코드 집합** 열릴 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블와는 **Null** 인덱싱된 필드의 값입니다. 설정에 따라이 새 레코드의 표시 여부는 **IndexNulls** 속성입니다.  
+# <a name="indexnulls-property-example-vc"></a>IndexNulls 속성 예제(VC++)
+이 예제에서는 합니다 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 새 인덱스를 만들고 값을 설정 **IndexNulls** 사용자 입력을 기반으로 합니다. 그런 다음, **인덱스** 에 추가 됩니다 합니다 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반으로 **직원** 테이블 및 **레코드 집합** 열려 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블을 사용 하 여를 **Null** 인덱싱된 필드의 값입니다. 설정에 따라 새 레코드가 표시 되는지 여부를 **IndexNulls** 속성입니다.  
   
 ```  
 // BeignIndexNullCpp.cpp  

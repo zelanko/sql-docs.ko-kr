@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73c5e698ecebee93e6b78d884b0b2978750db63e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275692"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828751"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
-**ADOStreamConstruction** 인터페이스 사용 하는 ADO 생성 **스트림** OLE DB에서 개체 **IStream** C/c + + 응용 프로그램의 개체입니다.  
+합니다 **ADOStreamConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **Stream** OLE DB 개체 **IStream** C/c + + 응용 프로그램에서 개체입니다.  
   
 ## <a name="properties"></a>속성  
   
 |||  
 |-|-|  
-|[Stream 속성](../../../ado/reference/ado-api/stream-property.md)|읽기/쓰기입니다. 가져오기/설정 OLE DB **스트림** 개체입니다.|  
+|[Stream 속성](../../../ado/reference/ado-api/stream-property.md)|읽기/쓰기입니다. OLE DB를 가져오거나 **Stream** 개체입니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -42,16 +39,16 @@ ms.locfileid: "35275692"
  없음  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB를 제공 **IStream** 개체 (`pStream`), ADO의 생성 **스트림** 개체 (`adoStr`) 다음 세 가지 기본 작업입니다.  
+ OLE DB를 제공 **IStream** 개체 (`pStream`), ADO 생성 **Stream** 개체 (`adoStr`) 다음 세 가지 기본 작업에 금액:  
   
-1.  ADO 만들기 **스트림** 개체:  
+1.  ADO를 만듭니다 **Stream** 개체:  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  쿼리는 **IADOStreamConstruction** 에 대 한 인터페이스는 **스트림** 개체:  
+2.  쿼리는 **IADOStreamConstruction** 에 대 한 인터페이스를 **Stream** 개체:  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -59,7 +56,7 @@ ms.locfileid: "35275692"
                          (void**)&adoStrConstruct);  
     ```  
   
- 호출 된 `IADOStreamConstruction::get_Stream` 속성은 OLE DB를 설정 하는 방법은 **IStream** ADO 개체 **스트림** 개체:  
+ 호출 된 `IADOStreamConstruction::get_Stream` OLE DB를 설정 하려면 속성 메서드 **IStream** ADO 개체 **Stream** 개체:  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -67,10 +64,10 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- 결과 `adoStr` 개체는 이제 ADO 나타냅니다 **스트림** OLE DB에서 생성 된 개체 **IStream** 개체입니다.  
+ 결과 `adoStr` 개체에는 이제 ADO 나타냅니다 **Stream** OLE DB에서 생성 된 개체 **IStream** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **버전:** ADO 2.0 또는 최신 버전  
+ **버전:** ADO 2.0 이상 버전  
   
  **라이브러리:** msado15.dll  
   

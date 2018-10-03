@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-f1
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: ''
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b97950c37c5cff52f049253bbd85a60d5373d724
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ff61f3f69b5ce5c73a96d6f9c06141e5bd17f75a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839391"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +39,7 @@ Windows Azure 계정에 대해 다음 정보를 지정한 후 **다음** 을 클
 
 2.  **계정 키** - 지정한 저장소 계정의 계정 키를 지정합니다.  
   
-3.  **보안 끝점 사용(HTTPS)** – 이 옵션은 암호화된 통신 및 네트워크 웹 서버의 보안 ID를 사용합니다.  
+3.  **보안 엔드포인트 사용(HTTPS)** – 이 옵션은 암호화된 통신 및 네트워크 웹 서버의 보안 ID를 사용합니다.  
   
 4.  **계정 키 저장** - 이 옵션은 암호화된 파일에 암호를 저장합니다.  
   

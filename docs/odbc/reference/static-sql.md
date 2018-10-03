@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - static SQL [ODBC]
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - embedded SQL [ODBC]
 - SQL [ODBC], static SQL
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff2144ae69c48098324bc0b97ca9c33d5159adc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849141"
 ---
 # <a name="static-sql"></a>정적 SQL
-에 표시 된 포함 된 SQL [포함 된 SQL 예제](../../odbc/reference/embedded-sql-example.md) 정적 SQL 라고 합니다. 프로그램의 SQL 문에 정적; 정적 SQL 라고 즉, 프로그램 실행 될 때마다를 변경 하지 마십시오. 이전 섹션에서 설명한 대로 이러한 문은 프로그램의 나머지를 컴파일할 때 컴파일됩니다.  
+Embedded SQL 에서처럼 [Embedded SQL 예제](../../odbc/reference/embedded-sql-example.md) 정적 SQL 이라고 합니다. 프로그램에서 SQL 문은 정적; 때문에 정적 SQL 라고 즉, 프로그램이 실행 될 때마다를 변경 하지 마십시오. 이전 섹션에서 설명한 대로, 프로그램의 나머지 부분을 컴파일하면 이러한 문이 컴파일됩니다.  
   
- 정적 SQL 다양 한 상황에서 잘 작동 하 고 프로그램 디자인 타임에 확인할 수는 데이터 액세스를 모든 응용 프로그램에서 사용할 수 있습니다. 예를 들어 주문 입력 프로그램 항상는 동일한 문을 사용 하 여 새 주문을 삽입 하 고 항공권 예약 시스템에서 예약을 사용할 수 있는 한 라이선스 상태를 변경 하려면 항상 동일한 문에서 사용 합니다. 호스트 변수를 사용 하 여 일반화는 이러한 각 문은 판매 주문에 다른 값을 삽입할 수 및 다른 사용자를 예약할 수 있습니다. 이러한 문의 프로그램에 하드 코드 될 수 있습니다, 때문에 이러한 프로그램은 문을 구문 분석, 유효성을 검사 하 고 컴파일 시간에 한 번만 최적화 하는 장점이 많습니다. 이 인해 상대적으로 속도가 빠른 코드입니다.
+ 정적 SQL 다양 한 상황에서 잘 작동 하 고는 데이터 액세스를 확인할 수 있습니다 프로그램 디자인 타임에 응용 프로그램에서 사용할 수 있습니다. 예를 들어, 주문 입력 프로그램 항상를 동일한 문을 사용 하 여 새 주문을 삽입 하 고는 항공편 예약 시스템에서 예약을 사용할 수는 사용자의 상태를 변경 하려면 동일한 문에서 항상 사용 합니다. 호스트 변수를 사용 하 여 일반화는 이러한 각 문은 판매 주문에 다른 값을 삽입할 수 있습니다 하 고 다른 사용자를 예약할 수 있습니다. 이러한 문의 일 수 있으므로 프로그램에 하드 코드 된 이러한 프로그램 문을 구문 분석, 유효성을 검사 하 고 컴파일 시간에 한 번만 최적화 해야 하는 장점이 있습니다. 이 인해 비교적 빠른 코드입니다.
