@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLSetConfigMode
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58cb5aabecfbccb3d8a2133f2d48e198e0fba0ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d520a84d45e3552f5e260778b5cacf2ac91f05a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654383"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 함수
 **규칙**  
- ODBC 3.0 도입 된 버전:  
+ ODBC 3.0 버전에 도입 되었습니다.  
   
  **요약**  
- **SQLSetConfigMode** 시스템 정보에 DSN 값을 나열 하는 Odbc.ini 항목 인지를 나타내는 구성 모드를 설정 합니다.  
+ **SQLSetConfigMode** DSN 값을 나열 하는 Odbc.ini 항목은 시스템 정보에서 위치를 지정 하는 구성 모드를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,24 +53,24 @@ BOOL SQLSetConfigMode(
  ODBC_BOTH_DSN  
   
 ## <a name="returns"></a>반환 값  
- 함수는 실패 한 경우, FALSE 실패할 경우 TRUE를 반환 합니다.  
+ 함수가 성공적 이면 FALSE 실패 한 경우 TRUE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLSetConfigMode** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **SQLSetConfigMode** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|잘못 된 매개 변수 순서|*wConfigMode* ODBC_USER_DSN, ODBC_SYSTEM_DSN, 또는 ODBC_BOTH_DSN 인수를 포함 하지 않았습니다.|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|잘못 된 매개 변수 순서|합니다 *wConfigMode* ODBC_USER_DSN, ODBC_SYSTEM_DSN, 또는 ODBC_BOTH_DSN 인수 포함 되지 않았습니다.|  
   
-## <a name="comments"></a>설명  
- 이 함수는 DSN 값을 나열 하는 Odbc.ini 항목 시스템 정보에 있는 설정에 사용 됩니다. 경우 *wConfigMode* ODBC_USER_DSN, DSN은 DSN이 사용자 이며 HKEY_CURRENT_USER에 Odbc.ini 항목에서 함수를 읽습니다. ODBC_SYSTEM_DSN 이면 DSN은 시스템 DSN 고 함수 Odbc.ini 항목 HKEY_LOCAL_MACHINE에서 읽습니다. ODBC_BOTH_DSN 이면 HKEY_CURRENT_USER 시도 되 면 하 고 실패 한 경우 HKEY_LOCAL_MACHINE 사용 됩니다.  
+## <a name="comments"></a>주석  
+ 이 함수는 시스템 정보에 DSN 값을 나열 하는 Odbc.ini 항목 인 설정에 사용 됩니다. 하는 경우 *wConfigMode* ODBC_USER_DSN, DSN 사용자 DSN 이며 함수는 Odbc.ini 항목 HKEY_CURRENT_USER에서 읽습니다. ODBC_SYSTEM_DSN 인 경우 DSN은 시스템 DSN 및 함수는 Odbc.ini 항목 HKEY_LOCAL_MACHINE에서 읽습니다. HKEY_CURRENT_USER 시도할 ODBC_BOTH_DSN 이면 하 고 실패 한 경우 HKEY_LOCAL_MACHINE 사용 됩니다.  
   
- 이 함수에 영향을 주지 않는 **SQLCreateDataSource** 및 **SQLDriverConnect**합니다. 구성 모드에는 드라이버를 호출 하 여 레지스트리에서 읽을 때 서비스에서 설정할 **SQLGetPrivateProfileString** 호출 하 여 레지스트리에 씁니다 또는 **SQLWritePrivateProfileString**합니다. 에 대 한 호출이 **SQLGetPrivateProfileString** 및 **SQLWritePrivateProfileString** 구성 모드를 사용 하 여에서 작동 하도록 레지스트리의 어느 부분에 알아야 합니다.  
+ 이 함수에 영향을 주지 않습니다 **SQLCreateDataSource** 하 고 **SQLDriverConnect**합니다. 구성 모드에 드라이버를 호출 하 여 레지스트리에서 읽을 때 설정할 **SQLGetPrivateProfileString** 하거나 호출 하 여 레지스트리에 씁니다 **SQLWritePrivateProfileString**합니다. 에 대 한 호출 **SQLGetPrivateProfileString** 하 고 **SQLWritePrivateProfileString** 구성 모드를 사용 하 여 어느 부분에서 작동 하도록 레지스트리를 알아야 합니다.  
   
 > [!CAUTION]  
->  **SQLSetConfigMode** ODBC 설치 제대로 작동 하지 않을 수 있습니다는 모드가 설정 잘못 되어 있으면 필요한 경우에 호출 해야 합니다.  
+>  **SQLSetConfigMode** ODBC 설치 관리자를 제대로 작동 하지 못할 수 있습니다 때 필요한; 모드를 설정한 부적절 하 게 하는 경우에 호출 해야 합니다.  
   
- **SQLSetConfigMode** 을 선택 하면 구성 모드의 레지스트리를 직접 수정 합니다. 이 구성 모드를 호출 하 여 수정 프로세스와는 별도로 **SQLConfigDataSource**합니다. 에 대 한 호출 **SQLConfigDataSource** DSN을 수정할 때 사용자 및 시스템 Dsn을 구별 하는 구성 모드를 설정 합니다. 를 반환 하기 전에 **SQLConfigDataSource** 구성 모드 BOTHDSN을 기본값으로 다시 설정 합니다.  
+ **SQLSetConfigMode** 구성 모드의 직접 레지스트리를 수정 하면 됩니다. 호출 하 여 구성 모드를 수정 하는 프로세스와는 별도로 이것이 **SQLConfigDataSource**합니다. 에 대 한 호출 **SQLConfigDataSource** DSN을 수정 하는 경우 사용자 및 시스템 Dsn을 구분 하기 위해 구성 모드를 설정 합니다. 를 반환 하기 전에 **SQLConfigDataSource** BOTHDSN 구성 모드를 다시 설정 합니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   

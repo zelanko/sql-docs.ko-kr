@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2492568dc6e9e62dc3db2ffb914495015e714880
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5c16f76e086dfc78ffed967ef33300a09630a798
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616601"
 ---
-# <a name="definedsize-property-example-vc"></a>DefinedSize 속성 예제 (VC + +)
-이 예제에서는 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 코드의 FirstName 열 크기를 다시 정의 됩니다는 **직원** 목차는 *Northwind* 데이터베이스입니다. 그런 다음는 FirstName의 값에 변경 내용을 [필드](../../../ado/reference/ado-api/field-object.md) 의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 따라는 **직원** 테이블이 표시 됩니다. 기본적으로 FirstName 필드는 공백으로 채워집니다 다시 정의 하면 후 참고는 **DefinedSize** 속성입니다.  
+# <a name="definedsize-property-example-vc"></a>DefinedSize 속성 예제(VC++)
+이 예제에서는 합니다 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 코드의 FirstName 열 크기를 다시 정의 됩니다 합니다 **직원** 목차 합니다 *Northwind* 데이터베이스입니다. 그런 다음는 FirstName의 값을 변경 [필드](../../../ado/reference/ado-api/field-object.md) 의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반으로 **직원** 테이블이 표시 됩니다. 기본적으로 FirstName 필드 됩니다 공백으로 채워집니다 재정의 하면 후 확인 합니다 **DefinedSize** 속성입니다.  
   
 ```  
 // BeginDefinedSizeCpp.cpp  

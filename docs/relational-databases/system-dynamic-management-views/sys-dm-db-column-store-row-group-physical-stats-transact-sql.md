@@ -5,9 +5,7 @@ ms.date: 05/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_column_store_row_group_physical_stats_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - dm_db_column_store_row_group_physical_stats
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 487d58a3254a9f7af22a661c363cb639a6fde384
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cbc4b71c75eab2699bccd5f83f68a621b4ea1fc4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624181"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.locfileid: "43089764"
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 분할 된 테이블에는이 파티션 내에서 고유 합니다.<br /><br /> 메모리 내 꼬리가-1입니다.|  
 |**delta_store_hobt_id**|**bigint**|델타 저장소에 행 그룹은 hobt_id 합니다.<br /><br /> 행 그룹 델타 저장소에 없는 경우 NULL입니다.<br /><br /> 메모리 내 테이블의 꼬리에 대 한 NULL입니다.|  
 |**state**|**tinyint**|연결 된 ID 번호 *state_description*합니다.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = 열기<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 삭제 표시<br /><br /> 압축은 메모리 내 테이블에 적용 되는 유일한 상태 이기 때문입니다.|  
-|**state_desc**|**nvarchar(60)**|행 그룹 상태 설명:<br /><br /> 빌드되는 보이지 않는 – A 행 그룹입니다. 예를 들어: <br />Columnstore에서 행 그룹 데이터를 압축 하는 동안 표시 되지 됩니다. 압축에는 메타 데이터 스위치 변경 완료 되 면 columnstore 행의 상태에서 그룹을 보이지 않는 압축, 및 삭제 표시 "에서" deltastore 행 그룹의 상태.<br /><br /> OPEN – 새 행을 수락 하는 deltastore 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> CLOSED – 행의 최대 수를 포함 하 고 columnstore로 압축할 tuple mover 프로세스에 대 한 기다리고 있는 델타 저장소에 행 그룹입니다.<br /><br /> COMPRESSED – columnstore 압축으로 압축 되 고 columnstore에 저장 되는 행 그룹입니다.<br /><br /> TOMBSTONE –는 deltastore에 있는 이전의 이며 더 이상 행 그룹을 사용 합니다.|  
+|**state_desc**|**nvarchar(60)**|행 그룹 상태 설명:<br /><br /> 빌드되는 보이지 않는 – A 행 그룹입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. <br />Columnstore에서 행 그룹 데이터를 압축 하는 동안 표시 되지 됩니다. 압축에는 메타 데이터 스위치 변경 완료 되 면 columnstore 행의 상태에서 그룹을 보이지 않는 압축, 및 삭제 표시 "에서" deltastore 행 그룹의 상태.<br /><br /> OPEN – 새 행을 수락 하는 deltastore 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> CLOSED – 행의 최대 수를 포함 하 고 columnstore로 압축할 tuple mover 프로세스에 대 한 기다리고 있는 델타 저장소에 행 그룹입니다.<br /><br /> COMPRESSED – columnstore 압축으로 압축 되 고 columnstore에 저장 되는 행 그룹입니다.<br /><br /> TOMBSTONE –는 deltastore에 있는 이전의 이며 더 이상 행 그룹을 사용 합니다.|  
 |**total_rows**|**bigint**|행 그룹에 저장 된 실제 행 수입니다. 압축 된 행 그룹에 대 한 삭제 된 행으로 표시 된 포함 됩니다.|  
 |**deleted_rows**|**bigint**|삭제 표시 되는 압축 된 행 그룹에 물리적으로 저장 하는 행 수입니다.<br /><br /> 델타 저장소에 있는 행 그룹에 대 한 0입니다.|  
 |**size_in_bytes**|**bigint**|이 행 그룹의 모든 페이지를 바이트 단위로 결합 된 크기입니다. 이 크기는 메타 데이터 또는 공유 사전 제외를 저장 하는 데 필요한 크기로 포함 되지 않습니다.|  

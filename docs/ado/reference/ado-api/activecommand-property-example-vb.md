@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30e70c09826344db57ea9152447d2d197bb33ef7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617151"
 ---
-# <a name="activecommand-property-example-vb"></a>ActiveCommand 속성 예제 (VB)
-이 예제에서는 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성입니다.  
+# <a name="activecommand-property-example-vb"></a>ActiveCommand 속성 예제(VB)
+이 예제에서는 합니다 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성입니다.  
   
- 서브루틴 제공할지는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 **ActiveCommand** 속성을 사용 하는 명령 텍스트 및 매개 변수를 만든 표시는 **레코드 집합**합니다.  
+ 서브루틴을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다 **ActiveCommand** 속성은 명령 텍스트와 생성 매개 변수를 표시 하려면 사용 합니다 **레코드 집합**합니다.  
   
 ```  
 'BeginActiveCommandVB  
@@ -94,11 +91,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint** 루틴만 제공 됩니다는 **레코드 집합** 명령 텍스트 및 매개 변수를 만든 인쇄 해야 아직 개체는 **레코드 집합**합니다. 때문에이 수행할 수 있습니다는 **레코드 집합** 개체의 **ActiveCommand** 속성 관련 된 생성 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
+ 합니다 **ActiveCommandXprint** 루틴만 지정 하는 **레코드 집합** 명령 텍스트 및 생성 매개 변수를 인쇄 해야 하지만 개체를 **레코드 집합**합니다. 때문에이 수행할 수 있습니다 합니다 **레코드 집합** 개체의 **ActiveCommand** 연결 된 속성 생성 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
   
- **명령** 개체의 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 속성을 만든 매개 변수가 있는 명령이 생성 된 **레코드 집합**합니다. **명령** 개체의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 명령의 매개 변수 자리 표시자에 대 한 대체 된 값을 생성 하는 컬렉션 ("**?**").  
+ **명령** 개체의 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 속성에는 생성 매개 변수가 있는 명령을 생성 합니다 **레코드 집합**합니다. 합니다 **명령** 개체의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 명령의 매개 변수 자리 표시자에 대 한 대체 된 값을 생성 하는 컬렉션 ("**?**").  
   
- 마지막으로 오류 메시지 또는 만든이의 이름 및 ID 인쇄 됩니다.  
+ 마지막으로 오류 메시지 또는 작성자의 이름 및 ID 출력 됩니다.  
   
 ```  
 'BeginActiveCommandPrintVB  
@@ -126,5 +123,5 @@ End Sub
   
 ## <a name="see-also"></a>관련 항목  
  [ActiveCommand 속성 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

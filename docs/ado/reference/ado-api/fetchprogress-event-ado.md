@@ -1,13 +1,11 @@
 ---
-title: FetchProgress 이벤트 (ADO) | Microsoft Docs
+title: Fetchprogress 및 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - FetchProgress event [ADO]
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 88f5fafb3bc6f4a244d642c0ca18204977a79161
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682165"
 ---
-# <a name="fetchprogress-event-ado"></a>FetchProgress 이벤트 (ADO)
-**FetchProgress**이벤트에 현재으로 가져온 더 많은 행의 수를 보고 하기 위해 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+# <a name="fetchprogress-event-ado"></a>FetchProgress 및(ADO)
+합니다 **FetchProgress**이벤트에 현재으로 가져온 보다 많은 행을 보고 하려면 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 됩니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,22 +36,22 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
   
 #### <a name="parameters"></a>매개 변수  
  *진행률*  
- A **긴** 현재 반입 작업을 통해 검색 된 레코드의 수를 나타내는 값입니다.  
+ A **긴** 인출 작업에서 현재 검색 된 레코드의 수를 나타내는 값입니다.  
   
  *MaxProgress*  
- A **긴** 레코드의 최대 수를 나타내는 값을 검색할 필요 합니다.  
+ A **긴** 검색할 레코드의 최대 수를 나타내는 값이 필요 합니다.  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다.  
   
  *pRecordset*  
- A **레코드 집합** 레코드는 가져온 개체입니다.  
+ A **레코드 집합** 레코드는 검색 되는 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하는 경우 **FetchProgress** 자식이 있는 **레코드 집합**, 알아야 하는 *진행률* 및 *MaxProgress* 매개 변수 값에서 파생 된 기본 [커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 행 집합입니다. 반환 되는 값은 현재 장의 레코드 수가 뿐 아니라 원본 행 집합에 있는 레코드의 총 수를 나타냅니다.  
+ 사용 하는 경우 **FetchProgress** 자식이 있는 **레코드 집합**를 주의 하는 합니다 *진행률* 및 *MaxProgress* 매개 변수 값에서 파생 됩니다 기본 [커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 행 집합입니다. 반환 되는 값에는 현재 챕터에 레코드의 수 뿐만 아니라 기본 행 집합의 레코드 총 수를 나타냅니다.  
   
 > [!NOTE]
->  사용 하도록 **FetchProgress** 와 Microsoft Visual Basic, Visual Basic 6.0 이상이 필요 합니다.  
+>  사용 하도록 **FetchProgress** with Microsoft Visual Basic, Visual Basic 6.0 이상가 필요 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
