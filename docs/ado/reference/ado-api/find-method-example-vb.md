@@ -1,32 +1,29 @@
 ---
-title: 메서드 예제 (VB) 찾기 | Microsoft Docs
+title: Find 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f4b1bea33cc861f1746fdc2af3fe58e0df77773
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e7e2d3c0c306cf9004f42b7d58beb160e8180516
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615621"
 ---
-# <a name="find-method-example-vb"></a>(VB) 메서드 예제 찾기
-사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾고의 비즈니스 이름 수를 계산 하는 메서드는 ***Pubs*** 데이터베이스입니다. 이 예제에서는 기본 공급자와 비슷한 기능을 지원 하지 않습니다 가정 합니다.  
+# <a name="find-method-example-vb"></a>Find 메서드 예제(VB)
+이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾아에서 직함의 수를 계산 하는 메서드를 ***Pubs*** 데이터베이스. 기본 공급자와 유사한 기능을 지원 하지 않습니다 하는 것을 전제로 합니다.  
   
 ```  
 'BeginFindVB  

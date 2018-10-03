@@ -5,34 +5,31 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909778"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618981"
 ---
 # <a name="column-wise-binding"></a>열 단위 바인딩
-열 단위 바인딩을 사용할 때 응용 프로그램 하나 또는 두 개 또는 경우에 따라 배열이 세, 데이터 반환 되는 각 열에 바인딩합니다. 첫 번째 배열을 데이터 값을 보유 하 고 두 번째 배열 길이/표시기 버퍼를 저장 합니다. 표시기 및 길이 값에에서 저장할 수 별도 버퍼 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드; 있는 다른 값을 설정 하 여 이 도구를 실행 하는 경우 세 번째 배열이 바인딩되어 있습니다. 각 배열 행 집합의 행이 더 많은 요소를 포함 합니다.  
+열 단위 바인딩을 사용 하는 경우 응용 프로그램, 세 개의 배열에 하나 또는 두 개 또는 일부 경우에는 반환 될 데이터는 각 열에 바인딩합니다. 첫 번째 배열을 데이터 값을 보유 하 고 두 번째 배열 길이/표시기 버퍼 저장 키를 누릅니다. 표시기 및 길이 값은 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드를 다른 값을 설정 하 여 별도 버퍼에 저장할 있습니다. 이 작업을 세 번째 배열 바인딩되어 있습니다. 각 배열에는 행 집합의 행이 있는 만큼의 요소가 포함 됩니다.  
   
- 응용 프로그램 SQL_ATTR_ROW_BIND_TYPE 문 특성을 가진 열 단위 바인딩을 사용 함을 선언 버퍼 설정 매개 변수 대신 행 집합 버퍼에 대 한 바인딩 종류를 결정 합니다. 드라이버는 연속 된 각 배열의 요소에 각 행에 대 한 데이터를 반환합니다. 다음 그림에서는 어떻게 열 단위 바인딩의 작동 보여 줍니다.  
+ 응용 프로그램 SQL_ATTR_ROW_BIND_TYPE 문 특성을 사용 하 여 열 단위 바인딩을 사용 함을 선언 대신 매개 변수 행 집합 버퍼에 대 한 바인딩 형식을 결정 하는 버퍼를 설정 합니다. 드라이버는 각 연속 요소에 각 행에 대 한 데이터를 반환합니다. 다음 그림에서는 어떻게 열 단위 바인딩의 작동 보여 줍니다.  
   
  ![열&#45;세 열의 열 단위 바인딩](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- 예를 들어 다음 코드 OrderID, 영업 사원, 및 상태 열에 10 개 요소 배열에 바인딩합니다.  
+ 예를 들어, 다음 코드는 요소가 10 개인 배열을 OrderID, SalesPerson 및 상태 열에 바인딩합니다.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

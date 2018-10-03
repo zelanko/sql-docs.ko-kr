@@ -1,14 +1,11 @@
 ---
-title: sp_msx_set_account (Transact SQL) | Microsoft Docs
+title: sp_msx_set_account (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_set_account
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_set_account
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d776a7ad3d29c180a4a2d2b017f5e1e6d0158a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249425"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627941"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +41,10 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
   
 ## <a name="arguments"></a>인수  
  [  **@credential_name=** ] **'***credential_name***'**  
- 마스터 서버에 로그인하는 데 사용할 자격 증명의 이름입니다. 제공된 이름은 기존 자격 증명의 이름이어야 합니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
+ 마스터 서버에 로그인하는 데 사용할 자격 증명의 이름입니다. 제공된 이름은 기존 자격 증명의 이름이어야 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
   
  [ **@credential_id=** ] *credential_id*  
- 마스터 서버에 로그인하는 데 사용할 자격 증명의 식별자입니다. 식별자는 기존 자격 증명의 식별자여야 합니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
+ 마스터 서버에 로그인하는 데 사용할 자격 증명의 식별자입니다. 식별자는 기존 자격 증명의 식별자여야 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,13 +52,13 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 자격 증명을 사용하여 대상 서버가 마스터 서버에 로그인하는 데 사용하는 사용자 이름 및 암호 정보를 저장합니다. 이 프로시저는 이 대상 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 마스터 서버에 로그인하는 데 사용하는 자격 증명을 설정합니다.  
   
- 지정된 자격 증명은 기존 자격 증명이어야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 참조 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)합니다.  
+ 지정된 자격 증명은 기존 자격 증명이어야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
- 실행 권한은 **sp_msx_set_account** 기본의 멤버에 게는 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 실행 권한은 **sp_msx_set_account** 기본의 멤버에는 **sysadmin** 고정된 서버 역할입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 서버가 `MsxAccount` 자격 증명을 사용하여 마스터 서버에 로그인하도록 설정합니다.  
@@ -75,8 +71,8 @@ EXECUTE dbo.sp_msx_set_account @credential_name = MsxAccount ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server 에이전트 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_get_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   

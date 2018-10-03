@@ -6,37 +6,34 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625290"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>충돌 감지 및 해결
-직접 실행 모드에서 레코드 집합으로 처리 하는 경우 훨씬 더 적은 동시성 문제가 발생할 가능성이 있습니다. 반면에 응용 프로그램에서 일괄 업데이트 모드를 사용 하는 경우 있을 수 있습니다 좋은 변경 동일한 레코드를 편집 하는 다른 사용자가 수행한 변경 내용을 저장 하기 전에 사용자 레코드를 변경 합니다. 이 경우 응용 프로그램을 정상적으로 충돌을 처리 합니다. 마지막 사용자에 대 한 업데이트는 서버에 보내도록 "알고리즘이 적용 됩니다." 내리 세요 수 있습니다. 또는 가장 최근 사용자가 업데이트 우선 그 제공 두 개의 충돌 하는 값 중 하나를 선택 하 여 결정을 할 수 있습니다.  
+직접 실행 모드에서는 레코드 집합을 사용 하 여 처리 하는 경우 동시성 문제가 발생할 가능성이 낮아집니다 있습니다. 반면에 응용 프로그램 일괄 업데이트 모드를 사용 하는 경우 있을 잘 변경 동일한 레코드를 편집 하는 다른 사용자가 수행한 변경 내용을 저장 하기 전에 하나의 사용자 레코드를 변경 됩니다. 이러한 경우 응용 프로그램을 정상적으로 충돌을 처리 해야 합니다. 마지막으로 서버에 업데이트를 보내는 사용자 "알고리즘이 적용 됩니다." 내리 세요 수도 있습니다. 또는 가장 최근 사용자가 결정 업데이트 충돌 하는 두 값 중에서 선택 사항이 제공 하 여 보다 우선적으로 적용 해야 하는 것이 좋습니다.  
   
- 어느 경우에 든 ADO 이러한 충돌 유형을 처리 하도록 필드 개체의 UnderlyingValue 및 OriginalValue 속성을 제공 합니다. 조합 하 여 이러한 속성을 사용 하 여 Resync 메서드 및 레코드 집합의 필터 속성을 사용 합니다.  
+ 경우에 든 ADO는 이러한 유형의 충돌을 처리 하는 필드 개체의 OriginalValue 및 UnderlyingValue 속성을 제공 합니다. Resync 메서드 및 레코드 집합의 속성 필터 조합 하 여 이러한 속성을 사용 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- ADO가 일괄 처리 업데이트를 사용 하는 동안 충돌을 발견 경고 Errors 컬렉션에 추가 됩니다. 따라서 항상 확인 해야 오류에 대 한 직후 BatchUpdate를를 호출 하 고, 찾을 경우 충돌이 발생 가정 테스트를 시작 합니다. 레코드 집합에 대 한 같음 adFilterConflictingRecords에 Filter 속성을 설정 하는 첫 번째 단계가입니다. 충돌 하는 레코드를 레코드 집합에서 보기를 제한 합니다. RecordCount 속성이이 단계는 0 일 이면 충돌이 이외의 방법으로 오류 발생 알 수 있습니다.  
+ ADO에서 일괄 처리 업데이트를 사용 하는 동안 충돌이 발생을 하는 경우 경고를 오류 컬렉션에 추가 됩니다. 따라서 항상 확인 해야 오류에 대 한 직후 BatchUpdate, 호출 하 고, 경우 충돌이 발생 한 가정을 테스트를 시작 합니다. 첫 번째 단계에서 레코드 집합에 대 한 같음 adFilterConflictingRecords 필터 속성을 설정 하는 것입니다. 이 충돌 하는 레코드를 레코드 집합에서 보기를 제한 합니다. RecordCount 속성이이 단계를 수행한 후 0 인 경우 충돌이 아닌 오류 발생 알 수 있습니다.  
   
- BatchUpdate를 호출 하는 경우 ADO 및 공급자를 생성 하는 SQL 문을 데이터 원본에서 업데이트를 수행 합니다. 특정 데이터 원본 제한에 열 유형의 WHERE 절에 사용할 있습니다 한지 기억 합니다.  
+ BatchUpdate를 호출 하는 경우 ADO 및 공급자는 데이터 원본에서 업데이트를 수행 하는 SQL 문을 생성 합니다. 특정 데이터 원본 제한 사항은 열의 형식을 사용할 수는 WHERE 절에 있는 것을 기억 합니다.  
   
- 다음으로 AffectRecords 인수 adAffectGroup와 adResyncUnderlyingValues 동일 하 게 설정 ResyncValues 인수 설정 레코드 집합에서 Resync 메서드를 호출 합니다. Resync 메서드는 기본 데이터베이스에서 현재 레코드 집합 개체의에서 데이터를 업데이트합니다. AdAffectGroup를 사용 하 여 데이터베이스와 현재 필터 충돌 하는 레코드만 즉, 설정으로 표시 되는 레코드는 재 동기화를 보장 됩니다. 큰 레코드 집합으로 처리 하는 경우 상당한 성능 차이가 없습니다. UnderlyingValue 속성 데이터베이스에서 (충돌) 값을 포함 하는, Value 속성에서 사용자가 입력 한 값을 유지 관리할 확인을 설정 하 여 ResyncValues 인수 adResyncUnderlyingValues를 재 동기화를 호출 하는 경우 및 OriginalValue 속성 (만들어진 마지막 성공한 UpdateBatch 호출 되기 전의 값) 필드에 대 한 원래 값을 포함 됩니다. 다음 충돌을 프로그래밍 방식으로 해결 또는 사용자가 사용 되는 값을 선택 하려면 이러한 값을 사용할 수 있습니다.  
+ 다음으로, AffectRecords 인수 설정 adAffectGroup adResyncUnderlyingValues 같음 설정 ResyncValues 인수를 사용 하 여 레코드 집합에는 다시 동기화 메서드를 호출 합니다. Resync 메서드는 기본 데이터베이스에서 현재 레코드 집합 개체의 데이터를 업데이트합니다. AdAffectGroup를 사용 하 여 데이터베이스를 사용 하 여 충돌 하는 레코드만, 설정을 현재 필터를 사용 하 여 표시 되는 레코드는 재 동기화를 보장 됩니다. 큰 레코드 집합을 사용 하 여 처리 하는 경우 상당한 성능 차이가 수 없습니다. ResyncValues 인수 adResyncUnderlyingValues 다시 동기화를 호출할 때로 설정 하면 Value 속성은 사용자가 입력 한 값을 유지 관리 하는, UnderlyingValue 속성 데이터베이스에서 (충돌) 값을 포함 하 고 OriginalValue 속성 (마지막으로 성공한 UpdateBatch 호출이 이루어진 전의 값) 필드에 대 한 원래 값을 포함 됩니다. 그런 다음 프로그래밍 방식으로 충돌을 해결 하거나 사용자가 사용 되는 값을 선택 해야 이러한 값을 사용할 수 있습니다.  
   
- 이 방법은 다음 코드 예제에 표시 됩니다. 이 예제는 인위적 UpdateBatch가 호출 되기 전에 원본 테이블에 값을 변경 하려면 별도 레코드 집합을 사용 하 여 충돌을 만듭니다.  
+ 이 기술은 다음 코드 예제에 표시 됩니다. 인위적 UpdateBatch 호출 되기 전에 기본 테이블의 값을 변경 하려면 별도 레코드 집합을 사용 하 여 충돌을 만듭니다.  
   
 ```  
 'BeginConflicts  
@@ -115,9 +112,9 @@ ms.locfileid: "35270612"
 'EndConflicts  
 ```  
   
- 어떤 유형의 충돌이 발생 확인 하려면 현재 레코드 또는 특정 필드의 Status 속성을 사용할 수 있습니다.  
+ 어떤 종류의 충돌 발생을 확인 하려면 특정 필드 또는 현재 레코드의 상태 속성을 사용할 수 있습니다.  
   
- 오류 처리에 대 한 자세한 내용은 참조 하십시오. [의 오류 처리](../../../ado/guide/data/error-handling.md)합니다.  
+ 오류 처리에 대 한 자세한 내용은 [오류 처리](../../../ado/guide/data/error-handling.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)

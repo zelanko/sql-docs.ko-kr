@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8d199301be727faa3013100ba17bd340ed4661
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631321"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 및 모드 속성 예제 (VB)
-사용 하 여이 예제는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 단독 연결을 열려면 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 수행 하는 트랜잭션은 다른 트랜잭션의 격리에서 엽니다.  
+이 예제에서는 합니다 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 전용 연결을 여는 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 다른 트랜잭션의 격리 된 상태에서 수행 하는 트랜잭션을 열지 속성.  
   
 ```  
 'BeginIsolationLevelVB  

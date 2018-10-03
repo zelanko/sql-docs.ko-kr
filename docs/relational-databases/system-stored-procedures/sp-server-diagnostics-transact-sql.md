@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644701"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**creation_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
 |**component_type**|**sysname**|행에 대 한 정보를 포함 하는지 여부를 나타냅니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 합니다.<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 이벤트<br /><br /> *\<가용성 그룹의 이름 >*|  
-|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
 |**data**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
   

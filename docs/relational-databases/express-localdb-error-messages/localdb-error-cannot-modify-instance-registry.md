@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6bbaecd7cec42ceb85cde27ae7283b48ec0393b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 103d4f7b00702ca1af4f2f42e7b9d4ac5f1d4573
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326444"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618211"
 ---
 # <a name="localdberrorcannotmodifyinstanceregistry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |||  
 |-|-|  

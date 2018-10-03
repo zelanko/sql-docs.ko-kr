@@ -1,34 +1,31 @@
 ---
-title: 예제에서는 불일치 (VC + +) | Microsoft Docs
+title: CompareBookmarks 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ff4ae1e6314f1ed72dd73ec25eef0b3261906f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639281"
 ---
-# <a name="comparebookmarks-method-example-vc"></a>예제에서는 불일치 (VC + +)
-이 예제에서는 [불일치](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드. 책갈피의 상대 값은 특정 책갈피는 어떤 방식으로든 특별 한 경우가 아니면 필요 하지 않습니다.  
+# <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 메서드 예제(VC++)
+이 예제에서는 합니다 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드. 책갈피의 상대 값은 특정 책갈피를 소유자가 없는 경우 특별 한 경우가 아니면 필요 하지 않습니다.  
   
- 임의 행의 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 파생 된는 ***작성자*** 테이블 검색의 대상으로 합니다. 그런 다음 대상으로 하는 기준으로 각 행의 위치를 표시 합니다.  
+ 임의 행을 지정는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 파생 된 합니다 ***작성자*** 테이블 검색을 대상으로 합니다. 그런 다음 대상으로 하는 기준으로 각 행의 위치를 표시 합니다.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -174,5 +171,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [불일치 메서드 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+ [CompareBookmarks 메서드 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

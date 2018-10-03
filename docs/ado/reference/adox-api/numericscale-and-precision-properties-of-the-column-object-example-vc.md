@@ -1,13 +1,11 @@
 ---
-title: NumericScale 및 열의 예 (VC + +)의 전체 자릿수 속성 | Microsoft Docs
+title: NumericScale 및 Precision 속성 예제 (VC + +) 열을 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Precision property [ADOX], VC++ example
 - NumericScale property [ADOX], VC++ example
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cb5e3c3554d5930f78e688e40ae782864154a1c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 71ecb8c981bafad0bcbc2c53b27140adad9281ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616911"
 ---
-# <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale 및 전체 자릿수이 고 속성 열 개체 예제의 (VC + +)
-이 예제에서는 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [정밀도](../../../ado/reference/adox-api/precision-property-adox.md) 의 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체입니다. 이 코드에 대 한 해당 값이 표시는 **Order Details** 목차는 *Northwind* 데이터베이스입니다.  
+# <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column 개체의 NumericScale 및 Precision 속성 예제(VC++)
+이 예제에서는 합니다 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [정밀도](../../../ado/reference/adox-api/precision-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체. 이 코드에 대 한 해당 값을 표시 합니다 **Order Details** 목차를 *Northwind* 데이터베이스.  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  

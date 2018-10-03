@@ -5,36 +5,33 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeEnv function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeEnv
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe0941bc094efbb4c0d0f0ef348b7d17df760997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c1ab12a975d7b9c0aba77db9af31accac398a16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618991"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv 매핑
-응용 프로그램 호출 하는 경우 **SQLFreeEnv** ODBC 3 *.x* 드라이버에 대 한 호출  
+응용 프로그램을 호출할 때 **SQLFreeEnv** 는 ODBC 3 *.x* 드라이버에 대 한 호출  
   
 ```  
 SQLFreeEnv(henv)   
 ```  
   
- 매핑됩니다.  
+ 매핑되는  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_ENV,Handle)  
 ```  
   
- 와 *처리* 인수에 값으로 설정 *henv*합니다.
+ 사용 하 여 합니다 *처리할* 인수는 값으로 설정 *henv*합니다.

@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a5590adadc1436d616d73b275ad90359b6e64d88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc8849c19adb9e372c0c74d2f213e77ff4e7407d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643031"
 ---
-# <a name="data-migration-settings-mysqltosql"></a>데이터 마이그레이션 설정 (MySQLToSQL)
+# <a name="data-migration-settings-mysqltosql"></a>데이터 마이그레이션 설정(MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>데이터 마이그레이션 설정  
 **데이터 마이그레이션 설정** 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.  

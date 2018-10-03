@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16a13b9051bafa40ed61d1aecce6f5b47cf4a8f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638311"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 프로그래머는 ADO 또는 RDS 이상적인 환경에 게 모든 데이터 소스를 OLE DB 인터페이스를 노출 한 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 점점 더 많은 데이터베이스 공급 업체는 OLE DB 인터페이스를 구현 하지만 일부 데이터 소스는이 이렇게를 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템은 ODBC를 통해 액세스할 수 있습니다.
@@ -204,26 +201,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |메서드|ForwardOnly|Dynamic|Keyset|정적|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|예|예|예|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|예|
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|예|
-|[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
-|[Update](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|사용자 계정 컨트롤|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|사용자 계정 컨트롤|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|사용자 계정 컨트롤|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|사용자 계정 컨트롤|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[Update](../../../ado/reference/ado-api/update-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
 
  * Microsoft Access 데이터베이스에 대 한 지원 되지 않습니다.
 

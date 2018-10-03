@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636911"
 ---
-# <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제 (VC + +)
-사용 하 여이 예제는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성 열을 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 10 개의 가장 비싼 책 제목을 포함 하는 ***타이틀*** 테이블입니다.  
+# <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제(VC++)
+이 예제에서는 합니다 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 를 엽니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 10 개의 가장 비싼 책 제목을 포함 하는 ***제목*** 테이블.  
   
 ## <a name="example"></a>예제  
   
@@ -170,16 +167,16 @@ void PrintComError(_com_error &e) {
 ```  
   
  **가격으로 상위 10 개의 제목:**  
-**하지만 사용자 활용이 편한은 무엇입니까? ---22.95**  
-**컴퓨터 Phobic 및 비 Phobic 개인: 동작의 변형을---21.59**  
-**Onions, Leeks와 마늘: 지중해---20.95의 비밀 요리**  
-**실리콘 밸리---20.00의 암호**  
-**사용 중인 임원의 데이터베이스 가이드---19.99**  
-**컴퓨터---19.99에 대 한 직선 얘기**  
-**실리콘 밸리 Gastronomic 처리---19.99**  
-**장기간된 데이터 Deprivation: 4 개의 사례 연구---19.99**  
+**하지만 사용자 친숙 한이? ---22.95**  
+**컴퓨터 Phobic 및 비 Phobic 개인: 동작 변형---21.59**  
+**Onions, Leeks, 및 마늘: 요리 지중해---20.95의 비밀**  
+**실리콘밸리---20.00의 비밀**  
+**사용 중인 경영진의 데이터베이스 가이드---19.99**  
+**컴퓨터---19.99에 대 한 직접 강연**  
+**실리콘밸리 Gastronomic 처리---19.99**  
+**장기적인된 데이터 Deprivation: 네 가지 사례 연구---19.99**  
 **Sushi, 누구나? ---14.99**  
-**Buckingham 전송 사용---11.95의에서 연도 50 개**   
+**50 년 Buckingham Palace 사용---11.95에**   
 ## <a name="see-also"></a>관련 항목  
  [MaxRecords 속성 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

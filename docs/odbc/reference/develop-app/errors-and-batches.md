@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC], errors
@@ -16,26 +14,25 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - sql_error [ODBC]
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d00672166039421fb8518c52a58d19d73d02d477
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61effe29811cc7a8f6e23cbea127b2f757cc7b0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645941"
 ---
 # <a name="errors-and-batches"></a>오류 및 일괄 처리
-SQL 문의 일괄 처리를 실행 하는 동안 오류가 발생 하는 경우 다음 네 가지 결과 중 하나 작성할 수 있으며 (각 가능한 결과 데이터 원본에 따른 특정 및 일괄 처리에 포함 된 문을에 종속 될 수 있습니다.)  
+SQL 문의 일괄 처리를 실행 하는 동안 오류가 발생 하는 경우 다음 네 가지 결과 중 하나가 있을 수 있습니다. (각 가능한 결과 데이터 소스 관련 및 일괄 처리에 포함 된 문에서 따라 달라질 수 있습니다.)  
   
--   일괄 처리에 문이 없습니다 실행 됩니다.  
+-   일괄 처리에 문이 실행 됩니다.  
   
--   일괄 처리에 문이 없습니다 실행 되 고 트랜잭션이 롤백됩니다.  
+-   일괄 처리에 문이 실행 되 고 트랜잭션이 롤백됩니다.  
   
--   모든 오류 문 앞에 문은 실행 됩니다.  
+-   모든 오류 문 앞에 문을 실행 됩니다.  
   
--   모든 문을 error 문 제외 하 고 실행 됩니다.  
+-   모든 오류 문 제외 하 고 문을 실행 됩니다.  
   
- 처음 두 가지 경우에서 **SQLExecute** 및 **SQLExecDirect** SQL_ERROR를 반환 합니다. 후자의 두 가지 경우에는 구현에 따라 SQL_SUCCESS_WITH_INFO 또는 관계 없이 SQL_SUCCESS를 반환할 수 있습니다. 모든 경우에 추가 오류 정보 수를 검색할 수와 **SQLGetDiagField**, **SQLGetDiagRec**, 또는 **SQLError**합니다. 그러나 특성 및 자세한이이 정보는 데이터 원본에 따른 특정입니다. 또한이 정보가 어렵습니다 오류가 문을 정확 하 게 식별 합니다.
+ 처음 두 경우에 **SQLExecute** 하 고 **SQLExecDirect** SQL_ERROR를 반환 합니다. 후자의 두 가지 경우 구현에 따라 SQL_SUCCESS_WITH_INFO 또는 관계 없이 SQL_SUCCESS를 반환할 수 있습니다. 모든 경우에 추가 오류 정보를 검색할 있습니다 사용 하 여 **SQLGetDiagField**하십시오 **SQLGetDiagRec**, 또는 **SQLError**합니다. 그러나 특성 및이 정보의 깊이 데이터 소스 관련 됩니다. 또한이 정보는 정확 하 게 문이 오류에서를 식별 하는 일을 할 수 없습니다.
