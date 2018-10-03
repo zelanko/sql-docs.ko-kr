@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.permissions.f1
@@ -18,12 +16,12 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0fff329718cd3cc54a186928f78fd20dffe84a92
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123773"
 ---
 # <a name="permissions-or-securables-page"></a>사용 권한 또는 보안 개체 페이지
   **사용 권한** 페이지 또는 **보안 개체** 페이지를 사용하여 보안 개체에 대한 사용 권한을 보거나 설정할 수 있습니다. 이 페이지는 여러 위치에서 열 수 있으며 페이지의 내용은 페이지를 연 방법과 페이지에 포함된 항목에 따라 조금씩 다를 수 있습니다. 페이지가 열릴 때 해당 페이지의 위쪽 표는 채워져 있거나 비어 있을 수 있습니다. 상단 표에 항목을 추가하려면 **검색**을 클릭합니다. 상단 표에서 항목을 선택한 다음 **명시적** 탭에서 적절한 사용 권한을 설정합니다. 집계된 사용 권한을 보려면 **유효** 탭을 사용합니다.  

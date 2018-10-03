@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - READ_WRITE_FILEGROUPS option
 - database backups [SQL Server], about backing up databases
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce00c1a5f5c9e2847c71581828554f2b2abf070d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4213bcee1d17d27bf63da9eb286b21dea4cc5a02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175930"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063813"
 ---
 # <a name="partial-backups-sql-server"></a>부분 백업(SQL Server)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복구 모델은 부분 백업을 지원하므로 이 항목에서는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 그러나 부분 백업은 하나 이상의 읽기 전용 파일 그룹을 포함하는 초대형 데이터베이스를 백업할 경우의 유연성 향상을 위해 단순 복구 모델에서 사용하도록 디자인되었습니다.  

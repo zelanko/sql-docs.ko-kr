@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Setup [Upgrade Advisor]
 - Upgrade Advisor [SQL Server], installing
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83d6e2fce7d4a9f2f5066aa568ecda57fd313efd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e834cb85458b7fd0e265e5077500ebc4dec5f45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095415"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>명령 프롬프트에서 업그레이드 관리자 설치
   설치 마법사를 사용하거나 명령 프롬프트에서 업그레이드 관리자를 설치할 수 있습니다. 명령 프롬프트를 사용하여 무인 및 자동 설치를 수행할 수 있습니다.  

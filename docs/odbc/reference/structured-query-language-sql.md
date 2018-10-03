@@ -5,25 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a32983b1dd4faaa64c09f5ccc773fd4ce78f3533
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 86f9dd843171c02654302694c669f40b6b51ab78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769671"
 ---
 # <a name="structured-query-language-sql"></a>SQL(구조적 쿼리 언어)(Structured Query Language)
 일반적인 DBMS를 사용 하면 저장, 액세스 및 구성 하 고 효율적인 방식으로 데이터를 수정할 수 있습니다. 원래 Dbms의 사용자는 프로그래머에 게 되었습니다. 저장된 된 데이터에 액세스 COBOL 같은 프로그래밍 언어에서 프로그램을 작성 해야 합니다. 이러한 프로그램 비기술적 사용자에 게 친숙 한 인터페이스를 보여 쓴 종종를 잘 알고 있는 프로그래머의 서비스 필요한 데이터 자체에 대 한 액세스. 데이터에 대 한 일반 액세스 실용적인 없습니다.  

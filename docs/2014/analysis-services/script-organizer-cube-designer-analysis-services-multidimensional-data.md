@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.scriptorganizerpane.f1
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82bde6a6773306fb0e90617d82c9198606c3c202
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069193"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>스크립트 구성 도우미(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에 있는 **스크립트 구성 도우미** 창을 사용하여 지정한 큐브에 대한 큐브 스크립트에 포함된 계산 멤버, 명명된 집합 및 스크립트 명령에 액세스하고 다시 정렬할 수 있습니다.  

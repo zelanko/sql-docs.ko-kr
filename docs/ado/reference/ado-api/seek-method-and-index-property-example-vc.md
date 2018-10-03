@@ -1,13 +1,11 @@
 ---
-title: Seek 메서드 및 속성 예제 인덱스 (VC + +) | Microsoft Docs
+title: Seek 메서드 및 인덱스 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95bb888ad6bc57ec6fb29e94237953d86f6b0582
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0c8bfe0781af1bf3ca5dcd4ae642ffb49ef81817
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723001"
 ---
-# <a name="seek-method-and-index-property-example-vc"></a>Seek 메서드 및 속성 예제 인덱스 (VC + +)
-사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성과 함께 주어진 ***직원 ID***, 찾을 수 직원의 이름에는 ***직원*** Nwind.mdb 데이터베이스의 테이블입니다.  
+# <a name="seek-method-and-index-property-example-vc"></a>Seek 메서드 및 인덱스 속성 예제(VC++)
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 와 함께에서 속성을 지정 ***직원 ID***를 찾습니다 직원의 이름에는 ***직원*** Nwind.mdb 데이터베이스의 테이블입니다.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -230,6 +227,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Index 속성](../../../ado/reference/ado-api/index-property.md)   
+ [인덱스 속성](../../../ado/reference/ado-api/index-property.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)

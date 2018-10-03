@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eef420b0581d5b1a2907c0bb0bc1ace05193c39e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 091482cbfc42dabead28ceade0c7840860ae3cc9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394712"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776615"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Sybase용 SSMA 클라이언트 설치(SybaseToSQL)
 SSMA 클라이언트 Sybase 적응형 Server Enterprise (ASE) 데이터베이스 서버 및 인스턴스에 연결 하는 데 사용 되는 프로그램 파일 이루어져 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB, ASE 데이터베이스 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 구문, 로드를 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 및 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQLDB 합니다.  

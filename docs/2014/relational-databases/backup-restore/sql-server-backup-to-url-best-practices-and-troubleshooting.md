@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9347a38b1289afa3150cb5354aa85e16516947b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049024"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
   이 항목에는 SQL Server를 백업하고 Windows Azure Blob 서비스로 복원하는 최상의 방법 및 문제 해결 팁이 포함되어 있습니다.  
@@ -105,7 +102,7 @@ ms.locfileid: "37277079"
   
      백업 문을 다시 시도하는 경우 다음과 같은 오류가 발생하여 백업 작업이 실패할 수 있습니다.  
   
-     **URL 백업 수행 시 원격 끝점에서 예외를 수신했습니다. 예외 메시지: 원격 서버에서 오류를 반환했습니다. (412) 현재 Blob에 임대가 있으며 요청에 임대 ID가 지정되지 않았습니다.**  
+     **URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 원격 서버에서 오류를 반환했습니다. (412) 현재 Blob에 임대가 있으며 요청에 임대 ID가 지정되지 않았습니다.**  
   
      활성 임대가 있는 백업 blob 파일에 대해 복원 문을 시도할 경우 다음과 같은 오류가 발생하여 복원 작업이 실패합니다.  
   
@@ -122,13 +119,13 @@ ms.locfileid: "37277079"
   
 -   작성 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 실패 했습니다: 원격 끝점에서 예외를 수신 하는 URL에 백업 합니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
   
--   파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 오류가 발생했습니다. 원격 끝점에서 오류를 수집할 수 없습니다.  
+-   파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 오류가 발생했습니다. 원격 엔드포인트에서 오류를 수집할 수 없습니다.  
   
      메시지 3013, 수준 16, 상태 1, 줄 2  
   
      백업 데이터베이스가 비정상적으로 종료됩니다.  
   
--   BackupIoRequest::ReportIoError: 백업 장치에 쓰기 실패 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. 운영 체제 오류 URL 백업 수행 시 원격 끝점에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
+-   BackupIoRequest::ReportIoError: 백업 장치에 쓰기 실패 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. 운영 체제 오류 URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
   
  추적 플래그 3051을 사용하여 자세한 로깅을 설정하는 경우 로그에 다음과 같은 메시지도 표시될 수 있습니다.  
   
@@ -136,7 +133,7 @@ ms.locfileid: "37277079"
   
  **기본 프록시 설정이 선택되지 않음:**  
   
- 경우에 따라 기본 설정이 선택되지 않아서 다음과 같은 프록시 인증 오류가 발생합니다. *파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 I/O 오류가 발생했습니다. URL 백업 수행 시 원격 끝점에서 예외를 수신했습니다. 예외 메시지: 원격 서버에서 오류를 반환했습니다. (407)* **프록시 인증 필요**  
+ 경우에 따라 기본 설정이 선택되지 않아서 다음과 같은 프록시 인증 오류가 발생합니다. *파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 I/O 오류가 발생했습니다. URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 원격 서버에서 오류를 반환했습니다. (407)* **프록시 인증 필요**  
   
  이 문제를 해결하려면 다음 단계를 사용하여 URL에 대한 백업 프로세스에서 기본 프록시 설정을 사용하도록 허용하는 구성 파일을 만듭니다.  
   

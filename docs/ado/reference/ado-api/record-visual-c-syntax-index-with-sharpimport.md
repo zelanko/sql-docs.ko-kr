@@ -1,13 +1,11 @@
 ---
-title: '레코드 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
+title: '레코드 (Visual c + + 구문 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - 'Record collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03ec7a636d52ca2da92601acc3d8441500795a09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 05b2ab826fd5afe9b91b3dcfb314af176b1cb9da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645741"
 ---
-# <a name="record-visual-c-syntax-index-with-import"></a>레코드 (Visual c + + 구문 인덱스 #import 사용)
+# <a name="record-visual-c-syntax-index-with-import"></a>레코드 (Visual c + + 구문 인덱스 #import)
 ## <a name="methods"></a>메서드  
   
 ```  

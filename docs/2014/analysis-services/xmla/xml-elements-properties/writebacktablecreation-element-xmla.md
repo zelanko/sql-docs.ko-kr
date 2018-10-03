@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - WritebackTableCreation Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 454ee8dc998fbbebc5a867a29a289bce4ee818be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131493"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 요소(XMLA)
   하는 동안 쓰기 저장 테이블을 만들지 여부를 결정 합니다 [프로세스](../xml-elements-commands/process-element-xmla.md) 작업 합니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37319213"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37319213"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[처리](../xml-elements-commands/process-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Services 인스턴스에서 개체를 사용할 수 있는 처리 옵션에 대 한 자세한 내용은 참조 [다차원 모델 개체 처리](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  

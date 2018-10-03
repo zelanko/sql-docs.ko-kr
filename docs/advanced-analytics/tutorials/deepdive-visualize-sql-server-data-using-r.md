@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 923b8201b6948a93f0994306269c0d3338f54c2d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 0d34ece68c421dbb7aabd845e117c9f07e00d013
+ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202315"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47217518"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>(SQL과 R 심층 분석) R을 사용해 SQL Server 데이터 시각화하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "31202315"
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예제의 `F(numTrans):F(numIntlTrans)`는 `_numTrans` 및 `numIntlTrans` 변수를 각 정숫값에 따라 범주 변수로 처리하는 것을 의미합니다.
+    그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예제의 `F(numTrans):F(numIntlTrans)`는 `numTrans` 및 `numIntlTrans` 변수를 각 정숫값에 따라 범주 변수로 처리하는 것을 의미합니다.
   
     최솟값과 최댓값이 `sqlFraudDS` 데이터 원본에 추가되었으므로(`colInfo` 매개 변수를 사용해), 히스토그램에 자동으로 적용됩니다.
   
@@ -65,7 +65,7 @@ ms.locfileid: "31202315"
        
     하지만 **rxResultsDF** 출력이 훨씬 더 보기 쉬우므로 원본 열의 이름을 유지합니다.
   
-6. 사용 하 여 열 지도 만들려면 다음 코드를 실행 하는 마지막으로 `levelplot` 에서 함수는 **격자** 모든 R 배포에 포함 되어 있는 패키지입니다.
+6. 마지막으로 사용 하 여 열 지도 만들려면 다음 코드를 실행 합니다 `levelplot` 에서 함수를 **격자** 모든 R 배포에 포함 된 패키지입니다.
   
     ```R
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
@@ -77,7 +77,7 @@ ms.locfileid: "31202315"
   
 이런 간단한 분석을 통해서도 거래 수와 국제 거래 수가 증가할수록 사기의 위험이 증가하는 것을 확인할 수 있습니다.
 
-에 대 한 자세한 내용은 **rxCube** 함수와 크로스탭 일반적으로 참조 [RevoScaleR을 사용 하 여 데이터 요약](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)합니다.
+에 대 한 자세한 내용은 합니다 **rxCube** 함수와 크로스탭 일반적으로 볼 수 [RevoScaleR를 사용 하 여 데이터 요약](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)합니다.
 
 ## <a name="next-step"></a>다음 단계
 

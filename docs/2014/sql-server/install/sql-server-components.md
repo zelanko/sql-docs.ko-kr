@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], component list
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
-caps.latest.revision: 41
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 546a9908791972564cd5cf749eb9e189753602c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098659"
 ---
 # <a name="sql-server-components"></a>SQL Server 구성 요소
   있는 로컬 또는 원격 컴퓨터에 대해 업그레이드 관리자 분석 마법사를 실행할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]를 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 합니다. 업그레이드 이전 분석의 첫 번째 단계는 분석을 위한 컴퓨터 및 구성 요소를 식별하는 작업입니다.  

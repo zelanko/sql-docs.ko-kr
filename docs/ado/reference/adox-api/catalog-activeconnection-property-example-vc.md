@@ -1,32 +1,29 @@
 ---
-title: 카탈로그 ActiveConnection 속성 예제 (VC + +) | Microsoft Docs
+title: Catalog ActiveConnection 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c501e7dd74c204c9f126c7dbc8abbb31d71637b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285372"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696792"
 ---
-# <a name="catalog-activeconnection-property-example-vc"></a>카탈로그 ActiveConnection 속성 예제 (VC + +)
-설정의 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성 유효한 열린 연결을 "열립니다" 카탈로그입니다. 열려 있는 카탈로그에서 해당 카탈로그에 포함 된 스키마 개체를 액세스할 수 있습니다.  
+# <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection 속성 예제(VC++)
+설정 된 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성 유효 하 고 열린 연결을 "열립니다" 카탈로그입니다. 열린 카탈로그에서 해당 카탈로그에 포함 된 스키마 개체를 액세스할 수 있습니다.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  

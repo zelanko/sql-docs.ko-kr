@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 172b0f927f7ca25173b86c3b0efb87cef6bcc271
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980335"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678961"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 콘솔 (DB2ToSQL)의 명령줄 옵션
 Microsoft를 실행 하 고 SSMA 작업을 제어 하려면 강력한 명령줄 옵션을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  

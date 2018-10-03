@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123709"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
   **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
@@ -140,7 +137,7 @@ C:\>osql
  명령 종료 문자를 지정합니다. 기본적으로 줄에 GO만 단독으로 입력하면 명령이 종료되어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 보내집니다. 명령 종료 문자를 다시 설정할 때는 앞에 백슬래시를 지정하는지 여부에 상관없이 [!INCLUDE[tsql](../includes/tsql-md.md)] 예약어 또는 운영 체제와 연관된 특별한 의미를 가진 문자를 사용하지 마십시오.  
   
  **-q "** *query* **"**  
- **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 예를 들어:  
+ **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SET table=sys.objects  
@@ -272,13 +269,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어:  
+ EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -306,7 +303,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   상태가 127인 RAISERROR  
   
 > [!NOTE]  
->  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어:  
+>  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 RAISERROR(50001, 10, 127)  

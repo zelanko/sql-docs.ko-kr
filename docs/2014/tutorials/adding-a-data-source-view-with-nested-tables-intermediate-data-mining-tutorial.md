@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e17467d6d3e207456bd525bde4be6183b92c6450
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068043"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>중첩 테이블이 있는 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
   시장 바구니 모델을 만들려면 연관 데이터를 지원하는 데이터 원본 뷰를 사용해야 합니다. 이 데이터 원본 뷰는 시퀀스 클러스터링 시나리오에도 사용됩니다.  
@@ -37,7 +34,7 @@ ms.locfileid: "37244035"
 -   사례 및 중첩 테이블 간에 다 대 일 관계를 지정합니다.  
   
     > [!NOTE]  
-    >  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 사례 테이블과 중첩 테이블 간의 관계를 올바르게 지정하고 모델을 처리할 때 오류를 피하려면 설명된 절차를 정확하게 따르는 것이 중요합니다.  
+    >  . 사례 테이블과 중첩 테이블 간의 관계를 올바르게 지정하고 모델을 처리할 때 오류를 피하려면 설명된 절차를 정확하게 따르는 것이 중요합니다.  
   
 -   모델에서 데이터 열이 사용되는 방법을 정의합니다.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetFlag Method (ServerNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetFlag method
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be1c1ce569ccc68965106950f4371807cc88991e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50bb53b24e9066a05926169bbbfd8b44650e0d6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080883"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag 메서드(ServerNetworkProtocolProperty 클래스)
   참조된 속성의 플래그를 설정합니다.  

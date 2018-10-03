@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7f86328234ab251c50ab4ac68b02bd039b653da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065793"
 ---
 # <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
   또한 (효율적인 데이터 액세스)에 대 한 메모리 최적화 테이블 및 고유 하 게 컴파일된 저장된 프로시저 (에 대 한 효율적인 쿼리 처리 및 비즈니스 논리 실행) [!INCLUDE[hek_2](../includes/hek-2-md.md)] 세 가지 개체가 도입 되었습니다: 메모리 액세스에 최적화 된 테이블 형식입니다. 메모리 최적화 테이블 형식을 사용하여 만든 테이블 변수가 메모리 최적화 테이블 변수입니다.  
@@ -63,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  이 예제에서는 다음 사항을 제외하고 메모리 최적화 테이블 형식의 구문이 디스크 기반 테이블 형식과 비슷함을 보여 줍니다.  
   
--   
-            `MEMORY_OPTIMIZED=ON`은 테이블 형식이 메모리 최적화 형식인지 여부를 나타냅니다.  
+-   `MEMORY_OPTIMIZED=ON`은 테이블 형식이 메모리 최적화 형식인지 여부를 나타냅니다.  
   
 -   이 형식에 적어도 한 개의 인덱스가 있어야 합니다. 메모리 최적화 테이블과 마찬가지로 해시 및 비클러스터형 인덱스를 사용할 수 있습니다.  
   

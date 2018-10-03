@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f3d1db1998e91eedf4ebc8f759550b2088a29d03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139993"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 요소(CSDLBI)
   `EntityType` 요소는 데이터 모델에서 고객 또는 주문과 같은 높은 수준의 엔터티 구조를 나타내는 복합 유형입니다. `bi:EntityType` 요소 확장의 정의 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) 에 사용 합니다 [엔터티 데이터 프레임 워크](/dotnet/framework/data/adonet/ef/overview)합니다.  
@@ -30,16 +27,16 @@ ms.locfileid: "40393288"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 `EntityType` 요소를 정의하는 특성과 해당 요소를 보여 줍니다. 또한 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) 요소의 특성도 살펴봅니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|내용|아니오|가능한 데이터 형식이 열에 포함된 문자열입니다. 값은 데이터 모델에 있는 DimensionAttributeTypeEnumType의 값에서 파생됩니다.<br /><br /> DimensionAttributeTypeEnumType의 값이 'ExtendedType'이면 Contents의 값은 DimensionAttribute의 ExtendedType 요소에서 파생됩니다. 클라이언트는 이러한 값에 응답할 필요가 없습니다.|  
-|DefaultDetails|아니오|테이블의 열 집합을 나타내는 속성 참조의 목록입니다.<br /><br /> 참조 [DefaultDetails 요소 &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md)합니다.|  
-|DefaultImage|아니오|엔터티 이미지가 포함된 열에 대한 참조입니다.<br /><br /> 다차원 모델에서 이 요소는 차원 특성의 이진 특성에 해당합니다. 이 특성이 있으면 요소는 MemberRef 요소를 정확히 한 개 포함해야 합니다.<br /><br /> 참조 [MemberRef 요소 &#40;CSDLBI&#41;](memberref-element-csdlbi.md)합니다.|  
-|DefaultMeasure|아니오|엔터티를 통해 계산할 때 엔터티에서 기본값으로 사용해야 하는 측정값에 대한 참조입니다. 지정하지 않으면 기본값은 SUM입니다.<br /><br /> 참조 [MemberRef 요소 &#40;CSDLBI&#41;](memberref-element-csdlbi.md)합니다.|  
-|DisplayKey|아니오|엔터티 인스턴스의 강력한 고유 식별자를 구성하는 열 또는 역할 End에 대한 참조 목록입니다.<br /><br /> 참조 [DisplayKey 요소 &#40;CSDLBI&#41;](displaykey-element-csdlbi.md)합니다.|  
-|계층|아니오|모델에 있는 계층 목록입니다.<br /><br /> 참조 [Hierarchy 요소 &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)합니다.|  
+|내용|아니요|가능한 데이터 형식이 열에 포함된 문자열입니다. 값은 데이터 모델에 있는 DimensionAttributeTypeEnumType의 값에서 파생됩니다.<br /><br /> DimensionAttributeTypeEnumType의 값이 'ExtendedType'이면 Contents의 값은 DimensionAttribute의 ExtendedType 요소에서 파생됩니다. 클라이언트는 이러한 값에 응답할 필요가 없습니다.|  
+|DefaultDetails|아니요|테이블의 열 집합을 나타내는 속성 참조의 목록입니다.<br /><br /> 참조 [DefaultDetails 요소 &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md)합니다.|  
+|DefaultImage|아니요|엔터티 이미지가 포함된 열에 대한 참조입니다.<br /><br /> 다차원 모델에서 이 요소는 차원 특성의 이진 특성에 해당합니다. 이 특성이 있으면 요소는 MemberRef 요소를 정확히 한 개 포함해야 합니다.<br /><br /> 참조 [MemberRef 요소 &#40;CSDLBI&#41;](memberref-element-csdlbi.md)합니다.|  
+|DefaultMeasure|아니요|엔터티를 통해 계산할 때 엔터티에서 기본값으로 사용해야 하는 측정값에 대한 참조입니다. 지정하지 않으면 기본값은 SUM입니다.<br /><br /> 참조 [MemberRef 요소 &#40;CSDLBI&#41;](memberref-element-csdlbi.md)합니다.|  
+|DisplayKey|아니요|엔터티 인스턴스의 강력한 고유 식별자를 구성하는 열 또는 역할 End에 대한 참조 목록입니다.<br /><br /> 참조 [DisplayKey 요소 &#40;CSDLBI&#41;](displaykey-element-csdlbi.md)합니다.|  
+|계층|아니요|모델에 있는 계층 목록입니다.<br /><br /> 참조 [Hierarchy 요소 &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)합니다.|  
 |ReferenceName|사용자 계정 컨트롤|DAX(Data Analysis Expressions) 쿼리에서 이 엔터티를 참조하는 데 사용할 수 있는 식별자입니다.<br /><br /> 이 특성이 없으면 엔터티의 정규화된 필드 이름이 사용됩니다.|  
-|SortMembers|아니오|정렬할 속성 목록입니다. SortDirection 특성은 순서가 오름차순인지 아니면 내림차순인지를 나타냅니다.|  
+|SortMembers|아니요|정렬할 속성 목록입니다. SortDirection 특성은 순서가 오름차순인지 아니면 내림차순인지를 나타냅니다.|  
   
 ## <a name="contents-element"></a>Contents 요소  
  `Contents` 요소는 엔터티에서 데이터의 형식을 설명하는 단순 유형입니다.  

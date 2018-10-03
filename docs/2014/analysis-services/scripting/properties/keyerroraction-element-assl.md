@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyErrorAction Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyErrorAction element
 ms.assetid: 91fa9f88-b79e-4996-9717-d7ca82b64ddd
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119cf38dc30683c4d1c4fc7edc67c77c8f01e4f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e07c37c43240c2f4fbadf848d80fba8d6a76ef8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140215"
 ---
 # <a name="keyerroraction-element-assl"></a>KeyErrorAction 요소(ASSL)
   동작을 지정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 키에서 오류가 발생할 때.  
@@ -59,7 +56,7 @@ ms.locfileid: "37173534"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

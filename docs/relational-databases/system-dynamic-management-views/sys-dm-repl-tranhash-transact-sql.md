@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_tranhash (Transact SQL) | Microsoft Docs
+title: sys.dm_repl_tranhash (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_tranhash
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_tranhash dynamic management view
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b809a373f2c64a3c8ed8146eb9394a342e5aeca
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7d10d4451071ac476b25fdfef00ab4a48d1c3f63
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736591"
 ---
 # <a name="sysdmrepltranhash-transact-sql"></a>sys.dm_repl_tranhash(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +40,14 @@ ms.locfileid: "34467099"
 |**first_begin_lsn**|**nvarchar(64)**|현재 일괄 처리에서 가장 빠른 시작 LSN(로그 시퀀스 번호)입니다.|  
 |**last_commit_lsn**|**nvarchar(64)**|현재 일괄 처리에서 마지막 커밋 LSN입니다.|  
   
-## <a name="permissions"></a>Permissions  
- 호출 하는 게시 데이터베이스에 대 한 VIEW DATABASE STATE 권한이 필요 **dm_repl_tranhash**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 호출 하려면 게시 데이터베이스에 대 한 VIEW DATABASE STATE 권한이 필요 **dm_repl_tranhash**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  현재 복제 아티클 캐시에 로드되어 있는 복제된 데이터베이스 개체에 대한 정보만 반환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [복제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [복제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - architecture [SQL Server], Database Mail
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40f485a3e75e02c47e1e0c15e1ab47650040b983
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3fea03f3328d2cf19a0f17d4e4339a670b2af9b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132923"
 ---
 # <a name="database-mail"></a>데이터베이스 메일
   데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에서 전자 메일 메시지를 보내는 엔터프라이즈 솔루션입니다. 데이터베이스 메일을 사용하여 데이터베이스 응용 프로그램에서 전자 메일 메시지를 사용자에게 보낼 수 있습니다. 메시지에는 쿼리 결과와 네트워크상의 리소스 파일이 포함될 수 있습니다.  

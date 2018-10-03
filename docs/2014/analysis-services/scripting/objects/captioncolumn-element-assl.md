@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CaptionColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CaptionColumn element
 ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c60ac92841ce35e7b4c00c80da4be4eeed6bd96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc8f782456b47f03ca8a7eab1bf9407020fda3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108993"
 ---
 # <a name="captioncolumn-element-assl"></a>CaptionColumn 요소(ASSL)
   특성의 캡션을 제공하는 열을 정의합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37273349"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37273349"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AttributeTranslation](../data-type/translation-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  에 대 한 자세한 내용은 합니다 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  

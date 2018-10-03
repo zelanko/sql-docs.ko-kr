@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Tuple Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32dc7b75f47acf69a8d16e33bc25ac505b1c9333
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061343"
 ---
 # <a name="tuple-element-xmla"></a>Tuple 요소(XMLA)
   부모 [Tuples](tuples-element-xmla.md) 요소에 포함된 [Member](member-element-xmla.md) 요소의 컬렉션을 포함합니다.  
@@ -53,8 +50,8 @@ ms.locfileid: "37233693"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

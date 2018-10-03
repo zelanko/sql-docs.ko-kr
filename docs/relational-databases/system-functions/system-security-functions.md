@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
-caps.latest.revision: 4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d4651dcea60ef0dcc20b6ef9f0779eb82c8d1dc9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 13523ce92a2e4e97935079c70ef9d0c1aa426c43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748111"
 ---
 # <a name="system-security-functions"></a>시스템 보안 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

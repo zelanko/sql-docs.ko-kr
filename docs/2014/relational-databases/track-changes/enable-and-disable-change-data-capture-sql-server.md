@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e96cb5bb777544b8a3a390eee59a16e0213c857f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebbfd8c66737afb03564dee557757f4406a5c5a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057563"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>변경 데이터 캡처 설정 및 해제(SQL Server)
   이 항목에서는 데이터베이스 및 테이블에서 변경 데이터 캡처를 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
@@ -76,7 +73,7 @@ GO
   
  캡처 인스턴스를 만들 때에는 다음과 같은 옵션을 지정할 수 있습니다.  
   
- `Columns in the source table to be captured`을 참조하세요.  
+ `Columns in the source table to be captured` 을 참조하세요.  
   
  기본적으로 원본 테이블의 모든 열은 캡처된 열로 식별됩니다. 개인 정보 보호 또는 성능상의 이유 등으로 인해 열의 하위 집합만 추적해야 하는 경우에는 *@captured_column_list* 매개 변수를 사용하여 열의 하위 집합을 지정합니다.  
   

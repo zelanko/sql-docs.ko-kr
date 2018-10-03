@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_single_file_db
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37171709c977e55197ac2b7075442b9bf8323cbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647431"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
  사용 하 여 **sp_attach_single_file_db** 명시적인 사용 하 여 서버에서 이전에 분리 된 데이터베이스 에서만 **sp_detach_db** 작업 데이터베이스나 복사 합니다.  

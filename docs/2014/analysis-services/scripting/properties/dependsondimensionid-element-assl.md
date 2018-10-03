@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DependsOnDimensionID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DependsOnDimensionID element
 ms.assetid: 66ec20dd-b475-4895-a92c-7ac0e7e1c675
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8bda178f067cb8bf1a3cfe4bf7341c6916659a65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 620a4058739412a18aca81e58a3ee0f8f488d477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096453"
 ---
 # <a name="dependsondimensionid-element-assl"></a>DependsOnDimensionID 요소(ASSL)
   부모 차원이 종속되는 다른 차원의 ID(식별자)를 포함합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37171404"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37171404"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Dimension](../objects/dimension-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `DependsOnDimensionID` 요소는 종속되는 차원을 식별하기 위해 종속 차원에 사용됩니다.  

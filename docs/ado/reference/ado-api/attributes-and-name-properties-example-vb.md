@@ -1,13 +1,11 @@
 ---
-title: 특성 및 이름 속성 예 (VB) | Microsoft Docs
+title: Attributes 및 Name 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48d96c2afe1018b64933fb96ba8c36d08a93d4e1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb69a3f9da2ed86411c2a6506cf2ea7a8defcc7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735151"
 ---
-# <a name="attributes-and-name-properties-example-vb"></a>특성 및 이름 속성 예 (VB)
-값을 표시 하는이 예제는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 대 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md), 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다. 사용 하 여는 [이름](../../../ado/reference/ado-api/name-property-ado.md) 각각의 이름을 표시 하는 속성 **필드** 및 **속성** 개체입니다.  
+# <a name="attributes-and-name-properties-example-vb"></a>Attributes 및 Name 속성 예제(VB)
+값을 표시 하는이 예제는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 대 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md)에 [필드](../../../ado/reference/ado-api/field-object.md), 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다. 사용 하 여는 [이름](../../../ado/reference/ado-api/name-property-ado.md) 각각의 이름을 표시 하는 속성 **필드** 하 고 **속성** 개체입니다.  
   
 ```  
 ' BeginAttributesVB  
@@ -131,7 +128,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 속성 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
+ [Attributes 속성 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Name 속성 (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   

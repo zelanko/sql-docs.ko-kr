@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - maximum file size for traces
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file rollover option [SQL Server]
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f393d71a4508d1441ee95487c69022ef0b93c2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a576f191cf02a7af186934fdd67204249f36ec78
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050584"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>추적 파일 및 테이블 크기 제한
   SQL 추적 파일의 크기는 추적에 포함된 이벤트 클래스와 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 사용되는 방식에 따라 달라집니다. 자주 발생하는 이벤트 클래스를 추적하는 경우 최대 파일 크기나 최대 행 수를 설정하여 추적을 통해 수집되는 데이터의 양을 최소화할 수 있습니다. 최대 파일 크기나 최대 행 수를 지정하면 추적 파일이나 테이블의 크기가 지정된 한도를 초과하지 않습니다.  

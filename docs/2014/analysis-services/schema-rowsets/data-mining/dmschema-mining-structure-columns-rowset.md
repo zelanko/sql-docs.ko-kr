@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c012515df76b1f19712c5bf1ba828dafdc787ef7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088373"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 행 집합
   실행 중인 서버에 배포 된 모든 마이닝 구조의 개별 열에 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -47,7 +44,7 @@ ms.locfileid: "37171584"
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||열의 기본값입니다. 공급자는 `DBCOLUMN_DEFAULTVALUE`에서 반환하는 행 집합의 `DBCOLUMN_HASDEFAULT`(ISO 테이블의 경우)가 아닌 `IColumnsRowset::GetColumnsRowset`를 표시할 수 있습니다.<br /><br /> 기본값이 `NULL`이면 `COLUMN_HASDEFAULT`는 `TRUE`이고 `COLUMN_DEFAULT` 열은 `NULL` 값입니다.|  
 |`COLUMN_FLAGS`|`DBTYPE_UI4`||열 특징을 설명 하는-비트 마스크입니다. `DBCOLUMNFLAGS` 열거 형식은 비트 마스크의 비트를 지정합니다. 이 열은 `NULL` 값을 포함할 수 없습니다. 유효한 값은 다음과 같습니다.<br />-   **DBCOLUMNFLAGS_ISNULLABLE** (`0x20`)<br />-   **DBCOLUMNFLAGS_MAYBENULL** (`0x40`)<br />-   **DBCOLUMNFLAGS_ISLONG** (`0x80`)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||이 열에 기본값이 있는지 여부를 나타내는 부울입니다.<br /><br /> 열에 `TRUE`이 포함될 수 있으면 `NULL`이고, 그렇지 않으면 `FALSE`입니다.|  
-|`DATA_TYPE`|`DBTYPE_UI2`||열 데이터 형식 표시기입니다. 예를 들어:<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
+|`DATA_TYPE`|`DBTYPE_UI2`||열 데이터 형식 표시기입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
 |`TYPE_GUID`|`DBTYPE_GUID`||열 데이터 형식의 GUID입니다. 데이터 형식을 식별하는 데 GUID를 사용하지 않는 공급자는 이 열에 `NULL`을 반환해야 합니다.|  
 |`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||열 값의 최대 길이로서 문자, 이진 또는 비트 열의 경우 이 값은 다음 중 하나입니다.<br /><br /> -열의 최대 길이 문자, 바이트 또는 비트 각각 길이가 정의 되어 있는 경우. 예를 들어 SQL 테이블에 있는 `CHAR(5)` 열의 최대 길이는 5입니다.<br />-형식의 최대 길이 데이터의 문자, 바이트 또는 비트 각각 열 길이가 정의 되지 않은 경우.<br />(0) 데이터 형식은 아니고 열에 정의 된 최대 길이 0입니다.<br />-   `NULL` 다른 모든 형식의 열입니다.|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||열 유형이 문자 또는 이진이면 옥텟(바이트) 단위의 최대 열 길이입니다. 0 값은 열에 최대 길이가 없음을 나타냅니다. 다른 모든 열 유형의 경우에는 `NULL`입니다.|  

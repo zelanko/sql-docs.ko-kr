@@ -1,26 +1,23 @@
 ---
-title: C에서 SQL로 변환을 | Microsoft Docs
+title: C에서 SQL로의 변환은 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f1f44e37b212c973a59fbead2618bfbb477370e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410081"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109503"
 ---
 # <a name="conversions-from-c-to-sql"></a>C에서 SQL로의 변환
   이 항목에서는 C 형식에서 변환 하는 경우 고려해 야 할 문제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식입니다.  

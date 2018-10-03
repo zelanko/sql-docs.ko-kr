@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185310"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057043"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **데이터 원본 뷰** 창을 사용하여 선택한 큐브와 연결된 데이터 원본 뷰의 테이블 및 열을 볼 수 있습니다. 이 창은 **데이터 원본 뷰** 창에서 **측정값** 창으로 열을 끌어 측정값 그룹 및 측정값을 만드는 데 사용합니다.  

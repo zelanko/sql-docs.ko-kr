@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bf61e09dbb1e1a98b1af609cb092cf072821a14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106049"
 ---
 # <a name="choose-link-page-report-manager"></a>링크 선택 페이지(보고서 관리자)
   링크 선택 페이지를 사용하여 현재 선택한 링크된 보고서의 기반이 되는 다른 보고서를 선택할 수 있습니다. 링크된 보고서는 보고서 서버에 이미 게시된 다른 보고서를 기반으로 합니다. 링크된 보고서는 기본 보고서의 레이아웃과 데이터를 사용하지만 별도의 속성 페이지가 있으므로 매개 변수 속성, 보안 설정, 이름, 설명 및 위치를 사용자 지정할 수 있습니다.  

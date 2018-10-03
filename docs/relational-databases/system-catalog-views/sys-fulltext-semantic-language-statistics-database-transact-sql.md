@@ -1,14 +1,11 @@
 ---
-title: sys.fulltext_semantic_language_statistics_database (Transact SQL) | Microsoft Docs
+title: sys.fulltext_semantic_language_statistics_database (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fulltext_semantic_language_statistics_database_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.fulltext_semantic_language_statistics_database catalog view
 ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5e84ee0b65a38766f7d6a58e0488cb98c1b7a99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 97631b830acc3babacb5720707722775b4592629
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708931"
 ---
 # <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +47,22 @@ ms.locfileid: "33180099"
  자세한 내용은 [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)을 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
- 의미 체계 인덱싱에 지원 되는 언어에 대 한 내용은 카탈로그 뷰를 쿼리 [sys.fulltext_semantic_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)합니다.  
+ 의미 체계 인덱싱에 지원 되는 언어에 대 한 내용은 카탈로그 뷰를 쿼리하여 [sys.fulltext_semantic_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)합니다.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 쿼리 하는 방법을 **sys.fulltext_semantic_language_statistics_database** 의 현재 인스턴스에 등록 된 의미 체계 언어 통계 데이터베이스에 대 한 정보를 가져오려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 다음 예제에서는 쿼리 하는 방법 **sys.fulltext_semantic_language_statistics_database** 의 현재 인스턴스에 등록 된 의미 체계 언어 통계 데이터베이스에 대 한 정보를 가져오려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

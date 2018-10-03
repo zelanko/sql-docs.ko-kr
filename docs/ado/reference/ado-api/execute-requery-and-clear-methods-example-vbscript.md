@@ -1,13 +1,11 @@
 ---
-title: 실행 하 고 다시 쿼리, 방법 예 (VBScript)의 선택을 취소 | Microsoft Docs
+title: Execute, requery, Clear 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 900bacb5c71a5a3ba7d55fa6d3e2d84d6e1c0e60
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 48028d073c7ab3d730a0af5c433d1a8f0c8f2de8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727131"
 ---
-# <a name="execute-requery-and-clear-methods-example-vbscript"></a>실행, Requery, 및 메서드 (VBScript) 예제를 지웁니다.
-이 예제에서는 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 에 현재 데이터를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [지우기](../../../ado/reference/ado-api/clear-method-ado.md) 의 내용을 삭제 하는 메서드는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. ExecuteCommand 및 PrintOutput 절차는이 절차를 실행 하려면 필요 합니다.  
+# <a name="execute-requery-and-clear-methods-example-vbscript"></a>실행, requery, Clear 메서드 예제 (VBScript)
+이 예제에서는 합니다 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 의 현재 데이터를 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [선택을 취소](../../../ado/reference/ado-api/clear-method-ado.md) 내용의 선택을 취소 하는 방법은 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. ExecuteCommand 및 PrintOutput 절차는이 프로시저를 실행 하도록 필요 합니다.  
   
- 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 이 완벽 하 게 작동 하는 예제를 보려면 하거나 있어야 AdvWorks.mdb (SDK 샘플을 설치) C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb에 있는 원본 또는 예제 코드에 대 한 경로 편집 하거나 외부 데이터 이 파일의 실제 위치를 반영 합니다. Microsoft Access 데이터베이스 파일입니다.  
+ 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 완벽 하 게 작동 예제를 보려면 하거나 있어야 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 위치한 AdvWorks.mdb (SDK 샘플을 사용 하 여 설치)를 원본 또는 편집 하는 예제 코드에서 경로 데이터 이 파일의 실제 위치를 반영 합니다. Microsoft Access 데이터베이스 파일입니다.  
   
- 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려면 디렉터리에 배치 합니다. 잘라내기 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣고로 저장 **ExecuteVBS.asp**합니다. 모든 클라이언트 브라우저에서 결과 볼 수 있습니다.  
+ 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려는 디렉터리에 배치 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣습니다. 잘라내기 및 저장 **ExecuteVBS.asp**합니다. 모든 클라이언트 브라우저에서 결과 볼 수 있습니다.  
   
 ```  
 <!-- BeginExecuteVBS -->  
@@ -183,7 +180,7 @@ BODY {
   
 ## <a name="see-also"></a>관련 항목  
  [Clear 메서드 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error 개체](../../../ado/reference/ado-api/error-object.md)   
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   

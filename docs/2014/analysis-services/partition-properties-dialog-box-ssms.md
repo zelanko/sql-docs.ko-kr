@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionpropertiesdialog.f1
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30192ebd1ac739612e36f6895e22e455419a7449
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113203"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>파티션 속성 대화 상자(SSMS)
   SQL Server Management Studio의 **파티션 속성** 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 큐브에 대한 파티션 속성을 설정할 수 있습니다.  

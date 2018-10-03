@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1f76fef29f1e90e1759c039bafaccad23a61bba
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392410"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136193"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 도입을 **max** 지정자 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식을 저장할 수 있도록 값 2 ^31-1 바이트 수입니다. 테이블 열 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수를 지정할 수 있습니다 **varchar (max)** 를 **nvarchar (max)** 하거나 **varbinary (max)** 데이터 형식입니다.  

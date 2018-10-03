@@ -1,14 +1,11 @@
 ---
-title: sp_help_targetservergroup (Transact SQL) | Microsoft Docs
+title: sp_help_targetservergroup (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetservergroup_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetservergroup
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a07d7001f2bced566780d0987d26c9e3f068d03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1c2b16617a4676e50a105affd5a885c8627b3120
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784726"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ sp_help_targetservergroup
   
 ## <a name="argument"></a>인수  
  [ **@name=** ] **'***name***'**  
- 정보를 반환할 대상 서버 그룹의 이름입니다. *이름* 은 **sysname**, 기본값은 NULL입니다.  
+ 정보를 반환할 대상 서버 그룹의 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -58,7 +54,7 @@ sp_help_targetservergroup
 |**servergroup_id**|**int**|서버 그룹의 ID 번호입니다.|  
 |**name**|**sysname**|서버 그룹의 이름입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행 하는 권한은 기본적으로 **sysadmin** 고정된 서버 역할입니다.  
   
 ## <a name="examples"></a>예  
@@ -86,7 +82,7 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7808c9270e0085c2f8fafb5262d6356f8c8d1e08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091553"
 ---
 # <a name="script-a-table"></a>테이블 스크립팅
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 스크립트를 만들어 테이블을 선택, 삽입, 업데이트 및 삭제하고 저장 프로시저를 작성, 변경, 삭제 또는 실행할 수 있습니다.  

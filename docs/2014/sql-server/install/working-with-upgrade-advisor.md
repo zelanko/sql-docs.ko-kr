@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], when to use
 - SQL Server Upgrade Advisor, when to use
 - when to use Upgrade Advisor
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
-caps.latest.revision: 43
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19bb6bfbb6abcc80bbf33b919aecc18acfb2fef2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076253"
 ---
 # <a name="working-with-upgrade-advisor"></a>업그레이드 관리자 작업
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 성공적인 업그레이드를 위해 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 설치에서 해결해야 하는 문제를 식별하는 중앙 콘솔을 제공합니다.  

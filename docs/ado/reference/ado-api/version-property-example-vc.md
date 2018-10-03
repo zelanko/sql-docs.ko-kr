@@ -1,32 +1,29 @@
 ---
-title: 버전 속성 예제 (VC + +) | Microsoft Docs
+title: Version 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83abd1361cad72644f948316bc24c704e0437c35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613251"
 ---
-# <a name="version-property-example-vc"></a>버전 속성 예제 (VC + +)
-사용 하 여이 예제는 [버전](../../../ado/reference/ado-api/version-property-ado.md) 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  
+# <a name="version-property-example-vc"></a>Version 속성 예제(VC++)
+이 예제에서는 합니다 [버전](../../../ado/reference/ado-api/version-property-ado.md) 의 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  
   
 -   현재 DBMS 이름과 버전입니다.  
   
@@ -39,7 +36,7 @@ ms.locfileid: "35282822"
 -   ODBC 드라이버 이름과 버전입니다.  
   
 > [!NOTE]
->  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 또는 **통합 보안 = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
+>  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 하거나 **Integrated Security = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
   
 ```  
 // BeginVersionCpp.cpp  

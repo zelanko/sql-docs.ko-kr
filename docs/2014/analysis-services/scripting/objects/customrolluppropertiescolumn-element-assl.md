@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CustomRollupPropertiesColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CustomRollupPropertiesColumn element
 ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92125569eec6b0642efea7c9164e41c7740ded66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e848817a08c2f90a5a4c7466568a6543dbe8c8b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104849"
 ---
 # <a name="customrolluppropertiescolumn-element-assl"></a>CustomRollupPropertiesColumn 요소(ASSL)
   사용자 지정 롤업 수식의 속성을 제공하는 열의 세부 정보를 정의합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37180840"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37180840"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  에 대 한 추가 정보에 대 한는 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  

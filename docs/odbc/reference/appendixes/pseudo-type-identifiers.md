@@ -1,28 +1,25 @@
 ---
-title: 의사 (pseudo) 유형 식별자 | Microsoft Docs
+title: 의사 (pseudo) 형식 식별자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42b484bd6d879787c8322a1586dcbce9192318a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e197f6054e417a01f8d7e352cffb40328de69e9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801903"
 ---
-# <a name="pseudo-type-identifiers"></a>의사 (pseudo) 유형 식별자
-ODBC 응용 프로그램 프로그래밍 편의 위해 다양 한 의사 (pseudo) 유형 식별자를 정의합니다. 이러한 식별자는 실제로 실제 데이터 형식에 맞지 않는 이지만 대신는 상황에 따라 기존 데이터 형식으로 확인 합니다.  
+# <a name="pseudo-type-identifiers"></a>의사(pseudo) 형식 식별자
+ODBC 응용 프로그램 프로그래밍 편의 위해 다양 한 의사 (pseudo) 형식 식별자를 정의합니다. 이러한 식별자는 실제로 실제 데이터 형식에 맞지 않는 이지만 대신 상황에 따라 기존 데이터 형식으로 확인 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.swb.assemblies.general.f1
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fde2e92113e3fa32df4491a89e5fed348513bd4e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351165"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103273"
 ---
 # <a name="assembly-properties-general-page"></a>어셈블리 속성(일반 페이지)
   이 페이지를 사용하여 어셈블리 속성을 확인하거나 수정할 수 있습니다.  

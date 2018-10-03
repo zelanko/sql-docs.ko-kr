@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary data type [ODBC]
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - binary data transfers [ODBC]
 - converting data from c to SQL types [ODBC], binary
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6d1e7f422829cce804f401ac98083d066e0f67e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849131"
 ---
 # <a name="c-to-sql-binary"></a>C에서 SQL로: 이진
-다음은 이진 ODBC C 데이터 형식에 대 한 식별자가입니다.  
+이진 ODBC C 데이터 형식에 대 한 식별자가 있습니다.  
   
  SQL_C_BINARY  
   
- 다음 표에서 ODBC SQL 데이터 형식이 이진 C 데이터 변환할 수를 보여 줍니다. 참조에 대 한 열과 테이블의 용어 설명은 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)합니다.  
+ 다음 표에서 ODBC SQL 데이터 형식에는 이진 C 데이터를 변환 될 수 있습니다를 보여 줍니다. 열과 테이블의 용어 설명은 참조 하세요 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)입니다.  
   
 |SQL 유형 식별자|테스트|SQLSTATE|  
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|데이터의 바이트 길이 < = 바이트 길이 열<br /><br /> 데이터의 바이트 길이 > 열의 바이트 길이|n/a<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|문자 데이터의 길이 < = 열 문자 길이<br /><br /> 문자 데이터의 길이 > 열 문자 길이|n/a<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|데이터의 바이트 길이 = SQL 데이터 길이<br /><br /> <> SQL 데이터 길이 데이터의 바이트 길이|n/a<br /><br /> 22003|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|데이터의 길이 문자 < 열 문자 길이 =<br /><br /> 문자 데이터의 길이 > 문자 길이로 된 열|n/a<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|데이터의 바이트 길이 = SQL 데이터 길이<br /><br /> 데이터 <> SQL 데이터 길이의 바이트 길이|n/a<br /><br /> 22003|  
 |SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|데이터의 길이 < = 열 길이<br /><br /> 데이터의 길이 > 열 길이|n/a<br /><br /> 22001|

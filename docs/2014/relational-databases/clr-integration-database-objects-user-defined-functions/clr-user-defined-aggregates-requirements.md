@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - aggregate functions [CLR integration]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 - UDTs [CLR integration], user-defined aggregates
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93163efb9de969bbca62b46b0f23e8df36b5fa8e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 44aee43742fdc451012a9516249c0558b3ce0d35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129183"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR 사용자 정의 집계 요구 사항
   공용 언어 런타임(CLR) 어셈블리의 형식이 필요한 집계 계약을 구현한다면 해당 형식을 사용자 정의 집계 함수로 등록할 수 있습니다. 이 계약은 `SqlUserDefinedAggregate` 특성과 집계 계약 메서드로 구성됩니다. 집계 계약은 집계의 중간 상태를 저장하는 메커니즘과 새 값을 누적하는 메커니즘을 포함하며 `Init`, `Accumulate`, `Merge` 및 `Terminate`의 4가지 메서드로 구성됩니다. 이러한 요구를 충족 하는 경우 수의 사용자 정의 집계의 활용 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](clr-user-defined-aggregate-invoking-functions.md)합니다.  

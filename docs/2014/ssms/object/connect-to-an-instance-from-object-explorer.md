@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f2d811dc542bf24c2cf75fe792a079046830076
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7947bba9f41ffb77a1260ce79a5f4afb6c773295
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110933"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>개체 탐색기에서 인스턴스에 연결
   개체 탐색기를 사용하여 개체를 관리하려면 먼저 개체가 포함된 인스턴스에 개체 탐색기를 연결해야 합니다. 동시에 여러 인스턴스에 개체 탐색기를 연결할 수 있습니다.  

@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobschedules (Transact SQL) | Microsoft Docs
+title: dbo.sysjobschedules (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysjobschedules
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sysjobschedules system table
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2818512730a99bf7352c87f7d651d3084870767f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33252708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644711"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행할 작업에 관한 일정 정보를 포함합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-> **참고:** 는 **sysjobschedules** 테이블 반환 하는 값에 영향을 줄 수는 20 분 마다 새로 **sp_help_jobschedule** 저장 프로시저입니다.  
+> **참고:** 는 **sysjobschedules** 테이블을 반환 하는 값에 영향을 줄 수 있는 20 분 마다 새로 고칩니다 합니다 **sp_help_jobschedule** 저장 프로시저입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,6 +42,6 @@ ms.locfileid: "33252708"
 |**next_run_time**|**int**|작업을 실행하도록 예약된 시간입니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [dbo.sysschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo.sysschedules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

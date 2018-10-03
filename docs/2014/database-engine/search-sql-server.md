@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
-caps.latest.revision: 6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ffd43a5c0dd17f049f724bc32fb299b7656f23ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106363"
 ---
 # <a name="search-sql-server"></a>검색(SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 텍스트 및의 기능 보다 우수한 문서에 대 한 검색 기능을 제공 합니다 [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` 키워드입니다.  

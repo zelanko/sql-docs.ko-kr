@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3194411494a28c60b77440358a9ad0ebe3b0438b
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2a8eecf04bdc1b985863ffd2bafe3acfea4e6240
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056963"
 ---
 # <a name="policy-management-node-object-explorer"></a>정책 관리 노드(개체 탐색기)
   이 섹션에서는 **에 있는 개체 탐색기의** 정책 관리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에 대한 다음 F1 도움말 항목을 제공합니다.  

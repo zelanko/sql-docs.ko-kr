@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d4d9a3c2efa2bfcb8e3b1db44f43d525f0b067
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257939"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070590"
 ---
-# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>자동 페이지 복구 (가용성 그룹 및 데이터베이스 미러링)
+# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>자동 페이지 복구(가용성 그룹 및 데이터베이스 미러링)
   자동 페이지 복구는 데이터베이스 미러링과 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서 지원됩니다. 특정 유형의 오류로 인해 페이지가 손상되어 읽을 수 없게 되면 데이터베이스 미러링 파트너(주 파트너 또는 미러 파트너) 또는 가용성 복제본(주 복제본 또는 보조 복제본)이 자동으로 페이지를 복구하려고 시도합니다. 페이지를 읽을 수 없는 파트너 또는 복제본은 해당 파트너나 다른 복제본에 페이지의 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 읽을 수 있는 복사본으로 대체되고 일반적으로 오류가 해결됩니다.  
   
  일반적으로 데이터베이스 미러링과 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 은 동일한 방식으로 I/O 오류를 처리합니다. 여기에서 몇 가지 차이점을 명시적으로 소개합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f0252eb3ba9d0aea5e69ffa077dfc6b3ac1f3bd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122403"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>전체 텍스트 검색의 주요 변경 내용
   이 항목에서는 전체 텍스트 검색의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 응용 프로그램, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  

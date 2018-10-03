@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fff9084513f21333125eaee8995eebfd3e22e1a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048443"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp를 사용하여 파일 저장 유형 지정(SQL Server)
   *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터 또는 내보낼 수 데이터 파일에는 데이터베이스 테이블 형식 (네이티브 형식)로 문자 표시 (문자 형식), 암시적 변환이 지원 되는 데이터 형식으로 예를 들어 복사를 `smallint` 으로 `int`합니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다.  

@@ -5,31 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLTables
 - SQLTables function [ODBC], Excel Driver
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2921d9e047e03cae092e5c0e7d2fcd4e4f8f24c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23ce67350b7fa7d0a88f3d51e618ce9bb9f9ebcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796221"
 ---
-# <a name="sqltables-excel-driver"></a>SQLTables (Excel 드라이버)
+# <a name="sqltables-excel-driver"></a>SQLTables(Excel 드라이버)
 > [!NOTE]  
->  이 항목에서는 Excel 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 Excel 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
-|인수|설명|  
+|인수|주석|  
 |--------------|--------------|  
-|*szTableOwner*|에 대 한 유효한 인수 *szTableOwner* 소유자 이름을 지 원하는 드라이버의 없기 때문에 NULL입니다. 와 *szTableOwner* NULL로 설정 모든 테이블이 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
-|*szTableQualifier*|Microsoft Excel 3.0 또는 4.0 드라이버 사용 되는 경우를 호출 하는 경우 **SQLTables** 에 값이 있는 *szTableQualifier* 기존 테이블의 이름을 즉, 드라이버는 해당 이름의 테이블이 만들어집니다.<br /><br /> TABLE_QUALIFIER 열에서 **SQLTables** 디렉터리 경로 반환 합니다.|  
-|*SzTableType*|Microsoft Excel 3.0 또는 4.0에 대 한 "TABLE" 지원만 테이블 유형입니다.<br /><br /> Microsoft Excel 파일의 이후 버전에서는 시트 이름 (테이블 끝에 "$"로)에 대해 "시스템 테이블"이 반환 하 고 "TABLE" 워크시트 내의 테이블에 대 한 반환 됩니다.|
+|*szTableOwner*|에 대 한 유효한 인수 *szTableOwner* 소유자 이름을 지 원하는 드라이버 하나도 NULL입니다. 사용 하 여 *szTableOwner* NULL로 설정한 모든 테이블 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
+|*szTableQualifier*|경우는 Microsoft Excel 3.0 또는 4.0 드라이버는를 호출 하는 경우 **SQLTables** 에 대 한 값을 사용 하 여 *szTableQualifier* 기존 테이블의 이름 없는, 드라이버는 해당 이름의 테이블이 만들어집니다.<br /><br /> TABLE_QUALIFIER 열의 **SQLTables** 디렉터리 경로 반환 합니다.|  
+|*SzTableType*|Microsoft Excel 3.0 또는 4.0에 대 한 "TABLE" 테이블 유형만 지원 됩니다.<br /><br /> Microsoft Excel 파일의 이후 버전에 "시스템 테이블" 시트 이름 (테이블 끝에 "$"로)에 대 한 돌아가고 "TABLE" 워크시트 내의 테이블에 대해 반환 됩니다.|

@@ -1,14 +1,11 @@
 ---
-title: trace_xe_action_map (Transact SQL) | Microsoft Docs
+title: trace_xe_action_map (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trace_xe_action_map_TSQL
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - extended events [SQL Server], tables
 - trace_xe_action_map
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fba0bc16dc42798ecd37d234dd79e30e9db856
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7308df1dafe80d4c4b342c6b5797db6354f98416
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827181"
 ---
-# <a name="extended-events-tables---tracexeactionmap"></a>확장 이벤트 테이블-trace_xe_action_map
+# <a name="extended-events-tables---tracexeactionmap"></a>확장 이벤트 테이블 - trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  SQL 추적 열 ID에 매핑된 Extended Events 동작마다 하나의 행을 포함합니다. 이 테이블에 master 데이터베이스의 sys 스키마에 저장 됩니다.  
+  SQL 추적 열 ID에 매핑된 Extended Events 동작마다 하나의 행을 포함합니다. 이 표에서 sys 스키마에 master 데이터베이스에 저장 됩니다.  
   
   
 |열 이름|데이터 형식|Description|  
@@ -42,7 +38,7 @@ ms.locfileid: "33256757"
 |package_name|**nvarchar(60)**|매핑된 동작이 있는 Extended Events 패키지의 이름입니다.|  
 |xe_action_name|**nvarchar(60)**|SQL 추적 열에 매핑된 Extended Events 동작의 이름입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 쿼리를 사용하여 SQL 추적 열에 해당하는 Extended Events 동작을 식별할 수 있습니다.  
   
 ```  
@@ -54,7 +50,7 @@ INNER JOIN sys.trace_xe_action_map AS am
   
  동작에 매핑되지 않은 SQL 추적 열은 테이블에 포함되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [trace_xe_event_map&#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)  
   
   

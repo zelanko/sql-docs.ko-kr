@@ -1,14 +1,11 @@
 ---
-title: sp_fulltext_semantic_unregister_language_statistics_db (Transact SQL) | Microsoft Docs
+title: sp_fulltext_semantic_unregister_language_statistics_db (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec9142a0d39405db9fd6473a8db6c2d0283027e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: aefc83920cfe20f150c34ff7f35ad639f78739ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259453"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756071"
 ---
 # <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,22 +62,22 @@ GO
  자세한 내용은 [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)을 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
- 인스턴스에 설치 된 의미 체계 언어 통계 데이터베이스에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 카탈로그 뷰를 쿼리 [sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)합니다.  
+ 인스턴스에 설치 되어 있는 의미 체계 언어 통계 데이터베이스에 대 한 자세한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 카탈로그 뷰를 쿼리 [sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)합니다.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 호출 하 여 의미 체계 언어 통계 데이터베이스 등록 취소 하는 방법을 보여 줍니다 **sp_fulltext_semantic_unregister_language_statistics_db**합니다.  
+ 다음 예제에서는 호출 하 여 의미 체계 언어 통계 데이터베이스를 등록 하는 방법을 보여 줍니다 **sp_fulltext_semantic_unregister_language_statistics_db**합니다.  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

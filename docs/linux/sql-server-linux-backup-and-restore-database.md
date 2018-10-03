@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 707801b47258d48661a4f0725c2ee7062b1a40a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29db423235533a0855f268459c6db379c7f7dfca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690131"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스를 백업 및 복원
 
@@ -33,7 +31,7 @@ ms.locfileid: "39086556"
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-명령을 실행 하는 경우 SQL Server 암호를 입력 합니다. 암호를 입력 하면 셸에서 백업 진행 상황의 결과 반환 합니다. 예를 들어:
+명령을 실행 하는 경우 SQL Server 암호를 입력 합니다. 암호를 입력 하면 셸에서 백업 진행 상황의 결과 반환 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```
 Password:

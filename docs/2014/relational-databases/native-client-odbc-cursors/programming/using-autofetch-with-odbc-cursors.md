@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC cursors, autofetch
 - autofetch option
 - cursors [ODBC], autofetch
 ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc376d6ecc536ce95c8b2ffdd60d972211b271f8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076313"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>ODBC 커서로 자동 인출 사용
   인스턴스에 연결할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 모든 서버 커서 유형을 사용 하는 경우 자동 인출 옵션을 지원 합니다. 자동 인출을 사용 하면 합니다 **SQLExecute** 또는 **SQLExecDirect** 커서 열리는 함수 역시 암시적 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST) 함수도 있습니다. 문 실행의 일부로 첫 번째 행 집합을 구성하는 행이 바인딩된 응용 프로그램 변수에 반환되므로 네트워크를 통해 다시 서버로 왕복할 필요가 없습니다. [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 때 지원 되지 않습니다는 자동 인출 옵션을 사용할 수 있습니다; 결과 집합 열을 프로그램 변수에 바인딩되어야 합니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionPermission Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c783f0627ad82ae0d1f33388ad086f7eb60df82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096630"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>DimensionPermission 데이터 형식(ASSL)
   데이터베이스 차원에 할당된 사용 권한을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -49,13 +46,13 @@ ms.locfileid: "37178840"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[사용 권한](permission-data-type-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[AttributePermissions](../collections/attributepermissions-element-assl.md), [AllowedRowsExpression](../collections/attributepermissions-element-assl.md)|  
 |파생 요소|[DimensionPermission](../objects/dimensionpermission-element-assl.md)|  
   

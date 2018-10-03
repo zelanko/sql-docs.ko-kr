@@ -4,13 +4,8 @@ ms.custom: ''
 ms.date: 09/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server 2014
 f1_keywords:
 - sql12.swb.roleproperties.database.f1
 - sql12.swb.roleproperties.general.f1
@@ -42,12 +37,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 814b585d1ac15af1b083a3191ca44c32fe29e15e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104123"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
   데이터베이스에서 사용 권한을 쉽게 관리하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 다른 보안 주체를 그룹핑하는 보안 주체인 다양한 *역할* 을 제공합니다. 역할은 ***Windows 운영 체제의*** 그룹 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 과 같습니다. 데이터베이스 수준 역할은 데이터베이스 측 사용 권한 범위에 속합니다.  

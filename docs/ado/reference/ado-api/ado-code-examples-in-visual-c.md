@@ -1,35 +1,32 @@
 ---
-title: Visual c + +에서 ADO 코드 예제 | Microsoft Docs
+title: Visual c + +의 ADO 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO code examples, Visual C++
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9085d135e0a96ea78de3a6bf75827c8a6149907a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275408"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613291"
 ---
-# <a name="ado-code-examples-in-visual-c"></a>Visual c + +에서 ADO 코드 예제
-다음 코드 예제를 사용 하 여 ADO 메서드, 속성 및 Microsoft Visual c + +에서 작성 될 때 이벤트를 사용 하는 방법에 알아봅니다.  
+# <a name="ado-code-examples-in-visual-c"></a>Visual C++의 ADO 코드 예제
+ADO 메서드, 속성 및 Microsoft Visual c + +에서를 작성할 때 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  
   
 > [!NOTE]
->  전체 코드 예제에서는부터 끝까지 코드 편집기에 붙여 넣습니다. 이 예제에서는 부분 예제가 사용 하거나 단락 서식을 분실 한 경우 올바르게 실행 되지 않을 수 있습니다.  
+>  전체 코드 예제를부터 끝까지, 코드 편집기에 붙여 넣습니다. 예제에서는 예제 부분을 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -45,13 +42,13 @@ ms.locfileid: "35275408"
   
 -   [Clone 메서드 예제](../../../ado/reference/ado-api/clone-method-example-vc.md)  
   
--   [불일치 예제](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)  
+-   [CompareBookmarks 메서드 예제](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)  
   
--   [삭제 메서드 예제](../../../ado/reference/ado-api/delete-method-example-vc.md)  
+-   [Delete 메서드 예제](../../../ado/reference/ado-api/delete-method-example-vc.md)  
   
--   [실행 하 고, Requery 메서드 예제의 선택을 취소합니다](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
+-   [Execute, requery, Clear 메서드 예제](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
   
--   [메서드 예제 찾기](../../../ado/reference/ado-api/find-method-example-vc.md)  
+-   [Find 메서드 예제](../../../ado/reference/ado-api/find-method-example-vc.md)  
   
 -   [GetRows 메서드 예제](../../../ado/reference/ado-api/getrows-method-example-vc.md)  
   
@@ -65,25 +62,25 @@ ms.locfileid: "35275408"
   
 -   [OpenSchema 메서드 예제](../../../ado/reference/ado-api/openschema-method-example-vc.md)  
   
--   [메서드 예제 새로 고침](../../../ado/reference/ado-api/refresh-method-example-vc.md)  
+-   [Refresh 메서드 예제](../../../ado/reference/ado-api/refresh-method-example-vc.md)  
   
 -   [Resync 메서드 예제](../../../ado/reference/ado-api/resync-method-example-vc.md)  
   
--   [저장 및 열기 메서드 예제](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)  
+-   [Save 및 Open 메서드 예제](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)  
   
--   [메서드 및 속성 예제 Index seek](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Seek 메서드 및 인덱스 속성 예제](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
   
 -   [지원 메서드 예제](../../../ado/reference/ado-api/supports-method-example-vc.md)  
   
--   [업데이트 및 CancelUpdate 메서드 예제](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)  
+-   [Update 및 CancelUpdate 메서드 예제](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)  
   
 -   [UpdateBatch 및 CancelBatch 메서드 예제](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
   
 ## <a name="properties"></a>속성  
   
--   [AbsolutePage, PageCount, 및 PageSize 속성 예제](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
+-   [AbsolutePage, PageCount, PageSize 속성 예제](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
--   [AbsolutePosition 및 앞 속성 예제](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)  
+-   [AbsolutePosition 및 CursorLocation 속성 예제](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)  
   
 -   [ActiveCommand 속성 예제](../../../ado/reference/ado-api/activecommand-property-example-vc.md)  
   
@@ -91,65 +88,65 @@ ms.locfileid: "35275408"
   
 -   [ActualSize 및 DefinedSize 속성 예제](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)  
   
--   [특성 및 이름 속성 예](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
+-   [Attributes 및 Name 속성 예제](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
   
--   [BOF, EOF, 및 책갈피 속성 예제](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)  
+-   [BOF, EOF 및 책갈피 속성 예제](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)  
   
 -   [CacheSize 속성 예제](../../../ado/reference/ado-api/cachesize-property-example-vc.md)  
   
--   [ConnectionString, ConnectionTimeout, 및 상태 속성 예제](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
+-   [ConnectionString, ConnectionTimeout, 및 State 속성 예제](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
   
 -   [Count 속성 예제](../../../ado/reference/ado-api/count-property-example-vc.md)  
   
--   [모두, LockType, 및 EditMode 속성 예제](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
+-   [CursorType, LockType, EditMode 속성 예제](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
   
--   [설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
+-   [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
   
--   [필터 및 RecordCount 속성 예제](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)  
+-   [Filter 및 RecordCount 속성 예제](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)  
   
--   [Index 속성 및 메서드 예제 찾기](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Index 속성 및 메서드 예제를 검색 합니다.](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
   
 -   [IsolationLevel 및 모드 속성 예제](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)  
   
--   [항목 속성 예제](../../../ado/reference/ado-api/item-property-example-vc.md)  
+-   [Item 속성 예제](../../../ado/reference/ado-api/item-property-example-vc.md)  
   
--   [마샬링 예제](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)  
+-   [MarshalOptions 속성 예제](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)  
   
 -   [MaxRecords 속성 예제](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)  
   
--   [NumericScale 및 전체 자릿수 속성 예제](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)  
+-   [NumericScale 및 Precision 속성 예제](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)  
   
--   [최적화 속성 예제](../../../ado/reference/ado-api/optimize-property-example-vc.md)  
+-   [Optimize 속성 예제](../../../ado/reference/ado-api/optimize-property-example-vc.md)  
   
 -   [OriginalValue 및 UnderlyingValue 속성 예제](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)  
   
--   [준비 속성 예제](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
+-   [Prepared 속성 예제](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
   
--   [공급자 및 DefaultDatabase 속성 예제](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)  
+-   [Provider 및 DefaultDatabase 속성 예제](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)  
   
--   [정렬 속성 예제](../../../ado/reference/ado-api/sort-property-example-vc.md)  
+-   [Sort 속성 예제](../../../ado/reference/ado-api/sort-property-example-vc.md)  
   
--   [원본 속성 예제](../../../ado/reference/ado-api/source-property-example-vc.md)  
+-   [Source 속성 예제](../../../ado/reference/ado-api/source-property-example-vc.md)  
   
 -   [State 속성 예제](../../../ado/reference/ado-api/state-property-example-vc.md)  
   
--   [상태 속성 예제](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Status 속성 예제](../../../ado/reference/ado-api/status-property-example-vc.md)  
   
 -   [StayInSync 속성 예제](../../../ado/reference/ado-api/stayinsync-property-example-vc.md)  
   
--   [형식 속성 예제 (필드)](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Type 속성 예제 (필드)](../../../ado/reference/ado-api/status-property-example-vc.md)  
   
--   [형식 속성 예제 (속성)](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
+-   [Type 속성 예제 (속성)](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
   
--   [값 속성 예제](../../../ado/reference/ado-api/value-property-example-vc.md)  
+-   [Value 속성 예제](../../../ado/reference/ado-api/value-property-example-vc.md)  
   
--   [버전 속성 예제](../../../ado/reference/ado-api/version-property-example-vc.md)  
+-   [Version 속성 예제](../../../ado/reference/ado-api/version-property-example-vc.md)  
   
 ## <a name="other"></a>기타  
   
 -   [ADO 이벤트 모델 예제](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Visual Basic에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [ADO 코드 예에서는 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
+ [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
+ [ADO 코드 예제 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

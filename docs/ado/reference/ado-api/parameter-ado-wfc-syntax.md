@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280592"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720711"
 ---
-# <a name="parameter-ado---wfc-syntax"></a>매개 변수 (ADO-WFC 구문)
+# <a name="parameter-ado---wfc-syntax"></a>매개 변수(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>생성자  
@@ -69,13 +66,13 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>매개 변수 접근자 메서드  
- [값](../../../ado/reference/ado-api/value-property-ado.md) 속성은 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 해당 개체의 콘텐츠를 가져오거나 설정 합니다. 콘텐츠 값을 지정할 수 있는 개체의 유형 및 여러 데이터 형식 중 하나는 VARIANT로 표시 됩니다.  
+ 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 의 속성을 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체는 개체의 콘텐츠를 가져오거나 설정 합니다. 콘텐츠는 변형에 값을 할당할 수 있는 개체의 형식 및 여러 데이터 형식으로 표시 됩니다.  
   
- ADO/WFC 구현는 **값** 속성을는 **getValue** 는 VARIANT 개체를 반환 하는 메서드 및 **setValue** 메서드는 VARIANT를 인수로 사용 합니다. Variant는 특정 언어의 경우 Microsoft Visual Basic 등의 매우 효율적입니다.  
+ ADO/WFC 구현를 **값** 속성을 합니다 **getValue** ; VARIANT를 반환 하는 메서드 및 **setValue** VARIANT를 인수로 사용 하는 메서드를 합니다. 변형은 Microsoft Visual Basic 같은 특정 언어에서 매우 효율적입니다.  
   
- 이외에 **값** 속성, ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 내용을 사용 하는 메서드 **매개 변수** 개체입니다. 대부분의 이러한 메서드가 폼의 이름이 **가져오기 * * * DataType* 또는 **설정 * * * DataType*합니다.  
+ 외에 **값** 속성인 ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 콘텐츠를 사용 하는 방법 **매개 변수** 개체입니다. 이러한 메서드 중 대부분은 폼의 이름이 **가져오기 * * * DataType* 또는 **설정 * * * DataType*합니다.  
   
- 가지 주목할 만한 예외:는 없는 **getNull** 속성 대신는 **isNull** 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 속성입니다.  
+ 한 가지 주목할 만한 예외가: 방법이 없는 **getNull** 속성 대신는 **isNull** 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 속성입니다.  
   
 ```  
 public boolean getBoolean()  

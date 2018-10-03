@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076493"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>처리 옵션 속성 페이지(보고서 관리자)
   처리 옵션 속성 페이지를 사용하여 현재 선택한 보고서의 보고서 실행 속성을 설정할 수 있습니다. 이 옵션은 보고서의 데이터 처리가 수행되는 시간을 결정합니다. 이 옵션을 통해 사용량이 적은 시간에 보고서 데이터를 검색하도록 설정할 수 있습니다. 자주 액세스할 보고서가 있으면 이 보고서의 복사본을 임시로 캐시하여 여러 사용자가 같은 보고서를 짧은 시간 간격으로 동시에 액세스할 때 대기 시간을 없앨 수 있습니다.  

@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: c87533096357117fda518794d961dfacca2ce481
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: e3b76a386598b7439d9cb2ffbad738d86b1b9183
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788251"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux의 SQL Server 관리에 적합 한 도구 선택
 

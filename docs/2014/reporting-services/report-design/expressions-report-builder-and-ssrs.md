@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 272aba58ecd342bd1bf0040a9b14beca15e4d160
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110859"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
   식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 보고서 전체에서 광범위하게 사용됩니다. 많은 보고서 항목 속성을 식으로 설정할 수 있으므로 식을 사용하면 보고서의 내용, 디자인 및 상호 작용을 제어할 수 있습니다. 식 쓰는지 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], 보고서 정의에 저장 하 고 보고서를 실행할 때 보고서 처리기에서 계산 합니다.  
@@ -118,7 +115,7 @@ ms.locfileid: "37268589"
 
   
 ##  <a name="Valid"></a> 식 유효성 검사  
- 특정 보고서 항목 속성에 대한 식을 만들 때 식에 포함할 수 있는 참조는 보고서 항목 속성에 허용될 수 있는 값 및 속성이 계산되는 범위에 따라 달라집니다. 예를 들어:  
+ 특정 보고서 항목 속성에 대한 식을 만들 때 식에 포함할 수 있는 참조는 보고서 항목 속성에 허용될 수 있는 값 및 속성이 계산되는 범위에 따라 달라집니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   기본적으로 [Sum] 식은 식이 계산될 때 범위 내에 있는 데이터의 합계를 계산합니다. 테이블 셀의 경우 범위는 행 및 열 그룹 멤버 자격에 따라 달라집니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   

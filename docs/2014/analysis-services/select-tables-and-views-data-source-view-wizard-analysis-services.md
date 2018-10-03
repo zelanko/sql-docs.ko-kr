@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104013"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>테이블 및 뷰 선택(데이터 원본 뷰 마법사)(Analysis Services)
   **테이블 및 뷰 선택** 페이지를 사용하여 데이터 원본 뷰에 포함시킬 데이터 원본의 테이블 또는 뷰를 선택할 수 있습니다.  

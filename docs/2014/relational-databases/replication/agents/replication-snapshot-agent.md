@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087163"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
   복제 스냅숏 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅숏 파일을 준비하여 스냅숏 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  

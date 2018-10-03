@@ -1,14 +1,11 @@
 ---
-title: semantickeyphrasetable (Transact SQL) | Microsoft Docs
+title: semantickeyphrasetable (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98d837abe05cf99051230e24fd0d418e1263aa4f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785331"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +76,7 @@ SEMANTICKEYPHRASETABLE
 |**score**|**REAL**|동일한 문서의 인덱싱된 열에 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 자세한 내용은 참조 [의미 체계 검색 하 여 문서의 키 구 찾기](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)합니다.  
+ 자세한 내용은 [의미 체계 검색을 사용 하 여 문서의 키 구 찾기](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)합니다.  
   
 ## <a name="metadata"></a>메타데이터  
  의미 체계 키 구 추출 및 채우기에 대한 정보와 상태를 보려면 다음 동적 관리 뷰를 쿼리합니다.  
@@ -91,12 +87,12 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  전체 텍스트 및 의미 체계 인덱스를 만든 기본 테이블에 대한 SELECT 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
-###  <a name="HowToTopPhrases"></a>예 1: 특정 문서에서 상위 키 구 찾기  
+###  <a name="HowToTopPhrases"></a> 예제 1: 특정 문서에서 상위 키 구 찾기  
  다음 예제에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 @DocumentId 변수를 통해 지정된 문서에서 상위 10개의 키 구를 검색합니다. @DocumentId 변수는 전체 텍스트 인덱스의 키 열에 있는 값을 나타냅니다. **SEMANTICKEYPHRASETABLE** 함수는 테이블 검색 대신 인덱스 검색을 사용하여 이러한 결과를 효율적으로 검색합니다. 이 예에서는 열이 전체 텍스트 및 의미 체계 인덱싱에 대해 구성되어 있는 것으로 가정합니다.  
   
 ```sql  
@@ -111,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>예제 2: 특정 키 구가 포함 된 상위 문서 찾기  
+###  <a name="HowToTopDocuments"></a> 예제 2: 특정 키 구가 포함 된 상위 문서 찾기  
  다음 예에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 “Bracket” 키 구가 포함된 상위 25개의 문서를 검색합니다. 이 예에서는 열이 전체 텍스트 및 의미 체계 인덱싱에 대해 구성되어 있는 것으로 가정합니다.  
   
 ```sql  

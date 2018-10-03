@@ -1,13 +1,11 @@
 ---
-title: Visual FoxPro ODBC 드라이버 및 ODBC 함수 | Microsoft Docs
+title: ODBC 함수 및 Visual FoxPro ODBC 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
@@ -20,27 +18,26 @@ helpviewer_keywords:
 - level 2 API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbd0f2c54fb84f21d0a2448dcab07f22a47ae32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782681"
 ---
-# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버 및 ODBC 함수
-이 단원의 항목에서는 ODBC API 함수에 대 한 간단한 요약 및 모든 Visual FoxPro 관련 세부 정보를 제공 합니다.  
+# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 함수 및 Visual FoxPro ODBC 드라이버
+이 섹션의에서 항목에서는 간략 한 ODBC API 함수 및 Visual FoxPro 관련 세부 정보를 제공합니다.  
   
 > [!NOTE]  
->  ODBC 함수에 대 한 일반 정보를 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md) "ODBC Programmer's guide"입니다.  
+>  ODBC 함수에 대 한 일반적인 정보를 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md) "ODBC Programmer's Guide"에서 합니다.  
   
- 세 가지 주요 범주로 구분 되는 ODBC API 함수: 핵심 수준 API 함수, 수준 1 API 함수 및 수준 2 API 함수입니다.  
+ ODBC API 함수를 세 가지 주요 범주로 나뉘어 있습니다: 핵심 수준 API 함수, 수준 1 API 함수 및 수준 2 API 함수입니다.  
   
 > [!NOTE]  
->  디렉터리에 대 한 연결으로 데이터 원본 정의 여부에 따라 다르게 동작할 함수 중 몇 가지 [테이블 있음](../../odbc/microsoft/visual-foxpro-terminology.md) (.dbf 파일) 또는 Visual FoxPro [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) (.dbc 파일). 특정 작업은 데이터베이스 연결에 대해서만 지원 됩니다.  
+>  데이터 소스 디렉터리에 대 한 연결으로 정의 되었는지 여부에 따라 다르게 동작할 함수 중 몇 [테이블 무료](../../odbc/microsoft/visual-foxpro-terminology.md) (.dbf 파일) 또는 Visual FoxPro [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) (.dbc 파일). 특정 작업은 데이터베이스 연결에 대해서만 지원 됩니다.  
   
 ## <a name="core-level-api-support"></a>핵심 수준 API 지원  
  ODBC 핵심 수준 API 함수는 다음 표에 나열 됩니다. 이러한 함수의 모든 Visual FoxPro ODBC 드라이버에서 지원 됩니다.  
@@ -60,7 +57,7 @@ ms.locfileid: "32905078"
 |[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
 ## <a name="level-1-api-support"></a>수준 1 API 지원  
- 수준 1 ODBC API 함수는 다음 표에 나열 됩니다. 이러한 함수는 모두 완전히 또는 부분적으로 사용할 수 Visual FoxPro ODBC 드라이버가 있습니다.  
+ ODBC 수준 1 API 함수는 다음 표에 나열 됩니다. 이러한 함수는 완전히 또는 부분적으로 지원 되는 모든 Visual FoxPro ODBC 드라이버에서.  
   
 |||  
 |-|-|  
@@ -74,7 +71,7 @@ ms.locfileid: "32905078"
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
 ## <a name="level-2-api-support"></a>수준 2 API 지원  
- 다음 ODBC 수준 2 API 함수 완전히 또는 부분적으로 지원 됩니다.  
+ 다음 ODBC 수준 2 API 함수를 완전히 또는 부분적으로 지원 됩니다.  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   
@@ -94,7 +91,7 @@ ms.locfileid: "32905078"
   
 -   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (부분 지원)  
   
- 다음 수준 2 API 함수는 지원 되지 않습니다.  
+ 다음 수준 2 API 함수를 사용 하 여 지원 되지 않습니다.  
   
 -   SQLBrowseConnect  
   

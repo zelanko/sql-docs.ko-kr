@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 922ffe08cfff03a1f3347136d2b809ae5b9926c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb003df07b23f47e3cb5bb78e04f92b35029ea9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127583"
 ---
 # <a name="grouping-pane-report-builder"></a>그룹화 창(보고서 작성기)
   그룹화 창에는 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹이 표시됩니다. 차트 및 계기 데이터 영역은 그룹화 창에서 사용할 수 없습니다. 그룹화 창은 행 그룹 창과 열 그룹 창으로 구성되며 기본 및 고급 모드의 두 가지 모드를 제공합니다. 기본 모드에서는 행 및 열 그룹의 동적 멤버의 계층 뷰를 표시하고 고급 모드에서는 행과 열 그룹의 동적 및 정적 멤버를 모두 표시합니다. 그룹은 데이터 영역에 표시되는 보고서 데이터 집합의 명명된 데이터 집합입니다. 그룹은 정적 및 동적 멤버를 포함하는 계층으로 구성됩니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
@@ -66,11 +63,11 @@ ms.locfileid: "37153824"
   
 -   **KeepTogether**. Boolean입니다. 가능하면 전체 테이블릭스 멤버 및 중첩된 멤버를 한 페이지에 표시한다는 것을 나타냅니다.  
   
--   `KeepWithGroup`을 참조하세요. Boolean입니다. 정적 행 멤버에만 사용할 수 있습니다. 숨기지 않는 경우 가능하면 동적 멤버의 이전 또는 다음 형제와 함께 이 행을 표시합니다. 행 머리글을 연결된 그룹과 함께 표시하려면 KeepWithGroup을 **After**로 설정합니다.  
+-   `KeepWithGroup` 을 참조하세요. Boolean입니다. 정적 행 멤버에만 사용할 수 있습니다. 숨기지 않는 경우 가능하면 동적 멤버의 이전 또는 다음 형제와 함께 이 행을 표시합니다. 행 머리글을 연결된 그룹과 함께 표시하려면 KeepWithGroup을 **After**로 설정합니다.  
   
--   `RepeatOnNewPage`을 참조하세요. Boolean입니다. 정적 행 멤버이고 KeepWithGroup이 None이 아닌 경우에만 사용할 수 있습니다. 가능하면 KeepWithGroup에 지정된 동적 멤버의 인스턴스가 하나 이상 있는 모든 페이지에서 이 정적 행을 반복합니다. 행 머리글을 연결된 그룹과 함께 표시하려면 RepeatOnNewPage를 **True**로 설정합니다.  
+-   `RepeatOnNewPage` 을 참조하세요. Boolean입니다. 정적 행 멤버이고 KeepWithGroup이 None이 아닌 경우에만 사용할 수 있습니다. 가능하면 KeepWithGroup에 지정된 동적 멤버의 인스턴스가 하나 이상 있는 모든 페이지에서 이 정적 행을 반복합니다. 행 머리글을 연결된 그룹과 함께 표시하려면 RepeatOnNewPage를 **True**로 설정합니다.  
   
--   `Hidden`을 참조하세요. Boolean입니다. 처음에 행 또는 열을 숨길지 여부를 나타냅니다.  
+-   `Hidden` 을 참조하세요. Boolean입니다. 처음에 행 또는 열을 숨길지 여부를 나타냅니다.  
   
 -   **ToggleItem.** 문자열입니다. 토글 이미지를 추가할 입력란의 이름입니다. 입력란은 동일한 그룹 범위 또는 포함 범위에 있어야 합니다.  
   

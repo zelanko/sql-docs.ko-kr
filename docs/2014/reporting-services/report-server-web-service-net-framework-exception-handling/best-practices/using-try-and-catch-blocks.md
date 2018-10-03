@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - exceptions [Reporting Services], try/catch blocks
 - try/catch blocks [Reporting Services]
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2a83b3097dd0bdb27e662c5ab28e741fea2bfee4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 217ae6ee4fb118b6d0f9388c71c451200624faa5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121733"
 ---
 # <a name="using-try-and-catch-blocks"></a>Try 및 Catch 블록 사용
   조건문을 코드에 추가하여 보고서 서버에 대한 잘못된 요청을 제한한 후에는 try/catch 블록을 사용하여 적절한 예외 처리를 제공해야 합니다. 이를 통해 유효하지 않은 요청에 대한 또 하나의 보호막을 만들 수 있습니다. 보고서 서버에 대한 요청이 try 블록 안에 포함되어 있으며 이 요청으로 인해 보고서 서버에서 예외가 throw되는 경우 이 예외는 catch 블록에서 catch되므로 응용 프로그램이 갑자기 종료되는 것을 막을 수 있습니다. 예외가 catch되면 예외를 사용하여 사용자에게 다른 작업을 수행하도록 지시하거나 오류가 발생했음을 친숙한 방법으로 알려줄 수 있습니다. 그런 다음 finally 블록을 사용하여 리소스를 정리할 수 있습니다. 일반적인 예외 처리 계획을 생성하여 불필요한 try/catch 블록 중복을 피하는 것이 가장 이상적입니다.  

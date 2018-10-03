@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179240"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117853"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>보고서 페이지에서 테이블릭스 데이터 영역 표시 제어(보고서 작성기 및 SSRS)
   이 항목에서는 보고서에서 테이블릭스 데이터 영역이 표시되는 방법을 변경하기 위해 수정할 수 있는 테이블릭스 데이터 영역의 속성에 대해 설명합니다.  

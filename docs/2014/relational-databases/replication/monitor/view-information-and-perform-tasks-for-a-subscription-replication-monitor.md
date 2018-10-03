@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], viewing information
 - subscriptions [SQL Server replication], Replication Monitor tasks
 - viewing subscription information
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea071e2023c302d604c7d77f703cdaa050fc1c24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 329107e41d4732c21b8c3aa5a056048ac2283cd3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150664"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049523"
 ---
 # <a name="view-information-and-perform-tasks-for-a-subscription-replication-monitor"></a>구독에 대한 정보 보기 및 태스크 수행(복제 모니터)
   복제 모니터는 구독에 대한 정보가 들어 있는 다음 탭을 제공합니다.  

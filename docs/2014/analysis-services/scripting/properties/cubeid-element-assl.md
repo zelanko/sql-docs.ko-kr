@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeID element
 ms.assetid: cea9cd1b-30e6-48b1-afb9-c2c1243cead8
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 941e8171a183bcbc66521b4f022be185cac7911a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a78461e32dad6e6af501360d450cb950fd91bda1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049223"
 ---
 # <a name="cubeid-element-assl"></a>CubeID 요소(ASSL)
   하 게 식별 하는 [큐브](../objects/cube-element-assl.md) 연관 된 요소를 [바인딩](../data-type/binding-data-type-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37321123"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37321123"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubeAttributeBinding](../data-type/attributebinding-data-type-assl.md)하십시오 [CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md)하십시오 [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  AMO(Analysis Management Objects) 개체 모델에서 `CubeID`의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.CubeAttributeBinding>, <xref:Microsoft.AnalysisServices.CubeDimensionBinding> 및 <xref:Microsoft.AnalysisServices.MeasureGroupBinding>입니다.  

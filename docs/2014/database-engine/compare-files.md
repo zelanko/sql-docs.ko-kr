@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [SQL Server], file comparisons
 - comparing files
 - file comparisons [SQL Server]
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d04fcf3113aeed4c2cd1512375956921029c992f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073523"
 ---
 # <a name="compare-files"></a>파일 비교
   파일을 비교하여 파일이 현재 상태로 진행된 방법을 확인할 수 있습니다. 예를 들어 특정 원본 파일 버전이 체크 인된 후에 코드 프로젝트의 작성에서 오류가 발견된 경우 현재 파일 버전을 이전 파일 버전과 비교할 수 있습니다. 이렇게 하면 오류를 일으킨 코드를 찾아낼 수 있습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Measure Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1079cd11970fad7299064fbbfefe1d476b0daed7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059393"
 ---
 # <a name="measure-element-assl"></a>Measure 요소(ASSL)
   측정값을 정의합니다.  
@@ -72,13 +69,13 @@ ms.locfileid: "37159334"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  
 |------------------------|---------------|  
 |[AggregationInstance](../data-type/binding-data-type-assl.md)|  
-|[측정값 그룹](group-element-assl.md)|InclusionThresholdSetting|  
+|[측정값 그룹](group-element-assl.md)|없음|  
 |[MeasureGroupBinding (아웃 아웃오브 라인)](../data-type/measurebinding-data-type-assl.md)|  
 |[PerspectiveMeasureGroup](../data-type/perspectivemeasure-data-type-assl.md)|  
   
@@ -91,7 +88,7 @@ ms.locfileid: "37159334"
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
 |[MeasureGroup](../properties/aggregatefunction-element-assl.md), [주석을](../collections/annotations-element-assl.md)를 [BackColor](../properties/backcolor-element-assl.md)를 [DataType](../properties/datatype-element-assl.md)를 [설명](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md)를 [FontName](../properties/name-element-assl.md)를 [FontSize](../properties/fontsize-element-assl.md)를 [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md)를 [이름](../properties/name-element-assl.md)를 [원본](../properties/source-element-measure-assl.md), [번역](../collections/translations-element-assl.md), [표시](../properties/visible-element-assl.md)|  
-|나머지|InclusionThresholdSetting|  
+|나머지|없음|  
   
 ## <a name="remarks"></a>Remarks  
  측정값에 대한 바인딩 세부 정보가 제공될 수 있습니다. 이때 이러한 세부 정보는 파티션마다 기본값으로 동작합니다.  

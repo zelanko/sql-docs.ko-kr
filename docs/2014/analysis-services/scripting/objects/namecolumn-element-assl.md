@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NameColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NameColumn element
 ms.assetid: 9ff79f2e-26d7-4ab9-a166-14c2c2d1fc07
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b2a0ae2308c14caaf46edaed876a31e04b82e46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b51c297b2b7c81b4cbec4f629cf3efe9e8b367b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213943"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095654"
 ---
 # <a name="namecolumn-element-assl"></a>NameColumn 요소(ASSL)
   부모 요소의 이름을 제공하는 열을 식별합니다.  
@@ -56,14 +53,14 @@ ms.locfileid: "37213943"
 |상위 항목 또는 부모|기본값|  
 |------------------------|-------------------|  
 |[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|Varies(주의 참조)|  
-|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|InclusionThresholdSetting|  
+|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|없음|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  경우는 [KeyColumns](../collections/columns-element-assl.md) 컬렉션인 `DimensionAttribute` 하나를 포함 [KeyColumn](column-element-assl.md) 같은 문자열 데이터 형식의 키 열을 나타내는 요소 `DataItem` 값이 기본값으로 사용 됩니다 `NameColumn` 요소입니다.  

@@ -1,40 +1,34 @@
 ---
-title: (AccessToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs
+title: 데이터베이스 (AccessToSQL)에서 새로 고침 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6d38b1bdb437ed553648d9f93c0b09edfc7ca463
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676291"
 ---
-# <a name="refresh-from-database-accesstosql"></a>(AccessToSQL) 데이터베이스에서 새로 고침
-**데이터베이스에서 새로 고침** 대화 상자에서는 Access 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  
+# <a name="refresh-from-database-accesstosql"></a>데이터베이스 (AccessToSQL)에서 새로 고침
+합니다 **데이터베이스에서 새로 고침** 대화 상자에서는 Access 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에서 행은 색으로 구분 된 메타 데이터의 상태를 기반으로 합니다.  
   
--   개체 메타 데이터에 로컬 및 Access 데이터베이스에서 변경 된 경우 행은 파란색입니다.  
+-   개체 메타 데이터를 로컬 및 Access 데이터베이스에서 변경 된 경우 행은 파란색입니다.  
   
--   SSMA 아니라 Access 데이터베이스에 있는 개체 메타 데이터가 변경 된 경우 노란색입니다.  
+-   SSMA 제외한 Access 데이터베이스에 개체 메타 데이터를 변경 하는 경우 노란색입니다.  
   
--   개체 메타 데이터를 로컬로 변경 되었지만 Access 데이터베이스에 없는 행은 녹색입니다.  
+-   개체 메타 데이터를 로컬에서 변경 된 행은 녹색 Access 데이터베이스에 없는 경우.  
   
--   Access 데이터베이스의 새 개체가 있으면 해당 행은 분홍색.  
+-   Access 데이터베이스에서 새 개체가 있으면 분홍색입니다.  
   
-기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정 &#40;개체 로드&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
+기본 개체 새로 고침 설정을 지정할 수 있습니다 합니다 **프로젝트 설정** 대화 상자. 자세한 내용은 [프로젝트 설정 &#40;개체를 로드&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
   
-액세스는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 **데이터베이스** 액세스 메타 데이터 탐색기 및 클릭에서 노드 **데이터베이스에서 새로 고침**합니다.  
+액세스 하는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 **데이터베이스** 하 고 액세스 메타 데이터 탐색기에서 노드 **데이터베이스에서 새로 고침**합니다.  
   

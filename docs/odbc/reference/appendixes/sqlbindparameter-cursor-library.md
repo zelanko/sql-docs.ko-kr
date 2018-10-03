@@ -5,32 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindParameter function [ODBC], Cursor Library
 ms.assetid: 04c53e4c-cd1d-40b2-9997-684ebe43499f
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef5189f1179c5be6b9307feb4dcf72c74838177d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eafab0f29cb4e1b7ecdfea378f9315ba29cf133f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813671"
 ---
-# <a name="sqlbindparameter-cursor-library"></a>SQLBindParameter (커서 라이브러리)
+# <a name="sqlbindparameter-cursor-library"></a>SQLBindParameter(커서 라이브러리)
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 이 항목의 사용을 설명는 **SQLBindParameter** 커서 라이브러리의 함수가 있습니다. 에 대 한 일반적인 내용은 **SQLBindParameter**, 참조 [SQLBindParameter 함수](../../../odbc/reference/syntax/sqlbindparameter-function.md)합니다.  
+ 이 항목에서는의 사용을 설명 합니다 **SQLBindParameter** 커서 라이브러리의 함수입니다. 에 대 한 일반 정보에 대 한 **SQLBindParameter**를 참조 하십시오 [SQLBindParameter 함수](../../../odbc/reference/syntax/sqlbindparameter-function.md)합니다.  
   
- 응용 프로그램에서 호출할 수 **SQLBindParameter** C 데이터 형식, 열 크기 및 연결된 된 필드의 10 진수 동일 하 게 유지으로 매개 변수를 다시 바인딩해야 합니다.  
+ 응용 프로그램에서 호출할 수 있습니다 **SQLBindParameter** C 데이터 형식, 열 크기 및 연결된 된 필드의 10 진수 남아 동일한 매개 변수를 다시 바인딩해야 합니다.  
   
- 커서 라이브러리 지원 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성 바인딩 오프셋을 사용 하도록 설정 합니다. (**SQLBindParameter** 되려면 리바인딩이 대해 호출할 필요는 없습니다.)  
+ 커서 라이브러리 지원 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성 바인딩 오프셋을 사용 하도록 설정 합니다. (**SQLBindParameter** 이렇게 다시 바인딩하기 위해서는 발생에 대해 호출할 필요가 없습니다.)  
   
- 커서 라이브러리 바인딩 실행 시 데이터 매개 변수를 지원 합니다.
+ 커서 라이브러리 바인딩 실행 시 데이터 매개 변수를 지원합니다.

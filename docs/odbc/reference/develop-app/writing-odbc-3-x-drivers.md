@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -15,108 +13,107 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9b926d45e6556b53957ecd2934d7068418f3101
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77a94c7505b5ab221fee4896e91f9b26850669df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795657"
 ---
-# <a name="writing-odbc-3x-drivers"></a>쓰기 ODBC 3.x 드라이버
-다음 표에서 ODBC 3에서 함수 지원을 보여 줍니다. *x* 드라이버 및 ODBC 응용 프로그램 및 ODBC 3에 대해 함수를 호출할 때 드라이버 관리자에 의해 수행 매핑. *x* 드라이버입니다.  
+# <a name="writing-odbc-3x-drivers"></a>ODBC 3.x 드라이버 작성
+다음 표에서 ODBC 3에서 함수 지원 합니다. *x* 드라이버 및 ODBC 응용 프로그램 및 매핑을 함수는 ODBC 3에 대해 호출 될 때 드라이버 관리자에 의해 수행 됩니다. *x* 드라이버입니다.  
   
-|함수|지원됨<br /><br /> 여는<br /><br /> ODBC 3입니다. *x*<br /><br /> 드라이버?|지원됨<br /><br /> 여는<br /><br /> ODBC 3입니다. *x*<br /><br /> 응용 프로그램?|매핑된/지원<br /><br /> ODBC 3. *x*<br /><br /> 드라이버 관리자를<br /><br /> ODBC 3입니다. *x* 드라이버?|  
+|기능|지원됨<br /><br /> 여는<br /><br /> ODBC 3입니다. *x*<br /><br /> 드라이버?|지원됨<br /><br /> 여는<br /><br /> ODBC 3입니다. *x*<br /><br /> 응용 프로그램이 있나요?|매핑된/지원<br /><br /> ODBC 3에서. *x*<br /><br /> 드라이버 관리자<br /><br /> ODBC 3입니다. *x* 드라이버?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|아니요|[1]|예|  
-|**SQLAllocEnv**|아니요|[1]|예|  
-|**SQLAllocHandle**|예|사용자 계정 컨트롤|아니요|  
-|**SQLAllocStmt**|아니요|[1]|예|  
-|**SQLBindCol**|예|사용자 계정 컨트롤|아니요|  
-|**SQLBindParam**|아니요|예 [2]|예|  
-|**SQLBindParameter**|예|사용자 계정 컨트롤|아니요|  
-|**SQLBrowseConnect**|예|사용자 계정 컨트롤|아니요|  
-|**SQLBulkOperations**|예|사용자 계정 컨트롤|아니요|  
-|**SQLCancel**|예|사용자 계정 컨트롤|아니요|  
-|**SQLCloseCursor**|예|사용자 계정 컨트롤|아니요|  
-|**SQLColAttribute**|예|사용자 계정 컨트롤|아니요|  
-|**SQLColAttributes**|[3]|아니요|예|  
-|**SQLColumnPrivileges**|예|사용자 계정 컨트롤|아니요|  
-|**SQLColumns**|예|사용자 계정 컨트롤|아니요|  
-|**SQLConnect**|예|사용자 계정 컨트롤|아니요|  
-|**SQLCopyDesc**|예|예|예 [4]|  
-|**SQLDataSources**|아니요|사용자 계정 컨트롤|예|  
-|**SQLDescribeCol**|예|사용자 계정 컨트롤|아니요|  
-|**SQLDescribeParam**|예|사용자 계정 컨트롤|아니요|  
-|**SQLDisconnect**|예|사용자 계정 컨트롤|아니요|  
-|**SQLDriverConnect**|예|사용자 계정 컨트롤|아니요|  
-|**SQLDrivers**|아니요|사용자 계정 컨트롤|예|  
-|**SQLEndTran**|예|사용자 계정 컨트롤|아니요|  
-|**SQLError**|아니요|[1]|예|  
-|**SQLExecDirect**|예|사용자 계정 컨트롤|아니요|  
-|**SQLExecute**|예|사용자 계정 컨트롤|아니요|  
-|**SQLExtendedFetch**|예|아니요|아니요|  
-|**SQLFetch**|예|사용자 계정 컨트롤|아니요|  
-|**SQLFetchScroll**|예|사용자 계정 컨트롤|아니요|  
-|**SQLForeignKeys**|예|사용자 계정 컨트롤|아니요|  
-|**SQLFreeConnect**|아니요|예 [1]|예|  
-|**SQLFreeEnv**|아니요|예 [1]|예|  
-|**SQLFreeHandle**|예|사용자 계정 컨트롤|아니요|  
-|**SQLFreeStmt**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetConnectAttr**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetConnectOption**|[5]|[1]|예|  
-|**SQLGetCursorName**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetData**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetDescField**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetDescRec**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetDiagField**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetDiagRec**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetEnvAttr**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetFunctions**|[6]|예|예|  
-|**SQLGetInfo**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetStmtAttr**|예|사용자 계정 컨트롤|아니요|  
-|**SQLGetStmtOption**|[5]|[1]|예|  
-|**SQLGetTypeInfo**|예|사용자 계정 컨트롤|아니요|  
-|**SQLMoreResults**|예|사용자 계정 컨트롤|아니요|  
-|**SQLNativeSql**|예|사용자 계정 컨트롤|아니요|  
-|**SQLNumParams**|예|사용자 계정 컨트롤|아니요|  
-|**SQLNumResultCols**|예|사용자 계정 컨트롤|아니요|  
-|**SQLParamData**|예|사용자 계정 컨트롤|아니요|  
-|**SQLParamOptions**|아니요|아니오|예|  
-|**SQLPrepare**|예|사용자 계정 컨트롤|아니요|  
-|**SQLPrimaryKeys**|예|사용자 계정 컨트롤|아니요|  
-|**SQLProcedureColumns**|예|사용자 계정 컨트롤|아니요|  
-|**SQLProcedures**|예|사용자 계정 컨트롤|아니요|  
-|**SQLPutData**|예|사용자 계정 컨트롤|아니요|  
-|**SQLRowCount**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetConnectAttr**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetConnectOption**|[5]|[1]|예|  
-|**SQLSetCursorName**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetDescField**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetDescRec**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetEnvAttr**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetPos**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetParam**|아니요|아니오|예|  
-|**SQLSetScrollOption**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetStmtAttr**|예|사용자 계정 컨트롤|아니요|  
-|**SQLSetStmtOption**|[5]|[1]|예|  
-|**SQLSpecialColumns**|예|사용자 계정 컨트롤|아니요|  
-|**SQLStatistics**|예|사용자 계정 컨트롤|아니요|  
-|**SQLTablePrivileges**|예|사용자 계정 컨트롤|아니요|  
-|**SQLTables**|예|사용자 계정 컨트롤|아니요|  
-|**SQLTransact**|아니요|[1]|예|  
+|**SQLAllocConnect**|아니요|[1]|사용자 계정 컨트롤|  
+|**SQLAllocEnv**|아니요|[1]|사용자 계정 컨트롤|  
+|**SQLAllocHandle**|사용자 계정 컨트롤|예|아니요|  
+|**SQLAllocStmt**|아니요|[1]|사용자 계정 컨트롤|  
+|**SQLBindCol**|사용자 계정 컨트롤|예|아니요|  
+|**SQLBindParam**|아니요|예 [2]|사용자 계정 컨트롤|  
+|**SQLBindParameter**|사용자 계정 컨트롤|예|아니요|  
+|**SQLBrowseConnect**|사용자 계정 컨트롤|예|아니요|  
+|**SQLBulkOperations**|사용자 계정 컨트롤|예|아니요|  
+|**SQLCancel**|사용자 계정 컨트롤|예|아니요|  
+|**SQLCloseCursor**|사용자 계정 컨트롤|예|아니요|  
+|**SQLColAttribute**|사용자 계정 컨트롤|예|아니요|  
+|**SQLColAttributes**|[3]|아니요|사용자 계정 컨트롤|  
+|**SQLColumnPrivileges**|사용자 계정 컨트롤|예|아니요|  
+|**SQLColumns**|사용자 계정 컨트롤|예|아니요|  
+|**SQLConnect**|사용자 계정 컨트롤|예|아니요|  
+|**SQLCopyDesc**|사용자 계정 컨트롤|사용자 계정 컨트롤|예 [4]|  
+|**SQLDataSources**|아니요|예|사용자 계정 컨트롤|  
+|**SQLDescribeCol**|사용자 계정 컨트롤|예|아니요|  
+|**SQLDescribeParam**|사용자 계정 컨트롤|예|아니요|  
+|**SQLDisconnect**|사용자 계정 컨트롤|예|아니요|  
+|**SQLDriverConnect**|사용자 계정 컨트롤|예|아니요|  
+|**SQLDrivers**|아니요|예|사용자 계정 컨트롤|  
+|**SQLEndTran**|사용자 계정 컨트롤|예|아니요|  
+|**SQLError**|아니요|[1]|사용자 계정 컨트롤|  
+|**SQLExecDirect**|사용자 계정 컨트롤|예|아니요|  
+|**SQLExecute**|사용자 계정 컨트롤|예|아니요|  
+|**SQLExtendedFetch**|사용자 계정 컨트롤|아니오|아니요|  
+|**SQLFetch**|사용자 계정 컨트롤|예|아니요|  
+|**SQLFetchScroll**|사용자 계정 컨트롤|예|아니요|  
+|**SQLForeignKeys**|사용자 계정 컨트롤|예|아니요|  
+|**SQLFreeConnect**|아니요|예 [1]|사용자 계정 컨트롤|  
+|**SQLFreeEnv**|아니요|예 [1]|사용자 계정 컨트롤|  
+|**SQLFreeHandle**|사용자 계정 컨트롤|예|아니요|  
+|**SQLFreeStmt**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetConnectAttr**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetConnectOption**|[5]|[1]|사용자 계정 컨트롤|  
+|**SQLGetCursorName**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetData**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetDescField**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetDescRec**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetDiagField**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetDiagRec**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetEnvAttr**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetFunctions**|[6]|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|**SQLGetInfo**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetStmtAttr**|사용자 계정 컨트롤|예|아니요|  
+|**SQLGetStmtOption**|[5]|[1]|사용자 계정 컨트롤|  
+|**SQLGetTypeInfo**|사용자 계정 컨트롤|예|아니요|  
+|**SQLMoreResults**|사용자 계정 컨트롤|예|아니요|  
+|**SQLNativeSql**|사용자 계정 컨트롤|예|아니요|  
+|**SQLNumParams**|사용자 계정 컨트롤|예|아니요|  
+|**SQLNumResultCols**|사용자 계정 컨트롤|예|아니요|  
+|**SQLParamData**|사용자 계정 컨트롤|예|아니요|  
+|**SQLParamOptions**|아니요|아니요|사용자 계정 컨트롤|  
+|**SQLPrepare**|사용자 계정 컨트롤|예|아니요|  
+|**SQLPrimaryKeys**|사용자 계정 컨트롤|예|아니요|  
+|**SQLProcedureColumns**|사용자 계정 컨트롤|예|아니요|  
+|**SQLProcedures**|사용자 계정 컨트롤|예|아니요|  
+|**SQLPutData**|사용자 계정 컨트롤|예|아니요|  
+|**SQLRowCount**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetConnectAttr**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetConnectOption**|[5]|[1]|사용자 계정 컨트롤|  
+|**SQLSetCursorName**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetDescField**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetDescRec**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetEnvAttr**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetPos**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetParam**|아니요|아니요|사용자 계정 컨트롤|  
+|**SQLSetScrollOption**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetStmtAttr**|사용자 계정 컨트롤|예|아니요|  
+|**SQLSetStmtOption**|[5]|[1]|사용자 계정 컨트롤|  
+|**SQLSpecialColumns**|사용자 계정 컨트롤|예|아니요|  
+|**SQLStatistics**|사용자 계정 컨트롤|예|아니요|  
+|**SQLTablePrivileges**|사용자 계정 컨트롤|예|아니요|  
+|**SQLTables**|사용자 계정 컨트롤|예|아니요|  
+|**SQLTransact**|아니요|[1]|사용자 계정 컨트롤|  
   
- [ODBC 3에서 1]이이 함수는 사용 되지 않습니다. *x*합니다. ODBC 3입니다. *x* 응용 프로그램은이 기능을 사용 하지 않아야 합니다. 그러나는 Open Group 또는 ISO CLI 호환 응용 프로그램이이 함수를 호출할 수 있습니다.  
+ [1]이이 함수는 ODBC 3에서 사용 되지 않습니다. *x*합니다. ODBC 3입니다. *x* 응용 프로그램 해야이 함수를 사용 하지 않습니다. 그러나는 Open Group 또는 ISO CLI 호환 응용 프로그램이 함수를 호출할 수 있습니다.  
   
- [2] ODBC 3입니다. *x* 응용 프로그램 사용 해야 **SQLBindParameter** 대신 **SQLBindParam**합니다. 그러나는 Open Group 또는 ISO CLI 호환 응용 프로그램이이 함수를 호출할 수 있습니다.  
+ [2] ODBC 3입니다. *x* 응용 프로그램을 사용할지 **SQLBindParameter** 대신 **SQLBindParam**합니다. 그러나는 Open Group 또는 ISO CLI 호환 응용 프로그램이 함수를 호출할 수 있습니다.  
   
- [3] 드라이버 작성자 한다는 점에 유의 해야 ODBC 2. *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE, 및 SQL_COLUMN_LENGTH를 지원 해야 하는 열 특성 **SQLColAttribute**합니다.  
+ [3] 드라이버 작성자 한다는 점에 유의 해야 ODBC 2. *x* SQL_COLUMN_LENGTH SQL_COLUMN_PRECISION 고 SQL_COLUMN_SCALE를 사용 하 여 지원 해야 하는 열 특성 **SQLColAttribute**합니다.  
   
- [4] **SQLCopyDesc** 다른 드라이버에 속해 있는 연결을 통해 한 설명자를 복사할 때 드라이버 관리자에서 부분적으로 구현 됩니다. 드라이버 지원에 필요한 **SQLCopyDesc** 두 자체 연결에 걸쳐 있습니다. 와 같은 함수가 **SQLDrivers**, 드라이버 관리자에서 전적으로 구현 되는,이 목록에 표시 되지 않습니다.  
+ [4] **SQLCopyDesc** 다른 드라이버에 속하는 연결 설명자를 복사할 때 드라이버 관리자에 의해 부분적으로 구현 됩니다. 드라이버 지원에 필요한 **SQLCopyDesc** 대 한 자체 연결의 두 개의. 와 같은 함수 **SQLDrivers**전적으로 드라이버 관리자에 의해 구현 되는 경우,이 목록에 표시 되지 않습니다.  
   
- [특정 상황에서 5] 드라이버 해야이 기능을 지원 합니다. 자세한 내용은이 함수의 참조 페이지를 참조 하세요.  
+ [5] 특정 상황에서 드라이버를이 함수를 지원 해야 합니다. 자세한 내용은이 함수의 참조 페이지를 참조 하세요.  
   
- [6]의 드라이버 지원 하도록 선택할 수 **SQLGetFunctions** 드라이버에서 지 원하는 기능 집합은 달라 연결에서 연결 하는 경우.
+ [6]의 드라이버 지원 하도록 선택할 수 **SQLGetFunctions** 드라이버에서 지 원하는 함수 집합이 다릅니다 연결에서 연결 하는 경우.

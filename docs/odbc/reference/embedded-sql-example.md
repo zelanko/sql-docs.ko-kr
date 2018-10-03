@@ -1,32 +1,29 @@
 ---
-title: SQL 예제를 포함 합니다. | Microsoft Docs
+title: Embedded SQL 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8983bcabb791c99974055fa718bdd89057e2d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750486"
 ---
-# <a name="embedded-sql-example"></a>포함 된 SQL 예제
-다음 코드는 간단한 포함 된 SQL 프로그램을 C 언어로 작성 된 프로그램은 아니지만 많은 중는 포함 된 SQL 기술을 보여 줍니다. 프로그램 주문 번호에 대 한 사용자 요청 하 고, 고객 번호, 영업 사원, 및는 주문 상태를 검색 하 고, 검색 된 정보 화면에 표시 합니다.  
+# <a name="embedded-sql-example"></a>Embedded SQL 예제
+다음 코드는 간단한 embedded SQL 프로그램, C로 작성 된 프로그램에는 아니지만 많은 전부는 아님 포함 된 SQL 기술을 보여 줍니다. 프로그램 주문 번호에 대 한 라는 메시지를 고객 번호, 영업 사원, 및는 주문 상태를 검색 하며 화면에 검색된 된 정보를 표시 합니다.  
   
 ```  
 int main() {  
@@ -70,10 +67,10 @@ bad_number:
   
  이 프로그램에 대 한 다음 note:  
   
--   **호스트 변수** 호스트 변수가 포함 되는 섹션에서 선언 되었습니다는 **시작 선언 섹션** 및 **끝 선언 섹션** 키워드입니다. 포함 된 SQL 문에 표시 되 면 각 호스트 변수 이름은 콜론 (:)가 붙은 합니다. 콜론은 호스트 변수 및 테이블 및 열 같은 이름을 가진 같은 데이터베이스 개체를 구분 하려면 프리 수 있습니다.  
+-   **호스트 변수** 묶어 섹션에서 선언 된 호스트 변수를 **선언 섹션 시작** 및 **최종 선언 섹션** 키워드. 에 포함 된 SQL 문을 표시 하는 경우 각 호스트 변수 이름에 콜론 (:) 접두사로 추가 됩니다. 콜론 프리를 호스트 변수 및 테이블과 동일한 이름을 가진 열 같은 데이터베이스 개체를 구별할 수 있습니다.  
   
--   **데이터 형식** DBMS와 호스트 언어에서 지 원하는 데이터 형식 매우 다를 수 있습니다. 이중 역할을 수행 하기 때문에 호스트 변수를 영향을 줍니다. 한편으로 호스트 변수는 프로그램 변수를 선언 하 고 호스트 언어 문에 의해 조작. 반면에 데이터베이스 데이터를 검색 하려면 포함 된 SQL 문에서 사용 됩니다. DBMS 데이터 형식에 해당 하는 호스트 언어 유형이 경우 DBMS의 데이터를 자동으로 변환 합니다. 그러나 규칙 및 변환 프로세스와 관련 된 고유한 특징에는 각 DBMS에 있으므로 호스트 변수 형식은 선택 해야 신중 하 게 합니다.  
+-   **데이터 형식** DBMS 및 호스트 언어에서 지원 되는 데이터 형식 매우 다를 수 있습니다. 이러한 역할을 이중 때문에 호스트 변수를 영향을 줍니다. 한편으로 호스트 변수는 프로그램 변수를 선언 하 고 호스트 언어 문으로 조작. 반면에 데이터베이스 데이터를 검색에 포함 된 SQL 문에서 사용 됩니다. DBMS 데이터 형식에 해당 하는 호스트 언어 유형이 없는 경우 DBMS는 자동으로 데이터를 변환 합니다. 그러나 각 DBMS 자체 규칙 및 변환 프로세스에 연결 된 고유한 특징이 있으므로 호스트 변수 형식은 선택 해야 신중 하 게 합니다.  
   
--   **오류 처리** The DBMS는 SQL 통신 영역 또는 SQLCA을 통해 응용 프로그램에 런타임에 오류를 보고 합니다. 위의 코드 예제에서는 첫 번째 포함 된 SQL 문이 포함 SQLCA 경우 프로그램에서 SQLCA 구조를 포함 하도록 프리를 인지를 나타냅니다. 프로그램은 DBMS에 의해 반환 되는 오류를 처리할 때마다 이것이 필요 합니다. WHENEVER 중... GOTO 문의 분기를 특정 레이블 때 오류가 발생 하는 오류 처리 코드를 생성 하려면 프리를 지시 합니다.  
+-   **오류 처리** The DBMS SQL 통신 영역 또는 SQLCA를 통해 응용 프로그램에 런타임 오류를 보고 합니다. 앞의 코드 예제에 포함된 된 첫 번째 SQL 문을 포함 SQLCA 경우 프로그램에서 SQLCA 구조를 포함 하도록 다르거나를 인지를 나타냅니다. 이 프로그램 DBMS에 의해 반환 되는 오류를 처리할 때마다 수행 해야 합니다. WHENEVER... GOTO 문 시 특정 레이블로 분기 발생 하는 오류 처리 코드를 생성할 다르거나 알려 줍니다.  
   
--   **단일 선택** 데이터를 반환 하는 데 사용 하는 문을 단일 SELECT 문입니다; 즉, 데이터의 단일 행만을 반환 합니다. 따라서이 코드 예제에서는 선언 않거나 커서를 사용 합니다.
+-   **단일 선택** 문이 데이터를 반환 하는 데 사용 하는 단일 SELECT 문, 즉, 데이터의 단일 행만을 반환 합니다. 따라서 코드 예제에서는 않습니다 하지 선언 또는 커서를 사용 합니다.

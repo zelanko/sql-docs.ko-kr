@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], Visual Basic example
 - GetObjectOwner method [ADOX], Visual Basic example
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9599d5b1130b5e19a3c42614ae49df3183918e2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f2442124889e6217edc730d4cd47b2c98fa1d2d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828221"
 ---
-# <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제 (VB)
-이 예제에서는 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 및 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드. 이 코드 그룹의 있다고 가정 Accounting (참조는 [그룹 및 사용자 추가, ChangePassword 메서드 예제 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) 시스템에이 그룹을 추가 하는 방법을 보려면). Categories 테이블의 소유자는 계정으로 설정 됩니다.  
+# <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제(VB)
+이 예제에서는 합니다 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 하 고 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드. 이 코드 그룹의 가정 계정 (참조를 [그룹과 사용자 Append, ChangePassword 메서드 예제 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) 시스템에이 그룹에 추가 하는 방법을 보려면). Categories 테이블의 소유자는 계정으로 설정 됩니다.  
   
 ```  
 ' BeginOwnersVB  
@@ -66,6 +63,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetObjectOwner 메서드 (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [SetObjectOwner 메서드](../../../ado/reference/adox-api/setobjectowner-method.md)

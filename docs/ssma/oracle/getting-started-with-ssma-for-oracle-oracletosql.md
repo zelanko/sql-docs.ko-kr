@@ -4,24 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1c2b325e10223cf30d233facb3de3e3282eaa7b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782071"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Oracle용 SSMA 시작(OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) Oracle 사용 하면 신속 하 게에 대 한 Oracle 데이터베이스 스키마로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마의 경우 결과 스키마를 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle에서 데이터를 마이그레이션하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

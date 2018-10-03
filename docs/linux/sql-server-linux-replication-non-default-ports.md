@@ -8,20 +8,17 @@ ms.date: 9/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dd5887f4db97ae4d8f52103fd29403e7eb4c51e
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dae79e05ff7f92e9e93543fd3540b5a2b019e255
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850101"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>기본이 아닌 포트를 사용 하 여 복제를 구성 합니다.
 
@@ -36,25 +33,25 @@ Network.tcpport mssql conf 설정을 사용 하 여 구성 된 모든 포트에�
 
 ## <a name="examples"></a>예
 
-'Server1' linux 1,500 포트에서 수신 대기합니다. 'Server1' 배포를 구성 하려면 `sp_adddistributor` 사용 하 여 `@distributor`입니다. 예를 들어: 
+'Server1' linux 1,500 포트에서 수신 대기합니다. 'Server1' 배포를 구성 하려면 `sp_adddistributor` 사용 하 여 `@distributor`입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
 
 ```sql
 exec sp_adddistributor @distributor = 'Server1,1500'
 ```
 
-'Server1' linux 1,500 포트에서 수신 대기합니다. 배포자에 대 한 게시자를 구성 하려면 `sp_adddistpublisher` 사용 하 여 `@publisher`입니다. 예를 들어:
+'Server1' linux 1,500 포트에서 수신 대기합니다. 배포자에 대 한 게시자를 구성 하려면 `sp_adddistpublisher` 사용 하 여 `@publisher`입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```sql
 exec sp_adddistpublisher @publisher = 'Server1,1500' ,  ,  
 ```
 
-'Server2' linux 6549 포트에서 수신합니다. 'Server2'를 구독자로 구성 하려면 `sp_addsubscription` 사용 하 여 `@subscriber`입니다. 예를 들어:
+'Server2' linux 6549 포트에서 수신합니다. 'Server2'를 구독자로 구성 하려면 `sp_addsubscription` 사용 하 여 `@subscriber`입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,  
 ```
 
-'Server3' Server3의 서버 이름과 MSSQL2017의 인스턴스 이름을 사용 하 여 Windows에서 6549 포트에서 수신합니다. 'Server3'를 구독자로 구성 하려면 다음을 실행 합니다 `sp_addsubscription` 사용 하 여 `@subscriber`입니다. 예를 들어:
+'Server3' Server3의 서버 이름과 MSSQL2017의 인스턴스 이름을 사용 하 여 Windows에서 6549 포트에서 수신합니다. 'Server3'를 구독자로 구성 하려면 다음을 실행 합니다 `sp_addsubscription` 사용 하 여 `@subscriber`입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  

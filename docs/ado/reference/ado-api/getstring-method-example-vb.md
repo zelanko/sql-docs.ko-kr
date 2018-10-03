@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a5a2ac54d8a177669d94613a2b612f6ce65f8d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a7210c3680202a0e08e3096f7f58d32e876e1ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623141"
 ---
-# <a name="getstring-method-example-vb"></a>GetString 메서드 예제 (VB)
-이 예제에서는 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드.  
+# <a name="getstring-method-example-vb"></a>GetString 메서드 예제(VB)
+이 예제에서는 합니다 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드.  
   
- 데이터 액세스 문제를 디버깅 하는 하 고 원하는 경우 약간의 현재 내용을 인쇄는 빠르고 간단한 방법 가정 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+ 데이터 액세스 문제를 디버깅 하 고 작은의 현재 내용을 인쇄 하는 빠르고 간단한 방법을 원합니다 가정 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
 ```  
 'BeginGetStringVB  

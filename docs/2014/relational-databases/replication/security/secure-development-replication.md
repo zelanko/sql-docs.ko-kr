@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], development
 - development security [SQL Server replication]
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3144b5aa38b273de283b624b90fa612130e6270d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00e18959f7b9fa99ab401d1ae6a8caa7438c4ce3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111703"
 ---
 # <a name="secure-development-replication"></a>안전한 개발(복제)
   이 섹션에서는 보다 안전한 복제 토폴로지를 계획하는 데 유용한 정보를 제공합니다.  

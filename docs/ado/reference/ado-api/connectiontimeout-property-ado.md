@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,32 +13,31 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionTimeout property [ADO]
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1f90890b8f48a4a00fe9469ed978d42d3f6a86a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b5cb3e6e1cc4266551bfeabf09bde1a65fea032f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707251"
 ---
-# <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 속성 (ADO)
-시도 종료 하 고 오류를 생성 하기 전에 연결을 설정 하는 동안 대기 시간을 나타냅니다.  
+# <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 속성(ADO)
+종료 하 고 오류를 생성 하기 전에 연결을 설정 하는 동안 대기할 시간을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환는 **긴** 연결이 열리기 전까지 대기 하는 초 단위로 나타내는 값입니다. 기본값은 15입니다.  
+ 설정 하거나 반환 된 **긴** 연결이 열릴 때까지 대기 하는 초 단위로 나타내는 값입니다. 기본값은 15입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여는 **ConnectionTimeout** 속성에는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 경우 네트워크 트래픽 또는 중형 서버 사용에서 지연이 발생 하 게 연결 시도 중단 하는 데 필요한 개체입니다. 경우는에서 시간은 **ConnectionTimeout** 오류가 발생 속성 설정이 연결을 열기 전에 경과 하 고 ADO 시도 취소 합니다. 속성을 0으로 설정 하는 경우 ADO는 연결이 열릴 때까지 무기한 대기 합니다. 코드를 작성 하는 공급자를 지원 하는지 확인는 **ConnectionTimeout** 기능입니다.  
+ 사용 합니다 **ConnectionTimeout** 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 경우 네트워크 트래픽 또는 많은 서버 사용에서 지연이 발생 하 게 연결 시도 중단 하는 데 필요한 개체입니다. 경우에서 시간을 **ConnectionTimeout** 오류가 발생 하는 연결을 열기 전에 속성 설정은 경과 하 고 ADO 시도 취소 합니다. 속성을 0으로 설정 하면 ADO 연결이 열릴 때까지 무한정 기다릴 수 있습니다. 코드를 작성 하는 공급자를 지원 해야 합니다 **ConnectionTimeout** 기능입니다.  
   
- **ConnectionTimeout** 속성은 읽기/쓰기 연결이 닫혀 있고 읽기 전용으로 열려 있으면입니다.  
+ 합니다 **ConnectionTimeout** 를 열었을 때 닫혀 있고 읽기 전용으로 연결 되 면 속성은 읽기/쓰기입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [CommandTimeout 속성(ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)

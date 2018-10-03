@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 914962bfbedc048ac648e9e0526b320c0eb2213e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9da9ebbde45045228e57d8c3fceed18024e30bf4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137573"
 ---
 # <a name="name-element-for-database-dta"></a>Database의 Name 요소(DTA)
   튜닝할 데이터베이스의 이름을 지정합니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
-caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 002ef268bbb858db961862c1a30479a3e8462237
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136063"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
   인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 나 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 현재 릴리스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 기존 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지는 현재 릴리스는 패키지 형식으로 자동 업그레이드 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용합니다. 직접 업그레이드 방법을 선택하고 수동으로 패키지를 업그레이드해야 합니다.  

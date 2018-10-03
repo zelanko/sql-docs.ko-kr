@@ -1,32 +1,29 @@
 ---
-title: 할당 하 고 버퍼를 해제 합니다. | Microsoft Docs
+title: 버퍼 할당 및 해제 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], allocating and freeing
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85c2ab4ad25501637ccba2206f85c7895440ade
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682831"
 ---
-# <a name="allocating-and-freeing-buffers"></a>할당 하 고 버퍼를 해제 합니다.
-모든 버퍼가 할당 되 고 응용 프로그램에 의해 해제 됩니다. 버퍼를 연기 하지 되는 경우 함수에 대 한 호출 기간 동안 다만 필요 합니다. 예를 들어 **SQLGetInfo** 가리키는 버퍼에 특정 옵션과 관련 된 값을 반환 된 *InfoValuePtr* 인수입니다. 이 버퍼에 대 한 호출 직후 해제할 수 있도록 **SQLGetInfo**다음 코드 예제에 나온 것 처럼:  
+# <a name="allocating-and-freeing-buffers"></a>버퍼 할당 및 해제
+모든 버퍼가 할당 되 고 응용 프로그램에서 해제 합니다. 버퍼 연기 되지 않고, 하는 경우 함수에 대 한 호출 중에 존재 해야 합니다. 예를 들어 **SQLGetInfo** 가리키는 버퍼의 특정 옵션을 사용 하 여 연결 된 값을 반환 합니다 *InfoValuePtr* 인수입니다. 이 버퍼를 호출한 후 즉시 해제할 수 있습니다 **SQLGetInfo**다음 코드 예제 에서처럼:  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -38,7 +35,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- 지연 된 버퍼 하나의 함수에 지정 된 다른 사용 되는, 되므로 드라이버 여전히 기대에 존재 하는 동안 지연 된 버퍼를 해제할를 하면 응용 프로그램 프로그래밍 오류가 발생 합니다. 예를 들어의 주소는 \* *ValuePtr* 버퍼가 전달 될 **SQLBindCol** 에서 나중에 사용할 **SQLFetch**합니다. 열을 호출 하 여 같은 바인딩된 없을 때까지이 버퍼를 해제할 수 없습니다 **SQLBindCol** 또는 **SQLFreeStmt** 다음 코드 예제에 표시 된 대로:  
+ 지연 된 버퍼는 하나의 함수에 지정 되 고 다른 사용, 이므로 드라이버 여전히 존재 하는 동안 지연 된 버퍼를 해제 하려면 응용 프로그램 프로그래밍 오류가 있습니다. 주소의 예는 \* *ValuePtr* 버퍼가 전달 될 **SQLBindCol** 에서 나중에 사용할 **SQLFetch**합니다. 이 버퍼 열에 대 한 호출을 사용 하 여 같은 바인딩된 없을 때까지 해제 될 수 없습니다 **SQLBindCol** 하거나 **SQLFreeStmt** 다음 코드 예제 에서처럼:  
   
 ```  
 SQLRETURN    rc;  
@@ -63,7 +60,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- 함수에서 로컬로 버퍼를 선언 하 여 이러한 오류가 쉽게 발생 버퍼에는 응용 프로그램은 함수를 벗어날 때 해제 됩니다. 예를 들어 다음 코드는 드라이버에서 정의 되지 않은 및 아마도 심각한 동작을 발생합니다.  
+ 함수를 로컬로 버퍼를 선언 하 여 이러한 오류가 쉽게 발생 버퍼는 응용 프로그램 함수를 벗어날 때 해제 됩니다. 예를 들어, 다음 코드는 드라이버에서 정의 되지 않은 및 아마도 심각한 동작을 발생:  
   
 ```  
 SQLRETURN   rc;  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClassifiedColumnID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClassifiedColumnID element
 ms.assetid: c294b9c5-3ac2-4554-8ba8-d9f15d7e85c0
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc9938b44568e0641f97697216780ec4f31ad424
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb48844934cc5783d2e25210bc406e348e2a6b85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129383"
 ---
 # <a name="classifiedcolumnid-element-assl"></a>ClassifiedColumnID 요소(ASSL)
   분류 되는 관련 열의 식별자 (ID)를 포함 합니다 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) 요소입니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37316863"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -57,7 +54,7 @@ ms.locfileid: "37316863"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ClassifiedColumns](../collections/columns-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  AMO(Analysis Management Object) 개체 모델에서 `ClassifiedColumns` 컬렉션의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>입니다.  

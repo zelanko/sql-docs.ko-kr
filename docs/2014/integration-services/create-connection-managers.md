@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-caps.latest.revision: 54
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074469"
 ---
 # <a name="create-connection-managers"></a>연결 관리자 만들기
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 태스크를 여러 유형의 서버 및 데이터 원본에 연결하기 위한 다양한 연결 관리자가 포함됩니다. 연결 관리자는 여러 유형의 데이터 저장소에서 데이터를 추출하고 로드하는 데이터 흐름 구성 요소와 서버, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블 또는 파일에 로그를 기록하는 로그 공급자에서 사용됩니다. 예를 들어 메일 보내기 태스크가 포함된 패키지에서는 SMTP 연결 관리자 유형을 사용하여 SMTP(Simple Mail Transfer Protocol) 서버에 연결합니다. SQL 실행 태스크가 포함된 패키지에서는 OLE DB 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 연결할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)을 참조하세요.  

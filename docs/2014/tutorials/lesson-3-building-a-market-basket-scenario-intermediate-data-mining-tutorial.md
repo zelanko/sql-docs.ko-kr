@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - nested tables
 - tutorials [Data Mining]
 ms.assetid: 651eef38-772e-4d97-af51-075b1b27fc5a
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c03f8b54859a960479d78f1d0de7a0a30836347
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f31a323320487623339170043112fceb7ba65d3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109423"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>3단원: 시장 바구니 시나리오 구축(중급 데이터 마이닝 자습서)
   마케팅 부서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 교차 판매 홍보 회사 웹 사이트를 개선 하려고 합니다. 사이트 업데이트의 일부로 이 부서에서는 고객의 온라인 시장 바구니에 이미 있는 다른 제품을 기반으로 고객이 구매할 제품을 예측하려고 합니다. 또한 구매될 가능성이 높은 항목이 함께 배열되도록 웹 사이트를 디자인하여 고객의 구매 행동을 더 잘 파악하고자 합니다. 이 부서에서는 데이터 마이닝이 이러한 종류의 *시장 바구니 분석* 에 특히 유용하다는 것을 알게 되었으며 데이터 마이닝 모델 개발을 요구해 왔습니다.  

@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_instance_node_map (Transact SQL) | Microsoft Docs
+title: sys.dm_hadr_instance_node_map (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sys.dm_hadr_instance_node_map_TSQL
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d6000215b2504fcb1a09af2d0ca871773d02e901
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 74f44195e0c365b46794fdd03ff296a1fa4040dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640481"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  모든 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 가용성 그룹에 조인, 서버 인스턴스를 호스팅하는 Windows Server 장애 조치 클러스터링 (WSFC) 노드의 이름을 반환 하는 가용성 복제본을 호스팅하는 합니다. 이러한 동적 관리 뷰는 다음과 같이 사용됩니다.  
+  모든 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 가용성 그룹에 가입 된 서버 인스턴스를 호스팅하는 Windows Server 장애 조치 클러스터링 (WSFC) 노드의 이름을 반환 하는 가용성 복제본을 호스팅하는 합니다. 이러한 동적 관리 뷰는 다음과 같이 사용됩니다.  
   
 -   이 동적 관리 뷰는 동일한 WSFC 노드에서 호스팅되는 여러 가용성 복제본이 포함된 가용성 그룹을 검색하는 데 유용합니다. 이러한 구성은 가용성 그룹이 잘못 구성된 경우 FCI 장애 조치(failover) 이후 발생 가능한 지원되지 않는 구성입니다. 자세한 내용은 [장애 조치(failover) 클러스터링 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
@@ -43,16 +40,16 @@ ms.locfileid: "34464329"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|가용성 그룹의 고유 ID를 WSFC 클러스터의 리소스로 나타낸 것입니다.|  
-|**instance_name**|**nvarchar(256)**|이름-*서버*/*인스턴스*-가용성 그룹에 대 한 복제본을 호스팅하는 서버 인스턴스.|  
+|**instance_name**|**nvarchar(256)**|이름 —*server*/*인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스.|  
 |**node_name**|**nvarchar(256)**|WSFC 클러스터 노드의 이름입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Always On 가용성 그룹 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 가용성 그룹 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [가용성 그룹 모니터링 & #40; Transact SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 7d881278-1e77-42e1-8cfc-f1bbd9ec2340
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adcf9e8b2b87e0302158bbbf5652d8c32277170f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 929529214979c2c8bd6c441914ef84974a86a807
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060033"
 ---
 # <a name="displaykey-element-csdlbi"></a>DisplayKey 요소(CSDLBI)
   DisplayKey 요소는 강력한 식별자를 구성하는 다음 요소 목록을 포함합니다. DisplayKey는 EntityType 요소의 자식으로만 사용됩니다. 이 요소는 열 또는 역할 END를 참조할 수 있습니다.  
@@ -28,7 +25,7 @@ ms.locfileid: "37297153"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표에서는 DisplayKey 요소의 특성을 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |IsDisplayKey|아니요|True 또는 False입니다.|  
   

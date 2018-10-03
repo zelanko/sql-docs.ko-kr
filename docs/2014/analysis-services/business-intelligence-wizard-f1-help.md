@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b06c909f8661bf1bec2d715a449e565295eb179b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079129"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>비즈니스 인텔리전스 마법사 F1 도움말
   비즈니스 인텔리전스 마법사를 사용하여 비즈니스 인텔리전스 기능을 정의하고 큐브 및 차원에 대해 고급 옵션을 설정할 수 있습니다. 이 마법사는 기존 개체의 속성을 설정하고 새 개체를 만들며 MDX(Multidimensional Expressions) 스크립트를 생성하여 차원 인텔리전스 및 통화 변환과 같은 기능을 제공합니다.  

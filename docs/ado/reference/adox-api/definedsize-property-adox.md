@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,27 +17,26 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADOX]
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 291065218fc76fa60875a408714f789747983ac2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 54b2607a2754e8e1663cce15eea19274fdd7b4e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285542"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803071"
 ---
-# <a name="definedsize-property-adox"></a>DefinedSize 속성 (ADOX)
+# <a name="definedsize-property-adox"></a>DefinedSize 속성(ADOX)
 열의 명시 된 최대 크기를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하 고 반환 된 **긴** 값의 최대 길이 데이터 값의 문자입니다.  
+ 설정 하 고 반환 된 **긴** 문자 데이터 값의 최대 길이 값.  
   
 ## <a name="remarks"></a>Remarks  
  기본값은 영 (0).  
   
- 이 속성에 대 한 읽기 전용은 [열](../../../ado/reference/adox-api/column-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  
+ 이 속성은 읽기 전용 [열](../../../ado/reference/adox-api/column-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

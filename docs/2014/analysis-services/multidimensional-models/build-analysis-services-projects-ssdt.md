@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85e3b552234ff34333b8566bdb741b28f2e56d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c077da81b20444a71b28a2f604cdb7cc485de123
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129474"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services 프로젝트 빌드(SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 Visual Studio에서 프로그래밍 개체를 빌드하는 것과 유사한 방식으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 빌드할 수 있습니다. 프로젝트를 빌드하면 출력 디렉터리에 XML 파일 집합이 생성됩니다. 이러한 XML 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 비롯한 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들거나 수정하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 통신하는 데 사용하는 XML 언어인 ASSL(Analysis Services Scripting Language)을 사용합니다. XML 파일은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 정의를 지정한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하는 데 사용됩니다.  

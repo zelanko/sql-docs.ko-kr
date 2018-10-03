@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79a86a9b589fc5118f3418d0898117c7482dda6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8309a4d66fbcf36aca4e5e4d817c2bb34722bc08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072973"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 설정
   원본 데이터의 프로필을 검토하기 전에 수행해야 하는 첫 번째 단계는 데이터 프로파일링 태스크를 설정하고 실행하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 이 태스크를 만듭니다. 데이터 프로파일링 태스크를 구성하려면 데이터 프로파일링 태스크 편집기를 사용합니다. 이 편집기를 사용하면 프로필을 출력할 위치와 계산할 프로필을 선택할 수 있습니다. 태스크를 설정한 후 패키지를 실행하여 데이터 프로필을 계산합니다.  
@@ -43,8 +40,7 @@ ms.locfileid: "37285639"
  자세한 내용은 [패키지 워크플로에 데이터 프로파일링 태스크 포함](incorporate-a-data-profiling-task-in-package-workflow.md)을 참조하세요.  
   
 ## <a name="setup-of-the-task-output"></a>태스크 출력 설정  
- 패키지에 데이터 프로파일링 태스크를 삽입한 후에는 태스크에서 계산할 프로필의 출력을 설정해야 합니다. 프로필의 출력을 설정하려면 데이터 프로파일링 태스크 편집기의 **일반** 페이지를 사용합니다. 
-  **일반** 페이지는 출력의 대상을 지정하는 기능뿐만 아니라 빠른 데이터 프로파일링을 수행하는 기능을 제공합니다. **빠른 프로필**을 선택하면 데이터 프로파일링 태스크가 일부 또는 전체 기본 프로필과 해당 기본 설정을 사용하여 테이블 또는 뷰를 프로파일링합니다.  
+ 패키지에 데이터 프로파일링 태스크를 삽입한 후에는 태스크에서 계산할 프로필의 출력을 설정해야 합니다. 프로필의 출력을 설정하려면 데이터 프로파일링 태스크 편집기의 **일반** 페이지를 사용합니다. **일반** 페이지는 출력의 대상을 지정하는 기능뿐만 아니라 빠른 데이터 프로파일링을 수행하는 기능을 제공합니다. **빠른 프로필**을 선택하면 데이터 프로파일링 태스크가 일부 또는 전체 기본 프로필과 해당 기본 설정을 사용하여 테이블 또는 뷰를 프로파일링합니다.  
   
  자세한 내용은 [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md) 및 [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](data-profiling-task.md)을 참조하세요.  
   
@@ -96,7 +92,7 @@ ms.locfileid: "37285639"
 -   [값 포함 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>데이터 프로파일링 태스크가 포함된 패키지 실행  
- 데이터 프로파일링 태스크를 설정한 후 이 태스크를 실행할 수 있습니다. 그러면 이 태스크에서 데이터 프로필을 계산하여 이 정보를 XML 형식으로 파일 또는 패키지 변수에 출력합니다. 이 XML의 구조는 DataProfile.xsd 스키마를 따릅니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기, 메모장과 같은 텍스트 편집기에서 이 스키마를 열 수 있습니다. 데이터 품질 정보에 대한 이 스키마는 다음과 같은 용도로 사용할 경우 유용할 수 있습니다.  
+ 데이터 프로파일링 태스크를 설정한 후 이 태스크를 실행할 수 있습니다. 그러면 이 태스크에서 데이터 프로필을 계산하여 이 정보를 XML 형식으로 파일 또는 패키지 변수에 출력합니다. 이 XML의 구조는 DataProfile.xsd 스키마를 따릅니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기, 메모장과 같은 텍스트 편집기에서 이 스키마를 열 수 있습니다. 데이터 품질 정보에 대한 이 스키마는 다음과 같은 용도로 사용할 경우 유용할 수 있습니다.  
   
 -   조직 내부 또는 조직 간의 데이터 품질 정보 교환  
   

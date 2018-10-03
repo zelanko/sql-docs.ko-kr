@@ -1,35 +1,32 @@
 ---
-title: XSLT 변환을 | Microsoft Docs
+title: XSLT 변환 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 835362b473c16d71cbdd6c46d6e068a17d7d051d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59b00a521624759af8f73a94f75c4a74101b1937
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839681"
 ---
 # <a name="xslt-transformations"></a>XSLT 변환
-XSLT는 다른 형식으로 변환 하는 생성 된 XML에 적용할 수 있습니다. XSLT 템플릿 보다 친숙 한 형식으로 변환할 수 있는 개발에 도움이 ADO의 XML 형식을 이해 합니다.  
+다른 형식으로 변환할 생성 된 XML에 XSLT은 적용할 수 있습니다. ADO에 XML 형식으로 이해 하는 작업은 보다 친숙 한 형식으로 변환할 수 있는 XSLT 템플릿 개발에 도움이 됩니다.  
   
- 예를 들어 알고 레코드 집합의 각 행 z: 행 요소 rs: 데이터 요소 안에 저장 됩니다. 마찬가지로, 레코드 집합의 각 필드는이 요소에 대 한 특성-값 쌍으로 저장 됩니다.  
+ 예를 들어, 레코드 집합의 각 행 rs: 데이터 요소 내에서 z: 행 요소로 저장 되어 있음을 알 수 있습니다. 마찬가지로, 레코드 집합의 각 필드는이 요소에 대 한 특성-값 쌍으로 저장 됩니다.  
   
 ## <a name="remarks"></a>Remarks  
- 다음 XSLT 스크립트는 브라우저에 표시할 HTML 테이블로 변환 하는 이전 섹션에 표시 된 XML에 적용할 수 있습니다.  
+ 다음 XSLT 스크립트를 브라우저에 표시할 HTML 테이블로 변환 하는 이전 섹션에 나와 있는 XML에 적용할 수 있습니다.  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -54,7 +51,7 @@ XSLT는 다른 형식으로 변환 하는 생성 된 XML에 적용할 수 있습
 </html>  
 ```  
   
- XSLT 변환 표 제목 함께 레코드 집합의 각 필드를 표시 하는 HTML 표로 ADO 저장 메서드에 의해 생성 된 XML 스트림을 합니다. 테이블 머리글 및 행도 할당 된 다양 한 글꼴 및 색입니다.  
+ XSLT에는 테이블 머리글을와 함께 레코드 집합의 각 필드를 표시 하는 HTML 테이블에 저장 하는 ADO 메서드에 의해 생성 된 XML 스트림을 변환 합니다. 테이블 머리글 및 행도 할당 된 다양 한 글꼴 및 색입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

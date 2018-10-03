@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - warnings [Upgrade Advisor]
 - analyzing system [Upgrade Advisor], reports
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 857f83c12983f7f23fdbedf7f73ce94a2ad91fff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070903"
 ---
 # <a name="using-reports"></a>보고서 사용
   업그레이드 관리자 분석 마법사가 서버에서 분석하는 각 구성 요소에 대해 별도의 보고서가 생성되며, 필요한 경우 각 인스턴스에 대해서도 별도의 보고서가 생성됩니다. 보고서에는 업그레이드에 영향을 주는 알려진 문제에 대한 세부 정보가 제공됩니다. 또한 보고서에는 식별된 문제를 해결하기 위한 정보 및 권장 동작의 링크도 제공됩니다.  

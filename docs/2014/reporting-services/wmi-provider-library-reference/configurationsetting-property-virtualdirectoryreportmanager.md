@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportManager property
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 947c2c7301525b928babc4344fbbf67a7738f57e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c105177a9957bfe6f8d4492796e98824e9f2f8f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063793"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportManager 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 관리자 응용 프로그램의 가상 디렉터리를 반환합니다. 읽기 전용입니다.  

@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b601c336ba8b8fdc6c581bfb00bfb80f84f025
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ecc2960e583b46b44839259bc9b84d3d941a553
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786611"
 ---
-# <a name="source-property-example-vc"></a>원본 속성 예제 (VC + +)
-이 예제에서는 [소스](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성 3 개를 열어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 서로 다른 데이터 원본을 기반으로 합니다.  
+# <a name="source-property-example-vc"></a>Source 속성 예제(VC++)
+이 예제에서는 합니다 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성 3 개를 열어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다른 데이터 원본을 기반으로 개체입니다.  
   
 ```  
 // Source_Property_Sample.cpp  

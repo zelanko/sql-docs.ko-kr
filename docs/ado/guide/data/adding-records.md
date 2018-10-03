@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a1d367e572a7839b6a5d54b1c6460716aa09160
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850412"
 ---
 # <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드를 추가합니다.
-사용 하 여는 **AddNew** 메서드를 만들고 기존에서 새 레코드를 초기화할 **레코드 집합**합니다. 사용할 수 있습니다는 **지원** 메서드는 **CursorOptionEnum** 값 **adAddNew** 현재 레코드를 추가할 수 있는지 여부를 확인 하려면 **레코드집합** 개체입니다.
+사용 된 **AddNew** 메서드를 만들고 기존에서 새 레코드를 초기화할 **레코드 집합**합니다. 사용할 수는 **지원** 메서드를 **CursorOptionEnum** 의 값 **adAddNew** 현재 레코드를 추가할 수 있는지 여부를 확인 하려면 **레코드집합** 개체입니다.
 
- 호출한 후의 **AddNew** 새 레코드 현재 레코드가 메서드와 호출한 후 유지 되는 **업데이트** 메서드. 경우는 **레코드 집합** 개체 책갈피를 지원 하지 않으면, 다른 레코드로 이동 되 면 새 레코드에 액세스할 수 없습니다. 따라서 커서 유형에 따라 해야를 호출 하는 **Requery** 메서드 새 레코드에 액세스할 수 있도록 합니다.
+ 호출한 후 합니다 **AddNew** 메서드 새 레코드를 현재 레코드가 호출한 후에 현재 상태로 유지 됩니다 합니다 **업데이트** 메서드. 경우는 **레코드 집합** 개체가 책갈피를 지원 하지 않습니다, 다른 레코드로 이동 되 면 새 레코드에 액세스할 수 있습니다. 따라서 커서 유형에 따라 수 호출 해야 합니다 **Requery** 새 레코드에 액세스할 수 있도록 하는 방법입니다.
 
- 호출 하는 경우 **AddNew** ADO를 호출 하는 현재 레코드를 편집 하는 동안 또는 새 레코드를 추가 하는 동안는 **업데이트** 메서드를 변경 하 고 새 레코드를 만듭니다.
+ 호출 하는 경우 **AddNew** ADO를 호출 하는 현재 레코드를 편집 하는 동안 또는 새 레코드를 추가 하는 동안 합니다 **업데이트** 메서드 하나를 변경 하 고 새 레코드를 만듭니다.
 
  이 섹션에서는 다음 항목을 다룹니다.
 

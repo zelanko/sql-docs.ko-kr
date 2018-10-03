@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126673"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>옵션(텍스트 편집기 - XML - 기타 페이지)
   **옵션** 대화 상자를 사용하여 XML 편집기의 자동 완성 및 스키마 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더를 확장한 다음 **XML** 과 **기타** 를 차례로 클릭하면 볼 수 있습니다.  

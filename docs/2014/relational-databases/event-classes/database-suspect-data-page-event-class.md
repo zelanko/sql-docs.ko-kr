@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67265ee31ebf9f9a013546ccac631c2cd53f373
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50ee8a83c87ec6f2b14ac07caa77774b7a7c2d15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137909"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 이벤트 클래스
   **Database Suspect Data Page** 이벤트 클래스는 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 의 [suspect_pages](../databases/msdb-database.md)테이블에 페이지가 추가되었음을 나타냅니다. 주의 대상 페이지의 발생을 모니터링하는 추적에 이 이벤트 클래스를 포함합니다.  
@@ -40,14 +37,14 @@ ms.locfileid: "37331463"
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**DatabaseID**|**int**|주의 대상 페이지 이벤트가 발생한 데이터베이스의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **database_id** 열과 같습니다.|3|예|  
+|**DatabaseID**|**int**|주의 대상 페이지 이벤트가 발생한 데이터베이스의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **database_id** 열과 같습니다.|3|사용자 계정 컨트롤|  
 |**EventClass**|**int**|이벤트 유형이 213입니다.|27|아니요|  
 |**EventSequence**|**int**|일괄 처리 내의 이벤트 클래스 순서입니다.|51|아니요|  
-|**SPID**|**int**|주의 대상 페이지가 발생한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크의 ID입니다.|12|예|  
-|**StartTime**|**datetime**|이벤트가 발생한 시간입니다.|14|예|  
-|**Exchange Spill**|**int**|주의 대상 페이지가 포함된 데이터베이스 파일의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **file_id** 열과 같습니다.|22|예|  
-|**ObjectID2**|**int**|파일 내 주의 대상 페이지의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **page_id** 열과 같습니다.|56|예|  
-|**오류**|**int**|발생한 오류 유형입니다. 이 값은 **suspect_pages** 테이블의 페이지에 대한 **event_type** 값과 같습니다.|31|예|  
+|**SPID**|**int**|주의 대상 페이지가 발생한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크의 ID입니다.|12|사용자 계정 컨트롤|  
+|**StartTime**|**datetime**|이벤트가 발생한 시간입니다.|14|사용자 계정 컨트롤|  
+|**Exchange Spill**|**int**|주의 대상 페이지가 포함된 데이터베이스 파일의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **file_id** 열과 같습니다.|22|사용자 계정 컨트롤|  
+|**ObjectID2**|**int**|파일 내 주의 대상 페이지의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **page_id** 열과 같습니다.|56|사용자 계정 컨트롤|  
+|**오류**|**int**|발생한 오류 유형입니다. 이 값은 **suspect_pages** 테이블의 페이지에 대한 **event_type** 값과 같습니다.|31|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>관련 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

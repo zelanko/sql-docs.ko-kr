@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Mode Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e768d9ef176a05d4fe7622a520c9ac98f1d71d81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267649"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072413"
 ---
 # <a name="mode-element-xmla"></a>Mode 요소(XMLA)
   부모에서 사용할 모드를 식별 [잠금](../xml-elements-commands/lock-element-xmla.md) 지정된 된 개체에서 잠금을 만들 때 요소입니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37267649"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37267649"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[잠금을](../xml-elements-commands/lock-element-xmla.md), [잠금 해제](../xml-elements-commands/unlock-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  부모 `Lock` 요소는 `Mode` 요소를 사용하여 개체에 만들 잠금 유형을 결정합니다. 이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

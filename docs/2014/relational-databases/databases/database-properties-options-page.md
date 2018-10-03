@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 65
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30a0bf869529c81b86e05a9bf6a8be8b43573705
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54c7a5361a411ff68456504962bbf62298f4ba9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062633"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
   이 페이지를 사용하여 선택한 데이터베이스의 옵션을 확인하거나 수정할 수 있습니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하세요. [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)합니다.  

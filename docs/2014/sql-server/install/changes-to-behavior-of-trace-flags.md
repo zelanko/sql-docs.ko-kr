@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - trace flags [SQL Server], behavior changes
 ms.assetid: d739df96-2659-4383-8e10-194657632526
-caps.latest.revision: 25
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3eacd213cd113cb6f96e4a23d1208b6e7b21b760
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe5d7e5580fb59616dbde50244bf1b45e94d2dfb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104533"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>추적 플래그의 동작에 대한 변경입니다.
   한 세션에서 설정한 전역 추적 플래그가 다른 세션에 즉시 적용됩니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 일부 추적 플래그는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 없습니다.  

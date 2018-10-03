@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - .SPID
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9304d32ba3288d712d6869303af212ce506193
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 77b678508867f39a37acbf640eb159a61a4f3727
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122333"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
   **속성** 창을 사용하여 선택한 요소의 속성을 확인할 수 있습니다. 또한 **속성** 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **속성** 창은 **보기** 메뉴에서 **속성** 창을 클릭하여 사용할 수 있습니다.  
