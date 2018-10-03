@@ -4,32 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0cb0e08f48dbb873d3dec7d4d688182ebe3415fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116013"
 ---
 # <a name="developer39s-guide-reporting-services"></a>개발자&#39;가이드 (Reporting Services)
-  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 응용 프로그램에서 활용할 수 있는 프로그래밍 인터페이스를 다수 제공합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 기존 기능을 사용하여 웹 사이트와 Windows 응용 프로그램에 사용자 지정 보고 및 관리 도구를 작성할 수 있으며 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼을 확장할 수도 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 응용 프로그램에서 활용할 수 있는 프로그래밍 인터페이스를 다수 제공합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 기존 기능을 사용하여 웹 사이트와 Windows 응용 프로그램에 사용자 지정 보고 및 관리 도구를 작성할 수 있으며 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼을 확장할 수도 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼 확장에는 데이터 액세스, 보고서 배달 등에 사용할 수 있는 새 구성 요소 및 리소스를 만드는 작업이 포함됩니다. 조직에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 사용하는 회사를 대상으로 이러한 구성 요소 및 리소스를 마케팅할 수 있습니다.  
   

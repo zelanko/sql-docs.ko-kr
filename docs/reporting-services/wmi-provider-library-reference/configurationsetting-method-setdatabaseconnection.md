@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c9d825d348153ea2bb401df8fd4b3064415e126
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8eeff8f6b53b9a48f0da04bdbcd7927a224b3d70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850425"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 메서드 - SetDatabaseConnection
   특정 보고서 서버 데이터베이스에 대한 보고서 서버 데이터베이스 연결을 설정합니다.  

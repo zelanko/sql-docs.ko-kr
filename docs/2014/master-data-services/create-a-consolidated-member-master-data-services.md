@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating consolidated members [Master Data Services]
 - members [Master Data Services], creating consolidated members
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5dacb24967cb8fe61450f706e1b3ea091821bb09
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 352e545c834b0b4e94b19bcfcd014a4e363b0b75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058643"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>통합 멤버 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 명시적 계층에 대한 부모 노드가 필요한 경우 통합 멤버를 만듭니다. 통합된 멤버는 고유한 특성을 가질 수 있습니다. 이러한 특성은 그룹화에 사용됩니다. 다음 예제와 같이 계정을 포함하는 계정 그룹에 통합된 멤버를 사용할 수 있습니다.  

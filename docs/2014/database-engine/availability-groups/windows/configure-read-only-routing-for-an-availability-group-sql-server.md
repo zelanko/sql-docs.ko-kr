@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - read-only routing
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07a56151370935f0162afd3a6e4013628d04045c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbe56ab8f9665535837a1f50147ec64222a51e58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049454"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 읽기 전용 라우팅을 지원하도록 AlwaysOn 가용성 그룹을 구성하려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용할 수 있습니다. *읽기 전용 라우팅*이란 특정 읽기 전용 연결 요청을 AlwaysOn의 사용 가능하고 [읽기 가능한 보조 복제본](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)(즉, 보조 역할로 실행될 때 읽기 전용 작업을 허용하도록 구성된 복제본)으로 라우팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기능을 말합니다. 읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 응용 프로그램 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  

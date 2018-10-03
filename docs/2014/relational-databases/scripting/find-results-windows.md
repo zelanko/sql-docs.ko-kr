@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findresults1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0df41e184e2a1efe3b74d3feb541e7e0ce3bf43c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fbb23c1e85d5c612ded5ddfefa53ca3ddc9f1c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106493"
 ---
 # <a name="find-results-windows"></a>찾기 결과 창
   두 개의 찾기 결과 창에는 **찾기 및 바꾸기** 대화 상자의 **파일에서 찾기** 또는 **파일에서 바꾸기** 탭을 사용하여 찾은 항목이 표시됩니다. **파일에서 찾기** 와 **파일에서 바꾸기** 의 **결과 옵션** 명령을 사용하여 항목을 표시할 찾기 결과 창을 선택할 수 있습니다.  

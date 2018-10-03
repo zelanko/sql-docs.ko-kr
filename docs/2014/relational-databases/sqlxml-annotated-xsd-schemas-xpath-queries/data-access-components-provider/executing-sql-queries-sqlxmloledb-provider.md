@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [SQLXML], SQLXMLOLEDB Provider
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing SQL queries
 - SQL queries [SQLXML]
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1173e11fb6a5b1ed6dd61af23491cc8146a36d7f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0bf453deb98b060e799a52995a0dd45f00e5b9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095423"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리 실행(SQLXMLOLEDB 공급자)
   이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  
@@ -34,7 +31,7 @@ ms.locfileid: "37225223"
   
 -   xml root  
   
- 이 클라이언트 쪽 ADO 예제 응용 프로그램에서는 예제 SQL 쿼리가 클라이언트에서 실행됩니다. ClientSideXML 속성은 True로 설정 하기 때문에 FOR XML 절이 없는 SELECT 문이 서버로 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
+ 이 클라이언트 쪽 ADO 예제 응용 프로그램에서는 예제 SQL 쿼리가 클라이언트에서 실행됩니다. ClientSideXML 속성을 True로 설정 하기 때문에 FOR XML 절이 있는 SELECT 문은 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
   
  Xml 루트 속성 생성 되는 XML 문서에 대 한 단일 최상위 루트 요소를 제공 합니다.  
   

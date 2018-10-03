@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38ab07360df2b5c0d11078db47739af4ea588417
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425312"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076649"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 출력 매개 변수에 대한 스트리밍 지원
   이 항목에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 588e945d95aca8946e327c0fff98e78c21dae8aa
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107763"
 ---
 # <a name="open-solutions-from-source-control"></a>원본 제어에서 솔루션 열기
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원본 제어에서 솔루션을 직접 열 수 있습니다. 이렇게 할 경우 Studio 환경은 최신 버전의 솔루션 파일에 대한 복사본을 지정된 위치에 만듭니다.  

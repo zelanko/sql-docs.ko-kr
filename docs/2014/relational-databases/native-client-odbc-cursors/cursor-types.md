@@ -1,12 +1,10 @@
 ---
-title: 커서 유형 | Microsoft Docs
+title: 커서 유형 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - cursors [ODBC], types
 - ODBC cursors, types
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a69d50c3f818f2eae6f5b1c97e31e0ec344e006
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6d88b48c1fc4166b32821da9cdaaa5eb7f6c2e60
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072293"
 ---
 # <a name="cursor-types"></a>커서 유형
   ODBC Microsoft에서 지 원하는 네 가지 커서 유형을 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버. 이 커서 결과 집합에 변경 내용을 검색 하는 기능에 따라 다양 하 고 리소스에서 예: 메모리 사용 공간 **tempdb**합니다. 커서는 이러한 행을 다시 인출할 때만 행 변경 내용을 검색할 수 있습니다. 데이터 원본은 현재 인출된 행의 변경 내용을 커서에 알릴 수 없습니다. 커서를 통해 변경되지 않은 내용에 대한 커서의 검색 기능은 트랜잭션 격리 수준에 의해서도 영향을 받습니다.  

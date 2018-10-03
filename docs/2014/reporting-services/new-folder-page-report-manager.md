@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053593"
 ---
 # <a name="new-folder-page-report-manager"></a>새 폴더 페이지(보고서 관리자)
   새 폴더 페이지를 사용하여 보고서 서버 폴더 계층에 새 폴더를 만들 수 있습니다. 이 페이지에서 만드는 폴더는 보고서 서버 데이터베이스에 저장되는 가상 폴더입니다. 컴퓨터의 파일 시스템에서는 폴더가 생성되지 않습니다.  
@@ -37,7 +34,7 @@ ms.locfileid: "39083405"
   
 2.  도구 모음에서 **새 폴더**를 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>변수  
  **이름**  
  폴더 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
   

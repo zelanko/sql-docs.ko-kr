@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e3dcd12e3ab266e90ae55a507432ea678714be7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b248f61465e3c9f2228608a5640b2b7395fd902
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049773"
 ---
 # <a name="drag-and-drop-text"></a>텍스트 끌어다 놓기
   텍스트를 선택한 다음 다른 위치에 끌어 놓을 수 있습니다. 다음과 같이 텍스트를 끌어 놓을 수 있습니다.  

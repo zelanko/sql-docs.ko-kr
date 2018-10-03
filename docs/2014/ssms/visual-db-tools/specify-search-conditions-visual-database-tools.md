@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - choosing search criteria
 - search conditions [SQL Server], specifying
 - search criteria [SQL Server], specifying conditions
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b2b651c4cb3c84e845cf15cc6253dbfcba077bc
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 41d7e663e843e932da450d24ad4f7327f35f9ba4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119346"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
   검색 조건을 지정하여 쿼리에 표시할 데이터 행을 지정할 수 있습니다. 예를 들어 `employee` 테이블을 쿼리 중인 경우 특정 지역에 근무하는 직원만 찾도록 지정할 수 있습니다.  

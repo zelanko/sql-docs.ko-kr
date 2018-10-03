@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 409cdbaa10dc93c5cb659961f084d76bc3370bde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114237"
 ---
 # <a name="define-linked-dimensions"></a>연결된 차원 정의
   연결된 차원은 동일한 버전 및 호환성 수준의 다른 Analysis Services 데이터베이스에서 만들어지고 저장된 차원을 기반으로 합니다. 연결된 차원을 통해 하나의 데이터베이스에 차원을 만들고 저장하고 유지 관리할 수 있으며 이와 동시에 여러 데이터베이스의 사용자가 이 차원을 사용하도록 할 수 있습니다. 연결된 차원은 사용자에게 다른 차원과 동일하게 나타납니다.  

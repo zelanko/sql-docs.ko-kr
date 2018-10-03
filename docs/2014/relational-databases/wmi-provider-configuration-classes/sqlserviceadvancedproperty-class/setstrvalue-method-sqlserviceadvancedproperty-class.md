@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetStrValue Method (SqlServiceAdvancedProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f3a004f849835fae8e5803a46190c64b793a1490
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da80e6ee5524dd4b5fbd34d28906d671a061d5ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071845"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 메서드(SqlServiceAdvancedProperty 클래스)
   속성의 문자열 값을 설정합니다.  
@@ -52,7 +49,7 @@ StrValue
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|*StrValue*|고급 속성의 값을 지정하는 문자열 값입니다.|  
+|*strValue*|고급 속성의 값을 지정하는 문자열 값입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  uint32 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  

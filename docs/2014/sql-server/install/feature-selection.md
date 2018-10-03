@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Components to Install page
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
-caps.latest.revision: 86
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cedec01a7e8c7da94f75c00e377a2c965bd58c7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087413"
 ---
 # <a name="feature-selection"></a>기능 선택
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **기능 선택** 페이지에 있는 확인란을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 구성 요소를 선택할 수 있습니다.  
@@ -93,7 +90,7 @@ ms.locfileid: "37315493"
 ## <a name="installing-adventureworks-sample-databases"></a>AdventureWorks 예제 데이터베이스 설치  
  기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. 예제 데이터베이스 및 예제 코드 설치에 대 한 자세한 내용은 참조는 [Microsoft SQL Server 커뮤니티 프로젝트 및 샘플](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843)합니다.  
   
- 예제에 대한 추가 정보는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치한 후에 확인할 수 있습니다. **시작** 메뉴에서 클릭 **프로그램도**, 클릭 ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **를 클릭 **설명서 및 자습서** 를 클릭 하 고 ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 개요**합니다.  
+ 예제에 대한 추가 정보는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치한 후에 확인할 수 있습니다. **시작** 메뉴에서 클릭 **프로그램도**, 클릭 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 를 클릭 **설명서 및 자습서** 를 클릭 하 고  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 개요**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014 버전 및 구성 요소](../editions-and-components-of-sql-server-2016.md)  

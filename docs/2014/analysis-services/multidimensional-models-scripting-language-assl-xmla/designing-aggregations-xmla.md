@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statistical information [XML for Analysis]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 773187385538a70ed145e330eb60c648cf8f0511
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71abb7339a45e86e39329f6f5e9478d03889c71b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094763"
 ---
 # <a name="designing-aggregations-xmla"></a>집계 디자인(XMLA)
   집계 디자인은 특정 측정값 그룹의 파티션과 연결되어 해당 파티션에서 집계를 저장할 때 동일한 구조를 사용하도록 합니다. 사용 하 여 나중에 병합할 수 있는 파티션을 쉽게 정의할 수 있습니다 파티션에 동일한 저장 구조를 사용 합니다 [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다. 집계 디자인에 대 한 자세한 내용은 참조 하세요. [집계 및 집계 디자인](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  

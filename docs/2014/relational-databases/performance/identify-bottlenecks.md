@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - resource bottlenecks [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - bottlenecks [SQL Server]
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 68ff1cfa48bf6c9a39f83f13fa066a6928c676a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 57f1485ea7c427dd24a6231c8a7fb940135d7ceb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108213"
 ---
 # <a name="identify-bottlenecks"></a>병목 상태 식별
   공유 리소스를 동시에 액세스하는 경우 병목 상태가 발생합니다. 일반적으로 병목 상태는 모든 소프트웨어 시스템에서 필연적으로 나타나지만 공유 리소스에 대한 과도한 요구는 응답 시간을 현저히 늦추는 원인이므로 반드시 확인하고 적절하게 튜닝해야 합니다.  
@@ -48,7 +45,7 @@ ms.locfileid: "37172764"
 ## <a name="analyzing-bottlenecks"></a>병목 상태 분석  
  다양한 이벤트에서 과도하게 시간이 소요되면 튜닝할 수 있는 병목 상태가 있음을 의미합니다.  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   다른 구성 요소로 인해 이 구성 요소에 로드가 도달하지 못해 로드를 완료하기까지의 시간이 길어지는 경우  
   

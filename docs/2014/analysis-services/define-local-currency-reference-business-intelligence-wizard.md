@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 364c86c5b908408dc3212593612467abade93735
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048625"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>현지 통화 참조 정의(비즈니스 인텔리전스 마법사)
   **현지 통화 참조 정의** 페이지를 사용하여 **변환 유형 선택** 페이지에서 지정한 다 대 다 또는 다 대 일 변환 유형을 다루는 통화 변환 기능에 대한 현지 통화를 정의할 수 있습니다. 현지 통화는 **측정값 선택** 페이지에서 선택한 측정값에 대한 트랜잭션이 저장되는 통화입니다.  

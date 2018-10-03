@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], authentication
 - XML Web service [Reporting Services], authentication
 - Report Server Web service, authentication
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b5da874e42f78d54090f640327d85e5867b2f14a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7317cafbcff5c02322eae2671939f22344ef25bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191165"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098693"
 ---
 # <a name="web-service-authentication"></a>웹 서비스 인증
   Windows 인증 또는 기본 인증을 사용하여 보고서 서버 웹 서비스에 대한 호출을 인증할 수 있습니다. 보고서 서버에 SOAP 요청을 하는 클라이언트는 지원되는 인증 프로토콜 중 하나의 클라이언트 부분을 구현해야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용하는 경우 관리 코드 HTTP 클래스를 사용하여 인증을 구현할 수 있습니다. 이러한 API를 사용하면 SOAP 요청과 함께 인증 정보를 쉽게 보낼 수 있습니다.  

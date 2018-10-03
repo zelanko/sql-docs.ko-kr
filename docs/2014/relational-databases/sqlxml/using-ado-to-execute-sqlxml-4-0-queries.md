@@ -1,14 +1,12 @@
 ---
-title: ADO를 사용 하 여 SQLXML 4.0을 실행 하려면 쿼리 | Microsoft Docs
+title: ADO를 사용 하 여 SQLXML 4.0 실행할 쿼리 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query testers [SQLXML]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91ccb8afcc1de50498695da442ba1f20a0942d27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 270bd5a9354f5f1a60bfa867638d4b75a6d2303f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082263"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
   SQLXML의 이전 버전에서는 SQLXML IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용하여 HTTP 기반 쿼리 실행이 지원되었습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 SQLXML IIS 가상 디렉터리 및 SQLXML ISAPI 필터와 유사하고 겹치는 기능이 네이티브 XML 웹 서비스와 함께 제공되므로 SQLXML 4.0에서는 이러한 구성 요소가 제거되었습니다.  
@@ -117,14 +114,14 @@ ms.locfileid: "37201193"
   
 1.  다음과 같이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 설치되어 있는지 확인합니다.  
   
-    1.  **시작** 메뉴에서 **설정**를 클릭 하 고 **제어판**합니다.  
+    1.  **시작** 메뉴에서 **설정**, 다음을 클릭 하 고 **컨트롤 패널**.  
   
-    2.  제어판을 열고 **프로그램 추가 / 제거**  
+    2.  제어판에서 열고 **프로그램 추가 / 제거**  
   
-    3.  현재 설치 된 프로그램 목록에 있는지를 확인 **Microsoft SQL Server Native Client** 목록에 나타납니다.  
+    3.  현재 설치 된 프로그램 목록에서 확인 하는 **Microsoft SQL Server Native Client** 목록에 나타납니다.  
   
         > [!NOTE]  
-        >  설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 참조 하세요 [SQL Server Native Client 설치](../native-client/applications/installing-sql-server-native-client.md)합니다.  
+        >  설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 참조 [SQL Server Native Client 설치](../native-client/applications/installing-sql-server-native-client.md).  
   
 2.  클라이언트 컴퓨터에 대해 설치된 MDAC 버전이 2.6 이상인지 확인합니다. MDAC 버전 정보를 확인해야 하는 경우 Microsoft 웹 사이트(www.microsoft.com)에서 무료 다운로드로 제공되는 MDAC Component Checker 도구를 사용할 수 있습니다. 자세한 내용을 보려면 Microsoft 웹 사이트에서 "MDAC Component Checker"를 검색하십시오.  
   

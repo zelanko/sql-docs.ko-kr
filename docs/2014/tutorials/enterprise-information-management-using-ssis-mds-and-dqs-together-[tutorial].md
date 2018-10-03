@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9d03470d21532ce097ba753fb8073a5685ccb9f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395776"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122633"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]
   기업의 정보 관리에는 일반적으로 기업 내부 및 외부의 데이터를 통합하고, 데이터를 정리하고, 데이터를 비교해서 중복 항목을 제거하고, 데이터를 표준화하고, 데이터를 강화하고, 데이터에 대한 법적 및 컴플라이언스 요구 사항을 준수하고, 모든 필수 보안 설정을 사용해서 데이터를 중앙 위치에 저장하는 모든 과정이 포함됩니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/10/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - jobs [SQL Server], msdb database
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33f5804831a0adb341d37f199556273842c00918
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e0862083d323131523d0e9eee03b7e4d2f52e04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058803"
 ---
 # <a name="msdb-database"></a>msdb 데이터베이스
   **msdb** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 경고 및 작업을 예약하는 데 사용되며 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] 및 데이터베이스 메일과 같은 다른 기능에서도 사용됩니다.  
@@ -52,33 +49,33 @@ ms.locfileid: "37154514"
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|아니요|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|예|  
-|AUTO_CREATE_STATISTICS|ON|예|  
-|AUTO_SHRINK|OFF|예|  
-|AUTO_UPDATE_STATISTICS|ON|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
+|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
+|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
+|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
+|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
+|ARITHABORT|OFF|사용자 계정 컨트롤|  
+|AUTO_CLOSE|OFF|사용자 계정 컨트롤|  
+|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_SHRINK|OFF|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
 |CHANGE_TRACKING|OFF|아니요|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 예<br /><br /> 예|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|ON|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
+|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 예<br /><br /> 사용자 계정 컨트롤|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
+|DB_CHAINING|ON|사용자 계정 컨트롤|  
 |ENCRYPTION|OFF|아니요|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|CHECKSUM|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
+|PAGE_VERIFY|CHECKSUM|사용자 계정 컨트롤|  
+|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
+|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
 |READ_COMMITTED_SNAPSHOT|OFF|아니요|  
-|RECOVERY|SIMPLE|예|  
-|RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|ENABLE_BROKER|예|  
-|TRUSTWORTHY|ON|예|  
+|RECOVERY|SIMPLE|사용자 계정 컨트롤|  
+|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
+|Service Broker 옵션|ENABLE_BROKER|사용자 계정 컨트롤|  
+|TRUSTWORTHY|ON|사용자 계정 컨트롤|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SPID Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47a220caccafa9288a8fa9176b52db05297ff477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094530"
 ---
 # <a name="spid-element-xmla"></a>SPID 요소(XMLA)
   부모를 실행 하는 활성 서버 프로세스 식별자 (SPID)를 식별 [취소](../xml-elements-commands/cancel-element-xmla.md) 요소입니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37167024"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|정수|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37167024"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[취소](../xml-elements-commands/cancel-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  합니다 `SPID` 요소를 서버 프로세스 ID (SPID) 인스턴스에서 지정된 된 세션에 사용 되는 나타냅니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  

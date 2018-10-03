@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 215db39cdf87cff69f2bfefbc28e730590daec15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5e51d1989b3c492814f5958bacd82bbc01ef76d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105383"
 ---
 # <a name="commands-xmla"></a>명령(XMLA)
   이 참조 섹션에서는 `Command` 메서드 호출 시 `Execute` 요소에서 사용할 수 있는 XMLA(XML for Analysis) 요소를 다룹니다.  

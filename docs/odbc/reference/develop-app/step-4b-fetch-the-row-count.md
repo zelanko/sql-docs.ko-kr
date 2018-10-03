@@ -1,35 +1,32 @@
 ---
-title: '4b 단계: 행 개수를 반입 | Microsoft Docs'
+title: '4b 단계: 행 수 페치 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fetches [ODBC], fetching row count
 - row count [ODBC]
 - application process [ODBC], fetching row count
 ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b90259758ceab600abce600bdfdab6edc52f506
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3091d379bca6c061437e7767fdf6f99d69dc9861
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763891"
 ---
-# <a name="step-4b-fetch-the-row-count"></a>4b 단계: 인출 된 행 수
-다음 단계는 다음 그림에 나와 있는 것 처럼 인출할 행 수입니다.  
+# <a name="step-4b-fetch-the-row-count"></a>4b단계: 행 수 페치
+다음 그림과에서 같이 행을 인출 하는 다음 단계가입니다.  
   
- ![행 개수를 페치하](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  
+ ![행 수를 페치하는 방법](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  
   
- 3 단계에서에서 실행 된 문의 경우는 **업데이트**, **삭제**, 또는 **삽입** 문, 응용 프로그램으로 영향을 받는 행의 수를 검색  **SQLRowCount**합니다. 자세한 내용은 참조 [영향을 받는 행 개수 확인](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md)합니다.  
+ 3 단계에서에서 실행 된 문의 경우는 **업데이트**를 **삭제**, 또는 **삽입** 문에서 응용 프로그램이 검색 된 영향을 받는 행의 수  **SQLRowCount**합니다. 자세한 내용은 [영향을 받는 행 개수 확인](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md)합니다.  
   
- 응용 프로그램은 이제 동일한 트랜잭션 내에서 다른 문을 실행 하는 3 단계를 반환 하거나 트랜잭션을 커밋하거나 5 단계로 진행 됩니다.
+ 응용 프로그램에 이제 동일한 트랜잭션에서 다른 문을 실행 하는 3 단계로 반환 또는 커밋 또는 트랜잭션을 롤백하는 5 단계로 진행 됩니다.

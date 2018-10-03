@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3fa21bdf2392028ada3034c60e2525f2f657788
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055623"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 CSDLBI(비즈니스 인텔리전스 포함 개념 스키마 정의 언어) 주석이라는 XML 형식으로 테이블 형식 모델 정의를 표현할 수 있도록 합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000efcad2db89e05bbfac8e1471ccf4551bc1956
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077633"
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
   정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **찾기 및 바꾸기** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  

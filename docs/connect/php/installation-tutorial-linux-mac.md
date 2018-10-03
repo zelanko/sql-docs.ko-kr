@@ -3,19 +3,18 @@ title: Linux 및 macOS Microsoft Drivers for PHP for SQL Server에 대 한 설�
 ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 5b22d2c74ad356a9466c8441f979414857865386
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 88d50c22a9e48db225f8cd38d8a1050ec0f4c156
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851731"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux 및 macOS Microsoft Drivers for PHP for SQL Server에 대 한 설치 자습서
 다음 지침을 정리 된 환경을 가정 및 Ubuntu 16.04, 17.10 및 18.04, RedHat 7, Debian 8 및 9, Suse 12, 및 macOS 10.11의 SQL Server에 대 한 PHP에 대 한 PHP 7.x, Microsoft ODBC driver, Apache, 및 Microsoft 드라이버를 설치 하는 방법을 보여 줍니다. 10.12 및 10.13 합니다. 이러한 지침은 PECL를 사용 하 여 드라이버를 설치 하는 것이 좋습니다 하지만에서 미리 작성 된 이진 파일을 다운로드할 수도 있습니다는 [&#40;microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 프로젝트 페이지 및 의지침에따라설치[ Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)합니다. 에 대 한 확장 로드 및 php.ini에 확장을 추가할 것 수행 되는 이유는 설명은 섹션을 참조 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)합니다.

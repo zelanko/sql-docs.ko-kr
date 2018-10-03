@@ -1,33 +1,30 @@
 ---
-title: 핵심 SQLXML 보안 고려 사항 | Microsoft Docs
+title: 핵심 SQLXML 보안 고려 사항 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 972ece66513dcc8784ed40e9757ec6114684f10e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8212f3983bd671ee0efe9fbe389aab8c10ca63b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255965"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096433"
 ---
 # <a name="core-sqlxml-security-considerations"></a>핵심 SQLXML 보안 고려 사항
   다음은 데이터 액세스에 SQLXML을 사용하는 경우에 대한 보안 지침입니다.  
   
--   SQLXMLOLEDB 공급자는 각 특정 인스턴스에 대해 사용하거나 사용하지 않도록 설정할 SQLXML 기능을 나타내는 플래그를 설정할 수 있는 `StreamFlags` 속성을 노출합니다. 이 속성을 사용하여 SQLXML 사용을 사용자 지정하고 원하는 구성 요소만 사용되도록 설정할 수 있습니다. 자세한 내용은 [SQLXMLOLEDB 공급자 &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)합니다.  
+-   SQLXMLOLEDB 공급자는 각 특정 인스턴스에 대해 사용하거나 사용하지 않도록 설정할 SQLXML 기능을 나타내는 플래그를 설정할 수 있는 `StreamFlags` 속성을 노출합니다. 이 속성을 사용하여 SQLXML 사용을 사용자 지정하고 원하는 구성 요소만 사용되도록 설정할 수 있습니다. 자세한 내용은 [SQLXMLOLEDB 공급자 &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md).  
   
 -   SQLXML 오류가 발생하고 반환되는 경우 테이블 이름, 열 이름 또는 유형 정보와 같은 데이터베이스 스키마 정보가 포함될 수 있습니다. 의도되지 않았거나 필요하지 않은 경우 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에 대한 정보를 쉽게 검색할 수 없도록 이러한 오류를 처리할 때는 주의해야 합니다.  
   

@@ -4,7 +4,6 @@ ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.previewview.f1
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ca0aa6329a06fbcf3a079c61c7d61da6b8d316c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4386fef770eb741b55df5740651cec1bd64ef048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854281"
 ---
 # <a name="preview-view"></a>미리 보기 뷰
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 디자이너에서 **미리 보기** 뷰를 사용하여 렌더링된 보고서를 표시할 수 있습니다. 보고서를 미리 보는 경우 보고서 디자이너가 로컬 컴퓨터에서 보고서를 실행하여 미리 보기에 표시합니다. 미리 보기 모드에서는 보고서 전체를 처리합니다. 보고서에 복잡한 쿼리나 많은 양의 데이터가 있는 경우 처음 볼 때 미리 보기를 완료하는데 몇 분 정도 걸릴 수 있습니다. 보고서의 형식에만 영향을 미치는 후속 변경 내용의 경우 미리 보기 기능에서는 캐시된 데이터를 사용합니다.

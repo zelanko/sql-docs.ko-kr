@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 560fed2eba751609f9e187be60a1d08d9b6a1364
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188470"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079413"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
   인덱스는 테이블이나 뷰와 관련된 디스크상 구조로서 테이블이나 뷰의 행 검색 속도를 향상시킵니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 이러한 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 구조(B-트리)에 저장됩니다.  

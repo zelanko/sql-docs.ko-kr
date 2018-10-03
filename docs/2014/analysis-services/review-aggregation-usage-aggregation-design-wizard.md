@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.aggregationdesignwizard.reviewusage.f1
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c0027b2bceada8bfe84f0ee835395dd62686d16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10968a24c858f2523ff8b816bf153b9dc5dc2a8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332815"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113493"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>집계 사용 검토(집계 디자인 마법사)
   **집계 사용 검토** 페이지를 사용하여 집계 사용 설정을 구성할 수 있습니다.  

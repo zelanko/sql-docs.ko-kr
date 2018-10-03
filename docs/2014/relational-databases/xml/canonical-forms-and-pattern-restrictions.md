@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61b11894a1fdcbcf29cba0f4ff4096cba041c71e
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: f386c1b913efb9aa84bb96518670b96236bc5325
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067580"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>정규 형식 및 패턴 제한 사항
   XSD 패턴 패싯을 사용하면 단순 유형의 어휘 영역을 제한할 수 있습니다. 어휘 표현이 둘 이상 있는 형식에 패턴 제한을 적용한 경우 일부 값으로 인해 유효성 검사 후 예기치 않은 동작이 발생할 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
-caps.latest.revision: 8
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05f2e3ae157597f4c933e6c7cac710495171e8bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4b9f893a0a8711825062a05c5e78db0440d298c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077733"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 하이브리드 클라우드 소개
  대부분의 응용 프로그램에는 높은 효율성, 비즈니스 가치, 복잡한 하드웨어 구성, 수요의 엄청난 폭증, 업계 및 회사 규정 준수 등의 주요 문제가 있습니다. 이러한 요소를 모두 고려하고 엔터프라이즈급 기술을 구현하는 작업은 매우 어려울 수 있습니다. Microsoft 하이브리드 클라우드 전략은 이러한 주요 문제를 극복할 수 있도록 기존, 사설 클라우드, 공용 클라우드 및 하이브리드 클라우드 환경에 대한 지원을 제공합니다. 

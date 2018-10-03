@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd8a6563e72e53d9fcc01e7a687c411b3d86dce5
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c9edcbe27c015e4f63b2a0d66640dcca818d3eba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853891"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC 인스턴스 관리
   CDC Designer 콘솔을 사용하여 직접 만든 인스턴스에 대한 정보를 보고 인스턴스 작업을 관리할 수 있습니다.  

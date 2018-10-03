@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 98aafe228a4dfe8a2e38667fcf58a61527e103e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b9e394929aa78e301e0431d25781626c3ba79dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112775"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>관계형 쿼리 디자이너에서 쿼리 작성(보고서 작성기 및 SSRS)
   쿼리 디자이너를 사용하면 보고서 데이터 집합에 사용하기 위해 외부 데이터 원본에서 검색할 데이터를 지정할 수 있습니다. 마법사에서 쿼리를 작성하거나 데이터 집합 쿼리를 만들 때 쿼리 디자이너를 사용할 수 있습니다.  

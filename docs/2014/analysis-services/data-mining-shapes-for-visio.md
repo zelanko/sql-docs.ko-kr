@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining shapes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visio shapes
 - shapes, data mining
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6dae172d599b6da648962e50cb3d24fa2f36351d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055233"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio용 데이터 마이닝 셰이프
   Visio용 데이터 마이닝 셰이프는 데이터 마이닝 모델을 표시하기 위해 사용자 지정된 템플릿을 제공합니다. 이러한 템플릿을 사용하여, 사용자가 만든 모델에 연결할 수 있으며 데이터 마이닝의 결과를 보여 주기 위한 대화형 프레젠테이션을 만들 수 있습니다.  

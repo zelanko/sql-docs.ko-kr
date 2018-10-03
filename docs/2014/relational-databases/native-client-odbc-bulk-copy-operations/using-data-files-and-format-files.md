@@ -1,12 +1,10 @@
 ---
-title: 데이터 파일과 서식 파일을 사용 하 여 | Microsoft Docs
+title: 데이터 파일과 서식 파일을 사용 하 여 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], file formats
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f56cb9a5bd18ca4080d16b3fa2a4fdbff0398247
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071933"
 ---
 # <a name="using-data-files-and-format-files"></a>데이터 파일 및 서식 파일 사용
   가장 간단한 대량 복사 프로그램은 다음을 수행합니다.  

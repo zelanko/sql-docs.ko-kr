@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, stopping
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - default instances [SQL Server], broadcasting shutdown messages
 - stopping SQL Server
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f0ac43587ec85fb1d33300f3b148ae19570d8c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4ac2fc507e86a9f0b24b03f661326a64f20f354
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269449"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055876"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>종료 메시지 브로드캐스트(명령 프롬프트)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 **net send** 명령을 사용하여 종료 메시지를 브로드캐스팅하는 방법에 대해 설명합니다. 사용자가 제시간에 태스크를 완료할 수 있도록 메시지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 중지 시간을 포함시키세요.  

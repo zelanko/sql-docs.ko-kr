@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 021dd0e24fbdbefdceba2920786fc62f451cb677
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: be9e057c6e746fa5d058c44a1261388888f69300
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078083"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
   조건 창에서 스프레드시트 모양의 표 형태에 선택한 항목을 입력하여 표시할 데이터 열, 결과 정렬 방법, 선택할 행 등의 쿼리 옵션을 지정할 수 있습니다. 조건 창에서 지정할 수 있는 내용은 다음과 같습니다.  

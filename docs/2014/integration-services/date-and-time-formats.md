@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time data types [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-caps.latest.revision: 52
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7c54b3ee399043d752efb9e55ce9c2f8fed488d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112749"
 ---
 # <a name="date-and-time-formats"></a>날짜 및 시간 형식
   빠른 구문 분석에서는 데이터 구문 분석을 위한 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석에서는 날짜 및 시간 데이터 형식에 대해 다음과 같은 형식이 지원됩니다.  

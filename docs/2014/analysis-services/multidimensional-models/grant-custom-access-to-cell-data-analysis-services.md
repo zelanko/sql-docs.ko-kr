@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105173"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>셀 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
   셀 보안은 큐브 내 측정값 데이터에 대한 액세스를 허용하거나 거부하는 데 사용됩니다. 다음 그림은 특정 측정값에 대한 액세스만 허용된 사용자로 연결했을 때 피벗 테이블에서 허용된 측정값과 거부된 측정값의 조합을 보여 줍니다. 이 예제에서 **재판매인 판매액** 및 **재판매인 총 제품 원가** 는 이 역할을 통해 사용할 수 있는 유일한 측정값입니다. 다른 모든 측정값은 암시적으로 거부됩니다. 이 결과를 얻는 데 사용한 단계는 아래의 다음 섹션인 "특정 측정값에 대한 액세스 허용"에 나와 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b4b1b53558f27c3d86046c2ab71639e6d487ebc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116927"
 ---
 # <a name="thread-pool-properties"></a>스레드 풀 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 여러 작업에 다중 스레드를 사용하여 여러 작업을 병렬로 실행함으로써 전반적인 서버 성능을 향상시킵니다. 스레드를 보다 효율적으로 관리하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 스레드 풀을 사용해서 스레드를 미리 할당하고 다음 작업에 스레드를 쉽게 사용할 수 있도록 지원합니다.  
@@ -91,7 +88,7 @@ ms.locfileid: "40396163"
   
  속성은 사전순으로 나열됩니다.  
   
-|속성|형식|Description|기본값|지침|  
+|이름|형식|Description|기본값|지침|  
 |----------|----------|-----------------|-------------|--------------|  
 |`IOProcess` \ `Concurrency`|double|큐에 한 번에 넣을 수 있는 스레드 수의 목표치를 설정하는 알고리즘을 결정하는 배정밀도 부동 소수점 값입니다.|2.0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.<br /><br /> Windows에서 IO 완료 포트를 사용해서 구현되는 동시성을 사용해서 스레드 풀이 초기화됩니다. 자세한 내용은 [I/O 완료 포트](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 를 참조하세요.<br /><br /> 다차원 모델에만 적용됩니다.|  
 |`IOProcess` \ `GroupAffinity`|string|시스템의 프로세서 그룹에 해당하는 16진수 값 배열로, 각 프로세서 그룹의 논리적 프로세서에 대한 IOProcess 스레드 풀의 스레드 선호도를 설정하는 데 사용됩니다.|none|이 속성을 사용해서 사용자 지정 선호도를 만들 수 있습니다. 이 속성은 기본적으로 비어 있습니다.<br /><br /> 자세한 내용은 [GroupAffinity를 설정하여 프로세서 그룹의 프로세서에 대한 스레드 선호도 설정](#bkmk_groupaffinity) 를 참조하세요.<br /><br /> 다차원 모델에만 적용됩니다.|  

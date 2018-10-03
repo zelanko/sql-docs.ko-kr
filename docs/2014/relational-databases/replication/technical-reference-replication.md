@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4f62bd5ac5a6e8ac98b04edf305bd3533ad57d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35ae15fc44acfd7b9b203c4af2b9e436edecb9d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124244"
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
   이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 대한 기술 참조 설명서에 연결되는 링크가 들어 있습니다.  

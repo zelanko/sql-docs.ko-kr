@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.visualizers.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1815402b13ad8ba1550472a7a2dc1cb70374a4d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf19f89656b7c93c4c97ea8e09b62afadf069eee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047605"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>데이터 흐름 경로 편집기(데이터 뷰어 페이지)
   **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  

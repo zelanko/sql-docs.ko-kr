@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20e289a5920dba9ab2567a07841010ceaeaa2666
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5e6cf3c0be2ec3ab8587bd086c99b32e718cd78
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069453"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
   데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성(인덱스 및 분할 집합)에 사용될 수 있는 최대 공간(MB)을 지정합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37218383"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**자식 요소**|InclusionThresholdSetting|  
+|**자식 요소**|없음|  
   
 ## <a name="remarks"></a>Remarks  
  여러 개의 데이터베이스를 튜닝할 경우 모든 데이터베이스에 대한 권장 구성은 공간 계산을 고려하여 처리됩니다. 기본적으로 데이터베이스 엔진 튜닝 관리자는 다음 저장소 크기보다 작은 공간을 가정합니다.  

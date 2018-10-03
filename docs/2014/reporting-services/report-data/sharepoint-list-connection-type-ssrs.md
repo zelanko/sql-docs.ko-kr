@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260399"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116353"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
   Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합을 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 및 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 사이트에 연결하고 이러한 사이트에서 목록 데이터를 검색할 수 있습니다.  
@@ -44,18 +41,18 @@ ms.locfileid: "37260399"
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|<sup>3</sup> 클레임 인증|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
-||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|예|아니요|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|이상<sup>2</sup>|  
-||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|예|이상<sup>2</sup>|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|사용자 계정 컨트롤|아니요|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|이상<sup>2</sup>|  
+||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|사용자 계정 컨트롤|이상<sup>2</sup>|  
   
  **표 2**  
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|<sup>3</sup> 클레임 인증|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
 ||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|아니요|아니요|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|이상<sup>2</sup>|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|이상<sup>2</sup>|  
 ||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|아니요|이상<sup>2</sup>|  
   
  <sup>1</sup> 저장 및 프롬프트 자격 증명 비 Windows 자격 증명을 사용 하 여 지원 되지 않습니다.  

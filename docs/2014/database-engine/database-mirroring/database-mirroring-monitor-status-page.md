@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b54eb6377a0d0816d186d612075b678e8eaadb7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef9b125cafb521461bfb17fcdf6fa31a5509411a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067873"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
   이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  

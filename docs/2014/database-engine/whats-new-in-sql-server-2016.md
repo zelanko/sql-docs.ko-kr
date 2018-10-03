@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 206
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 25dab69d079cf758a58669437e3e481eebe204a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067033"
 ---
 # <a name="what39s-new-database-engine"></a>새로운&#39;s (데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 최신 릴리스에는 데이터 저장소 시스템을 디자인, 개발 및 유지 관리하는 설계자, 개발자 및 관리자의 작업 효율성과 생산성을 증대시키는 새로운 기능과 향상된 기능이 추가되었습니다. 다음은 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 향상된 기능에 대한 설명입니다.  

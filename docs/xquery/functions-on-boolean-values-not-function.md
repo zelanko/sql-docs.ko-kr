@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,18 +16,17 @@ helpviewer_keywords:
 - not function [XQuery]
 - EBV
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f3da41971a8af3fe92fc8c7034fa6cd749a68ac8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7961b6daed4db42095e6d8a0856b3e99c6ca6041
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849811"
 ---
-# <a name="functions-on-boolean-values---not-function"></a>부울 값 함수-not 함수 
+# <a name="functions-on-boolean-values---not-function"></a>부울 값 함수 - not 함수 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   TRUE를 반환의 유효한 부울 값 *$arg* false이 고 경우에 FALSE를 반환 합니다의 유효한 부울 값 *$arg* 그렇습니다.  

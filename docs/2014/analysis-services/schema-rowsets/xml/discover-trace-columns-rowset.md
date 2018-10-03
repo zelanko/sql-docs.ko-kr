@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f07c4d548022ae12ab44e9c2772c13a0ffff574
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76cd71a6701c1cd29b39c36f256963e5ee5f0c34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051253"
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS 행 집합
   추적에 사용할 수 있는 열을 설명하는 XML 문서를 반환합니다.  
@@ -32,7 +29,7 @@ ms.locfileid: "37210023"
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`Data`|`DBTYPE_WSTR`|예|추적 공급자가 제공하는 추적 열에 대한 정보를 설명하는 인코딩된 XML 문자열을 포함합니다.|  
+|`Data`|`DBTYPE_WSTR`|사용자 계정 컨트롤|추적 공급자가 제공하는 추적 열에 대한 정보를 설명하는 인코딩된 XML 문자열을 포함합니다.|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   

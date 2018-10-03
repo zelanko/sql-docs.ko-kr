@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 947f9a04de5203742bf4a0fd8c0f605a8288d79a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0193a58fe54ccd288f7e9496b87c21c36917a900
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098793"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>2단원: 배포 번들 만들기
   [1단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)에서는 Deployment Tutorial이라는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 패키지 및 지원 파일을 이 프로젝트에 추가했으며 패키지에서 구성을 구현했습니다.  

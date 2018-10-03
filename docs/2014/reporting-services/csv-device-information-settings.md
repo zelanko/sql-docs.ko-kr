@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5e2183790fcc7af3f173d7f674173f3dd49857fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2dfb27e467dc762c6591c8b820cb71302eac99fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116913"
 ---
 # <a name="csv-device-information-settings"></a>CSV 장치 정보 설정
   CSV 렌더링 확장 프로그램에 대한 장치 정보 설정을 통해 구분 기호 및 한정자를 변경하고 줄 바꿈 처리를 지정할 수 있습니다. 출력에 파일 확장명과 인코딩 및 머리글 행도 포함하여 제출할 수 있습니다. 구분 기호는 특수 문자일 수 있기 때문에 설정이 XML로 작성된 경우 CDATA 섹션에서 인코딩해야 합니다.  

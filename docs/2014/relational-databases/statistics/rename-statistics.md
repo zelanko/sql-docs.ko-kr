@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming statistics
@@ -15,12 +13,12 @@ ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ff5f8386745211bd443b1a1b948b8148d464cb5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a97bb9ab3fcf5aa3ec9e3177a8f4b319c98e1988
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100313"
 ---
 # <a name="rename-statistics"></a>통계 이름 바꾸기
   다음을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 통계 개체의 이름을 바꾸려면 사용합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  

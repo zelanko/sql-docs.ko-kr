@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a4e6dcaedf09ca73691678cb21dd6066c23dbddf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095373"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 특정 버전의 보고서 서버 및 배포 모드에서 작동하는 다양한 웹 파트를 제공합니다.  

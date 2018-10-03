@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Parameter collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43500a8e2ea054d4af7f82992cd94e20f0fc293d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 291ef7f063ef8c5fb0769ea8430eacef946797bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851511"
 ---
-# <a name="parameter-ado-for-visual-c-syntax"></a>매개 변수 (Visual c + + 구문에 대 한 ADO)
+# <a name="parameter-ado-for-visual-c-syntax"></a>매개 변수(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  
   
 ```  

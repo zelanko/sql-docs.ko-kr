@@ -5,9 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32ccdd28dc8993107cdc1d5e2a3b5daac618b7f4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1b53839079c2a5cfc1e09788d44b955f5da3da7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401905"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857281"
 ---
 # <a name="cache-transform"></a>캐시 변환
   캐시 변환은 데이터 흐름에 있는 연결된 데이터 원본의 데이터를 캐시 연결 관리자에 기록하여 조회 변환에 대한 참조 데이터 집합을 생성합니다. 조회 변환은 연결된 데이터 원본의 입력 열에 있는 데이터를 참조 데이터베이스의 열과 조인하여 조회합니다.  
@@ -66,7 +63,7 @@ ms.locfileid: "35401905"
   
  캐시 연결 관리자에 대한 자세한 내용은 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **Cache connection manager**  
  목록을 사용하여 기존 캐시 연결 관리자를 선택하거나 **새로 만들기** 단추를 사용하여 새 연결을 만듭니다.  
   

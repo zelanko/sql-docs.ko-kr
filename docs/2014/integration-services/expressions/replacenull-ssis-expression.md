@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab1f7be1f763dbb405d5c65d29c25381e0c09d2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4307cf4955d369a38ce2d419495dc3cce9f5c86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073863"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL(SSIS 식)
   첫 번째 식 매개 변수의 값이 NULL이면 두 번째 식 매개 변수의 값을 반환하고, 그렇지 않으면 첫 번째 식의 값을 반환합니다.  

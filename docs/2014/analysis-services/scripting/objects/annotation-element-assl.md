@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Annotation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c8c8b70e9e15e01a0864cd9f3491aa188be6777
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103403"
 ---
 # <a name="annotation-element-assl"></a>Annotation 요소(ASSL)
   ASSL(Analysis Services Scripting Language) 스키마를 확장하는 데 사용되는 요소를 포함합니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37304503"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

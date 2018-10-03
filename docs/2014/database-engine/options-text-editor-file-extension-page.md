@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176420"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076868"
 ---
 # <a name="options-text-editor---file-extension-page"></a>옵션(텍스트 편집기 - 파일 확장명 페이지)
   **옵션** 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 특정 파일 확장명의 모든 파일을 처리하는 방법을 지정할 수 있습니다. 입력하는 확장명마다 편집기를 선택할 수 있으므로 특정 형식의 문서를 열 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기를 선택할 수 있습니다. 파일 확장명 옵션을 열려면 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기**를 확장한 다음 **파일 확장명**을 클릭합니다.  

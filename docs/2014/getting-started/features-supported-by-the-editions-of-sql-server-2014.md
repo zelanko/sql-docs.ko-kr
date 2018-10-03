@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - data-quality-services
@@ -13,19 +12,17 @@ ms.technology:
 - master-data-services
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
-caps.latest.revision: 126
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02aa7277a06857f415143fd4497b0971773a03b6
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 35fad6632f6c03cbbcc913868da15a60d4b87453
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395745"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095899"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
   이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다.  
@@ -117,7 +114,7 @@ ms.locfileid: "40395745"
 |Hot Add 메모리 및 CPU<sup>2</sup>|사용자 계정 컨트롤|||||||  
 |데이터베이스 복구 관리자|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |암호화된 백업|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
-|스마트 백업|사용자 계정 컨트롤|예|예|아니오||||  
+|스마트 백업|사용자 계정 컨트롤|예|예|아니요||||  
   
  <sup>1</sup>를 설치 하는 방법은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Server core에서 참조 [Server Core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)합니다.  
   
@@ -174,8 +171,8 @@ ms.locfileid: "40395745"
 |SQL CMD(명령 프롬프트 도구)|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|사용자 계정 컨트롤|예|예|예|예|사용자 계정 컨트롤||  
 |Distributed Replay - 관리 도구|사용자 계정 컨트롤|예|예|예|예|사용자 계정 컨트롤||  
-|Distributed Replay - 클라이언트|사용자 계정 컨트롤|아니오|예|사용자 계정 컨트롤||||  
-|Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|아니오|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
+|Distributed Replay - 클라이언트|사용자 계정 컨트롤|아니요|예|사용자 계정 컨트롤||||  
+|Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|아니요|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
 |SQL 프로파일러|사용자 계정 컨트롤|예|사용자 계정 컨트롤|이상<sup>2</sup>|이상<sup>2</sup>|이상<sup>2</sup>|이상<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |Microsoft System Center Operations Manager 관리 팩|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
@@ -244,7 +241,7 @@ ms.locfileid: "40395745"
 |전체 텍스트 및 의미 체계 검색|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|||  
 |쿼리에서 언어 지정|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|||  
 |Service Broker(메시징)|사용자 계정 컨트롤|예|사용자 계정 컨트롤|아니요(클라이언트 전용)|아니요(클라이언트 전용)|아니요(클라이언트 전용)|아니요(클라이언트 전용)|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)] 끝점|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
+|[!INCLUDE[tsql](../includes/tsql-md.md)] 엔드포인트|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
   
 ##  <a name="SSIS"></a> Integration Services  
   

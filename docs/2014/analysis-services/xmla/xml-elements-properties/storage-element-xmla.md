@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Storage Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Storage element
 ms.assetid: c3590af8-a24b-4fd3-b846-17edbd399b6d
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65a301134d245cc419c762a139e81b05010dbdcb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5314abe0dbc16c87b8ffae277719d889a91de7f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095693"
 ---
 # <a name="storage-element-xmla"></a>Storage 요소(XMLA)
   [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) 명령에서 집계를 디자인하는 데 사용되는 최대 저장소 크기(바이트)를 지정합니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37195973"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Long|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37195973"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
   

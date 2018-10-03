@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 210ea4da165109d8c1bb3e0dc6378116589f03a8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092183"
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
     
@@ -36,7 +33,7 @@ ms.locfileid: "37421582"
 |메시지 텍스트|트랜잭션(프로세스 ID %d)이 %.*ls 리소스에서 다른 프로세스와의 교착 상태가 발생하여 실행이 중지되었습니다. 트랜잭션을 다시 실행하십시오.|  
   
 ## <a name="explanation"></a>설명  
- 분리된 트랜잭션에서 리소스에 액세스하는 순서가 적절하지 못하여 교착 상태가 발생합니다. 예를 들어:  
+ 분리된 트랜잭션에서 리소스에 액세스하는 순서가 적절하지 못하여 교착 상태가 발생합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   Transaction2가 **Table2.Row2**를 업데이트하는 동안 Transaction1이 **Table1.Row1**을 업데이트합니다.  
   

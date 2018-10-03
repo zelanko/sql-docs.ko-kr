@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272609"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060179"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>필터 대화 상자(마이닝 정확도 차트)
   **필터** 대화 상자를 사용하면 데이터 집합에 적용할 수 있는 조건을 작성할 수 있습니다. 데이터 집합은 테스트에 사용되는 외부 데이터 집합이나 마이닝 모델 학습에 사용되는 사례 데이터일 수 있습니다. 이 대화 상자를 사용하면 **데이터 집합 필터** 대화 상자 또는 **모델 필터** 대화 상자에서 보다 복잡한 필터 조건의 일부로 저장할 수 있는 조건을 작성할 수 있습니다.  
@@ -46,7 +43,7 @@ ms.locfileid: "37272609"
 |-----------|-----------------|  
 |**및/또는**|이 줄의 조건에 AND 연산자를 적용할지, 아니면 OR 연산자를 적용할지를 지정하려면 클릭합니다. 이러한 값은 **마이닝 구조 열** 목록에서 열을 선택한 후에만 사용할 수 있습니다.|  
 |**마이닝 구조 열**|**데이터 집합 필터** 대화 상자의 데이터 원본에서 선택한 테이블에 포함된 열 목록에서 열을 선택하려면 클릭합니다.|  
-|**같음**|목록에서 연산자를 선택합니다. 사용할 수 있는 연산자는 열의 데이터 형식에 따라 달라집니다.<br /><br /> 열에 불연속 값이 포함되어 있으면 다음 연산자만 사용할 수 있습니다.<br /><br /> =(같음), <>(같지 않음), IS NOT NULL, IS NULL<br /><br /> 열에 연속 값이 포함되어 있으면 보다 큼 연산자와 보다 작음 연산자도 사용할 수 있습니다.|  
+|**연산자**|목록에서 연산자를 선택합니다. 사용할 수 있는 연산자는 열의 데이터 형식에 따라 달라집니다.<br /><br /> 열에 불연속 값이 포함되어 있으면 다음 연산자만 사용할 수 있습니다.<br /><br /> =(같음), <>(같지 않음), IS NOT NULL, IS NULL<br /><br /> 열에 연속 값이 포함되어 있으면 보다 큼 연산자와 보다 작음 연산자도 사용할 수 있습니다.|  
 |**Value**|조건으로 사용할 값을 입력합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

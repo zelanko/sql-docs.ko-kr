@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f19732c1287b1c915f8a49adc9f12938ebb9a744
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079143"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
   ODBC 대상은 ODBC 지원 데이터베이스 테이블로 데이터를 대량 로드합니다. ODBC 대상은 ODBC 연결 관리자를 사용하여 데이터 원본에 연결합니다.  

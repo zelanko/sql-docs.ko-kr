@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075093"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Excel에서 분석(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 개발자는**Excel에서 분석** 을 사용하여 프로젝트가 최종 사용자에게 어떻게 표시될지 빠르게 검토할 수 있습니다. **Excel에서 분석** 기능은 Microsoft Excel을 열고 작업 영역 데이터베이스에 데이터 원본을 연결한 후 자동으로 워크시트에 피벗 테이블을 추가합니다. 이 기능은 이전 릴리스에서 브라우저 탭에 포함된 피벗 테이블을 제공하던 Office Web Control을 대체합니다.  

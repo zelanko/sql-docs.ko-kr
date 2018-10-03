@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CPU [SQL Server], idle conditions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Agent, CPU idle conditions
 - idle time [SQL Server]
 ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2defdc495278c603c51102ae42a0a9d0c28382b6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6f60620ac9f0fcc729da0570723c8d48229c8bfc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080043"
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>CPU 유휴 상태 시간 및 지속 시간 설정(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다. CPU 유휴 상태 판단 기준 정의는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 이벤트에 응답하는 방법에 영향을 줍니다. 예를 들어 CPU 유휴 상태 판단 기준을 평균 CPU 사용량이 10% 이하로 떨어져서 10분 동안 이 수준을 유지하는 것으로 가정해 보세요. 그런 다음 서버 CPU가 유휴 상태 판단 기준에 도달할 때마다 작업이 실행되도록 정의하면 해당 작업은 CPU 사용량이 10% 이하로 떨어져서 10분 동안 이 수준을 유지할 때 시작됩니다. 이 작업이 사용 중인 서버 성능에 상당한 영향을 주는 경우 CPU 유휴 상태 판단 기준 정의 방법이 중요합니다.  

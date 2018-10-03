@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275629"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102513"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>2 단원: 웹 참조 추가
+# <a name="lesson-2-adding-a-web-reference"></a>2단원: 웹 참조 추가
   웹 서비스 검색은 클라이언트에서 웹 서비스를 찾고 해당 서비스에 대한 설명을 얻는 과정입니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]의 웹 서비스 검색 과정에는 미리 결정된 알고리즘을 따르는 웹 사이트를 질의하는 과정이 포함됩니다. 이러한 과정의 목적은 WSDL(웹 서비스 설명 언어)을 사용하는 XML 문서인 서비스 설명을 찾는 것입니다.  
   
  서비스 설명은 사용할 수 있는 서비스 및 이러한 서비스와 상호 작용하는 방법을 설명합니다. 서비스 설명이 없으면 웹 서비스와 프로그래밍 방식으로 상호 작용할 수 없습니다.  

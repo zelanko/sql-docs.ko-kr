@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NamingTemplate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b1a167ffc7418d69b28e8436bb67238acc3284b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106313"
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate 요소(ASSL)
   생성 된 부모-자식 계층에서 수준의 이름이 지정 되는 방법을 정의 합니다 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) 부모 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37300843"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37300843"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  값을 `NamingTemplate` 요소는 부모 특성에만 사용 됩니다 (값 즉,를 [사용](usage-element-dimensionattribute-assl.md) 요소의 `DimensionAttribute` 부모 요소가로 설정 되어 *부모*).  

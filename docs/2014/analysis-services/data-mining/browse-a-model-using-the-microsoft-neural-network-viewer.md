@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - Neural Network Viewer [Analysis Services]
 - neural network model [Analysis Services]
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45561d4e2b5463e6525d9def3cf0d508fddd592f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117863"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Microsoft 신경망 뷰어를 사용하여 모델 찾아보기
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 신경망 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 개방형 분석 및 탐색에 유용하고 여러 입력 및 출력을 분석할 수 있는 분류 및 회귀 마이닝 모델을 만듭니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)를 참조하십시오.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 신경망 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 개방형 분석 및 탐색에 유용하고 여러 입력 및 출력을 분석할 수 있는 분류 및 회귀 마이닝 모델을 만듭니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)를 참조하십시오.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 뷰어를 사용하여 모델을 탐색할 때는 일반적으로 대상 특성 및 상태를 선택한 다음 뷰어를 사용하여 입력 특성이 출력에 영향을 주는 방식을 확인합니다.  
   

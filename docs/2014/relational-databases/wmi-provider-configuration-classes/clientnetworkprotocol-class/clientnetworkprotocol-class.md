@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClientNetworkProtocol Class
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ClientNetworkProtocol class
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
-caps.latest.revision: 27
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1452673041397a5af7d3274964e1221f448dbc1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26d1667f80547d81e9bda47d66dd3cf7df4b3bbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071253"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 클래스
   [ClientNetworkProtocol 클래스](clientnetworkprotocol-class.md) 는 클라이언트 인스턴스에 설치되어 네트워크를 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와의 통신을 허용하는 네트워크 프로토콜을 나타냅니다.  

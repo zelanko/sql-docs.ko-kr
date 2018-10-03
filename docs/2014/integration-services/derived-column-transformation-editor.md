@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntransformation.f1
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-caps.latest.revision: 32
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22d05a24cda6ac608fd747b325dc8038cfea6089
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfeb30098a0c82f1e494575db04de639cc8401c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075323"
 ---
 # <a name="derived-column-transformation-editor"></a>파생 열 변환 편집기
   **파생 열 변환 편집기** 대화 상자를 사용하여 새 열 또는 대체 열을 채우는 식을 만들 수 있습니다.  

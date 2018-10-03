@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 875ee5fe1edb2d0781f75c01dfe072d0b7f213c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050019"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 테이블 형식 모델, 큐브, 차원 및 마이닝 모델과 같은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 21a9ede5ef83169d312bb59e84bfd3f33619dafb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099033"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>웹 서비스 URL(SSRS 기본 모드)
   웹 서비스 URL 페이지에서는 보고서 서버에 액세스하는 데 사용되는 URL을 구성하거나 수정할 수 있습니다. *URL 예약* 은 지정된 URL을 기준으로 만들어집니다. URL 예약에는 다음에 보고서 서버 웹 서비스에 액세스할 때 사용할 수 있는 모든 URL에 대한 구문과 규칙이 정의되어 있으며, 보고서 서버 웹 서비스에 대한 접두사, 호스트, 포트 및 가상 디렉터리가 지정되어 있습니다. 호스트를 지정하는 방식에 따라 하나의 예약에 대해 여러 개의 URL을 사용할 수도 있습니다. 호스트 기본값에는 강력한 와일드카드가 지정되어 있습니다. 강력한 와일드카드를 사용하면 보고서 서버를 호스팅하는 컴퓨터로 확인될 수 있는 호스트 이름을 URL에 지정할 수 있습니다. URL 구성 및 예약에 대 한 자세한 내용은 참조 하세요. [URL 구성 &#40;SSRS 구성 관리자&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 하 고 [보고서 서버 Url 구성 &#40;&AMP;#40;SSRS 구성 관리자&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

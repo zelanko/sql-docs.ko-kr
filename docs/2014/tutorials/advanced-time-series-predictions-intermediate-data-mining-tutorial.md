@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81297beab8cea567277bd7f1e015859547ab2f7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122743"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>고급 시계열 예측(중급 데이터 마이닝 자습서)
   예측 모델 탐색을 통해 대부분 지역의 판매는 유사한 패턴을 따르지만 태평양 지역의 M200 모델과 같이 특정 지역 및 모델은 서로 매우 다른 추세를 보여 준다는 사실을 알았습니다. 이는 놀라운 일이 아니고 알려진 바와 같이 지역 간 차이는 일반적인 것이며 마케팅 홍보, 정확하지 않은 보고 또는 지정학적 사건과 같은 많은 요인으로 인해 발생할 수 있습니다.  

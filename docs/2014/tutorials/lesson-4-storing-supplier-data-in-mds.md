@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 363b92c975bd80f4d3298a2082b6cedfee9b1263
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048824"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>4단원: MDS에 공급자 데이터 저장
   MDS(Master Data Services)는 마스터 데이터 관리를 위한 SQL Server 솔루션입니다. MDM(마스터 데이터 관리)은 조직에서 비트랜잭션 데이터 목록을 검색 및 정의하기 위해 수행하는 작업을 의미합니다.  

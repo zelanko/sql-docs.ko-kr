@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - modifying filters, parameterized row
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3b3d8b397617674f4b297488e9cc8e2b541698df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef51e4b20fb96f76bbcfa8e9f5a2d4dccaa75d42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116394"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  

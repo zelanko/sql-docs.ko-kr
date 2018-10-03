@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], space
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - space allocation [SQL Server], displaying
 - data space [SQL Server]
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04777f6f03ed5e97249eaf50b04f44e8e9aac763
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a1491dc589299ca4410983cd28ed8f82d2e54db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149064"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058123"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>데이터베이스의 데이터 및 로그 공간 정보 표시
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 대한 데이터와 로그 공간 정보를 표시하는 방법에 대해 설명합니다.  

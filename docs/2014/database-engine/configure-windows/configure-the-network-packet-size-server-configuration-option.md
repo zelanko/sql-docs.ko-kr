@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default packet size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packets [SQL Server], size
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a41ad9cf55fbe1ef2799cef4b0a773ec3db4fb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bf4c593b8d13f2f4f88cd066cd183d92d2f6ae1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116433"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size 서버 구성 옵션 구성
   이 항목에서는 구성 하는 방법에 설명 합니다 `network packet size` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. `network packet size` 옵션 전체 네트워크에서 사용 되는 바이트 단위로 패킷 크기를 설정 합니다. 패킷은 클라이언트와 서버 간에 요청 및 결과를 전송하는 고정된 크기의 데이터 청크입니다. 기본 패킷 크기는 4,096바이트입니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ManagedProvider Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7b29b4db3d2acf34e684d89588ef5f1e2a935aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180850"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101633"
 ---
 # <a name="managedprovider-element-assl"></a>ManagedProvider 요소(ASSL)
   파생 된 요소에서 사용 하는 관리 되는 공급자의 이름을 포함 합니다 [DataSource](../data-type/datasource-data-type-assl.md) 데이터 형식입니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37180850"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -57,7 +54,7 @@ ms.locfileid: "37180850"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DataSource](../data-type/datasource-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  데이터 원본에서 관리 공급자를 사용하는 경우 `ManagedProvider` 요소에 관리 공급자의 이름이 포함됩니다.  

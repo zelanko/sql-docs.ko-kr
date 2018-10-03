@@ -1,13 +1,11 @@
 ---
-title: Visual c + + 구문 인덱스에 대 한 COM ADO | Microsoft Docs
+title: COM에 대 한 Visual c + + 구문 인덱스용 ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28753a50e8fea591c266db27e8121256869b1d6e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275512"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789486"
 ---
-# <a name="ado-for-visual-c-syntax-index-for-com"></a>Visual c + + 구문 인덱스에 대 한 COM ADO
-이 인덱스는 Microsoft Visual c + +에 따라 ADO 언어 참조에 대 한 상호 참조 합니다.  
+# <a name="ado-for-visual-c-syntax-index-for-com"></a>COM용 Visual C++ 구문 인덱스에 대한 ADO
+이 인덱스는 Microsoft Visual c + + 기반 ADO 언어 참조에 대 한 상호 참조 합니다.  
   
- 사용 하는 경우는 **#import** 응용 프로그램에서 지시문을 헤더 파일이 생성 됩니다 Microsoft Visual Basic과 유사한 구문을 사용할 수 있도록 합니다. 폼의 속성 이름 **get_ * * * PropertyName* 및 **put_ * * * PropertyName* 처럼 간단 하 게 선언 된 것 처럼 처리 되어야 *PropertyName*합니다. 그런 다음 함수가 아닌 데이터 멤버 처럼 속성을 처리할 수 있습니다.  
+ 사용 하는 경우는 **#import** 응용 프로그램에서 지시문, 헤더 파일을 생성할 됩니다 수 있는 Microsoft Visual Basic을 사용 하 여 것과 비슷한 구문을 사용 합니다. 폼의 속성 이름을 **get_ * PropertyName* 및 **put_ * PropertyName* 간단히 선언 된 것 처럼 처리할 수 있습니다 *PropertyName*합니다. 다음 함수 대신 데이터 멤버와 같은 속성을 처리할 수 있습니다.  
   
- 모든 메서드, 속성 및 이벤트는 반환 하는 함수는 **HRESULT**, 테스트를 함수 성공적으로 실행 되었는지 확인할 수 있는 합니다.  
+ 모든 메서드, 속성 및 이벤트는 반환 하는 함수는 **HRESULT**, 테스트를 함수가 성공적으로 실행 되었는지 확인할 수 있는 합니다.  
   
- 다음과 같은 요소에 대 한 Visual c + +에서 메서드 및 속성 구문이 표시 됩니다.  
+ 다음 요소에 대 한 Visual c + +에서 메서드 및 속성 구문을 나열 됩니다.  
   
 -   [컬렉션](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
--   [Command 개체](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
+-   [명령 개체](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
   
 -   [연결 개체](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
   
@@ -46,14 +43,14 @@ ms.locfileid: "35275512"
   
 -   [Field 개체](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
   
--   [Parameter 개체](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
+-   [매개 변수 개체](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
   
--   [Record 개체](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [레코드 개체](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
   
 -   [레코드 집합 개체](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
   
--   [스트림 개체](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
+-   [Stream 개체](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO #import 인 Visual c + + 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [#Import Visual c + + 구문 인덱스에 대 한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ADO(ActiveX Data Objects)](../../../ado/microsoft-activex-data-objects-ado.md)

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configuredistributionwizard.distributorpassword.f1
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a352eef0c9be945133d1883fd93f63f54f80e697
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e13c6a658409dbf0d8349a05621afd9768e5ee7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119243"
 ---
 # <a name="distributor-password"></a>배포자 암호
   이 마법사의 **게시자** 페이지에서 하나 이상의 게시자가 이 서버를 원격 배포자로 설정한 경우 복제가 **distributor_admin** 로그인을 사용하여 게시자와 원격 배포자 간 연결을 만들 때 사용할 암호를 지정해야 합니다. 새 게시 마법사 또는 배포 구성 마법사의 **관리 암호** 페이지에서 이 원격 배포자를 사용하는 각 게시자에 대해 동일한 암호를 입력해야 합니다. 배포자 보안에 자세한 내용은 [배포자 보안 설정](security/secure-the-distributor.md)을 참조하세요.  

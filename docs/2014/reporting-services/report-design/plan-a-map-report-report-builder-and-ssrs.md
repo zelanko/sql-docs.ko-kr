@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbc1b3eaabe4760cd8f0778f1c2e2659e4c6db74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095713"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
   훌륭한 보고서는 조치를 취하거나 상황을 깊이 있게 파악할 수 있는 정보를 제공합니다. 지리적 배경에 대한 인구 통계 또는 판매량 합계와 같은 분석 데이터를 제공하기 위해 보고서에 지도를 추가할 수 있습니다. 지도에는 여러 계층이 포함될 수 있으며, 각 계층에는 위치를 나타내는 점, 길을 나타내는 선, 영역을 나타내는 다각형 등의 특정 공간 데이터 유형으로 정의되는 지도 요소가 표시됩니다. 각 계층에서 분석 데이터와 지도 요소를 연결할 수 있습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7e3c070c8054378aeae2e3be8e6a2a237c4c3b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088613"
 ---
 # <a name="query-options-execution-ansi-page"></a>쿼리 옵션 실행(ANSI 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 ISO(ANSI) 표준에 지정되어 있는 설정의 일부 또는 전부를 사용하여 쿼리를 실행하도록 지정할 수 있습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6baf2dbbb100711b9665d5d705bce6399e3c754b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7903489a3fc34900ed8f717cc5a292f9af686af0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076983"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 연계 스타일 시트 파일 (.css) 스타일을 정의 하는 제공 된 **보고서** HTML 뷰어 및 보고서 관리자 도구 모음입니다. 웹 개발자나 CSS 스타일시트 파일을 만드는 전문가인 경우 기본 스타일을 수정하여 도구 모음이나 보고서 관리자의 색, 글꼴 및 레이아웃을 변경할 수 있습니다. 단, 이로 인해 발생하는 모든 문제에 대한 책임은 자신에게 있습니다. 이 릴리스에서는 기본 스타일시트나 스타일시트 수정 지침을 다루지 않습니다.  

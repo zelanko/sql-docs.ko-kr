@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Properties
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d79503c958729d95fe9ee223accb709e8369cf9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e6a022b50d4fb37474ba1183abc432ca4a7de463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080823"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>MSReportServer_ConfigurationSetting 속성
   MSReportServer_ConfigurationSetting 클래스는 보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이 설정은 RRSReportServer.config 구성 파일에 저장됩니다.  

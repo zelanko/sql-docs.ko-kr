@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring database mirroring [SQL Server]
 - Database Mirroring Monitor [SQL Server], starting
 - database mirroring [SQL Server], monitoring
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 48773b6f4fadf810f62f681cde45bfcb78206e53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a48c6620d4395cd44aac6f43cd1817cfebf785e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085340"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>데이터베이스 미러링 모니터 시작(SQL Server Management Studio)
   데이터베이스 미러링 모니터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 시작한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]모니터의 일부입니다.  

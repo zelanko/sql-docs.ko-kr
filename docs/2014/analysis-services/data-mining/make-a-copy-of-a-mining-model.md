@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 456150a7d7ba6759de20557a273875d95540f77f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ce5f68df0b543fb4c461fb34921ce2ee32a3357
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187780"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116243"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>마이닝 모델 복사본 만들기
   마이닝 모델의 복사본을 만들면 동일한 데이터를 기반으로 여러 마이닝 모델을 빠르게 만들 때 유용합니다. 모델을 복사한 후 매개 변수를 변경하거나 필터를 추가하여 새 복사본을 편집할 수도 있습니다.  

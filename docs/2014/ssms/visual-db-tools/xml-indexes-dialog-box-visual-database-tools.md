@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c828e45805e9e4aa5a37c98fada5c7ba5d168925
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8d0b162e8eb232f605e837a42fa55d3d39dcccd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100083"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
   **XML 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 XML 데이터 형식의 열에 대한 인덱스를 만들 수 있습니다. 각 XML 열에는 두 개 이상의 XML 인덱스가 있을 수 있지만 첫 번째 작성된 인덱스(기본 인덱스)가 나머지 인덱스(보조 인덱스)의 기준으로 사용됩니다. 기본 XML 인덱스를 삭제하면 보조 인덱스도 함께 삭제됩니다.  

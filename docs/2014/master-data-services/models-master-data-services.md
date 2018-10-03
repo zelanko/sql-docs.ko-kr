@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b7d295a5f9eac9c6a333618dc62d53cbf8294f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e4abc0b318af1ad13856d4ab6f1ca13e011d76a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178110"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088803"
 ---
 # <a name="models-master-data-services"></a>모델(Master Data Services)
   모델은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 최상위 데이터 구성 수준입니다. 모델은 마스터 데이터 관리 솔루션의 데이터 구조를 정의합니다. 모델은 다음 개체를 포함합니다.  

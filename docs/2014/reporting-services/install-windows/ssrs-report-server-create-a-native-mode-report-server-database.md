@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090263"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
   기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 내부 저장소로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용합니다. 이 데이터베이스는 필수 항목이며 게시된 보고서, 모델, 공유 데이터 원본, 세션 데이터, 리소스 및 서버 메타데이터를 저장하는 데 사용됩니다.  

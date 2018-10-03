@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9229eb61170d54da3959f8da831a4db840af21b8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 51c6c6834fa2f7d0d137d5d9c5236b189e213f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856786"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting 메서드 - ReserveURL
   지정된 응용 프로그램에 대한 URL 예약을 추가합니다.  

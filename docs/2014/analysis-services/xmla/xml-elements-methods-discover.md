@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Discover Method
@@ -25,16 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91ea30a495eb76c22075007f48e3ae721504ef49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116323"
 ---
 # <a name="discover-method-xmla"></a>Discover 메서드(XMLA)
   인스턴스에서 특정 개체에 대 한 세부 정보나 사용 가능한 데이터베이스 목록과 같은 정보를 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. `Discover` 메서드로 검색된 데이터는 해당 메서드에 전달된 매개 변수 값에 따라 달라집니다.  
@@ -58,15 +55,15 @@ ms.locfileid: "37196023"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[속성](xml-elements-properties/properties-element-xmla.md)하십시오 [RequestType](xml-elements-properties/type-element-xmla.md), [제한 사항](xml-elements-properties/restrictions-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

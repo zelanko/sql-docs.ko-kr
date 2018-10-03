@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e074a41f6d9f5053562dd7b6be453644cb5fa176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076633"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>큐브에서 데이터 및 메타데이터 찾아보기
   큐브 디자이너의 **브라우저** 탭에서 큐브 데이터를 검색할 수 있습니다. 이 뷰를 사용하여 큐브의 구조를 검토하고 데이터베이스 개체의 데이터, 계산, 형식, 보안을 확인할 수 있습니다. 보고 도구 또는 기타 클라이언트 응용 프로그램에서 최종 사용자에게 큐브가 어떻게 표시되는지 신속하게 검토할 수 있습니다. 큐브 데이터를 검색할 때는 차원별로 데이터를 조회하고, 멤버를 드릴다운하고, 차원을 통해 데이터를 조각화할 수 있습니다.  

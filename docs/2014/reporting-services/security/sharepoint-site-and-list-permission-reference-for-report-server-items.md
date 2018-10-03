@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e4197e80f29f7add23fcb1ddb7594fe5f7e3173f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a64c28884b5c656e75e172f36b2bb008a1bbfdcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327063"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077383"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
   이 항목에서는 SharePoint 통합 모드로 실행되는 보고서 서버에 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 SharePoint의 사용 권한 참조를 제공합니다. 사용자 지정 권한 수준을 만드는 경우 이 항목은 사용할 권한을 선택하는 데 도움이 될 수 있습니다.  
@@ -73,7 +70,7 @@ ms.locfileid: "37327063"
 |사용자 정보 찾아보기|웹 사이트의 사용자 정보를 봅니다.|X|X|X|여러 사이트, 라이브러리, 폴더에서 보고서 및 기타 항목을 찾아봅니다. 라이브러리에 보고서 및 기타 항목을 게시합니다.|  
 |사용 권한 열거|웹 사이트, 목록, 폴더, 문서 또는 목록 항목의 사용 권한을 열거합니다.|X|||모든 보고서 서버 항목에 대한 사용 권한을 읽습니다. 모델 항목 보안 설정이 포함된 보고서 모델을 사용하는 클릭 광고 보고서를 봅니다.|  
 |알림 관리|웹 사이트의 모든 사용자에 대해 알림을 관리합니다.|X|||사이트의 모든 구독을 만들고 변경 및 삭제합니다.|  
-|원격 인터페이스 사용|SOAP, Web DAV 또는 SharePoint Designer 인터페이스를 사용하여 웹 사이트에 액세스합니다.|X|X|X|보고서 서버에 대한 URL 프록시 끝점을 호출하는 데 사용됩니다.|  
+|원격 인터페이스 사용|SOAP, Web DAV 또는 SharePoint Designer 인터페이스를 사용하여 웹 사이트에 액세스합니다.|X|X|X|보고서 서버에 대한 URL 프록시 엔드포인트를 호출하는 데 사용됩니다.|  
 |열기|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
   
 ## <a name="see-also"></a>관련 항목  

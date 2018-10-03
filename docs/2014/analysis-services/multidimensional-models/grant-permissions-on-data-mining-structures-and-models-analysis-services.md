@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.miningmodels.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining structures
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2763f0af1b911c8fca27dad035ed25be8b29f7c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c898401e97bbc993fa0d913a46c4e264def40a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051213"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>데이터 마이닝 구조 및 모델에 대한 권한 부여(Analysis Services)
   기본적으로 Analysis Services 서버 관리자만 데이터베이스의 데이터 마이닝 구조 또는 마이닝 모델을 볼 수 있습니다. 관리자가 아닌 사용자에게 권한을 부여하려면 아래 지침을 따르세요.  

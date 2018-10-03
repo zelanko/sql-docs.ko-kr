@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69639
 - vdtsql.chm:69640
 - vdt.dlgbox.querydefinitionsdiffer
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23a767e053caae916584cd6aeef98413249e16ca
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 470bf9691aebfeaf87e99b7c7222bd1a5b29a25c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121273"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>쿼리 정의 다름 대화 상자(Visual Database Tools)
   이 대화 상자에는 다이어그램 창과 조건 창에서 쿼리를 그래픽 방식으로 표현할 수 없고 SQL 창에서만 쿼리를 편집할 수 있다는 메시지가 나타납니다.  

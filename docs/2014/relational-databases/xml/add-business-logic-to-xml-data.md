@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e2346587c198789f81663af9d98e5310b78de03
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078502"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
   비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  

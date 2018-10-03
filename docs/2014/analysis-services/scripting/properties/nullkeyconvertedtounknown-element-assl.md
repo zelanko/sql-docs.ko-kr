@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NullKeyConvertedToUnknown Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6aaf78e4081b0f2fe04bf9b4037639f5b86f5311
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121723"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>NullKeyConvertedToUnknown 요소(ASSL)
   Null 변환 오류가 발생할 때 수행할 동작을 지정합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37316923"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  키 열에 Null 값이 있으며 이 값이 `Unknown` 멤버로 해석되는 경우 Null 변환 오류가 발생합니다. 경우에이 오류가 발생 하는 반면를 [NullProcessing](nullprocessing-element-assl.md) 요소를 [DataItem](../data-type/dataitem-data-type-assl.md) 의 상위 항목을 `ErrorConfiguration` 부모 요소가로 설정 되어 *UnknownMember*합니다.  

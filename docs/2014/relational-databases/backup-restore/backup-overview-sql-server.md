@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 81
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049403"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 구성 요소에 대해 소개합니다. 데이터를 보호하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업해야 합니다. 여기서는 백업 유형과 백업 제한 사항에 대해 설명합니다. 또한 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치와 백업 미디어를 소개합니다.  

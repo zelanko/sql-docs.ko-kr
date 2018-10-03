@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-caps.latest.revision: 36
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf5ae5a5f80a13747b82290155bf5dfd5c38e00a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3fc54d5b287cd71ba303d34693e815c07b9cc3b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068082"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 루프 편집기(변수 매핑 페이지)
   **Foreach 루프 편집기** 대화 상자의 **변수 매핑** 페이지를 사용하여 변수를 컬렉션 값에 매핑할 수 있습니다. 변수 값은 루프가 반복될 때마다 컬렉션 값으로 업데이트됩니다.  
   
  Integration Services 패키지의 Foreach 루프 컨테이너를 사용하는 방법은 [Foreach Loop Container](control-flow/foreach-loop-container.md) 를 참조하십시오. 구성 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](../../2014/integration-services/configure-a-foreach-loop-container.md)을 참조하세요.  
   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서인 간단한 ETL 패키지 만들기 자습서에는 Foreach 루프를 추가 및 구성하는 방법을 배울 수 있는 단원이 있습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서인 간단한 ETL 패키지 만들기 자습서에는 Foreach 루프를 추가 및 구성하는 방법을 배울 수 있는 단원이 있습니다.  
   
 ## <a name="options"></a>변수  
  **변수**  

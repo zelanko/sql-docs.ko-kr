@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052273"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 내용(MDX)
   `FORMAT_STRING` 셀 속성 형식 합니다 `VALUE` 셀 속성에 값을 만드는 `FORMATTED_VALUE` 셀 속성입니다. 합니다 `FORMAT_STRING` 셀 속성에 대 한 서식이 지정 된 값을 반환 값에 형식 지정 식을 적용 문자열 및 숫자 원시 값을 처리 합니다 `FORMATTED_VALUE` 셀 속성입니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
@@ -74,7 +71,7 @@ ms.locfileid: "37293593"
   
 |문자|Description|  
 |---------------|-----------------|  
-|InclusionThresholdSetting|아무런 형식도 지정하지 않은 숫자를 표시합니다.|  
+|없음|아무런 형식도 지정하지 않은 숫자를 표시합니다.|  
 |**0**|숫자 한 개 또는 영(0)을 표시하는 숫자 자리 표시자입니다.<br /><br /> 숫자에 형식 문자열에서 0이 나타나는 위치에 숫자가 있으면 형식이 지정된 값에 그 숫자를 표시됩니다. 숫자가 없으면 형식이 지정된 값은 해당 위치에 영(0)을 표시합니다.<br /><br /> 숫자의 자릿수가 형식 문자열에 있는 0(소수점을 기준으로 양쪽)보다 적은 경우 형식이 지정된 값에 앞에 오는 0 또는 뒤에 오는 0이 표시됩니다.<br /><br /> 숫자의 소수 구분 기호 오른쪽 자릿수가 형식 지정 식의 소수 구분 기호 오른쪽의 0보다 많은 경우 형식이 지정된 값은 소수 자릿수의 0만큼 숫자를 반올림합니다.<br /><br /> 숫자의 소수 구분 기호 왼쪽 자릿수가 형식 지정 식의 소수 구분 기호 왼쪽의 0보다 많은 경우 형식이 지정된 값은 수정 없이 추가 자릿수를 표시합니다.|  
 |**#**|숫자 한 개 또는 아무 것도 표시하지 않는 숫자 자리 표시자입니다.<br /><br /> 식에 형식 문자열에서 숫자 기호(**#**)가 나타나는 위치에 숫자가 있으면 형식이 지정된 값에 그 숫자를 표시됩니다. 숫자가 없으면 형식이 지정된 값의 해당 위치에 아무 것도 표시되지 않습니다.<br /><br /> 숫자 기호(**#**) 자리 표시자는 형식 지정 식의 소수 구분 기호 왼쪽 또는 오른쪽에**문자보다 자릿수가 적거나 같은 경우 앞에 오는 0 및 뒤에 오는 0이 표시되지 않는 것을 제외하고는 영(** 0 **#** ) 숫자 자리 표시자와 동일한 역할을 수행합니다.|  
 |**.**|소수 구분 기호의 왼쪽 및 오른쪽에 표시될 자릿수를 결정하는 소수점 자리 표시자입니다.<br /><br /> 형식 지정 식이 마침표(**#**.**) 왼쪽에 숫자 기호(**) 문자만 포함하는 경우 1 미만의 숫자는 소수 구분 기호로 시작됩니다. 소수에서 앞에 오는 0을 표시하려면 소수 구분 기호 왼쪽의 첫 번째 숫자 자리 표시자로 영(0)을 사용하십시오.<br /><br /> 형식이 지정된 출력에서 소수점 자리 표시자에 사용되는 실제 문자는 컴퓨터 시스템이 인식하는 숫자 형식에 따라 다릅니다.<br /><br /> 참고: 일부 로캘에서는 소수 구분 기호로 쉼표를 사용하기도 합니다.|  

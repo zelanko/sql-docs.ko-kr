@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8a4c42548e00ec27831639c7d7a147be3fcca1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082683"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>1 단원: Bike Buyer 마이닝 구조 만들기
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>1단원: Bike Buyer 마이닝 구조 만들기
   이 단원에서는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]의 잠재 고객이 자전거를 구입할 것인지 여부를 예측할 수 있는 마이닝 구조를 만듭니다. 마이닝 구조 및 데이터 마이닝에 해당 역할을 사용 하 여 잘 모르는 경우 [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)합니다.  
   
  이 단원에서 만들 Bike Buyer 마이닝 구조를 기반으로 하는 추가 마이닝 모델을 지원 합니다 [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)합니다. 이후 단원에서는 클러스터링 마이닝 모델을 사용하여 고객을 그룹화할 수 있는 다양한 방법을 탐색하고 의사 결정 트리 마이닝 모델을 사용하여 잠재 고객이 자전거를 구입할 것인지 여부를 예측합니다.  

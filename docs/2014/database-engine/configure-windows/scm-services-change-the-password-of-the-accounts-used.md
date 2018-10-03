@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expired password [SQL Server], SQL Server Agent
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - changing passwords used by SQL Server
 - modifying passwords
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 37e989b7849cf3d3168df81b51733a49beaa8915
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11ea271e7cdf79f2fcc649746d6dc0fce1dd86f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056173"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>SQL Server에서 사용하는 계정의 암호 변경(SQL Server 구성 관리자)
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에이전트에 사용되는 계정의 암호를 변경하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 설치 중에 처음 제공된 자격 증명을 사용하여 컴퓨터에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 도메인 계정으로 실행되고 있으며 해당 계정의 암호가 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 암호를 새 암호로 업데이트해야 합니다. 암호를 업데이트하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 일부 도메인 리소스에 액세스하지 못할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 중지되면 암호를 업데이트할 때까지 서비스가 다시 시작되지 않습니다.  

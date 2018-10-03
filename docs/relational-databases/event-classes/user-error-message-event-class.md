@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8c1ae5b754d35472df0b4a64b7498245425c368
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 497ebc341ce5dc20476c2c9d1c6978e48685e524
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096132"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855691"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "43096132"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |State|**int**|오류 상태 코드입니다.|30|사용자 계정 컨트롤|  
-|TextData|**ntext**|오류 메시지 또는 예외의 텍스트입니다.|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|오류 메시지 또는 예외의 텍스트입니다.|1|사용자 계정 컨트롤|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|사용자 계정 컨트롤|  
 |XactSequence|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|사용자 계정 컨트롤|  
   

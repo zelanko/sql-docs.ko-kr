@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15537b159f34df3e69c3b415a8a00845ff2fe79f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c7be80b40c80edf3811f996e8037cbdbc9fa4d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052973"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가(SharePoint용 PowerPivot)
   BI 의미 체계 모델 연결은 SharePoint에서 만들어지며 네트워크 서버의 PowerPivot 통합 문서 또는 Analysis Services 테이블 형식 모델 데이터베이스에 있는 비즈니스 인텔리전스 의미 체계 모델 데이터에 대한 리디렉션을 제공합니다. SharePoint에서 BI 의미 체계 모델 연결을 만들려면 .bism 파일을 만들 수 있도록 문서 라이브러리를 확장해야 합니다. 이 단계는 각 라이브러리에 대해 한 번만 수행해야 하지만 .bism 파일을 만들려는 모든 라이브러리에 대해 반복해서 수행해야 합니다. 한 곳에서 사용 권한을 관리할 수 있도록 .bism 파일을 저장하기 위한 중앙 집중식 라이브러리를 만드는 것이 좋습니다.  

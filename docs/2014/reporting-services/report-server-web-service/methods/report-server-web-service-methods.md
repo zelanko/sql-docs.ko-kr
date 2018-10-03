@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, methods
@@ -18,26 +16,25 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c6a5bbcbc994a3f5cc7e62a3fa80048505f88e26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df2849f2aabfd7d69645d5fd82dbec8195df27b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059043"
 ---
 # <a name="report-server-web-service-methods"></a>보고서 서버 웹 서비스 메서드
-  보고서 서버 웹 서비스에는 구성 요소 기능에 따라 여러 범주의 메서드가 있습니다. 이러한 메서드는 <xref:ReportService2010.ReportingService2010> 및 <xref:ReportExecution2005.ReportExecutionService> 클래스의 멤버로 노출되는 여러 개의 웹 서비스 끝점(세 개는 보고서 관리용, 하나는 보고서 실행용)을 통해 제공됩니다. 이러한 클래스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK에 포함된 wsdl.exe와 같은 프록시 클래스 도구를 통해 생성될 수 있습니다. 보고서 서버 웹 서비스 및 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에 대한 자세한 내용은 [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)를 참조하세요.  
+  보고서 서버 웹 서비스에는 구성 요소 기능에 따라 여러 범주의 메서드가 있습니다. 이러한 메서드는 <xref:ReportService2010.ReportingService2010> 및 <xref:ReportExecution2005.ReportExecutionService> 클래스의 멤버로 노출되는 여러 개의 웹 서비스 엔드포인트(세 개는 보고서 관리용, 하나는 보고서 실행용)를 통해 제공됩니다. 이러한 클래스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK에 포함된 wsdl.exe와 같은 프록시 클래스 도구를 통해 생성될 수 있습니다. 보고서 서버 웹 서비스 및 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에 대한 자세한 내용은 [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)를 참조하세요.  
   
-## <a name="endpoints-and-methods"></a>끝점 및 메서드  
- 다음 표는 보고서 서버 웹 서비스의 끝점과 <xref:ReportService2010.ReportingService2010> 끝점에서 제공하는 메서드의 범주를 나열합니다. 다른 끝점에서 사용할 수 있는 메서드에 대한 자세한 내용은 [기술 참조&#40;SSRS&#41;](../../technical-reference-ssrs.md)를 참조하세요.  
+## <a name="endpoints-and-methods"></a>엔드포인트 및 메서드  
+ 다음 표는 보고서 서버 웹 서비스의 엔드포인트와 <xref:ReportService2010.ReportingService2010> 엔드포인트에서 제공하는 메서드의 범주를 나열합니다. 다른 엔드포인트에서 사용할 수 있는 메서드에 대한 자세한 내용은 [기술 참조&amp;#40;SSRS&amp;#41;](../../technical-reference-ssrs.md)를 참조하세요.  
   
 |항목|Description|  
 |-----------|-----------------|  
-|[보고서 서버 웹 서비스 끝점](report-server-web-service-endpoints.md)|보고서 서버 웹 서비스의 관리 및 실행 끝점을 설명합니다.|  
+|[보고서 서버 웹 서비스 엔드포인트](report-server-web-service-endpoints.md)|보고서 서버 웹 서비스의 관리 및 실행 엔드포인트를 설명합니다.|  
 |[보고서 서버 네임스페이스 관리 메서드](report-server-namespace-management-methods.md)|보고서 서버 데이터베이스를 관리하는 데 사용할 수 있는 메서드를 설명합니다. 특히 폴더 및 리소스를 관리하고 항목 속성을 설정할 수 있습니다.|  
 |[권한 부여 메서드](authorization-methods.md)|태스크, 역할 및 정책을 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
 |[데이터 원본 및 연결 메서드](data-sources-and-connection-methods.md)|보고서에 대한 데이터 원본 연결과 자격 증명 정보를 설정하고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  

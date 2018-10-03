@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a85a05d5a0b18701ed9b8a480ef0bb7c05e873d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d3bb5f71617371d4ff360242cf3076e73fdbbea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070680"
 ---
 # <a name="package-properties-dialog-box"></a>패키지 속성 대화 상자
   **패키지 속성** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 저장된 패키지의 속성을 볼 수 있습니다.  

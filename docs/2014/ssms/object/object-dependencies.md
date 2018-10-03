@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24dd9f4ca5b4f551f958a24636a942d50bcc68f3
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 188b3400308c540050793787ced03d69e79ca50c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090193"
 ---
 # <a name="object-dependencies"></a>개체 종속성
   일부 데이터베이스 개체는 다른 데이터베이스 개체에 대해 종속적입니다. 예를 들어 뷰와 저장 프로시저는 뷰나 프로시저에서 반환한 데이터가 들어 있는 테이블의 존재 여부에 종속됩니다. 현재 개체의 **개체 종속성(일반 페이지)** 에는 해당 개체가 정상적으로 작동하는 데 반드시 필요한 다른 데이터베이스 개체와 선택한 개체에 종속된 개체가 모두 표시됩니다. 정의에서 다른 개체를 참조하고 시스템 카탈로그에 해당 정의가 저장되어 있으면 이 엔터티를 *참조 엔터티*라고 합니다. 다른 개체에 의해 참조되는 개체는 *참조된 엔터티*라고 합니다.  

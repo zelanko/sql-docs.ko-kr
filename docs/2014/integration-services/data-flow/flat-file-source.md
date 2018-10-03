@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 040069e373761d6d3ad78ea26bea5f8e538c33ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125413"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
   플랫 파일 원본은 텍스트 파일에서 데이터를 읽습니다. 텍스트 파일은 구분 기호로 분리됨, 고정 폭 또는 혼합 형식 중 하나일 수 있습니다.  

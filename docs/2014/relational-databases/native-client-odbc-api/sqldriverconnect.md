@@ -1,37 +1,34 @@
 ---
-title: SQLDriverConnect | Microsoft Docs
+title: SQLDriverConnect | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLDriverConnect function
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9a7ab39d15b32a093cf7a9924645f2ad81f97e4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d2570a21987ed46ce7bda01302cf890ffab87bb5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086773"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열 키워드를 대체하거나 개선하는 연결 특성을 정의합니다. 몇 가지 연결 문자열 키워드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지정한 기본값이 있습니다.  
   
- 사용할 수 있는 키워드 목록은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 참조 하세요 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)입니다.  
+ 목록에서 사용할 수 있는 키워드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버를 참조 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 특성 및 드라이버 기본 동작을 참조 하세요 [SQLSetConnectAttr](sqlsetconnectattr.md)합니다.  
+ 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 특성 및 드라이버의 기본 동작을 참조 하십시오. [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
- 에 유효한 연결 문자열 키워드에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 참조 하세요 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)입니다.  
+ 유효한 연결 문자열 키워드에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 참조 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  경우는 `SQLDriverConnect` *DriverCompletion* 매개 변수 값이 SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED 이면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 키워드 값을 검색 합니다 표시 되는 대화 상자입니다. 키워드 값이 연결 문자열에서 전달되었고 사용자가 대화 상자에서 키워드 값을 변경하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열의 값을 사용합니다. 키워드 값이 연결 문자열에서 설정되지 않았고 사용자가 대화 상자에서 키워드 값을 지정하지 않은 경우 드라이버는 기본값을 사용합니다.  
   
@@ -51,7 +48,7 @@ ms.locfileid: "37426762"
  사용에 대 한 자세한 내용은 `SQLDriverConnect` 에 연결 하는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 클러스터를 참조 하십시오 [SQL Server Native Client Support for High Availability, Disaster Recovery](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>SPN(서비스 사용자 이름)에 대한 SQLDriverConnect 지원  
- SQLDDriverConnect은 ODBC 로그인 대화 상자 메시지를 표시 하도록 설정할지를 사용 합니다. 이를 통해 주 서버 및 해당 장애 조치(Failover) 파트너 모두에 대한 SPN이 입력되도록 할 수 있습니다.  
+ SQLDDriverConnect은 boxwhen 프롬프트 대화 상자를 사용할 수 있습니다. ODBC 로그인을 사용 합니다. 이를 통해 주 서버 및 해당 장애 조치(Failover) 파트너 모두에 대한 SPN이 입력되도록 할 수 있습니다.  
   
  SQLDriverConnect 새 연결 문자열 키워드를 수락할 `ServerSPN` 고 `FailoverPartnerSPN`, 새 연결 특성인 SQL_COPT_SS_SERVER_SPN과 SQL_COPT_SS_FAILOVER_PARTNER_SPN을 인식 합니다.  
   
