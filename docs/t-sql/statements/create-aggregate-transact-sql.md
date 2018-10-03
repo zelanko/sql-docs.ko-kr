@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_AGGREGATE_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 248fe1397de470076aa0060019d156ec0718ab2a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: e61e945523163766a323ec7edb2b40540cb69b05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786964"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853879"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  *assembly_name* 및 해당 메서드에서 참조되는 어셈블리의 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용자 정의 집계 함수를 구현하기 위한 모든 요구 사항을 만족해야 합니다. 자세한 내용은 [CLR 사용자 집계](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  EXTERNAL NAME 절에 지정된 어셈블리에 대한 REFERENCES 권한과 CREATE AGGREGATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

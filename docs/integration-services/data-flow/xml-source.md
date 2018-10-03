@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa529b30c25b4a21edd8d34a74c7fdfb5f8bdd64
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 977a4c0b0406a3da51d7f36210e797fc2024d77b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854991"
 ---
 # <a name="xml-source"></a>XML 원본
   XML 원본은 XML 데이터 파일을 읽고 원본 출력의 열을 해당 데이터로 채웁니다.  
@@ -135,7 +132,7 @@ ms.locfileid: "35409575"
 ## <a name="xml-source-editor-columns-page"></a>XML 원본 편집기(열 페이지)
   **XML 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 외부 열의 목록을 표시합니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다.  
   
@@ -148,7 +145,7 @@ ms.locfileid: "35409575"
 ## <a name="xml-source-editor-error-output-page"></a>XML 원본 편집기(오류 출력 페이지)
   **XML 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   

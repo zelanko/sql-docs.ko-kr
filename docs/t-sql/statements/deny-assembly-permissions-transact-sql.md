@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DENY statement, assemblies
 - denying permissions [SQL Server], assemblies
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 87f681807defaf20242966999d0d03c162426fed
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 160e2ae131870a0d1f5800adb5d3e380340d81c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792124"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844991"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 어셈블리 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  어셈블리에 대한 CONTROL 권한이 필요합니다. AS 옵션을 사용하는 경우 지정된 보안 주체가 어셈블리를 소유해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

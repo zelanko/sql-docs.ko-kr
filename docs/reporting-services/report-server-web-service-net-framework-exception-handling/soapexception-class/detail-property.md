@@ -4,22 +4,19 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69486db416f6f7de6ace59b0c7c84fb6b7a3ddfc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 87f5c6e9a7ec6251df814efacde0b5ef14dc8fb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850441"
 ---
 # <a name="detail-property"></a>Detail 속성
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException**클래스의 **Detail** 속성은 다음 XML 구조를 가집니다.  

@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10245"
@@ -14,12 +13,12 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 694ad2dc78b5f4dce1a4eb8974971a5b6f091ee3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a71fb335b1042fb4e7ea4949756e8454cace656c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848021"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
   Reporting Services는 차트에 여러 개의 기본 제공 색상표를 제공하며, 사용자가 사용자 지정 색상표를 정의할 수도 있습니다. 기본적으로 차트는 기본 제공 **Pacific** 색상표를 사용하여 각 계열을 채웁니다. 이 색은 범례에도 나타납니다. 차트에 여러 개의 계열이 추가될 때는 색상표에서 색을 정의한 순서대로 차트가 계열에 색을 할당합니다.  

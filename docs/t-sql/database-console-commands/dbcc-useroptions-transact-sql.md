@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC USEROPTIONS
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - active SET options
 - SET statement, active SET options
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
-caps.latest.revision: 41
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: bd94360f42130c2ab60e58b6d7608c82b236077e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 707c85d3c04f4ef2e4427b3af7abd99b92fbe975
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837363"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +74,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="remarks"></a>Remarks  
 데이터베이스 옵션 READ_COMMITTED_SNAPSHOT을 ON으로 설정하고 트랜잭션 격리 수준을 '커밋된 읽기'로 설정하면 DBCC USEROPTIONS가 커밋된 읽기 스냅숏의 격리 수준을 보고합니다. 그러나 실제 격리 수준은 커밋된 읽기입니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 **public** 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  

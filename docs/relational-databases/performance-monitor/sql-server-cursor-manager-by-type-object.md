@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cursor Manager by Type object
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bcf783c6ff68a2626b823d5dc5d077124f06b2bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 531bb0ebc4520bb358116f2bd4c47d9ecec58ff9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847081"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, Cursor Manager by Type 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32950488"
   
  다음 표에서는 SQL Server **Cursor Manager by Type** 카운터에 대해 설명합니다.  
   
-|Cursor Manager by Type 카운터|Description|  
+|Cursor Manager by Type 카운터|설명|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|활성 커서 수입니다.|  
 |**Cache Hit Ratio**|캐시 적중 횟수와 조회 간 비율입니다.|  
@@ -46,7 +42,7 @@ ms.locfileid: "32950488"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|Cursor Manager 인스턴스|Description|  
+|Cursor Manager 인스턴스|설명|  
 |-----------------------------|-----------------|  
 |**_Total**|모든 커서에 대한 정보입니다.|  
 |**API Cursor**|API 커서 정보만 해당됩니다.|  

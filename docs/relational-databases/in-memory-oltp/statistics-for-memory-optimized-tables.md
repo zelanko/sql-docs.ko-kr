@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b1254e3a691fae66a5e6e5af0651fe0ef65846e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 23f442dcf798a1d4f1961698958673dac007a37e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857241"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,8 +50,7 @@ ms.locfileid: "43072319"
 
 3. 업데이트된 통계를 활용하기 위해 고유하게 컴파일된 저장 프로시저를 수동으로 다시 컴파일합니다.
 
-
-            *통계에 대한 일회성 스크립트:* 낮은 호환성 수준에서 만든 메모리 최적화 테이블에 대해 다음 TRANSACT-SQL 스크립트를 한 번 실행하여 메모리 최적화 모든 테이블의 통계를 업데이트하고 향후 통계 자동 업데이트를 사용하도록 설정합니다(AUTO_UPDATE_STATISTICS가 데이터베이스에 사용하도록 설정된 것으로 가정).
+*통계에 대한 일회성 스크립트:* 낮은 호환성 수준에서 만든 메모리 최적화 테이블에 대해 다음 TRANSACT-SQL 스크립트를 한 번 실행하여 메모리 최적화 모든 테이블의 통계를 업데이트하고 향후 통계 자동 업데이트를 사용하도록 설정합니다(AUTO_UPDATE_STATISTICS가 데이터베이스에 사용하도록 설정된 것으로 가정).
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -80,8 +75,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-
-            *자동 업데이트가 사용하도록 설정되어 있는지 확인:* 다음 스크립트는 메모리 최적화 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `1` 열에 `auto-update enabled` 가 반환됩니다.
+*자동 업데이트가 사용하도록 설정되어 있는지 확인:* 다음 스크립트는 메모리 최적화 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `1` 열에 `auto-update enabled` 가 반환됩니다.
 
 ```
 SELECT 
