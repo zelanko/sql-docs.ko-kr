@@ -4,19 +4,16 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c2e038bed95598692a14955ea43e5fabdcad14a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a3892815dee3002e06abf6c76e4604225a29749a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777351"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 응용 프로그램에 ReportViewer 컨트롤 추가
 보고서 마법사를 사용하여 자식 보고서를 디자인한 후에는 웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 추가합니다. ASP.NET 보고서 웹 사이트를 사용하는 경우 default.aspx 페이지에 ReportViewer 컨트롤이 추가됩니다.   

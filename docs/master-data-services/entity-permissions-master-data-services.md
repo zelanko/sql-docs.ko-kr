@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], permissions
 - permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 343231fd0aea8a9c2ed61c640b6252e8a6a29b58
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 35b4b5e10ee2e76b85bd7b63e1ee57dbefe6af14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406985"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750531"
 ---
 # <a name="entity-permissions-master-data-services"></a>엔터티 권한(Master Data Services)
 

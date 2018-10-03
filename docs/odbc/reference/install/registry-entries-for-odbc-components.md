@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC]
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - subkeys [ODBC], for components
 - registry entries for components [ODBC], about registry entries
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cf61535ecda3e95f25dbd9e1b01a1d3ad25d4ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d0a654b70fb93020bbb0dcfde159b4884cb15c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651482"
 ---
-# <a name="registry-entries-for-odbc-components"></a>ODBC 구성 요소에 대 한 레지스트리 항목
+# <a name="registry-entries-for-odbc-components"></a>ODBC 구성 요소에 대한 레지스트리 항목
 > [!NOTE]  
->  Windows XP 및 Windows Server 2003부터 ODBC Windows 운영 체제에 포함 됩니다. 이전 버전의 Windows에서 ODBC만 명시적으로 설치 해야 합니다.  
+>  Windows XP 및 Windows Server 2003부터 ODBC Windows 운영 체제에 포함 됩니다. 이전 버전의 Windows에서 ODBC를 명시적으로 설치 해야 합니다.  
   
- 설치 관리자 DLL 레지스트리에서 설치 된 각 ODBC 구성 요소에 대 한 정보를 유지 관리합니다. Microsoft Windows NT 및 Microsoft Windows 95/98을 실행 하는 컴퓨터에서이 정보는 다음 레지스트리 키 아래의 하위 키에 저장 됩니다.  
+ 설치 관리자 DLL 레지스트리에서 설치 된 각 ODBC 구성 요소에 대 한 정보를 유지 관리합니다. Microsoft Windows NT 및 Microsoft Windows 95/98을 실행 하는 컴퓨터에서이 정보는 레지스트리에 다음 키 아래 하위 키에 저장 됩니다.  
   
  HKEY_LOCAL_MACHINE  
   
@@ -41,7 +38,7 @@ ms.locfileid: "32915808"
   
  Odbcinst.ini  
   
- Odbcinst.ini HKEY_LOCAL_MACHINE 트리의 하위 키 이므로 ODBC 구성 요소에 대 한 정보는 컴퓨터의 모든 사용자가 사용할 수 있습니다.  
+ Odbcinst.ini HKEY_LOCAL_MACHINE 트리의 하위 키 이기 때문에 ODBC 구성 요소에 대 한 정보는 컴퓨터의 모든 사용자에 게 제공 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

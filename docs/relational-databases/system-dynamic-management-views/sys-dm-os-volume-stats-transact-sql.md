@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_volume_stats (Transact SQL) | Microsoft Docs
+title: sys.dm_os_volume_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5fcc94554408ed68988ddbdf34422078ca31dd4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670491"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +44,13 @@ sys.dm_os_volume_stats (database_id, file_id)
  데이터베이스의 ID입니다. *database_id*는 **int**이며 기본값은 없습니다. NULL이 될 수 없습니다.  
   
  *file_id*  
- 파일의 ID입니다. *file_id* 은 **int**, 기본값은 없습니다. NULL이 될 수 없습니다.  
+ 파일의 ID입니다. *file_id* 됩니다 **int**, 기본값은 없습니다. NULL이 될 수 없습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
 ||||  
 |-|-|-|  
-|**열**|**데이터 형식**|**설명**|  
+|**열**|**Data type**|**설명**|  
 |**database_id**|**int**|데이터베이스의 ID입니다. null일 수 없습니다.|  
 |**file_id**|**int**|파일의 ID입니다. null일 수 없습니다.|  
 |**volume_mount_point**|**nvarchar(512)**|해당 볼륨이 루트 경로로 지정된 탑재 지점입니다. 빈 문자열을 반환할 수 있습니다.|  
@@ -70,7 +67,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -93,7 +90,7 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   

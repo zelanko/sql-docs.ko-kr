@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XML_TSQL
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c698df5b08735cca7fc3a3943331883a26fe175
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a0aa0261ebd896f8f7c8291d24f79a51b99e80bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053994"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760551"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -226,7 +223,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
   
- @shouldalert  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  

@@ -1,37 +1,34 @@
 ---
-title: SQL 받는 규칙 수준 (ODBC Driver for Oracle) | Microsoft Docs
+title: SQL 적합성 수준 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], SQL
 - SQL conformance levels [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6124577353292209f2bcbd2ca35b6b33add34ca6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669371"
 ---
-# <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 받는 규칙 수준 (ODBC Driver for Oracle)
+# <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 적합성 수준(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- ODBC Driver for Oracle 최소 SQL 문법 및 핵심 SQL 문법을 지원 하 고도 다음과 같은 ODBC 확장 SQL 지원 합니다.  
+ Oracle 용 ODBC 드라이버는 최소 SQL 문법 및 핵심 SQL 문법을 지원 및 SQL의 다음 ODBC 확장도 지원:  
   
--   Date, time 및 timestamp 데이터  
+-   날짜, 시간 및 타임 스탬프 데이터  
   
 -   왼쪽 및 오른쪽 우선 외부 조인  
   
@@ -40,27 +37,27 @@ ms.locfileid: "32904928"
     |||||  
     |-|-|-|-|  
     |Abs|Log|round|tan|  
-    |최대값|Log10|second|truncate|  
+    |ceiling|log10|second|truncate|  
     |Cos|Mod|로그인||  
-    |Exp|pi|sin||  
+    |Exp|Pi|sin||  
     |floor|Power|sqrt||  
   
 -   날짜 함수:  
   
     |||||  
     |-|-|-|-|  
-    |Curdate|dayofweek|monthname|second|  
+    |Curdate|Dayofweek|monthname|second|  
     |Curtime|Dayofyear|minute|week|  
     |Dayname|Hour|이제|year|  
-    |dayofmonth|Month|분기||  
+    |Dayofmonth|Month|분기||  
   
 -   문자열 함수:  
   
     |||||  
     |-|-|-|-|  
-    |ascii|왼쪽|오른쪽|ucase|  
+    |Ascii|왼쪽|오른쪽|Ucase|  
     |Char|길이|rtrim||  
-    |Concat|Ltrim|soundex||  
+    |Concat|Ltrim|Soundex||  
     |Lcase|바꾸기|substring||  
   
 -   형식 변환 함수:  

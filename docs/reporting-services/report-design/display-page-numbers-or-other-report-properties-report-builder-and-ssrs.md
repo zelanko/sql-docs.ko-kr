@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af478c71325204d5c23a8917de566c48be2f89d7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a4f2e6792e4523dea81b7e7ba8ac8f6ce45b5cbf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770311"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
   보고서의 페이지 머리글이나 바닥글에 페이지 번호, 보고서 제목, 파일 이름 및 기타 보고서 속성을 간단히 추가할 수 있습니다. 다음은 보고서 데이터 창의 기본 제공 필드 폴더에 필드로 저장되는 속성입니다.  

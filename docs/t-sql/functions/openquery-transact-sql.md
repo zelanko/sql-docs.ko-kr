@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENQUERY_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbe4bb57e37d650a56f88413b03b8002f6ac2096
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: f89a979716e944a4fff4f6d3021a34c7a51973aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787674"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768531"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
  FROM 절에서 OPENDATASOURCE, OPENQUERY 또는 OPENROWSET에 대한 모든 호출은 두 호출에 동일한 인수가 제공되는 경우에도 업데이트의 대상으로 사용되는 함수에 대한 호출과는 개별적이고 독립적으로 평가됩니다. 특히 이러한 호출 중 하나의 결과에 적용되는 필터 또는 조인 조건은 다른 호출의 결과에 영향을 미치지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  모든 사용자가 OPENQUERY를 실행할 수 있습니다. 원격 서버 연결에 사용되는 사용 권한은 연결된 서버에 대해 정의된 설정에서 가져옵니다.  
   
 ## <a name="examples"></a>예  

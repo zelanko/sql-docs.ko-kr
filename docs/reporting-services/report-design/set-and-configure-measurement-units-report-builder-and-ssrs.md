@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1cc9148e5aa5eae523b822ce4c067e1f0dd4e82d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 88913856dbdc61edc980cc231f497269fb34f133
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754567"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>단위 설정 및 구성(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 표시기는 백분율과 숫자의 두 가지 측정 단위 중 하나를 사용합니다.   

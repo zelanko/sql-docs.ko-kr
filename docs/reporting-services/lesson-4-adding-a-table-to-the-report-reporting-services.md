@@ -4,19 +4,16 @@ ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08632bb104904a20a730b0e4439d0bdef71441fb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772641"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
 데이터 집합이 정의되면 보고서 디자인을 시작할 수 있습니다. 데이터 영역, 입력란, 이미지 및 보고서에 포함하려는 항목을 디자인 화면에 끌어다 놓는 방법으로 보고서 레이아웃을 만듭니다.  

@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 540650cecdf31842b93d2626136756247a13b111
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f311c0b605b745aeb274865863fc3e7b1cd098f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764741"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -225,7 +221,7 @@ ms.locfileid: "43101130"
   
   
 ###  <a name="empty"></a> 비어 있음  
- *empty***geometry** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve**및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon**, **CurvePolygon**및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
+ _비어 있는_**geometry** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve**및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon**, **CurvePolygon**및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
   
  **인스턴스가 비어 있는지 확인하려면**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -234,7 +230,7 @@ ms.locfileid: "43101130"
 ###  <a name="simple"></a> 간단  
  **geometry** 인스턴스가 *단순*할 경우 다음 요구 사항을 모두 충족해야 합니다.  
   
--   인스턴스의 각 도형은 끝점을 제외하고 자체 교차해서는 안 됩니다.  
+-   인스턴스의 각 도형은 엔드포인트를 제외하고 자체 교차해서는 안 됩니다.  
   
 -   인스턴스의 도형 두 개가 양쪽의 경계가 아닌 점에서는 서로 교차하지 않아야 합니다.  
   
@@ -280,7 +276,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 닫힘  
- *closed***geometry** 인스턴스는 시작점과 끝점이 같은 도형입니다. **Polygon** 인스턴스는 닫혀 있다고 간주되며, **Point** 인스턴스는 닫혀 있지 않습니다.  
+ _닫혀 있는_**geometry** 인스턴스는 시작점과 끝점이 같은 도형입니다. **Polygon** 인스턴스는 닫혀 있다고 간주되며, **Point** 인스턴스는 닫혀 있지 않습니다.  
   
  링은 단순하고 닫혀 있는 **LineString** 인스턴스입니다.  
   

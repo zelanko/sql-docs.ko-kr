@@ -1,13 +1,11 @@
 ---
-title: '스트림 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
+title: 'Stream (Visual c + + 구문 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fea3e137b670eacf3a769d4f5cb7bd89648788f6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9b66a3549fde85f7806443a0cf5fa1299739e6f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282542"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663201"
 ---
-# <a name="stream-visual-c-syntax-index-with-import"></a>스트림 (Visual c + + 구문 인덱스 #import 사용)
+# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual c + + 구문 인덱스 #import)
 ## <a name="methods"></a>메서드  
   
 ```  

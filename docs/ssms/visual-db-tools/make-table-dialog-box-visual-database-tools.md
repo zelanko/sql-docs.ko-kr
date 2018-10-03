@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b755ee7478e3ffb83a8ef3897f97c325c7e169e1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5fecc39eb41cc39c9879c1f68f778575cde04fe4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997955"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763532"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>테이블 만들기 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

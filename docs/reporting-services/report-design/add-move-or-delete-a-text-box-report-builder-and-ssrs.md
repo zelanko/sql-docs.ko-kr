@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 39bec0cbaacdc0bcedf88eb9ea188aac1773a101
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8ed5623c2414fd55595e6f5890ae1b461d6bd76f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764390"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>입력란 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
   입력란은 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 가장 일반적으로 사용되는 보고서 항목입니다. 입력란을 보고서 본문에 추가하여 제목, 매개 변수 선택 항목, 기본 제공 필드 및 날짜와 같은 정보를 표시할 수 있습니다.  

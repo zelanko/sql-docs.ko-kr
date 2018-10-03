@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dae8d80182c1a38c7124d16f1b0eefeec10e1e0b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f24af29ad0c0378f9977bf73a6555135f2c1df8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753812"
 ---
 # <a name="unpivot-transformation"></a>피벗 해제 변환
   피벗 해제 변환은 단일 레코드의 여러 열 값을 단일 열에 동일 값이 포함된 여러 레코드로 확장하여 정규화되지 않은 데이터 집합을 정규화된 버전으로 만듭니다. 예를 들어 고객 이름이 나열된 데이터 집합에 각 고객마다 하나의 행이 있고 행의 열에 제품 및 구매 수량이 표시되어 있습니다. 피벗 해제 변환으로 데이터 집합을 정규화하면 데이터 집합에 고객이 구매한 각 제품이 서로 다른 행에 포함됩니다.  
@@ -63,7 +60,7 @@ ms.locfileid: "35410695"
 > [!NOTE]  
 >  이 항목에서는 [피벗 해제 변환](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 에 설명된 피벗 해제 시나리오를 사용하여 옵션 사용법을 보여 줍니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 입력 열**  
  확인란을 사용하여 행에 피벗할 열을 지정합니다.  
   

@@ -1,35 +1,32 @@
 ---
-title: Microsoft jscript에서 ADO 코드 예제 | Microsoft Docs
+title: Microsoft JScript의 ADO 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c65e6242525e0c3615e7b00d9067897a9ac898c0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646678"
 ---
-# <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft jscript에서 ADO 코드 예제
-다음 코드 예제를 사용 하 여 ADO 메서드, 속성 및 JScript로 작성할 때 이벤트를 사용 하는 방법에 알아봅니다.  
+# <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript의 ADO 코드 예제
+ADO 메서드, 속성 및 JScript로 작성할 때 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  
   
 > [!NOTE]
->  전체 코드 예제에서는부터 끝까지 코드 편집기에 붙여 넣습니다. 이 예제에서는 부분 예제가 사용 하거나 단락 서식을 분실 한 경우 올바르게 실행 되지 않을 수 있습니다.  
+>  전체 코드 예제를부터 끝까지, 코드 편집기에 붙여 넣습니다. 예제에서는 예제 부분을 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -37,17 +34,17 @@ ms.locfileid: "35275352"
   
 -   [추가 및 CreateParameter 메서드 예제](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
   
--   [실행 하 고, Requery 메서드 예제의 선택을 취소합니다](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
+-   [Execute, requery, Clear 메서드 예제](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
   
--   [메서드 예제 찾기](../../../ado/reference/ado-api/find-method-example-jscript.md)  
+-   [Find 메서드 예제](../../../ado/reference/ado-api/find-method-example-jscript.md)  
   
 -   [GetRows 메서드 예제](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
 ## <a name="properties"></a>속성  
   
--   [AbsolutePage, PageCount, 및 PageSize 속성 예제](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
+-   [AbsolutePage, PageCount, PageSize 속성 예제](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
--   [AbsolutePosition 및 앞 속성 예제](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
+-   [AbsolutePosition 및 CursorLocation 속성 예제](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
   
 -   [ActiveCommand 속성 예제](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)  
   
@@ -57,10 +54,10 @@ ms.locfileid: "35275352"
   
 -   [CacheSize 속성 예제](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)  
   
--   [필터 및 RecordCount 속성 예제](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
+-   [Filter 및 RecordCount 속성 예제](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Visual Basic에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [ADO 코드 예에서는 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Visual c + +에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
+ [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
+ [ADO 코드 예제 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
+ [Visual c + +의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

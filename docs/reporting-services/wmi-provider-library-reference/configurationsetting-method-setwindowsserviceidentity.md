@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e9535ba9a36a386360fea318348aef875017768
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763251"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting 메서드 - SetWindowsServiceIdentity
   보고서 서버 Windows 서비스가 지정된 Windows 사용자로 실행되도록 하고 이 계정에 보고서 서버를 작동하기에 충분한 파일 시스템 사용 권한을 부여합니다.  

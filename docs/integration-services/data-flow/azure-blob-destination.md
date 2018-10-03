@@ -5,24 +5,21 @@ ms.date: 07/25/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpblobdest.f1
 - sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 381dc754c11a938f5123d91a87837c9233c127da
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7f4eec23b199a9d88b32377762bcaddb65251b9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773541"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 대상
  SSIS 패키지는 **Azure Blob 대상** 구성 요소를 통해 Azure Blob에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 CSV 및 AVRO입니다. 

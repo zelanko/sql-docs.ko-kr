@@ -1,30 +1,26 @@
 ---
-title: 확장 된 추가 저장 프로시저를 SQL Server | Microsoft Docs
+title: 추가 확장 저장 프로시저를 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], adding
 - adding extended stored procedures
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 367ee61ee76481d6771da08436c676f821291ee8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdfd4effc0d41dc31c4aefb95e8574525fb03544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648251"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>SQL Server에 확장 저장 프로시저 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32938378"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
- 확장 저장 프로시저 함수가 포함된 DLL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 확장으로 사용됩니다. DLL을 설치 하려면 표준에 포함 된 것과 같은 디렉터리에 파일을 복사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 파일 (C:\Program Files\Microsoft SQL Server\MSSQL12.0. *x*기본적으로 \MSSQL\Binn).  
+ 확장 저장 프로시저 함수가 포함된 DLL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 확장으로 사용됩니다. DLL을 설치 하려면 표준을 포함 하는 것과 같은 디렉터리에 파일 복사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 파일 (C:\Program Files\Microsoft SQL Server\MSSQL12.0. *x*\MSSQL\Binn 기본적으로).  
   
  확장 저장 프로시저 DLL을 서버에 복사한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자가 DLL의 각 확장 저장 프로시저 함수를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록해야 합니다. 이 작업은 sp_addextendedproc 시스템 저장 프로시저를 사용하여 수행합니다.  
   
@@ -50,7 +46,7 @@ ms.locfileid: "32938378"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- `sp_addextendedproc`에 지정된 함수 이름이 DLL의 함수 이름과 정확히 일치하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 새 이름이 등록되지만 해당 이름을 사용할 수 없습니다. 예를 들어 있지만 `xp_Hello` 으로 등록 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 저장된 프로시저에 있는 `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 경우 DLL에서 함수를 찾을 수 없습니다 `xp_Hello` 함수를 호출 하면 나중에 합니다.  
+ `sp_addextendedproc`에 지정된 함수 이름이 DLL의 함수 이름과 정확히 일치하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 새 이름이 등록되지만 해당 이름을 사용할 수 없습니다. 예를 들어 있지만 `xp_Hello` 로 등록 된를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 저장된 프로시저에 있는 `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 경우 DLL의 함수를 찾을 수 없습니다 `xp_Hello` 나중에 함수를 호출 하 여 합니다.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -98,7 +94,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지한 후 다시 시작할 필요는 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   

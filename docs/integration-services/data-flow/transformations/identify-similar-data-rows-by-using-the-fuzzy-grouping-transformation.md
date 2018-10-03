@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Fuzzy Grouping transformation
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73675d391e2b53f9cc6fc25824b32d5bdef8d2de
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d915bde7fe4722063563f5d453dfc809d3163641
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748351"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
   유사 항목 그룹화 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크 하나의 원본이 이미 들어 있어야 합니다.  

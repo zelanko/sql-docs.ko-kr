@@ -5,9 +5,7 @@ ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVER AUDIT SPECIFICATION
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT SPECIFICATION statement
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
-caps.latest.revision: 19
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ba006c5081faa2de060b32f33e0ee2487a48279
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: f8ec3babd503117e70affa28ccd1a123d0f09894
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752291"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  감사 사양을 변경하려면 감사 사양의 상태를 OFF 옵션으로 설정해야 합니다. 감사 사양에 STATE=OFF 외의 옵션이 설정되었을 때 이 ALTER SERVER AUDIT SPECIFICATION 실행되면 오류 메시지가 표시됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  ALTER ANY SERVER AUDIT 권한이 있는 사용자는 서버 감사 사양을 변경하여 모든 감사에 바인딩할 수 있습니다.  
   
  만들어진 서버 감사 사양은 CONTROL SERVER 또는 ALTER ANY SERVER AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 감사에 대한 명시적인 액세스가 있는 보안 주체가 볼 수 있습니다.  

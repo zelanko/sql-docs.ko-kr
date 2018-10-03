@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d21866f3f7004dff1ea86ca4f608580a79ab754
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: 119574498dec87bc38ab1b0904c53b7f62716427
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049363"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665574"
 ---
 # <a name="configure-a-sql-server-always-on-availability-group-on-docker-containers-in-kubernetes-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS)를 사용 하 여 Kubernetes에서 Docker 컨테이너에서 SQL Server Always On 가용성 그룹 구성
 
@@ -152,7 +150,7 @@ kubectl apply -f ag-services.yaml
 
 사용 하 여 `kubectl get services` 이 IP 주소를 가져옵니다.
 
-예를 들어:
+이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ![가져오기 서비스 예제](media\tutorial-sql-server-ag-containers-kubernetes\KubernetesGetServices.png)
 
@@ -160,7 +158,7 @@ kubectl apply -f ag-services.yaml
 
 SQL 인증을 사용 하 여 SQL Server에 연결 하려면 사용 합니다 `sa` 계정, 값 `sapassword` , 만든 비밀 및이 IP 주소에서 합니다.
 
-예를 들어:
+이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```cmd
 sqlcmd -S 104.42.50.138 -U sa -P "MyC0m9l&xP@ssw0rd"

@@ -5,9 +5,7 @@ ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aa76a8c824b2390e54be422cdce5e668fee4c1e6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 739abfdbf2d25d5df634e7a085c393af9176a659
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749371"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -147,7 +144,7 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  지정한 보안 주체에 대한 CONTROL 권한 또는 CONTROL 권한을 포함하는 상위 사용 권한이 필요합니다.  
   
  db_owner 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 사용 권한을 거부할 수 있습니다.  
