@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 249b6789d6242a982e3b23b577740fdca9bafcdd
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43018085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757821"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +50,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
 |값|Description|  
 |-----------|-----------------|  
-|@shouldalert|모든 로컬 커서를 보고합니다.|  
+|1|모든 로컬 커서를 보고합니다.|  
 |2|모든 전역 커서를 보고합니다.|  
 |3|로컬과 전역 커서 모두를 보고합니다.|  
   

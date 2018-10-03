@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPColFmt (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea0872d071893e7d88a5d52d677702a984e49f02
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058683"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
   프로그램 변수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 간의 바인딩을 만듭니다.  
@@ -44,7 +41,7 @@ DBORDINALidxServerCol);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 합니다 **BCPColFmt** 메서드는 BCP 데이터 파일 필드 간의 바인딩을 만드는 데 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열입니다. 열의 길이, 유형, 종결자 및 접두사 길이를 매개 변수로 사용하고 개별 필드에 대해 이러한 각 속성을 설정합니다.  
+ **BCPColFmt** 메서드는 BCP 데이터 파일 필드와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 간의 바인딩을 만드는 데 사용됩니다. 열의 길이, 유형, 종결자 및 접두사 길이를 매개 변수로 사용하고 개별 필드에 대해 이러한 각 속성을 설정합니다.  
   
  사용자가 대화형 모드를 선택하면 이 메서드가 두 번 호출됩니다. 서버 열의 유형을 기반으로 하는 기본값에 따라 열 형식을 설정하기 위해 한 번 호출되고, 대화형 모드에서 각 열에 대해 선택된 클라이언트의 열 유형에 따라 형식을 설정하기 위해 한 번 호출됩니다.  
   
@@ -67,11 +64,11 @@ DBORDINALidxServerCol);
  **BCPColFmt** 에 대한 각 호출에서는 사용자 파일의 한 필드에 대한 서식을 지정합니다. 예를 들어 다섯 개의 필드로 구성된 사용자 데이터 파일에서 세 필드의 기본 설정을 변경하려면 먼저 `BCPColumns(5)`를 호출한 다음 **BCPColFmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 BCP_TYPE_DEFAULT로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, BCP_VARIABLE_LENGTH 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
   
 > [!NOTE]  
->  합니다 [ibcpsession:: Bcpcolumns](ibcpsession-bcpcolumns-ole-db.md) 메서드를 호출 하기 전에 호출 해야 **BCPColFmt**합니다. 사용자 파일에 있는 각 열에 대해 **BCPColFmt** 를 한 번씩 호출해야 합니다. 사용자 파일의 열에 대해 **BCPColFmt** 를 두 번 이상 호출하면 오류가 발생합니다.  
+>  [BCPColFmt](ibcpsession-bcpcolumns-ole-db.md)가 호출되기 전에 **IBCPSession::BCPColumns** 메서드를 호출해야 합니다. 사용자 파일에 있는 각 열에 대해 **BCPColFmt** 를 한 번씩 호출해야 합니다. 사용자 파일의 열에 대해 **BCPColFmt** 를 두 번 이상 호출하면 오류가 발생합니다.  
   
  사용자 파일의 모든 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 복사할 필요는 없습니다. 열을 건너뛰려면 idxServerCol 매개 변수를 0으로 설정하여 해당 열의 데이터 형식을 지정합니다. 필드를 건너뛰려는 경우에도 메서드가 제대로 작동하려면 모든 정보가 필요합니다.  
   
- **참고** 는 [ibcpsession:: Bcpwritefmt](ibcpsession-bcpwritefmt-ole-db.md) 함수를 통해 제공 되는 형식 사양을 유지를 사용할 수 있습니다 **BCPColFmt**합니다.  
+ **참고** [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) 함수를 사용하여 **BCPColFmt**를 통해 제공된 형식 지정을 저장할 수 있습니다.  
   
 ## <a name="arguments"></a>인수  
  *idxUserDataCol*[in]  
@@ -118,10 +115,10 @@ DBORDINALidxServerCol);
  메서드가 성공했습니다.  
   
  E_FAIL  
- 자세한 내용은 사용에 대 한 공급자 관련 오류가 발생 합니다 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스입니다.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스를 사용하세요.  
   
  E_UNEXPECTED  
- 예기치 않은 메서드가 호출되었습니다. 예를 들어 합니다 [ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md) 메서드가이 메서드를 호출 하기 전에 호출 되지 않았습니다.  
+ 예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  
   
  E_INVALIDARG  
  잘못된 인수입니다.  

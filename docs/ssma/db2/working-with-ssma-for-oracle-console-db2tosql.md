@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b90b7f0941179fd1a34fd8105c6dcffc6c46eb7b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 4b9d20778f618f9bfd1948e5b26f60756bce6f8d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772323"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Oracle 콘솔 (DB2ToSQL) 용 ssma 작업
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 릴리스가 DB2에 대 한 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하는 것에 대 한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램의 경우 SSMA 스크립트 수준 인터페이스를 사용 하도록 설정, 마이그레이션 주기를 줄이고 마이그레이션 작업의 크기를 조정 합니다.  

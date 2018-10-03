@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: track-changes
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e179185cd629e8bf36a0e805b7fe54713654d67b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 236168c4837b3c626011ff5ea82e1bb58cee3e1a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743921"
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "33012668"
  TVF 쿼리에 적합한 LSN 값을 결정하는 데 유용한 여러 함수가 제공됩니다. [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 함수는 캡처 인스턴스 유효성 간격과 관련된 가장 작은 LSN을 반환합니다. 유효성 간격은 현재 해당 캡처 인스턴스에 변경 데이터를 사용할 수 있는 시간 간격입니다. [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 함수는 유효성 간격의 가장 큰 LSN을 반환합니다. [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 및 [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 함수를 사용하여 LSN 값을 기존 시간대에 배치할 수 있습니다. 변경 데이터 캡처는 제한된 쿼리 간격을 사용하므로 연속적인 쿼리 창에서 변경 내용이 중복되지 않도록 시퀀스의 다음 LSN 값을 생성해야 하는 경우도 있습니다. LSN 값에 대한 증분 조정이 필요할 경우 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 및 [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) 함수가 유용합니다.  
   
 ##  <a name="LSN"></a> LSN 경계 유효성 검사  
- TVF 쿼리에 사용할 LSN 경계는 사용 전에 항상 유효성을 검사하는 것이 좋습니다. 캡처 인스턴스에 대한 유효성 간격을 벗어나는 Null 끝점이 있을 경우 이로 인해 변경 데이터 캡처 TVF에서 오류를 반환합니다.  
+ TVF 쿼리에 사용할 LSN 경계는 사용 전에 항상 유효성을 검사하는 것이 좋습니다. 캡처 인스턴스에 대한 유효성 간격을 벗어나는 Null 엔드포인트가 있을 경우 이로 인해 변경 데이터 캡처 TVF에서 오류를 반환합니다.  
   
  예를 들어 쿼리 간격을 정의하는 데 사용되는 매개 변수가 유효하지 않거나 범위를 벗어난 경우 또는 행 필터 옵션이 잘못된 경우 모든 변경 내용에 대한 쿼리에 대해 다음 오류가 반환됩니다.  
   

@@ -1,14 +1,11 @@
 ---
-title: sys.sysprotects (Transact SQL) | Microsoft Docs
+title: sys.sysprotects (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysprotects
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.sysprotects compatibility view
 - sysprotects system table
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13867ba0ef276f1e21fef890da8623d11f06b36c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7ce68f5f576754c8f84a5b4ac81aeef162f53c0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222448"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763061"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +45,8 @@ ms.locfileid: "33222448"
 |**columns**|**varbinary(8000)**|이러한 SELECT 또는 UPDATE 권한이 적용되는 열의 비트맵입니다.<br /><br /> Bit 0 = 모든 열입니다.<br /><br /> Bit 1 = 권한이 해당 열에 적용됩니다.<br /><br /> NULL = 정보가 없습니다.|  
 |**grantor**|**smallint**|GRANT 또는 DENY 권한을 발급한 사용자의 ID입니다. 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

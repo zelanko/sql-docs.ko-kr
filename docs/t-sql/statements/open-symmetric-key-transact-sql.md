@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPEN SYMMETRIC KEY
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 123689fada7686f68b7dce614198452355876d12
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b5fbd7c16e5150c9d547699c26038e435f1e96c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749638"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
  암호화 공급자에서 만든 대칭 키는 열 수 없습니다. 암호화 공급자가 이런 키를 열고 닫으므로 이런 종류의 키를 사용한 암호화 및 해독 작업은 **OPEN** 문이 없어도 성공적으로 수행됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  호출자는 키에 대한 일부 사용 권한을 가지고 있어야 하며 키에 대한 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다. 해독 메커니즘에 따라 추가 요구 사항이 따를 수도 있습니다.  
   
 -   인증서에 의한 암호 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  

@@ -5,11 +5,7 @@ ms.date: 02/01/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-stored-procedures
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,19 +14,18 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 319eee940c5f5d90d6cfe9442c66f506670c26a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837091"
 ---
-# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
+# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   실행을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 단일 원격 Azure SQL Database 또는 수평 분할 구성표의 분할 된 데이터베이스로 사용 되는 데이터베이스의 집합입니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyDuplicate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4ca2e06d39607acf92dc820bc08cfe53f938bed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192449"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055299"
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate 요소(ASSL)
   결정 하는 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 처리 중 발생 하는 경우 중복 키 오류를 처리 합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37192449"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  중복 키 오류는 차원 처리 중에 특성 키가 한 번 이상 발견된 경우에만 발생합니다. 특성 키는 고유해야 하므로 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 중복 레코드를 삭제합니다. 일반적으로 중복 키 오류는 특성 간 관계와 같은 차원의 디자인에 결함이 있음을 나타냅니다.  

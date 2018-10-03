@@ -1,13 +1,11 @@
 ---
-title: 모두, LockType, 및 EditMode 속성 예제 (VB) | Microsoft Docs
+title: CursorType, LockType, EditMode 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e624b9b45ae02524cba20d6a01915818b5589fa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c77629975b495d43e21f5d985264ed12f42dd56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838222"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>모두, LockType, 및 EditMode 속성 예제 (VB)
-이 예제에서는 설정 된 [모두](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성 열기 전에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 또한의 값을 표시는 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건에서 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType, EditMode 속성 예제 (VB)
+이 예제에서는 설정 합니다 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 열기 전에 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 값도 표시 합니다 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  
   
 ```  
 'BeginEditModeVB  
@@ -127,7 +124,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [모두 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [CursorType 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   

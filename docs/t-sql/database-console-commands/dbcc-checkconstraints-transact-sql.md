@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC CHECKCONSTRAINTS
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a274fea3b1171774def99daea9248ca96cd4c365
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759648"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,13 +106,13 @@ temporal 일관성 검사만 실행하기 위해 constraint_name 또는 constrai
 ## <a name="result-sets"></a>결과 집합  
 DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |테이블 이름|**varchar**|테이블 이름입니다.|  
 |Constraint Name|**varchar**|위반된 제약 조건의 이름입니다.|  
 |위치|**varchar**|제약 조건을 위반한 행을 식별하는 열 값 할당입니다.<br /><br /> 이 열의 값은 제약 조건을 위반한 행을 쿼리하는 SELECT 문의 WHERE 절에 사용될 수 있습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  

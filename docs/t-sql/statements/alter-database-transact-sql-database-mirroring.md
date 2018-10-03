@@ -5,9 +5,7 @@ ms.date: 08/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - ALTER DATABASE statement, database mirroring
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 281db8c39d24edb0cf26277d989b4c8b4f2e3f9a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5fcda605644c29f21b6fd9f71578a4d860f59619
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817491"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE(Transact-SQL) 데이터베이스 미러링 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +78,7 @@ SET { <partner_option> | <witness_option> }
  PARTNER \<partner_option>  
  데이터베이스 미러링 세션의 장애 조치 파트너 및 이들의 동작을 정의하는 데이터베이스 속성을 제어합니다. SET PARTNER 옵션에는 주 서버 또는 미러 서버로 제한되는 옵션과 어느 파트너에든 설정할 수 있는 옵션이 있습니다. 자세한 내용은 다음의 개별 PARTNER 옵션을 참조하십시오. SET PARTNER 절은 지정된 파트너에 관계없이 데이터베이스 복사본 양쪽 모두에 영향을 줍니다.  
   
- SET PARTNER 문을 실행하려면 두 파트너의 끝점에 대한 STATE가 STARTED로 설정되어 있어야 합니다. 또한 각 파트너 서버 인스턴스에 대한 데이터베이스 미러링 끝점의 ROLE이 PARTNER 또는 ALL로 설정되어 있어야 합니다. 끝점 지정 방법에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요. 서버 인스턴스에 대한 데이터베이스 미러링 끝점의 역할 및 상태를 확인하려면 해당 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하십시오.  
+ SET PARTNER 문을 실행하려면 두 파트너의 엔드포인트에 대한 STATE가 STARTED로 설정되어 있어야 합니다. 또한 각 파트너 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 ROLE이 PARTNER 또는 ALL로 설정되어 있어야 합니다. 엔드포인트 지정 방법에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요. 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 역할 및 상태를 확인하려면 해당 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하세요.  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -105,7 +102,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
 -   *\<system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 시스템 이름, 정규화된 도메인 이름 또는 IP 주소 등의 문자열입니다.  
   
--   *\<port>* 는 파트너 서버 인스턴스의 미러링 끝점과 연결된 포트 번호입니다.  
+-   *\<port&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트와 연결된 포트 번호입니다.  
   
  자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
@@ -182,9 +179,9 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  미러링 모니터와 장애 조치 파트너는 별도의 컴퓨터에 있는 것이 좋습니다. 미러링 모니터에 관한 자세한 내용은 [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)를 참조하세요.  
   
- SET WITNESS 문을 실행하려면 주 서버 인스턴스와 미러링 모니터 서버 인스턴스의 끝점에 대한 STATE가 STARTED로 설정되어 있어야 합니다. 또한 미러링 모니터 서버 인스턴스의 데이터베이스 미러링 끝점 ROLE이 WITNESS 또는 ALL로 설정되어 있어야 합니다. 엔드포인트 지정에 대한 정보는 [데이터베이스 미러링 엔드 포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)를 참조하세요.  
+ SET WITNESS 문을 실행하려면 주 서버 인스턴스와 미러링 모니터 서버 인스턴스의 엔드포인트에 대한 STATE가 STARTED로 설정되어 있어야 합니다. 또한 미러링 모니터 서버 인스턴스의 데이터베이스 미러링 엔드포인트 ROLE이 WITNESS 또는 ALL로 설정되어 있어야 합니다. 엔드포인트 지정에 대한 정보는 [데이터베이스 미러링 엔드 포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)를 참조하세요.  
   
- 서버 인스턴스에 대한 데이터베이스 미러링 끝점의 역할 및 상태를 확인하려면 해당 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하십시오.  
+ 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 역할 및 상태를 확인하려면 해당 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하세요.  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  

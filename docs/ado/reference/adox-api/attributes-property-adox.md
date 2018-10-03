@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cff8bb0f88581fae43ceb3d8af9ef57eb3a1e479
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ecced3970d5f0bebff4ad0b7a6ae6f7798cdc3e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285182"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759271"
 ---
-# <a name="attributes-property-adox"></a>특성 속성 (ADOX)
+# <a name="attributes-property-adox"></a>Attributes 속성(ADOX)
 열 특징을 설명 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환는 **긴** 값입니다. 값이 나타내는 테이블의 특성을 지정 된 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체입니다. 값의 조합 수 [ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md) 상수입니다. 기본값은 0 (**0**)가 아닌 **adColFixed** 나 **adColNullable**합니다.  
+ 설정 하거나 반환 된 **긴** 값입니다. 값으로 표현 되는 테이블의 특성을 지정 합니다 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체입니다. 값의 조합일 수 있습니다 [ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md) 상수입니다. 기본값은 0 (**0**),이 아닌 **adColFixed** 나 **adColNullable**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   

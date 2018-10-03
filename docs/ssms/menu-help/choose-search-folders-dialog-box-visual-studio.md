@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-menu
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20843ef85241c596c756d7bc0ad45776168d7105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e8d7fac329ef0c12566c2479459749dd74a5934
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835661"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "33045470"
   
 **선택한 폴더** 목록에 폴더를 추가하고 **폴더 집합** 필드에 이 폴더 집합의 이름을 입력한 다음 **적용** 을 클릭하여 저장합니다. 이러한 사용자 지정 검색 범위는 이후에 **파일에서 찾기** 및 **파일에서 바꾸기** 의 **찾는 위치**드롭다운 목록에서 이름으로 선택할 수 있습니다. 사용자 지정 폴더 집합을 **찾는 위치** 목록에서 제거하려면 **폴더 집합** 필드에서 해당 이름을 선택하고 **삭제**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 다음 컨트롤은 사용자의 명명된 검색 폴더 집합을 조합, 저장 및 수정하는 데 사용할 수 있습니다.  
   
 **폴더 집합**  

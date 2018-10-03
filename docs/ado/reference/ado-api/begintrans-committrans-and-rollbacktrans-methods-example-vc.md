@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - RollbackTrans method [ADO], VC++ example
 - CommitTrans method [ADO], VC++ example
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d229daf8838d5b749217b6b8ae680985757185a3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cffd1524ce12d53be41ea5a060c04ff32f43542e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276032"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822188"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VC + +)
-에 있는 모든 심리학 책의 책 종류를 변경 하는이 예제는 ***타이틀*** 데이터베이스의 테이블입니다. 후의 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드 시작에 대 한 모든 변경 내용을 격리 하는 트랜잭션을 ***타이틀*** 테이블은 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드는 변경 내용을 저장 합니다. 사용할 수는 [롤백](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 저장 하는 변경 내용을 취소 하는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드.  
+에 있는 모든 심리학 책의 책 종류를 변경 하는이 예제는 ***타이틀*** 데이터베이스의 테이블입니다. 후는 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 방법에 대 한 모든 변경 내용을 격리 하는 트랜잭션을 시작 합니다 ***제목*** 테이블을 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드 변경 내용을 저장 합니다. 사용할 수는 [롤백](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 저장 된 변경 내용을 취소 하는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드.  
   
 ## <a name="example"></a>예제  
   

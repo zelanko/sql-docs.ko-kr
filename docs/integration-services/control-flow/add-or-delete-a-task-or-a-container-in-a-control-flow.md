@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], adding
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d010e7c37b8bd297fce1ec06288f77904700031e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765751"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
   제어 흐름 디자이너에서 작업 중일 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 도구 상자에는 패키지의 제어 흐름을 작성하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 태스크가 나열됩니다. 도구 상자에 대한 자세한 내용은 [SSIS Toolbox](../../integration-services/ssis-toolbox.md)를 참조하십시오.  

@@ -4,7 +4,6 @@ ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8fe13ac523188d0cc389176635db43fbdc5eb36f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 36c66a0317fddf9b0b9d6a32ef328706125efea9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759501"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>오류 및 이벤트 참조(Reporting Services)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 오류 및 이벤트에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에도 오류 정보가 포함됩니다. 사용할 수 있는 로그 파일의 형식 및 로그를 보는 방법에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  

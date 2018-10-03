@@ -4,37 +4,34 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275642"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811431"
 ---
-# <a name="ado---wfc-syntax-index"></a>ADO-WFC 구문 인덱스
-ADO 언어 참조에는 Microsoft Visual Basic 프로그래밍 언어 ADO 메서드 및 속성 구문을 보여 주기 위해 사용 합니다. 이 인덱스는 ADO에 대 한 Windows Foundation Class (ADO/WFC)에 따라 ADO 언어 참조 항목에 대 한 상호 참조 합니다. 구문에 차이가 발생 하는 경우 언어 참조 항목의 구문 목록 대신이 인덱스에 함수 시그니처가 사용 합니다.  
+# <a name="ado---wfc-syntax-index"></a>ADO - WFC 구문 인덱스
+ADO 언어 참조에 대 한 프로그래밍 언어로 ADO 메서드 및 속성 구문을 보여 주기 위해 Microsoft Visual Basic을 사용 합니다. 이 인덱스는 ADO에 대 한 Windows Foundation Class (ADO/WFC)에 따라 ADO 언어 참조 항목에 대 한 상호 참조 합니다. 구문에 차이가 발생 하는 경우 언어 참조 항목의 구문 목록 대신이 인덱스에서 함수 시그니처를 사용 합니다.  
   
- 다음과 같은 요소에 대 한 메서드 및 속성 구문이 나와 있습니다.  
+ 다음 요소에 대 한 메서드 및 속성 구문을 나열 됩니다.  
   
 ## <a name="activex-data-objects"></a>ActiveX Data Objects  
   
 -   [ADO 컬렉션](../../../ado/reference/ado-api/collections-ado-wfc-syntax.md)  
   
--   [Command 개체](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
+-   [명령 개체](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
   
 -   [연결 개체](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
   
@@ -42,7 +39,7 @@ ADO 언어 참조에는 Microsoft Visual Basic 프로그래밍 언어 ADO 메서
   
 -   [Field 개체](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
   
--   [Parameter 개체](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
+-   [매개 변수 개체](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
   
 -   [레코드 집합 개체](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
   

@@ -5,24 +5,21 @@ ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 keywords:
 - SQL에 대해 알아보기
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-caps.latest.revision: 19
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e3cf9fabdd05539d9deabb83395df4b90bd4adad
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0686cb5079cd0c7810523c152aa8c04eb7ad3f4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778541"
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server Master Data Services에 대해 알아보기
 

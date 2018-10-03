@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c66f26fd27bd0f36161866ec0cf6e69b03bc752
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755886"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|Reception|112|2006-10-04|@shouldalert|  
+|1|Reception|112|2006-10-04|1|  
 |2|Dinner|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
@@ -89,10 +85,10 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|@shouldalert|  
-|3|Party|112|2006-10-11|@shouldalert|  
-|4|Wedding|112|2006-10-12|@shouldalert|  
+|1|Reception|112|2006-10-04|0|  
+|2|Dinner|112|2006-10-10|1|  
+|3|Party|112|2006-10-11|1|  
+|4|Wedding|112|2006-10-12|1|  
   
  이제 다음 주의 행사가 복제할 행사로 플래그가 지정됩니다. 다음에 행사 코디네이터 112가 사용하는 구독에 대해 병합 에이전트가 실행되면 행 2, 3 및 4는 구독자에 다운로드되고 행 1은 구독자에서 제거됩니다.  
   

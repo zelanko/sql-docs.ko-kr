@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056524"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
   KPI(핵심 성과 지표)는 비즈니스에 중요한 의미가 있는 측정 가능한 값입니다. 이 자습서에서는 KPI를 보고서에 포함하는 방법을 배웁니다. 이 시나리오에서 제품 하위 범주별 판매 요약이 KPI입니다. KPI의 현재 상태는 색, 계기 및 표시기를 사용하여 표시됩니다.  

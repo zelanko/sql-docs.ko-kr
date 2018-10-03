@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 224dd233d774781e5d902a952848587a543baee4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 96268fac4b81230fcb63db6b48ef4ef794abb9c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788711"
 ---
-# <a name="changepassword-method-adox"></a>ChangePassword 메서드 (ADOX)
-암호를 변경 하면는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정.  
+# <a name="changepassword-method-adox"></a>ChangePassword 메서드(ADOX)
+암호를 변경 된 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,9 +36,9 @@ User.ChangePassword OldPassword, NewPassword
   
 #### <a name="parameters"></a>매개 변수  
  *OldPassword*  
- A **문자열** 기존 사용자의 암호를 지정 하는 값입니다. 없으면 사용자 현재 암호를 사용 하 여 빈 문자열 ("")에 대 한 *OldPassword*합니다.  
+ A **문자열** 사용자의 기존 암호를 지정 하는 값입니다. 사용자 암호가 현재 없는 경우 빈 문자열을 사용 하 여 ("")에 대 한 *OldPassword*합니다.  
   
- *새 암호*  
+ *NewPassword*  
  A **문자열** 새 암호를 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  

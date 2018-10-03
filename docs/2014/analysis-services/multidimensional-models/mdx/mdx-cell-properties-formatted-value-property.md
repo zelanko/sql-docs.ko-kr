@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052359"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>FORMATED_VALUE에 대한 LANGUAGE 및 FORMAT_STRING
   FORMATTED_VALUE 속성은 셀의 VALUE, FORMAT_STRING 속성 및 LANGUAGE 속성의 상호 작용을 기반으로 합니다. 이 항목에서는 이러한 속성이 상호 작용하여 FORMATTED_VALUE 속성을 작성하는 방법에 대해 설명합니다.  
@@ -82,8 +79,8 @@ ms.locfileid: "37319273"
   
 |멤버|FORMATTED_VALUE|설명|  
 |------------|----------------------|-----------------|  
-|변수를 잠그기 위한|$5,040.00|FORMAT_STRING이 `Currency` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)입니다.|  
-|B| 5.040,00|FORMAT_STRING이 `Currency` (A에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었으므로 유로 기호, 다른 소수 구분 기호 및 다른 천 단위 구분 기호가 표시됩니다.|  
+|A|$5,040.00|FORMAT_STRING이 `Currency` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)입니다.|  
+|B|5.040,00|FORMAT_STRING이 `Currency` (A에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었으므로 유로 기호, 다른 소수 구분 기호 및 다른 천 단위 구분 기호가 표시됩니다.|  
 |C|$5.040,00|FORMAT_STRING이 `$#,##0.00` (A에서 상속된 Currency에 대한 재정의)으로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었습니다. FORMAT_STRING 속성이 명시적으로 통화 기호를 $로 설정했으므로 FORMATTED_VALUE가 $ 기호와 함께 표시됩니다. 그러나 `.` (점) 및 `,` (쉼표)가 각각 소수 구분 기호와 천 단위 구분 기호의 자리 표시자이므로 언어 사양은 소수 구분 기호와 천 단위 구분 기호에 대해 지역화된 출력을 생성하면서 이러한 기호에 영향을 줍니다.|  
 |d|5.04E+03|FORMAT_STRING이 `Scientific` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.|  
 |E|5,04E+03|FORMAT_STRING이 `Scientific` 으로 설정되었고 LANGUAGE가 명시적으로 `1034,` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.|  
@@ -132,7 +129,7 @@ ms.locfileid: "37319273"
   
 |멤버|FORMATTED_VALUE|설명|  
 |------------|----------------------|-----------------|  
-|변수를 잠그기 위한|3/12/1959 6:30:00 AM|FORMAT_STRING이 CDate() 식에 의해 암시적으로 `General Date` 로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)으로 설정되었습니다.|  
+|A|3/12/1959 6:30:00 AM|FORMAT_STRING이 CDate() 식에 의해 암시적으로 `General Date` 로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)으로 설정되었습니다.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)입니다.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING이 명시적으로 `General Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 미국 형식 지정 스타일과 비교해 보면 월과 일이 바뀌었습니다.|  
 |d|jueves, 12 de marzo de 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 월과 요일은 스페인어로 표시됩니다.|  

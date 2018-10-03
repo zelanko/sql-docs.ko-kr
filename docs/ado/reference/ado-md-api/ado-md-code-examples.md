@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD code examples
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2e16e92b952218e01c46e4071ee1cf99720d737
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ee8a14763479d48dfa2ea1c572222134693efaa2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815701"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 코드 예제
-ADO MD 개체, 메서드 및 속성을 사용 하는 방법에 알아보려면 다음 코드 예제를 사용 합니다. 이러한 예제는 SQL Server 7.0 용 Microsoft SQL Server OLAP Services와 함께 설치 된 샘플 응용 프로그램의 하위 집합.  
+ADO MD 개체, 메서드 및 속성을 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다. 이러한 예로 SQL Server 7.0에 대 한 Microsoft SQL Server OLAP Services와 함께 설치 하는 샘플 응용 프로그램의 하위 집합으로 구성 되어 있습니다.  
   
- 이 예제에는 MSOLAP OLE DB 공급자를 사용 하는 Microsoft SQL Server OLAP Services 로컬 호스트에 대해 실행 합니다. 그러나이 예제 기본 ADO MD 프로그래밍 기법을 표시 하는 데 사용 됩니다 하 다른 데이터 원본 또는 공급자에 쉽게 적용할 수 해야 합니다.  
+ 이러한 예제는 MSOLAP OLE DB 공급자를 사용 하 고 Microsoft SQL Server OLAP Services의 로컬 호스트에 대해 실행 합니다. 그러나 이러한 예로 기본적인 ADO MD 프로그래밍 기법을 표시할 수는 및 다른 데이터 원본 또는 공급자에 쉽게 적용할 수는 있습니다.  
   
 -   [Visual Basic의 ADO MD코드 예제](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic.md)  
   

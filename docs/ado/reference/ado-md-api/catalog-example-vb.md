@@ -1,31 +1,28 @@
 ---
-title: 예제 (VB) 카탈로그 | Microsoft Docs
+title: Catalog 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Catalog object, Visual Basic example
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7edb3a1f3e2c0767dd320e36a18a69a6fb0f85dd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283292"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749612"
 ---
-# <a name="catalog-example-vb"></a>카탈로그 예제 (VB)
+# <a name="catalog-example-vb"></a>Catalog 예제(VB)
 이 Visual Basic 프로젝트 MDX를 사용 하 여 새 큐브를 만듭니다. 그런 다음 Microsoft Word 문서에서 큐브의 구조를 설명합니다.  
   
 ```  

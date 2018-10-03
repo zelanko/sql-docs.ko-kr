@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76601dd77ad3049235ccd8eae40b845a77028571
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a6352530174b36a2377d2fbd8fd09438ba545779
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750981"
 ---
 # <a name="configurationsetting-property---version"></a>ConfigurationSetting 속성 - Version
   Major.Minor.Build.Revision 형식으로 보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  

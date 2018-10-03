@@ -7,18 +7,16 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: 288f46a2084166a1b7164ff8f0c0ef82b81fb16b
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: beb342156098ebb5516466ad7fd4a771cc5a0616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787301"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 타사 Active Directory 공급자를 사용 합니다.
 
@@ -26,7 +24,7 @@ ms.locfileid: "43381522"
 
 이 문서를 구성 하는 방법에 설명 된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와 같은 타사 AD 공급자를 사용 하는 경우 AD 인증을 사용 하 여 Linux 호스트 컴퓨터에 [PowerBroker Identity Services (PBI)](https://www.beyondtrust.com/), [Vintela 인증 서비스 (VAS)](https://www.oneidentity.com/products/authentication-services/), 및 [Centrify](https://www.centrify.com/)합니다. 이 가이드는 AD 구성을 확인 하는 단계를 포함 하 고 컴퓨터를 도메인에 조인 하는 방법을 지시 하는 아닙니다. 조인 하는 자세한 지침은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 영역과 SSSD를 사용 하 여 도메인에 호스트를 참조 하십시오 [Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증](sql-server-linux-active-directory-authentication.md)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 AD 인증을 구성 하기 전에 설정 해야 (Windows)는 AD 도메인 컨트롤러를 네트워크에 조인 하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 Linux 호스트에서. 사용할 수 있습니다 [PBI](https://www.beyondtrust.com/)하십시오 [VAS](https://www.oneidentity.com/products/authentication-services/), 또는 [Centrify](https://www.centrify.com/)합니다.
 

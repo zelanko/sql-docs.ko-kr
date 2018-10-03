@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81432475b79c85e8554cee48c39b9fb1b522590b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48fb7495e7dcd3818e784fd7c9dd7b4152871ebb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848867"
 ---
 # <a name="server-properties---security-page"></a>서버 속성 - 보안 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ ms.locfileid: "32865968"
  **암호**  
  프록시 계정의 암호를 지정합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **C2 감사 추적 설정**  
  문과 개체에 대한 모든 액세스 시도를 감사하여 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용되는 \MSSQL\Data 디렉터리 또는 명명된*인스턴스에 사용되는 \MSSQL$* instancename [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Data 디렉터리의 파일에 결과를 기록합니다. 자세한 내용은 [c2 audit mode 서버 구성 옵션](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)을 참조하세요.  
   

@@ -5,21 +5,18 @@ ms.date: 07/25/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 437b6205bc76b97bd48ca0b617088750af0088d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805461"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.locfileid: "32920128"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 블록 blob을 사용하면 백업 세트를 스트라이프하여 최대 12.8TB의 백업 파일 크기를 지원할 수 있습니다.  
   
--   백업 보관: Microsoft Azure Blob 저장소 서비스는 백업 보관에 자주 사용되는 테이프 옵션보다 더 효율적입니다. 테이프 저장소를 사용하려면 오프사이트 시설로 물리적 이동과 미디어 보호 조치가 필요합니다. Microsoft Azure Blob 저장소에 백업을 저장하면 즉각적이고 견고하며 가용성이 높은 보관이 가능합니다.  
+-   백업 보관: Microsoft Azure Blob Storage Service는 백업 보관에 자주 사용되는 테이프 옵션보다 더 효율적입니다. 테이프 저장소를 사용하려면 오프사이트 시설로 물리적 이동과 미디어 보호 조치가 필요합니다. Microsoft Azure Blob 저장소에 백업을 저장하면 즉각적이고 견고하며 가용성이 높은 보관이 가능합니다.  
   
 -   하드웨어 관리 오버헤드 없음: Microsoft Azure 서비스를 사용하면 하드웨어 관리에 따른 오버헤드가 없습니다. Microsoft Azure 서비스는 하드웨어를 관리하며 하드웨어 오류에 대비한 중복과 보호를 위해 지리적 복제를 제공합니다.  
   

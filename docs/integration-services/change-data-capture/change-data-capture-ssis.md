@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 235e7bf226544e415ecc32264c0c627d33f95aa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804661"
 ---
 # <a name="change-data-capture-ssis"></a>변경 데이터 캡처(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경 데이터 캡처는 원본 테이블에서 데이터 마트 및 데이터 웨어하우스로의 증분 로드를 효율적으로 수행하는 문제에 대한 효과적인 솔루션을 제공합니다.  
@@ -49,11 +46,11 @@ ms.locfileid: "35405485"
   
 -   검색하려는 원본 데이터에 대한 변경 간격의 시작 및 종료 **datetime** 값을 계산합니다.  
   
-     이러한 값을 계산하려면 SQL 실행 태스크를 사용하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식에 **datetime** 함수를 사용합니다. 그런 다음 패키지에서 나중에 사용하기 위해 이러한 끝점을 패키지 변수에 저장합니다.  
+     이러한 값을 계산하려면 SQL 실행 태스크를 사용하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식에 **datetime** 함수를 사용합니다. 그런 다음 패키지에서 나중에 사용하기 위해 이러한 엔드포인트를 패키지 변수에 저장합니다.  
   
      **자세한 내용:** [변경 데이터의 간격 지정](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
--   선택한 간격에 대한 변경 데이터가 준비되었는지 여부를 확인합니다. 비동기 캡처 프로세스에서 선택한 끝점에 아직 도달하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
+-   선택한 간격에 대한 변경 데이터가 준비되었는지 여부를 확인합니다. 비동기 캡처 프로세스에서 선택한 엔드포인트에 아직 도달하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
   
      데이터가 준비되었는지 여부를 확인하려면 필요한 경우 선택한 간격에 대한 변경 데이터가 준비될 때까지 실행을 지연하는 For 루프 컨테이너로 시작합니다. 해당 루프 컨테이너 내에서 SQL 실행 태스크를 사용하여 변경 데이터 캡처에 의해 유지되는 시간 매핑 테이블을 쿼리합니다. 그런 다음 필요한 경우 **Thread.Sleep** 메서드를 호출하는 스크립트 태스크 또는 **WAITFOR** 문이 있는 다른 SQL 실행 태스크를 사용하여 패키지 실행을 일시적으로 지연합니다. 다른 스크립트 태스크를 사용하여 오류 상태나 시간 초과를 기록할 수도 있습니다.  
   

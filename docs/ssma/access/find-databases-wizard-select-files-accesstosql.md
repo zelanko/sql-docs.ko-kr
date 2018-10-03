@@ -1,46 +1,40 @@
 ---
-title: 데이터베이스 마법사 (Select 파일)를 찾을 (AccessToSQL) | Microsoft Docs
+title: 데이터베이스 찾기 마법사 (파일 선택) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3a8cbc5295f34e2b839598d4f459d6346f563a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773519"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780431"
 ---
-# <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 마법사 (Select 파일)를 찾을 (AccessToSQL)
-데이터베이스 검색 마법사의 파일 선택 페이지는 검색 하는 동안 발견 된 파일을 나열 합니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 선택 확인 페이지를 볼 수 있습니다.  
+# <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 찾기 마법사 (파일 선택) (AccessToSQL)
+데이터베이스 찾기 마법사의 파일 선택 페이지를 검색 하는 동안 발견 된 파일을 나열 합니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 확인 선택 페이지를 표시 합니다.  
   
-파일 마법사에 대 한 검색 네트워크를는 **파일** 메뉴를 클릭 **찾을 데이터베이스**합니다.  
+파일 마법사에 대 한 검색 네트워크에서 열려는 합니다 **파일** 메뉴에서 클릭 **데이터베이스를 찾을**합니다.  
   
-SSMA에 추가할 파일을 선택 하려면 파일 이름 옆에 있는 확인란을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 완료 페이지를 볼 수 있습니다.  
+SSMA에 추가할 파일을 선택 하려면 파일 이름 옆의 확인란을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 완료 페이지를 표시 합니다.  
   
 ## <a name="options"></a>변수  
 **모두 선택**  
-목록에서 모든 데이터베이스를 선택 하려면이 확인란을 선택 합니다.  
+목록의 모든 데이터베이스를 선택 하려면이 확인란을 선택 합니다.  
   
-**모두 선택 취소 합니다.**  
-목록에 모든 데이터베이스의 선택을 취소 하려면이 확인란을 선택 합니다.  
+**모두 선택 취소**  
+목록에서 데이터베이스를 모두 선택 취소 하려면이 확인란을 선택 합니다.  
   
 **파일 이름**  
-SSMA에 추가 하려면 Access 데이터베이스 파일의 이름을 표시 합니다.  
+SSMA 추가할 Access 데이터베이스 파일의 이름을 표시 합니다.  
   
 **소유자**  
 파일의 소유자를 표시합니다.  

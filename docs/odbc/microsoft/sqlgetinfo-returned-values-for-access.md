@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo 액세스에 대 한 값을 반환 | Microsoft Docs
+title: 액세스에 대 한 SQLGetInfo 반환 값 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbebc3569c35020b54f2d516d4fde99f14fbd69f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826261"
 ---
-# <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo 액세스에 대 한 반환 값
-다음 표에서 C 언어 #에 대 한 defines는 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #에 대 한 defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 된 값에 대 한 자세한 내용은 **SQLGetInfo**, 참조는 *ODBC Programmer's Reference*합니다.  
+# <a name="sqlgetinfo-returned-values-for-access"></a>Access에 대한 SQLGetInfo 반환 값
+다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 *ODBC 프로그래머 참조*합니다.  
   
 > [!NOTE]  
->  여기서 **SQLGetInfo** 세로 막대 32 비트 비트 마스크를 반환 (&#124;) 비트 OR를 나타냅니다.  
+>  여기서 **SQLGetInfo** 세로 막대 32 비트 비트 마스크를 반환 합니다 (&#124;)는 비트 OR를 나타냅니다.  
   
 |InfoType|반환된 값|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|모든 설정|  
+|SQL_AGGREGATE_FUNCTIONS|모두 설정|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -85,19 +82,19 @@ ms.locfileid: "32904648"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" Odbc.ini 드라이버 키워드를 사용 하는 경우|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" Odbc.ini DRIVER 키워드가 사용 되는 경우|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|파일 이름|  
+|SQL_DATABASE_NAME|파일 이름 |  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"액세스"|  
 |SQL_DBMS_VER|다중 값|  
 |SQL_DDL_INDEX|다중 값|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|드라이버 관리자에서 처리 됩니다.|  
-|SQL_DRIVER_HENV|드라이버 관리자에서 처리 됩니다.|  
-|SQL_DRIVER_HLIB|드라이버 관리자에서 처리 됩니다.|  
-|SQL_DRIVER_HSTMT|드라이버 관리자에서 처리 됩니다.|  
+|SQL_DRIVER_HDBC|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HENV|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HLIB|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HSTMT|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* 빌드 날짜를 지정)|  
@@ -115,7 +112,7 @@ ms.locfileid: "32904648"
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (억음 악센트)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"'" (따옴표 다시)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -151,7 +148,7 @@ ms.locfileid: "32904648"
 |SQL_OJ_CAPABILITIES|다중 값|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
-|SQL_PROCEDURE_TERM|"쿼리"|  
+|SQL_PROCEDURE_TERM|"QUERY"|  
 |SQL_PROCEDURES|"Y"|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  

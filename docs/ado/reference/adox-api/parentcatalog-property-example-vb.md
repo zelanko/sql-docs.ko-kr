@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcf2ade63bf882a3b3fe8681d2126fd6a47e5d2b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a98d750a42692c10a083a1a953e81f274fca7dd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286742"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762701"
 ---
-# <a name="parentcatalog-property-example-vb"></a>ParentCatalog 속성 예제 (VB)
-다음 코드에서는 사용 하는 방법을 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 카탈로그에 테이블을 추가 하기 전에 공급자별 속성에 액세스 하는 속성입니다. 속성은 **AutoIncrement**, Microsoft Jet 데이터베이스의 자동 증분 필드 만듭니다.  
+# <a name="parentcatalog-property-example-vb"></a>ParentCatalog 속성 예제(VB)
+다음 코드를 사용 하는 방법에 설명 합니다 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 카탈로그에 테이블을 추가 하기 전에 공급자별 속성에 액세스 하는 속성입니다. 속성은 **AutoIncrement**, Microsoft Jet 데이터베이스에 자동 증가 필드를 만듭니다.  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -90,7 +87,7 @@ End Sub
 ## <a name="see-also"></a>관련 항목  
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 테이블)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Name 속성 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   

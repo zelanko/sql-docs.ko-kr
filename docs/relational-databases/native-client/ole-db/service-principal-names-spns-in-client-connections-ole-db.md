@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08dd08ba497f7046a29488cf27ce1fce53af4189
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 62073e1618d4ab43acbbfbaad1fb6e2ff16c7658
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082918"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779021"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "43082918"
 ## <a name="data-source-initialization-properties"></a>데이터 원본 초기화 속성  
  다음 속성을 **DBPROPSET_SQLSERVERDBINIT** 속성 집합에는 응용 프로그램 Spn을 지정할 수 있도록 합니다.  
   
-|속성|형식|사용법|  
+|이름|형식|사용법|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, 읽기/쓰기|서버의 SPN을 지정합니다. 기본값인 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, 읽기/쓰기|장애 조치(Failover) 파트너의 SPN을 지정합니다. 기본값인 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
@@ -48,7 +44,7 @@ ms.locfileid: "43082918"
 ## <a name="data-source-properties"></a>데이터 원본 속성  
  다음 속성을 **DBPROPSET_SQLSERVERDATASOURCEINFO** 속성 집합에는 응용 프로그램 인증 방법을 검색할 수 있도록 합니다.  
   
-|속성|형식|사용법|  
+|이름|형식|사용법|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, 읽기 전용|연결에 사용된 인증 방법을 반환합니다. 응용 프로그램에 반환되는 값은 Windows에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에 반환하는 값입니다. 다음은 가능한 값입니다. <br />NTLM 인증을 사용하여 연결을 열 때 반환되는 "NTLM"<br />Kerberos 인증을 사용하여 연결을 열 때 반환되는 "Kerberos"<br /><br /> 연결이 열려 있지만 인증 방법을 확인할 수 없는 경우에는 VT_EMPTY가 반환됩니다.<br /><br /> 이 속성은 데이터 원본이 초기화된 경우에만 읽을 수 있습니다. 데이터 원본이 초기화되기 전에 이 속성을 읽으려고 하면 IDBProperties::GetProperies에서 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 반환되고 이 속성의 DBPROPSET_PROPERTIESINERROR에 DBPROPSTATUS_NOTSUPPORTED가 설정됩니다. 이 동작은 OLE DB 핵심 사양을 따르는 것입니다.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, 읽기 전용|연결의 서버가 상호 인증되었으면 VARIANT_TRUE가 반환되고, 그렇지 않으면 VARIANT_FALSE가 반환됩니다.<br /><br /> 이 속성은 데이터 원본이 초기화된 경우에만 읽을 수 있습니다. 데이터 원본이 초기화되기 전에 이 속성을 읽으려고 하면 IDBProperties::GetProperies에서 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 반환되고 이 속성의 DBPROPSET_PROPERTIESINERROR에 DBPROPSTATUS_NOTSUPPORTED가 설정됩니다. 이 동작은 OLE DB 핵심 사양을 따르는 것입니다.<br /><br /> Windows 인증을 사용하지 않은 연결에 대해 이 특성을 쿼리하면 VARIANT_FALSE가 반환됩니다.|  

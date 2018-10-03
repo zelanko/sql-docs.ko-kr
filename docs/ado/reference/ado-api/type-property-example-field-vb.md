@@ -1,32 +1,29 @@
 ---
-title: 입력 속성 예제 (필드) (VB) | Microsoft Docs
+title: 속성 예제 (필드) (VB)를 입력 합니다. | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 700ceebeb78f1cda3d609255bd5406fd711900f1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ab419055687e7715e71005f2d231300269c2868f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282642"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811811"
 ---
-# <a name="type-property-example-field-vb"></a>형식 속성 예제 (필드) (VB)
-이 예제에서는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성의 값에 해당 하는 상수 이름을 표시 하 여는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 모든 속성은 [필드](../../../ado/reference/ado-api/field-object.md) 개체에 ***직원*** 테이블입니다. FieldType 함수는이 절차를 실행 하려면 필요 합니다.  
+# <a name="type-property-example-field-vb"></a>Type 속성 예제(필드)(VB)
+이 예제에서는 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성의 값에 해당 하는 상수의 이름을 표시 하 여를 [형식](../../../ado/reference/ado-api/type-property-ado.md) 모든 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 개체를 ***직원*** 테이블입니다. FieldType 함수는이 절차를 실행 하려면 필요 합니다.  
   
 ```  
 'BeginTypeFieldVB  

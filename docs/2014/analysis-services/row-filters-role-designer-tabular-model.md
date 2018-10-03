@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.roledesignerdialog.rowfilters.imbi.f1
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269ad2f2983db72aa49d5617466ae54884ec26b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155320"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061223"
 ---
 # <a name="row-filters-role-designertabular-model"></a>행 필터(역할 디자이너)(테이블 형식 모델)
   역할 디자이너의 **행 필터** 페이지를 사용하여 연결된 역할에 대한 행 수준 필터를 정의합니다. 읽기 권한과 읽기 및 처리 권한을 가진 역할에 대해서만 행 필터를 정의할 수 있습니다.  

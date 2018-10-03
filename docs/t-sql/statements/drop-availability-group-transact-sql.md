@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_AVAILABILITY_GROUP_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - DROP AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], dropping
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 521e88f96bd0c9188baf517107c7b7717b77aac4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 9b5f6151bc4c69d926d1bf067b609b0a32e71611
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844901"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ DROP AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  가용성 그룹에 대한 **ALTER AVAILABILITY GROUP** 권한, **CONTROL AVAILABILITY GROUP** permission, **ALTER ANY AVAILABILITY GROUP** 권한 또는 **CONTROL SERVER** 권한이 필요합니다. 로컬 서버 인스턴스에서 호스팅되지 않는 가용성 그룹을 삭제하려면 해당 가용성 그룹에 대한 **CONTROL SERVER** 권한이나 **CONTROL** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

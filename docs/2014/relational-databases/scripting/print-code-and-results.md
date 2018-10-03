@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bd7213705016d1cf482a161577908f30e60bbc9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ac6c8b8e45e63ccebd8ccc1cca2e1035d8f830d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053663"
 ---
 # <a name="print-code-and-results"></a>코드 및 결과 인쇄
   쿼리나 파일을 인쇄할 경우 프린터에서 컬러 인쇄를 지원하며 프린터 설정에서 컬러 인쇄가 설정된 경우 컬러 요소는 컬러로 인쇄됩니다.  

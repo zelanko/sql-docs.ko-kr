@@ -1,13 +1,11 @@
 ---
-title: 스트림 속성이 | Microsoft Docs
+title: Stream 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9318e52eac9301cdcf2d3cf02bbc88ad917b4669
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822021"
 ---
-# <a name="stream-property"></a>스트림 속성
-OLE DB를 가져오거나 설정 합니다. **스트림** 에/에서 개체는 **ADOStreamConstruction** 개체입니다.  
+# <a name="stream-property"></a>Stream 속성
+OLE DB를 가져오거나 설정 합니다. **Stream** 간에에서 개체를 **ADOStreamConstruction** 개체입니다.  
   
  읽기/쓰기입니다.  
   
@@ -44,10 +41,10 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>매개 변수  
  *ppStream*  
- OLE DB에 대 한 포인터 **스트림** 개체입니다.  
+ OLE DB에 대 한 포인터 **Stream** 개체입니다.  
   
  *pStream*  
- OLE DB **스트림** 개체입니다.  
+ OLE DB **Stream** 개체입니다.  
   
 ## <a name="return-values"></a>반환 값  
  이 속성 메서드는 표준 HRESULT 값을 반환합니다. S_OK와 E_FAIL이 포함 됩니다.  

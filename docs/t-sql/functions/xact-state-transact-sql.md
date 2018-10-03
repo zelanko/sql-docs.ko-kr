@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XACT_STATE
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d14b5af9c0ad7ca0e6261e1e7a34d13704ca54f2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098122"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799341"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +52,7 @@ XACT_STATE()
   
 |반환 값|의미|  
 |------------------|-------------|  
-|@shouldalert|현재 요청에 활성 사용자 트랜잭션이 있습니다. 해당 요청에서는 데이터를 쓰고 트랜잭션을 커밋하는 등 모든 동작을 수행할 수 있습니다.|  
+|1|현재 요청에 활성 사용자 트랜잭션이 있습니다. 해당 요청에서는 데이터를 쓰고 트랜잭션을 커밋하는 등 모든 동작을 수행할 수 있습니다.|  
 |0|현재 요청에 대한 활성 사용자 트랜잭션이 없습니다.|  
 |-1|현재 요청에 활성 사용자 트랜잭션이 있지만 오류가 발생하여 트랜잭션이 커밋할 수 없는 트랜잭션으로 분류된 상태입니다. 해당 요청에서는 트랜잭션을 커밋하거나 저장점까지 롤백할 수 없고 트랜잭션의 전체 롤백만 요청할 수 있습니다. 요청에서 트랜잭션을 롤백할 때까지 모든 쓰기 작업을 수행할 수 없습니다. 트랜잭션을 롤백할 때까지 읽기 작업만 수행할 수 있습니다. 트랜잭션이 롤백된 후에는 요청에서 읽기/쓰기 작업을 모두 수행할 수 있으며 새 트랜잭션을 시작할 수 있습니다.<br /><br /> 가장 바깥쪽 일괄 처리가 완료되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 자동으로 커밋할 수 없는 활성 트랜잭션을 모두 롤백합니다. 트랜잭션이 커밋할 수 없는 상태가 되었을 때 오류 메시지가 전송되지 않은 경우 일괄 처리가 완료되면 오류 메시지가 클라이언트 응용 프로그램으로 전송됩니다. 이 메시지는 커밋할 수 없는 트랜잭션이 검색되어 롤백되었음을 보여 줍니다.|  
   

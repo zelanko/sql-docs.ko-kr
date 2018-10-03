@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: track-changes
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c060999df59d34237602d09381419da8a0d66167
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65b6c50f59af1e05331e3620aa15639c52b4202d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841681"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +51,16 @@ ms.locfileid: "33012990"
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>데이터베이스에 대한 변경 데이터 캡처 유효성 간격  
  데이터베이스에 대한 변경 데이터 캡처 유효성 간격은 캡처 인스턴스에 변경 데이터를 사용할 수 있는 시간입니다. 유효성 간격은 데이터베이스 테이블에 대한 첫 번째 캡처 인스턴스가 만들어질 때 시작되어 현재 시간까지 지속됩니다.  
   
- 변경 테이블에 보관되어 있는 데이터는 주기적이며 체계적으로 정리하지 않으면 관리할 수 없을 정도로 커집니다. 변경 데이터 캡처 정리 프로세스는 보존을 기반으로 하는 정리 정책을 적용합니다. 먼저 이 프로세스는 시간 제한에 따라 유효성 간격의 하위 끝점으로 이동한 다음 만료된 변경 테이블 항목을 제거합니다. 기본적으로 3일 분량의 데이터가 보존됩니다.  
+ 변경 테이블에 보관되어 있는 데이터는 주기적이며 체계적으로 정리하지 않으면 관리할 수 없을 정도로 커집니다. 변경 데이터 캡처 정리 프로세스는 보존을 기반으로 하는 정리 정책을 적용합니다. 먼저 이 프로세스는 시간 제한에 따라 유효성 간격의 하위 엔드포인트로 이동한 다음 만료된 변경 테이블 항목을 제거합니다. 기본적으로 3일 분량의 데이터가 보존됩니다.  
   
  높은 끝점에서 캡처 프로세스가 각각의 새 변경 데이터 일괄 처리를 커밋하면 변경 테이블 항목을 포함하는 각 트랜잭션에 대해 새 항목이 **cdc.lsn_time_mapping** 에 추가됩니다. 매핑 테이블 내에서 커밋 LSN(로그 시퀀스 번호)과 트랜잭션 커밋 시간(각각 start_lsn 열 및 tran_end_time 열)은 모두 보존됩니다. **cdc.lsn_time_mapping** 에 있는 최대 LSN 값은 데이터베이스 유효성 기간의 상위 워터마크를 나타냅니다. 이 값의 해당 커밋 시간은 보존 기반 정리에서 새 하위 워터마크를 계산하는 기반으로 사용됩니다.  
   
  캡처 프로세스에서 트랜잭션 로그의 변경 데이터를 추출하기 때문에 변경 내용이 원본 테이블에 커밋되는 시간과 변경 내용이 관련 변경 테이블 내에 나타나는 시간 사이에는 기본적으로 대기 시간이 있게 됩니다. 이러한 대기 시간은 일반적으로 짧지만, 캡처 프로세스에서 관련 로그 항목을 처리할 때까지 변경 데이터를 사용할 수 없다는 점을 알아두는 것이 중요합니다.  
   
 ## <a name="change-data-capture-validity-interval-for-a-capture-instance"></a>캡처 인스턴스에 대한 변경 데이터 캡처 유효성 간격  
- 일반적으로 데이터베이스 유효성 간격과 개별 캡처 인스턴스의 유효성 간격은 일치하지만 그렇지 않은 경우도 있습니다. 캡처 인스턴스의 유효성 간격은 캡처 프로세스에서 캡처 인스턴스를 인식하여 해당 변경 테이블에 대한 관련 변경 내용을 기록하기 시작할 때 시작합니다. 따라서 여러 캡처 인스턴스가 서로 다른 시간에 만들어지는 경우 각 인스턴스는 처음에 서로 다른 하위 끝점을 포함하게 됩니다. [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 에서 반환되는 결과 집합의 start_lsn 열은 정의된 각 캡처 인스턴스의 현재 하위 끝점을 보여 줍니다. 정리 프로세스는 변경 테이블 항목을 정리할 때 모든 캡처 인스턴스에 대한 start_lsn 값을 조정하여 사용 가능한 변경 데이터의 새 하위 워터마크를 반영합니다. 현재 새 하위 워터마크보다 작은 start_lsn 값을 포함하는 캡처 인스턴스만 조정됩니다. 시간이 지나도 새 캡처 인스턴스가 만들어지지 않으면 모든 개별 인스턴스에 대한 유효성 간격이 데이터베이스 유효성 간격과 일치하게 됩니다.  
+ 일반적으로 데이터베이스 유효성 간격과 개별 캡처 인스턴스의 유효성 간격은 일치하지만 그렇지 않은 경우도 있습니다. 캡처 인스턴스의 유효성 간격은 캡처 프로세스에서 캡처 인스턴스를 인식하여 해당 변경 테이블에 대한 관련 변경 내용을 기록하기 시작할 때 시작합니다. 따라서 여러 캡처 인스턴스가 서로 다른 시간에 만들어지는 경우 각 인스턴스는 처음에 서로 다른 하위 엔드포인트를 포함하게 됩니다. [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 에서 반환되는 결과 집합의 start_lsn 열은 정의된 각 캡처 인스턴스의 현재 하위 엔드포인트를 보여 줍니다. 정리 프로세스는 변경 테이블 항목을 정리할 때 모든 캡처 인스턴스에 대한 start_lsn 값을 조정하여 사용 가능한 변경 데이터의 새 하위 워터마크를 반영합니다. 현재 새 하위 워터마크보다 작은 start_lsn 값을 포함하는 캡처 인스턴스만 조정됩니다. 시간이 지나도 새 캡처 인스턴스가 만들어지지 않으면 모든 개별 인스턴스에 대한 유효성 간격이 데이터베이스 유효성 간격과 일치하게 됩니다.  
   
- 요청에 대한 추출 간격이 캡처 인스턴스에 대한 현재 변경 데이터 캡처 유효성 간격에 완전히 포함되어야 하므로 변경 데이터 소비자에게는 유효성 간격이 중요합니다. 추출 간격의 하위 끝점이 유효성 간격 하위 끝점의 왼쪽에 있는 경우 적극적인 정리로 인해 변경 데이터가 누락될 수 있습니다. 추출 간격의 상위 끝점이 유효성 간격 상위 끝점의 오른쪽에 있는 경우 캡처 프로세스에서 추출 간격이 나타내는 기간을 아직 처리하지 않은 것입니다. 이 경우에도 변경 데이터가 누락될 수 있습니다.  
+ 요청에 대한 추출 간격이 캡처 인스턴스에 대한 현재 변경 데이터 캡처 유효성 간격에 완전히 포함되어야 하므로 변경 데이터 소비자에게는 유효성 간격이 중요합니다. 추출 간격의 하위 엔드포인트가 유효성 간격 하위 엔드포인트의 왼쪽에 있는 경우 적극적인 정리로 인해 변경 데이터가 누락될 수 있습니다. 추출 간격의 상위 엔드포인트가 유효성 간격 상위 엔드포인트의 오른쪽에 있는 경우 캡처 프로세스에서 추출 간격이 나타내는 기간을 아직 처리하지 않은 것입니다. 이 경우에도 변경 데이터가 누락될 수 있습니다.  
   
  [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 함수는 캡처 인스턴스에 대한 현재 최소 LSN 값을 검색하는 데 사용되고 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 함수는 현재 최대 LSN 값을 검색하는 데 사용됩니다. 변경 데이터를 쿼리할 때 지정 LSN 범위가 이러한 두 LSN 값 내에 포함되지 않는 경우 변경 데이터 캡처 쿼리 함수가 실패합니다.  
   

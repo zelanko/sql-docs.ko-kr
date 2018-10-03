@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f69c21f87a56a65fabd781c18612e6b475ca85c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061663"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>3단원: 시계열 구조 및 모델 처리
   이 단원에서는 사용할지는 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 시계열 마이닝 구조 및 마이닝 사용자가 만든 모델을 처리 하는 문입니다.  

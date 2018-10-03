@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Calculation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Calculation element
 ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7900d511cb847a98d9b4f037a39864b0b89c93a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c33adc47ad29224753109d1666f0f579d146409
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049883"
 ---
 # <a name="calculation-element-assl"></a>Calculation 요소(ASSL)
   계산와 연결 된 [관점](perspective-element-assl.md) 요소입니다.  
@@ -50,7 +47,7 @@ ms.locfileid: "37261339"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -58,7 +55,7 @@ ms.locfileid: "37261339"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[계산](../collections/calculations-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  AMO(Analysis Management Objects) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.CalculationType> 및 <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>입니다.  

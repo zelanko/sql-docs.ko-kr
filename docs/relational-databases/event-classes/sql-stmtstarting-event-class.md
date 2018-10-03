@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL:StmtStarting event class
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910f10567e1109ceb855f202a98bb633235570ee
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a235007cad354f89e1aaa0798bdabb73d5e3c755
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857361"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43067061"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |State|**int**|다시 컴파일한 후 문이 실행되고 있는지 나타냅니다.<br /><br /> 1=다시 컴파일됨|30|사용자 계정 컨트롤|  
-|TextData|**ntext**|실행될 문의 텍스트입니다.|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|실행될 문의 텍스트입니다.|1|사용자 계정 컨트롤|  
 |TransactionID|**bigint**|문이 트랜잭션 내에서 실행된 경우 트랜잭션의 ID입니다.|4|사용자 계정 컨트롤|  
 |XactSequence|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|사용자 계정 컨트롤|  
   

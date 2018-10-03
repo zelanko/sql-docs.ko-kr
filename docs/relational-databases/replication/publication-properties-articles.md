@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96ea49e892df4a3d2b1cb94c719a1d52974f89db
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 86f7e2620fdf9c78f21b5f83333cd3fdb8e9d844
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749061"
 ---
 # <a name="publication-properties-articles"></a>게시 속성, 아티클
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ ms.locfileid: "37357355"
 ## <a name="column-filters"></a>열 필터  
  이 페이지의 **게시할 개체** 창에서 테이블을 확장한 다음 필요한 열만 선택하여 열을 필터링할 수 있습니다. 이 마법사의 **테이블 행 필터** 페이지에서는 행을 필터링할 수 있습니다. 열 필터링은 보안(예: 중요한 데이터의 복제 방지) 및 성능(예: 큰 BLOB(Binary Large Object) 열의 복제 방지)을 비롯하여 다양한 범위에서 유용하게 사용됩니다. 필터링할 수 없는 열 유형 목록 등 열 필터링에 대한 자세한 내용은 [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **게시할 개체** 창을 사용하여 다음 작업을 수행할 수 있습니다.  
   
 -   복제에 사용 가능한 모든 개체를 봅니다.  

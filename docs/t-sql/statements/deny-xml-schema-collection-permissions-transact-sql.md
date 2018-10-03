@@ -5,13 +5,8 @@ ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- Azure SQL Database
-- SQL Server (starting with 2008)
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - DENY statement, XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6ee6b5fdd1ac8d692438bcb6de07dc7240b6032
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 0fb17be22b1dc970b83ca28d1fec44afd4e80f9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36245275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781303"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY XML 스키마 컬렉션 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,7 +108,7 @@ DENY permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  XML 스키마 컬렉션에 대한 CONTROL이 필요합니다. AS 옵션을 사용하는 경우 지정한 보안 주체가 XML 스키마 컬렉션을 소유해야 합니다.  
   
 ## <a name="examples"></a>예  

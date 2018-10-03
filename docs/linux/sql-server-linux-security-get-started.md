@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: 6df990176c63efb6c42181d013a4e77c81f3c4b2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786971"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 보안 기능에 대 한 연습
 
@@ -31,7 +29,7 @@ SQL Server의 새로운 Linux 사용자 인 경우 다음 작업을 안내 보�
 
 ## <a name="create-a-login-and-a-database-user"></a>로그인 및 데이터베이스 사용자 만들기 
 
-다른 로그인을 만들고 사용 하 여 master 데이터베이스에서 SQL Server에 대 한 액세스 부여 합니다 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문입니다. 예를 들어:
+다른 로그인을 만들고 사용 하 여 master 데이터베이스에서 SQL Server에 대 한 액세스 부여 합니다 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -52,7 +50,7 @@ GO
 - SQL Server 관리자 계정 데이터베이스에 연결할 수 있으며 자세한 로그인 및 사용자 데이터베이스에서 만들 수 있습니다.  
 - 사용자 데이터베이스를 만들 때 해지기 데이터베이스 소유자는 데이터베이스에 연결할 수 있습니다. 데이터베이스 소유자는 더 많은 사용자를 만들 수 있습니다.
 
-나중에 권한을 부여할 수 있습니다 부여 하 여 자세한 로그인을 만들려면 다른 로그인을 `ALTER ANY LOGIN` 권한. 데이터베이스 내에서 권한을 부여할 수 있습니다 다른 사용자가 부여 하 여 더 많은 사용자를 만들 수는 `ALTER ANY USER` 권한. 예를 들어:   
+나중에 권한을 부여할 수 있습니다 부여 하 여 자세한 로그인을 만들려면 다른 로그인을 `ALTER ANY LOGIN` 권한. 데이터베이스 내에서 권한을 부여할 수 있습니다 다른 사용자가 부여 하 여 더 많은 사용자를 만들 수는 `ALTER ANY USER` 권한. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -196,13 +194,13 @@ REVERT;
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
-|@shouldalert |ken0@adventure-works.com |    
+|1 |ken0@adventure-works.com |    
  
 into 
 
 |EmailAddressID |EmailAddress |  
 |----|---- |   
-|@shouldalert |kXXX@XXXX.com |   
+|1 |kXXX@XXXX.com |   
 
 
 ## <a name="enable-transparent-data-encryption"></a>투명한 데이터 암호화 사용

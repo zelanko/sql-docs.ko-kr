@@ -1,14 +1,11 @@
 ---
-title: sys.syslockinfo (Transact SQL) | Microsoft Docs
+title: sys.syslockinfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslockinfo_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e47eefe7a096664068d0762f43478881b532f815
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780881"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +37,12 @@ ms.locfileid: "33222055"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  이 기능은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 자세한 내용은 참조 [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다.  
+>  이 기능은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 자세한 내용은 [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|잠금 리소스에 관한 문자 설명입니다. 리소스 이름의 일부를 포함합니다.|  
-|**rsc_bin**|**binary(16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 도구에서 알 수 있는 잠금 리소스 형식을 생성 하기 위한 자체 형식의 잠금 리소스에 대 한이 열이 포함 하 고 수행 하기 위한에서 자체 조인을 **syslockinfo**합니다.|  
+|**rsc_bin**|**binary(16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 알고 있는 도구를 생성 하기 위한 잠금 리소스 형식을 자체 형식의 잠금 리소스에 대 한이 열은 포함 되어 있으며 자체에서 조인을 수행 하는 데 **syslockinfo**합니다.|  
 |**rsc_valblk**|**binary(16)**|잠금 값 블록입니다. 일부 리소스 유형은 잠금 관리자가 해시하지 않은 잠금 리소스에 추가 데이터를 포함하여 특정 잠금 리소스의 소유권을 결정할 수 있습니다. 예를 들어 특정 개체 ID가 잠금 에스컬레이션 및 기타 목적을 위해 페이지 잠금을 소유할 수 없습니다. 그러나 페이지 잠금의 개체 ID를 잠금 값 블록에 포함할 수는 있습니다.|  
 |**rsc_dbid**|**smallint**|리소스와 연관된 데이터베이스 ID입니다.|  
 |**rsc_indid**|**smallint**|필요한 경우 사용할 수 있는 리소스와 연관된 인덱스 ID입니다.|  
@@ -61,14 +57,14 @@ ms.locfileid: "33222055"
 |**req_spid**|**int**|내부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 잠금을 요청 하는 세션의 프로세스 ID입니다.|  
 |**req_ecid**|**int**|실행 컨텍스트 ID(ECID)입니다. 병렬 작업에서 특정 잠금을 소유하고 있는 스레드를 표시하는 데 사용합니다.|  
 |**req_ownertype**|**smallint**|다음은 잠금과 연관된 개체의 유형입니다.<br /><br /> 1 = 트랜잭션<br /><br /> 2 = 커서<br /><br /> 3 = 세션<br /><br /> 4 = ExSession<br /><br /> 3과 4는 각각 세션 잠금의 특별한 버전인 데이터베이스 추적 및 파일 그룹 잠금을 나타냅니다.|  
-|**req_transactionID**|**bigint**|ID에 사용 되는 고유 트랜잭션 **syslockinfo** 및 프로파일러 이벤트|  
+|**req_transactionID**|**bigint**|고유 트랜잭션 ID 레지스트리에 **syslockinfo** 및 프로파일러 이벤트|  
 |**req_transactionUOW**|**uniqueidentifier**|DTC 트랜잭션의 UOW(작업 단위) ID를 식별합니다. MS DTC 트랜잭션이 아닌 경우에는 UOW가 0으로 설정됩니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

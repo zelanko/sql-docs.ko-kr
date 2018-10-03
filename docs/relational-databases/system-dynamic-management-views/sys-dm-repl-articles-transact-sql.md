@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_articles (Transact SQL) | Microsoft Docs
+title: sys.dm_repl_articles (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12a9e842c8ff0ebbf74e9d1126de52224980b473
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791078"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +41,8 @@ ms.locfileid: "34467989"
 |**artfilter**|**bigint**|아티클을 행 필터링하는 데 사용된 저장 프로시저의 ID입니다.|  
 |**artobjid**|**bigint**|게시된 개체의 ID입니다.|  
 |**artpubid**|**bigint**|아티클이 속한 게시의 ID입니다.|  
-|**artstatus**|**tinyint**|아티클 옵션 및 상태의 비트 마스크이며 다음 값 중 하나 이상에 대한 논리적 비트 OR 연산의 결과일 수 있습니다.<br /><br /> **1** = 아티클이 활성 상태입니다.<br /><br /> **8** = INSERT 문에 열 이름을 포함 합니다.<br /><br /> **16** = 문을 매개 변수화 사용 합니다.<br /><br /> **24** = INSERT 문에 열 이름을 포함 하 고 매개 변수가 있는 문을 사용 하 여 둘 다 있습니다.<br /><br /> 예를 들어 매개 변수가 있는 문을 사용하는 활성 아티클은 이 열의 값이 17이 되며 값 0은 아티클이 비활성 상태이고 추가 속성이 정의되지 않았음을 의미합니다.|  
-|**arttype**|**tinyint**|아티클 유형입니다.<br /><br /> **1** = 로그 기반 아티클입니다.<br /><br /> **3** = 수동 필터가 있는 로그 기반 아티클입니다.<br /><br /> **5** = 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **7** = 수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **8** = 저장 프로시저 실행 합니다.<br /><br /> **24** = serializable 저장된 프로시저 실행 합니다.<br /><br /> **32** = 저장 프로시저 (스키마 전용).<br /><br /> **64** = 뷰 (스키마 전용).<br /><br /> **128** = 함수 (스키마 전용).|  
+|**artstatus**|**tinyint**|아티클 옵션 및 상태의 비트 마스크이며 다음 값 중 하나 이상에 대한 논리적 비트 OR 연산의 결과일 수 있습니다.<br /><br /> **1** = 아티클이 활성 상태입니다.<br /><br /> **8** = INSERT 문에 열 이름을 포함 합니다.<br /><br /> **16** = 문을 매개 변수화 사용 합니다.<br /><br /> **24** = INSERT 문에 열 이름을 포함 하 고 매개 변수가 있는 문을 사용 하 여 둘 다.<br /><br /> 예를 들어 매개 변수가 있는 문을 사용하는 활성 아티클은 이 열의 값이 17이 되며 값 0은 아티클이 비활성 상태이고 추가 속성이 정의되지 않았음을 의미합니다.|  
+|**arttype**|**tinyint**|아티클 유형입니다.<br /><br /> **1** = 로그 기반 아티클입니다.<br /><br /> **3** = 수동 필터가 있는 로그 기반 아티클입니다.<br /><br /> **5** = 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **7** = 수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **8** = 저장 프로시저 실행 합니다.<br /><br /> **24** = 직렬화 가능 프로시저 실행 합니다.<br /><br /> **32** = 저장 프로시저 (스키마 전용).<br /><br /> **64** = 뷰 (스키마 전용).<br /><br /> **128** = 함수 (스키마 전용).|  
 |**wszArtdesttable**|**nvarchar(514)**|대상에 게시된 개체의 이름입니다.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|대상에 게시된 개체의 소유자입니다.|  
 |**wszArtinscmd**|**nvarchar(510)**|삽입에 사용된 명령 또는 저장 프로시저입니다.|  
@@ -67,17 +64,17 @@ ms.locfileid: "34467989"
 |**artgendel2cmd**|**nvarchar(510)**|동시 스냅숏 처리 중 아티클을 조정하는 데 사용된 DELETE 명령 템플릿입니다.|  
 |**fInReconcile**|**tinyint**|동시 스냅숏 처리 중 아티클이 현재 조정되고 있는지 여부를 나타냅니다.|  
 |**fPubAllowUpdate**|**tinyint**|게시가 업데이트 구독을 허용하는지 여부를 나타냅니다.|  
-|**intPublicationOptions**|**bigint**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용할 수 있습니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** --SQL Server 이외 구독자에 사용 합니다.|  
+|**intPublicationOptions**|**bigint**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 설정할 수 있습니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -사용에 대 한 SQL Server 이외 구독자입니다.|  
   
-## <a name="permissions"></a>Permissions  
- 호출 하는 게시 데이터베이스에 대 한 VIEW DATABASE STATE 권한이 필요 **dm_repl_articles**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 호출 하려면 게시 데이터베이스에 대 한 VIEW DATABASE STATE 권한이 필요 **dm_repl_articles**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  현재 복제 아티클 캐시에 로드되어 있는 복제된 데이터베이스 개체에 대한 정보만 반환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [복제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [복제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

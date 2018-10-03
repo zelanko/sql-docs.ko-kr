@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f0fb9a3b956a6ae1be07c3fc8337d83ebb4ad34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933124"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822201"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +129,7 @@ ON
  SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
- SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 저장소 컨테이너의 URL 경로를 입력합니다(예: >https://teststorageaccnt.blob.core.windows.net/testcontainer/).
+ SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 저장소 컨테이너의 URL 경로를 입력합니다(예: > https://teststorageaccnt.blob.core.windows.net/testcontainer/).
  
  여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   

@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5138982829e14779632ddbb60aad34c63ac1b54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99e093b1c98ed661fd2517fd2f7fbd723ff6e38e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802580"
 ---
 # <a name="select-source-dialog-box"></a>원본 선택 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "32955388"
   
 -   개체 탐색기에서 서버, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책**을 선택한 다음 **평가**를 선택합니다. **정책 평가** 대화 상자에서 **정책 선택** 페이지에서 찾아보기 단추(**...**)를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **파일**  
  정책이 포함된 하나 이상의 XML 파일을 선택합니다.  
   

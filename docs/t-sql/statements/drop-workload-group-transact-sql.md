@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_WORKLOAD_GROUP_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DROP WORKLOAD GROUP statement
 ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
-caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 696df4ea82c7bc78a6e9a1c79f69892e500f5901
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c4900794c3a29067c38b1fb16b127d07cf574ab8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812601"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ DROP WORKLOAD GROUP group_name
   
 -   DROP WORKLOAD GROUP 문을 발행했지만 변경 내용을 적용하기 위해 세션을 명시적으로 중지하지 않을 경우 DROP 문을 발행하기 이전의 이름을 사용하여 그룹을 다시 만든 다음 해당 그룹을 원래 리소스 풀로 이동할 수 있습니다. 변경 내용을 적용하려면 ALTER RESOURCE GOVERNOR RECONFIGURE 문을 실행합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

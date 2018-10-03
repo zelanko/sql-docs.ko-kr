@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], data readers
 - data readers [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ab7855a916a1a1dbd6d75fad9004c656e24641f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ff8806f690dab925f30befe2a01ec33e79edd960
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750641"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
   **DataReader** 개체가 있으면 클라이언트에서는 읽기 전용, 정방향 전용 데이터 스트림을 데이터 원본에서 검색할 수 있습니다. 결과는 쿼리 실행으로 반환되고 **DataReader** 클래스의 **Read** 메서드를 사용하여 요청할 때까지 클라이언트의 네트워크 버퍼에 저장됩니다. **DataReader** 클래스를 만들려면 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader>를 구현하고 선택적으로 <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>을 구현합니다. **DataReader** 개체를 사용하면 전체 쿼리 결과가 반환될 때까지 기다리지 않고 사용 가능할 때 즉시 데이터를 검색하고 (기본적으로) 한 번에 행 한 개씩만 메모리에 저장하여 시스템 오버헤드를 줄임으로써 응용 프로그램 성능이 높아집니다.  

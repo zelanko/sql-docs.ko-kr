@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053373"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 실행 태스크의 결과 집합
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 결과 집합이 SQL 실행 태스크에 반환되는지 여부는 태스크에 사용되는 SQL 명령의 유형에 따라 다릅니다. 예를 들어 SELECT 문은 일반적으로 결과 집합을 반환하지만 INSERT 문은 결과 집합을 반환하지 않습니다.  

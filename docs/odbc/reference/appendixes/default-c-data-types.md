@@ -5,36 +5,33 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec05e58cd651497b07e131d4c3dcfe2e70baa04f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854111"
 ---
 # <a name="default-c-data-types"></a>기본 C 데이터 형식
-응용 프로그램에서 SQL_C_DEFAULT를 지정 하는 경우 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**, 드라이버는 출력 또는 입력된 버퍼의 C 데이터 형식을 가정 열 또는 매개 변수 버퍼 바인딩되는 변수의 SQL 데이터 형식에 해당 합니다.  
+응용 프로그램에서 SQL_C_DEFAULT를 지정 하는 경우 **SQLBindCol**를 **SQLGetData**, 또는 **SQLBindParameter**, 드라이버 가정 출력 또는 입력된 버퍼의 C 데이터 형식 열 또는 버퍼 바인딩되는 매개 변수의 SQL 데이터 형식에 해당 합니다.  
   
 > [!IMPORTANT]  
->  상호 운용 가능한 응용 프로그램 SQL_C_DEFAULT를 사용 해야 합니다. 대신, 사용 하는 버퍼의 C 형식의 항상 지정 해야 합니다. 다음은 다음과 같은 이유로 드라이버 기본 C 형식을 항상 올바르게 확인할 수 없기 때문입니다.  
+>  상호 운용 가능한 응용 프로그램 SQL_C_DEFAULT를 사용 하지 마십시오. 대신 사용 하는 버퍼의 C 형식이 지정 항상 해야 합니다. 다음은 다음과 같은 이유로 드라이버 기본 C 형식을 항상 올바르게 확인할 수 없기 때문입니다.  
   
--   DBMS에서 SQL 데이터 형식 열 또는 매개 변수를 승격 하는 경우 드라이버는 원래 SQL 데이터 형식의 열 또는 매개 변수는 확인할 수 없습니다. 따라서 그는 해당 기본 C 데이터 형식을 확인할 수 없습니다.  
+-   DBMS는 SQL 데이터 형식의 열 또는 매개 변수 승격, 드라이버 원본 SQL 데이터 형식의 열 또는 매개 변수를 확인할 수 없습니다. 따라서이 해당 기본 C 데이터 형식을 확인할 수 없습니다.  
   
--   드라이버 확인할 수 없는 경우 특정 열 또는 매개 변수는 서명 되었는지를, 종종의 경우 처럼이 드라이버를 확인할 수 없습니다는 DBMS에 의해 처리 해당 기본 C 데이터 형식 인지 해야 수 서명 되거나 서명 되지 않은 합니다.  
+-   드라이버를 확인할 수 없는 경우 서명할지 여부를 특정 열 이나 매개 변수를 종종 경우 처럼이 경우 드라이버를 확인할 수 없습니다 DBMS에 의해 처리 해당 기본 C 데이터 형식 인지 해야 서명 되거나 서명 되지 않은 합니다.  
   
-     SQL_C_DEFAULT 프로그래밍 편의 위해 제공 하기 때문에 실제 C 데이터 형식을 지정 하는 경우 응용 프로그램 기능을 손실 하지 않습니다.  
+     SQL_C_DEFAULT 프로그래밍 편의 위해 제공 하기 때문에 실제 C 데이터 형식을 지정 하는 경우 응용 프로그램 기능을 손실 되지 않습니다.  
   
- 각 SQL 데이터 형식에 대 한 기본 C 데이터 형식을 표시 하는 테이블에 포함 되어 [SQL에서 C 데이터 형식 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)이 부록의 뒷부분에 나오는 합니다.
+ 각 SQL 데이터 형식에 대 한 기본 C 데이터 형식을 표시 하는 테이블에 포함 되어 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)이 부록의 뒷부분에 나오는.

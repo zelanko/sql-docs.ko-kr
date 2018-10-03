@@ -4,17 +4,16 @@ ms.date: 12/17/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eeaa107f3d9510edcd7ffbb54e301ab12265d8ea
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2739af78765645db8f24c211e8c9110085995e74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273122"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744771"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Power BI Mobile에 액세스할 수 있도록 보고서 서버 활성화
 Power BI Mobile 앱을 사용하여 모바일 보고서를 사용할 수 있습니다. Power BI Mobile 앱을 Reporting Services에 연결하기 위해서는 몇 가지 구성 사항이 있습니다.  

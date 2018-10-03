@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: d644a2dd1d8cef03618aec7651b4db37795b1507
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f1391c44f5dd6f231a1a0beb734fd71548f28a43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795477"
 ---
 # <a name="project-settings-migration-oracletosql"></a>프로젝트 설정(마이그레이션)(OracleToSQL)
 마이그레이션 페이지의 **프로젝트 설정** 대화 상자에는 SSMA Oracle에서 데이터를 마이그레이션합니다 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

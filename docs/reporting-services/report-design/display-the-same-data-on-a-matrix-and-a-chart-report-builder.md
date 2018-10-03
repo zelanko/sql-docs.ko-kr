@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 09589f64e396fc86ed6f0616752a0b52e79b3529
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f3eafaec96e27d6e78521b0c4ef7580af103a12e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792251"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>행렬 및 차트에 같은 데이터 표시(보고서 작성기)
   행렬 및 차트에 같은 데이터를 표시하려면 두 데이터 영역에서 같은 데이터 집합을 지정하는 속성을 설정해야 하고 필터, 그룹, 정렬 및 데이터에 대한 동일한 식도 지정해야 합니다.  

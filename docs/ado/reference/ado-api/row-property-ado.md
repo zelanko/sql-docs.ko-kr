@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Row property [ADO]
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4de19beeb853abb0a6bdc4d517332a812fa43c0e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747411"
 ---
-# <a name="row-property-ado"></a>Row 속성 (ADO)
-OLE DB를 가져오거나 설정 합니다. **행** 또는에서 개체는 [ADORecordConstruction 인터페이스](../../../ado/reference/ado-api/adorecordconstruction-interface.md) 개체입니다. 사용 하는 경우 **put_Row** 설정 하는 **행** 개체를 행 ADO로 변경 됩니다 **레코드** 개체입니다.  
+# <a name="row-property-ado"></a>Row 속성(ADO)
+OLE DB를 가져오거나 설정 합니다. **행** 에서 개체를 [ADORecordConstruction 인터페이스](../../../ado/reference/ado-api/adorecordconstruction-interface.md) 개체입니다. 사용 하는 경우 **put_Row** 설정 하는 **행** 개체를 행 ADO로 바뀝니다 **레코드** 개체입니다.  
   
 ## <a name="readwritesyntax"></a>읽기/쓰기입니다. 구문  
   
@@ -44,11 +41,11 @@ HRESULT put_Row([in] IUnknown* pRow);
  *ppRow*  
  OLE DB에 대 한 포인터 **행** 개체입니다.  
   
- *PRow*  
+ *pRow*  
  OLE DB **행** 개체입니다.  
   
 ## <a name="return-values"></a>반환 값  
- 이 속성 메서드는 S_OK와 E_FAIL을 포함 하는 표준 HRESULT 값을 반환 합니다.  
+ 이 속성 메서드는 S_OK와 E_FAIL을 비롯 한 표준 HRESULT 값을 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [ADORecordConstruction 인터페이스](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

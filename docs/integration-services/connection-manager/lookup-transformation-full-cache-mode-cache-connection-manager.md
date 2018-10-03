@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 54802ce4096caf85d2d5a33eb1e122b7e82057bc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bdf93e2f4da62ffa7a1cfd6edac11955f3bd757f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853584"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>조회 변환 전체 캐시 모드 - 캐시 연결 관리자
   전체 캐시 모드와 캐시 연결 관리자를 사용하도록 조회 변환을 구성할 수 있습니다. 전체 캐시 모드에서 조회 변환이 실행되기 전에 참조 데이터베이스가 캐시에 로드됩니다.  

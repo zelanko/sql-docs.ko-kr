@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b042690b6cf4a9d2335a2c91f8f6a618f9261caf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f51c538b050e746a3d806e5a226eaa77eba1c8b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183980"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054083"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
-  Reporting Services 응용 프로그램의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 응용 프로그램에 대한 URL 끝점 구문을 정의합니다. 보고서 서버에서 응용 프로그램을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
+  Reporting Services 응용 프로그램의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 응용 프로그램에 대한 URL 엔드포인트 구문을 정의합니다. 보고서 서버에서 응용 프로그램을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
   
 -   설치 프로그램은 기본값을 사용하여 URL 예약을 만듭니다. 설치 프로그램이 기본 구성을 설치할 경우 두 개의 URL이 예약되는데 하나는 보고서 서버 웹 서비스에 대한 URL이고 다른 하나는 보고서 관리자에 대한 URL입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 URL을 더 추가하거나 설치 프로그램에서 만든 기본 URL을 수정할 수 있습니다.  
   
@@ -56,9 +53,9 @@ ms.locfileid: "37183980"
 ##  <a name="URLreservation"></a> URL 예약 및 등록  
  URL 예약은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 액세스할 때 사용할 수 있는 URL을 정의합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 프로그램이 보고서 서버 웹 서비스와 보고서 관리자 HTTP에 대 한 하나 이상의 Url을 예약 합니다. SYS, 다음 서비스를 시작할 때 등록 합니다. 보고서 작성기와 보고서에 대한 URL은 보고서 서버 웹 서비스 URL 예약을 기준으로 합니다. URL에 매개 변수를 추가하면 웹 서비스를 통해 보고서 작성기나 보고서를 열 수 있습니다. 예약 및 등록은 HTTP.SYS에서 제공합니다. 자세한 내용은 MSDN의 [네임스페이스 예약, 등록 및 라우팅(Namespace Reservations, Registration, and Routing)](http://go.microsoft.com/fwlink/?LinkId=92653) 을 참조하세요.  
   
- *URL 예약* 은 웹 응용 프로그램에 대한 URL 끝점이 HTTP.SYS에 생성되고 저장되는 프로세스입니다. HTTP.SYS는 컴퓨터에 정의된 모든 URL 예약의 공용 리포지토리로서 고유한 URL 예약을 보장하는 일반 규칙 집합을 정의합니다.  
+ *URL 예약* 은 웹 응용 프로그램에 대한 URL 엔드포인트가 HTTP.SYS에 생성되고 저장되는 프로세스입니다. HTTP.SYS는 컴퓨터에 정의된 모든 URL 예약의 공용 리포지토리로서 고유한 URL 예약을 보장하는 일반 규칙 집합을 정의합니다.  
   
- *URL 등록* 은 서비스가 시작될 때 발생합니다. 그러면 요청 큐가 생성되고 HTTP.SYS에서는 요청을 요청 큐로 라우팅합니다. URL 끝점은 URL 끝점으로 전달되는 요청이 큐에 추가되기 전에 등록되어야 합니다. 보고서 서버 서비스가 시작되면 설정된 모든 응용 프로그램용으로 예약된 URL이 모두 등록됩니다. 즉 등록이 발생하려면 웹 서비스가 설정되어 있어야 합니다. 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성에서 **WebServiceAndHTTPAccessEnabled** 속성을 **False**로 설정한 경우에는 서비스가 시작될 때 웹 서비스의 URL이 등록되지 않습니다.  
+ *URL 등록* 은 서비스가 시작될 때 발생합니다. 그러면 요청 큐가 생성되고 HTTP.SYS에서는 요청을 요청 큐로 라우팅합니다. URL 엔드포인트는 URL 엔드포인트로 전달되는 요청이 큐에 추가되기 전에 등록되어야 합니다. 보고서 서버 서비스가 시작되면 설정된 모든 응용 프로그램용으로 예약된 URL이 모두 등록됩니다. 즉 등록이 발생하려면 웹 서비스가 설정되어 있어야 합니다. 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성에서 **WebServiceAndHTTPAccessEnabled** 속성을 **False**로 설정한 경우에는 서비스가 시작될 때 웹 서비스의 URL이 등록되지 않습니다.  
   
  서비스를 중단하거나 웹 서비스 또는 보고서 관리자 응용 프로그램 도메인을 재활용하는 경우 URL 등록이 취소됩니다. 서비스가 실행 중일 때 URL 예약을 수정한 경우 이전 URL 등록이 취소되고 새 URL이 사용될 수 있도록 보고서 서버가 응용 프로그램 도메인을 즉시 재활용합니다.  
   
@@ -108,7 +105,7 @@ ms.locfileid: "37183980"
   
  http://localhost URL은 http://127.0.0.1로 해석됩니다. URL 예약을 컴퓨터 이름이나 단일 IP 주소로 해석한 경우 로컬 컴퓨터에 127.0.0.1에 대한 예약을 추가로 만들어야 localhost를 사용할 수 있습니다. 마찬가지로 컴퓨터에서 localhost 또는 127.0.0.1을 사용할 수 없는 경우 해당 URL을 사용할 수 없습니다.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 실수로 상승 된 권한으로 프로그램 실행의 위험을 최소화 하기 위해 새 보안 기능을 포함 합니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 실수로 상승 된 권한으로 프로그램 실행의 위험을 최소화 하기 위해 새 보안 기능을 포함 합니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 ##  <a name="URLSharePoint"></a> SharePoint 통합 모드로 보고서 서버에 대 한 Url  
  보다 큰 규모의 SharePoint 제품 또는 기술 배포 내에서 실행되도록 독립 실행형 보고서 서버를 구성하는 경우 URL 및 가상 디렉터리 생성은 다음과 같이 영향을 받습니다.  
@@ -121,7 +118,7 @@ ms.locfileid: "37183980"
   
 -   단일 서버 배포의 통합된 보고서 서버 및 SharePoint 기술 인스턴스를 동일한 컴퓨터에 설치 되어 있는 경우 사용할 수 없습니다 http://localhost/reportserver합니다. 경우 http://localhost 는 SharePoint 웹 응용 프로그램에 액세스 하는 데에 사용 해야 기본이 아닌 웹 사이트 또는 고유한 포트 할당을 보고서 서버에 액세스할 수 있습니다. 또한 보고서 서버가 SharePoint 팜과 통합되는 경우 원격 컴퓨터에 설치된 배포의 노드에 대해서는 보고서 서버에 대한 localhost 액세스가 확인되지 않습니다.  
   
--   SharePoint 통합 모드에서 실행되는 보고서 서버에 대해서는 보고서 관리자에 대한 URL 예약 및 끝점을 구성할 수 없습니다. 이를 구성하는 경우에는 보고서 서버를 SharePoint 통합 모드로 배포한 후 이 URL 및 가상 디렉터리가 더 이상 작동하지 않습니다. 이 모드에서는 보고서 관리자가 지원되지 않습니다.  
+-   SharePoint 통합 모드에서 실행되는 보고서 서버에 대해서는 보고서 관리자에 대한 URL 예약 및 엔드포인트를 구성할 수 없습니다. 이를 구성하는 경우에는 보고서 서버를 SharePoint 통합 모드로 배포한 후 이 URL 및 가상 디렉터리가 더 이상 작동하지 않습니다. 이 모드에서는 보고서 관리자가 지원되지 않습니다.  
   
  보고서 서버 스케일 아웃 배포를 통합하여 보다 큰 규모의 SharePoint 제품 또는 기술 배포 내에서 실행하는 경우 보고서 서버 노드에 대한 부하를 분산시키고 스케일 아웃 배포에 대한 단일 가상 서버 URL을 정의하세요. 보고서 서버 통합 설정을 통해서만 단일 보고서 URL을 지정할 수 있습니다. 스케일 아웃 배포의 경우 URL은 스케일 아웃 배포의 서버 노드에 대한 액세스 지점이어야 합니다.  
   

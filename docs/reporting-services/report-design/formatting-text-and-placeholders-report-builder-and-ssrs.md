@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
@@ -16,12 +15,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f244fa79534ca1d99c198ac7d38d3224beaeb21f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 447c763b55bdb9803f5418e19ba13a745e054e1a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770811"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
   입력란은 데이터 영역 안에 있는 보고서 항목 또는 개별 셀로서 텍스트, 계산 필드, 데이터베이스의 필드에 대한 포인터 또는 이 세 항목의 조합을 포함하고 있습니다. 글꼴 및 색을 혼합하고, 굵게 및 기울임꼴 스타일을 추가하고, 맞춤 및 내어쓰기와 같은 단락 스타일을 사용할 수 있습니다. 또한 입력란 전체의 형식을 지정하거나 입력란 내에 있는 특정 텍스트, 숫자, 식 또는 필드의 형식을 지정할 수 있습니다.  

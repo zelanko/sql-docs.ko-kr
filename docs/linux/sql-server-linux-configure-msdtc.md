@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f8070b5910f5488d9aec9470adc088172d92ad1
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: b32b3465184d5a8be1ef07f42b6b764b0600940d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815551"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에는 MSDTC Microsoft Distributed Transaction Coordinator ()를 구성 하는 방법
 

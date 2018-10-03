@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Key_GUID_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - KEY_GUID function
 - GUIDs [SQL Server]
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b175bb55b08427ce41d2d6ad638d625f25944413
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 06ffb5927414cc169863dbe2435fe4221618e5cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799961"
 ---
 # <a name="keyguid-transact-sql"></a>KEY_GUID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ Key_GUID( 'Key_Name' )
   
  임시 키의 경우 키 이름이 숫자 기호(#)로 시작해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  임시 키는 생성된 세션에서만 사용할 수 있으므로 액세스 권한이 필요 없습니다. 임시 키가 아닌 키에 액세스하려는 호출자는 키에 대한 일부 권한이 필요하며 키에 대한 VIEW 권한이 거부되어서는 안 됩니다.  
   
 ## <a name="examples"></a>예  

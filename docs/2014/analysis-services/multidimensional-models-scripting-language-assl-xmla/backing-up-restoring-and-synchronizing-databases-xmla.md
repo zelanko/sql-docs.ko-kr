@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061163"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>데이터베이스 백업, 복원 및 동기화(XMLA)
   XML for Analysis에는 데이터베이스를 백업, 복원 및 동기화하는 세 개의 명령이 있습니다.  
@@ -148,7 +145,7 @@ ms.locfileid: "37159604"
 ### <a name="synchronizing-rolap-objects"></a>ROLAP 개체 동기화  
  ROLAP 저장소를 사용하는 개체에 대한 집계 또는 데이터는 내부 관계형 데이터 원본에서 테이블로 저장되므로 이러한 정보는 `Synchronize` 명령으로 동기화할 수 없습니다. 하지만 ROLAP 개체의 메타데이터는 동기화할 수 있습니다. 메타데이터를 동기화하기 위해 `Synchronize` 명령에서는 관계형 데이터 원본의 테이블 구조를 다시 만듭니다.  
   
- Synchronize 명령의 `Location` 요소를 사용하여 ROLAP 개체를 동기화할 수 있습니다. 각 `Location` 데이터 원본을 재배치 하는 데 사용 되는 요소는 `DataSourceType` 속성으로 명시적으로 설정 되어 있어야 *로컬*합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 또한 `ConnectionString` 요소의 `Location` 속성을 새 위치의 연결 문자열로 설정해야 합니다. 동기화하는 동안 `Synchronize` 명령에서는 `DataSourceID` 요소의 `Location` 속성으로 식별된 데이터 원본의 연결 문자열을 `ConnectionString` 요소의 `Location` 속성 값으로 바꿉니다.  
+ Synchronize 명령의 `Location` 요소를 사용하여 ROLAP 개체를 동기화할 수 있습니다. 각 `Location` 데이터 원본을 재배치 하는 데 사용 되는 요소는 `DataSourceType` 속성으로 명시적으로 설정 되어 있어야 *로컬*합니다. . 또한 `ConnectionString` 요소의 `Location` 속성을 새 위치의 연결 문자열로 설정해야 합니다. 동기화하는 동안 `Synchronize` 명령에서는 `DataSourceID` 요소의 `Location` 속성으로 식별된 데이터 원본의 연결 문자열을 `ConnectionString` 요소의 `Location` 속성 값으로 바꿉니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [요소를 백업 &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   

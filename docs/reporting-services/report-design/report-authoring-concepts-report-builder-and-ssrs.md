@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b04181c8605dff46e0f744f6445bd61847b1b2c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a51c8ac3fce465e6742001eb884332d2eb1e4309
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274340"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800581"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
   이 섹션에서는 보고서 작성기 및 보고서 디자이너 설명서에서 페이지를 매긴 보고서를 설명하는 데 사용된 몇 가지 주요 개념을 간략하게 정의합니다. 특정 단어 또는 용어에 대한 정의를 보려면 [용어집&#40;보고서 작성기&#41;](../../reporting-services/report-builder/glossary-report-builder.md)을 참조하세요.  

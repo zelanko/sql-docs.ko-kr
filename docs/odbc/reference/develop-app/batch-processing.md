@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], batch processing
 - batches [ODBC], interoperable applications
 ms.assetid: 3fa4eca8-691c-467d-bfa7-39c59cdb9c8d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ccac736bed438ed4df161bbe7ec18199182e7541
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c4aa7b22e2d7b419db0e80d723ab7b0d875c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910408"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778601"
 ---
 # <a name="batch-processing"></a>일괄 처리
-SQL 문의 일괄 처리에 대 한 지원, 광범위 한 하지 않으므로 상호 운용 가능한 응용 프로그램 조건에 따라 되지 않거나 전혀을 사용 해야 합니다. 자세한 내용은 참조 [일괄 처리 실행](../../../odbc/reference/develop-app/executing-batches.md)합니다.
+SQL 문의 일괄 처리에 대 한 지원 되므로 상호 운용 가능한 응용 프로그램을 사용 해야 이러한 조건에 따라 또는 전혀를 광범위 하 게 아닙니다. 자세한 내용은 [일괄 처리 실행](../../../odbc/reference/develop-app/executing-batches.md)합니다.

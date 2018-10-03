@@ -1,14 +1,11 @@
 ---
-title: backupfilegroup (Transact SQL) | Microsoft Docs
+title: backupfilegroup (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 040e55c50c91ed40b7e43bfc71d8ea5fbca0273c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832981"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33259233"
   백업 당시 데이터베이스의 각 파일 그룹마다 하나의 행을 포함합니다. **backupfilegroup** 에 저장 되는 **msdb** 데이터베이스입니다.  
   
 > [!NOTE]  
->  **backupfilegroup** 테이블 백업 세트가 아닌 데이터베이스의 파일 그룹 구성을 보여 줍니다. 백업 세트에는 파일을 포함할지 여부를 식별 하려면 사용 하 여는 **is_present** 의 열은 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 테이블입니다.  
+>  합니다 **backupfilegroup** 테이블에는 백업 세트가 아닌 데이터베이스의 파일 그룹 구성을 보여 줍니다. 백업 세트에 있는 파일을 포함할지 여부를 식별 하려면 사용 합니다 **is_present** 열의 합니다 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 테이블입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,17 +46,17 @@ ms.locfileid: "33259233"
 |**is_readonly**|**bit**|1 = 읽기 전용 파일 그룹입니다.|  
 |**log_filegroup_guid**|**uniqueidentifier**|NULL일 수 있습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  여러 데이터베이스에 같은 파일 그룹 이름이 나타날 수 있지만 각 파일 그룹에는 고유 GUID가 있습니다. 따라서 **(backup_set_id, filegroup_guid)** 의 파일 그룹을 식별 하는 고유 키가 **backupfilegroup**합니다.  
+>  여러 데이터베이스에 같은 파일 그룹 이름이 나타날 수 있지만 각 파일 그룹에는 고유 GUID가 있습니다. 따라서 **(backup_set_id, filegroup_guid)** 에서 파일 그룹을 식별 하는 고유 키인 **backupfilegroup**합니다.  
   
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY의 열을 채우는 **backupmediaset** 미디어 세트 헤더의 적절 한 값으로는 테이블입니다.  
+ RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY 채웁니다의 열을 **backupmediaset** 미디어 세트 헤더의 적절 한 값이 있는 테이블입니다.  
   
- 이 테이블의 다른 백업 및 기록 테이블에서 행의 수를 줄이려면 실행는 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  
+ 이 테이블에 다른 백업 및 기록 테이블의 행 수를 줄이려면 다음을 실행 합니다 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [백업 및 복원 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [백업 및 복원 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupmediafamily&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
