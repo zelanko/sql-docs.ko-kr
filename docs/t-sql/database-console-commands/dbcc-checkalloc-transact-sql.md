@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 76
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 5532f6870e19e830a4d8925fbfca68862493fa6a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e772a5afba4129d90ae7ab26fb051db7fd8113bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597782"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,7 +114,7 @@ DBCC CHECKALLOC은 내부 데이터베이스 스냅숏을 사용하여 이러한
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해  
 DBCC CHECKALLOC 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
   
-|State|Description|  
+|State|설명|  
 |---|---|  
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|  
 |1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|  
@@ -137,7 +134,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 DBCC CHECKALLOC이 반환하는 정보에 대해 설명합니다.
   
-|항목|Description|  
+|항목|설명|  
 |---|---|  
 |FirstIAM|내부적으로만 사용됩니다.|  
 |Root|내부적으로만 사용됩니다.|  
@@ -147,7 +144,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
   
 또한 DBCC CHECKALLOC은 각 파일의 인덱스와 파티션에 대한 할당 요약을 보고합니다. 이 요약에서는 데이터 배포에 대해 설명합니다.
   
-|항목|Description|  
+|항목|설명|  
 |---|---|  
 |Reserved pages|인덱스에 할당된 페이지 및 할당된 익스텐트에서 사용되지 않은 페이지입니다.|  
 |Used pages|할당되었으며 인덱스에서 사용하고 있는 페이지입니다.|  
@@ -231,7 +228,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
