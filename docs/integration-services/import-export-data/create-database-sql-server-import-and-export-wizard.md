@@ -5,23 +5,20 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef0a0e2e2abf0f871e8d7a4e61e7f5c5457dda36
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3456afaeff6d8eda0ee54bac846fab00c7e35488
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807291"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
 **대상 선택** 페이지에서 **새로 만들기** 를 선택하여 새 SQL Server 대상 데이터베이스를 만드는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **데이터베이스 만들기** 대화 상자가 표시됩니다. 이 페이지에서 새 데이터베이스의 이름을 입력합니다. 필요에 따라 새 데이터베이스의 처음 크기와 자동 증가 및 해당 로그 파일에 대한 설정을 변경할 수도 있습니다. 

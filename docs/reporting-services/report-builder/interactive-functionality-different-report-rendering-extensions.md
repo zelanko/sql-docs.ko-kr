@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 837086489e52f4f34513aecd68403ce1c78047f1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272455"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789081"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>대화형 기능 - 여러 보고서 렌더링 확장 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 런타임 시 페이지를 매긴 보고서와 상호 작용하기 위한 기능을 제공합니다. 모든 보고서 렌더링 형식에 대화형 기능을 전부 사용할 수 있는 것은 아닙니다. 다음 표에는 각 대화형 기능이 특정 형식에서 어떻게 작동하는지 이해하는 데 도움이 되는 정보가 나와 있습니다.  

@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0d0d154c844bd1afbcb4662b7e45f8a120de618
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793261"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +27,7 @@ ms.locfileid: "37351285"
 > [!NOTE]  
 >  피어 투 피어 토폴로지 구성 마법사는 닫힐 때 토폴로지 정보를 요청합니다. 모든 노드가 이 정보 요청에 응답하기 전에 마법사가 닫혔다가 다시 열리면 마법사에 부분 네트워크가 표시될 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **토폴로지 구성** 페이지에는 여러 가지 인터페이스 요소와 요소를 마우스 오른쪽 단추로 클릭하면 사용할 수 있는 옵션이 포함되어 있습니다. 다음 표에서는 각 인터페이스 요소에 대해 설명합니다.  
   
 |인터페이스 요소|설명|  

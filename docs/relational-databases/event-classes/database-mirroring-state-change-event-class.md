@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], database mirroring
 - database mirroring [SQL Server], event notifications
 - Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 905a04afa865baffbca0929c2086cd0986d08213
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b1474dea560935e675a3817c22d94d24f63bfe57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43081334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803740"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "43081334"
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |**State**|**int**|새 미러링 상태의 ID입니다. 값은 다음과 같습니다.<br /><br /> 0 = Null 알림<br /><br /> 1 = 미러링 모니터와 함께 주 서버 동기화<br /><br /> 2 = 미러링 모니터 없이 주 서버 동기화<br /><br /> 3 = 미러링 모니터와 함께 미러 동기화<br /><br /> 4 = 미러링 모니터 없이 미러 동기화<br /><br /> 5 = 주 서버 연결 손실<br /><br /> 6 = 미러 연결 손실<br /><br /> 7 = 수동 장애 조치<br /><br /> 8 = 자동 장애 조치<br /><br /> 9 = 미러링 일시 중지됨<br /><br /> 10 = 쿼럼 없음<br /><br /> 11 = 미러 동기화 중<br /><br /> 12 = 주 서버 노출 실행 중|30|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|상태 변경에 대한 설명입니다.|@shouldalert|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|상태 변경에 대한 설명입니다.|1|사용자 계정 컨트롤|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  

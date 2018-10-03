@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 7915 (Database Engine error)
 ms.assetid: 63338587-7dd3-40e6-b70e-d8ae18fff47b
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21c43e914c933463028e6815f698ee6c1c71a5de
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 653deb1710937d37a11688d41eb378c0650e0a20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324944"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803481"
 ---
 # <a name="mssqlserver7915"></a>MSSQLSERVER_7915
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +37,5 @@ ms.locfileid: "34324944"
 REPAIR에서 전송한 이 정보 메시지는 지정된 IAM(Index Allocation Map) 체인이 패치되어 다시 작성될 수 있음을 나타냅니다. 패치 작업은 IAM 체인의 새 헤드를 할당하거나 체인에서 잘못된 페이지를 제거할 때 필요할 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-InclusionThresholdSetting  
+없음  
   

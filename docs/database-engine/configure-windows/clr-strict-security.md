@@ -6,9 +6,7 @@ ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - clr strict security
@@ -19,23 +17,22 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: ''
-caps.latest.revision: 0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3889d749e7b50300a42a165c46a029daee5feb56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4816aade2a0b1ce76b56fcda6be9e7afff05114
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32871068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787421"
 ---
 # <a name="clr-strict-security"></a>CLR 엄격한 보안   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` 권한의 해석을 제어합니다.   
 
-|값 |Description | 
+|값 |설명 | 
 |----- |----- | 
 |0 |Disabled - 이전 버전과의 호환성을 위해 제공됩니다. `Disabled` 값은 사용하지 않는 것이 좋습니다. | 
 |1 |Enabled - [!INCLUDE[ssde-md](../../includes/ssde-md.md)]에서 어셈블리에 대한 `PERMISSION_SET` 정보를 무시하도록 하고 항상 `UNSAFE`로 해석합니다.  `Enabled`는 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]에 대한 기본값입니다. | 
@@ -52,7 +49,7 @@ ms.locfileid: "32871068"
 >  [!IMPORTANT]  
 >  strict security(엄격한 보안)를 사용하도록 설정하면 서명되지 않은 어셈블리는 로드되지 않습니다. 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명되도록 각 어셈블리를 변경하거나 삭제한 다음 다시 만들어야 합니다.
 
-## <a name="permissions"></a>사용 권한 
+## <a name="permissions"></a>Permissions 
 
 ### <a name="to-change-this-option"></a>이 옵션을 변경하려면,  
 `CONTROL SERVER` 권한 또는 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다.
