@@ -6,30 +6,27 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9e4e686ad1203675ea42d3bcf8291a863ae48
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709271"
 ---
-# <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual c + +의에서 ADOX 코드 예제
-이러한 항목 ADOX를 사용 하는 방법을 이해 하는 예제 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual c + +를 사용 하 여 기록 됩니다.  
+# <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++의 ADOX 코드 예제
+이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual c + +를 사용 하 여 기록 됩니다.  
   
 > [!NOTE]
->  전체 코드 예제에서는부터 끝까지 코드 편집기에 붙여 넣습니다. 예제에서는 부분 예제를 사용 하거나 단락 서식을 분실 한 경우 올바르게 실행 되지 않을 수 있습니다.  
+>  전체 코드 예제를부터 끝까지, 코드 편집기에 붙여 넣습니다. 예제 부분 예제를 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35284882"
   
 -   [Indexes Append 메서드 예제(VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [키 추가 방법, 키 형식, RelatedColumn, RelatedTable, 및 UpdateRule 속성 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Keys Append 메서드, 키 유형, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>속성  
   
@@ -59,7 +56,7 @@ ms.locfileid: "35284882"
   
 -   [Command 및 CommandText 속성 예제(VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [Command 속성, 매개 변수 컬렉션 예제 (VC + +)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command 속성을 매개 변수 컬렉션 예제 (VC + +)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [DateCreated 및 DateModified 속성 예제(VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -69,9 +66,9 @@ ms.locfileid: "35284882"
   
 -   [IndexNulls 속성 예제(VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [키 유형, RelatedColumn, RelatedTable, UpdateRule 속성, 키 추가 메서드 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [키 유형, RelatedColumn, RelatedTable, UpdateRule 속성, 키 Append 메서드 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Name 속성, 열 및 테이블 추가 방법 예 (VC + +)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Name 속성, Columns 및 Tables Append 메서드 예제 (VC + +)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [NumericScale 및 Precision 속성 예제(VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   

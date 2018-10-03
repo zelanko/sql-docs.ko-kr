@@ -1,13 +1,11 @@
 ---
-title: 응용 프로그램 기능에 대 한 Visual Basic | Microsoft Docs
+title: Visual Basic for Applications 기능 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611601"
 ---
-# <a name="visual-basic-for-applications-functions"></a>응용 프로그램 기능에 대 한 Visual Basic
-다음 Visual Basic 응용 프로그램 기능에 대 한 데이터 셰이핑 계산 식에에서 사용할 수 있습니다.  
+# <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 기능
+다음 Visual Basic for Applications 기능 데이터 셰이핑 계산 식에서에서 사용할 수 있습니다.  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -54,8 +51,8 @@ ms.locfileid: "35273232"
 ## <a name="see-also"></a>관련 항목  
  [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md)   
- [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
- [데이터 모양 지정에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md)   
+ [데이터 셰이프에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [셰이프 APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
- [일반적으로 shape 명령](../../../ado/guide/data/shape-commands-in-general.md)   
+ [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)   
  [셰이프 COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md)

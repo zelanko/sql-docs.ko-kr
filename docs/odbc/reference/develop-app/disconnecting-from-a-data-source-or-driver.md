@@ -1,13 +1,11 @@
 ---
-title: 데이터에서 연결을 끊으면 원본이 나 드라이버 | Microsoft Docs
+title: 데이터에서 연결을 끊는 중 원본 또는 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - disconnecting from driver [ODBC]
@@ -17,20 +15,19 @@ helpviewer_keywords:
 - connecting to driver [ODBC], disconnecting
 - ODBC drivers [ODBC], disconnecting
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2118aac1d22df8a4fbf2fbda6679f960e7ced0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2189c0fcc65fd4192e94da140e2d55ac86826137
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706421"
 ---
-# <a name="disconnecting-from-a-data-source-or-driver"></a>데이터에서 연결을 끊으면 원본이 나 드라이버
-호출 응용 프로그램 데이터 원본을 사용 하 여 완료 되 면 **SQLDisconnect**합니다. **SQLDisconnect** 연결에 할당 되는 모든 문을 해제 하 고 데이터 원본에서 드라이버 연결을 끊습니다. 트랜잭션을 진행 중인 경우 오류를 반환 합니다.  
+# <a name="disconnecting-from-a-data-source-or-driver"></a>데이터 원본 또는 드라이버 연결 끊기
+호출 응용 프로그램 데이터 원본을 사용 하 여 완료 되 면 **SQLDisconnect**합니다. **SQLDisconnect** 연결에 할당 되는 모든 문을 해제 하 고 데이터 원본에서 드라이버 연결을 끊습니다. 트랜잭션이 진행에서 중이면 오류가 발생 합니다.  
   
- 연결을 끊은 후 응용 프로그램이 호출할 수 **SQLFreeHandle** 를 연결을 해제 합니다. 응용 프로그램 프로그래밍 오류; ODBC 함수 호출에서 연결의 핸들을 사용 하려는 것이 연결을 해제 한 후 이렇게 하면 되므로 결과가 정의 되지 않은 있지만 아마도 심각한 됩니다. 때 **SQLFreeHandle** 호출 되는 드라이버 릴리스 구조는 연결에 대 한 정보를 저장 하는 데 사용 합니다.  
+ 연결을 끊은 후 응용 프로그램이 호출할 수 있습니다 **SQLFreeHandle** 를 연결 해제 합니다. 응용 프로그램 프로그래밍 오류는 ODBC 함수 호출에서 연결의 핸들을 사용 하는 것 연결을 해제 한 후 이렇게 하면에 정의 되지 않은 있지만 아마도 심각한 결과가 발생 합니다. 때 **SQLFreeHandle** 호출 구조를 연결 하는 방법에 대 한 정보를 저장 하는 데 드라이버 릴리스 합니다.  
   
- 또한 응용 프로그램 다른 데이터 원본에 연결 하거나 동일한 데이터 원본에 연결 하려면 연결을 다시 사용할 수 있습니다. 연결을 끊고, 나중에 다시 연결 하는 대신 연결 된 상태로 유지 하는 결정 해야 응용 프로그램 기록기는 각 옵션의 상대 비용을 고려 데이터 원본에 연결 하 고 연결 된 상태로 유지 연결 매체에 따라 비교적 비용이 많이 들 수 있습니다. 올바른 균형을 조절 하는 경우 응용 프로그램 에서도 가능성 및 동일한 데이터 원본에 대 한 추가 작업의 타이밍에 대 한 가정을 확인 해야 합니다.
+ 또한 응용 프로그램 서로 다른 데이터 원본에 연결 하거나 동일한 데이터 소스에 다시 연결 하려면 연결을 다시 사용할 수 있습니다. 연결을 끊고, 나중에 다시 연결 하는 대신 연결 된 상태로 유지 하는 결정 해야 각 옵션의 상대 비용을 고려 하는 응용 프로그램 작성자 데이터 원본에 연결 및 연결 된 연결 매체에 따라 비교적 비용이 많이 들 수 있습니다. 올바른 균형을 유지 하는 경우 응용 프로그램 가능성과 동일한 데이터 원본에 대 한 추가 작업의 타이밍에 대 한 가정을 또한 확인 해야 합니다.

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688561"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 모드 속성 예제 (VC + +)
-사용 하 여이 예제는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 단독 연결을 열려면 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 수행 하는 트랜잭션은 다른 트랜잭션의 격리에서 엽니다.  
+이 예제에서는 합니다 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 전용 연결을 여는 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 다른 트랜잭션의 격리 된 상태에서 수행 하는 트랜잭션을 열지 속성.  
   
 ## <a name="example"></a>예제  
   
@@ -227,25 +224,25 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **연결 모드는 없습니다.**  
-**트랜잭션이 격리 됨**  
-**사용 중인 Executive의 데이터베이스 가이드-비즈니스**  
-**컴퓨터와 요리: Surreptitious 잔고-비즈니스**  
-**컴퓨터 스트레스를 만나는 수 있습니다! -비즈니스**  
-**컴퓨터-비즈니스에 대 한 직선 얘기**  
-**실리콘 밸리 Gastronomic 처리 mod_cook**  
+ **연결 모드는 전용**  
+**트랜잭션이 격리**  
+**사용 중인 경영진의 데이터베이스 가이드-비즈니스**  
+**컴퓨터를 사용 하 여 요리: Surreptitious 잔고-비즈니스**  
+**컴퓨터 스트레스를 전투 있습니다! -비즈니스**  
+**컴퓨터-비즈니스에 대 한 직접 강연**  
+**실리콘밸리 Gastronomic 처리-mod_cook**  
 **고급 Microwave-mod_cook**  
 **컴퓨터 요리-정하지의 심리학**  
-**하지만 사용자 활용이 편한은 무엇입니까? -popular_comp**  
-**실리콘 밸리-popular_comp의 암호**  
-**Net에 티켓-popular_comp**  
-**컴퓨터 Phobic 및 비 Phobic 개인: 동작의 변형을-self_help**  
+**하지만 사용자 친숙 한이? -popular_comp**  
+**Popular_comp 실리콘밸리의 비밀**  
+**Net 티켓-popular_comp**  
+**컴퓨터 Phobic 및 비-Phobic 개인: 동작 변형-self_help**  
 **분노 적 인지 확인 합니다. -self_help**  
 **걱정-self_help 없이 수명**  
-**장기간된 데이터 Deprivation: 4 개의 사례 연구-self_help**  
-**있지만 보안: 새로운 알고리즘-self_help**  
-**Onions, Leeks와 마늘: 지중해-trad_cook의 비밀 요리**  
-**Buckingham 전송 사용-trad_cook의에서 연도 50 개**  
+**장기간된 데이터 Deprivation: 네 가지 사례 연구-self_help**  
+**감정적인 Security: 새 알고리즘을-self_help**  
+**Onions, Leeks, 및 마늘: 지중해-trad_cook의 요리 비밀**  
+**50 년 Buckingham Palace 사용-trad_cook에**  
 **Sushi, 누구나? -trad_cook**   
 ## <a name="see-also"></a>관련 항목  
  [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)   

@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73f9889b829f7829c8ac0ffc5fa15d5ae5399049
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d98ba4961ee6118ad1437380418336168708c264
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623241"
 ---
 # <a name="view-policies-dialog-box"></a>정책 보기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 이 대상에 적용되는 정책을 볼 수 있습니다. 이 대화 상자에는 관련 정책, 해당 정책 범주 및 정책에 대한 정보가 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **정책 상태**  
  정책의 대상 관련 상태를 나타냅니다. 상태를 알 수 없는 경우 비어 있습니다.  
   

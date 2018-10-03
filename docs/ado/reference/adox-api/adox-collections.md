@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 405d7b0d944342ba4e426ef7ecb14458c8a97eb6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 67cc6adbb21071484a444c72baf2abb154411a33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613402"
 ---
 # <a name="adox-collections"></a>ADOX 컬렉션
 |||  
@@ -31,10 +28,10 @@ ms.locfileid: "35284661"
 |[그룹](../../../ado/reference/adox-api/groups-collection-adox.md)|모든 포함 저장 **그룹** 카탈로그 또는 사용자의 개체입니다.|  
 |[인덱스](../../../ado/reference/adox-api/indexes-collection-adox.md)|모든 포함 **인덱스** 테이블의 개체입니다.|  
 |[키](../../../ado/reference/adox-api/keys-collection-adox.md)|모든 포함 **키** 테이블의 개체입니다.|  
-|[절차](../../../ado/reference/adox-api/procedures-collection-adox.md)|모든 포함 **프로시저** 카탈로그의 개체가 있습니다.|  
-|[테이블](../../../ado/reference/adox-api/tables-collection-adox.md)|모든 포함 **테이블** 카탈로그의 개체가 있습니다.|  
-|[사용자가](../../../ado/reference/adox-api/users-collection-adox.md)|모든 포함 저장 **사용자** 카탈로그 또는 그룹의 개체입니다.|  
-|[뷰](../../../ado/reference/adox-api/views-collection-adox.md)|모든 포함 **보기** 카탈로그의 개체가 있습니다.|  
+|[절차](../../../ado/reference/adox-api/procedures-collection-adox.md)|모든 포함 **프로시저** 카탈로그의 개체입니다.|  
+|[테이블](../../../ado/reference/adox-api/tables-collection-adox.md)|모든 포함 **테이블** 카탈로그의 개체입니다.|  
+|[사용자](../../../ado/reference/adox-api/users-collection-adox.md)|모든 포함 저장 **사용자** 카탈로그 또는 그룹의 개체입니다.|  
+|[뷰](../../../ado/reference/adox-api/views-collection-adox.md)|모든 포함 **보기** 카탈로그의 개체입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   

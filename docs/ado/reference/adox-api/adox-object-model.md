@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ca46f636c295b56de346889e672e439e2aab41a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 334f96c221e87188bc830c868170852d690e3269
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284752"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718941"
 ---
 # <a name="adox-object-model"></a>ADOX 개체 모델
-다음 다이어그램에는 개체를 표시 하 고 ADOX 관련 된 하는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목을 참조 하십시오. 또는 [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md) 및 [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)합니다.  
+다음 다이어그램에서는 개체 표시 되 고 ADOX 관련 되는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목을 참조 하거나 [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md) 하 고 [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)합니다.  
   
  ![ADOX 개체 모델](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
- 각각의 [테이블](../../../ado/reference/adox-api/table-object-adox.md), [인덱스](../../../ado/reference/adox-api/index-object-adox.md), 및 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체 역시 표준 ADO [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
+ 각 합니다 [테이블](../../../ado/reference/adox-api/table-object-adox.md)를 [인덱스](../../../ado/reference/adox-api/index-object-adox.md), 및 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체 역시 표준 ADO [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   

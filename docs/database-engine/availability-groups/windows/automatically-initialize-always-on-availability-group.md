@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 4856ae5b4feede296b0c51ccfe5abf58e9947eee
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: eccdccaaa6e448439097ba25d2c6706152544088
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684891"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Always On 가용성 그룹 자동 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ SQL Server 2016에서는 가용성 그룹의 자동 시드를 도입했습니다
 
 SQL Server 2016에서 자동 시드를 사용하려면 데이터 및 로그 파일 경로가 가용성 그룹에 참여하는 모든 SQL Server 인스턴스에서 동일해야 합니다. SQL Server 2017에서는 다른 경로를 사용할 수 있지만 모든 복제본이 하나의 플랫폼에 호스트된 경우에는 동일한 경로를 사용하는 것이 좋습니다. 복제본에 대한 플랫폼 간 가용성 그룹의 경로는 모두 다릅니다. 자세한 내용은 [디스크 레이아웃](automatic-seeding-secondary-replicas.md#disklayout)을 참조하세요.
 
-가용성 그룹 시드는 데이터베이스 미러링 끝점을 통해 통신합니다. 각 서버에서 미러링 끝점 포트에 대해 인바운드 방화벽 규칙을 엽니다.
+가용성 그룹 시드는 데이터베이스 미러링 엔드포인트를 통해 통신합니다. 각 서버에서 미러링 엔드포인트 포트에 대해 인바운드 방화벽 규칙을 엽니다.
 
 가용성 그룹의 데이터베이스가 전체 복구 모델에 포함되어야 합니다. 데이터베이스에 현재 전체 백업 및 트랜잭션 로그 백업이 있어야 합니다. 이러한 백업 파일은 자동 시드에 사용되지 않지만 가용성 그룹에 데이터베이스를 포함하기 전에 필요합니다. 
  
@@ -41,7 +38,7 @@ SQL Server 2016에서 자동 시드를 사용하려면 데이터 및 로그 파�
 
 다음 예제에서는 두 개의 노드 Windows Server 장애 조치(failover) 클러스터에 가용성 그룹을 만듭니다. 스크립트를 실행하기 전에 사용자 환경에 대한 값을 업데이트합니다.
 
-1. 끝점을 만듭니다. 각 서버에는 끝점이 필요합니다. 다음 스크립트는 수신기에 대해 TCP 포트 5022를 사용하는 끝점을 만듭니다. `<endpoint_name>` 및 `LISTENER_PORT` 를 사용자 환경에 맞게 설정하고 양쪽 서버 모두에서 스크립트를 실행합니다.
+1. 엔드포인트를 만듭니다. 각 서버에는 엔드포인트가 필요합니다. 다음 스크립트는 수신기에 대해 TCP 포트 5022를 사용하는 엔드포인트를 만듭니다. `<endpoint_name>` 및 `LISTENER_PORT` 를 사용자 환경에 맞게 설정하고 양쪽 서버 모두에서 스크립트를 실행합니다.
 
     ```sql
     CREATE ENDPOINT [<endpoint_name>] 
@@ -176,7 +173,7 @@ SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>오류 로그에서 자동 시드를 사용 중인 데이터베이스 초기화 진단
 
-자동 시드를 위해 구성된 가용성 그룹에 데이터베이스를 추가하는 경우 SQL Server는 가용성 그룹 끝점을 통해 VDI 백업을 수행합니다. 백업이 완료되고 보조 복제본이 동기화된 경우 SQL Server 오류 로그에서 정보를 검토합니다.
+자동 시드를 위해 구성된 가용성 그룹에 데이터베이스를 추가하는 경우 SQL Server는 가용성 그룹 엔드포인트를 통해 VDI 백업을 수행합니다. 백업이 완료되고 보조 복제본이 동기화된 경우 SQL Server 오류 로그에서 정보를 검토합니다.
 
 ### <a name="diagnose-database-level-health-with-extended-events"></a>확장 이벤트를 사용하여 데이터베이스 수준 상태 진단
 

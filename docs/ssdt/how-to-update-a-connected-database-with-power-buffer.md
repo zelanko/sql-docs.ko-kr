@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a9da9c532e20375581a425e8072280cf892ce67
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ef93616fb6f96911d08a56326e014305b4e818b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701531"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트
 SQL Server Data Tools 파워 버퍼 기술을 사용하면 편집한 모든 내용을 현재 세션에 저장하여 변경 내용을 연결된 데이터베이스에 손쉽게 적용할 수 있습니다. Transact\-SQL 편집기나 테이블 디자이너의 [파워 버퍼] 창에서 수행한 편집 작업으로 인해 발생한 오류는 **오류 목록** 창에 즉시 표시되므로 식별된 오류에 따라 더욱 세부적으로 문제를 해결할 수 있습니다. 변경 내용을 데이터베이스에 적용할 준비가 될 때까지 보류 중인 변경 내용을 확인할 수 있습니다. 업데이트하는 동안 SSDT에서는 사용자가 편집한 내용에 따라 ALTER 스크립트를 자동으로 만들고 잠재적인 문제를 알려 줍니다. 그러면 열려 있는 모든 파워 버퍼 창에서 누적된 모든 변경 내용을 동일한 데이터베이스에 적용하거나, ALTER 스크립트를 저장했다가 나중에 배포할 수 있습니다.  

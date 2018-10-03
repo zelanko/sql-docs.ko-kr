@@ -5,42 +5,39 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBase indexes [ODBC]
 - DBase driver [ODBC], indexes
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe8787e299d57fcac9d437be6d71023268e6c7d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66dab60f4a9a180d2a8b74ce4d0c8f4d7bf8d242
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682841"
 ---
 # <a name="dbase-indexes"></a>dBASE 인덱스
-ODBC dBASE 드라이버가 자동으로 열리고 dBASE IV 인덱스 파일을 업데이트 합니다. 사용 해야 합니다는 **인덱스 선택** dBASE 파일 dBASE III.ndx 파일과 연결 하려면 ODBC 데이터 원본 관리자를 통해 표시 되는 대화 상자.  
+ODBC dBASE 드라이버를 자동으로 열리고 dBASE IV 인덱스 파일을 업데이트 합니다. 사용 해야 합니다 **인덱스 선택** dBASE III.ndx 파일 dBASE 파일을 사용 하 여 연결 하려면 ODBC 데이터 원본 관리자를 통해 표시 되는 대화 상자.  
   
- DBASE 인덱스 만들기에는 다음과 같은 제한 사항이 적용 됩니다.  
+ DBASE 인덱스 생성에는 다음과 같은 제한이 적용 됩니다.  
   
--   모든 열 이름은 유효 해야 합니다.  
+-   열 이름을 모두 유효 해야 합니다.  
   
--   모든 열은 동일한 오름차순 또는 내림차순 되어야 합니다.  
+-   모든 열에 동일한 오름차순 또는 내림차순으로 정렬 해야 합니다.  
   
--   단일 텍스트 열 길이 100 바이트 미만 이어야 합니다.  
+-   모든 단일 텍스트 열의 길이 100 바이트 미만이 이어야 합니다.  
   
--   둘 이상의 열이 있으면 열의 모든 텍스트 열 있어야 하며 열 크기의 합계는 100 바이트 미만 이어야 합니다.  
+-   둘 이상의 열이 있는 경우 모든 열의 텍스트 열 하며 열 크기의 합계는 100 바이트 미만이 이어야 합니다.  
   
 -   메모 필드를 인덱싱할 수 없습니다.  
   
--   필드의 현재 집합에 대 한 인덱스를 지정 하지 해야 (즉, 중복 인덱스 허용 되지 않음).  
+-   필드의 현재 집합에 대 한 인덱스를 지정할 수 있어야 합니다 (즉, 중복 된 인덱스는 허용 되지 않음).  
   
--   인덱스 이름 dBASE 인덱스 명명 규칙을 일치 해야 합니다. dBASE III 각은 확장명이.ndx 별도 파일에 각 인덱스 요구 합니다. DBASE IV 단일.mdx 파일에 저장 된 태그 이름으로 인덱스를 만듭니다. .Mdx 파일은 데이터베이스 파일과 동일한 기본 이름 (예를 들어 Emp.mdx는 Emp.dbf 데이터베이스에 대 한 인덱스 파일).  
+-   인덱스 이름을 dBASE 인덱스 명명 규칙이 일치 해야 합니다. dBASE III 개.ndx 확장 별도 파일에서 각 인덱스는 필요 합니다. DBASE IV, 인덱스는 단일.mdx 파일에 저장 된 태그 이름으로 생성 됩니다. .Mdx 파일 이름이 동일한 기본 데이터베이스 파일 (예를 들어 Emp.mdx은 Emp.dbf 데이터베이스에 대 한 인덱스 파일).  
   
--   dBASE 정의 고유 인덱스를 동일한 키 값을 가진 집합에서 레코드를 하나만 인덱스에 추가 됩니다.
+-   dBASE는 인덱스에 동일한 키 값을 사용 하 여 집합에서 하나의 레코드가 추가 되는 위치 하나로 고유 인덱스를 정의 합니다.

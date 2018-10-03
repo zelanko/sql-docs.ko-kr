@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: afe0b33bf3fd1cdbd27ba215e70e3e125e124422
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4fa09fbd6d66262d22e7061adad88dc4a6b6d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649685"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>변경 집합 및 승인(Excel용 MDS 추가 기능)
 

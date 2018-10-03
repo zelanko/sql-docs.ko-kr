@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f4aa2ae97b594372e92283520a9346d1524b88a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c2dae72cf4246b2d78b246e52ca96d5f52f7183a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725271"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 다음 중 하나 필요로 **int** 값을 입력 합니다.  
   
-|값|속성|Description|  
+|값|이름|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  에 지정 된 행 *rownum* 다시 액세스 하 고 업데이트 합니다.|  
 |0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. 에 지정 된 행 *rownum* 다시 액세스 및 삭제 합니다.|  
@@ -73,7 +69,7 @@ sp_cursor  cursor, optype, rownum, table
   
  *rownum* 필요로 하는 필수 매개 변수를 **int** 값을 입력 합니다.  
   
- @shouldalert  
+ 1  
  인출 버퍼의 첫 번째 행을 나타냅니다.  
   
  2  

@@ -1,13 +1,11 @@
 ---
-title: 공급자 및 DefaultDatabase 속성 예제 (VC + +) | Microsoft Docs
+title: Provider 및 DefaultDatabase 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6efcd2a571902cedaf065982490e2d593bd22ab6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1cae1cc5e15bd945a28e5c36008faeade43b54b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709231"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vc"></a>공급자 및 DefaultDatabase 속성 예제 (VC + +)
-이 예제에서는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성 3 개를 열어 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다양 한 공급자를 사용 하 여 개체입니다. 또한 사용 하 여는 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 속성을 Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 합니다.  
+# <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 및 DefaultDatabase 속성 예제(VC++)
+이 예제에서는 합니다 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성 3 개를 열어 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다른 공급자를 사용 하 여 개체입니다. 또한를 사용 합니다 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 하는 속성입니다.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  

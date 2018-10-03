@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], deleting
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69dbe5d284c7d384805c9fb4ea8fd6d652866612
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1b089c749a1f7a9ef55d82b5c324f80d5de3dfb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270151"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667141"
 ---
 # <a name="delete-an-item-management-studio"></a>항목 삭제(Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버 인스턴스에 연결된 경우 역할 정의 및 공유 일정을 삭제할 수 있습니다. 보고서 서버의 보고서, 모델 또는 기타 항목을 삭제할 수 없습니다. 보고서 서버 내용을 삭제하려면 보고서 관리자를 대신 사용합니다. 또는 보고서 서버가 SharePoint 통합 모드용으로 구성된 경우 계정이 들어 있는 SharePoint 라이브러리의 항목 관리 기능을 사용합니다.  

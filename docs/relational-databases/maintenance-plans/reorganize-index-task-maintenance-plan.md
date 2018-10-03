@@ -4,34 +4,30 @@ ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.defrag.f1
 helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c66ac244da74b4ba19e164817e662b79aaf94d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b5e5cee73f4df9a0c445666f29f69622a2723d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725861"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>인덱스 다시 구성 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **인덱스 다시 구성 태스크** 대화 상자를 사용하여 인덱스 페이지를 보다 효율적인 검색 순서로 이동할 수 있습니다. `ALTER INDEX REORGANIZE` 데이터베이스의 경우 이 태스크를 수행하면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 문이 사용됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], backward compatibility
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursor library
 - cursor library [ODBC], backward compatibility
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60d0d5e9cb136b586fad675ad48a4b84ce353bc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32e3fcaf9c83c2613a1dc2df499f11c7df2570ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692401"
 ---
 # <a name="cursor-library-operations"></a>커서 라이브러리 작업
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- ODBC 2를 사용 하는 응용 프로그램 *.x* 드라이버에서는 ODBC 3를 호출 합니다. *x* 커서 라이브러리를 응용 프로그램 ODBC 3을 사용 하 여 할 수 있습니다. *x* ODBC 2에서 지원 되지 않는 기능 *.x* 드라이버입니다. 그러나 이러한 기능을 사용 방법, 응용 프로그램 작성기에서 주의 해야 해야 합니다. ODBC 3 사용 합니다. *x* 커서 라이브러리는 ODBC 2 있도록 하지는 않지만 *.x* 드라이버는 ODBC 3. *x* 드라이버입니다.
+ ODBC 2를 사용 하 여 작업 응용 프로그램 *.x* 드라이버 호출을 ODBC 3. *x* 커서 라이브러리를 응용 프로그램이 ODBC 3을 사용 하는 일을 할 수 있습니다. *x* ODBC 2에서 지원 되지 않는 기능 *.x* 드라이버입니다. 하지만 어떻게 이러한 기능을 사용 응용 프로그램 작성기에서 주의 해야 해야 합니다. ODBC 3 사용 합니다. *x* 커서 라이브러리는 ODBC 2 해도 *.x* 드라이버는 ODBC 3. *x* 드라이버입니다.

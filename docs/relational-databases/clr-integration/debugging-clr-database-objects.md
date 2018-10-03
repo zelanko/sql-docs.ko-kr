@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - building database objects [CLR integration], debugging
 - common language runtime [SQL Server], debugging
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a983312beb68f266c20973e70f730eb13bd89e6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1594b912a8914e253cc89ce236fd26ad7a1c32c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693861"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR 데이터베이스 개체 디버깅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "37354345"
   
 1.  Microsoft Visual Studio를 열고 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트를 만든 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스에 대한 연결을 설정합니다.  
   
-2.  새 형식을 만듭니다. **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭, 선택 **추가** 고 **새 항목...** **새 항목 추가** 창에서 **저장 프로시저**에 **사용자 정의 함수**를 **사용자 정의 형식**, ** 트리거**하십시오 **집계**, 또는 **클래스**합니다. 새 형식의 원본 파일의 이름을 지정 하 고 클릭 **추가**합니다.  
+2.  새 형식을 만듭니다. **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭, 선택 **추가** 고 **새 항목...** **새 항목 추가** 창에서 **저장 프로시저**에 **사용자 정의 함수**를 **사용자 정의 형식**,  **트리거**하십시오 **집계**, 또는 **클래스**합니다. 새 형식의 원본 파일의 이름을 지정 하 고 클릭 **추가**합니다.  
   
 3.  새 형식의 코드를 텍스트 편집기에 추가합니다. 저장 프로시저의 예제 코드는 이 항목의 뒷부분에 나오는 섹션을 참조하십시오.  
   

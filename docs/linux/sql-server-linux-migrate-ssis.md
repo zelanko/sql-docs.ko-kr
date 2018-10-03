@@ -8,16 +8,14 @@ manager: craigg
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d01a53524bf03e0ea8318c41b05b9cc59499de33
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 07072a2c6cc724c26c6ae2f6f7950d199cd57df7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713225"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697571"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>추출, 변환 및 SSIS 사용 하 여 Linux에서 데이터를 로드 합니다.
 

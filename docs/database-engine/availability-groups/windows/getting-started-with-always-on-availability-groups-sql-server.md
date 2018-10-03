@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-caps.latest.revision: 53
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f47f3b711c14dec6a55caa8681ebd3afc2e584f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1d499c14c346983478fb2d7291ae5b334414edd5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023802"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688371"
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 시작(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "43023802"
 ||단계|링크|  
 |------|----------|-----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하도록 설정합니다.** 가용성 그룹에 참여할 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능을 사용하도록 설정해야 합니다.<br /><br /> **필수 조건:**  호스트 컴퓨터는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드여야 합니다.<br /><br /> 다른 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 사용하도록 설정합니다.|[Always On 가용성 그룹 활성화 및 비활성화](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**데이터베이스 미러링 끝점을 만듭니다(없는 경우).** 각 서버 인스턴스에 [데이터베이스 미러링 끝점](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)이 있는지 확인합니다. 서버 인스턴스는 이 끝점을 사용하여 다른 서버 인스턴스에서의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결을 수신합니다.|데이터베이스 미러링 끝점이 있는지 여부를 확인하려면 <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Windows 인증의 경우**  데이터베이스 미러링 끝점을 만들려면 다음을 사용합니다.<br /><br /> [새 가용성 그룹 마법사](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **인증서 인증의 경우** 데이터베이스 미러링 끝점을 만드는 데 사용되는 도구:[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**데이터베이스 미러링 엔드포인트를 만듭니다(없는 경우).** 각 서버 인스턴스에 [데이터베이스 미러링 엔드포인트](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)가 있는지 확인합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결을 수신합니다.|데이터베이스 미러링 엔드포인트가 있는지 여부를 확인하려면 <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Windows 인증의 경우**  데이터베이스 미러링 엔드포인트를 만들려면 다음을 사용합니다.<br /><br /> [새 가용성 그룹 마법사](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **인증서 인증의 경우** 데이터베이스 미러링 엔드포인트를 만드는 데 사용되는 도구:[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   

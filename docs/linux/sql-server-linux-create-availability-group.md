@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 21ca1eea093121107b2e04cff40b6f749a6c6bda
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692141"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16355eaa114c10a412db39940a8902d1b361d735
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700753"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +45,16 @@ sysmail_help_profileaccount_sp
   
 ## <a name="arguments"></a>인수  
  [ **@profile_id** = ] *profile_id*  
- 나열할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 NULL입니다. 어느 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
+ 나열할 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
  [ **@profile_name** = ] **'***profile_name***'**  
- 나열할 프로필의 이름입니다. *profile_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
+ 나열할 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
  [ **@account_id** = ] *account_id*  
- 나열할 계정 ID입니다. *account_id* 은 **int**, 기본값은 NULL입니다. 때 *account_id* 및 *account_name* 이 모두 null 인, 프로필에 있는 모든 계정을 나열 합니다.  
+ 나열할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
   
  [ **@account_name** =] **'***account_name***'**  
- 나열할 계정의 이름입니다. *account_name* 은 **sysname**, 기본값은 NULL입니다. 때 *account_id* 및 *account_name* 이 모두 null 인, 프로필에 있는 모든 계정을 나열 합니다.  
+ 나열할 계정의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -75,13 +71,13 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|계정 이름입니다.|  
 |**sequence_number**|**int**|프로필 내 계정의 시퀀스 번호입니다.|  
   
-## <a name="remarks"></a>주의  
- No *profile_id* 또는 *profile_name* 지정 하면이 저장된 프로시저 인스턴스에 있는 모든 프로필에 대 한 정보를 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ 없는 경우 *profile_id* 하거나 *profile_name* 을 지정 하면이 저장된 프로시저 인스턴스의 모든 프로필에 대 한 정보를 반환 합니다.  
   
- 저장된 프로시저 **sysmail_help_profileaccount_sp** 에 **msdb** 데이터베이스에 있으며가 소유 하 고는 **dbo** 스키마입니다. 현재 데이터베이스 없는 경우 세 부분으로 이루어진 이름으로 프로시저를 실행 해야 **msdb**합니다.  
+ 저장된 프로시저 **sysmail_help_profileaccount_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
   
-## <a name="permissions"></a>Permissions  
- 실행의 구성원에 게이 프로시저 기본값에 대 한 권한을 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 이 프로시저 기본의 멤버에 대 한 권한을 실행 합니다 **sysadmin** 고정된 서버 역할입니다.  
   
 ## <a name="examples"></a>예  
  **A. 이름별으로 특정 프로필에 대 한 계정 나열**  
@@ -138,10 +134,10 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [데이터베이스 메일 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

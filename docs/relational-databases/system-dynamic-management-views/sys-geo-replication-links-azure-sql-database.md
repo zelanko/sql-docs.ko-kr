@@ -5,10 +5,7 @@ ms.date: 10/18/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_links_TSQL
@@ -19,19 +16,18 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e59dcd6550c006b5a1e0f3e3be6440669e05021
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b37ca384c2d3402a3b9ec01a4b9d6ccbfb7d402
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610113"
 ---
-# <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
+# <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   지역에서 복제 파트너 관계의 주 및 보조 데이터베이스 간의 각 복제 링크에 대 한 행을 포함 합니다. 이 보기는 논리적 master 데이터베이스에 상주합니다.  
@@ -40,7 +36,7 @@ ms.locfileid: "37997745"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Sys.databases 뷰의 현재 데이터베이스의 ID입니다.|  
 |start_date|**datetimeoffset**|데이터베이스 복제를 시작한 경우 지역 SQL Database 데이터 센터의 UTC 시간|  
-|modify_date|**datetimeoffset**|데이터베이스 지역 복제를 완료 하는 경우 지역 SQL Database 데이터 센터에서 UTC 시간입니다. 새 데이터베이스는이 시간을 기준으로 주 데이터베이스와 동기화 됩니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+|modify_date|**datetimeoffset**|데이터베이스 지역 복제를 완료 하는 경우 지역 SQL Database 데이터 센터에서 UTC 시간입니다. 새 데이터베이스는이 시간을 기준으로 주 데이터베이스와 동기화 됩니다. .|  
 |link_guid|**uniqueidentifier**|지역에서 복제 링크의 고유 ID입니다.|  
 |partner_server|**sysname**|지역에서 복제 된 데이터베이스를 포함 하는 논리 서버의 이름입니다.|  
 |partner_database|**sysname**|연결된 된 논리 서버에서 지역에서 복제 된 데이터베이스의 이름입니다.|  

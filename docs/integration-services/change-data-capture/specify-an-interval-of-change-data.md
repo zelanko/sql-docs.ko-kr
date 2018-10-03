@@ -5,32 +5,29 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: edb489423b701d665c9c3b845c342dec6131a16d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: dcf5d6989b7485ddd993b39d3f9f0f35c1f357ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335717"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654431"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정
-  변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 첫 번째 태스크는 변경 간격의 끝점을 계산하는 것입니다. 이러한 끝점은 **datetime** 값이며 패키지에서 나중에 사용하기 위해 패키지 변수에 저장됩니다.  
+  변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 첫 번째 태스크는 변경 간격의 엔드포인트를 계산하는 것입니다. 이러한 엔드포인트는 **datetime** 값이며 패키지에서 나중에 사용하기 위해 패키지 변수에 저장됩니다.  
   
 > [!NOTE]  
 >  제어 흐름 디자인의 전체 프로세스에 대한 설명은 [데이터 캡처 변경&#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)을 참조하세요.  
   
-## <a name="set-up-package-variables-for-the-endpoints"></a>끝점에 대한 패키지 변수 설정  
- SQL 실행 태스크를 구성하여 끝점을 계산하기 전에 끝점을 저장할 패키지 변수를 정의해야 합니다.  
+## <a name="set-up-package-variables-for-the-endpoints"></a>엔드포인트에 대한 패키지 변수 설정  
+ SQL 실행 태스크를 구성하여 엔드포인트를 계산하기 전에 엔드포인트를 저장할 패키지 변수를 정의해야 합니다.  
   
 #### <a name="to-set-up-package-variables"></a>패키지 변수를 설정하려면  
   
@@ -46,10 +43,10 @@ ms.locfileid: "35335717"
   
          이 예에서는 변수 이름으로 ExtractEndTime을 사용합니다.  
   
- 여러 자식 패키지를 실행하는 마스터 패키지에서 끝점을 계산하는 경우 부모 패키지 변수 구성을 사용하여 이러한 변수 값을 각 자식 패키지에 전달할 수 있습니다. 자세한 내용은 [패키지 실행 태스크](../../integration-services/control-flow/execute-package-task.md) 및 [자식 패키지에서 변수 및 매개 변수의 값 사용](../../integration-services/packages/legacy-package-deployment-ssis.md#child)을 참조하세요.  
+ 여러 자식 패키지를 실행하는 마스터 패키지에서 엔드포인트를 계산하는 경우 부모 패키지 변수 구성을 사용하여 이러한 변수 값을 각 자식 패키지에 전달할 수 있습니다. 자세한 내용은 [패키지 실행 태스크](../../integration-services/control-flow/execute-package-task.md) 및 [자식 패키지에서 변수 및 매개 변수의 값 사용](../../integration-services/packages/legacy-package-deployment-ssis.md#child)을 참조하세요.  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>변경 데이터의 시작 지점 및 끝 지점 계산  
- 간격 끝점에 대한 패키지 변수를 설정한 후 해당 끝점의 실제 값을 계산하고 이러한 값을 해당 패키지 변수에 매핑할 수 있습니다. 이러한 끝점은 **datetime** 값이므로 **datetime** 값을 계산하거나 사용할 수 있는 함수를 사용해야 합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어와 Transact-SQL 모두에 **datetime** 값을 사용하는 함수가 있습니다.  
+ 간격 엔드포인트에 대한 패키지 변수를 설정한 후 해당 엔드포인트의 실제 값을 계산하고 이러한 값을 해당 패키지 변수에 매핑할 수 있습니다. 이러한 엔드포인트는 **datetime** 값이므로 **datetime** 값을 계산하거나 사용할 수 있는 함수를 사용해야 합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어와 Transact-SQL 모두에 **datetime** 값을 사용하는 함수가 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datetime **값을 사용하는** 식 언어의 함수  
  -   [DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)  
@@ -71,11 +68,11 @@ ms.locfileid: "35335717"
  **datetime** 값을 사용하는 Transact-SQL의 함수  
  [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- 이러한 **datetime** 함수 중 하나를 사용하여 끝점을 계산하기 전에 간격이 고정되어 있고 정기적으로 발생하는지 확인해야 합니다. 일반적으로 원본 테이블에서 발생한 변경 내용을 정기적으로 대상 테이블에 적용합니다. 예를 들어 이러한 변경 내용을 매시간, 매일 또는 매주 적용할 수 있습니다.  
+ 이러한 **datetime** 함수 중 하나를 사용하여 엔드포인트를 계산하기 전에 간격이 고정되어 있고 정기적으로 발생하는지 확인해야 합니다. 일반적으로 원본 테이블에서 발생한 변경 내용을 정기적으로 대상 테이블에 적용합니다. 예를 들어 이러한 변경 내용을 매시간, 매일 또는 매주 적용할 수 있습니다.  
   
- 변경 간격이 고정적인지, 아니면 보다 임의적인지 이해한 후 끝점을 계산할 수 있습니다.  
+ 변경 간격이 고정적인지, 아니면 보다 임의적인지 이해한 후 엔드포인트를 계산할 수 있습니다.  
   
--   **시작 날짜 및 시간 계산**. 이전 로드의 종료 날짜 및 시간을 현재 시작 날짜 및 시간으로 사용합니다. 증분 로드에 고정 간격을 사용하는 경우 Transact-SQL 또는 **식 언어의** datetime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 함수를 사용하여 이 값을 계산할 수 있습니다. 그렇지 않은 경우 실행 간 끝점을 유지하고 SQL 실행 태스크 또는 스크립트 태스크를 사용하여 이전 끝점을 로드해야 할 수 있습니다.  
+-   **시작 날짜 및 시간 계산**. 이전 로드의 종료 날짜 및 시간을 현재 시작 날짜 및 시간으로 사용합니다. 증분 로드에 고정 간격을 사용하는 경우 Transact-SQL 또는 **식 언어의** datetime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 함수를 사용하여 이 값을 계산할 수 있습니다. 그렇지 않은 경우 실행 간 엔드포인트를 유지하고 SQL 실행 태스크 또는 스크립트 태스크를 사용하여 이전 엔드포인트를 로드해야 할 수 있습니다.  
   
 -   **종료 날짜 및 시간 계산**. 증분 로드에 고정 간격을 사용하는 경우 현재 종료 날짜 및 시간을 시작 날짜 및 시간의 오프셋으로 계산합니다. Transact-SQL 또는 **식 언어의** datetime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 함수를 사용하여 이 값을 계산할 수도 있습니다.  
   

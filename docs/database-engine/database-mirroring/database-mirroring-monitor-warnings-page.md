@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0d76cedf7479e222ba01fef70c81c72486202fc1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 39044dfd57f4ae6a05a85e7cf21d4e7def5fb1c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311692"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659521"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.locfileid: "35311692"
 |**보내지 않은 가장 오래된 트랜잭션 기간이 임계값을 초과하는 경우 경고**|보내지 않은 가장 오래된 트랜잭션|32044|  
 |**미러 커밋 오버헤드가 임계값을 초과하는 경우 경고**|미러 커밋 오버헤드|32045|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  전체 액세스 권한의 경우 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버만 주요 성능 메트릭에 대해 경고 임계값을 구성하고 볼 수 있습니다.  
   
  **dbm_monitor** 역할의 멤버 자격을 사용하면 **경고** 페이지에서 최신 상태 행만 볼 수 있습니다.  

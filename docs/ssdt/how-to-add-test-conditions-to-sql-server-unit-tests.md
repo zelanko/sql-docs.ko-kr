@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86e450a6eb6c1e169d5c9dc6147f0ab3cc2a9fb6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 63446667e82beef51798f7b1d97e3b13911898b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731231"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>방법: SQL Server 단위 테스트에 테스트 조건 추가
 **SQL Server 단위 테스트 디자이너**를 사용하여 SQL Server 단위 테스트에 테스트 조건을 추가할 수 있습니다. 테스트 클래스를 저장하면 해당 테스트 조건이 테스트 프로젝트에서 테스트 클래스를 포함하는 소스 코드 파일에 Visual C\# 또는 Visual Basic 코드로 자동 저장됩니다. 테스트 조건을 저장한 후에는 **SQL Server 단위 테스트 디자이너**나 해당 소스 코드 파일에서 테스트 조건을 편집할 수 있습니다.  

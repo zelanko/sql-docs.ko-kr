@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC], ORDER BY clause
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - GROUP BY clause [ODBC]
 - SQL grammar [ODBC], GROUP BY clause
 ms.assetid: eafcc668-9244-4e1e-a857-d9bd2585ed0c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 446c967b49b92663b7902c16ca4227a0fa4ec0b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5684abc8100700146c3dbb7f9db8ff75c5132b6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682927"
 ---
-# <a name="order-by-with-group-by"></a>GROUP BY와 ORDER BY
-GROUP BY에 있는 모든 식에서 ORDER BY 수행할 수 *식 목록* 또는 결과에 모든 열 집합입니다.
+# <a name="order-by-with-group-by"></a>ORDER BY와 GROUP BY
+ORDER BY GROUP by 식에서 수행할 수 있습니다 *식 목록* 또는 모든 결과의 열을 설정 합니다.

@@ -1,13 +1,11 @@
 ---
-title: 업데이트 및 CancelUpdate 메서드 예제 (VB) | Microsoft Docs
+title: Update 및 CancelUpdate 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0ba0f097bb0885478360f4ea2cc34b2d829f54
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 506d35b93cd873aed344ebb5dd5b019d6cbf3867
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282752"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662299"
 ---
-# <a name="update-and-cancelupdate-methods-example-vb"></a>업데이트 및 CancelUpdate 메서드 예제 (VB)
-이 예제에서는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드와 함께 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
+# <a name="update-and-cancelupdate-methods-example-vb"></a>Update 및 CancelUpdate 메서드 예제(VB)
+이 예제에서는 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드와 함께 합니다 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
   
 ```  
 'BeginUpdateVB  
@@ -118,7 +115,7 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- 이 예제에서는 **업데이트** 메서드와 함께 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드.  
+ 이 예제에서는 합니다 **업데이트** 메서드와 함께 합니다 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드.  
   
 ```  
 Attribute VB_Name = "Update"  

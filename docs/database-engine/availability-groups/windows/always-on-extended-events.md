@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b6152a89af59acd56478b6dabee5d29f8d009f9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b010e4b913d6e7259306cceb73d61cebcdb13b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32862558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629531"
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Always On 가용성 그룹 확장 이벤트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |속성|availability_replica_state_change|  
 |범주|alwayson|  
@@ -98,7 +95,7 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|Description|  
+|속성|Type_name|설명|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
@@ -121,7 +118,7 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |속성|availability_group_lease_expired|  
 |범주|alwayson|  
@@ -129,7 +126,7 @@ GO
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|Description|  
+|속성|Type_name|설명|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
@@ -149,7 +146,7 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |범주|alwayson|  
@@ -157,7 +154,7 @@ GO
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|Description|  
+|속성|Type_name|설명|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
@@ -184,9 +181,9 @@ GO
 ```  
   
 ###  <a name="BKMK_error_reported"></a> error_reported(여러 오류 번호): 전송 또는 연결 문제의 경우  
- 각 실패한 이벤트는 가용성 그룹이 의존하는 전송 또는 데이터베이스 미러링 끝점에서 연결 문제가 발생했음을 나타냅니다.  
+ 각 실패한 이벤트는 가용성 그룹이 의존하는 전송 또는 데이터베이스 미러링 엔드포인트에서 연결 문제가 발생했음을 나타냅니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |속성|error_reported<br /><br /> 필터링할 번호: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |범주|오류|  
@@ -194,24 +191,24 @@ GO
   
 #### <a name="error-numbers-to-filter"></a>필터링할 오류 번호  
   
-|오류 번호|Description|  
+|오류 번호|설명|  
 |------------------|-----------------|  
 |35201|가용성 복제본 '%ls'에 연결 설정을 시도하는 동안 연결 시간 제한이 발생했습니다.|  
 |35202|ID [%ls]인 가용성 복제본 '%ls'에서 ID [%ls]인 '%ls'까지 가용성 그룹 '%ls'에 대한 연결이 설정되었습니다.  이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.|  
 |35206|가용성 복제본 '%ls'에 대해 이전에 설정된 연결에서 연결 시간 제한이 발생했습니다.|  
-|35204|끝점 종료로 인해 인스턴스 '%ls' 및 '%ls' 간의 연결이 사용하지 않도록 설정되었습니다.|  
+|35204|엔드포인트 종료로 인해 인스턴스 '%ls' 및 '%ls' 간의 연결이 사용하지 않도록 설정되었습니다.|  
 |시간 제한 + 연결됨|  
 |35207|오류 %d 심각도 %d 상태 %d 때문에 복제본 ID '%ls'에서 복제본 ID '%ls'까지 가용성 그룹 ID '%ls'에 대한 연결 시도가 실패했습니다.  심각도 %d 상태 %d. (이는 좋은 DBA 사용을 포함하지 않을 수 있습니다. 그러한 경우 나중에 확인하여 제거하십시오.)|  
-|9642|Service Broker/데이터베이스 미러링 전송 연결 끝점에서 오류가 발생했습니다. 오류: %i 상태: %i. (근거리 끝점 역할: %S_MSG  원거리 끝점 주소: '%.*hs') 오류: %i 상태: %i. (근거리 끝점 역할: %S_MSG 원거리 끝점 주소: '%.\*hs')|  
-|9666|%S_MSG 끝점이 사용할 수 없거나 정지된 상태에 있습니다.|  
-|9691|%S_MSG 끝점이 연결 수신 대기를 중지했습니다.|  
-|9692|%S_MSG 끝점은 다른 프로세스에 사용 중이므로 포트 %d에서 수신 대기할 수 없습니다.|  
-|9693|%S_MSG 끝점이 다음 오류로 인해 연결에 대해 수신 대기할 수 없습니다: '%.*ls'.|  
-|28034|연결 핸드셰이크가 실패했습니다. 로그인 '%.*ls'에 끝점에 대한 CONNECT 권한이 없습니다. 상태 %d.|  
-|28036|연결 핸드셰이크가 실패했습니다. 이 끝점에 사용된 인증서를 찾을 수 없습니다: %S_MSG. master 데이터베이스에서 DBCC CHECKDB를 사용하여 끝점의 메타데이터 무결성을 확인하십시오. 상태 %d.|  
-|28080|연결 핸드셰이크가 실패했습니다. %S_MSG 끝점이 구성되어 있지 않습니다. 상태 %d.|  
-|28091|인증이 없는 %S_MSG에 대한 시작 끝점은 지원되지 않습니다.|  
-|33309|기본 %S_MSG 끝점 구성이 아직 로드되지 않았으므로 클러스터 끝점을 시작할 수 없습니다.|  
+|9642|Service Broker/데이터베이스 미러링 전송 연결 엔드포인트에서 오류가 발생했습니다. 오류: %i 상태: %i. (근거리 엔드포인트 역할: %S_MSG  원거리 엔드포인트 주소: '%.*hs') 오류: %i 상태: %i. (근거리 엔드포인트 역할: %S_MSG 원거리 엔드포인트 주소: '%.\*hs')|  
+|9666|%S_MSG 엔드포인트가 사용할 수 없거나 정지된 상태에 있습니다.|  
+|9691|%S_MSG 엔드포인트가 연결 수신 대기를 중지했습니다.|  
+|9692|%S_MSG 엔드포인트는 다른 프로세스에 사용 중이므로 포트 %d에서 수신 대기할 수 없습니다.|  
+|9693|%S_MSG 엔드포인트가 다음 오류로 인해 연결에 대해 수신 대기할 수 없습니다: '%.*ls'.|  
+|28034|연결 핸드셰이크가 실패했습니다. 로그인 '%.*ls'에 엔드포인트에 대한 CONNECT 권한이 없습니다. 상태 %d.|  
+|28036|연결 핸드셰이크가 실패했습니다. 이 엔드포인트에 사용된 인증서를 찾을 수 없습니다: %S_MSG. master 데이터베이스에서 DBCC CHECKDB를 사용하여 엔드포인트의 메타데이터 무결성을 확인하세요. 상태 %d.|  
+|28080|연결 핸드셰이크가 실패했습니다. %S_MSG 엔드포인트가 구성되어 있지 않습니다. 상태 %d.|  
+|28091|인증이 없는 %S_MSG에 대한 시작 엔드포인트는 지원되지 않습니다.|  
+|33309|기본 %S_MSG 엔드포인트 구성이 아직 로드되지 않았으므로 클러스터 엔드포인트를 시작할 수 없습니다.|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
   
@@ -249,7 +246,7 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |속성|data_movement_suspend_resume|  
 |범주|Alwayson|  
@@ -259,7 +256,7 @@ GO
   
 ||||  
 |-|-|-|  
-|속성|Type_name|Description|  
+|속성|Type_name|설명|  
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|사용 가능한 경우 가용성 그룹의 이름입니다.|  
 |availability_replica_id|guid|가용성 복제본의 ID입니다.|  
@@ -292,7 +289,7 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |속성|alwayson_ddl_execution|  
 |범주|alwayson|  
@@ -300,7 +297,7 @@ GO
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|Description|  
+|속성|Type_name|설명|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
@@ -325,7 +322,7 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |속성|availability_replica_manager_state_change|  
 |범주|alwayson|  
@@ -333,7 +330,7 @@ GO
   
 #### <a name="event-fields"></a>이벤트 필드  
   
-|속성|Type_name|Description|  
+|속성|Type_name|설명|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|가용성 복제본 관리자의 현재 상태입니다.<br /><br /> 온라인<br /><br /> 오프라인<br /><br /> WaitingForClusterCommunication|  
   
@@ -356,7 +353,7 @@ GO
   
 #### <a name="event-information"></a>이벤트 정보  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |속성|error_reported<br /><br /> 오류 번호 1480: REPLICATION_TYPE_MSG 데이터베이스 "DATABASE_NAME"이 REASON_MSG로 인해 역할을 "OLD_ROLE"에서 "NEW_ROLE"로 변경함|  
 |범주|오류|  

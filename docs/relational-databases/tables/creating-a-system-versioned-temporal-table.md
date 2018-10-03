@@ -5,22 +5,19 @@ ms.date: 05/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d19226b82190e17a9a0d8ee2a7c32bd8e1d1ab4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078156"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639421"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -97,8 +94,7 @@ WITH
   
 -   지정된 스키마가 없는 경우 **CREATE TABLE** 문이 실패합니다.  
   
--   
-            **HISTORY_TABLE** 매개 변수에 의해 지정한 테이블이 이미 있는 경우 [스키마 일관성 및 임시 데이터 일관성](http://msdn.microsoft.com/library/dn935015.aspx)측면에서 새로 생성된 temporal 테이블에 대해 유효성이 검사됩니다. 잘못된 기록 테이블을 지정하면 **CREATE TABLE** 문이 실패합니다.  
+-   **HISTORY_TABLE** 매개 변수에 의해 지정한 테이블이 이미 있는 경우 [스키마 일관성 및 임시 데이터 일관성](http://msdn.microsoft.com/library/dn935015.aspx)측면에서 새로 생성된 temporal 테이블에 대해 유효성이 검사됩니다. 잘못된 기록 테이블을 지정하면 **CREATE TABLE** 문이 실패합니다.  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기  
  사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기는 특정 저장소 옵션 및 추가 인덱스를 가진 기록 테이블을 지정하려는 경우에 편리한 옵션입니다. 아래 예제에서는 생성될 temporal 테이블과 정렬된 스키마를 가진 사용자 정의 기록 테이블을 만듭니다. 이 사용자 정의 기록 테이블에 대해 포인트 조회를 위해 클러스터형 columnstore 인덱스 및 추가 비클러스터형 rowstore(Btree) 인덱스를 만듭니다. 이 사용자 정의 기록 테이블이 생성된 후 사용자 정의 기록 테이블을 기본 기록 테이블로 지정하는 시스템 버전 temporal 테이블이 생성됩니다.  

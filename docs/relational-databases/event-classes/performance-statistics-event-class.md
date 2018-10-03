@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 769e8f9277b88dba35e2a62bdd0c702fbfce1a82
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a9e698b750e37e595592299e9b7e41a60e868d79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059244"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640297"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "43059244"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |SqlHandle|**image**|sys.dm_exec_sql_text 동적 관리 뷰를 사용하여 일괄 처리 SQL 텍스트를 가져오는 데 사용할 수 있는 SQL 핸들입니다.|63|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|일괄 처리의 SQL 텍스트입니다.|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|일괄 처리의 SQL 텍스트입니다.|1|사용자 계정 컨트롤|  
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
@@ -65,7 +62,7 @@ ms.locfileid: "43059244"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |SqlHandle|**image**|dm_exec_sql_text 동적 관리 뷰를 사용하여 저장 프로시저의 SQL 텍스트를 가져오는 데 사용할 수 있는 SQL 핸들입니다.|63|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|NULL|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|NULL|1|사용자 계정 컨트롤|  
 |PlanHandle|**image**|저장 프로시저에 대한 컴파일된 계획의 계획 핸들입니다. sys.dm_exec_query_plan 동적 관리 뷰를 사용하여 XML 계획을 가져오는 데 사용할 수 있습니다.|65|사용자 계정 컨트롤|  
 |ObjectType|**int**|이벤트와 관련된 개체 유형을 나타내는 값입니다.<br /><br /> 8272 = 저장 프로시저|28|사용자 계정 컨트롤|  
 |BigintData2|**bigint**|컴파일 시 사용되는 총 메모리(KB)입니다.|53|사용자 계정 컨트롤|  
@@ -89,7 +86,7 @@ ms.locfileid: "43059244"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |SqlHandle|**image**|SQL 핸들입니다. dm_exec_sql_text 동적 관리 뷰를 사용하여 일괄 처리 SQL 텍스트를 가져오는 데 사용할 수 있습니다.|63|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|NULL|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|NULL|1|사용자 계정 컨트롤|  
 |PlanHandle|**image**|일괄 처리에 대한 컴파일된 계획의 계획 핸들입니다. dm_exec_query_plan 동적 관리 뷰를 사용하여 일괄 처리 XML 계획을 가져오는 데 사용할 수 있습니다.|65|사용자 계정 컨트롤|  
 |BigintData2|**bigint**|컴파일 시 사용되는 총 메모리(KB)입니다.|53|사용자 계정 컨트롤|  
 |CPU|**int**|컴파일 시 소요되는 총 CPU 시간(마이크로초)입니다.|18|사용자 계정 컨트롤|  
@@ -112,7 +109,7 @@ ms.locfileid: "43059244"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |SqlHandle|**image**|dm_exec_sql_text 동적 관리 뷰를 사용하여 저장 프로시저나 일괄 처리 SQL 텍스트를 가져오는 데 사용할 수 있는 SQL 핸들입니다.|63|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|QueryExecutionStats|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|QueryExecutionStats|1|사용자 계정 컨트롤|  
 |PlanHandle|**image**|저장 프로시저나 일괄 처리에 대한 컴파일된 계획의 계획 핸들입니다. dm_exec_query_plan 동적 관리 뷰를 사용하여 XML 계획을 가져오는 데 사용할 수 있습니다.|65|사용자 계정 컨트롤|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
   
@@ -132,7 +129,7 @@ ms.locfileid: "43059244"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |SqlHandle|**image**|dm_exec_sql_text 동적 관리 뷰를 사용하여 실행된 저장 프로시저 SQL 텍스트를 가져오는 데 사용할 수 있는 SQL 핸들입니다.|63|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|ProcedureExecutionStats|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|ProcedureExecutionStats|1|사용자 계정 컨트롤|  
 |PlanHandle|**image**|저장 프로시저에 대한 컴파일된 계획의 계획 핸들입니다. dm_exec_query_plan 동적 관리 뷰를 사용하여 XML 계획을 가져오는 데 사용할 수 있습니다.|65|사용자 계정 컨트롤|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
   
@@ -152,7 +149,7 @@ ms.locfileid: "43059244"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |SqlHandle|**image**|dm_exec_sql_text 동적 관리 뷰를 사용하여 트리거의 SQL 텍스트를 가져오는 데 사용할 수 있는 SQL 핸들입니다.|63|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|TriggerExecutionStats|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|TriggerExecutionStats|1|사용자 계정 컨트롤|  
 |PlanHandle|**image**|트리거에 대한 컴파일된 계획의 계획 핸들입니다. dm_exec_query_plan 동적 관리 뷰를 사용하여 XML 계획을 가져오는 데 사용할 수 있습니다.|65|사용자 계정 컨트롤|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
   

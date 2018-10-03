@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Skipline method [ADO]
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5a2c6c5808abdcb13acb00c967ef35eeb943148
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b0e96900fdac55e97e3481ba5198e0f51d659877
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282052"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713761"
 ---
 # <a name="skipline-method"></a>SkipLine 메서드
-텍스트를 읽을 때 한 줄 전체를 건너뜁니다 [스트림](../../../ado/reference/ado-api/stream-object-ado.md)합니다.  
+텍스트를 읽을 때 줄 전체를 건너뜁니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,9 +35,9 @@ Stream.SkipLine
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 및 다음 선 구분 기호가까지 모든 문자는 무시 됩니다. 기본적으로는 [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 은 **adCRLF**합니다. 지난 건너뛸 하려고 하면 [EOS](../../../ado/reference/ado-api/eos-property.md), 현재 위치에 유지 됩니다 **EOS**합니다.  
+ 다음 줄 구분 기호를 포함 하는 모든 문자는 무시 됩니다. 기본적으로 [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 됩니다 **adCRLF**합니다. 건너뛰어야 하려고 [EOS](../../../ado/reference/ado-api/eos-property.md), 현재 위치가 유지 됩니다 **EOS**합니다.  
   
- **SkipLine** 메서드 텍스트 스트림 함께 사용 됩니다 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 은 **adTypeText**).  
+ **SkipLine** 메서드는 텍스트 스트림 사용 됩니다 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 는 **adTypeText**).  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

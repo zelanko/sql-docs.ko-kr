@@ -5,38 +5,35 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a761fe38b7d162d7e43ae2f9148626dadff57e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696281"
 ---
-# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access 드라이버)
+# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo(Access 드라이버)
 > [!NOTE]  
->  이 항목에서는 액세스 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 액세스 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
- **SQLGetInfo** SQL_FILE_USAGE 정보 유형을 지원 합니다. 반환 된 값이 드라이버 파일을 데이터 원본에서 직접 처리 하는 방법을 나타내는 16 비트 정수.  
+ **SQLGetInfo** SQL_FILE_USAGE 정보 유형을 지원 합니다. 반환된 값은 드라이버 파일을 데이터 원본에서 직접 처리 하는 방법을 나타내는 16 비트 정수.  
   
--   SQL_FILE_NOT_SUPPORTED — 드라이버는 단일 계층 드라이버가 아닙니다.  
+-   SQL_FILE_NOT_SUPPORTED-드라이버는 단일 계층 드라이버 없습니다.  
   
--   SQL_FILE_TABLE-단일 계층 드라이버에서는 파일 데이터 원본의 테이블로 처리 합니다.  
+-   SQL_FILE_TABLE-단일 계층 드라이버 파일 데이터 원본에서 테이블로 처리합니다.  
   
--   SQL_FILE_QUALIFIER-단일 계층 드라이버 한정자로 데이터 원본 파일을 처리합니다.  
+-   단일 계층 드라이버 SQL_FILE_QUALIFIER-파일 데이터 원본에 한정자로 처리합니다.  
   
- ODBC 드라이버는 각 파일은 전체 데이터베이스 SQL_FILE_QUALIFIER를 반환 합니다.  
+ ODBC 드라이버는 각 파일의 전체 데이터베이스 이므로 SQL_FILE_QUALIFIER를 반환 합니다.  
   
 ## <a name="sqlbookmarkpersistence"></a>SQL_BOOKMARK_PERSISTENCE  
  SQL_BP_SCROLL &AMP;#124; SQL_BP_UPDATE [1]  
@@ -104,7 +101,7 @@ ms.locfileid: "32904855"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  버전 1.0 및 1.1 지원 되지 않습니다. 또한 Microsoft Access 버전 3.0, 7.0 및 97 데이터 형식에 차이가 없습니다.  
+>  버전 1.0 및 1.1을 사용 하는 것이 없습니다. 또한 Microsoft Access 버전 3.0, 7.0 및 97 데이터 형식에 차이가 없습니다.  
   
 ## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -131,7 +128,7 @@ ms.locfileid: "32904855"
   
  DATABASE  
   
- 데이터베이스 이름  
+ DATABASENAME  
   
  DATETIME  
   

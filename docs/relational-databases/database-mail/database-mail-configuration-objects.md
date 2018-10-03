@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a4cdccc289b8348b443be415beed1656f5c3dde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f59d1724d3808bba92e70d7ca64e933555266
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640302"
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,14 +130,14 @@ ms.locfileid: "32931858"
   
 ### <a name="database-mail-settings"></a>데이터베이스 메일 설정  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[sysmail_configure_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|데이터베이스 메일의 구성 설정을 변경합니다.|  
 |[sysmail_help_configure_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|데이터베이스 메일의 구성 설정을 표시합니다.|  
   
 ### <a name="accounts-and-profiles"></a>계정 및 프로필  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|데이터베이스 메일 프로필에 메일 계정을 추가합니다.|  
 |[sysmail_delete_account_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|데이터베이스 메일 계정을 삭제합니다.|  
@@ -156,7 +152,7 @@ ms.locfileid: "32931858"
   
 ### <a name="security"></a>보안  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|데이터베이스 보안 주체에 대해 데이터베이스 메일 프로필을 사용할 수 있는 권한을 부여합니다.|  
 |[sysmail_delete_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|공개 또는 개인 데이터베이스 메일 프로필을 사용할 수 있는 데이터베이스 보안 주체에 대한 사용 권한을 제거합니다.|  
@@ -165,7 +161,7 @@ ms.locfileid: "32931858"
   
 ### <a name="system-state"></a>시스템 상태  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[sysmail_start_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|데이터베이스 메일 외부 프로그램 및 관련 SQL Service Broker 큐를 시작합니다.|  
 |[sysmail_stop_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|데이터베이스 메일 외부 프로그램 및 관련 SQL Service Broker 큐를 중지합니다.|  

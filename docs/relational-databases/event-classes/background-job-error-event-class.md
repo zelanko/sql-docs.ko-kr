@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53a5f6acd5f2b74d10aa2d40957e52ebc16abce9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5689c86e530fd7bf7f78cb58f3e1e53f9b731bc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690631"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.locfileid: "43064276"
 |**Severity**|**int**|마지막 시도에서 발생한 오류의 심각도입니다(**EventSubClass** 1에만 해당).|20|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이 작업이 만들어진 시간입니다.|14|사용자 계정 컨트롤|  
 |**State**|**int**|마지막 시도에서 발생한 오류의 상태입니다(**EventSubClass** 1에만 해당).|30|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|이벤트 하위 클래스 값의 텍스트 설명입니다.|@shouldalert|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|이벤트 하위 클래스 값의 텍스트 설명입니다.|1|사용자 계정 컨트롤|  
 |**형식**|**int**|작업 유형입니다.|57|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  

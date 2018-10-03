@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - expanded-QName function
 - fn:expanded-QName function
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cbf18272b3cb8cfebd24f09c8ae33f50a18da4e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739841"
 ---
-# <a name="functions-related-to-qnames---expanded-qname"></a>Expanded-qname QNames 관련 함수
+# <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   URI에 지정 된 네임 스페이스를 사용 하 여 xs: qname 유형의 값을 반환 합니다 *$paramURI* 에 지정 된 로컬 이름 및 합니다 *$paramLocal*합니다. 하는 경우 *$paramURI* 빈 문자열 이거나 빈 시퀀스인 경우 네임 스페이스를 나타냅니다.  
