@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d1a54777ee9330873dedf7073803b4a3a3c3db0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86d72f79d19dfb45f4ee005762d3d8de520aa981
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951298"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747012"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951298"
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 카운터를 설명합니다.  
   
-|SQL Server Locks 카운터|Description|  
+|SQL Server Locks 카운터|설명|  
 |-------------------------------|-----------------|  
 |**Average Wait Time(ms)**|대기한 각 잠금 요청에 대한 평균 대기 시간(밀리초)입니다.|  
 |**Average Wait Time Base**|내부용으로만 사용할 수 있습니다.|
@@ -45,7 +41,7 @@ ms.locfileid: "32951298"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 잠글 수 있는 리소스는 다음과 같습니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |**_Total**|모든 잠금 정보입니다.|  
 |**AllocUnit**|할당 단위에 대한 잠금입니다.|  

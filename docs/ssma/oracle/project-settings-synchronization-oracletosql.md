@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8ec281788502666ab8384bf082c0a47e20e81727
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f1dde13356f684d7fa6d7273156485bd6b5d07fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780731"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>프로젝트 설정(동기화)(OracleToSQL)
 [동기화] 페이지의 **프로젝트 설정** 대화 상자에는 어떻게 SSMA 로드 하 고 새로 고침 같은 데이터베이스 개체, 테이블 및 저장된 프로시저를 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

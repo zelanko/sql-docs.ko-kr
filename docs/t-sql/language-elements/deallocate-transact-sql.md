@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DEALLOCATE
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c05655cfa13393c4687296ea2c62acbc987fa59
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 715803e27516df04c0fb1267ceabc8a162d5da4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36247895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747831"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +98,7 @@ GO
   
  커서 변수는 명시적으로 할당 해제할 필요가 없으며 범위를 벗어나면 암시적으로 할당 해제됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  DEALLOCATE 권한은 기본적으로 모든 유효한 사용자에게 부여됩니다.  
   
 ## <a name="examples"></a>예  

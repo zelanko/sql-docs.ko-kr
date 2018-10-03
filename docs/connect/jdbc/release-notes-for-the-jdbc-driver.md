@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737261"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 드라이버에 대한 릴리스 정보
 
@@ -114,7 +111,8 @@ JDK 8.0 및 7.0 외에도 JDK(Java Development Kit) 버전 9.0을 지원합니�
 
 JDBC 드라이버는 이제 SQL Server를 사용 하 여 사용할 sql_variant 데이터 형식이 지원 합니다. Sql_variant 제한 아래 테이블 반환 매개 변수 (TVP) 사용 하 여 BulkCopy 등의 기능을 사용 하 여 지원 됩니다.
 
-1. 날짜 값에 대 한: sql_variant 열에 저장 하는 datetime/smalldatetime/날짜 값이 포함 된 테이블을 채우기 위한 TVP를 사용할 때 결과 집합에서 getDateTime()/getSmallDateTime()/getDate() 메서드를 호출 작동 하지 않습니다 하 고 다음 예외를 throw 합니다.  `java java.lang.String cannot be cast to java.sql.Timestamp` 해결 방법: "getstring ()" 또는 "getobject ()" 메서드를 대신 사용 합니다.
+1. 날짜 값에 대 한: sql_variant 열에 저장 하는 datetime/smalldatetime/날짜 값이 포함 된 테이블을 채우기 위한 TVP를 사용할 때 결과 집합에서 getDateTime()/getSmallDateTime()/getDate() 메서드를 호출 작동 하지 않습니다 하 고 다음 예외를 throw 합니다. `java java.lang.String cannot be cast to java.sql.Timestamp`
+    해결 방법: "getString()" 또는 "getObject()" 메서드를 대신 사용합니다.
 
 2. null 값에 대한 SQL VARIANT로 TVP 사용
 

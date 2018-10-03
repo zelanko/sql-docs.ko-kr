@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECRYPTBYASYMKEY
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - DECRYPTBYASYMKEY function
 - decryption [SQL Server], asymmetric keys
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1e002b65eb3136947e3785d6068b695001338447
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: cd2e34d7ceca82bf0fa9c0509092e276b1538414
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740761"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="remarks"></a>Remarks  
 대칭 암호화/암호 해독, 비대칭 키 암호화/암호 해독과 비교하여 비용이 많습니다. 큰 데이터 집합을 작업할 때(예: 테이블에 저장된 사용자 데이터) 개발자는 비대칭 키 암호화/암호 해독을 피하는 것이 좋습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 `DECRYPTBYASYMKEY`는 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

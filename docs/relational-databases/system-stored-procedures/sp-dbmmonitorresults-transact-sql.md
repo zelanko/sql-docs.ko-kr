@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorresults (Transact SQL) | Microsoft Docs
+title: sp_dbmmonitorresults (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702751"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +61,11 @@ sp_dbmmonitorresults database_name
   
  5 = 마지막 2일 동안의 행  
   
- 6 = 마지막 100 행  
+ 6 = 마지막 100 개 행  
   
  7 = 마지막 500 행  
   
- 8 = 마지막 1, 000 행  
+ 8 = 마지막 1,000 행  
   
  9 = 마지막 1,000,000개의 행  
   
@@ -78,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  0 = 데이터베이스의 상태를 업데이트하지 않습니다. 결과는 마지막 두 개의 행만 사용하여 계산되고 두 행의 사용 기간은 상태 테이블의 새로 고침 시기에 따라 달라집니다.  
   
- 1 = 호출 하 여 데이터베이스에 대 한 상태 업데이트 **sp_dbmmonitorupdate** 결과 계산 하기 전에. 그러나 상태 테이블이 이전 15 초 또는 사용자 내에서 업데이트 된 경우 구성원이 아니므로의 **sysadmin** 고정 서버 역할, **sp_dbmmonitorresults** 상태를 업데이트 하지 않고 실행 합니다.  
+ 1 = 호출 하 여 데이터베이스에 대 한 상태를 업데이트 **sp_dbmmonitorupdate** 결과 계산 하기 전에 합니다. 그러나 상태 테이블이 이전 15 초, 또는 사용자 내에 업데이트 된 없으면의 멤버는 **sysadmin** 고정 서버 역할 **sp_dbmmonitorresults** 상태를 업데이트 하지 않고 실행 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  지정한 데이터베이스에 대해 요청된 개수의 기록 상태 행을 반환합니다. 각 행에는 다음 정보가 들어 있습니다.  
@@ -104,14 +100,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|미러 데이터베이스가 현재 동기화되는 주 서버의 대략적인 시스템 클럭 시간입니다. 이 값은 주 서버 인스턴스에서만 의미가 있습니다.|  
 |**local_time**|**datetime**|이 행이 업데이트된 로컬 서버 인스턴스의 시스템 클럭 시간입니다.|  
   
-## <a name="remarks"></a>주의  
- **sp_dbmmonitorresults** 의 컨텍스트에서만 실행할 수는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_dbmmonitorresults** 의 컨텍스트에서만 실행할 수 있습니다 합니다 **msdb** 데이터베이스입니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **sysadmin** 고정된 서버 역할 또는 **dbm_monitor** 고정된 데이터베이스 역할에는 **msdb** 데이터베이스입니다. **dbm_monitor** 역할을 사용 하면 해당 멤버 데이터베이스 미러링 상태를 보고 하지만 하지 업데이트 하지만 하지을 보거나 구성 하려면 데이터베이스 미러링 이벤트입니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **sysadmin** 고정된 서버 역할 또는 **dbm_monitor** 고정된 데이터베이스 역할을 **msdb** 데이터베이스. 합니다 **dbm_monitor** 역할에 해당 멤버 데이터베이스 미러링 상태를 보고 하지만 하지 업데이트 하지만 하지 보기 또는 구성 데이터베이스 미러링 이벤트를 사용 하도록 설정 합니다.  
   
 > [!NOTE]  
->  처음으로 **sp_dbmmonitorupdate** 실행을 만듭니다는 **dbm_monitor** 고정된 데이터베이스 역할에는 **msdb** 데이터베이스입니다. 멤버는 **sysadmin** 고정된 서버 역할에 임의의 사용자를 추가할 수는 **dbm_monitor** 고정된 데이터베이스 역할입니다.  
+>  처음 **sp_dbmmonitorupdate** 실행 만듭니다 합니다 **dbm_monitor** 고정된 데이터베이스 역할에는 **msdb** 데이터베이스. 멤버는 **sysadmin** 고정된 서버 역할에 임의의 사용자를 추가할 수는 **dbm_monitor** 고정된 데이터베이스 역할.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 데이터베이스의 상태를 업데이트하지 않고 이전 2시간 동안 기록된 행을 반환합니다.  
@@ -121,7 +117,7 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   

@@ -4,17 +4,16 @@ ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3bcc1ef9a96baae8f0a98b0b57488b3fb4dcd76
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758660"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Reporting Services 구성 파일 수정(RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 응용 프로그램 설정을 구성 파일 집합에 저장합니다. 설치 프로그램은 사용자가 설치하는 각 보고서 서버 인스턴스에 대한 구성 파일을 만듭니다. 각 파일 내에서 값은 설치 중 설정되거나 도구 및 응용 프로그램을 사용하여 작업을 위해 서버를 구성할 때 설정됩니다. 경우에 따라 파일을 직접 수정하여 고급 설정을 추가하거나 구성해야 합니다. 구성 설정은 XML 요소나 특성으로 지정됩니다. XML과 구성 파일에 대해 이해하고 있으면 텍스트나 코드 편집기를 사용하여 사용자 정의 가능한 설정을 수정할 수 있습니다.  

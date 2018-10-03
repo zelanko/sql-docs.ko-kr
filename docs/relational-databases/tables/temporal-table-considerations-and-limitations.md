@@ -5,22 +5,19 @@ ms.date: 05/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f41683335b34d452df44dca56edf4851c97e0f9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a238d92b6fbb9e025f304f0c5e957ff2d15a6975
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770461"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,8 +38,7 @@ ms.locfileid: "43065074"
   
 -   임시 및 기록 테이블은 **FILETABLE** 이 될 수 없고 **FILESTREAM** 을 제외한 지원되는 모든 데이터 형식의 열을 포함할 수 있습니다. 그 이유는 **FILETABLE** 및 **FILESTREAM** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서의 데이터 조작을 허용하여 시스템 버전 관리가 보장되지 않기 때문입니다.  
   
--   
-            **(n)varchar(max)**, **varbinary(max)**, **(n)text** 및 **image**등의 temporal 테이블은 BLOB 데이터 형식을 지원하는 반면 크기로 인해 상당한 저장소 비용이 부과되고 성능이 저하됩니다. 따라서 이러한 데이터 유형을 사용하는 경우 시스템 설계 시 유의해야 합니다.  
+-   **(n)varchar(max)**, **varbinary(max)**, **(n)text** 및 **image**등의 temporal 테이블은 BLOB 데이터 형식을 지원하는 반면 크기로 인해 상당한 저장소 비용이 부과되고 성능이 저하됩니다. 따라서 이러한 데이터 유형을 사용하는 경우 시스템 설계 시 유의해야 합니다.  
   
 -   기록 테이블은 현재 테이블과 동일한 데이터베이스에 만들어야 합니다. **Linked Server** 에서의 임시 쿼리는 지원되지 않습니다.  
   
@@ -73,8 +69,7 @@ ms.locfileid: "43065074"
     -   **스냅숏 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우, 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서(‘AS OF’ 쿼리 포함)에서 사용됩니다.    
         각 구독자가 로컬 시스템 시계에 의존하여 임시 데이터가 일치하지 않을 수 있으므로 다중 구독자를 사용할 수 없습니다.  
   
-    -   
-            **병합 복제:** temporal 테이블에서 지원되지 않습니다.  
+    -   **병합 복제:** temporal 테이블에서 지원되지 않습니다.  
   
 -   일반 쿼리는 현재 테이블의 데이터에만 영향을 줍니다. 기록 테이블에서 데이터를 쿼리하려면 임시 쿼리를 사용해야 합니다. 이것에 대한 설명은 이 문서의 임시 데이터 쿼리 섹션에서 차후에 설명됩니다.  
   

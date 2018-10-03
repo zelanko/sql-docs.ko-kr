@@ -5,21 +5,18 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 96897ca8889af1c227e6304a358d0ab2b8154e72
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 58257752fa22f6b3536e80c3dd25da8cca924b01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723851"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>메모리 액세스에 최적화된 시스템 버전 관리 임시 테이블 성능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

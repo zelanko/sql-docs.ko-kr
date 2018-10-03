@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d84c243d448376490b50835278b936c18fe0a47e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682505"
 ---
 # <a name="send-mail-task"></a>메일 보내기 태스크
   메일 보내기 태스크는 전자 메일 메시지를 보냅니다. 메일 보내기 태스크를 사용하면 패키지 워크플로의 태스크 성공 여부에 관계없이 패키지가 메시지를 보낼 수 있거나 런타임 시 패키지에서 발생한 이벤트에 응답하여 메시지를 보낼 수 있습니다. 예를 들어 이 태스크는 데이터베이스 백업 태스크의 성공 또는 실패에 대해 데이터베이스 관리자에게 알릴 수 있습니다.  
@@ -91,7 +88,7 @@ ms.locfileid: "35331897"
 ## <a name="send-mail-task-editor-general-page"></a>메일 보내기 태스크 편집기(일반 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메일 보내기 태스크의 이름을 지정하고 설명할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **이름**  
  메일 보내기 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -103,7 +100,7 @@ ms.locfileid: "35331897"
 ## <a name="send-mail-task-editor-mail-page"></a>메일 보내기 태스크 편집기(메일 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **메일** 페이지를 사용하여 받는 사람, 메시지 유형 및 메시지 우선 순위를 지정할 수 있습니다. 또한 메시지에 파일을 첨부할 수 있습니다. 메시지 텍스트는 사용자가 제공한 문자열, 텍스트가 포함된 파일에 대한 파일 연결 또는 텍스트가 포함된 변수 이름일 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **SMTPConnection**  
  목록에서 SMTP 연결 관리자를 선택하거나 **\<새 연결...>** 을 클릭하여 새 연결 관리자를 만듭니다.  
   

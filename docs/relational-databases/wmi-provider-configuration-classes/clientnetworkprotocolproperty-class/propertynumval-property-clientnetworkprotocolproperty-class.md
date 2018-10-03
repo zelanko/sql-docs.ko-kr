@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - PropertyNumVal Property (ClientNetworkProtocolProperty Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a231464059647349170bedcd9f8168d1c30c50b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae42fc53393a0da5df267edb47ddc1eba0c59fc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705291"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal 속성(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +38,11 @@ object.PropertyNumVal [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체*  
+ *object*  
  [클라이언트에서 사용하는 네트워크 프로토콜의 특성을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  현재 속성의 숫자 값을 지정하는**int32** 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   

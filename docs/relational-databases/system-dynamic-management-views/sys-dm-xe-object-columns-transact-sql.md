@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_object_columns (Transact SQL) | Microsoft Docs
+title: sys.dm_xe_object_columns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_object_columns
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b7123f557674afe6016138f05803a8d13753c6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732180"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ ms.locfileid: "34465809"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|열 이름입니다. 이름은 개체 내에서 고유 합니다. Null을 허용하지 않습니다.|  
+|NAME|**nvarchar(60)**|열 이름입니다. 이름은 개체 내에서 고유 합니다. Null을 허용하지 않습니다.|  
 |column_id|**int**|열 식별자입니다. column_id는 column_type과 함께 사용할 경우 개체 내에서 고유 합니다. Null을 허용하지 않습니다.|  
 |object_name|**nvarchar(60)**|해당 열이 속한 개체의 이름입니다. sys.dm_xe_objects.id와 다 대 일 관계를 갖습니다. Null을 허용하지 않습니다.|  
 |object_package_guid|**uniqueidentifier**|개체가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
@@ -52,7 +49,7 @@ ms.locfileid: "34465809"
 |capabilities_desc|**nvarchar(256)**|해당 개체 열의 기능에 대한 설명입니다. 이 값은 다음 중 하나일 수 있습니다.<br /><br /> 필수. 부모 개체를 이벤트 세션에 바인딩하는 경우 값을 설정해야 합니다.<br /><br /> NULL|  
 |description|**nvarchar(256)**|해당 개체 열에 대한 설명입니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
@@ -62,7 +59,7 @@ ms.locfileid: "34465809"
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

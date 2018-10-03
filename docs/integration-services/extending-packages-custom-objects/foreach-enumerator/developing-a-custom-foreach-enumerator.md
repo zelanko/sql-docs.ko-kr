@@ -5,27 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services]
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f72d1c6d5f97f85e86bed30a380ea0c8fc0b62f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: edc8126c3154c486ba9712f4f841b3561261cb06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669731"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>사용자 지정 ForEach 열거자 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 foreach 열거자를 사용하여 컬렉션의 항목을 반복하고 각 요소에 대해 동일한 태스크를 수행합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 폴더의 모든 파일, 데이터베이스의 모든 테이블 또는 패키지 변수에 저장된 목록의 모든 요소와 같이 가장 일반적으로 사용되는 컬렉션을 지원하는 다양한 foreach 열거자가 포함되어 있습니다. 제공된 foreach 열거자 및 컬렉션이 개발자의 요구 사항을 완전하게 충족시키지 못할 경우에는 사용자 지정 foreach 열거자를 만들 수 있습니다.  

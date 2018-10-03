@@ -5,9 +5,7 @@ ms.date: 01/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQLPERF
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 43
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 4f8229b7765655bd75c2e0bfa2dc804c56a6fffa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe8d7ae38915a335276e661e3ce5f28c61b9a40e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261139"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711001"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ WITH NO_INFOMSGS
  
 트랜잭션 로그는 데이터베이스에서 수행된 각 트랜잭션을 기록합니다. 자세한 내용은 [트랜잭션 로그 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)을 참조하세요.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `DBCC SQLPERF(LOGSPACE)`를 실행하려면 서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다. 대기 및 래치 통계를 다시 설정하려면 서버에 대한 `ALTER SERVER STATE` 권한이 필요합니다.
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 및 중요 비즈니스용 계층에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준, 기본 및 범용 계층에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정이 필요합니다. 대기 및 래치 통계 재설정은 지원되지 않습니다.

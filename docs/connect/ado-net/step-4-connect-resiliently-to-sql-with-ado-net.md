@@ -5,23 +5,20 @@ ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ed6eca2928ea396c03e3b10a20978fe17987264
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9a812aacbbbd87ba8fc38479be7d62a0fc9401b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42788574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731371"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결
 

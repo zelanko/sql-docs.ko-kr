@@ -5,25 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab0815d1822894f4c5e64c4103a713d98d6654b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aad19b3cb15c02e5db8e2635641a88f298c898c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917138"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713171"
 ---
 # <a name="installation-and-configuration-components-reference"></a>설치 및 구성 구성 요소 참조
 > [!NOTE]  
->  Windows XP 및 Windows Server 2003부터 ODBC Windows 운영 체제에 포함 됩니다. 이전 버전의 Windows에서 ODBC만 명시적으로 설치 해야 합니다.  
+>  Windows XP 및 Windows Server 2003부터 ODBC Windows 운영 체제에 포함 됩니다. 이전 버전의 Windows에서 ODBC를 명시적으로 설치 해야 합니다.  
   
  다음 섹션에서는 설치 하 고 ODBC를 구성 하는 데 사용 하는 구성 요소에 대 한 정보를 제공 합니다.  
   

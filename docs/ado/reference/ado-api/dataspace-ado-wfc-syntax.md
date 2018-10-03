@@ -6,26 +6,23 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6213c4f5246395911cc562a64246007500d0059e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 94a539fb2ba3285bd8bb5c3668879695598725a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718351"
 ---
-# <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO-WFC 구문)
-**createObject** 의 메서드는 **DataSpace** 클라이언트 응용 프로그램 요청을 처리할 두 비즈니스 개체를 지정 하는 클래스 (*progid*) 및 통신 프로토콜 와 서버 (*연결*). **createObject** 반환는 [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) 서버를 나타내는 개체입니다.  
+# <a name="dataspace-ado---wfc-syntax"></a>데이터스페이스(ADO - WFC 구문)
+합니다 **createObject** 메서드는 **DataSpace** 클라이언트 응용 프로그램 요청을 처리 하는 데 두 비즈니스 개체를 지정 하는 클래스 (*progid*) 및 통신 프로토콜 및 서버 (*연결*). **createObject** 반환 된 [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) 서버를 나타내는 개체입니다.  
   
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   

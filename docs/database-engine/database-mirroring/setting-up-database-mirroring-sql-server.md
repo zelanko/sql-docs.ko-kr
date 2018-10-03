@@ -5,23 +5,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9a549eea881a23e62ab8e8a158a2c36c07955a3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 38cd77776070b6a7c493e68eaf42da49c79ba425
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728794"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>데이터베이스 미러링 설정(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,19 +31,19 @@ ms.locfileid: "35312272"
 ##  <a name="PrepareInstances"></a> 미러 서버를 호스팅하도록 서버 인스턴스 준비  
  각 데이터베이스 미러링 세션에 대해 다음을 준비합니다.  
   
-1.  주 서버, 미러 서버 및 미러링 모니터 서버(있는 경우)는 별도의 호스트 시스템에 있는 개별 서버 인스턴스로 호스팅되어야 합니다. 각 서버 인스턴스에는 데이터베이스 미러링 끝점이 필요합니다. 데이터베이스 미러링 끝점을 만들어야 할 경우 다른 서버 인스턴스에 액세스할 수 있는지 확인합니다.  
+1.  주 서버, 미러 서버 및 미러링 모니터 서버(있는 경우)는 별도의 호스트 시스템에 있는 개별 서버 인스턴스로 호스팅되어야 합니다. 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다. 데이터베이스 미러링 엔드포인트를 만들어야 할 경우 다른 서버 인스턴스에 액세스할 수 있는지 확인합니다.  
   
-     서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 끝점의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)을 참조하세요.  
+     서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)을 참조하세요.  
   
      네트워크 액세스에 대한 요구 사항은 다음과 같은 인증 형태에 따라 달라집니다.  
   
     -   **Windows 인증을 사용하는 경우**  
   
-         서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 인스턴스는 다른 인스턴스의 **master** 데이터베이스에서 로그인을 필요로 합니다. 따라서 로그인이 없으면 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
+         서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 인스턴스는 다른 인스턴스의 **master** 데이터베이스에서 로그인을 필요로 합니다. 따라서 로그인이 없으면 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
   
     -   **인증서를 사용하는 경우**  
   
-         지정된 서버 인스턴스에서 데이터베이스 미러링에 인증서 인증을 사용하려면 시스템 관리자가 아웃바운드 및 인바운드 연결 모두에 인증서를 사용하도록 각 서버 인스턴스를 구성해야 합니다. 이 경우 아웃바운드 연결을 먼저 구성해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
+         지정된 서버 인스턴스에서 데이터베이스 미러링에 인증서 인증을 사용하려면 시스템 관리자가 아웃바운드 및 인바운드 연결 모두에 인증서를 사용하도록 각 서버 인스턴스를 구성해야 합니다. 이 경우 아웃바운드 연결을 먼저 구성해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
 2.  미러 서버에 모든 데이터베이스 사용자에 대한 로그인이 있는지 확인하십시오. 자세한 내용은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)을 참조하세요.  
   
@@ -107,7 +104,7 @@ ms.locfileid: "35312272"
  일시 중단된 세션을 재개하기 전에 미러 데이터베이스를 만들거나 준비하는 단계를 요약합니다. 또한 방법 도움말 항목에 대한 링크를 제공합니다.  
   
  [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
- 서버 네트워크 주소의 구문, 주소로 서버 인스턴스의 데이터베이스 미러링 끝점을 식별하는 방법 및 시스템의 정규화된 도메인 이름을 찾는 방법에 대해 설명합니다.  
+ 서버 네트워크 주소의 구문, 주소로 서버 인스턴스의 데이터베이스 미러링 엔드포인트를 식별하는 방법 및 시스템의 정규화된 도메인 이름을 찾는 방법에 대해 설명합니다.  
   
  [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
  데이터베이스 미러링 보안 구성 마법사를 사용하여 데이터베이스에서 데이터베이스 미러링을 시작하는 방법에 대해 설명합니다.  
@@ -133,13 +130,13 @@ ms.locfileid: "35312272"
   
  **Transact-SQL**  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   
--   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   

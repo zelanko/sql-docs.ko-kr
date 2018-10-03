@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d78162f149b96831d61ebcc0960db67887dc853c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3806621fcc6ebfc696b57f84eac8a067b83ee33d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719111"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Linux의 SQL Server 장애 조치 클러스터 인스턴스-작동
 
@@ -60,7 +58,7 @@ Red Hat Enterprise Linux (RHEL) 제목을 또는 Ubuntu 서버는 수동 장애 
 ## <a name = "#slesFailover"></a> 수동 장애 조치 (SLES)
 
 
-Enterprise Server SLES (Suse Linux)를 사용 하 여는 `migrate` SQL Server FCI 수동 장애 조치 하는 명령입니다. 예를 들어:
+Enterprise Server SLES (Suse Linux)를 사용 하 여는 `migrate` SQL Server FCI 수동 장애 조치 하는 명령입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>

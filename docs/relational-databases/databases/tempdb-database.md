@@ -5,12 +5,8 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: databases
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -23,12 +19,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2591c5c37bd0d37b7591eb6dee629d92fcd5fb3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 93ccc48a8dc85bc788bb8ea35de6e6c57e031fa6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676381"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,11 +109,11 @@ ms.locfileid: "43083656"
 
 |SLO|최대 Tempdb 데이터 파일 크기(MB)|tempdb 데이터 파일 수|최대 tempdb 데이터 크기(MB)|
 |---|---:|---:|---:|
-|Basic|14,225|@shouldalert|14,225|
-|S0|14,225|@shouldalert|14,225| 
-|S1|14,225|@shouldalert|14,225| 
-|S2|14,225| @shouldalert|14,225| 
-|S3|32,768|@shouldalert|32,768| 
+|Basic|14,225|1|14,225|
+|S0|14,225|1|14,225| 
+|S1|14,225|1|14,225| 
+|S2|14,225| 1|14,225| 
+|S3|32,768|1|32,768| 
 |S4|32,768|2|65,536| 
 |S6|32,768|3|98,304| 
 |S7|32,768|6|196,608| 

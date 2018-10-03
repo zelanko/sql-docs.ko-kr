@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
@@ -20,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 11d465beac74de1198e0803ea704c512fbd45240
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4d55a57a1730abafa2f389c252be7c25681dbe89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664641"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>사용자 지정 데이터 처리 확장 프로그램에 대한 연결 지정
   보고서 서버에서 타사의 사용자 지정 데이터 처리 확장 프로그램을 만들거나 사용하여 지원되는 데이터 원본의 데이터 처리 기능을 향상시키거나 기본 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 사용할 수 없는 추가 형식의 데이터 원본을 지원할 수 있습니다. 연결은 구현에 따라 다르게 처리됩니다. 데이터 처리 확장 프로그램에 사용될 수 있는 구현은 다음과 같습니다.  

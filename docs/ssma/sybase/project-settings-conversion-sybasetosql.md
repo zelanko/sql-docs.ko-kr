@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dc51a7149b1af55db3a79bc1dae811a2480e351f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 5ca907bb6ce3a1f8e298c5ecefa920815cf6a8be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712399"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>프로젝트 설정(변환)(SybaseToSQL)
 변환 페이지의 **프로젝트 설정** 대화 상자에는 SSMA Sybase 적응형 Server Enterprise (ASE) 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문입니다.  

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0ff86dbb264194a0d4693d88c6eb14cc629d344
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 35d62927e8f7579c207ddaa4cd5c7fe04a4cd3f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654351"
 ---
 # <a name="understanding-concurrency-control"></a>동시성 제어 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,32 +1,29 @@
 ---
-title: 메서드 예제 (VB)를 추가 하는 프로시저 | Microsoft Docs
+title: Procedures Append 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cd39f90ccd8aef159cfd88c5dc921b802a54bae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 14de33e27d184c4474aeb6eb601f7d34969c47a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811607"
 ---
-# <a name="procedures-append-method-example-vb"></a>메서드 예제 (VB)를 추가 하는 절차
-다음 코드에 사용 하는 방법을 보여 줍니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션 [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) 메서드를 기본 데이터 원본에 새 프로시저를 만듭니다.  
+# <a name="procedures-append-method-example-vb"></a>Procedures Append 메서드 예제(VB)
+다음 코드를 사용 하는 방법에 설명 된 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션 [추가](../../../ado/reference/adox-api/append-method-adox-procedures.md) 기본 데이터 원본에 새 프로시저를 만드는 방법.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -80,6 +77,6 @@ End Sub
 ## <a name="see-also"></a>관련 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [프로시저 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

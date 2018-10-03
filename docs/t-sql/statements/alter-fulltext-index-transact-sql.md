@@ -5,9 +5,7 @@ ms.date: 04/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 95
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ed53bf8d3bb8034f7a55e8329bb14ba24bbccb73
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662101"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -288,7 +285,7 @@ ALTER FULLTEXT INDEX ON table_name
     > [!NOTE]  
     >  `spl_2`과 같은 다른 검색 속성 목록에는 다시 작성이 필요합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용자는 테이블 또는 인덱싱된 뷰에 대한 ALTER 권한을 가지거나 **sysadmin** 고정 서버 역할, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
  SET STOPLIST를 지정한 경우 사용자는 중지 목록에 대한 REFERENCES 권한이 있어야 합니다. SET SEARCH PROPERTY LIST가 지정된 경우 사용자가 검색 속성 목록에 대한 REFERENCES 권한이 있어야 합니다. 지정한 중지 목록이나 검색 속성 목록의 소유자는 ALTER FULLTEXT CATALOG 권한을 가진 경우 REFERENCES 권한을 부여할 수 있습니다.  

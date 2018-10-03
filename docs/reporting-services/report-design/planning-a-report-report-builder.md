@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53abce8b3b80d9219311cf95d4bb4ef391ae22b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab5c01a12200ed62cfc462fa25d3d75a95fd8589
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716631"
 ---
 # <a name="planning-a-report-report-builder"></a>보고서 계획(보고서 작성기)
   보고서 작성기를 사용하여 다양한 종류의 페이지가 매겨진 보고서를 만들 수 있습니다. 예를 들어 판매 데이터, 마케팅 및 판매 추세를 요약하거나 자세히 보여 주는 보고서를 만들거나 운영 보고서 또는 대시보드를 만들 수 있습니다. 판매 주문, 제품 카탈로그 또는 양식 편지와 같은 서식 있는 텍스트를 사용한 보고서를 만들 수도 있습니다. 이러한 보고서는 모두 보고서 작성기에 있는 동일한 기본 빌딩 블록을 다르게 조합하여 만듭니다. 보고서를 만들기 전에 먼저 계획을 세우면 보다 유용하고 이해하기 쉬운 보고서를 만들 수 있습니다. 보고서 생성 작업을 시작하기 전에 고려해야 할 사항은 다음과 같습니다.  

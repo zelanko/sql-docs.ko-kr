@@ -4,17 +4,16 @@ ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 103d852f27f2f70f598a4bf1d09bb59fcdbcb8d8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: add4499483ce463c73a6ba7b82bd79befa784485
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717561"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>사용자 지정 보안 확장 프로그램 설치 방법
 

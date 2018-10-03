@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EventLog event class
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b341033bd881046cb040227ab7de591ed8d845f5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d906594e1db5f12123c34088e284916bd892c5d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678331"
 ---
 # <a name="eventlog-event-class"></a>EventLog 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "43058331"
 |Severity|**int**|예외적인 심각도입니다.|20|사용자 계정 컨트롤|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|오류 메시지 텍스트입니다(있는 경우).|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|오류 메시지 텍스트입니다(있는 경우).|1|사용자 계정 컨트롤|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  

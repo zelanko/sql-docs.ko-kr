@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -20,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04ed90b51adb15f64dcfe5cda3a1352d68d04967
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: da0c23b3fcc746fa2ad8614f88ce539386e71b6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266294"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775321"
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 페이지가 매겨진 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 디자인 화면은 창의 가운데에 있고 그 주위에 리본과 창이 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 이 문서에서는 보고서 리소스를 추가, 선택 및 구성하고 보고서 항목 속성을 변경하는 데 사용하는 창에 대해 설명합니다.  

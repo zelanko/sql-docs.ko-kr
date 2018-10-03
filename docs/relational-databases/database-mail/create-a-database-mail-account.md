@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
 - accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ce4f4cb379819cb6b3b0ff292bcd0578738b0b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9afd0984ab74a516b6958aa71d6e23a1e8c439af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923878"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696602"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

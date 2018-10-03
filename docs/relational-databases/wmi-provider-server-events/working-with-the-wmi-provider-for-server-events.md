@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event notifications [WMI]
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 98f1dfb796dbd30eb6e4d7f4e20d9bf37854d902
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd79d77b846bf3d29604c725b5114741ad5b3f56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667801"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 작업
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +45,10 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
  msdb의 Service Broker GUID는 공급자의 대상 서비스에 대한 위치이기 때문에 특별한 관심 대상입니다.  
   
- 사용할 수 있도록 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ENABLE_BROKER SET 옵션을 사용 하 여 데이터베이스는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문.  
+ 사용할 수 있도록 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ENABLE_BROKER SET 옵션을 사용 하 여 데이터베이스를 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문입니다.  
   
 ## <a name="specifying-a-connection-string"></a>연결 문자열 지정  
- 응용 프로그램에서는 공급자가 정의한 WMI 네임스페이스에 연결하여 서버 이벤트용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 전달합니다. Windows WMI 서비스는 이 네임스페이스를 공급자 DLL인 Sqlwep.dll에 매핑하여 메모리에 로드합니다. 각 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 기본값으로 사용 하는 고유한 WMI 네임 스페이스가: \\ \\.\\ *루트*\Microsoft\SqlServer\ServerEvents\\*instance_name*합니다. *instance_name* 의 기본 설치의 기본값은 MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 응용 프로그램에서는 공급자가 정의한 WMI 네임스페이스에 연결하여 서버 이벤트용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 전달합니다. Windows WMI 서비스는 이 네임스페이스를 공급자 DLL인 Sqlwep.dll에 매핑하여 메모리에 로드합니다. 인스턴스마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고유한 WMI 네임 스페이스가 있으며 기본값은: \\ \\.\\ *루트*\Microsoft\SqlServer\ServerEvents\\*instance_name*합니다. *instance_name* 의 기본 설치의 기본값은 MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="permissions-and-server-authentication"></a>권한과 서버 인증  
  서버 이벤트용 WMI 공급자에 액세스하려면 WMI 관리 응용 프로그램이 시작된 클라이언트는 응용 프로그램의 연결 문자열에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 Windows 인증 로그인 또는 그룹과 일치해야 합니다.  
@@ -82,7 +78,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  WMI 공급자는 이 쿼리를 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 생성되는 이벤트 알림으로 변환합니다. 이는 호출자가 이러한 이벤트 알림을 생성하는 데 필요한 권한, 즉 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 CREATE DATABASE DDL EVENT NOTIFICATION 권한을 가지고 있어야 함을 의미합니다.  
   
- 범위가 서버 수준에 한정되는 이벤트 알림을 WQL 쿼리에서 지정할 경우(예: SELECT * FROM ALTER_TABLE 쿼리 실행), 호출 응용 프로그램은 서버 수준의 REATE DDL EVENT NOTIFICATION 권한을 가지고 있어야 합니다. 범위가 서버에 한정되는 이벤트 알림은 master 데이터베이스에 저장됩니다. 사용할 수는 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 카탈로그 뷰의 메타 데이터를 볼 수 있습니다.  
+ 범위가 서버 수준에 한정되는 이벤트 알림을 WQL 쿼리에서 지정할 경우(예: SELECT * FROM ALTER_TABLE 쿼리 실행), 호출 응용 프로그램은 서버 수준의 REATE DDL EVENT NOTIFICATION 권한을 가지고 있어야 합니다. 범위가 서버에 한정되는 이벤트 알림은 master 데이터베이스에 저장됩니다. 사용할 수는 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 카탈로그 뷰를 해당 메타 데이터를 참조 하세요.  
   
 > [!NOTE]  
 >  WMI 공급자가 생성하는 이벤트 알림의 범위(서버, 데이터베이스 또는 개체)는 궁극적으로 WMI 공급자에서 사용하는 권한 확인 프로세스의 결과에 따라 달라집니다. 이는 공급자를 호출하는 사용자의 권한 집합 및 쿼리 대상 데이터베이스에 대한 확인 결과의 영향을 받습니다.  
@@ -115,9 +111,9 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY 또는 REVOKE(ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION 또는 CREATE TRACE EVENT NOTIFICATION 권한에만 적용됨)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>클라이언트 쪽에서의 이벤트 데이터 작업  
- WMI 공급자 서버 이벤트 대상 데이터베이스에 필요한 이벤트 알림을 만듭니다에 대 한 이벤트 알림 이벤트 데이터를 보냅니다 라는 msdb에 대상 서비스 **ProcessWMIEventProviderNotification/SQL/알림 /v1.0**합니다. 대상 서비스는 이름이 **WMIEventProviderNotificationQueue** 인 **msdb**큐에 이벤트를 추가합니다. 서비스와 큐 모두 공급자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 처음 연결할 때 동적으로 만들어집니다. 그런 다음 공급자는 이 큐에서 XML 이벤트 데이터를 읽어 MOF(Managed Object Format)로 변환한 후 클라이언트 응용 프로그램에 반환합니다. MOF 데이터는 WQL 쿼리에서 CIM(Common Information Model) 클래스 정의로 요청되는 이벤트의 속성으로 구성되며 각 속성에는 해당되는 CIM 형식이 있습니다. 예를 들어는 `SPID` 속성은 CIM 형식으로 반환 됩니다. **Sint32**합니다. 각 속성의 CIM 형식은의 각 이벤트 클래스 아래에 나열 됩니다 [서버 이벤트 클래스 및 속성에 대 한 WMI 공급자](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)합니다.  
+ WMI 공급자 서버 이벤트 알림을 만들면 이벤트 알림은 필요한 이벤트 대상 데이터베이스에 대 한 이벤트 알림 이벤트 데이터를 보냅니다 대상 서비스 라는 msdb에 **SQL/알림/ProcessWMIEventProviderNotification /v1.0**합니다. 대상 서비스는 이름이 **WMIEventProviderNotificationQueue** 인 **msdb**큐에 이벤트를 추가합니다. 서비스와 큐 모두 공급자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 처음 연결할 때 동적으로 만들어집니다. 그런 다음 공급자는 이 큐에서 XML 이벤트 데이터를 읽어 MOF(Managed Object Format)로 변환한 후 클라이언트 응용 프로그램에 반환합니다. MOF 데이터는 WQL 쿼리에서 CIM(Common Information Model) 클래스 정의로 요청되는 이벤트의 속성으로 구성되며 각 속성에는 해당되는 CIM 형식이 있습니다. 예를 들어 합니다 `SPID` CIM 형식으로 속성은 반환 **Sint32**합니다. 각 속성의 CIM 형식은의 각 이벤트 클래스 아래에 나열 됩니다 [Server 이벤트 클래스 및 속성에 대 한 WMI 공급자](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서버 이벤트용 WMI 공급자 개념](http://technet.microsoft.com/library/ms180560.aspx)  
   
   

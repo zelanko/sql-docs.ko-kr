@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - InstanceName Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2929e64e89d1734d1a8e991f51d292c7a4ac388
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 986381b2e821de4008840ae56fef22d94135c964
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271744"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663721"
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting 속성 - InstanceName
   특정 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 읽기 전용입니다.  

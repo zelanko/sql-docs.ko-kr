@@ -5,9 +5,7 @@ ms.date: 11/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.index.rebuild.f1
@@ -30,17 +28,16 @@ helpviewer_keywords:
 - LOB data [SQL Server], defragmenting
 - clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67dac44e6d59e89e1d05f9e0f9a81bb1dd944fac
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: dd23323817a8d858e8fbacdc7a6d54639d25a8bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725061"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -4,31 +4,26 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b089af44863033eba2c4e0c83b862ebaa918b715
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 0fcb098d96e8e62bd99f6c9560df1d23d5266ca2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680731"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   리소스 풀은 관리할 수 있는 물리적 리소스의 하위 집합을 나타냅니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 기본 리소스 풀의 리소스에 바인딩되고 이 리소스를 사용합니다. 하나 이상의 메모리 최적화 테이블에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 리소스를 사용하지 않고 다른 메모리 사용자가 메모리 최적화 테이블에 필요한 메모리를 사용하지 않게 하려면 별도의 리소스 풀을 만들어 메모리 최적화 테이블이 있는 데이터베이스의 메모리 사용을 관리해야 합니다.  
   
- 하나의 리소스 풀에서만 데이터베이스를 바인딩할 수 있습니다. 하지만 동일한 풀에 여러 데이터베이스를 바인딩할 수 있습니다. 
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 메모리 최적화 테이블을 리소스 풀에 바인딩할 수 있지만 이렇게 하는 것은 아무 효과도 없습니다. 나중에 데이터베이스에 메모리 최적화 테이블을 만들려면 명명된 리소스 풀에 데이터베이스를 바인딩합니다.  
+ 하나의 리소스 풀에서만 데이터베이스를 바인딩할 수 있습니다. 하지만 동일한 풀에 여러 데이터베이스를 바인딩할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 메모리 최적화 테이블을 리소스 풀에 바인딩할 수 있지만 이렇게 하는 것은 아무 효과도 없습니다. 나중에 데이터베이스에 메모리 최적화 테이블을 만들려면 명명된 리소스 풀에 데이터베이스를 바인딩합니다.  
   
  데이터베이스를 리소스 풀에 바인딩하려면 먼저 데이터베이스와 리소스 풀이 있어야 합니다. 다음에 데이터베이스를 온라인 상태로 전환할 때 바인딩이 적용됩니다. 자세한 내용은 [Database States](../../relational-databases/databases/database-states.md) 을 참조하세요.  
   
@@ -54,8 +49,7 @@ ms.locfileid: "34332234"
   
 -   [기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   
--   
-            [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
+-   [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
 ##  <a name="bkmk_CreatePool"></a> 데이터베이스 및 리소스 풀 만들기  
  어떤 순서로든 데이터베이스와 리소스 풀을 만들 수 있습니다. 중요한 점은 데이터베이스를 리소스 풀에 바인딩하기 전에 데이터베이스와 리소스 풀이 모두 있는 것입니다.  
@@ -169,9 +163,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  
-            <a name="bkmk_PercentAvailable">
-            </a> 메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율  
+##  <a name="bkmk_PercentAvailable"></a> 메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율  
  메모리 최적화 테이블과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 동일한 리소스 풀에 매핑하면 리소스 관리자는 풀 사용자가 풀 사용에서 충돌을 일으키지 않도록 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 사용에 대한 내부 임계값을 설정합니다. 일반적으로 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 사용에 대한 임계값은 풀의 약 80%입니다. 다음 표에서는 다양한 메모리 크기에 대한 실제 임계값을 보여 줍니다.  
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 추정했으면 DMV `sys.dm_os_sys_info` 에서 ‘committed_target_kb’ 열에 반영된 대로 SQL 인스턴스의 커밋 대상 메모리 비율을 사용하여 리소스 풀을 만듭니다( [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)참조). 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  

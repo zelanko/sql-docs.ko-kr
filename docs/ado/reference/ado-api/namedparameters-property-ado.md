@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,22 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - NamedParameters property [ADO]
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d66b740bbe042510de019571639e796787caaf42
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c63fb598630a30fd2616722146bb6737f17b82b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760411"
 ---
-# <a name="namedparameters-property-ado"></a>NamedParameters 속성 (ADO)
-매개 변수 이름 공급자에 전달 해야 하는지 여부를 나타냅니다.  
+# <a name="namedparameters-property-ado"></a>NamedParameters 속성(ADO)
+매개 변수 이름 공급자에 전달할지 여부를 나타냅니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 속성이 true 이면 ADO의 값을 전달는 **이름** 속성의 각 매개 변수에 **매개 변수** 에 대 한 컬렉션은 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다. 공급자는 매개 변수 이름에서 매개 변수를 사용 하 여는 **CommandText** 또는 **CommandStream** 속성입니다. 이 속성이 false 이면 (기본값) 이면 매개 변수 이름은 무시 되 고 매개 변수에 값과 일치 하도록 매개 변수 순서를 사용 하는 공급자는 **CommandText** 또는 **CommandStream** 속성입니다.  
+ ADO 값을 전달이 속성이 true 이면를 **이름** 에서 각 매개 변수의 속성을 **매개 변수** 컬렉션에 대 한를 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다. 공급자에서 매개 변수와 일치 하도록 매개 변수 이름을 사용 합니다 **CommandText** 하거나 **CommandStream** 속성입니다. 이 속성이 false 인 경우 (기본값), 매개 변수 이름을 무시 되 고 공급자에서 매개 변수 값과 일치 하도록 매개 변수의 순서를 사용 합니다 **CommandText** 또는 **CommandStream** 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

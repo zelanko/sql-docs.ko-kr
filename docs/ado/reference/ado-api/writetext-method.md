@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679891"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
-에 지정 된 텍스트 문자열을 쓰고는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
+에 지정 된 텍스트 문자열을 쓰고를 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,17 +39,17 @@ Stream.WriteText Data, Options
  A **문자열** 쓸 문자에 텍스트를 포함 하는 값입니다.  
   
  *옵션*  
- (선택 사항) A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) 지정된 된 문자열의 끝에 줄 구분 기호 문자를 작성 해야 하는지 여부를 지정 하는 값입니다.  
+ (선택 사항) A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) 지정된 된 문자열의 끝 줄 구분 기호 문자를 작성 해야 하는지 여부를 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 지정 된 문자열에 기록 되는 **스트림** 중간 공백이 나 각 문자열 사이 문자 없이 개체입니다.  
+ 지정 된 문자열에 기록 되는 **Stream** 중간 공백이 나 문자 각 문자열 사이 없는 개체입니다.  
   
- 현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 기록된 된 데이터를 뒤의 문자로 설정 됩니다. **WriteText** 메서드 나머지 스트림에서 데이터를 잘라내지 않습니다. 이러한 문자를 truncate 하려면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  
+ 현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 기록된 된 데이터를 다음에 설정 됩니다. 합니다 **WriteText** 메서드 스트림에서 데이터의 나머지 부분을 잘라내지 않습니다. 이러한 문자를 truncate 하려는 경우 호출할 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  
   
- 현재 이전 작성 하는 경우 [EOS](../../../ado/reference/ado-api/eos-property.md) 위치는 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 의 **스트림** 새 문자가 있으면 이러한 문자가 증가 시켜 및 **EOS** 새 마지막 바이트에 들어왔다는 **스트림**합니다.  
+ 현재 이전 작성 하는 경우 [EOS](../../../ado/reference/ado-api/eos-property.md) 위치를 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 의 합니다 **Stream** 늘어납니다 새 문자가 포함 될 및 **EOS** 새 마지막 바이트를 이동 합니다 **Stream**합니다.  
   
 > [!NOTE]
->  **WriteText** 메서드 텍스트 스트림 함께 사용 됩니다 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 은 **adTypeText**). 이진 스트림에 대 한 (**형식** 은 **adTypeBinary**)를 사용 하 여 [쓰기](../../../ado/reference/ado-api/write-method.md)합니다.  
+>  **WriteText** 메서드는 텍스트 스트림 사용 됩니다 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 는 **adTypeText**). 이진 스트림에 대 한 (**형식** 됩니다 **adTypeBinary**)를 사용 하 여 [작성](../../../ado/reference/ado-api/write-method.md)합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

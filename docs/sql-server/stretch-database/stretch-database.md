@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database
@@ -13,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 371c853fd97f303ec756a8d492a95ed07b673b05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6d9675dfc6a36407f788bfc9c419ce9aea1eccb4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37973997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689591"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,8 +69,7 @@ ms.locfileid: "37973997"
 ## <a name="what-kind-of-databases-and-tables-are-candidates-for-stretch-database"></a>Stretch Database에 적합한 데이터베이스 및 테이블 종류  
  Stretch Database는 많은 양의 콜드 데이터가 있고 일반적으로 소수의 테이블에 저장된 트랜잭션 데이터베이스를 대상으로 합니다. 이러한 테이블은 1억 개가 넘는 행을 포함할 수 있습니다.  
   
- 
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 temporal 테이블 기능을 사용하는 경우 스트레치 데이터베이스를 사용하여 연결된 기록 테이블의 전부 또는 일부를 Azure의 비용 효율적인 저장소로 마이그레이션할 수 있습니다. 자세한 내용은 [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 temporal 테이블 기능을 사용하는 경우 스트레치 데이터베이스를 사용하여 연결된 기록 테이블의 전부 또는 일부를 Azure의 비용 효율적인 저장소로 마이그레이션할 수 있습니다. 자세한 내용은 [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)를 참조하세요.  
   
  SQL Server 2016 업그레이드 관리자의 기능인 Stretch Database 관리자를 사용하여 Stretch Database용 데이터베이스 및 테이블을 식별할 수 있습니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요. 잠재적 차단 문제에 대한 자세한 내용은 [Stretch Database에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.  
 

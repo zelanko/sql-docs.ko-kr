@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ce926659bd322dfc24c105a1c684ff087944352
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757551"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
   웹 서비스 태스크는 웹 서비스 메서드를 실행합니다. 웹 서비스 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -85,7 +82,7 @@ ms.locfileid: "35411045"
 ## <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **HTTPConnection**  
  목록에서 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
@@ -132,7 +129,7 @@ ms.locfileid: "35411045"
 ## <a name="web-service-task-editor-input-page"></a>웹 서비스 태스크 편집기(입력 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **입력** 페이지를 사용하여 웹 서비스, 웹 메서드 및 웹 메서드에 입력으로 제공할 값을 지정할 수 있습니다. 문자열을 값 열에 직접 입력하거나 값 열에서 변수를 선택하여 값을 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **서비스**  
  목록에서 웹 메서드를 실행하는 데 사용할 웹 서비스를 선택합니다.  
   

@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - message types [Service Broker], permissions
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 05a7c4b4416581e2b76e994213f1aa07bc47d48c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5af2e9a7ad54c76d2c6fb6e5854803a652dc2ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799021"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

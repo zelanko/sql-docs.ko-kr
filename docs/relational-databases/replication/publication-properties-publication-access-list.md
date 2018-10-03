@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.publicationaccesslist.f1
 ms.assetid: 9587bb9e-c66c-4e70-8171-09b943ec2d50
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23b0de2fe02ad046e13152d39386f01eb96eef4c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8dfe6ea6cace81776deefe3b0824d7289e9ed6b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784501"
 ---
 # <a name="publication-properties-publication-access-list"></a>게시 속성, 게시 액세스 목록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "37355665"
   
  구독자가 게시자 또는 배포자에 연결하여 게시에 대한 액세스를 요청하면 구독자의 로그인을 PAL의 인증 정보와 비교합니다. 이 방법은 클라이언트 도구가 게시자에서 직접 수정 작업을 수행하는 데 게시자 및 배포자 로그인을 사용하지 못하도록 하여 게시자에 대한 보안을 강화합니다. 자세한 내용은 [게시자 보안 설정](../../relational-databases/replication/security/secure-the-publisher.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **추가**  
  새 항목을 목록에 추가합니다. 게시자 및 배포자에서 이미 정의한 로그인, 계정 또는 그룹 이름만 추가할 수 있습니다. 두 서버 모두에서 도메인 계정이 사용되거나 로컬 계정이 생성되면 로그인, 계정 또는 그룹 이름이 두 서버에 정의됩니다.  
   

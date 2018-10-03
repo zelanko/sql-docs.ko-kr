@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f13813381b70d820151ba422912980a2d78e7789
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5d481544611f1246922fc16b1c89f16dcf745802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750353"
 ---
 # <a name="create-infosource-for-master-data"></a>마스터 데이터용 InfoSource 만들기
   **마스터 데이터용 InfoSource 만들기** 대화 상자에서는 SAP Netweaver BW 시스템의 마스터 데이터에 대한 새 InfoSource를 만듭니다.  
@@ -41,7 +38,7 @@ ms.locfileid: "35329557"
   
 5.  **InfoSource 만들기** 대화 상자에서 **마스터 데이터**를 선택한 다음 **확인**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **InfoObject 이름**  
  새 InfoSource의 기준으로 사용할 InfoObject 이름을 입력합니다.  
   

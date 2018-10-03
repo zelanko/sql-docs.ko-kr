@@ -3,7 +3,6 @@ title: 파일만 설치(Reporting Services) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - files-only installation [Reporting Services]
@@ -11,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c55108cab5fb57dbcca1e9f1ab2d3fd9d45489d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 510c5dc33aa70f988b5f69e66fd93d5f4aaf4ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666881"
 ---
 # <a name="files-only-installation-reporting-services"></a>파일만 설치(Reporting Services)
   *파일만 설치* 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 프로그램 파일에 대한 폴더 구조 만들기, 디스크로 파일 복사, 로컬 컴퓨터에 보고서 서버 서비스 등록, 서비스 계정 구성, 서비스 계정에 파일 권한 부여 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 공급자 등록 등의 작업을 설치 프로그램에서 수행하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 의미합니다.  

@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93c0b81d1a267f447564605b86b34fadcfcb1c83
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1a49a83dca8e2de49ef279269261fa1ce7dad2f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278155"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660051"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>식에 기본 제공 컬렉션(보고서 작성기 및 SSRS)
   보고서의 식에는 ReportItems, 매개 변수, 필드, 데이터 집합, 데이터 원본, 변수 및 보고서 이름과 같은 전역 정보에 대한 기본 제공 필드 등 기본 제공 컬렉션에 대한 참조가 포함될 수 있습니다. **식** 대화 상자에 표시되지 않는 컬렉션도 있습니다. DataSets 및 DataSources 컬렉션은 보고서 서버의 게시된 보고서에 대해 런타임에만 사용할 수 있습니다. ReportItems 컬렉션은 페이지 또는 페이지 머리글의 입력란과 같이 보고서 영역에 있는 입력란의 컬렉션입니다.  

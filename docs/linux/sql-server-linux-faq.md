@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 448db7c77d26e06651e01a7e790917757aff0e9d
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745751"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 

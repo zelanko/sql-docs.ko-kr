@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENJSON
@@ -20,12 +18,12 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 55d9b3fcf3ab8e6b55c6704e363e486627f7985c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f74d264e52a8ed48cf35c09b5aa33b1521ffcc56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052919"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742151"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -92,7 +90,7 @@ FROM OPENJSON(@json)
   
 |Key|value|유형|  
 |---------|-----------|----------|  
-|StringValue|John|@shouldalert|  
+|StringValue|John|1|  
 |IntValue|45|2|  
 |TrueValue|true|3|  
 |FalseValue|false|3|  
@@ -125,7 +123,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |Key|값|  
 |---------|-----------|  
 |0|en-GB|  
-|@shouldalert|en-UK|  
+|1|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
@@ -209,7 +207,7 @@ WITH (
   
 |Number|date|Customer|수량|주문|  
 |------------|----------|--------------|--------------|-----------|  
-|SO43659|2011-05-31T00:00:00|AW29825|@shouldalert|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
+|SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
 
@@ -224,7 +222,7 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
         |Type 열의 값|JSON 데이터 형식|  
         |------------------------------|--------------------|  
         |0|null|  
-        |@shouldalert|string|  
+        |1|string|  
         |2|ssNoversion|  
         |3|true/false|  
         |4|array|  

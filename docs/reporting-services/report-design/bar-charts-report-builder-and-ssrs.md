@@ -4,17 +4,16 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 706bab4385bb9510fd6eced4200632ba09ee0bcf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: add231df29906b945d1637c09969b670f4419909
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703781"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>가로 막대형 차트(보고서 작성기 및 SSRS)
   가로 막대형 차트는 계열을 가로 막대 집합으로 표시합니다. 일반 가로 막대형 차트는 세로 막대 집합으로 계열을 표시하는 세로 막대형 차트 및 시작점과 끝점이 다양한 가로 막대 집합으로 계열을 표시하는 범위형 가로 막대 차트와 밀접하게 연관되어 있습니다.  

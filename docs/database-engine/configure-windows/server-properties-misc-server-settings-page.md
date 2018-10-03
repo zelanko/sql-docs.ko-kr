@@ -5,29 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a6ef0e31d5a1faf0fbca745f725fe27f0e31b65d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e72286c63ef8721d68817a4a0347f4124630b2cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739321"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>서버 속성 - 기타 서버 설정 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 페이지를 사용하여 서버 설정을 확인하거나 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **사용자의 기본 언어**  
  새로 생성된 모든 로그인에 대한 기본 언어를 지정합니다.  
   

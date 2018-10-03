@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.reportservicelogin.f1
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98673cc6302868199f4c3781f6ff5b451b41c964
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2beb59a4cd0b1fefc8ff6ef9fafc376614cf0f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706201"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 로그인 대화 상자(SSRS)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다.  

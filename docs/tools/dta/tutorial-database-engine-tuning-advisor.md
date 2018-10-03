@@ -4,29 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 - tutorials [Database Engine Tuning Advisor]
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d398fcbefc2ce308f83515d70a7c2a5114e11295
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 571b2a78414b6435a48d24cbc4abb83d0f8d2d8d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750501"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>자습서: 데이터베이스 엔진 튜닝 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

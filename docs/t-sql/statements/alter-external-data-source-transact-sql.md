@@ -5,9 +5,7 @@ ms.date: 01/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7a8f604d87de12130967ce2ae27e26a542dc1c2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667251"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="remarks"></a>Remarks
  한 번에 하나의 원본만 수정할 수 있습니다. 동일한 원본을 수정하기 위한 동시 요청은 하나의 명령문이 기다려야 합니다. 그러나 다른 원본은 동시에 수정할 수 있습니다. 이 명령문은 다른 명령문과 동시에 실행할 수 있습니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  ALTER ANY EXTERNAL DATA SOURCE 권한이 필요합니다.
  > [!IMPORTANT]  
  >  ALTER ANY EXTERNAL DATA SOURCE 권한은 모든 보안 주체에 외부 데이터 원본 개체를 만들고 수정하는 기능을 부여하고, 따라서 데이터베이스의 모든 데이터베이스 범위 자격 증명에 액세스하는 기능도 부여합니다. 이 권한은 높은 수준의 권한으로 간주되어야 하므로, 시스템의 신뢰할 수 있는 보안 주체에만 부여되어야 합니다.

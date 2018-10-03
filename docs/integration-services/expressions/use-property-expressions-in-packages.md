@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc25504d28dc2d2db54182165b419414ad5a2632
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 97ab72d572ee533ed43dfde39b362c5bb16120a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726671"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
   속성 식은 런타임에 동적으로 속성을 업데이트하기 위해 속성에 할당한 식입니다. 예를 들어 속성 식을 사용하면 메일 보내기 태스크에서 사용하는 받는 사람 줄에 변수에 저장된 전자 메일 주소를 삽입할 수 있습니다.  

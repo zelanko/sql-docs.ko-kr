@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2568e97b9207b37b4bf490f124e25aaeea5ca77b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2451c688361ab2c2dcf2ec0bdcd8745825c658ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268459"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767841"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   지원되는 웹 브라우저에서 보고서 서버에 직접 연결하여 보고서를 볼 수 있습니다. 모든 보고서에는 보고서 서버에 대한 URL 주소가 있습니다. 보고서의 웹 주소를 입력하여 웹 응용 프로그램과는 상관없이 브라우저 창에 보고서를 열 수 있습니다. 보고서는 HTML 형식으로 열리고 페이지를 탐색하거나 보고서 내의 데이터 값을 검색하는 데 사용할 수 있는 보고서 도구 모음이 함께 표시됩니다. URL에 매개 변수를 설정하여 도구 모음을 숨기거나 보고서의 출력 형식을 선택할 수 있습니다.  

@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 115c3565edfa128d0d9650c3512357caf7d3bebb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 623afddc5f9490afd1b0e162025641112fb36300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762041"
 ---
-# <a name="sort-property-example-vc"></a>정렬 속성 예제 (VC + +)
-사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성은 **레코드 집합** 에서 파생 된 ***작성자*** 의 테이블 **Pubs** 데이터베이스입니다. 보조 유틸리티 루틴 각 행을 출력합니다.  
+# <a name="sort-property-example-vc"></a>Sort 속성 예제(VC++)
+이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성을 **레코드 집합** 에서 파생 된를 ***작성자*** 목차 합니다 **Pubs** 데이터베이스입니다. 보조 유틸리티 루틴을 각 행을 출력합니다.  
   
 ```  
 // SortPropertyExample.cpp  

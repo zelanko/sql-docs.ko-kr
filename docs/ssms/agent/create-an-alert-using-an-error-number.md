@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
 - SQL Server Agent, alerts
 - alerts [SQL Server], error numbers
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea5a65f57def6e9b16b8f619996e7873818ae4d5
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 85c3057dddcdef4834091e4d8ec06fe5209ecbc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42773973"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799351"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>오류 번호를 사용하여 경고 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

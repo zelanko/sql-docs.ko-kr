@@ -1,13 +1,11 @@
 ---
-title: BOF, EOF, 및 책갈피 속성 예제 (VC + +) | Microsoft Docs
+title: BOF, EOF 및 책갈피 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659531"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF, 및 책갈피 속성 예제 (VC + +)
-사용 하 여이 예제의 첫 번째 함수는 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성을 사용자의 첫 번째 또는 마지막 레코드를 지 나 이동 하려고 하는 경우 메시지를 표시 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성 레코드에 플래그입니다. 사용자는 **레코드 집합** 나중 돌아갑니다.  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF 및 책갈피 속성 예제 (VC + +)
+이 예제의 첫 번째 함수를 사용 합니다 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 사용자의 첫 번째 또는 마지막 레코드를 지 나 이동 하려고 하는 경우 메시지를 표시 하는 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 사용자가 레코드 플래그 속성을 **레코드 집합** 하 고 나중에 반환 합니다.  
   
- 두 번째 함수에서 책갈피 속성을 사용 하 여 배치 하는 **책갈피** 에서 다른 모든 레코드의는 **레코드 집합** 배열 변환한 다음 필터는 배열을 사용 하 여 레코드 집합입니다.  
+ 두 번째 함수를 배치할 책갈피 속성을 사용 하는 **책갈피** 에서 다른 모든 레코드의는 **레코드 집합** 배열 한 다음 필터는 배열을 사용 하 여 레코드 집합에 합니다.  
   
 ## <a name="example"></a>예제  
   

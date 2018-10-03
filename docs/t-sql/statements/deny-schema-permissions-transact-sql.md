@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - permissions [SQL Server], schemas
 - DENY statement, schemas
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a7165c02805a2d6a2cfa3591c60e06c135aea76
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 10812df142aa71329df5d5b024d3a18d5216e250
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701021"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 스키마 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +94,7 @@ CASCADE
 |VIEW CHANGE TRACKING|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  스키마에 대한 CONTROL 권한이 필요합니다. AS 옵션을 사용하는 경우 지정한 보안 주체가 스키마를 소유해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

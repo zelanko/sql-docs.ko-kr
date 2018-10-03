@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - SearchDirectionEnum enumeration [ADO]
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f6cba75e0e4a2bf164c36f65c9e5fe58d81b1e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f05af48f2edcdcf2c6adc6e3617860fdad38bde7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776169"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
-내에서 레코드 검색의 방향을 지정는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+내에서 레코드 검색 방향을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adSearchBackward**|-1|뒤로 검색의 시작 부분에서 중지 된 **레코드 집합**합니다. 일치 하는 항목이 없는 경우 레코드 포인터에 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  
-|**adSearchForward**|1|검색의 끝에서 중지를 앞으로 **레코드 집합**합니다. 일치 하는 항목이 없는 경우 레코드 포인터에 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  
+|**adSearchBackward**|-1|시작 부분에서 중지, 검색 된 **레코드 집합**합니다. 일치 하는 항목이 없으면 레코드 포인터의 위치가 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  
+|**adSearchForward**|1|끝날 때 중지, 검색에서 전달 된 **레코드 집합**합니다. 일치 하는 항목이 없으면 레코드 포인터의 위치가 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  
   
-## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  Package: **com.ms.wfc.data**  
   
 |상수|  

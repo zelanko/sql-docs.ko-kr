@@ -5,12 +5,8 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fff879e523baaf7955dd985cfc6453dfada8330
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f81faab9a9ef4e9ecfeb1438dc45e27bf963e8f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671481"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 오류 출력 사용
   구성 요소에 오류 출력이라는 특수한 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 개체를 추가하면 실행 중 해당 구성 요소에서 처리할 수 없는 행을 리디렉션할 수 있습니다. 구성 요소에서 발생할 수 있는 문제는 일반적으로 오류 또는 잘림으로 분류되며 각 구성 요소와만 관련이 있습니다. 구성 요소에서 오류 출력을 제공할 경우 해당 구성 요소의 사용자는 결과 집합에서 오류 행을 필터링하거나, 문제가 발생할 때 해당 구성 요소를 실패로 처리하거나, 오류를 무시하고 계속하는 방법으로 유연하게 오류 조건을 처리할 수 있습니다.  

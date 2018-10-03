@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e88957f03b821ee350a575080bd4f0fd40ce466b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272712"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784011"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>3 단계: 필드 목록 상자 채우기
-필드 목록 상자를 채우려면의 Click 이벤트 처리기에 다음 코드를 삽입 `lstMain`:  
+# <a name="step-3-populate-the-fields-list-box"></a>3단계: 필드 목록 상자 채우기
+필드 목록 상자를 채우려면 Click 이벤트 처리기에 다음 코드를 삽입 `lstMain`:  
   
 ```  
 Private Sub lstMain_Click()  
@@ -50,15 +47,15 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- 이 코드는 선언 하 고 로컬 기록 및 레코드 집합 개체를 인스턴스화합니다 `rec` 및 `rs`각각.  
+ 이 코드는 선언 하 고 로컬 레코드 및 레코드 집합 개체를 인스턴스화합니다 `rec` 고 `rs`, 각각.  
   
- 선택한 리소스에 해당 하는 행 `lstMain` 의 현재 행 이루어집니다 `grs`합니다. 다음 세부 정보 목록 상자를 지우고 및 `rec` 의 현재 행으로 열려 `grs` 소스로 합니다.  
+ 선택한 리소스에 해당 하는 행 `lstMain` 의 현재 행 이루어집니다 `grs`합니다. 세부 정보 목록 상자를 지우고 다음 하 고 `rec` 의 현재 행과 열은 `grs` 원본으로 합니다.  
   
- 리소스 컬렉션 레코드인 경우에 지정 된 대로 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), 로컬 Recordset `rs` rec의 자식을에서 열릴 합니다. 그런 다음 `lstDetails` 의 행의 값으로 채워지는 `rs`합니다.  
+ 리소스 컬렉션 레코드인 경우, 지정 된 대로 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), 로컬 레코드 집합 `rs` rec의 자식에 대해 열려 있습니다. 그런 다음 `lstDetails` 행의 값으로 채워지는 `rs`합니다.  
   
- 리소스가 있는 경우 단순 레코드 `recFields` 호출 됩니다. 에 대 한 자세한 내용은 `recFields`, 다음 단계를 참조 하세요.  
+ 리소스 레코드를 간단한 경우 `recFields` 라고 합니다. 에 대 한 자세한 내용은 `recFields`, 다음 단계를 참조 하세요.  
   
- 코드가 없는 리소스가 있는 경우 구조적된 문서 구현 됩니다.  
+ 코드가 없는 경우 리소스는 구조화 된 문서에 구현 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   

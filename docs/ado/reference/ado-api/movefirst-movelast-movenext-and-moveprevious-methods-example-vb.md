@@ -1,13 +1,11 @@
 ---
-title: 레코드 집합 예 (VB)의 레코드 포인터를 이동 합니다. | Microsoft Docs
+title: 레코드 집합 예제 (VB)의 레코드 포인터를 이동 합니다. | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - MoveFirst method [ADO], Visual Basic example
 - MoveNext method [ADO], Visual Basic example
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e152dbfa8b5cea7cc945e1290e2206fc03e7d795
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 573c433dbcf6ee7bb32f7a83639836f30bd43025
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747341"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 예제 (VB)
-사용 하 여이 예제는 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), 및 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 는 의레코드포인터를이동하는메서드를[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 제공 된 명령을 기반으로 합니다. MoveAny 절차는이 절차를 실행 하려면 필요 합니다.  
+이 예제에서는 합니다 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), 및 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 를 의레코드포인터를이동하는방법[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 제공 된 명령을 기반으로 합니다. MoveAny 절차는이 절차를 실행 하려면 필요 합니다.  
   
 ```  
 'BeginMoveFirstVB  

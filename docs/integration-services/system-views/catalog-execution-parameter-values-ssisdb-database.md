@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6bf1f2873d926fe54efa8caab8fa4e5546fb679
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7ebe5d9e8ec650a05eb92667dbf5d357965352e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658663"
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "35406815"
 ## <a name="remarks"></a>Remarks  
  이 뷰는 카탈로그의 각 실행 매개 변수에 대한 행을 표시합니다. 실행 매개 변수 값은 단일 실행 인스턴스 중에 프로젝트 매개 변수 또는 패키지 매개 변수에 할당되는 값입니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 권한  

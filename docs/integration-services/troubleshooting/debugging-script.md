@@ -5,25 +5,22 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - debugging [Integration Services], scripts
 - scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbfd196ccfb99bea59ca4df7f66291534d5d3d1f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1daf885be70e310e49ad3fa449830cfbe125b8b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705871"
 ---
 # <a name="debugging-script"></a>스크립트 디버깅
   VSTA( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)에서 스크립트 태스크 및 스크립트 구성 요소에 사용할 스크립트를 작성할 수 있습니다.  

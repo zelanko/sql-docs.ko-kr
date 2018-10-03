@@ -3,7 +3,6 @@ title: SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비�
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83a8ecf2bba804c1bdc497378fb3dab51ee3226d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: da88e8367c8904e79a983adc63ccedcf5d99a05e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683361"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 데이터 경고에는 SQL Server 에이전트가 필요하며 SQL Server 에이전트에 대한 사용 권한 구성이 필요합니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트하거나 확인해야 합니다. 이 항목의 범위는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이며, 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 사용하여 SQL Server 에이전트의 사용 권한을 업데이트하는 세 가지 방법에 대해 설명합니다. 이 항목의 단계에 사용하는 자격 증명에는 서비스 응용 프로그램, msdb 및 master 데이터베이스의 개체를 위한 RSExecRole에 실행 권한을 부여하기에 충분한 사용 권한이 있어야 합니다.  

@@ -5,12 +5,8 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,16 +20,15 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9abe04ac85e75a81553057e10fe01abcdfe5b01d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: abd99051ddd130a2f3f570dc571f59320f4ae33b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769540"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
   구성 요소 개발자는 구성 요소를 편집할 때 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 표시되는 사용자 지정 사용자 인터페이스를 구성 요소에 제공할 수 있습니다. 사용자 지정 사용자 인터페이스를 구현하면 해당 구성 요소가 데이터 흐름 태스크에 추가되거나 데이터 흐름 태스크에서 삭제될 때와 해당 구성 요소에 대한 도움말이 요청될 때 이에 대한 알림을 받을 수 있습니다.  

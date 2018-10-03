@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.reinit.all.f1
 helpviewer_keywords:
 - Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dde4e44d17b6120e1dc9fdd53942d9e6e6ba7cf
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d5e57eff6a607939d1ca7b5e7e40e18d56ae1d0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809821"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>구독 다시 초기화 - 모든 구독
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **구독 다시 초기화** 대화 상자를 사용하여 게시에 대한 모든 구독을 다시 초기화로 표시할 수 있습니다. 다시 초기화를 수행하려면 각 구독자에 스냅숏을 적용해야 하며 이 작업은 트랜잭션 게시에 대한 구독을 위한 배포 에이전트 및 병합 게시에 대한 구독을 위한 병합 에이전트에서 수행합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **현재 스냅숏 사용**  
  다음에 배포 에이전트 또는 병합 에이전트가 구독에 대해 실행될 때 현재 스냅숏을 각 구독자에 적용하려면 선택합니다. 유효한 스냅숏이 없으면 이 옵션을 선택할 수 없습니다.  
   

@@ -4,7 +4,6 @@ ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -16,12 +15,12 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db1356dd296ab2936ab67de9cf72cfdf61fd5284
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266231"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681491"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 생성한 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 생성한 모바일 보고서에서도 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  

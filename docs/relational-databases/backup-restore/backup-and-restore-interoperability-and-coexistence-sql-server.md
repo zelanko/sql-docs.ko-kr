@@ -5,9 +5,7 @@ ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server], related features
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f689fcf2082a6a025fbd41f743ba7bd40225d32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723791"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "32920808"
   
 -   [파일 백업과 복원 및 압축](#FileBnRandCompression)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="FileRestoreAndDbStartup"></a> 파일 복원 및 데이터베이스 시작  
  이 섹션에서는 여러 개의 파일 그룹이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  

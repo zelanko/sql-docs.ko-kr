@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c770331e58e65ef5a70f9743c49d2854054b7d2b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 579c4b5de14712d5845a6bbf737d85276120bbf0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675441"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>공유 일정 일시 중지 및 다시 시작
   사용 중인 공유 일정을 일시 중지하고 다시 시작할 수 있습니다. 공유 일정을 일시 중지하여 보고서 처리 및 구독을 트리거하는 데 사용되는 일정을 일시적으로 중지할 수 있습니다. 공유 일정만 일시 중지하고 다시 시작할 수 있습니다. 보고서별 일정은 일시 중지할 수 없습니다.  

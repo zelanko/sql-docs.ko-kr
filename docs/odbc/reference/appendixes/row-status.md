@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], cache
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - row status [ODBC]
 - cache [ODBC]
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba4f36ad63ee5e7d9fada29d444e8cc36eca1bcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce45314cef92404fe14a43e033c14d6a272e1bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765791"
 ---
 # <a name="row-status"></a>행 상태
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 커서 라이브러리 행 상태에 대 한 캐시의 버퍼를 만듭니다. 커서 라이브러리는이 버퍼에서 행 상태 배열이 (SQL_ATTR_ROW_STATUS_PTR 문 특성으로 지정)에 대 한 값을 검색 합니다. 각 행에 대해 커서 라이브러리가이 버퍼를 설정합니다.  
+ 커서 라이브러리 캐시 행 상태에 있는 버퍼를 만듭니다. 커서 라이브러리는이 버퍼에서 행 상태 배열 (SQL_ATTR_ROW_STATUS_PTR 문 특성을 사용 하 여 지정 됨)에 대 한 값을 검색 합니다. 각 행에 대 한 커서 라이브러리는이 버퍼를 설정 합니다.  
   
--   Sql_row_deleted가 배치를 실행 하는 경우에 행에는 문을 삭제 합니다.  
+-   Sql_row_deleted가 배치를 실행할 때 문이 행을 삭제 합니다.  
   
--   사용 하 여 데이터 소스에서 행을 검색 하는 오류가 발생 하면 SQL_ROW_ERROR **SQLFetch**합니다.  
+-   사용 하 여 데이터 원본에서 행을 검색 하는 오류가 발생 하면 SQL_ROW_ERROR **SQLFetch**합니다.  
   
--   성공적으로 사용 하 여 데이터 소스에서 행을 인출할 때 SQL_ROW_SUCCESS **SQLFetch**합니다.  
+-   성공적으로 사용 하 여 데이터 원본의 행을 인출할 때 SQL_ROW_SUCCESS **SQLFetch**합니다.  
   
--   행에 위치 지정된 update 문을 실행할 때 SQL_ROW_UPDATED 합니다.
+-   행 위치 지정된 update 문을 실행할 때 SQL_ROW_UPDATED 합니다.

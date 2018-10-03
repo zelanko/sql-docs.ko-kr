@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 96a8a4e87167adc8243f8f313b9801966c1c32f0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e2c03cecb508788e1852ee154d783a8f25320298
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405838"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732231"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
 
@@ -39,7 +36,7 @@ ms.locfileid: "40405838"
 - SQL Server의 모든 인스턴스에서 동일한 서비스 계정이 사용됩니다.
 - 사용자가 SQL Server의 모든 인스턴스에서 고정되는 SQL Server 역할 sysadmin의 멤버입니다.
 - DTC에서 확인할 수 없는 트랜잭션의 기본 결과는 `presume commit`로 설정됩니다.
-- 미러링 끝점에서 `5022`포트를 사용합니다.
+- 미러링 엔드포인트에서 `5022`포트를 사용합니다.
 - 다른 가용성 그룹 또는 클러스터형 DTC 리소스가 없습니다.
 - 클러스터 세부 정보(기존):
   - 이름: `Cluster`
@@ -100,7 +97,7 @@ foreach ($node in $nodes) {
 }
 ```  
 ## <a name="2---configure-firewall-rules"></a>2.   방화벽 규칙 구성
-이 스크립트에서는 가용성 그룹 복제본을 호스트하는 각 SQL Server와 분산 트랜잭션에 참여하는 다른 모든 서버에 DTC 트래픽을 허용하도록 방화벽을 구성합니다.  데이터베이스 미러링 끝점에 대한 연결을 허용하도록 방화벽을 구성하기도 합니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다.
+이 스크립트에서는 가용성 그룹 복제본을 호스트하는 각 SQL Server와 분산 트랜잭션에 참여하는 다른 모든 서버에 DTC 트래픽을 허용하도록 방화벽을 구성합니다.  데이터베이스 미러링 엔드포인트에 대한 연결을 허용하도록 방화벽을 구성하기도 합니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다.
 
 ```powershell  
 # Configure Firewall
@@ -217,8 +214,8 @@ CREATE TABLE [dbo].[Names] (
 GO    
 ----------------------------------------------------------------
 ```
-## <a name="5---create-endpoints"></a>5.   끝점 만들기
-이 스크립트에서는 TCP 포트 `5022`에서 수신하는 `AG1_endpoint`라는 끝점을 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
+## <a name="5---create-endpoints"></a>5.   엔드포인트 만들기
+이 스크립트에서는 TCP 포트 `AG1_endpoint` 에서 수신하는 `5022`라는 엔드포인트를 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /**********************************************

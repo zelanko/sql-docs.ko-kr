@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a7f9c717006eec8d1ee7deb4e807709b124ced
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730931"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 집합의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -147,7 +144,7 @@ ms.locfileid: "35332867"
 ## <a name="lookup-transformation-editor-general-page"></a>조회 변환 편집기(일반 페이지)
   조회 변환 편집기 대화 상자의 **일반** 페이지를 사용하여 캐시 모드와 연결 형식을 선택하고 일치하는 항목이 없는 행의 처리 방법을 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **전체 캐시**  
  조회 변환이 실행되기 전에 참조 데이터 집합을 생성하고 캐시에 로드합니다.  
   
@@ -176,7 +173,7 @@ ms.locfileid: "35332867"
 ## <a name="lookup-transformation-editor-connection-page"></a>조회 변환 편집기(연결 페이지)
   **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 집합을 생성할 수도 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **조회 변환 편집기** 대화 상자의 일반 페이지에서 **전체 캐시** 및 **캐시 연결 관리자** 를 선택하는 경우 다음 옵션을 사용할 수 있습니다.  
   
  **전체 캐시**  
@@ -223,7 +220,7 @@ ms.locfileid: "35332867"
 ## <a name="lookup-transformation-editor-columns-page"></a>조회 변환 편집기(열 페이지)
   **조회 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 원본 테이블과 참조 테이블 간의 조인을 지정하고 참조 테이블에서 조회 열을 선택할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 입력 열은 연결된 원본에서 데이터 흐름에 있는 열입니다. 입력 열과 조회 열의 데이터 형식은 동일해야 합니다.  
   
@@ -252,7 +249,7 @@ ms.locfileid: "35332867"
 ## <a name="lookup-transformation-editor-advanced-page"></a>조회 변환 편집기(고급 페이지)
   **조회 변환 편집기** 대화 상자의 **고급** 페이지를 사용하여 조회 변환의 부분 캐싱을 구성하고 SQL 문을 수정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **캐시 크기(32비트)**  
  32비트 컴퓨터의 캐시 크기(MB)를 조정합니다. 기본값은 5MB입니다.  
   

@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.erroroutput.f1
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85f47cd795798616d41749a4d79fdccbc186da40
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 26ca5d1504118d07a84105a4e5d6c7079b847d1f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654751"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 대상 편집기(오류 출력 페이지)
   **SAP BW 대상 편집기** 의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "35334317"
   
 3.  **SAP BW 대상 편집기**에서 **오류 출력** 을 클릭하여 편집기의 **오류 출력** 페이지를 엽니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
   
 > [!NOTE]  
 >  대상을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  

@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLGetInfo function
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e80f302ff996790536551c02f9629bc26f091791
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 60850daf93756d71441bb5b764513530e812fcfb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108563"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768301"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -131,7 +128,7 @@ ms.locfileid: "43108563"
 |SQL_KEYWORDS|BREAK BROWSE BULK CHECKPOINT CLUSTERED COMMITTED COMPUTE CONFIRM CONTROLROW DATABASE DBCC DISK DISTRIBUTED DUMMY DUMP ERRLVL ERROREXIT EXIT FILE FILLFACTOR FLOPPY HOLDLOCK IDENTITY_INSERT IDENTITYCOL IF KILL LINENO LOAD MIRROREXIT NONCLUSTERED OFF OFFSETS ONCE OVER PERCENT PERM PERMANENT PLAN PRINT PROC PROCESSEXIT RAISERROR READ READTEXT RECONFIGURE REPEATABLE RETURN ROWCOUNT RULE SAVE SERIALIZABLE SETUSER SHUTDOWN STATISTICS TAPE TEMP TEXTSIZE TRAN TRIGGER TRUNCATE TSEQUEL UNCOMMITTED UPDATETEXT USE WAITFOR WHILE WRITETEXT|  
 |SQL_LIKE_ESCAPE_CLAUSE|"Y"|  
 |SQL_LOCK_TYPES|SQL_LCK_NO_CHANGE|  
-|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|@shouldalert|  
+|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|1|  
 |SQL_MAX_BINARY_LITERAL_LEN|131072|  
 |SQL_MAX_CATALOG_NAME_LEN|128|  
 |SQL_MAX_CHAR_LITERAL_LEN|131072|  
@@ -141,7 +138,7 @@ ms.locfileid: "43108563"
 |SQL_MAX_COLUMNS_IN_ORDER_BY|16|  
 |SQL_MAX_COLUMNS_IN_SELECT|4000|  
 |SQL_MAX_COLUMNS_IN_TABLE|250|  
-|SQL_MAX_CONCURRENT_ACTIVITIES|@shouldalert|  
+|SQL_MAX_CONCURRENT_ACTIVITIES|1|  
 |SQL_MAX_CURSOR_NAME_LEN|128|  
 |SQL_MAX_DRIVER_CONNECTIONS|0|  
 |SQL_MAX_IDENTIFIER_LEN|128|  

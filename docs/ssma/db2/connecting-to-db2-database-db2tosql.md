@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2228a08c2985f4e683ff860cd77e68159a0ecd0a
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: c280b28082a1f85074b129d7a659333d7323d879
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735551"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 데이터베이스 (DB2ToSQL)에 연결
 DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 마이그레이션하려는 DB2 데이터베이스에 연결 해야 합니다. 에 연결 하면 SSMA는 모든 DB2 스키마에 대 한 메타 데이터를 가져오고 DB2 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  

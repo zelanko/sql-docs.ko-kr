@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup devices [SQL Server], tapes
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - tape backup devices, backing up
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69b01a20f429c1c9612a1a64c0ddc2a57bca3243
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b361c5bcc12f2ceb532de0338cceeb6659fc52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657131"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>디스크 또는 테이프를 백업 대상으로 지정(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

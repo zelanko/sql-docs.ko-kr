@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 775a90dd61febaa140eef057ac299ded7e5531c8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6ec2295d10374f9fc861ed1778a9a3851db021a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753561"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +52,7 @@ ms.locfileid: "40405966"
   
      필터 설정에 액세스하거나 목록 뷰의 데이터를 새로 고치려면 트리 뷰에서 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 추가합니다.  
   
--   
-  **유틸리티의 모든 **의 관리되는 인스턴스와 배포한 데이터 계층 응용 프로그램의 글로벌 정책 정의에 액세스하고, UCP 관리자 정보를 보고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 관리 데이터 웨어하우스의 구성 설정에 액세스하려면 트리 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유틸리티 관리[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드를 클릭합니다. 자세한 내용은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)를 참조하세요. **정책** 탭의 컨트롤을 사용하여 정책 위반 보고의 민감도를 변경할 수도 있습니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
+-   **유틸리티의 모든** 의 관리되는 인스턴스와 배포한 데이터 계층 응용 프로그램의 글로벌 정책 정의에 액세스하고, UCP 관리자 정보를 보고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 관리 데이터 웨어하우스의 구성 설정에 액세스하려면 트리 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유틸리티 관리[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드를 클릭합니다. 자세한 내용은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)를 참조하세요. **정책** 탭의 컨트롤을 사용하여 정책 위반 보고의 민감도를 변경할 수도 있습니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
   
      내용 창의 데이터를 새로 고치려면 트리 뷰에서 **유틸리티 관리** 노드를 마우스 오른쪽 단추로 클릭합니다.  
   

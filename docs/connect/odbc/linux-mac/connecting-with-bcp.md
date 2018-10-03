@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785812"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682641"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>사용 가능한 옵션
 현재 릴리스에서 다음 구문 및 옵션을 사용할 수 있습니다.  
 
-[*database***.**]* schema ***.*** table* **in** *data_file* | **out** *data_file*
+[_데이터베이스_**.**] _스키마_**.** _테이블_ **에서** _data\_파일_ | **out** _데이터\_파일_
 
 - -a *packet_size*  
 서버에서 전송되거나 서버로 전송되는 네트워크 패킷당 바이트 수를 지정합니다.  

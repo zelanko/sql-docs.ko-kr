@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e5bf5f929be3af2d5fa911c4aed93458713ceba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 170c97c2f01f58972fbcba1d8dc9e63045a1095f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282408"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659321"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 장치 정보 설정
   다음 표는 웹 보관 파일(MHTML) 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  

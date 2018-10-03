@@ -4,19 +4,16 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba42fd64652e613d476dabf5d8bba383c3785895
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9bc3a8c70cb1b37bda19d99ab6a79b23b03490c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810349"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 응용 프로그램을 빌드하고 실행합니다.  

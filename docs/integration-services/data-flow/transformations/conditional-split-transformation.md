@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.conditionalsplittrans.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da8653f0e3b3080e4cbab0baa60d1eb2d9f79b5d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1c4dc3bc656d0c71d0fc33a78ad9ed5016908582
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728351"
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
   조건부 분할 변환은 데이터 내용에 따라 각 데이터 행을 서로 다른 출력으로 라우팅할 수 있습니다. 조건부 분할 변환의 구현은 프로그래밍 언어의 CASE 의사 결정 구조와 유사합니다. 이 변환은 식을 평가한 후 평가 결과를 기준으로 데이터 행을 지정된 출력으로 보냅니다. 기본 출력도 제공되므로 일치하는 식이 없을 경우 행을 기본 출력으로 보냅니다.  
@@ -78,7 +75,7 @@ ms.locfileid: "35332977"
 > [!NOTE]  
 >  조건부 분할 변환에서는 각 입력 행을 하나의 출력에만 전송합니다. 여러 조건을 입력하는 경우 조건부 분할 변환에서는 각 행을 조건이 True가 되는 첫 번째 출력으로 전송하고 해당 행에 대한 다른 조건은 무시합니다. 여러 조건을 연속적으로 평가해야 하는 경우 조건부 분할 변환을 데이터 흐름에서 연결해야 합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **주문**  
  행을 선택하고 오른쪽의 화살표 키를 사용하여 식을 평가하는 순서를 변경합니다.  
   

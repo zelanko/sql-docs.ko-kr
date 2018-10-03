@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad55d02436d5d2ef0667e1b444ab68da5c526f46
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ab67abb878cd5eea91aff9c8d055baec0ef87329
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717151"
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드(RDS)
 요청을 실행 하 고 ADO 2.1의에서 사용에 대 한 ADO 레코드 집합을 만듭니다.  

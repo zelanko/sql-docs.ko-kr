@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e61cd4451590fc9a2b9341fbe4337651f8f3962f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6dc711b73e7cc190ae8ae3d46d142bab65b9566c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672731"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;(보다 작음)(SSIS 식)
   첫 번째 식이 두 번째 식보다 작은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  

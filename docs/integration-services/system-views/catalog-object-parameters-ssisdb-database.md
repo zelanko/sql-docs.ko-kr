@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a22b2741f7e8c3f38fe313699027d6b0ae458809
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0afd8f494474c54eaf911f6cd7b8f74c9ec1a287
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729561"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.locfileid: "35406055"
 |validation_status|**char(1)**|정보를 제공하기 위해서만 확인됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 사용되지 않습니다.|  
 |last_validation_time|**datetimeoffset(7)**|정보를 제공하기 위해서만 확인됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 사용되지 않습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 뷰의 행을 보려면 다음 권한 중 하나가 있어야 합니다.  
   
 -   프로젝트에 대한 READ 권한  

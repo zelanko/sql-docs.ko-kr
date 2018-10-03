@@ -1,13 +1,11 @@
 ---
-title: 필터 및 RecordCount 속성 예제 (VB) | Microsoft Docs
+title: Filter 및 RecordCount 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675421"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>필터 및 RecordCount 속성 예제 (VB)
-이 예에서는 열린는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 게시자 테이블에는 ***Pubs*** 데이터베이스입니다. 다음 사용 하 여는 [필터](../../../ado/reference/ado-api/filter-property.md) 특정 국가/지역에 해당 게시자에 표시 된 레코드의 수를 제한 하는 속성입니다. **RecordCount** 속성 필터링 되 고 필터링 되지 않은 레코드 집합 간의 차이 표시 하는 데 사용 됩니다.  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Filter 및 RecordCount 속성 예제(VB)
+이 예제에서는 열기를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 게시자 테이블에는 ***Pubs*** 데이터베이스입니다. 사용 하 여는 [필터](../../../ado/reference/ado-api/filter-property.md) 특정 국가/지역에서 해당 게시자에 표시 되는 레코드의 수를 제한 하는 속성입니다. 합니다 **RecordCount** 속성 필터링 및 필터링 되지 않은 레코드 집합 간의 차이 표시 하는 데 사용 됩니다.  
   
 ```  
 'BeginFilterVB  
@@ -112,7 +109,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  일반적으로 보다 효과적으로 열은 선택 하려는 데이터를 알고 있는 경우는 **레코드 집합** SQL 문을 사용 합니다. 하나만 만드는 방법을 보여 주는이 예제 **레코드 집합** 특정 국가에서 레코드를 가져와야 합니다.  
+>  선택 하려는 데이터를 알고 때 일반적으로 더 효과적으로 열을 **레코드 집합** SQL 문을 사용 하 여 합니다. 이 예제에서는 하나만 만드는 방법을 보여 줍니다 **레코드 집합** 특정 국가에서 레코드를 가져와야 합니다.  
   
 ```  
 Attribute VB_Name = "Filter"  

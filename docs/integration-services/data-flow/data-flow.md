@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02785d03d4ca31881b76af7badd97b693dcd2b48
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6676cceb6f48b4609e14e8b0667db9d6a2c92b28
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796761"
 ---
 # <a name="data-flow"></a>데이터 흐름
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 집합을 만듭니다.  

@@ -5,11 +5,7 @@ ms.date: 07/30/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - database permissions
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
@@ -17,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48770d7c72e114856c7a29bbff2e005987a4ba49
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3aca79a451c925b9c8c7734ecf3545152328a65f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683761"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>2단원: 데이터베이스 개체에 대한 사용 권한 구성
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

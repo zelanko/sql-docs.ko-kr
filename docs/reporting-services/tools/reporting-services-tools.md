@@ -4,7 +4,6 @@ ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -20,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d56edf40635907c4ba7a91deb358977fd70ed1e6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fdde81c9e1fc044bef965695158bf3fcb8aa5dbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675521"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  

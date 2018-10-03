@@ -1,33 +1,30 @@
 ---
-title: 개체 속성, 메서드 및 이벤트 인덱스 | Microsoft Docs
+title: 인덱스 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Index object [ADOX], members
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f6117e5ec4fcf6a044b7351292f337628890a4e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 70ef6dc82f4830f7394cb586e36a22075151b061
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286022"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730381"
 ---
-# <a name="index-object-properties-methods-and-events"></a>Index 개체 속성, 메서드 및 이벤트
+# <a name="index-object-properties-methods-and-events"></a>인덱스 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [Clustered 속성](../../../ado/reference/adox-api/clustered-property-adox.md)  
   
- [Columns 컬렉션](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [열 컬렉션](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
  [IndexNulls 속성](../../../ado/reference/adox-api/indexnulls-property-adox.md)  
   
@@ -35,7 +32,7 @@ ms.locfileid: "35286022"
   
  [PrimaryKey 속성](../../../ado/reference/adox-api/primarykey-property-adox.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [고유한 속성](../../../ado/reference/adox-api/unique-property-adox.md)  
   

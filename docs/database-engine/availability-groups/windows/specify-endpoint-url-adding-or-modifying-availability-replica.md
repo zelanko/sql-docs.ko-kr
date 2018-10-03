@@ -1,12 +1,10 @@
 ---
-title: 끝점 URL 지정 - 가용성 복제본 추가 또는 수정 | Microsoft Docs
+title: 엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - endpoints [SQL Server], AlwaysOn Availability Groups
@@ -14,25 +12,24 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cba856e2b4e4b57eec0a30709fa093c305cca51
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 83be7eae028ba456dd9d2b3191668a3bd68c5e08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769939"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670201"
 ---
-# <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>끝점 URL 지정 - 가용성 복제본 추가 또는 수정
+# <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  가용성 그룹에 대한 가용성 복제본을 호스팅하려면 서버 인스턴스에서 데이터베이스 미러링 끝점을 처리해야 합니다. 서버 인스턴스는 이 끝점을 사용하여 다른 서버 인스턴스에서 호스팅하는 가용성 복제본의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 메시지를 수신합니다. 가용성 그룹에 대한 가용성 복제본을 정의하려면 복제본을 호스팅하는 서버 인스턴스의 끝점 URL을 지정해야 합니다. *끝점 URL* 은 데이터베이스 미러링 끝점의 전송 프로토콜인 TCP, 서버 인스턴스의 시스템 주소, 끝점과 연결된 포트 번호를 정의합니다.  
+  가용성 그룹에 대한 가용성 복제본을 호스팅하려면 서버 인스턴스에서 데이터베이스 미러링 엔드포인트를 처리해야 합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서 호스팅하는 가용성 복제본의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 메시지를 수신합니다. 가용성 그룹에 대한 가용성 복제본을 정의하려면 복제본을 호스팅하는 서버 인스턴스의 엔드포인트 URL을 지정해야 합니다. *엔드포인트 URL* 은 데이터베이스 미러링 엔드포인트의 전송 프로토콜인 TCP, 서버 인스턴스의 시스템 주소, 엔드포인트와 연결된 포트 번호를 정의합니다.  
   
 > [!NOTE]  
->  "끝점 URL"이라는 용어는 데이터베이스 미러링 사용자 인터페이스 및 설명서에서 사용하는 "서버 네트워크 주소"라는 용어와 동의어입니다.  
+>  "엔드포인트 URL"이라는 용어는 데이터베이스 미러링 사용자 인터페이스 및 설명서에서 사용하는 "서버 네트워크 주소"라는 용어와 동의어입니다.  
   
--   [끝점 URL의 구문](#SyntaxOfURL)  
+-   [엔드포인트 URL의 구문](#SyntaxOfURL)  
   
 -   [시스템의 정규화된 도메인 이름 찾기](#Finding_FQDN)  
   
@@ -40,8 +37,8 @@ ms.locfileid: "34769939"
   
 -   [관련 내용](#RelatedContent)  
   
-##  <a name="SyntaxOfURL"></a> 끝점 URL의 구문  
- 끝점 URL의 구문은 다음 형식을 사용합니다.  
+##  <a name="SyntaxOfURL"></a> 엔드포인트 URL의 구문  
+ 엔드포인트 URL의 구문은 다음 형식을 사용합니다.  
   
  TCP**://***\<system-address>***:***\<port>*  
   
@@ -63,15 +60,15 @@ ms.locfileid: "34769939"
   
          도메인 세그먼트의 내용과 개수는 회사 또는 조직 내에서 결정됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [정규화된 도메인 이름 찾기](#Finding_FQDN)를 참조하세요.  
   
--   *\<포트>* 는 파트너 서버 인스턴스의 미러링 끝점에서 사용하는 포트 번호입니다.  
+-   *\<포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용하는 포트 번호입니다.  
   
-     데이터베이스 미러링 끝점은 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 각 포트 번호는 하나의 끝점에만 연결되어야 하고 각 끝점은 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 끝점에서 수신합니다. 따라서 가용성 복제본을 지정할 때 끝점 URL에서 지정하는 포트는 항상 들어오는 메시지를 끝점이 해당 포트와 연결된 서버 인스턴스로 지정합니다.  
+     데이터베이스 미러링 엔드포인트는 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 각 포트 번호는 하나의 엔드포인트에만 연결되어야 하고 각 엔드포인트는 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 엔드포인트에서 수신합니다. 따라서 가용성 복제본을 지정할 때 엔드포인트 URL에서 지정하는 포트는 항상 들어오는 메시지를 엔드포인트가 해당 포트와 연결된 서버 인스턴스로 지정합니다.  
   
-     끝점 URL에서는 포트 번호를 통해서만 대상 컴퓨터에서 미러링 끝점과 연결되는 서버 인스턴스가 식별됩니다. 다음 그림에서는 단일 컴퓨터에 있는 두 서버 인스턴스의 끝점 URL을 보여 줍니다. 기본 인스턴스는 포트 `7022` 를 사용하고 명명된 인스턴스는 포트 `7033`을 사용합니다. 이러한 두 서버 인스턴스에 대한 끝점 URL은 각각 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` 및 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`입니다. 주소에는 서버 인스턴스 이름이 포함되지 않습니다.  
+     엔드포인트 URL에서는 포트 번호를 통해서만 대상 컴퓨터에서 미러링 엔드포인트와 연결되는 서버 인스턴스가 식별됩니다. 다음 그림에서는 단일 컴퓨터에 있는 두 서버 인스턴스의 엔드포인트 URL을 보여 줍니다. 기본 인스턴스는 포트 `7022` 를 사용하고 명명된 인스턴스는 포트 `7033`을 사용합니다. 이러한 두 서버 인스턴스에 대한 엔드포인트 URL은 각각 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` 및 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`입니다. 주소에는 서버 인스턴스 이름이 포함되지 않습니다.  
   
      ![기본 인스턴스의 서버 네트워크 주소](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "기본 인스턴스의 서버 네트워크 주소")  
   
-     서버 인스턴스의 데이터베이스 미러링 끝점과 현재 연결된 포트를 식별하려면 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
+     서버 인스턴스의 데이터베이스 미러링 엔드포인트와 현재 연결된 포트를 식별하려면 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
   
     ```  
     SELECT type_desc, port FROM sys.TCP_endpoints  
@@ -82,22 +79,22 @@ ms.locfileid: "34769939"
 ### <a name="examples"></a>예  
   
 #### <a name="a-using-a-system-name"></a>1. 시스템 이름 사용  
- 다음 끝점 URL은 시스템 이름 `SYSTEM46`및 포트 `7022`를 지정합니다.  
+ 다음 엔드포인트 URL은 시스템 이름 `SYSTEM46` 및 포트 `7022`를 지정합니다.  
   
  `TCP://SYSTEM46:7022`  
   
 #### <a name="b-using-a-fully-qualified-domain-name"></a>2. 정규화된 도메인 이름 사용  
- 다음 끝점 URL은 정규화된 도메인 이름 `DBSERVER8.manufacturing.Adventure-Works.com`및 포트 `7024`를 지정합니다.  
+ 다음 엔드포인트 URL은 정규화된 도메인 이름 `DBSERVER8.manufacturing.Adventure-Works.com` 및 포트 `7024`를 지정합니다.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
   
 #### <a name="c-using-ipv4"></a>3. IPv4 사용  
- 다음 끝점 URL은 IPv4 주소 `10.193.9.134`및 포트 `7023`을 지정합니다.  
+ 다음 엔드포인트 URL은 IPv4 주소 `10.193.9.134` 및 포트 `7023`을 지정합니다.  
   
  `TCP://10.193.9.134:7023`  
   
 #### <a name="d-using-ipv6"></a>4. IPv6 사용  
- 다음 끝점 URL에는 IPv6 주소 `2001:4898:23:1002:20f:1fff:feff:b3a3`및 포트 `7022`가 포함되어 있습니다.  
+ 다음 엔드포인트 URL에는 IPv6 주소 `2001:4898:23:1002:20f:1fff:feff:b3a3` 및 포트 `7022`가 포함되어 있습니다.  
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
@@ -124,25 +121,25 @@ ms.locfileid: "34769939"
 >  정규화된 도메인 이름에 대한 자세한 내용은 시스템 관리자에게 문의하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
- **데이터베이스 미러링 끝점을 구성하려면**  
+ **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   가용성 복제본 추가 또는 수정 시 끝점 URL 지정(SQL Server)  
+-   가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정(SQL Server)  
   
 -   [Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
- **데이터베이스 미러링 끝점에 대한 정보를 보려면**  
+ **데이터베이스 미러링 엔드포인트에 대한 정보를 보려면**  
   
 -   [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   

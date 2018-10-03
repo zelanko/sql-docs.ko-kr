@@ -5,23 +5,20 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - example application
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d47fe33801ca8a4932b6295a5052e9948bc5ef0f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d3e97f0fa4e8abfb8eddb27095fefcacd565d1d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007194"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671641"
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 응용 프로그램(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

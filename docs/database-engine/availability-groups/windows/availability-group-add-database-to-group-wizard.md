@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.adddatabasewizard.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e836fb404f71d1e2a37a7ab91353b4734aa50484
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 25bea0c614d55774207692ab275917d7ecdcab2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724251"
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>가용성 그룹 - 그룹 마법사에 데이터베이스 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +111,7 @@ ms.locfileid: "34769289"
   
      선택이 완료되었으면 필요에 따라 스크립트를 클릭하여 마법사에서 실행할 단계에 대한 스크립트를 만들 수 있습니다. 새 가용성 그룹을 만들어 구성하려면 **마침**을 클릭합니다.  
   
-9. **진행률** 페이지에 가용성 그룹을 만들기 위한 단계(끝점 구성, 가용성 그룹 만들기 및 가용성 그룹에 보조 복제본 조인)의 진행 상태가 표시됩니다.  
+9. **진행률** 페이지에 가용성 그룹을 만들기 위한 단계(엔드포인트 구성, 가용성 그룹 만들기 및 가용성 그룹에 보조 복제본 조인)의 진행 상태가 표시됩니다.  
   
      자세한 내용은 [진행률 페이지&#40;Always On 가용성 그룹 마법사&#41;](../../../database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md)를 참조하세요.  
   

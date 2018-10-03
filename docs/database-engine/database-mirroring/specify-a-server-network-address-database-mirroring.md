@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2f1fd02985216d5f6f6ef7360bc08312cf79ccbd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 7217be66fa41328d2483bc42fa66f2f71fcc1beb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789041"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>서버 네트워크 주소 지정(데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   데이터베이스 미러링 세션을 설정하려면 각 서버 인스턴스에 대한 서버 네트워크 주소가 필요합니다. 서버 인스턴스의 서버 네트워크 주소는 시스템 주소와 인스턴스가 수신하는 포트 번호를 제공하여 인스턴스를 명확하게 식별해야 합니다.  
   
- 서버 인스턴스에 데이터베이스 미러링 끝점이 있어야만 서버 네트워크 주소에 포트를 지정할 수 있습니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+ 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있어야만 서버 네트워크 주소에 포트를 지정할 수 있습니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
   
 ##  <a name="Syntax"></a> 서버 네트워크 주소 구문  
@@ -59,15 +56,15 @@ ms.locfileid: "35312392"
         > [!NOTE]  
         >  정규화된 도메인 이름을 찾는 방법은 이 항목의 뒷부분에 나오는 "정규화된 도메인 이름 찾기"를 참조하세요.  
   
--   *\<포트>* 는 파트너 서버 인스턴스의 미러링 끝점에서 사용하는 포트 번호입니다. 끝점 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+-   *\<포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용하는 포트 번호입니다. 엔드포인트 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
-     데이터베이스 미러링 끝점은 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 컴퓨터 시스템의 각 포트 번호는 하나의 끝점에만 연결되어야 하고 각 끝점은 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 끝점에서 수신합니다. 따라서 데이터베이스 미러링 세션을 설정할 때 서버 네트워크 주소에 지정하는 포트는 항상 끝점이 해당 포트와 연결된 서버 인스턴스로 세션을 지정합니다.  
+     데이터베이스 미러링 엔드포인트는 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 컴퓨터 시스템의 각 포트 번호는 하나의 엔드포인트에만 연결되어야 하고 각 엔드포인트는 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 엔드포인트에서 수신합니다. 따라서 데이터베이스 미러링 세션을 설정할 때 서버 네트워크 주소에 지정하는 포트는 항상 엔드포인트가 해당 포트와 연결된 서버 인스턴스로 세션을 지정합니다.  
   
-     서버 인스턴스의 서버 네트워크 주소에서 미러링 끝점과 연결된 포트 번호만이 해당 인스턴스를 컴퓨터의 다른 인스턴스와 구분해 줍니다. 다음 그림에서는 단일 컴퓨터에 있는 두 서버 인스턴스의 서버 네트워크 주소를 보여 줍니다. 기본 인스턴스는 포트 `7022` 를 사용하고 명명된 인스턴스는 포트 `7033`을 사용합니다. 이러한 두 서버 인스턴스에 대한 서버 네트워크 주소는 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` 및 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`입니다. 주소에는 서버 인스턴스 이름이 포함되지 않습니다.  
+     서버 인스턴스의 서버 네트워크 주소에서 미러링 엔드포인트와 연결된 포트 번호만이 해당 인스턴스를 컴퓨터의 다른 인스턴스와 구분해 줍니다. 다음 그림에서는 단일 컴퓨터에 있는 두 서버 인스턴스의 서버 네트워크 주소를 보여 줍니다. 기본 인스턴스는 포트 `7022` 를 사용하고 명명된 인스턴스는 포트 `7033`을 사용합니다. 이러한 두 서버 인스턴스에 대한 서버 네트워크 주소는 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` 및 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`입니다. 주소에는 서버 인스턴스 이름이 포함되지 않습니다.  
   
      ![기본 인스턴스의 서버 네트워크 주소](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "기본 인스턴스의 서버 네트워크 주소")  
   
-     서버 인스턴스의 데이터베이스 미러링 끝점과 현재 연결된 포트를 식별하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
+     서버 인스턴스의 데이터베이스 미러링 엔드포인트와 현재 연결된 포트를 식별하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
     ```  
     SELECT type_desc, port FROM sys.tcp_endpoints  
@@ -125,20 +122,20 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
  `MYSERVER.mydomain.Adventure-Works.com`  
   
 ##  <a name="Examples"></a> 예  
- 다음 예에서는 다른 도메인에 있는 `REMOTESYSTEM3` 이라는 컴퓨터 시스템의 서버 인스턴스에 대한 서버 네트워크 주소를 보여 줍니다. 도메인 정보는 `NORTHWEST.ADVENTURE-WORKS.COM`이고 데이터베이스 미러링 끝점의 포트는 `7025`입니다. 이러한 예제 구성 요소가 지정되면 서버 네트워크 주소는 다음과 같습니다.  
+ 다음 예에서는 다른 도메인에 있는 `REMOTESYSTEM3` 이라는 컴퓨터 시스템의 서버 인스턴스에 대한 서버 네트워크 주소를 보여 줍니다. 도메인 정보는 `NORTHWEST.ADVENTURE-WORKS.COM`이고 데이터베이스 미러링 엔드포인트의 포트는 `7025`입니다. 이러한 예제 구성 요소가 지정되면 서버 네트워크 주소는 다음과 같습니다.  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
   
- 다음 예에서는 `DBSERVER1`이라는 컴퓨터 시스템의 서버 인스턴스에 대한 서버 네트워크 주소를 보여 줍니다. 이 시스템은 로컬 도메인에 있으며 해당 시스템 이름으로 명확하게 식별됩니다. 데이터베이스 미러링 끝점의 포트는 `7022`입니다.  
+ 다음 예에서는 `DBSERVER1`이라는 컴퓨터 시스템의 서버 인스턴스에 대한 서버 네트워크 주소를 보여 줍니다. 이 시스템은 로컬 도메인에 있으며 해당 시스템 이름으로 명확하게 식별됩니다. 데이터베이스 미러링 엔드포인트의 포트는 `7022`입니다.  
   
  `TCP://DBSERVER1:7022`  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
--   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

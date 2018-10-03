@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -22,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: df25145c876548139bd166d2aa3e767ddcb5b168
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740631"
 ---
 # <a name="stored-procedures---calling"></a>저장 프로시저 - 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +96,7 @@ ms.locfileid: "43032715"
   
  ODBC CALL 이스케이프 시퀀스를 사용한 프로시저 호출의 일반적인 구문은 다음과 같습니다.  
   
- {0} [**? =**]**호출 * **procedure_name*[**(**[*매개 변수*] [**,**[*매개 변수*]]...** )**]}  
+ {0} [**? =**]**호출**_프로시저\_이름_[**(**[*매개 변수*] [ **하십시오**[_매개 변수_]]... **)**]}  
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   

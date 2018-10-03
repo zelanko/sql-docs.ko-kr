@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AS
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-caps.latest.revision: 70
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d390f1ed3d607d7e8b5c0686004b856591960d6d
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 17d2a3ce8ff7fba2cc8e34472911287e25c61e08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942791"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761061"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -191,7 +188,7 @@ GO
 ## <a name="best-practice"></a>최선의 구현 방법  
  모듈에 정의된 작업을 수행하는 데 필요한 최소한의 권한이 있는 로그인이나 사용자를 지정합니다. 예를 들어 데이터베이스 소유자 계정은 해당 권한이 필요한 경우에만 지정하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  EXECUTE AS로 지정된 모듈을 실행하려면 호출자에게 해당 모듈에 대한 EXECUTE 권한이 있어야 합니다.  
   
  다른 데이터베이스 또는 서버의 리소스에 액세스하는 EXECUTE AS로 지정된 CLR 모듈을 실행하려면 대상 데이터베이스나 서버가 모듈이 원래 속한 원본 데이터베이스의 인증자를 트러스트해야 합니다.  

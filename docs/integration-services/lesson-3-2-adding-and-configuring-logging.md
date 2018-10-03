@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03fadd534280172b14b251d6b143335348a15911
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3d28fe017e3757b3f21d6d735911692708eb66c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726661"
 ---
 # <a name="lesson-3-2---adding-and-configuring-logging"></a>3-2단원 - 로깅 추가 및 구성
 이 태스크에서는 Lesson 3.dtsx 패키지의 데이터 흐름에 로깅을 설정한 다음 PipelineExecutionPlan 및 PipelineExecuteTrees 이벤트를 로그하도록 텍스트 파일 로그 공급자를 구성합니다. 텍스트 파일 로그 공급자는 쉽게 보고 변환할 수 있는 로그를 만듭니다. 이러한 로그 파일은 단순하기 때문에 특히 패키지의 기본 테스트 단계에서 유용합니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 로그 이벤트 창에서도 로그 항목을 볼 수 있습니다.  

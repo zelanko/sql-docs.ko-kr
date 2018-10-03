@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SESSIONPROPERTY
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SESSIONPROPERTY function
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8674d633df2c8e4c2dfc15197a46f2d790b38e59
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 36fb5844c7255aff7b8527ff5cc462ec5a573977
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642911"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

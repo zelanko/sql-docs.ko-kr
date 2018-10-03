@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408525"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694151"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
   플랫 파일 대상을 선택한 경우 테이블을 복사하도록 지정하거나 쿼리를 지정한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **플랫 파일 대상 구성**을 표시합니다. 이 페이지에서 대상 플랫 파일에 대한 서식 옵션을 지정합니다. 필요에 따라 개별 열의 매핑을 검토하고 샘플 데이터를 미리 봅니다.  

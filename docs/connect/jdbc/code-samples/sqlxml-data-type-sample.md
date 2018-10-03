@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29dab6834b367d58f80471f920c7ab23d63fedae
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9cea65df353bfd207f54f7ab4d5408491ab1d042
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726411"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 데이터 형식 샘플
 

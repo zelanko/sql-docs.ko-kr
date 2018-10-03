@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d756cca30be1b6bc74be577c0b5498cd34c11292
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688351"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 요소 경로 구문(SSRS)
   보고서 디자이너에서 대/소문자 구분 요소 경로를 정의하여 XML 데이터 원본에서 보고서에 사용할 데이터를 지정할 수 있습니다. 요소 경로는 XML 데이터 원본의 XML 계층 노드와 해당 특성으로 이동하는 방법을 나타냅니다. 기본 요소 경로를 사용하려면 데이터 집합 쿼리나 XML **ElementPath** 의 XML **Query** 를 비워 둡니다. XML 데이터 원본에서 데이터가 검색될 때 텍스트 값이 있는 요소 노드와 요소 노드 특성은 결과 집합의 열이 됩니다. 쿼리를 실행하면 노드 및 특성 값은 행 데이터가 됩니다. 열은 보고서 데이터 창에 데이터 집합 필드 컬렉션으로 표시됩니다. 이 항목에서는 요소 경로 구문을 설명합니다.  
