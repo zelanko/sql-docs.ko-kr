@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events], ring buffer target
 - ring buffer target [SQL Server extended events]
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b60f4e3c5ca8d207d3eac23047c8cdefc99d9f66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d52dc4ba85ec3b65ddf3e1c703befd0ee32d78a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182544"
 ---
 # <a name="ring-buffer-target"></a>링 버퍼 대상
   간단히 말해 링 버퍼 대상은 메모리에 이벤트 데이터를 보관합니다. 이 대상은 다음 두 모드 중 하나로 이벤트를 관리할 수 있습니다.  

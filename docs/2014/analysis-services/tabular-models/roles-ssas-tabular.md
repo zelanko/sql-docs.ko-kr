@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181373"
 ---
 # <a name="roles-ssas-tabular"></a>역할(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 각 역할에는 Windows 사용자 이름 또는 Windows 그룹별 멤버와 권한(읽기, 프로세스, 관리자)이 포함됩니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다.  
@@ -68,7 +65,7 @@ ms.locfileid: "37235693"
   
 |사용 권한|Description|DAX를 사용하는 행 필터|  
 |-----------------|-----------------|----------------------------|  
-|InclusionThresholdSetting|멤버는 model 데이터베이스 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 데이터가 이 역할의 사용자에게 표시되지 않습니다.|  
+|없음|멤버는 model 데이터베이스 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 데이터가 이 역할의 사용자에게 표시되지 않습니다.|  
 |읽기|멤버는 행 수준 필터를 기반으로 데이터를 쿼리할 수 있지만 SSMS의 model 데이터베이스를 볼 수 없으며, model 데이터베이스 스키마를 변경할 수 없고, 사용자가 모델을 처리할 수 없습니다.|행 필터를 적용할 수 있습니다. 행 필터 DAX 수식에 지정된 데이터만 사용자에게 표시됩니다.|  
 |읽기 및 처리|멤버는 행 수준 필터를 기반으로 데이터를 쿼리할 수 있고 처리 명령을 포함하는 스크립트 또는 패키지를 실행하여 처리 작업을 실행할 수 있지만 데이터베이스를 변경할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 model 데이터베이스를 볼 수 없습니다.|행 필터를 적용할 수 있습니다. 행 필터 DAX 수식에 지정된 데이터만 쿼리할 수 있습니다.|  
 |처리|멤버는 처리 명령을 포함하는 스크립트 또는 패키지를 실행하여 처리 작업을 실행할 수 있습니다. model 데이터베이스 스키마를 수정할 수 없습니다. 데이터를 쿼리할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 model 데이터베이스를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 이 역할에서는 데이터를 쿼리할 수 없습니다.|  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89ac992a05c043dc22dd2ff3ef85d62284b77955
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194780"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181413"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>공유 데이터 원본 만들기 및 관리(SharePoint 통합 모드의 Reporting Services)
   SharePoint 라이브러리에서 보고서를 실행하는 경우 연결 정보는 보고서에 링크된 외부 파일에 또는 보고서 내에 정의될 수 있습니다. 연결 정보가 보고서 내에 포함되어 있는 경우 사용자 지정 데이터 원본이라고 하며 연결 정보가 외부 파일에 정의되어 있는 경우 공유 데이터 원본이라고 합니다. 외부 파일은 보고서 서버 데이터 원본 파일(.rsds)이나 Office 데이터 연결 파일(.odc)이 될 수 있습니다.  

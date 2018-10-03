@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 21281fe3b01f8b6ed89042f9abb9f8eb9f1d4edf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87984d85ea18415472669cf4ce05dbdbe300e8e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182113"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>축 레이블의 서식을 날짜 또는 통화로 지정(보고서 작성기 및 SSRS)
   올바른 형식의 DateTime 값을 축에 표시하면 차트에 이러한 값이 일로 자동 표시됩니다. X축에 대해 월 또는 시간 간격과 같은 날짜/시간 간격을 지정하려면 축 레이블의 서식을 지정하고 축 간격 유형을 올바른 날짜 또는 시간 간격으로 설정해야 합니다.  

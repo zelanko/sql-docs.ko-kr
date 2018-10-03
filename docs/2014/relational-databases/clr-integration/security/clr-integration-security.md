@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349595"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181563"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
   보안 모델을 [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] CLR (공용 언어 런타임) 관리 하 고 서로 다른 유형의 CLR 및 비-CLR 개체 내에서 실행 되는 액세스를 보호 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 문이나 다른 CLR 개체를 서버에서 실행 합니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  

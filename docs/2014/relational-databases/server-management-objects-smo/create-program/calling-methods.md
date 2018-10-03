@@ -1,14 +1,12 @@
 ---
-title: 메서드를 호출 합니다. | Microsoft Docs
+title: 메서드를 호출 합니다. | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - methods [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, method calling
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b2d2cce4fa8bf38e8403af1a783c9b1d85eb14aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f0e816cce3b43a95cac481e4fe84f5ad11060a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181773"
 ---
 # <a name="calling-methods"></a>메서드 호출
   개체와 관련 된를 실행 하는 등 특정 작업을 수행 하는 메서드를 `Checkpoint` 데이터베이스 또는 인스턴스에 대해 로그온 열거 목록을 요청 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
