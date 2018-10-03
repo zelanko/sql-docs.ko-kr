@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
-caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ab5c7785fed8f22a12e265426d485fd65ed9a66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58e99449b2ee05fa81f63320b4004126d44ca4cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203123"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스 구성(SQL Server)
   인스턴스에서 호스팅하는 데이터베이스에 대해 정의된 성능 및 가용성 요구 사항에 맞게 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 각 인스턴스를 구성해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에는 리소스 사용과 같은 동작 및 감사 또는 트리거 재귀와 같은 기능의 가용성을 제어하는 구성 옵션이 있습니다.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 49a17ff3-94e9-4969-84fc-37d49e63933b
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d55ef159195d42935db271c3b3a51860fd698ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34e900268c42f1bc4541b1ddf6aad5901fc35480
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212963"
 ---
 # <a name="extending-olap-functionality"></a>OLAP 기능 확장
   프로그래머는 여러 데이터베이스 응용 프로그램에서의 사용 및 용도 변경 기능을 제공하는 어셈블리, 개인 설정 확장 프로그램 및 저장 프로시저를 작성하여 Analysis Services를 확장할 수 있습니다. 어셈블리는 새 프로시저와 함수를 MDX 언어에 추가하거나 개인 설정 추가 기능을 사용하여 다차원 모델 기능을 확장하는 데 사용됩니다.  

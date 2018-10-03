@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68015cd04ad32dd20b48b0aa6f4b83971a63fa31
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0e0f1e8f3e76ffbe84495fc7bae6229a1b590089
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808399"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211933"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *에서* 작업 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  

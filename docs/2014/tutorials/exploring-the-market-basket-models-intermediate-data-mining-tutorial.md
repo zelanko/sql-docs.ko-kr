@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c81bba0a055f812afddb56eac604111796f464d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179140"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211943"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>시장 바구니 모델 탐색(중급 데이터 마이닝 자습서)
   만든 했으므로 합니다 `Association` 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. 이 자습서는 뷰어를 사용하여 항목 간 관계를 탐색하는 단계를 안내합니다. 뷰어에서는 함께 나타나는 경향이 있는 제품을 한 눈에 확인하고, 나타나는 패턴을 파악할 수 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - historical information [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - status information [SQL Server], source control files
 - historical information [SQL Server], source control files
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52fdedc502bc2d8c53a01b0bc69d8a3168957b97
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212143"
 ---
 # <a name="set-and-retrieve-version-information"></a>버전 정보 설정 및 검색
   버전 정보에는 원본 제어 파일의 기록 및 현재 상태가 포함됩니다. 모든 원본 제어 파일에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe는 포괄적인 기록을 유지 관리하므로 시간이 지남에 따라 하나 이상의 파일이 발전하는 상황을 추적할 수 있습니다. 또한 이 정보를 사용하여 모든 파일 버전의 로컬 복사본을 검색하거나 두 개의 파일 버전을 비교할 수 있습니다.  

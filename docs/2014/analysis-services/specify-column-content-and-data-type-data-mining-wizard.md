@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5203f517335ab3d346b5b303d4225a87e5be64ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183370"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213473"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>열 내용 및 데이터 형식 지정(데이터 마이닝 마법사)
   **열 내용 및 데이터 형식 지정** 페이지를 사용하여 마법사의 이전 페이지에서 선택한 각 열의 사용법 및 데이터 형식을 지정할 수 있습니다. 열을 무시하려면 **뒤로** 를 클릭하여 **학습 데이터 지정**페이지로 돌아간 다음 모든 확인란의 선택을 취소합니다.  

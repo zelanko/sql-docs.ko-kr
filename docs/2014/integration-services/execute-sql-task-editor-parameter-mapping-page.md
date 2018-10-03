@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 867ecaedcdcbafb972ccd289b5257fc73b353a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092373"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>SQL 실행 태스크 편집기(매개 변수 매핑 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
   
  이 태스크에 대해 알아보려면 [SQL 실행 태스크](control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)를 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>변수  
  **변수 이름**  
  **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 추가합니다.  
   
@@ -45,7 +42,7 @@ ms.locfileid: "39082955"
  **매개 변수 이름**  
  매개 변수 이름을 입력합니다.  
   
- 태스크에서 사용하는 연결 관리자 유형에 따라 숫자 또는 매개 변수 이름을 사용해야 합니다. 일부 연결 관리자 유형의 매개 변수 이름의 첫 번째 문자는 필요 합니다 \@ 과 같은 특정 이름을 로그인 \@Param1, 또는 열 이름을 매개 변수 이름으로 합니다.  
+ 태스크에서 사용하는 연결 관리자 유형에 따라 숫자 또는 매개 변수 이름을 사용해야 합니다. 일부 연결 관리자 유형의 경우 매개 변수 이름의 첫 문자가 \@ 기호여야 하거나, 이름이 \@Param1과 같은 특정 이름이어야 하거나, 열 이름을 매개 변수 이름으로 지정해야 합니다.  
   
  **관련 항목:** [SQL 실행 태스크의 매개 변수 및 반환 코드](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

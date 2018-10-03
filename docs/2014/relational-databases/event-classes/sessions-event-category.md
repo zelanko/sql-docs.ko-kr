@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server event classes, Sessions event category
 - event classes [SQL Server], Sessions event category
 ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7068d68d58d793e62b712875a507ced7c0ec55e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b1503f7e8a423430c7f5da7c522e34d631cf889
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182433"
 ---
 # <a name="sessions-event-category"></a>Sessions 이벤트 범주
   **Sessions** 이벤트 범주에는 **ExistingConnection** 이벤트 클래스가 포함됩니다.  

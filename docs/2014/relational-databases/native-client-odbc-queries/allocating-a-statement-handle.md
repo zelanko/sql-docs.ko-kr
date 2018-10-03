@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22b207f02fd2cbf4cffa10af8ebab1cb6ba268e7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215033"
 ---
 # <a name="allocating-a-statement-handle"></a>문 핸들 할당
   응용 프로그램에서 문을 실행하려면 먼저 문 핸들을 할당해야 합니다. 호출 하는 것 **SQLAllocHandle** 사용 하 여는 *HandleType* 매개 변수 호출으로 설정 하 고 *InputHandle* 연결 핸들을 가리키는 합니다.  

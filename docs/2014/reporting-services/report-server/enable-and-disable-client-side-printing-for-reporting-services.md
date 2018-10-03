@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1271756e0a8caf036872e03aa1f55fa1da259860
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067445"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 컨트롤인 **RSClientPrint**, 브라우저에서 표시 되는 보고서에 대 한 클라이언트 쪽 인쇄를 제공 합니다. 이 컨트롤은 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 인쇄 미리 보기, 특정 페이지와 범위 지정을 위한 페이지 선택, 페이지 여백 및 방향이 여기에 포함됩니다. 클라이언트 쪽 인쇄 기능은 기본적으로 설정되어 있지만 이 기능을 사용하지 않으려면 해제할 수 있습니다.  
@@ -79,7 +76,7 @@ ms.locfileid: "37313139"
   
 -   스크립트 또는 보고서 서버 시스템 속성을 설정 하는 코드를 작성할 **EnableClientPrinting** 를 `false.`  
   
- 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
+ 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
   
 ### <a name="sample-script"></a>예제 스크립트  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, administering
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adc39c68b201f4de69da8e65a66272e0e1c4729e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0fbd2bc3ee7390bc2187afa6f3cb6ce0b6b6462
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070043"
 ---
 # <a name="administration-replication"></a>관리(복제)
   이 섹션에서는 복제 토폴로지 관리에 대한 정보를 제공합니다. 최상의 방법 항목을 먼저 읽고 나서 해당 항목의 링크를 따라 이 섹션 및 다른 섹션에 있는 더 자세한 정보를 찾아보는 것이 좋습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data retrieval [ADOMD.NET]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - ADOMD.NET, data retrieval
 - data retrieval [ADOMD.NET], about retrieving data
 ms.assetid: 88358189-28aa-4bc7-8dda-5a92e3a012b8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e5595bd4e001b006cb1dfe62cba40cee3bbb30c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cfc0c783e8c61689d8f5b0ca3bab6ded39a57a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212383"
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>분석 데이터 원본에서 데이터 검색
   연결을 설정하고 쿼리를 만든 후에는 데이터를 검색할 수 있습니다. ADOMD.NET에서 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체의 `Execute` 메서드 중 하나를 호출하여 세 가지 다른 개체(<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, <xref:System.Xml.XmlReader> 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>)를 사용하는 데이터를 검색할 수 있습니다.  
@@ -40,10 +37,10 @@ ms.locfileid: "37196423"
   
 |Object|상호 작용|오버헤드|차원 유지|사용량 정보|  
 |------------|-------------------|--------------|----------------------------|-----------------------|  
-|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>|가장 높음|약간 높음, 데이터 검색 속도가 가장 느림|예|[CellSet을 사용하여 데이터 검색](retrieving-data-using-the-cellset.md)|  
+|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>|가장 높음|약간 높음, 데이터 검색 속도가 가장 느림|사용자 계정 컨트롤|[CellSet을 사용하여 데이터 검색](retrieving-data-using-the-cellset.md)|  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter>|보통|보통|아니요|[DataAdapter에서 DataSet 채우기](http://go.microsoft.com/fwlink/?LinkId=70016)|  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>|보통|보통|아니요|[AdomdDataReader를 사용하여 데이터 검색](retrieving-data-using-the-adomddatareader.md)|  
-|<xref:System.Xml.XmlReader>|가장 낮음|가장 낮음, 데이터 검색 속도가 가장 빠름|예|[XmlReader를 사용하여 데이터 검색](retrieving-data-using-the-xmlreader.md)|  
+|<xref:System.Xml.XmlReader>|가장 낮음|가장 낮음, 데이터 검색 속도가 가장 빠름|사용자 계정 컨트롤|[XmlReader를 사용하여 데이터 검색](retrieving-data-using-the-xmlreader.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [ADOMD.NET 클라이언트 프로그래밍](adomd-net-client-programming.md)  

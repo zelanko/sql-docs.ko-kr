@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
@@ -18,31 +16,30 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d258dd150b879b9e993e0c550916b4ab42e272d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a43cfd2b692bb897950be25e29aa7932d32f780
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180400"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212463"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
-  이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 끝점을 만듭니다.  
+  이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 엔드포인트를 만듭니다.  
   
- 두 번째 TDS 끝점을 만드는 이유는 다음과 같습니다.  
+ 두 번째 TDS 엔드포인트를 만드는 이유는 다음과 같습니다.  
   
--   특정 서브넷 상에서 로컬 클라이언트 컴퓨터의 기본 끝점에 대한 액세스를 제한하도록 방화벽을 구성하여 보안을 향상시킵니다. 방화벽이 인터넷에 노출시키는 새로운 끝점을 만들고 이 끝점에 대한 연결 권한을 해당 서버 지원 팀으로만 제한하여 지원 팀이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 인터넷으로 액세스할 수 있도록 유지합니다.  
+-   특정 서브넷 상에서 로컬 클라이언트 컴퓨터의 기본 엔드포인트에 대한 액세스를 제한하도록 방화벽을 구성하여 보안을 향상시킵니다. 방화벽이 인터넷에 노출시키는 새로운 엔드포인트를 만들고 이 엔드포인트에 대한 연결 권한을 해당 서버 지원 팀으로만 제한하여 지원 팀이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 인터넷으로 액세스할 수 있도록 유지합니다.  
   
 -   NUMA(Non-Uniform Memory Access)를 사용할 때 특정 프로세서에 대한 연결의 선호도를 설정합니다.  
   
- TDS 끝점 구성은 실행 순서에 관계없이 다음 단계들로 구성됩니다.  
+ TDS 엔드포인트 구성은 실행 순서에 관계없이 다음 단계들로 구성됩니다.  
   
--   TCP 포트에 대한 TDS 끝점을 만들고 적합한 경우 기본 끝점에 대한 액세스를 복원합니다.  
+-   TCP 포트에 대한 TDS 엔드포인트를 만들고 적합한 경우 기본 엔드포인트에 대한 액세스를 복원합니다.  
   
--   원하는 서버 보안 주체에 끝점에 대한 액세스를 부여합니다.  
+-   원하는 서버 보안 주체에 엔드포인트에 대한 액세스를 부여합니다.  
   
 -   선택한 IP 주소에 대한 TCP 포트 번호를 지정합니다.  
   
@@ -50,9 +47,9 @@ ms.locfileid: "37180400"
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### <a name="to-create-a-tds-endpoint"></a>TDS 끝점을 만들려면  
+#### <a name="to-create-a-tds-endpoint"></a>TDS 엔드포인트를 만들려면  
   
--   다음 문을 실행하여 서버에서 사용 가능한 모든 TCP 주소에 대해 포트 1500의 **CustomConnection** 이라는 끝점을 만듭니다.  
+-   다음 문을 실행하여 서버에서 사용 가능한 모든 TCP 주소에 대해 포트 1500의 **CustomConnection** 이라는 엔드포인트를 만듭니다.  
   
     ```  
     USE master;  
@@ -65,11 +62,11 @@ ms.locfileid: "37180400"
     GO  
     ```  
   
- 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)] 끝점을 만들 때 **public** 에 대한 연결 권한은 기본 TDS 끝점에 대해 취소됩니다. **public** 그룹에 대한 액세스에 기본 끝점이 필요한 경우 `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` 문을 사용하여 이 권한을 다시 적용합니다.  
+ 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)] 엔드포인트를 만들 때 **public** 에 대한 연결 권한은 기본 TDS 엔드포인트에 대해 취소됩니다. **public** 그룹에 대한 액세스에 기본 엔드포인트가 필요한 경우 `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` 문을 사용하여 이 권한을 다시 적용합니다.  
   
-#### <a name="to-grant-access-to-the-endpoint"></a>끝점에 액세스를 부여하려면  
+#### <a name="to-grant-access-to-the-endpoint"></a>엔드포인트에 액세스를 부여하려면  
   
--   다음 문을 실행하여 **CustomConnection** 끝점에 대한 액세스를 회사 도메인의 SQLSupport 그룹에 부여합니다.  
+-   다음 문을 실행하여 **CustomConnection** 엔드포인트에 대한 액세스를 회사 도메인의 SQLSupport 그룹에 부여합니다.  
   
     ```  
     GRANT CONNECT ON ENDPOINT::[CustomConnection] to [corp\SQLSupport] ;  
@@ -97,9 +94,9 @@ ms.locfileid: "37180400"
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 다시 시작하면 오류 로그에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트 목록이 표시됩니다.  
   
-#### <a name="to-connect-to-the-new-endpoint"></a>새 끝점에 연결하려면  
+#### <a name="to-connect-to-the-new-endpoint"></a>새 엔드포인트에 연결하려면  
   
--   다음 문을 실행하여 ACCT 서버에서 SQL Server의 기본 인스턴스에 대한 **CustomConnection** 끝점에 신뢰할 수 있는 연결을 사용하여 연결합니다. 이때 사용자는 [corp\SQLSupport] 그룹의 멤버인 것으로 가정합니다.  
+-   다음 문을 실행하여 ACCT 서버에서 SQL Server의 기본 인스턴스에 대한 **CustomConnection** 엔드포인트에 신뢰할 수 있는 연결을 사용하여 연결합니다. 이때 사용자는 [corp\SQLSupport] 그룹의 멤버인 것으로 가정합니다.  
   
     ```  
     sqlcmd -SACCT,1500  
@@ -108,7 +105,7 @@ ms.locfileid: "37180400"
 ## <a name="see-also"></a>관련 항목  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
- [GRANT 끝점 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+ [GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [NUMA 노드에 TCP IP 포트 매핑&#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)  
   
   

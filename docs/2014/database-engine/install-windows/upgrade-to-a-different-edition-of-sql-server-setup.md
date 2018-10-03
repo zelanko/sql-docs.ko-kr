@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182860"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088283"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>다른 SQL Server 2014 버전으로 업그레이드(설치 프로그램)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 프로그램은 다양한 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 간에 버전 업그레이드를 지원합니다. 지원되는 버전 업그레이드 경로에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)를 참조하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 인스턴스 버전 업그레이드를 시작하기 전에 다음 항목을 검토하십시오.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8ced7cfaef647fb8aaa93a477c69f1d690d0328
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316063"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213453"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 병합 및 병합 조인 변환에는 정렬된 데이터를 입력해야 합니다. 입력 데이터는 물리적으로 정렬되어야 하며 출력 및 원본의 출력 열 또는 업스트림 변환에 정렬 옵션이 설정되어야 합니다. 정렬 옵션은 데이터가 정렬되었음을 나타내지만 데이터가 실제로 정렬되지 않은 경우에는 병합 또는 병합 조인 작업의 결과를 예측할 수 없습니다.  

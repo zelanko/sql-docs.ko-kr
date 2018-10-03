@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e1135f8f565f0fcff10c994878caea33091e34f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ba5a2b12d4f80f497491fef208d5eb0f29f1104
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213496"
 ---
 # <a name="watch-window"></a>조사식 창
   **조사식** 창은 선택한 식에 대한 정보를 표시합니다. **조사식 1**, **조사식 2, 조사식 3**및 **조사식 4**의 최대 4개의 창으로 구성할 수 있습니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  

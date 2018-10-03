@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23e0cbadc5f24a82154816dc85567d4446940706
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca91ff208e3e9d0824fff65df5fe8ffeeff7bba4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121243"
 ---
 # <a name="distributor-properties"></a>배포자 속성
   이 섹션에서는 배포자 및 배포 데이터베이스의 속성에 대한 정보를 제공합니다.  

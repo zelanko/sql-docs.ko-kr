@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28f8711f832d4dd06b5ea66e4e2a587db1c57cec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b392293114979b5732bb0857fa5873b1375972c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164413"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에 있는 **도구 모음** 창을 사용하여 처리 또는 새 측정값 그룹 생성과 같은 일반 동작을 수행할 수 있습니다.  

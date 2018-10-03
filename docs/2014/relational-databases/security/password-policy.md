@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ALTER LOGIN statement
@@ -34,12 +32,12 @@ ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c72482740aed5f90bba4c5e8e212950943cda699
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049995"
 ---
 # <a name="password-policy"></a>암호 정책
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows 암호 정책 메커니즘을 사용할 수 있습니다. 암호 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인과 암호를 가진 포함된 데이터베이스 사용자에게 적용됩니다.  

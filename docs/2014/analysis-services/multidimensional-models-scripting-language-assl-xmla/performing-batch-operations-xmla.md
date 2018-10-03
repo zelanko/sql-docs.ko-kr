@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 186d5a0896814544f34531fe98ad88c8034ac63a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa4083d1a35f710cbbfb87ecb904b1dafc346af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213273"
 ---
 # <a name="performing-batch-operations-xmla"></a>일괄 작업 수행(XMLA)
   사용할 수는 [일괄 처리](../xmla/xml-elements-commands/batch-element-xmla.md) XMLA (XML for Analysis) 단일 XMLA를 사용 하는 여러 XMLA 명령을 실행할 명령을 [Execute](../xmla/xml-elements-methods-execute.md) 메서드. `Batch` 명령에 포함된 여러 명령을 단일 트랜잭션으로 실행하거나 각 명령에 대한 개별 트랜잭션을 순차적으로 또는 병렬로 실행할 수 있습니다. 또한 여러 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리하기 위해 `Batch` 명령의 아웃오브 라인 바인딩 및 기타 속성을 지정할 수 있습니다.  

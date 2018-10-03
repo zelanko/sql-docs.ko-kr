@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column-level permissions [SQL Server]
 - removed statement permissions [SQL Server]
 ms.assetid: 7f4fbbef-2696-4911-903b-63f6d9e4484a
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 217feecec3058c71a51914bde1db9e20755472db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dfc0bf1d77322bca3a95ec5d0ed49ab856ce9cf9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125273"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>시스템 개체에 대한 열 수준 사용 권한을 수정하는 문을 제거합니다.
   업그레이드 관리자가 시스템 개체에 대한 비표준 열 수준 사용 권한을 검색했습니다. 이러한 권한 변경 내용은 업그레이드 시 유지되지 않습니다. 또한 시스템 개체에 대한 열 수준 사용 권한은 더 이상 지원되지 않습니다. 응용 프로그램에서 시스템 개체에 대한 열 수준 사용 권한을 설정하는 문을 제거합니다.  

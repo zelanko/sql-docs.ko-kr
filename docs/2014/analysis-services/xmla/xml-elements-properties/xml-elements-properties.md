@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 7aa5815f-d614-497b-a9eb-f6284772bda8
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 708e386acae4a5370c4561c00c3942065c4ac7df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 713337106de8b980aec2e1c2832273010f5791bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213953"
 ---
 # <a name="properties-xmla"></a>속성(XMLA)
   XMLA(XML for Analysis) 프로토콜은 XML 요소를 사용하여 XMLA 헤더, 메서드, 개체, 명령 및 데이터 형식에 대한 속성 정보 및 값을 나타냅니다.  
