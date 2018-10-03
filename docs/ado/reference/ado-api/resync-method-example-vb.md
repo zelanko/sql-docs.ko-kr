@@ -1,32 +1,29 @@
 ---
-title: 메서드 예제 (VB)를 다시 동기화 | Microsoft Docs
+title: Resync 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 735692ba4b769c65b20daed2c12761447ec46389
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630811"
 ---
-# <a name="resync-method-example-vb"></a>메서드 예제 (VB)를 다시 동기화
-사용 하 여 보여 주는이 예제는 [Resync](../../../ado/reference/ado-api/resync-method.md) 정적 레코드 집합에서 데이터를 새로 고치려면 메서드.  
+# <a name="resync-method-example-vb"></a>Resync 메서드 예제(VB)
+이 예제에서는 합니다 [Resync](../../../ado/reference/ado-api/resync-method.md) 정적 레코드 집합에서 데이터 새로 고침 하는 방법.  
   
 ```  
 'BeginResyncVB  

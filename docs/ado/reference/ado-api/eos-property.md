@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,28 +14,27 @@ f1_keywords:
 helpviewer_keywords:
 - EOS property
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c029efee5c4a938ff28e5cfefb5172d6b6219eeb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 47b3e48e612e0ee5595ada33127f016ee6b986f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650678"
 ---
 # <a name="eos-property"></a>EOS 속성
-현재 위치가의 끝에 있는지 여부를 나타냅니다는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md)합니다.  
+현재 위치가 끝에 있는지 여부를 나타내는 합니다 [스트림을](../../../ado/reference/ado-api/stream-object-ado.md)합니다.  
   
 ## <a name="return-values"></a>반환 값  
- 반환 된 **부울** 현재 위치가 스트림 끝에 있는지 여부를 나타내는 값입니다. **EOS** 반환 **True** 반환에 있는 경우 추가 바이트 스트림; **False** 더 많은 바이트를 현재 위치 뒤에 있는 경우.  
+ 반환 된 **부울** 현재 위치가 스트림의 맨 끝에 있는지 여부를 나타내는 값입니다. **EOS** 반환 **True** 반환에 있는 경우 더 이상 바이트 스트림에서 **False** 경우 더 많은 바이트를 현재 위치를 수행 합니다.  
   
- 스트림 위치의 끝을 설정 하려면는 [SetEOS](../../../ado/reference/ado-api/seteos-method.md) 메서드. 현재 위치를 확인 하려면 사용 하 여는 [위치](../../../ado/reference/ado-api/position-property-ado.md) 속성입니다.  
+ 스트림 위치의 끝을 설정 하려면 사용 합니다 [SetEOS](../../../ado/reference/ado-api/seteos-method.md) 메서드. 현재 위치를 확인 하려면 사용 합니다 [위치](../../../ado/reference/ado-api/position-property-ado.md) 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [EOS LineSeparator 속성 및 SkipLine 메서드 예제 (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
+ [EOS 및 LineSeparator 속성 SkipLine 메서드 예제 (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

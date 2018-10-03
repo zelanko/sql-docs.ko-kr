@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb4fb9792fc59c6206328b23f97b9b2f3257228b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2f50c116060f5ef842cf359b958f9e6cedb5c716
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633651"
 ---
-# <a name="connection-ado---wfc-syntax"></a>연결 (ADO-WFC 구문)
+# <a name="connection-ado---wfc-syntax"></a>연결(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>생성자  
@@ -48,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **executeUpdate** 메서드는 내부 ADO를 호출 하는 특수 한 사례 방법이 **실행** 특정 매개 변수와 함께 메서드. **executeUpdate** 방법은의 반환을 지원 하지 않습니다는 **레코드 집합** 개체 이므로 **실행** 메서드의 *옵션* 매개 변수는 로 수정 **AdoEnums.ExecuteOptions.NORECORDS**합니다. 이후에 **실행** 메서드가 완료 되 면 해당 업데이트 된 *RecordsAffected* 로 다시 전달 될 매개 변수는 **executeUpdate** 는 로마지막으로반환되는메서드**int**합니다.  
+ 합니다 **executeUpdate** 메서드는 특수 한 경우 호출 하는 메서드 내부 ADO **실행** 특정 매개 변수를 사용 하 여 메서드. **executeUpdate** 메서드는 반환을 지원 하지 않습니다는 **레코드 집합** 개체 이므로 **실행** 메서드의 *옵션* 매개 변수는 사용 하 여 수정할 **AdoEnums.ExecuteOptions.NORECORDS**합니다. 후는 **실행** 메서드가 완료 되 면 해당 업데이트 *RecordsAffected* 로 다시 전달 될 매개 변수를 **executeUpdate** 는으로마지막으로반환되는메서드**int**합니다.  
   
 ```  
 public void open()   
@@ -90,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>이벤트  
- ADO/WFC 이벤트에 대 한 자세한 내용은 참조 [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)합니다.  
+ ADO/WFC 이벤트에 대 한 자세한 내용은 참조 하세요. [언어별 ADO 이벤트 인스턴스](../../../ado/guide/data/ado-event-instantiation-by-language.md)합니다.  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

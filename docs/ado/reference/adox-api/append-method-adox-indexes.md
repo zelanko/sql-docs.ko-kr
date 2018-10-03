@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22f3dbde110252950694431040bd943c59344938
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284742"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632251"
 ---
-# <a name="append-method-adox-indexes"></a>Append 메서드 (ADOX 인덱스)
-새로 추가 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체는 [인덱스](../../../ado/reference/adox-api/indexes-collection-adox.md) 컬렉션입니다.  
+# <a name="append-method-adox-indexes"></a>Append 메서드(ADOX 인덱스)
+새로 추가 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체를 [인덱스](../../../ado/reference/adox-api/indexes-collection-adox.md) 컬렉션입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,13 +35,13 @@ Indexes.Append Index [,Columns]
   
 #### <a name="parameters"></a>매개 변수  
  *Index*  
- **인덱스** 추가할 개체 또는 만들고 추가 하 고 인덱스의 이름입니다.  
+ 합니다 **인덱스** 추가할 개체 또는 만들기 및 추가 인덱스의 이름입니다.  
   
  *열*  
- (선택 사항) A **Variant** 인덱싱할 열 이름을 지정 하는 값입니다. *열* 있는 값에 해당 하는 매개 변수는 [이름](../../../ado/reference/adox-api/name-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체 또는 개체입니다.  
+ (선택 사항) A **Variant** 인덱싱할 열 이름을 지정 하는 값입니다. *열* 의 값에 해당 하는 매개 변수를 [이름](../../../ado/reference/adox-api/name-property-adox.md) 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체 또는 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
- *열* 매개 변수는 열 이름이 나 열 이름의 배열을 나타낼 수 있습니다.  
+ 합니다 *열* 열의 이름 또는 열 이름의 배열 매개 변수를 사용할 수 있습니다.  
   
  공급자 만들기 인덱스를 지원 하지 않는 경우 오류가 발생 합니다.  
   
@@ -52,7 +49,7 @@ Indexes.Append Index [,Columns]
  [Indexes 컬렉션(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [인덱스 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Indexes Append 메서드 예제 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append 메서드 (ADOX 키)](../../../ado/reference/adox-api/append-method-adox-keys.md)   

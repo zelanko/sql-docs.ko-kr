@@ -6,28 +6,25 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 547588d79d52f81d6f12c8b733829f7e38a6da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630681"
 ---
 # <a name="configuring-rds"></a>RDS 구성
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- RDS를 효율적으로 구현 하 게 사용할 수 있는 다양 한 구성에 잘 알고 있다면 해야 합니다. 이 섹션 rds. 구현에 보안 및 확장성에 대 한 중요 한 정보를 포함합니다. Rds. 사용 하도록 컴퓨터를 구성 하는 방법에 대 한 내용은 다음 항목을 참조 하십시오  
+ RDS를 효율적으로 구현 하기를 사용할 수 있는 다양 한 구성에 잘 알고 있다면 해야 합니다. 이 섹션에서는 rds. 구현에 대 한 보안 및 확장성에 대 한 중요 한 정보 Rds.를 사용 하 여 컴퓨터를 구성 하는 방법은 다음 항목을 참조 하세요  
   
 -   [웹 서버 컴퓨터에 게스트 권한 부여](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
@@ -48,7 +45,7 @@ ms.locfileid: "35273789"
 -   [안전 또는 무제한 모드에 대한 DataFactory 구성](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [관련된 기술 RDS를 사용 하 여](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
+ [RDS를 사용 하 여 관련된 기술을 사용 하 여](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 문제 해결](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
 

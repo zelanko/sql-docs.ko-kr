@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052373"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
   이 항목에서는  , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대한 단일 가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 만들거나 구성하는 방법에 대해 설명합니다.  
@@ -223,7 +220,7 @@ ms.locfileid: "37225903"
   
 -   다중 서브넷 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스로 명명된 인스턴스 확인  
   
-    -   서브넷 끝점이 여러 개인 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스에 대한 명명된 인스턴스 확인 지원을 추가합니다.  
+    -   서브넷 엔드포인트가 여러 개인 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스에 대한 명명된 인스턴스 확인 지원을 추가합니다.  
   
  **MultiSubnetFailover=True가 .NET Framework 3.5 또는 OLEDB에서 지원되지 않음**  
   

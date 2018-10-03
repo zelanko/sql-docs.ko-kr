@@ -1,14 +1,11 @@
 ---
-title: sp_delete_category (Transact SQL) | Microsoft Docs
+title: sp_delete_category (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb4cdd9f5e3104ac2673bce0f60a6653defde5ca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28a1b42780b57fb5807e0ff8f900bfe7b1fc7559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670461"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,30 +42,30 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
 ## <a name="arguments"></a>인수  
  [ **@class =**] **'***class***'**  
- 범주의 클래스입니다. *클래스* 은 **varchar(8)** 은 없으며 기본적으로 이러한 값 중 하나가 있어야 합니다.  
+ 범주의 클래스입니다. *클래스* 은 **varchar(8)** 해야 없고 기본적으로 사용 하 여 이러한 값 중 하나가 있어야 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**JOB**|작업 범주를 제거합니다.|  
 |**경으십시오**|경고 범주를 제거합니다.|  
 |**연산자**|연산자 범주를 제거합니다.|  
   
  [ **@name =**] **'***name***'**  
- 제거할 범주의 이름입니다. *이름* 은 **sysname**, 기본값은 없습니다.  
+ 제거할 범주의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- **sp_delete_category** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_category** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  범주를 제거하면 해당 범주의 모든 작업, 경고 또는 연산자를 해당 클래스의 기본 범주로 다시 범주화합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `AdminJobs`라는 작업 범주를 삭제합니다.  
@@ -84,7 +80,7 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

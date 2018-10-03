@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264469"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053893"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems 컬렉션 참조(보고서 작성기 및 SSRS)
   `ReportItems` 기본 제공 컬렉션은 데이터 영역의 행 또는 보고서 디자인 화면의 입력란과 같은 보고서 항목의 입력란 집합입니다. `ReportItems` 컬렉션 페이지 머리글, 페이지 바닥글 또는 보고서 본문의 현재 범위에 있는 입력란이 포함 되어 있습니다. 이 컬렉션은 보고서 처리기 및 보고서 렌더러에 의해 런타임에 결정됩니다. 현재 범위는 사용자가 보고서 페이지를 볼 때 보고서 처리기가 보고서 데이터 및 보고서 항목 레이아웃 요소를 연속적으로 조합함에 따라 변경됩니다. 사용할 수는 `ReportItems` 기본 제공 컬렉션의 각 페이지의 첫 번째 및 마지막 항목을 표시 하는 사전 스타일의 페이지 머리글을 생성 합니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "37264469"
 ## <a name="using-the-reportitems-value-property"></a>ReportItems 값 속성 사용  
  내에서 항목을 `ReportItems` 컬렉션 속성이 하나만: 값입니다. `ReportItems` 항목의 값을 사용하면 보고서에 있는 다른 필드의 데이터를 표시하거나 계산할 수 있습니다. 현재 입력란의 값에 액세스하려는 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 기본 제공 전역 Me.Value를 사용하거나 그냥 Value만 사용할 수 있습니다. First와 같은 보고서 함수 및 집계 함수에서는 정규화된 구문을 사용해야 합니다.  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   이 식을 입력란에 배치하면 `Textbox1`이라는 `ReportItem` 입력란의 값이 표시됩니다.  
   

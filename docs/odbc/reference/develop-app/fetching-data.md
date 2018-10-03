@@ -1,31 +1,28 @@
 ---
-title: 데이터 페치 | Microsoft Docs
+title: 데이터를 가져오는 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], defined
 ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58c050243f14e6c5a34468890f507cf2ce37dcc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a548c521b7baa283a9cdf1572fbe8e42e1e6cf45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639191"
 ---
 # <a name="fetching-data"></a>데이터 페치
-결과 집합에서 행을 검색 하 고 응용 프로그램에 반환 하기는 프로세스 라고 *인출*합니다. 이 섹션에서는 데이터를 인출 하는 방법을 설명 합니다.  
+결과 집합에서 행을 검색 하 고 응용 프로그램에 반환 하는 프로세스 라고 *페치*합니다. 이 섹션에서는 데이터를 인출 하는 방법을 설명 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

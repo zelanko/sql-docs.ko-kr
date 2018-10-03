@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_database_replica_cluster_states (Transact SQL) | Microsoft Docs
+title: sys.dm_hadr_database_replica_cluster_states (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_replica_cluster_states
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c47ab1243a4493fb49b47247233ed478e3cd70ca
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636681"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  각 Always On 가용성 그룹에 Windows Server 장애 조치 클러스터링 (WSFC) 클러스터에서 Always On 가용성 그룹의 가용성 데이터베이스의 상태에 대 한 정보를 제공 하는 필요한 정보가 들어 있는 행을 반환 합니다. 쿼리 **sys.dm_hadr_database_replica_states** 다음과 같은 질문에 답변할 수:  
+  각 Always On 가용성 그룹에 Windows Server 장애 조치 클러스터링 (WSFC) 클러스터에서 Always On 가용성 그룹의 가용성 데이터베이스의 상태에 대 한 정보를 제공 하는 데 필요한 정보가 포함 된 행을 반환. 쿼리 **sys.dm_hadr_database_replica_states** 다음 질문에 답변할 수 있습니다.  
   
 -   가용성 그룹의 모든 데이터베이스에서 장애 조치(failover)를 수행할 준비가 되었습니까?  
   
@@ -42,7 +39,7 @@ ms.locfileid: "34465569"
   
 -   주 복제본을 현재 사용할 수 없는 경우 주 복제본으로 전환될 때 데이터 손실이 최소화되는 보조 복제본은 어느 것입니까?  
   
--   때의 값은 [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait** 열이 지정된 된 주 데이터베이스의 로그 잘림을 보유 중인 가용성 그룹에 보조 복제본 "AVAILABILITY_REPLICA" ?  
+-   때의 값을 [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** 열이 가용성 그룹에 보조 복제본은 지정된 된 주 데이터베이스의 로그 잘림을 보유 중인 "AVAILABILITY_REPLICA" ?     
    
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -57,14 +54,14 @@ ms.locfileid: "34465569"
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Always On 가용성 그룹 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 가용성 그룹 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [가용성 그룹 모니터링 & #40; Transact SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [sys.dm_hadr_database_replica_states& #40; Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [sys.dm_hadr_database_replica_states&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   
