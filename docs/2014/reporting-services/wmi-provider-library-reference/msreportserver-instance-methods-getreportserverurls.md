@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9b2963bad73fce65f252ad44ed857f6006978c2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 148e0ece44e97bd4c559bbed9cc95aa97092dffb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171053"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls 메서드(WMI MSReportServer_Instance)
   사용자가 보고서 서버 및 보고서 관리자에 액세스하는 데 사용할 수 있는 URL 목록을 반환합니다.  

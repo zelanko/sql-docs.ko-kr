@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10183"
@@ -27,16 +25,15 @@ f1_keywords:
 - "10188"
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8e67ff32578131fc5689ac819fd3ac1fc155d0f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f61ad0448df247678be1479b8f28ebb8828796a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211833"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>차트의 범례 서식 지정(보고서 작성기 및 SSRS)
   차트 범례에는 차트의 각 범주에 대한 설명이 포함됩니다. 범례는 항상 하나 이상의 범례 항목을 포함합니다. 각 범례 항목은 다음 그림에 표시된 대로 계열을 나타내는 색 지정된 상자 및 계열을 설명하는 텍스트 문자열로 구성되어 있습니다.  

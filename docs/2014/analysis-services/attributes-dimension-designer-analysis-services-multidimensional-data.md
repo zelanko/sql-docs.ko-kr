@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 522bffc53240a7456ee77911b4f3044ffe0f231c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229813"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   이 창을 사용하여 선택한 차원과 연결된 특성을 관리할 수 있습니다. 이 창에서 **계층** 창으로 특성을 끌어서 계층 및 수준을 만들 수 있습니다. 자세한 내용은 [계층 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)합니다.  

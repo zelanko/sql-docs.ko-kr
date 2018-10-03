@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b45767cde324af3309178182085615ced5153f60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f20575da48685a2f6c2b990169da1baba54ed667
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212113"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Uninstall PowerPivot for SharePoint
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 제거는 제거를 준비하고, 팜에서 기능과 솔루션을 제거하고, 프로그램 파일과 레지스트리 설정을 제거하는 작업으로 구성된 다단계 작업입니다.  

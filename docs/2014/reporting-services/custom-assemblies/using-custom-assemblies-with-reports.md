@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services]
 - assemblies [Reporting Services], custom
 - custom assemblies [Reporting Services], about custom assemblies
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef7579e104fecc5d73e35398f9e54b7b9d8bd7e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0ab2fc2b4411fa97f99b2888142ad7783d9b514
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219443"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>보고서에서 사용자 지정 어셈블리 사용
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 항목 값, 스타일 및 서식 지정을 위한 사용자 지정 코드를 작성할 수 있습니다. 예를 들어, 사용자 지정 코드를 사용하여 로캘에 따른 통화 형식을 지정하거나 특정 값을 특수한 서식으로 플래그 지정하거나 회사에서 사용되는 다른 비즈니스 규칙을 적용할 수 있습니다. 보고서에 이 코드를 포함시키는 방법은 보고서 정의 파일 내에서 참조할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 사용자 지정 코드 어셈블리를 만드는 것입니다. 보고서가 실행되면 서버는 사용자 어셈블리에서 함수를 호출합니다. 사용자 지정 어셈블리는 보고서에서 사용하고자 하는 특수화된 함수를 검색하는 데 사용할 수 있습니다.  

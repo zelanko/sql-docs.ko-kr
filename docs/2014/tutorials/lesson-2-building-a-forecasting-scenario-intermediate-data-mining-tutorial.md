@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5db75cbdabd62b569c782bd48755ce817819a475
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67e4843931587d9c627b229bc221a784237cc5d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122605"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>2단원: 예측 시나리오 구축(중급 데이터 마이닝 자습서)
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]의 판매 분석가가 제품의 내년 판매액을 예측해 달라는 요청을 받았습니다. 특히 지역 및 제품 라인별 예측을 비교해야 합니다. 또한 시간에 따라 여러 제품의 판매 방식이 달라지는지 확인해야 합니다.  

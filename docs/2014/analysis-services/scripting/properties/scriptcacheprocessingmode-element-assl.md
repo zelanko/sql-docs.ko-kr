@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ScriptCacheProcessingMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d74499d0678f920fe9f09b9cdc2d8626045a380
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253075"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221343"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>ScriptCacheProcessingMode 요소(ASSL)
   서버에서 스크립트 캐시를 처리 중에 작성할지, 아니면 처리 후에 작성할지를 나타냅니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37253075"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Cube](../objects/cube-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  

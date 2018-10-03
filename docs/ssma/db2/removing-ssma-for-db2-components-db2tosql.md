@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f93ca145c96e2cc9b6d86e0ebc8c2c9899afad9
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: b4ffde9828a2136dc01dbb37dd4009f9a2783001
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844681"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>SSMA 용 DB2 구성 요소 제거 (DB2ToSQL)
 완료 했을 때를 DB2에서 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 확장 팩을 제거 하면 안 되는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 데이터베이스의 함수를 더 이상 사용 하지 않는 한는 **ssma_DB2** 의 스키마를 **sysdb** 데이터베이스입니다.  

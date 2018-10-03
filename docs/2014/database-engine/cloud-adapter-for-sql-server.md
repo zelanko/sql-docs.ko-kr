@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157994"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server에 대한 클라우드 어댑터
   클라우드 어댑터 서비스는 Windows Azure VM에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로비전의 일부로 만들어집니다. 클라우드 어댑터 서비스는 첫 번째 실행 중에 자체 서명된 SSL 인증서를 생성한 다음 **로컬 시스템** 계정으로 실행됩니다. 이 서비스는 자체적으로 구성하는 데 사용되는 구성 파일을 생성합니다. 또한 클라우드 어댑터는 기본 포트 11435에서 들어오는 TCP 연결을 허용하는 Windows Firewall 규칙도 만듭니다.  

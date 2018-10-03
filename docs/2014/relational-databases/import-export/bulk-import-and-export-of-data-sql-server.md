@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfbd00c0079aec3e9bcfa67560962356be1cad4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36065984f03980f54cbc6a75162bb007f8b5f772
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124443"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>데이터 대량 가져오기 및 내보내기(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는*테이블에서 대량으로 데이터(* 대량 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )를 내보내고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이나 분할되지 않은 뷰로 대량의 데이터를 가져올 수 있습니다. 대량 가져오기 및 대량 내보내기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 데이터 원본 간에 데이터를 효과적으로 전송하는 데 필수적입니다. *대량 내보내기* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 데이터를 데이터 파일로 복사하는 것입니다. *대량 가져오기* 는 데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 데이터를 로드하는 것입니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 응용 프로그램의 데이터를 데이터 파일로 내보낸 다음 해당 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져올 수 있습니다.  
@@ -57,9 +54,9 @@ ms.locfileid: "37227693"
   
 |메서드|Description|데이터 가져오기|데이터 내보내기|  
 |------------|-----------------|------------------|------------------|  
-|[bcp 유틸리티](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|데이터를 대량으로 내보내고 가져오며 서식 파일을 생성하는 명령줄 유틸리티(Bcp.exe)입니다.|예|예|  
-|[BULK INSERT 문](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|데이터 파일에서 데이터베이스 테이블이나 분할되지 않은 뷰로 직접 데이터를 가져오는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|예|아니요|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...) 문](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|INSERT 문의 데이터를 선택하는 OPENROWSET(BULK…) 함수를 지정하여 대량의 데이터를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블로 가져오기 위해 OPENROWSET 대량 행 집합 공급자를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문입니다.|예|아니요|  
+|[bcp 유틸리티](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|데이터를 대량으로 내보내고 가져오며 서식 파일을 생성하는 명령줄 유틸리티(Bcp.exe)입니다.|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|[BULK INSERT 문](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|데이터 파일에서 데이터베이스 테이블이나 분할되지 않은 뷰로 직접 데이터를 가져오는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|사용자 계정 컨트롤|아니요|  
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...) 문](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|INSERT 문의 데이터를 선택하는 OPENROWSET(BULK…) 함수를 지정하여 대량의 데이터를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블로 가져오기 위해 OPENROWSET 대량 행 집합 공급자를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문입니다.|사용자 계정 컨트롤|아니요|  
   
 > [!IMPORTANT]  
 >  CSV(쉼표로 구분된 값) 파일은 SQL Server 대량 가져오기 작업에서 지원되지 않습니다. 그러나 경우에 따라 데이터를 SQL Server로 대량으로 가져오기 위한 데이터 파일로 CSV(쉼표로 구분된 값) 파일이 사용될 수 있습니다. CSV 파일의 필드 종결자로는 쉼표 이외에 다른 문자도 사용될 수 있습니다. 자세한 내용은 [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.  

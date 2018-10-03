@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a3c83dfc8e7282ea67c3aff783ad4ec50826865
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41bdf706a4834ffb2f4e5d5df1b5b7633a20d603
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100513"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 유틸리티
   사용 된 `SqlLocalDB` 유틸리티의 인스턴스를 만들 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**합니다. 합니다 `SqlLocalDB` 유틸리티 (SqlLocalDB.exe)는 사용자와 개발자가 만들고의 인스턴스를 관리할 수 있도록 하는 간단한 명령줄 도구 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**합니다. 사용 하는 방법에 대 한 자세한 **LocalDB**를 참조 하십시오 [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)합니다.  
@@ -48,7 +45,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>인수  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 새 인스턴스를 만듭니다. `SqlLocalDB` 버전을 사용 하 여 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 으로 지정 된 바이너리 * \<인스턴스 버전 >* 인수입니다. 버전 번호는 하나 이상의 숫자를 포함하는 숫자 형식으로 지정됩니다. 부 버전 번호(서비스 팩)는 선택 사항입니다. 예를 들어 버전 번호 11.0 또는 11.0.1186은 모두 허용됩니다. 지정된 버전을 컴퓨터에 설치해야 합니다. 버전의 버전 번호는 기본적으로 지정 하지 않으면는 `SqlLocalDB` 유틸리티입니다. **–s** 를 추가하여 **LocalDB**의 새 인스턴스를 시작합니다.  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 새 인스턴스를 만듭니다. `SqlLocalDB` 버전을 사용 하 여 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 으로 지정 된 바이너리  *\<인스턴스 버전 >* 인수입니다. 버전 번호는 하나 이상의 숫자를 포함하는 숫자 형식으로 지정됩니다. 부 버전 번호(서비스 팩)는 선택 사항입니다. 예를 들어 버전 번호 11.0 또는 11.0.1186은 모두 허용됩니다. 지정된 버전을 컴퓨터에 설치해야 합니다. 버전의 버전 번호는 기본적으로 지정 하지 않으면는 `SqlLocalDB` 유틸리티입니다. **–s** 를 추가하여 **LocalDB**의 새 인스턴스를 시작합니다.  
   
  [ **share** | **h** ]  
  지정한 공유 이름을 사용하여 지정한 개인 **LocalDB** 인스턴스를 공유합니다. 사용자 SID 또는 계정 이름을 생략하면 기본값으로 현재 사용자가 사용됩니다.  

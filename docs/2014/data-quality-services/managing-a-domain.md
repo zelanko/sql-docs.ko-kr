@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb61470789fb7474216b1a4da1364305c4cd9f8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb8371e848ae1975f0c37942070bff09c839af7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179943"
 ---
 # <a name="managing-a-domain"></a>도메인 관리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인을 사용하는 방법에 대해 설명합니다. 도메인은 분석할 데이터 원본의 특정 필드에 있는 데이터를 의미 체계에 따라 표현한 것입니다. 도메인은 사용자가 데이터 원본에 대해 만드는 기술 자료의 일부이며, 샘플 데이터 원본을 분석하거나 데이터를 가져와 구축한 정보는 기술 자료에 정의된 도메인에 추가됩니다. 이러한 도메인의 정보는 나중에 데이터 품질 프로젝트에서 정리 및 일치를 수행할 때 사용됩니다. 도메인은 Data Quality Services에서 모든 작업의 핵심에 있습니다.  

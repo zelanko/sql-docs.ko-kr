@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_DATASOURCEINFO property set
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7789a1f591b95ec5442697c5bfa6c7d730ba4faf
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 369e6f836c11f69a37b5cdd72f227c3b120e71b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395185"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228833"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 UDT(사용자 정의 형식)가 도입되었습니다. UDT는 개체와 사용자 지정 데이터 구조를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 SQL 유형 시스템을 확장합니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 .NET CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. 이러한 언어에는 Microsoft Visual C#<sup>®</sup> 및 Visual Basic<sup>®</sup> .NET 등이 있습니다. 데이터는 .NET 클래스 또는 구조체의 필드와 속성으로 노출되며 동작은 클래스 또는 구조체의 메서드로 정의됩니다.  
@@ -140,7 +137,7 @@ ms.locfileid: "40395185"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값이 포함 된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|속성|형식|Description|  
+|이름|형식|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -151,7 +148,7 @@ ms.locfileid: "40395185"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  테이블 만들기를 지원 합니다 **ITableDefinition** 인터페이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합을 다음 3 개의 새 열을 추가 합니다.  
   
-|속성|Description|형식|Description|  
+|이름|Description|형식|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  

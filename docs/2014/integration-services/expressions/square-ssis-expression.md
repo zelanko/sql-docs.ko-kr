@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db690f1b8ffd3b011ef5a39f442ca44d32b50f33
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c375621cf6b8f6310fad1beec74b9cf1850478d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214983"
 ---
 # <a name="square-ssis-expression"></a>SQUARE(SSIS 식)
   숫자 식의 제곱을 반환합니다.  
@@ -66,7 +63,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  식에서 변수 이름은 항상 포함 합니다 \@ 접두사입니다.  
+>  식에서 변수 이름에는 항상 \@ 접두사가 포함되어 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  

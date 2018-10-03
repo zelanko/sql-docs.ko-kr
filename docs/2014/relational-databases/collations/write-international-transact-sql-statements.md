@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - database international considerations [SQL Server], Transact-SQL
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 236948c23164cd0890e7c4fc4455cbc87227d792
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2fdd35b7af73cbbfce49f8a8b399f7cf64e97b51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208913"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
   다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 응용 프로그램을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  

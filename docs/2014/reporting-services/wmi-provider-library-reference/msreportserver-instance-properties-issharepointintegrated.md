@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IsSharePointIntegrated property
 ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c96d8e6bf204759f9096bd870c72887f9ef26f65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 716ff525b322a5722a097ad69dee3e7c3ee97bb6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257909"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227103"
 ---
 # <a name="issharepointintegrated-property-wmi-msreportserverinstance"></a>IsSharePointIntegrated 속성(WMI MSReportServer_Instance)
   보고서 서버가 SharePoint 통합 모드에 있는지 여부를 지정합니다. SharePoint 모드에서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 인스턴스가 SharePoint 공유 서비스이며 WMI 공급자를 통해 제어되지 않으므로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]부터는 이 속성이 항상 `False`를 반환합니다.  

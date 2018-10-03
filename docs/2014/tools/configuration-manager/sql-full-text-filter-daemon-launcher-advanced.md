@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c94d2df0a6f4b0d219f9068dff30dacf06c6d0e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf21f6c736125b15f016460240bad0cb6729e08a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213053"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-advanced"></a>SQL 전체 텍스트 필터 데몬 시작 관리자(고급)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트에서 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 사용됩니다. 전체 텍스트 검색을 사용할 경우 이 서비스를 실행해야 합니다. 필터 데몬 호스트 프로세스에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "전체 텍스트 검색 아키텍처"를 참조하십시오.  

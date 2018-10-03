@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85c7682512adb310a487a79742543c9383611f5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 635a5428685feff5887b0800388a41f95a108c1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209233"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
   이 페이지를 사용하여 이 공유 일정을 사용하는 모든 보고서 목록을 볼 수 있습니다. 일정을 사용하여 보고서 스냅숏을 새로 고치거나, 보고서 기록을 생성하거나, 구독을 트리거하거나, 보고서의 캐시된 복사본을 만료시킬 수 있습니다. 일정 사용 방법을 확인하려면 보고서의 속성 및 구독 정보를 확인하십시오.  

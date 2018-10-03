@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.columnvisibility.f1
 - "10127"
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8a63473d706fa25f69910a52b4ab352d631bcc11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf9f11b8b56333dba7c0d2a5066712017ea194cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215263"
 ---
 # <a name="column-visibility-dialog-box"></a>열 표시 유형 대화 상자
   **열 표시 유형** 대화 상자를 사용하면 보고서를 처음 실행할 때 선택된 열을 표시하거나 숨길 수 있고 다른 보고서 항목을 사용하여 열의 표시 유형을 전환할 수 있습니다.  

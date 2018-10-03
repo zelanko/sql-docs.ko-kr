@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
 - adding tables
 - queries [SQL Server], tables
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d6d7273d6530c96a286b401b006866b827c9acd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a58a2514009eab620f484afd8552fbb34a568857
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815649"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170873"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>쿼리에 테이블 추가(Visual Database Tools)
   쿼리를 만들 때는 뷰와 특정 사용자 정의 함수 같은 테이블 구조의 다른 개체나 테이블에서 데이터를 검색합니다. 쿼리에서 이러한 개체를 사용하여 작업하려면 필요한 개체를 **다이어그램 창**에 추가합니다.  

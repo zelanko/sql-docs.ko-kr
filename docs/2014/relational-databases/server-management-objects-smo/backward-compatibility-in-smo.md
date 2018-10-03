@@ -1,26 +1,23 @@
 ---
-title: SMO의 이전 버전과 호환성 | Microsoft Docs
+title: SMO의 이전 버전과 호환성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1406eaa3d8d9a82f28b1c813f08a3a570c8eefe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de831b5eadcfcd8d44c46189e5d2b0735e5ab3e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313481"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229593"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO의 이전 버전과의 호환성
   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 작성된 SMO 응용 프로그램은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 SMO를 사용하여 다시 컴파일할 수 있습니다.  

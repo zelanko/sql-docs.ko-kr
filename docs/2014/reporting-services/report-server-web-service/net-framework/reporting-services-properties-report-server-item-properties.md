@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6f4c94f85e4dad79f03963a300ada3fabd8a9cfb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b81c8eb53247caa2a0f0a4d931df10f9f43cd602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221283"
 ---
 # <a name="report-server-item-properties"></a>보고서 서버 항목 속성
   항목 속성은 보고서 서버 데이터베이스의 항목에 대한 특정 속성입니다. 이러한 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.  

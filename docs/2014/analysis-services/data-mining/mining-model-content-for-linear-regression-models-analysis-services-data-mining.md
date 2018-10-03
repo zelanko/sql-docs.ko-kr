@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 289c9a68e6abce019324945cafd9baed544802a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200983"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 대해 마이닝 모델 콘텐츠를 일반적인 설명은 참조 하세요. [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다.  

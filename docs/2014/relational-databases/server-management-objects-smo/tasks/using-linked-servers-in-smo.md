@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - linked servers [SQL Server], SMO
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57c84f885a53fd2b277fbb34c9bfecc178e0fe89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cdbbe3b44b2e3e6754f1f6c4dd084bec0032051
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213983"
 ---
 # <a name="using-linked-servers-in-smo"></a>SMO에서 연결된 서버 사용
   연결된 서버는 원격 서버의 OLE DB 데이터 원본을 나타냅니다. 원격 OLE DB 데이터 원본 인스턴스에 연결 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용 하 여는 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체입니다.  

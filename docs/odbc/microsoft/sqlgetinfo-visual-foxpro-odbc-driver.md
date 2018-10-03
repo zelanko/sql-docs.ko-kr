@@ -5,37 +5,34 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b05ab71a12059535986cbd452e993e01178342fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855421"
 ---
-# <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC 드라이버)
+# <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보입니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
  지원: 전체  
   
- 수준 1 ODBC API 적용:  
+ 수준 1 ODBC API 규칙:  
   
- Visual FoxPro ODBC 드라이버 및 연결 핸들에 연결 된 데이터 원본에 대 한 일반 정보를 반환 *hdbc*합니다. 다음 목록은 각 Visual FoxPro ODBC 드라이버에서 반환 되는 값 *fInfoType* 인수 및 반환된 된 값에 대 한 의견 합니다.  
+ Visual FoxPro ODBC 드라이버 및 연결 핸들을 사용 하 여 연결 된 데이터 원본에 대 한 일반 정보를 반환 합니다 *hdbc*합니다. 다음 목록은 각 Visual FoxPro ODBC 드라이버에서 반환 된 값 *fInfoType* 인수 및 반환된 값에 대 한 주석입니다.  
   
- 자세한 내용은 참조 [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) 에 *ODBC Programmer's Reference*합니다.  
+ 자세한 내용은 [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) 에 *ODBC 프로그래머 참조*합니다.  
   
-## <a name="a"></a>변수를 잠그기 위한  
+## <a name="a"></a>A  
  SQL_ACCESSIBLE_PROCEDURES 반환 ' N '입니다.  
   
  SQL_ACCESSIBLE_TABLES 'Y'를 반환합니다.  
@@ -44,7 +41,7 @@ ms.locfileid: "32904938"
   
  SQL_ACTIVE_STATEMENTS 0을 반환합니다.  
   
- SQL_ALTER_TABLE는 SQL_AT_ADD_COLUMN 또는 SQL_AT_DROP_COLUMN 중 하나를 반환합니다.  
+ SQL_ALTER_TABLE는 SQL_AT_ADD_COLUMN 또는 SQL_AT_DROP_COLUMN를 반환합니다.  
   
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE SQL_BP_SCROLL를 반환합니다.  
@@ -54,7 +51,7 @@ ms.locfileid: "32904938"
   
  SQL_CONCAT_NULL_BEHAVIOR SQL_CB_NULL를 반환합니다.  
   
- SQL_CONVERT_BIGINT 0을 반환합니다. Visual FoxPro ODBC 드라이버가 지원 하지 않으면 *BigInt*합니다.  
+ SQL_CONVERT_BIGINT 0을 반환합니다. Visual FoxPro ODBC 드라이버를 지원 하지 않습니다 *BigInt*합니다.  
   
  SQL_CONVERT_BINARY 0을 반환합니다.  
   
@@ -64,7 +61,7 @@ ms.locfileid: "32904938"
   
  SQL_CONVERT_DATE 0을 반환합니다.  
   
- SQL_CONVERT_DECIMAL 0을 반환합니다.  
+ Sql_convert_decimal을 0을 반환합니다.  
   
  SQL_CONVERT_DOUBLE 0을 반환합니다.  
   
@@ -100,26 +97,26 @@ ms.locfileid: "32904938"
   
  SQL_CURSOR_ROLLBACK_BEHAVIOR SQL_CB_PRESERVE를 반환합니다.  
   
-## <a name="d"></a>D  
- DSN을 변수로 전달 된 값을 반환 하는 SQL_DATA_SOURCE_NAME [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), 또는 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); 없는 DSN이 지정 된 경우 빈 문자열을 반환 합니다.  
+## <a name="d"></a>d  
+ SQL_DATA_SOURCE_NAME DSN에 변수로 전달 된 값을 반환 합니다. [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), 또는 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); 없는 DSN에서 지정 된 경우 빈 문자열을 반환 합니다.  
   
  SQL_DATA_SOURCE_READ_ONLY 반환 ' N '입니다.  
   
- 데이터 원본이 경우 현재 데이터베이스에 전체 UNC 경로 SQL_DATABASE_NAME 반환는 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)합니다. 데이터의 디렉터리에 연결 하는 경우 [테이블](../../odbc/microsoft/visual-foxpro-terminology.md), 함수는 디렉터리에 경로 반환 합니다.  
+ 데이터 원본이 있으면 SQL_DATABASE_NAME 현재 데이터베이스에 전체 UNC 경로 반환 된 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)합니다. 데이터 소스 디렉터리에 연결 하는 경우 [테이블](../../odbc/microsoft/visual-foxpro-terminology.md), 디렉터리 경로 반환 합니다.  
   
  SQL_DBMS_NAME "Visual FoxPro"를 반환합니다.  
   
  SQL_DBMS_VER "03.00.0000"를 반환합니다.  
   
- SQL_DEFAULT_TXN_ISOLATION SQL_TXN_READ_COMMITTED를 반환합니다. 더티 읽기 가능 하지만 읽기가 및 팬텀 있을 수도 있습니다.  
+ SQL_DEFAULT_TXN_ISOLATION SQL_TXN_READ_COMMITTED를 반환합니다. 더티 읽기 가능한 있고 반복할 수 없는 읽기 및 가상 있는 가능 합니다.  
   
- SQL_DRIVER_HDBC는 드라이버 관리자에서 구현 됩니다.  
+ SQL_DRIVER_HDBC는 드라이버 관리자에 의해 구현 됩니다.  
   
- SQL_DRIVER_HENV는 드라이버 관리자에서 구현 됩니다.  
+ SQL_DRIVER_HENV는 드라이버 관리자에 의해 구현 됩니다.  
   
- SQL_DRIVER_HLIB은 드라이버 관리자에서 구현 됩니다.  
+ SQL_DRIVER_HLIB은 드라이버 관리자에 의해 구현 됩니다.  
   
- SQL_DRIVER_HSTMT은 드라이버 관리자에서 구현 됩니다.  
+ SQL_DRIVER_HSTMT은 드라이버 관리자에 의해 구현 됩니다.  
   
  SQL_DRIVER_NAME "vfpodbc.dll"를 반환합니다.  
   
@@ -131,7 +128,7 @@ ms.locfileid: "32904938"
  SQL_EXPRESSIONS_IN_ORDERBY 반환 ' N '입니다.  
   
 ## <a name="f"></a>F  
- SQL_FETCH_DIRECTION를 반환합니다.  
+ SQL_FETCH_DIRECTION 반환합니다.  
   
 -   SQL_FD_FETCH_NEXT  
   
@@ -147,10 +144,10 @@ ms.locfileid: "32904938"
   
 -   SQL_FD_FETCH_BOOKMARK 합니다.  
   
- SQL_FILE_USAGE는 데이터베이스 (.dbc 파일)에 대 한 SQL_FILE_QUALIFIER 모두를 반환 하 고 무료로 (.dbf 파일) 데이터 원본 테이블입니다.  
+ SQL_FILE_USAGE는 데이터베이스 (.dbc 파일)에 대 한 SQL_FILE_QUALIFIER 모두를 반환 하 고 무료로 (.dbf 파일) 데이터 원본 테이블.  
   
 ## <a name="g-h"></a>G-H  
- SQL_GETDATA_EXENSIONS를 반환합니다.  
+ SQL_GETDATA_EXENSIONS 반환합니다.  
   
 -   SQL_GD_ANY_COLUMN  
   
@@ -182,9 +179,9 @@ ms.locfileid: "32904938"
   
  SQL_MAX_COLUMN_NAME_LEN 128을 반환합니다.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY 16을 반환 합니다.  
+ SQL_MAX_COLUMNS_IN_GROUP_BY 16을 반환합니다.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY 16을 반환 합니다.  
+ SQL_MAX_COLUMNS_IN_ORDER_BY 16을 반환합니다.  
   
  SQL_MAX_COLUMNS_IN_INDEX 0을 반환합니다.  
   
@@ -198,7 +195,7 @@ ms.locfileid: "32904938"
   
  SQL_MAX_OWNER_NAME_LEN 0을 반환합니다.  
   
- SQL_MAX_PROCEDURE_NAME_LEN 0을 반환합니다. Visual FoxPro ODBC 드라이버 Visual FoxPro 저장 프로시저에 대 한 직접 액세스를 허용 하지 않습니다.  
+ SQL_MAX_PROCEDURE_NAME_LEN 0을 반환합니다. Visual FoxPro ODBC 드라이버에서 Visual FoxPro 저장 프로시저에 대 한 직접 액세스를 허용 하지 않습니다.  
   
  SQL_MAX_QUALIFIER_NAME_LEN 최대 운영 체제 경로 길이 반환합니다.  
   
@@ -210,13 +207,13 @@ ms.locfileid: "32904938"
   
  SQL_MAX_TABLE_NAME_LEN 128을 반환합니다.  
   
- SQL_MAX_TABLES_IN_SELECT 16을 반환 합니다.  
+ SQL_MAX_TABLES_IN_SELECT 16을 반환합니다.  
   
  SQL_MAX_USER_NAME_LEN 0을 반환합니다.  
   
  SQL_MULT_RESULT_SETS 'Y'를 반환합니다.  
   
- SQL_MULTIPLE_ACTIVE_TXN 'Y'를 반환합니다. 여러 연결이 여러 트랜잭션을 한 번에 열을 가질 수 있습니다.  
+ SQL_MULTIPLE_ACTIVE_TXN 'Y'를 반환합니다. 여러 연결에는 여러 트랜잭션이 동시에 열려 있을 수 있습니다.  
   
 ## <a name="n"></a>N  
  SQL_NEED_LONG_DATA_LEN 반환 ' N '입니다.  
@@ -225,7 +222,7 @@ ms.locfileid: "32904938"
   
  SQL_NULL_COLLATION SQL_NC_LOW를 반환합니다.  
   
- SQL_NUMERIC_FUNCTIONS Visual FoxPro ODBC 드라이버에서 지원 되지 않는 SQL_FN_NUM_POWER 제외한 모든 함수를 반환 합니다. 다음 기능을 지원 합니다.  
+ SQL_NUMERIC_FUNCTIONS Visual FoxPro ODBC 드라이버에서 지원 되지 않는 SQL_FN_NUM_POWER 제외한 모든 함수를 반환 합니다. 다음 함수가 지원 됩니다.  
   
 -   SQL_FN_NUM_ABS  
   
@@ -276,15 +273,15 @@ ms.locfileid: "32904938"
   
  SQL_ODBC_SAG_CLI_CONFORMANCE SQL_OSCC_COMPLIANT를 반환합니다.  
   
- SQL_ODBC_SQL_CONFORMANCE는 sql_osc_minimum이 합니다를 반환합니다. 최소 SQL 구문이 지원 됩니다.  
+ SQL_ODBC_SQL_CONFORMANCE SQL_OSC_MINIMUM를 반환합니다. 최소 SQL 구문을 사용할 수 있습니다.  
   
- SQL_ODBC_SQL_OPT_IEF "N"를 반환 합니다.  
+ SQL_ODBC_SQL_OPT_IEF "N"을 반환 합니다.  
   
- SQL_ODBC_VER는 드라이버 관리자에서 구현 됩니다.  
+ SQL_ODBC_VER는 드라이버 관리자에 의해 구현 됩니다.  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT "N"를 반환 합니다.  
+ SQL_ORDER_BY_COLUMNS_IN_SELECT "N"을 반환 합니다.  
   
- SQL_OUTER_JOINS "N"를 반환 합니다.  
+ SQL_OUTER_JOINS "N"을 반환 합니다.  
   
  SQL_OWNER_TERM 반환 ""입니다. Visual FoxPro ODBC 드라이버는 해당 개체에 대 한 소유자를 지원 하지 않습니다.  
   
@@ -302,21 +299,21 @@ ms.locfileid: "32904938"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION SQL_QL_START를 반환합니다.  
   
- SQL_QUALIFIER_NAME_SEPARATOR 반환 '!' 또는 '\\'. 데이터베이스와 테이블 사이의 구분 기호는 '!'에 연결 된 데이터 원본에 대 한 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md), 및 '\\'의 디렉터리에 있는 데이터 원본에 대 한 [테이블 있음](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.  
+ SQL_QUALIFIER_NAME_SEPARATOR 반환 '!' 또는 '\\'. 데이터베이스 및 테이블 간의 구분 기호는 '!'에 연결 하는 데이터 원본에 대 한 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md), 및 '\\' 디렉터리에 있는 데이터 원본에 대 한 [무료 테이블](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.  
   
- SQL_QUALIFIER_TERM "데이터베이스" 또는 "directory"를 반환합니다. 한정자 "데이터베이스"에 연결 된 데이터 원본에 대 한가 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md), 및의 디렉터리에 있는 데이터 원본에 대 한 "디렉터리" [테이블 있음](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.  
+ SQL_QUALIFIER_TERM "database" 또는 "directory"를 반환합니다. 한정자는 "database" 데이터 원본에 연결 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md), 및 데이터 소스 디렉터리에 대 한 "디렉터리" [테이블을 무료](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.  
   
- SQL_QUALIFIER_USAGE SQL_QU_PRIVILEGE_DEFINITION;를 지원 하지 않습니다. SQL_QU_DML_STATEMENT 또는 SQL_QU_TABLE_DEFINITION 중 하나를 반환합니다.  
+ SQL_QUALIFIER_USAGE SQL_QU_PRIVILEGE_DEFINITION;를 지원 하지 않습니다. SQL_QU_DML_STATEMENT 또는 SQL_QU_TABLE_DEFINITION 반환합니다.  
   
  SQL_QUOTED_IDENTIFIER_CASE는 sql_ic_mixed 입니다를 반환합니다.  
   
 ## <a name="r"></a>R  
- SQL_ROW_UPDATES "N"를 반환 합니다. Visual FoxPro ODBC 드라이버는만 정적 및 앞으로 커서를 지원합니다.  
+ SQL_ROW_UPDATES "N"을 반환 합니다. Visual FoxPro ODBC 드라이버는만 정적 및 정방향 커서를 지원합니다.  
   
 ## <a name="s"></a>S  
  SQL_SCROLL_CONCURRENCY SQL_SCCO_READ_ONLY를 반환합니다.  
   
- SQL_SCROLL_OPTIONS는 SQL_SO_STATIC 또는 SQL_SO_READONLY 중 하나를 반환합니다.  
+ SQL_SCROLL_OPTIONS는 SQL_SO_STATIC 또는 SQL_SO_READONLY를 반환합니다.  
   
  SQL_SEARCH_PATTERN_ESCAPE 반환 "\\"입니다.  
   
@@ -360,7 +357,7 @@ ms.locfileid: "32904938"
   
 -   SQL_FN_STR_SPACE 합니다.  
   
- SQL_SUBQUERIES를 반환합니다.  
+ SQL_SUBQUERIES 반환합니다.  
   
 -   SQL_SQ_CORRELATED_SUBQUERIES  
   
@@ -372,20 +369,20 @@ ms.locfileid: "32904938"
   
 -   SQL_SQ_QUANTIFIED 합니다.  
   
- SQL_SYSTEM_FUNCTIONS를 반환합니다.  
+ SQL_SYSTEM_FUNCTIONS 반환합니다.  
   
 -   SQL_FN_SYS_DBNAME  
   
 -   SQL_FN_SYS_IFNULL  
   
- 하지만 없습니다.  
+ 제외:  
   
 -   SQL_FN_SYS_USERNAME  
   
 ## <a name="t"></a>T  
  SQL_TABLE_TERM "table"를 반환합니다.  
   
- SQL_TIMEDATE_ADD_INTERVALS를 반환합니다.  
+ SQL_TIMEDATE_ADD_INTERVALS 반환합니다.  
   
 -   SQL_FN_TSI_ 초  
   
@@ -399,7 +396,7 @@ ms.locfileid: "32904938"
   
 -   SQL_FN_TSI_YEAR  
   
- 하지만 없습니다.  
+ 제외:  
   
 -   SQL_FN_TSI_FRAC_SECOND  
   
@@ -407,7 +404,7 @@ ms.locfileid: "32904938"
   
 -   SQL_FN_TSI_QUARTER  
   
- SQL_TIMEDATE_DIFF_INTERVALS를 반환합니다.  
+ SQL_TIMEDATE_DIFF_INTERVALS 반환합니다.  
   
 -   SQL_FN_TSI_ 초  
   
@@ -455,7 +452,7 @@ ms.locfileid: "32904938"
   
  SQL_TXN_ISOLATION_OPTION SQL_TXN_READ_COMMITTED를 반환합니다.  
   
-## <a name="u-z"></a>U + Z  
- SQL_UNION은 SQL_U_UNION 또는 SQL_U_UNION_ALL 중 하나를 반환합니다.  
+## <a name="u-z"></a>U-Z  
+ SQL_UNION은 SQL_U_UNION 또는 SQL_U_UNION_ALL를 반환합니다.  
   
- SQL_USER_NAME 반환 \<빈 > 합니다.
+ SQL_USER_NAME 반환 \<빈 >.

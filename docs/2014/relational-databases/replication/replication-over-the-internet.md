@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Web publishing [SQL Server replication], about Web publishing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication]
 - Internet [SQL Server replication], publishing
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b448a51c55f45e113d23cdcac37ac51ff2930b19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b49e8e364853ab0c5d3878af419f794ea1404cdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258619"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188653"
 ---
 # <a name="replication-over-the-internet"></a>인터넷을 통한 복제
   인터넷으로 데이터를 복제하면 연결이 끊긴 원격 사용자가 필요할 때 인터넷 연결을 사용해서 데이터에 액세스할 수 있습니다. 다음을 사용하여 인터넷을 통해 데이터를 복제합니다.  

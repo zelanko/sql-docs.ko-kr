@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1082bd587d9c3455733d611a676d901b62741859
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6228b3c146c91fa2990caf8f33b218dfbaf9c3f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122553"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
   `sqlps` 유틸리티는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 공급자와 cmdlet이 로드 및 등록된 Windows PowerShell 2.0 세션을 시작합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 및 해당 개체와 함께 작동하는 PowerShell 명령 또는 스크립트를 입력할 수 있습니다.  

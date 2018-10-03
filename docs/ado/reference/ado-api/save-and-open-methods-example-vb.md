@@ -1,13 +1,11 @@
 ---
-title: 저장 및 열기 메서드 예제 (VB) | Microsoft Docs
+title: Save 및 Open 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828851"
 ---
-# <a name="save-and-open-methods-example-vb"></a>저장 하 고 (VB) 메서드 예제 열기
-이 세 가지 예제를 보여 주는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 및 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 방법을 함께 사용할 수 있습니다.  
+# <a name="save-and-open-methods-example-vb"></a>Save 및 Open 메서드 예제(VB)
+이러한 세 가지 예를 보여 줍니다 하는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 하 고 [오픈](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 함께 사용할 수 있습니다.  
   
- 출장 진행 하 고 데이터베이스에서 테이블을 따라을 가정 합니다. 진행 하기 전에으로 데이터에 액세스 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 이동 가능한 형식으로 저장 합니다. 목적지에 도착 하는 경우 액세스는 **레코드 집합** 에 로컬 연결이 끊어진 **레코드 집합**합니다. 변경 된 **레코드 집합**, 한 후 다시 저장 합니다. 마지막으로, 홈을 반환할 때 데이터베이스에 다시 연결을 이동 중에 변경 내용으로 업데이트 합니다.  
+ 출장 예정인을 데이터베이스에서 테이블 가져가려는 가정 합니다. 진행 하기 전에으로 데이터에 액세스 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 이동 가능한 형식으로 저장 합니다. 대상에 도착 하는 경우 액세스를 **Recordset** 는 로컬 연결이 끊긴 **레코드 집합**. 변경 하는 **레코드 집합**, 한 다음 다시 저장 합니다. 마지막으로, 홈을 반환 하는 경우 데이터베이스에 다시 연결을 이동 중에 변경한 내용으로 업데이트.  
   
- 첫째, 액세스 및 저장 된 ***작성자*** 테이블입니다.  
+ 첫째, 액세스 및 저장 합니다 ***작성자*** 테이블입니다.  
   
 ```  
 'BeginSaveVB  
@@ -88,13 +85,13 @@ End Sub
 'EndSaveVB  
 ```  
   
- 이 시점에서 목적지에 도착 했습니다. 액세스 합니다는 ***작성자*** 테이블에 로컬 연결이 끊어진 **레코드 집합**합니다. 있어야는 **MSPersist** 저장된 된 파일에 액세스 하는 데 사용 하는 컴퓨터의 공급자 a:\Pubs.xml 합니다.  
+ 이 시점에서 대상에 도착 했습니다. 액세스는 ***작성자*** 로컬 테이블로 연결 끊김 **레코드 집합**합니다. 있어야 합니다 **MSPersist** 저장된 된 파일에 액세스 하는 데 사용 하는 컴퓨터의 공급자 a:\Pubs.xml 합니다.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
- 마지막으로 돌아가게 홈입니다. 이제 데이터베이스에서 변경 내용을 업데이트 합니다.  
+ 마지막으로 돌아가면 홈입니다. 이제 데이터베이스에서 변경 내용을 업데이트 합니다.  
   
 ```  
 Attribute VB_Name = "Save"  
@@ -103,5 +100,5 @@ Attribute VB_Name = "Save"
 ## <a name="see-also"></a>관련 항목  
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [지 속성 레코드 집합에 대 한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)   
+ [레코드 집합 지 속성에 대 한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cae311ef131f8ceafcc32dbae0881c236e3ea19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b87d9ff8173c5c708628befb3fd3c900fd7f0bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175790"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194119"
 ---
 # <a name="generate-filters"></a>필터 생성
   **필터 생성** 대화 상자를 사용하여 병합 게시의 테이블에 행 필터를 정의할 수 있습니다. 그러면 복제에서 외래 키 관계를 통해 관련된 다른 테이블로 해당 필터를 확장합니다. 예를 들어 프랑스 고객에 대한 데이터만 포함되도록 고객 테이블에 필터를 정의하면 복제에서는 관련된 주문 및 주문 세부 정보 테이블에 프랑스 고객과 관련된 정보만 포함되도록 해당 필터를 확장합니다.  

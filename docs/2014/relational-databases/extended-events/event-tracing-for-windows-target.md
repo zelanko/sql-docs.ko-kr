@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f768030b110a85d9c2c230bc06d2c9e42e85aa6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175163"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
   ETW(Windows용 이벤트 추적)를 대상으로 사용하려면 먼저 ETW에 대한 실무 지식을 갖추고 있는 것이 좋습니다. ETW 추적은 확장 이벤트와 함께 사용되거나 확장 이벤트의 이벤트 소비자로 사용됩니다. 다음 외부 링크를 클릭하면 ETW에 대한 배경 지식을 제공하는 항목으로 연결됩니다.  

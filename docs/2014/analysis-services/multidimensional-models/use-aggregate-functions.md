@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199580"
 ---
 # <a name="use-aggregate-functions"></a>집계 함수 사용
   차원을 사용하여 측정값을 분할하는 경우 측정값은 해당 차원에 포함된 계층에서 요약됩니다. 이러한 요약 동작은 측정값에 대해 지정된 집계 함수에 따라 달라집니다. 숫자 데이터가 포함된 대부분 측정값의 경우 집계 함수는 `Sum`입니다. 측정값은 활성 상태인 계층의 수준에 따라 다른 금액으로 합계됩니다.  

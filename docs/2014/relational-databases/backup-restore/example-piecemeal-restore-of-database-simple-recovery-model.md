@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - piecemeal restores [SQL Server], simple recovery model
 - restore sequences [SQL Server], piecemeal
 - simple recovery model [SQL Server], RESTORE examples
 ms.assetid: 9834b14a-4e56-4654-b190-c2a38624b6b4
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12cbb85f6fc335fcb944bee8eb270315dca4957e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2e44148d1cd250e575b46f83b7d801d40fc47b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170924"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229633"
 ---
 # <a name="example-piecemeal-restore-of-database-simple-recovery-model"></a>예제: 데이터베이스의 증분 복원(단순 복구 모델)
   증분 복원 시퀀스는 주 파일 그룹에서 시작하여 모든 읽기/쓰기 파일 그룹, 보조 파일 그룹의 순서로 파일 그룹 수준에서 데이터베이스를 복원하고 복구합니다.  

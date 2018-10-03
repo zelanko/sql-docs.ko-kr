@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b4ca2154a7574ba787fe59737c6165c41bc1d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5235f19b1d85282d7c66ffa64f4dcdc1a43a0fc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225893"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Server Core에 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]의 Server Core 설치에 설치할 수 있습니다. 이 항목에서는 Server  Core에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 설치하기 위한 설치 관련 세부 정보를 제공합니다.  
@@ -41,14 +38,14 @@ ms.locfileid: "37193883"
   
 |기능|지원됨|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|예|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제|예|  
-|전체 텍스트 검색|예|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|사용자 계정 컨트롤|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제|사용자 계정 컨트롤|  
+|전체 텍스트 검색|사용자 계정 컨트롤|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|예|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|아니요|  
 |SSDT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|아니요|  
-|클라이언트 도구 연결|예|  
-|Integration Services 서버<sup>[1]</sup>|예|  
+|클라이언트 도구 연결|사용자 계정 컨트롤|  
+|Integration Services 서버<sup>[1]</sup>|사용자 계정 컨트롤|  
 |클라이언트 도구 이전 버전과의 호환성|아니요|  
 |클라이언트 도구 SDK|아니요|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|아니요|  
@@ -56,7 +53,7 @@ ms.locfileid: "37193883"
 |관리 도구 -  전체|원격 전용<sup>[2]</sup>|  
 |Distributed  Replay  Controller|아니요|  
 |Distributed  Replay  Client|원격 전용<sup>[2]</sup>|  
-|SQL  클라이언트 연결 SDK|예|  
+|SQL  클라이언트 연결 SDK|사용자 계정 컨트롤|  
 |Microsoft  Sync  Framework|예<sup>[3]</sup>|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|아니요|  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|아니요|  
@@ -271,7 +268,7 @@ ms.locfileid: "37193883"
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Server Core에서 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 원격 액세스 구성  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]의 Server Core 설치에서 실행되는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 인스턴스의 원격 액세스를 구성하려면 아래에 설명된 작업을 수행합니다.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  원격 연결을 설정하려면 SQLCMD.exe를 로컬로 사용하고 Server Core 인스턴스에 대해 다음 문을 실행합니다.  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -294,7 +291,7 @@ ms.locfileid: "37193883"
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows 방화벽에서 예외 생성  
  Windows 방화벽에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 관련 예외를 만들려면 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)에 지정된 단계를 참조하세요.  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하십시오.  
   
 1.  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core를 실행하는 컴퓨터에서 작업 관리자를 실행합니다.  

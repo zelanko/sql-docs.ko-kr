@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReportFormatParameter Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReportFormatParameter element
 ms.assetid: 064a8683-c44b-4261-be4d-32226d3d3119
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dfcc98e3abe60296e7ee28b57bc54fe89f5c2abe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f3dd567a88a76837e13d051988620eb1886ef40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188023"
 ---
 # <a name="reportformatparameter-element-assl"></a>ReportFormatParameter 요소(ASSL)
   이름 및 지정 하는 매개 변수의 값을 포함 하는 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서가 런타임에 서식이 지정 됩니다.  
@@ -51,8 +48,8 @@ ms.locfileid: "37245583"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

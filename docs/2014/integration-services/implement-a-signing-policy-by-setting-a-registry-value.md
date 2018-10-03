@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103023"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>레지스트리 값을 설정하여 서명 정책 구현
   선택적 레지스트리 값을 사용하여 서명된 패키지나 서명되지 않은 패키지를 로드하기 위한 조직의 정책을 관리할 수 있습니다. 이 레지스트리 값을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 실행하고 정책을 적용할 각 컴퓨터에 이 레지스트리 값을 만들어야 합니다. 레지스트리 값이 설정된 후 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 로드하기 전에 서명을 확인합니다.  

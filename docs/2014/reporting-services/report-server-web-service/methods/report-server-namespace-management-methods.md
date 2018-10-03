@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - reports [Reporting Services], managing
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - methods [Reporting Services], about methods
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 982dabf5a880459e785033411ead754f81dbce4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0203866f4c8d7380e0590ad843e52432a0fcf119
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100473"
 ---
 # <a name="report-server-namespace-management-methods"></a>보고서 서버 네임스페이스 관리 메서드
   보고서 서버 관리 웹 서비스에는 보고서 서버 데이터베이스에서 보고서, 폴더 및 리소스를 관리하는 데 사용할 수 있는 메서드가 포함됩니다.  

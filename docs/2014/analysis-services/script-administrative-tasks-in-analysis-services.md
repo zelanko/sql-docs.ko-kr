@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
 - administering Analysis Services
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3d928ceb2fc390ee65ed413b6199965e1684823
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11385dd002acd7b0181422aaa571fe8fe46f188c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186073"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Analysis Services의 스크립트 관리 태스크
   SQL Server 에이전트를 통해 예약하거나 수동으로 실행할 수 있는 스크립트를 작성하거나 생성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리 태스크를 자동화할 수 있습니다. 다음 표에서는 사용할 수 있는 스크립팅 옵션을 요약하여 보여 주고 추가 정보에 대한 링크를 제공합니다.  

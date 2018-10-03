@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RegularMeasureGroupDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RegularMeasureGroupDimension data type
 ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20ac4c8ddf1d9acba769b0e6931d15b1c8a94647
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 072ada60b803f4c8adfde73a228144a4d0157dff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163484"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051821"
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>RegularMeasureGroupDimension 데이터 형식(ASSL)
   차원과 측정값 그룹 간의 일반 관계를 나타내는 파생 데이터 형식을 정의합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37163484"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[특성](../collections/attributes-element-assl.md), [카디널리티](../properties/cardinality-element-assl.md)|  
 |파생 요소|[차원](../objects/dimension-element-assl.md) ([차원](../collections/dimensions-element-assl.md) 컬렉션)|  
   

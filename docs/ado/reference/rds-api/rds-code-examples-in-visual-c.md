@@ -1,13 +1,11 @@
 ---
-title: RDS 코드 Visual c + +에서 예제 | Microsoft Docs
+title: RDS 코드 예제에서는 Visual c + +에서 | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - Visual C++ RDS examples [ADO]
 - RDS samples [ADO], Visual C++
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51795587d9cab1d9c221359f296378849e1380b0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: af47808a50475633614c28a0307d5e4fd49591b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752321"
 ---
-# <a name="rds-code-examples-in-visual-c"></a>Visual c + +의 RDS 코드 예제
-다음 코드 예제를 사용 하 여 Microsoft Visual c + +에서 작성 하는 경우 RDS 속성을 사용 하는 방법을 알아봅니다.  
+# <a name="rds-code-examples-in-visual-c"></a>Visual C++의 RDS 코드 예제
+Microsoft Visual c + +에서 작성 하는 경우 RDS 속성을 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 > [!NOTE]
->  전체 코드 예제에서는부터 끝까지 코드 편집기에 붙여 넣습니다. 이 예제에서는 부분 예제가 사용 하거나 단락 서식을 분실 한 경우 올바르게 실행 되지 않을 수 있습니다.  
+>  전체 코드 예제를부터 끝까지, 코드 편집기에 붙여 넣습니다. 예제에서는 예제 부분을 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  
   
--   [처리기 속성 예제](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Handler 속성 예제](../../../ado/reference/rds-api/handler-property-example-vc.md)  
   
 -   [InternetTimeout 속성 예제](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
 

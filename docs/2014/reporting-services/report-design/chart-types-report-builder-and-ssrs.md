@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2c305f6a4b4188e05f67bc8ac8ffd8cd66cdbb5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8da6fab7797154cdb59ee83993499607f515550a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098863"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>차트 종류(보고서 작성기 및 SSRS)
   표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 어떤 차트 종류를 선택하는가에 따라 데이터를 차트 폼에 삽입했을 때 그 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 예를 들어 차트의 크기에 비해 많은 양의 데이터 요소가 데이터 집합에 포함되어 있으면 영역형, 꺾은선형 또는 분산형 차트를 사용하여 데이터를 표현하는 것이 더 나을 수 있습니다. 선택한 차트 종류에 따라 데이터를 준비 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  

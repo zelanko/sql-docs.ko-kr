@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], indexes
 - indexes [CLR integration]
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
-caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 360715f3b239347aedcae2b50a0e21f7a2943125
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351805"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153433"
 ---
 # <a name="defining-udt-tables-and-columns"></a>UDT 테이블 및 열 정의
   사용자 정의 형식 (UDT)를 포함 하는 어셈블리 정의에 등록 된 후에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, 열 정의에 사용할 수 있습니다.  

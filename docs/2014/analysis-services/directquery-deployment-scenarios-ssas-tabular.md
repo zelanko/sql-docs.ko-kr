@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89454dfd53b641401352928ecf8e08b4b23e784c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268019"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135183"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 배포 시나리오(SSAS 테이블 형식)
   이 항목에서는 DirectQuery 모델에 대한 디자인 및 배포 프로세스를 연습할 수 있습니다. 관계형 데이터만 사용하도록 DirectQuery를 구성하거나(DirectQuery 전용) 전환을 통해 캐시된 데이터만 사용하거나 관계형 데이터만 사용하도록 모델을 구성할 수 있습니다(혼합 모드). 이 항목에서는 두 모드에 대한 구현 프로세스에 대해 설명하고 모드와 보안 구성에 따라 달라질 수 있는 쿼리 결과에 대해 살펴봅니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server], spatial storage design
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - spatial storage [SQL Server]
 - geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f042b5ed328f0666fd3b9420963000b5b7898a51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f25de7e1aa60d482d5256470d3fb2e1ada08f356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222173"
 ---
 # <a name="spatial-data-sql-server"></a>공간 데이터(SQL Server)
   공간 데이터는 기하학적 개체의 물리적 위치와 모양에 대한 정보를 표시합니다. 이러한 개체는 위치나 지역, 도로 또는 호수와 같은 좀 더 복잡한 개체를 가리킬 수 있습니다.  

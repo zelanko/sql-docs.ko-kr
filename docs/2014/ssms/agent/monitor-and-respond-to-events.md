@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - notifications [SQL Server], alert
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73c1883e0181d750d3e22dab64e7096a90f29372
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 739668b9223b770803ef1fdd4985ce112982c58b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212343"
 ---
 # <a name="monitor-and-respond-to-events"></a>이벤트 모니터링 및 응답
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *의 메시지, 특정 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트와 같은*이벤트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 자동으로 응답할 수 있습니다.  

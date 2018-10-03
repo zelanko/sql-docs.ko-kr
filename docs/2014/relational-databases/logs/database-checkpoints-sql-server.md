@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4226f66d19a37bc352a62d8f0113c604c4ca67f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b0271c21b849ee754e0050ea461c86d1f773850
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058536"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 검사점에 대해 간략하게 설명합니다. *검사점* 은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 예기치 않은 종료 또는 충돌 후 복구하는 과정에서 로그에 포함된 변경 내용의 적용을 시작할 수 있는 알려진 올바른 지점을 만듭니다.  
@@ -46,7 +43,7 @@ ms.locfileid: "37303953"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 자동, 간접, 수동 및 내부와 같은 여러 가지 유형의 검사점이 지원됩니다. 다음 표에는 검사점의 유형이 요약되어 있습니다.  
   
-|속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|Description|  
+|이름|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|Description|  
 |----------|----------------------------------|-----------------|  
 |자동|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|제안 하는 상한 시간 제한에 맞게 백그라운드에서 자동으로 실행 된 `recovery interval` 서버 구성 옵션입니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 20밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 이를 감지하는지 여부에 따라 조절됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
 |간접|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. 기본 대상 복구 시간은 0으로, 이 경우 데이터베이스에서 자동 검사점 추론이 사용됩니다. ALTER DATABASE을 사용하여 TARGET_RECOVERY_TIME을 0보다 크게 설정한 경우 서버 인스턴스에 대해 지정된 복구 간격 대신 이 값이 사용됩니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9114289ed2a4e09a5f7b59ed016c553c1d225dfc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1222d6d217c004790336a6a234d7f52154e148ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132442"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>태스크 1: 기술 자료 및 도메인 만들기
   이 작업을 만듭니다는 **공급 업체** 기술 자료 및 데이터 정리 및 일치 하는 데이터가 중복 제거 하는 데 사용 되는 도메인을 만듭니다.  

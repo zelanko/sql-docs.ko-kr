@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44138cf39e7ed07120b85da6dfd708dee3e90182
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222593"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 포함된 Reporting Services(SQL Server)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 06eff5cef73ab96d5e694714e98288fad21f4ddc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82ae72d5639f4ea22e6a3762e72f65f3354d315a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223023"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>계기에서 범위 서식 지정(보고서 작성기 및 SSRS)
   계기 범위는 계기에서 값의 중요한 하위 섹션을 나타내는 계기 눈금의 영역입니다. 계기 범위를 사용하여 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타낼 수 있습니다. 범위는 시작 값과 끝 값으로 정의됩니다.  

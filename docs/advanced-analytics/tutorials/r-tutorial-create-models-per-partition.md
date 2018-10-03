@@ -1,20 +1,21 @@
 ---
 title: 만들기, 학습 및 R (SQL Server Machine Learning Services)에서 파티션 기반 모델을 점수 매기기에 대 한 자습서 | Microsoft Docs
+description: 모델을 학습, SQL Server machine learning의 파티션 기반 모델링 기능을 사용 하 여 때 동적으로 생성 되는 분할 된 데이터를 사용 하는 방법에 알아봅니다.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232567"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ SQL Server 2019 파티션 기반 모델링에서는 분할 데이터 모델을 �
 이 자습서에서는 클래식 NYC 택시 샘플 데이터 및 R 스크립트를 사용 하 여 파티션 기반 모델링에 알아봅니다. 파티션 열에는 지불 방법입니다.
 
 > [!div class="checklist"]
-> * 파티션 payment_type 열을 기준으로 합니다. 이 열 세그먼트 데이터를 각 지불 형식에 대해 하나의 파티션 값입니다.
+> * 파티션에 지불 유형은 (5)를 기반으로 합니다.
 > * 각 파티션에 모델을 학습 만들고 데이터베이스에서 개체를 저장 합니다.
 > * 해당 목적을 위해 예약 하는 샘플 데이터를 사용 하 여 각 파티션 모델을 통해 팁 결과의 확률을 예측 합니다.
 
@@ -37,21 +38,17 @@ SQL Server 2019 파티션 기반 모델링에서는 분할 데이터 모델을 �
  
 이 자습서를 완료 하려면 다음이 필요 합니다.
 
-+ Machine Learning Services 및 R 기능을 사용 하 여 SQL Server 2019 데이터베이스 엔진 인스턴스를
-+ 예제 데이터
-+ SQL Server Management Studio 같은 T-SQL 쿼리 실행을 위한 도구
++ 시스템 리소스가 충분 합니다. 데이터 집합이 크면 및 학습 작업은 리소스를 많이 사용 합니다. 가능 하면 최소 8GB RAM 포함 된 시스템을 사용 합니다. 또는 리소스 제약 조건을 해결 하려면 더 작은 데이터 집합을 사용할 수 있습니다. 데이터 집합을 줄이기 위한 지침은 인라인입니다. 
 
-### <a name="system-resources"></a>시스템 리소스
++ 쿼리 실행, 같은 T-SQL에 대 한 도구 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
 
-데이터 집합이 크면 및 학습 작업은 리소스를 많이 사용 합니다. 가능 하면 최소 8GB RAM 포함 된 시스템을 사용 합니다. 또는 리소스 제약 조건을 해결 하려면 더 작은 데이터 집합을 사용할 수 있습니다. 데이터 집합을 줄이기 위한 지침은 인라인입니다. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 할 수 있습니다 [다운로드 하 고 복원](sqldev-download-the-sample-data.md) 로컬 데이터베이스 엔진 인스턴스로. 파일 크기는 약 90입니다.
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>Machine Learning 서비스를 사용 하 여 SQL Server 데이터베이스 엔진
++ SQL Server 2019 미리 보기 데이터베이스 엔진 인스턴스, Machine Learning Services 및 R 통합 합니다.
 
-SQL Server 2019 CTP 2.0 이상을 사용 하 여 Machine Learning 서비스 설치 및 구성 필요 합니다. Management Studio의 서버 버전을 실행 하 여 확인할 수 있습니다 `SELECT @@Version` T-SQL 쿼리로 합니다. 출력 해야 "Microsoft SQL Server (CTP 2.0)-2019 15.0.x"입니다.
+실행 하 여 버전을 확인 **`SELECT @@Version`** 쿼리 도구에서 T-SQL 쿼리로 합니다. 출력 해야 "Microsoft SQL Server (CTP 2.0)-2019 15.0.x"입니다.
 
-### <a name="r-packages"></a>R 패키지
-
-이 자습서에서는 R을 Machine Learning 서비스를 사용 하 여 설치 합니다. 데이터베이스 엔진 인스턴스를 사용 하 여 현재 설치 된 모든 R 패키지의 잘못 된 목록을 반환 하 여 R 설치를 확인할 수 있습니다.
+데이터베이스 엔진 인스턴스를 사용 하 여 현재 설치 된 모든 R 패키지의 잘못 된 목록을 반환 하 여 R 패키지의 가용성을 확인:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>쿼리 실행을 위한 도구
-
-할 수 있습니다 [다운로드 하 여 SQL Server Management Studio를 설치](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), 관계형 데이터베이스에 연결 하 고 T-SQL 스크립트를 실행 하는 모든 도구를 사용 합니다. Machine Learning 서비스에 있는 데이터베이스 엔진 인스턴스에 연결할 수 있는지 확인 합니다.
-
-### <a name="sample-data"></a>예제 데이터
-
-데이터에서 시작 합니다 [NYC 택시 및 리무진 수수료](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) 공용 데이터 집합입니다. 
-
-+ 다운로드 합니다 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) 데이터베이스 백업 파일 및 데이터베이스 엔진 인스턴스에 복원 합니다.
-
-데이터베이스 파일 이름 이어야 합니다 **NYCTaxi_sample** 수정 하지 않으면를 사용 하 여 다음 스크립트를 실행 하려는 경우.
 
 ## <a name="connect-to-the-database"></a>데이터베이스에 연결
 

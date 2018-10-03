@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.updatetable
 - vdtsql.chm:69643
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 92af88c39aabac5b8007d78965659026abd16de9
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7db4556a90be7392146f20018e1de13977d3b37f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163143"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>테이블 업데이트 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 업데이트할 테이블을 지정할 수 있습니다.  

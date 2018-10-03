@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1677c81bb13261e054d352697faeaf96aefd392c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b0772ac03110b21912671b7e7651a1b0ede2903
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055993"
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
   여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../collations/collation-and-unicode-support.md)을 참조하세요.  

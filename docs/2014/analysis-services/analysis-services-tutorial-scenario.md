@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7694bdc07e602f9ed93cee5419e51f9c7083d26a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dddb6aec8d55a2a0495900b87661a431f8de9d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275779"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106753"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
   이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북미, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  

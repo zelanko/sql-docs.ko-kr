@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,12 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9178ec5c24f1077c5e4a76a4429a2d34684b8162
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5cec8fb34b8605b7b31924f082a5178c6a78eeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147913"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에서 압축 해제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블이나 인덱스에서 압축을 해제하는 방법에 대해 설명합니다.  

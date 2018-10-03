@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f2c47fee88ba536c084649669ac5cd5f53cf6d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c93e226ea61d9d427b236a31247d01346c8d5cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077353"
 ---
 # <a name="error-handling"></a>오류 처리
-  Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 변경 사항을 마이닝하고(Oracle RAC 클러스터가 단일 데이터베이스로 간주됨) 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 CDC 데이터베이스에 있는 변경 테이블에 커밋된 변경 내용을 기록합니다.  
+  Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 변경 사항을 마이닝하고(Oracle RAC 클러스터가 단일 데이터베이스로 간주됨) 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CDC 데이터베이스에 있는 변경 테이블에 커밋된 변경 내용을 기록합니다.  
   
  **cdc.xdbcdc_state**시스템 테이블에서 CDC 인스턴스의 상태가 유지됩니다. 언제든지 이 테이블을 쿼리하여 CDC 인스턴스의 상태를 확인할 수 있습니다. cdc.xdbcdc_state 테이블에 대한 자세한 내용은 [cdc.xdbcdc_state](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state)를 참조하세요.  
   

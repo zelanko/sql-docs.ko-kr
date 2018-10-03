@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subcomponents visibility [SQL Server]
@@ -21,12 +19,12 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1cd39b93b761bd6466f3c0627df40aa9b67bbb2b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222223"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
   사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체에 대해서만 메타데이터를 볼 수 있도록 제한됩니다. 예를 들어 다음 쿼리는 사용자에게 `myTable`테이블에 대한 SELECT 또는 INSERT와 같은 권한을 부여한 경우에 행을 반환합니다.  

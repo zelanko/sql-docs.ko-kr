@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DatabaseName Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DatabaseName element
 ms.assetid: 5cfd9a1f-da53-497a-b677-c51be4641bd0
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc7969194f91afa5dcf4d795ce33fae39d00c398
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4727f3554b654687484e6bd273a0d88e557215e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183210"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172683"
 ---
 # <a name="databasename-element-xmla"></a>DatabaseName 요소(XMLA)
   식별 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 부모 복원 될 데이터베이스 [복원](../xml-elements-commands/restore-element-xmla.md) 명령입니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37183210"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37183210"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[복원](../xml-elements-commands/restore-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `DatabaseName` 요소는 `Restore` 명령으로 백업 파일을 복원하는 데이터베이스를 식별합니다. 이 요소를 지정하지 않았거나 빈 문자열을 포함하는 경우 백업 파일에 포함된 데이터베이스의 이름이 사용됩니다.  

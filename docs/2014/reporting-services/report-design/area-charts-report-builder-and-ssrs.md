@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 84262598ecb49d69eae360b6de3b4e78369e7fc8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d19fa1a5aca4ac67be6328646df47267218af42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191003"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>영역형 차트(보고서 작성기 및 SSRS)
   영역형 차트에서 계열은 선으로 연결된 일련의 점(선 아래 영역이 모두 채워짐)으로 표시됩니다. 영역형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  

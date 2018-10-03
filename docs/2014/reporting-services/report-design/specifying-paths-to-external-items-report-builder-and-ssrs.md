@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bff6f23531c5b66c225964869fc391423191db8a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b41acb95312ac9675d711c0c02817e58dfe2106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221713"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
   드릴스루 보고서, 하위 보고서 및 이미지 파일과 같이 보고서 서버에 저장되어 있고 보고서 정의 파일 외부에 있는 항목을 참조하기 위해 보고서 항목 속성에 경로를 지정할 수 있습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reosurce Pool Stats object
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a3b589fee01dc06b4a2cbf96e984ddb0294fd56d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a1360399717819cfe82f02979de06b9f933fca4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229233"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, Resource Pool Stats 개체
   SQLServer:Resource Pool Stats 개체는 리소스 관리자 리소스 풀 통계에 대한 정보를 보고하는 성능 카운터를 포함합니다.  

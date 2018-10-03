@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f16ab06ab21f266c4993a3148668effadbee2175
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25054c92124930d2d33b9f35eb43a1945d4a22bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149874"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197123"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>SharePoint 2010 팜에서 SQL Server BI 기능을 사용하기 위한 지침
   이 항목에서는 사용 중인 소프트웨어의 버전에 따라 사용 가능한 기능을 요약하여 보여 줍니다. 또한 특정 SQL Server 기능을 사용하는 데 필요한 SharePoint 2010 설치 요구 사항에 대해서도 설명합니다. SharePoint 2013으로 관련 된 정보를 참조 하세요 [SharePoint의 SQL Server BI 기능에 대 한 배포 토폴로지](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)합니다.  
@@ -49,8 +46,8 @@ ms.locfileid: "37149874"
   
 |지원되는 기능|SharePoint 제품|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 추가 기능 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]을 참조하세요.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition|  
-|일반 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 보기 및 SharePoint와 기능 통합|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 및 Enterprise Editions<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]을 참조하세요.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 추가 기능 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 참조하세요.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition|  
+|일반 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 보기 및 SharePoint와 기능 통합|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 및 Enterprise Editions<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 을 참조하세요.|  
   
  자세한 내용은 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   

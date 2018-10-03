@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 43558261eff0d22d597cdfe63f7d01137aa467a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161523"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>목록(보고서 작성기 및 SSRS)
   목록 데이터 영역은 보고서 데이터 집합의 각 그룹 또는 행에서 반복됩니다. 목록은 자유 형식 보고서나 송장 등의 양식을 만드는 데 사용하거나 다른 데이터 영역과 함께 사용할 수 있습니다. 여러 보고서 항목을 포함하는 목록을 정의할 수 있습니다. 목록을 다른 목록 안에 중첩하여 여러 그룹의 데이터를 제공할 수 있습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0f050783582fe62c85da06700dc168f7753785f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f58c39f80a1fe34314cd2043ca3a7d94e78471fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153563"
 ---
 # <a name="disable-resource-governor"></a>리소스 관리자 사용 안 함
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자를 사용하지 않도록 설정할 수 있습니다.  

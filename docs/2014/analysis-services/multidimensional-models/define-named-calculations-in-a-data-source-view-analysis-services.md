@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
 - data source views [Analysis Services], named calculations
 - named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b22519994be250c7dc435228265685842f258198
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c67d7becd2fae8557a734424f9f767e17b3ba7ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146183"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 계산 정의(Analysis Services)
   명명된 계산은 계산 열로 표시된 SQL 식입니다. 이 식은 테이블의 열과 같이 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블이나 뷰를 수정하지 않고 데이터 원본 뷰에 있는 기존 테이블이나 뷰의 관계형 스키마를 확장할 수 있습니다. 다음 예를 살펴봅니다.  

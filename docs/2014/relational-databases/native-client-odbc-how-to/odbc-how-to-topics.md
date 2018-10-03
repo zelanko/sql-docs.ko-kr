@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97ee08999f393423798cb57e13ff0b3c42203b29
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193354"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
   사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 수 있어야 ODBC 데이터 원본을 만들고 서버 카탈로그 저장 프로시저의 올바른 버전이 있는지 확인 합니다. SQL Server를 사용하는 ODBC 응용 프로그램의 코드를 작성하려면 ODBC 핸들을 할당하고 특성을 설정하고 SQL Server의 인스턴스에 연결하고 쿼리를 실행하고 결과를 처리하는 방법을 알아야 합니다.  

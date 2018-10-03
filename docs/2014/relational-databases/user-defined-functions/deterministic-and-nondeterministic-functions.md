@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - built-in functions [SQL Server]
@@ -18,12 +16,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f7b60f44d1ee8cf4224fd4b4bd24a0cba5862e4c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214713"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
   결정적 함수는 데이터베이스의 상태가 같을 경우 특정 입력 값 집합으로 호출될 때마다 항상 동일한 결과를 반환합니다. 비결정적 함수는 액세스하는 데이터베이스의 상태가 동일하게 유지되더라도 특정 입력 값 집합으로 호출될 때마다 다른 결과를 반환할 수 있습니다. 예를 들어 AVG 함수는 항상 위에서 설명된 조건에 따라 동일한 결과를 반환하지만 현재 날짜/시간 값을 반환하는 GETDATE 함수는 항상 다른 결과를 반환합니다.  

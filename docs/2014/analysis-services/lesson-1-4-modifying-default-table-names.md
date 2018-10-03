@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82f448c652bfb36f0f09eba975e3fecd8915afab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065413"
 ---
 # <a name="modifying-default-table-names"></a>기본 테이블 이름 수정
   데이터 원본 뷰에서 개체에 대한 **FriendlyName** 속성의 값을 변경하여 알아보기 쉽고 사용이 간편한 이름을 지정할 수 있습니다.  

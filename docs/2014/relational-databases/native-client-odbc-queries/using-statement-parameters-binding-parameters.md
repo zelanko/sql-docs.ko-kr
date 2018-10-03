@@ -1,12 +1,10 @@
 ---
-title: 바인딩 매개 변수 | Microsoft Docs
+title: 매개 변수 바인딩 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, parameters
@@ -19,25 +17,24 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f117cf02f863eb2c5d3dae602ce4503e71b885e1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227913"
 ---
 # <a name="binding-parameters"></a>매개 변수 바인딩
-  SQL 문을 실행하려면 먼저 SQL 문의 각 매개 변수 표식을 응용 프로그램의 변수에 연결하거나 바인딩해야 합니다. 호출 하 여 이렇게 합니다 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 함수입니다. **SQLBindParameter** 드라이버 프로그램 변수 (주소, C 데이터 형식 및 등)에 대해 설명 합니다. 또한 매개 변수 표식의 서수 값을 나타낸 후 해당 표식이 나타내는 SQL 개체의 특성(SQL 데이터 형식, 전체 자릿수 등)을 설명하여 매개 변수 표식을 식별합니다.  
+  SQL 문을 실행하려면 먼저 SQL 문의 각 매개 변수 표식을 응용 프로그램의 변수에 연결하거나 바인딩해야 합니다. 이렇게 호출 하 여 해당 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 함수입니다. **SQLBindParameter** 드라이버 프로그램 변수 (예: 주소, C 데이터 형식 및 등)를 설명 합니다. 또한 매개 변수 표식의 서수 값을 나타낸 후 해당 표식이 나타내는 SQL 개체의 특성(SQL 데이터 형식, 전체 자릿수 등)을 설명하여 매개 변수 표식을 식별합니다.  
   
  문을 실행하기 전이라면 언제라도 매개 변수 표식을 바인딩하거나 다시 바인딩할 수 있습니다. 매개 변수 바인딩은 다음 호출 중 하나가 발생하기 전까지 계속 유지됩니다.  
   
 -   에 대 한 호출 [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) 사용 하 여 합니다 *옵션* SQL_RESET_PARAMS로 설정한 매개 변수는 문 핸들에 바인딩된 모든 매개 변수를 해제 합니다.  
   
--   에 대 한 호출 **SQLBindParameter** 사용 하 여 *상태로* 는 바인딩된 매개 변수 표식의 서 수로 설정에는 자동으로 이전 바인딩을 해제 합니다.  
+-   호출을 **SQLBindParameter** 와 *ParameterNumber* 바운드 매개 변수 표식의 서 수로 설정에 자동으로 이전 바인딩을 해제 합니다.  
   
  응용 프로그램에서 매개 변수를 프로그램 변수의 배열에 바인딩하여 SQL 문을 일괄 처리할 수도 있습니다. 배열 바인딩에는 다음과 같은 두 가지 유형이 있습니다.  
   
@@ -49,7 +46,7 @@ ms.locfileid: "37423042"
   
      호출 하 여 지정 된 행 단위 바인딩은 **SQLSetStmtAttr** 사용 하 여 *특성* 를 sql_attr_param_bind_type으로 설정 하 고 *ValuePtr* 보관 하는 구조체의 크기로 설정 합니다 프로그램 변수입니다.  
   
- 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 서버로 문자나 이진 문자열 매개 변수를 보냅니다, 값에 지정 된 길이 채웁니다 **SQLBindParameter** *ColumnSize* 매개 변수입니다. ODBC 2.x 응용 프로그램에 대해 0을 지정 하는 경우 *ColumnSize*, 드라이버는 데이터 형식의 전체 자릿수 매개 변수 값을 채웁니다. 전체 자릿수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 연결할 경우 8000이고 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 경우 255입니다. *ColumnSize* 는 variant 열의 바이트 단위입니다.  
+ 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버는 문자나 이진 문자열 매개 변수를 서버에 보냅니다, 길이 지정 된 값을 채웁니다 **SQLBindParameter** *ColumnSize* 매개 변수입니다. ODBC 2.x 응용 프로그램에 대해 0을 지정 하는 경우 *ColumnSize*, 드라이버 데이터 형식의 전체 자릿수 매개 변수 값을 채웁니다. 전체 자릿수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 연결할 경우 8000이고 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 경우 255입니다. *ColumnSize* 열 변형에 대 한 바이트 단위입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 저장 프로시저 매개 변수의 이름 정의를 지원합니다. ODBC 3.5에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 호출할 때 사용되는 명명된 매개 변수에 대한 지원이 도입되었습니다. 이 지원을 통해 다음을 수행할 수 있습니다.  
   
@@ -59,7 +56,7 @@ ms.locfileid: "37423042"
   
  명명 된 매개 변수는 사용할 때에 지원 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` 문이나 ODBC CALL 이스케이프 시퀀스를 저장된 프로시저를 실행 합니다.  
   
- 저장 프로시저 매개 변수에 `SQL_DESC_NAME`을 설정할 경우 쿼리의 모든 저장 프로시저 매개 변수도 `SQL_DESC_NAME`을 설정해야 합니다.  리터럴이 사용 될 경우 저장된 프로시저 호출에서 매개 변수에 `SQL_DESC_NAME` 으로 설정 된 리터럴 형식을 사용 해야 *' 이름*=*값*' 여기서 *이름* 은 저장된 프로시저 매개 변수 이름 (예를 들어 @p1). 자세한 내용은 [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215)합니다.  
+ 저장 프로시저 매개 변수에 `SQL_DESC_NAME`을 설정할 경우 쿼리의 모든 저장 프로시저 매개 변수도 `SQL_DESC_NAME`을 설정해야 합니다.  리터럴이 사용 될 경우 저장된 프로시저 호출에서 매개 변수에 `SQL_DESC_NAME` 으로 설정 된 리터럴 형식을 사용 해야 *' 이름*=*값*' 여기서 *이름* 은 저장된 프로시저 매개 변수 이름 (예를 들어 @p1). 자세한 내용은 [이름 (명명 된 매개 변수)에 의해 매개 변수 바인딩](http://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>관련 항목  
  [문 매개 변수 사용](using-statement-parameters.md)  

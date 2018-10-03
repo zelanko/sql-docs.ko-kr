@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - context switching [SQL Server], tutorials
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c580b7b2f9826251a9703b89bbc8c46a227e4564
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e46d5f6f28a1d93df5cf92194164a4335501523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082003"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   이 자습서에서는 시나리오를 통해 소유권 체인 및 사용자 컨텍스트 전환과 관련된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보안 개념을 설명합니다.  

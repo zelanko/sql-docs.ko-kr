@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142243"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>기존 개체의 데이터 원본(데이터 원본 마법사)(Analysis Services)
   **기존 개체의 데이터 원본** 페이지를 사용하여 새 데이터 원본의 기반으로 사용할 기존 데이터 원본 또는 프로젝트를 지정할 수 있습니다.  

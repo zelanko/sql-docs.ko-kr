@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.getCatalogName
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37b9bb634f4c6cb6f0ca9f6acb36fef512e6ec6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dcf7c0b513726db49615b8ab85e99493b8a7cb41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730493"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,15 +41,15 @@ public java.lang.String getCatalogName(int column)
  열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 카탈로그 이름이 들어 있는입니다.  
+ 카탈로그 이름이 포함하는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getCatalogName 메서드는 java.sql.ResultSetMetaData 인터페이스의 getCatalogName 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData 멤버](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData 클래스](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

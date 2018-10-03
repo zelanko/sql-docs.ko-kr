@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f9b7b2819eec76f3ccc913debea3773cad0b9e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b2a0b30329516a478e07eeaddf4d04f6f5d8c65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103629"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>기록 특성 옵션(느린 변경 차원 마법사)
   **기록 특성 옵션** 대화 상자를 사용하여 시작 및 종료 날짜별로 기록 특성을 표시하거나 이 용도로 특별히 만든 열에 기록 특성을 기록할 수 있습니다.  

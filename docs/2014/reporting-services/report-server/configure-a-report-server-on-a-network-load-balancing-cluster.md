@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d8d693e328aafb852e5878418401495ffd61a2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3b8d3c1d86983b66379c31b556e9eb378b4dc51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223514"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
   NLB(네트워크 부하 분산) 클러스터에서 실행되도록 보고서 서버 확장을 구성하는 경우 다음을 수행해야 합니다.  
@@ -30,11 +27,9 @@ ms.locfileid: "37234733"
   
 -   대화형 보고서 보기를 지원하도록 뷰 상태 유효성 검사를 구성합니다. 대화형 보고서는 일반적으로 단일 사용자 세션 동안 사용자 동작에 대한 응답으로 새 데이터나 다른 데이터를 시각화하기 위해 여러 번 렌더링됩니다. 뷰 상태 유효성 검사를 구성하면 실제 요청을 제공하는 보고서 서버에 관계없이 사용자 세션 내에서 근접성이 유지됩니다.  
   
- 
-            [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 스케일 아웃 배포의 부하 분산을 위한 기능, 또는 공유 URL을 통해 단일 액세스 지점을 정의하는 기능을 제공하지 않습니다. 따라서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포를 지원하기 위한 별도의 소프트웨어 또는 하드웨어 NLB 클러스터 솔루션을 구현해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 스케일 아웃 배포의 부하 분산을 위한 기능, 또는 공유 URL을 통해 단일 액세스 지점을 정의하는 기능을 제공하지 않습니다. 따라서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포를 지원하기 위한 별도의 소프트웨어 또는 하드웨어 NLB 클러스터 솔루션을 구현해야 합니다.  
   
- 
-            [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 이미 NLB 클러스터에 속하는 노드에 설치하거나 먼저 스케일 아웃 배포를 구성한 후 클러스터 소프트웨어를 설치할 수 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 이미 NLB 클러스터에 속하는 노드에 설치하거나 먼저 스케일 아웃 배포를 구성한 후 클러스터 소프트웨어를 설치할 수 있습니다.  
   
 ## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>NLB 클러스터에서의 보고서 서버 배포 단계  
  배포를 설치하고 구성하려면 다음 지침을 따르십시오.  

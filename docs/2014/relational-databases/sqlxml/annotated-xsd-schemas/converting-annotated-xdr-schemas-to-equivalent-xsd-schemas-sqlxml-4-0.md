@@ -1,14 +1,12 @@
 ---
-title: 주석이 추가 된 XDR 스키마를 해당 XSD 스키마 (SQLXML 4.0) 변환 | Microsoft Docs
+title: 주석이 추가 된 XDR 스키마를 해당 XSD 스키마 (SQLXML 4.0) 변환 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XDR schemas, converting schemas
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], conversions
 - XSD schemas [SQLXML], converting schemas
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d991e750103de330df1ac4993ee3373c93eb2593
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3e1331c63c119365de8d5862af3db223ce60e72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250019"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157783"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>주석이 추가된 XDR 스키마를 해당 XSD 스키마로 변환(SQLXML 4.0)
   XSD(XML 스키마 정의) 언어는 XDR(XML-Data Reduced) 스키마 정의 언어의 후속 제품입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에서는 새로 XSD를 지원하므로 XSD를 사용하여 주석이 추가된 새 스키마를 만들 수 있습니다. SQLXML 4.0에는 기존의 주석이 추가된 XDR 스키마를 해당하는 XSD 스키마로 변환하는 데 도움을 주기 위한 XDR-XSD 변환기 도구가 포함되어 있습니다.  

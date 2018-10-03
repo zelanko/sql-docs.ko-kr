@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 137 (Database Engine error)
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23412d364a23c3ba191a4fd03d84bccbbb358822
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214133"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
     
@@ -57,7 +54,7 @@ ms.locfileid: "37429032"
 ## <a name="user-action"></a>사용자 동작  
  SQL 스크립트에서 변수를 사용하기 전에 해당 변수를 선언했는지 확인하십시오.  
   
- EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 예를 들어:  
+ EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  USE AdventureWorks2012;  
   
