@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationID Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47d79781ea7f85efa51f48b149a442e7c87ec1f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087673"
 ---
 # <a name="aggregationid-element-assl"></a>AggregationID 요소(ASSL)
   집계 정의 식별 합니다 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 집계 인스턴스를 만드는 데 사용 되는 요소입니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37277819"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -57,7 +54,7 @@ ms.locfileid: "37277819"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소를 누락하거나 빈 문자열로 설정하면 `AggregationInstance`가 사용자 정의 집계를 나타냅니다.  

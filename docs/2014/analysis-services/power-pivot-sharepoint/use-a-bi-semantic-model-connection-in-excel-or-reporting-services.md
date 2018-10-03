@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123543"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용
   이 항목에서는 다른 항목의 지침을 사용하여 만든 BI 의미 체계 모델 연결을 사용하는 방법에 대해 설명합니다. BI 의미 체계 모델을 아직 만들지 않은 경우 [PowerPivot 통합 문서에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 하 고 [테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  

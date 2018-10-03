@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d331e0a22042258c087a3f58b0c72330c66f9203
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 10c6d8cf2b5c68aba12d92530f345a56b2882474
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082021"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 지원 합니다 [xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) 선택적으로 FOR XML 쿼리 결과가 반환 되도록 요청할 수 있습니다 `xml` TYPE 지시어를 지정 하 여 데이터 형식입니다. 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 에 대해 XQuery를 지정 결과를 할당을 예는 `xml` 변수를 입력 하거나 작성 [중첩 FOR XML 쿼리](use-nested-for-xml-queries.md)합니다.  

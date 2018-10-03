@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf5fc254aff0398b40605fdc6c568d9dc01b3a60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00f4c86dd09dd9b88959415459151d4cef518d57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099533"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>태스크 3: 일치에 대한 데이터 품질 프로젝트 만들기 및 실행
   이 작업에서는 일치 작업을 위한 데이터 품질 프로젝트를 만들고 정리된 공급자 데이터에서 일치 프로세스를 실행하여 데이터에 있는 모든 중복 항목을 제거합니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
-caps.latest.revision: 38
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8ef67e673e6ba5fe21180c33c8dd501f1baa0c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5d1f22d37723545cde9430404a5e414fb1856c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079043"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>데이터 원본 속성 대화 상자, 자격 증명
   **데이터 원본 속성** 대화 상자의 **자격 증명** 을 선택하여 보고서의 데이터 원본에 연결하는 데 사용할 자격 증명을 표시하고 수정할 수 있습니다. 사용자가 제공하는 자격 증명은 데이터 원본에 액세스하고 보고서를 미리 보기 위해 데이터의 복사본을 캐시하는 데 사용됩니다. 미리 보기 데이터 캐시 방법에 대한 자세한 내용은 [보고서 미리 보기](reports/previewing-reports.md)를 참조하세요. 자격 증명에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  

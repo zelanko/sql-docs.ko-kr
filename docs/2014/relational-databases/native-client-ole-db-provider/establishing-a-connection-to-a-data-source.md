@@ -1,12 +1,10 @@
 ---
-title: 데이터 원본에 연결 | Microsoft Docs
+title: 데이터 원본에 연결 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [SQL Server Native Client]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b07fd8c9710c591806721d019f7dc776298fbab
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137555"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결 설정
   액세스 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자 먼저 만들어야 데이터 원본 개체의 인스턴스를 호출 하 여 합니다 **CoCreateInstance** 메서드. 각 OLE DB 공급자는 고유한 CLSID(클래스 ID)를 사용하여 식별합니다. 에 대 한는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자, 클래스 식별자가 CLSID_SQLNCLI10입니다. 기호 SQLNCLI_CLSID를 사용할 수도 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 참조 하는 sqlncli.h에서 사용 되는 Native Client OLE DB 공급자입니다.  
@@ -33,7 +30,7 @@ ms.locfileid: "37425292"
   
  컴퓨터에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 경우 서버 이름은 ServerName\InstanceName 형식으로 지정됩니다.  
   
- 데이터 원본 개체도 노출 합니다 **IDBInitialize** 인터페이스입니다. 호출 하 여 데이터 원본에는 연결이 설정 되는 속성을 설정한 후 합니다 **idbinitialize:: Initialize** 메서드. 예를 들어:  
+ 데이터 원본 개체도 노출 합니다 **IDBInitialize** 인터페이스입니다. 호출 하 여 데이터 원본에는 연결이 설정 되는 속성을 설정한 후 합니다 **idbinitialize::Initialize** 메서드. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

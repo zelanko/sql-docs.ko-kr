@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125043"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 테이블에서 전체 텍스트 인덱스를 사용하려면 먼저 전체 텍스트 엔진을 사용하여 액세스하려는 테이블 열에 전체 텍스트 인덱싱 기능을 설정해야 합니다.  

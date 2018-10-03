@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], examples
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e5596107f5bae9ceeab8ae105203e89584e854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69cc3a0d32c12c71b3909bda23dea93417475f2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847632"
 ---
-# <a name="data-source-example"></a>데이터 원본 예
-원본 정보는 Microsoft® Windows NT® 서버/Windows 2000 Server, Microsoft Windows NT 워크스테이션/Windows 2000 Professional 또는 Microsoft Windows® 95/98, 컴퓨터 데이터를 실행 하는 컴퓨터에서 레지스트리에 저장 됩니다. 레지스트리에 따라 키 정보 아래에 저장 된, 데이터 원본 이라고는 *사용자 데이터 원본이* 또는 *시스템 데이터 원본*합니다. 사용자 데이터 원본 HKEY_CURRENT_USER 키 아래에 저장 됩니다 및 현재 사용자에만 사용할 수 있습니다. 시스템 데이터 원본은 HKEY_LOCAL_MACHINE 키 아래에서 저장 되 고 하나의 컴퓨터에 둘 이상의 사용자가 사용할 수 있습니다. 도 액세스할 수 있게 데이터 원본에 없는 사용자가 컴퓨터에 로그온 하는 경우에는 시스템 전체 서비스에서 사용할 수 있습니다. 사용자 및 시스템 데이터 원본에 대 한 자세한 내용은 참조 [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)합니다.  
+# <a name="data-source-example"></a>데이터 원본 예제
+Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT 워크스테이션/Windows 2000 Professional 또는 Microsoft Windows® 95/98 컴퓨터 데이터를 실행 하는 컴퓨터에서 원본 정보는 레지스트리에 저장 됩니다. 사용할 레지스트리에 따라 키 정보는 아래에 저장, 데이터 원본 이라고는 *사용자 데이터 원본* 또는 *시스템 데이터 원본을*합니다. 사용자 데이터 원본 HKEY_CURRENT_USER 키 아래에 저장 됩니다 및 현재 사용자 에게만 제공 됩니다. 시스템 데이터 원본 HKEY_LOCAL_MACHINE 키 아래 저장 되 고 하나의 컴퓨터에서 둘 이상의 사용자가 사용할 수 있습니다. 또한 없는 사용자가 컴퓨터에 로그온 하는 경우에 데이터 원본에 대 한 액세스를 얻을 수 있습니다는 시스템 전체 서비스에서 사용 수 있습니다. 사용자 및 시스템 데이터 원본에 대 한 자세한 내용은 참조 하세요. [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)합니다.  
   
- 사용자가 사용자 데이터 원본은 다음 세 가지 경우를 가정해 볼: Oracle DBMS;를 사용 하 여 담당자 및 인벤토리를 및 Microsoft SQL Server DBMS를 사용 하 여 급여 합니다. 데이터 원본에 대 한 레지스트리 값 수 있습니다.  
+ 사용자에 세 가지 사용자 데이터 원본이 있다고 가정 합니다:는 Oracle DBMS;를 사용 하는 직원 및 인벤토리 및 Microsoft SQL Server DBMS를 사용 하는 급여를 합니다. 데이터 원본에 대 한 레지스트리 값을 수 있습니다.  
   
 ```  
 HKEY_CURRENT_USER  
@@ -39,7 +36,7 @@ SOFTWARE
                     Payroll : REG_SZ : SQL Server  
 ```  
   
- 고 급여 데이터 원본에 대 한 레지스트리 값 수 있습니다.  
+ 및 급여 데이터 원본에 대 한 레지스트리 값이 될 수 있습니다.  
   
 ```  
 HKEY_CURRENT_USER  

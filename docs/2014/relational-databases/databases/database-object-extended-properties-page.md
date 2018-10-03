@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efbcf8ccaf28f134ba1d9ec2d5a6c0353d8c7f17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1f3f9518a6d104801b6d81d68def64facbd589a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119094"
 ---
 # <a name="database-object-extended-properties-page"></a>데이터베이스 개체(확장 속성 페이지)
   확장 속성을 사용하여 데이터베이스 개체에 사용자 지정 속성을 추가할 수 있습니다. 이 페이지를 사용하여 선택한 개체의 확장 속성을 확인하거나 수정할 수 있습니다. 모든 데이터베이스 개체 유형의 **확장 속성** 페이지는 동일합니다.  

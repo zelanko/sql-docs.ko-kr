@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5665db92828c5a6ea6a6d94587414dc6b411a01b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091303"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>로컬 파티션 만들기 및 관리(Analysis Services)
   처리 성능 향상을 위해 측정값 그룹에 대한 추가 파티션을 만들 수 있습니다. 여러 개의 파티션이 있으면 로컬 서버뿐만 아니라 원격 서버의 해당하는 개수의 실제 데이터 파일에 팩트 데이터를 할당할 수 있습니다. Analysis Services에서는 파티션을 독립적으로 병렬 처리할 수 있어 서버에서 작업을 처리할 때 더 세부적으로 제어할 수 있습니다.  

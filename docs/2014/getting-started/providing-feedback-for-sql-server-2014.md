@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sending feedback to Microsoft
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e878c3d09e2dde7d32e9fa5b37fd02081a6979c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109905"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014에 대한 사용자 의견 제공
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 할애해 시간 개선을 위해을 내어 주셔서 감사는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제품과 설명서. 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용자 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보낼 수 있습니다. 다음 항목에서는 이러한 세 가지 사용자 의견 옵션 각각에 대해 설명합니다.  

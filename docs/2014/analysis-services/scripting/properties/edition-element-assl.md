@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Edition Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Edition element
 ms.assetid: 521e1286-097e-494f-b036-61047096e87e
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a94ed085a345100579b3305fa43e7e360fe8258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce3d1037aad06a0ec81e32150eed05a47363d835
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094783"
 ---
 # <a name="edition-element-assl"></a>Edition 요소(ASSL)
   인스턴스의 읽기 전용 버전을 포함 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 나타내는 합니다 [Server](../objects/server-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37245663"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37245663"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Server](../objects/server-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Edition` 요소는 설치된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 버전을 설명합니다. 이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  

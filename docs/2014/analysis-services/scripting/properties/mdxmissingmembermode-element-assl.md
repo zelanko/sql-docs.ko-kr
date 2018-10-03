@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MdxMissingMemberMode Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MdxMissingMemberMode element
 ms.assetid: aca6130b-5fb8-4fa1-af8b-8e1ef361926f
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bf066a836d329096d36366b3d4a5f2835957fc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c942587601c5e62d9e876be8eb1277f638eaa7ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126743"
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>MdxMissingMemberMode 요소(ASSL)
   MDX(Multidimensional Expressions) 문에 대해 누락된 멤버가 처리되는 방식을 결정합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37319413"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Dimension](../data-type/dimension-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

@@ -1,14 +1,11 @@
 ---
-title: sp_fulltext_load_thesaurus_file (Transact SQL) | Microsoft Docs
+title: sp_fulltext_load_thesaurus_file (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e3b6cd075ab2b0fb11d013ee7af2973007d40ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d076bfde2e4dc4a71af558a08f197d20144ce9db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840976"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,29 +43,29 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>인수  
  *lcid*  
- 동의어 사전 XML 정의를 로드할 언어의 LCID(로캘 ID)를 매핑하는 정수입니다. 서버 인스턴스에서 사용할 수 있는 언어의 Lcid를 가져오려면는 [sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 카탈로그 뷰에 있습니다.  
+ 동의어 사전 XML 정의를 로드할 언어의 LCID(로캘 ID)를 매핑하는 정수입니다. 서버 인스턴스에서 사용할 수 있는 언어의 Lcid를 가져오려면 합니다 [sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 카탈로그 뷰.  
   
  **@loadOnlyIfNotLoaded** = *작업*  
- 동의어 사전 파일이 이미 로드된 경우에도 내부 동의어 사전 테이블로 로드되는지 여부를 지정합니다. *동작* 중 하나입니다.  
+ 동의어 사전 파일이 이미 로드된 경우에도 내부 동의어 사전 테이블로 로드되는지 여부를 지정합니다. *작업* 중 하나입니다.  
   
-|Value|정의|  
+|값|정의|  
 |-----------|----------------|  
-|**0**|이미 로드되었는지 여부와 관계없이 동의어 사전 파일을 로드합니다. 이것이 기본 동작의 **sp_fulltext_load_thesaurus_file**합니다.|  
-|1.|아직 로드되지 않은 경우에만 동의어 사전 파일을 로드합니다.|  
+|**0**|이미 로드되었는지 여부와 관계없이 동의어 사전 파일을 로드합니다. 기본적으로 이것이 **sp_fulltext_load_thesaurus_file**합니다.|  
+|1|아직 로드되지 않은 경우에만 동의어 사전 파일을 로드합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- 동의어 사전 파일은 해당 동의어 사전을 사용하는 전체 텍스트 쿼리에 의해 자동으로 로드됩니다. 전체 텍스트 쿼리에 미치는이 첫 번째 성능 영향을 방지 하려면 실행 하는 권장 **sp_fulltext_load_thesaurus_file**합니다.  
+## <a name="remarks"></a>Remarks  
+ 동의어 사전 파일은 해당 동의어 사전을 사용하는 전체 텍스트 쿼리에 의해 자동으로 로드됩니다. 전체 텍스트 쿼리에 미치는이 첫 번째 성능 영향을 방지 하려면를 실행 하는 권장 **sp_fulltext_load_thesaurus_file**합니다.  
   
  사용 하 여 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' 전체 텍스트 검색에 등록 된 언어 목록을 업데이트 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할 또는 시스템 관리자를 실행할 수는 **sp_fulltext_load_thesaurus_file** 저장 프로시저입니다.  
+## <a name="permissions"></a>사용 권한  
+ 구성원만 합니다 **sysadmin** 고정된 서버 역할 또는 시스템 관리자를 실행할 수는 **sp_fulltext_load_thesaurus_file** 저장 프로시저입니다.  
   
  동의어 사전 파일은 시스템 관리자만 업데이트, 수정 또는 삭제할 수 있습니다.  
   
@@ -91,10 +87,10 @@ EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [FULLTEXTSERVICEPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [구성 하 고 전체 텍스트 검색에 대 한 동의어 사전 파일을 관리 합니다.](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [구성 및 전체 텍스트 검색 동의어 사전 파일 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  
   
   

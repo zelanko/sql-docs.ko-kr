@@ -1,13 +1,11 @@
 ---
-title: Delete 메서드 (ADO Parameters 컬렉션) | Microsoft Docs
+title: Delete 메서드 (ADO 매개 변수 컬렉션) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68beeda88e205e4e96d6b5e4d4e853e360fb61a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8eb7d5d58e0f6afe31304b6fce13da2d8c48e54e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696922"
 ---
-# <a name="delete-method-ado-parameters-collection"></a>Delete 메서드 (ADO Parameters 컬렉션)
-개체를 삭제는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다.  
+# <a name="delete-method-ado-parameters-collection"></a>Delete 메서드(ADO 매개 변수 컬렉션)
+개체를 삭제 합니다 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,10 +36,10 @@ Parameters.Delete Index
   
 #### <a name="parameters"></a>매개 변수  
  *Index*  
- A **문자열** 컬렉션에서 삭제할 개체 또는 개체의 서 수 위치 (인덱스)의 이름을 포함 하는 값입니다.  
+ A **문자열** 컬렉션에서 삭제 하려는 개체 또는 개체의 서 수 위치 (인덱스)의 이름을 포함 하는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하는 **삭제** 메서드는 컬렉션에 컬렉션의 개체 중 하나를 제거할 수 있습니다. 이 메서드는 에서만 사용할 수는 **매개 변수** 컬렉션은 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 사용 해야 합니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성이 나 호출할 때 해당 컬렉션 인덱스는 **삭제** 메서드-개체 변수는 유효한 인수가 아닙니다.  
+ 사용 하는 **삭제** 컬렉션에 대해 메서드를 사용 하면 컬렉션의 개체 중 하나를 제거 합니다. 이 메서드는 에서만 사용할 수 있습니다 합니다 **매개 변수** 의 컬렉션을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 사용 해야 합니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성 또는 호출 하는 경우 해당 컬렉션 인덱스는 **삭제** 메서드-개체 변수에 올바른 인수가 아닙니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Parameters 컬렉션(ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  

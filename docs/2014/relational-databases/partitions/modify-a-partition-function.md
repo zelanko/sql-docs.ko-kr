@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 700d4ea1e3f5e0fc77de052ac9e83a2875f89bd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9371a82366f31c2d8221834a1bd29f9cfd9cc0d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049043"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 분할된 테이블이나 인덱스의 파티션 함수에 지정된 파티션 수를 하나씩 더하거나 빼서 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블이나 인덱스가 분할되는 방식을 변경할 수 있습니다. 파티션 추가는 기존의 한 파티션을 두 파티션으로 "분할"하고 새 파티션의 경계를 다시 정의하는 것입니다. 파티션 삭제는 두 파티션의 경계를 하나로 "병합"하는 것입니다. 이 마지막 동작에서 한 파티션은 다시 채워지고 다른 한 파티션은 할당되지 않은 상태로 남게 됩니다.  

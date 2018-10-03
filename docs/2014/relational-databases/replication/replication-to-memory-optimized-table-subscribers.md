@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188490"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128653"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
   피어 투 피어 트랜잭션 복제를 제외하고 트랜잭션 복제 구독자 역할을 수행하는 테이블은 메모리 최적화 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 최적화 테이블과 호환되지 않습니다.  
@@ -67,8 +64,7 @@ ms.locfileid: "37188490"
   
 3.  찾을 **합니다. SCH** 테이블에 대 한 파일 및 Management Studio에서 엽니다. 아래 설명에 따라 테이블 스키마를 변경하고 저장 프로시저를 업데이트합니다.  
   
-     IDX 파일에 정의된 인덱스를 평가합니다. 
-            `CREATE TABLE`을 수정하여 필수 인덱스, 제약 조건, 기본 키 및 메모리 최적화 구문을 지정합니다. 메모리 최적화 테이블에서 인덱스 열은 NOT NULL이어야 하며 문지 형식의 인덱스 열은 Unicode여야 하고 BIN2 데이터 정렬을 사용해야 합니다. 아래 예제를 참조하십시오.  
+     IDX 파일에 정의된 인덱스를 평가합니다. `CREATE TABLE`을 수정하여 필수 인덱스, 제약 조건, 기본 키 및 메모리 최적화 구문을 지정합니다. 메모리 최적화 테이블에서 인덱스 열은 NOT NULL이어야 하며 문지 형식의 인덱스 열은 Unicode여야 하고 BIN2 데이터 정렬을 사용해야 합니다. 아래 예제를 참조하십시오.  
   
     ```  
     SET ANSI_PADDING ON;  

@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-caps.latest.revision: 43
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108303"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>3 단원: 웹 서비스 액세스
+# <a name="lesson-3-accessing-the-web-service"></a>3단원: 웹 서비스에 액세스
   보고서 서버 웹 서비스에 대한 참조를 프로젝트에 추가한 후에는 웹 서비스의 프록시 클래스 인스턴스를 만듭니다. 그런 다음 프록시 클래스에서 메서드를 호출하여 웹 서비스의 메서드에 액세스할 수 있습니다. 프록시 클래스에서 생성 된 코드 응용 프로그램에서 이러한 메서드를 호출 하면 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 응용 프로그램 및 웹 서비스 간의 통신을 처리 합니다.  
   
  첫째, 웹 서비스의 프록시 클래스의 인스턴스를 만들려는 <xref:ReportService2010.ReportingService2010>합니다. 그런 다음 프록시 클래스를 사용하여 웹 서비스의 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 호출합니다. 이 호출로 예제 보고서인 Company Sales에 대한 이름 및 설명을 검색할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되고 있는 웹 서비스에 액세스할 경우 "ReportServer" 경로에 "$SQLExpress"를 추가해야 합니다. 예를 들어:  
+>  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되고 있는 웹 서비스에 액세스할 경우 "ReportServer" 경로에 "$SQLExpress"를 추가해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   

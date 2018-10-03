@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ModelingFlag Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 611a93a27e5f668c9b367eb35d5df9eb454743b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8137da94a03e560fbed2c263e8e0a10b187fa569
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275439"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118133"
 ---
 # <a name="modelingflag-element-assl"></a>ModelingFlag 요소(ASSL)
   마이닝 구조 또는 마이닝 모델의 열에 대한 모델링 플래그를 포함합니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37275439"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[MiningModelingFlag](../data-type/miningmodelingflag-data-type-assl.md)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -57,7 +54,7 @@ ms.locfileid: "37275439"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ModelingFlags](../collections/modelingflags-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  AMO(Analysis Management Object) 개체 모델에서 밀접한 관련이 있는 요소는 <xref:Microsoft.AnalysisServices.MiningModelingFlags>입니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
-caps.latest.revision: 44
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31e3e002996d523aa225e0d0bb607d1772d8b0e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5dd09ba81c6bdf79abdb5d668821442fad7acab0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273069"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114613"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>선행 제약 조건에서 식 사용
   이 절차에서는 **선행 제약 조건 편집기** 대화 상자를 사용하여 선행 제약 조건에 식을 추가하는 방법에 대해 설명합니다. 선행 제약 조건에 식을 추가하려면 패키지에 태스크 또는 컨테이너와 같은 실행 개체가 적어도 두 개 이상 포함되어야 하며 선행 제약 조건에 의해 연결되어 있어야 합니다.  

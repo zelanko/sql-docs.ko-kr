@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
 - monitoring [CLR integration]
 - performance [CLR integration]
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b597c47815ca52055f999edda925c8c01bdcfe73
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090653"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>관리되는 데이터베이스 개체 모니터링 및 문제 해결
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 실행 중인 관리되는 데이터베이스 개체와 어셈블리를 모니터링하고 문제를 해결하는 데 사용할 수 있는 도구에 대한 정보를 제공합니다.  

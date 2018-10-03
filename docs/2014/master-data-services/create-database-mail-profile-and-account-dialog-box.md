@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da77653fa78503a62ec974aa88d41dee020a34d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089183"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>데이터베이스 메일 프로필 및 계정 만들기 대화 상자(Master Data Services 구성 관리자)
   **데이터베이스 메일 프로필 및 계정 만들기** 대화 상자를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 대한 데이터베이스 메일 프로필 및 데이터베이스 메일 계정을 만들 수 있습니다. 이 프로필은 비즈니스 규칙 유효성 검사가 실패한 경우 사용자와 그룹에 전자 메일로 알리는 데 사용됩니다.  

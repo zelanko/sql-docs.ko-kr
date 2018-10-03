@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: 86
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67bb174803f7368257217e5244ef023e2c274929
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 0463360db65621a90f270c2eedb87972c6bd986b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354005"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088553"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
   테이블 반환 함수는 테이블을 반환하는 사용자 정의 함수입니다.  
@@ -57,7 +54,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL에서 테이블 반환 함수 정의  
- CLR 테이블 반환 함수를 정의하는 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수를 정의하는 구문과 비슷하지만 `EXTERNAL NAME` 절이 추가됩니다. 예를 들어:  
+ CLR 테이블 반환 함수를 정의하는 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수를 정의하는 구문과 비슷하지만 `EXTERNAL NAME` 절이 추가됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Aliases Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4783d4d24c383864efb212f512e24ceeb8b842b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049093"
 ---
 # <a name="aliases-element-assl"></a>Aliases 요소(ASSL)
   컬렉션을 포함 [별칭](../properties/alias-element-assl.md) 와 관련 된 요소를 [계정](../objects/account-element-assl.md) 요소  

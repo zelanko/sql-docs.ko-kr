@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4ee726afd23b410d5d145a548a1f810fe758711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118983"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>열을 지정 합니다&#39;s 내용 및 데이터 형식 (데이터 마이닝 마법사)
   **열 내용 및 데이터 형식 지정** 페이지를 사용하여 마법사에서 이미 설정한 열 및 내용 유형을 수정할 수 있습니다. 마법사에서는 원본 열의 데이터 형식 및 선택한 알고리즘의 기능을 사용하여 각 열에 대한 기본 데이터 및 내용 유형을 결정합니다.  

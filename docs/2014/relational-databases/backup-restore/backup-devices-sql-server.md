@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 89
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d6cd424915692bcdfbe258975b8cf771ad80eba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084829"
 ---
 # <a name="backup-devices-sql-server"></a>백업 장치(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 장치에 기록됩니다. 이 물리적 백업 장치는 미디어 세트의 첫 번째 백업을 장치에 기록할 때 초기화됩니다. 하나 이상의 백업 장치 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
@@ -91,7 +88,7 @@ ms.locfileid: "37237183"
   
  TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -141,7 +138,7 @@ GO
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>UNC(Universal Naming Convention) 이름 지정  
  백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 장치에 정규화된 UNC 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName* 형식입니다.  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -179,7 +176,7 @@ GO
   
  TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 BACKUP LOG AdventureWorks2012   

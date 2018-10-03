@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - zoom [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - modifying execution plan display
 - custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b8fe5d5f733592ae51f91b4e8b9956b8489e1a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcdd937dcd0bde4359c03fa5735947668e88fceb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136893"
 ---
 # <a name="display-the-estimated-execution-plan"></a>예상 실행 계획 표시
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 그래픽 예상 실행 계획을 작성하는 방법에 대해 설명합니다. 예상 실행 계획이 작성되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행되지 않습니다. 대신 쿼리가 실제로 실행되었을 때 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 사용할 가능성이 가장 큰 쿼리 실행 계획이 실행 계획을 통해 표시됩니다.  

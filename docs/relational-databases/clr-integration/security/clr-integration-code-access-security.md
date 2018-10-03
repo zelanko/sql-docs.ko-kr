@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 87b58d73233cf586ec631e43ad17cb9232d59f8f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 25f802f5c9cb67646903179c9100c7014fe466df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802281"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +108,10 @@ ms.locfileid: "37357665"
 |-|-|-|-|  
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**코드 액세스 보안 권한**|실행 전용|실행 및 외부 리소스 액세스|제한 없음(P/Invoke 포함)|  
-|**프로그래밍 모델 제한 사항**|예|예|제한 없음|  
-|**안정성 요구 사항**|예|예|아니요|  
-|**로컬 데이터 액세스**|예|예|예|  
-|**네이티브 코드를 호출 하는 기능**|아니요|아니요|예|  
+|**프로그래밍 모델 제한 사항**|사용자 계정 컨트롤|사용자 계정 컨트롤|제한 없음|  
+|**안정성 요구 사항**|사용자 계정 컨트롤|예|아니요|  
+|**로컬 데이터 액세스**|사용자 계정 컨트롤|예|사용자 계정 컨트롤|  
+|**네이티브 코드를 호출 하는 기능**|아니요|아니요|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 통합 보안](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

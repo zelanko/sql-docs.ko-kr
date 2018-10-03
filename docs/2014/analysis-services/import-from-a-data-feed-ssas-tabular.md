@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099843"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>데이터 피드에서 가져오기(SSAS 테이블 형식)
   데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 응용 프로그램으로 스트리밍되는 하나 이상의 XML 데이터 스트림입니다. 테이블 가져오기 마법사를 사용하여 데이터 피드의 데이터를 모델로 가져올 수 있습니다.  

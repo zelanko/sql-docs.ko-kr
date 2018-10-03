@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Report Server Windows service, accounts
 - Web service [Reporting Services], report server
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136383"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>서비스 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램은 하나의 서비스 내에서 실행됩니다. 서비스를 실행하는 계정은 설치 중 서비스 ID 페이지에 계정을 지정할 때 정의되지만 다른 계정을 사용하거나 암호를 업데이트하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용할 수 있습니다.  

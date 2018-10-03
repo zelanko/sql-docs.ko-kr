@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataAggregation Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01a86977cc6ebf85d004bf235b6d47a354e112a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134823"
 ---
 # <a name="dataaggregation-element-assl"></a>DataAggregation 요소(ASSL)
   인스턴스가 영구 데이터 나 캐시 된 데이터를 집계할 수 있는지 여부를 결정 합니다 [MeasureGroup](../objects/group-element-assl.md)합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37289589"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[측정값 그룹](../objects/group-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  

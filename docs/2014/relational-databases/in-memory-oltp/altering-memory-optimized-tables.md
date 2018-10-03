@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea556bf0bf0f7b1df112443cb7620fa0cb2350ae
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136485"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
   메모리 최적화 테이블에 대한 ALTER 작업 수행은 지원되지 않습니다. 여기에는 bucket_count 변경, 인덱스 추가 또는 제거, 열 추가 또는 제거 등의 작업이 포함됩니다. 이 항목에서는 메모리 최적화 테이블을 업데이트하는 방법에 대한 지침을 제공합니다.  

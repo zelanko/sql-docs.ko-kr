@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], prediction queries
 - Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05834e74be4e8d4ef2a42d2b22ac695417fb27f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7741d2acf1e26e4e5a424c823a435fb37ff1d71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119063"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>예측 쿼리에 대한 입력 데이터 선택 및 매핑
   마이닝 모델에서 예측을 만드는 경우 일반적으로 모델에 새 데이터를 제공하여 예측을 만듭니다. 기록 데이터만 기반으로 하여 예측을 만들 수 있는 시계열 모델은 예외입니다. 모델에 새 데이터를 제공하려면 해당 데이터를 데이터 원본 뷰의 일부로 사용할 수 있는지 확인해야 합니다. 예측에 사용할 데이터를 미리 알아보려는 경우 모델을 만드는 데 사용한 데이터 원본 뷰에 해당 데이터를 포함할 수 있습니다. 그렇지 않으면 새 데이터 원본 뷰를 만들어야 할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  

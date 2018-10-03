@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 103254951e111a0340a2869ba12e189e79ec1510
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa7cb2ad5c23900bd44aae89e1af6f8478fb2f74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095870"
 ---
 # <a name="master-database"></a>master 데이터베이스
-  **master** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 대한 모든 시스템 수준 정보를 기록합니다. 이 정보에는 로그온 계정, 끝점, 연결된 서버 및 시스템 구성 설정 등 인스턴스 차원의 메타데이터가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 개체가 **master** 데이터베이스에 저장되지 않고 [리소스 데이터베이스](resource-database.md)에 저장됩니다. **master** 는 다른 모든 데이터베이스의 존재 여부와 해당 데이터베이스 파일의 위치를 기록하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 초기화 정보를 기록하는 데이터베이스이기도 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **데이터베이스를 사용할 수 없는 경우에는** 를 시작할 수 없습니다.  
+  **master** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 대한 모든 시스템 수준 정보를 기록합니다. 이 정보에는 로그온 계정, 엔드포인트, 연결된 서버 및 시스템 구성 설정 등 인스턴스 차원의 메타데이터가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 개체가 **master** 데이터베이스에 저장되지 않고 [리소스 데이터베이스](resource-database.md)에 저장됩니다. **master** 는 다른 모든 데이터베이스의 존재 여부와 해당 데이터베이스 파일의 위치를 기록하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 초기화 정보를 기록하는 데이터베이스이기도 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **데이터베이스를 사용할 수 없는 경우에는** 를 시작할 수 없습니다.  
   
 ## <a name="physical-properties-of-master"></a>master의 물리적 속성  
  다음 표에서는 **master** 데이터와 로그 파일의 초기 구성 값을 나열합니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
@@ -43,33 +40,33 @@ ms.locfileid: "37245043"
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|아니요|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
+|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
+|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
+|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
+|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
+|ARITHABORT|OFF|사용자 계정 컨트롤|  
 |AUTO_CLOSE|OFF|아니요|  
-|AUTO_CREATE_STATISTICS|ON|예|  
+|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
 |AUTO_SHRINK|OFF|아니요|  
-|AUTO_UPDATE_STATISTICS|ON|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
+|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
 |CHANGE_TRACKING|OFF|아니요|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
+|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
 |데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
 |DB_CHAINING|ON|아니요|  
 |ENCRYPTION|OFF|아니요|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|CHECKSUM|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
+|PAGE_VERIFY|CHECKSUM|사용자 계정 컨트롤|  
+|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
+|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
 |READ_COMMITTED_SNAPSHOT|OFF|아니요|  
-|RECOVERY|SIMPLE|예|  
-|RECURSIVE_TRIGGERS|OFF|예|  
+|RECOVERY|SIMPLE|사용자 계정 컨트롤|  
+|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
 |Service Broker 옵션|DISABLE_BROKER|아니요|  
-|TRUSTWORTHY|OFF|예|  
+|TRUSTWORTHY|OFF|사용자 계정 컨트롤|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.find.f1
 helpviewer_keywords:
 - Find dialog box
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 311d248acae2b64d106c57f5c7f92024c4174e5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23bbfd748bcb649e5f7d103683d20413764a62a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078933"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server 프로파일러 - 찾기 대화 상자
   **찾기** 대화 상자를 사용하여 추적에서 특정 문자 또는 단어를 검색할 수 있습니다. 진행 중인 검색을 취소하려면 Esc 키를 누릅니다.  

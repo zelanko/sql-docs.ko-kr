@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Caption Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Caption element
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 283e7f84373d5f36431ba1b706b4d27e23cb876f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93efaaecdf5b8a7f17ab404df9629fd4bb253e54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167704"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083483"
 ---
 # <a name="caption-element-assl"></a>Caption 요소(ASSL)
   연결된 부모 요소에 대한 캡션을 포함합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37167704"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37167704"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[동작](../objects/action-element-assl.md), [번역](../objects/translation-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  부모에 해당 하는 요소가 `Caption` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.Action> 및 <xref:Microsoft.AnalysisServices.Translation>합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], encryption
@@ -19,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbd0e8057d5b75ead870741357f1d12b18ab1855
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d652bc4ff516a03dfe2a0ff66b0b9f9590fea3c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762391"
 ---
 # <a name="using-encryption-without-validation"></a>유효성 검사 없이 암호화 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,10 +42,10 @@ ms.locfileid: "43104397"
   
 |프로토콜 암호화 강제 사용 클라이언트 설정|서버 인증서 신뢰 클라이언트 설정|연결 문자열/연결 특성 Encrypt/Use Encryption for Data|연결 문자열/연결 특성 서버 인증서 신뢰|결과|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|아니오|해당 사항 없음|아니요(기본값)|무시됨|암호화가 수행되지 않습니다.|  
-|아니오|해당 사항 없음|사용자 계정 컨트롤|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
-|아니오|해당 사항 없음|사용자 계정 컨트롤|사용자 계정 컨트롤|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
-|사용자 계정 컨트롤|아니오|무시됨|무시됨|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|아니요|해당 사항 없음|아니요(기본값)|무시됨|암호화가 수행되지 않습니다.|  
+|아니요|해당 사항 없음|사용자 계정 컨트롤|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
+|아니요|해당 사항 없음|사용자 계정 컨트롤|사용자 계정 컨트롤|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
+|사용자 계정 컨트롤|아니요|무시됨|무시됨|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
 |사용자 계정 컨트롤|사용자 계정 컨트롤|아니요(기본값)|무시됨|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  
 |사용자 계정 컨트롤|예|사용자 계정 컨트롤|아니요(기본값)|확인할 수 있는 서버 인증서가 있는 경우에만 암호화가 수행되고 그렇지 않으면 연결 시도가 실패합니다.|  
 |사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|항상 암호화가 수행되지만 자체 서명된 서버 인증서가 사용될 수 있습니다.|  

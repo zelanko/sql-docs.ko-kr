@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - results Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e99728941db468f361535fa675281f880ad3133a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091363"
 ---
 # <a name="results-element-xmla"></a>results 요소(XMLA)
   [Batch](root-element-xmla.md) 명령을 사용하여 [Execute](../xml-elements-methods-execute.md) 메서드에 의해 반환되는 [root](../xml-elements-commands/batch-element-xmla.md) 요소의 컬렉션을 포함합니다.  
@@ -54,8 +51,8 @@ ms.locfileid: "37165234"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

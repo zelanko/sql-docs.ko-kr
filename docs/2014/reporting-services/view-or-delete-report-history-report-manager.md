@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], viewing snapshots
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - displaying report snapshots
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
-caps.latest.revision: 34
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a972408c7e21995f9b1c28482bcb74eea1e7f495
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117893"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>보고서 기록 보기 또는 삭제(보고서 관리자)
   보고서 기록은 기반이 되는 보고서와 함께 관리됩니다. 보고서를 볼 수 있는 권한을 가진 모든 사용자는 해당 보고서의 기록을 볼 수 있습니다.  

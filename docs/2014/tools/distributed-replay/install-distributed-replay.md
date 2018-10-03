@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cc56f35b44636493fe022b7adbc2270bf121e55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7dbc86ff32e0c9ba6e77558a713cda2598221e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126123"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>명령 프롬프트에서 Distributed Replay 설치
   명령 프롬프트에서 Distributed Replay의 새 인스턴스를 설치할 경우 어떤 기능을 설치할지 지정하고 그 기능을 어떻게 구성할지 지정할 수 있습니다. 명령 프롬프트에서 설치하면 Distributed Replay 구성 요소를 설치, 복원, 업그레이드 및 제거할 수 있습니다. 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 /Q 매개 변수를 사용하는 완전 자동 모드를 지원합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126533"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. 같은 문자 데이터 형식을 함께 사용 되는 데이터 정렬은 `char` 및 `varchar` 코드 지정 페이지와 해당 문자 데이터 형식에 나타낼 수 있는 합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용할 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)를 참조하세요.  
@@ -47,7 +44,7 @@ ms.locfileid: "37287339"
   
   
 ###  <a name="Collation_Defn"></a> 데이터 정렬  
- 데이터 정렬은 데이터 집합의 각 문자를 나타내는 비트 패턴을 지정합니다. 또한 데이터 정렬은 데이터를 정렬하고 비교하는 규칙을 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 여러 다른 데이터 정렬을 갖는 개체를 단일 데이터베이스에 저장하도록 지원합니다. 비유니코드 열의 경우 데이터 정렬 설정은 데이터에 대한 코드 페이지와 나타낼 수 있는 문자를 지정합니다. 유니코드가 아닌 열 간에 데이터를 이동하려면 원본 코드 페이지에서 대상 코드 페이지로 변환해야 합니다.  
+ 데이터 정렬은 데이터 집합의 각 문자를 나타내는 비트 패턴을 지정합니다. 또한 데이터 정렬은 데이터를 정렬하고 비교하는 규칙을 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 여러 다른 데이터 정렬을 갖는 개체를 단일 데이터베이스에 저장하도록 지원합니다. 비유니코드 열의 경우 데이터 정렬 설정은 데이터에 대한 코드 페이지와 나타낼 수 있는 문자를 지정합니다. 유니코드가 아닌 열 간에 데이터를 이동하려면 원본 코드 페이지에서 대상 코드 페이지로 변환해야 합니다.  
   
  데이터 정렬 설정이 각기 다른 데이터베이스의 컨텍스트에서[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)를 참조하세요.  
   

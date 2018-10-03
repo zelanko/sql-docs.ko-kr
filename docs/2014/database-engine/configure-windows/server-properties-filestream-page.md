@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.filestream.f1
 helpviewer_keywords:
 - FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b7ed447650dfcedddba45bca426a9e7f30a6fc6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b6e3b37b356b715f1365e87f423c5e4346f0fc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086173"
 ---
 # <a name="sql-server-properties-filestream-page"></a>SQL Server 속성(FILESTREAM 페이지)
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다.  

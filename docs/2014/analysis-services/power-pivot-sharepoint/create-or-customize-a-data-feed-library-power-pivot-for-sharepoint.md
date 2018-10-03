@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17ea214c6e9dacb8517c42e7cb62141b92ef1ccc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126693"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>데이터 피드 라이브러리 만들기 또는 사용자 지정(SharePoint용 PowerPivot)
   *데이터 피드 라이브러리* 는 Atom 데이터 서비스 문서(.atomsvc)를 등록 및 공유할 수 있도록 해 주는 특수 용도의 SharePoint 라이브러리입니다. 이러한 문서는 Atom 데이터 피드 형식을 지원하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 기타 클라이언트 응용 프로그램에 XML 데이터 피드를 제공합니다. 데이터 피드 라이브러리는 다음과 같은 기능을 제공하므로 다른 SharePoint 라이브러리와 다릅니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - upgrading Reporting Services
 - migrating Reporting Services
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082893"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
   이 항목에서는 다음과 같은 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 배포 중 하나를 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스로 마이그레이션하는 데 필요한 단계별 지침을 제공합니다.  
@@ -182,13 +179,13 @@ ms.locfileid: "37309463"
   
     -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 릴리스용으로 작성된 사용자 지정 인증 확장 프로그램은 다시 컴파일해야 합니다.  
   
-    -    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
+    -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
   
     -   HTML 3.2 및 HTML OWC 렌더러는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다.  
   
     -   다른 사용자 지정 어셈블리는 다시 컴파일할 필요가 없습니다.  
   
-2.  어셈블리를 새 보고서 서버와 보고서 관리자 \bin 폴더로 이동합니다.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 보고서 서버 이진 파일은 기본 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 경우 다음 위치에 있습니다.  
+2.  어셈블리를 새 보고서 서버와 보고서 관리자 \bin 폴더로 이동합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 보고서 서버 이진 파일은 기본 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 경우 다음 위치에 있습니다.  
   
      `\Program files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -231,7 +228,7 @@ ms.locfileid: "37309463"
   
 5.  새 컴퓨터에 보고서 서버를 설치한 후 Windows 방화벽을 사용 중인 경우에는 보고서 서버가 수신하는 TCP 포트를 열어야 합니다. 기본값은 포트 80입니다. 자세한 내용은 [보고서 서버 액세스를 위한 방화벽 구성](../report-server/configure-a-firewall-for-report-server-access.md)을 참조하세요.  
   
-6.  기본 모드 보고서 서버를 로컬로 관리하려는 경우 보고서 관리자에서 로컬 관리가 가능하도록 운영 체제를 구성해야 합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+6.  기본 모드 보고서 서버를 로컬로 관리하려는 경우 보고서 관리자에서 로컬 관리가 가능하도록 운영 체제를 구성해야 합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 ##  <a name="bkmk_copy_custom_config"></a> RSReportServer.config 파일에 사용자 지정 구성 설정 복사  
  이전 설치에서 RSReportServer.config 파일 또는 RSWebApplication.config 파일을 수정한 경우 새 RSReportServer.config 파일도 동일하게 수정해야 합니다. 다음 목록에서는 이전 구성 파일을 수정하게 되는 이유를 간략히 설명하며, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 동일한 설정을 구성하는 방법에 대한 추가 정보 링크도 제공합니다.  
@@ -243,7 +240,7 @@ ms.locfileid: "37309463"
 |원격 인스턴스의 보고서 관리자|[보고서 관리자 구성 &#40;기본 모드&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Windows 서비스 그룹 및 보안 ACL  
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에 있는 유일한 서비스 그룹인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 설치된 모든 레지스트리 키, 파일 및 폴더에 대한 보안 ACL을 만드는 데 사용됩니다. 이 Windows 그룹 이름은 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 형식으로 표시됩니다. 이 그룹에 있는 두 개의 Windows 서비스 그룹의 부르던 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. 중 하나를 사용 하 여 연결 하는 사용자 지정 Acl을 사용 하는 경우는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 새 보고서 서버 인스턴스에 대 한 새 그룹에 이러한 Acl을 적용 해야 Windows 그룹 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다.  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에 있는 유일한 서비스 그룹인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 설치된 모든 레지스트리 키, 파일 및 폴더에 대한 보안 ACL을 만드는 데 사용됩니다. 이 Windows 그룹 이름은 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 형식으로 표시됩니다. 이 그룹에 있는 두 개의 Windows 서비스 그룹의 부르던 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. 중 하나를 사용 하 여 연결 하는 사용자 지정 Acl을 사용 하는 경우는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 새 보고서 서버 인스턴스에 대 한 새 그룹에 이러한 Acl을 적용 해야 Windows 그룹 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다.  
   
 ##  <a name="bkmk_verify"></a> 배포 확인  
   

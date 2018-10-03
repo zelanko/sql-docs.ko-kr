@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b932ac5fac719be29bda37f134f9beb06d1483f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104783"
 ---
 # <a name="level-element-csdlbi"></a>Level 요소(CSDLBI)
   Level 요소는 계층 구조에서 단일 수준을 정의하는 복합 유형입니다.  
@@ -28,10 +25,10 @@ ms.locfileid: "37211483"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 Level 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|원본|예|속성 참조를 위한 컨테이너입니다.|  
-|PropertyRef|예|인스턴스 속성에 대한 참조입니다. 캡션, 이름 및 참조 이름 등 그 밖의 수준 특성은 참조된 인스턴스 속성에서 가져올 수 있습니다. 그 경우 Level 요소에서 지정할 필요가 없습니다.|  
+|원본|사용자 계정 컨트롤|속성 참조를 위한 컨테이너입니다.|  
+|PropertyRef|사용자 계정 컨트롤|인스턴스 속성에 대한 참조입니다. 캡션, 이름 및 참조 이름 등 그 밖의 수준 특성은 참조된 인스턴스 속성에서 가져올 수 있습니다. 그 경우 Level 요소에서 지정할 필요가 없습니다.|  
   
 ## <a name="remarks"></a>Remarks  
  테이블 형식 모델의 계층에 대한 자세한 내용은 [Hierarchy 요소&#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)를 참조하세요.  

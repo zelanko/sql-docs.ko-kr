@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO code examples
 - ADO, code examples
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89a5b8a91481fd11a22c6a429065c9b8ccb46fe5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7105160c7008d6f36d1c4e01faf8b1631080b8d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718811"
 ---
 # <a name="ado-code-examples"></a>ADO 코드 예제
-다음 코드 예제를 사용 하 여 ADO 개체, 메서드, 속성 및 이벤트를 사용 하는 방법에 알아봅니다.  
+ADO 개체, 메서드, 속성 및 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  
   
 > [!NOTE]
->  전체 코드 예제에서는 코드 편집기에 붙여 넣습니다. 이 예제에서는 부분 예제가 사용 하거나 단락 서식을 분실 한 경우 올바르게 실행 되지 않을 수 있습니다.  
+>  전체 코드 예제에서는 코드 편집기에 붙여넣습니다. 예제에서는 예제 부분을 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  
   
 -   [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)  
   
@@ -36,4 +33,4 @@ ms.locfileid: "35275412"
   
 -   [Visual C++의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)  
   
--   [Jscript에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)
+-   [JScript의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, indexes
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29940e4ed8e9bb3a0ca7e3e3db419b27e491b1e2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072713"
 ---
 # <a name="tables-and-indexes"></a>테이블 및 인덱스
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **IIndexDefinition** 하 고 **ITableDefinition** 인터페이스를 소비자를 만들려면, alter 및 drop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 인덱스입니다. 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
@@ -40,7 +37,7 @@ ms.locfileid: "37430993"
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> 기본값: Null<br /><br /> 설명:이 속성에만 사용 됩니다 **ITableDefinition**합니다. 이 속성에 지정 된 문자열을 만들 때 사용 되는 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)<br /><br /> 문을 만들 때 사용됩니다.|  
+|SSPROP_COL_COLLATIONNAME|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> 기본값: Null<br /><br /> 설명: 이 속성은 **ITableDefinition**에서만 사용됩니다. 이 속성에 지정된 문자열은 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)을 생성할 때 사용됨<br /><br /> 문을 만들 때 사용됩니다.|  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

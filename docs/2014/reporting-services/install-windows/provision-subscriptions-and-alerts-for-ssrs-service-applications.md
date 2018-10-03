@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 910bd13ffca5ceec7e31d7c27079c48ffe249b04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e289f05f511f3d5dbed3e48c08b84d446ceaa35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098133"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 데이터 경고에는 SQL Server 에이전트가 필요하며 SQL Server 에이전트에 대한 사용 권한 구성이 필요합니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트하거나 확인해야 합니다. 이 항목의 범위는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이며, 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 사용하여 SQL Server 에이전트의 사용 권한을 업데이트하는 세 가지 방법에 대해 설명합니다. 이 항목의 단계에 사용하는 자격 증명에는 서비스 응용 프로그램, msdb 및 master 데이터베이스의 개체를 위한 RSExecRole에 실행 권한을 부여하기에 충분한 사용 권한이 있어야 합니다.  
@@ -98,7 +95,7 @@ ms.locfileid: "37297923"
   
 2.  **서버에 연결** 대화 상자에서 다음 옵션을 설정합니다.  
   
-    -    **서버 유형** 목록에서 **데이터베이스 엔진**을 선택합니다.  
+    -   **서버 유형** 목록에서 **데이터베이스 엔진**을 선택합니다.  
   
     -   **서버 이름**에서 SQL Server 에이전트를 구성하려는 SQL Server 인스턴스의 이름을 입력합니다.  
   

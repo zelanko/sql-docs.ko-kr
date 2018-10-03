@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095799"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
   동일한 팜의 PowerPivot 통합 문서로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 사용합니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Folder Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9bc961679619f15211689b4f118f511edbadac8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70c5258edefa19d2858c40648aa742f75a9a1e49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055133"
 ---
 # <a name="folder-element-xmla"></a>Folder 요소(XMLA)
   에 대해 업데이트할 파일 시스템 저장소 위치를 포함 한 [위치](location-element-xmla.md) 요소 중를 [복원](../xml-elements-commands/restore-element-xmla.md) 또는 [동기화](../xml-elements-commands/synchronize-element-xmla.md) 명령입니다.  
@@ -55,8 +52,8 @@ ms.locfileid: "37283919"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

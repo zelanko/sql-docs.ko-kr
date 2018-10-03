@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4cb5529ad750a72fa2572edd62b6b63c20867e7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083965"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135743"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
   SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
@@ -68,7 +65,7 @@ ms.locfileid: "39083965"
  예를 들어 **ServerCollection** 클래스에 대한 서버, **DatabaseCollection** 클래스에 대한 데이터베이스를 지정합니다.  
   
  \@*PropertyName*  
- *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성의 이름을 붙여야 합니다 \@ 문자입니다. 예를 들어 지정할 \@IsAnsiNull에 대 한는 **데이터베이스** 클래스 속성 **IsAnsiNull**합니다.  
+ *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 **Database** 클래스 속성인 **IsAnsiNull**에 \@IsAnsiNull을 지정합니다.  
   
  \@*BooleanPropertyName*=true()  
  지정된 부울 속성이 TRUE로 설정된 개체를 모두 열거합니다.  
@@ -76,7 +73,7 @@ ms.locfileid: "39083965"
  \@*BooleanPropertyName*=false()  
  지정된 부울 속성이 FALSE로 설정된 개체를 모두 열거합니다.  
   
- 포함 되어 있습니다 (\@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  지정된 문자열 속성에 '*PatternString*'에 지정된 문자열 집합이 하나 이상 포함되어 있는 개체를 모두 열거합니다.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -97,11 +94,11 @@ ms.locfileid: "39083965"
   
  이 형식으로 지정된 날짜를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 저장된 모든 날짜 형식에 대해 평가할 수 있습니다.  
   
- is_null (\@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  지정된 속성 값이 NULL인 개체를 모두 열거합니다.  
   
  not(\<*PropertyExpression*>)  
- *PropertyExpression*의 평가 값을 부정하고 *PropertyExpression*에 지정된 조건과 일치하지 않는 개체를 모두 열거합니다. 예를 들어 없습니다 (포함 (\@이름, 'xyz')) 이름에 xyz 문자열이 없는 개체를 모두 열거 합니다.  
+ *PropertyExpression*의 평가 값을 부정하고 *PropertyExpression*에 지정된 조건과 일치하지 않는 개체를 모두 열거합니다. 예를 들어 not(contains(\@Name, 'xyz'))는 이름에 xyz 문자열이 없는 개체를 모두 열거합니다.  
   
 ## <a name="remarks"></a>Remarks  
  쿼리 식은 SMO 모델 계층 구조에 있는 노드를 열거하는 문자열입니다. 각 노드에는 해당 노드에서 열거되는 개체를 결정하는 조건을 지정하는 필터 식이 있습니다. 쿼리 식은 XPath 식 언어에서 모델링됩니다. 쿼리 식은 XPath에서 지원하는 작은 식 집합을 구현하고 XPath에 없는 일부 확장도 포함합니다. XPath 식은 XML 문서에서 하나 이상의 태그를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. XPath에 대한 자세한 내용은 [W3C XPath Language](http://www.w3.org/TR/xpath20/)를 참조하십시오.  

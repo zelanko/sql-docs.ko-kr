@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 262da5aac419c0b7bb07b79c97dcc6590b29574e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2adcb3e79e3733b5fb8151bfa7f65e7bebb4d910
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126169"
 ---
 # <a name="configure-a-for-loop-container"></a>For 루프 컨테이너 구성
   이 절차에서는 **For 루프 편집기** 대화 상자를 사용하여 For 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  

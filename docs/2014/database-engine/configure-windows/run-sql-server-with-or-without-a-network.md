@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying Server service has been started
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - starting Server service
 - SQL Server, running
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 54718a326946a454d132236964ede6b83811db6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b52c8939aff1bb0d5802e49f22f613ffe641f622
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083453"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>네트워크에서 또는 네트워크 없이 SQL Server 실행
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 네트워크에서 또는 네트워크 없이 작동할 수 있습니다.  

@@ -6,30 +6,27 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000a63882a7f4ec64e0fa0c9cb4e6d88d3264df1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f20c372fbd98f0b14660e8c419e382a8a5c26c46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803011"
 ---
-# <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate 메서드 예제 (VBScript)
+# <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate 메서드 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- 이 예제를 테스트 하려면 잘라내어 붙여 사이 다음이 코드는 \<본문 > 및 \</본문 > 일반 HTML 태그를에서 문서화 하 고 이름을 **CancelUpdateVBS.asp**합니다. ASP 스크립트에서 인터넷 서버를 식별 합니다. 사용자가 변경한 설정을 반영 하도록 서버의 이름을 편집 해야 합니다. SQL Server 설치의 이름으로 MyServer에서 연결 문자열의 값을 변경 하기만 하면 합니다.  
+ 이 예제를 테스트 하려면에서 잘라내기 및 붙여넣기 사이 다음이 코드를 \<본문 > 및 \</b > 일반 HTML 태그를에서 문서화 하 고 이름을 **CancelUpdateVBS.asp**합니다. ASP 스크립트에서 인터넷 서버를 식별 합니다. 사용자가 변경한 설정을 반영 하기 위해 서버의 이름을 편집 해야 합니다. SQL Server 설치의 이름으로 MyServer에서 연결 문자열에서 값을 변경 하기만 하면 됩니다.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

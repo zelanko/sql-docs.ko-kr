@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], host databases
@@ -15,28 +13,27 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95839d9c8a8f617363ed31b49bef2f2fc1dc3e2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 582c74fd68528792d996aee4491d4bc3b8c7af96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067053"
 ---
 # <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
   **msdb** 데이터베이스는 데이터베이스 메일 호스트 데이터베이스입니다. 이 데이터베이스에는 데이터베이스 메일 지원을 위한 저장 프로시저와 메시징 개체가 있습니다. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 데이터베이스 메일을 사용하고 프로필과 계정을 만들어 관리하고 데이터베이스 메일 옵션을 구성하기 위한 데이터베이스 메일 구성 마법사가 포함되어 있습니다.  
   
 ##  <a name="ComponentsAndConcepts"></a>**msdb** 데이터베이스의 개체  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 **msdb** 데이터베이스에서 사용할 수 있어야 합니다. 그러나 데이터베이스 메일은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 네트워킹을 사용하지 않습니다. 따라서 사용자는 데이터베이스 메일을 사용하기 위해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 끝점을 만들 필요가 없습니다. 외부 데이터베이스 메일 프로세스는 표준 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 통신합니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 **msdb** 데이터베이스에서 사용할 수 있어야 합니다. 그러나 데이터베이스 메일은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 네트워킹을 사용하지 않습니다. 따라서 사용자는 데이터베이스 메일을 사용하기 위해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트를 만들 필요가 없습니다. 외부 데이터베이스 메일 프로세스는 표준 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 통신합니다.  
   
  데이터베이스 메일은 데이터베이스 메일을 설정할 때 **msdb** 데이터베이스에 다음 개체를 표시합니다.  
   
  이러한 개체는 메일 호스트 데이터베이스 내에서 데이터베이스 메일에 대한 인터페이스입니다. 위에 나열된 개체에서 제공하는 기능을 구현하도록 다른 개체가 설치됩니다. 그러나 해당 개체는 내부 사용을 위해 예약됩니다.  
   
-|속성|형식|Description|  
+|이름|형식|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|데이터베이스 메일에 제출된 모든 메시지를 나열합니다.|  
 |[sysmail_event_log&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|[Database Mail External Program](database-mail-external-program.md)의 동작에 대한 메시지를 나열합니다.|  

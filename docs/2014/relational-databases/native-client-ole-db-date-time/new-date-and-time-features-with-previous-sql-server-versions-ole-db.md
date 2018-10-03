@@ -1,28 +1,25 @@
 ---
-title: 새 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB) | Microsoft Docs
+title: 새 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1f9f48b1703719ce08ca2d1da4a5c9addaffc0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125505"
 ---
-# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>새 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB)
+# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
   이 항목에서는 향상 된 날짜 및 시간 기능을 사용 하는 클라이언트 응용 프로그램의 버전을 사용 하 여 통신 하는 경우 예상 되는 동작을 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], 및의 버전을 사용 하 여 컴파일한 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 날짜 및 시간 기능 향상 된 지 원하는 서버에 명령을 보냅니다.  
   
 ## <a name="down-level-client-behavior"></a>하위 수준 클라이언트 동작  
@@ -40,8 +37,8 @@ ms.locfileid: "37420188"
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|IRowsetChange 소수 자릿수 초가 0이 아닌 경우 문자열 잘림으로 인해 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
 |DBTYPE_DBTIME||Time(7)|실패 - 시간 리터럴이 잘못되었습니다.|확인|  
 |DBTYPE_DBTIMESTAMP|||실패 - 시간 리터럴이 잘못되었습니다.|확인|  
-|DBTYPE_DBTIMESTAMP||Datetime2(3)|확인|확인|  
-|DBTYPE_DBTIMESTAMP||Datetime2(7)|확인|확인|  
+|DBTYPE_DBTIMESTAMP||datetime2(3)|확인|확인|  
+|DBTYPE_DBTIMESTAMP||datetime2(7)|확인|확인|  
 |DBTYPE_DBDATE|Smalldatetime|Date|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|IRowsetChange 시간 필드가 0이 아닌 경우 문자열 잘림으로 인해 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|확인|확인|  
@@ -169,6 +166,6 @@ ms.locfileid: "37420188"
  새 날짜/시간 형식은 날짜/시간 형식이 아니라 문자열 형식으로 표시되기 때문에 이러한 형식에 대해서는 모든 비교 연산자를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [날짜 및 시간 기능 향상 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

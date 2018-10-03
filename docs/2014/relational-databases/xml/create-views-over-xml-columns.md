@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc4890077c25e98ebff0832423f6d1f0aaabdc46
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 767844d7b195ece286b8f19cc34855bf50185a0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049833"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 열에서 뷰 만들기
   사용할 수는 `xml` 뷰를 만들려면 유형 열입니다. 다음 예에서는 뷰를 만듭니다에서 값을는 `xml` 형식 열이 사용 하 여 검색 됩니다 합니다 `value()` 메서드의 `xml` 데이터 형식입니다.  

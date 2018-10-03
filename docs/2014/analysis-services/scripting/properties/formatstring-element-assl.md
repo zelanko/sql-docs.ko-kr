@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FormatString Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbcc34f0bdc167f61beebb2e97171027759d6c3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089863"
 ---
 # <a name="formatstring-element-assl"></a>FormatString 요소(ASSL)
   에 대 한 표시 형식을 설명 합니다는 [CalculationProperty](../objects/calculationproperty-element-assl.md) 요소 또는 [측정값](../objects/measure-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37273199"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37273199"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CalculationProperty](../objects/calculationproperty-element-assl.md), [측정값](../objects/measure-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `FormatString` 속성은 MDX(Multidimensional Expressions) 식을 포함합니다. 경우 `CalculationProperty` 요소에 적용 됩니다 요소를 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 하거나 *셀*.  

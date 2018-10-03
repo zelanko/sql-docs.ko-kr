@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visio shapes, decision tree
 - decision tree [data mining]
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4b4eb570d1d81bc724c885e8c277aa662cf4ff5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079713"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>의사 결정 트리 다이어그램 연습 (데이터 마이닝 추가 기능)
   의사 결정 트리 모델을 만든 경우 의사 결정 트리 셰이프 또는 종속성 네트워크 셰이프를 사용하여 Visio에서 사용자 지정된 다이어그램을 만들 수 있습니다. 이 항목으로 수행할 수 있는 사용자 지정을 설명 합니다 **의사 결정 트리** 셰이프 및 이러한 컨트롤:  

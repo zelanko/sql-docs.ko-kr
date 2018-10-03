@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113243"
 ---
 # <a name="lesson-5-create-relationships"></a>5단원: 관계 만들기
   이 단원에서는 데이터를 가져올 때 자동으로 생성된 관계를 확인하고 다양한 테이블 간에 새 관계를 추가합니다. 관계는 두 테이블에 있는 데이터의 상관 관계를 설정하기 위한 테이블 간 연결입니다. 예를 들어 Product 테이블과 Product Subcategory 테이블은 각 제품이 하위 범주에 속한다는 점에서 관련되어 있습니다. 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](tabular-models/relationships-ssas-tabular.md)를 참조하세요.  
@@ -51,11 +48,11 @@ ms.locfileid: "37204508"
   
     |활성|Table|관련 조회 테이블|  
     |------------|-----------|--------------------------|  
-    |예|**고객 [Geography Id]**|**Geography [Geography Id]**|  
-    |예|**제품 [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
-    |예|**Product Subcategory [제품 범주 Id]**|**제품 범주 [제품 범주 Id]**|  
-    |예|**Internet Sales [고객 Id]**|**고객 [고객 Id]**|  
-    |예|**Internet Sales [제품 Id]**|**제품 [제품 Id]**|  
+    |사용자 계정 컨트롤|**고객 [Geography Id]**|**Geography [Geography Id]**|  
+    |사용자 계정 컨트롤|**제품 [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
+    |사용자 계정 컨트롤|**Product Subcategory [제품 범주 Id]**|**제품 범주 [제품 범주 Id]**|  
+    |사용자 계정 컨트롤|**Internet Sales [고객 Id]**|**고객 [고객 Id]**|  
+    |사용자 계정 컨트롤|**Internet Sales [제품 Id]**|**제품 [제품 Id]**|  
   
  위 표에 나와 있는 관계 중 누락된 항목이 있으면 모델에 Customer, Date, Geography, Product, Product Category, Product Subcategory 및 Internet Sales 테이블이 포함되어 있는지 확인합니다. 동일한 데이터 원본 연결에서 각기 다른 시간에 테이블을 가져오는 경우에는 해당 테이블 간에 관계가 생성되지 않으므로 관계를 수동으로 만들어야 합니다.  
   

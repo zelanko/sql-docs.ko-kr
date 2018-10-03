@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding projects
 - projects [SQL Server Management Studio], adding
 ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
-caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9507be8eb78f84ddb775a70a997813166a06d08c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815779"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074483"
 ---
 # <a name="add-projects-to-source-control"></a>원본 제어에 프로젝트 추가
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 솔루션은 여러 스크립트 프로젝트를 호스팅할 수 있습니다. 프로젝트를 원본 제어에 추가하는 방법은 프로젝트가 속하는 솔루션이 원본 제어에서 사용 중인지 여부에 따라 다릅니다. 솔루션이 원본 제어에서 사용 중일 경우 솔루션을 체크 인하면 프로젝트가 원본 제어에 자동으로 추가됩니다. 솔루션에서 확인 하는 방법에 대 한 자세한 내용은 참조 하세요. [파일에서 확인](../../2014/database-engine/check-in-files.md)합니다.  

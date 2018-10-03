@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dd7a2d2b-6327-4d77-ac5a-580d36073ad4
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4f1d1ac95e5dbc82eae07a8bcb977df532ad015
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b16eb8fdfaf18bac628bf902427fed0edb1962c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084133"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 방법 도움말 항목
   [sqlcmd 유틸리티](../tools/sqlcmd-utility.md) 를 사용하면 명령 프롬프트, SQLCMD 모드의 쿼리 편집기, Windows 스크립트 파일 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] 에이전트 작업의 운영 체제(Cmd.exe) 작업 단계에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.  

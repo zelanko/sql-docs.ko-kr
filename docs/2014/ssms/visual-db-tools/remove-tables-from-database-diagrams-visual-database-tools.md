@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
 - removing tables
 - dropping tables
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69ed664373ace78201f6ca9a122e528915a2890e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 549c23271b8c969dc0e62d3bb73b973bbd85819c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108176"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
   데이터베이스 다이어그램에서 테이블을 제거할 수 있습니다. 테이블을 제거한 경우에도 데이터베이스는 바뀌지 않습니다. 제거한 테이블 및 해당 테이블과 다른 테이블의 관계는 데이터베이스에 계속 남아 있습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
 ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19cf53ef3e3f118f53d9496d38c336eb3adb4c2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 05ec77f2a7c4224b06e764997b6c01ee18ac0579
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051826"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>개발 단계 중의 Analysis Services 프로젝트 및 데이터베이스 작업
   프로젝트 모드나 온라인 모드로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스를 개발할 수 있습니다.  

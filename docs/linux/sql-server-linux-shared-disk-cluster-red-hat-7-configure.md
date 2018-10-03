@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 4ab3db647ea96ce926d51c7dcf94c2e17e633c22
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 79525e1127bdef20c85e1098b040de5d5eb7a60e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739471"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
 
@@ -141,7 +139,7 @@ NFS 서버에서 다음을 수행합니다.
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  편집 `/etc/exports` 공유 하려는 디렉터리를 내보내려면 합니다. 각 공유에 대 한 1 줄이 필요 합니다. 예를 들어: 
+1.  편집 `/etc/exports` 공유 하려는 디렉터리를 내보내려면 합니다. 각 공유에 대 한 1 줄이 필요 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: d4dbdcedec7cf61b3de912bab3e3658c0267f134
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 673dcead751bf5db8da326de5cfe8e3aa18288a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114343"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역의 유연성 살펴보기(보고서 작성기 및 SSRS)
   리본의 삽입 탭에서 테이블, 행렬 또는 목록 데이터 영역을 추가할 때는 테이블릭스 데이터 영역에 대한 초기 템플릿으로 시작하게 되지만 이 템플릿만 사용할 수 있는 것은 아닙니다. 그룹, 행 및 열 같은 테이블릭스 데이터 영역 기능을 추가하거나 제거하여 데이터 표시 방식을 계속 개발할 수 있습니다.  

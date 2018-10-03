@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129463"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
@@ -64,7 +61,7 @@ ms.locfileid: "37265350"
 |DT_UI4|4바이트의 부호 없는 정수입니다.|  
 |DT_UI8|8바이트의 부호 없는 정수입니다.|  
 |DT_WSTR|최대 길이가 4000자인 Null 종료 유니코드 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
-|DT_IMAGE|2의 최대 크기를 사용 하 여 이진값<sup>31</sup>-1 (2147483647) 바이트입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+|DT_IMAGE|2의 최대 크기를 사용 하 여 이진값<sup>31</sup>-1 (2147483647) 바이트입니다. .|  
 |DT_NTEXT|최대 길이가 2 사용 하 여 유니코드 문자열<sup>30</sup> -1 (1073741823) 자인 합니다.|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 문자열 2의 최대 길이가<sup>31</sup>-1 (2147483647) 자입니다.|  
   

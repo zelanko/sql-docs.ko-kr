@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.connecttoreplicas.f1
 - sql12.swb.adddatabasewizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f7282c48e5c31dc4ee71ddb8dee5d828f70a049
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085653"
 ---
-# <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>기존 보조 복제본 페이지로 연결 (복제본 추가 마법사 및 데이터베이스 추가 마법사)
+# <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>기존 보조 복제본 페이지로 연결(복제본 추가 마법사 및 데이터베이스 추가 마법사)
   이 도움말 항목에서는 **기존 보조 복제본에 연결** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 의 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 와 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 사용됩니다.  
   
  **표 열:**  

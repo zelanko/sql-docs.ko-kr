@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089651"
 ---
 # <a name="lesson-11-create-partitions"></a>11단원: 파티션 만들기
   이 단원에서는 다른 파티션과 독립적으로 처리(새로 고침)할 수 있도록 파티션을 만들어 Internet Sales 테이블을 더 작은 논리적 부분으로 나눕니다. 기본적으로 모델에 포함하는 각 테이블에는 테이블의 열과 행이 모두 들어 있는 파티션이 하나씩 포함되어 있습니다. 여기서는 Internet Sales 테이블의 데이터를 연도별로 나누고, 테이블에 있는 5개의 연도 각각에 대해 파티션을 하나씩 만들려고 합니다.  이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)을 참조하세요.  

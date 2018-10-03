@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_colfmt
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad117fe5580267db103f1e6a44ec6798bf87c023
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089283"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정합니다. 원본 형식으로 사용 될 때 **bcp_colfmt** 대량 복사에서 데이터 원본으로 사용할 기존 데이터 파일의 형식을 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블. 대상 형식으로 사용될 경우에는 데이터 파일이 **bcp_colfmt**에 지정된 열 형식을 사용하여 만들어집니다.  

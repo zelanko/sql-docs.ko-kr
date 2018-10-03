@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092835"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 모델에서 예측 만들기(중급 데이터 마이닝 자습서)
   시퀀스 뷰어에서 이동 하 여 클러스터링 되는 더 나은 모델을 이해 한 이후에 예측 쿼리 작성기를 사용 하 여 예측 쿼리를 만들 수 있습니다 합니다 **마이닝 모델 예측** 데이터 마이닝 디자이너의 탭 합니다. 예측을 만들려면 먼저 시퀀스 클러스터링 모델을 선택한 다음 입력 데이터를 선택합니다. 입력의 경우 외부 데이터 원본을 사용하거나 단일 쿼리를 작성하고 대화 상자에 값을 제공할 수 있습니다.  

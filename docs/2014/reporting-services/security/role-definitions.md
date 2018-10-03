@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 03d3bc951a76b6ff3fdf088999777d80f699f690
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18b5d73d3ec4a6bc77a249d66af9b6d22c4e6be1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107103"
 ---
 # <a name="role-definitions"></a>역할 정의
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *역할**정의*는 보고서 서버에서 사용할 수 있는 작업을 정의하는 명명된 태스크 모음입니다. 역할 정의는 보고서 서버가 보안을 강화하기 위해 사용하는 규칙을 제공합니다. 사용자가 보고서 게시와 같은 태스크를 수행하려고 하면 보고서 서버가 사용자의 역할 할당을 검사하여 이 태스크가 해당 역할 정의에 포함되어 있는지 여부를 확인합니다. 해당 태스크가 역할 정의에 포함되어 있으면 요청이 제출됩니다.  

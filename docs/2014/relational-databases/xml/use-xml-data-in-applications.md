@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [XML in SQL Server]
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd4cd4f0edba28fc8bb7171a2e120fe7439057c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 0c1e77011b43887518b6a452d9bbe1091e651008
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098243"
 ---
 # <a name="use-xml-data-in-applications"></a>응용 프로그램에서 XML 데이터 사용
   작업에 사용할 수 있는 옵션에 설명 합니다 `xml` 응용 프로그램에서 데이터 형식입니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  

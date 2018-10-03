@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9678f42ee401a2d1f223220e82fb0c024559f5d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 524c0b4b875d8fc63cbd508c04032d7b50453c3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092843"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인의 용어 기반 관계를 만드는 방법에 대해 설명합니다. TBR(용어 기반 관계)을 사용하면 도메인 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 용어 "Inc."를 "Incorporated"로 변경하는 용어 기반 관계를 설정할 수 있습니다. 용어 "Inc."는 도메인에서 발생할 때마다 변경됩니다. "Contoso, Inc."의 인스턴스는 "Contoso, Incorporated"로 변경되고 두 값은 정확한 동의어로 간주됩니다.  

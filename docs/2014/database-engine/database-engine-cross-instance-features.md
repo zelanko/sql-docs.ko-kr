@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
-caps.latest.revision: 4
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d447ae6b48e7cb352f9350be687332c1fb265e76
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096753"
 ---
 # <a name="database-engine-cross-instance-features"></a>데이터베이스 엔진 인스턴스 간 기능
   이 섹션에서는 서버 및 데이터베이스 인스턴스를 관리하고 모니터링하는 데 관련된 도구 및 태스크에 대해 설명합니다.  

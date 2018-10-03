@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Language Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Language element
 ms.assetid: cd998202-e43f-4c6c-8727-a15a76a520ea
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d247e81c19c3394ac46274ba775c1695741e00ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f55255a0f57c92d0a8975b18bcd5f4810ca95d88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116231"
 ---
 # <a name="language-element-xmla"></a>Language 요소(XMLA)
   부모에 대 한 로캘 식별자 (LCID)를 포함 [번역](translation-element-xmla.md) 요소입니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37205853"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|정수|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37205853"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[번역](translation-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Language` 요소는 `Translation` 또는 `Name` 명령이 실행되는 동안 부모 `Translation` 요소가 부모 `Insert` 요소의 `Update` 요소를 지정된 언어로 특성 멤버에 할당하는 데 사용하는 LCID를 지정합니다.  

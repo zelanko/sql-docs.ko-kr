@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], about result sets
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - result sets [ODBC]
 - COMPUTE BY clause
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95a474c6c105a29f38eb9d49a810142714291659
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: cb490ab23d146dc8131c16e22b0d63f07b79d482
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058313"
 ---
 # <a name="processing-results-odbc"></a>결과 처리(ODBC)
   응용 프로그램이 SQL 문을 제출하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결과 데이터를 하나 이상의 결과 집합으로 반환합니다. 결과 집합은 쿼리 조건과 일치하는 행과 열 집합입니다. SELECT 문, 카탈로그 함수 및 일부 저장 프로시저는 응용 프로그램에서 사용할 수 있는 결과 집합을 테이블 형식으로 생성합니다. 실행한 SQL 문이 저장 프로시저, 여러 명령이 포함된 일괄 처리 또는 키워드가 포함된 SELECT 문이면 처리할 결과 집합이 여러 개가 됩니다.  

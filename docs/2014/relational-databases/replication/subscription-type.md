@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subscriptiontype.f1
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3bec01b8de34c7b7273b4599a986cb3064d52298
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 473c3ebc9347f5898e043a04a975e4fe497b0fc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091439"
 ---
 # <a name="subscription-type"></a>구독 유형
   병합 복제는 서버와 클라이언트라는 구독 유형을 제공합니다. 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 각각 전역 및 로컬이라고 불렀습니다. 서버 구독이 있는 구독자는 다음을 수행할 수 있습니다.  

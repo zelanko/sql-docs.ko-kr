@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], about data validation
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fad815b99f6daf9ba14e765f394cfe1e416aaa6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098103"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
   트랜잭션 및 병합 복제를 사용하면 구독자의 데이터가 게시자의 데이터와 일치하는지 확인할 수 있습니다. 게시에 대한 특정 구독 또는 모든 구독에 대해 유효성 검사를 수행할 수 있습니다. 다음 유효성 검사 유형 중 하나를 지정합니다. 배포 에이전트 또는 병합 에이전트가 다음에 실행될 때 해당 유형에 따라 데이터의 유효성을 검사합니다.  

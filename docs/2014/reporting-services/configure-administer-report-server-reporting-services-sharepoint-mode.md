@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7546ee205dc20dccbac6a83e8f1fea8420ee511d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085623"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>보고서 서버의 구성 및 관리(Reporting Services SharePoint 모드)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 즉시 사용할 도구 및 서비스 만들기, 배포 및 확장 하 고 보고 하는 사용자 지정할 수 있는 프로그래밍 기능 뿐만 아니라 사용자 조직에 대 한 보고서를 관리 하는 데 전체 범위를 제공 하는 서버 기반 보고 플랫폼 기능입니다. 보고 환경을 SharePoint 제품과 통합하면 SharePoint 사이트에서 제공하는 공동 작업 환경을 사용하는 이점을 얻을 수 있습니다.  

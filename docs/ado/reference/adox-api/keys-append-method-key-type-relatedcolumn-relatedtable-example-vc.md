@@ -1,13 +1,11 @@
 ---
-title: Create 새 외래 키 예 (VC + +) | Microsoft Docs
+title: 새 외래 키 예제 (VC + +) 만들기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30b5590d1abecfb36869179aa1212dafa4d59527
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5e90a0bfa98a17a4b9330997cb3f59ef57778403
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286511"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726371"
 ---
-# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>키 추가 방법, 키 형식, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VC + +)
-다음 코드에는 새 외래 키를 만드는 방법을 보여 줍니다. (예: Customers 및 Orders) 두 테이블이 있다고 가정 합니다.  
+# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VC++)
+다음 코드에는 새 외래 키를 만드는 방법을 보여 줍니다. (예: Customers 및 Orders) 두 개의 테이블이 있다고 가정 합니다.  
   
 ```  
 // BeginCreateKeyCpp.cpp  

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL modules [ODBC]
@@ -16,20 +14,19 @@ helpviewer_keywords:
 - modules [ODBC]
 - SQL statements [ODBC], modules
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10957c8e4a847f13d2dbf4b427382e65ea404c1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834751"
 ---
 # <a name="sql-modules"></a>SQL 모듈
-DBMS SQL 문을 보내기 위한 두 번째 방법은 모듈을 통해 것입니다. 짧게 모듈은 호스트 프로그래밍 언어에서에서 호출 된 프로시저의 그룹으로 구성 됩니다. 각 프로시저는 단일 SQL 문 있어서 데이터가 하 고 프로시저에서 매개 변수를 통해 전달 됩니다.  
+모듈을 통해 DBMS SQL 문을 보내기 위한 두 번째 방법은 됩니다. 요약 하자면, 모듈 호스트 프로그래밍 언어에서에서 호출 되는 프로시저의 그룹으로 구성 됩니다. 각 프로시저에는 단일 SQL 문을 포함 하 고 데이터에는 프로시저에서 매개 변수를 통해 전달 됩니다.  
   
- 모듈을 응용 프로그램 코드에 연결 된 개체 라이브러리로 생각할 수 있습니다. 그러나 정확 하 게 프로시저와 응용 프로그램의 나머지과 연결 된 방법을 구현에 따라 다릅니다. 예를 들어 프로시저를 개체 코드로 컴파일될와 응용 프로그램 코드에 직접 연결할 수 없습니다, 컴파일 및 DBMS 및 응용 프로그램 코드에 배치 하는 계획 식별자 액세스에 대 한 호출에 저장 된 수 또는 런타임 시 해석 될 수 있습니다.  
+ 모듈을 응용 프로그램 코드에 연결 된 개체 라이브러리로 생각할 수 있습니다. 그러나 구현에 따라 다릅니다는 정확 하 게 하는 방법을 절차 및 응용 프로그램의 나머지 부분 연결 됩니다. 예를 들어 절차 개체 코드를 컴파일 및 응용 프로그램 코드에 직접 연결할 수 없습니다, 컴파일 및 DBMS 및 응용 프로그램 코드에 배치 하는 계획 식별자 액세스에 대 한 호출에 저장할 수 있습니다 또는 런타임에 해석 될 수 있습니다.  
   
- 모듈의 주요 장점은 프로그래밍 언어에서 SQL 문의 명확 하 게 구분 하는 것입니다. 이론적으로, 다른 변경 하지 않고 하나를 변경 하 여 단순히 다시 연결 수 있어야 합니다.
+ 모듈의 주요 이점은 이러한 프로그래밍 언어에서 SQL 문을 완전히 분리 됩니다. 이론적으로 다른 변경 하지 않고 하나를 변경 하 여 단순히 연결을 다시 수 있어야 합니다.

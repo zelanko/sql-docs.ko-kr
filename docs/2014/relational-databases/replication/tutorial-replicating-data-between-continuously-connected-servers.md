@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - replication [SQL Server], tutorials
 - wizards [SQL Server replication]
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20c45c34806cf8373c8063421dc1a54ac78e5f07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094624"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>자습서: 계속 연결된 서버 간 데이터 복제
   복제는 계속 연결된 서버 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 이 자습서에서는 계속 연결된 서버에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다.  

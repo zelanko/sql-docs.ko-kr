@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UnknownMember Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - UnknownMember element
 ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1fdfbaa296a7c83c96a7a41d759d582833d2ed8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dab3908376520a67e1192a0a4a2d52c76b6a88df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052333"
 ---
 # <a name="unknownmember-element-assl"></a>UnknownMember 요소(ASSL)
   알 수 없는 멤버의 표시 여부를 나타냅니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37151174"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Dimension](../objects/dimension-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

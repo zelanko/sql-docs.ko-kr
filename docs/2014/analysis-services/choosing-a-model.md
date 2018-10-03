@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining algorithms
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data mining models
 - data mining structures
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9817f7e8906d9e75f7c2b5d55db679d77e7cc47e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273889"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113293"
 ---
 # <a name="choosing-a-model"></a>모델 선택
   **마이닝 알고리즘:** 데이터 마이닝 *알고리즘* 데이터에서 패턴을 만드는 메커니즘입니다. 알고리즘은 데이터의 수를 세는 방법, 관계가 파생되는 방법 및 패턴을 저장하는 방법을 정의합니다. 분석할 데이터의 형식에 따라 선택할 알고리즘이 어느 정도는 달라집니다. 예를 들어 연속 숫자에서만 작동하는 알고리즘이 있는 반면 제한된 수의 고유 값에서 최상의 성능을 제공하는 알고리즘이 있습니다.  

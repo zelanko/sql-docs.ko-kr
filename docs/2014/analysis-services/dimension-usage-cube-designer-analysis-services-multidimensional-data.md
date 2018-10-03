@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusagepane.f1
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bc3fec6c8f618446590c89fe555f5d4592575fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7561d15eb1a291d39fd481ef2f0a4ed8d221a06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126053"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>차원 용도(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **차원 용도** 탭을 사용하여 큐브의 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다.  

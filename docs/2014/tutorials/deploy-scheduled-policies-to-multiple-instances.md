@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
-caps.latest.revision: 6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ebabe1d982f427002eea31f09541cd40654bcfc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128273"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>여러 인스턴스에 예약된 정책 배포
   등록된 서버를 사용하면 중앙 위치에서 관리되는 서버로 예약된 정책을 배포할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버에서 예약된 정책을 배포할 수 있습니다.  

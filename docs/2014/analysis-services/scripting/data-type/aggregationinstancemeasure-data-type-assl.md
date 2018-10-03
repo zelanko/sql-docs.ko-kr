@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationInstanceMeasure Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationInstanceMeasure data type
 ms.assetid: 3250970a-a67d-486c-b205-038f1bd1770f
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c8cd25248eac6ed347011db8377085cc4cd2bdd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 22c5afdfe38d4068881d8e5611bd2b479121075b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263619"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048363"
 ---
 # <a name="aggregationinstancemeasure-data-type-assl"></a>AggregationInstanceMeasure 데이터 형식(ASSL)
   집계 인스턴스에서 사용하는 측정값에 대한 정보를 나타내는 기본 데이터 형식을 정의합니다.  
@@ -47,14 +44,14 @@ ms.locfileid: "37263619"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|InclusionThresholdSetting|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|기본 데이터 형식|없음|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[MeasureID](../properties/id-element-assl.md), [원본](../properties/source-element-binding-assl.md)|  
 |파생 요소|[측정값](../objects/measure-element-assl.md)|  
   

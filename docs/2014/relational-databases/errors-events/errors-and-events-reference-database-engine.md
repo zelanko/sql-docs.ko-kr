@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dfdd9b62c4ccdf782de88b24082306d8850e188a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 798660cb396ca34f856653a7e65fda13d4d023a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093963"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>오류 및 이벤트 참조(데이터베이스 엔진)
   합니다 [이벤트 및 오류 메시지 센터](http://go.microsoft.com/fwlink/?LinkId=47660) TechNet에 있는 오류 메시지에 대 한 정보의 기본 소스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지뿐만 아니라 다른 Microsoft 제품에 대한 정보를 검색할 수 있는 향상된 고객 환경을 제공합니다. 즉, 고객은 전체 텍스트 검색을 수행하고 제품, 버전, 출처, 숫자 또는 기호 식별자에 따라 결과를 필터링할 수 있습니다. 또한 여러 언어를 지원하는 새로운 인터페이스가 제공됩니다. 이 센터는 자주 발생하는 오류에 대한 새로운 문제 해결 정보 등으로 계속 업데이트될 예정입니다.  

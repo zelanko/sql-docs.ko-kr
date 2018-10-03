@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritytable (Transact SQL) | Microsoft Docs
+title: semanticsimilaritytable (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791181"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +78,10 @@ SEMANTICSIMILARITYTABLE
 |**score**|**REAL**|유사한 다른 모든 문서를 기준으로 한 이 문서의 상대적 유사성 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 자세한 내용은 참조 [유사한 찾기 및 의미 체계 검색을 사용 하 여 관련 문서](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)합니다.  
+ 자세한 내용은 [유사한 찾기 및 의미 체계 검색을 사용 하 여 관련 문서](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- 유사한 문서의 열 간에는 쿼리할 수 없습니다. **SEMANTICSIMILARITYTABLE** 함수에 의해 식별 되는 원본 열과 동일한 열에서 유사 문서 검색는 **source_key** 인수입니다.  
+ 유사한 문서의 열 간에는 쿼리할 수 없습니다. 합니다 **SEMANTICSIMILARITYTABLE** 함수에서 식별 된 원본 열과 동일한 열 에서만 유사한 문서를 검색 합니다 **source_key** 인수입니다.  
   
 ## <a name="metadata"></a>메타데이터  
  의미 체계 유사성 추출 및 채우기에 대한 정보와 상태를 보려면 다음 동적 관리 뷰를 쿼리합니다.  
@@ -96,7 +92,7 @@ SEMANTICSIMILARITYTABLE
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  전체 텍스트 및 의미 체계 인덱스를 만든 기본 테이블에 대한 SELECT 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

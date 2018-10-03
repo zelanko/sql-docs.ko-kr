@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviews.f1
 ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dcc5de5cfa1125ee950b9c86e02445f192199439
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f341940849a1e3152048f8eea87ff946de4a02e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092304"
 ---
 # <a name="select-tables-and-views-ssas"></a>테이블 및 뷰 선택(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 가져올 데이터가 포함되어 있는 테이블과 뷰를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

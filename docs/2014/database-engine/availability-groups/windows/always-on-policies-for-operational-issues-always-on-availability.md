@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44d086a00d2e18bfd87410848a5acd73461fac6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104175"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 운영 문제에 대한 Always On 정책(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹 및 가용성 복제본과 데이터베이스의 상태를 볼 수 있습니다.  

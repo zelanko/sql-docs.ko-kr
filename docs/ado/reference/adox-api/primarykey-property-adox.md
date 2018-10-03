@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - PrimaryKey property [ADOX]
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4a13f413e4f18b84133757082879ac4eff7ec58
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1205c87f1251543521deddd7d1118b602ac7e05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286752"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723511"
 ---
-# <a name="primarykey-property-adox"></a>PrimaryKey 속성 (ADOX)
-인덱스는 테이블에 기본 키를 나타내는지 여부를 나타냅니다.  
+# <a name="primarykey-property-adox"></a>PrimaryKey 속성(ADOX)
+인덱스 테이블에 기본 키를 나타내는지 여부를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 **부울** 값입니다.  
@@ -45,5 +42,5 @@ ms.locfileid: "35286752"
  [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [PrimaryKey 및 고유한 속성 예제 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
+ [PrimaryKey 및 Unique 속성 예제 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

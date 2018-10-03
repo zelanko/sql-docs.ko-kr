@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.changecredentialswizard.F1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Change Credentials Wizard
 - report server database, reconfigure
 ms.assetid: 9eb4060a-9c3e-41e0-8767-3cfaebc45de7
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0163bff016043e31bf36a689220976b85e4ae097
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 632cfe6f1ea61612f59225f38a665ef73da0d898
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078500"
 ---
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>자격 증명 변경 마법사(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 보고서 서버 데이터베이스에 연결할 때 보고서 서버에서 사용하는 계정을 다시 구성하는 단계를 안내하는 자격 증명 변경 마법사를 제공합니다. 자격 증명을 변경할 때 구성 관리자는 보고서 서버에서 현재 사용 중인 보고서 서버 데이터베이스의 데이터베이스 서버에 대한 모든 사용 권한과 데이터베이스 로그인 정보를 업데이트합니다.  

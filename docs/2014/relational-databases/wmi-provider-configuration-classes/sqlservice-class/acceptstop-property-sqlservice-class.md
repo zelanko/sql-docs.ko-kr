@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AcceptStop Property (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AcceptStop property
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7ee6991565a78ddf4b0b76d82d30ebd0da0892c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afce20f92e237a97b56e92b0d1a9c0c1c2d8f3b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228773"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136083"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 속성(SqlService 클래스)
   서비스를 중지할 수 있는지 여부를 지정하는 부울 속성 값을 가져옵니다.  

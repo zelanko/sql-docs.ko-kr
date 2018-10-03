@@ -5,8 +5,6 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
@@ -14,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132193"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
   FILESTREAM을 사용하려면 먼저 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 FILESTREAM을 사용하도록 설정해야 합니다. 이 항목에서는 SQL Server 구성 관리자를 사용하여 FILESTREAM을 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -85,7 +83,7 @@ ms.locfileid: "37413152"
 |-|-|-|-|-|  
 |RAID 수준|쓰기 성능|읽기 성능|내결함성|Remarks|  
 |RAID 5|보통|보통|최고|성능은 하나의 디스크 또는 JBOD보다 우수하지만 RAID 0 또는 스트라이프를 사용하는 RAID 5보다 떨어집니다.|  
-|RAID 0|최고|최고|InclusionThresholdSetting||  
+|RAID 0|최고|최고|없음||  
 |RAID 5 + 스트라이프|최고|최고|최고|가장 비용이 많이 드는 옵션입니다.|  
   
 

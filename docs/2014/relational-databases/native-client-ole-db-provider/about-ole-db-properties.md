@@ -1,12 +1,10 @@
 ---
-title: OLE DB 속성 정보 | Microsoft Docs
+title: OLE DB 속성 정보 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, properties
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - properties [OLE DB]
 - property values [SQL Server Native Client]
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e44a961cb2f4ab39dfba9550024925f141803058
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d02a551826912f69755e50c7dde039482595b54a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123603"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB 속성 정보
   소비자는 속성 값을 설정하여 특정 개체 동작을 요청합니다. 예를 들어 소비자는 속성을 사용하여 행 집합에서 노출할 인터페이스를 지정합니다. 소비자는 속성 값을 가져와서 행 집합, 세션 또는 데이터 원본 개체와 같은 개체의 기능을 확인합니다.  
@@ -50,6 +47,6 @@ ms.locfileid: "37422972"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [속성 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [속성(OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

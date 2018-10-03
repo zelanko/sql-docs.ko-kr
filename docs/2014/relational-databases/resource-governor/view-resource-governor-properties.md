@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da438bf2b53b6bbc9897b3719087fd54a152f641
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230785"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116413"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  

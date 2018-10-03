@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 030ba6850c05f6fd81d106833205566576474faa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39a8eaf1f487d70e7e7042129410fcf2b6fb4a67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167064"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105733"
 ---
 # <a name="adding-connections-programmatically"></a>프로그래밍 방식으로 연결 추가
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 클래스는 외부 데이터 원본에 대한 실제 연결을 나타냅니다. <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 클래스는 연결의 구현 세부 사항을 런타임에서 격리합니다. 이 클래스를 사용하면 런타임에서는 일관되고 예측 가능한 방식으로 각 연결 관리자와 상호 작용할 수 있습니다. 연결 관리자에는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>과 같이 모든 연결에 공통된 스톡 속성 집합이 포함되어 있습니다. 그러나 연결 관리자를 구성하는 데는 일반적으로 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 속성만 필요합니다. 연결 클래스에서 `Open` 또는 `Connect`와 같은 메서드를 제공하여 데이터 원본에 대한 실제 연결을 설정하는 다른 프로그래밍 패러다임과 달리 런타임 엔진에서는 패키지 실행 중 패키지의 모든 연결을 관리합니다.  

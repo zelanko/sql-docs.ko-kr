@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ee60f4bfe93996ee753f06063bcf7b16aef4d02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 590cb6da26f0857c62b87542b7890732416aa486
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103993"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>오류 메시지 전송 태스크 편집기(메시지 페이지)
   **오류 메시지 전송 태스크 편집기** 대화 상자의 **메시지** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)를 참조하십시오.  

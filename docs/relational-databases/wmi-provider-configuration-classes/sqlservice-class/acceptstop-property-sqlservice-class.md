@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - AcceptStop Property (SqlService Class)
@@ -18,16 +15,15 @@ apilocation:
 helpviewer_keywords:
 - AcceptStop property
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e5d6e5d1100e68788a1a43a9a7e3f003ca205cef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa73e1d1ef45f3f06feb399aa5b0530983210989
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007290"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705731"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +37,15 @@ object.AcceptStop [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체*  
+ *object*  
  A [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 서비스를 나타내는 개체  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서비스를 중지할 수 있는지 여부를 지정 하는 부울 값: **true** 서비스를 중지할 경우 또는 **false** 서비스를 중지할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [Analysis Services - multidimensional data]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cdce8bf19c1d167952f954f82cc0cb679eb2612
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 669703a6f086c760f669d58bb167f1bddd19f97c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075630"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services 인스턴스 모니터
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 성능 모니터( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **)를 사용하여**의 성능을 모니터할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 작성 및 관리하고 추적 결과를 분석 및 재생할 수 있습니다. 성능 모니터는 다음 섹션에서 설명하는 것처럼 특정 카운터를 통해 인덱싱된 서버 상태를 보고합니다.  

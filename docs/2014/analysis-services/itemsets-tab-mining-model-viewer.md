@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.itemsets.f1
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2069f5355629c1ac82889e56b11a9a35023edfb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060343"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>항목 집합 탭(마이닝 모델 뷰어)
   **항목 집합** 창을 사용하여 연결 규칙 마이닝 모델에 자주 포함되는 항목 집합을 볼 수 있습니다. 연결 모델에 많은 항목 집합이 포함될 수 있기 때문에 뷰어에 표시되는 항목 집합을 필터링하는 데 도움이 되는 컨트롤이 뷰어에서 제공됩니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - compliance [XML for Analysis]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - XMLA, compliance
 - extending XML for Analysis
 ms.assetid: d987d320-5581-4454-ad45-68e3a22175b6
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc7a8da77b72f25a68764636fbe15bc2d9e4ae04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ced7dc5977955b8eca5f3843d6ddbf5fa007325
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090663"
 ---
 # <a name="xml-for-analysis-compliance-xmla"></a>XMLA(XML for Analysis) 호환성
   XMLA 1.1 사양에는 World Wide Web에 존재하는 데이터 원본에 대한 데이터 액세스를 지원하는 개방형 표준이 기술되어 있습니다. 이 항목에서는에서 지원 되는 XML for Analysis 1.1 사양 준수 수준을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  

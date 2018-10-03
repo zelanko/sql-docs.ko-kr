@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7697f6bf230b3d37b145e56f6827895b44daa5c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65eed443f671f18944ce381a011498e3ca23af4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102893"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 XML 데이터 원본에 대한 데이터 집합을 만들 수 있습니다. 데이터 원본을 정의한 후 데이터 집합에 대한 쿼리를 만듭니다. 데이터 원본이 가리키는 XML 데이터 형식에 따라 XML을 포함 하 여 데이터 집합 쿼리를 만들 `Query` 나 요소 경로입니다. XML `Query` 로 시작 하는  **\<쿼리 >** 태그 및 네임 스페이스와 데이터 원본에 따라 달라 지는 XML 요소를 포함 합니다. 요소 경로는 네임스페이스로부터 독립적이며 기본 XML 데이터에서 사용할 노드 및 노드 특성을 XPath 형식 구문으로 지정합니다. 요소 경로에 대한 자세한 내용은 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](report-data-ssrs.md)을 참조하세요.  
@@ -33,7 +30,7 @@ ms.locfileid: "37227003"
   
 -   http 프로토콜을 사용하는 URL이 가리키는 XML 문서  
   
--   XML 데이터를 반환하는 웹 서비스 끝점  
+-   XML 데이터를 반환하는 웹 서비스 엔드포인트  
   
 -   포함 XML 데이터  
   
@@ -41,7 +38,7 @@ ms.locfileid: "37227003"
   
  XML 문서의 경우 XML `Query` 선택 사항입니다. 이 쿼리가 포함되어 있지 않으면 선택적 XML `ElementPath`를 포함할 수 있습니다. XML `ElementPath` 값에는 요소 경로 구문이 사용됩니다. XML을 포함할 `Query` 및 XML `ElementPath` 데이터 원본의 XML 데이터에서 필요할 때 네임 스페이스를 올바르게 처리 합니다.  
   
- 연결 문자열 URL이 가리키는 웹 서비스 끝점의 경우 XML `Query`는 웹 서비스 메서드나 SOAP 동작 또는 둘 모두를 정의합니다. XML 데이터 공급자는 보고서에 사용할 XML 데이터를 검색하는 웹 서비스 요청을 만듭니다.  
+ 연결 문자열 URL이 가리키는 웹 서비스 엔드포인트의 경우 XML `Query`는 웹 서비스 메서드나 SOAP 동작 또는 둘 모두를 정의합니다. XML 데이터 공급자는 보고서에 사용할 XML 데이터를 검색하는 웹 서비스 요청을 만듭니다.  
   
 > [!NOTE]  
 >  웹 서비스 네임스페이스에 슬래시(`/)` 문자가 포함되어 있으면 XML 데이터 처리 확장 프로그램에서 해당 네임스페이스를 올바르게 가져올 수 있도록 웹 서비스 메서드와 SOAP 동작을 모두 포함하십시오.  

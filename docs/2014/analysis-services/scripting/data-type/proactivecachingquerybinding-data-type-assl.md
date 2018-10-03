@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingQueryBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingQueryBinding data type
 ms.assetid: c1b06e50-9e68-40db-bdab-fc2cb3a8ff64
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c93fc223e66910dde5e532ecf20e89497227f6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7b9c4aea38bb66277467275d2cf89a04cc3144a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087633"
 ---
 # <a name="proactivecachingquerybinding-data-type-assl"></a>ProactiveCachingQueryBinding 데이터 형식(ASSL)
   정보를 나타내는 파생된 데이터 형식을 정의 합니다 [ProactiveCaching](../objects/proactivecaching-element-assl.md) 테이블 및 뷰의 캐시 재작성이 필요한 지정 된 쿼리의 실행을 통해 식별 된 데이터 원본 변경 내용에 대 한 요소입니다.  
@@ -49,15 +46,15 @@ ms.locfileid: "37263499"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[ProactiveCachingBinding](binding-data-type-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[QueryNotification](../objects/querynotification-element-assl.md), [RefreshInterval](../properties/refreshinterval-element-assl.md)|  
-|파생 요소|InclusionThresholdSetting|  
+|파생 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  에 대 한 자세한 내용은 합니다 `ProactiveCachingBinding` 상속 계층의 테이블을 포함 하 여 형식이 `ProactiveCachingBinding` 참조 하십시오 [ProactiveCachingBinding 데이터 형식 &#40;ASSL&#41;](binding-data-type-assl.md).  

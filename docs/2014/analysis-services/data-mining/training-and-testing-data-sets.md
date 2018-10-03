@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120265"
 ---
 # <a name="training-and-testing-data-sets"></a>데이터 집합 학습 및 테스트
   데이터를 학습 집합과 테스트 집합으로 분할하는 작업은 데이터 마이닝 모델 평가의 중요한 부분입니다. 데이터 집합을 학습 집합과 테스트 집합으로 분리할 경우 일반적으로 대부분의 데이터가 학습에 사용되고 나머지 데이터가 테스트에 사용되지만, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 테스트 및 학습 집합의 크기가 비슷하게 되도록 데이터를 무작위로 샘플링합니다. 학습 및 테스트에 유사한 데이터를 사용하면 데이터 불일치의 영향을 최소화하고 모델의 특징을 보다 잘 이해할 수 있습니다.  

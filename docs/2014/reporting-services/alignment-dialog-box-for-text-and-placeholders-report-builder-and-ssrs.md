@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10136"
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.alignment.f1
 - sql12.rtp.rptdesigner.textproperties.alignment.f1
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
-caps.latest.revision: 9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dedb6d0c6e16f0be8c760f46fdbf57e836bf39b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30093374f366fe3b31c62b05de360a228d2f54ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113640"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자의 맞춤 대화 상자(보고서 작성기 및 SSRS)
   **맞춤** 탭을 선택하여 선택한 셀 또는 데이터 영역 내의 값 위치를 지정할 수 있습니다. 입력란 내 개별 텍스트의 가로 맞춤만 지정할 수 있습니다. 입력란에 안쪽 여백 값 또는 텍스트 세로 맞춤을 설정하려면 해당되는 입력란 속성을 사용해야 합니다. 자세한 내용은 [텍스트 상자 속성 대화 상자, 맞춤 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)합니다.  

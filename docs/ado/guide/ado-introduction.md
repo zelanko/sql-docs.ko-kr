@@ -3,8 +3,6 @@ title: ADO 소개 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2b3e0a8f9249abd76ccaf69bdd9f2311bcff2e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723841"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
-ADO ActiveX Data Objects ()는 OLE DB에는 상위 수준, 사용 하기 쉬운 인터페이스입니다. OLE DB는 다양 한 데이터 저장소에는 하위 수준, 고성능 인터페이스입니다. OLE DB 및 ADO 작업할 수 관계형 (테이블 형식) 및 비관계형 (계층적 또는 스트림) 데이터입니다.
+데이터 개체 (ADO (ActiveX)에 OLE DB를 상위 수준, 사용 하기 쉬운 인터페이스입니다. OLE DB에는 데이터 저장소의 다양 한 고성능의 낮은 수준의 인터페이스입니다. OLE DB 및 ADO 작업할 수 관계형 (테이블 형식) 및 비관계형 (계층적 또는 stream) 데이터.
 
- ADO는 낮은 수준의 OLE DB 인터페이스와 클라이언트 또는 중간 계층 응용 프로그램 간에 추상화 계층을 제공합니다. ADO를 OLE DB에 간단 하 고 효율적인 인터페이스를 제공 하는 작은 집합이 자동화 개체를 사용 합니다. 이 인터페이스를 COM 및 OLE DB의 복잡성을 배울 필요 없이 데이터에 액세스 하는 Visual Basic 및 VBScript 같은 더 높은 수준의 언어로 개발자 ADO 선택을 하면 합니다.
+ ADO는 하위 수준 OLE DB 인터페이스와 클라이언트 또는 중간 계층 응용 프로그램 간에 추상화 계층을 제공합니다. ADO 소수의 자동화 개체를 사용 하 여 OLE DB를 간단 하 고 효율적인 인터페이스를 제공 합니다. 이 인터페이스를 사용 하면 ADO 적합 한 Visual Basic 및 VBScript와 같은 높은 수준의 언어로 COM 및 OLE DB의 복잡성을 배울 필요 없이 데이터에 액세스 하려는 개발자에 대 한 합니다.
 
  이 섹션에서는 다음 항목을 다룹니다.
 

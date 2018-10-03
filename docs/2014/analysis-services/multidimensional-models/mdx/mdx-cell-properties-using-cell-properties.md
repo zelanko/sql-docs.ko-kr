@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic cell properties [MDX]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - cell properties [MDX]
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ba678db945252692d72901aab725224a6dfb503
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8aa9168e6272522bc773cb61166cb888d988c009
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082813"
 ---
 # <a name="using-cell-properties-mdx"></a>셀 속성 사용(MDX)
   MDX의 셀 속성은 큐브와 같은 다차원 데이터 원본의 셀 내용 및 형식에 대한 정보를 포함합니다.  
@@ -84,7 +81,7 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORMAT_STRING, FORE_COLOR, BACK_COLOR
  일반된 행 집합;를 반환 하는 MDX 쿼리에 대 한 셀 속성이 반환 되지 않습니다. 처럼 각 셀은 표시 하는 경우에 `FORMATTED_VALUE` 셀 속성만 반환 된 것입니다.  
   
 ## <a name="setting-cell-properties"></a>셀 속성 설정  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 다양한 위치에서 셀 속성을 설정할 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 있는 큐브 편집기의 큐브 구조 탭에서 일반 측정값에 대해 Format String 속성을 설정할 수 있습니다. 또한 큐브 편집기의 계산 탭에서 큐브에 정의된 계산 측정값에 대해서도 동일한 속성을 설정할 수 있습니다. 쿼리의 WITH 절에 정의된 계산 측정값에도 형식 문자열이 정의됩니다. 다음 쿼리에서는 계산 측정값에 대해 셀 속성을 설정하는 방법을 보여 줍니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 다양한 위치에서 셀 속성을 설정할 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 있는 큐브 편집기의 큐브 구조 탭에서 일반 측정값에 대해 Format String 속성을 설정할 수 있습니다. 또한 큐브 편집기의 계산 탭에서 큐브에 정의된 계산 측정값에 대해서도 동일한 속성을 설정할 수 있습니다. 쿼리의 WITH 절에 정의된 계산 측정값에도 형식 문자열이 정의됩니다. 다음 쿼리에서는 계산 측정값에 대해 셀 속성을 설정하는 방법을 보여 줍니다.  
   
 ```  
 WITH MEMBER MEASURES.CELLPROPERTYDEMO AS [Measures].[Internet Sales Amount]  

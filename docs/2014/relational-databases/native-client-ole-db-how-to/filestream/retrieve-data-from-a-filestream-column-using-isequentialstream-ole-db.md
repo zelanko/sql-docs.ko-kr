@@ -1,38 +1,35 @@
 ---
-title: ISequentialStream (OLE DB)를 사용 하 여 FILESTREAM 열에서 데이터를 검색 합니다. | Microsoft Docs
+title: ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af1fdbad51d7d6ae1c6c2320a6ac05d103123324
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086393"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB)
   이 예제에서는 ICommandText 인터페이스의 ISequentialStream 인터페이스를 사용하여 Filestream 열에서 레코드 하나를 검색하는 방법을 보여 줍니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)합니다.  
+ Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>예제  
  INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  다음 예제 중 하나를 사용하여 이 예제에서 읽어들이는 테이블을 만듭니다.  
   
--   [ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용 하 여 FILESTREAM 열에 데이터 보내기 &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload를 사용 하 여 FILESTREAM 열에 데이터 보내기 &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송&#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   

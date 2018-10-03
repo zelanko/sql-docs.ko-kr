@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc899a11663a877cfc6cd2ff8013992a828e08a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74fb3d14d9b4776cc7085b45bbf19c55de88d4ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136973"
 ---
 # <a name="publication-properties-articles"></a>게시 속성, 아티클
   **게시 속성** 대화 상자의 **아티클** 페이지에는 게시에 포함된 아티클에 대한 정보가 들어 있습니다. 이 페이지를 사용하여 기존 게시에 아티클을 추가하거나 기존 게시에서 아티클을 삭제할 수 있으며 아티클 속성 및 열 필터링을 변경할 수 있습니다.  

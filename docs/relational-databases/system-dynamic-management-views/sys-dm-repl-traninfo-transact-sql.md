@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_traninfo (Transact SQL) | Microsoft Docs
+title: sys.dm_repl_traninfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_traninfo
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20a15bd329da102b45b3f611a9cbe86651ba2b3d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795031"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,20 +63,20 @@ ms.locfileid: "34467929"
 |**max_cmds_in_tran**|**int**|논리적 트랜잭션의 최대 명령 수이며 로그 판독기 에이전트가 지정합니다.|  
 |**begin_time**|**datetime**|트랜잭션의 시작 시간입니다.|  
 |**commit_time**|**datetime**|트랜잭션이 커밋된 시간입니다.|  
-|**session_id**|**int**|변경 데이터 캡처 로그 스캔 세션의 ID입니다. 이 열에 매핑되는 **session_id** 열에 [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)합니다.|  
-|**session_phase**|**int**|오류 발생한 시점의 세션 단계를 나타내는 번호입니다. 이 열에 매핑되는 **phase_number** 열에 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)합니다.|  
+|**session_id**|**int**|변경 데이터 캡처 로그 스캔 세션의 ID입니다. 이 열에 매핑되는 **session_id** 열에서 [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)합니다.|  
+|**session_phase**|**int**|오류 발생한 시점의 세션 단계를 나타내는 번호입니다. 이 열에 매핑되는 **phase_number** 열에서 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)합니다.|  
 |**is_known_cdc_tran**|**bit**|변경 데이터 캡처로 추적된 트랜잭션을 나타냅니다.<br /><br /> 0 = 트랜잭션 복제 트랜잭션<br /><br /> 1 = 변경 데이터 캡처 트랜잭션|  
 |**error_count**|**int**|오류가 발생한 횟수입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  변경 데이터 캡처에 설정된 데이터베이스 또는 게시 데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  현재 아티클 캐시에 로드되어 있는 변경 데이터 캡처에 설정된 테이블이나 복제된 데이터베이스 개체에 대한 정보만 반환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [복제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
+ [복제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   

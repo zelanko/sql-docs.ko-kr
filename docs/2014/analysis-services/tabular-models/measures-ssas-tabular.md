@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a92df5ff3826ea7febe4bcf0910125f38c30a2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121573"
 ---
 # <a name="measures-ssas-tabular"></a>측정값(SSAS 테이블 형식)
   테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  

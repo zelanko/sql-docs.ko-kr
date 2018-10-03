@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b9d7c4669f58c3ccfa09a310f270a7308057aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5334b2459b171d0c5cb1728677bf5cb93eb80f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097784"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>추적 결과를 파일에 저장(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 결과를 파일에 저장하는 방법에 대해 설명합니다.  
@@ -42,7 +39,7 @@ ms.locfileid: "37295903"
   
      **다른 이름으로 저장**대화 상자가 나타납니다.  
   
-4.  **다른 이름으로 저장**대화 상자에 경로와 파일 이름을 지정합니다.  **저장**을 클릭합니다.  
+4.  **다른 이름으로 저장**대화 상자에 경로와 파일 이름을 지정합니다. **저장**을 클릭합니다.  
   
     > [!NOTE]  
     >  SQL Server 서비스는 지정된 디렉터리에 있는 파일에 대한 쓰기 권한이 있어야 합니다.  

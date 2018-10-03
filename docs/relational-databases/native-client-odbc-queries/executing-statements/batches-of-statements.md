@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC], batches
@@ -21,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4856ffe458a14275790770d72588a05cda6e8814
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 651ff25ac3331820f93fae7cdd5fc85567738107
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851978"
 ---
 # <a name="batches-of-statements"></a>문의 일괄 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  일괄 처리 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 세미콜론 (;)에 전달 된 단일 문자열에 두 개 이상의 문을 포함 **SQLExecDirect** 하거나 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)합니다. 예를 들어:  
+  일괄 처리 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 세미콜론 (;)에 전달 된 단일 문자열에 두 개 이상의 문을 포함 **SQLExecDirect** 하거나 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SQLExecDirect(hstmt,   

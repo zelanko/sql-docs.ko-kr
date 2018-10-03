@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 240ae9701aa48f393c77dd27aafcd350bdd89d51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220530"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137643"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기
   이 작업에서는 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 가져옵니다. 자세한 내용은 [정리 프로젝트 값을 도메인으로 가져오기](http://msdn.microsoft.com/library/hh479581.aspx) 항목을 참조하십시오. 또한 업데이트된 **Suppliers** 기술 자료를 게시하기 전에 기술 자료를 DQS로 내보냅니다.  

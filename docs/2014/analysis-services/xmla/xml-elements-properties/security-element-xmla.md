@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Security Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Security element
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138b93043cbfeba51472dfa61816cf9023a3f2c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 784a3f6b56c0372897b984c5fac4e8915cb53ebc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111975"
 ---
 # <a name="security-element-xmla"></a>Security 요소(XMLA)
   백업 하는 동안 역할 및 권한과 같은 보안 정의 복원 하는 방법을 지정는 [Backup](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령입니다.  
@@ -61,7 +58,7 @@ ms.locfileid: "37155024"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Backup](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Security` 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스에 정의된 역할 및 사용 권한과 같은 보안 정의가 각각 `Backup` 또는 `Restore` 명령 중에 백업 또는 복원되는지 여부를 결정합니다. 또한 이 요소는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 `Backup` 또는 `Restore` 명령의 일부로 포함할지 여부를 결정합니다.  

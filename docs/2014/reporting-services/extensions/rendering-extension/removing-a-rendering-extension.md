@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deleting rendering extensions
 - removing rendering extensions
 - rendering extensions [Reporting Services], removing
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dd559679afa7575f285737f289f66201fd06671e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e9abf2254d9c9710e68df9b488321b4ae4c1b16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132963"
 ---
 # <a name="removing-a-rendering-extension"></a>렌더링 확장 프로그램 제거
   제거할를 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 렌더링 확장 프로그램 제거 하기만 하면 합니다 `Extension` 요소에 있는 rsreportserver.config 파일에서 렌더링 확장 프로그램에 대해 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< 인스턴스 이름 > \reporting** 폴더입니다. 보고서 서버 뿐만 아니라 보고서 디자이너에 대 한 항목을 만든 경우 제거 합니다 `Extension` 요소를 [RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md) 도 합니다. 구성 정보를 제거한 후에는 구성 요소에서 렌더링 확장 프로그램을 사용할 수 없습니다.  

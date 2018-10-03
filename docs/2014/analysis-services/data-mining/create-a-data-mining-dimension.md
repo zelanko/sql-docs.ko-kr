@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], dimensions
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e0bb84b1627aaeafaf16a39df9a1bdf32fef489
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: feff90d769016492f10c3699ebd563aac13a84b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117316"
 ---
 # <a name="create-a-data-mining-dimension"></a>데이터 마이닝 차원 만들기
   마이닝 구조가 OLAP 큐브를 기반으로 하는 경우에는 마이닝 모델의 내용을 포함하는 차원을 만들 수 있습니다. 그런 다음 차원을 다시 원본 큐브에 통합할 수 있습니다.  

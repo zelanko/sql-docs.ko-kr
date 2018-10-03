@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5ba2d0d5d3cb355a4d0d6a372b41207ddce1d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97d88ee83d92d22f72db13d20ce37bb6ea9da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097605"
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 요소
   테스트 집합을 포함 하는 반복 가능한 홀드 아웃 파티션의 초기값을 지정 된 [MiningStructure](../objects/miningstructure-element-assl.md) 요소입니다. 이 초기값은 다시 처리하는 동안 모델 내용이 동일하게 유지되도록 합니다. 지정 되지 않았거나 0으로 설정 하는 경우 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 마이닝 구조의 이름에 해시 알고리즘을 사용 하 여 초기값을 만듭니다.  
@@ -55,7 +52,7 @@ ms.locfileid: "37185230"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  마이닝 구조를 처음 만들면 ID 및 이름이 같습니다. 마이닝 구조의 이름을 변경할 수도 있습니다. 따라서 파티션을 반복할 수 있게 하려면 이름으로 만든 초기값에 따를 필요가 없으며 초기값을 명시적으로 설정해야 합니다.  

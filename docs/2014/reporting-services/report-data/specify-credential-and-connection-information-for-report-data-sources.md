@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082249"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  
@@ -138,7 +135,7 @@ ms.locfileid: "37210743"
 |통합 보안|현재 사용자를 가장합니다.|모든 데이터 원본 유형에 대해 현재 사용자 계정을 사용하여 연결합니다.|  
 |Windows 자격 증명|지정한 사용자를 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우: 가장된 사용자 계정을 사용하여 연결합니다.|  
 |데이터베이스 자격 증명|무인 실행 계정 또는 서비스 계정을 가장합니다.<br /><br /> Reporting Services는 서비스 ID를 사용하여 연결 요청을 보낼 경우 관리자 권한을 제거합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 사용자 이름과 암호를 연결 문자열에 추가합니다.<br /><br /> 에 대 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> TCP/IP 프로토콜을 사용할 경우 연결되고 그렇지 않을 경우 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 데이터베이스 자격 증명을 사용할 경우 보고서 서버에서 연결에 실패합니다.|  
-|InclusionThresholdSetting|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> 에 대 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
+|없음|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> 에 대 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
   
 ## <a name="setting-credentials-programmatically"></a>프로그래밍 방식으로 자격 증명 설정  
  코드에 자격 증명을 설정하여 보고서 및 보고서 서버에 대한 액세스를 제어할 수 있습니다. 자세한 내용은 [데이터 원본 및 연결 메서드](../report-server-web-service/methods/data-sources-and-connection-methods.md)합니다.  

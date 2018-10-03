@@ -1,14 +1,11 @@
 ---
-title: sp_add_targetsvrgrp_member (Transact SQL) | Microsoft Docs
+title: sp_add_targetsvrgrp_member (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_targetsvrgrp_member
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetsvrgrp_member
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 042e090bfeff3631eac7e7bde75c91a0c254156c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5ea36ea5efe4c693193761887659a445affe2855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237751"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758381"
 ---
 # <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +41,22 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
   
 ## <a name="arguments"></a>인수  
  [ **@group_name=** ] **'***group_name***'**  
- 그룹의 이름입니다. *group_name* 은 **sysname**, 기본값은 없습니다.  
+ 그룹의 이름입니다. *group_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@server_name=** ] **'***server_name***'**  
- 지정된 그룹에 추가해야 하는 서버의 이름입니다. *server_name* 은 **nvarchar (30)**, 기본값은 없습니다.  
+ 지정된 그룹에 추가해야 하는 서버의 이름입니다. *server_name* 됩니다 **nvarchar(30)**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  대상 서버는 두 개 이상의 대상 서버 그룹의 멤버가 될 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Servers Maintaining Customer Information` 그룹을 추가하고 해당 그룹에 `LONDON1` 서버를 추가합니다.  
@@ -75,7 +71,7 @@ EXEC dbo.sp_add_targetsvrgrp_member
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_delete_targetsvrgrp_member &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

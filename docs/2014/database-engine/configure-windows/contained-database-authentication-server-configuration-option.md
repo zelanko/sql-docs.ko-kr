@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - contained_database_authentication_TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - contained database, enabling
 - contained database authentication option
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b39c50ae71206f923cb2e8a86ae570da010c7d40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ea76cc1902f96f49218b2c2e550b601822ca1a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130603"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>contained database authentication 서버 구성 옵션
   **포함된 데이터베이스 인증** 옵션을 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 포함된 데이터베이스를 사용하도록 설정할 수 있습니다.  

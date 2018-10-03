@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DDL events
@@ -16,12 +14,12 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 58b96e8ef7dfd0f2ef2d5f087c1ab73f3453b451
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093033"
 ---
 # <a name="ddl-events"></a>DDL 이벤트
   다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트를 나열합니다. 각 이벤트는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 저장 프로시저에 해당하며 키워드 사이에 밑줄(_)을 포함하도록 문 구문이 수정됩니다.  

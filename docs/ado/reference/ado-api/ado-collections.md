@@ -6,34 +6,31 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6eb94c92f9516333c6681691d470f626c10cb4b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b50f5245ed476fd09acd2556b4f7f5e2186fce10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756821"
 ---
 # <a name="ado-collections"></a>ADO 컬렉션
-이러한 컬렉션 및 ADO 개체 간의 관계는 표현 되는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  
+이러한 컬렉션 및 ADO 개체 간의 관계가에 표시 되는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  
   
- 각 컬렉션에는 해당 개체가 포함 될 수 있습니다. 예를 들어 한 [오류](../../../ado/reference/ado-api/error-object.md) 개체에 포함 될 수는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션입니다. 개체에 대 한 자세한 내용은 참조 [ADO 개체](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) 또는 특정 개체 항목.  
+ 각 컬렉션 해당 개체를 포함할 수 있습니다. 예를 들어를 [오류](../../../ado/reference/ado-api/error-object.md) 개체에 포함 될 수는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션입니다. 개체에 대 한 자세한 내용은 참조 하십시오 [ADO 개체](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) 또는 특정 개체 항목.  
   
 |||  
 |-|-|  
 |[오류](../../../ado/reference/ado-api/errors-collection-ado.md)|모든 포함 된 **오류** 단일 공급자 관련 오류에 대 한 응답에서 생성 된 개체입니다.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|모든 포함 된 **필드** 의 개체는 **레코드 집합** 개체입니다.|  
-|[매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md)|모든 포함 된 **매개 변수** 의 개체는 **명령** 개체입니다.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|모든 포함 된 **필드** 의 개체를 **레코드 집합** 개체.|  
+|[매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md)|모두 포함 합니다 **매개 변수** 의 개체를 **명령** 개체입니다.|  
 |[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|모든 포함 된 **속성** 개체의 특정 인스턴스에 대 한 개체입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

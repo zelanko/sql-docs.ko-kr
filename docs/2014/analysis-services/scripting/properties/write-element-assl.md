@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Write Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Write element
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0f275ecb6ca20d22cedb1aed214fb2d0f78479b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd39e3354ee68a2e716e4cfbf50e41e371bf5303
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104253"
 ---
 # <a name="write-element-assl"></a>Write 요소(ASSL)
   에 대 한 데이터 또는 메타 데이터를 쓸 수 있는지 여부를 결정을 지정 [CubeDimensionPermission](../data-type/permission-data-type-assl.md) 하거나 [권한](../data-type/permission-data-type-assl.md) 요소입니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37176190"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubeDimensionPermission](../objects/cubepermission-element-assl.md), [권한](../data-type/permission-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 43a6d53dd099589db67765ecd7ae6027d0b532bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3995d85af81e6417e3117c25c1ec06052d60f269
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069003"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>계기의 눈금 서식 지정(보고서 작성기 및 SSRS)
   계기 눈금은 계기에 표시되는 최대값과 최소값에 바인딩된 숫자 범위입니다. 일반적으로 계기 눈금에는 계기 포인터가 표시하는 값을 정확하게 판독할 수 있도록 계기 레이블과 눈금 표시가 포함됩니다. 계기 눈금은 일반적으로 하나 이상의 계기 포인터와 연결됩니다. 동일한 계기에 둘 이상의 눈금이 있을 수 있습니다.  
@@ -34,7 +31,7 @@ ms.locfileid: "37159984"
   
 -   방사형 계기에서는 방사형 눈금의 반지름, 시작 각도 및 스윕 각도를 지정할 수 있습니다.  
   
--   선형 계기에서는 선형 계기의 끝점에 상대적인 시작 여백 및 끝 여백의 너비를 지정할 수 있습니다.  
+-   선형 계기에서는 선형 계기의 엔드포인트에 상대적인 시작 여백 및 끝 여백의 너비를 지정할 수 있습니다.  
   
  눈금 서식 지정을 빠르게 시작하려면 [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)을 참조하세요.  
   

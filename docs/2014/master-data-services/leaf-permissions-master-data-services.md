@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 82dea3e40d1e6c367441b8fa057fad36570430bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb8ea24effbb07d5ecad1f7efec491acb6fb55d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175830"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103263"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
   리프 권한은 엔터티의 모든 리프 멤버에 대한 특성 값에 적용됩니다.  
@@ -56,7 +53,7 @@ ms.locfileid: "37175830"
 ### <a name="example"></a>예제  
  Product 엔터티에 대해 Subcategory 특성에 **업데이트** 권한을 할당합니다. 모든 다른 특성에 대한 사용 권한은 거부합니다.  
   
-|속성|코드|Subcategory(업데이트)|  
+|이름|코드|Subcategory(업데이트)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  

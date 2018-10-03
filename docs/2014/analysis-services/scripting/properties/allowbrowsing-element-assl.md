@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllowBrowsing Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26c93ea360fb7036179375ff62aa6f182c9b790f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35e5c4450e250db41a6f09ce76ebb6f088e70f86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282009"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096423"
 ---
 # <a name="allowbrowsing-element-assl"></a>AllowBrowsing 요소(ASSL)
   정의 하는지 여부를의 멤버는 [역할](../objects/role-element-assl.md) 요소에 대 한 찾아보기 권한이 [MiningModel](../objects/miningmodel-element-assl.md) 요소입니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37282009"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningModelPermission](../objects/miningmodelpermission-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  부모에 해당 하는 요소가 `AllowBrowsing` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningModelPermission>합니다.  

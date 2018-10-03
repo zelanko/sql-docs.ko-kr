@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], samples
 - examples [SQLXML], Updategram
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
-caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5989d87461736535b7c8b1d8cb6d024a4c2ae991
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6eaf2e0143b3f9ddcdc0c33757647b24d53b70a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135823"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Updategram 예제 응용 프로그램(SQLXML 4.0)
   이 섹션에서는 updategram을 사용하는 예를 보여 줍니다.  
