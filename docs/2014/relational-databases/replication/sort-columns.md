@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.sortcolumns.f1
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0610b65013bce66f4ebcb6f446d63ecaf656463
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6af9c094df7b95eb400e95e81259546b21e571ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136643"
 ---
 # <a name="sort-columns"></a>열 정렬
   **열 정렬** 대화 상자를 사용하여 복제 모니터에서 하나 이상의 열을 기준으로 표를 정렬할 수 있습니다. 복제 모니터 표의 열 머리글을 클릭하여 단일 열을 기준으로 정렬할 수도 있습니다. 예를 들어 **모든 구독** 탭에서 구독을 상태별로 정렬한 다음 연결 유형별로 정렬하려면 다음 단계를 수행합니다.  

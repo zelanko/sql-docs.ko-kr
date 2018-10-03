@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e9ffea3675f13320d68d5b829cde29272c83f28d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b865adca53c432cc5347fff38d52cfeda5334c7c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072693"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 문자열 UDT(사용자 정의 데이터 형식)
   SQL Server에 대한 UTF8String 예제는 사용자 정의 데이터 형식을 구현하는 방법을 보여 줍니다. UTF8로 인코딩된 값을 저장할 수 있도록 데이터베이스의 형식 시스템을 확장하는 UTF8 사용자 정의 데이터 형식의 구현 방법을 보여 줍니다. 이 형식은 유니코드 문자열과 UTF8 간의 상호 변환 코드도 구현합니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Server Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Server element
 ms.assetid: 92ca67f6-817e-4a75-9244-8f8bcf412190
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5ae1dc9c10bce01cb9b0f90da2ef25b023392f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39c4d780ade53dcb16d446237aa467f131614176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106713"
 ---
 # <a name="server-element-assl"></a>Server 요소(ASSL)
   인스턴스를 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -66,15 +63,15 @@ ms.locfileid: "37319233"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[이름](../properties/name-element-assl.md), [ID](../properties/id-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)를 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)를 [설명](../properties/description-element-assl.md), [주석](../collections/annotations-element-assl.md), [ProductName](../properties/productname-element-assl.md)를 [Edition](../properties/edition-element-assl.md)를 [EditionId](../../xmla/xml-elements-properties/editionid-element.md)를 [버전](../properties/version-element-assl.md), [ServerMode](../../xmla/xml-elements-properties/editionid-element.md), [ProductLevel](../../xmla/xml-elements-properties/productlabel-element.md)합니다 [데이터베이스](../collections/databases-element-assl.md), [어셈블리](../collections/assemblies-element-assl.md)를 [추적](../collections/traces-element-assl.md), [역할](../collections/roles-element-assl.md), [ServerProperties](../collections/serverproperties-element-assl.md)>|  
   
 ## <a name="remarks"></a>Remarks  

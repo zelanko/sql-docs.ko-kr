@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36238b6cc481e58161b67442d8f5fdbf0e663e52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181060"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138483"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>테이블 형식 및 다차원 솔루션(SSAS) 비교
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 모델링에 대 한 두 가지 고유한 방법을 제공 합니다: 테이블 형식 및 다차원입니다. 두 방식 간에 중요한 공통점이 있지만 작업 진행 방식을 어떻게 결정할지에 영향을 미치는 중요한 차이점도 있습니다. 이 항목에서는 기능을 비교하고 각 접근 방식이 일반적인 프로젝트 요구 사항을 해결하는 방법을 설명합니다. 예를 들어 특정 데이터 원본을 지원하는 것이 가장 중요하게 고려되는 경우 데이터 원본에 대한 섹션이 사용할 모델링 방법을 결정하는 데 도움이 될 수 있습니다.  
@@ -103,13 +100,13 @@ ms.locfileid: "37181060"
 ||**다차원**|**테이블 형식**|  
 |동작|[예](multidimensional-models/actions-in-multidimensional-models.md)|아니요|  
 |집계 개체|[예](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|아니요|  
-|계산 측정값|[예](multidimensional-models/create-calculated-members.md)|예|  
+|계산 측정값|[예](multidimensional-models/create-calculated-members.md)|사용자 계정 컨트롤|  
 |사용자 지정 어셈블리|[예](multidimensional-models/multidimensional-model-assemblies-management.md)|아니요|  
-|사용자 지정 롤업|예|아니요|  
+|사용자 지정 롤업|사용자 계정 컨트롤|아니요|  
 |Distinct Count|[예](multidimensional-models/use-aggregate-functions.md)|예 (DAX를 통해) *|  
-|드릴스루|[예](multidimensional-models/actions-in-multidimensional-models.md)|예|  
-|계층 구조|[예](multidimensional-models/user-defined-hierarchies-create.md)|예|  
-|KPI|[예](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|예|  
+|드릴스루|[예](multidimensional-models/actions-in-multidimensional-models.md)|사용자 계정 컨트롤|  
+|계층 구조|[예](multidimensional-models/user-defined-hierarchies-create.md)|사용자 계정 컨트롤|  
+|KPI|[예](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|사용자 계정 컨트롤|  
 |연결된 측정값 그룹|[예](multidimensional-models/linked-measure-groups.md)|아니요|  
 |다 대 다 관계|[예](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|아니요|  
 |부모-자식 계층 구조|[예](multidimensional-models/parent-child-dimension.md)|예(DAX를 통해)|  
@@ -117,7 +114,7 @@ ms.locfileid: "37181060"
 |큐브 뷰|[예](multidimensional-models/perspectives-in-multidimensional-models.md)|[예](tabular-models/partitions-ssas-tabular.md)|  
 |반가산적 측정값|[예](multidimensional-models/define-semiadditive-behavior.md)|예(DAX를 통해)|  
 |Translations|[예](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|아니요|  
-|사용자 정의 계층|[예](multidimensional-models/user-defined-hierarchies-create.md)|예|  
+|사용자 정의 계층|[예](multidimensional-models/user-defined-hierarchies-create.md)|사용자 계정 컨트롤|  
 |쓰기 저장(writeback)|[예](multidimensional-models/set-partition-writeback.md)|아니요|  
   
  * 솔루션을 많은 수의 고유 카운트 (예: 수백만 개의 고객 Id)를 지원 해야 하는 경우 테이블 형식을 먼저 고려 합니다. 이 시나리오에서는 이 형식의 성능이 더 우수합니다. [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델 사용](http://msdn.microsoft.com/library/dn751533.aspx)(영문) 백서에서 고유 카운트에 대한 섹션을 참조하세요.  

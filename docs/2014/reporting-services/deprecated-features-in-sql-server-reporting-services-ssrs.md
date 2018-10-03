@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6817f31ff83e1a502506893f66b5080399200fd8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93d31c4f9f8f712834131136034541bf469e0014
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119883"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014의 SQL Server Reporting Services에서 지원되지 않는 기능
   이 항목에서는 지원되지 않는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대해 설명합니다. 이러한 기능은 지원되지 않는 버전에서 계속 사용할 수 있지만 이후 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 기능이 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
   
  항목 내용  
   
--   [SQL Server 2014 Reporting Services에서 사용 되지 않는 기능](#bkmk_2014)  
+-   [SQL Server 2014 Reporting Services에서 지원되지 않는 기능](#bkmk_2014)  
   
 -   [SQL Server 2012 SP1 Reporting Services에서 사용 되지 않는 기능](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services에서 사용 되지 않는 기능](#bkmk_2012)  
+-   [SQL Server 2012 Reporting Services에서 지원되지 않는 기능](#bkmk_2012)  
   
 -   [SQL Server 2008 R2 Reporting Services에서 사용 되지 않는 기능](#bkmk_kj)  
   
@@ -86,7 +83,7 @@ ms.locfileid: "37305143"
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 보고서 모델을 만들거나 업데이트하기 위한 도구가 포함되지 않았습니다. 자세한 내용은 [SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)합니다.  
   
-#### <a name="deprecated-methods-in-the-web-service-endpoint"></a>웹 서비스 끝점에서 사용되지 않는 메서드  
+#### <a name="deprecated-methods-in-the-web-service-endpoint"></a>웹 서비스 엔드포인트에서 사용되지 않는 메서드  
  다음 작업에서 사용 되지 않는 <xref:ReportService2010.ReportingService2010> 웹 서비스 끝점:  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
@@ -156,7 +153,7 @@ ms.locfileid: "37305143"
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 보고서 모델을 만들거나 업데이트하기 위한 도구가 포함되지 않았습니다. 자세한 내용은 [SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)합니다.  
   
-### <a name="deprecated-methods-in-the-web-service-endpoint"></a>웹 서비스 끝점에서 사용되지 않는 메서드  
+### <a name="deprecated-methods-in-the-web-service-endpoint"></a>웹 서비스 엔드포인트에서 사용되지 않는 메서드  
  다음 작업에서 사용 되지 않는 <xref:ReportService2010.ReportingService2010> 웹 서비스 끝점:  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
@@ -168,10 +165,10 @@ ms.locfileid: "37305143"
 > [!NOTE]  
 >  SQL Server 2008 R2는 SQL Server 2008의 부 버전 업그레이드이므로 SQL Server 2008 섹션의 내용도 검토하는 것이 좋습니다.  
   
-### <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 끝점  
+### <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 엔드포인트  
  웹 서비스 <xref:ReportService2005.ReportingService2005> 고 <xref:ReportService2006.ReportingService2006> 이 릴리스에서 더 이상 사용 되지 되었습니다. 이러한 끝점은 새 끝점으로 대체 되었습니다: <xref:ReportService2010.ReportingService2010>합니다.  
   
- 새 끝점에는 사용되지 않는 끝점에서 제공하던 모든 기능과 SQL Server 2008 R2에 추가된 새 기능이 모두 포함됩니다.  
+ 새 엔드포인트에는 사용되지 않는 엔드포인트에서 제공하던 모든 기능과 SQL Server 2008 R2에 추가된 새 기능이 모두 포함됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [새로운 &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   

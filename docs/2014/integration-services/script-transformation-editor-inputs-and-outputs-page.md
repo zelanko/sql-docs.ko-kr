@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52d82b5ca8010e3343d089281f3f66e85f32864b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d015b637a2823b0551fec82fbe761e586cf1ccd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324633"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084524"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>스크립트 변환 편집기(입/출력 페이지)
   **스크립트 변환 편집기** 대화 상자의 **입/출력** 페이지를 사용하여 스크립트 변환에 대한 입력 및 출력을 추가, 제거 및 구성할 수 있습니다.  

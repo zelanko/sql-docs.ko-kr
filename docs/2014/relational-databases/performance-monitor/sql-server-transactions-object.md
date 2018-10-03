@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1fc758cb5be461bf229ca9b9ad6bcf695e4f1611
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: fb1efc812503a34d0bace9739a3de93f85059cdb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196482"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
   Microsoft **의** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 활성 트랜잭션 수와 **tempdb**의 스냅숏 격리 행 버전 저장소 등의 리소스에 대해 이러한 트랜잭션이 미치는 영향을 모니터링하기 위한 카운터를 제공합니다. 트랜잭션은 논리적 작업 단위이며 데이터의 논리적 무결성을 유지하기 위해 모두 성공하거나 데이터베이스에서 지워져야 하는 작업 집합입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 데이터는 모두 트랜잭션에서 수정됩니다.  

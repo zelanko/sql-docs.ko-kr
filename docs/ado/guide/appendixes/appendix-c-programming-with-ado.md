@@ -1,34 +1,31 @@
 ---
-title: '부록 c: ADO와 프로그래밍 | Microsoft Docs'
+title: '부록 c: ADO를 사용한 프로그래밍 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc648bb210f7f8d526886043b2b096de95c456ab
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789211"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 c: 개발 환경에서 ADO를 사용한 프로그래밍
-ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual c + +를 포함 하 여 많은 프로그래밍 언어를 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. ADO의 버전은 각 이러한 도구 및 Microsoft Office 및 Microsoft SQL Server와 같은 다른 응용 프로그램에 함께 설치 됩니다.
+ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual c + +를 비롯 한 여러 프로그래밍 언어를 사용 하 여 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. ADO의 버전을 사용 하 여 이러한 도구 및 Microsoft Office 및 Microsoft SQL Server와 같은 다른 응용 프로그램의 각 설치 됩니다.
 
- ADO 용 라이브러리 msado15.dll 및 프로그램 ID (ProgID) 접두사는 "ADODB." 예: ADO을 명시적으로 참조 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)를 사용 하 여 `ADODB.Recordset`합니다.
+ ADO 용 라이브러리는 msado15.dll 이며 프로그램 ID (ProgID) 접두사 "ADODB." 예를 들어 ADO 명시적으로 가리킵니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)를 사용 하 여 `ADODB.Recordset`입니다.
 
- 다양 한 개발 환경에서 ADO와 프로그래밍에 대 한 자세한 내용은 다음 항목을 참조 합니다.
+ ADO 사용 하 여 다양 한 개발 환경에서 프로그래밍 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.
 
 -   [Microsoft Visual Basic에서 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)
 

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CreatedTimestamp Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CreatedTimestamp element
 ms.assetid: 35f5dd33-ea82-4be3-a117-69136aa9d1a4
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bab2bbc51422d6062b5f7df97fd3ff7b17e40c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e13b032b34ee63a7c7a939d7ad17b8ceb1786739
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191023"
 ---
 # <a name="createdtimestamp-element-assl"></a>CreatedTimestamp 요소(ASSL)
   부모 요소의 읽기 전용 생성 타임스탬프를 포함합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37235623"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|DateTime|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37235623"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[어셈블리](../objects/assembly-element-assl.md), [큐브](../objects/cube-element-assl.md)를 [데이터베이스](../objects/database-element-assl.md)를 [DataSource](../objects/datasource-element-assl.md)를 [DataSourceView](../objects/datasourceview-element-assl.md), [차원](../objects/dimension-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md)를 [MeasureGroup](../objects/group-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md)를 [MiningStructure](../objects/miningstructure-element-assl.md), [파티션](../objects/partition-element-assl.md)하십시오 [권한을](../data-type/permission-data-type-assl.md), [관점](../objects/perspective-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `CreatedTimestamp` 요소는 지정된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에서 개체가 만들어진 날짜와 시간을 나타내는 읽기 전용 `DateTime` 값을 포함합니다. 이 요소의 값은 비워둘 수 없습니다.  

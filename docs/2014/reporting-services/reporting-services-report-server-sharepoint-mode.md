@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4a41599128d6b0f9bbceaa47a30d851e312f39e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee8df91688c3878b0b124b72630922c9ee09f843
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167983"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
   **SharePoint 모드**에 대해 구성된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버 보고서 및 기타 SharePoint의 공동 작업 및 관리 기능을 사용할 수 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식입니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
@@ -71,7 +68,7 @@ ms.locfileid: "37168134"
   
 -   SharePoint 페이지에 추가할 수 있는 보고서 뷰어 웹 파트를 통해 SharePoint 웹 응용 프로그램 내에서 보고서를 볼 수 있습니다. 웹 파트에는 페이지 탐색, 검색, 인쇄 및 내보내기 기능이 포함되어 있습니다.  
   
--   새 SOAP 끝점에 대해 프로그래밍하여 SharePoint 사이트와 통합되는 사용자 지정 응용 프로그램을 만들 수 있습니다. 업데이트된 WMI(Windows Management Instrumentation) 공급자를 사용하여 SharePoint 통합 모드에서 실행되는 보고서 서버 인스턴스를 프로그래밍 방식으로 구성할 수도 있습니다.  
+-   새 SOAP 엔드포인트에 대해 프로그래밍하여 SharePoint 사이트와 통합되는 사용자 지정 응용 프로그램을 만들 수 있습니다. 업데이트된 WMI(Windows Management Instrumentation) 공급자를 사용하여 SharePoint 통합 모드에서 실행되는 보고서 서버 인스턴스를 프로그래밍 방식으로 구성할 수도 있습니다.  
   
 -   연결된 모드의 Microsoft Access 서비스 보고  
   

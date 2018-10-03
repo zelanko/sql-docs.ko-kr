@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSTASK.F1
 - SQL11.DTS.DESIGNER.AFPADLSTASK.F1
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
-caps.latest.revision: 3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 768113129fd380d335895364344742eb9bb8e791
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c6b4c27b0edde310ba3252dd67bf8f51f40f0e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136563"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 파일 시스템 태스크
 합니다 **Azure Data Lake Store 파일 시스템 태스크** 에서 다양 한 파일 시스템 작업을 수행할 수 있습니다 [Azure Data Lake 저장소 (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/)합니다.

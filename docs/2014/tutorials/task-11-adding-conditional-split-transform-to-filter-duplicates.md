@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3094bd57-5cf4-4860-bf51-fadd1b309f94
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae4b77e5788ac21e6962ad7f4a6679982363cd67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01824587b583483a519a5f2a7d8731dd657aae48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161435"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>태스크 11: 조건부 분할 변환을 추가하여 중복 항목 필터링
   이 작업에서는 조건부 분할 변환을 데이터 흐름에 추가합니다. 이 변환은 들어오는 레코드 집합에서 중복 항목을 필터링하는 데 도움이 됩니다. 유사 항목 그룹 변환은 일치하는 것으로 발견된 레코드를 그룹화하고 레코드 중 하나를 피벗 레코드로 선택합니다. 그룹의 모든 레코드는 동일한 _key_out 값을 갖습니다. 그룹의 피벗 레코드는 _key_in 값이 _key_out 값과 동일합니다. 그룹의 다른 레코드는 _key_in 및 _key_out 값이 서로 다릅니다. 따라서 _key_in==_key_out 조건을 사용해서 필터링하면 그룹의 피벗 행만 표시됩니다.  

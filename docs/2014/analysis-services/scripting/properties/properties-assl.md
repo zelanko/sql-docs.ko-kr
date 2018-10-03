@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a000f4f4c9a73698f04a0bd88882db55b8661e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6371a751cdd5a4d647b781373ab74629103e0c44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061403"
 ---
 # <a name="properties-assl"></a>속성(ASSL)
   이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 개체 속성으로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  
@@ -164,53 +161,53 @@ ms.locfileid: "37173504"
 |[KeyErrorLimit 요소 &#40;ASSL&#41;](keyerrorlimit-element-assl.md)|처리 중 허용 가능한 오류 수를 포함합니다.|  
 |[KeyErrorLimitAction 요소 &#40;ASSL&#41;](keyerrorlimitaction-element-assl.md)|동작을 지정 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 키 오류를 계산 하는 경우는 [KeyErrorLimit](keyerrorlimit-element-assl.md) 요소에 도달할 때.|  
 |[KeyErrorLogFile 요소 &#40;ASSL&#41;](../objects/file-element-assl.md)|처리 오류를 기록할 파일 이름을 포함합니다.|  
-|[Source 요소 &#40;ComAssembly&#41; &#40;ASSL&#41;](keynotfound-element-assl.md)|참조 무결성 오류가 발생하는 경우 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]가 반응하는 방식을 지정합니다.|  
-|[Source 요소 &#40;측정값&#41; &#40;ASSL&#41;](keyuniquenessguarantee-element-assl.md)|특성 키와 해당 이름 간의 관계와 관련 특성에 대한 관계가 유효하도록 보장되는지 여부를 나타냅니다.|  
-|[SourceAttributeID 요소 &#40;ASSL&#41;](kpiid-element-assl.md)|`Kpi` 요소와 `Perspective` 요소를 연결하는 ID를 포함합니다.|  
-|[원본 특성의 ID를 포함 합니다 [수준](language-element-assl.md) 요소의 기반이 되 합니다.](language-element-assl.md)|부모 요소의 언어 식별자를 포함합니다.|  
-|[SourceColumnID 요소 &#40;ASSL&#41;](lastprocessed-element-assl.md)|부모 요소를 포함하는 데이터베이스가 마지막으로 처리된 시간을 나타내는 읽기 전용 타임스탬프를 포함합니다.|  
-|[요소를 상태 &#40;ASSL&#41;](lastschemaupdate-element-assl.md)|부모 요소의 읽기 전용 메타데이터 업데이트 타임스탬프를 포함합니다.|  
-|[StatusGraphic 요소 &#40;ASSL&#41;](lastupdate-element-assl.md)|연결된 `Database` 또는 데이터베이스에 포함된 주요 개체 중 하나가 마지막으로 변경된 시간을 나타내는 읽기 전용 타임스탬프를 포함합니다.|  
-|[StopTime 요소 &#40;ASSL&#41;](latency-element-assl.md)|가장 이른 알림과 MOLAP 이미지가 삭제된 시점 사이의 "유예 기간"을 정의합니다.|  
-|[StorageLocation 요소 &#40;ASSL&#41;](logfileappend-element-assl.md)|`Trace` 요소가 해당 로깅 출력을 기존 로그 파일에 추가할지, 아니면 기존 로그 파일을 덮어쓸지를 결정합니다.|  
-|[StorageMode 요소 &#40;ASSL&#41;](logfilename-element-assl.md)|`Trace` 요소에 대한 로그 파일의 파일 이름을 포함합니다.|  
-|[TableID 요소 &#40;ASSL&#41;](logfilerollover-element-assl.md)|Target 요소 &#40;ASSL&#41;|  
-|[TargetType 요소 &#40;ASSL&#41;](logfilesize-element-assl.md)|최대 로그 파일 크기(MB)를 지정합니다.|  
-|[식별 된 항목 유형을 식별 합니다 [대상](managedprovider-element-assl.md) 요소입니다.](managedprovider-element-assl.md)|`DataSource` 데이터 형식에서 파생된 요소에 사용되는 관리 공급자의 이름을 포함합니다.|  
-|[텍스트 요소 &#40;ASSL&#41;](manufacturingextramonthquarter-element-assl.md)|`TimeBinding` 요소에 대한 추가 월이 할당된 제조 기간의 월을 정의합니다.|  
-|[텍스트를 포함 한 [명령](manufacturingfirstmonth-element-assl.md) 요소입니다.](manufacturingfirstmonth-element-assl.md)|`TimeBinding` 요소에 대한 첫 번째 제조 월을 정의합니다.|  
-|[Timeout 요소 &#40;ASSL&#41;](manufacturingfirstweekofmonth-element-assl.md)|`TimeBinding` 요소에 대한 제조 월의 첫 번째 주를 정의합니다.|  
-|[TrendGraphic 요소 &#40;ASSL&#41;](masterdatasourceid-element-assl.md)|`Database` 요소의 마스터 데이터 원본 ID를 포함합니다.|  
-|[Trimming 요소 &#40;ASSL&#41;](materialization-element-assl.md)|측정값 그룹과 참조 차원 간의 관계 유형을 나타냅니다.|  
-|[Type 요소 &#40;작업&#41; &#40;ASSL&#41;](maxactiveconnections-element-assl.md)|`DataSource` 데이터 형식에서 파생된 요소에 허용되는 최대 동시 연결 수를 포함합니다.|  
-|[Type 요소 &#40;바인딩&#41; &#40;ASSL&#41;](mdxmissingmembermode-element-assl.md)|MDX 문에 대해 누락된 멤버가 처리되는 방식을 결정합니다.|  
-|[Type 요소 &#40;ClrAssemblyFile&#41; &#40;ASSL&#41;](measureexpression-element-assl.md)|측정값을 정의하는 MDX 식을 포함합니다.|  
-|[.NET Framework 어셈블리에 속하는 파일 중 하나의 파일 유형을 지정 합니다.](measuregroupid-element-assl.md)|`MeasureGroup`을 부모 요소, 바인딩 또는 아웃오브 라인 바인딩과 연결합니다.|  
-|[Type 요소 &#40;차원&#41; &#40;ASSL&#41;](measureid-element-assl.md)|`Measure` 요소를 부모 요소와 연결합니다.|  
-|[Type 요소 &#40;DimensionAttribute&#41; &#40;ASSL&#41;](measurequalificaton-element-assl.md)|`MeasureGroup`의 측정값에 접두사를 적용할지 여부를 결정합니다.|  
-|[Type 요소 &#40;MeasureGroup&#41; &#40;ASSL&#41;](membernamesunique-element-assl.md)|부모 요소의 멤버 이름이 고유해야 하는지 여부를 결정합니다.|  
-|[Type 요소 &#40;MeasureGroupAttribute&#41; &#40;ASSL&#41;](memberuniquenamestyle-element-assl.md)|`CubeDimension` 요소 내에 포함된 계층의 멤버에 대해 고유한 이름이 생성되는 방식을 결정합니다.|  
+|[KeyNotFound 요소 &#40;ASSL&#41;](keynotfound-element-assl.md)|참조 무결성 오류가 발생하는 경우 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]가 반응하는 방식을 지정합니다.|  
+|[KeyUniquenessGuarantee 요소 &#40;ASSL&#41;](keyuniquenessguarantee-element-assl.md)|특성 키와 해당 이름 간의 관계와 관련 특성에 대한 관계가 유효하도록 보장되는지 여부를 나타냅니다.|  
+|[KpiID 요소 &#40;ASSL&#41;](kpiid-element-assl.md)|`Kpi` 요소와 `Perspective` 요소를 연결하는 ID를 포함합니다.|  
+|[언어 요소 &#40;ASSL&#41;](language-element-assl.md)|부모 요소의 언어 식별자를 포함합니다.|  
+|[LastProcessed 요소 &#40;ASSL&#41;](lastprocessed-element-assl.md)|부모 요소를 포함하는 데이터베이스가 마지막으로 처리된 시간을 나타내는 읽기 전용 타임스탬프를 포함합니다.|  
+|[LastSchemaUpdate 요소 &#40;ASSL&#41;](lastschemaupdate-element-assl.md)|부모 요소의 읽기 전용 메타데이터 업데이트 타임스탬프를 포함합니다.|  
+|[LastUpdate 요소 &#40;ASSL&#41;](lastupdate-element-assl.md)|연결된 `Database` 또는 데이터베이스에 포함된 주요 개체 중 하나가 마지막으로 변경된 시간을 나타내는 읽기 전용 타임스탬프를 포함합니다.|  
+|[Latency 요소 &#40;ASSL&#41;](latency-element-assl.md)|가장 이른 알림과 MOLAP 이미지가 삭제된 시점 사이의 "유예 기간"을 정의합니다.|  
+|[LogFileAppend 요소 &#40;ASSL&#41;](logfileappend-element-assl.md)|`Trace` 요소가 해당 로깅 출력을 기존 로그 파일에 추가할지, 아니면 기존 로그 파일을 덮어쓸지를 결정합니다.|  
+|[LogFileName 요소 &#40;ASSL&#41;](logfilename-element-assl.md)|`Trace` 요소에 대한 로그 파일의 파일 이름을 포함합니다.|  
+|[LogFileRollover 요소 &#40;ASSL&#41;](logfilerollover-element-assl.md)|지정의 로깅을 `Trace` 은에 지정 된 최대 로그 파일 크기는 중지 또는 출력을 새 파일로 롤오버할 [LogFileSize](logfilesize-element-assl.md) 에 도달 합니다.|  
+|[LogFileSize 요소 &#40;ASSL&#41;](logfilesize-element-assl.md)|최대 로그 파일 크기(MB)를 지정합니다.|  
+|[ManagedProvider 요소 &#40;ASSL&#41;](managedprovider-element-assl.md)|`DataSource` 데이터 형식에서 파생된 요소에 사용되는 관리 공급자의 이름을 포함합니다.|  
+|[ManufacturingExtraMonthQuarter 요소 &#40;ASSL&#41;](manufacturingextramonthquarter-element-assl.md)|`TimeBinding` 요소에 대한 추가 월이 할당된 제조 기간의 월을 정의합니다.|  
+|[ManufacturingFirstMonth 요소 &#40;ASSL&#41;](manufacturingfirstmonth-element-assl.md)|`TimeBinding` 요소에 대한 첫 번째 제조 월을 정의합니다.|  
+|[ManufacturingFirstWeekOfMonth 요소 &#40;ASSL&#41;](manufacturingfirstweekofmonth-element-assl.md)|`TimeBinding` 요소에 대한 제조 월의 첫 번째 주를 정의합니다.|  
+|[MasterDatasourceID 요소 &#40;ASSL&#41;](masterdatasourceid-element-assl.md)|`Database` 요소의 마스터 데이터 원본 ID를 포함합니다.|  
+|[Materialization 요소 &#40;ASSL&#41;](materialization-element-assl.md)|측정값 그룹과 참조 차원 간의 관계 유형을 나타냅니다.|  
+|[MaxActiveConnections 요소 &#40;ASSL&#41;](maxactiveconnections-element-assl.md)|`DataSource` 데이터 형식에서 파생된 요소에 허용되는 최대 동시 연결 수를 포함합니다.|  
+|[MdxMissingMemberMode 요소 &#40;ASSL&#41;](mdxmissingmembermode-element-assl.md)|MDX 문에 대해 누락된 멤버가 처리되는 방식을 결정합니다.|  
+|[MeasureExpression 요소 &#40;ASSL&#41;](measureexpression-element-assl.md)|측정값을 정의하는 MDX 식을 포함합니다.|  
+|[MeasureGroupID 요소 &#40;ASSL&#41;](measuregroupid-element-assl.md)|`MeasureGroup`을 부모 요소, 바인딩 또는 아웃오브 라인 바인딩과 연결합니다.|  
+|[MeasureID 요소 &#40;ASSL&#41;](measureid-element-assl.md)|`Measure` 요소를 부모 요소와 연결합니다.|  
+|[MeasureQualificaton 요소 &#40;ASSL&#41;](measurequalificaton-element-assl.md)|`MeasureGroup`의 측정값에 접두사를 적용할지 여부를 결정합니다.|  
+|[MemberNamesUnique 요소 &#40;ASSL&#41;](membernamesunique-element-assl.md)|부모 요소의 멤버 이름이 고유해야 하는지 여부를 결정합니다.|  
+|[MemberUniqueNameStyle 요소 &#40;ASSL&#41;](memberuniquenamestyle-element-assl.md)|`CubeDimension` 요소 내에 포함된 계층의 멤버에 대해 고유한 이름이 생성되는 방식을 결정합니다.|  
 |[MembersWithData 요소 &#40;ASSL&#41;](memberswithdata-element-assl.md)|비-리프 멤버에 대한 데이터 멤버를 부모 특성에 표시할지 여부를 결정합니다.|  
-|[형식이 포함 된 [MeasureGroupAttribute](memberswithdatacaption-element-assl.md) 요소입니다.](memberswithdatacaption-element-assl.md)|시스템 생성 데이터 멤버에 대한 캡션을 만드는 데 사용되는 템플릿 문자열을 제공합니다.|  
-|[Type 요소 &#40;MiningStructureColumn&#41; &#40;ASSL&#41;](mimetype-element-assl.md)|부모 `DataItem` 요소가 나타내는 데이터의 MIME(Multipurpose Internet Mail Extensions) 형식(적용 가능한 경우)을 포함합니다.|  
-|[형식을 포함 합니다 [MiningStructureColumn](miningmodelid-element-assl.md) 요소입니다.](miningmodelid-element-assl.md)|마이닝 모델을 데이터 마이닝 차원과 연결합니다.|  
+|[MembersWithDataCaption 요소 &#40;ASSL&#41;](memberswithdatacaption-element-assl.md)|시스템 생성 데이터 멤버에 대한 캡션을 만드는 데 사용되는 템플릿 문자열을 제공합니다.|  
+|[MimeType 요소 &#40;ASSL&#41;](mimetype-element-assl.md)|부모 `DataItem` 요소가 나타내는 데이터의 MIME(Multipurpose Internet Mail Extensions) 형식(적용 가능한 경우)을 포함합니다.|  
+|[MiningModelID 요소 &#40;ASSL&#41;](miningmodelid-element-assl.md)|마이닝 모델을 데이터 마이닝 차원과 연결합니다.|  
 |[요소의 이름을 &#40;ASSL&#41;](name-element-assl.md)|부모 요소의 이름을 포함합니다.|  
-|[Type 요소 &#40;파티션&#41; &#40;ASSL&#41;](namingtemplate-element-assl.md)|`DimensionAttribute` 부모 요소에서 생성된 부모-자식 계층에서 수준의 이름이 지정되는 방식을 정의합니다.|  
-|[Type 요소 &#40;PerspectiveCalculation&#41; &#40;ASSL&#41;](nonemptybehavior-element-assl.md)|`CalculationProperty` 요소의 부모와 연결된 비어 있지 않은 동작을 결정합니다.|  
-|[UnknownMember 요소 &#40;ASSL&#41;](notificationtechnique-element-assl.md)|지정 여부 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 외부 클라이언트 응용 프로그램이 알림을 처리할지 또는 합니다.|  
-|[Usage 요소 &#40;DimensionAttribute&#41; &#40;ASSL&#41;](nullkeyconvertedtounknown-element-assl.md)|Null 변환 오류가 발생할 때 수행할 동작을 지정합니다.|  
-|[Usage 요소 &#40;MiningModelColumn&#41; &#40;ASSL&#41;](nullkeynotallowed-element-assl.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 처리 엔진이 처리 중 발생하는 Null 키 오류를 처리하는 방법을 결정합니다.|  
-|[Version 요소 &#40;ASSL&#41;](nullprocessing-element-assl.md)|Null 값이 처리되는 방식을 정의합니다.|  
-|[Visibility 요소 &#40;ASSL&#41;](onlinemode-element-assl.md)|캐시를 다시 작성하기 시작할 때 바로 데이터베이스를 다시 온라인 상태로 만들지, 아니면 캐시를 다시 작성한 후에만 데이터베이스를 다시 온라인 상태로 만들지를 지정합니다.|  
-|[Visible 요소 &#40;ASSL&#41;](state-element-assl.md)|계층에 적용되는 최적화 수준을 결정합니다.|  
-|[VisualTotals 요소 &#40;ASSL&#41;](optionality-element-assl.md)|`AttributeRelationship` 요소에 대한 멤버의 옵션을 나타냅니다.|  
-|[Write 요소 &#40;ASSL&#41;](orderby-element-assl.md)|특성에 포함된 멤버의 정렬 방식을 설명합니다.|  
-|[WriteEnabled 요소 &#40;ASSL&#41;](orderbyattributeid-element-assl.md)|[Dimension](../data-type/dimensionattribute-data-type-assl.md) 특성의 멤버를 정렬하는 기준인 다른 특성을 식별합니다.|  
-|[Version 요소 &#40;ASSL&#41;](ordinal-element-assl.md)|키 및 번역과 같은 컬렉션에서 바인딩할 서수를 나타냅니다.|  
-|[Visibility 요소 &#40;ASSL&#41;](overridebehavior-element-assl.md)|`AttributeRelationship` 요소로 설명되는 관계의 재정의 동작을 나타냅니다.|  
-|[Visible 요소 &#40;ASSL&#41;](partitionid-element-assl.md)|`Partition` 요소를 부모 요소, 바인딩 또는 아웃오브 라인 바인딩과 연결합니다.|  
-|[VisualTotals 요소 &#40;ASSL&#41;](password-element-assl.md)|`ImpersonationInfo` 요소에 대한 사용자 계정의 암호를 포함합니다.|  
-|[Write 요소 &#40;ASSL&#41;](path-element-assl.md)|WriteEnabled 요소 &#40;ASSL&#41;|  
+|[NamingTemplate 요소 &#40;ASSL&#41;](namingtemplate-element-assl.md)|`DimensionAttribute` 부모 요소에서 생성된 부모-자식 계층에서 수준의 이름이 지정되는 방식을 정의합니다.|  
+|[NonEmptyBehavior 요소 &#40;ASSL&#41;](nonemptybehavior-element-assl.md)|`CalculationProperty` 요소의 부모와 연결된 비어 있지 않은 동작을 결정합니다.|  
+|[NotificationTechnique 요소 &#40;ASSL&#41;](notificationtechnique-element-assl.md)|지정 여부 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 외부 클라이언트 응용 프로그램이 알림을 처리할지 또는 합니다.|  
+|[NullKeyConvertedToUnknown 요소 &#40;ASSL&#41;](nullkeyconvertedtounknown-element-assl.md)|Null 변환 오류가 발생할 때 수행할 동작을 지정합니다.|  
+|[NullKeyNotAllowed 요소 &#40;ASSL&#41;](nullkeynotallowed-element-assl.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 처리 엔진이 처리 중 발생하는 Null 키 오류를 처리하는 방법을 결정합니다.|  
+|[NullProcessing 요소 &#40;ASSL&#41;](nullprocessing-element-assl.md)|Null 값이 처리되는 방식을 정의합니다.|  
+|[OnlineMode 요소 &#40;ASSL&#41;](onlinemode-element-assl.md)|캐시를 다시 작성하기 시작할 때 바로 데이터베이스를 다시 온라인 상태로 만들지, 아니면 캐시를 다시 작성한 후에만 데이터베이스를 다시 온라인 상태로 만들지를 지정합니다.|  
+|[OptimizedState 요소 &#40;ASSL&#41;](state-element-assl.md)|계층에 적용되는 최적화 수준을 결정합니다.|  
+|[Optionality 요소 &#40;ASSL&#41;](optionality-element-assl.md)|`AttributeRelationship` 요소에 대한 멤버의 옵션을 나타냅니다.|  
+|[OrderBy 요소 &#40;ASSL&#41;](orderby-element-assl.md)|특성에 포함된 멤버의 정렬 방식을 설명합니다.|  
+|[OrderByAttributeID 요소 &#40;ASSL&#41;](orderbyattributeid-element-assl.md)|[Dimension](../data-type/dimensionattribute-data-type-assl.md) 특성의 멤버를 정렬하는 기준인 다른 특성을 식별합니다.|  
+|[Ordinal 요소 &#40;ASSL&#41;](ordinal-element-assl.md)|키 및 번역과 같은 컬렉션에서 바인딩할 서수를 나타냅니다.|  
+|[OverrideBehavior 요소 &#40;ASSL&#41;](overridebehavior-element-assl.md)|`AttributeRelationship` 요소로 설명되는 관계의 재정의 동작을 나타냅니다.|  
+|[PartitionID 요소 &#40;ASSL&#41;](partitionid-element-assl.md)|`Partition` 요소를 부모 요소, 바인딩 또는 아웃오브 라인 바인딩과 연결합니다.|  
+|[Password 요소 &#40;ASSL&#41;](password-element-assl.md)|`ImpersonationInfo` 요소에 대한 사용자 계정의 암호를 포함합니다.|  
+|[경로 요소 &#40;ASSL&#41;](path-element-assl.md)|인스턴스에서 제공 된 경로 포함 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 사용 된 보고서의는 [ReportAction](../data-type/reportaction-data-type-assl.md) 요소입니다.|  
 |[PendingValue 요소 &#40;ASSL&#41;](pendingvalue-element-assl.md)|연결된 `ServerProperty` 요소의 읽기 전용 보류 값을 포함합니다.|  
 |[PermissionSet 요소 &#40;ASSL&#41;](permissionset-element-assl.md)|연결 된 권한 집합을 식별 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 어셈블리입니다.|  
 |[Persistence 요소 &#40;ASSL&#41;](persistence-element-assl.md)|바인딩된 원본 데이터의 어떤 부분이 동적 부분과 지정 된 빈도 사용 하 여 업데이트 확인을 확인 합니다 [RefreshPolicy](refreshpolicy-element-assl.md) 요소입니다.|  

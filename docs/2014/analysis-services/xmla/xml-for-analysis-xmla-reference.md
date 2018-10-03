@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, reference
 - XMLA, reference
 ms.assetid: 88045e05-ce47-4e28-999b-7f9c74af9faf
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec0d843ac46cbcf5d032d1f93190869fd5a37cb2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fde04360c7b6af1c9bf6aa906328e5031eb76c32
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164443"
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML for Analysis (XMLA) 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램 및 Analysis Services 인스턴스 간의 모든 통신을 처리 하는 XML for Analysis (XMLA) 프로토콜을 사용 합니다. 가장 기본적인 수준에서 ADOMD.NET과 AMO 같은 기타 클라이언트 라이브러리는 XMLA에서 요청을 생성하고 응답을 디코딩하여 XMLA를 독점적으로 사용하는 Analysis Services 인스턴스의 매개자 역할을 합니다.  

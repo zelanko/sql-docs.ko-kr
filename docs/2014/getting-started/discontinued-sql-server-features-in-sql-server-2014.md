@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-caps.latest.revision: 28
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063843"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 SQL Server 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드한 후 더 이상 사용할 수 없는 기능에 대해 설명합니다.  
@@ -60,7 +57,7 @@ ms.locfileid: "37322753"
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -EnableIntegrated 보안 속성|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 속성 설정을 사용합니다.|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -"예약 이벤트 및 보고서 배달" 및 "웹 서비스 및 HTTP 액세스"|RSReportServer.config 구성 파일을 편집합니다.|  
 |명령줄 옵션|이 릴리스에서 지원되지 않습니다.|  
-|SOAP 및 [!INCLUDE[ssSB](../includes/sssb-md.md)] 끝점|사용 하 여 [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)하 고 [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql)합니다.|  
+|SOAP 및 [!INCLUDE[ssSB](../includes/sssb-md.md)] 엔드포인트|사용 하 여 [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)하 고 [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql)합니다.|  
   
 ### <a name="discontinued-command-prompt-parameters-for-sql-server-setup"></a>SQL Server 설치에 지원되지 않는 명령 프롬프트 매개 변수  
  다음 표에서는 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 지원되지만 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 지원되지 않는 설치 명령 프롬프트 매개 변수를 보여 줍니다.  

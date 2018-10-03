@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc.change_tables
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2f10909d7660e7dd6e65c38182a8332068a801f
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 47265c1a4e541481edfef8029faf32e5cee3798a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750347"
 ---
 # <a name="cdcchangetables-transact-sql"></a>cdc.change_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "39103880"
 |**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 경우 이 열은 항상 0을 반환합니다.|  
 |**source_object_id**|**int**|변경 데이터 캡처를 사용하도록 설정한 원본 테이블의 ID입니다.|  
 |**capture_instance**|**sysname**|인스턴스별 추적 개체의 이름을 지정하는 데 사용되는 캡처 인스턴스의 이름입니다. 기본적으로 이름은 형식으로 원본 테이블 이름을 붙인 원본 스키마 이름에서 파생 됩니다 *schemaname_sourcename*합니다.|  
-|**start_lsn**|**binary(10)**|변경 테이블의 변경 데이터를 쿼리할 때 하위 끝점을 나타내는 LSN(로그 시퀀스 번호)입니다.<br /><br /> NULL = 하위 끝점이 설정되지 않았습니다.|  
+|**start_lsn**|**binary(10)**|변경 테이블의 변경 데이터를 쿼리할 때 하위 엔드포인트를 나타내는 LSN(로그 시퀀스 번호)입니다.<br /><br /> NULL = 하위 엔드포인트가 설정되지 않았습니다.|  
 |**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 경우 이 열은 항상 NULL을 반환합니다.|  
 |**supports_net_changes**|**bit**|변경 테이블에서 순 변경에 대한 쿼리 지원을 사용하도록 설정되어 있습니다.|  
 |**has_drop_pending**|**bit**|원본 테이블이 삭제되었다는 알림이 캡처 프로세스에 수신되었습니다.|  

@@ -1,12 +1,10 @@
 ---
-title: 문 매개 변수를 사용 하 여 | Microsoft Docs
+title: 문 매개 변수를 사용 하 여 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, parameters
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41fcbf9534f8d9b1accc424dd873609a6a357ade
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155559"
 ---
 # <a name="using-statement-parameters"></a>문 매개 변수 사용
   매개 변수는 ODBC 응용 프로그램에서 다음을 수행할 수 있도록 하는 SQL 문의 변수입니다.  

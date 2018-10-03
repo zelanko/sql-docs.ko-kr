@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - features to upgrade
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
-caps.latest.revision: 15
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f308bd39c805a2d53f86d887481295d12ce11aca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 527d57daa253cdab0f9107b38e2e8de87c9b2b8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182653"
 ---
 # <a name="select-features-upgrade"></a>기능 선택(업그레이드)
   **설치 마법사의** 기능 선택 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 페이지를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 기능을 확인할 수 있습니다.  

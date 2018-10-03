@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC], calling
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ce27067c4ad30e38b6d3c168b8f676815b693d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 74c43a204fbf9b4d65ebe9a03cfdf4194eceb49c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089883"
 ---
 # <a name="call-stored-procedures-odbc"></a>저장 프로시저 호출(ODBC)
   SQL 문이 ODBC CALL 이스케이프 절을 사용하여 저장 프로시저를 호출하는 경우 Microsoft® SQL Server™ 드라이버는 RPC(원격 저장 프로시저) 메커니즘을 사용하여 해당 프로시저를 SQL Server로 보냅니다. RPC 요청은 SQL Server의 문 구문 분석과 매개 변수 처리를 대부분 무시하므로 Transact-SQL EXECUTE 문을 사용할 때보다 속도가 향상됩니다.  

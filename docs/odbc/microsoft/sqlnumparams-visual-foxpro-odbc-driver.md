@@ -5,32 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLNumParams function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1e01b932f59c55f5d3cb16f0bef67dac83c086a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a9ae08fe6e13238e86b38e19c6df959b4840e3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905098"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699931"
 ---
-# <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (Visual FoxPro ODBC 드라이버)
+# <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보입니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
  지원: 전체  
   
  ODBC API 규칙: 수준 2  
   
- SQL 문에서 매개 변수 개수를 반환합니다. 매개 변수 수가 전달 된 SQL 문에 물음표의 수와 같아야 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다.  
+ SQL 문에서 매개 변수 개수를 반환합니다. 매개 변수 수가 SQL 문에 전달할 물음표의 수와 같아야 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다.  
   
- SQL 문법에 대 한 자세한 내용은 참조 [ODBC SQL 문법을 지원](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)합니다. 이 함수에 대 한 자세한 내용은 참조 [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) 에 *ODBC Programmer's Reference*합니다.
+ SQL 문법에 대 한 자세한 내용은 참조 하십시오 [지원 되는 ODBC SQL 문법](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)합니다. 이 함수에 대 한 자세한 내용은 참조 하세요. [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) 에 *ODBC 프로그래머 참조*합니다.

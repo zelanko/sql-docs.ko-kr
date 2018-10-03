@@ -1,33 +1,30 @@
 ---
-title: 다른 Paradox 드라이버 프로그래밍 정보 | Microsoft Docs
+title: 기타 Paradox 드라이버 프로그래밍 세부 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80b667f6f9449621cd5156ea91e98322527920d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a99861e41a8d64406cf3585f331e4b6f1ecc740e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902138"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769041"
 ---
-# <a name="other-paradox-driver-programming-details"></a>다른 Paradox 드라이버 프로그래밍 정보
+# <a name="other-paradox-driver-programming-details"></a>기타 Paradox 드라이버 프로그래밍 세부 정보
 > [!NOTE]  
->  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 세부 정보에 대 한 Paradox 드라이버 관련 정보를 제공 합니다. 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 세부 정보에 대 한 Paradox 드라이버 관련 정보를 제공합니다. 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

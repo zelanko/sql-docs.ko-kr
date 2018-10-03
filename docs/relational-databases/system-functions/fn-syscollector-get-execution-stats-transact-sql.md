@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_stats (Transact SQL) | Microsoft Docs
+title: fn_syscollector_get_execution_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_stats
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a80d59325234108f16a75c081f94d4102c44154
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811213"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="arguments"></a>인수  
  *log_id*  
- 실행 로그의 고유한 로컬 식별자입니다. *log_id* 은 **int**합니다.  
+ 실행 로그의 고유한 로컬 식별자입니다. *log_id* 됩니다 **int**합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -63,10 +59,10 @@ fn_syscollector_get_execution_stats ( log_id )
 |min_duration|**int**|패키지의 데이터 흐름 구성 요소에 소요된 최소 시간(밀리초)입니다.|  
 |max_duration|**int**|패키지의 데이터 흐름 구성 요소에 소요된 최대 시간(밀리초)입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  에 대 한 SELECT가 필요 **dc_operator**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [syscollector_execution_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   

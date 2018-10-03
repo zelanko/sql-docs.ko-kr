@@ -1,32 +1,29 @@
 ---
-title: Parameters 컬렉션, 명령 속성 예제 (VB) | Microsoft Docs
+title: Parameters 컬렉션, Command 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38b389c04a6f9c4842c700aac0d87e14299ed31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826790"
 ---
-# <a name="parameters-collection-command-property-example-vb"></a>Parameters 컬렉션, 명령 속성 예제 (VB)
-다음 코드에서는 사용 하는 방법을 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성을는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 프로시저에 대 한 매개 변수 정보를 검색할 개체입니다.  
+# <a name="parameters-collection-command-property-example-vb"></a>Parameters 컬렉션, Command 속성 예제(VB)
+다음 코드를 사용 하는 방법에 설명 합니다 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성을를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 프로시저의 매개 변수 정보를 검색 하는 개체입니다.  
   
 ```  
 ' BeginParametersVB  
@@ -81,7 +78,7 @@ End Sub
   
 ## <a name="see-also"></a>관련 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command 속성 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [프로시저 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

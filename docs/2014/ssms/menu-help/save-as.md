@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0164c0a426f0d317107178a5f7c2e7eb9e41c5b8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116800"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
   이 대화 상자를 사용하여 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장할 수 있습니다. 이 대화 상자를 표시 하려면 클릭 **저장할**  *\<파일 >* **으로** 에 **파일** 메뉴 (여기서  *\<파일 >* 현재 항목의 이름)에 코드 편집기에서 ALT + F를 누르십시오.  

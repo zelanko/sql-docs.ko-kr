@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185033"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 연결 알고리즘으로 추천 엔진에 유용합니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 제품을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다. 시장 바구니 분석의 예제를 보려면 [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 데이터 마이닝 자습서에서입니다.  

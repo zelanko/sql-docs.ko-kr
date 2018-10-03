@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144233"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>암호화 키(SSRS 기본 모드)
   암호화 키 페이지를 사용하여 보고서 서버의 데이터를 암호화 및 암호 해독하는 데 사용되는 대칭 키를 관리할 수 있습니다. 암호화 키 관리는 보고서 서버 구성에 있어 매우 중요합니다. 대칭 키는 보고서 서버 데이터베이스를 만들 때 자동으로 만들어지고 적용됩니다. 일상적인 유지 관리 작업을 수행할 수 있도록 대칭 키의 백업 복사본을 만드십시오. 다음 유지 관리 태스크를 수행하려면 올바른 대칭 키 복사본이 있어야 합니다.  

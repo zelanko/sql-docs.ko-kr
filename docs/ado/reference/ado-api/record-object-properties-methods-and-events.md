@@ -6,34 +6,31 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Record object [ADO], members
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d92f1c1c7a06dc876879d08d475bfe00b2b0edaf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 34a3d44ecd85845a47923a7f26de7188b65df8e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757521"
 ---
-# <a name="record-object-properties-methods-and-events"></a>개체 속성, 메서드 및 이벤트를 기록 합니다.
+# <a name="record-object-properties-methods-and-events"></a>Record 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [ActiveConnection 속성](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [Fields 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [필드 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [Mode 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [모드 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [ParentURL 속성](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType 속성](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
@@ -46,13 +43,13 @@ ms.locfileid: "35280902"
   
  [Close 메서드](../../../ado/reference/ado-api/close-method-ado.md)  
   
- [범위란 메서드](../../../ado/reference/ado-api/copyrecord-method-ado.md)  
+ [CopyRecord 메서드](../../../ado/reference/ado-api/copyrecord-method-ado.md)  
   
- [참여할 수 있는 메서드](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
+ [DeleteRecord 메서드](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
   
  [GetChildren 메서드](../../../ado/reference/ado-api/getchildren-method-ado.md)  
   
- [범위란 메서드](../../../ado/reference/ado-api/moverecord-method-ado.md)  
+ [MoveRecord 메서드](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   
  [Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   

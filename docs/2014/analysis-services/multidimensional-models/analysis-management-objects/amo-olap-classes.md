@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94391515ef388c77b7a8e258aff7c2ee3ead53d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177809"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 클래스
   AMO(Analysis Management Objects) OLAP 클래스를 사용하면 큐브 및 차원과 KPI(핵심 성과 지표), 동작, 자동 관리 캐싱 등의 관련 개체를 손쉽게 만들고 수정, 삭제 및 처리할 수 있습니다.  

@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a00e6dfd96851984018d00d017257939cb69586
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 591f2c00534f00529870b4eaa3742eef886d8e6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159923"
 ---
 # <a name="use-the-binary-base64-option"></a>BINARY BASE64 옵션 사용
   쿼리에서 BINARY BASE64 옵션을 지정하면 이진 데이터가 base64 인코딩 형식으로 반환됩니다. 기본적으로 BINARY BASE64 옵션이 지정되지 않은 경우 AUTO 모드는 이진 데이터의 URL 인코딩을 지원합니다. 즉, 이진 데이터 대신 쿼리가 실행된 데이터베이스의 가상 루트의 상대 URL에 대한 참조가 반환됩니다. 이 참조를 사용하면 후속 작업에서 SQLXML ISAPI dbobject 쿼리를 사용하여 실제 이진 데이터를 액세스할 수 있습니다. 쿼리는 이미지를 식별하기 위해 기본 키 열과 같은 정보를 충분히 제공해야 합니다.  
   
  쿼리를 지정할 때 뷰의 이진 열에 대해 별칭이 사용되는 경우 별칭은 이진 데이터의 URL 인코딩으로 반환됩니다. 후속 작업에서 별칭은 아무 의미도 없으며 URL 인코딩은 이미지를 검색하는 데 사용할 수 없습니다. 따라서 FOR XML AUTO 모드를 사용하여 뷰를 쿼리할 때는 별칭을 사용하지 않아야 합니다.  
   
- 예를 들어 SELECT 쿼리에서 모든 열에 BLOB에 대한 캐스트를 지정하면 임시 엔터티가 되어 관련 테이블 이름과 열 이름이 손실됩니다. 이것은 XML 계층 구조에서 이 값을 둘 위치를 알 수 없으므로, 이로 인해 AUTO 모드 쿼리에서 오류가 발생하게 됩니다. 예를 들어:  
+ 예를 들어 SELECT 쿼리에서 모든 열에 BLOB에 대한 캐스트를 지정하면 임시 엔터티가 되어 관련 테이블 이름과 열 이름이 손실됩니다. 이것은 XML 계층 구조에서 이 값을 둘 위치를 알 수 없으므로, 이로 인해 AUTO 모드 쿼리에서 오류가 발생하게 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  

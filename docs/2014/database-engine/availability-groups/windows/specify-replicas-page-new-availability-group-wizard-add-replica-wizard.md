@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1928b48145367e2bdd1ed183ac16230c5b7374fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172363"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
   이 항목에서는 **복제본 선택** 페이지의 옵션에 대해 설명합니다. 이 페이지는 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. **복제본 선택** 페이지에서 하나 이상의 가용성을 지정하고 구성하여 가용성 그룹을 추가합니다. 이 페이지에 포함된 4개의 탭은 다음 표에 설명되어 있습니다. 표에서 탭 이름을 클릭하면 이 항목 뒷부분의 해당 섹션으로 이동할 수 있습니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "37279639"
 |탭|간단한 설명|  
 |---------|-----------------------|  
 |[복제본](#ReplicasTab)|보조 복제본을 호스팅할 예정이거나 현재 호스팅하고 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정하려면 이 탭을 사용합니다. 현재 연결된 서버 인스턴스가 주 복제본을 호스팅해야 합니다.<br /><br /> 팁: 다른 탭을 시작하기 전에 **복제본** 탭에서 모든 복제본의 지정을 마칩니다.|  
-|[끝점](#EndpointsTab)|기존 데이터베이스 미러링 끝점을 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 끝점이 없는 경우 끝점을 자동으로 만들려면 이 탭을 사용합니다.|  
+|[엔드포인트](#EndpointsTab)|기존 데이터베이스 미러링 엔드포인트를 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 엔드포인트가 없는 경우 엔드포인트를 자동으로 만들려면 이 탭을 사용합니다.|  
 |[백업 기본 설정](#BackupPreferencesTab)|가용성 그룹 전체에 대한 백업 기본 설정과 개별 가용성 복제본에 대한 백업 우선 순위를 지정하려면 이 탭을 사용합니다.|  
 |[수신기](#Listener)|가능한 경우 가용성 그룹 수신기를 만들려면 이 탭을 사용합니다. 기본적으로 수신기는 만들어지지 않습니다.<br /><br /> 참고: 이 탭은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]를 실행하는 경우에만 사용할 수 있습니다.|  
   
@@ -74,28 +71,28 @@ ms.locfileid: "37279639"
  **복제본 제거**  
  선택한 보조 복제본을 가용성 그룹에서 제거하려면 클릭합니다.  
   
-##  <a name="EndpointsTab"></a> 끝점 탭  
- **끝점** 탭에는 가용성 복제본을 호스팅할 각 서버 인스턴스에 대한 기존 데이터베이스 미러링 끝점의 실제 값(있는 경우)이나 Windows 인증을 사용할 잠재적인 새 끝점의 제안된 값이 표시됩니다. 끝점 값 표에는 기존 끝점과 잠재적인 끝점 모두에 대한 다음 정보가 표시됩니다.  
+##  <a name="EndpointsTab"></a> 엔드포인트 탭  
+ **엔드포인트** 탭에는 가용성 복제본을 호스팅할 각 서버 인스턴스에 대한 기존 데이터베이스 미러링 엔드포인트의 실제 값(있는 경우)이나 Windows 인증을 사용할 잠재적인 새 엔드포인트의 제안된 값이 표시됩니다. 엔드포인트 값 표에는 기존 엔드포인트와 잠재적인 엔드포인트 모두에 대한 다음 정보가 표시됩니다.  
   
  **서버 이름**  
  가용성 복제본을 호스팅할 서버 인스턴스의 이름을 표시합니다.  
   
- **끝점 URL**  
- 데이터베이스 미러링 끝점의 실제 또는 제안된 URL을 표시합니다. 제안된 새 끝점의 경우 이 값을 변경할 수 있습니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ **엔드포인트 URL**  
+ 데이터베이스 미러링 엔드포인트의 실제 또는 제안된 URL을 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **포트 번호**  
- 끝점의 실제 또는 제안된 포트 번호를 표시합니다. 제안된 새 끝점의 경우 이 값을 변경할 수 있습니다.  
+ 엔드포인트의 실제 또는 제안된 포트 번호를 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다.  
   
- **끝점 이름**  
- 끝점의 실제 또는 제안된 이름을 표시합니다. 제안된 새 끝점의 경우 이 값을 변경할 수 있습니다.  
+ **엔드포인트 이름**  
+ 엔드포인트의 실제 또는 제안된 이름을 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다.  
   
  **데이터 암호화**  
- 이 끝점을 통해 보내는 데이터가 암호화되는지 여부를 나타냅니다. 제안된 새 끝점의 경우 이 설정을 변경할 수 있습니다.  
+ 이 엔드포인트를 통해 보내는 데이터가 암호화되는지 여부를 나타냅니다. 제안된 새 엔드포인트의 경우 이 설정을 변경할 수 있습니다.  
   
  **SQL Server 서비스 계정**  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 사용자 이름입니다.  
   
- 서버 인스턴스에서 Windows 인증을 사용하는 끝점을 사용하려면 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정이어야 합니다.  
+ 서버 인스턴스에서 Windows 인증을 사용하는 엔드포인트를 사용하려면 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정이어야 합니다.  
   
  이 요구 사항에 따라 다음과 같이 이후 구성 단계가 결정됩니다.  
   
@@ -105,9 +102,9 @@ ms.locfileid: "37279639"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 도메인 계정으로 변경합니다. 자세한 내용은 [SQL Server의 서비스 시작 계정 변경&#40;SQL Server 구성 관리자&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md)을 참조하세요.  
   
-    -   인증서를 사용하는 데이터베이스 미러링 끝점을 수동으로 만들려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용합니다. 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql) 또는 [AlwaysOn 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)를 참조하세요.  
+    -   인증서를 사용하는 데이터베이스 미러링 엔드포인트를 수동으로 만들려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용합니다. 자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-endpoint-transact-sql) 또는 [AlwaysOn 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](database-mirroring-always-on-availability-groups-powershell.md)를 참조하세요.  
   
-     끝점을 구성하는 동안 **가용성 복제본 지정** 페이지를 열어 둔 경우 **끝점** 탭으로 돌아와서 **새로 고침** 을 클릭하여 **끝점 값** 표를 업데이트합니다.  
+     엔드포인트를 구성하는 동안 **가용성 복제본 지정** 페이지를 열어 둔 경우 **엔드포인트** 탭으로 돌아와서 **새로 고침** 을 클릭하여 **엔드포인트 값** 표를 업데이트합니다.  
   
 ##  <a name="BackupPreferencesTab"></a> 백업 기본 설정 탭  
  백업이 수행되는 위치를 지정하려면 다음 옵션 중 하나를 선택합니다.  
@@ -205,7 +202,7 @@ ms.locfileid: "37279639"
   
 -   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   

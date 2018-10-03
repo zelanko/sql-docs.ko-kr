@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.f1
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 438d8da5512394241656d6c03185192cc6161eac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 780cb5cfc35f67ba53b9c0e48c410fa1720847d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154253"
 ---
 # <a name="select-script-component-type"></a>스크립트 구성 요소 유형 선택
   **스크립트 구성 요소 유형 선택** 대화 상자를 사용하여 원본, 변환 또는 대상으로 사용하도록 미리 구성된 스크립트 변환 생성 여부를 지정할 수 있습니다.  
   
- 스크립트 구성 요소에 대한 자세한 내용은 [Script Component](data-flow/transformations/script-component.md) 및 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하십시오. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+ 스크립트 구성 요소에 대한 자세한 내용은 [Script Component](data-flow/transformations/script-component.md) 및 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하십시오. 스크립트 구성 요소 프로그래밍 방법은 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
 ## <a name="options"></a>변수  
  **원본**, **대상**또는 **변환** 에서 선택한 내용에 따라 스크립트 변환 편집기의 페이지와 스크립트 변환 구성이 달라집니다.  

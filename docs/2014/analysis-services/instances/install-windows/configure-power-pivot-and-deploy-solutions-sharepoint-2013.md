@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104803"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configure PowerPivot and Deploy Solutions (SharePoint 2013)
   이 항목의 PowerPivot 기능에 대 한 중간 계층 향상의 구성과 배포에 설명 합니다 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] PowerPivot 갤러리를 포함 하 여 데이터 새로 고침, 관리 대시보드 및 데이터 공급자를 예약 합니다. **SharePoint 2013용 PowerPivot 구성** 도구를 실행하여 다음을 수행합니다.  
@@ -43,7 +40,7 @@ ms.locfileid: "37312673"
 ##  <a name="bkmk_run_configuration_tool"></a> SharePoint 2013 구성에 대 한 PowerPivot을 실행 합니다.  
  **참고:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 마법사는 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]에 대한 두 가지 구성 도구를 설치합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
   
-|속성|Description|  
+|이름|Description|  
 |----------|-----------------|  
 |SharePoint 2013용 PowerPivot 구성|SharePoint 2013|  
 |PowerPivot 구성 도구|SharePoint 2010 SP1(서비스 팩 1)|  

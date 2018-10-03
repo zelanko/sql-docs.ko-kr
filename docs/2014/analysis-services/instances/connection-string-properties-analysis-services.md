@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cca12397250ad12e4f892d00271b9afdbb81ca2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d79370893dc2d3bfef06890baf5ffd88f0da53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171263"
 ---
 # <a name="connection-string-properties-analysis-services"></a>연결 문자열 속성(Analysis Services) 
   이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 응용 프로그램에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
@@ -73,7 +70,7 @@ ms.locfileid: "37319473"
 |`Integrated Security`|호출자의 Windows ID는 Analysis Services에 연결하는 데 사용됩니다. 유효한 값은 공백, SSPI 및 BASIC입니다.<br /><br /> `Integrated Security`=`SSPI` NTLM, Kerberos 또는 익명 인증을 허용 하는 TCP 연결에 대 한 기본값입니다. 공백은 HTTP 연결에 대한 기본값입니다.<br /><br /> 사용 하는 경우 `SSPI`, `ProtectionLevel` 중 하나를 설정 해야 합니다: `Connect`를 `PktIntegrity`, `PktPrivacy`합니다.|  
 |`Persist Encrypted`|클라이언트 응용 프로그램에서 데이터 원본 개체에 암호화된 형태로 암호와 같은 중요한 인증 정보를 유지해야 하는 경우 이 속성을 설정합니다.  기본적으로 인증 정보는 유지되지 않습니다.|  
 |`Persist Security Info`|유효한 값은 True 및 False입니다. True로 설정되면 연결이 설정된 후 연결 문자열에서 이전에 지정된 사용자 ID 또는 암호와 같은 보안 정보를 연결에서 가져올 수 있습니다. 기본값은 False입니다.|  
-|`ProtectionLevel`|연결에서 사용되는 보안 수준을 결정합니다.  유효한 값은<br /><br /> `None`을 참조하세요. 인증되지 않은 연결이나 익명 연결입니다.  서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다. <br /><br /> `Connect`을 참조하세요. 인증된 연결입니다.  클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br /><br /> `PktIntegrity`을 참조하세요. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다. <br /><br /> `PktPrivacy`을 참조하세요. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> <br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)를 참조하세요.|  
+|`ProtectionLevel`|연결에서 사용되는 보안 수준을 결정합니다.  유효한 값은<br /><br /> `None` 을 참조하세요. 인증되지 않은 연결이나 익명 연결입니다.  서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다. <br /><br /> `Connect` 을 참조하세요. 인증된 연결입니다.  클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br /><br /> `PktIntegrity` 을 참조하세요. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다. <br /><br /> `PktPrivacy` 을 참조하세요. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> <br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)를 참조하세요.|  
 |`Roles`|해당 역할이 제공하는 사용 권한을 사용하여 서버 또는 데이터베이스에 연결할 미리 정의된 역할의 쉼표로 구분된 목록을 지정합니다. 이 속성을 생략하면 모든 역할이 사용되고 유효 사용 권한은 모든 역할의 조합이 됩니다. 이 속성을 빈 값으로 설정하면(예: Roles=’ ‘) 클라이언트 연결에 역할 멤버 자격이 없습니다.<br /><br /> 이 속성을 사용하는 관리자는 역할이 제공하는 사용 권한을 사용하여 연결됩니다.  일부 명령은 역할이 충분한 사용 권한을 제공하지 않는 경우 실패할 수도 있습니다. |  
 |`SSPI`|`Integrated Security`가 `SSPI`로 설정된 경우 클라이언트 인증에 사용할 보안 패키지를 명시적으로 지정합니다.  SSPI는 여러 패키지를 지원하지만 이 속성을 사용하여 특정 패키지를 지정할 수 있습니다. 유효한 값은 Negotiate, Kerberos, NTLM 및 Anonymous User입니다. 이 속성이 설정되지 않으면 모든 패키지를 연결에 사용할 수 있습니다.|  
 |`Use Encryption for Data`|데이터 전송을 암호화합니다.  유효한 값은 True 및 False입니다.|  

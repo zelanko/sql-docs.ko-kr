@@ -4,34 +4,31 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d015d40052b781babc865a099726d1cddd4688
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 47e545cf1b1f99859330f0f0ffbbc72aa3f9393c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826901"
 ---
-# <a name="readystate-property-example-vbscript"></a>ReadyState 속성 (VBScript) 예제
+# <a name="readystate-property-example-vbscript"></a>ReadyState 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- 다음 예제에서는 읽는 방법을 보여 줍니다.는 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 의 속성은 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) VBScript 코드의 런타임 개체입니다. **ReadyState** 읽기 전용 속성입니다.  
+ 다음 예제에서는 읽는 방법을 보여 줍니다 합니다 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 의 속성을 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) VBScript 코드에서 런타임 시 개체입니다. **ReadyState** 읽기 전용 속성입니다.  
   
- 이 예제를 테스트 하려면 잘라내어 붙여 사이 다음이 코드는 \<본문 > 및 \</본문 > 일반 HTML 태그를에서 문서화 하 고 이름을 **RDSReadySt.asp**합니다. 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려면 디렉터리에 배치 합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 이 예제를 테스트 하려면에서 잘라내기 및 붙여넣기 사이 다음이 코드를 \<본문 > 및 \</b > 일반 HTML 태그를에서 문서화 하 고 이름을 **RDSReadySt.asp**합니다. 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트에서 서버를 식별 합니다.  
   
 ```  
 <!-- BeginReadyStateVBS -->  

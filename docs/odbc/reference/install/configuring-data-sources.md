@@ -1,36 +1,33 @@
 ---
-title: 데이터 소스 구성 | Microsoft Docs
+title: 데이터 원본 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c194752c76ca96ad5c8119ed9fa1919cd9f3ea14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595671"
 ---
-# <a name="configuring-data-sources"></a>데이터 소스 구성
-데이터 원본에 대 한 정보는 시스템 레지스트리에 저장 됩니다. 사용자가 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. 이 ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 하는 관리 프로그램 수 있습니다.  
+# <a name="configuring-data-sources"></a>데이터 원본 구성
+데이터 원본에 대 한 정보를 시스템 레지스트리에 저장 됩니다. 사용자 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 하는 관리 프로그램을 수 있습니다.  
   
- 데이터 소스를 수정 하려면 PowerShell 명령을 사용할 수 있습니다. 이러한 PowerShell 명령에 대 한 자세한 내용은 참조 [Windows 데이터 액세스 구성 요소 PowerShell 명령](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)합니다.  
+ 데이터 원본을 수정 하려면 PowerShell 명령을 사용할 수 있습니다. 다음 PowerShell 명령에 대 한 자세한 내용은 참조 하세요. [Windows 데이터 액세스 구성 요소 PowerShell 명령을](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)합니다.  
   
 > [!NOTE]  
->  이 섹션은 Microsoft Windows® 플랫폼 관련이 있습니다. 다른 플랫폼에서 데이터 소스 구성 된 방법는 플랫폼 마다 다릅니다.  
+>  이 섹션에서는 Microsoft Windows® 플랫폼에 따라 다릅니다. 플랫폼별은 데이터 원본을 다른 플랫폼에서 구성 된 방법입니다.  
   
- 이 섹션에는 다음 항목이 포함 됩니다.  
+ 이 단원의 다음 항목:  
   
 -   [구성 구성 요소](../../../odbc/reference/install/configuration-components.md)

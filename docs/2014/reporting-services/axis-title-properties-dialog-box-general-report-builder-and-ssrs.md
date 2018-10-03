@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10146"
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbb5ad8e5b578cedf0aa9ac99839c4de0932b1df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e20efdcc1d5ca2833896ae583583ed04449b996
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064933"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>축 제목 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **축 제목 속성** 대화 상자의 **일반** 을 선택하여 축 제목을 정의할 수 있습니다. 축 제목은 x 축 아래나 y 축 옆에 표시됩니다.  

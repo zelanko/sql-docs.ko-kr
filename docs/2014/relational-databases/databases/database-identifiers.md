@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Transact-SQL identifiers
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8e78ebf44a325490e937bea070cb4fc4d59178
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1436ad20cf3fc22f8f070f2422904fca79c21595
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133273"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
   데이터베이스 개체 이름을 그 개체의 식별자라고 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 개체에는 식별자가 있습니다. 서버, 데이터베이스 그리고 테이블, 뷰, 열, 인덱스, 트리거, 프로시저, 제약 조건, 규칙 등과 같은 데이터베이스 개체도 식별자를 가질 수 있습니다. 식별자는 대부분의 개체에서 필수 항목이지만 제약 조건과 같은 일부 개체에서는 옵션입니다.  
@@ -61,7 +58,7 @@ WHERE KeyCol = 124
 ```  
   
  구분 식별자  
- 큰따옴표(")나 대괄호([])로 묶여져 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 예를 들어:  
+ 큰따옴표(")나 대괄호([])로 묶여져 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SELECT *  
@@ -69,7 +66,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- 모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 예를 들어:  
+ 모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SELECT *  

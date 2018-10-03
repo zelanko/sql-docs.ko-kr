@@ -7,18 +7,16 @@ manager: craigg
 ms.date: 07/02/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: fbb8364b555d7e0a7a7c083641e8194b8c9094c7
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 169ca2d6afc9d6061af0021d97062d12f19c9854
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596551"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 
@@ -492,7 +490,7 @@ Windows에는 시작 하는 PowerShell 또는 관리자 권한으로 명령 프�
 
 SQL Server 컨테이너를 실행 하지 못하는 경우에 다음 테스트를 시도해 보세요.
 
-- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시 시작 오류: 수신 tcp 0.0.0.0:1433 바인딩: 이미 사용 중인 주소입니다.'** , 컨테이너 포트 1433을 이미 사용 중인 포트를 매핑할 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 둘 다 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 매개 변수를 다른 호스트 포트에 컨테이너 포트 1433을 매핑합니다. 예를 들어: 
+- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시 시작 오류: 수신 tcp 0.0.0.0:1433 바인딩: 이미 사용 중인 주소입니다.'** , 컨테이너 포트 1433을 이미 사용 중인 포트를 매핑할 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 둘 다 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 매개 변수를 다른 호스트 포트에 컨테이너 포트 1433을 매핑합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
