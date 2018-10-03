@@ -4,22 +4,19 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - linked reports [Reporting Services], methods
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a08583b1945c6713d36c4248c520eebed470030b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0ad67f5a187ae8ef314ee29122f3cefb866185b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265095"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620961"
 ---
 # <a name="linked-reports-methods"></a>링크된 보고서 메서드
   다음 메서드를 사용하여 링크된 항목을 만들고 관리할 수 있습니다.  

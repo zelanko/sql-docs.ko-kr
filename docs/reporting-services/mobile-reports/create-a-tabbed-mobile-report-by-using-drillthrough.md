@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74e29fb8dba47af077332536fe719922a22983d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bcc78ff386997d445d4bc23bb452179853565686
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645234"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>드릴스루를 사용하여 탭 모바일 보고서 만들기
 드릴스루 보고서 및 매개 변수를 사용하여 탭으로 구성된 보고서 모양으로 작업되는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서를 만드는 방법에 대해 알아봅니다.

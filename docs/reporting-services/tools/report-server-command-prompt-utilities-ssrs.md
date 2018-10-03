@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - rsconfig utility
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da7d30f725a0e30b4e655d968c3e48804125878b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f9e91b69a5b20238af34877f97330299d8d2f5d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634961"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>보고서 서버 명령 프롬프트 유틸리티(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 서버를 관리하는 데 사용할 수 있는 몇 가지 명령줄 유틸리티가 포함되어 있습니다. 이러한 유틸리티는 보고서 서버를 설치할 때 자동으로 설치됩니다.  

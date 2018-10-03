@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: import-export
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdfbae15fe3a8bad561bcc96e30739ee3ed2b96d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bd8995c954d88a90b5e1c5cd8802f69d96b33186
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627291"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp를 사용하여 필드 길이 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +66,7 @@ ms.locfileid: "43072353"
 |**nvarchar**|열에 정의된 길이의 2배|  
 |**텍스트**|0|  
 |**ntext**|0|  
-|**bit**|@shouldalert|  
+|**bit**|1|  
 |**binary**|열에 정의된 길이의 2배에 1을 더한 값|  
 |**varbinary**|열에 정의된 길이의 2배에 1을 더한 값|  
 |**image**|0|  
@@ -104,7 +100,7 @@ ms.locfileid: "43072353"
   
 |데이터 형식|기본 길이(문자)|  
 |---------------|-----------------------------------|  
-|**bit**|@shouldalert|  
+|**bit**|1|  
 |**binary**|열에 정의된 길이|  
 |**varbinary**|열에 정의된 길이|  
 |**image**|0|  
@@ -115,7 +111,7 @@ ms.locfileid: "43072353"
 |**int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
-|**tinyint**|@shouldalert|  
+|**tinyint**|1|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  

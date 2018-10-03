@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE SERVICE MASTER KEY
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - RESTORE SERVICE MASTER KEY statement
 - transferring Service Master Keys
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9c35003000ff9455181548c9a4035ccb50edea8a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 5353a53c8a7082d4f23c62fa48bc03bcbd27e0b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607901"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  암호화 계층을 다시 생성하는 작업에는 리소스가 많이 소비됩니다. 이 작업은 사용량이 적은 기간 동안에 실행하도록 예약해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

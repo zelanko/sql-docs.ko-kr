@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], database projects
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], about projects
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8781d1c91f03800cf59a87a4458903d0a92c8aff
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 887e5e7bf5dde482055941680c8151fa971254f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637871"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

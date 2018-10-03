@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 6bbf9e0fa3d3c2a8cc900e0bd48163dc11eba3ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619381"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
   문자표 변환은 소문자에서 대문자로의 변환과 같은 문자열 함수를 문자 데이터에 적용합니다. 이 변환은 문자열 데이터 형식의 열 데이터에서만 실행됩니다.  
@@ -90,7 +87,7 @@ ms.locfileid: "35403235"
 ## <a name="character-map-transformation-editor"></a>문자표 변환 편집기
   **문자표 변환 편집기** 대화 상자를 사용하여 열 데이터에 적용할 문자열 함수를 선택하고 매핑이 내부 변경인지, 아니면 새 열로 추가되었는지를 지정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 입력 열**  
  확인란을 사용하여 문자열 함수로 변환할 열을 선택할 수 있습니다. 아래 테이블에 선택 내용이 나타납니다.  
   

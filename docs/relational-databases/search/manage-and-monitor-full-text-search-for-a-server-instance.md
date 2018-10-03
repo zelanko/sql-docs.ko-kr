@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac604a4ba47413aead7a6cf2e67f896b5cd0f745
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3f83639c130910c8e6e23f489c2de114af34f9e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623541"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

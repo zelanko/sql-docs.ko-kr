@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cfc17d7989ea3f65f7800a83d809c08042bd8bfc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 918c5da975c6b9e2d47134391f14f7314cdca93b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611611"
 ---
 # <a name="report-builder-functions---countrows-function"></a>보고서 작성기 함수 - CountRows 함수
   Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.  

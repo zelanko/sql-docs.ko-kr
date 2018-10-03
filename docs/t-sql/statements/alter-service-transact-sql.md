@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVICE
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ALTER SERVICE statement
 - services [Service Broker], modifying
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b20e57ce59d30ae0eb4c507dd34427e32a52b740
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 40d8904952530525ccebb7f97dd6deba00ff9071
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628937"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ ALTER SERVICE service_name
   
  서비스에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  서비스 변경 권한은 기본적으로 서비스 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

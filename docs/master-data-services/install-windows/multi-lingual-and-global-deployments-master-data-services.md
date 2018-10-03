@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12e796619f7ab5674f5f94b34ea15d4e2aefe595
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 775f3788946767b0a46ab4efd490cf2670d7ff76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612311"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>다국어 및 글로벌 배포(Master Data Services)
 

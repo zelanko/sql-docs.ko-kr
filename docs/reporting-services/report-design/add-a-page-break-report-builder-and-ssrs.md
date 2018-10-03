@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80453ceb280e7f4a1d01f51f0bc62a54fb7355eb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a7a62c9e9188fbd67c34d5ecaf1a5da77d9faecc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266955"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638231"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>페이지 나누기 추가(보고서 작성기 및 SSRS)
   사각형, 데이터 영역 또는 데이터 영역 내의 그룹에 페이지 나누기를 추가하여 각 페이지의 정보 양을 제어할 수 있습니다. 페이지 나누기를 추가하면 보고서를 볼 때 각 페이지에 있는 항목만 처리하면 되기 때문에 게시된 보고서의 성능이 향상될 수 있습니다. 전체 보고서가 단일 페이지로 이뤄진 경우에는 모든 항목이 처리된 후에 보고서를 볼 수 있습니다.  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EVENT_NOTIFICATION_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ec76374712bfc1b0d32c2044c766382539d58591
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629151"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +117,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  이벤트 알림 보내기 실패는 모두 기록됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스(ON DATABASE)에 한정되는 이벤트 알림을 생성하려면 현재 데이터베이스에 대해 CREATE DATABASE DDL EVENT NOTIFICATION 권한이 필요합니다.  
   
  DDL 문에서 서버(ON SERVER)에 한정되는 이벤트 알림을 생성하려면 해당 서버에 대해 CREATE DDL EVENT NOTIFICATION 권한이 필요합니다.  

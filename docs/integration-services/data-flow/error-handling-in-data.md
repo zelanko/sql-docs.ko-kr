@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configureerroroutput.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805cb6c613375f0aee126a264f8894b9c09d92a6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: cb3e092e9ea185be0de966c73a5005072b8a70c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612212"
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
   데이터 흐름 구성 요소가 열 데이터에 변환을 적용하거나, 원본에서 데이터를 추출하거나, 데이터를 대상으로 로드할 때 오류가 발생할 수 있습니다. 오류는 주로 예기치 않은 데이터 값으로 인해 발생합니다. 예를 들어 열에 숫자 대신 문자열이 포함되었기 때문에 데이터 변환이 실패하거나, 열의 데이터 형식은 숫자인데 데이터가 날짜여서 데이터베이스 열에 대한 삽입 작업이 실패하거나, 열 값이 0이어서 식 계산이 실패하고 잘못된 수치 연산이 발생할 수 있습니다.  
@@ -62,7 +59,7 @@ ms.locfileid: "35401415"
   
  오류 출력 작업 방법에 대한 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **입력 또는 출력**  
  출력의 이름을 확인합니다.  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13ec9c1cea7a47853b45cb5f60f9161c75a0f0e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3534d1772fcc13ebcd420bc845b004bf20b1d446
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629862"
 ---
 # <a name="openxml-sql-server"></a>OPENXML(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +139,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  다음 표에서는 Edge 테이블의 구조에 대해 설명합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|문서 노드의 고유 ID입니다.<br /><br /> 루트 요소의 ID 값은 0입니다. 음수 ID 값은 예약된 값입니다.|  
 |**parentid**|**bigint**|노드의 부모를 나타냅니다. 이 ID로 식별된 부모는 부모 요소가 아닐 수도 있습니다. 하지만 부모 요소인지 여부는 부모가 이 ID에 의해 식별되는 노드의 NodeType에 따라 달라집니다. 예를 들어 노드가 텍스트 노드인 경우 해당 부모는 특성 노드일 수 있습니다.<br /><br /> 노드가 XML 문서의 최상위 수준에 있으면 해당 **ParentID** 는 NULL입니다.|  

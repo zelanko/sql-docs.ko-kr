@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecation [SQL Server], events announced stage
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae7922a177db5f0de69b467822b17dfb85730a0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 236bf28f9455ed2a9bf3a84aad4fa0ce71b7c52f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624881"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43101115"
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |SqlHandle|**image**|SQL 일괄 처리나 저장 프로시저를 식별하는 데 사용할 수 있는 이진 핸들입니다.|63|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다.|@shouldalert|사용자 계정 컨트롤|  
+|TextData|**ntext**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다.|1|사용자 계정 컨트롤|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|사용자 계정 컨트롤|  
 |XactSequence|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|사용자 계정 컨트롤|  
   

@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d1e169e625d466acf6aef9e06b74c8fb3645f8f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 7500d510e08aae85b89d7ad83f97a85ed51cd88a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619401"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
   CDC 분할자는 CDC 원본 데이터 흐름의 단일 변경 행 흐름을 삽입, 업데이트 및 삭제 작업을 위한 여러 데이터 흐름으로 분할합니다. 데이터 흐름은 필요한 열인 `__$operation` 과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블의 해당 표준 값을 기반으로 분할됩니다.  

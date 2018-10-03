@@ -5,26 +5,23 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing primary keys
 - deleting primary keys
 - primary keys [SQL Server], deleting
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50618dcb951f01dc60a2e85ddb9d8bc6d647909c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 87c1456360542797ed5fe80029236663f11c1aa1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644831"
 ---
 # <a name="delete-primary-keys"></a>기본 키 삭제
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ ms.locfileid: "43102852"
     > [!NOTE]  
     >  이 동작을 실행 취소하려면 변경 내용을 저장하지 않은 상태로 테이블을 닫습니다. 기본 키 삭제 작업을 취소하면 테이블에 대한 다른 모든 변경 내용이 손실됩니다.  
   
-3.  **파일** 메뉴에서 *****테이블 이름 저장*을 클릭합니다.  
+3.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

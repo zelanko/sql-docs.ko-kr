@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - management endpoints [Reporting Services]
 - Web service [Reporting Services], endpoints
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c7c0362271c57f9e69a3b2d628d95b1ec629a07
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a57110500cc51bda0ddaea459d69af7a127ec67c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605971"
 ---
 # <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 엔드포인트
   보고서 서버 웹 서비스는 보고서 서버 관리 및 보고서의 실행과 탐색을 위한 엔드포인트를 다수 제공합니다.  

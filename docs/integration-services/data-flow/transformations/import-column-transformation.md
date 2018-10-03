@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.importcolumntrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba2cd41fecf7b646313d2c619b1dd2a3e276c0f9
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: db6164b8f8c90e4b7ec97f134dcdb41da4d2e240
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611341"
 ---
 # <a name="import-column-transformation"></a>열 가져오기 변환
   열 가져오기 변환은 파일에서 데이터를 읽어 데이터 흐름의 열에 추가합니다. 이 변환을 사용하면 패키지가 별도의 파일에 저장된 텍스트와 이미지를 데이터 흐름에 추가할 수 있습니다. 예를 들어 제품 정보를 저장하는 테이블에 데이터를 로드하는 데이터 흐름은 파일에서 각 제품에 대한 고객 평가를 가져와서 데이터 흐름에 추가하는 열 가져오기 변환을 포함할 수 있습니다.  

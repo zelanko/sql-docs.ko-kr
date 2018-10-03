@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd1ef1ee5c1d2d322beb41dc60439036d490c62f
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 40bca8db984a0f1c4b84dd6ba01f78c5be915b32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36903786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623841"
 ---
 # <a name="filetable-schema"></a>FileTable 스키마
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64c32d1497a0bc54f6d3d72779ca65f1b5fa05d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c908154b21c1adca88b959d0a1d1243a0465ea02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951958"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609961"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +33,13 @@ ms.locfileid: "32951958"
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 개체에 대해 설명합니다.  
   
-|SQL Server User Settable 카운터|Description|  
+|SQL Server User Settable 카운터|설명|  
 |---------------------------------------|-----------------|  
 |**쿼리**|**User Settable** 개체는 쿼리 카운터를 포함합니다. 사용자는 쿼리 개체에서 **사용자 카운터** 를 구성합니다.|  
   
  이 표에서는 **Query** 카운터의 **인스턴스** 에 대해 설명합니다.  
   
-|쿼리 카운터 인스턴스|Description|  
+|쿼리 카운터 인스턴스|설명|  
 |-----------------------------|-----------------|  
 |**사용자 카운터 1**|**sp_user_counter1**을 사용하여 정의합니다.|  
 |**사용자 카운터 2**|**sp_user_counter2**를 사용하여 정의합니다.|  
@@ -73,7 +69,7 @@ GO
 > [!IMPORTANT]  
 >  사용자 카운터 저장 프로시저에서 정의한 쿼리는 가능한 한 단순한 것이 좋습니다. I/O를 많이 사용하는 실제 배열, 해시 작업 또는 쿼리를 실행하는 메모리 집중형 쿼리는 실행하는 데 비용이 많이 들며 성능에도 영향을 미칩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **sp_user_counter** 는 모든 사용자에 대해 사용할 수 있지만 쿼리 카운터로 제한될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62965b040ac718e91d84162123f4b25c9624a097
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d27410db5472917cda8460331dc1756db5b3782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619491"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>취소 옵션(Distributed Replay Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ dreplay cancel [-m controller] [-q]
 dreplay cancel –m localhost -q  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  관리 도구는 로컬 사용자 또는 도메인 사용자 등의 대화형 사용자 계정으로 실행해야 합니다. 로컬 사용자 계정을 사용하려면 관리 도구와 컨트롤러가 동일한 컴퓨터에서 실행되고 있어야 합니다.  
   
  자세한 내용은 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)을 참조하세요.  

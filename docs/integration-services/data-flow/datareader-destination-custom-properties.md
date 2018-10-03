@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40eac0ed658d7a09c0f570fd157432c137101340
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 67de6f79ceac48dc6e81ef9b61674fd65bd24bed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637001"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 대상 사용자 지정 속성
   DataReader 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

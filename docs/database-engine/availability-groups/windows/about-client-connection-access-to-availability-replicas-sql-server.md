@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a96778c40315871052aeb8d1ba2f5369c2c14ef
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 422ece01b8c0003fe51f685463956e143668c028
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642191"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,8 +98,8 @@ ms.locfileid: "34769309"
   
 |복제본|커밋 모드|초기 역할|보조 역할에 대한 연결 액세스|주 역할에 대한 연결 액세스|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|동기|주|InclusionThresholdSetting|읽기/쓰기|  
-|Replica2|동기|보조|InclusionThresholdSetting|읽기/쓰기|  
+|Replica1|동기|주|없음|읽기/쓰기|  
+|Replica2|동기|보조|없음|읽기/쓰기|  
 |Replica3|비동기|보조|읽기 전용만|읽기/쓰기|  
 |Replica4|비동기|보조|읽기 전용만|읽기/쓰기|  
   

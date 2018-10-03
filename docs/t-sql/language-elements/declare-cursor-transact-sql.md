@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECLARE_CURSOR_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82a1ce7e2b416ed0b31b6612d580e95ac7d7500e
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 3119038bac239e20ed903ef198674a74f9818eac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609191"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -169,7 +166,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  변수는 커서를 선언하는 *select_statement*의 일부로 사용될 수 있습니다. 커서가 선언된 후에는 커서 변수 값이 변경되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  DECLARE CURSOR 권한은 커서에 사용된 뷰, 테이블, 열에 대한 SELECT 권한이 있는 모든 사용자에게 기본적으로 부여됩니다.
  
 ## <a name="limitations-and-restrictions"></a>제한 사항

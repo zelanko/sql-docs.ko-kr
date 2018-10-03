@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607341"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
@@ -141,7 +138,7 @@ ms.locfileid: "35331197"
 >   
 >  집계 변환에서 **키** 및 **키 배율** 은 **Group by** 연산의 결과로 반환될 그룹 수를 나타냅니다. **고유 키 수** 및 **고유 수 배율** 은 **고유 카운트** 연산의 결과로 반환될 고유 값 수를 나타냅니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **고급/기본**  
  여러 개의 출력에 대한 여러 집계를 구성하는 옵션을 표시하거나 숨깁니다. 기본적으로 고급 옵션은 숨겨져 있습니다.  
   
@@ -210,7 +207,7 @@ ms.locfileid: "35331197"
 >   
 >  집계 변환에서 **키** 및 **키 배율** 은 **Group by** 연산의 결과로 반환될 그룹 수를 나타냅니다. **고유 키 수** 및 **고유 수 배율** 은 **고유 카운트** 연산의 결과로 반환될 고유 값 수를 나타냅니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **키 배율**  
  필요에 따라 집계에 필요한 키 수를 대략적으로 지정합니다. 변환 시 이 정보를 사용하여 최초 캐시 크기를 최적화합니다. 이 옵션의 기본값은 **Unspecified**입니다. **키 배율** 과 **키 수** 를 모두 지정하면 **키 수** 가 우선 적용됩니다.  
   

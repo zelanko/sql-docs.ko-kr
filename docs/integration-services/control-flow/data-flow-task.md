@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataflowtask.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b241a695b63bd7de59e490bb67686d7e53e3f625
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 073b16502e725c36b64427514be04074439070bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633631"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
   데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하며, 이를 통해 사용자는 데이터 이동 시 데이터를 변환, 정리 및 수정할 수 있습니다. 데이터 흐름 태스크를 패키지에 추가하면 패키지에서 데이터를 추출, 변환 및 로드할 수 있습니다.  

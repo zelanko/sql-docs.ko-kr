@@ -6,20 +6,17 @@ ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2949f0aabaf4f59d6d2fc6635991f8eb0a921ca6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 317e38cab16de2cbfc5f3688d5f555123288eb93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624801"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services(SSIS) 규모 확장 작업자
 
@@ -32,7 +29,7 @@ Configuration  |설명  |기본값
 ---------|---------|---------
 DisplayName|규모 확장 작업자의 표시 이름입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|컴퓨터 이름         
 설명|규모 확장 작업자에 대한 설명입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|비어 있음         
-MasterEndpoint|규모 확장 마스터에 연결하는 끝점입니다.|규모 확장 작업자 설치 중에 설정된 끝점         
+MasterEndpoint|규모 확장 마스터에 연결하는 엔드포인트입니다.|규모 확장 작업자 설치 중에 설정된 엔드포인트         
 MasterHttpsCertThumbprint|규모 확장 마스터를 인증하는 데 사용되는 클라이언트 SSL 인증서의 지문입니다.|규모 확장 작업자 설치 중에 지정된 클라이언트 인증서의 지문          
 WorkerHttpsCertThumbprint|규모 확장 작업자를 인증하는 데 사용되는 규모 확장 마스터에 대한 인증서의 지문입니다.|규모 확장 작업자 설치 중에 자동으로 생성되고 설치되는 인증서의 지문          
 StoreLocation|작업자 인증서의 저장소 위치입니다.|LocalMachine       

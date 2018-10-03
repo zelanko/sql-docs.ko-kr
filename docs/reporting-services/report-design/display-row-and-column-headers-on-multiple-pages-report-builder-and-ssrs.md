@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d06b7f345cf026e6588ba66be0b261cc7f65e94
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f420f92cf6dd2099244a1f2bd782ee9b72e2aebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608731"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
   여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역(테이블, 매트릭스 또는 목록)에 대해 페이지를 매긴 보고서의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다.
