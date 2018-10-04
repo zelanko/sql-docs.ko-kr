@@ -17,15 +17,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "48039129"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 추가 된 *느린 쿼리 5* 데이터베이스 대시보드 위젯의 샘플
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: *5개의 가장 느린 쿼리* 샘플 위젯을 데이터베이스 대시보드에 추가하기
 
-이 자습서 중 하나를 추가 하는 과정을 보여 줍니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기본 제공 샘플 widget을 합니다 *데이터베이스 대시보드* 신속 하 게 데이터베이스의 가장 느린 쿼리 5를 보려면. 알아볼도 느린 쿼리의 세부 정보를 보는 방법 및 사용 하 여 쿼리 계획 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능입니다. 이 자습서에 대해 알아봅니다 방법:
+이 자습서는 데이터베이스의 가장 느린 5개 쿼리를 빠르게 보기 위해 *데이터베이스 대시보드*에 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 기본 제공되는 샘플 widget 중 하나를 추가하는 과정을 보여줍니다. 또한 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능을 사용해서느린 쿼리의 세부 정보와과 쿼리 계획을 보는 방법을 배웁니다. 이 자습에서 배울 내용:
 
 > [!div class="checklist"]
-> * 데이터베이스에서 쿼리 저장소를 사용 하도록 설정
-> * 데이터베이스 대시보드 미리 작성된 된 정보 위젯을 추가합니다
-> * 데이터베이스의 가장 느린 쿼리에 대 한 세부 정보 보기
-> * 느린 쿼리에 대 한 쿼리 실행 계획 보기
+> * 데이터베이스에서 쿼리 저장소를 사용하도록 설정
+> * 데이터베이스 대시보드에 미리 작성된 insight 위젯을 추가
+> * 데이터베이스의 가장 느린 쿼리에 대한 세부 정보 보기
+> * 느린 쿼리에 대한 쿼리 실행 계획 보기
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 몇 가지 정보 위젯-의-기본을 포함합니다. 이 자습서에서는 추가 하는 방법을 보여 줍니다.는 *쿼리-데이터-저장소-db-insight* 위젯에서 있지만 단계는 기본적으로 모든 위젯 추가 대해 동일 합니다.
 
