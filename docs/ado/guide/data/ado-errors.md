@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adae5d5247a3d0966ad5685eacc1a6cdebdc5437
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776371"
 ---
-# <a name="ado-run-time-errors"></a>ADO 런타임 오류
-ADO 오류를 프로그램 실행 시간 오류로 보고 됩니다. 트래핑 하 고 처리 하는 프로그래밍 언어의 오류 트래핑 메커니즘을 사용할 수 있습니다. 예를 들어 Visual Basic에서 사용 하 여는 **On Error** 문. Visual c + +에서 ADO 라이브러리에 액세스 하는 데 사용 하는 방법에 따라 다릅니다. #Import를 사용 하 여 한 **try / catch** 블록입니다. C + + 프로그래머를 명시적으로 호출 하 여 오류 개체를 검색 해야 하는 그렇지 않은 경우 **GetErrorInfo**합니다. 다음 Visual Basic sub 프로시저는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.
+# <a name="ado-run-time-errors"></a>ADO에서 런타임 오류
+ADO 오류는 런타임 오류로 프로그램에 보고 됩니다. 트래핑 하 고 처리할 프로그래밍 언어의 오류 트래핑 메커니즘을 사용할 수 있습니다. 예를 들어, Visual Basic의 경우를 사용 합니다 **오류 발생 시** 문입니다. Visual c + +에서 ADO 라이브러리에 액세스 하는 방법에 따라 다릅니다. #Import, 사용 된 **try / catch** 블록. C + + 프로그래머를 명시적으로 호출 하 여 오류 개체를 검색 해야 하는 고, 그렇지 **GetErrorInfo**합니다. 다음 Visual Basic sub 프로시저는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.
 
 ```
 ' BeginErrorHandlingVB01
@@ -82,7 +79,7 @@ End Sub
 ' EndErrorHandlingVB01
 ```
 
- 이 **Form_Load** 이벤트 프로시저 동일한 열려고 시도 하 여 오류를 의도적으로 만듭니다 **연결** 두 번 개체입니다. 두 번째는 **열려** 메서드가 호출 되 면 오류 처리기가 활성화 됩니다. 형식의 오류는이 경우 **adErrObjectOpen**프로그램 실행을 다시 시작 하기 전에 다음과 같은 메시지를 표시 하는 오류 처리기,:
+ 이렇게 **Form_Load** 이벤트 프로시저를 열어 동일한 오류를 의도적으로 만듭니다 **연결** 개체를 두 번입니다. 두 번째는 **열려** 메서드가 호출 되 면 오류 처리기가 활성화 됩니다. 형식의 오류는이 예제의 **adErrObjectOpen**이므로 프로그램 실행을 다시 시작 하기 전에 오류 처리기에 다음 메시지가 표시 됩니다.
 
 ```
 Error #3705: Operation is not allowed when the object is open.
@@ -90,15 +87,15 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- 오류 메시지에는 각 Visual Basic에서 제공 하는 정보의 포함 **Err** 을 제외 하 고 개체는 **LastDLLError** 값으로, 여기에 적용 되지 않습니다. 오류 번호 어떤 오류가 발생 했는지를 알려 줍니다. 설명은를 원하지 않는 오류를 처리 하는 경우에 유용 합니다. 사용자를 따라를 전달 하면 있습니다. 하지만 응용 프로그램에 대 한 사용자 지정 된 메시지를 사용 하려는 일반적으로 모든 오류; 예측할 수는 없습니다. 설명을 무엇이 잘못 되었는지에 대 한 단서를 제공 합니다. 샘플 코드에서 오류에 의해 보고 되었으므로 **연결** 개체입니다. 개체의 형식 또는 프로그래밍 ID 여기 나타납니다-변수 이름이 아닙니다.
+ Visual Basic에서 제공 하는 정보를 포함 하는 오류 메시지 **Err** 제외 하 고 개체를 **LastDLLError** 값으로, 여기에 적용 되지 않습니다. 오류 번호는 오류 발생을 알려 줍니다. 에 대 한 설명에는 원하지 않는 오류를 직접 처리 하는 경우에 유용 합니다. 전달할 수 있습니다 단순히를 따라 사용자에 게 합니다. 모든 오류를 예상할 수 있지만 응용 프로그램에 대 한 사용자 지정 된 메시지를 사용 하려는 일반적으로 설명을은 무엇이 잘못 되었는지에 대 한 단서를 제공 합니다. 샘플 코드에서는 오류를 보고 합니다 **연결** 개체입니다. 개체의 형식 또는 여기에 ID를 프로그래밍 방식으로 표시 됩니다-변수 이름이 아닙니다.
 
 > [!NOTE]
->  Visual Basic **Err** 개체는 가장 최근의 오류에 대 한 정보만 포함 합니다. ADO **오류** 의 컬렉션은 **연결** 개체 하나에 포함 되어 **오류** 가장 최근의 ADO 작업에 의해 발생 하는 각 오류에 대 한 개체입니다. 사용 하 여는 **오류** 컬렉션 보다는 **Err** 여러 오류를 처리 하는 개체입니다. 에 대 한 자세한 내용은 **오류** 컬렉션 참조 [공급자 오류 정보](../../../ado/guide/data/provider-errors.md)합니다. 그러나 더 유효한 경우 **연결** 개체는 **Err** 개체는 ADO 오류에 대 한 정보에 대 한 유일한 원본입니다.
+>  Visual Basic **Err** 개체는 가장 최근의 오류에 대 한 정보만 포함 합니다. ADO **오류** 의 컬렉션을 **연결** 개체 하나가 포함 되어 있습니다 **오류** 최근 ADO 작업에서 발생 하는 각 오류에 대 한 개체입니다. 사용 된 **오류** 컬렉션 대신 **Err** 여러 오류를 처리 하는 개체입니다. 에 대 한 자세한 내용은 합니다 **오류** 컬렉션에 참조 [공급자 오류](../../../ado/guide/data/provider-errors.md)합니다. 그러나 없으면 잘못 **연결** 개체를 **Err** 개체는 ADO 오류에 대 한 정보에 대 한 유일한 원본입니다.
 
- 작업의 종류는 ADO 오류가 발생할 가능성이 높은? 일반적인 ADO 오류 개체를 같은 열을 포함할 수는 **연결** 또는 **레코드 집합**, 데이터를 업데이트 하는 동안 또는 공급자가 지원 되지 않는 속성 또는 메서드 호출 합니다.
+ 작업의 종류를 ADO 오류를 일으킬 가능성이? 일반적인 ADO 오류와 같은 개체를 열고 포함할 수는 **연결** 하거나 **레코드 집합**, 데이터를 업데이트 하는 동안 또는 공급자가 지원 되지 않는 속성 또는 메서드 호출 합니다.
 
- OLE DB 오류에서 런타임 오류로 응용 프로그램에 전달할 수도 있습니다는 **오류** 컬렉션입니다.
+ OLE DB 오류 응용 프로그램에서 런타임 오류도 전달할 수도 있습니다는 **오류** 컬렉션입니다.
 
- 다음 항목 ADO 오류에 대 한 자세한 정보를 제공합니다.
+ 다음 항목에서는 ADO 오류에 대 한 자세한 정보를 제공합니다.
 
 -   [ADO 오류 참조](../../../ado/guide/data/ado-error-reference.md)

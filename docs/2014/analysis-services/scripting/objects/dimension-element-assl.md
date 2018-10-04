@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Dimension Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension element
 ms.assetid: 71886014-f463-4b70-a2a2-d9e5053ba4f0
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d6d8b909b6bf7018f70f381ec8d07b20f6b7d851
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70e4cae1e039f1d604492e78dbde392454b42863
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051143"
 ---
 # <a name="dimension-element-assl"></a>Dimension 요소(ASSL)
   차원을 정의합니다.  
@@ -60,7 +57,7 @@ ms.locfileid: "37185246"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  
@@ -78,7 +75,7 @@ ms.locfileid: "37185246"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Dimensions](../collections/dimensions-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>합니다 <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, 및 <xref:Microsoft.AnalysisServices.PerspectiveDimension>합니다.  

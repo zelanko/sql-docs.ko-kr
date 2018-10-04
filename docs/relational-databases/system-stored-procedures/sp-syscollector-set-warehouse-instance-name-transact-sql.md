@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_warehouse_instance_name (Transact SQL) | Microsoft Docs
+title: sp_syscollector_set_warehouse_instance_name (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a41db8df8316720f1a88b090de51e39a5d4d5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258787"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827501"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +42,19 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
 ## <a name="arguments"></a>인수  
  [ @instance_name =] '*instance_name*'  
- 인스턴스 이름입니다. *instance_name* 은 **sysname** 이며 null 인 경우 로컬 인스턴스가 기본값으로 합니다.  
+ 인스턴스 이름입니다. *instance_name* 됩니다 **sysname** 이며 null 인 경우 로컬 인스턴스가 기본값으로 합니다.  
   
-> **참고:***instance_name* 컴퓨터 이름과 인스턴스 이름을 형태로 구성 된 정규화 된 인스턴스 이름 이어야 합니다 *computerName* \\ *instanceName*합니다.  
+> **참고:***instance_name* 되는 컴퓨터 이름과 인스턴스 이름 형식으로 이루어진 정규화 된 인스턴스 이름 이어야 합니다 *computerName* \\ *instanceName*합니다.    
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 데이터 수집기 차원의 구성을 변경하기 전에 데이터 수집기를 해제해야 합니다. 데이터 수집기를 사용하는 경우 이 프로시저가 실패합니다.  
   
- 현재 인스턴스 이름을 보려면 쿼리는 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) 시스템 뷰.  
+ 현재 인스턴스 이름을 쿼리 합니다 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) 시스템 뷰.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -71,7 +67,7 @@ EXEC sp_syscollector_set_warehouse_instance_name N'RemoteSERVER'; -- the default
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_config_store&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
   

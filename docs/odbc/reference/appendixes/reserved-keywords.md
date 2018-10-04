@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b791ea7d4430e4f594079231926c41e02de1ed4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626341"
 ---
 # <a name="reserved-keywords"></a>예약 키워드
-다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어; 최소 SQL 문법을 강요 하지 그러나 응용 프로그램은 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 보장 하려면 이러한 키워드를 사용 하 여를 하지 않아야 합니다. #**정의** 값 SQL_ODBC_KEYWORDS 이러한 키워드의 쉼표로 구분 된 목록을 포함 합니다.  
+다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 강요 하지 않지만 최소 SQL 문법을; 그러나 응용 프로그램은 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 위해 이러한 키워드를 사용 하 여를 방지 해야 합니다. #**정의** 값 SQL_ODBC_KEYWORDS 이러한 키워드의 쉼표로 구분 된 목록을 포함 합니다.  
   
 |||  
 |-|-|  
@@ -36,7 +33,7 @@ ms.locfileid: "32912827"
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
-|및|LEFT|  
+|AND|LEFT|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
@@ -64,14 +61,14 @@ ms.locfileid: "32912827"
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|OR|  
+|COLLATION|또는|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|겹치는 항목이 있습니다|  
+|CONNECTION|겹침|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|파스칼|  
+|CONTINUE|PASCAL|  
 |CONVERT|위치|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
@@ -82,7 +79,7 @@ ms.locfileid: "32912827"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -92,7 +89,7 @@ ms.locfileid: "32912827"
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -115,13 +112,13 @@ ms.locfileid: "32912827"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
-|포트란|TRAILING|  
+|FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
-|FROM|번역하기|  
+|FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
@@ -131,9 +128,9 @@ ms.locfileid: "32912827"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|USER|  
+|IDENTITY|User|  
 |IMMEDIATE|USING|  
-|IN|VALUE|  
+|IN|Value|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

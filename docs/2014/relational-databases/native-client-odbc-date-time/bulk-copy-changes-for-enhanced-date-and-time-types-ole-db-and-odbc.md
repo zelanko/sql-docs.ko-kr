@@ -1,29 +1,26 @@
 ---
-title: 향상 된 날짜 및 시간 형식 (OLE DB 및 ODBC)에 대 한 대량 복사 변경 | Microsoft Docs
+title: 향상 된 날짜 및 시간 형식 (OLE DB 및 ODBC)에 대 한 대량 복사 변경 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e33cc7b320f3445d0da6e7f5927fe985a668b77
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 23e4d815e7f351bcc0c0220e32ad13051a23d97b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120033"
 ---
-# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상 된 날짜 및 시간 형식 (OLE DB 및 ODBC)에 대 한 대량 복사 변경 사항
+# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB 및 ODBC)
   이 항목에서는 대량 복사 기능을 지원하기 위한 날짜/시간 개선 사항에 대해 설명합니다. 이 항목의 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 OLE DB 및 ODBC 둘 모두에 적용됩니다.  
   
 ## <a name="format-files"></a>서식 파일  
@@ -105,7 +102,7 @@ ms.locfileid: "37430652"
 ## <a name="bcp-data-type-conversions"></a>BCP 데이터 형식 변환  
  다음 표에서는 변환 정보를 보여 줍니다.  
   
- **OLE DB 참고 사항** IBCPSession 하 여 다음과 같은 변환이 수행 됩니다. IRowsetFastLoad에 정의 된 대로 OLE DB 변환을 사용 하 여 [변환은 클라이언트에서 서버로 수행](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
+ **OLE DB 참고 사항** 다음 변환은 IBCPSession에 의해 수행됩니다. IRowsetFastLoad에 정의 된 대로 OLE DB 변환을 사용 하 여 [변환은 클라이언트에서 서버로 수행](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
   
 |To --><br /><br /> 보낸 사람|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
@@ -141,6 +138,6 @@ ms.locfileid: "37430652"
   
 ## <a name="see-also"></a>관련 항목  
  [날짜 및 시간 기능 향상 &#40;ODBC&#41;](date-and-time-improvements-odbc.md)   
- [날짜 및 시간 기능 향상 &#40;OLE DB&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

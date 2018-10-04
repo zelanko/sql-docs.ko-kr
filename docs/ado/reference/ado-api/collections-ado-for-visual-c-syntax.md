@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc0c28d095c96fa94c13118ce6876a99a888dbc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d94570a337f564588b2709fd292eab5ed5396dc4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679881"
 ---
-# <a name="collections-ado-for-visual-c-syntax"></a>컬렉션 (Visual c + + 구문에 대 한 ADO)
+# <a name="collections-ado-for-visual-c-syntax"></a>컬렉션(Visual C++ 구문에 대한 ADO)
 ## <a name="parameters"></a>매개 변수  
   
 ### <a name="methods"></a>메서드  
@@ -146,6 +143,6 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 ## <a name="see-also"></a>관련 항목  
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

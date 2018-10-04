@@ -5,31 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa09dad7423a56db064ade504f3b6598f3daf4ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622211"
 ---
-# <a name="setup-dll-api-reference"></a>설치 프로그램 DLL API 참조
-이 섹션에서는 드라이버 설치는 두 개의 구성 된 DLL API의 구문을 설명 (**ConfigDriver** 및 **ConfigDSN**). **ConfigDriver** 및 **ConfigDSN** 별도의 DLL을 설치 하거나 드라이버 DLL에에서 있을 수 있습니다.  
+# <a name="setup-dll-api-reference"></a>설정 DLL API 참조
+이 섹션에서는 드라이버 설치 프로그램은 두 함수로 구성 된 DLL API의 구문을 설명 합니다 (**ConfigDriver** 하 고 **ConfigDSN**). **ConfigDriver** 하 고 **ConfigDSN** 드라이버 DLL에에서 있을 수 있습니다 또는 별도의 DLL을 설치 합니다.  
   
- 이 섹션에서는 변환기 설치는 단일 함수 구성 된 DLL API의 구문을 설명 하는 또한 (**ConfigTranslator**). **ConfigTranslator** 변환기 DLL에에서 있을 수 있습니다 또는 별도의 DLL을 설치 합니다.  
+ 이 섹션에서는 변환기 설치 DLL API를 단일 함수로 구성의 구문을 설명 하는 또한 (**ConfigTranslator**). **ConfigTranslator** 수 translator DLL의에서 이거나 별도의 DLL을 설치 합니다.  
   
- 각 함수는 ODBC 도입 된 버전이 표시 되어 있습니다.  
+ 각 함수는 도입 하는 ODBC의 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

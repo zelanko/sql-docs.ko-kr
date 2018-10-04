@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9131bda927e123d3b718d9a769ef59efff157903
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212773"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111570"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
   전체 텍스트 인덱싱 및 전체 텍스트 쿼리의 성능은 메모리, 디스크 속도, CPU 속도 및 컴퓨터 아키텍처와 같은 하드웨어 리소스의 영향을 받습니다.  
@@ -138,7 +135,7 @@ ms.locfileid: "37212773"
   
  <sup>2</sup> 500MB는 시스템의 다른 프로세스에 필요한 메모리를 예상 합니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
   
- <sup>3</sup> .* ism_size* x64 8mb로 가정 플랫폼입니다.  
+ <sup>3</sup> . *ism_size* x64 8mb로 가정 플랫폼입니다.  
   
  **예제: fdhost.exe에 필요한 예상 메모리 요구 사항 예상**  
   

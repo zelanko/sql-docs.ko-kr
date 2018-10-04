@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], solutions
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b307be56b6711f4c51b6bf7b96d03d946296e57
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061264"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>원본 제어에서 솔루션 및 프로젝트 열기
   사용할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 소스 제어에서 직접 솔루션이 나 프로젝트를 엽니다. 소스 제어에서 솔루션을 열면 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경은 솔루션의 최신 버전을 자동으로 검색하여 지정된 위치에 복사합니다.  

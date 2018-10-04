@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 157f43f4646c6c935da7884a0fdae93c9676e6fe
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354965"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208433"
 ---
 # <a name="assemblies-database-engine"></a>어셈블리(데이터베이스 엔진)
   이 섹션의 항목에서는 어셈블리를 이해하고 어셈블리를 디자인 및 구현하는 데 도움이 되는 정보를 제공합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37354965"
   
 -   사용자 정의 집계 함수. 자세한 내용은 [만들기 사용자 정의 집계](../user-defined-functions/create-user-defined-aggregates.md)합니다.  
   
--   사용자 정의 유형. 자세한 내용은 [사용자 형식](../native-client/features/using-user-defined-types.md)합니다.  
+-   사용자 정의 유형. 자세한 내용은 [사용자 정의 형식 사용](../native-client/features/using-user-defined-types.md)을 참조하세요.  
   
  어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 다음과 같은 기능을 수행합니다.  
   

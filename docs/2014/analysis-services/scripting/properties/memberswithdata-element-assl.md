@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MembersWithData Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17a3fced7327c1fb2211b1c80f774ae859757952
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089654"
 ---
 # <a name="memberswithdata-element-assl"></a>MembersWithData 요소(ASSL)
   비-리프 멤버에 대한 데이터 멤버를 부모 특성에 표시할지 여부를 결정합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37218233"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  값을 `MembersWithData` 요소는 부모 특성에만 사용 됩니다 (값 즉,는 [사용](usage-element-dimensionattribute-assl.md) 요소의 `DimensionAttribute` 부모 요소가로 설정 되어 *부모*) 결정할 여부를 부모 특성에서 비-리프 멤버에 대 한 데이터 멤버를 표시 합니다. 데이터 멤버에 대한 자세한 내용은 [부모-자식 계층의 특성](../../multidimensional-models/parent-child-dimension-attributes.md)을 참조하세요.  
@@ -74,7 +71,7 @@ ms.locfileid: "37218233"
  AMO(Analysis Management Objects) 개체 모델에서 `MembersWithData`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.MembersWithData>입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [형식이 포함 된 [MeasureGroupAttribute](caption-element-assl.md) 요소입니다.](caption-element-assl.md)   
+ [MembersWithDataCaption 요소 &#40;ASSL&#41;](caption-element-assl.md)   
  [DimensionAttribute 데이터 형식 &#40;ASSL&#41;](../data-type/dimensionattribute-data-type-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Query Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68da02ef99a5668c7ee0a3a57a06aca90ae68a25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293251"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224403"
 ---
 # <a name="query-element-xmla"></a>Query 요소(XMLA)
   내에서 쿼리를 포함 합니다 [쿼리](queries-element-xmla.md) 사용 되는 컬렉션의 [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) 사용 빈도 기반 최적화 중 명령을.  
@@ -53,7 +50,7 @@ ms.locfileid: "37293251"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37293251"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[쿼리](queries-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `DesignAggregations` 명령은 명령의 `Query` 컬렉션에 하나 이상의 `Queries` 요소를 포함하여 사용 빈도 기반 최적화를 지원합니다. 각 `Query` 요소 디자인 프로세스를 사용 하 여 가장 자주 사용 되는 쿼리를 대상으로 하는 집계를 정의 하는 목표 쿼리를 나타냅니다. 사용자 고유의 목표 쿼리를 지정 하거나 또는 인스턴스의 저장 된 정보를 사용할 수 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 가장 자주에 대 한 정보를 검색 하는 쿼리 로그에 쿼리를 사용 합니다.  

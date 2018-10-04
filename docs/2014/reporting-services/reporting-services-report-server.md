@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - report servers [Reporting Services], about report server
@@ -26,16 +22,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], report server
 - storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 9cb9c580dbd044034923718dd59e4ed27caebab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108493"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
   이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치의 중앙 구성 요소인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버의 개요입니다. 인증, 데이터 처리, 렌더링 및 배달 작업을 처리하는 특수 용도의 확장 프로그램 모음과 처리 엔진 쌍으로 구성됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나의 배포 모드에서 실행됩니다. 기능 비교는 [SharePoint와 기본 모드의 기능 비교](#bkmk_featuresupport) 섹션을 참조하세요.  
@@ -96,16 +91,16 @@ ms.locfileid: "40394914"
 |**구성 관리자**|사용자 계정 컨트롤|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
 |**보고서 관리자**|사용자 계정 컨트롤|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 응용 프로그램 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
 |**링크된 보고서**|사용자 계정 컨트롤|아니요.|  
-|**내 보고서**|사용자 계정 컨트롤|아니오|  
-|**내 구독** 및 일괄 처리 방법|사용자 계정 컨트롤|아니오|  
-|**데이터 경고**|아니오|사용자 계정 컨트롤|  
-|**파워 뷰**|아니오|사용자 계정 컨트롤<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**내 보고서**|사용자 계정 컨트롤|아니요|  
+|**내 구독** 및 일괄 처리 방법|사용자 계정 컨트롤|아니요|  
+|**데이터 경고**|아니요|사용자 계정 컨트롤|  
+|**파워 뷰**|아니요|사용자 계정 컨트롤<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**.RDL 보고서**|사용자 계정 컨트롤|사용자 계정 컨트롤<br /><br /> .RDL 보고서는 기본 모드 또는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행될 수 있습니다.|  
-|**.RDLX 보고서**|아니오|사용자 계정 컨트롤<br /><br /> 파워 뷰 .RDLX 보고서는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서만 실행될 수 있습니다.|  
-|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|아니오|사용자 계정 컨트롤|  
-|**인터넷 연결 배포를 위한 AAM 영역**|아니오|사용자 계정 컨트롤|  
-|**SharePoint 백업 및 복구**|아니오|사용자 계정 컨트롤|  
-|**ULS 로그 지원**|아니오|사용자 계정 컨트롤|  
+|**.RDLX 보고서**|아니요|사용자 계정 컨트롤<br /><br /> 파워 뷰 .RDLX 보고서는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서만 실행될 수 있습니다.|  
+|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|아니요|사용자 계정 컨트롤|  
+|**인터넷 연결 배포를 위한 AAM 영역**|아니요|사용자 계정 컨트롤|  
+|**SharePoint 백업 및 복구**|아니요|사용자 계정 컨트롤|  
+|**ULS 로그 지원**|아니요|사용자 계정 컨트롤|  
   
 ##  <a name="bkmk_nativemode"></a> 기본 모드  
  기본 모드에서 보고서 서버는 보고서 및 보고서 모델에 대한 모든 확인, 관리, 처리 및 배달 기능을 제공하는 독립 실행형 응용 프로그램 서버입니다. 이 모드는 보고서 서버 인스턴스의 기본 모드입니다. 설치 중 구성된 기본 모드 보고서 서버를 설치하거나 설치가 완료된 후 보고서 서버를 기본 모드 작업용으로 구성할 수 있습니다.  
@@ -139,7 +134,7 @@ ms.locfileid: "40394914"
 ||Description|  
 |-|-----------------|  
 |**(1)**|웹 서버 또는 WFE(웹 프런트 엔드). [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능은 데이터 원본 또는 구독 관리와 같은 태스크를 위해 보고서 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리 페이지 보기와 같은 웹 응용 프로그램 기능을 활용하려는 각 웹 서버에 설치해야 합니다.|  
-|**(2)**|이 추가 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 프록시를 통해 클라이언트가 응용 프로그램 서버와 통신할 수 있도록 URL 및 SOAP 끝점을 설치합니다.|  
+|**(2)**|이 추가 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 프록시를 통해 클라이언트가 응용 프로그램 서버와 통신할 수 있도록 URL 및 SOAP 엔드포인트를 설치합니다.|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스를 실행하는 응용 프로그램 서버. 보고서 처리의 확장은 SharePoint 팜의 일부로 그리고 추가 응용 프로그램 서버에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스를 추가하여 관리됩니다.|  
 |**(4)**|권한, 전자 메일, 프록시 및 구독을 포함하여 서로 다른 구성을 사용하는 두 개 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만들 수 있습니다.|  
 |**(5)**|보고서, 데이터 원본 및 기타 항목은 SharePoint 콘텐츠 데이터베이스에 저장됩니다.|  

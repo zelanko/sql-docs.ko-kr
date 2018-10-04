@@ -1,29 +1,26 @@
 ---
-title: 멤버 개체 속성, 메서드 및 이벤트 | Microsoft Docs
+title: Member 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Member object [ADO MD]
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46166a62011e0ab27ba4f189b45a8b196be97b0a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 67faee86f0b5a333e406ccc2fead8b002b525e36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688061"
 ---
-# <a name="member-object-properties-methods-and-events"></a>멤버 개체 속성, 메서드 및 이벤트
+# <a name="member-object-properties-methods-and-events"></a>Member 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [Caption 속성](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
   
@@ -41,13 +38,13 @@ ms.locfileid: "35284762"
   
  [Name 속성](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
- [Parent 속성](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
+ [부모 속성](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
  [ParentSameAsPrev 속성](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Type 속성](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
+ [형식 속성](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
   
  [UniqueName 속성](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   

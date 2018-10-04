@@ -5,25 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - drivers [ODBC], examples
 ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 279545f50d0ba98c5d1199e29ae5abc5e5032d5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d2a3b80fd34aa93fad4735edb623a154e6fa225
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617121"
 ---
-# <a name="network-example"></a>네트워크 예
-다음이 그림은 이전 구성 들의 각각이 단일 네트워크에 나타날 수 방법을 보여줍니다.  
+# <a name="network-example"></a>네트워크 예제
+이 그림에서는 단일 네트워크에 나타날 수 있습니다 각 이전 구성 하는 방법을 보여 줍니다.  
   
  ![단일 네트워크의 다양 한 구성을](../../odbc/reference/media/pr08.gif "pr08")

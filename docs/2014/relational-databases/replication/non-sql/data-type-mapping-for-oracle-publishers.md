@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 131c2a7618493d1b48758f653ab2e2d2e22ed2dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194743"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
   Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
@@ -32,36 +29,36 @@ ms.locfileid: "37313693"
   
 |Oracle 데이터 형식|SQL Server 데이터 형식|대체 형식|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|예|  
-|BLOB|VARBINARY(MAX)|예|  
-|CHAR([1-2000])|CHAR([1-2000])|예|  
-|CLOB|VARCHAR(MAX)|예|  
-|DATE|DATETIME|예|  
+|BFILE|VARBINARY(MAX)|사용자 계정 컨트롤|  
+|BLOB|VARBINARY(MAX)|사용자 계정 컨트롤|  
+|CHAR([1-2000])|CHAR([1-2000])|사용자 계정 컨트롤|  
+|CLOB|VARCHAR(MAX)|사용자 계정 컨트롤|  
+|DATE|DATETIME|사용자 계정 컨트롤|  
 |FLOAT|FLOAT|아니요|  
 |FLOAT([1-53])|FLOAT([1-53])|아니요|  
 |FLOAT([54-126])|FLOAT|아니요|  
-|INT|NUMERIC(38)|예|  
-|INTERVAL|DATETIME|예|  
-|LONG|VARCHAR(MAX)|예|  
-|LONG RAW|IMAGE|예|  
+|INT|NUMERIC(38)|사용자 계정 컨트롤|  
+|INTERVAL|DATETIME|사용자 계정 컨트롤|  
+|LONG|VARCHAR(MAX)|사용자 계정 컨트롤|  
+|LONG RAW|IMAGE|사용자 계정 컨트롤|  
 |NCHAR([1-1000])|NCHAR([1-1000])|아니요|  
-|NCLOB|NVARCHAR(MAX)|예|  
-|NUMBER|FLOAT|예|  
+|NCLOB|NVARCHAR(MAX)|사용자 계정 컨트롤|  
+|NUMBER|FLOAT|사용자 계정 컨트롤|  
 |NUMBER([1-38])|NUMERIC([1-38])|아니요|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|예|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|사용자 계정 컨트롤|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니요|  
 |RAW([1-2000])|VARBINARY([1-2000])|아니요|  
 |real|FLOAT|아니요|  
 |ROWID|CHAR(18)|아니요|  
-|TIMESTAMP|DATETIME|예|  
-|TIMESTAMP(0-7)|DATETIME|예|  
-|TIMESTAMP(8-9)|DATETIME|예|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|예|  
+|TIMESTAMP|DATETIME|사용자 계정 컨트롤|  
+|TIMESTAMP(0-7)|DATETIME|사용자 계정 컨트롤|  
+|TIMESTAMP(8-9)|DATETIME|사용자 계정 컨트롤|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|사용자 계정 컨트롤|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니요|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|사용자 계정 컨트롤|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니요|  
 |UROWID|CHAR(18)|아니요|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|예|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|사용자 계정 컨트롤|  
   
 ## <a name="considerations-for-data-type-mapping"></a>데이터 형식 매핑에 대한 고려 사항  
  Oracle 데이터베이스에서 데이터를 복제할 때는 다음 데이터 형식 문제를 고려하십시오.  

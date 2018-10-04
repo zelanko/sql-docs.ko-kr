@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column names [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed84257be696772ee89d2f72968ae6b41a219fc2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2296d7f004ab42729b62c57f65172b8304bb0bf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175003"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>다이어그램 창에 열 이름 표시(Visual Database Tools)
   쿼리 및 뷰 디자이너의 **다이어그램 창** 에서 테이블의 열 이름을 숨기거나 표시하도록 선택할 수 있습니다.  

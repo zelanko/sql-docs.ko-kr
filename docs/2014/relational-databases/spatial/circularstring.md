@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1baa6e59d017df6a0491d4359a8e445fea83d722
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4602b251d7e0674c206fe85830b0abc35d92684b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128893"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` 는 0 개 이상의 연속 원호 세그먼트 컬렉션입니다. 원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되는 곡선 세그먼트입니다. 첫 번째 점은 세 번째 점과 같을 수 없습니다. 원호 세그먼트의 세 점 모두가 공선상에 있는 경우 원호 세그먼트가 선분으로 처리됩니다.  
@@ -52,7 +49,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
 -   이러한 인스턴스는 하나 이상의 원호 세그먼트(즉, 최소 3개의 점)를 포함해야 합니다.  
   
--   마지막 세그먼트를 제외하고 시퀀스에 있는 각 원호 세그먼트의 마지막 끝점은 시퀀스에 있는 다음 세그먼트의 첫 번째 끝점이어야 합니다.  
+-   마지막 세그먼트를 제외하고 시퀀스에 있는 각 원호 세그먼트의 마지막 엔드포인트는 시퀀스에 있는 다음 세그먼트의 첫 번째 엔드포인트가어야 합니다.  
   
 -   이 인스턴스에는 홀수 점이 있어야 합니다.  
   

@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e04067cda6fad31ebd07f5d887e387139c7739b1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 729d6d0713e70e2d628a08c2ce5008772d6a005d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710153"
 ---
-# <a name="using-a-connection-object"></a>연결 개체를 사용 하 여
-열기 전에 **연결** 개체를 데이터 원본 및 연결 형식에 대 한 특정 정보를 정의 해야 합니다. 대부분의이 정보에서 유지 되는 *ConnectionString* 의 매개 변수를 [Open 메서드](../../../ado/reference/ado-api/open-method-ado-connection.md) 에 **연결** 개체를 또는 [ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 **연결** 개체입니다. 연결 문자열을 작은따옴표로 묶인 값과 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 예를 들어:  
+# <a name="using-a-connection-object"></a>연결 개체 사용
+열기 전에 **연결** 개체를 데이터 원본 및 연결 형식에 대 한 특정 정보를 정의 해야 합니다. 대부분의이 정보에서 유지 되는 *ConnectionString* 의 매개 변수를 [Open 메서드](../../../ado/reference/ado-api/open-method-ado-connection.md) 에 **연결** 개체를 또는 [ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 **연결** 개체입니다. 연결 문자열을 작은따옴표로 묶인 값과 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 Dim sConn As String  

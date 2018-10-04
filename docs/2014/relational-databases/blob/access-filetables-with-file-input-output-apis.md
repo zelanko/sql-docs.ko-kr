@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3083e3365c8303c12adfc631881d887a970e471f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082210"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
   FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
@@ -107,14 +104,14 @@ ms.locfileid: "37191743"
   
 |기능|지원됨|주석|  
 |----------------|---------------|--------------|  
-|**Oplock**|예|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
+|**Oplock**|사용자 계정 컨트롤|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
 |**확장 특성**|아니요||  
 |**구문 재분석 지점**|아니요||  
 |**영구 ACL**|아니요||  
 |**명명된 스트림**|아니요||  
-|**스파스 파일**|예|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 저장소에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
-|**압축**|예||  
-|**암호화**|예||  
+|**스파스 파일**|사용자 계정 컨트롤|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 저장소에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
+|**압축**|사용자 계정 컨트롤||  
+|**암호화**|사용자 계정 컨트롤||  
 |**TxF**|아니요||  
 |**파일 ID**|아니요||  
 |**개체 ID**|아니요||  
@@ -122,9 +119,9 @@ ms.locfileid: "37191743"
 |**하드 링크**|아니요||  
 |**짧은 이름**|아니요||  
 |**디렉터리 변경 알림**|아니요||  
-|**바이트 범위 잠금**|예|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
+|**바이트 범위 잠금**|사용자 계정 컨트롤|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
 |**메모리 매핑된 파일**|아니요||  
-|**취소 I/O**|예||  
+|**취소 I/O**|사용자 계정 컨트롤||  
 |**보안**|아니요|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
 |**USN 저널**|아니요|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
   

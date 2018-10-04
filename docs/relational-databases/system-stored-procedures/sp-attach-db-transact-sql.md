@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c275128a8e3c2bbce6165486e256fc5b34d402d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 87093ee870549307e9395c013b2f8727f047ae4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037201"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811291"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
  합니다 **sp_attach_db** 명시적인 사용 하 여 데이터베이스 서버에서 이전에 분리 된 데이터베이스에서 저장된 프로시저 에서만 실행 해야 **sp_detach_db** 작업 데이터베이스나 복사 합니다. 16 개 이상의 파일을 지정 해야 할 경우 CREATE DATABASE를 사용 *database_name* FOR ATTACH 또는 CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG 합니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  

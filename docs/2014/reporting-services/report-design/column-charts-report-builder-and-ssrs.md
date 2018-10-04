@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246201"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056443"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>세로 막대형 차트(보고서 작성기 및 SSRS)
   세로 막대형 차트에서 계열은 범주별로 그룹화된 일련의 세로 막대로 표시됩니다. 세로 막대형 차트는 기간에 따라 변경되는 데이터를 표시하거나 항목 간 차이를 설명하는 데 유용하게 사용할 수 있습니다. 일반 세로 막대형 차트는 가로 막대 집합으로 계열을 표시하는 가로 막대형 차트 및 시작점과 끝점이 다양한 세로 막대 집합으로 계열을 표시하는 범위형 세로 막대 차트와 밀접하게 연관되어 있습니다. 자세한 내용은 [가로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41; ](charts-report-builder-and-ssrs.md) 하 고 [범위 형 차트 &#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
@@ -39,9 +36,9 @@ ms.locfileid: "37246201"
   
 -   **3D 원통형**. 3D 차트에서 막대를 실린더 모양으로 표시하는 세로 막대형 차트입니다.  
   
--   `Histogram`을 참조하세요. 막대가 정규 분포로 정렬되도록 차트를 계산하는 세로 막대형 차트입니다.  
+-   `Histogram` 을 참조하세요. 막대가 정규 분포로 정렬되도록 차트를 계산하는 세로 막대형 차트입니다.  
   
--   `Pareto`을 참조하세요. 가장 긴 막대에서 가장 짧은 막대 순서로 막대를 정렬하는 세로 막대형 차트입니다.  
+-   `Pareto` 을 참조하세요. 가장 긴 막대에서 가장 짧은 막대 순서로 막대를 정렬하는 세로 막대형 차트입니다.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>세로 막대형 차트의 데이터 고려 사항  
   

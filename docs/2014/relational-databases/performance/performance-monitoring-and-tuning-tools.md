@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3139aa4fab106e048e21847acadafc6bc90b8bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262469"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204733"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이벤트를 모니터링하고 물리적 데이터베이스 디자인을 튜닝하는 여러 가지 도구를 제공합니다. 도구를 선택하는 기준은 수행된 모니터링 또는 튜닝 유형과 모니터링할 이벤트에 따라 결정됩니다.  
@@ -54,12 +51,12 @@ ms.locfileid: "37262469"
   
 |이벤트/작업|SQL Server 프로파일러|Distributed Replay|시스템 모니터|작업 모니터|Transact-SQL|오류 로그|  
 |-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|추세 분석|예||예||||  
+|추세 분석|사용자 계정 컨트롤||사용자 계정 컨트롤||||  
 |캡처한 이벤트 재생|예(단일 컴퓨터에서)|예(여러 컴퓨터에서)|||||  
-|임시 모니터링|예|||예|예|예|  
-|경고 생성|||예||||  
-|그래픽 인터페이스|예||예|예||예|  
-|사용자 지정 응용 프로그램에서 사용|예 <sup>1</sup>||||예||  
+|임시 모니터링|사용자 계정 컨트롤|||예|예|사용자 계정 컨트롤|  
+|경고 생성|||사용자 계정 컨트롤||||  
+|그래픽 인터페이스|사용자 계정 컨트롤||예|예||사용자 계정 컨트롤|  
+|사용자 지정 응용 프로그램에서 사용|예 <sup>1</sup>||||사용자 계정 컨트롤||  
   
  <sup>1</sup> 사용 하 여 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 시스템 저장 프로시저입니다.  
   

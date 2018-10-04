@@ -1,14 +1,12 @@
 ---
-title: (SQLXMLOLEDB 공급자) XSL 변환 적용 | Microsoft Docs
+title: XSL 변환 (SQLXMLOLEDB 공급자) 적용 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0631033305d05252eb9253fb24614485a5ebccbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11f7ce945dcf4b89c6b76ba14e0383bc38ca3c39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224043"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 변환 적용(SQLXMLOLEDB 공급자)
-  이 예제 ADO 응용 프로그램에서는 SQL 쿼리를 실행하고 결과에 XSL 변환을 적용합니다. 클라이언트 쪽의 행 집합의 처리를 적용 ClientSideXML 속성을 True로 설정 합니다. 이 예에서는 명령 언어가 {5d531cb2-e6ed-11d2-b252-00c04f681b71}로 설정되었는데 그 이유는 SQL 쿼리가 템플릿에 지정되었고, 템플릿을 실행하려면 이 명령 언어를 지정해야 하기 때문입니다. Xsl은 변환을 적용 하는 데 XSL 파일을 지정 합니다. 기본 경로 속성의 값은 XSL 파일을 검색 하려면 사용 됩니다. Xsl 속성의 값에 경로 지정 하는 경우 경로 Base Path 속성에 지정 된 경로 상대적입니다.  
+  이 예제 ADO 응용 프로그램에서는 SQL 쿼리를 실행하고 결과에 XSL 변환을 적용합니다. 클라이언트 쪽 행 집합을 처리를에서는 ClientSideXML 속성을 True로 설정 합니다. 이 예에서는 명령 언어가 {5d531cb2-e6ed-11d2-b252-00c04f681b71}로 설정되었는데 그 이유는 SQL 쿼리가 템플릿에 지정되었고, 템플릿을 실행하려면 이 명령 언어를 지정해야 하기 때문입니다. Xsl 속성은 변환을 적용 하는 데 사용할 XSL 파일을 지정 합니다. 자료 경로 속성의 값은 XSL 파일을 검색 하려면 사용 됩니다. Xsl 속성 값에 경로 지정 하면 경로 자료 Path 속성에 지정 된 경로 상대적입니다.  
   
  이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  
   
@@ -39,9 +36,9 @@ ms.locfileid: "37268489"
   
  이 클라이언트 쪽 ADO 예제 응용 프로그램에서는 SQL 쿼리로 구성된 XML 템플릿을 서버에서 실행합니다.  
   
- ClientSideXML 속성은 True로 설정 하기 때문에 FOR XML 절이 없는 SELECT 문이 서버로 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
+ ClientSideXML 속성을 True로 설정 하기 때문에 FOR XML 절이 있는 SELECT 문은 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
   
- 응용 프로그램에 xsl 속성 지정 따라서 클라이언트에서 생성 되는 XML 문서에 XSL 변환을 적용 하 고 결과 2 열 테이블입니다.  
+ Xsl 속성은 응용 프로그램에 지정 된 따라서 클라이언트에서 생성 되는 XML 문서에 XSL 변환이 적용 되 고 결과 2 열 표.  
   
  템플릿 명령을 실행하려면 XML 템플릿 언어 {5d531cb2-e6ed-11d2-b252-00c04f681b71}을 지정해야 합니다.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionAttribute data type
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9e07d7b7c313c4d9d21e8e562f2ed6893a08b42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4624e963a9bca0d7850d2936291d3a7515cac25f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106853"
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute 데이터 형식(ASSL)
   차원의 특성을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -83,14 +80,14 @@ ms.locfileid: "37194293"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|InclusionThresholdSetting|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|기본 데이터 형식|없음|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[주석](../collections/annotations-element-assl.md), [AttributeHierarchyDisplayFolder](../properties/displayfolder-element-assl.md), [AttributeHierarchyEnabled](../properties/enabled-element-assl.md)하십시오 [AttributeHierarchyOptimizedState](../properties/state-element-assl.md), [ AttributeHierarchyOrdered](../properties/attributehierarchyordered-element-assl.md), [AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeRelationships](../collections/relationships-element-assl.md)하십시오 [CustomRollupColumn](../objects/column-element-assl.md)를 [CustomRollupPropertiesColumn](../objects/customrolluppropertiescolumn-element-assl.md), [DefaultMember](../objects/member-element-assl.md)하십시오 [설명](../properties/description-element-assl.md), [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md), [ DiscretizationMethod](../properties/discretizationmethod-element-assl.md), [EstimatedCount](../properties/estimatedcount-element-assl.md)합니다 [ID](../properties/id-element-assl.md)를 [InstanceSelection](../properties/instanceselection-element-assl.md)를 [IsAggregatable](../properties/isaggregatable-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [KeyUniquenessGuarantee](../properties/keyuniquenessguarantee-element-assl.md)를 [MemberNamesUnique](../properties/membernamesunique-element-assl.md)하십시오 [MembersWithData](../objects/data-element-assl.md), [ MembersWithDataCaption](../properties/caption-element-assl.md), [이름](../properties/name-element-assl.md), [NameColumn](../objects/namecolumn-element-assl.md)하십시오 [NamingTemplate](../properties/namingtemplate-element-assl.md), [NamingTemplateTranslations](../collections/translations-element-assl.md), [OrderBy](../properties/orderby-element-assl.md)를 [OrderByAttributeID](../properties/attributeid-element-assl.md)하십시오 [RootMemberIf](../properties/rootmemberif-element-assl.md), [SkippedLevelsColumn](../objects/skippedlevelscolumn-element-assl.md), [소스](../properties/source-element-binding-assl.md)를 [번역](../collections/translations-element-assl.md)를 [형식](../properties/type-element-dimensionattribute-assl.md)를 [UnaryOperatorColumn](../objects/unaryoperatorcolumn-element-assl.md), [사용 현황](../properties/usage-element-dimensionattribute-assl.md), [ValueColumn](../objects/valuecolumn-element-assl.md)|  
 |파생 요소|[특성](../objects/attribute-element-assl.md) ([특성](../collections/attributes-element-assl.md) 모음인 [차원](../objects/dimension-element-assl.md))|  
   

@@ -1,13 +1,11 @@
 ---
-title: 열기 및 닫기 방법 예 (VBScript) | Microsoft Docs
+title: Open 및 Close 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Close method [ADO], VBScript example
 - Open method [ADO], VBScript example
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e876658bcdd8bd7595349bc2e4a559d21d7efa08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 375ebc025368551ccf9fda9dfba299027e6225ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709211"
 ---
-# <a name="open-and-close-methods-example-vbscript"></a>Open 및 Close 메서드 (VBScript) 예제
-사용 하 여이 예제는 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에 대 한 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  
+# <a name="open-and-close-methods-example-vbscript"></a>Open 및 Close 메서드 예제(VBScript)
+이 예제에서는 합니다 [열기](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에서 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  
   
- 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려면 디렉터리에 배치 합니다. 잘라내기 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣고로 저장 **넣고 OpenVBS.asp**합니다. 모든 브라우저에서 결과 볼 수 있습니다.  
+ 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려는 디렉터리에 배치 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣습니다. 잘라내기 및 저장 **넣고 OpenVBS.asp**합니다. 모든 브라우저에서 결과 볼 수 있습니다.  
   
 ```  
 <!-- BeginOpenVBS -->  

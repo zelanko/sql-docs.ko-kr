@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b6b8f9c722b69213a0e7e4d9816c3b779ce41de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af871c13b877fb3c84f0ace7b33d8987834ffa15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161355"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 지정된 범위에서 계산되는 Null이 아닌 모든 숫자 값의 분산을 반환합니다.  

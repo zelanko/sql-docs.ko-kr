@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb98cf3bdc1a0e4f021a5b82116dba1f390b0fd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105193"
 ---
-# <a name="availability-group-properties-and-new-availability-group-general-page"></a>가용성 그룹 속성 및 새 가용성 그룹 (일반 페이지)
+# <a name="availability-group-properties-and-new-availability-group-general-page"></a>가용성 그룹 속성 및 새 가용성 그룹(일반 페이지)
   이 항목은 **새 가용성 그룹** 대화 상자 및 **가용성 그룹 속성** 대화 상자의 **일반** 탭에 적용됩니다.  **를 사용하지 않고** 새 가용성 그룹 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]대화 상자를 사용하여 새 가용성 그룹을 만들 수 있으며, **가용성 그룹 속성** 대화 상자를 사용하여 기존 가용성 그룹의 구성을 확인하고 변경할 수 있습니다.  
   
  **가용성 그룹 속성을 보려면**  
@@ -103,8 +100,8 @@ ms.locfileid: "37283999"
  **세션 제한 시간(초)**  
  이 복제본에 대한 세션 제한 시간(초)입니다.  
   
- **끝점 URL**  
- 끝점의 URL입니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ **엔드포인트 URL**  
+ 엔드포인트의 URL입니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **추가**  
  가용성 그룹에 보조 복제본을 추가하려면 클릭합니다.  
