@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-caps.latest.revision: 16
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f4933108a167ca0572ed59e2bb834dcb260bbc6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23d4a24811c545bc69b41cb43bfc3f6b957eddf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180543"
 ---
 # <a name="back-up-the-service-master-key"></a>서비스 마스터 키 백업
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 서비스 마스터 키를 백업하는 방법에 대해 설명합니다. 서비스 마스터 키는 암호화 계층의 루트입니다. 이 키는 안전한 오프 사이트 위치에 백업 및 저장해야 합니다. 이러한 백업을 만드는 작업은 서버에서 수행되는 첫 번째 관리 동작 중 하나입니다.  

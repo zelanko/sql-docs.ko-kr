@@ -9,26 +9,32 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7cf5cf2d78900c5bbd7607666afecc64aa98267f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 70fa652e876f1011bc2d74df56104671b33775b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118551"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187493"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Machine Learning Server (독립 실행형) 또는 SQL Server 설치 프로그램을 사용 하 여 R Server (독립 실행형) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 설치 프로그램에는 **공유 기능** 를 인스턴스 비인식형를 설치 하기 위한 옵션 SQL Server 외부에서 실행 되는 독립 실행형 machine learning server. 이 기능은 SQL Server 2016에서 이라고 **R Server (독립 실행형)** 합니다. SQL Server 2017에서 라고 **Machine Learning Server (독립 실행형)** R 및 Python을 포함 합니다. 
 
-비 SQL 브랜드 버전의 SQL Server 설치 프로그램으로 설치 된 독립 실행형 서버 기능적으로 동일 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 사용 사례 및 시나리오, 원격 실행을 비롯 한 동일한 지원 운영 화 및 웹 서비스와 RevoScaleR 및 revoscalepy 함수의 전체 컬렉션입니다.
+비 SQL 브랜드 버전의 SQL Server 설치 프로그램으로 설치 된 독립 실행형 서버 기능적으로 동일 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 사용 사례 및 시나리오를 비롯 한 동일한 지원:
+
++ 동일한 콘솔에서 로컬 및 원격 세션 간에 전환 하는 원격 실행
++ 웹 노드와 계산 노드를 사용 하 여 운영 화
++ 웹 서비스 배포: R 및 Python 스크립트를 웹 서비스로 패키지 하는 기능
++ R 및 Python 함수 라이브러리의 전체 컬렉션
 
 SQL Server에서 분리 하는 독립 서버와 R 및 Python 환경이 구성, 보안 및 기본 운영 체제 및 SQL Server가 아닌 독립 실행형 서버에서 제공 하는 도구를 사용 하 여 액세스 합니다.
 
-SQL Server의 보충 모델, 독립 실행형 서버는 계산 컨텍스트를 원격으로 사용할 수 있는 솔루션을 학습, 로컬 서버를 원격 Machine Learning Server spark와 같은 의미로 전환 고성능 컴퓨터를 개발 해야 하는 경우에 유용 클러스터 또는 다른 SQL server 인스턴스.
-  
+SQL Server의 보충 모델, 독립 실행형 서버는 고속 기계 학습 지원 되는 데이터 플랫폼의 전체 범위 원격 계산 컨텍스트를 사용할 수 있는 솔루션을 개발 해야 하는 경우에 유용 합니다. Spark 클러스터에서 또는 다른 SQL Server 인스턴스에서 원격 Machine Learning Server에 로컬 서버에서 실행을 이동할 수 있습니다.
 
-## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
+<a name="bkmk_prereqs"> </a>
+
+## <a name="pre-install-checklist"></a>설치 전 검사 목록
 
 SQL Server 2016 R Server (독립 실행형) 또는 Microsoft R Server와 같은 이전 버전을 설치한 경우 계속 하기 전에 기존 설치를 제거 합니다.
 
@@ -37,7 +43,9 @@ SQL Server 2016 R Server (독립 실행형) 또는 Microsoft R Server와 같은 
 컴퓨터의 한 독립 실행형 서버를 하나만 사용할 수 있습니다: SQL Server 2017의 Machine Learning Server 또는 SQL Server 2016 R Server (독립 실행형). 다른 버전을 설치 하기 전에 하나의 버전을 수동으로 제거 해야 합니다.
 
 ::: moniker range="=sql-server-2016"
- ###  <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항 
+<a name="bkmk_ga_instalpatch"></a> 
+
+ ###  <a name="install-patch-requirement"></a>패치 설치 요구 사항 
 
 SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 되는 Microsoft VC + + 2013 런타임 이진 파일의 특정 버전을 사용 하 여 문제를 확인 했습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server를 설치하기 전에 [SQL Server 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) 의 지침에 따라 해당 컴퓨터에 VC 런타임 이진 파일에 대한 패치가 필요한지 확인하세요.  
 ::: moniker-end
@@ -134,9 +142,52 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
 |SQL Server 2016 R Server (독립 실행형) |  SQL Server 2016 설치 마법사 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (In-database) |SQL Server 2016 설치 마법사|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>업데이트를 적용 합니다.
+
+데이터베이스 엔진 및 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용 하는 것이 좋습니다. 누적 업데이트는 설치 프로그램을 통해 설치 됩니다. 
+
+인터넷에 연결 된 장치에서 누적 업데이트는 Windows Update를 통해 일반적으로 적용 됩니다 있지만 제어 되는 업데이트에 대 한 아래 단계를 사용할 수도 있습니다. 데이터베이스 엔진에 대 한 업데이트를 적용 하면 설치 프로그램은 독립 실행형 서버에 설치한 모든 R 또는 Python 기능에 대 한 누적 업데이트를 끌어옵니다. 
+
+연결이 끊어진된 서버에 추가 단계가 필요 합니다. 데이터베이스 엔진에 대 한 누적 업데이트와 machine learning 기능에 대 한 CAB 파일을 가져와야 합니다. 모든 파일이 격리 된 서버에 전송 하 고 수동으로 적용 해야 합니다.
+
+1. 기본 인스턴스를 시작 합니다. 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
+
+  + SQL Server 2017 초기 버전에서 machine Learning Server (독립 실행형)
+  + SQL Server 2016의 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 sp2에서 R Server (독립 실행형)
+
+2. 인터넷 연결된 장치에서의 SQL Server 버전에 대 한 누적 업데이트 목록으로 이동 합니다.
+
+  + [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 최신 누적 업데이트를 다운로드 합니다. 실행 파일입니다.
+
+4. 인터넷에 연결 된 장치에서 설정 및 단계에서 라이선스 조건에 동의 하 고, 영향을 받는 기능을 검토 하 고, 완료 될 때까지 진행 상황을 모니터링 하려면 마법사를 실행 하는.exe를 두 번 클릭 합니다.
+
+5. 인터넷에 연결 되지 않은 서버:
+
+   + R 및 Python에 대 한 해당 CAB 파일을 가져옵니다. 다운로드 링크를 참조 하세요 [CAB 인스턴스를 SQL Server 데이터베이스 내 분석에 누적 업데이트에 대 한 다운로드](sql-ml-cab-downloads.md)합니다.
+
+   + 모든 파일, 주 실행 파일 및 CAB 파일, 오프 라인 컴퓨터의 폴더로 전송 합니다.
+
+   + 설치 프로그램을 실행 하는.exe를 두 번 클릭 합니다. 인터넷에 연결 되지 않은 서버에 누적 업데이트를 설치, R 및 Python에 대 한.cab 파일의 위치를 선택 하 라는 메시지가 표시 됩니다.
+
+6. 설정한 웹 노드와 계산 노드를 사용 하 여 운영 화 하는 서버에서 설치 후 편집 **appsettings.json**, "MMLNativePath" 바로 아래에 있는 "MMLResourcePath" 항목을 추가 합니다.
+
+    ```json
+    "ScorerParameters": {
+        "MMLNativePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\",
+        "MMLResourcePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\"
+    }
+    ```
+
+7. [관리 CLI 유틸리티를 실행](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) 웹 다시 계산 노드. 단계와 구문을 참조 하세요 [모니터, 시작 및 중지 웹 및 계산 노드와](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)합니다.
+
 ## <a name="development-tools"></a>개발 도구
 
-개발 IDE 설치의 일부로 설치 되지 않았습니다. 개발 환경을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [R 도구 설정](../r/set-up-a-data-science-client.md) 하 고 [Python 도구 설정](../python/setup-python-client-tools-sql.md)합니다.
+개발 IDE 설치의 일부로 설치 되지 않았습니다. 개발 환경 구성에 대 한 자세한 내용은 참조 하세요. [R 도구 설정](../r/set-up-a-data-science-client.md) 하 고 [Python 도구 설정](../python/setup-python-client-tools-sql.md)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

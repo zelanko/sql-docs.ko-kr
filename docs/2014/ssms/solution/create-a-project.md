@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.newproject
@@ -14,16 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86b820eb481bf1f27b28d54aa386c4dbc601ce81
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 693989d4a1dddd812d3f96279b23cd2218f2078c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182763"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
   기존 솔루션 내에 하나 이상의 프로젝트를 만들 수 있습니다.  

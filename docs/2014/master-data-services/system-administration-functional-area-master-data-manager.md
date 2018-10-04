@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e7f6f90aab70c08be52c002dc92a9bc3f1943358
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11bfe5a2a1a8a79866983855c61c9666fb114a03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188522"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>시스템 관리 기능 영역(마스터 데이터 관리자)
   시스템 관리 기능 영역에서 관리자는 모델 및 해당 모든 개체를 만들 수 있습니다. 또한 비즈니스 규칙을 만들 수 있으며 모델 패키지를 만들어 배포할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  

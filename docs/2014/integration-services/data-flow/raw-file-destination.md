@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8898d3932b809596bbbc0aa415c34bfdb4200c72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 515f6ffe76b451b621ceded394a22483ce59b2cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188093"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   원시 파일 대상은 원시 데이터를 파일에 기록합니다. 대상의 기본 데이터 형식을 사용하므로 데이터를 변환하거나 구문 분석할 필요도 거의 없습니다. 따라서 원시 파일 대상은 플랫 파일 및 OLE DB 대상과 같은 다른 대상보다 빨리 데이터를 기록할 수 있습니다.  

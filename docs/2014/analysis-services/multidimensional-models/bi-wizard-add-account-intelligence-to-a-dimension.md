@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80704cdf9df5481f1ec098ca29443e38fcf97bc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183443"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>차원에 계정 인텔리전스 추가
   계정 특성의 멤버에 대해 수입 및 비용과 같은 표준 계정 분류를 할당하려면 큐브나 차원에 향상된 계정 인텔리전스 기능을 추가합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 분류를 사용하여 시간별로 계정을 집계할 수 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - metadata [Master Data Services]
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19e3cde73564540b44c49536da008fa4aa54e348
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185013"
 ---
 # <a name="metadata-master-data-services"></a>메타데이터(MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자 정의 메타데이터는 모델 개체를 설명하는 데 사용되는 정보입니다. 예를 들어 특정 모델이나 엔터티의 소유자를 추적하거나 엔터티에 데이터를 제공하는 원본 시스템을 추적해야 하는 경우가 있을 수 있습니다.  

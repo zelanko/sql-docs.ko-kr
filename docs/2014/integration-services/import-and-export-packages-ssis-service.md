@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - importing packages
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
-caps.latest.revision: 50
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96f87aedbadd6535fc6e82feb92a822a85b49f0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178823"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>패키지 가져오기 및 내보내기(SSIS 서비스)
     
@@ -54,7 +51,7 @@ ms.locfileid: "37322693"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 다음과 같은 위치에서 가져오거나 내보낼 수 있습니다.  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 다른 저장소 형식 또는 위치로 내보낼 수 있습니다.  
   

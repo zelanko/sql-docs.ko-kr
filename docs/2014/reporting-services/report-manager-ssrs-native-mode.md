@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-caps.latest.revision: 69
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176943"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>보고서 관리자(SSRS 기본 모드)
   보고서 관리자는 HTTP 연결을 통해 원격 위치의 단일 보고서 서버 인스턴스를 관리하는 데 사용되는 웹 기반 보고서 액세스 및 관리 도구입니다. 또한 보고서 관리자를 보고서 뷰어로 사용하고 탐색 기능도 활용할 수 있습니다. 항목 내용  
@@ -74,7 +71,7 @@ ms.locfileid: "37327073"
   
  새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 응용 프로그램 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)를 참조하세요.  
   
- [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 또는 Windows Server 2008을 사용하는 경우 로컬 관리용으로 보고서 관리자를 구성해야 합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 또는 Windows Server 2008을 사용하는 경우 로컬 관리용으로 보고서 관리자를 구성해야 합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 ##  <a name="bkmk_start_report_manager"></a> 시작 및 보고서 관리자를 사용 하 여  
  보고서 관리자는 브라우저 창의 주소 표시줄에 보고서 관리자 URL을 입력하면 열리는 웹 응용 프로그램입니다. 보고서 서버에 대해 가지고 있는 권한에 따라 보고서 관리자를 시작할 때 표시되는 페이지, 링크 및 옵션이 달라집니다. 특정 태스크를 수행하기 위해서는 해당 태스크를 포함하는 역할이 할당되어야 합니다. 모든 권한이 있는 역할이 할당된 사용자는 보고서 서버를 관리하는 데 사용할 수 있는 응용 프로그램의 모든 메뉴와 페이지에 액세스할 수 있습니다. 그러나 보고서를 보고 실행할 수 있는 권한이 있는 역할이 할당된 사용자는 이러한 작업을 지원하는 메뉴와 페이지만 볼 수 있습니다. 각 사용자는 각 보고서 서버에 대해 다른 역할을 할당 받을 수 있으며, 단일 보고서 서버에 저장된 여러 보고서 및 폴더에 대해서도 각기 다른 역할을 할당 받을 수 있습니다.  

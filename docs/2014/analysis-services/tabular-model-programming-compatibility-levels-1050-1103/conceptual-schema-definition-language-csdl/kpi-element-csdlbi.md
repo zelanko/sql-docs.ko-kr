@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a649ffffe6f2d9f5902ede9e6d7a6126fd09e25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09f42856788dffa45a03690c87e2383849c5f813
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155084"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189823"
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 요소(CSDLBI)
   KPI 요소는 KPI(핵심 성과 지표)로 사용할 수 있는 계산을 정의합니다. 비즈니스 인텔리전스 데이터 모델에서 KPI는 측정값을 기반으로 하며, KPI 정의처럼 측정값과 관련된 모든 메타데이터뿐 아니라 KPI 값을 표시하는 데 필요한 기본 그래픽 등의 정보를 포함합니다.  
@@ -30,12 +27,12 @@ ms.locfileid: "37155084"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 KPI 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |설명서|아니요|KPI에 대한 설명입니다.|  
-|KpiGoal|예|목표로 사용할 수 있는 값이 포함된 열에 대한 참조입니다.<br /><br /> [PropertyRef 요소&#40;CSDLBI&#41;](propertyref-element-csdlbi.md)a를 참조하세요.|  
-|KpiStatus|예|KPI의 현재 상태를 나타내는 값이 포함된 열에 대한 참조입니다.|  
-|StatusGraphic|예|KPI에 정의된 대상에 대한 음수, 보통 또는 양수 진행률을 나타내는 이미지에 대한 참조입니다.|  
+|KpiGoal|사용자 계정 컨트롤|목표로 사용할 수 있는 값이 포함된 열에 대한 참조입니다.<br /><br /> [PropertyRef 요소&#40;CSDLBI&#41;](propertyref-element-csdlbi.md)a를 참조하세요.|  
+|KpiStatus|사용자 계정 컨트롤|KPI의 현재 상태를 나타내는 값이 포함된 열에 대한 참조입니다.|  
+|StatusGraphic|사용자 계정 컨트롤|KPI에 정의된 대상에 대한 음수, 보통 또는 양수 진행률을 나타내는 이미지에 대한 참조입니다.|  
   
 ## <a name="remarks"></a>Remarks  
  모델을 디자인할 때 측정값을 만든 다음 이 측정값을 KPI로 사용하도록 할당하여 KPI를 만들 수 있습니다. 그런 다음 추세를 나타내는 데 사용할 그래픽과 같은 KPI 관련 정보를 추가합니다.  

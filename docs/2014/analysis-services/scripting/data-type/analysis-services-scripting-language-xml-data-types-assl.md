@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Analysis Services Scripting Language XML Data Types
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc773c4eda7b9f26b8ddafab5f6c80b068d32ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ff2f0989aa2c88a69351d698c847ca6e835285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179253"
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>ASSL(Analysis Services Scripting Language) XML 데이터 형식
   이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 유형으로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37276639"
   
  개체 요소와 같이 유형 요소는 ASSL 스키마에서 리프 수준 요소가 아니지만 자식 요소 및 개체 속성에 해당하는 요소를 갖습니다.  
   
- 그러나 유형 요소 나타나지 않으며 정의 하거나 설명 하는 스크립트에서 요소로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체입니다. 대신 일반적으로 `type` 또는 `xsi:type`을 사용하여 XML 스키마 인스턴스 스키마의 `xs:type` 특성으로 지정하는 다른 개체 요소의 유형으로 나타납니다. `<Assembly xsi:type="ClrAssembly">...</Assembly>`)을 입력합니다.  
+ 그러나 유형 요소 나타나지 않으며 정의 하거나 설명 하는 스크립트에서 요소로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체입니다. 대신 일반적으로 `type` 또는 `xsi:type`을 사용하여 XML 스키마 인스턴스 스키마의 `xs:type` 특성으로 지정하는 다른 개체 요소의 유형으로 나타납니다. `<Assembly xsi:type="ClrAssembly">...</Assembly>`) 을 입력합니다.  
   
  다른 유형에서 파생되는 유형도 있습니다. 예를 들어 `CubeBinding` 유형은 부모 `Binding` 유형에서 파생됩니다.  
   

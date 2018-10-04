@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OrderBy property
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - ordering dimensions [Analysis Services]
 - OrderByAttributeID property
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 622dc698bfcae76297e208015a7c257feadd6b5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 916663a7d667187acc6b881ec4ac3c68d406c987
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189803"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>차원 순서 정의
   큐브나 차원에 특성 순서 지정 기능을 추가하여 특성 멤버의 순서 지정 방식을 지정할 수 있습니다. 특성의 이름이나 키 또는 특성 관계를 기반으로 하는 다른 특성의 이름이나 키를 기준으로 멤버 순서를 지정할 수 있습니다. 기본적으로 멤버는 이름을 기준으로 순서가 지정됩니다. 이 향상 된이 기능을 변경 합니다 `OrderBy` 및 `OrderByAttributeID` 차원에서 특성에 대 한 속성 설정 합니다.  

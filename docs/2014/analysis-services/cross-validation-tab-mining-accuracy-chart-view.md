@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188213"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>교차 유효성 검사 탭(마이닝 정확도 차트 뷰)
   교차 유효성 검사를 사용하면 마이닝 구조를 교집합 영역으로 분할하고 각 교집합 영역에 대해 모델을 반복적으로 학습 및 테스트할 수 있습니다. 데이터를 분할할 접기 수를 지정하면 각 접기가 테스트 데이터로 사용되고 나머지 데이터는 새 모델을 학습하는 데 사용됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 각 모델에 대해 표준 정확도 메트릭 집합을 생성 합니다. 각 교집합 영역에 대해 생성된 모델의 메트릭을 비교하여 전체 데이터 집합에 대한 마이닝 모델의 안정성을 파악할 수 있습니다.  

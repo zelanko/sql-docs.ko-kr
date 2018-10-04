@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2623087a485070b442716c953501b2496679be9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186220"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180583"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>예제: 서버 이벤트용 WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기
   WMI 이벤트 공급자를 사용하는 일반적인 방법 중 하나는 특정 이벤트에 응답하는 SQL Server 에이전트 경고를 만드는 것입니다. 다음 예제에서는 XML 교착 상태 그래프 이벤트를 나중에 분석할 수 있도록 테이블에 저장하는 간단한 경고를 보여 줍니다. SQL Server 에이전트는 WQL 요청을 전송하고 WMI 이벤트를 수신하고 이벤트에 대한 응답으로 작업을 실행합니다. 알림 메시지 처리와 관련된 Service Broker 개체가 여러 개 있지만 WMI 이벤트 공급자가 이러한 개체의 생성 및 관리 세부 정보를 처리합니다.  

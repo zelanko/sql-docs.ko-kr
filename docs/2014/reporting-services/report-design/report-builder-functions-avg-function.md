@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 15bfc9e6ee8e513026d66fd4da55dd9271d12864
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e610d089206237fb6e9a1f525e124cb72bbfaa0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179123"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Avg 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 평균을 반환합니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5cdb0804e91e74486facbbc7d7b77885d87d6bc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 318ad51d389a25905056fd08b8789bc3250383c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186997"
 ---
 # <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
   이 화면에서는 기술 자료 관리, 데이터 품질 프로젝트 및 관리라는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 세 가지 주요 태스크 그룹에 대한 사용자 인터페이스 액세스 권한을 얻을 수 있습니다.  

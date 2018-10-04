@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc3c6ab630680d3d0d5cf1e3998153ac3e3a66fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a22d59c38366d5010cc472bb5d86414849cf9e22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188743"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RsReportServer.config** 파일은 보고서 관리자, 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  

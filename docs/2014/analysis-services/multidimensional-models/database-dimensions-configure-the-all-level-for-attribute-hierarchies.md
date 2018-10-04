@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - All members
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - members [Analysis Services], All
 - AllMemberName property
 ms.assetid: 0cb35e6f-b10f-483d-b893-78f6ca3979fd
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13e4ca2c3eb2336a4434cd37bfd0c8484ab4c91c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96e7e0cd5377e180630f10bdae6c32e33fcd119b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171623"
 ---
 # <a name="configure-the-all-level-for-attribute-hierarchies"></a>특성 계층에 대해 (All) 수준 구성
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 (All) 수준은 선택적인 시스템 생성 수준입니다. 이 수준에는 바로 아래 종속되는 수준의 모든 멤버 값의 집계를 값으로 갖는 멤버 하나만 포함됩니다. 이 멤버를 All 멤버라고 합니다. All 멤버는 차원 테이블에 포함되지 않은 시스템 생성 멤버입니다. (All) 수준의 멤버는 계층의 맨 위에 있기 때문에 이 멤버의 값은 해당 계층의 모든 멤버 값을 통합하여 집계한 값입니다. All 멤버는 대개 계층의 기본 멤버 역할을 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 (All) 수준은 선택적인 시스템 생성 수준입니다. 이 수준에는 바로 아래 종속되는 수준의 모든 멤버 값의 집계를 값으로 갖는 멤버 하나만 포함됩니다. 이 멤버를 All 멤버라고 합니다. All 멤버는 차원 테이블에 포함되지 않은 시스템 생성 멤버입니다. (All) 수준의 멤버는 계층의 맨 위에 있기 때문에 이 멤버의 값은 해당 계층의 모든 멤버 값을 통합하여 집계한 값입니다. All 멤버는 대개 계층의 기본 멤버 역할을 합니다.  
   
  특성 계층의 (All) 수준의 존재에 따라 달라 집니다 합니다 `IsAggregatable` 특성 및 사용자 정의 계층의 (All) 수준의 존재에 대 한 속성 설정에 따라 달라 집니다는 `IsAggregatable` 최상위 수준에서 특성의 속성 사용자 정의 계층입니다. `IsAggregatable` 속성이 `True`로 설정되어 있으면 (All) 수준이 존재합니다. `IsAggregatable` 속성이 `False`로 설정되어 있으면 계층에 (All) 수준이 없습니다.  
   

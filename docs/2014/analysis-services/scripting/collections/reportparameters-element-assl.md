@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReportParameters Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReportParameters element
 ms.assetid: 0e138e8f-8313-47f2-96e1-cd189eec26bb
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 004b23b3cbd2aa22dff73514b03257ac50dddd8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31a1124169818a6ada24c7386dc87f7398716a1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189933"
 ---
 # <a name="reportparameters-element-assl"></a>ReportParameters 요소(ASSL)
   컬렉션을 포함 [ReportParameter](../objects/reportparameter-element-assl.md) 에 대 한 요소를 [ReportAction](../data-type/action-data-type-assl.md) 요소입니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37282109"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

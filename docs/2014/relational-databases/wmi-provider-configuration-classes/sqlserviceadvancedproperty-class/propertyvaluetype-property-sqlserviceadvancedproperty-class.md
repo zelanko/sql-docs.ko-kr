@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PropertyValueType Property (SqlServiceAdvancedProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - PropertyValueType property
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f12b5695eb17529d9bc80e1262cf422b546d7407
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ffe5a59e84a6608e7b72a83b76ad6595b72c7201
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186223"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>PropertyValueType 속성(SqlServiceAdvancedProperty 클래스)
   속성의 데이터 형식을 가져옵니다.  

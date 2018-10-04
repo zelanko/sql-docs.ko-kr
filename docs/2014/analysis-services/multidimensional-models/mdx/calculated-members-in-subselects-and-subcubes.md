@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b729fb46b83617f0bcc9b0fc7ea7c93583513da6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188383"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
   이전 릴리스에서는 계산 멤버가 하위 SELECT 또는 하위 큐브에서 허용되지 않았습니다. 그러나 SQL Server 2008부터 계산 멤버가 허용되며 연결 속성에 의해 활성화됩니다. 또한 하위 SELECT 및 하위 큐브의 계산 멤버에 대한 새 동작이 SQL Server 2008 R2에서 도입되었습니다.  

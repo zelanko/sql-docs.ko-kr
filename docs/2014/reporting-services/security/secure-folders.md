@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4889b0385f3f55b4e0ca220d6b1f5f9ecda356b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182713"
 ---
 # <a name="secure-folders"></a>보안 폴더
   폴더 보안 설정은 보고서 서버의 모든 내용에 보안을 설정하기 위한 기본 토대입니다. 보안 설정은 폴더 구조를 통해 상속되므로 폴더 계층의 큰 부분이나 작은 부분을 지정하여 특정 종류의 액세스를 허용할 수 있습니다.  

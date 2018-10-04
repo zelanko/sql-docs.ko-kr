@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], time to execute
 - query governor cost limit option [SQL Server]
 - time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d9cb6a60d2cf839bbe9060e7a6ec8170ee679b64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e6a5bd5639774520567943b64bfb55965e2f654e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190085"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit 서버 구성 옵션 구성
   이 항목에서는 구성 하는 방법에 설명 합니다 `query governor cost limit` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. 쿼리 관리자 비용 제한 옵션은 쿼리 실행 제한 시간에 대한 상한값을 지정합니다. 쿼리 비용이란 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 소요 시간(초)입니다. 이 옵션의 기본값은 0이며, 이 값은 쿼리 관리자 설정을 해제합니다. 기본값을 사용하면 시간 제한 없이 모든 쿼리를 실행할 수 있습니다. 0이나 음수가 아닌 값을 지정하면 쿼리 관리자가 그 값을 초과하는 예상 비용을 갖는 쿼리의 실행을 허용하지 않습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68a9e0c00bc51d7bee4c083a8ccc4f65b85d4880
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49aff131d55dbc38511fdae0dc930e161904a985
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188973"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 자습서: 패키지 배포
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.  
@@ -66,7 +63,7 @@ ms.locfileid: "37213433"
   
 -   AdventureWorks 데이터베이스가 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 을 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 참조하세요.  
   
