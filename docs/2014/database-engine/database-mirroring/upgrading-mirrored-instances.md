@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219863"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화
   서버 인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 순차적 업그레이드를 수행 하 여 단일 수동 장애 조치만 미러된 각 데이터베이스에 대 한 가동 중지 시간을 줄일 수 있습니다 이라고는 *롤링 업그레이드*합니다. 롤링 업그레이드란 간단히 말해서 현재 미러링 세션에서 미러 서버 역할을 하고 있는 서버 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(Failover)하고, 이전 주 서버를 업그레이드하고, 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 정확한 프로세스는 업그레이드 중인 서버 인스턴스에서 실행되는 미러링 세션의 개수 및 레이아웃과 운영 모드에 따라 달라집니다.  

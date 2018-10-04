@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingBinding data type
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d440911eefa33981ef435240c4e440378da34a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a8d34019463453b52df520d1c0153420903a0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189100"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209763"
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>ProactiveCachingBinding 데이터 형식(ASSL)
   정보를 나타내는 추상 파생된 데이터 형식을 정의 합니다 [ProactiveCaching](../objects/proactivecaching-element-assl.md) 캐시를 다시 작성 해야 하는 데이터 원본 변경 내용 또는 다시 작성 프로세스의 상태에 대 한 요소입니다.  
@@ -53,9 +50,9 @@ ms.locfileid: "37189100"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
-|자식 요소|InclusionThresholdSetting|  
-|파생 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
+|자식 요소|없음|  
+|파생 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  에 대 한 자세한 내용은 합니다 `Binding` 형식, Analysis Services Scripting Language (ASSL) 개체 테이블을 비롯 한는 `Binding` 형식과 상속 계층 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL &#41;](binding-data-type-assl.md).  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofileprops.f1
 helpviewer_keywords:
 - Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f810dff0d2dad97cc58bafa993658cd80666638
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1ffaf34b0fca7dc03a5c8eb0d5ee1d95c2e7d66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221403"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 속성
   **에이전트 프로필 속성** 대화 상자를 사용하여 프로필의 각 에이전트 매개 변수에 대해 지정된 값을 보고 사용자 정의 프로필의 값을 수정할 수 있습니다.  

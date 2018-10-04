@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Assembly Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb02963baa8a7fca296abe89801d89c1f7ea19fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209650"
 ---
 # <a name="assembly-data-type-assl"></a>Assembly 데이터 형식(ASSL)
   나타내는 추상 기본 데이터 형식을 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리나와 연결 된 COM 동적 연결 라이브러리 (DLL)는 [Server](../objects/server-element-assl.md) 또는 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
@@ -55,16 +52,16 @@ ms.locfileid: "37233833"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|InclusionThresholdSetting|  
+|기본 데이터 형식|없음|  
 |파생 데이터 형식|[ClrAssembly](assembly-data-type-assl.md), [ComAssembly](comassembly-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[주석을](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)를 [설명](../properties/description-element-assl.md)를 [ID](../properties/id-element-assl.md)를 [ImpersonationInfo](../properties/impersonationinfo-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [이름](../properties/name-element-assl.md)|  
-|파생 요소|InclusionThresholdSetting|  
+|파생 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Assembly` 데이터 형식은 인스턴스 또는 데이터베이스와 연결된 COM 라이브러리를 나타내는 `ComAssembly` 요소와 인스턴스 또는 데이터베이스와 연결된 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리를 나타내는 `ClrAssembly` 요소에 대한 기본 데이터 형식으로 사용됩니다. 어셈블리에 대 한 자세한 내용은 참조 하세요. [다차원 모델 어셈블리 관리](../../multidimensional-models/multidimensional-model-assemblies-management.md)합니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Format Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed7cf229d4ef65e324a59d2d9292948ae530147
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228013"
 ---
 # <a name="format-element-assl"></a>Format 요소(ASSL)
   필수 형식을 포함 합니다 [DataItem](../data-type/dataitem-data-type-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37169504"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37169504"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  허용 되는 값을 `Format` 요소는 Microsoft Office Excel 형식과 문자열 *TrimRight*를 *TrimLeft*를 *TrimAll*, 및  *TrimNone*합니다. 잘라내기의 경우 *TrimRight* 가 기본값입니다.  

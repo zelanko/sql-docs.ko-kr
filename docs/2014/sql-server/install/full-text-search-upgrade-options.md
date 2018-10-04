@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 52490126091c122a272d0404f95026a1d68d12ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217943"
 ---
 # <a name="full-text-search-upgrade-options"></a>전체 텍스트 검색 업그레이드 옵션
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 전체 텍스트 검색 업그레이드 옵션 페이지에서 현재 업그레이드 중인 데이터베이스에 사용할 전체 텍스트 검색 업그레이드 옵션을 선택할 수 있습니다.  

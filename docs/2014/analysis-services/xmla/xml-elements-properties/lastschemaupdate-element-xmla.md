@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LastSchemaUpdate Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - LastSchemaUpdate element
 ms.assetid: 2109955c-2817-413e-93aa-95d9910e8b24
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebdd4048e8e22aee422f3bee315776dbaed66873
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dbf2a1d11f799263b0b74671a16106d63c3d4d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226411"
 ---
 # <a name="lastschemaupdate-element-xmla"></a>LastSchemaUpdate 요소(XMLA)
   부모 [Cube](cube-element-olapinfo-xmla.md) 요소가 나타내는 큐브의 메타데이터가 마지막으로 업데이트된 날짜 및 시간을 포함합니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37152734"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|dateTime|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37152734"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Cube](cube-element-olapinfo-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
   

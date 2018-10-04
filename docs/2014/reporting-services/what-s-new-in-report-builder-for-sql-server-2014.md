@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8825385596c14121d0e6e13a7ecdbccbafb26a52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15e4e4a90232f4db1b83b3a09d45589e6fcdeb8d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226883"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>새로운&#39;SQL Server 2014 용 보고서 작성기의 새로운
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에는 많은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능이 도입되었습니다.  

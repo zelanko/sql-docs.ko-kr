@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - locking [XML for Analysis]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - XMLA, locking
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa6eab7a4d0ebe15e87ee83b60020b7a1f809ae8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 120326066a9145c6e223f9af5735c4b3435222c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278361"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219503"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>데이터베이스 잠금 및 잠금 해제(XMLA)
   잠금 및 각각 사용 하는 데이터베이스 잠금 해제, [잠금을](../xmla/xml-elements-commands/lock-element-xmla.md) 및 [잠금 해제](../xmla/xml-elements-commands/unlock-element-xmla.md) xml for Analysis (XMLA) 명령입니다. 일반적으로 다른 XMLA 명령은 실행 중 해당 명령을 수행하는 데 필요할 경우 자동으로 개체를 잠그거나 잠금 해제합니다. 수 명시적으로 잠그거나 잠금을 해제할 데이터베이스와 같은 단일 트랜잭션 내에서 여러 명령을 수행 하는 [일괄 처리](../xmla/xml-elements-commands/batch-element-xmla.md) 다른 응용 프로그램에서 데이터베이스에 쓰기 트랜잭션을 커밋하지 못하게 하는 동안 명령입니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e1f6f8700d0a5730785071f320b9ee88d80235b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56aa693625ecf78ddd5084b88e6fd6c3e2e0f5b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215103"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>태스크 3: Excel 파일에서 도메인 값 가져오기
   이 작업에서는 Excel 파일의 워크시트에서 **State** 도메인에 대한 값을 가져옵니다.  

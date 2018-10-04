@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining models, viewing
 - association [data mining]
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a108693491fba5c706f48a2eaf12b57ee0f3f69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210443"
 ---
 # <a name="browsing-an-association-rules-model"></a>연결 규칙 모델 찾아보기
   사용 하 여 연결 모델을 열면 **찾아보기**에서의 연결 규칙 뷰어와 비슷한 대화형 뷰어에서 모델이 표시 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  이 뷰어에서는 서로 연관된 항목을 한 눈에 확인할 수 있으며 예측 또는 제안에 사용할 수 있는 규칙이 표시됩니다.  

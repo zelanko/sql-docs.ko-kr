@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7a125ae3057d3398f51034f9307d7dd62bcabec
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cce5bf6a05cf84a66004066545a76cf8c7f00271
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214970"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
   Microsoft **의** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 사용하면 사용자 지정 카운터 인스턴스를 만들 수 있습니다. 사용자 지정 카운터 인스턴스를 사용하여 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 고유한 구성 요소 같이 기존 카운터로 모니터링할 수 없는 서버 측면(예: 로그된 고객의 주문 수나 제품 정보)를 모니터링할 수 있습니다.  

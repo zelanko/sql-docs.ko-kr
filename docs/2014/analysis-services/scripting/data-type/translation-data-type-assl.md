@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Translation Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Translation data type
 ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96c0f9a1ea7d6e3a081230c43fc95d785b1cf449
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6bf4fe33120a102239ccd54e7032e98719d0789
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213695"
 ---
 # <a name="translation-data-type-assl"></a>Translation 데이터 형식(ASSL)
   지역화된 번역을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -50,14 +47,14 @@ ms.locfileid: "37300883"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|InclusionThresholdSetting|  
+|기본 데이터 형식|없음|  
 |파생 데이터 형식|[AttributeTranslation](translation-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[Annotations](../collections/annotations-element-assl.md), [Caption](../properties/caption-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Language](../properties/language-element-assl.md)|  
 |파생 요소|[AllMemberTranslation](../objects/translation-element-assl.md), [AttributeAllMemberTranslation](../objects/attributeallmembertranslation-element-assl.md), [NamingTemplateTranslation](../objects/namingtemplatetranslation-element-assl.md), [UnknownMemberTranslation](../objects/unknownmembertranslation-element-assl.md)|  
   

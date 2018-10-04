@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7ab91fe3fac841c11a0e237a9ec44a4f1ad6911
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211993"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>옵션(SQL Server AlwaysOn, 대시보드 페이지)
   사용 합니다 **SQL Server AlwaysOn 대시보드** 페이지를 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **옵션** AlwaysOn 대시보드를 구성 하려면 대화 상자.  

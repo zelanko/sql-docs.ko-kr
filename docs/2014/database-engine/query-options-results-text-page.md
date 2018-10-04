@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223889"
 ---
 # <a name="query-options-results-text-page"></a>쿼리 옵션 결과(텍스트 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 텍스트 형식으로 표시하는 옵션을 지정할 수 있습니다. **파일로 결과 저장** 을 선택한 경우에도 이 페이지의 설정이 적용됩니다.  
@@ -35,7 +32,7 @@ ms.locfileid: "37205753"
  **결과 집합에 열 머리글 포함**  
  각 열에 열 제목을 붙이지 않으려면 이 확인란의 선택을 취소합니다.  
   
- **결과 받는 대로 스크롤**  
+ **결과를 받는 대로 스크롤**  
  아래쪽의 가장 최근에 반환된 레코드에 포커스를 표시하려면 이 확인란을 선택합니다. 받은 첫 번째 행에 포커스를 표시하려면 이 확인란의 선택을 취소합니다.  
   
  **숫자 값 오른쪽 맞춤**  
@@ -44,13 +41,13 @@ ms.locfileid: "37205753"
  **쿼리 실행 후 결과 삭제**  
  화면에 표시한 후 쿼리 결과를 삭제하여 메모리를 확보합니다.  
   
- **별도 탭에 결과 표시**  
+ **별도의 탭에 결과 표시**  
  쿼리 문서 창의 아래쪽 대신 새로운 문서 창에 결과 집합을 표시하려면 이 확인란을 선택합니다.  
   
  **쿼리 실행 후 결과 탭으로 전환**  
  자동으로 화면 포커스를 결과 집합에 두려면 클릭합니다.  
   
- **각 열에 표시 되는 문자의 최대 수**  
+ **각 열에 표시할 최대 문자 수**  
  기본값은 256자입니다. 이보다 큰 결과 집합을 잘리지 않게 표시하려면 값을 높입니다.  
   
  **기본값으로 다시 설정**  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 53ae2b68e51e534cc1b00afa9cf40e1786d644bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a9e726aea4428ac061ca57a4c1bc28199492492
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218139"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 배포 검사 목록: 확장
   SharePoint 팜에서 PowerPivot 쿼리 처리 요청이 많을 것으로 예상되는 경우에는 새 쿼리 및 데이터 처리 지원을 원활하게 추가하기 위해 추가 SharePoint용 PowerPivot 인스턴스를 추가할 수 있습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
-caps.latest.revision: 26
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4e4c150b59b52a27c81e7d744487a973af140ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3f26a52cc101a671e5587bd07e39503dfcfd0e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222973"
 ---
 # <a name="design-the-table-report-wizard"></a>테이블 디자인(보고서 마법사)
   보고서 마법사의 테이블 디자인 페이지를 사용하여 보고서에 만들 필드를 선택할 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5c6b18e88a4fbff18c06c9a10a06fe5d2f1e803
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213243"
 ---
 # <a name="lesson-7-create-measures"></a>7단원: 측정값 만들기
   이 단원에서는 모델에 포함할 측정값을 만듭니다. 이전 단원에서 만든 계산 열과 마찬가지로 측정값은 기본적으로 DAX 수식을 사용해 만든 계산입니다. 그러나 계산 열과는 달리 측정값은 사용자가 선택한 *필터*를 기반으로 계산됩니다. 피벗 테이블의 행 레이블 필드에 추가된 특정 열이나 슬라이서를 예로 들 수 있습니다.   적용된 측정값에 따라 필터의 각 셀에 대한 값이 계산됩니다. 측정값은 숫자 데이터에 대해 동적 계산을 수행하기 위해 대부분의 테이블 형식 모델에 포함할 수 있는 강력하고 유연한 계산입니다. 자세한 내용은 [측정값&#40;SSAS 테이블 형식&#41;](tabular-models/measures-ssas-tabular.md)을 참조하세요.  

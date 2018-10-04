@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Description Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Description element
 ms.assetid: db24bb51-3d75-49f9-82be-3380b2de1622
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90c5bb021b41c60b8ce23473fef99bb04b42b7d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f5ef850eaa7f347a61120fd7d82aa2a8434a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218903"
 ---
 # <a name="description-element-xmla"></a>Description 요소(XMLA)
   부모 [Error](error-element-xmla.md) 요소에 대한 설명을 포함합니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37257139"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37257139"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[오류](error-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
   

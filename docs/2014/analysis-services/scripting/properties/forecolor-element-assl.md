@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ForeColor Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ForeColor element
 ms.assetid: 5125520c-3bce-40e6-a722-8d4d47306fed
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: efcd4c226743ec313e338eea4af83ba68792b675
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 53436deea642942f7110b542d07312ba78256989
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216533"
 ---
 # <a name="forecolor-element-assl"></a>ForeColor 요소(ASSL)
   색 관련 표시 특징을 설명 합니다 [CalculationProperty](../objects/calculationproperty-element-assl.md) 하거나 [측정값](../objects/measure-element-assl.md) 부모 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37332833"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37332833"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CalculationProperty](../objects/calculationproperty-element-assl.md), [측정값](../objects/measure-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  합니다 `ForeColor` 속성이 MDX (Multidimensional Expressions) 식을 포함 하 고 적용할 `CalculationProperty` 요소를 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀* .  

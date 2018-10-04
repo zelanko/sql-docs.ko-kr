@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3d21e28d597badfb5220b9202a19f38b32d1e45
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6f28df5a3091ad54b8500bd29b9873277c33b690
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220953"
 ---
 # <a name="page-setup-dialog-box"></a>페이지 설정 대화 상자
   **페이지 설정** 대화 상자에서 옵션을 선택하여 페이지 디자인을 사용자 지정할 수 있습니다. 일부 옵션의 사용 가능성은 편집하기 위해 설치 및 설정된 언어에 따라 달라집니다.  

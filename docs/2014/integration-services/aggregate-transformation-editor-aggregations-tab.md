@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224463"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>집계 변환 편집기(집계 탭)
   **집계 변환 편집기** 대화 상자의 **집계** 탭을 사용하여 집계 및 집계 속성에 대한 열을 지정할 수 있습니다. 이때 여러 집계를 적용할 수 있습니다. 이 변환으로 인해 오류 출력이 생성되지는 않습니다.  

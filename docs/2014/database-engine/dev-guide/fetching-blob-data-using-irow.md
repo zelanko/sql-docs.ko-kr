@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching rows
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - BLOBs, fetching
 ms.assetid: badbd6ac-20aa-4891-a14f-48d38e7f30de
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2716ae0fdde3cf94a43f0b73f1a381a173ec466
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfdcec624614ef540180c7c02661c2927a1084f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225773"
 ---
 # <a name="fetching-blob-data-using-irow"></a>IRow를 사용하여 BLOB 데이터 인출
   사용 하 여 행 개체의 BLOB 열을 검색할 수 있습니다 **irow:: Getcolumns**, 또는 **irow:: Open** 하 고 **ISequentialStream**합니다.  

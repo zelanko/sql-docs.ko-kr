@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Properties Property (ServerNetworkProtocolIPAddress Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Properties property
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 68a8d39ae8bc516d40c53cb7c6986ef08aa8d52b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d049e52fc28e8359962577de17999d89560d598
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222266"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties 속성(ServerNetworkProtocolIPAddress 클래스)
   IP 주소와 연결된 속성을 가져옵니다.  

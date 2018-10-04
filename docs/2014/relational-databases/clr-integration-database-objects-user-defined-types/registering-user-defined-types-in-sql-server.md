@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1307f5b351ab77e9fb61160f4a0ad73a5eb06eb6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 158f71abbe82a3b15b497ea8cbd6e74aec2ed6ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216193"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server의 사용자 정의 형식 등록
   사용자 정의 형식 (UDT)를 사용 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](clr-user-defined-types.md)을 참조하세요.  

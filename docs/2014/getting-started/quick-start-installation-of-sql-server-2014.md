@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - data-quality-services
@@ -14,23 +13,21 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - quick start installation [SQL Server]
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-caps.latest.revision: 48
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1b7b5a6a8d763c2773e048f2302f874806a8c27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223383"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 빠른 시작 설치
     
@@ -108,7 +105,7 @@ ms.locfileid: "37231803"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |하드웨어 및 소프트웨어 요구 사항, 운영 체제 지원, 네트워크 및 인터넷 고려 사항, 하드 디스크 공간 요구 사항을 검토합니다.|[설치 필수 구성 요소](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 위한 보안 고려 사항을 검토합니다.|[Security Considerations](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 위한 보안 고려 사항을 검토합니다.|[보안 고려 사항](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 버전에서 지원되는 기능의 세부 정보를 검토합니다.|[기능 및 버전](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 결정합니다.|[SQL Server 2014 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |하드웨어 구성을 검토하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 설치를 준비하는 방법을 알아 봅니다.|[장애 조치(Failover) 클러스터링을 설치하기 전에](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
