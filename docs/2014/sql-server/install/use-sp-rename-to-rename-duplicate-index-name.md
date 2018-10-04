@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sp_rename
 - duplicate index names
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 522fcd712882d031a5febe4766946a31d5696859
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 641dbb6e33f7b39a7542fdd43a940c487a4b21d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093043"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>sp_rename을 사용하여 중복 인덱스 이름을 바꿉니다.
   업그레이드 관리자가 중복된 테이블 또는 뷰 인덱스 이름을 검색했습니다. 업그레이드하기 전에 인덱스 이름을 바꾸어 중복을 제거하십시오.  

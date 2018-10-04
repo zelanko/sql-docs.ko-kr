@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4240182748de91090e4d4d67dec35eb4ebf74e55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244090"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139973"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>5 단원: 예측 쿼리를 실행합니다.
+# <a name="lesson-5-executing-prediction-queries"></a>5단원: 예측 쿼리 실행
   이 단원에서는 사용할지 합니다 [SELECT FROM \<모델 > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) 형식의 두 가지 유형의 의사 결정 트리를 기반으로 예측을 만드는 SELECT 문은 모델에서 만든 [ 2 단원: 연결 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)합니다. 이러한 예측 유형은 다음과 같습니다.  
   
  단일 쿼리  

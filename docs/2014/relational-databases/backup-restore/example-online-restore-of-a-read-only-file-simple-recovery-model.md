@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restore sequences [SQL Server], online
 - online restores [SQL Server], simple recovery model
 - simple recovery model [SQL Server], RESTORE examples
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f13ec9ddbffbee60d9d82fbda40ff76f4f66cdc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccbb89a7af71545c3b410356b6ab6b101983798d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097173"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>예제: 읽기 전용 파일의 온라인 복원(단순 복구 모델)
   이 항목에서는 읽기 전용 파일 그룹이 있는 단순 복구 모델에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 단순 복구 모델의 경우 파일이 마지막으로 읽기 전용이 된 후에 수행된 파일 백업이 존재하는 경우 읽기 전용 파일을 온라인으로 복원할 수 있습니다.  

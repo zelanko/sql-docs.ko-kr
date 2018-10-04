@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b3800ad42fcab068ff2cb3cd601438fa82002c59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fbc3d3ce9bd665efa78554c98c010ee0952c8e51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123093"
 ---
 # <a name="page-compression-implementation"></a>페이지 압축 구현
   이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 페이지 압축을 구현하는 방법에 대해 간략하게 설명합니다. 이 요약에서는 사용자의 데이터에 필요한 저장 공간을 계획하는 데 도움이 되는 기본 정보를 제공합니다.  

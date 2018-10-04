@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 137
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87066f0d1460490312bbd2a7ca22035629b9f069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116455"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  
@@ -194,12 +191,12 @@ ms.locfileid: "37268159"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 비트) x64<sup>1</sup>|예|예|예<sup>2</sup>|예<sup>2</sup>|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|예|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|예|예|예 <sup>2</sup>|예 <sup>2</sup>|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|예|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|예|예|예|예|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|예|예|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 비트) x64<sup>1</sup>|사용자 계정 컨트롤|사용자 계정 컨트롤|예<sup>2</sup>|예<sup>2</sup>|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|예 <sup>2</sup>|예 <sup>2</sup>|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원 되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   

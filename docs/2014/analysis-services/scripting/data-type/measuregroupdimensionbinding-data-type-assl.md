@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupDimensionBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroupDimensionBinding data type
 ms.assetid: 770e5ef8-aea1-4c9e-8e0a-2cbac43f2383
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01390833046c8a1f8b684035a6ab3ae0b1f16e62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 203bf4bc93e01cc819be9938b2fa9ea1e1982bf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090243"
 ---
 # <a name="measuregroupdimensionbinding-data-type-assl"></a>MeasureGroupDimensionBinding 데이터 형식(ASSL)
   차원과 측정값 그룹 간의 바인딩을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -50,13 +47,13 @@ ms.locfileid: "37165214"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[바인딩](binding-data-type-assl.md)|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[CubeDimensionID](../properties/id-element-assl.md)|  
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de3df0aa4e66f882f618fc4db13bcce544ce6fab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9243ad3965a7245f2bd37f9d7024b03cd3abdd57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096093"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Oracle 권한 부여 스크립트
   이 항목에서 제공된 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제를 사용하여 데이터를 게시할 Oracle 데이터베이스를 구성할 때 사용됩니다. 이 스크립트는 설치 후 *\<드라이브>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql 디렉터리에서도 사용할 수 있습니다. Oracle 데이터베이스 구성에 대한 자세한 내용은 [Oracle 게시자 구성](configure-an-oracle-publisher.md)을 참조하세요.  

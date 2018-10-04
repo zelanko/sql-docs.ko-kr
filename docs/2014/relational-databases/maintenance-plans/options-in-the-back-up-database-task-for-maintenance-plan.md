@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c916f4bbf22b856056aad4ae61ad23c76f7d864
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111333"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>데이터베이스 백업 태스크(유지 관리 계획)
   **데이터베이스 백업 태스크** 대화 상자를 사용하여 유지 관리 계획에 백업 작업을 추가할 수 있습니다. 데이터베이스 백업은 시스템이나 하드웨어 상의 장애 또는 사용자의 오류로 인해 데이터베이스가 손상되어 백업 복사본을 복원해야 하는 경우를 대비하기 위한 중요한 작업입니다. 이 태스크를 통해 전체 백업, 차등 백업, 파일 및 파일 그룹 백업, 트랜잭션 로그 백업을 수행할 수 있습니다.  

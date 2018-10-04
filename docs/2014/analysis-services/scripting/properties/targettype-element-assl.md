@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TargetType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TargetType element
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b21033bb9a7e20923adccfa135475cf93dafb7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed0ca768f075b7cd4249c9d8b021e2ec10d54c46
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099563"
 ---
 # <a name="targettype-element-assl"></a>TargetType 요소(ASSL)
   식별 된 항목 유형을 식별 합니다 [대상](target-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37237563"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37237563"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[동작](../objects/action-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

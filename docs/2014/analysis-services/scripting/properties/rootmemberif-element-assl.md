@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RootMemberIf Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb10d62b14c5f13fbc26de23d832d77b724bebc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118703"
 ---
 # <a name="rootmemberif-element-assl"></a>RootMemberIf 요소(ASSL)
   부모 특성의 멤버 또는 루트 멤버를 식별하는 방법을 결정합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37280299"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  값을 `RootMemberIf` 요소는 부모 특성에만 사용 됩니다 (값 즉,는 [사용](usage-element-dimensionattribute-assl.md) 요소의 `DimensionAttribute` 부모 요소가로 설정 되어 *부모*) 루트 (결정할 부모-자식 계층의 최상위) 멤버입니다.  

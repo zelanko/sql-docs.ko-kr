@@ -1,14 +1,12 @@
 ---
-title: 백업 및 데이터베이스와 트랜잭션 로그 복원 | Microsoft Docs
+title: 백업 및 데이터베이스 및 트랜잭션 로그 복원 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [SMO]
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5b5a885ef12294f1d8b755ba72873ffe70e2eb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb3452b587bd455488d391656eae9801e642391f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092943"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>데이터베이스 및 트랜잭션 로그 백업 및 복원
-  SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Backup> 클래스와 <xref:Microsoft.SqlServer.Management.Smo.Restore> 클래스는 특정 백업 및 복원 태스크를 수행하는 도구를 제공하는 유틸리티 클래스입니다. A <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체 대신 필요한 특정 백업 태스크를 나타냅니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 인스턴스에 있는 개체입니다.  
+  SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Backup> 클래스와 <xref:Microsoft.SqlServer.Management.Smo.Restore> 클래스는 특정 백업 및 복원 태스크를 수행하는 도구를 제공하는 유틸리티 클래스입니다. A <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체가 나타내는 대신 필요한 특정 백업 작업은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체는 서버 인스턴스.  
   
  데이터 손실이나 손상이 발생하면 완전히 또는 부분적으로 백업을 복원해야 합니다. 부분 복원에서는 복원할 데이터를 분할하기 위해 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 컬렉션을 사용합니다. 백업에 트랜잭션 로그가 있으면 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Restore> 속성을 사용하여 특정 시점까지 데이터를 복원할 수 있습니다. 또한 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 메서드를 사용하여 데이터의 유효성을 확인할 수 있습니다. 권장되는 백업 절차는, 복원 작업을 수행하고 정기적으로 데이터베이스의 데이터를 검사하여 백업 무결성을 확인하는 것입니다.  
   

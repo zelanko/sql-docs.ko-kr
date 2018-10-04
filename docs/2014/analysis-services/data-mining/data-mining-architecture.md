@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb84b8ffc9f3dfbb5b1e89a50b0d57b2dafa9111
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121053"
 ---
 # <a name="data-mining-architecture"></a>데이터 마이닝 아키텍처
   이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에서 호스팅되는 데이터 마이닝 솔루션의 아키텍처에 대해 설명합니다. 이 섹션의 항목에서는 데이터 마이닝을 지원하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 논리적 아키텍처와 물리적 아키텍처에 대해 설명하고, 데이터 마이닝 서버와 통신하는 데 사용하고 데이터 마이닝 개체에 대해 로컬 또는 원격으로 작업하는 데 사용할 수 있는 프로토콜, 클라이언트 및 공급자에 대한 정보를 제공합니다.  

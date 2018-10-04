@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDSCHEMA_FUNCTIONS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MDSCHEMA_FUNCTIONS rowset
 ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 587d361eef197378fcc8b0347b9289ae2b81e99a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d5966a975cab0f70c24801e83ee9eab7fa99398
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090873"
 ---
 # <a name="mdschemafunctions-rowset"></a>MDSCHEMA_FUNCTIONS 행 집합
   데이터베이스에 연결된 클라이언트 응용 프로그램에 사용할 수 있는 함수를 설명합니다.  

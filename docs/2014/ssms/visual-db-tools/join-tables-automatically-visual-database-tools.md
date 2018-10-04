@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
 - joins [SQL Server], creating
 - joins [SQL Server], automatic
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62fb54219cf9646b0a560056a2cd1b82e422175f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 87d4ea836aa77899985555f0f103651d74578b03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112931"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>테이블 자동 조인(Visual Database Tools)
   쿼리에 두 개 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](visual-database-tools.md) 가 해당 테이블 사이의 관련성을 판단합니다. 관련이 있는 경우 쿼리 및 뷰 디자이너는 테이블 또는 테이블 구조 개체를 나타내는 사각형 사이에 자동으로 조인 선을 넣습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pages [SQL Server], space
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - reserved free rows per page [SQL Server]
 - calculating table size
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76f650bbfccba0eef9b269791605ae9a76235494
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60d9214fff9ef50ebcaf506006a68ad486d2edbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094083"
 ---
 # <a name="estimate-the-size-of-a-table"></a>테이블 크기 예측
   다음 단계를 통해 테이블에 데이터를 저장하는 데 필요한 공간을 추정할 수 있습니다.  

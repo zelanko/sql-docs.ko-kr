@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d06913da04eebdaa249e424fa7b4d66c8e8aaa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a45edaedce83d741d24ee085ccf962854303a68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153794"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129353"
 ---
 # <a name="use-my-subscriptions"></a>내 구독 사용
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 관리자 포함 된 **내 구독** 구독을 한 곳에서 모든 구성 페이지입니다. 내 구독을 사용하여 기존 구독을 보고, 수정하고, 삭제할 수 있습니다. 하지만 내 구독을 사용하여 구독을 만들 수는 없습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 625887e6b737e3e54fc8c0516ec3fdbc1e13d46e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89d2d5d8cee989d6541cdb256b0a7aaf48d00162
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142215"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014에서 사용되지 않는 MDS(Master Data Services) 기능
   이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  

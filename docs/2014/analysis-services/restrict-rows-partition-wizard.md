@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.typefilterexpression.f1
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b633b19331c836878487920e8145f12aae86f73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b86cfeedd76af51b5f9d8cc4633c73ed9cc17ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131713"
 ---
 # <a name="restrict-rows-partition-wizard"></a>행 제한(파티션 마법사)
   **행 제한** 페이지를 사용하여 지정한 테이블에서 검색한 다음 집계하여 파티션에 포함시킬 행을 제한할 수 있습니다.  

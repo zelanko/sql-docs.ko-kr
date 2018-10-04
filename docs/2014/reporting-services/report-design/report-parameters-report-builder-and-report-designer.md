@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
 - sql12.rtp.rptdesigner.reportparameters.general.f1
@@ -19,16 +15,15 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 26fdc20f897d904319c9080120aa5770b53145bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107339"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
   이 항목에서는 SSRS 보고서 매개 변수의 일반적인 용도, 설정할 수 있는 속성 및 매개 변수에 대한 기타 정보를 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다.  
@@ -134,9 +129,9 @@ ms.locfileid: "37168294"
   
 |속성|Description|  
 |--------------|-----------------|  
-|속성|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 이름은 데이터 집합 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 이름이 유사합니다.|  
+|이름|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 이름은 데이터 집합 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 이름이 유사합니다.|  
 |프롬프트|보고서 뷰어 도구 모음에서 매개 변수 옆에 표시되는 텍스트입니다.|  
-|데이터 형식|데이터 형식이 있는 경우에 사용자의 드롭다운 목록에서 값 선택 매개 변수에 대해 사용 가능한 값은 정의 하는 경우 `DateTime`합니다. 보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> `Boolean`을 참조하세요. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> `DateTime`을 참조하세요. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> `Text`을 참조하세요. 사용자가 입력란에 값을 입력합니다.<br /><br /> 보고서 데이터 형식에 대 한 자세한 내용은 참조 하세요. [RDL 데이터 형식](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)합니다.|  
+|데이터 형식|데이터 형식이 있는 경우에 사용자의 드롭다운 목록에서 값 선택 매개 변수에 대해 사용 가능한 값은 정의 하는 경우 `DateTime`합니다. 보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> `Boolean` 을 참조하세요. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> `DateTime` 을 참조하세요. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> `Text` 을 참조하세요. 사용자가 입력란에 값을 입력합니다.<br /><br /> 보고서 데이터 형식에 대 한 자세한 내용은 참조 하세요. [RDL 데이터 형식](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)합니다.|  
 |빈 값 허용|매개 변수 값에 빈 문자열이나 공백을 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 공백 값을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 공백 값을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 공백이 자동으로 포함되지는 않습니다.|  
 |Null 값 허용|매개 변수 값이 Null이 될 수 있도록 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 null을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 null을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 null이 자동으로 포함되지는 않습니다.|  
 |다중 값 허용|사용자가 선택할 수 있는 드롭다운 목록을 만드는 데 사용 가능한 값을 제공합니다. 이렇게 하면 데이터 집합 쿼리에서 유효한 값만 제출되도록 할 수 있습니다.<br /><br /> 매개 변수의 값이 드롭다운 목록에 표시되는 다중 값이 될 수 있도록 허용하려면 이 옵션을 선택합니다. Null 값은 허용되지 않습니다. 이 옵션을 선택하면 매개 변수 드롭다운 목록의 사용 가능한 값 목록에 확인란이 추가되고 목록의 맨 위에 **모두 선택**에 대한 확인란이 포함됩니다. 사용자는 원하는 값을 선택할 수 있습니다.<br /><br /> 값을 제공하는 데이터가 빠르게 변동될 경우 사용자에게 표시되는 목록이 최신 상태가 아닐 수도 있습니다.|  

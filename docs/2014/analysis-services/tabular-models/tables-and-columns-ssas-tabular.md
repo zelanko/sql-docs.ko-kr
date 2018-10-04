@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6def0344726c2b4427d12b548e60d3b68135369d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099713"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
   테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  

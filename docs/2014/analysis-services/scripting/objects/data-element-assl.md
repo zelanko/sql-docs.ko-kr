@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Data Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data element
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b31922593446e7d8aafd88cdb5667bef8b109ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 57958cfe25563b4a7e2fd53f639d3bc289dce07c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117370"
 ---
 # <a name="data-element-assl"></a>Data 요소(ASSL)
   포함 (자식 컬렉션에 [블록 요소 &#40;ASSL&#41; ](block-element-assl.md) 요소)의 이진 콘텐츠를 [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37218283"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[DataBlock](../data-type/datablock-data-type-assl.md)|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37218283"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[파일](file-element-assl.md) 형식의 [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  부모에 해당 하는 요소가 `Data` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  

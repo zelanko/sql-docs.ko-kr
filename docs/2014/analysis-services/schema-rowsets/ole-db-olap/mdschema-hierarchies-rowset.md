@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDSCHEMA_HIERARCHIES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MDSCHEMA_HIERARCHIES rowset
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a38dd03023fc266c5b8505979766d90979d16f05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5361453290ea1c45de4868e7498c51b1738cdfd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134193"
 ---
 # <a name="mdschemahierarchies-rowset"></a>MDSCHEMA_HIERARCHIES 행 집합
   특정 차원 내의 각 계층을 설명합니다.  

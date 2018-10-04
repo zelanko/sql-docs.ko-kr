@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - integer data types [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - locale-sensitive parsing [Integration Services]
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-caps.latest.revision: 33
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ed822a26c5722a249c3fda635288c282f3e2834
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92dc9782a00a55a9409bd5e87dd00a423002d200
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105443"
 ---
 # <a name="numeric-data-formats"></a>숫자 데이터 형식
   빠른 구문 분석에서는 데이터 구문 분석을 위해 로캘을 구분하지 않는 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석은 일부 제한된 정수 데이터 형식만 지원합니다.  

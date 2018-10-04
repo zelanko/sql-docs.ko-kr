@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, application building
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], application building
 - Web service [Reporting Services], client creation
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6daa44aae7057174ea827a7545ffb652a42e1bca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 062d7c811f0d2201fd1a0954005860a95511fb3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105853"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>웹 서비스 및 .NET Framework를 사용하여 응용 프로그램 작성
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 메서드, 기본 유형, 사용자 정의 복합 형식 등과 같은 친숙한 프로그래밍 구문을 사용하여 웹 서비스 작업을 수행할 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에는 모든 W3C(World Wide Web 컨소시엄) 표준 호환 웹 서비스를 호출할 수 있는 웹 서비스 클라이언트를 만드는 데 사용할 수 있는 인프라와 도구가 포함되어 있습니다.  

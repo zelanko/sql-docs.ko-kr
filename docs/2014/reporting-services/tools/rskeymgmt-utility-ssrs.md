@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -21,20 +19,18 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116896"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
-  중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. 
-            *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
+  중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -175,7 +171,7 @@ rskeymgmt -r <installationID>
 ## <a name="remarks"></a>Remarks  
  보고서 서버는 저장된 자격 증명과 연결 정보를 암호화합니다. 데이터를 암호화하는 데 공개 키와 대칭 키가 사용됩니다. 보고서 서버를 실행하려면 보고서 서버 데이터베이스에 유효한 키가 있어야 합니다. **rskeymgmt** 를 사용하여 키를 백업, 삭제 또는 복원할 수 있습니다. 키를 복원할 수 없을 경우 이 도구는 더 이상 사용할 수 없는 암호화된 내용을 삭제하는 방법을 제공합니다.  
   
- **rskeymgmt** 유틸리티를 사용하여 설치하는 동안 또는 초기화하는 동안 정의되는 키 집합을 관리할 수 있습니다. 이 유틸리티는 원격 프로시저 호출(RPC) 끝점을 통해 로컬 보고서 서버 Windows 서비스에 연결합니다. 이 유틸리티가 올바르게 작동하려면 보고서 서버 Windows 서비스가 실행 중이어야 합니다.  
+ **rskeymgmt** 유틸리티를 사용하여 설치하는 동안 또는 초기화하는 동안 정의되는 키 집합을 관리할 수 있습니다. 이 유틸리티는 원격 프로시저 호출(RPC) 엔드포인트를 통해 로컬 보고서 서버 Windows 서비스에 연결합니다. 이 유틸리티가 올바르게 작동하려면 보고서 서버 Windows 서비스가 실행 중이어야 합니다.  
   
  암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   

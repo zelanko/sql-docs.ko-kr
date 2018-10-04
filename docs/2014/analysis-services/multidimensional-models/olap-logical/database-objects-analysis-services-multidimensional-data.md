@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], about objects
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Analysis Services objects
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab12847fc040121bd1af8013f809e925e99f5eee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04f490e5b4305b665fc38793439626e3e5f651c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090763"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>데이터베이스 개체(Analysis Services - 다차원 데이터)
   A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 데이터베이스 개체 및 온라인 분석 처리 (OLAP) 및 데이터 마이닝 사용에 대 한 어셈블리를 포함 합니다.  

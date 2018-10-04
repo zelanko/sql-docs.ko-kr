@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091263"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
@@ -210,8 +207,8 @@ ms.locfileid: "37204033"
 ||**게시자**|**배포자** <sup>3</sup>|**구독자**|  
 |**트랜잭션**|예<sup>1</sup>|아니요|예<sup>2</sup>|  
 |**P2P**|아니요|아니요|아니요|  
-|**병합**|예|아니요|예<sup>2</sup>|  
-|**스냅숏**|예|아니요|예<sup>2</sup>|  
+|**병합**|사용자 계정 컨트롤|아니요|예<sup>2</sup>|  
+|**스냅숏**|사용자 계정 컨트롤|아니요|예<sup>2</sup>|  
   
  <sup>1</sup> 양방향 및 상호 트랜잭션 복제에 대 한 지원이 포함 되지 않습니다.  
   

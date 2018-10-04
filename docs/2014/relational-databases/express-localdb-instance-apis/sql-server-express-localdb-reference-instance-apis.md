@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 211e7a076cae09b3fef7ef40a23cca9c60910e47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65a19135038183d3ddc22fa09dfa47f79c343d92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154312"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130653"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>SQL Server Express LocalDB 인스턴스 API 참조
   기존 서비스 기반 SQL Server 환경에서는 단일 컴퓨터에 설치되는 개별 SQL Server 인스턴스가 실제로 분리됩니다. 즉, 각 인스턴스가 개별적으로 설치 및 제거되고, 별도의 이진 파일 집합을 사용하며, 별도의 서비스 프로세스에 따라 실행됩니다. SQL Server 인스턴스 이름을 사용하여 연결할 SQL Server 인스턴스를 지정합니다.  

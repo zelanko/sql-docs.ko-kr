@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllowOverwrite Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb0d58570349fbbb17b442ddebc0fd3193531149
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131433"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 요소(XMLA)
   확인 여부를 부모 [백업](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령은 대상 파일 또는 데이터베이스를 덮어쓸지 하려고 시도 합니다.  
@@ -60,7 +57,7 @@ ms.locfileid: "37190903"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Backup](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Backup` 명령의 경우 `AllowOverwrite` 요소는 명령으로 `File` 요소에 지정된 백업 파일을 덮어쓸 수 있는지 여부를 결정합니다.  

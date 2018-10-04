@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 345a24e6-186c-4570-baf2-7bfe9b7b4cc1
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95dca43ed30d0edfaa0c400906233dd41cda889e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 325fe14a5df51a49833485926ba10ee3f05f5bbe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127973"
 ---
 # <a name="displaykeyposition-element-xml"></a>DisplayKeyPosition 요소(XML)
   요소 컬렉션의 요소 위치에 대한 정보를 포함합니다.  
@@ -49,7 +46,7 @@ ms.locfileid: "37215883"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[RelationshipEndVisualizationProperties](../../scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `RelationshipEndVisualizationProperties` 요소의 경우 `DisplayKeyPosition` 요소는 세부 정보 컬렉션의 표시 키 요소 위치를 포함합니다. 기본값은 사용할 표시 키가 없음을 나타냅니다.  

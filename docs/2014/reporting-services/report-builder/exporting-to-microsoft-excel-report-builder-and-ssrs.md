@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096153"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010의 네이티브 형식으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  
@@ -181,7 +178,7 @@ ms.locfileid: "37152104"
 |워크시트당 최대 열 수|256|16,384|  
 |워크시트당 최대 행 수|65,536|1,048,576|  
 |워크시트에 허용된 색상 수|56(색상표)<br /><br /> 보고서에 56개보다 많은 수의 색을 사용한 경우 렌더링 확장 프로그램에서는 필요한 색을 사용자 지정 색상표에 이미 들어 있는 56색 중 하나로 대체합니다.|약 1600만(24비트 색상)|  
-|ZIP 압축 파일|InclusionThresholdSetting|ZIP 압축|  
+|ZIP 압축 파일|없음|ZIP 압축|  
 |기본 글꼴 패밀리|Arial|Calibri|  
 |기본 글꼴 크기|10pt|11pt|  
 |기본 행 높이|12.75pt|15pt|  

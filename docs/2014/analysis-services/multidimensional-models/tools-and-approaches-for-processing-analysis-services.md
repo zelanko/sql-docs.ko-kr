@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edddafdbc51c9f67beb7b0f92efddf1e14f9fc79
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118473"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
   처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  

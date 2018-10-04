@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: edf358f8ed321274d8af55accd5dbc4ac4692db2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6362196706e3c37ffbd325aeb8ff5576ca897c02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105373"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대한 자세한 내용은 [복합 도메인 관리](../../2014/data-quality-services/managing-a-composite-domain.md)를 참조하세요.  

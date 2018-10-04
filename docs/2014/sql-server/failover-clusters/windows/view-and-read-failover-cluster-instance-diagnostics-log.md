@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a72521b1d2c40eb50954ea16676e17ec40d7d07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098783"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
   SQL Server 리소스 DLL에 대한 모든 오류 및 경고 이벤트는 Windows 이벤트 로그에 기록됩니다. [sp_server_diagnostics&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 시스템 저장 프로시저에서 캡처된 SQL Server 관련 진단 정보의 실행 로그는 SQL Server 장애 조치(failover) 클러스터 진단(*SQLDIAG* 로그라고도 함) 로그 파일에 기록됩니다.  

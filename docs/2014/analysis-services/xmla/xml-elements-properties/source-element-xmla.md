@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06c69de2879b2298b180b6dd487fe2dc28f09684
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182960"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095723"
 ---
 # <a name="source-element-xmla"></a>Source 요소(XMLA)
   하는 동안 병합할 원본 파티션을 나타냅니다는 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다.  
@@ -55,8 +52,8 @@ ms.locfileid: "37182960"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|1-n: 두 번 이상 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

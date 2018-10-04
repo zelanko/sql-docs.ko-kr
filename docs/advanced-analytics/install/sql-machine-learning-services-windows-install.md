@@ -3,17 +3,17 @@ title: SQL Server Machine Learning Services (In-database) Windows에서 설치 |
 description: SQL Server 또는 SQL Server의 Python에는 R은 Windows에서 SQL Server 2017의 Machine Learning Services를 설치할 때 사용할 수입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/14/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 330c21e6eb256bfe398bc707852eb9a66a183fb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142663"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning에서 Windows 서비스를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,9 @@ SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learn
 
 7. 설치가 완료 되 면 컴퓨터를 다시 시작 하 라는 메시지가 표시 되는 경우 지금 합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
 
-## <a name="bkmk_enableFeature"></a>스크립트 실행 활성화
+<a name="bkmk_enableFeature"></a>
+
+## <a name="enable-script-execution"></a>스크립트 실행 활성화
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
 
@@ -136,6 +138,8 @@ SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learn
 마우스를 사용 하 여 서비스를 다시 시작할 수 있습니다 **다시 시작** SSMS에서 또는 사용 하 여 인스턴스에 대 한 명령을 합니다 **Services** 제어판 또는 사용 하 여 패널 [SQL Server 구성 관리자 ](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>설치 확인
+
+인스턴스의 설치 상태를 확인 [사용자 지정 보고서](../r/monitor-r-services-using-custom-reports-in-management-studio.md) 또는 로그를 설치 합니다.
 
 외부 스크립트를 실행 하는 데 사용 하는 모든 구성 요소가 실행 되 고 있는지 확인 하려면 다음 단계를 사용 합니다.
 
@@ -191,6 +195,28 @@ SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learn
 > 
 > 예를 들어는 임의의 열 이름을 생성 하려면 다음 줄을 추가할 수 있습니다. `WITH RESULT SETS ((Col1 AS int))`
 
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>업데이트를 적용 합니다.
+
+데이터베이스 엔진 및 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용 하는 것이 좋습니다.
+
+인터넷에 연결 된 장치에서 누적 업데이트는 Windows Update를 통해 일반적으로 적용 됩니다 있지만 제어 되는 업데이트에 대 한 아래 단계를 사용할 수도 있습니다. 데이터베이스 엔진에 대 한 업데이트를 적용 하면 설치는 동일한 인스턴스를 설치한 모든 R 또는 Python 기능에 대 한 누적 업데이트를 가져옵니다. 
+
+연결이 끊어진된 서버에 추가 단계가 필요 합니다. 자세한 내용은 [인터넷 액세스 없이 컴퓨터에 설치 > 누적 업데이트를 적용할](sql-ml-component-install-without-internet-access.md#apply-cu)합니다.
+
+1. 이미 설치 된 기본 인스턴스를 시작 합니다: SQL Server 2017 초기 릴리스
+
+2. 누적 업데이트 목록으로 이동: [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
+
+3. 최신 누적 업데이트를 선택 합니다. 실행 파일 다운로드 되어 자동으로 추출 합니다.
+
+4. 설치 프로그램을 실행합니다. 라이선스 조건에 동의 하 고 기능 선택 페이지의 누적 업데이트 적용 되는 기능을 검토 합니다. Machine learning 기능을 포함 하 여 현재 인스턴스에 대해 설치 된 모든 기능에 표시 됩니다. 모든 기능을 업데이트 하는 데 필요한 CAB 파일이 다운로드 됩니다.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. R 및 Python 배포에 대 한 라이선스 조건에 동의 하 여 마법사를 진행 합니다. 
+
 ## <a name="additional-configuration"></a>기타 고려 사항
 
 외부 스크립트 확인 단계를 성공적으로 수행 되었으면 SQL Server Management Studio, Visual Studio Code 또는 T-SQL 문을 서버로 보낼 수 있는 다른 모든 클라이언트에서 R 또는 Python 명령을 실행할 수 있습니다.
@@ -212,7 +238,9 @@ SQL Server 2017부터 R 및 Python에 대 한 지원은 SQL Server Machine Learn
 > [!NOTE]
 > 추가 구성이 필요한 지 여부를 보안 스키마를 설치한 SQL Server 및 데이터베이스에 연결 하 여 외부 스크립트를 실행 하는 사용자를 예상 하는 방법에 따라 달라 집니다. 
 
-###  <a name="bkmk_configureAccounts"></a> SQL 제한 된 사용자 그룹 (SQLRUserGroup) 계정 그룹에 대 한 암시적된 인증 사용
+<a name="bkmk_configureAccounts"></a> 
+
+###  <a name="enable-implied-authentication-for-sql-restricted-user-group-sqlrusergroup-account-group"></a>SQL 제한 된 사용자 그룹 (SQLRUserGroup) 계정 그룹에 대 한 암시적된 인증 사용
 
 원격 데이터 과학 클라이언트에서 스크립트를 실행 해야 하 고 Windows 인증을 사용 하는, 추가 구성은 R을 실행 하는 작업자 계정에 부여 하는 데 필요한 및 Python 프로세스에 로그인 할 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 귀하를 대신해 인스턴스. 이러한 동작 이라고 *묵시적된 인증*, SQL Server 2016 및 SQL Server 2017의 외부 스크립트의 보안 실행을 지원 하도록 데이터베이스 엔진에 의해 구현 됩니다.
 
@@ -235,7 +263,9 @@ SQL Server 2017 및 이전 버전에서는 로컬 Windows 사용자 계정의 �
 SQL Server 2019 작업자 계정 AppContainers, SQL Server 실행 패드 서비스에서 실행 중인 프로세스를 사용 하 여 대체 됩니다. 여전히 데이터베이스 로그인을 추가 해야 하는 작업자 계정에 더 이상 사용 하지만 **SQLRUsergroup** 인증이 필요한 사용 권한에 포함 된 경우. 작업자 계정에 로그인 권한이 없는 것 처럼 실행 패드 서비스 id도 서로 겹치지 않습니다. 로그인을 만드는 **SQLRUserGroup**, 묵시적된 인증이 작동 하려면 허용이 릴리스에서 실행 패드 서비스의 구성 합니다.
 ::: moniker-end
 
-### <a name="permissions-external-script"></a> 외부 스크립트를 실행 하도록 사용자 권한 부여
+<a name="permissions-external-script"></a> 
+
+### <a name="give-users-permission-to-run-external-scripts"></a>외부 스크립트를 실행 하도록 사용자 권한 부여
 
 설치한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 사용자가 직접 인스턴스를 직접에서 R 또는 Python 스크립트를 실행 중인, 일반적으로 관리자 권한으로 스크립트를 실행 합니다. 따라서 권한이 암시적 다양 한 작업 및 데이터베이스의 모든 데이터입니다.
 
@@ -250,7 +280,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!NOTE]
 > 권한은 지원 되는 스크립트 언어에 적용 됩니다. 즉, Python 스크립트 및 R 스크립트에 대해 별도 사용 권한 수준이 하지 않습니다. 이러한 언어에 대 한 별도 사용 권한을 유지 해야 할 경우 별도 인스턴스에서 R 및 Python을 설치 합니다.
 
-### <a name="permissions-db"></a> 사용자 읽기, 쓰기 또는 데이터 정의 언어 (DDL) 권한을 데이터베이스 제공
+<a name="permissions-db"></a> 
+
+### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>사용자 읽기, 쓰기 또는 데이터 정의 언어 (DDL) 권한을 데이터베이스 제공
 
 사용자 스크립트를 실행 하는 동안 다른 데이터베이스에서 데이터를 읽는 사용자 필요할 수 있습니다. 사용자 테이블로 데이터를 쓰고 결과 저장할 새 테이블을 만드는 해야 할 수 있습니다.
 
@@ -305,16 +337,6 @@ SQL Server에서 사용할 패키지는 인스턴스에서 사용되는 기본 �
 
 R 패키지 설치 및 관리에 대 한 프로세스는 SQL Server 2016 및 SQL Server 2017에서 다릅니다. SQL Server 2016에서 데이터베이스 관리자는 사용자에 게 필요한 R 패키지를 설치 해야 합니다. SQL Server 2017에서 데이터베이스별 수준에서 패키지를 공유 하도록 사용자 그룹을 설정할 수도 있고 사용자가 자신의 패키지를 설치할 수 있도록 하려면 데이터베이스 역할을 구성할 수 있습니다. 자세한 내용은 [SQL Server에서 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)합니다.
 
-
-## <a name="get-help"></a>도움말 보기
-
-설치 또는 업그레이드를 사용 하 여 도움이 필요 하세요? 알려진 문제와 관련 된 일반적인 질문에 대 한 답변을 다음 문서를 참조 하세요.
-
-* [업그레이드 및 설치 FAQ-Machine Learning 서비스](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-인스턴스의 설치 상태를 확인 하 고 일반적인 문제를 해결 하려면 이러한 사용자 지정 보고서를 봅니다.
-
-* [SQL Server R Services에 대 한 사용자 지정 보고서](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## <a name="next-steps"></a>다음 단계
 

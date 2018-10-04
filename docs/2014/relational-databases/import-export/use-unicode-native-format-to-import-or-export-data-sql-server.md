@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 631e857146b99ad9ae05b94b7a64adc0b27fff27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d05e69dd4a094e3f361098583adf3aed7899a018
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137964"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)
   유니코드 네이티브 형식은 한 곳의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에서 다른 설치로 정보를 복사해야 하는 경우 유용합니다. 비문자 형식의 데이터에 네이티브 형식을 사용하면 문자 형식과 다른 데이터 형식 간의 불필요한 변환을 막고 시간을 절약할 수 있습니다. 모든 문자 형식의 데이터에 유니코드 문자 형식을 사용하면 다른 코드 페이지를 사용하는 서버 간에 데이터를 대량 로드할 때 확장 문자의 손실을 방지할 수 있습니다. 유니코드 네이티브 형식의 데이터 파일은 어떤 대량 가져오기 방법으로도 읽을 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: db831f0a92962eaa12d220d31d762d2c591e0d45
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123493"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>보고서에 차트 추가(보고서 작성기 및 SSRS)
   시각적 형식으로 데이터를 요약하려면 차트 데이터 영역을 사용합니다. 표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 선택한 차트 종류에 따라 데이터를 차트 형태로 만들었을 때 해당 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  

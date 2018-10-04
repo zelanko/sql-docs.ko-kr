@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d864ea4e9d71928823b7de4d5b539594783d8ba2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116313"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>RollupChildren 함수 작업(MDX)
   다차원 식 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [찾기 및 바꾸기에 대 한 스크립트] 함수는 각각의 자식에 다른 단항 연산자를 적용 하는 멤버의 자식을 롤업 하 고 숫자로이 롤업 값을 반환 합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  

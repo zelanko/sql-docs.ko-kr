@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3ad4cad-d9eb-4824-802c-90f747b32507
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b9d7d54bbb4160f6258745a21fe2c05671aec5d8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396636"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135783"
 ---
 # <a name="in-memory-oltp-code-samples"></a>메모리 내 OLTP 코드 예제
   이 섹션에는 메모리 내 OLTP를 보여 주는 코드 예제가 있습니다.  

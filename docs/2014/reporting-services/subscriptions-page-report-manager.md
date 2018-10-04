@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181580"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109931"
 ---
 # <a name="subscriptions-page-report-manager"></a>구독 페이지(보고서 관리자)
   구독 페이지를 사용하여 현재 보고서나 공유 데이터 원본의 구독을 모두 나열할 수 있습니다. 모든 구독 태스크 관리가 뜻하는 바와 같이 충분한 권한이 있으면 모든 사용자의 구독을 볼 수 있습니다. 그렇지 않으면 이 페이지는 사용자가 소유하는 구독만 표시합니다.  

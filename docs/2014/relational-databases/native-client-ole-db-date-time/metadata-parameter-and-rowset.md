@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2f6d55777a6f11e968a75be0f3d5509294c484d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: cad0bb44160908a01e298c8f8f1476c67dbc8905
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110873"
 ---
 # <a name="parameter-and-rowset-metadata"></a>매개 변수 및 행 집합 메타데이터
   이 항목에서는 향상된 OLE DB 날짜 및 시간 기능과 관련하여 다음과 같은 형식 및 형식 멤버에 대한 정보를 제공합니다.  
@@ -36,7 +33,7 @@ ms.locfileid: "37427862"
 -   `IColumnsInfo::GetColumnInfo`  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- 다음 정보를 통해 DBPARAMINFO 구조에 반환 됩니다 *prgParamInfo*:  
+ 다음은 *prgParamInfo*를 통해 DBPARAMINFO 구조에 반환되는 정보입니다.  
   
 |매개 변수 유형|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
@@ -49,7 +46,7 @@ ms.locfileid: "37427862"
   
  값 범위가 연속되지 않을 수도 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
- DBPARAMFLAGS_SS_ISVARIABLESCALE은에 연결할 때 올바른만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (또는 이상) 서버. DBPARAMFLAGS_SS_ISVARIABLESCALE은 하위 수준 서버에 연결 하는 경우에 설정 하지 마십시오.  
+ DBPARAMFLAGS_SS_ISVARIABLESCALE은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전) 서버에 연결된 경우에만 유효합니다. 하위 수준 서버에 연결된 경우에는 DBPARAMFLAGS_SS_ISVARIABLESCALE이 설정되지 않습니다.  
   
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo 및 암시적 매개 변수 유형  
  DBPARAMBINDINFO 구조에 제공된 정보는 다음을 준수해야 합니다.  
@@ -67,7 +64,7 @@ ms.locfileid: "37427862"
   
  합니다 *bPrecision* 매개 변수가 무시 됩니다.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 응용 프로그램은 공급자별 유형 이름 "`datetime`" 및 "`smalldatetime`"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. 연결할 때 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (또는 이상) 서버를 "`datetime2`"형식이 사용 되도록 및 암시적 서버 변환이 발생, 필요한 경우 형식 이름은 때"`datetime2`" 또는 "DBTYPE_DBTIMESTAMP"입니다. *bScale* 공급자별 이름을 입력 하는 경우 무시 됩니다 "`datetime`"또는"`smalldatetime`"는 데 사용 됩니다. 응용 프로그램에서 확인 해야이 고, 그렇지 *bScale* 올바르게 설정 되어 있습니다. MDAC에서 업그레이드 하는 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 사용 하는 설정 하지 않을 경우 "DBTYPE_DBTIMESTAMP" 실패 *bScale* 올바르게 합니다. 서버 인스턴스에 연결 하는 경우 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a *bScale* 0 또는 "DBTYPE_DBTIMESTAMP"를 사용 하 여 3이 아닌 값을 오류 이며 E_FAIL이 반환 됩니다.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 응용 프로그램은 공급자별 유형 이름 "`datetime`" 및 "`smalldatetime`"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. 연결할 때 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (또는 이상) 서버를 "`datetime2`"형식이 사용 되도록 및 암시적 서버 변환이 발생, 필요한 경우 형식 이름은 때"`datetime2`" 또는 "DBTYPE_DBTIMESTAMP"입니다. *bScale* 공급자별 이름을 입력 하는 경우 무시 됩니다 "`datetime`"또는"`smalldatetime`"는 데 사용 됩니다. 응용 프로그램에서 확인 해야이 고, 그렇지 *bScale* 올바르게 설정 되어 있습니다. MDAC에서 업그레이드 하는 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 사용 하는 설정 하지 않을 경우 "DBTYPE_DBTIMESTAMP" 실패 *bScale* 올바르게 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
   
  Icommandwithparameters:: Setparameterinfo를 호출 하지 않은 경우 공급자 유추 서버 iaccessor:: Createaccessor에 지정 된 바인딩 유형에 서 다음과 같이 입력 합니다.  
   
@@ -112,7 +109,7 @@ ms.locfileid: "37427862"
   
  새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE는 응용 프로그램에서 DBCOLUMN_TYPE이 DBTYPE_DBTIMESTAMP인 열의 서버 유형을 확인할 수 있도록 DBCOLUMN_FLAGS에 제공됩니다. 서버 유형을 확인하려면 DBCOLUMN_SCALE 또는 DBCOLUMN_DATETIMEPRECISION도 사용해야 합니다.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE은에 연결할 때 올바른만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (또는 이상) 서버. 하위 수준 서버에 연결된 경우에는 DBCOLUMNFLAGS_SS_ISVARIABLESCALE이 정의되지 않습니다.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우에만 유효합니다. 하위 수준 서버에 연결된 경우에는 DBCOLUMNFLAGS_SS_ISVARIABLESCALE이 정의되지 않습니다.  
   
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 구조는 다음 정보를 반환합니다.  
@@ -126,7 +123,7 @@ ms.locfileid: "37427862"
 |Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
- *dwFlags*, DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 날짜/시간 형식에 대 한 true 및 다음 플래그는 항상 false.  
+ *dwFlags*에서 날짜/시간 유형에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -142,7 +139,7 @@ ms.locfileid: "37427862"
   
  나머지 플래그(DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE 및 DBCOLUMNFLAGS_WRITEUNKNOWN)가 설정될 수 있습니다.  
   
- 새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE는에서 제공 됩니다 *dwFlags* 인 열의 서버 유형을 확인 하려면 응용 프로그램이 허용 하는 *wType* 이 DBTYPE_DBTIMESTAMP. *bScale* 서버 유형을 확인을 사용 해야 합니다.  
+ 새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE은 응용 프로그램에서 *wType*이 DBTYPE_DBTIMESTAMP인 열의 서버 유형을 확인할 수 있도록 *dwFlags*에 제공됩니다. 서버 유형을 확인하려면 *bScale*도 사용해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [메타 데이터 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

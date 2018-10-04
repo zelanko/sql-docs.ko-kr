@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.computermgr.cert.general.f1
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a9a37de6a46d5c39eae14cf01d6cf2f7f90f938
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 009ef6454246682a91e14dd3ffa391f35b011d34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119313"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
-   **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **인증서** 탭을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 선택하거나 인증서 속성을 확인할 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
+  **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **인증서** 탭을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 선택하거나 인증서 속성을 확인할 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
   
  인증서는 사용자 컴퓨터에 로컬로 저장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 로드하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스와 동일한 사용자 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 실행해야 합니다.  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DML triggers, nested
 - nested triggers option
 - triggers [SQL Server], nested
 ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 683ffcfa3bb4715b25fb912fa12808be3b0873ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 826961aef9133c001c643c1ee7058d01438fe868
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098423"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>트리거 중첩이 OFF일 때도 중첩 AFTER 트리거가 발생합니다.
   업그레이드 관리자가 하나 이상의 테이블에 정의되어 있는 INSTEAD OF 트리거 내부에서 중첩 AFTER 트리거를 검색했습니다. `nested triggers` 서버 구성 옵션이 0으로 설정되어 있는 경우에도 중첩된 AFTER 트리거가 발생할 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a918816d8fd90624b625ed6107bbdc5e86b2cc08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0846c7bdb0728d79dc3538eb5a46797e1b77e3db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095983"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>클러스터의 Integration Services(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 클러스터형 또는 클러스터 인식형 서비스가 아니며 클러스터 노드 간 장애 조치(failover) 기능을 지원하지 않으므로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 클러스터링이 권장되지 않습니다. 따라서 클러스터형 환경에서는 클러스터의 노드마다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치하고 독립 실행형 서비스로 시작해야 합니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureQualificaton Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aff36cad69d59b7effa51ac9ab3e32490931f779
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123333"
 ---
 # <a name="measurequalificaton-element-assl"></a>MeasureQualificaton 요소(ASSL)
   측정값에 대 한 접두사 적용 여부를 결정 합니다 [MeasureGroup](../objects/group-element-assl.md)합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37149504"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[측정값 그룹](../objects/group-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

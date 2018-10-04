@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129164"
 ---
 # <a name="clr-hosted-environment"></a>CLR 호스팅 환경
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework CLR(공용 언어 런타임)은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++와 같은 여러 최신 프로그래밍 언어를 실행하는 환경입니다. CLR에는 가비지 수집되는 메모리, 선점형 스레딩, 메타데이터 서비스(형식 리플렉션), 코드 안정성, 코드 액세스 보안 등의 기능이 있습니다. CLR에서는 메타데이터를 사용하여 클래스를 찾아 로드하고, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.  
@@ -126,9 +123,9 @@ ms.locfileid: "37354695"
 |-|-|-|-|  
 |권한 집합|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
-|프로그래밍 모델 제한 사항|예|예|제한 없음|  
-|안정성 요구 사항|예|예|아니요|  
-|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
+|프로그래밍 모델 제한 사항|사용자 계정 컨트롤|사용자 계정 컨트롤|제한 없음|  
+|안정성 요구 사항|사용자 계정 컨트롤|예|아니요|  
+|네이티브 코드를 호출하는 기능|아니요|아니요|사용자 계정 컨트롤|  
   
  SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
   

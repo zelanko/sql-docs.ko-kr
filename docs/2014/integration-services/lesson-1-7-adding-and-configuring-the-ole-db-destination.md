@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f85ebcc3be06d86110a99e498a9349d973a9ca6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89073c9da5a4cd6243bd1fcdcd53d3fa13d02bb9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260939"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138468"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>7단계: OLE DB 대상 추가 및 구성
   이제 패키지는 플랫 파일 원본에서 데이터를 추출하여 대상과 호환되는 형식으로 이 데이터를 변환할 수 있습니다. 다음 태스크에서는 변환된 데이터를 실제로 대상에 로드합니다. 데이터를 로드하려면 데이터 흐름에 OLE DB 대상을 추가해야 합니다. OLE DB 대상은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스에 데이터를 로드할 수 있습니다.  

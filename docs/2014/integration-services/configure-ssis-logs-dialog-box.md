@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredtslogs.loggingdetails.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c2a52c7ee15c7fee222b290aa8ac2790965bb91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4730b52983c778fd71f778412552913d2ee6cbef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189180"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120571"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS 로그 구성 대화 상자
   **SSIS 로그 구성** 대화 상자를 사용하여 패키지에 대한 로깅 옵션을 정의할 수 있습니다.  
@@ -100,7 +97,7 @@ ms.locfileid: "37189180"
 |값|Description|  
 |-----------|-----------------|  
 |**Computer**|로깅된 이벤트가 발생한 컴퓨터의 이름입니다.|  
-|**같음**|패키지를 시작한 사람의 사용자 이름입니다.|  
+|**연산자**|패키지를 시작한 사람의 사용자 이름입니다.|  
 |**SourceName**|로깅된 이벤트가 발생한 패키지, 컨테이너 및 태스크의 이름입니다.|  
 |**SourceID**|로깅된 이벤트가 발생한 패키지, 컨테이너 또는 태스크의 GUID(Global Unique Identifier)입니다.|  
 |**ExecutionID**|패키지 실행 인스턴스의 GUID(Global Unique Identifier)입니다.|  

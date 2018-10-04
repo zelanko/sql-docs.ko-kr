@@ -4,27 +4,22 @@ ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 539cef78d7c9f9333688f4db1e5fbf35461479ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7049cce942cb593df74255a1459e07a6fa894c51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090513"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>파티션 조각 속성 설정(Analysis Services)
   데이터 조각은 적절한 파티션의 데이터에 대한 직접적인 쿼리를 돕는 중요한 최적화 기능입니다. Slice 속성을 명시적으로 설정하면 MOLAP 및 HOLAP 파티션에 대해 생성된 기본 조각을 재정의하여 쿼리 성능을 향상시킬 수 있습니다. 또한 Slice 속성은 파티션을 처리할 때 추가 유효성 검사를 제공합니다.  

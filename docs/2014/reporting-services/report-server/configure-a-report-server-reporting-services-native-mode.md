@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c236e26cc9c03490a88fec70ec619917f457cea1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104510"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>보고서 서버(Reporting Services 기본 모드) 구성
   설치 중에 선택한 옵션에 따라 보고서 서버를 사용하기 전에 추가 구성이 필요할 수 있습니다. 보고서 서버 구성은 최소한 다음과 같은 요소로 구성됩니다.  
@@ -58,7 +55,7 @@ ms.locfileid: "37200793"
   
  Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 원격 클라이언트 컴퓨터에서 보고서 관리자를 열 때 빈 페이지가 표시되면 포트가 닫혀 있기 때문일 수 있습니다. 방화벽 구성에 대 한 정보를 참조 하세요 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)합니다.  
   
- Windows Vista 또는 Windows Server 2008을 사용 중인 경우 보고서 관리자를 로컬로 열려면 추가 단계를 수행해야 합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Windows Vista 또는 Windows Server 2008을 사용 중인 경우 보고서 관리자를 로컬로 열려면 추가 단계를 수행해야 합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
  폴더를 만들고 항목을 업로드하고 보고서를 실행하여 설치가 제대로 되었는지 확인합니다. 지침을 따릅니다 [Reporting Services 설치 확인](../install-windows/verify-a-reporting-services-installation.md) 설치를 확인 합니다.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProcessingPriority Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5dcbf28ff2dd0fbcbbc64aba7785e41caab3905c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68a37c316cee72697cc24d23152b2b7035ea2386
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169664"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121553"
 ---
 # <a name="processingpriority-element-assl"></a>ProcessingPriority 요소(ASSL)
   지연 집계, 인덱싱 또는 클러스터링과 같은 백그라운드 작업을 수행하는 동안 부모 개체의 처리 우선 순위를 결정합니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37169664"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[차원](../data-type/dimension-data-type-assl.md)하십시오 [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  AMO(Analysis Management Objects) 개체 모델에서 `ProcessingPriority`의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup> 및 <xref:Microsoft.AnalysisServices.Partition>입니다.  

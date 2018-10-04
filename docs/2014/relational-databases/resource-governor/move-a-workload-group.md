@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties_moveworkloadgroup.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6301031e18f66e961633cb632dfe15484db9d10a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dd9fada1ffac50b11c4384f6ede19eac4ea069a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112883"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자 작업 그룹을 다른 리소스 풀로 이동할 수 있습니다.  

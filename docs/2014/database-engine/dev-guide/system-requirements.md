@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, system requirements
 - requirements [SMO]
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
-caps.latest.revision: 43
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f82d99f820556630c846557f6c93d8dbdf56fa9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db02b170bd4cccb2842b44d405da332f3df18e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107583"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` 개체 드라이버를 연결 하 고 인스턴스와 통신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

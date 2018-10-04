@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database performance [SQL Server], alerts
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database monitoring [SQL Server], alerts
 - server performance [SQL Server], alerts
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1dcbc89e580283335f0a969baa04322f38f7c71a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f58ae046ce906472a8c4b979832e278c4e2b7ad8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114994"
 ---
 # <a name="create-a-sql-server-database-alert"></a>SQL Server 데이터베이스 경고 만들기
   시스템 모니터를 사용하여 시스템 모니터 카운터의 임계값에 도달했을 때 발생하는 경고를 만들 수 있습니다. 시스템 모니터는 경고에 대한 응답으로 경고 조건을 처리하기 위해 쓰여진 사용자 지정 응용 프로그램과 같은 응용 프로그램을 시작합니다. 예를 들어 교착 상태 횟수가 지정한 값을 넘어설 때 발생할 경고를 만들 수 있습니다.  

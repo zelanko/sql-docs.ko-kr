@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10404"
@@ -19,16 +17,15 @@ f1_keywords:
 - "10292"
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139621"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>보고서 및 그룹 변수 컬렉션 참조(보고서 작성기 및 SSRS)
   보고서의 식에서 두 번 이상 사용되는 복잡한 계산이 있는 경우 변수를 만들어 사용할 수 있습니다. 보고서 변수 또는 그룹 변수를 만들 수 있습니다. 변수 이름은 보고서에서 고유해야 합니다.  
@@ -61,7 +58,7 @@ ms.locfileid: "37148494"
 ## <a name="group-variables"></a>그룹 변수  
  그룹 변수를 사용하여 복잡한 식을 그룹 범위에서 한 번에 계산할 수 있습니다. 그룹 변수는 그룹 및 해당 자식 그룹의 범위 내에서만 유효합니다.  
   
- 예를 들어 서로 다른 세금 범주에 속한 항목에 대한 재고 데이터를 표시하는 데이터 영역이 있고 각 범주에 대해 서로 다른 세율을 적용하려는 경우를 가정해 보겠습니다. Category에서 데이터를 그룹화하고 부모 그룹에서 *Tax* 변수를 정의합니다. 그런 다음 *ItemTax* 에 대한 그룹 변수를 각 세금 범주에 정의하고 서로 다른 각 Category 하위 그룹을 적절한 그룹 변수에 할당합니다. 예를 들어:  
+ 예를 들어 서로 다른 세금 범주에 속한 항목에 대한 재고 데이터를 표시하는 데이터 영역이 있고 각 범주에 대해 서로 다른 세율을 적용하려는 경우를 가정해 보겠습니다. Category에서 데이터를 그룹화하고 부모 그룹에서 *Tax* 변수를 정의합니다. 그런 다음 *ItemTax* 에 대한 그룹 변수를 각 세금 범주에 정의하고 서로 다른 각 Category 하위 그룹을 적절한 그룹 변수에 할당합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   `[Category]`기반의 부모 그룹에 대해 *Tax* 변수를 `[Tax]`값으로 정의합니다. 범주 값은 Food와 Clothing이라고 가정하겠습니다.  
   

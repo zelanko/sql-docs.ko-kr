@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sql12.swb.databaseuser.permissions.database.f1--May use common.permissions
 - sql12.swb.databaseuser.permissions.object.f1--May use common.permissions
@@ -22,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 53399e161e9c585c42c0442efe5138794819a273
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024960"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141973"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. 이 항목에서는 다음 정보를 제공합니다.  

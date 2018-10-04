@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - execution context [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Context object
 - query context [Analysis Services]
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28aafacda2e9880a79201fd07ca41fb15959e87b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6c5a22a6bc3768e324ca45805ff510b1a86668c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142223"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>저장 프로시저의 쿼리 컨텍스트 액세스
   저장 프로시저의 실행 컨텍스트는 ADOMD.NET 서버 개체 모델의 `Context` 개체로 저장 프로시저 코드 내에서 사용할 수 있습니다. 이것은 읽기 전용 컨텍스트이며 저장 프로시저로 수정할 수 없습니다. 이 개체에 다음 속성을 사용할 수 있습니다.  

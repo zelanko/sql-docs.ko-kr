@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [AMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e272929770986c95f9f0b0d5b5b908dcfce84cf4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141883"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 고급 개체 프로그래밍
   이 항목에서는 AMO(Analysis Management Objects) OLAP 고급 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  

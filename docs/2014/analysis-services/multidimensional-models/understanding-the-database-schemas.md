@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133433"
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
   스키마 생성 마법사는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 및 측정값 그룹을 기반으로 주제 영역 데이터베이스에 대한 비정규 관계형 스키마를 생성합니다. 마법사는 각 차원에 대해 차원 데이터를 저장할 관계형 테이블(차원 테이블)과 각 측정값 그룹에 대해 팩트 데이터를 저장할 관계형 테이블(팩트 테이블)을 생성합니다. 이러한 관계형 테이블을 생성할 때 연결된 차원, 연결된 측정값 및 서버 시간 차원은 무시합니다.  

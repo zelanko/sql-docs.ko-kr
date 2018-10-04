@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153874"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135156"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 응용 프로그램 관리
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 중앙 관리에서 관리 됩니다. 관리 및 속성 페이지에서 서비스 응용 프로그램의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  

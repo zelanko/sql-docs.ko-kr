@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116871"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>데이터 기반 구독 만들기 페이지(보고서 관리자)
   데이터 기반 구독 만들기 페이지를 사용하여 구독이 실행될 때마다 구독 정보에 대한 구독자 데이터베이스를 쿼리하는 구독을 작성하거나 수정할 수 있습니다. 데이터 기반 구독은 쿼리 결과를 사용하여 구독을 받는 사람, 배달 설정 및 보고서 매개 변수 값을 확인합니다. 실행할 때 보고서 서버는 쿼리를 실행하여 구독 설정에 사용된 값을 가져옵니다. 데이터 기반 구독 만들기 페이지를 사용하여 쿼리를 정의하고 구독 설정에 쿼리 값을 할당할 수 있습니다. 데이터 기반 구독에 지정하는 값과 옵션은 마법사처럼 여러 페이지(총 7페이지)로 나뉩니다.  

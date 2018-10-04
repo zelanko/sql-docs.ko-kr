@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - sequence clustering algorithms [Analysis Services]
 - tutorials [Data Mining]
 ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e594e44dd3c8af8ade94c549d8b489f31623553
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e276d4a2b44c8d0fdc6be6787f58e359e4c15d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122573"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>4단원: 시퀀스 클러스터링 시나리오 구축(중급 데이터 마이닝 자습서)
   마케팅 부서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 고객의 이동 방식을 파악 하려고 합니다 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 웹 사이트입니다. 이 회사에서는 고객이 시장 바구니에 제품을 넣는 순서에 일정한 패턴이 있으리라고 생각합니다. 이들은 구매 시퀀스 순서를 분석하여 고객의 시장 바구니에 관련된 항목을 추가하는 방식을 알아보고자 합니다. 이 정보로 웹 사이트의 흐름을 능률화하여 고객의 추가 제품 구매를 유도할 수 있습니다.  

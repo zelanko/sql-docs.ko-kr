@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091740"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
   **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
@@ -130,7 +127,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어:  
+ 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -154,7 +151,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|*–D* 옵션으로 지정된 **database_name**|  
 |*owner_name*|**dbo**<br /><br /> 참고: *owner_name* 있어야 **dbo**합니다. 다른 값을 지정할 경우 **dta** 를 실행할 수 없으며 오류가 반환됩니다.|  
-|*table_name*|InclusionThresholdSetting|  
+|*table_name*|없음|  
   
  파일을 사용하는 경우 TuningLog.xml과 같이 확장명으로 .xml을 지정합니다.  
   

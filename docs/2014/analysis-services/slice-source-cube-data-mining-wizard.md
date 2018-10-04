@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089993"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>원본 큐브 조각화(데이터 마이닝 마법사)
   **원본 큐브 조각화** 대화 상자를 사용하여 모델의 학습에 사용되는 데이터를 제한할 수 있습니다. 일반적으로 큐브는 모든 상점, 모든 지역 및 모든 제품 등 여러 다른 차원 및 특성과 관련된 데이터를 포함합니다. 제한 없는 특성 조합의 모델 학습은 실용적이지 않으므로 이 대화 상자를 사용하여 모델 학습에 사용할 특정 집합을 선택하십시오.  
@@ -52,7 +49,7 @@ ms.locfileid: "37326553"
   
  예를 들어 Geography 계층을 선택하고 Country를 수준으로 선택하는 경우 City를 특성으로 사용하는 모델을 작성할 수 없습니다. 반대로 City를 조각화할 계층의 수준으로 선택하는 경우 Country를 기준으로 마이닝 모델을 만들 수 없습니다.  
   
- **같음**  
+ **연산자**  
  조각화 식을 작성하는 데 사용할 연산자를 선택합니다.  
   
  예를 들어 Geography를 계층으로 선택한 경우 연산자 =를 선택한 다음 “Europe”을 필터로 입력하여 Europe에 대한 큐브 데이터만 가져올 수 있습니다.  

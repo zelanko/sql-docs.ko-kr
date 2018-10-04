@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9105abf7bc25b4327d1c3d75a214cb667850a7eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dcc748a025b638e1207902b0c5ef839c5fb8476d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128503"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>단위 설정 및 구성(보고서 작성기 및 SSRS)
   표시기는 백분율과 숫자라는 두 가지 측정 단위를 제공합니다. 표시기는 기본적으로 백분율을 단위로 사용하도록 구성됩니다. 즉, 표시기 집합에서 각 아이콘에 할당되는 표시기 값은 백분율 범위로 결정됩니다. 백분율 범위는 표시기 집합의 아이콘에 대해 균등하게 분할됩니다. 각 아이콘은 표시기 상태를 나타냅니다. 다른 시작 백분율 및 끝 백분율을 지정하여 표시기 집합의 각 아이콘에 대한 백분율을 변경할 수 있습니다 또한 표시기는 데이터의 최소값 및 최대값을 자동으로 검색합니다.  

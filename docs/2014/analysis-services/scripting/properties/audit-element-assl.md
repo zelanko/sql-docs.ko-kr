@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Audit Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Audit element
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d87e0c58dd944c140e57f89894cb98a32d9230d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 283be4682a7dd5742b93cba596efc87322a1d539
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097437"
 ---
 # <a name="audit-element-assl"></a>Audit 요소(ASSL)
   지정 된 [추적](../objects/trace-element-assl.md) 서버의 성능이 저하 되는 경우에 요소가 이벤트를 삭제할 수 없습니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37163324"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[추적](../objects/trace-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  부모에 해당 하는 요소가 `Audit` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Trace>합니다.  

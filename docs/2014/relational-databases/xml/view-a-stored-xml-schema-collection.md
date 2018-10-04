@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - schema collections [SQL Server], viewing
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca5b4d378861731b77472c5f88442a3f6e793f
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 708aed70836bfc5fdccb9dd8ba3afc2545e093f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889859"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089323"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>저장된 XML 스키마 컬렉션 보기
   [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)을 사용하여 XML 스키마 컬렉션을 가져오면 스키마 구성 요소가 메타데이터에 저장됩니다. [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)내장 함수를 사용하여 XML 스키마 컬렉션을 다시 만들 수 있습니다. 이 함수는 반환는 `xml` 데이터 형식 인스턴스입니다.  

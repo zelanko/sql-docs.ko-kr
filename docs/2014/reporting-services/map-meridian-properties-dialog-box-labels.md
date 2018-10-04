@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115766"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>지도 자오선 속성 대화 상자, 레이블
   사용 된 **MapMeridian 속성** 지도 뷰포트의 세로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 자오선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  

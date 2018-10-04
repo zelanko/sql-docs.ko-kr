@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112223"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **데이터 원본 뷰** 창을 사용하여 선택한 차원과 연결된 데이터 원본 뷰의 테이블 및 열을 볼 수 있습니다. **데이터 원본 뷰** 창에서 **특성** 또는 **계층 및 수준** 창으로 열을 끌어서 특성, 멤버 속성, 계층 및 수준을 만들 수 있습니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discontinued properties [Full-Text Search]
 - stored procedures [Full-Text Search]
 ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd8fda3e9d1968d7dcc480931cf4ae8492bd4686
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d6d7467da572d5d0552d400e2c05505c1bc0aaa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091543"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>지원되지 않는 전체 텍스트 검색 속성을 사용하는 저장 프로시저를 수정합니다.
   저장 프로시저가 올바로 수행되도록 하려면 기존 프로시저를 편집하고 제거되었거나 지원되지 않는 전체 텍스트 관련 속성 및 설정을 제거해야 합니다.  

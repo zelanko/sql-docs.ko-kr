@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 50
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c411b3780f1e3f5b91d00d08093f281a5daa286f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095301"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약할 수 있습니다.  
@@ -132,7 +129,7 @@ ms.locfileid: "37218883"
   
      출력 창에 다음과 비슷한 메시지가 표시되면 배포가 성공한 것입니다.  
   
-    > ------ 빌드 시작: 자습서, 구성: 디버그 ------'Sales Orders.rdl'을 건너 뛰는 중입니다. 항목은 최신 상태입니다. 빌드 완료--0 개 오류, 0 개 경고---배포 시작: 프로젝트: 자습서, 구성: 디버그---http:// 배포\<서버 이름 > reportserverDeploying 보고서 ' 자습서/Sales Orders'. 배포 완료--0 개 오류, 0 개 경고 === 빌드: 1 성공 또는 최신, 0 개 실패, 0 개 건너뜀 === 배포: 1 개 성공, 실패 0, 0 개 건너뜀 ===  
+    > ------ 빌드 시작: 자습서, 구성: 디버그 ------'Sales Orders.rdl'을 건너 뛰는 중입니다. 항목은 최신 상태입니다. 빌드 완료--0 개 오류, 0 개 경고---배포 시작: 프로젝트: 자습서, 구성: 디버그--- http:// 배포\<서버 이름 > reportserverDeploying 보고서 ' 자습서/Sales Orders'. 배포 완료--0 개 오류, 0 개 경고 === 빌드: 1 성공 또는 최신, 0 개 실패, 0 개 건너뜀 === 배포: 1 개 성공, 실패 0, 0 개 건너뜀 ===  
   
      다음과 비슷한 오류 메시지가 표시되면 보고서 서버에 대한 권한이 있는지 확인하고 관리자 권한으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 시작했는지 확인합니다.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - PRINT statement
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5548ff0d9ffdc958c0ce39c66e616d2d5ebf1037
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119143"
 ---
 # <a name="processing-statements-that-generate-messages"></a>메시지를 생성하는 문 처리
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 문 옵션 STATISTICS TIME 및 STATISTICS IO를 사용하여 장기 실행 쿼리를 진단하는 데 유용한 정보를 얻을 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 쿼리 계획을 분석하는 SHOWPLAN 옵션을 지원합니다. ODBC 응용 프로그램은 다음 문을 실행하여 이러한 옵션을 설정할 수 있습니다.  

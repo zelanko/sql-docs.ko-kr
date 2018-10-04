@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-caps.latest.revision: 39
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89240c561643d277481f6680da55f68aa582895f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca66bfd954ff9c6da23aeecd3997454539f48adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265440"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123453"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>패키지에 이벤트 처리기 추가
   컨테이너와 태스크는 런타임에 이벤트를 발생시킵니다. 이벤트가 발생할 때 워크플로를 실행하여 이벤트에 응답하는 사용자 지정 이벤트 처리기를 만들 수 있습니다. 예를 들어 태스크가 실패하면 전자 메일 메시지를 보내는 이벤트 처리기를 만들 수 있습니다.  

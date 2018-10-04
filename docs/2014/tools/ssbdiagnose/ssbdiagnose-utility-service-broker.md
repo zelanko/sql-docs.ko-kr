@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111173"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
   **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
@@ -182,10 +179,10 @@ WHERE database_id = DB_ID();
  **-ID**  
  지정된 대화 요소의 런타임 모니터링을 요청합니다. **-ID** 는 여러 번 지정할 수 있습니다.  
   
- 대화 핸들을 지정할 경우 연결된 대화 끝점과 연결된 이벤트만 보고됩니다. 대화 ID를 지정할 경우 해당 대화와 그 시작자 및 대상 끝점에 대한 이벤트가 모두 보고됩니다. 대화 그룹 ID를 지정할 경우 대화 그룹에 있는 모든 대화와 끝점에 대한 이벤트가 모두 보고됩니다.  
+ 대화 핸들을 지정할 경우 연결된 대화 엔드포인트와 연결된 이벤트만 보고됩니다. 대화 ID를 지정할 경우 해당 대화와 그 시작자 및 대상 엔드포인트에 대한 이벤트가 모두 보고됩니다. 대화 그룹 ID를 지정할 경우 대화 그룹에 있는 모든 대화와 엔드포인트에 대한 이벤트가 모두 보고됩니다.  
   
  *conversation_handle*  
- 응용 프로그램에 있는 대화 끝점을 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 끝점에 고유하기 때문에 시작자 끝점과 대상 끝점은 서로 다른 대화 핸들을 갖습니다.  
+ 응용 프로그램에 있는 대화 엔드포인트를 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 엔드포인트에 고유하기 때문에 시작자 엔드포인트와 대상 엔드포인트는 서로 다른 대화 핸들을 갖습니다.  
   
  대화 핸들은 응용 프로그램에 반환 됩니다는 *@dialog_handle* 의 매개 변수를 **BEGIN DIALOG** 문, 및 `conversation_handle` 결과의 열 집합을 **수신**  문입니다.  
   
@@ -199,7 +196,7 @@ WHERE database_id = DB_ID();
  대화 그룹 Id에 보고 되는 `conversation_group_id` 열의 합니다 **sys.conversation_groups** 및 **sys.conversation_endpoints** 카탈로그 뷰.  
   
  *conversation_id*  
- 대화를 식별하는 고유 식별자입니다. 대화의 시작자 끝점과 대상 끝점은 둘 다 동일한 대화 ID를 사용합니다.  
+ 대화를 식별하는 고유 식별자입니다. 대화의 시작자 엔드포인트와 대상 엔드포인트는 둘 다 동일한 대화 ID를 사용합니다.  
   
  대화 Id에는 보고를 `conversation_id` 열의 합니다 **sys.conversation_endpoints** 카탈로그 뷰.  
   
@@ -281,11 +278,11 @@ WHERE database_id = DB_ID();
   
 -   **-NEW** 와 **-ID** 를 둘 다 지정하지 않을 경우 목록에 연결 옵션에 지정된 모든 데이터베이스에 있는 대화가 모두 포함됩니다.  
   
--   **-NEW** 를 지정할 경우 **ssbdiagnose** 는 **ssbdiagnose** 가 실행된 후 시작되는 첫 번째 대화의 요소를 포함합니다. 여기에는 대상 대화 끝점과 시작자 대화 끝점 둘 다에 대한 대화 ID와 대화 핸들이 포함됩니다.  
+-   **-NEW** 를 지정할 경우 **ssbdiagnose** 는 **ssbdiagnose** 가 실행된 후 시작되는 첫 번째 대화의 요소를 포함합니다. 여기에는 대상 대화 엔드포인트와 시작자 대화 엔드포인트 둘 다에 대한 대화 ID와 대화 핸들이 포함됩니다.  
   
 -   대화 핸들을 사용하여 **-ID** 가 지정된 경우에는 해당 핸들만 목록에 포함됩니다.  
   
--   대화 ID를 사용하여 **-ID** 가 지정된 경우에는 두 대화 끝점 모두에 대한 대화 ID와 핸들이 목록에 추가됩니다.  
+-   대화 ID를 사용하여 **-ID** 가 지정된 경우에는 두 대화 엔드포인트 모두에 대한 대화 ID와 핸들이 목록에 추가됩니다.  
   
 -   대화 그룹 ID를 사용하여 **-ID** 가 지정된 경우에는 그룹에 있는 모든 대화 ID와 대화 핸들이 목록에 추가됩니다.  
   

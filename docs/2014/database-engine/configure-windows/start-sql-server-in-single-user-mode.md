@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ba40d074b8782d4a0a34bd3e8e91cc27609a02b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aeb0e1c28885e8611c1ae57a21a05c1265b6349c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090153"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server 시작
   특정 상황에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 옵션 -m **을 사용하여**의 인스턴스를 단일 사용자 모드로 시작해야 합니다. 예를 들어 서버 구성 옵션을 변경하거나 손상된 master 데이터베이스 또는 다른 시스템 데이터베이스를 복구하려고 할 수도 있습니다. 두 가지 동작 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작해야 합니다.  

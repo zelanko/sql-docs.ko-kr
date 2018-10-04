@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.DA.f1
 helpviewer_keywords:
 - Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf27eb864e2d0caca4d6cdf27f073a949479bdf9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25de27327b79c0bff1a08ba36c93d68f236a868a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089463"
 ---
 # <a name="distribution-agent-security"></a>배포 에이전트 보안
   **배포 에이전트 보안** 대화 상자를 사용하여 배포 에이전트를 실행하는 Windows 계정을 지정할 수 있습니다. 배포 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정으로 에이전트 프로세스가 실행되기 때문에 이 계정을 *프로세스 계정*이라고도 합니다. 이 대화 상자에서 사용 가능한 추가 옵션은 대화 상자에 액세스하는 방법에 따라 달라집니다.  

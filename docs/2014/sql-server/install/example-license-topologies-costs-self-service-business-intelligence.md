@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4672647d8e9caae94e3b64fc43c3b687aa010920
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091403"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>SQL Server 2014 셀프 서비스 비즈니스 인텔리전스에 대한 예제 라이선스 토폴로지 및 비용
   이 항목에서는 선택에 대 한 고급 고려 사항 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence 버전 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. 이 항목에는 몇 가지 샘플 온-프레미스 Microsoft 셀프 서비스 BI(Business Intelligence) 토폴로지가 포함되어 있습니다. 그 예에는 비용과 성능 간에 균형을 최적화하는 데 사용할 수 있는 버전과 라이선스가 포함됩니다. 토폴로지, 서버 수 및 라이선스 비용은 **예제로만**제공됩니다. Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 Microsoft SharePoint 2013은 라이선스 방식에 몇 가지 변경을 도입하여 서버, 사용자 및 장치를 라이선스 하는 방식에 더 많은 옵션을 제공합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 라이선스는 동일한 Business Intelligence 관련 시나리오를 지원합니다.  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 Business Intelligence 버전에서 사용 가능하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에 대한 코어 라이선스로 제공됩니다.  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 Business Intelligence 버전에서 사용 가능하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에 대한 코어 라이선스로 제공됩니다.  
   
 -   SharePoint 2013은 엑스트라넷 및 인터넷 시나리오를 비롯하여 SharePoint Online 옵션에 대한 SharePoint Server 라이선스를 간소화했습니다.  
   

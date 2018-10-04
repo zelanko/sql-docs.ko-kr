@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 - clickthrough reports, templates
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3df0b140c8d1eb08fc3b1502eb2a627be7f175c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095903"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>보고서를 클릭 광고 보고서로 모델에 연결
   기본 클릭 광고 보고서 템플릿을 사용하는 대신 보고서 작성기 보고서를 만들고 보고서 모델의 특정 엔터티에 연결할 수 있습니다. 보고서를 보는 사람이 주 보고서에서 대화형 데이터를 클릭하면 이 보고서는 클릭 광고 보고서로 표시됩니다. 보고서에 엔터티를 연결 하려면 사용 하 여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자입니다.  

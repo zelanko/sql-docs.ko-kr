@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Replication Monitor, thresholds and warnings
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a8ed8815e1ca314ec5562d662914e0cdefa6ed4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3934f596eecf9f0c431814c9e55823f876e51a7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133253"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  

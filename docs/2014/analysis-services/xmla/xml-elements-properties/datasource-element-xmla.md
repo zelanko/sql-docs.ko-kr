@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSource Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40efe20736e6e2e6364ddcf5aa41a92409a2e68c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3acbba2e1ee5df1535799e133c064b90b6921386
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130532"
 ---
 # <a name="datasource-element-xmla"></a>DataSource 요소(XMLA)
   부모에 대 한 아웃오브 라인 데이터 원본 바인딩을 포함 [일괄 처리](../xml-elements-commands/batch-element-xmla.md) 하거나 [프로세스](../xml-elements-commands/process-element-xmla.md) 요소입니다.  
@@ -55,8 +52,8 @@ ms.locfileid: "37167164"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

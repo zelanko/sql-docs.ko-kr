@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd29d0d9c3a49712cdb14f219070f071a8575eae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106773"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>배포 유틸리티를 사용하여 모델 솔루션 배포
-   **Microsoft.AnalysisServices.Deployment** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 엔진을 시작할 수 있습니다. 입력 파일로서 이 유틸리티는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 구축하여 생성된 XML 출력 파일을 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 배포를 사용자 지정할 수 있도록 이 입력 파일을 쉽게 수정할 수 있습니다. 그런 다음 생성된 배포 스크립트를 즉시 실행하거나 나중에 배포할 때 사용할 수 있도록 저장할 수 있습니다.  
+  **Microsoft.AnalysisServices.Deployment** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 엔진을 시작할 수 있습니다. 입력 파일로서 이 유틸리티는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 구축하여 생성된 XML 출력 파일을 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 배포를 사용자 지정할 수 있도록 이 입력 파일을 쉽게 수정할 수 있습니다. 그런 다음 생성된 배포 스크립트를 즉시 실행하거나 나중에 배포할 때 사용할 수 있도록 저장할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

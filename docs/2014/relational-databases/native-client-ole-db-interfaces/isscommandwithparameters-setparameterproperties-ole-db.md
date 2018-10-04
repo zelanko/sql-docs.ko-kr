@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096984"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties(OLE DB)
   매개 변수별 서수로 매개 변수 속성을 설정하거나, SSPARAMPROPS 구조의 배열을 지정하여 대량 매개 변수 속성을 설정합니다.  
@@ -40,7 +37,7 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>인수  
  *cParams*[in]  
- 수가 SSPARAMPROPS 구조는 *rgParamProperties* 배열입니다. 이 숫자가 0 이면 `ISSCommandWithParameters::SetParameterProperties` 명령에서 매개 변수에 대해 지정 된 모든 속성이 삭제 됩니다.  
+ *rgParamProperties* 배열의 SSPARAMPROPS 구조 수입니다. 이 숫자가 0 이면 `ISSCommandWithParameters::SetParameterProperties` 명령에서 매개 변수에 대해 지정 된 모든 속성이 삭제 됩니다.  
   
  *rgParamProperties*[in]  
  설정할 SSPARAMPROPS 구조의 배열입니다.  
@@ -73,12 +70,12 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- 부터 데이터베이스 엔진의 개선 사항 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] isscommandwithparameters:: Setparameterproperties 예상된 결과 대 한 보다 정확한 설명의 얻을를 허용 합니다. 이전 버전의 isscommandwithparameters:: Setparameterproperties 반환한 값에서 다를 수 있습니다 이러한 보다 정확한 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타 데이터 검색](../native-client/features/metadata-discovery.md)합니다.  
+ 부터 데이터베이스 엔진의 개선 사항 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] isscommandwithparameters:: Setparameterproperties 예상된 결과 대 한 보다 정확한 설명의 얻을를 허용 합니다. 이전 버전의 isscommandwithparameters:: Setparameterproperties 반환한 값에서 다를 수 있습니다 이러한 보다 정확한 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
   
 |멤버|Description|  
 |------------|-----------------|  
 |*iOrdinal*|전달된 매개 변수의 서수입니다.|  
-|*cPropertySets*|수가 DBPROPSET 구조 *rgPropertySets*합니다.|  
+|*cPropertySets*|*rgPropertySets*에 있는 DBPROPSET 구조의 개수입니다.|  
 |*rgPropertySets*|DBPROPSET 구조의 배열을 반환할 메모리에 대한 포인터입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

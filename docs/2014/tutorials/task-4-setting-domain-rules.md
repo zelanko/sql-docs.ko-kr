@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc51cf8a33c183f3256f7aec089c8e0095918ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c8bbc2bb88747aee84be9eeff18fcae59df54d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138771"
 ---
 # <a name="task-4-setting-domain-rules"></a>작업 4: 도메인 규칙 설정
   이 작업에 대 한 규칙을 만듭니다는 **Contact Email** 도메인으로 끝나는 경우 전자 메일 주소를 확인 하려면 **@adventure-works.com**합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](http://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  

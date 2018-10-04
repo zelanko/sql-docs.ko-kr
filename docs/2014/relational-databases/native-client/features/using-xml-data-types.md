@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRowsetChange interface
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f58b1d71724d36d70bb95a6084a6f4a4fc6f3ef
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9540e28716ef81717782e05aa98f173b3e47733f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394131"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138093"
 ---
 # <a name="using-xml-data-types"></a>XML 데이터 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있는 **xml** 데이터 형식이 도입되었습니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 형식과 마찬가지로 **xml** 데이터 형식도 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만드는 경우 열 유형으로 사용하거나 CAST 및 CONVERT 함수에 사용할 수 있습니다.  
@@ -170,7 +167,7 @@ ms.locfileid: "40394131"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  지원 하기 위해 합니다 **xml** OLE DB를 통해 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값이 포함 된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|속성|형식|Description|  
+|이름|형식|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 카탈로그(데이터베이스)의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|스키마 컬렉션 내 XML 스키마의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
@@ -179,7 +176,7 @@ ms.locfileid: "40394131"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  테이블 만들기를 지원 합니다 **ITableDefinition** 인터페이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합을 3 개의 새 열을 추가 합니다.  
   
-|속성|형식|Description|  
+|이름|형식|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 XML 스키마가 저장된 카탈로그의 이름을 지정하는 문자열입니다. 다른 열 유형에 대해서는 이 속성이 빈 문자열을 반환합니다.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 이 열을 정의하는 XML 스키마의 이름을 지정하는 문자열입니다.|  

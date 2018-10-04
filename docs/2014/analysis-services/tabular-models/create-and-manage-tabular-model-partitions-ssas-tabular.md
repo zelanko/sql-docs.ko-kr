@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5fbe478866d3e333893c4a01c78df53590e7fe0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2e06d49f22180ae99bf5f41bb4007fda1e03f84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113605"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>테이블 형식 모델 파티션 만들기 및 관리(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포된 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하거나 스크립트를 사용하여 해당 파티션을 관리할 수 있습니다. 이 항목에서 제공하는 태스크에서는 배포된 모델에 대해 파티션을 만들고 관리하는 방법을 설명합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - C2WTS
 - WSS_WPG
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02ca28f49468adced97c918521a685894bc9e9ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123083"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
   Windows 토큰 서비스 (c2WTS) SharePoint 클레임 사용 하 여 반드시 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 팜 외부에 있는 데이터 원본에 대 한 windows 인증을 사용 하려는 경우. 특히 사용자가 Windows 인증을 사용하여 데이터 원본에 액세스할 경우라도 WFE(웹 프런트 엔드)와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 간의 통신은 항상 클레임 인증으로 수행되기 때문에 SharePoint C2WTS가 필요합니다.  
@@ -103,7 +100,7 @@ ms.locfileid: "37278189"
 4.  SharePoint 'Windows 토큰 서비스에 대한 클레임'을 시작합니다. **서버의 서비스 관리** 페이지에서 SharePoint 중앙 관리를 통해 Windows 토큰 서비스에 대한 클레임을 시작합니다. 서비스는 동작을 수행하는 서버에서 시작되어야 합니다. 예를 들어 WFE인 서버와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 실행되는 응용 프로그램 서버인 다른 서버가 있는 경우 응용 프로그램 서버에서만 c2WTS를 시작하면 됩니다. WFE에는 c2WTS가 필요하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [개요 (Windows 토큰 서비스 (c2WTS) 클레임http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
- [Microsoft SharePoint 2010 제품 (에 대 한 Kerberos 인증 개요http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
+ [개요 (Windows 토큰 서비스 (c2WTS) 클레임 http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
+ [Microsoft SharePoint 2010 제품 (에 대 한 Kerberos 인증 개요 http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

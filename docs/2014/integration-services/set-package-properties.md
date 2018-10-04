@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0619ba605e154bab645041602b95436560fa8769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e500402c68da2e38fd88c5d061644a7f51fd58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104853"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -143,7 +140,7 @@ ms.locfileid: "37279549"
   
 |속성|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|패키지 트랜잭션의 격리 수준입니다.  이 속성의 기본값은 `Serializable`합니다. 유효한 값은 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`을 참조하세요.<br /><br /> `IsolationLevel` 속성 값을 `TransactionOption`로 설정한 경우에만 `Required` 속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 값은 `IsolationLevel` 다음 조건이 true 인 경우 자식 컨테이너에서 요청 하는 속성은 무시 됩니다.<br /><br /> 자식 컨테이너의 `TransactionOption` 속성 값이 `Supported`일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 `IsolationLevel` 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br /><br /> 컨테이너의 `TransactionOption` 속성 값이 `Required`일 경우<br />부모가 트랜잭션을 시작하지 않은 경우<br /><br /> <br /><br /> 참고:는 `Snapshot` 값을 `IsolationLevel` 속성이 패키지 트랜잭션에와 호환 되지 않습니다. 따라서 사용할 수 없습니다는 `IsolationLevel` 패키지 트랜잭션의 격리 수준을 설정 하려면 속성 `Shapshot`합니다. 대신 SQL 쿼리를 사용 하 여 패키지 트랜잭션을 `Snapshot`합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)을 참조하세요.<br /><br /> `IsolationLevel` 속성에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>을 참조하십시오.|  
+|`IsolationLevel`|패키지 트랜잭션의 격리 수준입니다.  이 속성의 기본값은 `Serializable`합니다. 유효한 값은 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot` 을 참조하세요.<br /><br /> `IsolationLevel` 속성 값을 `TransactionOption`로 설정한 경우에만 `Required` 속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 값은 `IsolationLevel` 다음 조건이 true 인 경우 자식 컨테이너에서 요청 하는 속성은 무시 됩니다.<br /><br /> 자식 컨테이너의 `TransactionOption` 속성 값이 `Supported`일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 `IsolationLevel` 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br /><br /> 컨테이너의 `TransactionOption` 속성 값이 `Required`일 경우<br />부모가 트랜잭션을 시작하지 않은 경우<br /><br /> <br /><br /> 참고:는 `Snapshot` 값을 `IsolationLevel` 속성이 패키지 트랜잭션에와 호환 되지 않습니다. 따라서 사용할 수 없습니다는 `IsolationLevel` 패키지 트랜잭션의 격리 수준을 설정 하려면 속성 `Shapshot`합니다. 대신 SQL 쿼리를 사용 하 여 패키지 트랜잭션을 `Snapshot`합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)을 참조하세요.<br /><br /> `IsolationLevel` 속성에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>을 참조하십시오.|  
 |`TransactionOption`|패키지의 트랜잭션 참여 옵션입니다. 가능한 값은 `NotSupported`, `Supported` 및 `Required`입니다. 이 속성의 기본값은 `Supported`합니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>가 될 때까지 태스크를 반복합니다.|  
   
 ###  <a name="Version"></a> 버전  

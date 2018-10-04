@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 35b93f11010afac463a40c9870a185be76031525
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40eb14cb2cc0b09a461ba621d29d636e2a2b9c91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108203"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 만들기
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 모델 배포 마법사를 사용하여 모델 개체로만 패키지를 만들 수 있습니다. 패키지에 데이터를 포함해야 하는 경우 [MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  

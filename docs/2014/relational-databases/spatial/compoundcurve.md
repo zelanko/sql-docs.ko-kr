@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 143f549a4f3b1961c02587b4a913d56d6002bbe6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1aecfa5c0c46e061c28479ebc244dc8d0c30ca72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089443"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve`는 geometry 또는 geography 유형의 연속적인 `CircularString` 또는 `LineString` 인스턴스가 하나 이상 포함된 컬렉션입니다.  

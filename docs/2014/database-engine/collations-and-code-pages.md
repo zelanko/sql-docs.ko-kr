@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db4148f2dfa7ce8d0520f71f5027e16c789f62fc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394756"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118173"
 ---
 # <a name="collations-and-code-pages"></a>데이터 정렬 및 코드 페이지
-  
-            [!INCLUDE[hek_2](../includes/hek-2-md.md)]에는 메모리 최적화 테이블의 (var)char 열에 대해 지원되는 코드 페이지와 인덱스 및 고유하게 컴파일된 저장 프로시저에 사용되는 지원되는 데이터 정렬에 대한 제한 사항이 있습니다.  
+  [!INCLUDE[hek_2](../includes/hek-2-md.md)]에는 메모리 최적화 테이블의 (var)char 열에 대해 지원되는 코드 페이지와 인덱스 및 고유하게 컴파일된 저장 프로시저에 사용되는 지원되는 데이터 정렬에 대한 제한 사항이 있습니다.  
   
  (var)char 값에 대한 코드 페이지는 테이블에 저장되는 문자와 바이트 표현 간의 매핑을 결정합니다. 예를 들어 Windows 라틴어 1 코드 페이지(1252, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기본값)를 사용하는 경우 문자 'a'는 바이트 0x61에 해당합니다.  
   

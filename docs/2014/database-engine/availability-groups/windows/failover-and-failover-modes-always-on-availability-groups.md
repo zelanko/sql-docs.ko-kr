@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0603ccd35973b27993207d634ebc89aa90e6fa1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140612"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(AlwaysOn 가용성 그룹)
   가용성 그룹의 컨텍스트 내에서는 일반적으로 가용성 복제본의 주 역할과 보조 역할을 *장애 조치(Failover)* 라는 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)* 라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획된 수동 장애 조치(Failover)는 모든 데이터를 보존합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 즉, 가용성 그룹은 해당 보조 복제본 중 하나(현재 *장애 조치(Failover) 대상*)로 장애 조치(Failover)됩니다.  
@@ -67,9 +64,9 @@ ms.locfileid: "37310443"
   
 ||비동기-커밋 모드|수동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|자동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|자동 장애 조치(automatic failover)|아니요|아니요|예|  
-|계획된 수동 장애 조치(Failover)|아니요|예|예|  
-|강제 장애 조치(failover)|예|예|예**<sup>*</sup>**|  
+|자동 장애 조치(automatic failover)|아니요|아니요|사용자 계정 컨트롤|  
+|계획된 수동 장애 조치(Failover)|아니요|예|사용자 계정 컨트롤|  
+|강제 장애 조치(failover)|사용자 계정 컨트롤|사용자 계정 컨트롤|예**<sup>*</sup>**|  
   
  **<sup>*</sup>**  동기화 된 보조 복제본에 강제 장애 조치 명령을 실행 하는 경우 보조 복제본을 수동 장애 조치의 경우와 동일 하 게 동작 합니다.  
   
@@ -219,9 +216,9 @@ ms.locfileid: "37310443"
   
 |보조 복제본의 가용성 모드|데이터베이스가 동기화되는지 여부|데이터가 손실될 가능성이 있는지 여부|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|예|아니요|  
-|Synchronous-commit|아니요|예|  
-|Asynchronous-commit|아니요|예|  
+|Synchronous-commit|사용자 계정 컨트롤|아니요|  
+|Synchronous-commit|아니요|사용자 계정 컨트롤|  
+|Asynchronous-commit|아니요|사용자 계정 컨트롤|  
 ||||  
   
  보조 데이터베이스는 두 개의 복구 분기만 추적하므로 강제 장애 조치(Failover)를 여러 번 수행할 경우 이전 강제 장애 조치(Failover)와 데이터 동기화를 시작한 보조 데이터베이스는 재개하지 못할 수도 있습니다. 이 경우 재개할 수 없는 보조 데이터베이스를 올바른 시점으로 복원된 가용성 그룹에서 제거한 후 이 가용성 그룹에 다시 조인해야 합니다. 여러 복구 분기 지점에 대해 복원을 수행할 수 없으므로 둘 이상의 강제 장애 조치(Failover) 수행한 후 로그 백업을 수행해야 합니다.  

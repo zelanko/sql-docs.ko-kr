@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], applying
 - snapshots [SQL Server replication], creating
 ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8f3ee9c034bbb57e2d8b392f02a3021e6ee0eff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc0654f4526ebd816b0b76dd7b2629a5bf2e1393
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135779"
 ---
 # <a name="create-and-apply-the-snapshot"></a>스냅숏 만들기 및 적용
   스냅숏은 복제가 생성된 후 스냅숏 에이전트에서 생성됩니다. 생성 방법은 다음과 같습니다.  

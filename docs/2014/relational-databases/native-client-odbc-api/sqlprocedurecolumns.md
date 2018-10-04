@@ -1,28 +1,25 @@
 ---
-title: SQLProcedureColumns | Microsoft Docs
+title: SQLProcedureColumns | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b693d06e42f0fc5d2815b188826b21f5d89cae7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ddbc2d437ab41238b1c9426659522fb4d0ab3ada
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130093"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns` 모든 반환 값 특성을 보고 하는 하나의 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저입니다.  
@@ -31,7 +28,7 @@ ms.locfileid: "37428392"
   
  `SQLProcedureColumns`는 정적 서버 커서에 대해 실행할 수 있습니다. 업데이트할 수 있는(동적 또는 키 집합) 커서에 대해 `SQLProcedureColumns`를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  
   
- 다음 표에서 결과 집합을 처리 하도록 확장 된 방법에서 반환 된 열을 나열 합니다 **udt** 및 **xml** 데이터 형식을 통해는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버:  
+ 다음 표에서 결과 집합을 처리 하기 위해 확장 된 방법에 의해 반환 되는 열은 **udt** 및 **xml** 데이터 형식을 통해의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버:  
   
 |열 이름|Description|  
 |-----------------|-----------------|  
@@ -43,7 +40,7 @@ ms.locfileid: "37428392"
 |SS_XML_SCHEMACOLLECTION_NAME|XML 스키마 컬렉션의 이름을 반환합니다. 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns와 테이블 반환 매개 변수  
- SQLProcedureColumns는 CLR 사용자 정의 형식으로 유사한 방식으로 테이블 반환 매개 변수를 처리합니다. 테이블 반환 매개 변수에 대해 반환되는 행의 열은 다음과 같은 값을 갖습니다.  
+ CLR 사용자 정의 형식에도 유사한 방법으로 테이블 반환 매개 변수를 처리 하는 SQLProcedureColumns. 테이블 반환 매개 변수에 대해 반환되는 행의 열은 다음과 같은 값을 갖습니다.  
   
 |열 이름|설명/값|  
 |-----------------|------------------------|  

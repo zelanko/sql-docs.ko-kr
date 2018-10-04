@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02b26ad89a5ad1d7cb6620a81829d247fa6b483f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103445"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>예제: Windows 인증을 사용하여 데이터베이스 미러링 설정(Transact-SQL)
   이 예에서는 Windows 인증을 사용하는 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 줍니다. 이 항목의 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계를 사용하는 대신 데이터베이스 미러링 보안 구성 마법사를 데이터베이스 미러링 설치에 사용할 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
@@ -55,7 +52,7 @@ GO
 |미러|PARTNERHOST5|*\<Mydomain>\\<dbousername\>*|  
 |미러링 모니터|WITNESSHOST4|*\<Somedomain>\\<witnessuser\>*|  
   
-1.  주 서버 인스턴스(PARTNERHOST1의 기본 인스턴스)에 끝점을 만듭니다.  
+1.  주 서버 인스턴스(PARTNERHOST1의 기본 인스턴스)에 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -77,7 +74,7 @@ GO
     GO  
     ```  
   
-2.  미러 서버 인스턴스(PARTNERHOST5의 기본 인스턴스)에 끝점을 만듭니다.  
+2.  미러 서버 인스턴스(PARTNERHOST5의 기본 인스턴스)에 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -99,7 +96,7 @@ GO
     GO  
     ```  
   
-3.  미러링 모니터 서버 인스턴스(WITNESSHOST4의 기본 인스턴스)에 끝점을 만듭니다.  
+3.  미러링 모니터 서버 인스턴스(WITNESSHOST4의 기본 인스턴스)에 엔드포인트를 만듭니다.  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -154,15 +151,15 @@ GO
   
 -   [Trustworthy 속성을 사용하도록 미러 데이터베이스 설정&#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
--   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

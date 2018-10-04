@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
@@ -17,16 +15,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.chartproperties.filters.f1
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3123a7c1ba3a520ad743ffe7dbd65dfd57443672
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64dda9e4da8e5045466b63410c9c19788dc48fc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116333"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>필터 페이지, 차트 대화 상자(보고서 작성기 및 SSRS)
   다음 위치에서 **필터** 를 클릭합니다.  
@@ -60,7 +57,7 @@ ms.locfileid: "37317903"
   
  필요한 데이터 형식 옵션이 드롭다운 목록에 없으면 값을 올바른 데이터 형식으로 변환하는 식을 작성합니다. 자세한 내용은 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
- **같음**  
+ **연산자**  
  식과 값을 비교하는 데 사용할 연산자를 선택합니다.  
   
  **Value**  

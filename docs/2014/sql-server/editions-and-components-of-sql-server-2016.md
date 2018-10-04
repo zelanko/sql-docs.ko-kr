@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: 111
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0c27bcd84ddb567eaab1645fcee75f68d513855b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142193"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 버전 및 구성 요소
   설치 요구 사항은 사용자의 응용 프로그램 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
@@ -64,8 +61,7 @@ ms.locfileid: "37150114"
 |Web(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web 버전을 사용하면 소규모부터 대규모에 이르는 웹 속성에 대한 확장성, 경제성 및 관리 효율성 기능을 제공하여 웹 호스터와 웹 VAP의 총 소유 비용을 낮출 수 있습니다.|  
   
 ## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>확장형 버전 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전은 특정 고객 시나리오에 맞게 엔지니어링되었으며 무료로 또는 최소한의 비용으로 제공됩니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전은 특정 고객 시나리오에 맞게 엔지니어링되었으며 무료로 또는 최소한의 비용으로 제공됩니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전에 대해 설명합니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Description|  
 |---------------------------------------|-----------------|  

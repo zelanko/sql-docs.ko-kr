@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configuredistributionwizard.distributiondatabase.f1
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f49e1f71897906d8ac3d947c43cd284cbee5289e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e074a10011cd0922def946f6bc3f7bda5789cc22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096973"
 ---
 # <a name="distribution-database"></a>배포 데이터베이스
   배포 데이터베이스는 모든 유형의 복제에 대한 메타데이터 및 기록 데이터와 트랜잭션 복제에 대한 트랜잭션을 저장합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5697fea6bea90407686f909e6c5cbafa2e2877b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120793"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다.  
@@ -75,7 +72,7 @@ ms.locfileid: "37212363"
   
  브라우저를 사용하여 보고서 서버에 직접 연결하는 경우 폴더 구조의 루트 노드는 보고서 서버 가상 디렉터리의 이름입니다. 루트 노드에서 보고서 서버 내용을 구성하기 위해 폴더를 생성, 수정 및 삭제할 수 있습니다. 내용을 폴더에 추가하고, 폴더 간에 항목을 이동하고, 폴더 이름 또는 위치를 수정하고, 필요 없는 폴더를 삭제할 수 있습니다.  
   
- 폴더는 보고서 관리자 또는 보고서 서버에 대한 브라우저 연결을 통해 액세스하는 게시된 항목에 대한 가상 컨테이너입니다. 폴더와 해당 내용 모두 실제로는 파일 시스템에 존재하지 않습니다. 대신 보고서 서버 데이터베이스에 저장되어 보고서 서버 웹 서비스 끝점을 통해 액세스됩니다. 보고서 서버 폴더 네임스페이스는 루트 노드, 미리 정의된 폴더 및 사용자 정의 폴더를 포함하는 계층입니다. 네임스페이스는 보고서 서버에 저장된 항목을 고유하게 식별합니다. 또한 URL에 항목을 지정하기 위한 주소 지정 체계를 제공합니다. 보고서를 선택하거나 찾을 때 폴더 경로는 해당 보고서의 URL 중 일부가 됩니다.  
+ 폴더는 보고서 관리자 또는 보고서 서버에 대한 브라우저 연결을 통해 액세스하는 게시된 항목에 대한 가상 컨테이너입니다. 폴더와 해당 내용 모두 실제로는 파일 시스템에 존재하지 않습니다. 대신 보고서 서버 데이터베이스에 저장되어 보고서 서버 웹 서비스 엔드포인트를 통해 액세스됩니다. 보고서 서버 폴더 네임스페이스는 루트 노드, 미리 정의된 폴더 및 사용자 정의 폴더를 포함하는 계층입니다. 네임스페이스는 보고서 서버에 저장된 항목을 고유하게 식별합니다. 또한 URL에 항목을 지정하기 위한 주소 지정 체계를 제공합니다. 보고서를 선택하거나 찾을 때 폴더 경로는 해당 보고서의 URL 중 일부가 됩니다.  
   
  폴더 작업 방법은 역할 할당에 속하는 태스크에 따라 다릅니다. 기본 보안을 사용하는 경우 내용 관리자 및 게시자가 폴더를 만들고 관리할 수 있습니다. 사용자 지정 역할 할당을 사용하는 경우 역할 할당에 폴더 관리 지원 태스크가 포함되어야 합니다. 역할 할당 및 태스크에 대한 자세한 내용은 [기본 모드 보고서 서버에 대한 사용 권한 부여](../security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 권한](../security/tasks-and-permissions.md)을 참조하세요.  
   
