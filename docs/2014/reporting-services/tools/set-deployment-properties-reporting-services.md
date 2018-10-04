@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06703a6f1a95b66a0c90fa022c186dca90d21b8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080853"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 보고서 서버 프로젝트의 항목을 보고서 서버에 게시할 수 있도록 보고서 서버를 지정하고 필요에 따라 보고서 및 공유 데이터 원본의 폴더를 지정해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 빌드, 미리 보기 및 배포하는 데 필요한 속성과 값은 보고서 서버 프로젝트의 프로젝트 구성에 저장됩니다. 속성 집합을 편리하게 전환할 수 있도록 이러한 프로젝트 속성에 대한 명명된 집합을 여러 개 만들 수 있습니다. 각 속성 집합은 하나의 구성입니다. 예를 들어 테스트 서버에 보고서를 게시하는 구성과 프로덕션 서버에 보고서를 게시하는 구성이 각각 존재할 수 있습니다.  

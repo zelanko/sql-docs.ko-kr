@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], connection string keywords
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - connection strings [SQL Server Native Client]
 - SQL Server Native Client, connection string keywords
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-caps.latest.revision: 79
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce3c43b14342da1dc8b7d6b1605579b2825a979c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a87237d23b06d0c2f269dde9f34573a74a6d7308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393307"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087663"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client에서 연결 문자열 키워드 사용
   일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API에서는 연결 문자열을 사용하여 연결 특성을 지정합니다. 연결 문자열은 키워드와 연관된 값의 목록이며 각 키워드는 특정 연결 특성을 식별합니다.  
@@ -70,7 +67,7 @@ ms.locfileid: "40393307"
 |`FileDSN`|기존 ODBC 파일 데이터 원본의 이름입니다.|  
 |`Language`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]언어 이름입니다(옵션). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 여러 언어에 대 한 메시지를 저장할 수 있습니다 **sysmessages**합니다. 여러 언어로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 경우 `Language`는 연결에 사용할 메시지 집합을 지정합니다.|  
 |`MARS_Connection`|연결에서 MARS(Multiple Active Result Sets)를 설정하거나 해제합니다. 인식되는 값은 "yes" 및 "no"입니다. 기본값은 "no"입니다.|  
-|`MultiSubnetFailover`|항상 지정 `multiSubnetFailover=Yes` 가용성 그룹 수신기에 연결할 때는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스. `multiSubnetFailover=Yes`는 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 구성합니다. 가능한 값은 `Yes` 및 `No`입니다. 예를 들어:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 기본값은 `No`입니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 지 원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하십시오 [SQL Server 네이티브 클라이언트에 대 한 지원 High Availability, Disaster Recovery](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.|  
+|`MultiSubnetFailover`|항상 지정 `multiSubnetFailover=Yes` 가용성 그룹 수신기에 연결할 때는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스. `multiSubnetFailover=Yes`는 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 구성합니다. 가능한 값은 `Yes` 및 `No`입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 기본값은 `No`입니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 지 원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하십시오 [SQL Server 네이티브 클라이언트에 대 한 지원 High Availability, Disaster Recovery](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.|  
 |`Net`|"Network"에 대한 동의어입니다.|  
 |`Network`|유효한 값은 **dbnmpntw** (명명 된 파이프) 및 **dbmssocn** (TCP/IP).<br /><br /> `Network` 키워드에 대한 값과 `Server` 키워드에 대한 프로토콜 접두사를 둘 다 지정하면 오류가 발생합니다.|  
 |`PWD`|UID 매개 변수에 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 계정의 암호입니다. 로그인 암호가 NULL이거나 Windows 인증을 사용하는 경우(`Trusted_Connection = yes`) `PWD`를 지정할 필요가 없습니다.|  

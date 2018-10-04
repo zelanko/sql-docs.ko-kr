@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: 3b075f86-dbbc-4285-8d2d-61fa722181c7
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ec91eee187e7ea0264eded7c92954822b49810
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4eb43414e0fd7da783f4a1ac588c4851e3c9bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083635"
 ---
 # <a name="measuregroupid-element-assl"></a>MeasureGroupID 요소(ASSL)
   연결 된 [MeasureGroup](../objects/group-element-assl.md) 부모 요소, 바인딩 또는 아웃오브 라인 바인딩을 사용 하 여 합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37239643"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티||  
   
 ## <a name="element-relationships"></a>요소 관계  

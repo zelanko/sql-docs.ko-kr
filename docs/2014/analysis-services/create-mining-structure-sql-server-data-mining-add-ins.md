@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2244f9c73d48946628c063d22a1f0645182a73ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086343"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>마이닝 구조 만들기(SQL Server 데이터 마이닝 추가 기능)
   ![Create Mining Structure 단추, 데이터 마이닝 리본의](media/dmc-createstruct.gif "Create Mining Structure 단추, 데이터 마이닝 리본 메뉴")  
@@ -113,7 +110,7 @@ ms.locfileid: "37244053"
   
      사용해야 할지 여부를 확실히 알 수 없는 열은 항상 마이닝 구조에 포함한 다음 해당 열을 사용하지 않는 마이닝 모델을 만듭니다. 예를 들어 나중에 참조할 수 있도록 데이터에 전화 번호 열을 포함하되 전화 번호를 무시하는 클러스터링 모델을 만들 수 있습니다. 클러스터를 만든 후에는 특정 클러스터에 속하는 사람의 전화 번호를 반환하는 쿼리를 만들 수 있습니다.  
   
--   모든 알고리즘 필요는 **키** 열입니다. Key 열의 값은 고유해야 합니다. A **Key Time** 열이 예측에 필요 또는 시계열 모델. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+-   모든 알고리즘 필요는 **키** 열입니다. Key 열의 값은 고유해야 합니다. A **Key Time** 열이 예측에 필요 또는 시계열 모델. .  
   
 ### <a name="requirements"></a>요구 사항  
  데이터 마이닝 구조를 만들려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결되어 있어야 합니다. 임시 구조를 사용하는 경우에도 연결이 필요합니다. 또는 연결을 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [원본 데이터에 연결 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](connect-to-source-data-data-mining-client-for-excel.md)합니다.  

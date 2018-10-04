@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,21 +18,18 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a50cf7d5cf3ef1a99e8d10fa22263f0590f08250
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085843"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
-  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
   
 > [!NOTE]  
 >  이 페이지 상단의 **모두 축소** 를 클릭하면 제목만 표시됩니다.  
@@ -377,10 +372,10 @@ ms.locfileid: "37317593"
 |현재 선택한 텍스트의 이전 위치 찾기|Ctrl+Shift+F3|Ctrl+Shift+F3|  
 |**파일에서 바꾸기** 대화 상자 표시|Ctrl+Shift+H|Ctrl+Shift+H|  
 |파일의 맨 아래에서 시작하여 맨 위로 검색하도록 증분 검색을 반대로 수행|Ctrl+Shift+I|Ctrl+Shift+I|  
-| **찾기 및 바꾸기** 에서 **위로 검색**옵션 선택 또는 선택 취소|Alt+F3, B|Alt+F3, B|  
+|**찾기 및 바꾸기** 에서 **위로 검색**옵션 선택 또는 선택 취소|Alt+F3, B|Alt+F3, B|  
 |**파일에서 찾기** 검색 중지|Alt+F3, S|Alt+F3, S|  
-| **찾기 및 바꾸기** 에서 **단어 단위로**옵션 선택 또는 선택 취소|Alt+F3, W|Alt+F3, W|  
-| **찾기 및 바꾸기** 에서 **와일드카드**옵션 선택 또는 선택 취소|Alt+F3, P|Alt+F3, P|  
+|**찾기 및 바꾸기** 에서 **단어 단위로**옵션 선택 또는 선택 취소|Alt+F3, W|Alt+F3, W|  
+|**찾기 및 바꾸기** 에서 **와일드카드**옵션 선택 또는 선택 취소|Alt+F3, P|Alt+F3, P|  
 |표준 도구 모음의 찾기/명령 상자에 캐럿 배치|Ctrl+/|해당 키 없음|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>잘라내기 및 붙여넣기 바로 가기 키  
@@ -441,13 +436,13 @@ ms.locfileid: "37317593"
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |현재 실행 중인 쿼리 취소 또는 중지|Ctrl+T|Ctrl+T|  
-| **쿼리 디자이너**의 다이어그램 창 표시|Ctrl+1|Ctrl+1|  
-| **쿼리 디자이너**의 조건 창 표시|Ctrl+2|Ctrl+2|  
-| **쿼리 디자이너**의 SQL 창 표시|Ctrl+3|Ctrl+3|  
-| **쿼리 디자이너**의 결과 창 표시|Ctrl+4|Ctrl+4|  
-| **쿼리 디자이너**에 지정된 쿼리 실행|Ctrl+R|Ctrl+R|  
+|**쿼리 디자이너**의 다이어그램 창 표시|Ctrl+1|Ctrl+1|  
+|**쿼리 디자이너**의 조건 창 표시|Ctrl+2|Ctrl+2|  
+|**쿼리 디자이너**의 SQL 창 표시|Ctrl+3|Ctrl+3|  
+|**쿼리 디자이너**의 결과 창 표시|Ctrl+4|Ctrl+4|  
+|**쿼리 디자이너**에 지정된 쿼리 실행|Ctrl+R|Ctrl+R|  
 |결과 창에 있는 경우 디자이너의 맨 아래에 도킹된 도구 모음으로 포커스 이동|Ctrl+G|Ctrl+G|  
-| **쿼리 디자이너**에서 JOIN 모드 사용|Ctrl+Shift+J|Ctrl+Shift+J|  
+|**쿼리 디자이너**에서 JOIN 모드 사용|Ctrl+Shift+J|Ctrl+Shift+J|  
   
 ## <a name="designer-keyboard-shortcuts"></a>디자이너 바로 가기 키  
   

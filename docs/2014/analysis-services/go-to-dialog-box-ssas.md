@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.gotodb.f1
 ms.assetid: 28cc2539-a983-4e29-9017-62e3ebea450f
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0fd2724bbe71242151662c3f32bc6f187962dd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44d2e66f8f1975662d369ece28b51e82a2ecf392
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087433"
 ---
 # <a name="go-to-dialog-box-ssas"></a>이동 대화 상자(SSAS)
   **이동** 대화 상자를 사용하면 테이블의 특정 열로 이동할 수 있습니다.  

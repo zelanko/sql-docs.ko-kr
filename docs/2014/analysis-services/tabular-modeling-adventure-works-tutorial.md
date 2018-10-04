@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083283"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>테이블 형식 모델링(Adventure Works 자습서)
   이 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 테이블 형식 모델을 만드는 방법을 설명하는 단원을 제공합니다.  
@@ -60,7 +57,7 @@ ms.locfileid: "37247373"
   
 -   테이블 형식 모드에서 실행 중인 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 인스턴스  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]을 참조하세요.  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 을 참조하세요.  
   
 -   AdventureWorksDW 예제 데이터베이스. 이 예제 데이터베이스에는 이 자습서를 완료하는 데 필요한 데이터가 포함되어 있습니다. 샘플 데이터베이스를 다운로드 하려면 [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807)합니다.  
   

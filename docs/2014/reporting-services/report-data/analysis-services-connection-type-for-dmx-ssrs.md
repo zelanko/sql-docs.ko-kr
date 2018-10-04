@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - data mining [Reporting Services]
 - passing parameters [Reporting Services]
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-caps.latest.revision: 62
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 287f6539400ad87a898340cc7c8709e0ab07fd91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a909c905fd9cb61df019f2db5eca85279cc85a8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328945"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085663"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX용 Analysis Services 연결 형식(SSRS)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 사용하여 데이터 집합을 만들면 올바른 큐브가 검색될 경우 보고서 디자이너에 MDX(Multidimensional Expressions) 쿼리 디자이너가 표시됩니다. 큐브가 검색되지 않지만 데이터 마이닝 모델을 사용할 수 있는 경우에는 보고서 디자이너에 DMX(Data Mining Extension) 쿼리 디자이너가 표시됩니다. MDX와 DMX 디자이너 사이를 전환하려면 도구 모음에서 **DMX 명령 유형**(![DMX 쿼리 언어 뷰로 변경](../media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경")) 단추를 클릭합니다. DMX 쿼리 디자이너에서는 그래픽 요소를 사용하여 DMX 쿼리를 대화형으로 작성할 수 있습니다. DMX 쿼리 디자이너를 사용하려면 지정한 데이터 원본에는 이미 데이터를 제공하는 데이터 마이닝 모델이 있어야 합니다. 쿼리 결과는 보고서에 사용되는 일반 행 집합으로 변환됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 사용하여 데이터 집합을 만들면 올바른 큐브가 검색될 경우 보고서 디자이너에 MDX(Multidimensional Expressions) 쿼리 디자이너가 표시됩니다. 큐브가 검색되지 않지만 데이터 마이닝 모델을 사용할 수 있는 경우에는 보고서 디자이너에 DMX(Data Mining Extension) 쿼리 디자이너가 표시됩니다. MDX와 DMX 디자이너 사이를 전환하려면 도구 모음에서 **DMX 명령 유형**(![DMX 쿼리 언어 뷰로 변경](../media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경")) 단추를 클릭합니다. DMX 쿼리 디자이너에서는 그래픽 요소를 사용하여 DMX 쿼리를 대화형으로 작성할 수 있습니다. DMX 쿼리 디자이너를 사용하려면 지정한 데이터 원본에는 이미 데이터를 제공하는 데이터 마이닝 모델이 있어야 합니다. 쿼리 결과는 보고서에 사용되는 일반 행 집합으로 변환됩니다.  
   
 > [!NOTE]  
 >  보고서를 디자인하기 전에 모델을 학습해야 합니다. 자세한 내용은 [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)을 참조하세요.  

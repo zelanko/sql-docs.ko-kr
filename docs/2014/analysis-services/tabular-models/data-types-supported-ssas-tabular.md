@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237633"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086903"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>지원되는 데이터 형식(SSAS 테이블 형식)
   이 문서에서는 테이블 형식 모델에서 사용할 수 있는 데이터 형식에 대해 설명하고 DAX(Data Analysis Expressions) 수식에서 데이터를 계산하거나 사용할 때 암시적으로 수행되는 데이터 형식 변환에 대해 설명합니다.  
@@ -77,7 +74,7 @@ ms.locfileid: "37237633"
 ##  <a name="bkmk_implicit"></a> DAX 수식의 명시적 및 암시적 데이터 형식 변환  
  각 DAX 함수에는 입력 및 출력으로 사용되는 데이터 형식과 관련된 특정 요구 사항이 있습니다. 예를 들어 정수와 날짜를 인수로 사용해야 하는 함수도 있고 텍스트 또는 테이블을 인수로 사용해야 하는 함수도 있습니다.  
   
- 인수로 지정하는 열의 데이터가 함수에 필요한 데이터 형식과 호환되지 않는 경우 대부분 오류가 반환됩니다. 그러나 가능한 경우 항상 DAX에서는 데이터를 필요한 데이터 형식으로 암시적으로 변환하려고 시도합니다. 예를 들어:  
+ 인수로 지정하는 열의 데이터가 함수에 필요한 데이터 형식과 호환되지 않는 경우 대부분 오류가 반환됩니다. 그러나 가능한 경우 항상 DAX에서는 데이터를 필요한 데이터 형식으로 암시적으로 변환하려고 시도합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   숫자(예: "123")를 문자열로 입력할 수 있습니다. DAX에서 문자열을 구문 분석하여 숫자 데이터 형식으로 지정하려고 합니다.  
   

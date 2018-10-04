@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (Error)
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: eed47b9f-0501-4baf-8cac-3ea839a859c3
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18ee5ec5d9c25715719c3c06eaf2b5c7b081666f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f536013514e2bcba6aa1db5552b0d7d054e1a20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087926"
 ---
 # <a name="source-element-error-xmla"></a>Source 요소(Error)(XMLA)
   부모 [Error](error-element-xmla.md) 요소를 생성한 구성 요소의 이름을 포함합니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37273709"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37273709"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[오류](error-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
   
