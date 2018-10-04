@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644362"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +155,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*–D* 옵션으로 지정된 **database_name**||  
 |*owner_name*|**dbo**|*owner_name* 은 **dbo**여야 합니다. 다른 값을 지정할 경우 **dta** 를 실행할 수 없으며 오류가 반환됩니다.|  
-|*table_name*|InclusionThresholdSetting||  
+|*table_name*|없음||  
   
  파일을 사용하는 경우 TuningLog.xml과 같이 확장명으로 .xml을 지정합니다.  
   
@@ -172,7 +168,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값을 지정하지 않으면 **dta** 는 기본적으로 **-fa****IDX**를 사용합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |IDX_IV|인덱스와 인덱싱된 뷰|  
 |IDX|인덱스만|  
@@ -193,7 +189,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  권장 구성을 생성할 때 **dta** 가 유지해야 할 기존의 실제 디자인 구조를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|기존 구조 없음|  
 |ALL|기존의 모든 구조|  
@@ -204,7 +200,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  **dta** 가 제안하는 새 실제 디자인 구조(인덱스 및 인덱싱된 뷰)를 분할할 것인지 여부와 분할 방법을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|분할 안 함|  
 |FULL|전체 분할(성능 향상 중심)|  
@@ -222,7 +218,7 @@ dta -d AdventureWorks2012 ...
  계획 캐시를 작업으로 사용할 수 있도록 지정합니다. 명시적으로 선택한 데이터베이스에 대한 상위 1,000개의 계획 캐시 이벤트가 분석됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  
  
 **-iq**  
- 쿼리 저장소 작업으로 사용할 수 있도록 지정 합니다. 명시적으로 선택한 데이터베이스에 대 한 쿼리 저장소에서 상위 1, 000 이벤트가 분석 됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  자세한 내용은 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 및 [쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)을 참조하세요.
+ 쿼리 저장소 작업으로 사용할 수 있는지를 지정 합니다. 명시적으로 선택한 데이터베이스에 대 한 쿼리 저장소에서 상위 1,000 개의 이벤트가 분석 됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  자세한 내용은 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 및 [쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)을 참조하세요.
  ||  
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
@@ -254,7 +250,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  물리적 디자인 구조를 온라인으로 만들 것인지 여부를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |OFF|권장되는 물리적 디자인 구조를 온라인으로 만들 수 없습니다.|  
 |ON|권장되는 모든 물리적 디자인 구조를 온라인으로 만들 수 있습니다.|  
@@ -272,11 +268,11 @@ dta -n number_of_events -A 0
  이러한 경우 반드시 무제한 튜닝 시간(`-A 0`)을 지정해야 합니다. 그렇지 않으면 기본적으로 데이터베이스 엔진 튜닝 관리자에서 튜닝 시간으로 8시간을 적용합니다.
  
  **-I** *time_window_in_hours*   
-   시간 창 (시간)을 지정 DTA 사용 하는 경우 튜닝에 대 한 것으로 간주 되려면에 대 한 쿼리 실행 해야 경우 **-iq** 옵션 (쿼리 저장소에서 작업). 
+   기간 (시간)을 지정 하면 쿼리 실행 사용 하는 경우 튜닝에 대 한 DTA로 간주 되기 위해 **-iq** 옵션 (쿼리 저장소의 작업). 
 ```  
 dta -iq -I 48  
 ```  
-이 경우 DTA 작업의 원본으로 쿼리 저장소를 사용 하 고만 지난 48 시간으로 실행 된 쿼리를 고려 합니다.  
+이 경우 DTA를 작업의 원본으로 쿼리 저장소를 사용 하 여 지난 48 시간을 사용 하 여 실행 하는 쿼리를 고려해 야 합니다.  
   ||  
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
