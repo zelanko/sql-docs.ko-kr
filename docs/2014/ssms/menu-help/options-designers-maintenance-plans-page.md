@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96a513d1ff221b550c53ce31442ae91a9cf5c8dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5f93bf95e34c377047cb86e47dc02a82b64d5777
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165279"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>옵션 (디자이너-유지 관리 계획 페이지)
   **옵션** 대화 상자를 사용하여 디자인 화면에 새 셰이프를 추가할 때의 디자이너 기본 동작을 결정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너**를 확장한 다음 **유지 관리 계획**을 선택합니다.  

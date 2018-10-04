@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150303"
 ---
 # <a name="basic-data-mining-tutorial"></a>기본 데이터 마이닝 자습서
   시작 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 데이터 마이닝 자습서입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 마이닝 모델을 만들고 예측 하기 위한 통합된 환경을 제공 합니다. 이 자습서에서는 시스템 학습을 사용하여 고객 구매 행동을 분석하고 예측하는 타겟 메일링 캠페인 시나리오를 완료합니다. 이 자습서에서는 가장 중요한 세 가지 데이터 마이닝 알고리즘인 클러스터링, 의사 결정 트리 및 Naive Bayes를 사용하는 방법을 보여 줍니다. 또한 마이닝 모델 뷰어를 사용 하 여 결과 분석 및 예측과 정확도 차트에 포함 된 데이터 마이닝 도구를 사용 하 여를 만드는 방법을 배웁니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 모든 예에 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]가 사용됩니다.  

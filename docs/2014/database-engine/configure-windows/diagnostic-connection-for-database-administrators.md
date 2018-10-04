@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147561"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에 대한 표준 연결이 불가능할 때 관리자에게 특별 진단 연결을 제공합니다. 이 진단 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 표준 연결 요청에 응답하지 않은 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하여 진단 쿼리를 실행하고 문제를 해결할 수 있습니다.  

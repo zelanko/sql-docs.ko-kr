@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updg:nullvalue attribute
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - nullvalue attribute
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb61234696e419bc203822985f8966a81975e476
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a6da64b6a626da7dcdc3ff8b29c9e291b8684b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172121"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160043"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 처리(SQLXML 4.0)
   XML 구문에서는 NULL을 부재로 해석합니다. 예를 들어 특성 또는 요소 값이 NULL이면 해당 특성이나 요소가 XML 문서에 없습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML에서는 `updg:nullvalue` 특성을 사용하여 요소 또는 특성 값에 NULL을 지정할 수 있습니다.  

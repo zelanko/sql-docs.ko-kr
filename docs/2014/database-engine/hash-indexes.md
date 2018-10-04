@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393950"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169473"
 ---
 # <a name="hash-indexes"></a>해시 인덱스
   인덱스는 메모리 최적화 테이블의 진입점으로 사용됩니다. 테이블의 행을 읽으려면 메모리에 있는 데이터를 찾을 인덱스가 필요합니다.  

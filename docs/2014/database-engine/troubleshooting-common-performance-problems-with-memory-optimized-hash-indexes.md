@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28fea2aed82e86d58264311914a341fb6ecca4fc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 79d986ed5f08c120113bd31ef9bb4f613cc56b66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154973"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결
   이 항목에서는 해시 인덱스의 일반적인 문제 해결을 집중적으로 다룹니다.  
@@ -51,7 +48,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  테이블에는 두 열(o_id, od_id)에 해시 인덱스가 있지만 쿼리에는 (o_id)에 같음 조건자가 있습니다. 쿼리에는 인덱스 키 열의 하위 집합에만 같음 연산자가 있으므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 PK_od를 사용하여 Index Seek 연산을 수행할 수 없습니다. 그 대신, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 전체 인덱스 검색으로 돌아가야 합니다.  
   
- **해결 방법:** 가능한 해결 방법이 많이 있습니다. 예를 들어:  
+ **해결 방법:** 가능한 해결 방법이 많이 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   비클러스터형 해시 대신 비클러스터형 유형으로 인덱스를 다시 만듭니다. 메모리 최적화 비클러스터형 인덱스가 정렬되므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 선행 인덱스 키 열에서 Index Seek를 수행할 수 있습니다. 결과적으로 이 예의 기본 키 정의는 `constraint PK_od primary key nonclustered`가 됩니다.  
   

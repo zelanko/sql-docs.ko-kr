@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cade93703374705e88abf136233a966e20aadfe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dca00ca68a700fa6e0283ed46d924b5ad4855f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162663"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>원시 파일 대상 편집기(연결 관리자 페이지)
   원시 파일 대상 편집기를 사용하여 원시 데이터를 파일에 기록하도록 원시 파일 대상을 구성합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], analysis progress status
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - progress information [Upgrade Advisor]
 - status information [Upgrade Advisor]
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
-caps.latest.revision: 30
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96ba7fd92927d5d18d7b1dc966829f3ff02911cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160363"
 ---
 # <a name="upgrade-advisor-progress"></a>업그레이드 관리자 진행률
   업그레이드 관리자 분석은 선택된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소의 분석을 수행하는 전용 분석기를 통해 시작됩니다. 진행률을 보고 구성 요소가 분석 되는 **진행률** 대화 상자.  

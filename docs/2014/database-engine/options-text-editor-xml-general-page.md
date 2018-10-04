@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-caps.latest.revision: 20
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7a6a5f53bbccbd0d30aaada30366d01af23a3a5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37c85ef93f04dd16d8ea3e00fa9ec99f40d2e1cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157815"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   이 대화 상자를 사용하여 XML 문서를 편집하는 데 사용되는 XML 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **XML** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174703"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>데이터 처리 문제 해결(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 모델을 제작할 때의 모델 데이터 처리(새로 고침)에 대한 정보를 제공합니다. 이 항목에서는 Analysis Services 서버 인스턴스에 배포된 모델에서 데이터 처리에 대한 정보를 제공하지 않습니다. 배포된 모델에서 데이터를 처리하는 방법에 대한 자세한 내용은 [Analysis Services의 스크립트 관리 태스크](script-administrative-tasks-in-analysis-services.md)를 참조하세요.  

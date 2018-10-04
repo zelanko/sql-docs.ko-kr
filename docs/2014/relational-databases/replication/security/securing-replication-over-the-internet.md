@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], Internet
 - Internet [SQL Server replication], security
 ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c61f78c805e08ec58f4c7f173e285d5f13123c42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55320406ef9fd56feafa9fcf65883e2b68eae329
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152167"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
   인터넷을 통한 복제는 특히 모바일 구독자에게 유용하지만 적절한 보안을 유지하려면 인터넷 복제를 알맞게 구성해야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 다음 두 가지 기술 중 하나를 통해 인터넷에서 정보를 안전하게 공유할 것을 권장합니다.  

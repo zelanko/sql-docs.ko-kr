@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155423"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>큐브 디자이너(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **큐브 디자이너**를 사용하여 큐브에 포함된 데이터를 찾아볼 수 있을 뿐만 아니라 큐브에 포함된 측정값 그룹 및 측정값, 큐브 차원 및 차원 관계, 계산, KPI(핵심 성과 지표), 동작, 파티션, 큐브 뷰 및 번역을 포함하여 기존 큐브의 다양한 속성을 편집할 수 있습니다. 다음 방법으로 **큐브 디자이너** 대화 상자를 표시할 수 있습니다.  

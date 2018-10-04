@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
-caps.latest.revision: 20
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 64eb317972d33f2fc2957f40c74b0bdea9aac152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147683"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services 구성 - 데이터 디렉터리
   다음 표의 기본 디렉터리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있습니다. 이러한 파일에 대한 액세스 권한은 설치 중에 만들어져 프로비전되는 SQLServerMSASUser$\<instance> 보안 그룹의 멤버와 로컬 관리자에게 부여됩니다.  

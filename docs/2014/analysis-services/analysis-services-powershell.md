@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/11/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fe6625cf512586c5f5e42bb4d5d4f601db41a70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8effab0536063466efe25161949a0efeebd0038b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162554"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]에는 Windows PowerShell을 사용하여 Analysis Services 개체를 탐색, 관리 및 쿼리할 수 있도록 Analysis Services PowerShell(SQLAS) 공급자 및 cmdlet이 포함되어 있습니다.  

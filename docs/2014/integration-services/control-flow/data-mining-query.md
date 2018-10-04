@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a40552887a63e9c07acf695a40dc3f7fecf02d29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb642130a1027e11015c67c0241677a25638130e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143783"
 ---
 # <a name="data-mining-query"></a>데이터 마이닝 쿼리
   디자인 창에는 데이터 마이닝 예측 쿼리를 작성할 때 사용할 수 있는 데이터 마이닝 예측 쿼리 작성기가 포함되어 있습니다. 입력 테이블을 기반으로 하는 예측 쿼리를 디자인하거나 단일 예측 쿼리를 디자인할 수 있습니다. 쿼리를 실행하고 결과를 보려면 결과 뷰로 전환합니다. 쿼리 뷰에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 쿼리를 표시합니다.  

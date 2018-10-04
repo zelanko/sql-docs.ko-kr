@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], namespace assignments
 - library [Reporting Services]
 - assigning namespaces to extensions
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f0663b49de4704e45f7127f41e200cf6f042f2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77d98f92747741f80c8a0af613ecc93f7647c5af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157535"
 ---
 # <a name="creating-a-delivery-extension-library"></a>배달 확장 프로그램 라이브러리 만들기
   만드는 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 고유한 네임스페이스에 할당하고 라이브러리 또는 어셈블리 파일로 만들어야 합니다. 네임스페이스의 정확한 이름은 중요하지 않지만 고유한 이름이어야 하며 다른 확장 프로그램과 공유하면 안 됩니다. 회사의 배달 확장 프로그램에 대해 고유한 네임스페이스를 만들어야 합니다.  

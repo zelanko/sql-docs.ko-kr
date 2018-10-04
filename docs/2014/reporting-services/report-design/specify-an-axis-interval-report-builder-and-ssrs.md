@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3c619ec718e3471eb6518f6604a65c97cb367508
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b86ef40b0a796c1d340a1d7ccadcc68fcdbed74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151943"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
   축 간격은 축에 있는 레이블 및 해당 눈금 표시의 수를 정의합니다. 값 축에서 축 간격은 차트의 데이터 요소를 일정하게 측정할 수 있도록 합니다. 그러나 범주 축에서는 이 기능 때문에 범주가 축 레이블 없이 표시될 수 있습니다. 축 Interval 속성에서 원하는 간격 수를 지정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 결과 집합의 데이터를 기반으로 런타임에 간격 수를 계산합니다. 축 간격을 계산하는 방법에 대한 자세한 내용은 [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  

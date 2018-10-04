@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2665040a-1291-4064-ba01-f458637dda57
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9cecd7cf22f5849e201aeca7779ceccb4a9e07dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b91be4b60c65a246b56a2d08142ce6937d80cea0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185341"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162583"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>예측할 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
   이 태스크에서 예측 시나리오에 사용할 데이터 원본 뷰를 추가합니다. 예측 모델을 사용하려면 데이터에 시계열의 단계를 식별하는 데 사용할 수 있는 열이 있어야 합니다. 여러 데이터 계열을 분석하려는 경우 모든 계열이 같은 날짜 또는 시간 단계에서 종료해야 합니다.  

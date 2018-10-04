@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.f1
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 105b4e33e916dda945e3cec77d0c0ca06b09b3c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25de20d08a477eb4a1bcb1d98f17ad7c179f356d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144583"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>마이닝 구조 뷰(데이터 마이닝 모델 디자이너)
   **마이닝 구조** 뷰를 사용하여 마이닝 구조를 수정하고 마이닝 구조 및 연결된 모든 마이닝 모델을 처리할 수 있습니다.  

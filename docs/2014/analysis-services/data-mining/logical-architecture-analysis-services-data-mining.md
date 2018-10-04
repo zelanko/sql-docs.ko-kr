@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166253"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>논리적 아키텍처(Analysis Services - 데이터 마이닝)
   데이터 마이닝은 여러 구성 요소와의 상호 작용을 수반하는 프로세스입니다.  

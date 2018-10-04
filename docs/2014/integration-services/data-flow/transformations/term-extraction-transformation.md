@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155133"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
   용어 추출 변환은 변환 입력 열의 텍스트에서 용어를 추출한 후 용어를 변환 출력 열에 기록합니다. 변환은 영어 텍스트에서만 작동되며 자체 영어 사전과 영어에 대한 언어적 정보가 사용됩니다.  

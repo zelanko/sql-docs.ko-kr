@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 545d4b494dc5214d0fa5b1b25f4687a7263330cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 357e3030657933c20715cb334ec66026b3a97adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252455"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154446"
 ---
 # <a name="validating-a-data-flow-component"></a>데이터 흐름 구성 요소의 유효성 검사
   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드는 올바르게 구성되지 않은 구성 요소가 실행되는 것을 방지하기 위해 제공됩니다. 이 메서드를 사용하여 구성 요소에 입력 및 출력 개체 수가 필요한 만큼 있는지, 구성 요소의 사용자 지정 속성 값이 허용되는 값인지, 필요한 경우 연결이 지정되어 있는지를 확인할 수 있습니다. 또한 이 메서드를 사용하여 입력 및 출력 컬렉션의 열 데이터 형식이 올바른지와 각 열의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>이 해당 구성 요소에 적절하게 설정되어 있는지 확인할 수 있습니다. 기본 클래스 구현은 유효성 검사 프로세스에서 구성 요소의 입력 열 컬렉션을 검사하고 컬렉션의 각 열이 업스트림 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100>에 있는 열을 참조하는지 확인하는 데 유용합니다.  

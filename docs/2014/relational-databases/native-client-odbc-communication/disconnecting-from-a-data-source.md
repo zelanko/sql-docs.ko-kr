@@ -1,12 +1,10 @@
 ---
-title: 데이터 원본에서 연결 끊기 | Microsoft Docs
+title: 데이터 원본에서 연결 끊기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC data sources, connections
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - ODBC functions
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 611a9052f9a974608226757d26420948c7bbe420
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144733"
 ---
 # <a name="disconnecting-from-a-data-source"></a>데이터 원본에서 연결 끊기
   호출 응용 프로그램 데이터 원본을 사용 하 여 완료 되 면 **SQLDisconnect**합니다. **SQLDisconnect** 연결에 할당 되는 모든 문을 해제 하 고 데이터 원본에서 드라이버 연결을 끊습니다. 연결을 끊은 후 응용 프로그램이 호출할 수 있습니다 [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) 를 연결 핸들을 해제 합니다. 를 종료 하기 전에 응용 프로그램 호출 **SQLFreeHandle** 를 환경 핸들을 해제 합니다.  

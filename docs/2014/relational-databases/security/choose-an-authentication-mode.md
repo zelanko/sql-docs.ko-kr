@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.authenticationmode.f1
@@ -25,12 +23,12 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 226a36b90d14e6a24ca651bec5ffee0688e6aaa9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163783"
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
   설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. Windows 인증 모드 및 혼합 모드의 2가지 유형이 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  

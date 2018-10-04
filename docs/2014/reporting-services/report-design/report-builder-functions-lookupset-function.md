@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166403"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름과 일치하는 값 집합을 반환합니다.  
@@ -36,13 +33,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>매개 변수  
  *source_expression*  
- (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`).  
+ (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`) 을 입력합니다.  
   
  *destination_expression*  
- (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!CustomerID.Value`)을 입력합니다.  
+ (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!CustomerID.Value`) 을 입력합니다.  
   
  *result_expression*  
- (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!PhoneNumber.Value`).  
+ (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!PhoneNumber.Value`) 을 입력합니다.  
   
  *데이터 집합(dataset)*  
  보고서의 데이터 집합 이름을 지정하는 상수입니다. 예를 들면 "ContactInformation"입니다.  

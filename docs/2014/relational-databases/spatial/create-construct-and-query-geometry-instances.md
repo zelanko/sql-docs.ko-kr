@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e75fa36b86a0efa24a1de7f5ebfa638b14392776
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158973"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry 인스턴스 만들기, 구성 및 쿼리
   평면 공간 데이터 형식인 `geometry`, 유클리드 (평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
@@ -239,7 +236,7 @@ ms.locfileid: "37294543"
 ###  <a name="simple"></a> 간단  
  에 대 한를 `geometry` 되도록 인스턴스 *간단한*, 이러한 요구 사항을 모두 충족 해야 합니다.  
   
--   인스턴스의 각 도형은 끝점을 제외하고 자체 교차해서는 안 됩니다.  
+-   인스턴스의 각 도형은 엔드포인트를 제외하고 자체 교차해서는 안 됩니다.  
   
 -   인스턴스의 도형 두 개가 양쪽의 경계가 아닌 점에서는 서로 교차하지 않아야 합니다.  
   

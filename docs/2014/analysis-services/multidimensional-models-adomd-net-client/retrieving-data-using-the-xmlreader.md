@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - retrieving data
 - XmlReader object
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa8ef058839fb3c97a9e3dfdf6022dd91bc2053
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165693"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>XmlReader를 사용하여 데이터 검색
   `XmlReader` 클래스의 일부를 `System.Xml` Microsoft.NET Framework 클래스 라이브러리에 대 한 네임 스페이스는 비슷합니다는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 클래스는를 `XmlReader` 클래스에서는 빠르고 캐시 되지 않은, 정방향 전용 데이터에 액세스할 수 합니다. <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체를 사용하는 데이터의 메모리 내 분석 뷰가 필요 없는 경우 대량의 XML 데이터를 검색하는 데는 `XmlReader` 개체가 가장 적합합니다. `XmlReader`는 데이터를 스트리밍하므로 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체를 사용하여 XML for Analysis 응답을 분석 개체 모델 표현으로 변환할 때처럼 `XmlReader`에서 데이터를 호출자에게 제공하기 전에 모든 데이터를 검색 및 캐시할 필요가 없습니다.  

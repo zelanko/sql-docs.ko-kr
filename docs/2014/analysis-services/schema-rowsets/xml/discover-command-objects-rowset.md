@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2bebb8f25bcf8c38b6422ad27ffa865d328be45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177993"
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 행 집합
   참조된 명령에서 사용 중인 개체에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
@@ -34,11 +31,11 @@ ms.locfileid: "37261199"
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`SESSION_SPID`|`DBTYPE_I4`|예|세션 ID입니다.|  
-|`SESSION_ID`|`DBTYPE_WSTR`|예|GUID와 같은 세션 고유 식별자입니다.|  
+|`SESSION_SPID`|`DBTYPE_I4`|사용자 계정 컨트롤|세션 ID입니다.|  
+|`SESSION_ID`|`DBTYPE_WSTR`|사용자 계정 컨트롤|GUID와 같은 세션 고유 식별자입니다.|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||명령 시퀀스 번호입니다.|  
-|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|예|현재 개체의 부모에 대한 경로입니다.|  
-|`OBJECT_ID`|`DBTYPE_WSTR`|예|개체를 만들 때 정의된 개체 ID입니다.|  
+|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|사용자 계정 컨트롤|현재 개체의 부모에 대한 경로입니다.|  
+|`OBJECT_ID`|`DBTYPE_WSTR`|사용자 계정 컨트롤|개체를 만들 때 정의된 개체 ID입니다.|  
 |`OBJECT_VERSION`|`DBTYPE_I4`||개체의 메타데이터 버전 번호입니다. 이 번호는 개체가 변경될 때마다 변경됩니다.|  
 |`OBJECT_DATA_VERSION`|`DBTYPE_I4`||개체 데이터의 계보 번호로서 개체가 처리될 때마다 증가합니다.|  
 |`OBJECT_CPU_TIME_MS`|`DBTYPE_I8`||명령 실행이 시작된 이후에 개체에 사용된 CPU 시간(밀리초)입니다.|  

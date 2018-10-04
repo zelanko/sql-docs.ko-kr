@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ForeignKeyColumns Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ForeignKeyColumns element
 ms.assetid: 0a673c1a-73dd-4217-aa41-56b340b5e1ab
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2aef4df8f107c081b0c19ad32816ba5ef50b45e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: faefae483593b1c4e4369d3e61347a5c7528c001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153423"
 ---
 # <a name="foreignkeycolumns-element-assl"></a>ForeignKeyColumns 요소(ASSL)
   관계형 데이터 원본에 대한 부모 테이블로의 조인을 식별하는 열의 컬렉션을 포함합니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37259689"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

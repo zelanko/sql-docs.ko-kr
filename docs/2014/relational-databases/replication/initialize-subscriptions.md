@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.initializesubscriptions.f1
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e80b04a7ba6d62ba57d237a61d5fc8b5bec6ec0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19b520bc5f977e3d6d1c56919f75f4cfa5195ce2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156313"
 ---
 # <a name="initialize-subscriptions"></a>구독 초기화
   구독자는 초기화되어야만 복제된 데이터를 받을 수 있습니다. 초기 데이터 집합은 필요 없지만 구독자에는 적어도 복제된 각 개체에 대한 스키마와 복제에 필요한 메타데이터 테이블 및 프로시저가 있어야 합니다.  

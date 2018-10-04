@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a61442deaf2ca75bd3fb85f5eb8c83f6f58c4fee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174013"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>여러 보고서 렌더링 확장 프로그램의 대화형 기능(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 런타임에 보고서 작업에 사용할 수 있는 대화형 보고 기능을 제공 합니다. 모든 보고서 렌더링 형식에 대화형 기능을 전부 사용할 수 있는 것은 아닙니다. 다음 표에는 각 대화형 기능이 특정 형식에서 어떻게 작동하는지 이해하는 데 도움이 되는 정보가 나와 있습니다.  

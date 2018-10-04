@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 317abe3278784d5328df02ec96c6f126a40d100e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9b9e174df4eef55a474e27613ac3101c3bfcaa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170997"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정
   SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트에 정의된 보안 설정에 따라 보고서, 보고서 모델 및 공유 데이터 원본을 보고 관리하는 방법이 결정됩니다. 기본 SharePoint 그룹, 사용 권한 수준 및 사용 권한 할당을 사용하는 경우 현재 보안 설정을 사용하여 보고서 및 기타 문서에 대해 작업을 수행할 수 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SVF
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
-caps.latest.revision: 81
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5dee7f6654bdf4e24eb170b968dd8afa366e8211
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157363"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수
   SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)]이나 다른 관리 코드에서 액세스할 수 있습니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../clr-integration/clr-integration-overview.md)합니다.  

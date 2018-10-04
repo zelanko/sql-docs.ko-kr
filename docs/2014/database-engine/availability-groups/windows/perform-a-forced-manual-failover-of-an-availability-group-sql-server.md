@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177796"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>가용성 그룹의 강제 수동 장애 조치(Failover) 수행(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법에 대해 설명합니다. 강제 장애 조치(failover)는 [예정된 수동 장애 조치(failover)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 가 가능하지 않을 때 재해 복구용으로만 사용하기 위한 수동 장애 조치(failover)의 한 형태입니다. 동기화되지 않은 보조 복제본으로 강제 장애 조치(failover)를 수행하면 데이터 손실이 발생할 수 있습니다. 따라서 서비스를 즉시 가용성 그룹으로 복원해야 하고 데이터 손실 위험을 감수할 수 있는 경우에만 강제 장애 조치(failover)를 수행하는 것이 좋습니다.  

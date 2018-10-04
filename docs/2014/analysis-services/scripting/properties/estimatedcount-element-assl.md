@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EstimatedCount Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a69d67554d0090e0e586421986bc97ba556c84a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc65def1576c28a9a21249501f83986c2652652d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155719"
 ---
 # <a name="estimatedcount-element-assl"></a>EstimatedCount 요소(ASSL)
   사용자가 정의한 특성의 예상 멤버 수를 포함합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37300853"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Long|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37300853"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AggregationDesignAttribute](../data-type/aggregationdesignattribute-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 값은 사용자가 할당 됩니다 및에서 사용 되는 [AggregationDesign 요소 &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)합니다.  

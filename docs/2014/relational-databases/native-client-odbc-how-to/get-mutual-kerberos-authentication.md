@@ -1,24 +1,21 @@
 ---
-title: 상호 Kerberos 인증 가져오기 | Microsoft Docs
+title: 상호 Kerberos 인증 가져오기 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0622e1ebac261085b341056e6178e72d02d66d0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147735"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>상호 Kerberos 인증 가져오기
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC를 사용하여 상호 Kerberos 인증을 가져오는 방법을 보여 줍니다.  

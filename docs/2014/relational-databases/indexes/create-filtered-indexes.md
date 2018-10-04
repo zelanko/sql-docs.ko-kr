@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3fdcc88a3f31b5706e78192c5722073994d1deb7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80b89f52469b2d05bf7f428e4f4b67788b73969b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146173"
 ---
 # <a name="create-filtered-indexes"></a>필터링된 인덱스 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 필터링된 인덱스를 만드는 방법에 대해 설명합니다. 필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 및 저장소 비용을 줄일 수 있습니다.  

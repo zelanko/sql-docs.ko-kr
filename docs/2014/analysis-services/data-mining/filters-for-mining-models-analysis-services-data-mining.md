@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb95e8bf7237fcf7ebae4321d14de690ebd0b2c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142715"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>마이닝 모델에 대한 필터(Analysis Services - 데이터 마이닝)
   데이터 기반 모델 필터링을 사용하면 마이닝 구조에서 데이터의 하위 집합을 사용하는 마이닝 모델을 만들 수 있습니다. 포괄적인 데이터 원본 뷰를 기반으로 단일 마이닝 구조를 만들 수 있으므로 필터링을 사용하면 마이닝 구조 및 데이터 원본을 유연하게 디자인할 수 있습니다. 그런 다음 데이터의 각 하위 집합에 대해 서로 다른 구조 및 관련 모델을 작성하는 대신 다양한 모델의 학습 및 테스트에 해당 데이터의 일부만 사용하기 위한 필터를 만들 수 있습니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4061f96d79faebb2f9c61af62f1c171cb328be4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9db2bfec3a189fcad99d72821e1415e935b1368c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168583"
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
   성능 모니터를 사용하면 성능 카운터를 사용하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 성능을 모니터링할 수 있습니다.  

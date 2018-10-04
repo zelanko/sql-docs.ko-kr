@@ -1,12 +1,10 @@
 ---
-title: 저장된 프로시저를 실행 합니다. | Microsoft Docs
+title: 저장된 프로시저를 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, stored procedures
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], executing
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5275dca79f7519a64b2ace936e5f91a6961819fd
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144863"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
   저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
@@ -58,7 +55,7 @@ ms.locfileid: "37426362"
   
      확장 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 제공되지 않는 C 및 C++ 기능을 사용할 수 있습니다.  
   
-     저장된 프로시저를 호출 하는 방법의 예제를 참조 하세요 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)합니다.  
+     저장된 프로시저를 호출 하는 방법에 대 한 예제를 보려면 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9536c674f9bf5733fb6d20109ee03206a50570c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55f5fdabcb3c751c0c9d4575e0375d4438fea30b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149773"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 시스템 기본값 및 런타임 입력을 기반으로 구성 파일을 생성할 수 있습니다. 구성 파일을 사용하면 동일한 구성으로 회사 전체에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 배포할 수 있습니다. 또한 Setup.exe를 실행하는 배치 파일을 만들어 수동 설치를 전사적으로 표준화할 수도 있습니다.  

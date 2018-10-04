@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4716406f1f789c978a7d8c8383ddf8ac328fc881
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162253"
 ---
 # <a name="create-a-relational-mining-structure"></a>관계형 마이닝 구조 만들기
   대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  

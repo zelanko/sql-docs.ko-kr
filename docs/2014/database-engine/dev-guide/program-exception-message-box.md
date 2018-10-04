@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - exception message box [SQL Server]
 - displaying exception message box
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52a24c53fcb7efa367b089b4cf5baa0731d7ad5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cf02e2759c36ae6408beed0d72b677e130e105a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164113"
 ---
 # <a name="program-exception-message-box"></a>프로그램 예외 메시지 상자
   응용 프로그램 예외 메시지 상자를 사용 하 여에서 제공 하는 것 보다 훨씬 더 많은 메시징 환경 제어를 제공 하는 수 여 <xref:System.Windows.Forms.MessageBox> 클래스입니다. 자세한 내용은 [예외 메시지 상자 프로그래밍](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)합니다. 예외 메시지 상자.dll 가져오기 및 배포 하는 방법에 대 한 정보를 참조 하세요 [예외 메시지 상자 응용 프로그램 배포](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)합니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9d20abf0f811b06ec380b1d4ba984c2f6d7eb87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153493"
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 추적 이벤트
   인스턴스에서 생성되는 추적 이벤트를 캡처한 다음 분석하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 작업을 따라갈 수 있습니다.  추적 이벤트는 관련된 추적 이벤트를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  각 추적 이벤트에는 이벤트와 관련된 데이터 집합이 포함되어 있습니다. 모든 데이터 조각이 모든 이벤트와 관련이 있는 것은 아닙니다.  

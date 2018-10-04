@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a22c2d234ca855d7de9f9dad81d0be4c6b014199
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be2320f3e13dc7bb2110f6bd05f0bccefda58464
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170783"
 ---
 # <a name="considerations-for-using-test-servers"></a>테스트 서버 사용 시 고려 사항
   테스트 서버를 사용하여 프로덕션 서버의 데이터베이스를 튜닝하는 것은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 중요한 장점입니다. 이 기능을 사용하여 프로덕션 서버의 실제 데이터를 테스트 서버로 복사하지 않고도 튜닝 오버헤드를 테스트 서버에 오프로드할 수 있습니다.  

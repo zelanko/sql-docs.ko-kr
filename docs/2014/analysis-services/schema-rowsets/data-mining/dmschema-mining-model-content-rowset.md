@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_MODEL_CONTENT
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e23e78bd3588dd31a11c39941572645fb11771d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172283"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 행 집합
   클라이언트 응용 프로그램에서 데이터 마이닝 모델의 내용을 찾아볼 수 있습니다. 클라이언트 응용 프로그램에서는 이 항목의 마지막에 설명된 특수 트리 작업 제한을 사용하여 마이닝 모델의 내용을 탐색할 수 있습니다.  

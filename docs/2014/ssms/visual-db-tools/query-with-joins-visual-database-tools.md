@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4ca2da0f658db385e3dcc23a2384f4dc7afc859
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cdf03d4e890347af90984989b0cffbd3c1691295
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174163"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>조인을 사용한 쿼리(Visual Database Tools)
   쿼리 결과에 여러 테이블 또는 테이블 반환 개체의 데이터가 포함될 수 있습니다. 여러 테이블 반환 개체에 있는 데이터를 조합하려면 SQL에서 JOIN 연산을 사용합니다.  

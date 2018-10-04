@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cda6eecd004b4e437552f3db07b7487c7529594
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156523"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>보고 통화 지정(비즈니스 인텔리전스 마법사)
   **보고 통화 지정** 페이지를 사용하여 **변환 유형 선택** 페이지에서 지정한 다 대 다 또는 일 대 다 변환 유형에 적용되는 통화 변환 기능에 대해 보고 통화를 정의할 수 있습니다. 보고 통화는 **측정값 선택** 페이지에서 선택한 측정값의 값이 변환되는 통화입니다. 통화 차원에서 선택한 멤버는 비즈니스 인텔리전스 마법사에서 생성된 통화 변환에 대한 보고 통화 차원을 정의합니다.  

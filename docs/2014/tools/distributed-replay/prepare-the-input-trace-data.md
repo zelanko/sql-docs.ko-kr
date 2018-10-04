@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7cc27c4aeb7245146fb35bcca12c236a56be370
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: dfc80ecaecdc51235928a5ff0e66704449f493d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177323"
 ---
 # <a name="prepare-the-input-trace-data"></a>입력 추적 데이터 준비
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작하려면 Distributed Replay Administration Tool에서 전처리 단계를 시작하여 입력 추적 데이터를 준비해야 합니다. 전처리 단계에서는 Distributed Replay Controller가 추적 데이터를 전처리하고 중간 파일을 생성합니다.  

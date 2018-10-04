@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +24,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbb0ac8f46b34b61134076ef5ccc523f55f769bd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152703"
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 응용 프로그램 업그레이드
   데이터 계층 응용 프로그램 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 응용 프로그램)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  

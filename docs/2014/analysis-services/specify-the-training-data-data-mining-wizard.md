@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149333"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>학습 데이터 지정(데이터 마이닝 마법사)
   **학습 데이터 지정** 페이지를 사용하여 마이닝 구조에 포함할 열을 확인할 수 있습니다. 모든 모델에서 열을 사용하지 않는 경우에도 열을 선택하여 구조에 포함할 수 있습니다. 예를 들어 마이닝 모델에서 열로 드릴스루하려는 경우 모델이 아닌 구조에 열을 포함할 수 있습니다.  

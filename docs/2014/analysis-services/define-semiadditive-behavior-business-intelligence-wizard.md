@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 201a5a24e8bafa2f2f919f6ad0b072ca801a694e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168013"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>반가산적 동작 정의(비즈니스 인텔리전스 마법사)
   **반가산적 동작 정의** 페이지를 사용하여 측정값에 대한 반가산적 동작을 설정 또는 해제할 수 있습니다. 반가산적 동작은 큐브에 포함된 측정값이 시간 차원에 대해 집계되는 방법을 결정합니다.  

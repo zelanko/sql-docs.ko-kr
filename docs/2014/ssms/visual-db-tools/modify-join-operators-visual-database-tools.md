@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad48b7e744dc83e5a32bec972383067eb076d470
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5dfc560a935373a9495edc884a892937fbd13161
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167163"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>조인 연산자 수정(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 기본적으로 두 조인 열의 값을 일치시키는 등호(동등 조인)를 사용하여 테이블을 조인합니다. 필요한 경우 조인 열의 값을 비교하는 데 사용되는 연산자를 변경할 수 있습니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4460b94a758a60abe27d8e9f3a90567ecbcbaa13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163513"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성
   한 서버에서 두 개 이상의 네트워크 또는 네트워크 서브넷으로의 연결을 제공해야 할 경우 다중 홈 컴퓨터를 사용하는 것이 일반적인 시나리오입니다. 이 컴퓨터는 경계 네트워크(DMZ(완충 영역) 또는 스크린된 서브넷이라고도 함)에 있는 경우가 많습니다. 이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.  
