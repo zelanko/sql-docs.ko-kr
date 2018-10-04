@@ -1,6 +1,6 @@
 ---
-title: '빠른 시작: 연결 및 Azure Data Studio를 사용 하 여 SQL Server 쿼리 | Microsoft Docs'
-description: 이 빠른 시작에서는 Azure Data Studio를 사용 하 여 SQL Server에 연결 하 고 쿼리를 실행 하는 방법
+title: '빠른 시작: Azure Data Studio를 사용하여 SQL Server에 연결 및 쿼리 | Microsoft Docs'
+description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 SQL Server에 연결하고 쿼리를 실행 하는 방법
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "48039057"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-이 빠른 시작에 사용 하는 방법을 보여 줍니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용 하 여 만드는 합니다 *TutorialDB* 에 사용 되는 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 SQL Server에 연결하고 쿼리
+이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB* 를 생성하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 빠른 시작을 완료 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], 및 SQL Server에 액세스 합니다.
+이 빠른 시작을 완료 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 및 SQL Server에 액세스 합니다.
 
-- [설치할 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)합니다.
+- [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md) 설치.
 
-SQL Server에는 액세스할 수 없는 경우 다음 링크에서 플랫폼을 선택 (SQL 로그인 및 암호를 놓치지 않도록!).
+SQL Server에 액세스할 수 없는 경우 다음 링크에서 플랫폼을 선택 (SQL 로그인 및 암호를 놓치지 않도록!).
 - [Windows - SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 - [Linux-SQL Server 2017 Developer Edition 다운로드](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -단계를 수행 해야 *만들기 및 쿼리 데이터*입니다.
@@ -35,17 +35,17 @@ SQL Server에는 액세스할 수 없는 경우 다음 링크에서 플랫폼을
 ## <a name="connect-to-a-sql-server"></a>SQL Server에 연결
 
    
-1. 시작 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 합니다.
-1. 처음 실행 하면 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 는 **연결** 대화 상자가 열립니다. 경우는 **연결** 대화 상자가 열리지를 클릭 합니다 **새 연결** 아이콘에는 **서버** 페이지:
+1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 시작합니다.
+1.  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 를 처음 실행하면 **연결** 대화 상자가 열립니다. **연결** 대화 상자가 열리지 않는 경우 **서버** 페이지에 **새 연결** 아이콘을 클릭합니다:
    
    ![새 연결 아이콘](media/quickstart-sql-server/new-connection-icon.png)
 
-1. 이 아티클에서 *SQL 로그인*, 되지만 *Windows 인증* 지원 됩니다. 필드를 다음과 같이 입력 합니다.
+1. 이 아티클에서는 *SQL 로그인*을 사용하지만 *Windows 인증*도 지원 됩니다. 필드를 다음과 같이 입력합니다.
  
     - **서버 이름:** localhost
     - **인증 유형:** SQL 로그인  
-    - **사용자 이름:** SQL Server에 대 한 사용자 이름  
-    - **암호:** SQL Server에 대 한 암호  
+    - **사용자 이름:** SQL Server에 대한 사용자 이름  
+    - **암호:** SQL Server에 대한 암호  
     - **데이터베이스 이름:** 이 필드를 비워 둡니다. 
     - **서버 그룹:** \<기본\>  
 
