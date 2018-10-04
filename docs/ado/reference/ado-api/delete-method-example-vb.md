@@ -1,32 +1,29 @@
 ---
-title: 삭제 메서드 예제 (VB) | Microsoft Docs
+title: Delete 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], Visual Basic example
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee42e1717c9a142c5da551b89b3c3b8fe79d86d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 32548ce458d84e234907efadb3694ae587c2b526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601401"
 ---
-# <a name="delete-method-example-vb"></a>삭제 (VB) 메서드 예제
-사용 하 여이 예제는 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 에서 지정 된 레코드를 제거 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+# <a name="delete-method-example-vb"></a>Delete 메서드 예제(VB)
+이 예제에서는 합니다 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 에서 지정 된 레코드를 제거 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
 ```  
 'BeginDeleteVB  

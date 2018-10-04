@@ -1,38 +1,35 @@
 ---
-title: 메서드 (VBScript) 예제 이동 | Microsoft Docs
+title: Move 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279462"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602521"
 ---
-# <a name="move-method-example-vbscript"></a>Move 메서드 (VBScript) 예제
-사용 하 여이 예제는 [이동](../../../ado/reference/ado-api/move-method-ado.md) 레코드 포인터를 배치 하는 메서드는 사용자 입력에 기반 합니다.  
+# <a name="move-method-example-vbscript"></a>Move 메서드 예제(VBScript)
+이 예제에서는 합니다 [이동](../../../ado/reference/ado-api/move-method-ado.md) 사용자 입력을 기반으로 하는 레코드 포인터를 배치 하는 방법입니다.  
   
- 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 이 완벽 하 게 작동 하는 예제를 보려면 하거나 있어야 AdvWorks.mdb (SDK와 함께 설치 됨) C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb에 있는 원본 또는 경로 반영 하도록 예제 코드를 편집 하는 데이터 이 파일의 실제 위치입니다. Microsoft Access 데이터베이스 파일입니다.  
+ 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 완벽 하 게 작동 예제를 보려면 하거나 있어야 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 위치한 AdvWorks.mdb (SDK와 함께 설치 됨)를 원본 또는 경로 반영 하도록 예제 코드를 편집 하는 데이터 이 파일의 실제 위치입니다. Microsoft Access 데이터베이스 파일입니다.  
   
- 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려면 디렉터리에 배치 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **붙여 넣고 MoveVBS.asp**합니다. 모든 브라우저에서 결과 볼 수 있습니다.  
+ 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려는 디렉터리에 배치 합니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **붙여 넣고 MoveVBS.asp**합니다. 모든 브라우저에서 결과 볼 수 있습니다.  
   
- 문자 또는 오류 처리 작업을 보려면 정수가 아닌 숫자를 입력 하십시오.  
+ 문자 또는 정수가 아닌 오류 처리 작업을 확인 하려면를 입력 하십시오.  
   
 ```  
 <!-- BeginMoveVBS -->  

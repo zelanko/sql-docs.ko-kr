@@ -1,34 +1,31 @@
 ---
-title: 모드를 일괄 처리 | Microsoft Docs
+title: 배치 모드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], batch mode
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78fd9c4c7a27bad0daddb02f3275ecebfc171cbd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602401"
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
-일괄 처리 모드가 설정 되어 때는 **LockType** 속성이 **adLockBatchOptimistic** 공급자 일괄 처리 업데이트를 지원 합니다. 특정 잠금 유형 설정은 커서 위치에 따라 사용할 수 있습니다. 예를 들어, 비관적 잠금 유형에 사용할 수 없는 경우는 **앞** 로 설정 된 **adUseClient**합니다. 반대로, 공급자는 커서 위치는 서버에 있으면 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  
+일괄 처리 모드에 적용 되는 경우는 **LockType** 속성이 **adLockBatchOptimistic** 공급자 일괄 처리 업데이트를 지원 합니다. 특정 잠금 유형을 커서 위치에 따라 사용할 수 없는 경우 예를 들어 비관적 잠금 유형에 사용할 수 없는 경우는 **CursorLocation** 로 설정 된 **adUseClient**합니다. 반대로, 커서 위치는 서버의 경우 공급자를 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  
   
- **UpdateBatch** 메서드는 보내는 데 사용 되 **레코드 집합** 변경 내용이 데이터 소스를 업데이트 하려면 서버에 복사 버퍼에 유지 합니다. 다음 섹션에서 열립니다는 **레코드 집합** 일괄 처리 모드에서 복사 버퍼에 변경을 수행 하 고 다음에 대 한 호출을 사용 하 여 데이터 원본에 변경 내용을 보내는 **UpdateBatch**합니다.  
+ 합니다 **UpdateBatch** 메서드는 보내는 데 **레코드 집합** 변경 내용이 데이터 소스를 업데이트 하려면 서버에 복사 버퍼에서 유지 합니다. 다음 섹션에서는 열립니다는 **레코드 집합** 일괄 처리 모드로 변경 버퍼에 복사 하 고 다음에 대 한 호출을 사용 하 여 데이터 원본에 변경 내용을 보내는 **UpdateBatch**합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
