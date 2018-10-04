@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Caption Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Caption element
 ms.assetid: 3d10ee68-98ab-4da0-a409-800dea2f1c32
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42a979937e087a1404393fe3bf4f6c6566ca5678
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4899f19b8a3986e2063d2979ce84c0a0d52d0d02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239613"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201483"
 ---
 # <a name="caption-element-xmla"></a>Caption 요소(XMLA)
   부모의 캡션에 대 한 정보를 포함 [HierarchyInfo](hierarchyinfo-element-xmla.md) 하거나 [멤버](member-element-xmla.md) 요소입니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37239613"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +58,7 @@ ms.locfileid: "37239613"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[HierarchyInfo](hierarchyinfo-element-xmla.md), [Member](member-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `HierarchyInfo` 요소의 경우 `Caption` 요소는 계층의 멤버 캡션을 제공하는 속성의 이름을 포함합니다. 이 값은 OLAP 사양에 대한 OLE DB의 축 행 집합에 대해 정의된 MEMBER_CAPTION 속성과 동일합니다.  

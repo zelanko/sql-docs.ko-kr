@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169613"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 하나 이상의 보조 복제본(*읽기 가능한 보조 복제본*)에 대한 읽기 전용 액세스 지원이 포함됩니다. 읽기 가능한 보조 복제본은 해당 보조 데이터베이스 모두에 대한 읽기 전용 액세스를 허용합니다. 하지만 읽기 가능한 보조 데이터베이스는 읽기 전용으로 설정되지 않습니다. 이러한 데이터베이스는 동적입니다. 해당 주 데이터베이스에서 변경 내용이 발생하면 보조 데이터베이스도 변경됩니다. 일반적인 보조 복제본의 경우 보조 데이터베이스의 내구성이 있는 메모리 액세스에 최적화된 테이블을 포함한 데이터는 거의 실시간 데이터입니다. 또한 전체 텍스트 인덱스는 보조 데이터베이스와 동기화됩니다. 대부분의 경우 주 데이터베이스와 해당하는 보조 데이터베이스 간의 데이터 대기 시간은 몇 초 이내입니다.  
@@ -124,9 +121,7 @@ ms.locfileid: "37176550"
   
  이로 인해 주 복제본과 보조 복제본 사이에는 대개 몇 초 내외의 대기 시간이 있습니다. 하지만 네트워크 문제로 인해 처리량이 줄어드는 경우와 같은 특수한 경우에는 대기 시간이 중요할 수 있습니다. I/O 병목이 발생하고 데이터 이동이 일시 중지되면 대기 시간이 증가합니다. 일시 중지된 데이터 이동을 모니터링하려면 [AlwaysOn 대시보드](use-the-always-on-dashboard-sql-server-management-studio.md) 또는 [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) 동적 관리 뷰를 사용하면 됩니다.  
   
-####  
-            <a name="bkmk_LatencyWithInMemOLTP">
-            </a> 메모리 최적화 테이블이 포함된 데이터베이스의 데이터 대기 시간  
+####  <a name="bkmk_LatencyWithInMemOLTP"></a> 메모리 최적화 테이블이 포함된 데이터베이스의 데이터 대기 시간  
  읽기 작업에 보조 복제본의 메모리 최적화 테이블을 액세스하는 경우 *safe-timestamp* 는 *safe-timestamp*이전에 커밋된 트랜잭션에서 행을 반환하는 데 사용됩니다. safe-timestamp는 주 복제본에서 행의 가비지 수집을 수행하기 위해 가비지 수집 스레드에서 사용하는 가장 오래된 타임스탬프 힌트입니다. 이 타임스탬프는 마지막 업데이트 이후 메모리 최적화 테이블의 DML 트랜잭션 수가 내부 임계값을 초과할 때 업데이트됩니다. 주 복제본에서 가장 오래된 트랜잭션 타임스탬프가 업데이트될 때마다 내구성 있는 메모리 최적화 테이블의 다음 DML 트랜잭션은 특별한 로그 기록의 일부로 보조 복제본에 전송되도록 이 타임스탬프를 전송합니다. 보조 복제본의 REDO 스레드는 이 로그 기록 처리의 일부로 safe-timestamp를 업데이트합니다.  
   
 #### <a name="the-impact-of-safe-timestamp-on-latency"></a>safe-timestamp가 대기 시간에 미치는 영향  
@@ -208,9 +203,7 @@ GO
   
 -   접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 따라서 주 데이터베이스에서 통계를 만들 때 이 접미사를 사용할 수 없습니다. 자세한 내용은 [Statistics](../../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
   
-##  
-            <a name="bkmk_AccessInMemTables">
-            </a> 보조 복제본에서 메모리 최적화 테이블 액세스  
+##  <a name="bkmk_AccessInMemTables"></a> 보조 복제본에서 메모리 최적화 테이블 액세스  
  보조 복제본의 읽기 작업 격리 수준은 주 복제본에서 허용되는 유일한 수준입니다. 보조 복제본에서 수행되는 격리 수준의 매핑은 없습니다. 따라서 주 복제본에서 실행할 수 있는 모든 보고 작업은 변경하지 않고도 보조 복제본에서 실행할 수 있습니다. 따라서 보조 복제본을 사용할 수 없는 경우 주 복제본에서 보조 복제본으로 또는 반대로 보고 작업을 쉽게 마이그레이션할 수 있습니다.  
   
  다음 쿼리는 주 복제본에서 실패하는 것과 비슷한 방식으로 보조 복제본에서 실행에 실패합니다.  
@@ -279,9 +272,9 @@ GO
     |읽기 가능한 보조 복제본인지 여부|스냅숏 격리 또는 RCSI 수준이 설정되었는지 여부|주 데이터베이스|보조 데이터베이스|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
     |아니요|아니요|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
-    |아니요|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
-    |예|아니요|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
-    |예|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |아니요|사용자 계정 컨트롤|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
+    |사용자 계정 컨트롤|아니요|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |사용자 계정 컨트롤|사용자 계정 컨트롤|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
   
 ##  <a name="bkmk_RelatedTasks"></a> 관련 태스크  
   

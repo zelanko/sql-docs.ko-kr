@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184953"
 ---
 # <a name="configure-report-manager-native-mode"></a>보고서 관리자 구성(기본 모드)
   보고서 관리자는 보고서를 확인하고 보고서 서버 내용을 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 프런트 엔드 응용 프로그램입니다. 보고서 관리자는 보고서 서버 웹 서비스와 동일한 보고서 서버 인스턴스 내에 설치되며 설치 시 **기본값인 기본 모드 구성으로 설치** 옵션을 선택하면 구성됩니다. 보고서 관리자를 사후 설치 태스크로 구성할 수도 있습니다. 이 항목에서는 다음과 같은 보고서 관리자 구성 시나리오에 대한 정보를 제공합니다.  
@@ -75,7 +72,7 @@ ms.locfileid: "37299763"
   
 4.  **적용**을 클릭합니다.  
   
-5.  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 또는 Windows Server 2008을 사용하는 경우 보고서 관리자를 사용하기 위해서는 추가 단계를 수행해야 할 수 있습니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+5.  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 또는 Windows Server 2008을 사용하는 경우 보고서 관리자를 사용하기 위해서는 추가 단계를 수행해야 할 수 있습니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 ##  <a name="ConfigureSpecificURL"></a> 특정 보고서 서버 URL을 사용하도록 보고서 관리자 구성  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 URL을 구성할 때 보고서 관리자는 동일한 서버 인스턴스에서 실행되는 보고서 서버에 대한 새 URL 및 업데이트된 URL을 자동으로 검색하여 사용합니다. 배포에서 모든 보고서 서버 요청에 대해 단일 정적 URL을 사용해야 하는 경우 RSReportServer.config 파일에 해당 URL을 지정하면 됩니다.  

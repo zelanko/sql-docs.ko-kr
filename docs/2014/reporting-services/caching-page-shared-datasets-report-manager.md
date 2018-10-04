@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205179"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>캐싱 페이지, 공유 데이터 집합(보고서 관리자)
   캐싱 속성 페이지를 사용하여 공유 데이터 집합의 캐시 옵션을 설정할 수 있습니다.  

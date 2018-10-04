@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157043"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], 웹 브라우저를 사용 하 여 보고서를 보고 보고서 관리자를 실행 합니다. 모든 브라우저에서 모든 보고서 기능을 지원하는 것은 아닙니다. 이 항목에서는 보고서 관리자 관리 기능, 보고서 보기 및 Visual Studio의 보고서 뷰어 컨트롤에 대한 지원 및 요구 사항에 대해 설명합니다. 또한 이 항목에는 지원되는 브라우저, 인증 요구 사항 및 스크립트 요구 사항에 대한 기능 가용성이 요약되어 있습니다.  
@@ -173,14 +170,14 @@ ms.locfileid: "37164324"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 |**브라우저**|**Windows 8** 및 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 및 **2012 R2**|**Windows Server 2008** 및 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**참고**|  
-|**Internet Explorer 11 (데스크톱용**|예|예|예|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 10 (데스크톱용)**|예|예|예|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 9**|지원되지 않음|예|지원되지 않음|예|예|예|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 8.0**|지원되지 않음|예|지원되지 않음|예|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1.</sup>|  
-|**Internet Explorer 7.0**|지원되지 않음|예|지원되지 않음|예|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1.</sup>|  
-|**Firefox (최신 공개 릴리스 버전)**|예|예|예|예|예|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
-|**Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|예|인쇄 및 확대/축소는 지원되지 않습니다.<br /><br /> 매개 변수가 있는 보고서에서 날짜를 선택하는 데 사용되는 달력 컨트롤은 이 브라우저에서 사용되지 않습니다. 사용자는 사용하려는 날짜를 수동으로 매개 변수 프롬프트 영역에 입력해야 합니다.|  
-|**Chrome (최신 공개 릴리스 버전)**|예|예|예|예|예|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
+|**Internet Explorer 11 (데스크톱용**|사용자 계정 컨트롤|예|사용자 계정 컨트롤|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 10 (데스크톱용)**|사용자 계정 컨트롤|예|사용자 계정 컨트롤|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 9**|지원되지 않음|사용자 계정 컨트롤|지원되지 않음|사용자 계정 컨트롤|예|사용자 계정 컨트롤|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 8.0**|지원되지 않음|사용자 계정 컨트롤|지원되지 않음|사용자 계정 컨트롤|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1.</sup>|  
+|**Internet Explorer 7.0**|지원되지 않음|사용자 계정 컨트롤|지원되지 않음|사용자 계정 컨트롤|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1.</sup>|  
+|**Firefox (최신 공개 릴리스 버전)**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
+|**Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|사용자 계정 컨트롤|인쇄 및 확대/축소는 지원되지 않습니다.<br /><br /> 매개 변수가 있는 보고서에서 날짜를 선택하는 데 사용되는 달력 컨트롤은 이 브라우저에서 사용되지 않습니다. 사용자는 사용하려는 날짜를 수동으로 매개 변수 프롬프트 영역에 입력해야 합니다.|  
+|**Chrome (최신 공개 릴리스 버전)**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
   
  <sup>1</sup>표준 모드에서 Internet Explorer 7.0 및 8.0 표시 되지 않습니다 보고서의 사선이 합니다. 보고서에서 사선을 사용하는 경우 ASP.NET 페이지가 Internet Explorer의 쿼크 모드에서 실행되도록 설정하세요. 이 작업을 수행 하려면는 \<! DOCTYPE > ASP.NET 페이지의 태그입니다. 또는 마스터 페이지를 사용하는 경우 .master 파일에서 태그를 찾을 수 있습니다. 이 태그는 다음과 같습니다.  
   

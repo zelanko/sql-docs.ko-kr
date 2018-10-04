@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - default languages
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3eb8657e52038320ec78d228802382bfba94a76f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172053"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. `Language` 및 `Collation` 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  

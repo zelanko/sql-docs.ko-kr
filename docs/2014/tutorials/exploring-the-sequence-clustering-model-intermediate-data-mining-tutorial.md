@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a17523ea68b8f04de5240011ad426dbe19779e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213883"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 모델 탐색(중급 데이터 마이닝 자습서)
   만든 했으므로 합니다 **Sequence Clustering with Region** 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터 뷰어에: **클러스터 다이어그램**, **클러스터 프로필**하십시오 **클러스터 특징**,  **ClusterDiscrimination**, 및 **상태 전환**합니다. 이 뷰어를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)합니다.  

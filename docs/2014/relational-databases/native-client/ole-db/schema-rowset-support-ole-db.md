@@ -1,12 +1,10 @@
 ---
-title: 스키마 행 집합 지원 (OLE DB) | Microsoft Docs
+title: 스키마 행 집합 지원 (OLE DB) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - schema rowsets [OLE DB]
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f37a7e25bf720ffa20e29b005e6022115583ac7f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203463"
 ---
 # <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
-  합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서는 연결된 된 서버에서 스키마 정보를 반환을 처리할 때 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 분산 쿼리 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 처리할 때 또한 네이티브 클라이언트 OLE DB 공급자는 연결 된 서버에서 스키마 정보를 반환 지원 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 분산 쿼리 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 동의어를 지원하기는 하지만 동의어의 메타데이터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 반환하지 않습니다.  
   
- 다음 표에 스키마 행 집합 목록 및에서 지원 되는 제한 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다.  
+ 다음 테이블에서 지원 되는 제한 열 및 스키마 행 집합 목록에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자입니다.  
   
 |스키마 행 집합|제한 열|  
 |-------------------|-------------------------|  

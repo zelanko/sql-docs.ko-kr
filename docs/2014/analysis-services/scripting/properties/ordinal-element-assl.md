@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Ordinal Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87957fdfa3adf85081c0a2ca6a6539917b9f9b81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195943"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198743"
 ---
 # <a name="ordinal-element-assl"></a>Ordinal 요소(ASSL)
   키 및 번역과 같은 컬렉션에서 바인딩할 서수를 나타냅니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37195943"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AttributeBinding](../data-type/binding-data-type-assl.md), [CubeAttributeBinding](../data-type/cubeattributebinding-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `AttributeBinding` 및 `CubeAttributeBinding` 요소가 합니다 [형식](type-element-binding-assl.md) 속성이 설정 되어 *키* 또는 *번역* 의 컬렉션에 바인딩되는 특성에 바인딩될 수 열을 데이터 원본 뷰. `Ordinal` 요소의 값은 해당 컬렉션에서 `AttributeBinding` 또는 `CubeAttributeBinding`이 참조하는 열을 결정합니다.  

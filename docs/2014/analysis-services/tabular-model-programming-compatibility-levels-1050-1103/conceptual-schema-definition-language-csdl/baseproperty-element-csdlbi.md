@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d0f63e52-7330-4b2c-a929-7a517acc6921
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6de9e321e3cd5122a6252663c533be2d536800d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dcea67deac28838f190947c0b890b86537536c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198813"
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty 요소(CSDLBI)
   BaseProperty 요소는 다른 요소에 대해 기준 역할을 하는 복합 유형입니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "37320843"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 BaseProperty 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |맞춤|아니요|Member 유형의 구현을 통해 정의되는 멤버(열, 측정값, 탐색 속성, 계층 또는 수준)에 지정된 이름입니다.|  
 |FormatString|아니요|멤버의 표시 이름입니다.|  
@@ -43,7 +40,7 @@ ms.locfileid: "37320843"
   
 |값|Description|  
 |-----------|-----------------|  
-|InclusionThresholdSetting|특성 이름을 사용합니다.|  
+|없음|특성 이름을 사용합니다.|  
 |컨텍스트|들어오는 관계 이름을 사용합니다.|  
 |병합|현재 문법의 규칙에 따라 들어오는 관계 이름과 속성 이름을 연결합니다.|  
   
@@ -52,7 +49,7 @@ ms.locfileid: "37320843"
   
 |값|Description|  
 |-----------|-----------------|  
-|InclusionThresholdSetting|특성 이름을 사용합니다.|  
+|없음|특성 이름을 사용합니다.|  
 |컨텍스트|들어오는 관계 이름을 사용합니다.|  
 |병합|들어오는 관계 이름과 속성 이름을 연결합니다.|  
   

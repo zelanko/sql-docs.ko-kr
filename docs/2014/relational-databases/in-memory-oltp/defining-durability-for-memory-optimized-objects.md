@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
-caps.latest.revision: 5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6423f92f639c7408cd66c4bdcf91fae02afff1d0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169553"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체에 대한 내구성 정의
   메모리 내 OLTP는 완전한 ACID(원자성, 일관성, 격리 및 내구성) 속성을 보장합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 메모리 최적화 테이블의 컨텍스트에서 내구성은 다음과 같은 보증을 제공합니다.  
@@ -29,8 +26,7 @@ ms.locfileid: "40393497"
  지연된 내구성이 있는 트랜잭션을 메모리 최적화 테이블로 커밋하면 메모리 내 트랜잭션 로그가 디스크에 저장된 이후에만 트랜잭션이 내구성을 갖습니다.  
   
  다시 시작 내구성  
- 
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 충돌이나 계획된 종료 후에 다시 시작되면 메모리 최적화 내구성이 있는 테이블이 다시 인스턴스화되어 종료나 충돌 전의 상태로 복원됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 충돌이나 계획된 종료 후에 다시 시작되면 메모리 최적화 내구성이 있는 테이블이 다시 인스턴스화되어 종료나 충돌 전의 상태로 복원됩니다.  
   
  미디어 오류 내구성  
  실패했거나 손상된 디스크에 메모리 최적화 내구성이 있는 개체의 영구 복사본이 하나 이상 포함되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 기능은 메모리 최적화 테이블을 새 미디어에 복원합니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdatasource.f1
 ms.assetid: ee6c283d-60a2-4f51-9406-483cd1df2d7d
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ef91f4b09844c9e75a8ef208bd28211c52f65a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f1272a654749f1fa6c3b4f8cafdada26ad56a56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177923"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>데이터 원본 뷰 선택(데이터 마이닝 마법사)
   **데이터 원본 뷰 선택** 페이지를 사용하여 마이닝 구조에 대한 데이터 원본 뷰를 식별할 수 있습니다.  

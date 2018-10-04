@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165753"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 인증 및 권한 부여
   SharePoint 2010 팜에서 실행되는 SharePoint용 PowerPivot 배포에서는 SharePoint 서버에서 제공되는 인증 하위 시스템과 권한 부여 모델을 사용합니다. 모든 PowerPivot 관련 콘텐츠는 SharePoint 콘텐츠 데이터베이스에 저장되고 모든 PowerPivot 관련 작업은 팜의 PowerPivot 공유 서비스에 의해 수행되므로 SharePoint 보안 인프라는 PowerPivot 콘텐츠 및 작업까지 포함합니다. PowerPivot 데이터가 포함된 통합 문서를 요청하는 사용자는 Windows 사용자 ID를 기반으로 하는 SharePoint 사용자 ID를 사용하여 인증됩니다. 통합 문서에 대한 보기 권한에 따라 요청을 허용할지 여부가 결정됩니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LogFileName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78f8a9cfa6462f7932e69323b0f7622d0f12064a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14f2ae0f1d90459bbe7d1fc1b80e43847c15c1b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174323"
 ---
 # <a name="logfilename-element-assl"></a>LogFileName 요소(ASSL)
   에 대 한 로그 파일의 파일 이름을 포함 합니다 [추적](../objects/trace-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37171344"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37171344"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[추적](../objects/trace-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  인스턴스의 Log 폴더에 로그 파일이 저장 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Hierarchy Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Hierarchy data type
 ms.assetid: 2e05917e-7e5d-4dd1-817b-4ff5647747ff
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b20bed156e97c33a1c9f9df02677ef403767e472
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8bce652f4fcb0453606ecfa2b2f23796f55d399c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199963"
 ---
 # <a name="hierarchy-data-type-assl"></a>Hierarchy 데이터 형식(ASSL)
   차원의 계층을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -56,14 +53,14 @@ ms.locfileid: "37230013"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|InclusionThresholdSetting|  
-|파생 데이터 형식|InclusionThresholdSetting|  
+|기본 데이터 형식|없음|  
+|파생 데이터 형식|없음|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[AllMemberName](../properties/name-element-assl.md), [AllMemberTranslations](../collections/translations-element-assl.md), [AllowDuplicateNames](../properties/allowduplicatenames-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [ID](../properties/id-element-assl.md), [Levels](../collections/levels-element-assl.md), [MemberNamesUnique](../properties/membernamesunique-element-assl.md), [Name](../properties/name-element-assl.md), [Translations](../collections/translations-element-assl.md)|  
 |파생 요소|[Hierarchy](../objects/hierarchy-element-assl.md)|  
   

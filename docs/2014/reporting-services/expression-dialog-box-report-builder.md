@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10040"
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-caps.latest.revision: 16
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 130d436ceb8080e6e7d70adc41196f3e76b07edb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220903"
 ---
 # <a name="expression-dialog-box-report-builder"></a>식 대화 상자(보고서 작성기)
   사용 된 **식** 쓸 대화 상자 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 식이 보고서 항목 속성입니다. 식을 사용하여 색, 글꼴 및 테두리를 비롯한 여러 속성을 설정할 수 있습니다. 런타임에 보고서 처리기는 식을 계산하고 그 결과로 속성의 값을 대체합니다.  
@@ -33,7 +30,7 @@ ms.locfileid: "37244503"
 ## <a name="expression-constructs"></a>식 생성  
  식은 등호(=)로 시작하며 상수, 리터럴, 연산자, 기본 제공 필드에 대한 참조, 기본 제공 컬렉션, 기본 제공 함수, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 런타임 라이브러리 함수, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 공용 언어 런타임 클래스 및 사용자 지정 함수를 포함할 수 있습니다. 다음 목록에서는 식에 추가할 수 있는 범주와 값에 대해 설명합니다.  
   
- **에 대 한 식 설정:***\<PropertyName >  *  
+ **에 대 한 식 설정:***\<PropertyName >*   
  식을 정의하는 속성의 이름입니다. 이 속성은 속성 창에서 이름으로 설정할 수도 있습니다.  
   
  **상수**  
@@ -47,7 +44,7 @@ ms.locfileid: "37244503"
  **매개 변수**  
  보고서 매개 변수 목록을 제공합니다.  
   
- **필드 (** * \<데이터 집합 선택 >* **)**  
+ **필드 (**  *\<데이터 집합 선택 >* **)**  
  데이터 집합 범주에 선택된 데이터 집합에 대한 필드 목록을 표시합니다. 필드를 두 번 클릭하여 필드를 **식** 상자에 복사할 수 있습니다.  
   
  **데이터 집합**  

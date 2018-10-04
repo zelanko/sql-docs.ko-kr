@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
-caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153734"
 ---
 # <a name="parameters-properties-page-report-manager"></a>매개 변수 속성 페이지(보고서 관리자)
   매개 변수 속성 페이지를 사용하여 매개 변수가 있는 보고서의 매개 변수 설정을 보거나 수정할 수 있습니다.  

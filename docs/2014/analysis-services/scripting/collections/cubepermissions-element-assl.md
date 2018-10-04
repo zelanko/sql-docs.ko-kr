@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubePermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubePermissions element
 ms.assetid: 75a3a0c2-e1d4-4896-b0f5-2ea9c769b927
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81b7e07f04c248747da81093fd3c9383665a3eb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d389a33f366b0df308289fce03513fa86185e2fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171673"
 ---
 # <a name="cubepermissions-element-assl"></a>CubePermissions 요소(ASSL)
   에 적용 가능한 권한 컬렉션을 포함 한 [큐브](../objects/cube-element-assl.md) 요소입니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37178880"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

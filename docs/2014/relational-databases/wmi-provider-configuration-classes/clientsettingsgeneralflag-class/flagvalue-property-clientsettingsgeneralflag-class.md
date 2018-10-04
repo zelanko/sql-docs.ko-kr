@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FlagValue Property (ClientSettingsGeneralFlag Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - FlagValue property
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e73996badf5d0ceac19f07ac3114afb13e8bcf79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0d83fe0463991d6816138e3677003ca7f03fe6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194965"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170533"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 속성(ClientSettingsGeneralFlag 클래스)
   플래그의 값을 가져옵니다.  

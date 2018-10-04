@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - Naive Bayes
 - time series [data mining]
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8cbcfbeae8691fb76daa6fa9231274040b52c23c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161563"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>데이터 마이닝 알고리즘(SQL Server 데이터 마이닝 추가 기능)
   Office용 데이터 마이닝 추가 기능은 다음과 같은 데이터 마이닝 알고리즘을 사용하여 분석 모델을 만드는 작업을 지원합니다. 모든 알고리즘은 잘 알려진 시스템 학습 방법을 기반으로 하며 Microsoft Research에서 구현되었습니다.  

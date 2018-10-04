@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 520f237c4f73708841a6e1f46c1bd14d49c84fa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283629"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200813"
 ---
 # <a name="integration-services-containers"></a>Integration Services 컨테이너
   컨테이너는 패키지에 구조를 제공하고 태스크에 서비스를 제공하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 개체입니다. 패키지의 반복 제어 흐름을 지원하고 태스크와 컨테이너를 의미 있는 작업 단위로 그룹화합니다. 컨테이너는 태스크 외에도 다른 컨테이너를 포함할 수 있습니다.  
@@ -65,7 +62,7 @@ ms.locfileid: "37283629"
 |`ForcedExecutionValueType`|데이터 형식은 `ForcedExecutionValue`합니다. 이 속성의 기본값은 `Int32`합니다.|  
 |`ForceExecutionResult`|패키지 또는 컨테이너 강제 실행 결과를 지정하는 값입니다. 값은 `None`, `Success`를 `Failure`, 및 `Completion`합니다. 이 속성의 기본값은 `None`합니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>가 될 때까지 태스크를 반복합니다.|  
 |`ForceExecutionValue`|컨테이너의 선택적 실행 값에 특정 값이 포함되도록 강제해야 하는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 `False`합니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>가 될 때까지 태스크를 반복합니다.|  
-|`ID`|패키지를 만들 때 할당된 컨테이너 GUID입니다. 이 속성은 읽기 전용입니다.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>을 참조하세요.|  
+|`ID`|패키지를 만들 때 할당된 컨테이너 GUID입니다. 이 속성은 읽기 전용입니다.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A> 을 참조하세요.|  
 |`IsolationLevel`|컨테이너 트랜잭션의 격리 수준입니다. 가능한 값은 `Unspecified`, `Chaos`, `ReadUncommitted`, `ReadCommitted`, `RepeatableRead`, `Serializable` 및 `Snapshot`입니다. 이 속성의 기본값은 `Serializable`합니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>가 될 때까지 태스크를 반복합니다.|  
 |`LocaleID`|Microsoft Win32 로캘입니다. 이 속성의 기본값은 로컬 컴퓨터 운영 체제의 로캘입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>가 될 때까지 태스크를 반복합니다.|  
 |`LoggingMode`|컨테이너의 로깅 동작을 지정하는 값입니다. 값은 `Disabled`하십시오 `Enabled`, 및 `UseParentSetting`합니다. 이 속성의 기본값은 `UseParentSetting`합니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>가 될 때까지 태스크를 반복합니다.|  

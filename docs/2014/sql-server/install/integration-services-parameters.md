@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, parameters
 ms.assetid: b1bb3ea3-8097-4e76-b9c2-78a0f46a23bc
-caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15d484ffbd513ac8a14f4388cd3cdce897654164
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2b9fc62d26edbac0244bed07d20931fbb508f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210383"
 ---
 # <a name="integration-services-parameters"></a>Integration Services 매개 변수
   에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 분석 하도록 결정할 수 있습니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 컴퓨터에 패키지 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 파일 시스템에 파일을 패키지 합니다. 파일 시스템에 있는 파일을 분석할 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지가 들어 있는 폴더의 경로를 제공합니다.  

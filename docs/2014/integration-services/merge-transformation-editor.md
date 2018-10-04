@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetransformation.f1
 helpviewer_keywords:
 - Merge Transformation Editor
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d49bef8fb6f6391c616e919b819db05b5ff5e63f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb2d0f8b08b605c192f1069a20f8e02919c2c229
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185853"
 ---
 # <a name="merge-transformation-editor"></a>병합 변환 편집기
   **병합 변환 편집기** 를 사용하여 병합할 두 개의 정렬된 데이터 집합에서 열을 지정할 수 있습니다.  

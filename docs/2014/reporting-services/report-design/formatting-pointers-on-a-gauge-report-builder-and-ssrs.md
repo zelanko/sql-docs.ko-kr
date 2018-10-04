@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183193"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>계기의 포인터 서식 지정(보고서 작성기 및 SSRS)
   계기 포인터는 계기의 현재 값을 나타냅니다. 기본적으로 필드가 추가될 때 필드에 포함된 여러 값들은 하나의 값으로 집계되어 계기의 포인터로 표시됩니다. 계기에 여러 개의 포인터를 추가하여 같은 눈금에서 여러 값을 가리키도록 하거나 여러 눈금을 추가하고 추가한 각 눈금에 대해 하나의 포인터를 추가할 수 있습니다. 계기에 필드를 추가한 후 포인터 값에 컨텍스트를 부여하려면 해당 눈금에 대한 최대값과 최소값을 설정해야 합니다. 또한 범위의 최소값과 최대값을 설정하여 눈금의 주요 영역을 나타낼 수도 있습니다.  
