@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Copyright
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - undocumented [SQL Server]
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
-caps.latest.revision: 64
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c08db5a6681dec8ef5928369a27bc53f31a4d7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228503"
 ---
 # <a name="legal-notice-for-documentation"></a>설명서에 대한 법적 고지 사항
   이 설명서는 "있는 그대로" 제공됩니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여 이 설명서의 내용 및 의견은 예고 없이 변경될 수 있습니다. 해당 사용으로 인해 발생하는 모든 위험은 귀하의 책임입니다.  

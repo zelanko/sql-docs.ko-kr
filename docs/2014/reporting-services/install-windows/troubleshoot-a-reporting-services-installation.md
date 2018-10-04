@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 447cab185ce02b83b25af160421391ed73bb7cf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 757ca354179094554beac92486209553e5440866
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224743"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
   설치 중에 오류가 발생하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치할 수 없는 경우 이 항목에 설명된 지침에 따라 설치 오류가 발생할 가능성이 가장 높은 상황을 처리하세요.  
   
  문제에 관한 최신 정보에 대 한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 참조 하세요 [Reporting Services SQL Server 2012 팁 요령 및 문제 해결](http://go.microsoft.com/fwlink/?LinkId=221297)  
   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
   
  릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](http://go.microsoft.com/fwlink/?linkid=236893) 를 검토하십시오.  
   
@@ -203,7 +200,7 @@ ms.locfileid: "37248343"
   
 2.  명령 창을 열고 프롬프트에 다음 명령을 입력합니다.  
   
-    -   **실행할 \< ** *.NET 2.0 Framework directory* **> \InstallUtil.exe \< ** *Report Server Bin directory* **> \ReportingServicesLibrary.dll**  
+    -   **실행할 \<**  *.NET 2.0 Framework directory* **> \InstallUtil.exe \<**  *Report Server Bin directory* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  바꿉니다 \< *.NET 2.0 Framework directory*> 파일은.NET Framework 2.0의 실제 경로로 바꾸고 \< *Report Server Bin directory*> 실제 경로 사용 하 여 보고서 서버 bin 파일입니다.  

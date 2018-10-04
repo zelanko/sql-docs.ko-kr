@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SqlTriggerContext class
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
-caps.latest.revision: 67
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226703"
 ---
 # <a name="clr-triggers"></a>CLR 트리거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 통합으로 인해 모든 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어를 사용하여 CLR 트리거를 만들 수 있습니다. 이 섹션에서는 CLR 통합을 사용하여 구현된 트리거와 관련된 정보를 제공합니다. 에 대 한 전체 설명은 트리거를 참조 하세요 [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)합니다.  
@@ -79,7 +76,7 @@ ms.locfileid: "37160994"
 ### <a name="using-the-inserted-and-deleted-tables"></a>Inserted 및 Deleted 테이블 사용  
  DML 트리거 문은 두 개의 특수 테이블이 사용 됩니다: 합니다 **삽입** 테이블 및 **삭제** 테이블입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 하지만 테이블의 데이터를 직접 변경할 수는 없습니다.  
   
- CLR 트리거 액세스할 수 합니다 **삽입** 하 고 **삭제** CLR in-process 공급자를 통해 테이블입니다. 이 작업을 수행하려면 SqlContext 개체에서 `SqlCommand` 개체를 얻습니다. 예를 들어:  
+ CLR 트리거 액세스할 수 합니다 **삽입** 하 고 **삭제** CLR in-process 공급자를 통해 테이블입니다. 이 작업을 수행하려면 SqlContext 개체에서 `SqlCommand` 개체를 얻습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  C#  
   

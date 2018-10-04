@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - warnings [XML for Analysis]
 - inline warnings [XMLA]
 ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc4d145d9f64c7a8b0761b6006aab9ede1184aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 206fbaa364f6410c9ac242aff9f4d3f10e14f9c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229500"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>오류 및 경고 처리(XMLA)
   경우 XML for Analysis (XMLA) 오류 해결이 필요한 [Discover](../xmla/xml-elements-methods-discover.md) 또는 [Execute](../xmla/xml-elements-methods-execute.md) 메서드 호출 실행 되지 않습니다, 성공적으로 실행 되지만 오류 또는 경고를 생성 또는 성공적으로 실행 되었으나 결과 반환 합니다. 오류를 포함 하는입니다.  
@@ -58,10 +55,10 @@ ms.locfileid: "37226353"
 |열 이름|형식|Description|Null 허용<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |`ErrorCode`|`UnsignedInt`|메서드의 성공 또는 실패를 나타내는 코드를 반환합니다. 16진수 값은 `UnsignedInt` 값으로 변환되어야 합니다.|아니요|  
-|`WarningCode`|`UnsignedInt`|경고 조건을 나타내는 코드를 반환합니다. 16진수 값은 `UnsignedInt` 값으로 변환되어야 합니다.|예|  
-|`Description`|`String`|오류가 발생한 구성 요소에서 반환한 오류 또는 경고에 대한 텍스트와 설명입니다.|예|  
-|`Source`|`String`|오류 또는 경고가 발생한 구성 요소의 이름입니다.|예|  
-|`HelpFile`|`String`|오류 또는 경고를 설명하는 도움말 파일 또는 항목의 경로 또는 URL입니다.|예|  
+|`WarningCode`|`UnsignedInt`|경고 조건을 나타내는 코드를 반환합니다. 16진수 값은 `UnsignedInt` 값으로 변환되어야 합니다.|사용자 계정 컨트롤|  
+|`Description`|`String`|오류가 발생한 구성 요소에서 반환한 오류 또는 경고에 대한 텍스트와 설명입니다.|사용자 계정 컨트롤|  
+|`Source`|`String`|오류 또는 경고가 발생한 구성 요소의 이름입니다.|사용자 계정 컨트롤|  
+|`HelpFile`|`String`|오류 또는 경고를 설명하는 도움말 파일 또는 항목의 경로 또는 URL입니다.|사용자 계정 컨트롤|  
   
  <sup>1</sup> 여부를 나타내는 반환 해야 하는 데이터를 반드시 또는 여부 데이터가 선택적 열 적용 되지 않는 경우 null 문자열이 허용 됩니다.  
   

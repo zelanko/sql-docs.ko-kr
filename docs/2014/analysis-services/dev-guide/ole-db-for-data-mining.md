@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data mining [Analysis Services], OLE DB for Data Mining
 - OLE DB for Data Mining
 ms.assetid: 69f306df-8038-463f-91c3-5413503246c2
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0898ce74c4cebbcd681d678e7e65f1b7f213783b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bd64d84a5282017da7c0001cdbca0288e25074d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224273"
 ---
 # <a name="ole-db-for-data-mining"></a>데이터 마이닝용 OLE DB
   데이터 마이닝 기능은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 준수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB for Data Mining 1.0 사양 2000 년 6 월에에서 릴리스 합니다.  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
-caps.latest.revision: 38
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aca8e62859da23d3a6b4749ae387fb12ee6c9d9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8737579fc495f36c59b13d67100854822145ebf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226763"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Visual Basic .NET 시작
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET의 공용 런타임 라이브러리에서 지원하는 관리되는 프로그래밍 언어 중 하나입니다. 이 설명서의 예제는 대부분 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET으로 작성됩니다. [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 및 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 를 사용하여 SMO 응용 프로그램을 개발할 수 있습니다.  
