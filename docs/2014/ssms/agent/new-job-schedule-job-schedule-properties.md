@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.editrecurringjobsched.f1
 - sql12.ag.job.scheduleproperties.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed90a03d0545745fed92ea07d587b0ad047741bd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d220cf42df242b0cf7ff436d7ad711adf4a89fe7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094793"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>새 작업 일정: 작업 일정 속성
   이 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  

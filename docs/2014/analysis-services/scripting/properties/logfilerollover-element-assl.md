@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LogFileRollover Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c9c07dd08cacfbc273f2b0e691b178d4953ce42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054853"
 ---
 # <a name="logfilerollover-element-assl"></a>LogFileRollover 요소(ASSL)
   지정의 로깅을 [추적](../objects/trace-element-assl.md) 출력을 새 파일로 롤오버할 또는 해야에 지정 된 최대 로그 파일 크기는 중지 [LogFileSize](logfilesize-element-assl.md) 에 도달 합니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "37299023"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[추적](../objects/trace-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `LogFileRollover` 요소의 값을 True로 설정하면 로그 파일의 크기가 `LogFileSize` 부모 요소의 `Trace` 요소에 지정된 값을 초과할 경우 새 파일이 시작됩니다. 그렇지 않으면 로깅이 중지됩니다.  

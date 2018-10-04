@@ -1,14 +1,12 @@
 ---
-title: 데이터베이스 개체를 사용 하 여 작업 | Microsoft Docs
+title: 데이터베이스 개체를 사용 하 여 작업 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database objects [SMO]
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14156938fc2e80678af2d75d5cdc037532307673
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5190d6fcabe339d4d99e8b5001174c9f638b54a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148253"
 ---
 # <a name="working-with-database-objects"></a>데이터베이스 개체 작업
   SMO 개체를 만드는 단계는 다음과 같습니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56fb4e61fe7e442247fb9977afc440f13e5276e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e531467e69271eacd535fbfd59e127d73513cf2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186180"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115135"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   이 섹션에는 구독 처리, 감독 및 제어 항목이 포함되어 있습니다. 표준 구독인지 데이터 기반 구독인지에 따라 구독 관리가 달라집니다. 표준 구독은 일반적으로 사용자가 소유하고 관리합니다. 반대로 데이터 기반 구독은 보고서 서버 관리자가 만들어 유지 관리합니다.  

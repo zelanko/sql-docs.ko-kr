@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ea1e53e6a9259633a353e8eb0988b0fddc74a4e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 176105cafaccafab2fc2a85a716db6dee958d31e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735081"
 ---
-# <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제 (VC + +)
-이 예제에서는 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 및 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드. 이 코드 그룹의 있다고 가정 Accounting (참조는 [그룹 및 사용자 추가, ChangePassword 메서드 예제 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) 시스템에이 그룹을 추가 하는 방법을 보려면). Categories 테이블의 소유자는 계정으로 설정 됩니다.  
+# <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제(VC++)
+이 예제에서는 합니다 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 하 고 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드. 이 코드 그룹의 가정 계정 (참조를 [그룹과 사용자 Append, ChangePassword 메서드 예제 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) 시스템에이 그룹에 추가 하는 방법을 보려면). Categories 테이블의 소유자는 계정으로 설정 됩니다.  
   
 ```  
 // BeginOwnersCpp.cpp  

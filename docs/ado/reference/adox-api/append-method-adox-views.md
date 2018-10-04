@@ -1,13 +1,11 @@
 ---
-title: Append 메서드 (ADOX 보기) | Microsoft Docs
+title: Append 메서드 (ADOX Views) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a524be12a721d86e0e5afd1029f486ca7c8ecaa9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707461"
 ---
-# <a name="append-method-adox-views"></a>Append 메서드 (ADOX 뷰)
-새 [보기](../../../ado/reference/adox-api/view-object-adox.md) 개체 및 필터를 추가 하는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션입니다.  
+# <a name="append-method-adox-views"></a>Append 메서드(ADOX 보기)
+새로 만듭니다 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 추가 하는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,18 +42,18 @@ Views.Append Name, Command
  ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들 뷰를 나타내는 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이름 및 특성에 지정 된 데이터 소스에서 새 뷰를 만듭니다는 **명령** 개체입니다.  
+ 이름 및 특성에 지정 된 데이터 원본에 새 뷰를 만듭니다는 **명령** 개체입니다.  
   
- 사용자 지정 하는 명령 텍스트를 뷰가 아닌 프로시저를 나타내는 경우 동작 공급자에 따라 달라 집니다. **추가** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  
+ 사용자 지정 하는 명령 텍스트를 뷰가 아닌 프로시저를 나타내는 경우 동작은 공급자에 따라 달라 집니다. **추가** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  
   
 > [!NOTE]
->  Microsoft Jet 용 OLE DB Provider를 사용 하는 경우는 **뷰** 컬렉션 **Append** 메서드를 사용 하면 지정할 수는 **프로시저** 아닌 **보기**  에 *명령* 매개 변수입니다. **프로시저** 데이터 소스에 추가 되 고에 추가 되는 **뷰** 컬렉션입니다. 후의 **Append**경우는 **프로시저** 및 **뷰** 컬렉션을 새로 고칠는 **프로시저** 는 에더이상됩니다**뷰** 컬렉션에 표시 됩니다는 **프로시저** 컬렉션입니다.  
+>  Microsoft Jet 용 OLE DB Provider를 사용 하는 경우는 **뷰** 컬렉션 **추가** 메서드를 사용 하면 지정 하는 **프로시저** 아닌 **보기**  에 *명령* 매개 변수입니다. **프로시저** 데이터 원본에 추가 되 고 추가할 합니다 **뷰** 컬렉션입니다. 후는 **추가**경우는 **프로시저** 및 **뷰** 컬렉션을 새로 고칠 합니다 **프로시저** 합니다 에서더이상**뷰** 컬렉션에 표시 됩니다는 **프로시저** 컬렉션입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [뷰 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Views Append 메서드 예제 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

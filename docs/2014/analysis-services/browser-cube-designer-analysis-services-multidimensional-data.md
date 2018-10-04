@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093175"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>브라우저(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **브라우저** 탭을 사용하여 큐브의 차원, 측정값 및 KPI를 탐색할 수 있습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브 브라우저는 MDX 쿼리 디자이너에 통합되어 MDX 쿼리를 만들고, 큐브를 필터링하거나 조각화하고, 계층을 드릴다운하는 데 도움이 되는 그래픽 사용자 인터페이스를 제공합니다.  

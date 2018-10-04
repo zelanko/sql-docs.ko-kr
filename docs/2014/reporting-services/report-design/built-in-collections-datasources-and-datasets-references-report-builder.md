@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095114"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 및 DataSets 컬렉션 참조(보고서 작성기 및 SSRS)
   `DataSources` 컬렉션은 보고서에 사용되는 모든 데이터 원본을 나타냅니다. 마찬가지로,는 `DataSets` 컬렉션은 보고서의 모든 데이터 원본에 대 한 모든 데이터 집합을 나타냅니다. **보고서 데이터** 창을 사용하여 참조하는 데이터 원본 아래에 구성된 보고서 데이터 집합을 계층적으로 볼 수 있습니다. 이러한 컬렉션에 대한 참조를 추가할 경우 보고서를 미리 볼 때 값이 표시되지 않습니다. 이러한 컬렉션은 보고서가 보고서 서버에 게시된 다음에만 사용할 수 있습니다.  
@@ -32,7 +29,7 @@ ms.locfileid: "37168154"
   
 |**변수**|`Type`|**설명**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|보고서 서버에 있는 데이터 원본 정의의 전체 경로입니다. 예를 들어 보고서 기록의 일부로 보고서에 사용된 모든 데이터 원본 목록을 포함할 수 있습니다. 다음 예에서는 AdventureWorks2012라는 데이터 원본의 전체 경로를 보여 줍니다.<br /><br /> `/DataSources/AdventureWorks2012`을 참조하세요.|  
+|`DataSourceReference`|`String`|보고서 서버에 있는 데이터 원본 정의의 전체 경로입니다. 예를 들어 보고서 기록의 일부로 보고서에 사용된 모든 데이터 원본 목록을 포함할 수 있습니다. 다음 예에서는 AdventureWorks2012라는 데이터 원본의 전체 경로를 보여 줍니다.<br /><br /> `/DataSources/AdventureWorks2012` 을 참조하세요.|  
 |`Type`|`String`|데이터 원본의 데이터 공급자 유형입니다. `SQL`)을 입력합니다.|  
   
 ## <a name="datasets"></a>DataSets  

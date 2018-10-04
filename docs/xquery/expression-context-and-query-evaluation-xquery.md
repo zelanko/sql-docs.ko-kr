@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4b9100ff14fc4cbd5e7d2a94830741fa6a1ceda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077580"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755921"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>식 컨텍스트 및 쿼리 평가(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +39,7 @@ ms.locfileid: "33077580"
 ## <a name="static-context"></a>정적 컨텍스트  
  정적 컨텍스트 초기화는 식에 대한 정적 분석을 위해 모든 정보를 함께 입력하는 프로세스를 의미합니다. 정적 컨텍스트 초기화의 일부로 다음과 같은 작업이 완료됩니다.  
   
--   **경계 공백** 정책이 스트립으로 설정 됩니다. 따라서 경계 공백이 유지 되지 않습니다는 **요소** 및 **특성** 쿼리에 대 한 생성자입니다. 예를 들어:  
+-   합니다 **경계 공백** 정책이 스트립으로 설정 됩니다. 따라서 경계 공백이 유지 되지 않습니다는 **요소** 하 고 **특성** 쿼리에서 생성자입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     declare @x xml  
@@ -65,9 +59,9 @@ ms.locfileid: "33077580"
   
     -   미리 정의된 네임스페이스 집합  
   
-    -   WITH XMLNAMESPACES를 사용하여 정의된 모든 네임스페이스. 자세한 내용은 참조 [WITH XMLNAMESPACES를 사용 하 쿼리에 네임 스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
+    -   WITH XMLNAMESPACES를 사용하여 정의된 모든 네임스페이스. 자세한 내용은 [WITH XMLNAMESPACES를 사용 하 여 쿼리에 네임 스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   쿼리 프롤로그에 정의된 모든 네임스페이스. 프롤로그에 있는 네임스페이스 선언은 WITH XMLNAMESPACES에 있는 네임스페이스 선언을 무효화할 수 있습니다. 예를 들어 다음 쿼리에서 WITH XMLNAMESPACES를 선언 네임 스페이스에 바인딩하는 접두사 (pd) (`http://someURI`). 하지만 WHERE 절에서 쿼리 프롤로그가 이 바인딩을 무효화합니다.  
+    -   쿼리 프롤로그에 정의된 모든 네임스페이스. 프롤로그에 있는 네임스페이스 선언은 WITH XMLNAMESPACES에 있는 네임스페이스 선언을 무효화할 수 있습니다. 예를 들어 다음 쿼리에서 WITH XMLNAMESPACES 선언 네임 스페이스에 바인딩하는 접두사 (pd) (`http://someURI`). 하지만 WHERE 절에서 쿼리 프롤로그가 이 바인딩을 무효화합니다.  
   
         ```  
         WITH XMLNAMESPACES ('http://someURI' AS pd)  
@@ -87,7 +81,7 @@ ms.locfileid: "33077580"
   
 -   쿼리는 형식화 된 경우 **xml** 열 또는 변수와 연결 된 XML 스키마 컬렉션의 구성 요소는 정적 컨텍스트로 가져옵니다 열 또는 변수입니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
--   가져온 스키마에 있는 모든 원자 유형에 대해 정적 컨텍스트에서 캐스트 함수를 사용할 수도 있습니다. 다음 예에서 확인할 수 있습니다. 이 예제에서는 쿼리를 지정에 대해 형식화 된 **xml** 변수입니다. 이 변수와 연결된 XML 스키마 컬렉션은 원자 유형인 myType을 정의합니다. 이 유형에 따라 캐스트 함수 **myType()**, 정적 분석 중를 사용할 수 있습니다. 쿼리 식(`ns:myType(0)`)은 myType의 값을 반환합니다.  
+-   가져온 스키마에 있는 모든 원자 유형에 대해 정적 컨텍스트에서 캐스트 함수를 사용할 수도 있습니다. 다음 예에서 확인할 수 있습니다. 이 예제에서는 쿼리가 지정 되어 형식화 된에 대 한 **xml** 변수입니다. 이 변수와 연결된 XML 스키마 컬렉션은 원자 유형인 myType을 정의합니다. 이 형식의 캐스트 함수 **myType()**, 정적 분석 중에 제공 됩니다. 쿼리 식(`ns:myType(0)`)은 myType의 값을 반환합니다.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -112,7 +106,7 @@ ms.locfileid: "33077580"
     SELECT @var.query('declare namespace ns="myNS"; ns:myType(0)')  
     ```  
   
-     다음 예제에 대 한 캐스팅 함수는 **int** 식에 기본 제공 XML 유형에 지정 됩니다.  
+     다음 예에 대 한 캐스팅 함수는 **int** 식에 기본 제공 XML 형식이 지정 됩니다.  
   
     ```  
     declare @x xml  
@@ -127,7 +121,7 @@ ms.locfileid: "33077580"
   
 2.  식에 지정된 함수 및 유형 이름 확인  
   
-3.  쿼리에 대한 정적 형식 지정. 이 작업은 쿼리가 안전한 유형인지 확인합니다. 때문에 다음 쿼리는 정적 오류를 반환 하는 예를 들어는 **+** 연산자는 숫자 primitive 유형 인수가 필요 합니다.  
+3.  쿼리에 대한 정적 형식 지정. 이 작업은 쿼리가 안전한 유형인지 확인합니다. 때문에 다음 쿼리는 정적 오류를 반환 하는 예를 들어 합니다 **+** 연산자는 숫자 primitive 유형 인수가 필요 합니다.  
   
     ```  
     declare @x xml  
@@ -135,7 +129,7 @@ ms.locfileid: "33077580"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     다음 예제에서는 **value ()** 연산자는 단일 항목이 필요 합니다. XML 스키마에 지정 된 대로 있을 수 있습니다 여러 \<Elem > 요소입니다. 식에 대한 정적 분석은 식의 안정성 여부와 정적 오류의 반환 여부를 확인합니다. 오류를 확인하려면 단일 항목(`data(/x:Elem)[1]`)을 명시적으로 지정하도록 식을 다시 작성해야 합니다.  
+     다음 예제에서는 **value ()** 연산자는 단일 항목에 필요 합니다. XML 스키마에서 지정 된 대로 있을 수 있습니다 여러 \<Elem > 요소입니다. 식에 대한 정적 분석은 식의 안정성 여부와 정적 오류의 반환 여부를 확인합니다. 오류를 확인하려면 단일 항목(`data(/x:Elem)[1]`)을 명시적으로 지정하도록 식을 다시 작성해야 합니다.  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -153,14 +147,14 @@ ms.locfileid: "33077580"
     SELECT @x.value('declare namespace x="myNS"; data(/x:Elem)[1]','varchar(20)')  
     ```  
   
-     자세한 내용은 참조 [XQuery 및 정적 형식 지정](../xquery/xquery-and-static-typing.md)합니다.  
+     자세한 내용은 [XQuery 및 정적 형식 지정](../xquery/xquery-and-static-typing.md)합니다.  
   
 ### <a name="implementation-restrictions"></a>구현 시 제한 사항  
  다음은 정적 컨텍스트와 관련된 제한 사항입니다.  
   
 -   XPath 호환성 모드는 지원되지 않습니다.  
   
--   XML 생성의 경우 스트립 생성 모드만 지원됩니다. 이 값은 기본 설정입니다. 따라서 생성 된 요소 노드 유형에 **xdt: 형식화 되지 않은** 의 유형이 며 특성은 **xdt: untypedatomic** 유형입니다.  
+-   XML 생성의 경우 스트립 생성 모드만 지원됩니다. 이 값은 기본 설정입니다. 따라서 생성 된 요소 노드의 유형을입니다 **xdt: 형식화 되지 않은** 유형 및 특성 **xdt: untypedatomic** 형식입니다.  
   
 -   정렬된 정렬 모드만 지원됩니다.  
   
@@ -174,14 +168,14 @@ ms.locfileid: "33077580"
   
 -   XQuery 정적 플래거는 제공되지 않습니다.  
   
--   연결 된 데이터 정렬을 **xml** 데이터 형식이 사용 됩니다. 이 데이터 정렬은 항상 유니코드 코드 포인트 데이터 정렬로 설정됩니다.  
+-   연결 된 데이터 정렬을 합니다 **xml** 데이터 형식이 사용 됩니다. 이 데이터 정렬은 항상 유니코드 코드 포인트 데이터 정렬로 설정됩니다.  
   
 ## <a name="dynamic-context"></a>동적 컨텍스트  
  동적 컨텍스트는 식을 실행할 때 제공되어야 하는 정보를 의미합니다. 정적 컨텍스트 외에도 다음 정보가 동적 컨텍스트의 일부로 초기화됩니다.  
   
--   컨텍스트 항목, 컨텍스트 위치 및 컨텍스트 크기와 같은 식의 중요 항목은 다음에 표시된 것과 같이 초기화됩니다. 이러한 모든 값으로 재정의 될 수 있는 참고는 [nodes () 메서드](../t-sql/xml/nodes-method-xml-data-type.md)합니다.  
+-   컨텍스트 항목, 컨텍스트 위치 및 컨텍스트 크기와 같은 식의 중요 항목은 다음에 표시된 것과 같이 초기화됩니다. 이러한 모든 값으로 재정의 될 수 있는 참고 합니다 [nodes () 메서드](../t-sql/xml/nodes-method-xml-data-type.md)합니다.  
   
-    -   **xml** 문서 노드로 처리 중인 노드인 컨텍스트 항목을 설정 하는 데이터 형식입니다.  
+    -   합니다 **xml** 문서 노드로 처리 중인 노드인 컨텍스트 항목을 설정 하는 데이터 형식입니다.  
   
     -   처리 중인 노드에 상대적인 컨텍스트 항목의 위치인 컨텍스트 위치는 처음에 1로 설정됩니다.  
   
@@ -190,15 +184,15 @@ ms.locfileid: "33077580"
 ### <a name="implementation-restrictions"></a>구현 시 제한 사항  
  다음은 동적 컨텍스트와 관련된 제한 사항입니다.  
   
--   **현재 날짜 및 시간** 컨텍스트 함수 **fn:current-날짜**, **fn:current-시간**, 및 **fn:current-dateTime**, 되지 않습니다 지원 됩니다.  
+-   **현재 날짜 및 시간** 컨텍스트 함수인 **fn:current-날짜**를 **fn:current-시간**, 및 **fn:current-dateTime**, 되지 지원 합니다.  
   
--   **암시적 표준 시간대** UTC + 0으로 고정 되며 변경할 수 없습니다.  
+-   합니다 **암시적 표준 시간대** utc+0으로 고정 되어 있고 변경할 수 없습니다.  
   
--   **fn:doc()** 함수가 지원 되지 않습니다. 에 대 한 모든 쿼리를 실행 하는 **xml** 유형의 열 또는 변수입니다.  
+-   합니다 **fn:doc()** 함수가 지원 되지 않습니다. 모든 쿼리는 실행할 **xml** 열 또는 변수를 입력 합니다.  
   
--   **fn:collection()** 함수가 지원 되지 않습니다.  
+-   합니다 **fn:collection()** 함수가 지원 되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 기초](../xquery/xquery-basics.md)   
  [형식화된 XML과 형식화되지 않은 XML 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 스키마 컬렉션&#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  

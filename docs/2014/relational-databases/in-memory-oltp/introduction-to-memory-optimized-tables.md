@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1f0c92e879c7992e21a6c424bc723c76ae0f18d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 325191a4355ec2b45a952fab72105b278b26d218
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087123"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
   메모리 액세스에 최적화된 테이블은 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)을 사용하여 만드는 테이블입니다.  
@@ -58,7 +55,7 @@ ms.locfileid: "40392870"
 |기능|고유하게 컴파일된 저장 프로시저를 통한 액세스|해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 액세스|CLR 액세스|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |메모리 액세스에 최적화된 테이블|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요 <sup>1</sup>|  
-|[메모리 액세스에 최적화된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)|사용자 계정 컨트롤|예|아니오|  
+|[메모리 액세스에 최적화된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)|사용자 계정 컨트롤|예|아니요|  
 |[고유하게 컴파일된 저장 프로시저](http://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE 문으로는 고유하게 컴파일된 저장 프로시저에서 저장 프로시저를 실행할 수 없습니다.|사용자 계정 컨트롤|아니요 <sup>1</sup>|  
   
  <sup>1</sup> 컨텍스트 연결에서 메모리 액세스에 최적화 된 테이블 또는 고유 하 게 컴파일된 저장된 프로시저를 액세스할 수 없습니다 (연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 모듈을 실행 하는 경우). 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다. 자세한 내용은 참조 하세요. [일반 vs. 컨텍스트 연결](../clr-integration/data-access/context-connections-vs-regular-connections.md)합니다.  

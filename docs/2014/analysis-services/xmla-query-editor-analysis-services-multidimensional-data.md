@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - XMLA Query Editor
 - Query Editor [XMLA]
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 221ea55990b98a9723928f52cd5432f13760cc91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d324657c6a405d090913909a7e5aaa756970734
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101543"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA 쿼리 편집기(Analysis Services - 다차원 데이터)
   XMLA 쿼리 편집기를 사용하여 XMLA 언어로 작성된 문과 스크립트를 디자인하고 실행할 수 있습니다.  

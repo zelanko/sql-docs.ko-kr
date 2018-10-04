@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d88f2dc9-2933-4be5-9bf3-48ffbc2d0a1a
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5003c84d74f5c75fd840f3bc06f128031f6ffb18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3f47ddcfab5df43104d3998822fdaf8bd504946
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048433"
 ---
 # <a name="process-data-ssas-tabular"></a>데이터 처리(SSAS 테이블 형식)
   데이터를 테이블 형식 모델로 가져올 경우 캐시된 모드에서 가져오는 시점에 해당 데이터의 스냅숏을 캡처하게 됩니다. 경우에 따라 이 데이터가 변경되지 않을 수 있으며 모델에서 데이터를 업데이트할 필요는 없습니다. 하지만 가져오는 데이터가 정기적으로 변경될 수 있으므로 모델이 데이터 원본의 최신 데이터를 반영하려면 데이터를 처리(새로 고침)하고 계산된 데이터를 다시 계산해야 합니다. 모델에서 데이터를 업데이트하려면 모든 테이블에 대해, 개별 테이블에 대해, 파티션별로 또는 데이터 원본 연결별로 처리 동작을 수행합니다.  

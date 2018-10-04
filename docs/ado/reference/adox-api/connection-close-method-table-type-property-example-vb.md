@@ -1,13 +1,11 @@
 ---
-title: 연결 닫기 메서드를 테이블 형식 속성 예제 (VB) | Microsoft Docs
+title: 연결 Close 메서드, Table Type 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749351"
 ---
-# <a name="connection-close-method-table-type-property-example-vb"></a>테이블 형식 속성 예제 (VB) 연결 Close 메서드
-설정의 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 카탈로그에 대 한 연결을 종료 해야 합니다. 연결된 컬렉션은 비어 있게 됩니다. 카탈로그의 스키마 개체에서 생성 된 모든 개체가 분리 됩니다. 캐시 된 경우 해당 개체에 속성을 사용할 수 있지만 공급자를 호출 하는 속성을 읽는 시도 실패 합니다.  
+# <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close 메서드, Table Type 속성 예제(VB)
+설정 된 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 카탈로그에 대 한 연결을 닫아야 합니다. 연결 된 컬렉션은 비어 있게 됩니다. 카탈로그에서 스키마 개체에서 만들어진 모든 개체가 분리 됩니다. 캐시 된 해당 개체에 속성을 사용할 수 있지만 공급자를 호출 하는 속성을 읽는 시도 실패 합니다.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -70,7 +67,7 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- 닫기는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 카탈로그를 열기 위해 사용 된 설정으로 동일한 영향을 미치지는 **ActiveConnection** 속성을 **Nothing**합니다.  
+ 닫는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체는 카탈로그를 열 수는 설정으로 동일한 영향을 미치지 합니다 **ActiveConnection** 속성을 **Nothing**.  
   
 ```  
 Attribute VB_Name = "Connection"  
@@ -78,9 +75,9 @@ Attribute VB_Name = "Connection"
   
 ## <a name="see-also"></a>관련 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Table 개체 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [테이블 컬렉션 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Tables 컬렉션 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type 속성(테이블)(ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

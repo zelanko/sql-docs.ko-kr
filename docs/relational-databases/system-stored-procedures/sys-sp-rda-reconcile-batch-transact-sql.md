@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_reconcile_batch
@@ -19,12 +17,12 @@ ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a55619d029df6946b68f9af3a3f7c4ad09e08c71
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29bd622dd82a223b235249b611c1bee5d98a5715
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084455"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717101"
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
