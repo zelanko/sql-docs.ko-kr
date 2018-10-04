@@ -1,14 +1,11 @@
 ---
-title: sp_upgrade_log_shipping (Transact SQL) | Microsoft Docs
+title: sp_upgrade_log_shipping (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_upgrade_log_shipping
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_upgrade_log_shipping
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca589512c10c344aeed5ab22b25b96b73dab3a7d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e5b806f897a22c53688731067acf53f7b647acb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737611"
 ---
 # <a name="spupgradelogshipping-transact-sql"></a>sp_upgrade_log_shipping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +48,16 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 중에 로그 전달과 관련된 메타데이터 업그레이드를 위해 자동으로 호출됩니다. 업그레이드 중 메타데이터 문제가 발생하지 않으면 이 프로시저를 명시적으로 실행할 필요가 없습니다.  
   
  sp_upgrade_log_shipping은 주 서버 또는 모니터 서버에 있는 master 데이터베이스에서 실행해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>관련 항목  
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

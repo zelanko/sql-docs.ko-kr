@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34565484d2a7b40a3502b3f7fb836a6ae0ee422c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2ef0a6de6c531695b5eaed9fc2544a29e3e7a374
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732451"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,18 +32,18 @@ ms.locfileid: "43104175"
   
 |키워드|목록 반환 여부|선택 사항 여부|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|해당 사항 없음|아니오|데이터 소스에서 반환 되는 이름 **SQLDataSources**. DRIVER 키워드가 사용되는 경우에는 DSN 키워드를 사용할 수 없습니다.|  
-|DRIVER|해당 사항 없음|아니오|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버 이름이 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 11}. DSN 키워드가 사용되는 경우에는 DRIVER 키워드를 사용할 수 없습니다.|  
+|DSN|해당 사항 없음|아니요|데이터 소스에서 반환 되는 이름 **SQLDataSources**. DRIVER 키워드가 사용되는 경우에는 DSN 키워드를 사용할 수 없습니다.|  
+|DRIVER|해당 사항 없음|아니요|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버 이름이 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 11}. DSN 키워드가 사용되는 경우에는 DRIVER 키워드를 사용할 수 없습니다.|  
   
 ## <a name="level-2"></a>수준 2  
   
 |키워드|목록 반환 여부|선택 사항 여부|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|사용자 계정 컨트롤|아니오|데이터 원본이 있는 네트워크의 서버 이름입니다. "(로컬)"이란 용어를 서버로 입력할 수 있으며, 이 경우 네트워크로 연결되지 않은 버전인 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 복사본을 사용할 수 있습니다.|  
-|UID|아니오|사용자 계정 컨트롤|사용자 로그인 ID입니다.|  
-|PWD|아니오|예(사용자에 따라 달라짐)|사용자가 지정한 암호입니다.|  
-|APP|아니오|사용자 계정 컨트롤|호출 하는 응용 프로그램의 이름 **SQLBrowseConnect**.|  
-|WSID|아니오|사용자 계정 컨트롤|워크스테이션 ID입니다. 일반적으로 응용 프로그램이 실행되는 컴퓨터의 네트워크 이름입니다.|  
+|SERVER|사용자 계정 컨트롤|아니요|데이터 원본이 있는 네트워크의 서버 이름입니다. "(로컬)"이란 용어를 서버로 입력할 수 있으며, 이 경우 네트워크로 연결되지 않은 버전인 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 복사본을 사용할 수 있습니다.|  
+|UID|아니요|사용자 계정 컨트롤|사용자 로그인 ID입니다.|  
+|PWD|아니요|예(사용자에 따라 달라짐)|사용자가 지정한 암호입니다.|  
+|APP|아니요|사용자 계정 컨트롤|호출 하는 응용 프로그램의 이름 **SQLBrowseConnect**.|  
+|WSID|아니요|사용자 계정 컨트롤|워크스테이션 ID입니다. 일반적으로 응용 프로그램이 실행되는 컴퓨터의 네트워크 이름입니다.|  
   
 ## <a name="level-3"></a>수준 3  
   

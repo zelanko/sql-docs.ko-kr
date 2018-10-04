@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.connection.f1
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 604012c4fa0db262ab862eb56627d794e57eaa7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 635e98ed9ad3f365f30f96653ad77a906ca0d81a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201295"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>데이터 마이닝 모델 학습 편집기(연결 탭)
   **데이터 마이닝 모델 학습 편집기** 대화 상자의 **연결** 페이지를 사용하여 성향을 습득할 마이닝 모델을 선택할 수 있습니다.  

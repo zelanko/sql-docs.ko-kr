@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7c3e2dcf695e9c6748881656d87e02404209dbf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9d57b193cd66c4c6428e3c60d6b1ef5d6331ffc9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613261"
 ---
 # <a name="readtext-method"></a>ReadText 메서드
-지정한 텍스트의 문자 수를 읽습니다 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
+지정한 텍스트에서 문자 수를 읽습니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,15 +39,15 @@ String = Stream.ReadText ( NumChars)
  (선택 사항) A **긴** 파일에서 읽을 문자 수를 지정 하는 값 또는 [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) 값입니다. 기본값은 **adReadAll**합니다.  
   
 ## <a name="return-value"></a>반환 값  
- **ReadText** 메서드는 지정된 된 수의 문자, 전체 행 또는에서 전체 스트림을 읽습니다는 **스트림** 개체를 결과 문자열을 반환 합니다.  
+ 합니다 **ReadText** 메서드는 지정 된 개수의 문자나 전체 줄을에서 전체 스트림을 읽습니다를 **Stream** 개체를 결과 문자열을 반환 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 경우 *NumChar* 스트림에 남아 보다 많은 수의 문자, 나머지 문자만 반환 됩니다. 로 지정 된 길이 일치 하도록 읽기 문자열은 채워지지 *NumChar*합니다. 왼쪽에서 읽을 문자가 더 인 경우 값이 null 인 variant 반환 됩니다. **ReadText** 뒤로 읽는 데 사용할 수 없습니다.  
+ 하는 경우 *NumChar* 보다 많은 수의 문자 스트림을에 그대로, 남아 있는 문자만 반환 됩니다. 지정 된 길이 맞게 문자열 읽기은 채워지지 *NumChar*합니다. 읽을 문자가 없는 경우 값이 null 인 변형 반환 됩니다. **ReadText** 이전 버전과 읽는 데 사용할 수 없습니다.  
   
 > [!NOTE]
->  **ReadText** 메서드 텍스트 스트림 함께 사용 됩니다 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 은 **adTypeText**). 이진 스트림에 대 한 (**형식** 은 **adTypeBinary**)를 사용 하 여 [읽기](../../../ado/reference/ado-api/read-method.md)합니다.  
+>  **ReadText** 메서드는 텍스트 스트림 사용 됩니다 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 는 **adTypeText**). 이진 스트림에 대 한 (**형식** 됩니다 **adTypeBinary**)를 사용 하 여 [읽기](../../../ado/reference/ado-api/read-method.md)합니다.  
   
- 대량의 XML 데이터를 통해 반환 되 고 발생 하는 쿼리는 **ReadText** 에서 호출 되는 COM + 구성 요소에서 수행 하는 경우 데이터 개체 ADO (ActiveX) 스트림 개체의 메서드를 상당; 실행 하는 시간이 걸릴 수 있습니다는 ASP 페이지에서 사용자의 세션 시간 초과 될 수 있습니다. ADO; 유니코드 인코딩을 u t F-8에서 스트림 개체 데이터를 변환 합니다. 이러한 많은 양의 데이터를 한 번에 변환에 관련 된 빈번한 메모리 재할당은 매우 빠릅니다. 를 해결 하려면 확인 반복된 하 여 호출 된 **ReadText** 의 ADO 명령 개체에 메서드와 문자 수를 적게 지정 합니다. 테스트 값 128k (131,072)에 해당 하는 최적의 방법 표시 했습니다. 응답 시간에는이 값은 감소 하는 대로 감소 합니다. 자세한 내용은 280067, 기술 자료 문서를 참조 하십시오. "PRB: ADO 스트림 개체의 ReadText 방법을 사용 하 여 SQL Server 2000에서에서 매우 큰 XML 문서 검색 속도가 느려질 수 있습니다", Microsoft 기술 자료에서 http://support.microsoft.com합니다.  
+ 통해 반환 되는 XML 데이터의 양이 발생 하는 쿼리를 **ReadText** 에서 호출 되는 COM + 구성 요소에서 이렇게 하는 경우 데이터 개체 (ADO (ActiveX) Stream 개체의 메서드; 실행 시간이 많이 걸릴 수 있습니다는 ASP 페이지에서 사용자의 세션 시간 초과 될 수 있습니다. ADO에서 u t F-8 인코딩을 유니코드로; Stream 개체 데이터를 변환 합니다. 빈도가 높은 메모리 재할당 한 번에 이러한 많은 양의 데이터 변환에 관련 된 상당한 시간이 소요 됩니다. 를 해결 하려면에 대 한 반복된 호출을 확인 합니다 **ReadText** ADO 메서드의 개체, 명령 및 문자 수를 적게 지정 합니다. 테스트는 최적의 128k (131,072)에 해당 값을 설명 했습니다. 응답 시간이이 값은 감소 하는 대로 감소 합니다. 자세한 내용은 기술 자료 문서 280067를을 참조 하세요. "PRB: ADO 스트림 개체의 ReadText 메서드를 사용 하 여 SQL Server 2000에서에서 매우 큰 XML 문서를 검색 속도가 느려질 수 있습니다", Microsoft 기술 자료에서 http://support.microsoft.com합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

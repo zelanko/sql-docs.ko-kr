@@ -1,12 +1,10 @@
 ---
-title: 전체 텍스트 및 의미 체계 검색 동적 관리 뷰 함수 | Microsoft Docs
+title: 전체 텍스트 및 의미 체계 검색 동적 관리 뷰-함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], full-text search
 - full-text search [SQL Server], dynamic management views
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5aff261fa7697f3a3c7ba3693ce68ac11bee4362
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 1d854cd444de6bb25e7f1f56f3b7e92b1e435bb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843371"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>전체 텍스트 및 의미 체계 검색 동적 관리 뷰 함수
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>전체 텍스트 및 의미 체계 검색 동적 관리 뷰-함수
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 섹션에서는 전체 텍스트 검색 및 의미 체계 검색과 관련된 다음과 같은 동적 관리 뷰 및 함수에 대해 설명합니다.  
@@ -47,7 +44,7 @@ ms.locfileid: "34468499"
  지정된 테이블의 전체 텍스트 인덱스에 있는 속성 관련 내용을 모두 반환합니다. 해당 전체 텍스트 인덱스와 연결된 검색 속성 목록에서 등록한 모든 속성에 속하는 데이터가 모두 여기에 포함됩니다.  
   
  sys.dm_fts_index_keywords_position_by_document  
- 문서에서 키워드의 위치를 반환합니다.  
+ 문서에서 키워드의 위치를 반환 합니다.  
   
  [sys.dm_fts_index_population](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
  현재 진행 중인 전체 텍스트 인덱스 채우기에 대한 정보를 반환합니다.  
@@ -71,8 +68,8 @@ ms.locfileid: "34468499"
  [sys.dm_fts_semantic_similarity_population&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  연결된 의미 체계 인덱스가 있는 각 테이블의 각 유사성 인덱스에 대해 문서 유사성 인덱스 채우기와 관련된 상태 정보가 들어 있는 하나의 행을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

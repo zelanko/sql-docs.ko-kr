@@ -5,10 +5,7 @@ ms.date: 10/13/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_link_status
@@ -19,19 +16,18 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ac416ef7d48655e25002646b6e364d04982688b2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046051"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809081"
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
+# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   지역에서 복제 파트너 관계의 주 및 보조 데이터베이스 간의 각 복제 링크에 대 한 행을 포함 합니다. 이 기본 및 보조 데이터베이스가 포함 됩니다. 지정된 된 주 데이터베이스에 대 한 둘 이상의 연속 복제 링크가 있는 경우이 테이블 각 관계에 대 한 행을 포함 합니다. 뷰 논리 마스터를 포함 한 모든 데이터베이스에 만들어집니다. 그러나 논리 master에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  

@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240151"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684451"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인
 
@@ -39,7 +36,7 @@ ms.locfileid: "43240151"
 
 다음 지침을 통해 Azure SQL 데이터베이스 SKU 권장 사항을 확인 하 고 Data Migration Assistant를 사용 하 여 azure에 연결된 된 데이터베이스를 프로 비전 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이미 있는 경우이 도구를 닫고 설치를 닫은 다음 다시 및 도구를 업그레이드 하 라는 메시지가 나타납니다.
 

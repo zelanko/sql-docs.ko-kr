@@ -1,36 +1,33 @@
 ---
-title: 저장 프로시저 매개 변수 제한이 | Microsoft Docs
+title: 저장 프로시저 매개 변수 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34f3bc435a0bbd514eed4f9ce6100a9cca6b6cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7dc74811bf6cead91850ebd3fcaa8cf64025c80d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848055"
 ---
-# <a name="stored-procedure-parameter-limitations"></a>저장된 프로시저 매개 변수의 제한
+# <a name="stored-procedure-parameter-limitations"></a>저장 프로시저 매개 변수 제한 사항
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- Oracle을 실행 하는 저장 프로시저 10을 사용 하거나 이상의 출력 매개 변수를 액세스 위반 또는 ADO ActiveX Data Objects () 오류는 저장된 프로시저 호출이 실패 합니다. 이 버전 8.0.4.0.0 그리고 8.0.4.0.4 Oracle 클라이언트 소프트웨어의 Microsoft ODBC Driver for Oracle 사용 하는 경우에 발생할 수 있습니다.  
+ Oracle을 실행 하는 저장 프로시저 10 활용 하거나 이상의 출력 매개 변수를 액세스 위반 또는 ActiveX 데이터 개체 (ADO) 오류가 발생 저장된 프로시저 호출이 실패 합니다. 8.0.4.0.0 버전과 8.0.4.0.4의 Oracle 클라이언트 소프트웨어를 사용 하 여 Microsoft ODBC Driver for Oracle 사용 하는 경우 발생할 수 있습니다.  
   
- 이 문제를 해결 하려면 Oracle 클라이언트 소프트웨어는 8.0.4.2.0 버전으로 업그레이드 된 이상 이어야 합니다. 에 대 한 자세한 내용은 Oracle Corporation 연락처는 [패치](../../odbc/microsoft/oracle-software-patches.md)합니다.  
+ 문제를 해결 하려면 Oracle 클라이언트 소프트웨어 8.0.4.2.0 버전으로 업그레이드 된 이상 이어야 합니다. 에 대 한 자세한 내용은 Oracle Corporation 연락처 합니다 [패치](../../odbc/microsoft/oracle-software-patches.md)합니다.  
   
 > [!NOTE]  
->  Oracle 클라이언트 소프트웨어 버전 8.0.3.0.0 초기 릴리스에서이 문제가 발생 하지 않습니다.
+>  Oracle 클라이언트 소프트웨어 버전 8.0.3.0.0의 초기 릴리스를 사용 하 여이 문제가 발생 하지 않습니다.

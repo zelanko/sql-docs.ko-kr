@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-caps.latest.revision: 26
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96d125a3d69b564c94b64d23f825778c55068991
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 361f3094e1a40cbfc6075888b2be13f42d74c8bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136053"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>RDL 스키마에서 생성한 클래스를 사용하여 보고서 업데이트(SSRS 자습서)
   이 자습서에는 XML 스키마 정의 도구 (Xsd.exe) 클래스를 생성 및 보고서 정의 파일 (.rdl 및.rdlc)을 deserialize 할 serialize 할 수 있는 사용 하는 방법을 보여 줍니다 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다.  

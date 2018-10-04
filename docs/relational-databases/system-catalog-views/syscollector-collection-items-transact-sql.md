@@ -1,14 +1,11 @@
 ---
-title: syscollector_collection_items (Transact SQL) | Microsoft Docs
+title: syscollector_collection_items (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_items_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - syscollector_collection_items view
 - add data collector view
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e1113453ebe83221fb8dd8b9de92113bcb346c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714366"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +38,12 @@ ms.locfileid: "33220574"
 |**collector_type_uid**|**uniqueidentifier**|수집기 유형을 식별하는 데 사용되는 GUID입니다. Null을 허용하지 않습니다.|  
 |**name**|**nvarchar(4000)**|컬렉션 집합의 이름입니다. Null을 허용합니다.|  
 |**frequency**|**int**|컬렉션 항목이 데이터를 수집하는 빈도입니다. Null을 허용하지 않습니다.|  
-|**parameters**|**xml**|컬렉션 항목과 연결된 수집기 유형에 대한 매개 변수화를 설명합니다. 이 컬렉션 항목에 대 한 XML 스키마와는 XSD (XML 스키마)에 저장 된 유효성이 검사 되는 **parameter_schema** 특정 수집기 형식에 대 한 합니다. Null을 허용합니다. 자세한 내용은 참조 [syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)합니다.|  
+|**parameters**|**xml**|컬렉션 항목과 연결된 수집기 유형에 대한 매개 변수화를 설명합니다. 이 컬렉션 항목에 대 한 XML 스키마와 스키마 XSD (XML)에 저장 된 유효성을 검사 합니다 **parameter_schema** 특정 수집기 형식에 대 한 합니다. Null을 허용합니다. 자세한 내용은 [syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)합니다.|  
   
-## <a name="permissions"></a>Permissions  
- 에 대 한 SELECT가 필요 **dc_operator**, **dc_proxy**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 에 대 한 SELECT가 필요 **dc_operator**하십시오 **dc_proxy**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [데이터 수집기 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  

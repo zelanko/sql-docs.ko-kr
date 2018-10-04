@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Invoke-Sqlcmd cmdlet
 - sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d07e40d7f5b616b4b555ae3bbd17be764a70e394
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180643"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd**는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및 XQuery 언어로 된 문과 **sqlcmd** 유틸리티에서 지원되는 명령이 포함된 스크립트를 실행하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  
@@ -99,7 +96,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** 는 **sqlcmd** 환경 변수 또는 스크립팅 변수(예: SQLCMDDBNAME, SQLCMDWORKSTATION)를 초기화하지 않습니다.  
   
- **Invoke-Sqlcmd** 는 Windows PowerShell **-Verbose** 공통 매개 변수를 지정해야 PRINT 문 출력과 같은 메시지를 표시합니다. 예를 들어:  
+ **Invoke-Sqlcmd** 는 Windows PowerShell **-Verbose** 공통 매개 변수를 지정해야 PRINT 문 출력과 같은 메시지를 표시합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  

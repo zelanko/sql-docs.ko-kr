@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8884b6af873bb2b3fcc4c54ba4f6abce90035e72
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136073"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계
   쿼리 최적화 프로그램에서는 열에 대한 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 통계는 데이터베이스의 테이블에서 수집되어 데이터베이스 메타데이터에 저장됩니다.  
@@ -61,7 +58,7 @@ ms.locfileid: "40394317"
   
  데이터가 자주 변경되는 경우 통계를 자주 업데이트해야 합니다. 예를 들어, 일괄 업데이트 후 테이블 통계를 업데이트합니다. 업데이트된 통계의 장점을 이용할 수 있도록 통계를 업데이트한 후 고유하게 컴파일된 저장 프로시저를 삭제하고 다시 만듭니다.  
   
- 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+ .  
   
  최대 작업 중에는 통계를 업데이트하지 마십시오.  
   

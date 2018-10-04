@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-caps.latest.revision: 32
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be0139638720b80428b820e5cb2083c5fbb1a450
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221543"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결
   선행 제약 조건은 두 실행 개체를 연결합니다. 실행 개체는 임의의 태스크, For 루프, Foreach 루프 또는 시퀀스 컨테이너일 수 있습니다. 이 절차에서는 선행 제약 조건에 대한 기본 동작을 설정하는 방법과 기본 선행 제약 조건을 사용하여 실행 개체를 연결하는 방법에 대해 설명합니다.  

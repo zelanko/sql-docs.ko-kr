@@ -1,30 +1,27 @@
 ---
-title: 집합의 고유한 명령 | Microsoft Docs
+title: SET UNIQUE 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SET UNIQUE command [ODBC]
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d824d02186601f2afcc60059aad40cf469ff98c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f58eb771245b9820e27ca4d14c2f69035effa44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692121"
 ---
-# <a name="set-unique-command"></a>고유한 명령 집합
-중복 인덱스 키 값을 가진 레코드는 인덱스 파일에서 유지 관리 하는지 여부를 지정 합니다.  
+# <a name="set-unique-command"></a>SET UNIQUE 명령
+중복 인덱스 키 값을 사용 하 여 레코드 인덱스 파일에 유지 됩니다 있는지 여부를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +32,10 @@ SET UNIQUE ON | OFF
   
 ## <a name="arguments"></a>인수  
  ON  
- 인덱스 파일에 중복 인덱스 키 값이 있는 레코드를 포함 하지 않았음을 지정 합니다. 인덱스 파일에 원래 인덱스 키 값을 가진 첫 번째 레코드에만 포함 됩니다.  
+ 인덱스 파일에 중복 인덱스 키 값을 가진 모든 레코드를 포함 되지 않음을 지정 합니다. 원래 인덱스 키 값을 가진 첫 번째 레코드에만 인덱스 파일에 포함 됩니다.  
   
  OFF  
- (기본값)입니다. 중복 인덱스 키 값을 가진 레코드 인덱스 파일에 포함 되어야 함을 지정 합니다.  
+ (기본값)입니다. 중복 인덱스 키 값을 사용 하 여 레코드 인덱스 파일에 포함 되어야 함을 지정 합니다.  
   
-## <a name="remarks"></a>주의  
- 인덱스 파일 인덱스 다시 작성을 발급 하는 경우 고유 설정 설정을 유지 합니다. 자세한 내용은 참조 [인덱스](../../odbc/microsoft/index-command.md)합니다.
+## <a name="remarks"></a>Remarks  
+ 인덱스 파일 REINDEX 실행할 때 해당 고유 설정 설정을 유지 합니다. 자세한 내용은 [인덱스](../../odbc/microsoft/index-command.md)합니다.

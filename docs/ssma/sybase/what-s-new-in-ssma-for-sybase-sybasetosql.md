@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 09/22/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ade0baa7e970639769cf5bdba522e54d3843771
-ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
+ms.openlocfilehash: c6e423af0a859932cc78e097b7a73e1644d3cccf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836381"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능
 이 문서에서는 SAP ASE (이전의 Sybase 용 SSMA) 각 릴리스의 변경 내용에 대 한 SSMA를 나열 합니다. 

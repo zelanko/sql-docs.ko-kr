@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
 helpviewer_keywords:
 - Replace Table with Other Table dialog box
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e442c06763be7c357835a1f82148cbbb61095725
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173763"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>다른 테이블로 테이블 바꾸기 대화 상자
   **의** 다른 테이블로 테이블 바꾸기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰의 기존 테이블을 아직 데이터 원본 뷰에 포함되지 않은 기본 데이터 원본의 테이블로 바꿀 수 있습니다. **데이터 원본 뷰 디자이너** 의 **다이어그램** 또는 **테이블** 창에서 테이블의 이름을 마우스 오른쪽 단추로 클릭하고 **테이블 바꾸기** 에서 **다른 테이블로** 를 선택하여 **다른 테이블로 테이블 바꾸기**대화 상자를 표시할 수 있습니다.  

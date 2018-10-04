@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sp_configure
 - show advanced options option
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93b3af39f04202128a5fd7be9d33157bf3b75460
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a3fe517434b95ec06affb850a6cd054d3a68d59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180330"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054823"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options 서버 구성 옵션
   **show advanced options** 옵션을 사용하여 **sp_configure** 시스템 저장 프로시저 고급 옵션을 표시할 수 있습니다. **show advanced options** 를 1로 설정하면 **sp_configure**를 사용하여 고급 옵션을 나열할 수 있습니다. 기본값은 0입니다.  

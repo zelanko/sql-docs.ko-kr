@@ -1,14 +1,11 @@
 ---
-title: 데이터 수집기 저장 프로시저 (Transact SQL) | Microsoft Docs
+title: 데이터 수집기 저장 프로시저 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,21 +14,20 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e004af91b72dfe3ffe1fb1731797036d42f82512
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dfd5f07cafacf5817f6fbef90b140b01c00e622f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741891"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>데이터 수집기 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server 지원 데이터 수집기는 다음 구성 요소와 작업 하는 데 사용 되는 다음 시스템 저장 프로시저: 컬렉션 집합, 컬렉션 항목 및 컬렉션 형식.  
+  SQL Server 데이터 수집기 및 다음 구성 요소를 사용 하는 데 사용 되는 다음 시스템 저장 프로시저를 지원 합니다: 컬렉션 집합, 컬렉션 항목 및 컬렉션 형식입니다.  
   
 > [!IMPORTANT]  
 >  일반적인 저장 프로시저와 달리 데이터 수집기 저장 프로시저에 대한 매개 변수는 형식이 엄격하게 지정되어 있으며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
@@ -71,7 +67,7 @@ ms.locfileid: "33239763"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

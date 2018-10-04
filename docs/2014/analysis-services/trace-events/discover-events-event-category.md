@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Discover Events event category
 - discover events [Analysis Services]
 - event classes [Analysis Services], discover events
 ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d442af2b41c5f1ce91a022aae037427a59efd475
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fab12fb7956443df5ef9849b90c1caad5a6ada92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134083"
 ---
 # <a name="discover-events-event-category"></a>Discover Events 이벤트 범주
   Discover Events 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  

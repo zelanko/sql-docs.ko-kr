@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159503"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 기본 행렬 보고서를 만드는 방법을 배웁니다. 행렬에는 중첩 행 및 열 그룹과 인접 열 그룹이 있습니다. 열의 서식을 지정하고 텍스트를 회전하는 방법도 배웁니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  

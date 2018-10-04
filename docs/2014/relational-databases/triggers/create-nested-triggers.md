@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
@@ -22,12 +20,12 @@ ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c063df615f5023c71cbff8700cfddb67aa60b57
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078333"
 ---
 # <a name="create-nested-triggers"></a>중첩 트리거 만들기
   DML 및 DDL 트리거는 트리거가 다른 트리거를 시작하는 동작을 수행할 때 둘 다 중첩됩니다. 이러한 동작이 다른 트리거를 시작할 수도 있습니다. DML 및 DDL 트리거는 최대 32 수준까지 중첩될 수 있습니다. **nested triggers** 서버 구성 옵션을 통해 AFTER 트리거를 중첩할 수 있는지를 제어할 수 있습니다. INSTEAD OF 트리거(DML 트리거만 INSTEAD OF 트리거가 될 수 있음)는 이 설정에 관계없이 중첩될 수 있습니다.  
@@ -37,7 +35,7 @@ ms.locfileid: "37420762"
   
  중첩 트리거가 허용되고 체인에 있는 한 트리거가 무한 루프를 시작하면 중첩 수준을 초과하기 때문에 트리거가 종료됩니다.  
   
- 중첩 트리거를 사용하여 이전 트리거의 영향을 받는 행의 백업 복사본을 저장하는 등의 유용한 정리 작업 기능을 수행할 수 있습니다. 예를 들어 `PurchaseOrderDetail` 트리거가 삭제한 `PurchaseOrderDetail` 행의 백업 복사본을 저장하는 트리거를 `delcascadetrig` 에 만들 수 있습니다. `delcascadetrig` 트리거가 적용 중일 때 `PurchaseOrderID` 에서 `PurchaseOrderHeader` 1965를 삭제하면 `PurchaseOrderDetail`에서 해당 행이 삭제됩니다. 삭제된 데이터를 별도로 만든 다른 테이블 `PurchaseOrderDetail` 에 저장하는 DELETE 트리거를 `del_save`에 만들면 삭제된 데이터를 저장할 수 있습니다. 예를 들어:  
+ 중첩 트리거를 사용하여 이전 트리거의 영향을 받는 행의 백업 복사본을 저장하는 등의 유용한 정리 작업 기능을 수행할 수 있습니다. 예를 들어 `PurchaseOrderDetail` 트리거가 삭제한 `PurchaseOrderDetail` 행의 백업 복사본을 저장하는 트리거를 `delcascadetrig` 에 만들 수 있습니다. `delcascadetrig` 트리거가 적용 중일 때 `PurchaseOrderID` 에서 `PurchaseOrderHeader` 1965를 삭제하면 `PurchaseOrderDetail`에서 해당 행이 삭제됩니다. 삭제된 데이터를 별도로 만든 다른 테이블 `PurchaseOrderDetail` 에 저장하는 DELETE 트리거를 `del_save`에 만들면 삭제된 데이터를 저장할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  

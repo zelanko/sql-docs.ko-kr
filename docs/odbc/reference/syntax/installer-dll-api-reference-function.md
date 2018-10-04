@@ -1,32 +1,29 @@
 ---
-title: 설치 관리자 DLL 함수 API 참조 | Microsoft Docs
+title: Installer DLL API Reference 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37828082300c387ac6a421171ca6fefaa0a2cad1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14a89c859e98a069106b79c9289187a64c310fa9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916918"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820381"
 ---
 # <a name="installer-dll-api-reference-function"></a>설치 관리자 DLL API 참조 함수
-이 섹션에는 설치 관리자 API DLL에서에서 함수 구문을 설명합니다. 20 함수의 DLL API 설치 관리자 구성 됩니다. 이러한 함수 중 3 개 **SQLGetTranslator**, **SQLRemoveDSNFromIni**, 및 **SQLWriteDSNToIni**, 설치 프로그램 Dll에 의해서만 호출 됩니다. 다른 함수는 설치 및 관리 프로그램에 의해 호출 됩니다.  
+이 섹션의 설치 관리자 DLL API 함수 구문을 설명합니다. Installer DLL API 함수를 20으로 이루어져 있습니다. 이러한 함수의 세 **SQLGetTranslator**를 **SQLRemoveDSNFromIni**, 및 **SQLWriteDSNToIni**, Dll 설정 의해서만 호출 됩니다. 다른 함수를 설치 및 관리 프로그램에 의해 호출 됩니다.  
   
- 각 함수는 ODBC 도입 된 버전이 표시 되어 있습니다.  
+ 각 함수는 도입 하는 ODBC의 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

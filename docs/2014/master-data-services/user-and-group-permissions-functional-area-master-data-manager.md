@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f333b030158072fa268da73d0ff33f6e67ddf8aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061023"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
   사용자 및 그룹 권한 기능 영역에서 관리자는 기능 영역, 특성(모델 탭에서) 및 멤버(계층 멤버 탭에서)에 사용 권한을 부여할 수 있습니다. 개별 특성 값에 대한 사용자의 사용 권한을 확인하려면 겹치는 사용 권한을 확인합니다.  

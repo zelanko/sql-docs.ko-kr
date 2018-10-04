@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 451b29e05d7bcb3dfca26a1f6c5287bf47e20f90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be4bab2d37570dab0bc3e6048b999330ddebb7f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142803"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
   누구 든 지 정보를 찾을-디자이너, 개발자, 분석가 또는 관리자-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 응용 프로그램 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.defrag.f1
 helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aba2815d7524369dc0da87988cc96dffc213ddb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5580534dac0249dd71f2ad2d0b5868a293a91d84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101153"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>인덱스 다시 구성 태스크(유지 관리 계획)
   **인덱스 다시 구성 태스크** 대화 상자를 사용하여 인덱스 페이지를 보다 효율적인 검색 순서로 이동할 수 있습니다. `ALTER INDEX REORGANIZE` 데이터베이스의 경우 이 태스크를 수행하면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 문이 사용됩니다.  

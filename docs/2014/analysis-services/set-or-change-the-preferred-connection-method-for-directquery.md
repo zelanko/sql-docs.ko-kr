@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186693"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery의 기본 연결 방법 설정 또는 변경
   DirectQuery 모드에서 사용할 모델을 만들 때는 먼저 디자인 환경에서 DirectQuery 사용을 지원하도록 구성해야 합니다. 이렇게 하려면 참조 [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)합니다.  

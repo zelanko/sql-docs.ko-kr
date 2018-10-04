@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XML for Analysis, headers
 - headers [XML for Analysis]
 ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b04b85e3267e7432f37c5f70e823c859a82a952
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdc6c9ebfef18b108c31870c5703cac3841cfc29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155702"
 ---
 # <a name="headers-xmla"></a>헤더(XMLA)
   XMLA(XML for Analysis) 프로토콜은 SOAP 헤더 내의 XML 요소를 사용하여 프로토콜 수준의 기능(예: 세션 지원, 지원 기능 협상)을 관리합니다.  

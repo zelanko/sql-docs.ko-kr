@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 331ab6da3e2e244f3a0413d80006ceeb907704f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066963"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>드릴스루 대화 상자(마이닝 모델 뷰어)
   데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭을 사용하여 마이닝 모델을 볼 때 모델에 드릴스루가 사용되도록 설정되어 있으면 사례 데이터에 대한 세부 정보로 드릴스루할 수 있습니다. 또한 기본 마이닝 구조에서도 드릴스루를 사용하도록 설정하면 마이닝 구조에서 마이닝 모델에 포함되지 않은 열도 볼 수 있습니다. 열 목록의 구조 열에는 접두사로 "Structure" 레이블이 붙습니다.  

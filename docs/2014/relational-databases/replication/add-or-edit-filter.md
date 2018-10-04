@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f7ed4231225c69caa2a1cff4d13051548461050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f1590275aaabd47524ba969615b28ab91f2b100
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195113"
 ---
 # <a name="add-or-edit-filter"></a>필터 추가 또는 편집
   **필터 추가** 및 **필터 편집** 대화 상자를 사용하여 정적 행 필터 및 매개 변수가 있는 행 필터를 추가 및 편집할 수 있습니다.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
-caps.latest.revision: 51
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209293"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>업그레이드 관리자를 사용하여 업그레이드 준비
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 업그레이드를 준비할 수 있도록 도와 줍니다. 업그레이드 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전에서 설치된 구성 요소를 분석한 다음 업그레이드 전이나 후에 해결해야 할 문제를 보여 주는 보고서를 생성합니다.  

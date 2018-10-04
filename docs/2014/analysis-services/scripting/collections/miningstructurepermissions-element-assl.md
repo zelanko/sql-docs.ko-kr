@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningStructurePermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningStructurePermissions element
 ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91beb4cef1679150255283621403b53abeadfa7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 191ece4bee99fe3a05ad2452ee58635c69a737b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196093"
 ---
 # <a name="miningstructurepermissions-element-assl"></a>MiningStructurePermissions 요소(ASSL)
   에 대 한 권한 컬렉션을 포함 한 [MiningStructure](../objects/miningstructure-element-assl.md) 요소입니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37324863"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bbf124c02a6fd80485b110f27e6bb2cbded6077e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 53f514e83e980e0a91184581d186bcb4046727c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192750"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On 클라이언트 연결(SQL Server)
   이 항목에서는 클라이언트 구성 및 설정에 대한 사전 요구 사항, 제한 사항 및 권장 사항을 비롯하여 AlwaysOn 가용성 그룹에 클라이언트를 연결할 때 고려해야 할 사항에 대해 설명합니다.  
@@ -36,13 +33,13 @@ ms.locfileid: "37158944"
   
  다음 표에는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 드라이버 지원이 요약되어 있습니다.  
   
-|드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔트포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
+|드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔드포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니요|  
-|연결 패치가 포함 된.NET Framework 4.0이 있는 ADO.NET**<sup>*</sup>**|예|예|예|예|예|  
-|연결 패치가 포함 된.NET Framework 3.5 SP1이 있는 ADO.NET **<sup>**</sup>**|예|예|예|예|예|  
-|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  
+|연결 패치가 포함 된.NET Framework 4.0이 있는 ADO.NET**<sup>*</sup>**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
+|연결 패치가 포함 된.NET Framework 3.5 SP1이 있는 ADO.NET **<sup>**</sup>**|사용자 계정 컨트롤|예|예|예|예|  
+|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|사용자 계정 컨트롤|  
   
  **<sup>*</sup>**  .NET Framework 4.0이 있는 ADO.NET 용 연결 패치 다운로드: [ http://support.microsoft.com/kb/2600211 ](http://support.microsoft.com/kb/2600211)합니다.  
   

@@ -2,44 +2,40 @@
 title: ADO 동적 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.service: ''
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5aa6d237b16c6ac24c0e921d51f19a26c36e3bbe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726601"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 동적 속성
-동적 속성에 추가할 수는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 속성에 대 한 소스는 중 하나는 데이터 공급자와 같은 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 또는 서비스 공급자와 같은 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)합니다. 적절 한 데이터 공급자 또는 특정 동적 속성에 대 한 자세한 내용은 서비스 공급자 설명서를 참조 하십시오.  
+동적 속성에 추가할 수 있습니다는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션의 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 속성에 대 한 원본이 두 데이터 공급자와 같은 합니다 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 또는 서비스 공급자와 같은 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)합니다. 적절 한 데이터 공급자 또는 특정 동적 속성에 대 한 자세한 내용은 서비스 공급자 설명서를 참조 하십시오.  
   
- [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 각 표준 OLE DB provider 동적 속성에 대 한 OLE DB 및 ADO 이름 간의 상호 참조를 제공 합니다.  
+ 합니다 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 각 표준 OLE DB 공급자 동적 속성에 대 한 ADO 및 OLE DB 이름 간의 상호 참조를 제공 합니다.  
   
- 다음 동적 속성은 특히 흥미롭습니다 및 설명한 소스에도 문서화 되어 있습니다. ADO와 특별 한 기능 다음 목록에서 ADO 도움말 항목에서 설명 됩니다.  
+ 다음 동적 속성 특히 흥미로운 되며 앞서 언급 한 원본에도 설명 되어 있습니다. ADO 사용 하 여 특별 한 기능 다음 목록에서 ADO 도움말 항목에 설명 되어 있습니다.  
   
 |||  
 |-|-|  
-|[최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|이 필드에 인덱스를 만들지 여부를 지정 합니다.|  
-|[프롬프트](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB 공급자에 게 초기화 정보 메시지를 표시 하는지 여부를 지정 합니다.|  
-|[Name 모양 변경](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|에 대 한 이름을 지정는 **레코드 집합** 개체입니다.|  
-|[다시 동기화 명령](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|지정 된 사용자가 제공한 명령 문자열의 **다시 동기화** 에 명명 된 테이블의 데이터를 새로 고치려면 메서드 문제는 **고유 테이블** 동적 속성.|  
-|[고유 테이블, 고유한 스키마, 고유한 카탈로그](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**고유 테이블** 는 업데이트, 삽입 및 삭제는 사용할 수는 기본 테이블의 이름을 지정 합니다.<br /><br /> **고유한 스키마** 스키마 또는 테이블의 소유자의 이름을 지정 합니다.<br /><br /> **고유한 카탈로그** 카탈로그 또는 테이블을 포함 하는 데이터베이스의 이름을 지정 합니다.|  
-|[다시 동기화를 업데이트 합니다.](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|지정 여부는 **UpdateBatch** 메서드 뒤 암시적 **다시 동기화** 메서드 작업 그리고 있다면 해당 작업의 범위입니다.|  
+|[최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|이 필드에 인덱스를 만들어야 하는지 여부를 지정 합니다.|  
+|[프롬프트](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB 공급자 초기화 정보에 대 한 사용자 메시지를 표시 하는지 여부를 지정 합니다.|  
+|[변형 이름](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|이름을 지정 합니다 **레코드 집합** 개체입니다.|  
+|[다시 동기화 명령](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|사용자가 제공한 명령 문자열을 지정 합니다 **다시 동기화** 에 지정 된 테이블에서 데이터를 새로 고치려면 메서드 문제를 **고유 테이블** 동적 속성입니다.|  
+|[고유 테이블, 고유 스키마, 고유 카탈로그](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**고유 테이블** 기반이 업데이트, 삽입 및 삭제를 수행할 기본 테이블의 이름을 지정 합니다.<br /><br /> **고유한 스키마** 스키마 또는 테이블 소유자의 이름을 지정 합니다.<br /><br /> **고유 카탈로그** 카탈로그 또는 테이블이 포함 된 데이터베이스의 이름을 지정 합니다.|  
+|[다시 동기화를 업데이트 합니다.](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|지정 여부는 **UpdateBatch** 메서드 뒤에 암시적 **다시 동기화** 메서드 작업 그렇다면 해당 작업의 범위.|  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4c04690906d9b5f3fd38ddf444d6c3f99e917a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054071"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>호환성 수준(SSAS 테이블 형식 SP1)
   지정할 수 있습니다 *호환성 수준* 테이블 형식 모델 데이터베이스에 배포 된 기존를 업그레이드할 때 기존 테이블 형식 모델 프로젝트를 업그레이드 하는 경우 새 테이블 형식 모델 프로젝트를 만들 때 또는 PowerPivot 통합 문서를 가져올 때입니다.  

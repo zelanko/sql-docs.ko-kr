@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d256a069213df774519a357d29ab1be8fe5417d8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125483"
 ---
 # <a name="unpack-a-dac-package"></a>DAC 패키지 압축 풀기
   데이터 계층 응용 프로그램 압축 풀기 대화 상자를 사용하여 DAC(데이터 계층 응용 프로그램) 패키지에서 스크립트와 파일 압축을 해제할 수 있습니다. 스크립트와 파일은 폴더에 저장되며 패키지를 사용하여 DAC를 프로덕션 시스템에 배포하기 전에 폴더에서 검토할 수 있습니다. 한 DAC의 내용을 다른 폴더에 압축을 푼 다른 패키지의 내용과 비교할 수도 있습니다.  
