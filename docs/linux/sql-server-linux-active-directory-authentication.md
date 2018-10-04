@@ -7,18 +7,16 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 85684fdb257dea2d4b3c06537c59e4c1a997aaaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631597"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증 자습서:
 
@@ -39,7 +37,7 @@ ms.locfileid: "43381261"
 >
 > 구성 하려는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 타사 AD 공급자를 사용 하도록 linux에서 하세요 [타사 Active Directory 공급자를 사용 하 여 Linux의 SQL Server를 사용 하 여](./sql-server-linux-active-directory-third-party-providers.md)입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 AD 인증을 구성 하기 전에 해야 합니다.
 

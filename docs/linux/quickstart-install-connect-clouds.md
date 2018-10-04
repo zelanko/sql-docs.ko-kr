@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 638df74c4288f8f1b67232ff99cfd90393a52380
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682981"
 ---
 # <a name="quickstart-run-the-sql-server-in-the-cloud"></a>클라우드에서 SQL Server를 실행 하는 빠른 시작:
 

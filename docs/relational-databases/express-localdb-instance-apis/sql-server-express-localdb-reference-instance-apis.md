@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 980b4c3de096cb9eaed8243a57c0f32a579206b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d79a4aa606d7e970ddbb9bbe0bb7a36a2948dc57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701911"
 ---
-# <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 참조-인스턴스 Api
+# <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 참조 - 인스턴스 API
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   기존 서비스 기반 SQL Server 환경에서는 단일 컴퓨터에 설치되는 개별 SQL Server 인스턴스가 실제로 분리됩니다. 즉, 각 인스턴스가 개별적으로 설치 및 제거되고, 별도의 이진 파일 집합을 사용하며, 별도의 서비스 프로세스에 따라 실행됩니다. SQL Server 인스턴스 이름을 사용하여 연결할 SQL Server 인스턴스를 지정합니다.  
   
@@ -30,7 +26,7 @@ ms.locfileid: "32939478"
   
  LocalDB 인스턴스는 항상 단일 사용자가 소유하며 인스턴스를 공유하도록 설정하지 않는 한 해당 사용자의 컨텍스트에서만 액세스할 수 있습니다.  
   
- 기술적으로 LocalDB 인스턴스는 기존 SQL Server 인스턴스와 다르지만 용도는 비슷합니다. 호출할 *인스턴스* 이러한 유사성을 강조 하 고 SQL Server 사용자가 보다 쉽게 이해 합니다.  
+ 기술적으로 LocalDB 인스턴스는 기존 SQL Server 인스턴스와 다르지만 용도는 비슷합니다. 라고 *인스턴스* 이 유사성을 강조 하는 데 SQL Server 사용자에 게 보다 직관적인 있도록 합니다.  
   
  LocalDB에서는 AI(Automatic Instance) 및 NI(Named Instance)의 두 가지 인스턴스를 지원합니다. LocalDB 인스턴스에 대한 식별자는 인스턴스 이름입니다.  
   
@@ -68,16 +64,16 @@ ms.locfileid: "32939478"
  명명된 각각의 인스턴스에는 연결된 LocalDB 버전이 있습니다. 즉, 지정된 LocalDB 이진 파일 집합을 가리킵니다. 명명된 인스턴스의 버전은 인스턴스를 만드는 과정에서 설정됩니다.  
   
 ### <a name="named-instance-naming-rules"></a>명명된 인스턴스 명명 규칙  
- LocalDB 인스턴스 이름은 최대 128 자 총 보유할 수 (제한에 의해 적용 되는 **sysname** 데이터 형식). 이는 NetBIOS 이름이 16자의 ASCII 문자로 제한되는 기존 SQL Server 인스턴스 이름과 비교할 때 중요한 차이점입니다. 이렇게 차이가 나는 이유는 LocalDB에서 데이터베이스를 파일로 간주하여 파일 기반 의미 체계를 적용하기 때문이며 따라서 사용자가 인스턴스 이름을 훨씬 더 자유롭게 선택할 수 있습니다.  
+ LocalDB 인스턴스 이름은 총 128 자 포함할 수 있습니다 (제한에 의해 적용 되는 **sysname** 데이터 형식). 이는 NetBIOS 이름이 16자의 ASCII 문자로 제한되는 기존 SQL Server 인스턴스 이름과 비교할 때 중요한 차이점입니다. 이렇게 차이가 나는 이유는 LocalDB에서 데이터베이스를 파일로 간주하여 파일 기반 의미 체계를 적용하기 때문이며 따라서 사용자가 인스턴스 이름을 훨씬 더 자유롭게 선택할 수 있습니다.  
   
- LocalDB 인스턴스 이름은 파일 이름 구성 요소에 적합한 모든 유니코드 문자를 포함할 수 있습니다. 파일 이름 구성 요소에 잘못 된 문자가 문자는 일반적으로 포함: / 유니코드 문자으로 1-31, 따옴표 ("), 미만 (\<), 보다 큼 (>), 파이프 (|), 백스페이스 (\b), 탭 (\t), 콜론 (:), 별표 (*) 물음표 (?), 백슬래시 (\\), 슬래시 (/)를 전달 합니다. null 문자(\0)는 문자열 종료를 나타내는 데 사용되므로 허용됩니다. 첫 번째 null 문자 뒤의 모든 문자가 무시됩니다.  
+ LocalDB 인스턴스 이름은 파일 이름 구성 요소에 적합한 모든 유니코드 문자를 포함할 수 있습니다. 파일 이름 구성 요소에 잘못 된 문자가 문자는 일반적으로 포함:으로 1-31, 따옴표 ("), / 유니코드 문자 보다 작은 (\<), 보다 큼 (>), 파이프 (|), 백스페이스 (\b), 탭 (\t), 콜론 (:), 별표 (*) 물음표 (?), 백슬래시 (\\), 슬래시 (/)를 전달 합니다. null 문자(\0)는 문자열 종료를 나타내는 데 사용되므로 허용됩니다. 첫 번째 null 문자 뒤의 모든 문자가 무시됩니다.  
   
 > [!NOTE]  
 >  부적합한 문자 목록은 운영 체제에 따라 다르며 이후 릴리스에서 변경될 수 있습니다.  
   
  인스턴스 이름의 선행 공백과 후행 공백은 무시되므로 제거됩니다.  
   
- 이름 LocalDB 라는 충돌을 방지 하려면 "자동 인스턴스 명명 규칙입니다."에서 설명한 대로 인스턴스 자동 인스턴스에 대 한 명명 패턴을 따르는 이름을 사용할 수 없습니다. 자동 인스턴스 명명 패턴을 효과적으로 뒤에 오는 이름의 명명된 된 인스턴스를 만들려는 시도가 기본 인스턴스를 만듭니다.  
+ 이름 충돌을 LocalDB 라는 하지 않으려면 "자동 인스턴스 명명 규칙입니다."에서 설명한 대로 인스턴스 자동 인스턴스 명명 패턴을 따르는 이름을 사용할 수 없습니다. 효과적으로 자동 인스턴스 명명 패턴을 따르는 이름을 가진 명명된 된 인스턴스를 만들려는 시도가 기본 인스턴스를 만듭니다.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>SQL Server Express LocalDB 참조 항목  
  [SQL Server Express LocalDB 헤더 및 버전 정보](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

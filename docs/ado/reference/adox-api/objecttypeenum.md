@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c9cb6239cee3bd6416e587dc77d55e287da68e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed7273b2fd24690956fa5c5ffe317ad9c00c40ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751793"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
-사용 권한 또는 소유권을 설정 하는 데이터베이스 개체의 유형을 지정 합니다.  
+사용 권한 또는 소유권을 설정 하는 데이터베이스 개체의 형식을 지정 합니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|개체에는 열입니다.|  
 |**adPermObjDatabase**|3|개체는 데이터베이스입니다.|  
 |**adPermObjProcedure**|4|개체는 프로시저입니다.|  
-|**adPermObjProviderSpecific**|-1|개체는 공급자에 의해 정의 된 형식입니다. 경우 오류가 발생 합니다는 *ObjectType* 매개 변수는 **adPermObjProviderSpecific** 및 *ObjectTypeId* 제공 되지 않았습니다.|  
+|**adPermObjProviderSpecific**|-1|개체는 공급자에 의해 정의 된 형식입니다. 오류가 발생 하는 경우는 *ObjectType* 매개 변수는 **adPermObjProviderSpecific** 와 *ObjectTypeId* 제공 하지 않으면.|  
 |**adPermObjTable**|1|개체는 테이블입니다.|  
-|**adPermObjView**|5|뷰는 개체가입니다.|  
+|**adPermObjView**|5|개체는 보기입니다.|  
   
 ## <a name="applies-to"></a>적용 대상  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.organizerpane.f1
 ms.assetid: 147b4622-e9fa-4537-9dbb-9e595c0f55bc
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a39e5579671cf870778f1cee679c49cd3e1617fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9833eb23936b41f63facb4ea4c018f23d8182377
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073433"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>동작 구성 도우미(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너에서 **동작** 탭의 **동작 구성 도우미** 창을 사용하여 지정한 큐브에 포함된 동작에 액세스할 수 있습니다.  

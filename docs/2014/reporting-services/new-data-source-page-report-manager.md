@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 57c22c0f39b411510fb70c5a5068ce4930674555
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073741"
 ---
 # <a name="new-data-source-page-report-manager"></a>새 데이터 원본 페이지(보고서 관리자)
   새 데이터 원본 페이지를 사용하여 공유 데이터 원본 항목을 만들 수 있습니다. 공유 데이터 원본은 외부 데이터 원본과의 연결을 정의합니다. 공유 데이터 원본을 사용하면 해당 데이터 원본을 사용하는 보고서, 모델 및 데이터 기반 구독과는 별도로 데이터 원본 연결에 대한 설정을 만들고 관리할 수 있습니다.  

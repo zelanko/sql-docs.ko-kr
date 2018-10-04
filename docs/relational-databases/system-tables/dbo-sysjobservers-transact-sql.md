@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobservers (Transact SQL) | Microsoft Docs
+title: dbo.sysjobservers (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysjobservers
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f960176ea1c0aea2dcc0251f9bc17a7aeb889846
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 635c71efaeed6d41a9b9e62ef3e8c79b4e9aae95
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607281"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +40,9 @@ ms.locfileid: "33259673"
 |last_outcome_ 메시지|**nvarchar(1024)**|last_run_outcome 열과 연관된 메시지(있는 경우)입니다.|  
 |last_run_date|**int**|작업을 마지막으로 실행한 날짜입니다.|  
 |last_run_time|**int**|작업을 마지막으로 실행한 시간입니다.|  
-|last_run_duration|**int**|작업의 실행 시간(시, 분, 초)입니다. 수식을 사용 하 여 계산: (*시간*\*10000) + (*분*\*100) + *초*합니다.|  
+|last_run_duration|**int**|작업의 실행 시간(시, 분, 초)입니다. 수식을 사용 하 여 계산 합니다. (*시간*\*10000) + (*분*\*100) + *초*합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server 에이전트 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Server 에이전트 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

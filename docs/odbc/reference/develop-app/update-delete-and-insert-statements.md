@@ -1,13 +1,11 @@
 ---
-title: UPDATE, DELETE 및 INSERT 문을 | Microsoft Docs
+title: UPDATE, DELETE 및 INSERT 문의 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -16,42 +14,41 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3c3c8bca44a5cce4a81ecef91c631f3ee1d769c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721911"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
-SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 확인는 **업데이트**, **삭제**, 및 **삽입** 문. 이러한 문은 최소 SQL 문법의 규칙 수준과의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  
+SQL 기반 응용 프로그램 실행 하 여 테이블에 변경 내용을 확인 합니다 **업데이트**, **삭제**, 및 **삽입** 문입니다. 이러한 문은 SQL 최소 문법 규칙 수준은의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  
   
  이러한 문의 구문은 다음과 같습니다.  
   
  **UPDATE**  *table-name*  
   
- **설정** *열 식별자* **=** {*식* &#124; **NULL**}  
+ **설정할** *열 식별자* **=** {*식* &#124; **NULL**}  
   
- [**,** *열 식별자* **=** {*식* &#124; **NULL**}]...  
+ [**하십시오** *열 식별자* **=** {*식* &#124; **NULL**}]...  
   
  [**WHERE** *search-condition*]  
   
  **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
   
- **INSERT INTO** *테이블 이름*[**(* * * 열 식별자* [* *,** *열 식별자*]... **)**]  
+ **INSERT INTO** *테이블 이름*[**(* * * 열 식별자* [* *을** *열 식별자*]... **)**]  
   
- {*쿼리 사양* &#124;  **값 (* * * 삽입 값* [* *,** *삽입 값*]... **)**}  
+ {*쿼리 사양* &#124;  **값 (* * * 삽입 값* [* *를** *삽입 값*]... **)**}  
   
- *쿼리 사양* 요소는 핵심 및 확장 SQL 문법을 지정 하 고 있는 경우에 유효는 *식* 및 *검색 조건* 요소 정하여 핵심 및 확장 SQL 문법에 복잡 한 합니다.  
+ *쿼리 사양* 요소는 및 코어 및 확장 SQL 문법의 경우에 유효 합니다 *식* 및 *검색 조건을* 요소 정하여 코어 및 확장 SQL 문법에 복합 형식입니다.  
   
- 다른 SQL 문의 경우 처럼 **업데이트**, **삭제**, 및 **삽입** 문을 더 효율적인 매개 변수를 사용할 때. 예를 들어 다음 문은 준비 및 반복적으로 실행 되어 Orders 테이블에서 여러 행을 삽입할 수 있습니다.  
+ 같은 다른 SQL 문에도 **업데이트**를 **삭제**, 및 **삽입** 문을 많습니다 매개 변수를 사용할 때 효율적입니다. 예를 들어, 다음 문은 준비 하 고 반복적으로 실행할 수 Orders 테이블의 여러 행을 삽입 합니다.  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- 매개 변수 값 배열을 전달 하 여 이러한 효율성을 늘릴 수 있습니다. 문 매개 변수 및 매개 변수 값의 배열에 대 한 자세한 내용은 참조 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다.
+ 매개 변수 값 배열을 전달 하 여 이러한 효율성을 늘릴 수 있습니다. 문 매개 변수 및 매개 변수 값의 배열에 대 한 자세한 내용은 참조 하세요. [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다.

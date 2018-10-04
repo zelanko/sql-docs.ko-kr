@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e64b28218f4d9912b06b1ab124de9c326133cc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068393"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 관리 도구 기능
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관리 도구 기능에 대해 설명합니다.  
   
 ## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>제거 된 기능 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>제거 된 기능 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   

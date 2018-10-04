@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -40,27 +38,26 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dd0c1e0ccc1751e79d6ccfdafe89523ae8e8e00
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286672"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637061"
 ---
-# <a name="parentcatalog-property-adox"></a>ParentCatalog 속성 (ADOX)
+# <a name="parentcatalog-property-adox"></a>ParentCatalog 속성(ADOX)
 공급자별 속성에 대 한 액세스를 제공 하는 테이블, 사용자 또는 열 개체의 부모 카탈로그를 지정 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하 고 반환 된 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 개체입니다. 설정 **ParentCatalog** 열린 **카탈로그** 테이블이 나 열을 추가 하기 전에 공급자별 속성에 액세스할 수 있습니다는 **카탈로그** 컬렉션입니다.  
+ 설정 하 고 반환 된 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 개체입니다. 설정 **ParentCatalog** 열린 **카탈로그** 테이블 또는 열을 추가 하기 전에 공급자별 속성에 액세스할 수는 **카탈로그** 컬렉션입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 일부 데이터 공급자는 공급자별 속성 값을 만들 때만 쓰도록 허용: 테이블 또는 열에 추가 됩니다 때에 즉, 해당 **카탈로그** 컬렉션입니다. 이러한 개체를 추가 하기 전에 이러한 속성에 액세스 하는 **카탈로그**, 지정 된 **카탈로그** 에 **ParentCatalog** 속성 첫 번째 합니다.  
+ 일부 데이터 공급자는 공급자별 속성 값을 만들 때만 기록 허용: 테이블 또는 열에 추가 되 면에, 해당 **카탈로그** 컬렉션입니다. 이러한 개체를 추가 하기 전에 이러한 속성에 액세스 하는 **카탈로그**를 지정 합니다 **카탈로그** 에서 **ParentCatalog** 속성 첫 번째.  
   
- 오류가 발생할 때 다른 테이블이 나 열을 추가할 때 **카탈로그** 보다는 **ParentCatalog**합니다.  
+ 오류가 발생할 때 다른 테이블 또는 열을 추가할 때 **카탈로그** 보다는 **ParentCatalog**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   

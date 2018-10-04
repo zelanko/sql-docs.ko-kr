@@ -1,13 +1,11 @@
 ---
-title: BOF, EOF, 및 책갈피 속성 예제 (VB) | Microsoft Docs
+title: BOF, EOF 및 책갈피 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698221"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF, 및 책갈피 속성 예제 (VB)
-사용 하 여이 예제는 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성을 사용자의 첫 번째 또는 마지막 레코드를 지 나 이동 하려고 하는 경우 메시지를 표시 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성 레코드에 플래그입니다. 사용자는 **레코드 집합** 나중 돌아갑니다.  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF 및 책갈피 속성 예제(VB)
+이 예제에서는 합니다 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 사용자의 첫 번째 또는 마지막 레코드를 지 나 이동 하려고 하는 경우 메시지를 표시 하는 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 사용자가 레코드 플래그 속성을 **레코드 집합** 하 고 나중에 반환 합니다.  
   
 ```  
 'BeginBOFVB  
@@ -133,7 +130,7 @@ End Sub
 'EndBOFVB  
 ```  
   
- 사용 하 여이 예제는 **책갈피** 및 [필터](../../../ado/reference/ado-api/filter-property.md) 의 제한 된 보기를 만드는 속성을는 **레코드 집합**합니다. 책갈피의 배열에서 참조 하는 유일한 레코드는 액세스할 수 있습니다.  
+ 이 예제에서는 **책갈피** 및 [필터](../../../ado/reference/ado-api/filter-property.md) 제한 된 보기를 만들기 위한 속성을 **레코드 집합**합니다. 책갈피의 배열에서 참조 하는 레코드만 액세스할 수 있습니다.  
   
 ```  
 Attribute VB_Name = "BOF"  

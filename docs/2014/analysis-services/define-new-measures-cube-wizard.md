@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.definenewmeasures.f1
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2896be718501d45f717d8e270e548e00664ca16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3769eaaa3b07c8f62ba8d558a44fdd16c85c2305
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055093"
 ---
 # <a name="define-new-measures-cube-wizard"></a>새 측정값 정의(큐브 마법사)
   **새 측정값 정의** 페이지를 사용하여 데이터 원본을 사용하지 않고 만드는 큐브에 대한 새 측정값을 만들 수 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - upgrading mirrored database systems
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053013"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>미러된 데이터베이스 작동 중단을 최소화하면서 시스템에 서비스 팩 설치
   이 항목에서는 서비스 팩과 핫픽스를 설치할 때 미러된 데이터베이스의 작동 중단을 최소화하는 방법에 대해 설명합니다. 이 프로세스에는 데이터베이스 미러링에 참여하는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스를 순차적으로 업그레이드하는 과정이 포함됩니다. 이러한 형태의 업데이트 라고도 함를 *롤링 업데이트*만 단일 장애 조치를 가동 중지 시간을 줄입니다. Note는 미러 서버는 지리적으로 먼 거리에서에 있는 주 서버는 성능 우선 모드 세션에 대 한 업데이트가 적합 하지 않습니다.  

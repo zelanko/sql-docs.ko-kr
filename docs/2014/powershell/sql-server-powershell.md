@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8a161aeef437e04a3d6e7300a79af5fa0671568
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068743"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 는 관리자와 개발자가 서버 관리 및 응용 프로그램 배포를 자동화할 수 있는 강력한 스크립팅 셸인 Windows PowerShell을 지원합니다. Windows PowerShell 언어는 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트보다 더 복잡한 논리를 지원하므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자가 강력한 관리 스크립트를 작성할 수 있습니다. 또한 Windows PowerShell 스크립트를 사용하여 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] 서버 제품을 관리할 수도 있습니다. 이는 관리자에게 서버 전체에 대한 공용 스크립팅 언어를 제공합니다.  
@@ -29,7 +26,7 @@ ms.locfileid: "37271139"
   
 -   파일 시스템 경로와 유사한 간단한 탐색 메커니즘을 제공하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자. 드라이브가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델과 연결되고 노드가 개체 모델 클래스를 기반으로 하는 파일 시스템 경로와 비슷한 경로를 작성할 수 있습니다. 그런 다음 명령 프롬프트 창에서 폴더를 탐색하는 것과 비슷한 방법으로 **cd** 및 **dir** 과 같은 친숙한 명령을 사용하여 경로를 탐색할 수 있습니다. **ren** 또는 **del**과 같은 다른 명령을 사용하여 경로의 노드에 동작을 수행할 수 있습니다.  
   
--   Windows PowerShell 스크립트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 동작을 지정하는 데 사용되는 명령인 cmdlet 집합.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet은 **sqlcmd** 또는 XQuery 문이 포함된 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 실행과 같은 동작을 지원합니다.  
+-   Windows PowerShell 스크립트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 동작을 지정하는 데 사용되는 명령인 cmdlet 집합. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet은 **sqlcmd** 또는 XQuery 문이 포함된 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 실행과 같은 동작을 지원합니다.  
   
  Windows PowerShell에 대한 자세한 내용은 [Windows PowerShell 시작 가이드](http://msdn.microsoft.com/library/hh857337.aspx)를 참조하십시오.  
   

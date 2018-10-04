@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 24
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 121113386ac42e689b2b8f73e60642c868c170f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f31402ae63b4e4f87a437d260ad6b12a7ccd7723
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066183"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 개요
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델은 마스터 데이터의 구조에서 가장 높은 수준의 컨테이너입니다. 온라인 제품 데이터를 관리하는 등의 목적으로 유사한 데이터의 그룹을 관리하기 위해 모델을 만듭니다. 모델에는 하나 이상의 엔터티가 포함되며 엔터티에는 데이터 레코드인 멤버가 포함됩니다.  

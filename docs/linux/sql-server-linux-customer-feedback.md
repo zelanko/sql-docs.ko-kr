@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 06/22/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 31bd8be73051349c122eb4a99dc99417b491669d
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623723"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 고객 의견
 

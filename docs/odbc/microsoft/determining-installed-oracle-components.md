@@ -5,31 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f4c2c85def4d413e9a3cca87e83b6f3b5e23780
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849719"
 ---
-# <a name="determining-installed-oracle-components"></a>설치 된 Oracle 구성 요소 확인
+# <a name="determining-installed-oracle-components"></a>설치된 Oracle 구성 요소 확인
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- 시스템 (및 해당 버전)에 설치 된 Oracle 구성 요소를 확인 하려면 Oracle 홈 디렉터리 아래 \Orainst 디렉터리로 이동 합니다. 다음 텍스트 파일 중 하나를 열려면: Nt.rgs, Win95.rgs, 또는 Win98.rgs 합니다.  
+ 시스템 (및 해당 버전)에 설치 된 Oracle 구성 요소를 확인 하려면 Oracle 홈 디렉터리 아래의 \Orainst 디렉터리로 이동 합니다. 다음 텍스트 파일 중 하나를 열어: Nt.rgs, Win95.rgs, 또는 Win98.rgs 합니다.  
   
- 파일 형식은 다음과 같습니다.  
+ 파일 형식은 다음과 비슷합니다.  
   
 ```  
 0 ntinstall     all    "orainst"  "3.3.1.0.0C"  "Oracle Installer"  
@@ -41,4 +38,4 @@ ms.locfileid: "32899358"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- .Rgs 파일 설치 정보 및 설명의 각 구성 요소에도 포함 됩니다.
+ .Rgs 파일 설치 정보 및 각 구성 요소의 설명을 포함 합니다.

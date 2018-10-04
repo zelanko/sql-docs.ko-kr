@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_bind
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 118b0a076a4a3f1cc377fc0407f83d1fe23d766c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff7fe566c7547dc4e0755762d37764cd8b5bc50b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069733"
 ---
 # <a name="bcpbind"></a>bcp_bind
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량 복사를 수행하기 위해 프로그램 변수에서 테이블 열로 데이터를 바인딩합니다.  
@@ -113,14 +110,14 @@ bcp_bind(hdbc, szName, 0,
    SQLCHARACTER, 2)  
 ```  
   
- 이 예제의 종결된 폼에서 15 자 복사 되어야 함을 나타낼 수 있습니다 합니다 *szName* 바인딩된 테이블의 두 번째 열에 변수:  
+ 이 예제는 nonterminated 형태의 15 자에서 복사 되어야 함을 나타낼 수 있는 *szName* 바인딩된 테이블의 두 번째 열을 가변:  
   
 ```  
 bcp_bind(hdbc, szName, 0, 15,   
    NULL, 0, SQLCHARACTER, 2)  
 ```  
   
- 대량 복사 API는 필요한 경우 유니코드에서 MBCS로의 문자 변환을 수행합니다. 종결자 바이트 문자열 및 바이트 문자열 길이를 모두 올바르게 설정해야 합니다. 예를 들어 나타내는 문자열 *szName* 유니코드 와이드 문자열이 유니코드 null 종결자 값에 의해 종료 됩니다.  
+ 대량 복사 API는 필요한 경우 유니코드에서 MBCS로의 문자 변환을 수행합니다. 종결자 바이트 문자열 및 바이트 문자열 길이를 모두 올바르게 설정해야 합니다. 예:입니다 문자열에 *szName* 유니코드 와이드 문자열이 유니코드 null 종결자 값으로 종료 됩니다.  
   
 ```  
 bcp_bind(hdbc, szName, 0,   
@@ -131,12 +128,12 @@ bcp_bind(hdbc, szName, 0,
  경우 바인딩된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열이 와이드 문자 하 변환이 수행 됩니다 [bcp_sendrow](bcp-sendrow.md)합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열이 MBCS 문자 형식이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 보내는 동안 와이드 문자가 멀티바이트 문자로 변환됩니다.  
   
  *cbTerm*  
- 프로그램 변수에 종결자가 있는 경우 바이트 수입니다. 종결자가 없는 변수를 설정 *cbTerm* 0입니다.  
+ 프로그램 변수에 종결자가 있는 경우 바이트 수입니다. 변수 종료 문자 없음 경우 *cbTerm* 을 0으로 합니다.  
   
  *eDataType*  
  프로그램 변수의 C 데이터 형식입니다. 프로그램 변수의 데이터는 데이터베이스 열의 형식으로 변환됩니다. 이 매개 변수가 0이면 변환이 수행되지 않습니다.  
   
- *eDataType* 의해 열거 된 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰 sqlncli.h에는 ODBC C 데이터 형식 열거자가 아닌 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 형식 SQLINT2를 사용하여 2바이트 정수인 ODBC 형식 SQL_C_SHORT를 지정할 수 있습니다.  
+ *eDataType* 매개 변수는 열거 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli.h의 데이터 형식 토큰, ODBC C 데이터 형식 표시기 없습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 형식 SQLINT2를 사용하여 2바이트 정수인 ODBC 형식 SQL_C_SHORT를 지정할 수 있습니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원을 도입 합니다 *`eDataType`* 매개 변수입니다.  
   
@@ -163,9 +160,9 @@ bcp_bind(hdbc, szName, 0,
   
  새로운 큰 값 형식에 대 한 같은 `varchar(max)`, `varbinary(max)`, 또는 `nvarchar(max)`, 형식으로 SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY 및 SQLNCHAR를 사용할 수 있습니다 합니다 *eDataType* 매개 변수입니다.  
   
- 하는 경우 *cbTerm* 는 0이 아닌 모든 값 (1, 2, 4 또는 8)이 접두사에 대 한 유효 (*cbIndicator*). 이런 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 종결자에 대 한 검색, 종결자와 관련 하 여 데이터 길이 계산 (*있습니까*), 설정 및 합니다 *cbData* i의 값을 더 작은 값 접두사입니다.  
+ 경우 *cbTerm* 가 0이 아닌 값 (1, 2, 4 또는 8)이 유효한 접두사 (*cbIndicator*). 이 상황에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 종단 장치를 검색, 종단 장치에 대 한 데이터 길이 계산 (*i*), 설정의 *cbData* i의 값과 작은 값을 접두사입니다.  
   
- 하는 경우 *cbTerm* 은 0 및 *cbIndicator* 아닙니다 (접두사) 0 *cbIndicator* 8 이어야 합니다. 8바이트 접두사는 다음과 같은 값을 가질 수 있습니다.  
+ 경우 *cbTerm* 0과 *cbIndicator* () 되지 않은 0 *cbIndicator* 8 이어야 합니다. 8바이트 접두사는 다음과 같은 값을 가질 수 있습니다.  
   
 -   0xFFFFFFFFFFFFFFFF는 필드의 Null 값을 의미합니다.  
   
@@ -184,7 +181,7 @@ bcp_bind(hdbc, szName, 0,
  호출 [bcp_columns](bcp-columns.md) 사용 하는 경우 **bcp_bind** 오류가 발생 합니다.  
   
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능을 위한 bcp_bind 지원  
- 사용 유형에 대 한 정보에 대 한 합니다 *eDataType* 날짜/시간 형식에 대 한 매개 변수 참조 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ 함께 사용 되는 형식에 대 한 정보는 *eDataType* 날짜/시간 형식에 대 한 매개 변수를 참조 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
  자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   

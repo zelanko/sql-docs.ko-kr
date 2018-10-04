@@ -1,32 +1,29 @@
 ---
-title: 기능에 대 한 조사식을 | Microsoft Docs
+title: 주목할 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 704fc0c45706e80408218d185146a438099da829
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770621"
 ---
-# <a name="features-to-watch-for"></a>기능에 대 한 조사식을
-이 섹션에서는 다양 한 응용 프로그램 개발자는 종종 부여 하기 위해 수행 하는 기능을 설명 합니다. 실제로 이러한 기능에 따라 크게 다릅니다 지원 및 Dbms; 지원 방식으로 실패 하는 코드는 상호 운용 가능한 응용 프로그램에서 문제가 발생할 수 있습니다.  
+# <a name="features-to-watch-for"></a>주목할 기능
+이 섹션에서는 다양 한 응용 프로그램 개발자는 종종 부여에 대 한 사용 하는 기능을 설명 합니다. 사실 이러한 기능에 따라 크게 다릅니다 지원과 방식으로 Dbms; 지원 오류 코드를 상호 운용 가능한 응용 프로그램에서 문제가 발생할 가능성이 있습니다.  
   
- 이 섹션에서 응용 프로그램 개발자가 고려해 야 하는 모든 기능을 나열 하지 않습니다. 해당 정보에 대 한 참조는 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), 및 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) 함수 설명, [부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), 및 각 기능을 설명 하는이 설명서의 섹션입니다.  
+ 이 섹션에서는 응용 프로그램 개발자가 고려해 야 하는 모든 기능을 나열 하지 않습니다. 해당 정보를 참조 하세요. 합니다 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)를 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), 및 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) 설명 함수 [부록 c: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), 및 각 기능을 설명 하는이 설명서의 섹션입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -40,7 +37,7 @@ ms.locfileid: "32911368"
   
 -   [CREATE TABLE 문의 NOT NULL](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
   
--   [지원 되는 데이터 형식](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
+-   [지원되는 데이터 형식](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [ODBC SQL 문법](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   

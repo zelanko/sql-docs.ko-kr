@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,35 +13,34 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ddf5486305d0d0e19de266e12a35987899846e6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655631"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 프로그래밍
 ## <a name="creating-an-ado-project"></a>ADO 프로젝트 만들기  
- Microsoft JScript 불필요 ADO 참조를 프로젝트에 있으므로 형식 라이브러리를 지원 하지 않습니다. 따라서 연결된 기능은 명령줄 완료 같은 지원 되지 않습니다. 또한 기본적으로 열거 하는 ADO 상수 jscript에서 정의 되지 않습니다.  
+ Microsoft JScript 있습니다 하지 않아도 되므로 ADO 참조 프로젝트에서 형식 라이브러리를 지원 하지 않습니다. 따라서 명령줄 완성과 같은 관련된 없는 기능 지원 됩니다. 또한 기본적으로 ADO 열거 상수 JScript에서 정의 되지 않습니다.  
   
- 그러나 ADO 제공 두 명의 JScript에서 사용 되는 다음 정의가 포함 된 파일을 포함 합니다.  
+ 그러나 ADO 제공 두 명의 JScript를 사용 하 여 사용할 다음 정의 포함 하는 파일을 포함 합니다.  
   
--   서버 쪽 스크립트 사용 Adojavas.inc는 ADO 라이브러리 폴더에 설치 됩니다.  
+-   서버 쪽 스크립팅 사용 Adojavas.inc는 ADO 라이브러리 폴더에 설치 됩니다.  
   
 -   클라이언트 쪽 스크립트 사용 Adcjavas.inc는 ADO 라이브러리 폴더에 설치 됩니다.  
   
- 복사 하 고 이러한 파일에서 상수 정의에서는 ASP 페이지에 붙여 넣을 하거나, Adojavas.inc 파일을 웹 사이트의 폴더에 복사 하 고 다음과 같이 ASP 페이지에서 참조 하는 서버 쪽 스크립팅 하는 경우:  
+ 복사 및 ASP 페이지에 이러한 파일에서 상수 정의 붙여 넣습니다. 하거나, 서버 쪽 스크립팅, 수행 하는 경우 웹 사이트의 폴더로 Adojavas.inc 파일을 복사 하 고 다음과 같은 ASP 페이지에서 참조 합니다.  
   
 ```  
 <!--#include File="adojavas.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-jscript"></a>Jscript에서 ADO 개체 만들기  
- 대신 사용 해야 합니다는 **CreateObject** 함수 호출:  
+## <a name="creating-ado-objects-in-jscript"></a>JScript의 ADO 개체 만들기  
+ 대신 사용 해야 합니다 **CreateObject** 함수 호출:  
   
 ```  
 var Rs1;  
@@ -51,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript 예제  
- 다음 코드는 열리면 페이지 ASP (Active Server) 파일에 JScript 서버 쪽 프로그래밍의 일반적인 예는 **레코드 집합** 개체:  
+ 다음 코드는 열리는 페이지 ASP (Active Server) 파일에서 JScript 서버 쪽 프로그래밍의 일반적인 예는 **레코드 집합** 개체:  
   
 ```  
 <%  @LANGUAGE="JScript" %>  

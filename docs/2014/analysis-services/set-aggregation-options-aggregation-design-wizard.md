@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e99f96de2f9b75fb49b0de5a73ef611bb7d991c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ded40a4ceca02e56f78207c35ff174f2d09feb07
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067513"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>집계 옵션 설정(집계 디자인 마법사)
   **집계 옵션 설정** 페이지를 사용하여 집계 디자인 프로세스를 시작하고 생성된 집계에 대해 저장소 또는 성능 제한을 지정할 수 있습니다.  

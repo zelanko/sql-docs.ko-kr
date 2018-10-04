@@ -1,36 +1,33 @@
 ---
-title: 조건자 사이 | Microsoft Docs
+title: BETWEEN 조건자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - BETWEEN predicate [ODBC]
 - SQL grammar [ODBC], between predicate
 ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9909930941c7dfd6a180ca3e33b7e89c7d9c4825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4411345d790e64ae9fb21144a7d82ffe4cd45e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690951"
 ---
-# <a name="between-predicate"></a>조건자 사이
+# <a name="between-predicate"></a>BETWEEN 조건자
 구문:  
   
 ```  
 expression1 BETWEEN expression2 AND expression3  
 ```  
   
- 경우 true를 반환만 *expression1* 보다 크거나 같음 *expression2* 및 *expression1* 보다 작거나 같음 *expression3*.  
+ 경우 true를 반환 유일한 *expression1* 보다 크거나 같음 *expression2* 하 고 *expression1* 보다 작거나 같음 *expression3*.  
   
- 이 구문의 의미 체계는 데스크톱 데이터베이스 드라이버 및 Microsoft Jet 엔진에서 서로 다릅니다. Microsoft Jet SQL에서 *expression2* 보다 클 수 *expression3* 문이 경우에 TRUE를 반환 되도록 *expression1* 보다크거나같은경우는*expression3*, 및 *expression1* 보다 작거나 같음 *expression2*합니다.
+ 이 구문의 의미 체계 데스크톱 데이터베이스 드라이버 및 Microsoft Jet 엔진에 대 한 서로 다릅니다. Microsoft Jet sql에서 *expression2* 보다 클 수 있습니다 *expression3* 문이 경우에 TRUE를 반환 하는 *expression1* 크거나 같거나 *expression3*, 및 *expression1* 보다 작거나 같음 *expression2*합니다.

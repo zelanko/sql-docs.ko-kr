@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074903"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>쿼리 및 필터(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너 **브라우저** 탭의 이 영역에는 찾아보기 또는 쿼리에서 사용할 데이터를 큐브에서 선택할 수 있는 쿼리 및 필터 영역이 포함되어 있습니다. 원하는 수의 큐브 개체를 추가한 다음 데이터 영역에서 결과를 보거나 Excel에서 분석을 사용하여 결과를 보고서로 내보내 최종 사용자에게 데이터가 어떻게 표시되는지 확인할 수 있습니다.  
@@ -38,7 +35,7 @@ ms.locfileid: "37250975"
  **Hierarchy**  
  하위 큐브를 조각화할 계층을 선택합니다.  
   
- **같음**  
+ **연산자**  
  **필터 식** 의 식이 선택한 계층에 적용되는 방법을 정의하는 연산자를 선택합니다. 다음 표에서는 사용 가능한 연산자에 대해 설명합니다.  
   
 |값|Description|  

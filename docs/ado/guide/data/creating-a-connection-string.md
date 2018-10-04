@@ -6,32 +6,29 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 106aacb0fbdda6e00d32b42a8bae49564ee1adbc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611395"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
-연결 문자열을 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 합니다. 예를 들어:  
+연결 문자열 (즉, 매개 변수) 인수/값 쌍의 세미콜론으로 구분 된 목록으로 구성 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
- 모든 매개 변수는 ADO 또는 지정된 된 공급자에서 인식 되어야 합니다.  
+ 모든 매개 변수는 ADO 또는 지정된 된 공급자 중 하나에서 인식 되어야 합니다.  
   
  ADO 연결 문자열에는 다음 5 개 인수를 인식합니다.  
   
@@ -40,21 +37,21 @@ ms.locfileid: "35270562"
 |*공급자*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예를 들어 지속형된 데이터 원본 개체)의 이름을 지정 합니다.|  
 |*URL*|파일 또는 디렉터리와 같은 리소스를 식별 하는 절대 URL로 연결 문자열을 지정 합니다.|  
-|*원격 공급자*|클라이언트 연결을 열 때 사용할 공급자의 이름을 지정 합니다. (원격 데이터 서비스만 합니다.)|  
-|*원격 서버*|클라이언트 연결을 열 때 사용할 서버 경로 이름을 지정 합니다. (원격 데이터 서비스만 합니다.)|  
+|*원격 공급자*|클라이언트 쪽 연결을 열 때 사용할 공급자의 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
+|*원격 서버*|클라이언트 쪽 연결을 열 때 사용할 서버를의 경로 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
   
- 다른 인수에 지정 된 공급자에 전달 되는 *공급자* ADO에서 처리 없이 인수입니다.  
+ 다른 인수에서 명명 된 공급자에 전달 되는 *공급자* ADO에서 처리 하지 않고 인수입니다.  
   
- HelloData 응용 프로그램에 [HelloData: 간단한 ADO 응용 프로그램](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 다음 연결 문자열을 사용 합니다.  
+ HelloData 응용 프로그램 [HelloData: 간단한 ADO 응용 프로그램](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 다음 연결 문자열을 사용 합니다.  
   
 ```  
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- 이 연결 문자열에 ADO만 인식는 `"Provider=SQLOLEDB"` ADO 데이터 원본으로 SQL Server 용 Microsoft OLE DB Provider를 지정 하는 매개 변수입니다. 인수/값 쌍의 나머지 부분 `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`,이 공급자에 정확 하 게 전달 됩니다. 형식 및 이러한 매개 변수가의 유효성은 공급자 마다 다릅니다. 연결 문자열에 전달 될 수 있는 유효한 매개 변수에 대 한 정보, 개별 공급 업체의 설명서를 참조 하십시오.  
+ 이 연결 문자열에 ADO만 인식 합니다 `"Provider=SQLOLEDB"` ADO 데이터 원본으로 SQL Server 용 Microsoft OLE DB Provider를 지정 하는 매개 변수입니다. 인수/값 쌍을 나머지 `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`,이 공급자를 정확 하 게 전달 됩니다. 형식 및 이러한 매개 변수의 유효성은 공급자 마다 다릅니다. 연결 문자열에 전달 될 수 있는 유효한 매개 변수에 대 한 자세한 내용은 개별 공급자의 설명서를 참조 하세요.  
   
- OLE DB Provider for SQL Server 설명서에 따라 대신 사용할 수 있습니다 "Server"는 *데이터 소스* 매개 변수 및 "데이터베이스"에 대 한는 *초기 카탈로그* 매개 변수입니다. 따라서 다음 연결 문자열은 위와 동일한 결과가 발생 합니다.  
+ OLE DB Provider for SQL Server 설명서를 따라 대체할 수 "Server"를 *데이터 원본* 매개 변수 및 "데이터베이스"에 대 한 합니다 *Initial Catalog* 매개 변수입니다. 따라서 다음 연결 문자열은 위와 동일한 결과가 발생 합니다.  
   
 ```  
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  

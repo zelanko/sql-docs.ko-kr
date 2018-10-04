@@ -1,27 +1,24 @@
 ---
-title: 개체 속성, 메서드 및 이벤트 명령 | Microsoft Docs
+title: 명령 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], members
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44133617ed912c0b16d6850769838dc1fde879db
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 132d302d994da5de812347f7c4d0396d5b5cf8ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705511"
 ---
 # <a name="command-object-properties-methods-and-events"></a>명령 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -41,11 +38,11 @@ ms.locfileid: "35276682"
   
  [NamedParameters 속성](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
   
- [Parameters 컬렉션](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+ [매개 변수 컬렉션](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
- [준비 된 속성](../../../ado/reference/ado-api/prepared-property-ado.md)  
+ [Prepared 속성](../../../ado/reference/ado-api/prepared-property-ado.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [State 속성](../../../ado/reference/ado-api/state-property-ado.md)  
   

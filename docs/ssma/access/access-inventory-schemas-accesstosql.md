@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - columns table
 - databases table
@@ -42,12 +37,12 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b0344fcfa5a5b174ef080a5eac431cebf6372842
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653728"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 인벤토리 스키마 (AccessToSQL)
 다음 섹션에 액세스 하는 스키마를 내보낼 때 SSMA에서 만든 테이블에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

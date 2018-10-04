@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.UE.dac.details.F1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], utility details
 - Multi-server management [SQL Server]
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
-caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54b12c13823acf51b5004eb43ee18ab8e1705135
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815909"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073302"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>배포된 데이터 계층 응용 프로그램 세부 정보(SQL Server 유틸리티)
   유틸리티 탐색기의 배포된 데이터 계층 응용 프로그램 뷰에 나오는 정보는 개별 데이터 계층 응용 프로그램의 사용 데이터, CPU 사용 기록, 파일 수준의 저장소 사용 세부 정보, 그리고 정책 임계값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 데이터 계층 응용 프로그램 수준에서 CPU 사용에 대해, 그리고 데이터베이스 데이터 파일 및 로그 파일에 대해 제어할 수 있습니다. 개별 데이터 계층 응용 프로그램의 속성 정보를 볼 수도 있습니다.  

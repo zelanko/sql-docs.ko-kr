@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -12,16 +11,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02b9011a567eb3a91bf36dfc7d2450dfa9498a60
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 76b861e0cfc6b9c2e747395e1b75a13f33b73f23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722551"
 ---
 # <a name="assemblies-database-engine"></a>어셈블리(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ ms.locfileid: "37359395"
   
 -   사용자 정의 집계 함수. 자세한 내용은 [만들기 사용자 정의 집계](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)합니다.  
   
--   사용자 정의 유형. 자세한 내용은 [사용자 형식](../../relational-databases/native-client/features/using-user-defined-types.md)합니다.  
+-   사용자 정의 유형. 자세한 내용은 [사용자 정의 형식 사용](../../relational-databases/native-client/features/using-user-defined-types.md)을 참조하세요.  
   
  어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음과 같은 기능을 수행합니다.  
   

@@ -1,31 +1,28 @@
 ---
-title: JScript 코드 예제에서는 레코드 집합을 반환 하려면 | Microsoft Docs
+title: JScript 코드 예제에서는 레코드 집합을 반환할 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59cfb19d1d3ee3e8b603cbb897a8e55c2b74128
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2dc86d8f454b67c00073508a4ed6d7e8fc0d033e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271982"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707181"
 ---
-# <a name="jscript-code-example-to-return-a-recordset"></a>JScript 코드 예제에서는 레코드 집합을 반환 하려면
+# <a name="jscript-code-example-to-return-a-recordset"></a>레코드 집합을 반환하는 JScript 코드 예제
 ## <a name="jscript-code-rsjs"></a>JScript 코드 (rs.js)  
   
 ```  
@@ -83,10 +80,10 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>사용해 보세요!  
+#### <a name="try-it"></a>지금 사용해 보세요!  
   
 1.  위의 코드를 텍스트 파일로 저장 합니다. Rs.js로 파일을 저장 합니다.  
   
-2.  명령 프롬프트 및 cd JScript 파일 (rs.js)를 저장 한 디렉터리를 엽니다.  
+2.  JScript 파일 (rs.js)를 저장 한 디렉터리에 대 한 cd를 명령 프롬프트를 엽니다.  
   
-3.  형식 `CScript rs.js` 명령 프롬프트에서 합니다.
+3.  형식 `CScript rs.js` 명령 프롬프트에서.

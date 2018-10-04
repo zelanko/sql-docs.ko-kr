@@ -1,14 +1,11 @@
 ---
-title: trace_xe_event_map (Transact SQL) | Microsoft Docs
+title: trace_xe_event_map (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trace_xe_event_map_TSQL
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - trace_xe_event_map
 - extended events [SQL Server], tables
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bf9c9db02063fd46b2119866d755b60757e9ded
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cc823459c701bd0045e594f753a803a0a092a244
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608441"
 ---
-# <a name="extended-events-tables---tracexeeventmap"></a>확장 이벤트 테이블-trace_xe_event_map
+# <a name="extended-events-tables---tracexeeventmap"></a>확장 이벤트 테이블 - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  SQL 추적 이벤트 클래스에 매핑된 Extended Events 이벤트마다 하나의 행을 포함합니다. 이 테이블에 master 데이터베이스의 sys 스키마에 저장 됩니다.  
+  SQL 추적 이벤트 클래스에 매핑된 Extended Events 이벤트마다 하나의 행을 포함합니다. 이 표에서 sys 스키마에 master 데이터베이스에 저장 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,7 +37,7 @@ ms.locfileid: "33259136"
 |package_name|**nvarchar(60)**|매핑된 이벤트가 있는 Extended Events 패키지의 이름입니다.|  
 |xe_event_name|**nvarchar(60)**|SQL 추적 이벤트 클래스에 매핑된 Extended Events 이벤트의 이름입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 쿼리를 사용하여 SQL 추적 이벤트 클래스에 해당하는 Extended Events 이벤트를 식별할 수 있습니다.  
   
 ```  
@@ -64,7 +60,7 @@ WHERE xe.trace_event_id IS NULL
   
  이전 쿼리에서 반환된 이벤트 클래스 대부분은 감사와 관련이 있습니다. 감사를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit를 사용하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit는 감사를 만들기 위해 Extended Events를 사용합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [trace_xe_action_map&#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  
   
   

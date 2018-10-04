@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
-caps.latest.revision: 29
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7906a576bab6ad6dd35da0f863a20ad02e56d342
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f672002f73600d74043f2b38bcfc88df508977
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070163"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 서비스 설치 개요
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공하는 업데이트를 통해 설치된 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 업데이트를 적용할 수 있습니다. 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소의 버전 수준이 업데이트 버전 수준보다 최신 상태이면 설치 프로그램을 통한 업데이트 작업에서 해당 구성 요소가 제외됩니다. 업데이트 서비스를 적용 하는 방법은 참조 하십시오 [SQL Server 2014 서비스 업데이트 설치](../../database-engine/install-windows/install-sql-server-servicing-updates.md)합니다.  

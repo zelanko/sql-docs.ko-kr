@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2c07349f7bf1cec153ccb1a57d3ba15dea70b4e2
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: aa7a16d3a5caad1ddb742e45ffe2e1534944e118
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802451"
 ---
-# <a name="accessing-user-defined-types---retrieving-udt-data"></a>사용자 정의 형식 액세스-UDT 데이터 검색
+# <a name="accessing-user-defined-types---retrieving-udt-data"></a>사용자 정의 형식 액세스 - UDT 데이터 검색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   클라이언트에서 UDT(사용자 정의 형식)를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 UDT로 등록된 어셈블리를 클라이언트 응용 프로그램에서 사용할 수 있어야 합니다. UDT 어셈블리는 응용 프로그램과 같은 디렉터리나 GAC(전역 어셈블리 캐시)에 넣을 수 있습니다. 사용자의 프로젝트에서 어셈블리에 대한 참조를 설정할 수도 있습니다.  
   
@@ -378,7 +375,7 @@ class GetRawBytes
  사용자의 ADO.NET 코드에서 UDT를 입력 및 출력 매개 변수 모두로 사용할 수 있습니다.  
   
 ## <a name="using-udts-in-query-parameters"></a>쿼리 매개 변수에 UDT 사용  
- 설정할 때 Udt를 매개 변수 값으로 사용할 수 있습니다는 **SqlParameter** 에 **System.Data.SqlClient.SqlCommand** 개체입니다. **SqlDbType.Udt** 의 열거형을 **SqlParameter** 개체를 호출할 때 매개 변수가 UDT 변수임을 나타내는 데 사용 되는 **추가** 메서드를는 ** 매개 변수** 컬렉션입니다. 합니다 **UdtTypeName** 의 속성을 **SqlCommand** 개체를 사용 하 여 데이터베이스에 UDT의 정규화 된 이름을 지정 하는 *database.schema_name.object_name* 구문입니다. 꼭 필요한 것은 아니지만 정규화된 이름을 사용하면 코드가 명확해집니다.  
+ 설정할 때 Udt를 매개 변수 값으로 사용할 수 있습니다는 **SqlParameter** 에 **System.Data.SqlClient.SqlCommand** 개체입니다. **SqlDbType.Udt** 의 열거형을 **SqlParameter** 개체를 호출할 때 매개 변수가 UDT 변수임을 나타내는 데 사용 되는 **추가** 메서드를는  **매개 변수** 컬렉션입니다. 합니다 **UdtTypeName** 의 속성을 **SqlCommand** 개체를 사용 하 여 데이터베이스에 UDT의 정규화 된 이름을 지정 하는 *database.schema_name.object_name* 구문입니다. 꼭 필요한 것은 아니지만 정규화된 이름을 사용하면 코드가 명확해집니다.  
   
 > [!NOTE]  
 >  클라이언트 프로젝트에서 UDT 어셈블리의 로컬 복사본을 사용할 수 있어야 합니다.  

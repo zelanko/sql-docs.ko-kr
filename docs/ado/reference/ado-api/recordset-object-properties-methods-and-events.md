@@ -6,22 +6,19 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281182"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691321"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>레코드 집합 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -39,17 +36,17 @@ ms.locfileid: "35281182"
   
  [CacheSize 속성](../../../ado/reference/ado-api/cachesize-property-ado.md)  
   
- [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [CursorLocation 속성](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
- [모두 속성](../../../ado/reference/ado-api/cursortype-property-ado.md)  
+ [CursorType 속성](../../../ado/reference/ado-api/cursortype-property-ado.md)  
   
  [DataMember 속성](../../../ado/reference/ado-api/datamember-property.md)  
   
- [DataSource 속성](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [데이터 원본 속성](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)  
   
- [Fields 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [필드 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
  [Filter 속성](../../../ado/reference/ado-api/filter-property.md)  
   
@@ -57,7 +54,7 @@ ms.locfileid: "35281182"
   
  [LockType 속성](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
- [마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+ [MarshalOptions 속성](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
  [MaxRecords 속성](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
@@ -65,7 +62,7 @@ ms.locfileid: "35281182"
   
  [PageSize 속성](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordCount 속성](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
@@ -92,7 +89,7 @@ ms.locfileid: "35281182"
   
  [Close 메서드](../../../ado/reference/ado-api/close-method-ado.md)  
   
- [불일치](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [CompareBookmarks 메서드](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
  [Delete 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
@@ -129,7 +126,7 @@ ms.locfileid: "35281182"
   
  [FetchComplete 이벤트](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
   
- [FetchProgress 이벤트](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
+ [Fetchprogress 및](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
  [WillChangeField 및 FieldChangeComplete 이벤트](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
@@ -137,7 +134,7 @@ ms.locfileid: "35281182"
   
  [WillChangeRecordset 및 RecordsetChangeComplete 이벤트](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [WillMove 및 두 이벤트](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [WillMove 및 MoveComplete 이벤트](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

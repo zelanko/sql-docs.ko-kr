@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64de692b36cd2abda06402e5c0d55c250b9632f5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714379"
 ---
-# <a name="item-property-ado-md-cellset"></a>Item 속성 (ADO MD Cellset)
-셀을 검색 한 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 좌표를 사용 하 여 합니다.  
+# <a name="item-property-ado-md-cellset"></a>Item 속성(ADO MD Cellset)
+셀을 검색 한 [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 좌표를 사용 하 여 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,16 +39,16 @@ Cell = Cellset.Item ( Positions)
  *위치*  
  A **VariantArray** 셀을 고유 하 게 지정 하는 값입니다. *위치* 다음 중 하나일 수 있습니다.  
   
--   위치 번호의 배열  
+-   위치 숫자의 배열  
   
--   멤버 이름 배열  
+-   멤버 이름의 배열  
   
 -   서 수 위치  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여는 **항목** 반환 하는 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 내에서 개체는 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다. 경우는 **항목** 속성에 해당 하는 셀을 찾을 수 없습니다는 *위치* 인수, 오류가 발생 합니다.  
+ 사용 하 여 합니다 **항목** 반환할 속성을 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 내에서 개체를 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다. 경우는 **항목** 속성에 해당 하는 셀을 찾을 수 없습니다는 *위치* 인수 오류가 발생 합니다.  
   
- **항목** 속성은 기본 속성에 대 한는 **셀 집합** 개체입니다. 다음 구문 형식은 서로 전환이 가능 합니다.  
+ **항목** 속성은 기본 속성을 **셀 집합** 개체입니다. 다음 구문 형식 서로:  
   
 ```  
   
@@ -59,18 +56,18 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ```  
   
 ## <a name="remarks"></a>Remarks  
- *위치* 인수는 반환할 셀을 지정 합니다. 셀 서 수 위치 별로 또는 각 축 위치를 지정할 수 있습니다. 각 축 따라 위치에 따라 셀을 지정할 때 위치 숫자 값 또는 각 위치에 대 한 멤버의 이름을 지정할 수 있습니다.  
+ 합니다 *위치* 인수를 반환 하는 셀을 지정 합니다. 셀 서 수 위치 또는 각 축 따라 위치를 지정할 수 있습니다. 각 축 따라 위치에 따라 셀을 지정할 때 위치 숫자 값 이나 각 위치에 대 한 멤버의 이름을 지정할 수 있습니다.  
   
- 서 수 위치는에서 하나의 셀을 고유 하 게 식별 하는 숫자는 **셀 집합**합니다. 이론적으로 셀은 번호가 매겨집니다는 **셀 집합** 처럼는 **셀 집합** 된는 *p*-차원 배열 여기서 *p* 축의 수입니다. 셀은 행 중심의 순서로 번호가 매겨집니다. 다음은 셀의 서 수를 계산 하는 것에 대 한 수식:  
+ 서 수 위치는 하나의 셀 내에서 고유 하 게 식별 하는 번호를 **Cellset**합니다. 이론적으로 셀 번호가 매겨집니다를 **셀 집합** 처럼 합니다 **셀 집합** 된를 *p*-차원 배열에 있는 *p* 는 축의 개수입니다. 셀은 행 중심의 순서로 번호가 매겨집니다. 다음은 셀의 서 수를 계산 하는 것에 대 한 수식:  
   
- 마찬가지로 문자열을 멤버 이름을 전달 하는 경우 **항목**, 멤버 숫자 축 식별자의 오름차순으로 나열 되어야 합니다. 축에서 멤버의 차원 중첩 오름차순으로 나열 합니다-즉, 가장 바깥쪽 차원 되어 내부 차원의 멤버가 옵니다. 각 차원에서 별도 문자열로 나타낼지 및 멤버 문자열 목록을 쉼표로 구분 해야 합니다.  
+ 마찬가지로 문자열을 멤버 이름을 전달 하는 경우 **항목**, 멤버는 숫자 축 식별자의 오름차순으로 나열 되어야 합니다. 축에서 멤버 차원 중첩의 오름차순으로 나열 합니다-즉, 가장 바깥쪽 차원 멤버는 먼저 내부 차원의 멤버 뒤에 있습니다. 별도 문자열로로 표시 되도록 각 차원 및 멤버 문자열 목록을 쉼표로 구분 해야 합니다.  
   
 > [!NOTE]
->  셀 멤버 이름으로 검색 데이터 공급자가 지원 되지 않을 수 있습니다. 자세한 내용은 공급자 설명서를 참조 하십시오.  
+>  셀 멤버 이름으로 검색 데이터 공급자에서 지원 될 수 있습니다. 자세한 내용은 공급자 설명서를 참조 하십시오.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Cell 개체 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

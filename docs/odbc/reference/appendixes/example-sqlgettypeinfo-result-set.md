@@ -5,47 +5,44 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], examples
 - SQLGetTypeInfo function [ODBC], examples
 - data types [ODBC], SQL data types
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d536df043bc7f609f4842d7c0bf68638f47bb66c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 028b9be01439b122ff164aed68adb40eb1b4a46e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914458"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662621"
 ---
-# <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 결과 집합 예제
-응용 프로그램이 호출 **SQLGetTypeInfo** 데이터 원본과 해당 데이터 형식 특성에서 지원 되는 데이터 유형을 확인 하려면. 다음 표에서에서 반환 된 결과 집합 예를 보여 줍니다. **SQLGetTypeInfo** SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, 및 SQL_INTERVAL_DAY_TO_SECOND 지 원하는 데이터 원본에 대 한 합니다.  
+# <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 결과 집합의 예제
+응용 프로그램 호출 **SQLGetTypeInfo** 데이터 원본과 해당 데이터 형식의 특성에서 지원 되는 데이터 형식을 확인 하려면. 다음 표에 결과 집합 예제 반환한 **SQLGetTypeInfo** SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, 및 SQL_INTERVAL_DAY_TO_SECOND 지 원하는 데이터 원본에 대 한 합니다.  
   
 |TYPE_NAME|DATA_TYPE|COLUMN_SIZE|LITERAL_PREFIX|LITERAL_SUFFIX|CREATE_PARAMS|NULLABLE|  
 |----------------|----------------|------------------|---------------------|---------------------|--------------------|--------------|  
-|"char"|SQL_CHAR|255|"'"|"'"|"길이"|SQL_TRUE|  
+|"char"|SQL_CHAR|255|"'"|"'"|"length"|SQL_TRUE|  
 |"text"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<Null>|SQL_TRUE|  
-|"십진수"|SQL_DECIMAL|28|\<Null>|\<Null>|"precision,<br />scale"|SQL_TRUE|  
+|"decimal"|SQL_DECIMAL|28|\<Null>|\<Null>|"전체 자릿수<br />scale"|SQL_TRUE|  
 |"실제"|SQL_REAL|7|\<Null>|\<Null>|\<Null>|SQL_TRUE|  
 |"datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<Null>|SQL_TRUE|  
-|"연도를 간격 YEAR()"|SQL_INTERVAL_YEAR|9|"'"|"'"|"precision"|SQL_TRUE|  
+|"년 간격 YEAR()"|SQL_INTERVAL_YEAR|9|"'"|"'"|"precision"|SQL_TRUE|  
 |"FRACTION(5) 간격 DAY()"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|"precision"|SQL_TRUE|  
   
 |DATA_TYPE|CASE_SENSITIVE|SEARCHABLE|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
 |----------------|---------------------|----------------|-------------------------|------------------------|-------------------------|-----------------------|  
 |**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"char"|  
 |**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<Null>|SQL_FALSE|\<Null>|"text"|  
-|**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"십진수"|  
+|**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"decimal"|  
 |**SQL_REAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"실제"|  
 |**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"datetime"|  
-|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"연도를 간격 YEAR()"|  
+|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"년 간격 YEAR()"|  
 TERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Null>|SQL_FALSE|\<Null>|"FRACTION(5) 간격 DAY()"|  
   
 |DATA_TYPE|MINIMUM_SCALE|MAXIMUM_SCALE|SQL_DATA_TYPE|SQL_DATETIME_SUB|NUM_PREC_RADIX|INTERVAL_PRECISION|  

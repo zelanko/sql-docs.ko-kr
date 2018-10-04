@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c3a2f2ef1c1dcc80e0b8ac9cb68ce5d5694d104
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de02e5c0233fb5cb1699f038b87871c8757f0256
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068403"
 ---
 # <a name="measure-element-csdlbi"></a>Measure 요소(CSDLBI)
   Measure 요소는 CSDL Property 요소를 기반으로 하는 복합 유형입니다. CSDLBI 주석은 비즈니스 인텔리전스 데이터 모델에서 사용할 복합 수식의 정의를 지원하는 특성을 추가합니다.  
@@ -28,7 +25,7 @@ ms.locfileid: "37224023"
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표에서는 Measure 요소를 정의하는 특성과 해당 요소 및 Property 요소에 적용 가능한 모든 특성을 설명합니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |Kpi|아니요|KPI로 사용되는 측정값 전용의 필수 요소입니다. 모든 측정값이 KPI인 것은 아니지만 모든 KPI는 측정값 정의를 기반으로 해야 합니다.<br /><br /> [KPI 요소 &#40;CSDLBI&#41;](kpi-element-csdlbi.md)|  
 |IsSimpleMeasure|아니요|측정값에 사용된 수식이 단순 집계(SUM, COUNT, MIN, MAX, AVG, DistinctCount) 중 하나인지 여부를 나타내는 True/False 값입니다.<br /><br /> 기본값은 true입니다.|  

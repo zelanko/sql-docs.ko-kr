@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 704f250c7cf3056cd2950cfb53224cb8b5c2b21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056213"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>자습서의 사전 요구 사항(보고서 작성기)
   보고서 작성기 자습서에서는 사용자가 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에서 보고서를 보고 저장할 수 있는 것으로 간주합니다. 모든 자습서에서는 데이터에 대해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]인스턴스에서 처리해야 하는 리터럴 쿼리를 사용합니다.  
@@ -29,7 +26,7 @@ ms.locfileid: "37296383"
 ## <a name="requirements"></a>요구 사항  
  보고서 작성기 자습서를 완료하려면 다음이 필요합니다.  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 독립 실행형 버전의 보고서 작성기 또는 ClickOnce 버전을 사용하여 보고서 작성기를 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 독립 실행형 버전의 보고서 작성기 또는 ClickOnce 버전을 사용하여 보고서 작성기를 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다.  
   
      보고서 관리자를 사용 하려면 보고서 관리자를 열고 클릭 **보고서 작성기**합니다. 기본적으로 보고서 관리자 URL은 http://\<*servername*> / reports.  
   

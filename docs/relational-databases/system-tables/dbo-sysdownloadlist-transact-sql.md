@@ -1,14 +1,11 @@
 ---
-title: dbo.sysdownloadlist (Transact SQL) | Microsoft Docs
+title: dbo.sysdownloadlist (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdownloadlist
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4390fe628a879b36b42ffd1a3c3209e910eb125c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745094"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +43,9 @@ ms.locfileid: "33257215"
 |**error_message**|**nvarchar(1024)**|대상 서버가 특정 행을 처리하다가 오류가 발생한 경우에 표시되는 오류 메시지입니다.|  
 |**date_posted**|**datetime**|대상 서버에 작업이 게시된 날짜 및 시간입니다.|  
 |**date_downloaded**|**datetime**|마지막으로 작업을 다운로드한 날짜 및 시간입니다.|  
-|**상태**|**tinyint**|작업의 상태입니다.<br /><br /> **0** = 아직 다운로드<br /><br /> **1** = 성공적으로 다운로드|  
+|**상태**|**tinyint**|작업의 상태입니다.<br /><br /> **0** = 아직 다운로드 되지 않음<br /><br /> **1** = 성공적으로 다운로드|  
 |**deleted_object_name**|**sysname**|삭제된 개체의 이름입니다.|  
   
- <sup>1</sup> 는 **object_id** 열 값이 될 수 있습니다 **-1**, 모든 경우의 값에 해당 하는 **operation_code** 열이 삭제의 값입니다.  
+ <sup>1</sup> 는 **object_id** 열 값이 될 수 있습니다 **-1**, 경우 ALL 값에 해당 하는 합니다 **operation_code** 열이 삭제의 값입니다.  
   
   

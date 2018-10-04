@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPInit (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11ddae5bacdd5428a4381ec034d9dc9f0f22b6b7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052163"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit(OLE DB)
   대량 복사 구조를 초기화하고, 일부 오류 검사를 수행하고, 데이터 및 서식 파일 이름이 올바른지 확인한 다음 파일을 엽니다.  
@@ -41,24 +38,24 @@ inteDirection);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 합니다 **BCPInit** 다른 대량 복사 메서드 메서드를 호출 해야 합니다. 합니다 **BCPInit** 워크스테이션 간에 데이터의 대량 복사에 필요한 초기화를 수행 하는 메서드 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ **BCPInit** 메서드는 다른 대량 복사 메서드를 호출하기 전에 호출해야 합니다. **BCPInit** 메서드는 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 데이터 대량 복사에 필요한 초기화를 수행합니다.  
   
- 합니다 **BCPInit** 메서드 데이터베이스 원본 또는 대상 테이블의 데이터 파일이 아니라 구조를 검사 합니다. 또한 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 각 열을 기반으로 데이터 파일의 데이터 형식 값을 지정합니다. 이 지정에는 각 열의 데이터 형식, 데이터에 길이 또는 Null 표시자 및 종결자 바이트 문자열이 있는지 여부, 고정 길이 데이터 형식의 길이가 포함됩니다. 합니다 **BCPInit** 메서드 이러한 값을 다음과 같이 설정 합니다.  
+ **BCPInit** 메서드는 데이터 파일이 아니라 데이터베이스 원본 또는 대상 테이블의 구조를 검사합니다. 또한 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 각 열을 기반으로 데이터 파일의 데이터 형식 값을 지정합니다. 이 지정에는 각 열의 데이터 형식, 데이터에 길이 또는 Null 표시자 및 종결자 바이트 문자열이 있는지 여부, 고정 길이 데이터 형식의 길이가 포함됩니다. **BCPInit** 메서드는 이러한 값을 다음과 같이 설정합니다.  
   
 -   지정되는 데이터 형식은 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 열의 데이터 형식입니다. 데이터 형식을 열거 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 형식에 지정 된 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 헤더 파일 (sqlncli.h). 이 값은 BCP_TYPE_XXX 패턴을 사용합니다. 데이터는 해당 컴퓨터 형식으로 표현됩니다. 즉, integer 데이터 형식의 열에서 가져온 데이터는 데이터 파일을 만든 컴퓨터에 따라 Big Endian 또는 Little Endian인 4바이트 시퀀스로 표현됩니다.  
   
--   데이터베이스 데이터 형식의 길이가 고정된 경우 데이터 파일 데이터의 길이도 고정됩니다. 데이터를 처리 하는 대량 복사 메서드 (예를 들어 [ibcpsession:: Bcpexec](ibcpsession-bcpexec-ole-db.md)) 데이터 파일을 데이터베이스 테이블, 뷰 또는 SELECT 열에 지정 된 데이터의 길이 동일할 수 있는 데이터의 길이 예상 하는 데이터 행을 구문 분석 목록입니다. 예를 들어 `char(13)`로 정의된 데이터베이스 열의 데이터에서 파일의 각 데이터 행은 13자로 표현되어야 합니다. 데이터베이스 열이 Null 값을 허용하는 경우에는 고정 길이 데이터 앞에 Null 표시자를 붙일 수 있습니다.  
+-   데이터베이스 데이터 형식의 길이가 고정된 경우 데이터 파일 데이터의 길이도 고정됩니다. 데이터를 처리하는 대량 복사 메서드(예: [IBCPSession::BCPExec](ibcpsession-bcpexec-ole-db.md))는 데이터 파일에 있는 데이터의 길이가 데이터베이스 테이블, 뷰 또는 SELECT 열 목록에 지정된 데이터의 길이와 동일할 것이라 예상하고 데이터 행을 구문 분석합니다. 예를 들어 `char(13)`로 정의된 데이터베이스 열의 데이터에서 파일의 각 데이터 행은 13자로 표현되어야 합니다. 데이터베이스 열이 Null 값을 허용하는 경우에는 고정 길이 데이터 앞에 Null 표시자를 붙일 수 있습니다.  
   
 -   데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사하는 경우 데이터 파일에 데이터베이스 테이블의 각 열에 대한 데이터가 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 복사하는 경우 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 모든 열의 데이터가 데이터 파일로 복사됩니다.  
   
--   데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사하는 경우 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 같아야 합니다. 데이터를 복사 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서 **BCPExec** 메서드는 데이터베이스 테이블에 있는 열의 서 수 위치를 기준으로 데이터를 배치 합니다.  
+-   데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사하는 경우 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 같아야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 복사하는 경우 **BCPExec** 메서드는 데이터베이스 테이블에 있는 열의 서수 위치를 기반으로 데이터를 배치합니다.  
   
--   데이터베이스 데이터 형식의 길이가 가변적(예: `varbinary(22)`)이거나 데이터베이스 열이 Null 값을 포함할 수 있는 경우 데이터 파일의 데이터 앞에 길이/Null 표시자가 옵니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다. 합니다 [ibcpsession:: Bcpcontrol](ibcpsession-bcpcontrol-ole-db.md) 이전 대량 복사 데이터 파일 및 이후 버전의를 실행 하는 서버 간의 호환성을 제공 하는 메서드 옵션 BCP_OPTION_FILEFMT [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시기를 지정 하 여 표시기의 너비를 데이터는 예상 보다입니다.  
+-   데이터베이스 데이터 형식의 길이가 가변적(예: `varbinary(22)`)이거나 데이터베이스 열이 Null 값을 포함할 수 있는 경우 데이터 파일의 데이터 앞에 길이/Null 표시자가 옵니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다. [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) 메서드 옵션 BCP_OPTION_FILEFMT는 데이터에 있는 표시자의 너비가 예상보다 짧은 경우를 표시하여 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 서버와 이전 대량 복사 데이터 파일 간의 호환성을 제공합니다.  
   
 > [!NOTE]  
->  데이터 파일에 지정 된 데이터 형식 값을 변경 하려면 사용 합니다 [ibcpsession:: Bcpcolumns](ibcpsession-bcpcolumns-ole-db.md) 하 고 [ibcpsession:: Bcpcolfmt](ibcpsession-bcpcolfmt-ole-db.md) 메서드.  
+>  데이터 파일에 대해 지정된 데이터 형식 값을 변경하려면 [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) 및 [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) 메서드를 사용합니다.  
   
- 로 대량 복사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 옵션을 설정 하 여 인덱스를 포함 하지 않는 테이블에 대 한 최적화 될 수 있습니다 **으로 선택 / bulkcopy**합니다.  
+ 데이터베이스 옵션 **select into/bulkcopy**를 설정하면 인덱스가 없는 테이블에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 대량 복사를 최적화할 수 있습니다.  
   
 ## <a name="arguments"></a>인수  
  *pwszTable*[in]  
@@ -66,7 +63,7 @@ inteDirection);
   
  eDirection 인수가 BCP_DIRECTION_OUT으로 설정된 경우 pwszTable 인수는 데이터베이스 뷰의 이름일 수 있습니다.  
   
- EDirection 인수가 BCP_DIRECTION_OUT로 설정 된 SELECT 문을 사용 하 여 지정 된 경우는 **BCPControl** 하기 전에 메서드를 **BCPExec** 메서드가 호출 되는 *pwszTable*인수를 NULL로 설정 해야 합니다.  
+ eDirection 인수를 BCP_DIRECTION_OUT으로 설정하고 **BCPControl** 메서드가 호출되기 전에 **BCPExec** 메서드를 사용하여 SELECT 문을 지정한 경우 *pwszTable* 인수를 NULL로 설정해야 합니다.  
   
  *pwszDataFile*[in]  
  복사의 원본 또는 대상이 될 사용자 파일의 이름입니다.  
@@ -82,7 +79,7 @@ inteDirection);
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생 했습니다. ' 자세한 정보를 사용 합니다 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스입니다.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스를 사용하세요.  
   
  E_OUTOFMEMORY  
  메모리 부족 오류가 발생했습니다.  

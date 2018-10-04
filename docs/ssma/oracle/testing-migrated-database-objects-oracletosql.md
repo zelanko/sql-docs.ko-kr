@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 037a58fc3fc9402c7148ec49d3a27ea0c0ace309
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684321"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>마이그레이션된 데이터베이스 개체 테스트(OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA 테스터) Oracle 테스터를 위한 데이터베이스 개체를 변환 하 고 SSMA 수행한 데이터 마이그레이션에 자동으로 테스트 합니다. 모든 SSMA 마이그레이션 단계가 완료 되 면 모든 데이터가 제대로 전송 된 및 변환 된 개체가 동일한 방식으로 작동 하는지 확인 하려면 SSMA 테스터를 사용 합니다.  

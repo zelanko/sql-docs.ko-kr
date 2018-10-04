@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Item property [ADO], VC++ example
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae9d63a532a54ed7f1c163685a39542ce8b2d53a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2b228ad46c89766475e8a74e26a0aaf389130acd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771351"
 ---
-# <a name="item-property-example-vc"></a>항목 속성 예제 (VC + +)
-이 예제에서는 방법을 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 합니다. 열고는 ***작성자*** 목차는 ***Pubs*** 매개 변수가 있는 명령 사용 하 여 데이터베이스입니다.  
+# <a name="item-property-example-vc"></a>Item 속성 예제(VC++)
+이 예제에서는 하는 방법을 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성 컬렉션의 멤버에 액세스 합니다. 예제 열립니다는 ***작성자*** 목차 합니다 ***Pubs*** 매개 변수가 있는 명령 사용 하 여 데이터베이스입니다.  
   
- 액세스 하는 데이터베이스에 대해 실행 된 명령에서 매개 변수는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 인덱스 및 이름을 사용 하 여 컬렉션입니다. 그런 다음 반환 된 필드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 해당 개체에서 액세스 하는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 인덱스 및 이름을 사용 하 여 컬렉션입니다.  
+ 액세스 하는 데이터베이스에 대해 실행 한 명령 매개 변수를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 인덱스 및 이름을 사용 하 여 컬렉션입니다. 그런 다음 반환 된 필드 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 해당 개체에서 액세스 하는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 인덱스 및 이름을 사용 하 여 컬렉션입니다.  
   
 ```  
 // BeginItemCpp.cpp  
@@ -236,8 +233,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Item 속성 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

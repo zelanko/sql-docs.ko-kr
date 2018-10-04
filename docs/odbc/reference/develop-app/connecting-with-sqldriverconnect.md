@@ -1,13 +1,11 @@
 ---
-title: SQLDriverConnect를 사용 하 여 연결 | Microsoft Docs
+title: SQLDriverConnect로 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da68bea5d1cf62effc85911b8d9a4d66568dd823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797911"
 ---
-# <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect를 사용 하 여 연결
-**SQLDriverConnect** 연결 문자열을 사용 하 여 데이터 원본에 연결 하는 데 사용 됩니다. **SQLDriverConnect** 대신 사용 됩니다 **SQLConnect** 이유는 다음과 같습니다.  
+# <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect로 연결
+**SQLDriverConnect** 연결 문자열을 사용 하 여 데이터 원본에 연결 하는 데 사용 됩니다. **SQLDriverConnect** 대신 사용 됩니다 **SQLConnect** 다음과 같은 이유로:  
   
 -   드라이버 관련 연결 정보를 사용 하 여 응용 프로그램 수 있도록 합니다.  
   

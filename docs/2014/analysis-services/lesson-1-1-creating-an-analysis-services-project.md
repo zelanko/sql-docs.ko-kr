@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e365dc5e26692b14b4c7621ca173a8e5e4ef1cdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066971"
 ---
 # <a name="creating-an-analysis-services-project"></a>Analysis Services 프로젝트 만들기
   다음 작업을 사용 하 여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 프로젝트 `Analysis Services Tutorial`기반으로 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 템플릿. *프로젝트* 는 관련된 개체의 모음입니다. 프로젝트는 솔루션 내에 있으며 솔루션은 하나 이상의 프로젝트를 포함합니다. 자세한 내용은 [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)를 참조하세요.  
@@ -28,7 +25,7 @@ ms.locfileid: "37304703"
   
 1.  **시작**을 클릭하고 **모든 프로그램**, **Microsoft SQL Server 2012**를 차례로 가리킨 후 **SQL Server Data Tools**를 클릭합니다.  
   
-      [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경이 열립니다.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경이 열립니다.  
   
 2.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]시작 페이지에서 **새 프로젝트**를 클릭합니다.  
   

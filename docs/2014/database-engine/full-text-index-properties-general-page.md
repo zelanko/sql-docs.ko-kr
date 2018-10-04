@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072463"
 ---
 # <a name="full-text-index-properties-general-page"></a>전체 텍스트 인덱스 속성(일반 페이지)
   **전체 텍스트 인덱스의 수정 가능한 속성 보기 또는 변경 하려면**  

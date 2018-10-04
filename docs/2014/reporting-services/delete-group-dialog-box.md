@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deletegroup.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Group dialog box
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5a3195d350e27e68c937e57b1325a00b05f056d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af50422d5f293b1c3bfd58a7db6472bbf81a81d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056163"
 ---
 # <a name="delete-group-dialog-box"></a>그룹 삭제 대화 상자
   **그룹 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 그룹을 삭제할 수 있습니다. 그룹에 연결된 행 또는 열이 있는 경우 해당 구조도 함께 삭제할 수 있습니다.  

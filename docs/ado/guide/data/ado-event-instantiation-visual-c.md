@@ -1,32 +1,29 @@
 ---
-title: 'ADO 이벤트 인스턴스화: Visual c + + | Microsoft Docs'
+title: 'ADO 이벤트 인스턴스: Visual c + + | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 699432fff2c849f4f89e7cadebe8dd4afabdd8ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605991"
 ---
-# <a name="ado-event-instantiation-visual-c"></a>ADO 이벤트 인스턴스화: Visual c + +
-Microsoft® C++®에서 ADO 이벤트를 인스턴스화하는 방법에 도식 설명입니다. 참조 [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 설명과 합니다.  
+# <a name="ado-event-instantiation-visual-c"></a>ADO 이벤트 인스턴스: Visual C++
+Microsoft® C++®에서 ADO 이벤트를 인스턴스화하는 방법에 도식 설명입니다. 참조 [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 설명은 합니다.  
   
- 파생 된 클래스를 만들기는 **ConnectionEventsVt** 및 **RecordsetEventsVt** 인터페이스 파일 adoint.h에서 찾을 수 있습니다.  
+ 파생 된 클래스를 만들기는 **ConnectionEventsVt** 하 고 **RecordsetEventsVt** 인터페이스 파일 adoint.h 있는 합니다.  
   
 ```  
 // BeginEventExampleVC01  
@@ -53,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- 두 클래스 모두에서 각 이벤트 처리기 메서드를 구현 합니다. 각 메서드에 단순히 HRESULT의 S_OK를 반환 만으로는 합니다. 그러나 수행할 때 그 알려진 이벤트 처리기를 사용할 수 있는, 기본적으로 지속적으로 호출 합니다. 대신, 하려는 경우도 처음 추가 알림이 설정 하 여 요청 **adStatus** 를 **adStatusUnwantedEvent**합니다.  
+ 두 클래스 모두에서 각 이벤트 처리기 메서드를 구현 합니다. 각 메서드는 S_OK HRESULT는 단순히 반환 부족 합니다. 그러나 하는 경우이 알려진 이벤트 처리기는 사용 가능한에 기본적으로 지속적으로 호출 합니다. 설정 하 여 처음으로 후 추가 알림이 요청 하려는 하는 대신 **adStatus** 하 **adStatusUnwantedEvent**합니다.  
   
 ```  
 // BeginEventExampleVC02  
@@ -69,11 +66,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 이벤트 클래스에서 상속 **IUnknown**구현 해야 하므로 **QueryInterface**, **AddRef**, 및 **릴리스** 메서드. 클래스 생성자 및 소멸자를 구현할 수도 있습니다. 이 부분에서는 작업을 간소화 하기 위해 가장 능숙 하는 Visual c + + 도구를 선택 합니다.  
+ 이벤트 클래스에서 상속 **IUnknown**이므로 구현 해야 합니다 **QueryInterface**를 **AddRef**, 및 **릴리스** 메서드. 또한 클래스 생성자와 소멸자를 구현 합니다. 작업의이 부분을 간소화 하기 위해 가장 편안한 Visual c + + 도구를 선택 합니다.  
   
- 알 수 있는 이벤트 처리기 되어 사용할 수 있는 실행 하 여 확인 **QueryInterface** 에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 에 대 한 개체는  **IConnectionPointContainer** 및 **IConnectionPoint** 인터페이스입니다. 그런 다음 실행할 **IConnectionPoint::Advise** 각 클래스에 대 한 합니다.  
+ 확인 하는 알려진 해당 이벤트 처리기를 사용할 수 있습니다 실행 **QueryInterface** 에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하 고 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 에 대 한 개체는  **IConnectionPointContainer** 하 고 **IConnectionPoint** 인터페이스입니다. 그런 다음 실행할 **IConnectionPoint::Advise** 각 클래스에 대 한 합니다.  
   
- 예를 들어 사용자가 반환 하는 부울 함수 사용을 가정 **True** 성공적으로 알리는 경우는 **레코드 집합** 이벤트 처리기를 사용할 수 있는 개체입니다.  
+ 예를 들어, 반환 하는 부울 함수를 사용 하는 것으로 가정 **True** 성공적으로 알리는 경우를 **Recordset** 이벤트 처리기를 사용할 수 있는 개체입니다.  
   
 ```  
 // BeginEventExampleVC03  
@@ -102,9 +99,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- 이 시점에 대 한 이벤트는 **RecordsetEvent** 제품군을 사용할 수 있고으로 메서드를 호출할지 **레코드 집합** 이벤트가 발생 합니다.  
+ 이 시점에 대 한 이벤트를 **RecordsetEvent** 제품군 설정 되 고 메서드를 호출할 **레코드 집합** 이벤트가 발생 합니다.  
   
- 나중에 이벤트 처리기를 사용할 수 없도록 설정 하려는 경우 연결 지점을 다시 가져오고 발급는 **IConnectionPoint::Unadvise** 메서드.  
+ 나중에 이벤트 처리기를 사용할 수 없게 하려는 경우 연결 지점을 다시 가져오고 실행 합니다 **iconnectionpoint:: Unadvise** 메서드.  
   
 ```  
 // BeginEventExampleVC04  
@@ -116,7 +113,7 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- 인터페이스를 해제 하 고 적절 하 게 클래스 개체를 삭제 해야 합니다.  
+ 인터페이스를 해제 하 고 적절 하 게 클래스 개체를 제거 해야 합니다.  
   
  다음 코드와의 완전 한 예제는 **레코드 집합** 이벤트 싱크 클래스입니다.  
   

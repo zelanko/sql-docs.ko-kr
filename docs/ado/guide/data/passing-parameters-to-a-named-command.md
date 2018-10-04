@@ -1,33 +1,30 @@
 ---
-title: 명명 된 명령에 매개 변수를 전달 | Microsoft Docs
+title: 명명된 된 명령에 매개 변수를 전달 합니다. | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773391"
 ---
-# <a name="passing-parameters-to-a-named-command"></a>명명 된 명령에 매개 변수 전달
-로 전달 됩니다 명령의 결과 마찬가지로 *아웃* 명명 된 명령의 매개 변수 매개 변수화 된 명령 수에로 전달 된 *에* 명명 된 명령에는 변수입니다.  
+# <a name="passing-parameters-to-a-named-command"></a>명명된 명령에 매개 변수 전달
+명령의 결과로 전달 됩니다와 마찬가지로 *아웃* 명명 된 명령의 매개 변수 매개 변수화 된 명령 수에 대 한 되었습니다로 전달 된 *에서* 명명 된 명령에는 변수.  
   
- 다음 코드 예제를 갖는 고객에 의해 모든 주문을 검색 하려고 배치 **CustomerID** Northwind 데이터베이스에서 "ALKFI" 됩니다. 값 **CustomerID** 명령어를 호출할 때 시간에 제공 됩니다.  
+ 다음 코드 예제에서는 해당 고객이 모든 주문을 검색 하려고 배치 **CustomerID** Northwind 데이터베이스에서 "ALKFI" 됩니다. 변수의 **CustomerID** 명명 된 명령을 호출 될 때 제공 합니다.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -80,15 +77,15 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 모든 출력 변수 앞에 야 모든 입력된 매개 변수 및 매개 변수의 데이터 형식과 일치 해야 합니다 또는 해당 필드의로 변환할 수를 확인 합니다. 다음 문은-  
+ 모든 출력 변수 앞에 야 모든 입력된 매개 변수 및 매개 변수의 데이터 형식과 일치 해야 합니다 또는 해당 필드의 변환 수를 확인 합니다. 다음 문은-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- — 필요한 입력된 매개 변수 이므로 일치 하지 않는 데이터 형식 중 오류가 발생 합니다는 **문자열** 형식 아닌는 **정수** 유형입니다.  
+ -필수 입력된 매개 변수 이므로 일치 하지 않는 데이터 형식 중 오류가 발생 하면를 **문자열** 형식이 아닌는 **정수** 형식입니다.  
   
- 다음 호출-  
+ 다음 호출은-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  

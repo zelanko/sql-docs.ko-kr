@@ -6,22 +6,19 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Parameter object [ADO], members
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc627b0bacd523a05e02ede96d2c4283db707c3e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45cf2031d9b87b569f206364f984db17633b7a5e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659697"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>매개 변수 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -35,11 +32,11 @@ ms.locfileid: "35280522"
   
  [전체 자릿수 속성](../../../ado/reference/ado-api/precision-property-ado.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [Size 속성](../../../ado/reference/ado-api/size-property-ado-parameter.md)  
   
- [Type 속성](../../../ado/reference/ado-api/type-property-ado.md)  
+ [형식 속성](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [Value 속성](../../../ado/reference/ado-api/value-property-ado.md)  
   

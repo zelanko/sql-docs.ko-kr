@@ -1,12 +1,10 @@
 ---
-title: sys.dm_broker_queue_monitors (Transact SQL) | Microsoft Docs
+title: sys.dm_broker_queue_monitors (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_broker_queue_monitors
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cef9da48e964164ca13b80de6f69c00d889bd08
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779861"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +36,12 @@ ms.locfileid: "34468349"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|모니터에서 감시하는 큐를 포함하는 데이터베이스의 개체 식별자입니다. NULL을 허용합니다.|  
 |**queue_id**|**int**|모니터에서 감시하는 큐의 개체 식별자입니다. NULL을 허용합니다.|  
-|**상태**|**nvarchar(32)**|모니터의 상태입니다. NULL을 허용합니다. 다음 중 하나일 수 있습니다.<br /><br /> **비활성**<br /><br /> **알림을**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|모니터의 상태입니다. NULL을 허용합니다. 다음 중 하나일 수 있습니다.<br /><br /> **비활성**<br /><br /> **알림을**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|큐에서 RECEIVE가 마지막으로 빈 결과를 반환한 시간입니다. NULL을 허용합니다.|  
 |**last_activated_time**|**datetime**|이 큐 모니터에서 마지막으로 저장 프로시저를 활성화한 시간입니다. NULL을 허용합니다.|  
 |**tasks_waiting**|**int**|이 큐에 대해 RECEIVE 문 내에서 현재 대기하고 있는 세션 수입니다. NULL을 허용합니다.<br /><br /> 참고:이 숫자는 큐 모니터에서 세션을 시작 하는 여부에 관계 없이 receive 문을 실행 하는 모든 세션을 포함 합니다. RECEIVE와 함께 WAITFOR를 사용하는 경우 해당됩니다. 기본적으로 이러한 태스크는 메시지가 큐에 도착할 때까지 대기하고 있습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -78,9 +75,9 @@ ON ( t2.object_id = t4.queue_id  AND t4.database_id = DB_ID() )
 INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 관련 동적 관리 뷰 & #40; Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

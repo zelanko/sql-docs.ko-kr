@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696902"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-데이터 원본에 대 한 연결을 열 때 누락 된 매개 변수를 요구 하는 대화 상자를 표시할지 여부를 지정 합니다.  
+데이터 원본에 연결을 열 때 누락 된 매개 변수를 묻는 대화 상자를 표시할지 여부를 지정 합니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1|항상 메시지를 표시합니다.|  
-|**adPromptComplete**|2|자세한 정보가 필요한 경우 메시지를 표시 합니다.|  
-|**adPromptCompleteRequired**|3|자세한 정보가 필요 하지만 선택적 매개 변수를 사용할 수 없습니다 경우 메시지를 표시 합니다.|  
+|**adPromptAlways**|1|항상 표시합니다.|  
+|**adPromptComplete**|2|자세한 정보가 필요한 경우 메시지 표시 합니다.|  
+|**adPromptCompleteRequired**|3|자세한 내용은 필요 하지만 선택적 매개 변수는 허용 되지 않습니다 하는 경우 메시지를 표시 합니다.|  
 |**adPromptNever**|4|표시 하지 않습니다.|  
   
-## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  Package: **com.ms.wfc.data**  
   
 |상수|  

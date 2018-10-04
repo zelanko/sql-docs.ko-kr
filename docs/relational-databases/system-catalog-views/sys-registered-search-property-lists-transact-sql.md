@@ -1,14 +1,11 @@
 ---
-title: sys.registered_search_property_lists (Transact SQL) | Microsoft Docs
+title: sys.registered_search_property_lists (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - registered_search_property_lists_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.registered_search_property_lists catalog view
 - search property lists [SQL Server], viewing
 ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0e404aa67e5e0cc386ab06db4d93cd1d988d86c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 36761417e5be68ef9da7c28464562ada75af088d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617791"
 ---
 # <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +42,10 @@ ms.locfileid: "33178739"
 |**modify_date**|**datetime**|ALTER 문을 사용하여 속성 목록을 마지막으로 수정한 날짜입니다.|  
 |**principal_id**|**int**|속성 목록의 소유자입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자가 소유하고 있거나 일부 REFERENCE 권한이 부여된 검색 속성만 검색 속성 목록에서 메타데이터를 볼 수 있도록 제한됩니다.  
   
 > [!NOTE]  
@@ -65,7 +61,7 @@ SELECT property_list_id, name FROM sys.registered_search_property_lists;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [sys.fulltext_indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   

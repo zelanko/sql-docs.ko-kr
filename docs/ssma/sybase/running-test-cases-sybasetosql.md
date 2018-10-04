@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e74fe0d569c627df15b4a75200b6821a236404ef
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833241"
 ---
 # <a name="running-test-cases-sybasetosql"></a>테스트 사례 실행(SybaseToSQL)
 SSMA 테스터는 테스트 사례를 실행 하면 테스트를 위해 선택한 개체를 실행 하 고 확인 결과 대 한 보고서를 만듭니다. 결과 두 플랫폼 모두에서 동일한 경우 테스트에 성공 합니다. Sybase 간에 개체의 관계 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 SSMA 프로젝트에 스키마 매핑 설정에 따라 결정 됩니다.  
@@ -51,7 +45,7 @@ SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대 한 
   
 SSMATESTER2005db 또는 SSMATESTER2008db 데이터베이스 및 Sybase에서 다음 개체 만들어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssmatesterdb_syb 데이터베이스에 있습니다.  
   
-|속성|형식|Description|  
+|이름|형식|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|트리거|확인 된 테이블의 변경 내용을 감사 하는 트리거.|  
 |USER_TABLE$Aud|Table|테이블을 삭제 하 고 덮어쓸 행을 저장 합니다.|  
@@ -63,7 +57,7 @@ SSMATESTER2005db 또는 SSMATESTER2008db 데이터베이스 및 Sybase에서 다
   
 Sybase에서 확인 된 테이블의 데이터베이스에서 다음 개체를 만들 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
-|속성|형식|Description|  
+|이름|형식|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|트리거|확인 된 테이블의 변경 내용을 감사 하는 트리거.|  
   

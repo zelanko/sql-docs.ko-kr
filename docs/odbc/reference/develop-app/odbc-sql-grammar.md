@@ -1,27 +1,24 @@
 ---
-title: ODBC SQL 문법을 | Microsoft Docs
+title: ODBC SQL 문법 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], SQL grammar
 ms.assetid: 301817a7-d656-4078-b95f-e5b8099d4be4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 557e9fde8341b33cca874e6c55e42c962c79d0e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53200bb8af774c11b9384174d5596708ef01f990
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797251"
 ---
 # <a name="odbc-sql-grammar"></a>ODBC SQL 문법
-상호 운용 가능한 응용 프로그램 SQL 문에서 ODBC SQL 문법을 항상 사용 해야 합니다. 그러나 성능이 매우 다양이이 문법 내 에서도 불가능합니다. 자세한 내용은 참조 [SQL 문을 상호 운용성](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)합니다.
+상호 운용 가능한 응용 프로그램 SQL 문에서 ODBC SQL 문법 항상 사용 해야 합니다. 그러나 상당한 변형이이 문법과 내 에서도 가능 합니다. 자세한 내용은 [SQL 문 상호 운용성](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)합니다.

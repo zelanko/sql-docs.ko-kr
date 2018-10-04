@@ -5,25 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], procedure call
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5279794a7f18df2ce2d56210e3ab1373af5cde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908628"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806562"
 ---
 # <a name="procedure-call-escape-sequence"></a>프로시저 호출 이스케이프 시퀀스
 ODBC는 이스케이프 시퀀스를 사용 하 여 프로시저 호출에 대 한 합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -40,29 +37,29 @@ ODBC는 이스케이프 시퀀스를 사용 하 여 프로시저 호출에 대 �
   
  *프로시저 식별자* :: = *사용자 정의 이름*  
   
- *프로시저 이름* :: = *프로시저 식별자*  
+ *프로시저 이름을* :: = *프로시저 식별자*  
   
- &#124;*소유자 이름*. *프로시저 식별자*  
+ &#124;*소유자 이름*. *절차-식별자*  
   
- &#124;*카탈로그 이름은 카탈로그 구분* *프로시저 식별자*  
+ &#124;*카탈로그 이름을 카탈로그 구분 기호* *프로시저 식별자*  
   
- &#124;*카탈로그 이름은 카탈로그 구분* [*소유자 이름*]. *프로시저 식별자*  
+ &#124;*카탈로그 이름을 카탈로그 구분 기호* [*소유자 이름*]. *절차-식별자*  
   
  (세 번째 구문은 데이터 원본 소유자를 지원 하지 않는 경우에 유효 합니다.)  
   
  *소유자 이름을* :: = *사용자 정의 이름*  
   
- *카탈로그 이름* :: = *사용자 정의 이름*  
+ *카탈로그 이름이* :: = *사용자 정의 이름*  
   
- *카탈로그 구분* :: = {*구현에서 정의 된*}  
+ *카탈로그 구분 기호* :: = {*구현에서 정의 된*}  
   
- (통해 반환 되는 카탈로그 구분 **SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR 정보 옵션을 사용 합니다.)  
+ (통해 반환 되는 카탈로그 구분 **SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR 정보 옵션을 사용 하 여.)  
   
  *프로시저 매개 변수 목록을* :: = *프로시저 매개 변수*  
   
- &#124;*프로시저 매개 변수*, *프로시저 매개 변수 목록*  
+ &#124;*프로시저 매개 변수가*, *프로시저 매개 변수 목록*  
   
- *프로시저 매개 변수* :: = *동적 매개 변수* &#124; *리터럴* &#124; *빈 문자열*  
+ *프로시저 매개 변수가* :: = *동적 매개 변수* &#124; *리터럴* &#124; *빈 문자열*  
   
  *빈 문자열* :: =  
   
@@ -70,6 +67,6 @@ ODBC는 이스케이프 시퀀스를 사용 하 여 프로시저 호출에 대 �
   
  *ODBC esc 종결자* :: =}  
   
- (프로시저 매개 변수가 빈 문자열 하는 경우 프로시저 기본값 해당 매개 변수에 사용 합니다.)  
+ (프로시저 매개 변수는 빈 문자열인 경우 프로시저는 기본 값을 해당 매개 변수에 대 한 합니다.)  
   
- 드라이버는 ODBC 프로시저 호출 구문 지원를 데이터 소스는 프로시저를 지원 하는지 여부를 확인 하려면 응용 프로그램이 호출할 수 **SQLGetInfo** SQL_PROCEDURES 정보 유형을 사용 합니다.
+ 드라이버는 ODBC 프로시저 호출 구문 지원를 데이터 소스는 프로시저를 지원 하는지 여부를 확인 하려면 응용 프로그램이 호출할 수 있습니다 **SQLGetInfo** SQL_PROCEDURES 정보 형식을 사용 하 여 합니다.

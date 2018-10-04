@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IntermediateCubeDimensionID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - IntermediateCubeDimensionID element
 ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8945791ccb2b09faf3d42821a847b2a822bceda6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b95216c83858e343341217a3efa34ab01fa87f70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059923"
 ---
 # <a name="intermediatecubedimensionid-element-assl"></a>IntermediateCubeDimensionID 요소(ASSL)
   참조 차원을 측정값 그룹에 연결하는 차원 ID를 포함합니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37204025"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37204025"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ReferenceMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  부모에 해당 하는 요소가 `IntermediateCubeDimensionID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>합니다.  

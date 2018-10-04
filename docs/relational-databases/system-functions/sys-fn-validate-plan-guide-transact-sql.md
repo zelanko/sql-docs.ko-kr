@@ -1,14 +1,11 @@
 ---
-title: sys.fn_validate_plan_guide (Transact SQL) | Microsoft Docs
+title: sys.fn_validate_plan_guide (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_validate_plan_guide
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b941fabfd4ebbd3ca41375622bf682f12b0fc26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798311"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>인수  
  *plan_guide_id*  
- 보고 되는 계획 지침의 ID는 [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 카탈로그 뷰에 있습니다. *plan_guide_id* 은 **int** 이며 기본값은 없습니다.  
+ 보고 되는 계획 지침의 ID를 [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 카탈로그 뷰에 있습니다. *plan_guide_id* 됩니다 **int** 기본값은 없습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -60,7 +56,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |state|**smallint**|오류가 발생한 코드의 지점을 나타내는 오류의 상태 번호입니다.|  
 |message|**nvarchar(2048)**|오류의 메시지 텍스트입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  OBJECT 범위 계획 지침에는 참조된 개체에 대한 VIEW DEFINITION 또는 ALTER 권한이 필요하고 계획 지침에 제공된 쿼리나 일괄 처리에 대한 권한이 필요합니다. 예를 들어 일괄 처리에 SELECT 문이 있으면 참조 개체의 SELECT 권한이 필요합니다.  
   
  SQL 범위 또는 TEMPLATE 범위의 계획 지침에는 데이터베이스에 대한 ALTER 권한과 계획 지침에 제공된 쿼리나 일괄 배치를 컴파일할 수 있는 권한이 필요합니다. 예를 들어 일괄 처리에 SELECT 문이 있으면 참조 개체의 SELECT 권한이 필요합니다.  
@@ -80,7 +76,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>2. 데이터베이스를 변경하기 전에 계획 지침 유효성 테스트  
- 다음 예에서는 명시적 트랜잭션을 사용하여 인덱스를 삭제합니다. `sys.fn_validate_plan_guide` 함수는이 작업은 데이터베이스에 있는 모든 계획 지침 무효화 됩니다 있는지 여부를 확인 하려면 실행 합니다. 함수의 결과에 따라 `DROP INDEX` 문이 커밋되거나 트랜잭션이 롤백되고 인덱스가 삭제되지 않습니다.  
+ 다음 예에서는 명시적 트랜잭션을 사용하여 인덱스를 삭제합니다. `sys.fn_validate_plan_guide` 함수는이 작업에 데이터베이스에 있는 모든 계획 지침을 무효화 됩니다 있는지 여부를 확인 하려면 실행 합니다. 함수의 결과에 따라 `DROP INDEX` 문이 커밋되거나 트랜잭션이 롤백되고 인덱스가 삭제되지 않습니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -97,7 +93,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계획 지침](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

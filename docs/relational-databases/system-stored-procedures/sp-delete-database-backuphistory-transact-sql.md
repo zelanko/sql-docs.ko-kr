@@ -1,14 +1,11 @@
 ---
-title: sp_delete_database_backuphistory (Transact SQL) | Microsoft Docs
+title: sp_delete_database_backuphistory (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_database_backuphistory
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_backuphistory
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64eda53e73aa4765ba1f846f8151c2cad1c05227
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5393a2c9808584cfcc52088ad32f63c8a4ec2562
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731481"
 ---
 # <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +41,16 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
   
 ## <a name="arguments"></a>인수  
  [ **@database_name=** ] *database_name*  
- 백업 및 복원 작업에 포함된 데이터베이스의 이름을 지정합니다. *a s e _* 은 **sysname**, 기본값은 없습니다.  
+ 백업 및 복원 작업에 포함된 데이터베이스의 이름을 지정합니다. *database_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="remarks"></a>주의  
- **sp_delete_database_backuphistory** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_database_backuphistory** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  이 저장 프로시저는 다음 테이블에 영향을 줍니다.  
   
@@ -74,7 +70,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
   
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -87,7 +83,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_delete_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   

@@ -5,33 +5,30 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35416c2d6e7b082141755660f0fda1011ad5c606
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cac190a634185a5bed77a7ff38423782044c83ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778501"
 ---
-# <a name="using-scrollable-cursors"></a>스크롤 가능 커서를 사용 하 여
-스크롤 가능 커서를 사용 하 여 이러한 세 가지 단계로 구성 됩니다.  
+# <a name="using-scrollable-cursors"></a>스크롤 가능 커서 사용
+스크롤 가능 커서를 사용 하 여 이러한 세 가지 단계가 필요 합니다.  
   
-1.  커서 기능을 결정 합니다.  
+1.  커서 기능을 확인 합니다.  
   
 2.  커서를 설정 합니다.  
   
-3.  스크롤 및 인출 행 수입니다.  
+3.  행 스크롤 및 인출 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

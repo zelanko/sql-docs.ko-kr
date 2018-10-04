@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672661"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>서버 연결 파일 (AccessToSQL) 만들기
-서버 정보 수 스크립트 파일의 서버 섹션에서 지정 합니다. 별도 서버 연결 파일에 서버 정보를 지정할 수도 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트와 서버 둘 다 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
+서버 정보 수 스크립트 파일의 서버 섹션에서 중 하나를 지정 합니다. 별도 서버 연결 파일에 서버 정보를 지정할 수도 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트와 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -67,11 +61,11 @@ ms.locfileid: "34773629"
 </sql-azure>  
 ```  
   
-## <a name="server-connection-file-validation"></a>서버 연결에 대 한 파일 유효성 검사  
-사용자가 서버 연결 파일 스키마 정의 파일에 대해 유효성을 검사할 쉽게 수 **'A2SSConsoleScriptServersSchema.xsd'** '스키마' 폴더에서 사용할 수 있습니다.  
+## <a name="server-connection-file-validation"></a>서버 연결 파일 유효성 검사  
+사용자 스키마 정의 파일에 대해 자신의 서버 연결 파일을 쉽게 확인할 수 있습니다 **'A2SSConsoleScriptServersSchema.xsd'** 'Schemas' 폴더에서 사용할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에 다음 단계는 [SSMA 콘솔 실행 &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>참고자료  
 [SSMA 콘솔 (Access)를 실행합니다.](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

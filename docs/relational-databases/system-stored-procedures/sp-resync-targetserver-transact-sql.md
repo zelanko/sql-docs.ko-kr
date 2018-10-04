@@ -1,14 +1,11 @@
 ---
-title: sp_resync_targetserver (Transact SQL) | Microsoft Docs
+title: sp_resync_targetserver (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_resync_targetserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_resync_targetserver
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d91ef10c7f1e98c4ad65d014f90fc42b0317ec5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33252462"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856981"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +42,16 @@ sp_resync_targetserver
   
 ## <a name="arguments"></a>인수  
  [ **@server_name =**] **'***server***'**  
- 다시 동기화하려는 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. 경우 **모든** 지정, 모든 대상 서버가 다시 동기화 됩니다.  
+ 다시 동기화하려는 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. 하는 경우 **모든** 를 지정 하면 모든 대상 서버가 다시 동기화 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 결과 보고 **sp_post_msx_operation** 동작 합니다.  
+ 결과 보고 **sp_post_msx_operation** 작업 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **sp_resync_targetserver** 현재 집합을 대상 서버에 대 한 지침을 삭제 하 고을 다운로드 하도록 대상 서버에 대 한 새 집합을 게시 합니다. 새로운 집합은 모든 다중 서버를 삭제하는 명령과 서버에서 현재 대상이 되는 각 작업에 대한 삽입으로 구성됩니다.  
+ **sp_resync_targetserver** 대상 서버에 대 한 명령의 현재 집합을 삭제 하 고 다운로드 하려면 대상 서버에 대 한 새 집합을 게시 합니다. 새로운 집합은 모든 다중 서버를 삭제하는 명령과 서버에서 현재 대상이 되는 각 작업에 대한 삽입으로 구성됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  

@@ -1,12 +1,10 @@
 ---
-title: sys.dm_qn_subscriptions (Transact SQL) | Microsoft Docs
+title: sys.dm_qn_subscriptions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834711"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>쿼리 알림-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.locfileid: "34465269"
 |**sid**|**varbinary(85)**|이 구독을 만들고 소유하는 서버 보안 주체의 보안 ID입니다.|  
 |**object_id**|**int**|구독 매개 변수에 관한 정보를 저장하는 내부 테이블의 ID입니다.|  
 |**created**|**datetime**|구독을 만든 날짜와 시간입니다.|  
-|**timeout**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정된 된 제한 시간 보다 클 수 있습니다. 그러나 지정된 제한 시간이 경과한 후 구독이 발생되기 전에 구독을 무효화하는 변경이 나타나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 변경이 수행된 시간에 구독이 발생하게 됩니다.|  
+|**timeout**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간 지정된 된 제한 시간 보다 클 수 있습니다. 그러나 지정된 제한 시간이 경과한 후 구독이 발생되기 전에 구독을 무효화하는 변경이 나타나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 변경이 수행된 시간에 구독이 발생하게 됩니다.|  
 |**상태**|**int**|구독의 상태를 나타냅니다. 코드 목록은 설명 아래의 표를 참조하십시오.|  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
@@ -51,7 +48,7 @@ ms.locfileid: "34465269"
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|다 대 일|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|다 대 일|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  상태 코드가 0이면 상태가 정의되지 않은 것입니다.  
   
  다음 상태 코드는 변경으로 인해 구독이 발생했음을 나타냅니다.  
@@ -59,7 +56,7 @@ ms.locfileid: "34465269"
 |코드|보조 상태|정보|  
 |----------|------------------|----------|  
 |65798|데이터가 변경되어 구독이 발생했습니다.|삽입으로 인해 구독이 트리거되었습니다.|  
-|65799|데이터가 변경되어 구독이 발생했습니다.|Delete|  
+|65799|데이터가 변경되어 구독이 발생했습니다.|DELETE|  
 |65800|데이터가 변경되어 구독이 발생했습니다.|Update|  
 |65801|데이터가 변경되어 구독이 발생했습니다.|병합|  
 |65802|데이터가 변경되어 구독이 발생했습니다.|테이블 자르기|  
@@ -94,7 +91,7 @@ ms.locfileid: "34465269"
 |199168|구독이 활성화되어 있습니다.|정의되지 않은 정보 모드입니다.|  
 |199424|구독이 초기화되었지만 아직 활성화되지 않았습니다.|정의되지 않은 정보 모드입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 > [!NOTE]  
@@ -134,9 +131,9 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [알림 관련된 동적 관리 뷰를 쿼리 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [쿼리 알림 관련된 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

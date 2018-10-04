@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864401"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
@@ -102,8 +98,8 @@ sp_execute_external_script
  반환할 데이터를 포함 하는 외부 스크립트의 변수 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 저장된 프로시저 호출이 완료 되 면 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R에 대 한 출력 데이터 프레임을 이어야 합니다. Python pandas 데이터 프레임 출력 이어야 합니다. *output_data_1* 됩니다 **sysname**합니다.  기본값은 *OutputDataSet*합니다.  
 
  [ **@parallel** = 0 | 1]  
- 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 된 `@parallel` 매개 변수 1로 합니다. 이 매개 변수의 기본값은 0 (병렬 처리). 하는 경우 `@parallel = 1` 클라이언트 컴퓨터에 직접 스트리밍되는 출력 및 해당 `WITH RESULTS SETS` 절이 필요 하 고 출력 스키마를 지정 해야 합니다.  
-  
+ 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 된 `@parallel` 매개 변수 1로 합니다. 이 매개 변수의 기본값은 0 (병렬 처리). 하는 경우 `@parallel = 1` 클라이언트 컴퓨터에 직접 스트리밍되는 출력 및 해당 `WITH RESULT SETS` 절이 필요 하 고 출력 스키마를 지정 해야 합니다.  
+
  + RevoScaleR 함수를 사용 하 여 사용 하지 않는 R 스크립트를 `@parallel` 매개 변수는 스크립트는 일반적으로 병렬 처리할 수 있는 것으로 가정 하는 큰 데이터 집합을 처리 하는 것에 대 한 유용할 수 있습니다. 예를 들어, R을 사용 하는 경우 `predict` 설정에 새 예측을 생성 하는 모델을 사용 하 여 함수 `@parallel = 1` 힌트로 쿼리 엔진. 행이에 따라 분산 쿼리를 병렬 처리할 수는 **MAXDOP** 설정 합니다.  
   
  + RevoScaleR 함수를 사용 하는 R 스크립트에 대 한 병렬 처리는 자동으로 처리 하 고 지정할 수 없습니다 `@parallel = 1` 에 **sp_execute_external_script** 호출 합니다.  
@@ -121,7 +117,7 @@ sp_execute_external_script
 
 사용 하 여 **sp_execute_external_script** 지원 되는 언어로 작성 된 스크립트를 실행 합니다. 현재 지원 되는 언어는 SQL Server 2016 R Services, Python 및 SQL Server 2017의 Machine Learning Services에 대 한 R에 대 한 R입니다. 
 
-기본적으로이 저장된 프로시저가 반환한 결과 집합에는 명명 되지 않은 열을 사용 하 여 출력 됩니다. 열 이름은 스크립트 내에서 사용 되는 스크립팅 환경에 로컬인 및 출력된 결과 집합에 반영 되지 않습니다. 결과 집합 열 이름을 사용 합니다 `WITH RESULTS SET` 절의 [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)합니다.
+기본적으로이 저장된 프로시저가 반환한 결과 집합에는 명명 되지 않은 열을 사용 하 여 출력 됩니다. 열 이름은 스크립트 내에서 사용 되는 스크립팅 환경에 로컬인 및 출력된 결과 집합에 반영 되지 않습니다. 결과 집합 열 이름을 사용 합니다 `WITH RESULT SET` 절의 [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)합니다.
   
  결과 집합을 반환 하는 것 외에도 스칼라 값을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 출력 매개 변수를 사용 하 여 합니다. 다음 예제에서는 출력 매개 변수를 스크립트에 대 한 입력으로 사용 된 직렬화 된 R 모델의 사용을 보여 줍니다.  
   
@@ -281,7 +277,7 @@ END;
 GO
 ```
 
-Python 코드에 사용된 열 머리글은 SQL Server로 출력되지 않으므로 WITH RESULTS 문을 사용하여 사용할 SQL의 열 이름과 데이터 형식을 지정합니다.
+Python 코드에 열 머리글이 없는 SQL server에 대 한 출력 따라서 문을 사용 하 여 사용 하 여 결과 열 이름 및 sql에서 사용할 데이터 형식을 지정 합니다.
 
 점수 매기기의 경우 네이티브 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 함수를 사용할 수도 있으며, 이 함수는 Python 또는 R 런타임 호출을 방지하기 때문에 일반적으로 더 빠릅니다.
 

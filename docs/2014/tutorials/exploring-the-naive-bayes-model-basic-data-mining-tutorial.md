@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 172c4eb4cd0ad134298ffce813113036b79baefd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cc0e052b49cbfbf2324850aced8bd4753ca7ee3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058173"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Naive Bayes 모델 탐색(기본 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 알고리즘은 자전거 구매와 입력된 특성 간의 상호 작용을 표시 하는 여러 가지 방법을 제공 합니다.  

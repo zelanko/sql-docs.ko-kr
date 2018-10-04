@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87b6cf55c658b3f381f5b575d565b1892b454362
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 302ad689a3e54a7a9937929b9c20f975fc3cd98f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079613"
 ---
 # <a name="objects-assl"></a>개체(ASSL)
   이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 개체로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  

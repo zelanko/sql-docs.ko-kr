@@ -1,34 +1,31 @@
 ---
-title: 변경 내용 유형의 | Microsoft Docs
+title: 변경 유형에 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], types of changes
 - backward compatibility [ODBC], types of changes
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08e478da2080cf3d457d2c0a1ec5673e95ba2ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac92c6d40ea9ead6b8875e3338bb740b4bdf8523
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631821"
 ---
-# <a name="types-of-changes"></a>유형의 변경
-ODBC 3에서 세 가지 유형의 변경 내용 수행 됩니다. *x* (및 ODBC의 모든 버전). 이러한 각 이전 버전과 호환성을 다르게 영향을 받으며를 다른 방식으로 처리 됩니다. 이러한 변경 내용은 다음 표에 설명 되어 있습니다.  
+# <a name="types-of-changes"></a>변경 형식
+ODBC 3에서 세 가지 유형의 변경이 됩니다. *x* (및 ODBC의 모든 버전). 이러한 각 이전 버전과 호환성을 다르게 영향을 받으며 다른 방식으로 처리 됩니다. 이러한 변경 내용은 다음과에서 같습니다.  
   
-|변경의 유형|Description|  
+|형식 변경|Description|  
 |--------------------|-----------------|  
-|새 기능|이들은 ODBC 3으로 새로운 기능입니다. *x*등 아웃오브 라인 바인딩 설명자입니다. 이러한 경우에 응용 프로그램 및 드라이버를 뿐 아니라 드라이버 관리자 버전 3의 작업 구현 됩니다 *.x*, 되므로 이러한 이전 버전과 호환성을 확인 하려고 하지 않습니다.|  
-|중복 된 기능|ODBC 2에 존재 하는 기능 *.x* 고 ODBC 3. *x* 있지만에 각각 다른 방식으로 구현 합니다. 함수 **SQLAllocHandle** 및 **SQLAllocStmt** 은 예입니다. 이러한 이전 버전과 호환성 및 다른 중복 된 기능 매핑 드라이버 관리자에서에서 대부분 처리 합니다.|  
-|동작 변경 내용|ODBC 2에서 다르게 처리 하는 기능 *.x* 고 ODBC 3. *x*합니다. 날짜/시간 **#define** 은 예입니다. 이러한 기능은 ODBC 3에서 처리 됩니다. *x* 환경 특성 설정을 기반으로 하는 드라이버입니다. (참조 [변경 된 동작](../../../odbc/reference/develop-app/behavioral-changes.md) 자세한 정보에 대 한 합니다.)|
+|새 기능|이들은 ODBC 3에 새로 추가 된 기능입니다. *x*등 아웃오브 라인 바인딩 설명자입니다. 이러한 드라이버 관리자 뿐만 아니라 응용 프로그램 및 드라이버 버전 3 가지 경우에 구현 됩니다 *.x*이므로 이러한 이전 버전과 호환성을 확인 하지 않습니다.|  
+|중복 된 기능|이러한 기능은 ODBC 2에 존재 *.x* 고 ODBC 3. *x* 에 각각 다른 방식으로 구현 됩니다. 함수 **SQLAllocHandle** 하 고 **SQLAllocStmt** 예입니다. 이전 버전과 호환성에 대 한 문제 및 다른 중복 된 기능 드라이버 관리자의 매핑을에서 처리 하는 대부분입니다.|  
+|동작 변경 내용|이러한 기능은 ODBC 2에서 다르게 처리 됩니다 *.x* 고 ODBC 3. *x*합니다. 날짜/시간 **#define** 은 예입니다. 이러한 기능 ODBC 3에서 처리 됩니다. *x* 환경 특성 설정을 기반으로 하는 드라이버입니다. (참조 [동작 변경 내용](../../../odbc/reference/develop-app/behavioral-changes.md) 자세한.)|

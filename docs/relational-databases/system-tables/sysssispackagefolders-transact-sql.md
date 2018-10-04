@@ -1,14 +1,11 @@
 ---
-title: sysssispackagefolders (Transact SQL) | Microsoft Docs
+title: sysssispackagefolders (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackagefolders90
@@ -18,25 +15,24 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackagefolders system table
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-caps.latest.revision: 22
 author: douglasl
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb24e752bf92704b1560aa84906f28173a0d9dc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5166d82d0212c3974cbc7f95b071765ef25afdb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740591"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  폴더 계층 구조에서 각 논리적 폴더에 대 한 행을 포함 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결하면 이 폴더가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 개체 탐색기에 나열됩니다. 폴더에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 파일 시스템에 저장된 패키지가 나열됩니다.  
+  폴더 계층 구조에서 각 논리적 폴더에 대 한 하나의 행을 포함 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결하면 이 폴더가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 개체 탐색기에 나열됩니다. 폴더에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 파일 시스템에 저장된 패키지가 나열됩니다.  
   
- **parentfolderid** 열은 폴더 계층 구조에 설명 합니다. 에 null 값을 포함 하는 폴더 계층 구조 맨 위에 있는 폴더 **parentfolderid**합니다.  
+ 합니다 **parentfolderid** 열은 폴더 계층 구조에 설명 합니다. 폴더 계층의 맨 위에 있는 폴더에 null 값을 포함 **parentfolderid**합니다.  
   
- **foldername** 열 개체 탐색기에 표시 되는 폴더의 이름을 포함 합니다.  
+ 합니다 **foldername** 열 개체 탐색기에 표시 되는 폴더의 이름을 포함 합니다.  
   
  이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
 

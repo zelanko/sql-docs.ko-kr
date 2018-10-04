@@ -1,13 +1,11 @@
 ---
-title: 참여할 수 있 및 범위란 메서드 예제 (VB) | Microsoft Docs
+title: DeleteRecord 및 MoveRecord 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bc593b8184d73085e01d637863075a960e34ae8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 78dba1568180e7e49ebe1c5cc7e6ee2ed61f9497
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811901"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>참여할 수 있 및 범위란 메서드 예제 (VB)
-이 예제에는 복사, 이동, 편집 및 웹 폴더에 게시 하는 텍스트 파일의 내용을 삭제 하는 방법을 보여 줍니다. 다른 속성 및 사용 되는 메서드를 포함 [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [소스](../../../ado/reference/ado-api/source-property-ado-record.md), 및 [플러시](../../../ado/reference/ado-api/flush-method-ado.md)합니다.  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 및 MoveRecord 메서드 예제 (VB)
+이 예제에는 복사, 이동, 편집 및 웹 폴더에 게시 된 텍스트 파일의 내용을 삭제 하는 방법을 보여 줍니다. 다른 속성 및 사용 되는 메서드를 포함 [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)합니다 [원본](../../../ado/reference/ado-api/source-property-ado-record.md), 및 [플러시](../../../ado/reference/ado-api/flush-method-ado.md)합니다.  
   
 ```  
 'BeginDeleteRecordVB  
@@ -153,9 +150,9 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [참여할 수 있는 메서드 (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
- [Flush 메서드 (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
+ [DeleteRecord 메서드 (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
+ [플러시 메서드 (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren 메서드 (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
- [범위란 메서드 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
+ [MoveRecord 메서드 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL 속성 (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
  [Source 속성(ADO 레코드)](../../../ado/reference/ado-api/source-property-ado-record.md)

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048973"
 ---
 # <a name="query-options-execution-general-page"></a>쿼리 옵션 실행(일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리를 실행하는 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 쿼리 편집기 창의 본문을 마우스 오른쪽 단추로 클릭한 다음 **쿼리 옵션**을 클릭합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "37269809"
  **일괄 처리 구분 기호**  
  Transact-SQL 문을 일괄 처리로 구분하는 데 사용할 단어를 입력합니다. 기본값은 GO입니다.  
   
- **기본적으로 SQLCMD 모드로 새 쿼리 열기**  
+ **기본적으로 SQLCMD 모드로 새 쿼리를 엽니다.**  
  SQLCMD 모드로 새 쿼리를 열려면 이 확인란을 선택합니다. 이 확인란은 **도구** 메뉴를 통해 대화 상자를 연 경우에만 표시됩니다.  
   
  이 옵션을 선택할 경우 다음과 같은 제한 사항에 유의해야 합니다.  

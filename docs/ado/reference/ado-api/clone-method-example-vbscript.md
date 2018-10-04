@@ -6,31 +6,28 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783671"
 ---
-# <a name="clone-method-example-vbscript"></a>Clone 메서드 예제 (VBScript)
-사용 하 여이 예제는 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만들고 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다음 각 복사본의 레코드 포인터를 독립적으로 배치 하는 사용자 지정할 수 있도록 합니다.  
+# <a name="clone-method-example-vbscript"></a>Clone 메서드 예제(VBScript)
+이 예제에서는 합니다 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만드는 방법을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다음 각 복사본의 레코드 포인터를 독립적으로 위치를 지정할 수 있도록 합니다.  
   
- 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 사용 하 여이 예제는 **Northwind** Microsoft Access와 함께 배포 하는 데이터베이스입니다. 잘라내기 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣고 CloneVBS.asp로 저장 합니다. 모든 클라이언트 브라우저에서 결과 볼 수 있습니다.  
+ 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 이 예제에서는 합니다 **Northwind** Microsoft Access를 사용 하 여 분산 데이터베이스입니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고 CloneVBS.asp로 저장 합니다. 모든 클라이언트 브라우저에서 결과 볼 수 있습니다.  
   
- 예를 실습 하려면 줄을 변경 `RsCustomerList.Source = "Customers"` 를 `RsCustomerList.Source = "Products"` 를 큰 테이블을 계산 합니다.  
+ 예를 실습 하는 줄을 변경 `RsCustomerList.Source = "Customers"` 에 `RsCustomerList.Source = "Products"` 더 큰 테이블을 계산 합니다.  
   
 ```  
 <!-- BeginCloneVBS -->  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
@@ -25,12 +23,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2fba39e592835f3c5e6dbffc6c8b6d384c5c837a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057314"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
   이 항목에서는 로그인에 매핑된 데이터베이스 사용자를 만드는 방법 설명 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]합니다. 데이터베이스 사용자는 데이터베이스 연결 시의 로그인 ID입니다. 데이터베이스 사용자는 원하는 경우 로그인과 같은 이름을 사용할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인이 이미 있다고 가정합니다. 로그인을 만드는 방법에 대 한 자세한 내용은 [로그인을 만들려면](create-a-login.md)합니다.  
@@ -89,8 +87,7 @@ ms.locfileid: "43030655"
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- 
-  **데이터베이스 사용자 - 신규** 대화 상자에는 또한 **소유한 스키마**, **멤버 자격**, **보안 개체**및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
+ **데이터베이스 사용자 - 신규** 대화 상자에는 또한 **소유한 스키마**, **멤버 자격**, **보안 개체**및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
   
 -   **소유한 스키마** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 스키마가 나열됩니다. 데이터베이스 사용자로부터 스키마를 추가하거나 제거하려면 **이 사용자가 소유한 스키마**아래에서 스키마 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
   

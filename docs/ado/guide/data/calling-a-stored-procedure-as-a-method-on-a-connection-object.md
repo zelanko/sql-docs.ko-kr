@@ -1,34 +1,31 @@
 ---
-title: 저장 프로시저는 연결 개체의 메서드로 호출 | Microsoft Docs
+title: 연결 개체의 메서드로 저장 프로시저 호출 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758821"
 ---
-# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>저장 프로시저는 연결 개체의 메서드로 호출
-연결된 열기에 대 한 네이티브 메서드 처럼 저장된 프로시저를 호출할 수 있습니다 **연결** 개체입니다. 명명된 된 명령을 호출 비슷합니다는 **연결** 개체입니다.  
+# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>연결 개체의 메서드로 저장 프로시저 호출
+연결 열기 네이티브 메서드인 것 처럼 저장된 프로시저를 호출할 수 있습니다 **연결** 개체입니다. 명명 된 명령을 호출 비슷합니다는 **연결** 개체입니다.  
   
- 다음 Visual Basic 코드 예제에서는 CustOrdersOrders로, 여기에 나열 되어 다시 사용자 편의 위해 호출 하는 Northwind 샘플 데이터베이스의 저장된 프로시저를 호출 합니다.  
+ 다음 Visual Basic 코드 예제에서는 CustOrdersOrders 나열 된 다음 다시 사용자 편의 위해 호출 하는 Northwind 샘플 데이터베이스에서 저장된 프로시저를 호출 합니다.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -38,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 다음 코드 예제에서는 열려 있는 연결된에서 네이티브 메서드인 것 처럼 저장된 프로시저를 호출 하는 방법을 보여 줍니다 **연결** 개체입니다.  
+ 다음 코드 예제에서는 연결된을 열 때 네이티브 메서드인 것 처럼 저장된 프로시저를 호출 하는 방법을 보여 줍니다 **연결** 개체입니다.  
   
 ```  
 Const DS = "MySQLServer"  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 51
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 059f2e3a6157c003c6d709b4ea954490803582e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055263"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services(SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 즉시 사용할 도구 및 서비스 만들기, 배포 및 조직에 대 한 보고서를 관리 하는 데 전체 범위를 제공 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 보고 기능을 확장하고 사용자 지정할 수 있는 프로그래밍 기능이 있습니다.  

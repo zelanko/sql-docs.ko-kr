@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,20 +14,19 @@ helpviewer_keywords:
 - modifying SQL Server Service properties
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a49cc34f92a2dd35d5f85a6013a738184d913810
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60dc69dfa0077c5adc375aa11eba411ab4004345
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802101"
 ---
-# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript를 사용 하 여 구성 관리용 WMI 공급자 액세스
+# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript를 사용하여 구성 관리용 WMI 공급자 액세스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  이 섹션의 설치 된 인스턴스 버전을 나열 하는 VBScript 프로그램 작성 하는 방법에 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 컴퓨터에서 실행 되는 합니다.  
+  이 섹션에서는 설치 된 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 실행 되는 합니다.  
   
  이 코드 예제에서는 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스와 해당 버전을 나열합니다.  
   
@@ -46,7 +42,7 @@ ms.locfileid: "33012136"
   
 5.  파일을 저장합니다.  
   
-6.  입력 하 여 스크립트를 실행 **cscript test.vbs** 명령 프롬프트입니다.  
+6.  입력 하 여 스크립트 실행 **cscript test.vbs** 명령 프롬프트에서.  
   
 ## <a name="example"></a>예제  
   

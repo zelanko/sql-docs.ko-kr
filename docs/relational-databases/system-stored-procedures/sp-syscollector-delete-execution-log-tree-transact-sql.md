@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_delete_execution_log_tree (Transact SQL) | Microsoft Docs
+title: sp_syscollector_delete_execution_log_tree (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_execution_log_tree_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_delete_execution_log_tree
 - data collector [SQL Server], stored procedures
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e2e7efc392e28b2dd8c3f1ee4fba3c8add8b5c6
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: b234caaa0de9f111c047cf54aeafca6d4fdce8b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33246784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730431"
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +43,16 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
   
 ## <a name="arguments"></a>인수  
  [ **@log_id =** ] *log_id*  
- 컬렉션 집합 로그의 고유 식별자입니다. *log_id* 은 **int**합니다.  
+ 컬렉션 집합 로그의 고유 식별자입니다. *log_id* 됩니다 **int**합니다.  
   
  [ **@from_collection_set =** ] *from_collection_set*  
- 컬렉션 집합의 식별자입니다. *from_collection_set* 은 **bit 1 =** 합니다.  
+ 컬렉션 집합의 식별자입니다. *from_collection_set* 됩니다 **bit 1 =** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버 자격이 필요는 **dc_operator** (EXECUTE 권한 있음)와이 프로시저를 실행 하는 고정된 데이터베이스 역할.  
+ 멤버 자격이 필요 합니다 **dc_operator** (EXECUTE 권한 있음)와이 프로시저를 실행 하려면 고정된 데이터베이스 역할.  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

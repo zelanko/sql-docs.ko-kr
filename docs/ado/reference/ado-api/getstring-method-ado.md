@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708061"
 ---
-# <a name="getstring-method-ado"></a>GetString 메서드 (ADO)
+# <a name="getstring-method-ado"></a>GetString 메서드(ADO)
 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 문자열입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -42,13 +39,13 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>매개 변수  
  *StringFormat*  
- A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) 값을 지정 하는 방법을 **레코드 집합** 문자열로 변환 해야 합니다. *RowDelimiter*, *ColumnDelimiter*, 및 *NullExpr* 매개 변수 에서만 사용 되는 *StringFormat* 의  **adClipString**합니다.  
+ A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) 지정 하는 값 방법을 **레코드 집합** 문자열로 변환 합니다. 합니다 *RowDelimiter*를 *ColumnDelimiter*, 및 *NullExpr* 매개 변수 에서만 사용 됩니다는 *StringFormat* 의  **adClipString**합니다.  
   
  *NumRows*  
- (선택 사항) 식을 변환할 수는 행 개수는 **레코드 집합**합니다. 경우 *NumRows* 를 지정 하지 않으면에 있는 행의 총 개수 보다 큰 경우 또는 **레코드 집합**, 다음의 모든 행은 **레코드 집합** 변환 됩니다.  
+ (선택 사항) 변환 될 행 수를 **레코드 집합**합니다. 경우 *NumRows* 지정 하지 않으면 행의 총 개수 보다 더 오래 걸리는 경우 또는 **레코드 집합**, 다음의 모든 행의 **레코드 집합** 변환 됩니다.  
   
- *columnDelimiter*  
- (선택 사항) 그렇지 않으면 탭 문자를 지정 하는 경우 열 간에 사용 되는 구분 기호입니다.  
+ *ColumnDelimiter*  
+ (선택 사항) 탭 문자를 다르게 지정 하는 경우 열 사이 사용 된 구분 기호입니다.  
   
  *RowDelimiter*  
  (선택 사항) 행을 캐리지 리턴 문자를 다르게 지정 하는 경우 간에 사용 되는 구분 기호입니다.  

@@ -1,35 +1,32 @@
 ---
-title: 오류 메시지 (ODBC Driver for Oracle) | Microsoft Docs
+title: 오류 메시지 (Oracle 용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error messages [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], error messages
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c88cbdd839725dd9cd2ee7cc26af3138eb59d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35193df4630b9bb613186b09c16d7c42479db686
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765678"
 ---
-# <a name="error-messages-odbc-driver-for-oracle"></a>오류 메시지 (ODBC Driver for Oracle)
+# <a name="error-messages-odbc-driver-for-oracle"></a>오류 메시지(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- 오류가 발생 하면 SQLSTATE (ODBC 오류 코드)와 오류 메시지가 Microsoft ODBC Driver for Oracle 반환 합니다. 드라이버는 드라이버에서 발견 된 오류와 Oracle 서버에서 반환 된 오류에서이 정보를 파생 시킵니다.  
+ 오류가 발생 하는 Microsoft ODBC Driver for Oracle SQLSTATE (ODBC 오류 코드) 및 오류 메시지를 반환 합니다. 드라이버를 드라이버에 의해 발견 된 오류와 Oracle 서버에서 반환 된 오류에서이 정보를 파생 합니다.  
   
- 이 섹션에는 다음 항목 포함 됩니다.  
+ 이 섹션에서는 다음 항목을 포함 합니다.  
   
 -   [Oracle용 ODBC 드라이버에서 반환한 메시지](../../odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md)

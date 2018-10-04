@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.batchsettingsdialog.f1
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c9a70f95f552ee5a614f8f44e1f8436c0aa35e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077863"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>설정 변경 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 설정 변경 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 **처리** 대화 상자에 나열된 개체의 처리를 제어하는 설정을 변경할 수 있습니다. **처리** 대화 상자에서 **설정 변경** 을 클릭하여 **설정 변경** 대화 상자를 표시할 수 있습니다.  

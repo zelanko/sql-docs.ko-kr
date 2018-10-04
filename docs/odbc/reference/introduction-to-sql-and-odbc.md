@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ed4223-89ff-4044-8bb9-19c8eafa8ad8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3e3dff0ef6dba30ff6fe0fe5363ca5548011956
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cb5d88243b604d7ca0fe40ee8b7f9a040380150
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656101"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 및 ODBC 소개
-다른 또는, 다른 유형의 데이터베이스 관리 시스템 (Dbms)에 대 한 액세스의 일정 한 방법을 제공 ODBC 만들어졌습니다. 이 소개에서는 개발의 ODBC와 관련 된 개념을 설명 합니다.  
+ODBC 다른 또는 유형이 다른 Dbms (데이터베이스 관리 시스템)에 대 한 액세스는 균일 한 수단으로 만들어졌습니다. 이 소개 ODBC의 개발에 관련 된 개념을 설명 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

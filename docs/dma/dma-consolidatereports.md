@@ -6,24 +6,21 @@ ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
-ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
+ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721091"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 

@@ -3,13 +3,10 @@ title: sp_addsubscription (TRANSACT-SQL) | Microsoft Docs
 ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -20,12 +17,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea2923af852801639d3cc2007d872a2823bc5d1b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663531"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +144,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|@shouldalert|한 번|  
+|1|한 번|  
 |2|요청 시|  
 |4|일별|  
 |8|매주|  
@@ -164,7 +161,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|@shouldalert|첫째|  
+|1|첫째|  
 |2|둘째|  
 |4|셋째|  
 |8|넷째|  
@@ -179,7 +176,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|@shouldalert|한 번|  
+|1|한 번|  
 |2|둘째|  
 |4|Minute|  
 |8|Hour|  
@@ -283,7 +280,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |0(기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자|  
-|@shouldalert|ODBC 데이터 원본 서버|  
+|1|ODBC 데이터 원본 서버|  
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |3|OLE DB 공급자|  
   
