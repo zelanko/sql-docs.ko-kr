@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172523"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>마이닝 구조(Analysis Services - 데이터 마이닝)
   마이닝 구조는 마이닝 모델을 작성하는 데이터, 즉 원본 데이터 뷰, 열 유형과 수, 학습 및 테스트 집합으로의 선택적 분할을 정의합니다. 하나의 마이닝 구조는 같은 도메인을 공유하는 여러 개의 마이닝 모델을 지원할 수 있습니다. 다음 다이어그램에서는 데이터 마이닝 구조와 이를 구성하는 데이터 마이닝 모델 및 데이터 원본 간의 관계를 보여 줍니다.  

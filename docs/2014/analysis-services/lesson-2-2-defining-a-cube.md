@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9de74db589624ecbf16785ca108dbdd6c5f9ca87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47e1840318adf5e2b3638dd412de50144f7b2372
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117479"
 ---
 # <a name="defining-a-cube"></a>큐브 정의
   큐브 마법사를 통해 큐브에 대한 측정값 그룹과 차원을 정의할 수 있습니다. 다음 태스크에서는 큐브 마법사를 사용하여 큐브를 만듭니다.  

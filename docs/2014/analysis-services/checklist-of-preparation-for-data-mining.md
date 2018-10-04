@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd702443b8f1addf43217499b639044d359647bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057573"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>데이터 마이닝 준비 검사 목록
   마이닝 추가 기능을 사용하여 쉽고 재미있게 모델을 만들고 시험해 볼 수 있지만 반복 및 실행 가능한 결과가 필요한 경우 기본 비즈니스 요구 사항을 공식화하고 데이터를 구하고 준비하는 데 충분한 시간을 가져야 합니다. 이 단원에서는 검사 활동을 계획하기 위한 검사 목록을 다루며, 일반적인 문제에 대해 설명합니다.  

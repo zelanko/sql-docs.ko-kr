@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5efe857321a5cbfc20612950227d70d7fe0b6815
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2c0ed3a548ffb67557a9ffb7bdbe932c2187ebc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205783"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
   FileTable이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능과 함께 작동하는 방식에 대해 설명합니다.  
@@ -90,7 +87,7 @@ ms.locfileid: "37275349"
   
 -   "업데이트 가능한 뷰" 의미 체계를 기반으로 뷰를 업데이트할 수 있지만 테이블에서와 마찬가지로 내부 테이블 제약 조건에 따라 업데이트가 거부될 수 있습니다.  
   
--   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 예를 들어:  
+-   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
   

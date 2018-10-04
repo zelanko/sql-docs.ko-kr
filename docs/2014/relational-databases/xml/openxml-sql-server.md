@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebfe172528ef3881f3c62371350c3f2c7214ab81
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 707e525515104d417b287d33009aa025cc27bff8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889869"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208537"
 ---
 # <a name="openxml-sql-server"></a>OPENXML(SQL Server)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드인 OPENXML은 테이블 또는 뷰와 비슷한 메모리 내 XML 문서에 대한 행 집합을 제공합니다. OPENXML은 관계형 행 집합인 것처럼 XML 데이터에 대한 액세스를 허용합니다. 이러한 기능은 XML 문서의 내부 표현에 대한 행 집합 뷰를 제공함으로써 제공됩니다. 행 집합의 레코드는 데이터베이스 테이블에 저장할 수 있습니다.  

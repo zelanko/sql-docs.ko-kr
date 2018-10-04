@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7af0f2bfe03fd04677259482016cf259a0093bc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251155"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083883"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>측정값 그룹의 차원 세분성 정의
   사용자는 다양한 목적에 맞게 팩트 데이터의 차원을 세밀하게 또는 구체적으로 구분할 수 있습니다. 예를 들어 대리점이나 인터넷 판매의 판매 데이터는 매일 기록하고 판매 할당량 정보는 월별 또는 분기별로 기록할 수 있습니다. 이러한 시나리오에서 사용자는 서로 다른 팩트 테이블 각각에 대해 수준이 다양한 시간 차원을 사용할 수 있습니다. 새 데이터베이스 차원을 이러한 다른 수준을 가진 시간 차원으로 정의할 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 더 쉬운 방법이 있습니다.  

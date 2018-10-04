@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - remote login errors [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66c8ddd5a5ab207f9e9f29367ace2c73b8d2811b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd0003a1741ad9b8f07c034dffd9c80753e00586
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125873"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 이름을 변경하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 새 이름이 인식됩니다. 컴퓨터 이름을 다시 설정하기 위해 설치 프로그램을 다시 실행할 필요는 없습니다. 대신 다음 단계를 사용하여 sys.servers에 저장되고 @@SERVERNAME 시스템 함수로 보고되는 시스템 메타데이터를 업데이트합니다. @@SERVERNAME을 사용하거나 sys.servers에서 서버 이름을 쿼리하는 응용 프로그램 및 원격 연결에 대해 변경된 컴퓨터 이름을 반영하도록 시스템 메타데이터를 업데이트합니다.  

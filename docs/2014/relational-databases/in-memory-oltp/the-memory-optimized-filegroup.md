@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
-caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 021bab292e56b9ead1164cd3933efa6c02eb7ee4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: cd1a637bdf40202e5c8a973be8f4ae68f415cde8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076565"
 ---
 # <a name="the-memory-optimized-filegroup"></a>메모리 액세스에 최적화된 파일 그룹
   메모리 최적화 테이블을 만들려면 먼저 메모리 최적화 파일 그룹을 만들어야 합니다. 메모리 최적화 파일 그룹에는 컨테이너가 하나 이상 포함되어 있고, 각 컨테이너에는 데이터 파일이나 델타 파일, 또는 둘 다 포함되어 있습니다.  
@@ -33,7 +30,7 @@ ms.locfileid: "40394737"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   MEMORY_OPTIMIZED_DATA 파일 그룹에 하나 이상의 컨테이너를 추가해야 합니다. 예를 들어:  
+-   MEMORY_OPTIMIZED_DATA 파일 그룹에 하나 이상의 컨테이너를 추가해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  

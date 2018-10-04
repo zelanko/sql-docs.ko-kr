@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113443"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
   Analysis Services는 다차원 및 데이터 마이닝(기본값), SharePoint용 PowerPivot, 테이블 형식 중 한 가지 서버 모드로 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  

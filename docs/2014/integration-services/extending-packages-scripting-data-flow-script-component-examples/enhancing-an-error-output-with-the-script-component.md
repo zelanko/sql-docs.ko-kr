@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - transformations [Integration Services], components
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9caf48a0ba48956e6f732a2cd2514422a3d6139a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afbe12653e00f7d95a04051ee47fcf07f908a85e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129693"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
   기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 출력의 추가 열인 ErrorCode 및 ErrorColumn에는 오류 번호를 나타내는 숫자 코드와 오류가 발생한 열의 ID만 포함됩니다. 이러한 숫자 값은 해당 오류 설명이 없으므로 사용이 제한적일 수 있습니다.  
@@ -90,7 +87,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 오류 처리](../data-flow/error-handling-in-data.md)   

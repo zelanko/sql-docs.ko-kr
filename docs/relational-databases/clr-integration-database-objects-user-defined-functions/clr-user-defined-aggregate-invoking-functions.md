@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - invoking user-defined aggregate functions
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
-caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9fa5ab2af307cb0ebdd55e4137c3c7642251f10e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723371"
 ---
-# <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 사용자 정의 집계-함수 호출
+# <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 사용자 정의 집계 - 함수 호출
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서 시스템 집계 함수에 적용되는 모든 규칙을 따르는 CLR(공용 언어 런타임) 사용자 정의 집계를 호출할 수 있습니다.  
   

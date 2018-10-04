@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server replication]
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58ea6e365d16e4487a1f24700a7731ed96e04914
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147493"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 복제 토폴로지의 사용자 구성 가능한 모든 기능에 대한 프로그래밍 방식 액세스는 시스템 저장 프로시저를 통해 제공됩니다. 저장 프로시저는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]나 sqlcmd 명령줄 유틸리티를 사용하여 개별적으로 실행할 수 있지만 복제 태스크의 논리적 시퀀스를 수행하기 위해 실행할 수 있는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 작성하는 것이 효율적일 수 있습니다.  
@@ -53,7 +50,7 @@ ms.locfileid: "37292273"
   
 -   복제 마법사에 제공되는 스크립트 생성 기능을 사용하거나  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 참조하세요. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 참조하세요. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
 -   RMO(복제 관리 개체)를 사용하여 RMO 개체를 만드는 스크립트를 프로그래밍 방식으로 생성합니다.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-clien
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, stored procedures
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], about OLE DB stored procedures
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42c227a54061f06a606cb5200368b60ade6c1a68
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 217baa6d3116f0297c95ffb16c2d157bc034cfcf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413562"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082603"
 ---
 # <a name="stored-procedures"></a>저장 프로시저
   저장된 프로시저 ([저장 프로시저 &#40;데이터베이스 엔진&#41;](../../stored-procedures/stored-procedures-database-engine.md))는 데이터베이스에 저장 된 실행 개체입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
@@ -38,9 +35,9 @@ ms.locfileid: "37413562"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [저장된 프로시저를 실행 &#40;OLE DB&#41;](stored-procedures-running.md)  
+-   [저장 프로시저&#40;OLE DB&#41; 실행](stored-procedures-running.md)  
   
--   [저장된 프로시저를 호출할 &#40;OLE DB&#41;](stored-procedures-calling.md)  
+-   [저장 프로시저&#40;OLE DB&#41; 호출](stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client&#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  

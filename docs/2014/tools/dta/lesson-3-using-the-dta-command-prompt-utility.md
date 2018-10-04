@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bb9c33d7c39a8a7267d81f22ac3341bdd000589
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f74b3e156a078630d7f9f96e6f6244b771077b55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195173"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>3단원: dta 명령 프롬프트 유틸리티 사용
-  
   **dta** 명령 프롬프트 유틸리티는 데이터베이스 엔진 튜닝 관리자에서 제공하는 기능 외에도 많은 기능을 제공합니다.  
   
  자주 사용하는 XML 도구에서 데이터베이스 엔진 튜닝 관리자 XML 스키마를 사용하여 유틸리티의 입력 파일을 만들 수 있습니다. 이 스키마는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 설치되며 C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd에서 확인할 수 있습니다.  

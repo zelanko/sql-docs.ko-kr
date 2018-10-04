@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d5e885e1429507b2ae86759a1a34cd68c61d622
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206893"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
@@ -187,7 +184,7 @@ ms.locfileid: "37243193"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 `False`합니다. 자세한 내용은 [Fast Parse](../../fast-parse.md) 및 [Standard Parse](../../standard-parse.md)를 참조하세요. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 `False`합니다. 자세한 내용은 [Fast Parse](../../fast-parse.md) 및 [Standard Parse](../../standard-parse.md)를 참조하세요. .<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
 |SourceInputColumnLineageId|정수|`LineageID` 출력 열의 원본인 입력 열의 합니다.|  
   
  데이터 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  

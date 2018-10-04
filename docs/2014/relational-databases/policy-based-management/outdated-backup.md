@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1584eecec18d8cbc33a833c8e85e370ba0d9d6c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ab9ff4990c3e2ce3444f241522d928f5c97003b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203233"
 ---
 # <a name="outdated-backup"></a>오래된 백업
   이 규칙은 최근 데이터베이스 백업이 있는지 검사합니다. 여러 가지 오류로 인한 데이터 손실로부터 데이터베이스를 보호하기 위해서는 정기적인 백업을 예약하는 것이 중요합니다. 적절한 데이터 백업 빈도는 데이터베이스의 복구 모델, 가능한 데이터 손실에 대한 비즈니스 요구 사항 및 데이터베이스 업데이트 빈도에 따라 달라집니다. 자주 업데이트되는 데이터베이스의 경우 백업 사이의 작업 손실 가능성이 빠르게 증가합니다.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f6ce35e58b34e44690de9992f5e0296edbe4589f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97d47bda8f3ceb98449392cda22d2a8152e08b7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201303"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 제어 태스크 편집기
   **CDC 제어 태스크 편집기** 대화 상자를 사용하여 CDC 제어 태스크를 구성할 수 있습니다. CDC 제어 태스크 구성에는 CDC 데이터베이스, CDC 태스크 작업 및 상태 관리 정보에 대한 연결을 정의하는 작업이 포함됩니다.  

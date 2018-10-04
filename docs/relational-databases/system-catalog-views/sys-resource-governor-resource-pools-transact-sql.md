@@ -1,14 +1,11 @@
 ---
-title: sys.resource_governor_resource_pools (Transact SQL) | Microsoft Docs
+title: sys.resource_governor_resource_pools (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_resource_pools
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_resource_pools catalog view
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb68e1efdd1261c5bc6204a96b398c55cc80cc43
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 87392911d8fa393777e1b2d7b9e5bec1c416e939
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755831"
 ---
 # <a name="sysresourcegovernorresourcepools-transact-sql"></a>sys.resource_governor_resource_pools(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "33181179"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|리소스 풀의 고유한 ID입니다. Null을 허용하지 않습니다.|  
-|name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|  
+|NAME|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|  
 |min_cpu_percent|**int**|CPU 충돌이 있으면 리소스 풀의 모든 요청에 대해 보장된 평균 CPU 대역폭입니다. Null을 허용하지 않습니다.|  
 |max_cpu_percent|**int**|CPU 충돌이 있으면 리소스 풀의 모든 요청에 대해 허용된 최대 평균 CPU 대역폭입니다. Null을 허용하지 않습니다.|  
 |min_memory_percent|**int**|리소스 풀의 모든 요청에 대해 보장된 메모리 양입니다. 이것은 다른 리소스 풀과 공유되지 않습니다. Null을 허용하지 않습니다.|  
@@ -48,16 +44,16 @@ ms.locfileid: "33181179"
 |min_iops_per_volume|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 풀에 대한 볼륨 설정당 최소 IOPS(초당 I/O 작업) 0 = 예약 없음. null일 수 없습니다.|  
 |max_iops_per_volume|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 풀에 대한 볼륨 설정당 최대 IOPS(초당 I/O 작업) 0 = 제한 없음. null일 수 없습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  카탈로그 뷰는 저장된 메타데이터를 표시합니다. 메모리 구성을 표시 하려면 해당 동적 관리 뷰를 사용 하 여 [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  내용을 보려면 VIEW ANY DEFINITION 권한이 필요하고, 내용을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [리소스 관리자 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [리소스 관리자 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
+ [관리](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   
   

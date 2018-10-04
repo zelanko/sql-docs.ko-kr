@@ -1,14 +1,11 @@
 ---
-title: Always On 가용성 그룹 카탈로그 뷰 (Transact SQL) | Microsoft Docs
+title: Always On 가용성 그룹 카탈로그 뷰 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,18 +13,17 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 - YY
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88a9b47829b0cd1e2685aff2d3bf6b7d8f1a2883
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 75cab555eef1ffd53226f891a264fb1be3195de2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627481"
 ---
-# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 가용성 그룹 카탈로그 뷰 (Transact SQL)
+# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 가용성 그룹 카탈로그 뷰 (TRANSACT-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 섹션에는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]과 관련된 카탈로그 뷰 및 함수가 포함되어 있습니다.  
@@ -42,13 +38,13 @@ ms.locfileid: "33177689"
 |[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)||  
   
 > [!NOTE]  
->  조인 된 가용성 데이터베이스에 대 한 정보를 참조 하십시오.는 **replica_id** 및 **group_database_id** 열 [sys.databases (TRANSACT-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)합니다.  
+>  조인 된 가용성 데이터베이스에 대 한 정보를 참조 하세요. 합니다 **replica_id** 하 고 **group_database_id** 열에서 [sys.databases (TRANSACT-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.databases (TRANSACT-SQL)](sys-databases-transact-sql.md)   
  [sys.database_mirroring_endpoints (TRANSACT-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
  [Always On 가용성 그룹(SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [가용성 그룹 모니터링 (Transact SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 가용성 그룹 동적 관리 뷰 및 함수 (Transact SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [가용성 그룹 모니터링 (TRANSACT-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On 가용성 그룹 동적 관리 뷰 및 함수 (TRANSACT-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cd4544aefe0f8a5b474b073ef4279f50c4d8a434
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 297441a73dcf2ff6f6e0e1808f863c7641edfa30
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190573"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>모델 작성(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에 제공되는 관리 기능 중 일부를 실행할 수 있습니다.  

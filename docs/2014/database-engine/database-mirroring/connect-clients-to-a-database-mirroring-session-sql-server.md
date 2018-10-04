@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 92
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204051"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200953"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
   데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
@@ -88,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에 포함 해야 합니다는 `Server` 현재 주 서버 인스턴스를 식별 하는 초기 파트너 이름을 제공 하는 특성입니다.  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 해당 이름을 지정하는 것입니다. 예를 들어:  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 해당 이름을 지정하는 것입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `Server=Partner_A;`  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f87b088072350e58aa00d7c0063a2aa2378346cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c517445eaf8fd82e42ffa6250b9958ef3afdc40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087703"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services)
   선택한 개체에 대한 개체 정의 또는 메타데이터를 읽을 수 있는 권한을 통해 관리자는 개체 정의를 수정하거나 개체 구조를 수정하거나 개체에 대한 실제 데이터를 볼 수 있는 권한을 부여하지 않고도 개체 정보를 볼 수 있는 권한을 부여할 수 있습니다. `Read Definition` 데이터베이스, 데이터 원본, 차원, 마이닝 구조 및 마이닝 모델 수준에서 권한은 부여할 수 있습니다. 필요한 경우 `Read Definition` 큐브에 대 한 권한을 설정한 다음 `Read Definition` 데이터베이스에 대 한 합니다. 사용 권한은 가산적입니다. 예를 들어 한 역할이 큐브에 대한 메타데이터를 읽을 수 있는 권한을 부여하고 두 번째 역할은 동일한 사용자에게 차원에 대한 메타데이터를 읽을 수 있는 권한을 부여합니다. 이 경우 두 역할의 사용 권한이 결합하여 사용자는 큐브에 대한 메타데이터와 해당 데이터베이스 내의 차원에 대한 메타데이터를 읽을 수 있는 권한을 동시에 부여받습니다.  

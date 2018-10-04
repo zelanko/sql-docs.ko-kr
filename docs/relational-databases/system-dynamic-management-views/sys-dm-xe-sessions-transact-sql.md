@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_sessions (Transact SQL) | Microsoft Docs
+title: sys.dm_xe_sessions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_sessions_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e4e4e6655aeffd54d06cc1cf23aa60208076d18
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 78a083b519c7d29d9e2421f7f8a91ee540ace271
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814421"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +35,24 @@ ms.locfileid: "34468009"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary(8)**|세션의 메모리 주소입니다. 주소는 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
-|name|**nvarchar(256)**|세션의 이름입니다. name은 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
+|NAME|**nvarchar(256)**|세션의 이름입니다. 이름은 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
 |pending_buffers|**int**|처리가 보류된 가득 찬 버퍼의 수입니다. Null을 허용하지 않습니다.|  
-|total_regular_buffers|**int**|세션과 연결된 정규 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 정규 버퍼는 대부분의 경우 사용 됩니다. 이러한 버퍼는 충분한 크기를 가지고 있어 많은 이벤트를 보유할 수 있습니다. 일반적으로 세션당 3개 이상의 버퍼가 있습니다. 정규 버퍼의 수는 MEMORY_PARTITION_MODE 옵션을 통해 설정된 메모리 분할을 기반으로 서버에 의해 자동으로 결정됩니다. 정규 버퍼의 크기는 MAX_MEMORY 옵션(기본값: 4MB) 값을 버퍼 수로 나눈 것과 동일합니다. MEMORY_PARTITION_MODE 및 MAX_MEMORY 옵션에 대 한 자세한 내용은 참조 [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
+|total_regular_buffers|**int**|세션과 연결된 정규 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 정규 버퍼는 대부분의 경우 사용 됩니다. 이러한 버퍼는 충분한 크기를 가지고 있어 많은 이벤트를 보유할 수 있습니다. 일반적으로 세션당 3개 이상의 버퍼가 있습니다. 정규 버퍼의 수는 MEMORY_PARTITION_MODE 옵션을 통해 설정된 메모리 분할을 기반으로 서버에 의해 자동으로 결정됩니다. 정규 버퍼의 크기는 MAX_MEMORY 옵션(기본값: 4MB) 값을 버퍼 수로 나눈 것과 동일합니다. MEMORY_PARTITION_MODE 및 MAX_MEMORY 옵션에 대 한 자세한 내용은 참조 하세요. [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
 |regular_buffer_size|**bigint**|정규 버퍼 크기(바이트 단위)입니다. Null을 허용하지 않습니다.|  
-|total_large_buffers|**int**|대용량 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 대용량 버퍼는 이벤트가 정규 버퍼 보다 클 때 사용 됩니다. 대용량 버퍼는 이 용도에 맞게 명시적으로 따로 설정합니다. 대용량 버퍼는 이벤트 세션이 시작될 때 할당되고 MAX_EVENT_SIZE 옵션에 따라 크기가 결정됩니다. MAX_EVENT_SIZE 옵션에 대 한 자세한 내용은 참조 [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
+|total_large_buffers|**int**|대용량 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 대용량 버퍼는 이벤트가 정규 버퍼 보다 큰 경우 사용 됩니다. 대용량 버퍼는 이 용도에 맞게 명시적으로 따로 설정합니다. 대용량 버퍼는 이벤트 세션이 시작될 때 할당되고 MAX_EVENT_SIZE 옵션에 따라 크기가 결정됩니다. MAX_EVENT_SIZE 옵션에 대 한 자세한 내용은 참조 하세요. [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
 |large_buffer_siz|**bigint**|대용량 버퍼 크기(바이트 단위)입니다. Null을 허용하지 않습니다.|  
 |total_buffer_size|**bigint**|세션 이벤트를 저장하는 데 사용되는 메모리 버퍼의 총 크기(바이트 단위)입니다. Null을 허용하지 않습니다.|  
 |buffer_policy_flags|**int**|모든 버퍼가 가득 찼는데 새 이벤트가 발생한 경우 세션 이벤트 버퍼의 동작 방법을 나타내는 비트맵입니다. Null을 허용하지 않습니다.|  
 |buffer_policy_desc|**nvarchar(256)**|모든 버퍼가 가득 찼는데 새 이벤트가 발생한 경우 세션 이벤트 버퍼의 동작 방법을 나타내는 설명입니다.  Null을 허용하지 않습니다. buffer_policy_desc는 다음 중 하나일 수 있습니다.<br /><br /> 이벤트 삭제<br /><br /> 이벤트 삭제 안 함<br /><br /> 가득 찬 버퍼 삭제<br /><br /> 새 버퍼 할당|  
 |flags|**int**|세션에 설정된 플래그를 나타내는 비트맵입니다. Null을 허용하지 않습니다.|  
-|flag_desc|**nvarchar(256)**|세션에 설정된 플래그에 대한 설명입니다.  Null을 허용하지 않습니다. flag_desc는 다음의 조합이 포함 될 수 있습니다.<br /><br /> 닫을 때 버퍼 플러시<br /><br /> 전용 발송자<br /><br /> 재귀 이벤트 허용|  
+|flag_desc|**nvarchar(256)**|세션에 설정된 플래그에 대한 설명입니다.  Null을 허용하지 않습니다. flag_desc는 다음의 조합일 수 있습니다.<br /><br /> 닫을 때 버퍼 플러시<br /><br /> 전용 발송자<br /><br /> 재귀 이벤트 허용|  
 |dropped_event_count|**int**|버퍼가 가득 찼을 때 삭제된 이벤트 수입니다. 이 값은 **0** 버퍼 정책이 "가득 찬 버퍼 삭제" 또는 "이벤트 삭제 안 함" 인지 합니다. Null을 허용하지 않습니다.|  
 |dropped_buffer_count|**int**|버퍼가 가득 찼을 때 삭제된 버퍼 수입니다. 이 값은 **0** 버퍼 정책이 "이벤트 삭제" 또는 "이벤트 삭제 안 함"으로 설정 됩니다. Null을 허용하지 않습니다.|  
 |blocked_event_fire_time|**int**|버퍼가 가득 찼을 때 이벤트 발생이 차단된 기간입니다. 이 값은 **0** 버퍼 정책이 "가득 찬 버퍼 삭제" 또는 "이벤트 삭제" 인지 합니다. Null을 허용하지 않습니다.|  
 |create_time|**datetime**|세션을 생성한 시간입니다. Null을 허용하지 않습니다.|  
 |largest_event_dropped_size|**int**|세션 버퍼에 맞지 않는 가장 큰 이벤트의 크기입니다. Null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="change-history"></a>변경 내역  
@@ -66,7 +63,7 @@ ms.locfileid: "34468009"
 |buffer_size 및 total_buffers 열을 제거했습니다.|  
 |Total_regular_buffers, regular_buffer_size, total_large_buffers, large_buffer_size 및 total_buffer_size 열을 추가 합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

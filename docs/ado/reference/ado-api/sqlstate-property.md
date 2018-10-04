@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,29 +15,28 @@ f1_keywords:
 helpviewer_keywords:
 - SQLState property
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97aa3d77696162e99f94876a19083ce96d5773e5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00ab80a10b2c7c411cee0fb6061467d67cfbd4a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281932"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822143"
 ---
 # <a name="sqlstate-property"></a>SQLState 속성
 SQL 상태를 나타냅니다는 주어진 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 5 자의 반환 **문자열** ANSI SQL 표준을 준수 하는 오류 코드를 나타내는 값입니다.  
+ 5 자로 이루어진 반환 **문자열** ANSI SQL 표준을 따르는 및 오류 코드를 표시 하는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여는 **SQLState** SQL 문 처리 하는 동안 오류가 발생 하는 경우 공급자에서 반환 하는 5 자의 오류 코드를 읽을 속성입니다. 예를 들어 Microsoft OLE DB Provider for ODBC와 함께 사용할 경우 Microsoft SQL Server 데이터베이스 SQL 상태 오류 코드에서에서 시작 오류 ODBC에 또는 Microsoft SQL Server에서 발생 하 고 ODBC에 매핑되는 오류를 기반으로 하는 ODBC 오류가 발생 했습니다. 이러한 오류 코드는 ANSI SQL 표준에 설명 되어 있지만 다른 데이터 원본에 의해 다르게 구현 될 수 있습니다.  
+ 사용 된 **SQLState** SQL 문 처리 하는 동안 오류가 발생 하는 경우 공급자를 반환 하는 5 문자 오류 코드를 읽을 속성입니다. 예를 들어, Microsoft OLE DB Provider for ODBC와 함께 사용할 경우 Microsoft SQL Server 데이터베이스를 SQL 상태 오류 코드에서에서 발생 ODBC, ODBC에 고유한 오류 또는 Microsoft SQL Server에서 시작 되며 다음 ODBC에 매핑되는 오류를 기반으로 오류가 발생 했습니다. 이러한 오류 코드는 ANSI SQL 표준에 설명 되어 있습니다 하지만 다른 데이터 원본에 의해 다르게 구현 될 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Error 개체](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   

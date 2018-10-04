@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
-caps.latest.revision: 5
 aauthor: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f82ec61d5f78b2590f463cade01b044aae459dbc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c3e7a329ac77d3d630f380a836bd05f5bea75aea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821671"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, process description
 - upgrade process [Upgrade Advisor]
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb54124a1646b65632a74db6d8c4cc9630e30046
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e95a30c813ad2d72313a0e470136d650ea9686a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207163"
 ---
 # <a name="upgrade-process-overview"></a>업그레이드 프로세스 개요
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자를 사용하는 최선의 구현 방법과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 위한 권장 프로세스에 대한 요약 정보를 제공합니다.  

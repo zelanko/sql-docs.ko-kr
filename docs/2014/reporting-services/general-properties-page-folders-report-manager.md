@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f8fca88baa1a3886f06e0c812164d0c759e7d835
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083905"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156460"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>일반 속성 페이지, 폴더(보고서 관리자)
   폴더의 일반 속성 페이지를 사용하여 만든 폴더의 속성을 보거나 설정할 수 있습니다. 폴더를 만들거나 수정한 사람 및 폴더를 수정한 시간에 대한 정보가 일반 속성 페이지 맨 위에 표시됩니다.  
@@ -37,7 +34,7 @@ ms.locfileid: "39083905"
   
 2.  폴더 배너 아래의 도구 모음에서 **폴더 설정**을 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>변수  
  **이름**  
  폴더의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ * \< > | "또는 / 이름을 지정 합니다.  
   

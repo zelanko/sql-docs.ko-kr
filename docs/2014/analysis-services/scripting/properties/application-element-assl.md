@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Application Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b4a9b82bef51b02d65c934a6b8adbbbdb30e2e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200393"
 ---
 # <a name="application-element-assl"></a>Application 요소(ASSL)
   연결 된 응용 프로그램을 식별 하는 [동작](../objects/action-element-assl.md) 요소입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37279499"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -59,7 +56,7 @@ ms.locfileid: "37279499"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[동작](../objects/action-element-assl.md) 또는 해당 파생 된 요소 중 하나: [DrillThroughAction](../data-type/action-data-type-assl.md)하십시오 [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `Application` 요소는 클라이언트 응용 프로그램에서 특정 클라이언트 응용 프로그램에 적용되는 동작을 확인하는 데 사용할 수 있습니다. 클라이언트 응용 프로그램에서는 이 요소 값을 계산해야 합니다.  

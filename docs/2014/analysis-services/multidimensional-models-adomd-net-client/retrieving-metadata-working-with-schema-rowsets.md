@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f00e4e22549cf73bf95f538b1d26797d6a8509f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051927"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>ADOMD.NET에서 스키마 행 집합 작업
   ADOMD.NET 개체 모델에서 사용할 수 있는 메타데이터보다 많은 메타데이터가 필요한 경우 ADOMD.NET에서는 모든 범위의 XMLA (XML for Analysis), OLE DB, OLAP용 OLE DB 및 데이터 마이닝용 OLE DB 스키마 행 집합을 검색할 수 있는 기능을 제공합니다.  

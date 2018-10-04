@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09822e47f6fb8e1a4b91832a2b47492ae1d8c2b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180923"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>구조에 대한 테스트 데이터 집합 지정(기본 데이터 마이닝 자습서)
   데이터 마이닝 마법사의 마지막 화면에서 데이터를 테스트 집합과 학습 집합으로 나눕니다. 그런 다음 구조에 이름을 지정하고 모델에 드릴스루를 사용합니다.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrator rights [Analysis Services]
 - server-wide administrative permissions [Analysis Services]
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4af61a59de6175d4241cb6b1b9700ff7ba816430
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3100fc8ccf9f21a6c0cf760d799dcf1b15cbb5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202213"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>서버 관리자 권한 부여(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 내에서 서버 관리자 역할의 멤버는 해당 인스턴스의 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체와 데이터에 무제한으로 액세스할 수 있습니다. 데이터베이스 작성 또는 처리, 서버 속성 수정, 추적 시작(이벤트 처리용 제외) 등의 서버 차원의 태스크를 수행하려면 사용자가 서버 관리자 역할의 멤버여야 합니다.  

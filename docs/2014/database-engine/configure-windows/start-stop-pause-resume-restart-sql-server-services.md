@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
@@ -40,16 +38,15 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 760ad35b8212ab8b38e441a3f5db332bce9f2bec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e451c01400fcf32a3676e0904bf44f226718985
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140721"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
   이 항목에서는 시작, 중지, 일시 중지, 재개 또는 다시 시작 하는 방법을 설명 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** 명령 프롬프트에서 명령을 [!INCLUDE[tsql](../../includes/tsql-md.md)], 또는 PowerShell입니다.  

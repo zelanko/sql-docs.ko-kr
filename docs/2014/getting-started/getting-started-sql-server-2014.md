@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - data-quality-services
@@ -14,19 +13,17 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: c5dc6314da166a0503f31326dfd562fc42a635f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccb6285f43764de7c7b6958aebd96de0fd40bac0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174283"
 ---
 # <a name="getting-started-sql-server-2014"></a>시작(SQL Server 2014)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 정보, 시스템 요구 사항, 설치 지침 등의 원본을 살펴봅니다.  

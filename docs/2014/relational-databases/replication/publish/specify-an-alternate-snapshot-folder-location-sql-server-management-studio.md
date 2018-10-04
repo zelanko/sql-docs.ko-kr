@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], alternate folder locations
 - snapshot replication [SQL Server], alternate folder locations
 - alternate snapshot folders [SQL Server replication]
 ms.assetid: 9293f0eb-5531-47ec-b6e2-0392823ce5cc
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48168354fd6609e4e43571c53c99cb80193aa98e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cae9676985ce2858d7eae1e2f6dc139ee6e4ed54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132953"
 ---
 # <a name="specify-an-alternate-snapshot-folder-location-sql-server-management-studio"></a>대체 스냅숏 폴더 위치 지정(SQL Server Management Studio)
   **게시 속성 - \<Publication>** 대화 상자의 **스냅숏** 페이지에 대체 스냅숏 위치를 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  

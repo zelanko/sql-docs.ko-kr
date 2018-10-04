@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b94ba91b68daf5415b4c9ae753f4d9e32c6949bc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 536860699bcdbed6753724bfad7832bc9fa7705e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144011"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>날짜 및 시간 기능 향상을 위한 OLE DB API 지원
   다음 OLE DB API는 향상된 날짜/시간 기능을 지원합니다.  
@@ -28,7 +25,7 @@ ms.locfileid: "37408389"
 |기능|Description|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|응용 프로그램에서 `datetime`, `datetime2` 및 `smalldatetime` 값을 구분할 수 있도록 DBBINDING 구조체에 플래그가 추가됩니다. 자세한 내용은 [매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  
-|Ibcpsession:: Bcpcolfmt|자세한 내용은 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.|  
+|IBCPSession::BCPColFmt|자세한 내용은 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.|  
 |ICommandWithParameters::GetParameterInfo|자세한 내용은[매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  
 |ICommandWithParameters::SetParameterinfo|자세한 내용은[매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  
 |IColumnsRowset::GetColumnsRowset|자세한 내용은[매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  
@@ -38,6 +35,6 @@ ms.locfileid: "37408389"
 |ITableDefinition::CreateTable|자세한 내용은 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-ole-db-date-and-time-improvements.md)합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [날짜 및 시간 기능 향상 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

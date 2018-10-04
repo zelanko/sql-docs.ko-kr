@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2d22c652ce63bfc3069756251ff554a5d13c186
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197353"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>2단계: 플랫 파일 연결 관리자 추가 및 구성
   이 태스크에서는 플랫 파일 연결 관리자를 방금 작성한 패키지에 추가합니다. 플랫 파일 연결 관리자를 통해 패키지가 플랫 파일에서 데이터를 추출할 수 있습니다. 플랫 파일 연결 관리자를 사용하여 패키지가 플랫 파일에서 데이터를 추출할 때 적용할 열 구분 기호를 포함한 파일 형식, 파일 이름과 위치 및 로캘과 코드 페이지를 지정할 수 있습니다. 또한 개별 열의 데이터 형식을 수동으로 지정하거나 **열 유형 제안** 대화 상자를 사용하여 추출된 데이터 열을 자동으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터 형식에 매핑할 수 있습니다.  

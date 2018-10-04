@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: d59ad6ad8059e7261054470c310d8fd82dbd88d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86308d04c45dfdb2bb135d1dc4d8a1da8bb957ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056344"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>극좌표형 차트(보고서 작성기 및 SSRS)
   극좌표형 차트에서는 360도 원에서 범주별로 그룹화된 점의 집합으로 계열이 표시됩니다. 값은 원의 중심에서 측정한 점까지의 거리로 표현됩니다. 점이 중심에서 멀수록 더 큰 값을 의미합니다. 범주 레이블은 차트의 주위에 표시됩니다. 극좌표 형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
@@ -42,7 +39,7 @@ ms.locfileid: "37208489"
 ## <a name="example"></a>예제  
  다음 예에서는 방사형 차트를 사용하는 방법을 보여 줍니다. 아래 표에는 이 차트에 사용한 데이터가 나와 있습니다.  
   
-|속성|Sales|  
+|이름|Sales|  
 |----------|-----------|  
 |Shrubs|61|  
 |Seeds|78|  

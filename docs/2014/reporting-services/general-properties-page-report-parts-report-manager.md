@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136251"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>일반 속성 페이지, 보고서 파트(보고서 관리자)
   속성 페이지를 사용하여 보고서 파트의 일반 속성을 보고 수정할 수 있습니다.  

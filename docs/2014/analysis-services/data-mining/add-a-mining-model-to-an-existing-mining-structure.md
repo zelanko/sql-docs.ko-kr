@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5140aa597e6ed1fea65ba3358fb5c493ffdaa5c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075015"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>기존 마이닝 구조에 마이닝 모델 추가
   초기 모델을 추가한 후 마이닝 구조에 마이닝 모델을 더 추가할 수 있습니다. 각 모델에 구조에 있는 열이 포함되어야 하지만 마이닝 모델마다 다르게 열 용도를 정의할 수 있습니다. 마이닝 모델 열을 정의하는 방법은 [마이닝 모델 열](mining-model-columns.md)을 참조하세요.  

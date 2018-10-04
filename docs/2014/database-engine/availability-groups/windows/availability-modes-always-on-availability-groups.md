@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129043"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 *가용성 모드* 는 지정된 가용성 복제본을 동기 커밋 모드에서 실행할 수 있는지 여부를 결정하는 복제본 속성입니다. 각 가용성 복제본에 대해 가용성 모드를 동기 커밋 모드나 비동기 커밋 모드로 구성해야 합니다.  주 복제본이 *비동기 커밋 모드*로 구성된 경우 주 복제본에서는 보조 복제본이 들어오는 트랜잭션 로그 레코드를 디스크에 기록( *로그 확정*)할 때까지 기다리지 않습니다. 특정 보조 복제본이 비동기 커밋 모드로 구성된 경우 주 복제본은 해당 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 주 복제본과 특정 보조 복제본이 모두 *동기 커밋 모드*로 구성된 경우에는 보조 복제본이 주 복제본의 *세션 제한 시간*내에 주 복제본을 ping하는 데 실패하지 않은 한 주 복제본은 보조 복제본이 로그를 확정했음을 확인할 때까지 기다립니다.  
@@ -53,8 +50,8 @@ ms.locfileid: "37273749"
   
 |현재 주 복제본|자동 장애 조치(Failover) 대상|동기-커밋 모드 다음에 대한 동작|비동기-커밋 모드 다음에 대한 동작|자동 장애 조치(Failover) 가능 여부|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 및 03|04|예|  
-|02|01|01 및 03|04|예|  
+|01|02|02 및 03|04|사용자 계정 컨트롤|  
+|02|01|01 및 03|04|사용자 계정 컨트롤|  
 |03||01 및 02|04|아니요|  
 |04|||01, 02 및 03|아니요|  
   

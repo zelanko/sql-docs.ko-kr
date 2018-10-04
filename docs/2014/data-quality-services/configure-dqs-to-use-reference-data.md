@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.rds.f1
 - sql12.dqs.administration.rdsconfiguration.f1
 - sql12.dqs.administration.configuration.createDirectRDS.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a7e2624248380059027db83d7f0342e64ca28dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd050cfcfee69f7e1c11e5c9d572cfe7ce5507dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193609"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
   이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성하는 방법에 대해 설명합니다. Windows Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  

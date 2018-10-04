@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9c67f29-0c47-4a5a-862b-db0f5213c2c9
-caps.latest.revision: 54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9c760ddd7f5445dfc00cc7c40ef877269940383
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112b45f2d5797d6797903661de0376bd4d316c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087713"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>타겟 메일링 마이닝 모델 구조 만들기(기본 데이터 마이닝 자습서)
   타겟 메일링 시나리오를 만드는 첫 번째 단계는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 데이터 마이닝 마법사를 사용하여 새 마이닝 구조와 의사 결정 트리 마이닝 모델을 만드는 것입니다.  

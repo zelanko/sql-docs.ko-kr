@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.inclusionexclusion.f1
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 183814c58f867f0a9241d4dba1f01e96ee9b8982
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a96d82cf2296fa8b0775e4fac025ebb53577344
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201573"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>용어 추출 변환 편집기(제외 탭)
   **용어 추출 변환 편집기** 대화 상자의 **제외** 탭을 사용하여 제외 테이블에 대한 연결을 설정하고 제외 용어를 포함하는 열을 지정할 수 있습니다.  

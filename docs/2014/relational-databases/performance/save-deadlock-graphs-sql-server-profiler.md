@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deadlocks [SQL Server], saving deadlock graphs
 - graphs [SQL Server]
 - saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 352bbfd96fcf3d70d6bce07ce520c4ee1333c51d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8bd4e6d73a0141b187ef21fcb6eee6208e38e95
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202043"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>교착 상태 그래프 저장(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 그래프를 저장하는 방법에 대해 설명합니다. 교착 상태 그래프는 XML 파일로 저장됩니다.  

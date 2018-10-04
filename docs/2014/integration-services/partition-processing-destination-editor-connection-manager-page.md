@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.connection.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 383b28d86ca87457d26446e1bc881ddcda1084f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2822193b536423e29f0d838ad64dda20664c7f8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200963"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>파티션 처리 대상 편집기(연결 관리자 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 지정할 수 있습니다.  

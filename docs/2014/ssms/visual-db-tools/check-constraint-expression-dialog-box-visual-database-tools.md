@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraintexpression
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4ee29da32d79f4c4048323a4b86fd2fbfbe330a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 28b62cf6a0774840385c0f3377675d26d57d6486
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190953"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK 제약 조건 식 대화 상자(Visual Database Tools)
   CHECK 제약 조건을 테이블이나 열에 연결하려면 SQL 식을 포함해야 합니다. 제공된 입력란에 CHECK 제약 조건 식을 입력합니다.  

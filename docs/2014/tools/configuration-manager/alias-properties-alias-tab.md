@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], <Alias> properties
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0554b9ce11e4551f79c73b436c1397312eedca48
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21da8eb4cb82775b1542d6d82a88558507de8900
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113313"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;별칭&gt; 속성(별칭 탭)
   별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. **\<** Alias name **> Properties** 대화 상자의 **별칭** 페이지를 사용하여 별칭에 대한 연결 문자열의 요소를 확인하거나 지정할 수 있습니다.  

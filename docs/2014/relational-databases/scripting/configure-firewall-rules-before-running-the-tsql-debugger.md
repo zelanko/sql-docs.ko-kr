@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 219b2fd0a31fbb5351044d041e3b5a4adbdda022
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170893"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL 디버거 구성
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
@@ -92,7 +89,7 @@ ms.locfileid: "37262519"
   
     8.  **프로토콜 및 포트** 탭을 선택합니다.  
   
-    9. **프로토콜 종류:** 상자에서는 **TCP** 를 선택하고 **로컬 포트:** 상자에서는 **RPC 끝점 매퍼** 를 선택한 후에 **적용**, **확인**을 차례로 클릭합니다.  
+    9. **프로토콜 종류:** 상자에서는 **TCP** 를 선택하고 **로컬 포트:** 상자에서는 **RPC 엔드포인트 매퍼** 를 선택한 후에 **적용**, **확인**을 차례로 클릭합니다.  
   
 -   도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우 UDP 포트 4500 및 UDP 포트 500을 여는 인바운드 규칙도 추가해야 합니다.  
   
@@ -119,7 +116,7 @@ ms.locfileid: "37262519"
   
     8.  **프로토콜 및 포트** 탭을 선택합니다.  
   
-    9. **프로토콜 종류:** 상자에서는 **TCP** 를 선택하고 **로컬 포트:** 상자에서는 **RPC 끝점 매퍼** 를 선택한 후에 **적용**, **확인**을 차례로 클릭합니다.  
+    9. **프로토콜 종류:** 상자에서는 **TCP** 를 선택하고 **로컬 포트:** 상자에서는 **RPC 엔드포인트 매퍼** 를 선택한 후에 **적용**, **확인**을 차례로 클릭합니다.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 호스팅하는 응용 프로그램에 대한 프로그램 항목을 추가합니다. 같은 컴퓨터에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 원격 디버깅 세션을 둘 다 열어야 하는 경우 다음과 같이 두 세션 모두에 대한 프로그램 규칙을 추가해야 합니다.  
   

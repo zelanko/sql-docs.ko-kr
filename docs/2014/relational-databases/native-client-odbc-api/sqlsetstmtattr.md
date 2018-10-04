@@ -1,28 +1,25 @@
 ---
-title: SQLSetStmtAttr | Microsoft Docs
+title: SQLSetStmtAttr | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ff0b12d2464ad9a792a9354503458408659da8e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208530"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 혼합(키 집합/동적) 커서 모델을 지원하지 않습니다. SQL_ATTR_KEYSET_SIZE를 사용하여 키 집합 크기를 0이 아닌 값으로 설정하려고 하면 오류가 발생합니다.  
@@ -113,7 +110,7 @@ ms.locfileid: "37409503"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `service=mySSBService;local database=mydb`  
   

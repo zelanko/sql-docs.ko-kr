@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionsourcedialog.f1
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 43e370a9926e342f105b68bfceba943ad4298244
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214182"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203183"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>파티션 원본 대화 상자(Analysis Services - 다차원 데이터)
   **의** 파티션 원본 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 파티션에 대한 팩트 테이블 데이터의 원본을 지정할 수 있습니다. 다음을 수행하여 **파티션 원본** 대화 상자를 표시할 수 있습니다.  

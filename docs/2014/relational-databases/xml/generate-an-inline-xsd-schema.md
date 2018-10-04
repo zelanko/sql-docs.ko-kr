@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40a1ee49efbd50e9ee0ec57b46fe86abb250291f
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 6605840bc887f4869d1ed0c153de7ca4374053fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183163"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
   FOR XML 절에서는 쿼리가 쿼리 결과와 함께 인라인 스키마를 반환하도록 요청할 수 있습니다. XDR 스키마가 필요한 경우 FOR XML 절에 XMLDATA 키워드를 사용합니다. XSD 스키마가 필요한 경우 XMLSCHEMA 키워드를 사용합니다.  
@@ -39,7 +36,7 @@ ms.locfileid: "43889259"
   
  FOR XML 쿼리에 XMLSCHEMA를 지정하는 경우 스키마와 XML 데이터를 모두 쿼리 결과로 수신합니다. 데이터의 각 최상위 요소는 기본 네임스페이스 선언을 사용하여 이전 스키마를 참조하며, 이 선언은 인라인 스키마의 대상 네임스페이스를 참조합니다.  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  

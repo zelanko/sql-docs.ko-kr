@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147460"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름 집합과 처음 일치하는 값 집합을 반환합니다.  
@@ -39,10 +36,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`)는 현재 범위에서 평가 되 고, 조회할 키 또는 이름의 집합을 지정 하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
   
  *destination_expression*  
- (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`).  
+ (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`) 을 입력합니다.  
   
  *result_expression*  
- (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!Name.Value`).  
+ (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!Name.Value`) 을 입력합니다.  
   
  *데이터 집합(dataset)*  
  보고서의 데이터 집합 이름을 지정하는 상수입니다. 예를 들면 "Colors"입니다.  
@@ -94,7 +91,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames 데이터 집합은 다음 표와 같이 범주 식별자와 범주 이름을 포함합니다.  
   
-|ID|속성|  
+|ID|이름|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  

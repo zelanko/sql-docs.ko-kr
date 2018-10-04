@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 763fea9f0ff216fab263edb1d30b56e8ca6a630f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077513"
 ---
 # <a name="browsing-the-cube"></a>큐브 찾아보기
   큐브를 배포하면 큐브 디자이너의 **브라우저** 탭에 큐브 데이터가 표시되고 차원 디자이너의 **브라우저** 탭에 차원 데이터가 표시됩니다. 큐브 및 차원 데이터 검색을 통해 작업을 증분 확인할 수 있습니다. 개체가 처리된 후 속성, 관계 및 기타 개체에 대한 약간의 변경으로 원하는 결과를 얻었는지 확인할 수 있습니다. 브라우저 탭을 사용하여 큐브 데이터와 차원 데이터 모두를 확인할 수 있지만 이 탭에서는 검색하려는 개체에 따라 다른 기능을 제공합니다.  

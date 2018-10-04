@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
@@ -19,12 +17,12 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c4836c7e6c6ce0199b280a3f2d4534f506591aad
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e3084e9d878085c20ab8af27cffb04758efceaab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200843"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
   이 페이지의 보안 및 보호 하는 방법에 대 한 필요한 정보를 찾을 수 있도록 링크를 제공 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]고 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]입니다.  

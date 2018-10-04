@@ -1,30 +1,26 @@
 ---
-title: 전체 텍스트 검색 및 의미 체계 검색 함수 (Transact SQL) | Microsoft Docs
+title: 전체 텍스트 검색과 의미 체계 Search 함수 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - semantic search [SQL Server], system functions
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04356970f56a3a2e5ee8f2a824b722801fe7262a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f2a6364d002200cea1c04b35216dcec6dc0743d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780991"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>전체 텍스트 Search 및 의미 체계 Search 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33226285"
  특정 단어나 구와 정확히 일치하거나 비슷하게 일치하는 단어 검색, 서로 근접한 단어 검색 또는 가중치 검색에서 일치하는 항목이 포함된 열에 대해 0개 이상의 행이 있는 테이블을 반환합니다.  
   
  [FREETEXTTABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- 0, 1 또는 뿐 아니라 정확한 단어는 지정 된 텍스트와 의미를 일치 하는 값이 포함 된 열에 대 한 더 많은 행의 테이블을 반환 *freetext_string*합니다.  
+ 0, 1 또는 지정 된 텍스트의 정확한 단어가 아니라와 의미는 일치 하는 값이 포함 된 열에 대 한 더 많은 행의 테이블을 반환 *freetext_string*합니다.  
   
 ## <a name="semantic-search-functions"></a>의미 체계 Search 함수  
  [semantickeyphrasetable&#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  

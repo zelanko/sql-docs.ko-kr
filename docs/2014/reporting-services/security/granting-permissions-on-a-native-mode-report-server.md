@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161473"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에 대한 사용 권한 부여
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 권한 부여 및 인증 하위 시스템을 통해 보고서 서버에서 작업을 수행하거나 항목에 액세스할 수 있는 사용자를 지정합니다. 역할 기반 권한 부여는 사용자 또는 그룹이 수행할 수 있는 동작을 역할별로 분류합니다. 인증은 기본 제공 Windows 인증이나 사용자가 제공하는 사용자 지정 인증 모듈을 기반으로 합니다. 이러한 인증 유형 중 하나에 미리 정의된 역할이나 사용자 지정 역할을 사용할 수 있습니다.  

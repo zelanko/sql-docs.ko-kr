@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SkippedLevels Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - SkippedLevels element
 ms.assetid: 4887b557-0ffc-4f42-b6b9-c98ad1208ca5
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d9293098996c927b0327f2718eba7d39e9b8b826
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb76860b4f022bf076e7d5ccaed2234c917e3f73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049413"
 ---
 # <a name="skippedlevels-element-xmla"></a>SkippedLevels 요소(XMLA)
   부모 [Attribute](attribute-element-xmla.md) 요소에서 나타내는 특성 멤버가 건너뛰는 수준의 수를 포함합니다.  
@@ -61,7 +58,7 @@ ms.locfileid: "37169494"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Attribute](attribute-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `SkippedLevels` 요소는 부모 `Attribute` 요소에서 정의하는 특성 멤버가 건너뛰는 수준의 수를 결정합니다.  

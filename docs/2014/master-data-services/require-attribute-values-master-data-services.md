@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 080f6ef911ee36a8f71efbf3c8783457ac1dc403
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e4c2932102892326ad159d5db1901873d1f22d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072823"
 ---
 # <a name="require-attribute-values-master-data-services"></a>특성 값 요구(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 마스터 데이터를 완전한 상태로 유지하려면 특성 값을 요구합니다.  

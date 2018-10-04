@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - precision [CLR integration]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43420c9e796605617e3884d8b5bf0aae0c5cfb6c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160946"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 허용 여부 및 3개의 값 논리 비교
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대해 잘 아는 경우 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 `System.Data.SqlTypes` 네임스페이스와 의미 체계 및 전체 자릿수가 유사하다는 것을 알 수 있습니다. 그러나 약간의 차이가 있으며 이 항목에서는 이러한 차이 중 가장 중요한 점에 대해 설명합니다.  

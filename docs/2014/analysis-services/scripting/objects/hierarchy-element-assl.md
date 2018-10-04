@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Hierarchy Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy element
 ms.assetid: ac54d74a-5e6c-4c24-83bf-766440478f6c
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 059536a84ff5eb888b6851f39ab7f418d9edbef3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e64d63e6dbb297571eb10f5e198a627a9828764e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200633"
 ---
 # <a name="hierarchy-element-assl"></a>Hierarchy 요소(ASSL)
   차원의 계층을 정의합니다.  
@@ -55,7 +52,7 @@ ms.locfileid: "37250903"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이||  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="data-type-and-length"></a>데이터 형식 및 길이  
@@ -72,7 +69,7 @@ ms.locfileid: "37250903"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[계층](../collections/hierarchies-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  AMO(Analysis Management Objects) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.CubeHierarchy> 및 <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>입니다.  

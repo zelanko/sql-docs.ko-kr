@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab3336a913a5b2a34c45800858af1b0b371f0746
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52ac84652bf5f1141ab40b2bcf1b3091a3dcf7de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204123"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>새로운&#39;의 SQLXML 4.0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1에는 다양한 업데이트와 향상된 기능이 포함되어 있습니다. 이 항목에서는 업데이트를 요약하고 사용 가능한 경우 자세한 정보 링크를 제공합니다. SQLXML 4.0 SP1에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 도입된 새로운 데이터 형식을 지원하기 위한 향상된 기능을 추가로 제공합니다. 이 항목은 다음과 같은 주제로 이루어져 있습니다.  
@@ -149,7 +146,7 @@ ms.locfileid: "37258229"
   
      이 키는 데이터의 공백 문자를 유지할 수 있도록 도입되었습니다. 이 레지스트리 키를 추가하고 해당 값을 0으로 설정하면 특성 값의 경우 XML의 공백 문자(LF, CR 및 탭)가 인코딩되어 반환됩니다. 요소 값의 경우 CR만 인코딩되어 반환됩니다.  
   
-     예를 들어:  
+     이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

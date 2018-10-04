@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82b5df9c4ee132a313b822da4aadc0bc5f90fd75
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b2ea62bd49073d7da87fd0e8218b656ded7f96f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105679"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
   문자 식에서 지정한 문자열 발생 위치를 반환합니다. 반환 결과는 항목의 인덱스(1부터 시작)입니다. 문자열 매개 변수는 문자 식으로 계산되고 발생 빈도 매개 변수는 정수여야 합니다. 문자열을 찾을 수 없는 경우 반환 값은 0입니다. 문자열이 발생 인수에 지정된 횟수보다 적게 발생하는 경우에도 반환 값이 0입니다.  

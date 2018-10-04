@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
@@ -20,12 +18,12 @@ ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 246607be42bf5e2725d1dcc9bf32c74527e0d9dc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8ef03fd5a9332e1c14a8c0eadf0730ccd5609c87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194753"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 프로그래밍
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기술로, OLE DB 및 ODBC 모두에서 사용되는 독립 실행형 데이터 액세스 API(응용 프로그래밍 인터페이스)입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 SQL OLE DB 공급자와 SQL ODBC 드라이버가 하나의 네이티브 DLL(동적 연결 라이브러리)로 결합되어 있습니다. 또한 Windows Data Access Components(Windows DAC, 이전의 Microsoft Data Access Components 또는 MDAC)에서 제공하는 것보다 뛰어난 새로운 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 MARS(Multiple Active Result Sets), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리, XML 데이터 형식 지원 등 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기능을 활용해야 하는 새 응용 프로그램을 작성하거나 기존 응용 프로그램을 개선할 수 있습니다.  

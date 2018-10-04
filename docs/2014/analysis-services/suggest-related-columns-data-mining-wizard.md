@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6007ce4d2eef03ad4a1f416c8c8409d13e4a544b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196893"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>관련 열 제안(데이터 마이닝 마법사)
   **관련 열 제안** 페이지를 사용하여 마법사의 이전 페이지에서 선택한 **제안** 기능의 권장 사항을 볼 수 있습니다. 입력 열은 선택한 **예측 가능** 열과의 연관성에 따라 미리 선택됩니다. 이 대화 상자의 변경 내용을 적용하는 경우 해당 변경 내용은 **학습 데이터 지정** 페이지에 반영됩니다.  

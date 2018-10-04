@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
@@ -42,19 +40,17 @@ helpviewer_keywords:
 - Deploy a SQL Server database to Azure
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c17e29b5a41930f954e5cad6b67fccbaa1cc086d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207533"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포
-  
   **Microsoft Azure VM에 SQL Server 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에서 Microsoft Azure VM(가상 머신)에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 배포합니다. 마법사는 전체 데이터베이스 백업 작업을 사용하므로 SQL Server 사용자 데이터베이스에서 전체 데이터베이스 스키마 및 데이터를 항상 복사합니다. 마법사에서는 사용자의 편의를 위해 모든 Azure VM 구성을 실행하므로 VM을 미리 구성할 필요가 없습니다.  
   
  마법사는 같은 데이터베이스 이름을 가진 기존 데이터베이스를 덮어쓰지 않으므로 차등 백업을 위해 마법사를 사용할 수 없습니다. VM에서 기존 데이터베이스를 바꾸려면 먼저 기존 데이터베이스를 삭제하거나 데이터베이스 이름을 변경해야 합니다. 진행 중인 배포 작업의 데이터베이스 이름과 VM의 기존 데이터베이스 간에 이름 충돌이 발생할 경우 마법사에서는 작업을 완료할 수 있도록 진행 중인 데이터베이스에 대해 추가된 데이터베이스 이름을 제안합니다.  
@@ -79,7 +75,7 @@ ms.locfileid: "37158514"
   
 -   VM을 만드는 데 Windows Azure VM 또는 갤러리 이미지를 사용할 계획이면 SQL Server 클라우드 어댑터를 구성하고 실행해야 합니다.  
   
--   전용 포트 11435를 사용하여 Windows Azure 게이트웨이에 있는 SQL Server 클라우드 어댑터에 대한 열린 끝점을 구성해야 합니다.  
+-   전용 포트 11435를 사용하여 Windows Azure 게이트웨이에 있는 SQL Server 클라우드 어댑터에 대한 열린 엔드포인트를 구성해야 합니다.  
   
  또한 기존 Windows Azure VM에 데이터베이스를 배포할 계획인 경우에도 다음 정보를 제공할 수 있어야 합니다.  
   
@@ -229,13 +225,11 @@ ms.locfileid: "37158514"
   
  **옵션**  
   
--   
-  **Azure Virtual Machine** – SQL Server 데이터베이스를 호스팅할 VM 세부 정보를 지정합니다.  
+-   **Azure Virtual Machine** – SQL Server 데이터베이스를 호스팅할 VM 세부 정보를 지정합니다.  
   
 -   **클라우드 서비스 이름** – VM을 호스팅하는 서비스의 이름을 지정합니다. 새 클라우드 서비스를 만들려면 새 클라우드 서비스의 이름을 지정합니다.  
   
--   
-  **가상 머신 이름** – SQL Server 데이터베이스를 호스팅할 VM 이름을 지정합니다. 새 Windows Azure VM을 만들려면 새 VM의 이름을 지정합니다.  
+-   **가상 머신 이름** – SQL Server 데이터베이스를 호스팅할 VM 이름을 지정합니다. 새 Windows Azure VM을 만들려면 새 VM의 이름을 지정합니다.  
   
 -   **설정** - 설정 단추를 사용하여 SQL Server 데이터베이스를 호스팅할 새로운 VM을 생성합니다. 기존 VM을 사용하는 경우 사용자가 제공하는 정보를 사용하여 자격 증명을 인증합니다.  
   

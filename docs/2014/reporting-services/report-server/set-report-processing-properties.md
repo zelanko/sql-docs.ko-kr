@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2d3ffb241dd28b0abff718f742ba9020df98195f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161733"
 ---
 # <a name="set-report-processing-properties"></a>보고서 처리 속성 설정
   보고서 실행 속성은 보고서의 처리 방식을 제어합니다. 실행 속성은 각 보고서별로 설정해야 합니다.  

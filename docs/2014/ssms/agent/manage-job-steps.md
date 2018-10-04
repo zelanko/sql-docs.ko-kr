@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6ef87f8fdc1dd490bffc6ef694376fae1c47fe
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167200"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
   작업 단계는 데이터베이스나 서버에서 작업이 수행하는 동작입니다. 모든 작업에는 작업 단계가 하나 이상 있어야 합니다. 작업 단계가 될 수 있는 항목은 다음과 같습니다.  

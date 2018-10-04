@@ -1,14 +1,11 @@
 ---
-title: log_shipping_secondary_databases (Transact SQL) | Microsoft Docs
+title: log_shipping_secondary_databases (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_secondary_databases_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary_databases system table
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f3daf3fa3a2e0873b5f7c62e8b0357cce858ca2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2311b37f3d804cd402715a1b9b9b1197ced78e2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727821"
 ---
 # <a name="logshippingsecondarydatabases-transact-sql"></a>log_shipping_secondary_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +40,12 @@ ms.locfileid: "33258020"
 |**disconnect_users**|**bit**|1로 설정될 경우 복원 작업 수행 시 보조 데이터베이스에서 사용자 연결이 끊어집니다. 기본값은 0입니다.|  
 |**block_size**|**int**|백업 장치의 블록 크기로 사용되는 크기(바이트)입니다.|  
 |**buffer_count**|**int**|백업 또는 복원 작업에 사용되는 버퍼의 총 개수입니다.|  
-|**max_transfer_size**|**int**|최대 입력 또는 출력 요청의 발행를 바이트 단위로 크기 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치에 있습니다.|  
+|**max_transfer_size**|**int**|크기 (바이트), 최대 입력 또는 출력 요청의에서 발급 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치에 있습니다.|  
 |**last_restored_file**|**nvarchar(500)**|보조 데이터베이스에 복원된 마지막 백업 파일의 이름입니다.|  
 |**last_restored_date**|**datetime**|보조 데이터베이스에 수행된 마지막 복원 작업의 시간과 날짜입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>관련 항목  
+ [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_help_log_shipping_secondary_database&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   

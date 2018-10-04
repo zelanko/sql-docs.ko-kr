@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6feed95973eb09bce9069d31fb370371a301f058
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848251"
 ---
 # <a name="primary-expressions-xquery"></a>기본 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

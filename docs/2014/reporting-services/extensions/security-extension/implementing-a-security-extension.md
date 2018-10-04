@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27707a7736c10794aec6c80679728988528665ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d97b570ca00251e7beaf39b104d254bf3363e8ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216773"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119335"
 ---
 # <a name="implementing-a-security-extension"></a>보안 확장 프로그램 구현
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 인증은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 보안을 위한 주 시스템입니다. 하지만 소속 조직에서 사용자 지정 보안을 충족하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 시스템을 확장해야 하는 경우도 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API로 제공되는 개발 플랫폼을 사용하여 이 작업을 수행할 수 있습니다. 이 섹션에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 보안 확장 프로그램 개요를 제공합니다.  

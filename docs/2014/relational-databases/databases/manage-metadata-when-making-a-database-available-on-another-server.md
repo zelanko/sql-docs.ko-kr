@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -34,16 +32,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbea790b9376f254be6c1de3179cc1057d5f8b7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198503"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리(SQL Server)
   이 항목에는 다음과 관련된 내용이 포함되어 있습니다.  

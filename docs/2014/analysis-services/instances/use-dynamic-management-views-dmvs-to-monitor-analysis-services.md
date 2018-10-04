@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3cbb873693a80b284e263594bfbcd4cb2046b216
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079803"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
   Analysis Services DMV(동적 관리 뷰)는 로컬 서버 작업 및 서버 상태에 대한 정보를 표시하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  

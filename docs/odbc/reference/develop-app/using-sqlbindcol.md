@@ -1,44 +1,41 @@
 ---
-title: SQLBindCol를 사용 하 여 | Microsoft Docs
+title: SQLBindCol 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776411"
 ---
-# <a name="using-sqlbindcol"></a>SQLBindCol를 사용 하 여
-응용 프로그램 호출 하 여 열을 바인딩하는 **SQLBindCol**합니다. 이 함수는 한 번에 하나의 열을 바인딩합니다. 응용 프로그램이 다음을 지정합니다.  
+# <a name="using-sqlbindcol"></a>SQLBindCol 사용
+응용 프로그램 호출 하 여 열을 바인딩합니다 **SQLBindCol**합니다. 이 함수는 한 번에 하나의 열을 바인딩합니다. 사용 하 여 응용 프로그램이 다음을 지정합니다.  
   
--   열 번호입니다. 책갈피 열; 열 0입니다. 이 열은 일부 결과 집합에 포함 되지 않습니다. 다른 모든 열을 숫자 1부터 매겨집니다. 결과 집합의 열 수보다 번호가 높은 열을 바인딩할 오류가 발생 이 오류 감지할 수 없는 결과 집합이 만들어질 때까지 반환한 하므로 **SQLFetch**이 아니라 **SQLBindCol**합니다.  
+-   열 번호입니다. Column 0은 책갈피 열; 일부 결과 집합의이 열이 포함 되지 않습니다. 다른 모든 열을 숫자 1부터 매겨집니다. 결과 집합에 열이 보다 높은 번호 열을 바인딩할 오류가 발생 이 오류 발견할 수 있는 결과 집합을 만들지 않으므로에서 반환 됩니다 **SQLFetch**가 아닌 **SQLBindCol**합니다.  
   
--   변수의 C 데이터 형식, 주소 및 바이트 길이 열에 바인딩됩니다. SQL 데이터 형식의 열을 변환할 수 없습니다; C 데이터 형식을 지정 하면 오류가 발생 이 오류가 수 검색 되지 결과 집합이 만들어질 때까지 반환한 하므로 **SQLFetch**이 아니라 **SQLBindCol**합니다. 목록이 지원 되는 변환에 대 한 참조 [SQL에서 C 데이터 형식 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식에서입니다. 바이트 길이 대 한 정보를 참조 하십시오. [데이터 버퍼 길이](../../../odbc/reference/develop-app/data-buffer-length.md)합니다.  
+-   변수의 C 데이터 유형, 주소 및 바이트 길이 열에 바인딩됩니다. 오류는 SQL 데이터 형식의 열을 변환할 수 없습니다; C 데이터 형식을 지정 하는 것 이 오류 수 검색 되지 않습니다 생성 된 결과 집합으로 반환 됩니다 **SQLFetch**가 아닌 **SQLBindCol**합니다. 지원 되는 변환의 목록을 참조 하세요 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식에서입니다. 바이트 길이 대 한 정보를 참조 하세요 [데이터 버퍼 길이](../../../odbc/reference/develop-app/data-buffer-length.md)입니다.  
   
--   길이/표시기 버퍼의 주소입니다. 길이/표시기 버퍼 선택 사항입니다. 데이터는 NULL 바이트 길이의 이진 또는 문자 데이터 또는 반환 SQL_NULL_DATA를 반환할 수 사용 됩니다. 자세한 내용은 참조 [길이/표시기 값을 사용 하 여](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)합니다.  
+-   길이/표시기 버퍼의 주소입니다. 길이/표시기 버퍼 선택 사항입니다. 데이터가 NULL 인 경우 반환 SQL_NULL_DATA 이진 또는 문자 데이터의 바이트 길이 반환 하는 것이 됩니다. 자세한 내용은 [길이/표시기 값을 사용 하 여](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)입니다.  
   
- 때 **SQLBindCol** 은 호출 드라이버 연결이 정보는 문을 사용 하 여 합니다. 데이터의 각 행을 인출할 때 바인딩된 응용 프로그램 변수에서 각 열에 대 한 데이터를 배치 하는 정보를 사용 합니다.  
+ 때 **SQLBindCol** 는 호출 드라이버 연결이 정보가이 문을 사용 하 여 합니다. 각 데이터 행을 인출할 때 바인딩된 응용 프로그램 변수에 각 열에 대 한 데이터를 넣을 정보를 사용 합니다.  
   
- 예를 들어 다음 코드는 영업 사원 및 CustID 열에 변수를 바인딩합니다. 에 열에 대 한 데이터를 반환할 *판매원* 및 *CustID*합니다. 때문에 *판매원* 문자 버퍼는 드라이버를 데이터를 자를지 여부를 결정할 수 있도록 응용 프로그램 (11)의 바이트 길이 지정 합니다. 반환 된 바이트 길이 제목, 또는 NULL 인지에서 반환할 *SalesPersonLenOrInd*합니다.  
+ 예를 들어, 다음 코드는 영업 사원 및 CustID 열에 변수를 바인딩합니다. 열에 대 한 데이터에서 반환될지 *판매원* 하 고 *CustID*. 때문에 *SalesPerson* 문자 버퍼는 응용 프로그램이 드라이버를 데이터를 자를지 여부를 확인할 수 있도록 해당 바이트 길이 (11)를 지정 합니다. 바이트 길이가 반환된 된 제목, 또는 NULL 인지에서 반환될지 *SalesPersonLenOrInd*합니다.  
   
- 때문에 *CustID* 정수 변수 이며 고정 길이 바이트 길이 지정할 필요가 없습니다; 드라이버가 것으로 간주 **sizeof (** SQLUINTEGER **)** 합니다. 반환 된 고객의 바이트 길이 데이터, ID 또는 NULL 인지 여부에 반환 됩니다 *CustIDInd*합니다. 바이트 길이 항상 때문에 응용 프로그램의 급여가 NULL 인지 여부에 interested가 참고 **sizeof (** SQLUINTEGER **)** 합니다.  
+ 때문에 *CustID* 는 정수 변수 및 길이 고정 하는 해당 바이트 길이를 지정 하지 않아도 됩니다; 드라이버 것으로 가정 **sizeof (** SQLUINTEGER **)** 합니다. 반환 된 고객의 바이트 길이 데이터, ID 또는 NULL 인지에서 반환될지 *CustIDInd*합니다. 응용 프로그램에 관여 하는 급여 NULL 인지 바이트 길이가 항상 이므로 유의 **sizeof (** SQLUINTEGER **)** 합니다.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -74,7 +71,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- 다음 코드를 실행 하는 **선택** 문은 사용자가 입력 하 고 결과 집합의 데이터의 각 행을 출력 합니다. 응용 프로그램에서 결과의 셰이프를 예측할 수 없는 있기 때문에 설정 하 여 만든는 **선택** 문, 결과 집합 앞의 예제에서와 같이 하드 코드 된 변수에 바인딩할 수 없습니다. 대신, 응용 프로그램 같은 행의 각 열에 대 한 데이터를 보유 하는 버퍼 및 길이/표시기 버퍼를 할당 합니다. 각 열에 대 한 열에 대 한 메모리의 시작 부분에 오프셋을 계산이 오프셋을 조정 하는 열에 대 한 데이터 및 길이/표시기 버퍼 맞춤 경계에서 시작 합니다. 다음 열 오프셋에서 시작 하는 메모리를 바인딩합니다. 드라이버의 관점에서이 메모리의 주소 앞의 예제에서 바인딩된 변수의 주소를 구분 되지 않습니다. 정렬에 대 한 자세한 내용은 참조 [맞춤](../../../odbc/reference/develop-app/alignment.md)합니다.  
+ 다음 코드를 실행 한 **선택** 문을 사용자가 입력 하 고 결과 집합에는 데이터의 각 행을 출력 합니다. 응용 프로그램에서 결과의 셰이프를 예측할 수 없습니다 때문에 설정 하 여 만든 합니다 **선택** 문에서 결과 집합 앞의 예제와 같이 하드 코드 된 변수 바인딩할 수 없습니다. 대신, 응용 프로그램이 해당 행의 각 열에 대 한 데이터를 보유 하는 버퍼 및 길이/표시기 버퍼를 할당 합니다. 각 열에 대 한 열에 대 한 메모리의 시작 부분 까지의 오프셋을 계산 하 고이 오프셋을 조정 하는 열에 대 한 데이터 및 길이/표시기 버퍼 맞춤 경계에서 시작 합니다. 다음 열 오프셋에서 시작 하는 메모리를 바인딩합니다. 드라이버의 관점에서이 메모리의 주소 앞의 예제에서 바인딩된 변수의 주소 구분 되지 않습니다. 맞춤에 대 한 자세한 내용은 참조 하세요. [맞춤](../../../odbc/reference/develop-app/alignment.md)합니다.  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

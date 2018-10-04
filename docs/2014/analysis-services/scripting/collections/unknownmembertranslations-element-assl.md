@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UnknownMemberTranslations Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - UnknownMemberTranslations element
 ms.assetid: 72920843-2d43-4ff4-b38e-19c9a7451cb2
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 331f61e1e0cea88ee8dfb58b5d69333f99961be4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24f9aa5470bc1283abc0fd2b50838dca880ed6d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113558"
 ---
 # <a name="unknownmembertranslations-element-assl"></a>UnknownMemberTranslations 요소(ASSL)
   캡션에 대 한 번역의 컬렉션을 포함 합니다 [UnknownMember](../objects/member-element-assl.md) 차원의 요소입니다.  
@@ -52,8 +49,8 @@ ms.locfileid: "37159344"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

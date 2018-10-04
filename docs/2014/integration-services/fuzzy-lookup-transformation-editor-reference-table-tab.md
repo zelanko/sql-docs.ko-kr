@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
-caps.latest.revision: 35
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78b04c27986224f1974dc35c3a60e02adcbe5483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37477215cbc13b17b903c58179d6ffa6026b35af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057955"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>유사 항목 조회 변환 편집기(참조 테이블 탭)
   **유사 항목 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 조회 시 사용할 원본 테이블 및 인덱스를 지정할 수 있습니다. 참조 데이터 원본은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 있는 테이블이어야 합니다.  

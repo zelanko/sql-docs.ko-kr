@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - managed code [SQL Server], CLR integration
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
-caps.latest.revision: 63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5300f1f82388e9331959d813b27a48928a47a8f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 817ff27eee40a36c2af3f73369c412722745ec7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191823"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>CLR(공용 언어 런타임) 통합 개요
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이제 통합된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows용 .NET Framework의 CLR(공용 언어 런타임) 구성 요소를 제공합니다. CLR은 관리 코드에 언어 간 통합, 코드 액세스 보안, 개체 수명 관리 및 디버깅과 프로파일링 지원 등의 서비스를 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 및 응용 프로그램 개발자는 이제 통합된 CLR을 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#을 포함한 .NET Framework 언어로 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수(스칼라 및 테이블 반환), 사용자 정의 집계 함수를 작성할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework 버전 4가 미리 설치되어 있습니다.  

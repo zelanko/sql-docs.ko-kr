@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,33 +17,32 @@ f1_keywords:
 helpviewer_keywords:
 - Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3491d76d0ba032cc9a8887f146bf9605aaf98772
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 22ee1b88ee6065a49c53ae7024c93e869099ca3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755292"
 ---
-# <a name="provider-property-ado"></a>공급자 속성 (ADO)
-에 대 한 공급자의 이름을 표시 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
+# <a name="provider-property-ado"></a>Provider 속성(ADO)
+에 대 한 공급자의 이름을 나타내는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환는 **문자열** 공급자 이름을 나타내는 값입니다.  
+ 설정 하거나 반환 된 **문자열** 공급자 이름을 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여는 **공급자** 속성을 설정 하거나 연결에 대 한 공급자의 이름을 반환 합니다. 하지만이 속성의 내용으로 설정할 수도 있습니다는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 또는 *ConnectionString* 의 인수는 [열려](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드; 공급자를 지정 호출 하는 동안 둘 이상의 위치에는 **열려** 메서드 예기치 않은 결과 가질 수 있습니다. 지정 된 없는 공급자 속성은 기본적으로 MSDASQL ([Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
+ 사용 된 **공급자** 속성을 설정 하거나 연결 공급자의 이름을 반환 합니다. 그러나이 속성의 내용으로 설정할 수도 있습니다는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 또는 *ConnectionString* 인수의 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드를 공급자를 지정 호출 하는 동안 하나 이상의 위치에는 **열고** 메서드 예기치 않은 결과가 있을 수 있습니다. 공급자가 없습니다 지정 된 경우 속성을 기본값으로 설정 됩니다 MSDASQL ([Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
   
- **공급자** 속성은 읽기/쓰기 연결이 닫혀 있고 읽기 전용으로 열려 있으면입니다. 설정이 적용 되지 않습니다 할 때까지 열거나는 **연결** 개체 또는 액세스는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 의 컬렉션은 **연결** 개체입니다. 설정이 유효 하지 않을 경우 오류가 발생 합니다.  
+ 합니다 **공급자** 를 열었을 때 닫혀 있고 읽기 전용으로 연결 되 면 속성은 읽기/쓰기입니다. 설정이 적용 되지 않습니다 때까지 열거나를 **연결** 개체 또는 액세스를 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 의 컬렉션을 **연결** 개체입니다. 설정이 올바르지 않으면 오류가 발생 했습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [공급자 및 DefaultDatabase 속성 예제 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [공급자 및 DefaultDatabase 속성 예제 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
+ [Provider 및 DefaultDatabase 속성 예제 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
+ [Provider 및 DefaultDatabase 속성 예제 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

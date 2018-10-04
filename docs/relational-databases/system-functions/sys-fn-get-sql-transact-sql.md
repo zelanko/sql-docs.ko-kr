@@ -1,14 +1,11 @@
 ---
-title: sys.fn_get_sql (Transact SQL) | Microsoft Docs
+title: sys.fn_get_sql (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842061"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33236165"
   지정된 SQL 핸들에 대한 SQL 문의 텍스트를 반환합니다.  
   
 > [!IMPORTANT]  
->  Microsoft SQL Server의 이후 버전에서는 이 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. sys.dm_exec_sql_text를 대신 사용하십시오. 자세한 내용은 참조 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)합니다.  
+>  Microsoft SQL Server의 이후 버전에서는 이 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. sys.dm_exec_sql_text를 대신 사용하십시오. 자세한 내용은 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)합니다.  
   
  
   
@@ -56,7 +52,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>인수  
  *SqlHandle*  
- 핸들 값입니다. *SqlHandle* 은 **varbinary(64)** 이며 기본값은 없습니다.  
+ 핸들 값입니다. *SqlHandle* 됩니다 **varbinary(64)** 기본값은 없습니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
@@ -68,22 +64,22 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**bit**|개체가 암호화되었는지 여부를 나타냅니다.<br /><br /> 0 = 암호화되지 않음<br /><br /> 1 = 암호화됨|  
 |text|**text**|SQL 문의 텍스트입니다. 암호화된 개체의 경우 NULL입니다.|  
   
-## <a name="remarks"></a>주의  
- Sql_handle 열에서 유효한 SQL 핸들을 가져올 수 있습니다는 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 동적 관리 뷰.  
+## <a name="remarks"></a>Remarks  
+ Sql_handle 열에서 유효한 SQL 핸들을 가져올 수 있습니다 합니다 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 동적 관리 뷰.  
   
- Fn_get_sq 캐시에 있는 핸들 전달 하는 더 이상 경우**l** 빈 결과 집합을 반환 합니다. 유효하지 않은 핸들을 전달하는 경우 일괄 처리가 중지되고 오류 메시지가 반환됩니다.  
+ 핸들을 전달 하는 더 이상에 있는지 캐시 fn_get_sq**l** 빈 결과 집합을 반환 합니다. 유효하지 않은 핸들을 전달하는 경우 일괄 처리가 중지되고 오류 메시지가 반환됩니다.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 일부 캐시할 수 없으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 대량 복사 문과 문자열 리터럴이 8KB를 초과 하는 같은 문의 합니다. 이러한 문에 대한 핸들은 fn_get_sql을 사용하여 검색할 수 없습니다.  
+ 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 일부를 캐시할 수 없으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 대량 복사 문과 문자열 리터럴이 8KB를 초과 하는 문 등의 문에서 합니다. 이러한 문에 대한 핸들은 fn_get_sql을 사용하여 검색할 수 없습니다.  
   
- **텍스트** 결과 집합의 열에 대 한 암호를 포함할 수 있는 텍스트가 필터링 됩니다. 모니터링 되는 자세한 저장와 관련 된 보안에 대 한 내용은 프로시저에 대 한 참조 [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)합니다.  
+ 합니다 **텍스트** 결과 집합의 열 암호를 포함할 수 있는 텍스트가 필터링 됩니다. 모니터링 되지 않은 자세한 저장 관련 보안에 대 한 정보 절차를 참조 [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)합니다.  
   
- 유사한 정보를 반환 하는 fn_get_sql 함수는 [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) 명령입니다. 다음은 DBCC INPUTBUFFER를 사용할 수 없기 때문에 fn_get_sql 함수를 사용할 수 있는 경우의 예입니다.  
+ Fn_get_sql 함수와 비슷한 정보를 반환 합니다 [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) 명령입니다. 다음은 DBCC INPUTBUFFER를 사용할 수 없기 때문에 fn_get_sql 함수를 사용할 수 있는 경우의 예입니다.  
   
 -   이벤트가 255자 이상을 포함할 경우  
   
 -   저장 프로시저의 가장 높은 현재 중첩 수준을 반환해야 하는 경우. 예를 들어 sp_1과 sp_2라는 두 저장 프로시저가 있습니다. sp_1이 sp_2를 호출하고 sp_2가 실행되는 동안 사용자가 sys.dm_exec_requests 동적 관리 뷰에서 핸들을 가져오면 fn_get_sql 함수는 sp_2에 대한 정보를 반환합니다. 또한 fn_get_sql 함수는 가장 높은 현재 중첩 수준에 있는 저장 프로시저의 완전한 텍스트를 반환합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -98,9 +94,9 @@ SELECT * FROM sys.fn_get_sql(@Handle);
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DBCC INPUTBUFFER &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [DBCC INPUTBUFFER &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys.sysprocesses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

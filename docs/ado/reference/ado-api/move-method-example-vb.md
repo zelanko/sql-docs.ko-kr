@@ -1,32 +1,29 @@
 ---
-title: 이동 메서드 예제 (VB) | Microsoft Docs
+title: Move 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method [ADO], Visual Basic example
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d19dbb751c925f1f747c054d7ffaf15ab3c598ca
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cfa592fa02d966002bf94d02e81ecc02b691c3c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679377"
 ---
-# <a name="move-method-example-vb"></a>Move 메서드 예제 (VB)
-사용 하 여이 예제는 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드 레코드 포인터를 사용자 입력에 기반 합니다.  
+# <a name="move-method-example-vb"></a>Move 메서드 예제(VB)
+이 예제에서는 합니다 [이동](../../../ado/reference/ado-api/move-method-ado.md) 사용자 입력을 기반으로 하는 레코드 포인터를 하는 방법입니다.  
   
 ```  
 'BeginMoveVB  

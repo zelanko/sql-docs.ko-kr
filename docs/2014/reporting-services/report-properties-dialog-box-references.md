@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10530"
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc6ea1f5322303f8a4429f226e44fd32c018962
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55ec2d6fa40e5f2e6aa7fcfd1d5be40667a518d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194333"
 ---
 # <a name="report-properties-dialog-box-references"></a>보고서 속성 대화 상자, 참조
   **보고서 속성** 대화 상자의 **참조** 를 선택하여 보고서 정의의 식에 사용되는 사용자 지정 또는 다른 외부 어셈블리 및 사용자 지정 클래스 인스턴스에 대한 참조를 추가 또는 제거할 수 있습니다.  

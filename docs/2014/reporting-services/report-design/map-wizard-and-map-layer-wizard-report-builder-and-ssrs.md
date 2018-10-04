@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128873"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
   지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  

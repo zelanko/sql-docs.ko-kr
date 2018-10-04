@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e1f744568bcce20528df364ca2faf638eb677784
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6af3783ca583dfa328b32ee6cfb4eaf8cd73b4dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100629"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>보고서에서 텍스트, 숫자 또는 날짜 찾기(SharePoint 통합 모드의 Reporting Services)
   찾을 단어나 구(검색 단어는 최대 256자까지 입력 가능)를 입력하여 보고서 내용을 검색할 수 있습니다. 검색은 보고서에서 일치하는 값을 찾아 해당 값이 포함된 보고서 부분에 중점을 두는 탐색 기술입니다.  

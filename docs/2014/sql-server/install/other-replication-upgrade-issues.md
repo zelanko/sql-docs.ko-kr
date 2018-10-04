@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system tables [SQL Server], replication
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - scripts [SQL Server replication]
 - ActiveX controls [SQL Server replication]
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
-caps.latest.revision: 34
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aa132e53e3d3328863c8f30fc86277fc6b394ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200733"
 ---
 # <a name="other-replication-upgrade-issues"></a>기타 복제 업그레이드 문제
   이 항목에서는 업그레이드 관리자가 보고하지 않는 몇 가지 업그레이드 문제에 대해 설명합니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0eabbd703d04e5aca74b8b94e449d5d8fd18ae97
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77a4a9b2749eefbe43cac04351fd1d2bd2c9300e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138762"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>차트의 레이블 위치 지정(보고서 작성기 및 SSRS)
   차트 종류마다 셰이프가 다르므로 데이터 요소 레이블은 차트에서 방해가 되지 않을 최적의 위치에 배치됩니다. 레이블의 기본 위치는 차트 종류에 따라 달라집니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37261999"
   
 2.  디자인 화면에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택합니다.  
   
-3.  속성 창을 엽니다.  **보기** 탭에서 **속성**을 클릭합니다.  
+3.  속성 창을 엽니다. **보기** 탭에서 **속성**을 클릭합니다.  
   
 4.  디자인 화면에서 차트를 클릭합니다. 차트의 속성이 속성 창에 표시됩니다.  
   
@@ -74,7 +71,7 @@ ms.locfileid: "37261999"
   
 2.  디자인 화면에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택합니다.  
   
-3.  속성 창을 엽니다.  **보기** 탭에서 **속성**을 클릭합니다.  
+3.  속성 창을 엽니다. **보기** 탭에서 **속성**을 클릭합니다.  
   
 4.  디자인 화면에서 차트를 클릭합니다. 차트의 속성이 속성 창에 표시됩니다.  
   
@@ -90,7 +87,7 @@ ms.locfileid: "37261999"
   
 2.  디자인 화면에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택합니다.  
   
-3.  속성 창을 엽니다.  **보기** 탭에서 **속성**을 클릭합니다.  
+3.  속성 창을 엽니다. **보기** 탭에서 **속성**을 클릭합니다.  
   
 4.  디자인 화면에서 계열을 클릭합니다. 계열의 속성이 속성 창에 표시됩니다.  
   

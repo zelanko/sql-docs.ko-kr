@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634391"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
-**ADORecordsetConstruction** 인터페이스 사용 하는 ADO 생성 **레코드 집합** OLE DB에서 개체 **행 집합** C/c + + 응용 프로그램의 개체입니다.  
+합니다 **ADORecordsetConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드 집합** OLE DB 개체 **행 집합** C/c + + 응용 프로그램에서 개체입니다.  
   
  이 인터페이스는 다음 속성을 지원합니다.  
   
@@ -35,9 +32,9 @@ ms.locfileid: "35275622"
   
 |||  
 |-|-|  
-|[장](../../../ado/reference/ado-api/chapter-property-ado.md)|읽기/쓰기입니다.<br />가져오기/설정 OLE DB **장** 개체에서 /이 ADO에 **레코드 집합** 개체입니다.|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|읽기/쓰기입니다.<br />가져오기/설정 OLE DB **RowPosition** 개체에서 /이 ADO에 **레코드 집합** 개체입니다.|  
-|[행 집합](../../../ado/reference/ado-api/rowset-property-ado.md)|읽기/쓰기입니다.<br />가져오기/설정 OLE DB **행 집합** 개체에서 /이 ADO에 **레코드 집합** 개체입니다.|  
+|[장](../../../ado/reference/ado-api/chapter-property-ado.md)|읽기/쓰기입니다.<br />OLE DB를 가져오거나 **장** 개체에서 /이 ADO **레코드 집합** 개체입니다.|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|읽기/쓰기입니다.<br />OLE DB를 가져오거나 **RowPosition** 개체에서 /이 ADO **레코드 집합** 개체입니다.|  
+|[행 집합](../../../ado/reference/ado-api/rowset-property-ado.md)|읽기/쓰기입니다.<br />OLE DB를 가져오거나 **행 집합** 개체에서 /이 ADO **레코드 집합** 개체입니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -46,16 +43,16 @@ ms.locfileid: "35275622"
  없음  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB를 제공 **행 집합** 개체 (`pRowset`), ADO의 생성 **레코드 집합** 개체 (`adoRs`) 다음 세 가지 기본 작업입니다.  
+ OLE DB를 제공 **행 집합** 개체 (`pRowset`), ADO 생성 **레코드 집합** 개체 (`adoRs`) 다음 세 가지 기본 작업에 금액:  
   
-1.  ADO 만들기 **레코드 집합** 개체:  
+1.  ADO를 만듭니다 **레코드 집합** 개체:  
   
     ```  
     Recordset20Ptr adoRs;  
     adoRs.CreateInstance(__uuidof(Recordset));  
     ```  
   
-2.  쿼리는 **IADORecordsetConstruction** 에 대 한 인터페이스는 **레코드 집합** 개체:  
+2.  쿼리는 **IADORecordsetConstruction** 에 대 한 인터페이스를 **Recordset** 개체:  
   
     ```  
     adoRecordsetConstructionPtr adoRsConstruct=NULL;  
@@ -63,7 +60,7 @@ ms.locfileid: "35275622"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  호출 된 `IADORecordsetConstruction::put_Rowset` 속성은 OLE DB를 설정 하는 방법은 `Rowset` ADO 개체 `Recordset` 개체:  
+3.  호출 된 `IADORecordsetConstruction::put_Rowset` OLE DB를 설정 하려면 속성 메서드 `Rowset` ADO 개체 `Recordset` 개체:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -71,9 +68,9 @@ ms.locfileid: "35275622"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 결과 `adoRs` 개체는 이제 ADO 나타냅니다 **레코드 집합** OLE DB에서 생성 된 개체 **행 집합** 개체입니다.  
+ 결과 `adoRs` 개체에는 이제 ADO 나타냅니다 **레코드 집합** OLE DB에서 생성 된 개체 **행 집합** 개체입니다.  
   
- ADO를 생성할 수도 있습니다 **레코드 집합** OLE DB에서 개체 **장** 또는 **RowPosition** 개체입니다.  
+ ADO를 생성할 수도 있습니다 **Recordset** OLE DB 개체 **장** 또는 **RowPosition** 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **버전:** ADO 2.0 이상  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 87116018f43f90fa78a8f7a6d4788b9fb0e660f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183920"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207585"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   데이터 기반 구독은 런타임에 구독을 처리하는 데 사용하는 데이터 값을 가져오는 쿼리 기반 구독입니다. 구독이 실행될 때 받는 사람, 보고서 배달 옵션, 렌더링 형식 및 매개 변수 설정에 대한 최신 정보를 가져오기 위한 쿼리가 처리됩니다. 쿼리 결과가 구독 정의에 조합되어 직원 데이터베이스, 고객 데이터베이스 또는 구독자 데이터로 사용할 수 있는 정보가 포함된 기타 데이터베이스에서 이미 유지 관리되고 있는 데이터를 사용하는 동적 구독을 형성합니다.  

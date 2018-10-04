@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.exportaspolicy.f1
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87a9bddfbd8261eccd9e2de20ce6020ba8e77335
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ea8ece2c34afa0de797312f282bd9c8a9cb47b40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199103"
 ---
 # <a name="export-as-policy-dialog-box"></a>정책으로 내보내기 대화 상자
   이 대화 상자를 사용하여 정책 기반 관리 패싯 속성 집합을 정책으로 저장할 수 있습니다. 정책을 XML 파일로 저장하거나 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 직접 저장할 수 있습니다.  

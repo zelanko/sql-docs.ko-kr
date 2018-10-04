@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [MDX]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], queries
 - queries [MDX]
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd81b9489e7b73f9897cd557999df3021e8f9e8d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c303a4108994100387981c1c2ab86f6b5f596c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163420"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198597"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 쿼리 기본 사항(Analysis Services)
   MDX를 사용하면 큐브와 같은 다차원 개체를 쿼리하여 큐브의 데이터를 포함하는 다차원 셀 집합을 반환할 수 있습니다. 이 항목 및 하위 항목에서는 MDX 쿼리에 대한 개요를 제공합니다.  

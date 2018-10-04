@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DeleteWithDescendants Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteWithDescendants element
 ms.assetid: adfc9437-aaa7-4364-bcdb-128fcc9a410d
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9aa39e4091c0d2fcde431a9f859c7a9b7a0e6e34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93a6d92e675e0ae016327e064fabb6ec2c012aac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199943"
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 요소(XMLA)
   부모 [Drop](../xml-elements-commands/drop-element-xmla.md) 명령으로도 특성 멤버의 하위 항목을 삭제할 수 있는지 여부를 나타냅니다.  
@@ -61,7 +58,7 @@ ms.locfileid: "37155254"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[삭제](../xml-elements-commands/drop-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  `DeleteWithDescendants` 요소 결정 여부를 `Drop` 명령에서 식별 한 특성 멤버를 삭제 해야 합니다 [여기서](where-element-xmla.md) 요소 뿐만 삭제할 해당 특성 멤버의 하위 항목을.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63a6367bbacb5affa3bf16a30ce9187a46add9fe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796211"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |값|결과|  
 |-----------|------------|  
 |0|동기식으로 잠금을 허가하는 데 성공했습니다.|  
-|@shouldalert|호환되지 않는 다른 잠금이 해제되기를 기다린 다음 성공적으로 잠금을 허가하였습니다.|  
+|1|호환되지 않는 다른 잠금이 해제되기를 기다린 다음 성공적으로 잠금을 허가하였습니다.|  
 |-1|잠금 요청이 시간을 초과하였습니다.|  
 |-2|잠금 요청이 취소되었습니다.|  
 |-3|잠금 요청이 교착 상태에서 처리되지 않았습니다.|  

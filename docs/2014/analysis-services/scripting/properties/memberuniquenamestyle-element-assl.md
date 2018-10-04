@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MemberUniqueNameStyle Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 204f29e7bfb90894fded974b78cfd136aa39eaeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133463"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 요소(ASSL)
   어떻게 고유한 이름을 결정에 포함 된 계층의 멤버에 대해 생성 되는 [CubeDimension](../data-type/dimension-data-type-assl.md) 요소입니다.  
@@ -57,7 +54,7 @@ ms.locfileid: "37226363"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubeDimension](../data-type/dimension-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3436b2d0e73fc452c12e1aa5a71724e9f8dcd31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d53b52355de6508d47fe7ee0e34fd30d26be454
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060311"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 제한된 위임에 대해 Analysis Services 구성
   Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 쿼리할 때 Analysis Services에서 사용자 ID를 가장하도록 하거나 Analysis Services에서 하위 서비스에 사용자 ID를 위임하도록 하는 데 관심을 갖고 있을 가능성이 높습니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  

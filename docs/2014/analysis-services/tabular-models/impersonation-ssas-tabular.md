@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176490"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112036"
 ---
 # <a name="impersonation-ssas-tabular"></a>가장(SSAS 테이블 형식)
   이 항목에서는 테이블 형식의 모델 작성자를 대상으로 데이터 원본에 연결하여 데이터를 가져오고 처리(새로 고침)할 때 로그온 자격 증명이 Analysis Services에서 사용되는 방법에 대해 설명합니다.  

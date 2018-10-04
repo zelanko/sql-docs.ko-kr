@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100093"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
   테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 응용 프로그램에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 응용 프로그램에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
@@ -96,7 +93,7 @@ ms.locfileid: "37190923"
  연결이 설정되면 데이터를 사용하여 피벗 테이블 또는 피벗 차트를 만들 수 있습니다. 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)을 참조하세요.  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint에서 연결  
- SharePoint용 PowerPivot을 사용하는 경우 Analysis Services 테이블 형식 모드 서버에서 실행되는 데이터베이스에 대한 리디렉션을 제공하는 BI 의미 체계 모델 연결 파일을 SharePoint에서 만들 수 있습니다. BI 의미 체계 모델 연결은 데이터베이스에 대한 HTTP 끝점을 제공합니다. 또한 BI 의미 체계 모델 연결을 사용하면 SharePoint 사이트에서 문서를 정기적으로 사용하는 지식 근로자가 테이블 형식 모델에 쉽게 액세스할 수 있습니다. 지식 근로자는 BI 의미 체계 모델 연결 파일의 위치 또는 해당 URL만 알면 테이블 형식 모델 데이터베이스에 액세스할 수 있습니다. 서버 위치 또는 데이터베이스 이름 정보는 BI 의미 체계 모델 연결에 캡슐화됩니다. 만들기 및 BI 의미 체계 모델 연결 파일을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 하 고 [테이블 형식 모델에 BI 의미 체계 모델 연결 만들기 데이터베이스](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
+ SharePoint용 PowerPivot을 사용하는 경우 Analysis Services 테이블 형식 모드 서버에서 실행되는 데이터베이스에 대한 리디렉션을 제공하는 BI 의미 체계 모델 연결 파일을 SharePoint에서 만들 수 있습니다. BI 의미 체계 모델 연결은 데이터베이스에 대한 HTTP 엔드포인트를 제공합니다. 또한 BI 의미 체계 모델 연결을 사용하면 SharePoint 사이트에서 문서를 정기적으로 사용하는 지식 근로자가 테이블 형식 모델에 쉽게 액세스할 수 있습니다. 지식 근로자는 BI 의미 체계 모델 연결 파일의 위치 또는 해당 URL만 알면 테이블 형식 모델 데이터베이스에 액세스할 수 있습니다. 서버 위치 또는 데이터베이스 이름 정보는 BI 의미 체계 모델 연결에 캡슐화됩니다. 만들기 및 BI 의미 체계 모델 연결 파일을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 하 고 [테이블 형식 모델에 BI 의미 체계 모델 연결 만들기 데이터베이스](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
   
 ##  <a name="bkmk_Tshoot"></a> 연결 문제 해결  
  이 섹션에서는 테이블 형식 모델 데이터베이스에 연결하는 동안 발생하는 문제에 대한 원인과 해결 단계를 제공합니다.  

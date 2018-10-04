@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c9a86fd007501c3c8fa742f55057852d222f358
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699c6c2dad976cc070609b3c652b5abcfe2d7577
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094145"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행
   프로젝트 배포 모델을 사용하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 구성하면 [!INCLUDE[ssIS](../includes/ssis-md.md)] 카탈로그의 저장 프로시저를 사용하여 프로젝트를 배포하고 패키지를 실행할 수 있습니다. 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], nested
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining structures [Analysis Services], nested tables
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 868ef7af9d2116e2b148925a2a60bc01da4140bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00ac2368cdba8d1f84141cf7881bc97563bab684
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177160"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066103"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>마이닝 구조에 중첩 테이블 추가
   데이터 마이닝 마법사에서 마이닝 구조를 만든 후 데이터 마이닝 디자이너를 사용하여 마이닝 구조에 중첩 테이블을 추가할 수 있습니다.  

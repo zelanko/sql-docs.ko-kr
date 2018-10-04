@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.removesecondaryar.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], configuring
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2616b1bf50197ded6d2c076844609e1f4776018
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91a19eebfb03019fdbd928a340c139a23d9f27d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208163"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>가용성 그룹에서 보조 복제본 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 보조 복제본을 제거하는 방법에 대해 설명합니다.  

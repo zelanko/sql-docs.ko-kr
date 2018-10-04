@@ -6,28 +6,25 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 188e1194a3c2f95bf8c97ad608e80a9cebb4a419
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ff122b0a7cf888ec93350da86bf0bc610e47270a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787818"
 ---
 # <a name="troubleshooting-rds"></a>RDS 문제 해결
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- 특정 오류 또는.rds입니다 문제에 대 한 솔루션에 대 한이 섹션을 참조 하십시오 이 섹션에서는 다음 항목을 다룹니다.  
+ 이 섹션에서는 특정 오류 또는 rds.를 사용 하 여 문제에 대 한 솔루션에 대 한 참조 이 섹션에서는 다음 항목을 다룹니다.  
   
 -   [Windows 2000에서 RDS 구성](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   

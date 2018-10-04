@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.mappings.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4be34fd0ed34ba5e60fedce309e187f856ab8edb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31ecbc1d0ef82482938ff073580d54edc3cb2bdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154614"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084463"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 대상 편집기(매핑 페이지)
   **SQL 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  

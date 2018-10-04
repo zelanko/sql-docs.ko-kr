@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207433"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>데이터 원본 속성 대화 상자, 자격 증명(보고서 작성기)
   **데이터 원본 속성** 대화 상자에서 **자격 증명** 을 선택하여 보고서의 포함된 데이터 원본에 연결하는 데 사용할 자격 증명을 표시하고 수정할 수 있습니다. 사용자가 제공하는 자격 증명은 데이터 원본에 액세스하여 보고서를 미리 보는 데 사용됩니다. 자격 증명에 대한 자세한 내용은 [보고서 작성기에 자격 증명 지정](../../2014/reporting-services/specify-credentials-in-report-builder.md)을 참조하세요.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.pickscheduleforjob.f1
 helpviewer_keywords:
 - Pick Schedule for Job dialog box
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8f8ae62f66101d91198f777622aba402d9a2192
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f9da20c25e0b116c1c91f5eb9015d5c5625d7514
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185093"
 ---
 # <a name="pick-schedule-for-job"></a>작업 일정 선택
   이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 기존 일정을 선택할 수 있습니다.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8923e4f38ec6ef69de9817ebc3940da07a1518db
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b1e2b14830e6b2be7d1e00ac1419070ee26eb5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833142"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,8 +88,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**NULLABLE**|**smallint**|Null 허용 여부를 지정합니다.<br /><br /> 1 = Null 값을 허용하는 데이터 형식을 만들 수 있습니다.<br /><br /> 0 = Null 값이 허용되지 않습니다.|  
 |**설명**|**varchar (** 254 **)**|프로시저 열에 대한 설명입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|열의 기본값입니다.|  
-|**SQL_DATA_TYPE**|**smallint**|에 표시 된 대로 SQL 데이터 형식의 값을 **형식** 설명자 필드입니다. 이 열은 동일 합니다 **DATA_TYPE** 열을 제외 하 고는 **datetime** 및 ISO **간격** 데이터 형식입니다. 이 열은 항상 값을 반환합니다.|  
-|**SQL_DATETIME_SUB**|**smallint**|합니다 **날짜/시간** ISO **간격** 하위 코드의 값 **SQL_DATA_TYPE** 됩니다 **SQL_DATETIME** 또는 **SQL_INTERVAL**. 이외의 다른 데이터 형식의 **날짜/시간** 및 ISO **간격**,이 필드는 NULL입니다.|  
+|**SQL_DATA_TYPE**|**smallint**|에 표시 된 대로 SQL 데이터 형식의 값을 **형식** 설명자 필드입니다. 이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외하고는 **DATA_TYPE** 열과 동일합니다. 이 열은 항상 값을 반환합니다.|  
+|**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. 이외의 다른 데이터 형식의 **날짜/시간** 및 ISO **간격**,이 필드는 NULL입니다.|  
 |**CHAR_OCTET_LENGTH**|**int**|최대 길이 (바이트) **문자** 하거나 **이진** 데이터 형식 열입니다. 다른 모든 데이터 형식의 경우에는 이 열이 NULL을 반환합니다.|  
 |**ORDINAL_POSITION**|**int**|테이블에 있는 열의 순서 위치입니다. 테이블의 첫 번째 열은 1입니다. 이 열은 항상 값을 반환합니다.|  
 |**IS_NULLABLE**|**varchar(254)**|테이블에 있는 열의 Null 허용 여부입니다. ISO 규칙을 따라서 null 허용 여부를 결정합니다. ISO 호환 DBMS에서는 빈 문자열을 반환할 수 없습니다.<br /><br /> 열이 NULL을 포함할 수 있으면 YES를 표시하고 NULL을 포함할 수 없으면 NO를 표시합니다.<br /><br /> Null 허용 여부를 알 수 없으면 이 열에서는 길이가 0인 문자열을 반환합니다.<br /><br /> 이 열에 반환되는 값은 NULLABLE 열에 반환되는 값과 다릅니다.|  

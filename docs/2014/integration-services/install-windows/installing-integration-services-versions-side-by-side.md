@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f7face1f41fdf02f772c05427db9d45d1bd6050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f5b9bcd179e5485ad4959df02fd0b05b638998f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200893"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>상호 운용성 및 공존성(Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services(SSIS)는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services와 함께 나란히 공존할 수 있습니다.  

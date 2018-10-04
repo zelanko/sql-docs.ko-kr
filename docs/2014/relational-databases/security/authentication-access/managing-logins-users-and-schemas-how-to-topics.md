@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], logins and users
@@ -14,12 +12,12 @@ ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f01de0ee3f0e0d36660cb047ff4b21d55baf3d8e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103003"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>로그인, 사용자 및 스키마 관리 방법 도움말 항목
   이 페이지에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인, 데이터베이스 사용자 및 데이터베이스 스키마를 관리하는 방법뿐만 아니라 역할을 조인하고 사용 권한을 보안 주체에 부여하는 방법을 설명하는 항목에 대한 링크를 제공합니다.  

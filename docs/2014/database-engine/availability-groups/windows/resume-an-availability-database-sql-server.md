@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.resumedatamove.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 005b050c03d85ad473fcadb3eab7bfc6358da48e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051053"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>가용성 데이터베이스 재개(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 일시 중지된 가용성 데이터베이스를 재개할 수 있습니다. 일시 중지된 데이터베이스를 재개하면 데이터베이스는 SYNCHRONIZING 상태가 됩니다. 주 데이터베이스를 재개하면 주 데이터베이스를 일시 중지함에 따라 함께 일시 중지된 보조 데이터베이스도 재개됩니다. 보조 데이터베이스가 보조 복제본을 호스팅하는 서버 인스턴스에서 로컬로 일시 중지된 경우 해당 보조 데이터베이스를 로컬로 재개해야 합니다. 지정된 보조 데이터베이스와 해당 주 데이터베이스가 SYNCHRONIZING 상태이면 보조 데이터베이스에서 데이터 동기화가 재개됩니다.  

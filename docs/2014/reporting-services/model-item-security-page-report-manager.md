@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08742a78d0992467a8fb596ecc4f267576f00701
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195073"
 ---
 # <a name="model-item-security-page-report-manager"></a>모델 항목 보안 페이지(보고서 관리자)
   이 페이지를 사용하여 특정 항목에 대한 읽기 전용 권한을 부여 또는 취소하는 방법으로 모델의 부분에 보안을 설정할 수 있습니다. 모델 항목 보안은 런타임에 임시 데이터 탐색에 영향을 미치며 보고서 작성기에서 보고서를 만들 때 게시된 모델의 부분을 사용하는 기능에도 영향을 미칩니다. 이 기능을 사용하려면 내용 관리자 권한이 있어야 합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functional area permissions [Master Data Services], about functional area permissions
 - functional area permissions [Master Data Services]
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1e3b534992f4856380e98255a53fa6b5ec26898a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4332afe3936740fa801810676f301b8fefbe35c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202443"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>기능 영역 권한(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)의 각 기능 영역에 사용 권한을 할당할 수 있습니다. 기능 영역에는 다음 다섯 가지 영역이 있습니다.  

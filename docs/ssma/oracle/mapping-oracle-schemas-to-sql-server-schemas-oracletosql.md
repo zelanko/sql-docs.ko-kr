@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5e231fd84b85a44392527e7f082b55da1c7826ac
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ecc3f711c90f46c17de54a6c3659d84b7756b25e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773901"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Oracle 스키마를 SQL Server 스키마에 매핑(OracleToSQL)
 Oracle에서는 각 데이터베이스에 하나 이상의 스키마에 있습니다. 기본적으로 SSMA는 Oracle 스키마의 모든 개체를 마이그레이션하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마에 대 한 명명 된 데이터베이스입니다. Oracle 스키마 간의 매핑을 사용자 지정할 수는 있지만 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  

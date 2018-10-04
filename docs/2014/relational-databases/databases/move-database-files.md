@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - disaster recovery [SQL Server], moving database files
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - planned database relocations [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e283055864a824d2a575fb77e0d64fcd1f2a990
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f851fd637ef1781bb1446219e284109e96c306fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193383"
 ---
 # <a name="move-database-files"></a>데이터베이스 파일 이동
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 FILENAME 절에 새 파일 위치를 지정하여 시스템 및 사용자 데이터베이스를 이동할 수 있습니다. 데이터, 로그 및 전체 텍스트 카탈로그 파일도 이런 식으로 이동할 수 있습니다. 이 방법은 다음과 같은 경우 유용합니다.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing publication information
 - publications [SQL Server replication], viewing information
 - publications [SQL Server replication], Replication Monitor tasks
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 283310364d5ea984960878fd675f9333e7c37a74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 885c48eaeed59042b431f8c9fd22a3a57ce49e73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200063"
 ---
 # <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>게시에 대한 정보 보기 및 태스크 수행(복제 모니터)
   복제 모니터에는 선택한 게시에 대한 정보를 포함하는 다음과 같은 탭이 있습니다.  

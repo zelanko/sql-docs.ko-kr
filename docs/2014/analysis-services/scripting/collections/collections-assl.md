@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - collections [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, collections
 - ASSL, collections
 ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a56b577f39c2b2f4ef7a4033203fcda9706d1370
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f549a8d84f356b9315cdf3ec03ee41234e4dd0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199713"
 ---
 # <a name="collections-assl"></a>컬렉션(ASSL)
   이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 컬렉션으로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  

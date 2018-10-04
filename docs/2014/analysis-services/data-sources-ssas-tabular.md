@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac9efd9de461b6ee605b73ed440233b4a0bea020
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ac0283148f328d75bb341ce7841f5e5da42ee2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094053"
 ---
 # <a name="data-sources-ssas-tabular"></a>데이터 원본(SSAS 테이블 형식)
   데이터 원본은 테이블 형식 모델 솔루션에 포함될 데이터를 제공합니다. 관계형 데이터베이스, 데이터 피드, 다차원 데이터 원본(Analysis Services 큐브 등) 및 텍스트 파일(Microsoft Excel 통합 문서 등) 등의 다양한 원본에서 모델로 데이터를 가져올 수 있습니다. 이 섹션의 항목에서는 데이터를 가져올 수 있는 데이터 원본의 유형, 가져올 수 있는 다양한 데이터 형식 및 이러한 원본에서 데이터를 가져오는 방법을 설명하는 태스크에 대한 정보를 제공합니다.  

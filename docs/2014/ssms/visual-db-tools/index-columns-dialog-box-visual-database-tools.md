@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87c6b1c72273a9ca0185de4274cfbbcbd31982df
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2cecd9aced6b4135c581910e5cbfb3a23d2aefd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168623"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>인덱스 열 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하여 인덱스의 열을 선택하고 정렬 순서를 설정할 수 있습니다. 인덱스는 하나 이상의 열을 사용할 수 있고 각 열은 오름차순 또는 내림차순으로 정렬할 수 있습니다. **인덱스/키** 대화 상자에서 이 대화 상자에 액세스하려면 **일반** 섹션의 **열** 행에 대한 줄임표 단추를 클릭합니다.  

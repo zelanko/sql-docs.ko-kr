@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
@@ -21,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac3b42956cacbd10718ca716e7b00b67e0afb949
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594632"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**크기 조정**|**smallint**|소수점 오른쪽 자릿수입니다. 이 값은 NULL입니다.|  
 |**기 수**|**smallint**|숫자 유형에 대한 기준입니다. 이 값은 NULL입니다.|  
 |**NULLABLE**|**smallint**|Null 허용 여부를 지정합니다.<br /><br /> 1 = Null 값을 허용하는 매개 변수 데이터 형식을 만들 수 있습니다.<br /><br /> 0 = Null 값이 허용되지 않습니다.<br /><br /> 이 값은 NULL입니다.|  
-|**SQL_DATA_TYPE**|**smallint**|설명자의 TYPE 필드에 표시된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 값입니다. 이 열은 동일 합니다 **DATA_TYPE** 열을 제외 하 고는 **datetime** 및 ISO **간격** 데이터 형식입니다. 이 열은 항상 값을 반환합니다. 이 값은 NULL입니다.|  
+|**SQL_DATA_TYPE**|**smallint**|설명자의 TYPE 필드에 표시된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 값입니다. 이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외하고는 **DATA_TYPE** 열과 동일합니다. 이 열은 항상 값을 반환합니다. 이 값은 NULL입니다.|  
 |**SQL_DATETIME_SUB**|**smallint**|합니다 **날짜/시간** 또는 ISO **간격** 하위 코드의 값 **SQL_DATA_TYPE** 이 SQL_DATETIME 또는 sql_interval 인 합니다. 이외의 다른 데이터 형식의 **날짜/시간** 및 ISO **간격**,이 열은 NULL입니다. 이 값은 NULL입니다.|  
 |**CHAR_OCTET_LENGTH**|**int**|최대 길이 (바이트) **문자** 또는 **이진** 데이터 매개 변수를 입력 합니다. 다른 모든 데이터 형식의 경우에는 이 열이 NULL을 반환합니다. 이 값은 항상 NULL입니다.|  
 |**ORDINAL_POSITION**|**int**|일괄 처리에 있는 매개 변수의 서수 위치입니다. 매개 변수 이름이 여러 번 반복되는 경우 이 열에는 처음 나타나는 위치의 서수가 포함됩니다. 첫 번째 매개 변수의 서수 위치는 1입니다. 이 열은 항상 값을 반환합니다.|  

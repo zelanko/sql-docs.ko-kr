@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c73078a44d45d10fae144eb0d15db8995b556ed8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193283"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>5단원: (선택 사항) TDE를 사용하여 데이터베이스 암호화
   선택적 단계로, 새로 만든 데이터베이스를 암호화할 수 있습니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이러한 종류의 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. 자세한 내용은 [투명 한 데이터 암호화 &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) 하 고 [다른 SQL Server로 TDE 보호 데이터베이스 이동](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74adfc254b0606fb62a93b72b2c8b5a038f2a7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c891d3723b86c529ae0fb96da6d834235f86150a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195480"
 ---
 # <a name="in-process-data-access-sample"></a>In-Process 데이터 액세스 예제
   `InProcessDataAccess` 예제에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR in-process 데이터 액세스 공급자의 다양한 기능을 보여 주는 몇 가지 간단한 함수가 포함되어 있습니다.  

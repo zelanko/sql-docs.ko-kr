@@ -5,34 +5,31 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fe61f62906c113d7ea07c96f20f816456c6bfb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2e218035473d1ebb980aa5f44da8cc7b8ef843d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827041"
 ---
-# <a name="sqlendtran-cursor-library"></a>SQLEndTran (커서 라이브러리)
+# <a name="sqlendtran-cursor-library"></a>SQLEndTran(커서 라이브러리)
 > [!IMPORTANT]  
->  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 이 항목의 사용을 설명는 **SQLEndTran** 커서 라이브러리의 함수가 있습니다. 에 대 한 일반적인 내용은 **SQLEndTran**, 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.  
+ 이 항목에서는의 사용을 설명 합니다 **SQLEndTran** 커서 라이브러리의 함수입니다. 에 대 한 일반 정보에 대 한 **SQLEndTran**를 참조 하십시오 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.  
   
- 커서 라이브러리 트랜잭션을 지원 하지 않으면 및 전달에 대 한 호출 **SQLEndTran** 드라이버에 직접 합니다. 그러나 커서 라이브러리는 SQL_CURSOR_ROLLBACK_BEHAVIOR 및 SQL_CURSOR_COMMIT_BEHAVIOR 정보 형식 사용 하 여 데이터 소스에서 반환 된 커서 commit 및 rollback 동작 지원:  
+ 커서 라이브러리 트랜잭션을 지원 하지 않습니다 하 고에 대 한 호출을 전달 **SQLEndTran** 드라이버에 직접. 그러나 커서 라이브러리 SQL_CURSOR_ROLLBACK_BEHAVIOR 및 SQL_CURSOR_COMMIT_BEHAVIOR 정보 형식 사용 하 여 데이터 소스에서 반환 된 커서 commit 및 rollback 동작을 지원 하지 않습니다.  
   
--   트랜잭션에 걸쳐 커서를 유지 하는 데이터 원본에 대 한 데이터 원본에서 롤백된 변경 내용이 롤백되지 않습니다 커서 라이브러리의 캐시에 있습니다. 데이터 원본의 데이터와 일치 하는 캐시를 응용 프로그램 해야 닫았다가 커서입니다.  
+-   트랜잭션 간 커서를 유지 하는 데이터 원본에 대 한 변경 내용은 데이터 원본에 롤백되는 롤백되지 않습니다 커서 라이브러리 캐시에서 합니다. 데이터 소스의 데이터와 일치 하는 캐시를 위해 응용 프로그램 닫은 후 다시 열어야 커서입니다.  
   
--   트랜잭션 경계에서 커서를 닫습니다는 데이터 원본에 대 한 커서 라이브러리는 커서가 닫힙니다 하 고 연결의 모든 문에 대해 캐시를 삭제 합니다.  
+-   트랜잭션 경계에 커서를 닫을 데이터 원본에 대 한 커서 라이브러리 커서를 닫고 연결의 모든 문에 대해 캐시를 삭제 합니다.  
   
--   준비 된 문은 트랜잭션 경계를 삭제 하는 데이터 원본에 대 한 응용 프로그램을 종료할지 하기 전에 연결에서 모든 준비 된 문을 reprepare 해야 합니다.
+-   준비 된 문은 트랜잭션 경계를 삭제 하는 데이터 원본에 대 한 응용 프로그램을 종료할지 전에 연결에서 모든 준비 된 문은 reprepare 해야 합니다.

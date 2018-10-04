@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49576de626183ab603699311b9c18f02013685d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea2ab2db1d5afec5a8816c3e6dc857fd87081585
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050544"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
   특성을 ID 유형 특성으로 지정할 수 있습니다. 그런 다음 IDREF 또는 IDREFS로 지정된 특성을 사용하여 ID 유형 특성을 참조하고 문서 간의 링크를 사용할 수 있습니다.  

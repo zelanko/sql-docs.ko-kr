@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a90dfbac3006f7dfbf27b38a8ab584ebb9e5d710
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4176e9dc902ae4c83024ba5e659a2467585d71c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249633"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115713"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 집합의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  

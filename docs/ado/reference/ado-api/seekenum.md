@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281592"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772731"
 ---
 # <a name="seekenum"></a>SeekEnum
-유형을 지정 [Seek](../../../ado/reference/ado-api/seek-method.md) 실행할 수 있습니다.  
+유형을 지정 [Seek](../../../ado/reference/ado-api/seek-method.md) 실행 합니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|같은 첫 번째 키를 찾고 *KeyValues*합니다.|  
-|**adSeekLastEQ**|2|검색 (seek)의 마지막 키와 같지 *KeyValues*합니다.|  
-|**adSeekAfterEQ**|4|같은 중 하나는 키를 찾고 *KeyValues* 위나 바로 뒤와 일치 하는 었어야 합니다.|  
-|**adSeekAfter**|8|키를 where 직후 검색 (seek) 일치 하는 *KeyValues* 발생 합니다.|  
-|**adSeekBeforeEQ**|16|같은 중 하나는 키 검색 (seek) *KeyValues*또는 바로 앞과 일치 하는 었어야 합니다.|  
-|**adSeekBefore**|32|일치 하는 경우 키 바로 앞 seek *KeyValues* 발생 합니다.|  
+|**adSeekLastEQ**|2|마지막 키 같음 검색 *KeyValues*합니다.|  
+|**adSeekAfterEQ**|4|키 같음 검색 *KeyValues* 또는 일치 하는 발생 한 위치는 직후입니다.|  
+|**adSeekAfter**|8|키 위치 바로 뒤에 검색 일치 하는 *KeyValues* 발생 합니다.|  
+|**adSeekBeforeEQ**|16|키 같음 검색 *KeyValues*또는 일치 하는 발생 한 위치는 직전입니다.|  
+|**adSeekBefore**|32|일치 하는 경우 키를 직전 seek *KeyValues* 발생 합니다.|  
   
-## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
+## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  Package: **com.ms.wfc.data**  
   
 |상수|  
