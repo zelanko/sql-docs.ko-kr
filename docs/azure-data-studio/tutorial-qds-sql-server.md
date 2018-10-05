@@ -19,7 +19,7 @@ ms.locfileid: "48039129"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: *5개의 가장 느린 쿼리* 샘플 위젯을 데이터베이스 대시보드에 추가하기
 
-이 자습서는 데이터베이스의 가장 느린 5개 쿼리를 빠르게 보기 위해 *데이터베이스 대시보드*에 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 기본 제공되는 샘플 widget 중 하나를 추가하는 과정을 보여줍니다. 또한 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능을 사용해서느린 쿼리의 세부 정보와과 쿼리 계획을 보는 방법을 배웁니다. 이 자습에서 배울 내용:
+이 자습서는 데이터베이스의 가장 느린 5개 쿼리를 빠르게 보기 위해 *데이터베이스 대시보드*에 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 기본 제공되는 샘플 widget 중 하나를 추가하는 과정을 보여줍니다. 또한 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능을 사용해서 느린 쿼리의 세부 정보와 쿼리 계획을 보는 방법을 배웁니다. 이 자습에서 배울 내용:
 
 > [!div class="checklist"]
 > * 데이터베이스에서 쿼리 저장소를 사용하도록 설정
