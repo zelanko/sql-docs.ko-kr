@@ -17,21 +17,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "48039113"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>자습서: TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체를 만들려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>자습서: TRANSACT-SQL 편집기를 사용하여 데이터베이스 개체 만들기 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-쿼리 작성 및 실행, 저장된 프로시저, 스크립트 등 데이터베이스 전문가의 핵심 작업 됩니다. 이 자습서에서는 데이터베이스 개체를 만드는 T-SQL 편집기의 주요 기능을 설명 합니다.
+쿼리 작성 및 실행, 저장된 프로시저, 스크립트 등은 데이터베이스 전문가의 핵심 작업입니다. 이 자습서에서는 데이터베이스 개체를 만드는 T-SQL 편집기의 주요 기능을 설명합니다.
 
-이 자습서에서는 사용 하는 방법을 알아봅니다 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 에:
+이 자습서에서 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 사용법을 알아봅니다.
 > [!div class="checklist"]
-> * 검색 데이터베이스 개체
+> * 데이터베이스 개체 검색
 > * 테이블 데이터 편집 
-> * 코드 조각을 신속 하 게 T-SQL을 작성 하는 데
-> * 사용 하 여 데이터베이스 개체 자세히 보기 *정의 피킹* 고 *정의로 이동*
+> * 코드 조각을 사용하여 T-SQL을 신속하게 작성
+> * *정의 피킹*과 *정의로 이동*을 사용하여 데이터베이스 개체 자세히 보기 
 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서에서는 SQL Server 또는 Azure SQL Database *TutorialDB*합니다. 만들려면 합니다 *TutorialDB* 데이터베이스, 다음 빠른 시작 중 하나를 수행 합니다.
+이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
 - [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
