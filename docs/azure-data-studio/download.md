@@ -17,14 +17,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "48038993"
 ---
-# <a name="download-and-install-azure-data-studio"></a>다운로드하여 Azure Data Studio를 설치합니다.
+# <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
-다운로드 후 최신 릴리스를 설치합니다 *9 월 GA 릴리스*:
+최신 릴리스를 다운로드하고 설치합니다. *9월 GA 릴리스*:
 
 > [!NOTE]
-> Azure Data Studio를 업데이트하고 설정, 바로 가기 키 또는 코드 조각을 유지하려는 경우 [사용자 설정 이동](#move-user-settings)합니다.
+> SQL Operations Studio를 통해 업데이트하고 설정, 바로 가기 키 또는 코드 조각을 유지하려는 경우 [사용자 설정 이동](#move-user-settings)을 확인합니다.
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
@@ -55,12 +55,12 @@ ms.locfileid: "48038993"
 
 1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=2024677)를 다운로드합니다.
 2. zip 내용을 확장하기 위해 두 번 클릭합니다.
-3. 되도록 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에서 사용할 수 있는 *실행 패드*를 끌어 *Azure Data Studio.app* 에 *응용 프로그램* 폴더.
+3. *실행 패드*에서 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용할 수 있게 하려면 *Azure Data Studio.app*을 *응용 프로그램* 폴더로 끌어옵니다.
 
 
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 용 Azure Data Studio 받기
 
-1. 다운로드 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용하여 Linux 용:
+1. 아래에서 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용하여 Linux용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 다운로드합니다.
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2024668)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2024672)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2024675)
@@ -153,12 +153,12 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 ## <a name="move-user-settings"></a>이동 사용자 설정
 
-사용자 지정 설정, 바로 가기 키 또는 코드 조각 이동하려는 경우 다음 단계를 수행합니다. 이 Azure Data studio 버전에서 업그레이드 하는 경우 작업을 수행하는 것이 중요 합니다.
+사용자 지정 설정, 바로 가기 키 또는 코드 조각을 이동하려는 경우 다음 단계를 수행합니다. 이 Azure Data studio 버전에서 업그레이드하는 경우 작업을 수행하는 것이 중요 합니다.
 
 *이미 Azure Data Studio 또는 되지 설치 했거나 SQL Operations Studio 사용자 지정 하는 경우이 섹션을 무시할 수 있습니다.*
 
 
-1. 왼쪽 아래에서 기어를 클릭하여 설정을 엽니다 **설정 합니다.**
+1. 왼쪽 아래에서 기어를 클릭하고 **설정**을 클릭하여 설정을 엽니다.
 
    ![설정 열기](./media/download/open-settings.png)
 
@@ -170,7 +170,7 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
    ![설정 복사](./media/download/copy-settings.png)
 
-4. 새 버전의 Azure Data Studio, 1-2, 3 단계에 대한 다음 폴더에 저장한 콘텐츠를 붙여 넣습니다. 단계를 수행합니다. 수동으로 설정, 키 바인딩 또는 해당 위치로의 코드 조각은 복사할 수 있습니다.
+4. 새 버전의 Azure Data Studio, 1-2, 3단계에 대한 다음 폴더에 저장한 콘텐츠를 붙여넣습니다. 단계를 수행합니다. 수동으로 설정, 키 바인딩 또는 해당 위치로의 코드 조각은 복사할 수 있습니다.
 
 
 ## <a name="next-steps"></a>다음 단계
