@@ -23,7 +23,7 @@ ms.locfileid: "48039017"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 적절한 구문을 빠르게 생성하도록 도와주는 여러 개의 T-SQL 코드 조각을 제공합니다. 
 
-사용자 정의 코드 조각 또한 만들 수 있습니다.
+사용자 정의 코드 조각도 만들 수 있습니다.
 
 ## <a name="using-built-in-t-sql-code-snippets"></a>기본 제공 T-SQL 코드 조각 사용하기
 
