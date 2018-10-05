@@ -1,6 +1,6 @@
 ---
 title: '빠른 시작: Azure Data Studio를 사용하여 SQL Server에 연결 및 쿼리 | Microsoft Docs'
-description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 SQL Server에 연결하고 쿼리를 실행 하는 방법
+description: 이 빠른 시작에서 Azure Data Studio를 사용하여 SQL Server에 연결하고 쿼리를 실행하는 방법 설명
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "48039057"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 SQL Server에 연결하고 쿼리
-이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB* 를 생성하는 방법을 보여줍니다.
+이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB*를 생성하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 빠른 시작을 완료 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 및 SQL Server에 액세스 합니다.
+이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 및 SQL Server에 액세스합니다.
 
-- [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md) 설치.
+- [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)를 설치합니다.
 
-SQL Server에 액세스할 수 없는 경우 다음 링크에서 플랫폼을 선택 (SQL 로그인 및 암호를 놓치지 않도록!).
+SQL Server에 액세스할 수 없는 경우 다음 링크에서 플랫폼을 선택합니다(SQL 로그인 및 암호를 기억해야 함!).
 - [Windows - SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 - [Linux-SQL Server 2017 Developer Edition 다운로드](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -단계를 수행 해야 *만들기 및 쿼리 데이터*입니다.
@@ -35,12 +35,12 @@ SQL Server에 액세스할 수 없는 경우 다음 링크에서 플랫폼을 �
 ## <a name="connect-to-a-sql-server"></a>SQL Server에 연결
 
    
-1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 시작합니다.
-1.  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 를 처음 실행하면 **연결** 대화 상자가 열립니다. **연결** 대화 상자가 열리지 않는 경우 **서버** 페이지에 **새 연결** 아이콘을 클릭합니다:
+1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**를 시작합니다.
+1.  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*를 처음 실행하면 **연결** 대화 상자가 열립니다. **연결** 대화 상자가 열리지 않는 경우 **서버** 페이지에서 **새 연결** 아이콘을 클릭합니다.
    
    ![새 연결 아이콘](media/quickstart-sql-server/new-connection-icon.png)
 
-1. 이 아티클에서는 *SQL 로그인*을 사용하지만 *Windows 인증*도 지원 됩니다. 필드를 다음과 같이 입력합니다.
+1. 이 아티클에서는 *SQL 로그인*을 사용하지만 *Windows 인증*도 지원됩니다. 필드를 다음과 같이 입력합니다.
  
     - **서버 이름:** localhost
     - **인증 유형:** SQL 로그인  
