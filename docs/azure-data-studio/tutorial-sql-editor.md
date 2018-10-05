@@ -21,12 +21,12 @@ ms.locfileid: "48039113"
 
 쿼리 작성 및 실행, 저장된 프로시저, 스크립트 등은 데이터베이스 전문가의 핵심 작업입니다. 이 자습서에서는 데이터베이스 개체를 만드는 T-SQL 편집기의 주요 기능을 설명합니다.
 
-이 자습서에서 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 사용법을 알아봅니다:
+이 자습서에서 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 사용법을 알아봅니다.
 > [!div class="checklist"]
 > * 데이터베이스 개체 검색
 > * 테이블 데이터 편집 
 > * 코드 조각을 사용하여 T-SQL을 신속하게 작성
-> * *정의 피킹* 과 *정의로 이동* 을 사용하여 데이터베이스 개체 자세히 보기 
+> * *정의 피킹*과 *정의로 이동*을 사용하여 데이터베이스 개체 자세히 보기 
 
 
 ## <a name="prerequisites"></a>필수 구성 요소
