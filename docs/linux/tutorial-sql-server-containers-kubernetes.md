@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 44f81a23d341e549243b8e99366fef435be04ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808631"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252011"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes 서비스 (AKS)를 사용 하 여 Kubernetes에서 SQL Server 컨테이너를 배포 합니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "47808631"
 
 고가용성 (HA)에 대 한 영구 저장소를 사용 하 여 Azure Kubernetes Service (AKS)에서 Kubernetes에 SQL Server 인스턴스를 구성 하는 방법에 알아봅니다. 솔루션 복원 력을 제공 합니다. SQL Server 인스턴스가 실패 하면 Kubernetes 자동으로 다시 만듭니다 새 pod에서입니다. Kubernetes 노드 실패에 대 한 복원 력을 제공합니다.
 
-이 자습서에는 AKS 컨테이너에 항상 사용 가능한 SQL Server 인스턴스를 구성 하는 방법을 보여 줍니다. 할 수도 있습니다 [Kubernetes에서 SQL Server 가용성 그룹 만들기](tutorial-sql-server-ag-kubernetes.md)합니다. 두 가지 다른 Kubernetes 솔루션 비교를 참조 하세요 [SQL Server 컨테이너에 대 한 고가용성](sql-server-linux-container-ha-overview.md)합니다.
+이 자습서에는 AKS 컨테이너에 항상 사용 가능한 SQL Server 인스턴스를 구성 하는 방법을 보여 줍니다. 만들 수도 있습니다 [SQL Server 컨테이너에 대 한 Always On 가용성 그룹](sql-server-ag-kubernetes.md)합니다. 두 가지 다른 Kubernetes 솔루션 비교를 참조 하세요 [SQL Server 컨테이너에 대 한 고가용성](sql-server-linux-container-ha-overview.md)합니다.
 
 > [!div class="checklist"]
 > * SA 암호를 만들려면

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724347"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798591"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>3 단원: 데이터를 탐색하고 시각화하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "44724347"
     GO
     ```
 
-저장된 프로시저 **PlotHistogram2** 기존 저장된 프로시저에 동일 **PlotHistogram** 에서 만든는 `RunSQL_SQL_Walkthrough.ps1` 스크립트입니다. 
+저장된 프로시저 **PlotHistogram2** 기존 저장된 프로시저에 동일 **PlotHistogram** NYCTaxi_sample 데이터베이스에서 찾을 수 있습니다. 
   
 + `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트(`@input_data_1`)를 정의합니다.
   
@@ -164,7 +164,7 @@ ms.locfileid: "44724347"
 
 일반적으로 데이터 과학자는 다양 한 관점에서 데이터에 대 한 정보를 가져오려면 여러 데이터 시각화를 생성 합니다. 이 예제에서는 저장된 프로시저와 같은 인기 있는 형식으로 이진 데이터를 내보낼 히스토그램을 만들려는 Hist 함수를 사용 합니다. JPG, 합니다. PDF 및 합니다. PNG입니다. 
 
-1. 기존 저장된 프로시저를 사용 하 여 **PlotInOutputFiles**히스토그램, 산 점도 및 다른 R 그래픽을 기록할 수 있습니다. JPG 및 합니다. PDF 형식입니다. 합니다 `RunSQL_SQL_Walkthrough.ps1` 만듭니다 **PlotInOutputFiles** 데이터베이스를 추가 합니다. 마우스 오른쪽 단추 클릭을 사용 하 여 **수정** 소스를 보려면.
+1. 기존 저장된 프로시저를 사용 하 여 **PlotInOutputFiles**히스토그램, 산 점도 및 다른 R 그래픽을 기록할 수 있습니다. JPG 및 합니다. PDF 형식입니다. 마우스 오른쪽 단추 클릭을 사용 하 여 **수정** 소스를 보려면.
 
 2. 선택적으로 learning 실습에서는 사용자에 따라이 절차의 복사본을 만들 **PlotInOutputFiles2**, 명명 충돌을 피하기 위해 고유한 이름입니다.
 

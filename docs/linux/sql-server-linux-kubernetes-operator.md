@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759361"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252001"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On 가용성 그룹 Kubernetes 연산자 매개 변수
 
-Always On 가용성 그룹에서 kubernetes는 연산자가 필요 합니다. 연산자는.yaml 파일에 설명 되어 있습니다.  지정의 예제를 보려면 [이 자습서](tutorial-sql-server-ag-kubernetes.md)합니다.
+Always On 가용성 그룹에서 kubernetes는 연산자가 필요 합니다. 매니페스트는 연산자에 설명 합니다. 매니페스트는는 `.yaml` 파일입니다. 지정의 예제를 보려면 [SQL Server 컨테이너에 대 한 Always On 가용성 그룹](sql-server-ag-kubernetes.md)합니다.
 
 이 문서에서는 연산자 전역 환경 변수를 설명 합니다.
 
@@ -31,15 +31,15 @@ Always On 가용성 그룹에서 kubernetes는 연산자가 필요 합니다. �
 
 * `MSSQL_K8S_POD_NAMESPACE` 
   * 필수
-  * **설명**: Kubernetes 네임 스페이스 연산자입니다.
+  * **설명**: The Kubernetes 네임 스페이스 연산자입니다.
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * 선택 사항
-  * **설명**: sql server 외부의 기간 쓰기 가능한 sql server를 유지 하 고 스플릿 브레인 시나리오를 방지 하는 임대를 작성 합니다. 보조 복제본 대기이 만료 후 새 리더를 선택 합니다.
+  * **설명**: sql server 쓰기 임대 기간입니다. 쓰기 가능한 sql server를 유지 하 여 스플릿 브레인 시나리오를 방지 하는 데 사용 합니다. 보조 복제본이 새 리더를 선택한 후 초 동안 기다립니다.
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * 선택 사항
-  * **설명**: 경우에 모니터링 하는 기간 가용성 그룹의 상태입니다. 복제본 추가 및 삭제 속도 결정 합니다. 해야 미만 `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`합니다.
+  * **설명**: 가용성 그룹의 상태를 모니터링 하는 기간. 복제본 추가 및 삭제 속도 결정 합니다. 해야 미만 `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`합니다.
   * **기본**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

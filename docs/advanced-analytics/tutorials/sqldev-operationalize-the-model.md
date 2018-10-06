@@ -1,6 +1,6 @@
 ---
-title: R 모델 (SQL Server 기계 학습)를 사용 하 여 6 Predict 잠재적인 결과 단원 | Microsoft Docs
-description: SQL Server에서 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
+title: R 모델 (SQL Server Machine Learning)를 사용 하 여 6 예측 가능한 결과 단원 | Microsoft Docs
+description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/08/2018
@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249856"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798573"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>6 단원: 저장된 프로시저에서 R 모델을 사용 하 여 잠재적인 결과 예측 합니다.
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>6 단원: 저장된 프로시저에 R 모델을 사용 하는 잠재적인 결과 예측 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
-이 단계에서는 새 관측 치에 대해 모델을 사용 하 여 잠재적인 결과를 예측 배웁니다. 모델 다른 응용 프로그램에서 직접 호출할 수 있는 저장된 프로시저에 래핑됩니다. 이 연습에서는 점수 매기기를 수행 하는 여러 방법을 보여 줍니다.
+이 단계에서는 새 관찰에 대해 모델을 사용 하 여 잠재적인 결과 예측 하 배웁니다. 모델은 다른 응용 프로그램에서 직접 호출할 수 있는 저장된 프로시저에 래핑됩니다. 이 연습에서는 점수 매기기를 수행 하는 여러 방법을 보여 줍니다.
 
 - **일괄 처리 점수 매기기 모드**: 저장 프로시저에 대한 입력으로 SELECT 조회를 사용하십시오.  저장 프로시저는 입력된 사례(case)에 해당하는 관측 표를 반환합니다.
 
@@ -56,7 +56,7 @@ GO
 
 + SELECT 문은 데이터베이스에서 직렬화된 모델을 가져와서, R을 사용한 추가 처리를 위해 R 변수 `mod`에 그 모델을 저장합니다.
 
-+ 새로운 점수매기기 사례는 저장 프로시저의 첫 번째 매개변수인 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 지정된 `@inquery` 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다. 이 데이터 프레임에 전달 되는 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 함수 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), 점수를 생성 하 합니다.
++ 새로운 점수매기기 사례는 저장 프로시저의 첫 번째 매개변수인 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 지정된 `@inquery` 쿼리에서 가져옵니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다. 이 데이터 프레임에 전달 되는 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 함수 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), 점수를 생성 합니다.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -84,7 +84,7 @@ GO
     WHERE b.medallion IS NULL
     ```
 
-    **예제 결과**
+    **샘플 결과**
     
     ```
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
@@ -93,9 +93,9 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    이 쿼리는 저장된 프로시저에 대 한 입력으로 사용할 수 **PredictTipMode**다운로드의 일부로 제공 합니다.
+    이 쿼리는 저장된 프로시저에 대 한 입력으로 사용할 수 있습니다 **PredictTipMode**다운로드의 일부로 제공 합니다.
 
-2. 저장된 프로시저의 코드를 검토 하는 데 1 분 소요 **PredictTipMode** 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.
+2. 저장된 프로시저의 코드 검토를 잠시 **PredictTipMode** 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.
 
     ```SQL
     /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
@@ -137,13 +137,13 @@ GO
 > 
 > "yes-tip" 및 "no-tip" 결과만 반환하는 대신 예측에 대한 확률 점수를 반환하고 _Score_ 열 값에 WHERE 절을 적용하여 점수를 0.5 또는 0.7과 같은 임계 값을 사용한 "팁을 줄 가능성이 높음" 또는 "주지 않을 가능성이 있음"으로 분류 할 수 있습니다.  이 단계는 저장 프로시저에 포함되지 않지만 쉽게 구현할 수 있습니다.
 
-## <a name="single-row-scoring"></a>단일 행의 점수 매기기
+## <a name="single-row-scoring"></a>단일 행 점수 매기기
 
 때로는 응용 프로그램에서 개별 값을 전달하고 해당 값을 기반으로 단일 결과를 얻고 싶을 수도 있습니다. 예를 들어 저장 프로시저를 호출하고 사용자가 입력하거나 선택한 입력을 제공하도록 Excel 워크 시트, 웹 응용 프로그램 또는 Reporting Services 보고서를 설정할 수 있습니다.
 
 이 섹션에서는 저장 프로시저를 사용하여 단일 예측을 만드는 방법을 설명합니다.
 
-1. 저장된 프로시저의 코드를 검토 하는 데 1 분 소요 **PredictTipSingleMode**, 다운로드의 일부로 포함 되어 있습니다.
+1. 저장된 프로시저의 코드 검토를 잠시 **PredictTipSingleMode**, 다운로드의 일부로 포함 되어 있는 합니다.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -192,7 +192,7 @@ GO
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. 결과는 상위 10번의 여정에서 팁을 얻을 확률이 낮다는 것을 의미합니다. 왜냐하면 모두가 비교적 거리가 짧은 단일 승객의 여정이기 때문입니다.
+3. 결과 임을 팁을 받을 확률이 낮은 (영) 이러한 상위 10 개의 여정에서 비교적 짧은 거리에 따라 단일 승객 여정 모두 때문입니다.
 
 ## <a name="conclusions"></a>결론
 

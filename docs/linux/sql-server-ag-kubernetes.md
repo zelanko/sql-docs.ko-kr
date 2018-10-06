@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6df953eed1226e6be62ba694651f3b3244736a5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: cc5a96fd5efc4a2eb0e45a3034d17e98ae3c7172
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626171"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251967"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server 컨테이너에 대 한 always On 가용성 그룹
 
@@ -58,7 +58,7 @@ Kubernetes에서 가용성 그룹을 배포 합니다.
 
 1. 데이터베이스를 만들고 가용성 그룹에 연결
 
-자세한 단계를 참조 하세요 [고가용성을 위해 Kubernetes에서 SQL Server Always On 가용성 그룹 구성](tutorial-sql-server-ag-kubernetes.md)합니다.
+자세한 단계를 참조 하세요 [SQL Server 컨테이너에 대 한 Always On 가용성 그룹](sql-server-ag-kubernetes.md)합니다.
 
 ## <a name="sql-server-kubernetes-operator"></a>SQL Server Kubernetes 연산자
 

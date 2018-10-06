@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770941"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782362"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 Machine Learning 서비스 (R, Python, Java) linux 설치
 
@@ -273,13 +273,19 @@ GO
 
 설치 하 고 R, Python 또는 Java 패키지 및 데이터베이스 엔진을 설치 하는 명령에 매개 변수를 추가 하 여 프로시저 하나에서 데이터베이스 엔진 및 Machine Learning 서비스를 구성할 수 있습니다. 
 
-다음 예제에서는 Yum 패키지 관리자를 사용 하 여 같은 결합 된 패키지 설치의 "템플릿" 보여 줍니다.
+다음 예제에서는 Yum 패키지 관리자를 사용 하 여 같은 결합 된 패키지 설치의 "템플릿" 보여 줍니다. 데이터베이스 엔진을 설치 하 고 확장성 프레임 워크 패키지를 종속성으로 끌어오는 Java 언어 확장을 추가 합니다.
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-예제는 데이터베이스 엔진을 설치 하 고 확장성 프레임 워크 패키지를 종속성으로 끌어오는 Java 언어 확장을 추가 합니다. 모든 패키지를이 예제에서 사용 된 동일한 경로에 있습니다. R 패키지에 추가 된 경우 microsoft r 열린 패키지 리포지토리에 대 한 등록 필요한 것입니다.
+모든 확장 프로그램 (Java, R, Python)를 사용 하 여 확장 된 예제는 다음과 같습니다.
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+R 필수 구성 요소를 제외 하 고 동일한 경로에서 찾을 모든 패키지를이 예제에서 사용 합니다. 에서는 R을 추가 하면 [열림-r microsoft 패키지 리포지토리를 등록](#mro) MRO 가져올 추가 단계로. MRO는 R 확장에 대 한 필수 구성 요소입니다. 인터넷에 연결 된 컴퓨터에서 MRO 검색 되어 자동으로 설치 R 확장의 일부로 두 리포지토리를 구성 하는 것으로 가정 합니다.
 
 설치 후 전체 설치를 구성 하 고 사용권 계약 동의 하려면 mssql-conf 도구를 사용 해야 합니다. 오픈 소스 R 및 Python 구성 요소에 대해 허용 되지 않은 Eula 자동으로 감지 하 고 SQL Server에 대 한 EULA와 함께에 동의 하 라는 메시지가 표시 됩니다.
 

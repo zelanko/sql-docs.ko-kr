@@ -1,8 +1,8 @@
 ---
-title: 온-프레미스 SQL Server Data Migration Assistant를 사용 하 여 Azure SQL Database로 마이그레이션 | Microsoft Docs
+title: 온-프레미스 SQL Server 또는 SQL Server Azure Vm에서 Azure SQL Database로 마이그레이션 Data Migration Assistant를 사용 하 여 | Microsoft Docs
 description: 온-프레미스 SQL Server는 Azure SQL Database로 마이그레이션할 Data Migration Assistant 사용 방법 알아보기
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/05/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,14 +15,14 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e8359fa14e474cceaa7316a67831ff8bf2351992
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd2fbf4340978424816ba3b4577e7559d80ea68c
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688031"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782392"
 ---
-# <a name="migrate-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server 또는 SQL Server Data Migration Assistant를 사용 하 여 Azure Vm에서 온-프레미스 SQL Server 마이그레이션
+# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>온-프레미스 SQL Server 또는 Azure Vm에서 SQL Server Data Migration Assistant를 사용 하 여 Azure SQL Database로 마이그레이션
 
 Data Migration Assistant는 Azure Vm 또는 Azure SQL Database에서 SQL Server 온-프레미스 및 이후 버전의 SQL Server로 업그레이드 하거나 SQL Server로의 마이그레이션을 원활 하 게 평가 제공합니다.
 

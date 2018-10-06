@@ -1,6 +1,6 @@
 ---
 title: 메모리 속성 | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054875"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264883"
 ---
 # <a name="memory-properties"></a>메모리 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 요청을 즉시 처리할 수 있도록 적절 한 시작 시 메모리 양을 미리 할당 합니다. 쿼리 및 처리 작업이 증가함에 따라 추가 메모리가 할당됩니다. 
+  Analysis Services는 사전 요청을 즉시 처리할 수 있도록 적절 한 양을 시작 메모리를 할당 합니다. 쿼리 및 처리 작업이 증가함에 따라 추가 메모리가 할당됩니다. 
   
   구성 설정을 지정하여 메모리가 해제되는 임계값을 제어할 수 있습니다. 예를 들어 **HardMemoryLimit** 설정은 더 많은 리소스를 사용할 수 있을 때까지 새로운 요청이 완전히 거부되는 자체 부과된 메모리 부족 조건을 지정합니다(기본적으로 이 임계값은 사용되지 않음).
 
-최대 메모리 버전에서 Analysis Services 인스턴스 당 사용량에 대 한 자세한 내용은 참조 하세요 [버전 및 SQL Server의 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)합니다.
+최대 메모리 버전에서 SQL Server Analysis Services 인스턴스 당 사용량에 대 한 자세한 내용은 참조 하세요 [버전 및 SQL Server의 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)합니다.
   
- 다른 설명이 없는 경우 다음 설정을 모두 테이블 형식 및 다차원 서버 모드에 적용 됩니다.  
+ 다음 설정을 설명이 없는 한 테이블 형식 및 다차원 서버에 적용 됩니다.  
  
 ## <a name="default-memory-configuration"></a>기본 메모리 구성
 
@@ -33,7 +33,7 @@ ms.locfileid: "38054875"
 
 구성 설정은 인스턴스별로 지정됩니다. 동일한 하드웨어에서 테이블 형식 및 다차원 인스턴스 등 Analysis Services의 여러 인스턴스를 실행하는 경우 각 인스턴스가 다른 인스턴스와 독립적으로 자체 메모리를 할당합니다.
 
-아래 표에서는 자주 사용되는 메모리 설정을 간략하게 설명합니다(참조 섹션에 자세한 내용이 포함되어 있음). 이러한 설정은 Analysis Services는 동일한 서버의 다른 응용 프로그램을 사용 하 여 메모리에 대 한 경쟁 하는 경우에 구성 해야 합니다.
+아래 표에서는 자주 사용되는 메모리 설정을 간략하게 설명합니다(참조 섹션에 자세한 내용이 포함되어 있음). Analysis Services는 동일한 서버의 다른 응용 프로그램을 사용 하 여 메모리에 대 한 경쟁 하는 경우에 이러한 설정을 구성 합니다.
 
 설정 | Description
 --------|------------
@@ -66,12 +66,10 @@ Azure Analysis Services에만 해당 합니다. 고급 속성을 쿼리 하는 �
  **VertiPaqPagingPolicy**  
   테이블 형식 인스턴스에만 적용되며, 서버의 메모리가 부족한 경우에 발생하는 페이징 동작을 지정합니다. 유효한 값은 다음과 같습니다.  
   
-  
-
 설정  |Description  
 ---------|---------
-**0**     |  페이징을 사용하지 않도록 설정합니다. 메모리가 부족하면 메모리 부족 오류로 처리가 실패합니다. 페이징을 사용하지 않도록 설정한 경우 서비스 계정에 대한 권한을 Windows에 부여해야 합니다. 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)을 참조하세요. 
-**1**     |  (기본값) 운영 체제 페이지 파일(pagefile.sys)을 통해 디스크로의 페이징을 사용하도록 설정합니다.   
+**0**     |  (Azure Analysis Services에 대 한 기본값) 페이징 하는 사용 하지 않도록 설정 합니다. 메모리가 부족하면 메모리 부족 오류로 처리가 실패합니다. 페이징을 사용하지 않도록 설정한 경우 서비스 계정에 대한 권한을 Windows에 부여해야 합니다. 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)을 참조하세요. 
+**1**     |  (SQL Server Analysis Services에 대 한 기본값) 이 속성에는 하는 운영 체제 페이지 파일 (pagefile.sys)을 사용 하 여 디스크로 페이징이 발생할을 수 있습니다.   
   
 1로 설정될 경우 서버는 지정된 방법을 사용하여 디스크로 페이징을 시도하기 때문에 메모리 제약 조건으로 인해 처리가 실패할 가능성이 적습니다. **VertiPaqPagingPolicy** 속성을 설정한다고 해서 메모리 오류가 절대로 발생하지 않는 것은 아닙니다. 다음과 같은 상황에서 메모리 부족 오류가 여전히 발생할 수 있습니다.  
   
@@ -95,7 +93,7 @@ Azure Analysis Services에만 해당 합니다. 고급 속성을 쿼리 하는 �
 **-1** | (기본값) 자동. 사용할 항목을 엔진이 결정합니다.
 **1** | Analysis Services 힙
 **2** | Windows LFH
-**5** | 하이브리드 할당자. 이 할당자에 대 한 Windows LFH \<16KB 할당 및에 대 한 AS 힙 = > 16KB 할당 합니다. 
+**5** | 하이브리드 할당자. 이 할당자에 대 한 Windows LFH 사용할지 \<16kb 및 AS 힙을 = > 16kb입니다. 
 **6** | Intel TBB 할당자. SQL Server 2016 SP1 이상 Analysis Services에서 사용할 수 있습니다.
   
   
