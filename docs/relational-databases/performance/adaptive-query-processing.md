@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs | Microsoft Docs
 description: SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 705f8115ff773668993dbbc408f97946e3c9b180
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087489"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171638"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,9 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 ## <a name="row-mode-memory-grant-feedback"></a>행 모드 메모리 부여 피드백
 **적용 대상**: SQL Database(공개 미리 보기 기능으로)
 
+> [!NOTE]
+> 행 모드 메모리 부여 피드백은 공용 미리 보기 기능입니다.  
+
 행 모드 메모리 부여 피드백은 일괄 처리 및 행 모드 연산자의 메모리 부여 크기를 둘 다 조정하여 일괄 처리 모드 메모리 부여 피드백 기능을 확장합니다.  
 
 Azure SQL Database에서 행 모드 메모리 부여 피드백의 공개 미리 보기를 사용하도록 설정하려면 쿼리를 실행할 때 연결된 데이터베이스의 데이터베이스 호환성 수준 150을 사용하도록 설정합니다.
@@ -129,7 +132,8 @@ LastRequestedMemory는 이전 쿼리 실행에서 부여된 메모리를 KB(킬�
 | Yes: Adjusting | 메모리 부여 피드백이 적용되었고 다음 실행에 맞게 추가 조정될 수 있습니다. |
 | Yes: Stable | 메모리 부여 피드백이 적용되었고 이제 부여된 메모리가 안정적입니다. 이는 이전 실행에 마지막으로 부여된 메모리가 현재 실행에 부여된 메모리와 같음을 의미합니다. |
 
-메모리 부여 피드백 계획 특성은 현재 SQL Server Management Studio 그래픽 쿼리 실행 계획에 표시되지 않지만, 초기 테스트의 경우 SET STATISTICS XML ON 또는 query_post_execution_showplan XEvent를 사용하여 해당 특성을 볼 수 있습니다.  
+> [!NOTE]
+> 공개 미리 보기 행 모드 메모리 부여 피드백 계획 특성은 버전 17.9 이상의 SQL Server Management Studio 그래픽 쿼리 실행 계획에서 표시됩니다. 
 
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
 일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.

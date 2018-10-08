@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 27d08ae64d0387f60963358bbdbb04471d9ffb05
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 2d12d84ca2784b58b839a3177a31d9fecc73feff
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453557"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171775"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존 경로에 대한 경로 정보를 수정합니다. 
 
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -89,7 +87,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='***next_hop_address'*  
 
- SQL Database Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다.
+ Azure SQL Database Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다.
 
  이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   

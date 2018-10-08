@@ -1,13 +1,9 @@
 ---
 title: ALTER CREDENTIAL(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/19/2015
+ms.date: 09/07/2018
 ms.prod: sql
-ms.prod_service: sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER CREDENTIAL
@@ -21,26 +17,24 @@ helpviewer_keywords:
 - authentication [SQL Server], credentials
 - ALTER CREDENTIAL statement
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
-caps.latest.revision: 27
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b86aef0e9dd9395f1c803cc3dd2b9e14866b25d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6939de7db25f8f0e572cebef2181551f5190922b
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451909"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171885"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   자격 증명의 속성을 변경합니다.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> [!IMPORTANT]
+> 모범 사례로써 “수행할 작업” 정보는 작업을 완료하기 위해 “반드시 수행”해야 합니다. ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +52,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다.  
   
  SECRET **='***secret***'**  
- 나가는 인증에 필요한 암호를 지정합니다. *비밀*은 선택 사항입니다.  
+ 나가는 인증에 필요한 암호를 지정합니다. *비밀*은 선택 사항입니다.
+  
+> [!IMPORTANT]
+> Azure SQL Database는 Azure Key Vault와 공유 액세스 서명 ID만 지원합니다. Windows 사용자 ID는 지원되지 않습니다.
   
 ## <a name="remarks"></a>Remarks  
  자격 증명이 변경되면 *identity_name*과 *비밀*의 값이 모두 다시 설정됩니다. 옵션인 SECRET 인수를 지정하지 않으면 저장된 암호 값이 NULL로 설정됩니다.  

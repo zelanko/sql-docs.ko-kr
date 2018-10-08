@@ -1,7 +1,7 @@
 ---
 title: ALTER ASSEMBLY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,15 +27,15 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942929"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171805"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   어셈블리의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 속성을 수정하여 어셈블리를 변경합니다. ALTER ASSEMBLY는 어셈블리의 구현을 유지하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 어셈블리를 새로 고치고 어셈블리와 연관된 파일을 추가하거나 제거합니다. 어셈블리는 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)를 사용하여 만듭니다.  
 
@@ -79,6 +79,9 @@ ALTER ASSEMBLY assembly_name
  어셈블리의 구현을 유지하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 어셈블리를 업데이트합니다. 지정한 어셈블리와 관련된 파일이 없는 경우에만 이 옵션을 사용할 수 있습니다.  
   
  \<client_assembly_specifier>는 새로 고칠 어셈블리가 있는 네트워크 위치나 로컬 위치를 지정합니다. 네트워크 위치에는 컴퓨터 이름, 공유 이름 및 해당 공유 내의 경로가 포함됩니다. *manifest_file_name*은 어셈블리의 매니페스트가 들어 있는 파일의 이름을 지정합니다.  
+
+> [!IMPORTANT]
+> Azure SQL Database는 파일 참조를 지원하지 않습니다.
   
  \<assembly_bits>는 어셈블리에 대한 이진 값입니다.  
   
@@ -118,13 +121,13 @@ ALTER ASSEMBLY assembly_name
  어셈블리와 관련된 특정 파일이나 모든 파일을 데이터베이스에서 제거합니다. ADD FILE이 뒤따를 경우 DROP FILE이 먼저 실행됩니다. 이 기능을 사용하여 같은 파일 이름의 파일을 대체할 수 있습니다.  
   
 > [!NOTE]  
->  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
+>  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  원본 코드, 디버그 파일 또는 기타 관련 정보와 같은 어셈블리와 관련된 파일을 서버로 업로드하고 **sys.assembly_files** 카탈로그 뷰에 표시합니다. *client_file_specifier*는 업로드할 파일이 있는 위치를 지정합니다. 이 옵션 대신 *file_bits*를 사용하면 파일을 구성하는 이진 값 목록을 지정할 수 있습니다. *file_name*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 저장되어야 하는 파일 이름을 지정합니다. *file_bits*가 지정되면 *file_name*가 지정되어야 하고 *client_file_specifier*가 지정되면 선택적입니다. *file_name*을 지정하지 않으면 *client_file_specifier*의 file_name 부분이 *file_name*으로 사용됩니다.  
   
 > [!NOTE]  
->  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
+>  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
  ALTER ASSEMBLY는 현재 실행 중인 세션(수정 중인 어셈블리에서 실행 중인 코드)을 방해하지 않습니다. 현재 세션은 어셈블리의 변경되지 않은 비트를 사용하여 실행이 완료됩니다.  
@@ -168,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  UNCHECKED 데이터 절 없이 ALTER ASSEMBLY를 실행하면 새 어셈블리 버전이 테이블의 기존 데이터에 영향을 미치지 않는지 확인하는 검사가 수행됩니다. 확인해야 하는 데이터 양에 따라 이 검사가 성능에 영향을 미칠 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  어셈블리에 대한 ALTER 권한이 필요합니다. 추가 요구 사항은 다음과 같습니다.  
   
 -   기존 권한이 EXTERNAL_ACCESS로 설정되어 있는 어셈블리를 변경하려면 서버에 대한 **EXTERNAL ACCESS ASSEMBLY** 권한이 필요합니다.  
@@ -205,6 +208,10 @@ ALTER ASSEMBLY assembly_name
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> Azure SQL Database는 파일 참조를 지원하지 않습니다.
+
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>2. 어셈블리와 연결할 파일 추가  
  다음 예에서는 `Class1.cs` 어셈블리와 연결할 소스 코드 파일 `MyClass`를 업로드합니다. 이 예에서는 데이터베이스에 이미 `MyClass` 어셈블리가 있다고 가정합니다.  
   
@@ -212,7 +219,10 @@ ALTER ASSEMBLY assembly_name
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database는 파일 참조를 지원하지 않습니다.
+
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>3. 어셈블리의 사용 권한 변경  
  다음 예에서는 `ComplexNumber` 어셈블리 사용 권한 설정을 SAFE에서 `EXTERNAL ACCESS`로 변경합니다.  
   

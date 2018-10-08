@@ -46,12 +46,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095341"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44090003"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션 
 
@@ -315,7 +315,10 @@ AUTOGROW_ALL_FILES
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
   
-파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 증가합니다.  
+파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 커집니다. 
+
+> [!NOTE]
+> TempDB의 기본값입니다.
   
 **\<filegroup_updatability_option>::=**  
   

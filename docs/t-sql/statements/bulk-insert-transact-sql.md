@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782674"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171695"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 지정한 형식으로 데이터베이스 테이블이나 뷰로 가져옵니다.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,6 +100,10 @@ BULK INSERT
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1부터 data_file은 Azure Blob Storage에 있을 수 있습니다.
 
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+
+
 **'** *data_source_name* **'**   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 가져올 파일의 Azure Blob Storage 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.    
@@ -146,8 +148,7 @@ BULK INSERT
 |**char**(기본값)|문자 형식<br /><br /> 자세한 내용은 [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.|  
 |**native**|네이티브(데이터베이스) 데이터 형식. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 원시 데이터 파일을 만듭니다.<br /><br /> 네이티브 값은 char 값을 대체하여 보다 뛰어난 성능을 제공합니다.<br /><br /> 자세한 내용은 [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)를 참조하세요.|  
 |**widechar**|유니코드 문자<br /><br /> 자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.|  
-|**widenative**|**char**, **varchar** 및 **text** 열을 제외하고 데이터가 유니코드로 저장되는 원시(데이터베이스) 데이터 형식입니다. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 **widenative** 데이터 파일을 만듭니다.<br /><br /> 
-  **widenative** 값은 **widechar** 값을 대체하여 보다 뛰어난 성능을 제공합니다. 데이터 파일에 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 확장 문자가 포함되어 있으면 **widenative**를 지정하십시오.<br /><br /> 자세한 내용은 [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.|  
+|**widenative**|**char**, **varchar** 및 **text** 열을 제외하고 데이터가 유니코드로 저장되는 원시(데이터베이스) 데이터 형식입니다. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 **widenative** 데이터 파일을 만듭니다.<br /><br /> **widenative** 값은 **widechar** 값을 대체하여 보다 뛰어난 성능을 제공합니다. 데이터 파일에 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 확장 문자가 포함되어 있으면 **widenative**를 지정하십시오.<br /><br /> 자세한 내용은 [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.|  
   
   ERRORFILE **='***file_name***'**  
  형식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.  
@@ -294,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML 문서 대량 내보내기 또는 가져오기를 위한 데이터 형식  
  SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.  
   
@@ -339,7 +344,7 @@ GO
   
  이에 대한 자세한 내용 및 BULK INSERT를 사용하기 위한 기타 보안 고려 사항에 대한 자세한 내용은 [Import Bulk Data by Using BULK INSERT 또는 OPENROWSET을 사용하여 대량 데이터 가져오기 &#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL Database에서는 INSERT 및 ADMINISTER DATABASE BULK OPERATIONS 권한이 필요합니다. 또한 다음 중 하나 이상이 적용되는 경우에는 ALTER TABLE 권한이 필요합니다.  
   
 -   제약 조건이 있으며 CHECK_CONSTRAINTS 옵션을 지정하지 않았습니다.  
@@ -368,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
   
 ### <a name="b-using-the-firetriggers-argument"></a>2. FIRE_TRIGGERS 인수 사용  
  다음 예에서는 `FIRE_TRIGGERS` 인수를 지정합니다.  
@@ -382,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>3. 행 종결자로 줄 바꿈 사용  
  다음 예에서는 UNIX 출력 같은 행 종결자로 줄 바꿈을 사용하는 파일을 가져옵니다.  
@@ -396,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  Microsoft Windows에서 텍스트 파일을 처리하는 방법으로 인해 **(\n**은 **\r\n)** 으로 자동으로 바뀝니다.  
+
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
   
 ### <a name="d-specifying-a-code-page"></a>4. 코드 페이지 지정  
  다음 예에서는 코드 페이지를 지정하는 방법을 보여 줍니다.  
@@ -409,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+
 ### <a name="e-importing-data-from-a-csv-file"></a>5. CSV 파일에서 데이터 가져오기   
 다음 예제에서는 CSV 파일을 지정하는 방법을 보여 줍니다.   
 ```
@@ -416,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>6. Azure Blob Storage의 파일에서 데이터 가져오기   
 다음 예제에서는 외부 데이터 원본으로 구성된 Azure Blob Storage 위치의 csv 파일에서 데이터를 로드하는 방법을 보여 줍니다. 이를 위해 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다.    
@@ -426,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>7. Azure Blob Storage의 파일에서 데이터 가져오기 및 오류 파일 지정   
 다음 예제에서는 외부 데이터 원본으로 구성되고 오류 파일을 지정하는 Azure Blob Storage 위치의 csv 파일에서 데이터를 로드하는 방법을 보여줍니다. 이를 위해 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다. Azure SQL Database에서 실행되는 경우 ERRORFILE 옵션에는 ERRORFILE_DATA_SOURCE가 함께 사용되어야 하지만 사용 권한 오류로 인해 가져오기에 실패할 수 있습니다. ERRORFILE에 지정된 파일이 컨테이너에 존재하지 않아야 합니다.

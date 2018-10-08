@@ -1,7 +1,7 @@
 ---
 title: CREATE CREDENTIAL(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,19 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 87759a536e979600e7ff12d8ad932c4fcf4cd248
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458077"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171615"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   서버 수준 자격 증명을 만듭니다. 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보가 포함된 레코드입니다. 대부분의 자격 증명에는 Windows 사용자 및 암호가 들어 있습니다. 예를 들어 일부 위치에 데이터베이스 백업을 저장 하면 해당 위치에 액세스할 수 있는 특별 자격 증명을 제공하기 위해 SQL Server를 요청할 수 있습니다. 자세한 내용은 [자격 증명(데이터베이스 엔진)](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  데이터베이스 수준의 자격 증명을 만들려면 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 사용하세요. 서버에서 여러 데이터베이스에 대한 동일한 자격 증명을 사용해야 할 때 서버 수준의 자격 증명을 사용하세요. 데이터베이스 범위 자격 증명을 사용하여 데이터베이스의 이식성을 더 높게 만드십시오. 데이터베이스를 새 서버로 이동할 때 데이터베이스 범위 자격 증명도 함께 이동됩니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 데이터베이스 범위 자격 증명을 사용합니다.  
@@ -63,7 +61,10 @@ WITH IDENTITY = 'identity_name'
   
  IDENTITY **='***identity_name***'**  
  서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **IDENTITY**가 Key Vault의 이름입니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 *SAS*입니다. 아래의 예 4를 참조하십시오.  
-  
+ 
+> [!IMPORTANT]
+> Azure SQL Database는 Azure Key Vault와 공유 액세스 서명 ID만 지원합니다. Windows 사용자 ID는 지원되지 않습니다.
+ 
  SECRET **='***secret***'**  
  나가는 인증에 필요한 암호를 지정합니다.  
   

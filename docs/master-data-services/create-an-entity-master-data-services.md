@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410465"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811089"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
 
@@ -57,7 +57,9 @@ ms.locfileid: "35410465"
      이 필드에 이름을 입력하지 않으면 엔터티 이름이 사용됩니다.  
   
     > [!TIP]  
-    >  모델 이름을 준비 테이블의 일부로 사용합니다(예: *Modelname_Entityname*). 그러면 데이터베이스에서 테이블을 더 쉽게 찾을 수 있습니다. 준비 테이블에 대한 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
+    >  모델 이름을 준비 테이블의 일부로 사용합니다(예: *Modelname_Entityname*). 그러면 데이터베이스에서 테이블을 더 쉽게 찾을 수 있습니다. 준비 테이블에 대한 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.
+    > [!TIP]  
+    >  준비 테이블에 대해 기본 이름을 사용하는 경우 동일한 이름의 엔터티가 다른 모델에 존재하면 MDS는 준비 테이블 이름에 식별자(예: _1, _2)를 자동으로 추가합니다.
   
 7.  **트랜잭션 로그 유형** 필드의 드롭다운 목록에서 트랜잭션 로그 유형을 선택합니다.  
   

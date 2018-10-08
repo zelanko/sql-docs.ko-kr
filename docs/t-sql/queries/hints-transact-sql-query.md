@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240291"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089993"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,6 @@ ms.locfileid: "43240291"
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
-  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -182,7 +180,7 @@ ms.locfileid: "43240291"
  IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 쿼리에 비클러스터형 메모리 액세스에 최적화된 columnstore 인덱스가 사용되지 않도록 방지합니다. 쿼리에 Columnstore 인덱스 사용을 방지하기 위한 쿼리 힌트와 Columnstore 인덱스를 사용하기 위한 인덱스 힌트가 포함되어 있으면 힌트가 충돌하게 되고 오류가 반환됩니다.  
+ 쿼리에 비클러스터형 메모리 액세스에 최적화된 columnstore 인덱스가 사용되지 않도록 방지합니다. 쿼리에 columnstore 인덱스 사용을 방지하기 위한 쿼리 힌트와 columnstore 인덱스를 사용하기 위한 인덱스 힌트가 포함되어 있으면 힌트가 충돌하게 되고 오류가 반환됩니다.  
   
  MAX_GRANT_PERCENT = *percent*  
  PERCENT 단위의 최대 메모리 부여 크기입니다. 쿼리가 이 제한을 초과하지 않게 보장합니다. 리소스 관리자 설정이 이 힌트에 지정된 값보다 낮은 경우 실제 제한을 더 낮게 설정할 수 있습니다. 유효한 값은 0.0에서 100.0 사이의 값입니다.  
@@ -280,13 +278,13 @@ ms.locfileid: "43240291"
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  쿼리 최적화 프로그램이 현재 데이터베이스 호환성 수준에 해당하는 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. 이 힌트를 사용하여 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON 또는 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 재정의합니다.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- 다중 명령문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않습니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)을 참조합니다.
+ 다중 명령문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않습니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)을 참조하세요.
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
  일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조합니다.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- 쿼리가 데이터베이스 호환성 수준 *n*으로 컴파일된 것처럼 쿼리 수준에서 쿼리 최적화 프로그램 동작을 강제 실행합니다. 여기서 *n*은 지원되는 데이터베이스 호환성 수준입니다. *n*에 대해 현재 지원되는 값 목록은 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
+ 쿼리가 데이터베이스 호환성 수준 *n*으로 컴파일된 것처럼 쿼리 수준에서 쿼리 최적화 프로그램 동작을 강제 실행합니다. 여기서 *n*은 지원되는 데이터베이스 호환성 수준입니다. *n*에 대해 현재 지원되는 값 목록은 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10부터)   
  
     > [!NOTE]
     > 데이터베이스 범위 구성, 추적 플래그 또는 다른 쿼리 힌트(예: QUERYTRACEON)를 통해 강제 실행되는 경우 QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 힌트는 기본 또는 레거시 카디널리티 예상 설정을 재정의하지 않습니다.   
@@ -564,6 +562,6 @@ GO
  [힌트&#40;Transact SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
- [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-  
+ [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
+ [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
   

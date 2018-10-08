@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -31,19 +31,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f656953d814d53bf234ca890d56bf0ae0fa8eecb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7d0714bfff3de11ad36373f3ef710368169966e6
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091695"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171545"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스에 인증서를 추가합니다.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  이 기능은 Data Tier Application Framework(DACFx)를 사용하는 데이터베이스 내보내기와 호환되지 않습니다. 내보내기 전에 모든 인증서를 삭제해야 합니다.  
   
@@ -127,6 +125,9 @@ CREATE CERTIFICATE certificate_name
   
  [ EXECUTABLE ] FILE ='*path_to_file*'  
  인증서를 포함하는 DER 인코딩 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. EXECUTABLE 옵션을 사용한 경우 파일은 인증서로 서명된 DLL입니다. *path_to_file*은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
+
+> [!IMPORTANT]
+> Azure SQL Database는 파일에서 인증서 생성 또는 개인 키 파일 사용을 지원하지 않습니다.
   
  WITH PRIVATE KEY  
  인증서의 개인 키가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드되도록 지정합니다. 이 절은 인증서가 파일에서 생성되는 경우에만 유효합니다. 어셈블리의 개인 키를 로드하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)를 사용합니다.  
@@ -134,8 +135,8 @@ CREATE CERTIFICATE certificate_name
  FILE ='*path_to_private_key*'  
  개인 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. *path_to_private_key*는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
   
-> [!NOTE]  
->  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
+> [!IMPORTANT]  
+>  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
   
  asn_encoded_certificate  
  ASN으로 인코딩된 인증서 비트로, 이진 상수로 지정됩니다.  
@@ -211,7 +212,10 @@ CREATE CERTIFICATE Shipping11
     DECRYPTION BY PASSWORD = 'sldkflk34et6gs%53#v00');  
 GO   
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database는 파일에서 인증서 생성을 지원하지 않습니다.
+   
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>3. 서명된 실행 파일로부터 인증서 만들기  
   
 ```  
@@ -230,7 +234,9 @@ GO
 CREATE CERTIFICATE Shipping19 FROM ASSEMBLY Shipping19;  
 GO  
 ```  
-  
+> [!IMPORTANT]
+> Azure SQL Database는 파일에서 인증서 생성을 지원하지 않습니다.
+   
 ### <a name="d-creating-a-self-signed-certificate"></a>4. 자체 서명된 인증서 만들기  
  다음 예에서는 암호화된 암호를 지정하지 않고 `Shipping04`라는 인증서를 만듭니다. 이 예제는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]와 함께 사용할 수 있습니다.
   
@@ -239,7 +245,6 @@ CREATE CERTIFICATE Shipping04
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
 ```  
-  
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   

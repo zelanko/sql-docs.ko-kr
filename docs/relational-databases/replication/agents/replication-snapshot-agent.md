@@ -1,7 +1,7 @@
 ---
 title: 복제 스냅숏 에이전트 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: replication
@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349995"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311663"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -202,7 +203,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  성능이 향상될 것이라는 확신이 없으면 패킷 크기를 변경하지 마세요. 대부분의 응용 프로그램에는 기본 패킷 크기가 제일 좋습니다.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ 테이블 개체가 프리페치되고 캐시되는지를 지정하는 선택적 매개 변수입니다.  기본 동작은 내부 계산을 기반으로 하는 SMO 구성 요소를 사용하여 특정 테이블 속성을 프리페치하는 것입니다.  이 매개 변수는 SMO 프리페치 작업이 실행하는 데 상당히 오래 걸리는 경우에 유용할 수 있습니다. 이 매개 변수를 사용하지 않으면 게시에 아티클로 추가되는 테이블의 비율을 기준으로 런타임 시 동작이 결정됩니다.  
   
+|OutputVerboseLevel 값|설명|  
+|------------------------------|-----------------|  
+|**0**|SMO 구성 요소의 프리페치 메서드 호출을 사용할 수 없습니다.|  
+|**1**|스냅숏 에이전트가 프리페치 메서드를 호출하여 SMO를 사용하는 일부 테이블 속성을 캐시합니다.|  
+
  **-ProfileName** *profile_name*  
  에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   

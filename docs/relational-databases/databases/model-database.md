@@ -20,12 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 84b01fb62721b624ffde822f041dd160671d0840
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412644"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343114"
 ---
 # <a name="model-database"></a>model 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "40412644"
 |주 데이터|modeldev|model.mdf|디스크가 꽉 찰 때까지 64MB씩 자동 증가|  
 |Log|modellog|modellog.ldf|최대 2TB까지 64MB씩 자동 증가|  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]이전 버전의 경우 기본 파일 증가 값은 [model 데이터베이스](model-database.md)를 참조하세요.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전의 경우 기본 파일 증가 값은 [model 데이터베이스](../../2014/relational-databases/databases/model-database.md)를 참조하세요.  
   
  **model** 데이터베이스나 로그 파일을 이동하려면 [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md)을 참조하세요.  
   

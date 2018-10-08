@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899503"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889799"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
 
 
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+빌드 번호: 14.0.17285.0<br>
+릴리스 날짜: 2018년 9월 4일
+
+### <a name="whats-new"></a>새로운 기능
+
+**일반 SSMS**
+
+
+실행 계획:
+
+- 이제 그래픽 실행 계획은 특정 계획에 대해 기능이 활성화되면 새로운 행 모드 메모리 부여 피드백 특성을 보여 줍니다. IsMemoryGrantFeedbackAdjusted 및 LastRequestedMemory가 MemoryGrantInfo 쿼리 계획 XML 요소에 추가됩니다. 행 모드 메모리 부여 피드백에 대한 자세한 내용은 [SQL 데이터베이스의 적응 쿼리 처리](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing)를 참조하세요.
+
+Azure SQL: 
+
+- Azure DB 생성에서 vCore SKU에 대한 지원이 추가되었습니다. 자세한 내용은 [vCore 기반 구매 모델](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model)을 참조하세요.
+ 
+
+### <a name="bug-fixes"></a>버그 수정
+
+**일반 SSMS**
+    
+복제 모니터:
+
+- 복제 모니터(SqlMonitor.exe)가 시작되지 않도록 만드는 문제를 해결함(사용자 의견 항목: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+플랫 파일 가져오기 마법사: 
+
+- “플랫 파일 마법사” 대화 상자의 도움말 페이지에 대한 링크를 수정함 
+- 테이블이 이미 있는 경우 마법사에서 대상 테이블 변경을 허용하지 않는 문제를 해결했습니다. 사용자는 마법사를 종료하지 않고 다시 시도하고 실패한 테이블을 삭제하고 마법사에 정보를 다시 입력할 수 있습니다(사용자 의견 항목: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+
+데이터 계층 응용 프로그램 가져오기/내보내기:
+
+- 파티션이 정의된 테이블과 인덱스가 없는 테이블을 처리할 때 “오류 SQL72014: .Net SqlClient 데이터 공급자: Msg 9108, 수준 16, 상태 10, 줄 1 이러한 유형의 통계는 증분 통계가 될 수 없습니다.” 같은 메시지와 함께 .bacpac 가져오기를 실패하게 만드는 문제(DacFx에서)를 해결했습니다. 
+
+IntelliSense:
+
+- MFA와 함께 AAD를 사용할 때 IntelliSense 완료가 작동되지 않는 문제를 해결했습니다. 
+
+개체 탐색기: 
+
+- SSMS가 실행되는 모니터 대신 임의의 모니터에 “필터 대화 상자”가 표시되는 문제를 해결했습니다(다중 모니터 시스템).
+
+Azure SQL: 
+
+- 특정 데이터베이스에 연결될 때 드롭다운에 “마스터”가 표시되지 않는, “사용 가능한 데이터베이스”에서 데이터베이스 열거형과 관련된 문제를 해결했습니다. 
+- MFA와 함께 AAD를 사용하여 스크립트(“데이터” 또는 “스키마 및 데이터”)를 생성하려고 하면 실패하고 SQL Azure DB에 연결할 수 없는 문제를 해결했습니다. 
+- SQL Azure DB에 연결되어 있을 때 UI에서 “테이블 추가”를 선택할 수 없는 뷰 디자이너(뷰) 문제를 해결했습니다. 
+- MFA 토큰 갱신 중 SSMS 쿼리 편집기가 자동으로 연결을 닫았다가 다시 여는 문제를 해결했습니다. 이는 트랜잭션을 종료하고 다시 열지 않는 것처럼 사용자가 모르는 사이에 부작용이 발생하는 것을 방지합니다. 이러한 변경으로 인해 속성 창에 토큰 만료 시간이 추가됩니다. 
+- SSMS가 MFA 로그인을 사용하는 AAD에 대해 가져온 MSA 계정에 대한 암호를 묻지 않는 문제를 해결했습니다. 
+
+작업 모니터: 
+
+- 작업 모니터에서 시작되고 SQL 인증이 사용되면 “활성 쿼리 통계”가 중단하는 문제를 해결했습니다. 
+
+Microsoft Azure 통합: 
+
+- SSMS에서 처음 50개 구독만 표시하는 문제를 해결했습니다(Always Encrypted 대화 상자, URL에서 백업/복원 대화 상자 등). 
+- URL에서 백업/복원 대화 상자에서 저장소 계정이 없는 Microsoft Azure 계정에 로그온하려고 하면 SSMS에서 예외를 throw하는 문제를 해결했습니다. 
+
+개체 스크립팅: 
+
+- “Drop 및 Create”를 스크립팅할 때 SSMS에서 이제 동적 T-SQL 생성을 방지합니다.
+- 데이터베이스 개체를 스크립팅할 때 이제 SSMS에서 데이터베이스 범위 구성이 기본값으로 설정된 경우 이를 설정하기 위해 스크립트를 생성하지 않습니다.
+
+Help:
+
+- “도움말에 대한 도움말”이 온라인/오프라인 모드를 적용하지 않는 오랫동안 해결하지 못했던 문제를 해결했습니다.
+- “도움말 | Community Projects and Samples(커뮤니티 프로젝트 및 샘플)”을 클릭하면 이제 SSMS에서 Git 페이지로 안내하는 기본 브라우저를 열고 이전 브라우저 사용으로 인한 오류/경고를 표시하지 않습니다.
+
+### <a name="known-issues"></a>알려진 문제
+
+- 현재 이 릴리스에서 알려진 문제가 없습니다.
+
+
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![](../ssdt/media/download.png)[SSMS 17.8.1 다운로드](https://go.microsoft.com/fwlink/?linkid=875802)
 ‘17.8에서 SQL 데이터베이스 프로비전과 관련된 버그가 발견되었으므로 SSMS는17.8.1이 17.8로 대체됩니다.’
-
 
 빌드 번호: 14.0.17277.0<br>
 릴리스 날짜: 2018년 6월 26일
+
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>새로운 기능
@@ -93,10 +174,6 @@ SMO:
 - XEvents 뷰어에서 약간의 대기 시간이 발생할 수 있습니다. [.NET Framework의 알려진 문제](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)입니다. NetFx 4.7.2로 업그레이드해보세요.
 
 
-
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>[SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126) ![다운로드](../ssdt/media/download.png)
