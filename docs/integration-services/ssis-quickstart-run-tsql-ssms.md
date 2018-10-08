@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4943bbddb027632a39e7a3ef13748dec286c68c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 56e3cb535570c768b1a7db6b55c439e1fb3be74e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654361"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행
 이 빠른 시작에서는 SSMS(SQL Server Management Studio)를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 카탈로그에 저장된 SSIS 패키지를 실행하는 방법을 보여 줍니다.

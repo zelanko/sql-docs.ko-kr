@@ -5,29 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 23c5d9bd47192b66f3e77913f9305665518fb7aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4703e861683f9447ecd44490ccd5dba06cb6ce44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632901"
 ---
 # <a name="server-properties---database-settings-page"></a>서버 속성 - 데이터베이스 설정 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 페이지를 사용하여 데이터베이스 설정을 보거나 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **기본 인덱스 채우기 비율**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 기존 데이터를 사용하여 새 인덱스를 만들 때 각 페이지를 채우는 비율을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 페이지를 채울 때 페이지를 분할하는 데 시간이 걸리므로 채우기 비율은 성능에 영향을 줍니다.  
   

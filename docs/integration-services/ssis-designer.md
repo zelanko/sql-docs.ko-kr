@@ -5,9 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.controlflowwindow.f1
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c93d87a0645d6b3ee9b57879580684a177a4e459
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820111"
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만들고 유지 관리하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트의 일부로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다.  
@@ -148,7 +145,7 @@ ms.locfileid: "35411315"
 ## <a name="event-handlers-tab"></a>이벤트 처리기 탭
   **디자이너의** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다. 이벤트 처리기는 패키지 또는 패키지의 태스크나 컨테이너에 의해 발생한 이벤트에 대한 응답으로 실행됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **실행 파일**  
  이벤트 처리기를 작성할 실행 파일을 선택합니다. 실행 파일은 패키지 또는 패키지의 태스크나 컨테이너가 될 수 있습니다.  
   

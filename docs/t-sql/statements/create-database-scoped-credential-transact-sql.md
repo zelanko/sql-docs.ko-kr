@@ -5,9 +5,7 @@ ms.date: 02/28/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE SCOPED CREDENTIAL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e356fc4e62fb07cff0f08c375488a759d01712
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762421"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +51,10 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  만들려는 데이터베이스 범위 자격 증명의 이름을 지정합니다. *credential_name*은 번호(#) 기호로 시작할 수 없습니다. 시스템 자격 증명은 ##으로 시작합니다.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.  
   
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  나가는 인증에 필요한 암호를 지정합니다. `SECRET`은 Azure Blob 저장소에서 파일을 가져오는 데 필요합니다. Azure Blob Storage에서 SQL DW 또는 병렬 데이터 웨어하우스로 로드하려면 Azure Storage Key가 암호여야 합니다.  
 >  [!WARNING]
 >  SAS 키 값은 '?'(물음표)로 시작될 수 있습니다. SAS 키를 사용할 때는 앞의 '?'를 제거해야 합니다. 그렇지 않으면 작업이 차단될 수 있습니다.  

@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 061967b6c95d73f926be510fc1747c678b0abf66
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780351"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>방법: 쿼리를 사용하여 새 데이터베이스 개체 만들기
 스크립트를 사용하여 뷰, 저장 프로시저, 함수, 트리거, 사용자 정의 형식을 만들거나 편집하려면 Transact\-SQL 편집기를 사용합니다. Transact\-SQL 편집기는 IntelliSense 및 기타 언어 지원을 제공합니다. 자세한 내용은 [Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)을 참조하세요.  

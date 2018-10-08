@@ -5,22 +5,19 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a6c61b007f24cf78e182358d864789012c13015a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 601334f4d767f0e632f5641512b9855a75ddd282
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696311"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자)
 

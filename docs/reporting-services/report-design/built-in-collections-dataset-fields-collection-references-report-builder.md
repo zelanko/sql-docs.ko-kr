@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcc14000dac439a1f559133883789ca27f3c2b40
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 662c4b4fbd3eb754a971b0228e403c64e71b684b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789931"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션 - 데이터 집합 필드 컬렉션 참조(보고서 작성기)
   보고서의 각 데이터 집합에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 집합 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 집합을 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  

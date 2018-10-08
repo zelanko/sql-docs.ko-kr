@@ -5,9 +5,7 @@ ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SEQUENCE
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - sequence object
 - number, sequence
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1990b5f9e88949aebf0137fefdeec76172e3341e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629043"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -161,7 +158,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  SCHEMA에 대한 **CREATE SEQUENCE**, **ALTER**또는 **CONTROL** 권한이 필요합니다.  
   
 -   db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 시퀀스 개체를 생성, 변경 및 삭제할 수 있습니다.  

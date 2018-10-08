@@ -5,28 +5,25 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 00ffb8aea188ed367bf6b746b80ed0ad396abb61
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 54aa90739bb6f2d5d89afe33b6237b00a6c81a84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628041"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>데이터베이스 미러링 모니터 서버 추가 또는 바꾸기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  데이터베이스 미러링 끝점에서 Windows 인증을 사용하는 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 미러링 모니터 서버를 추가하거나 바꿀 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 미러링 모니터 서버를 추가하면 운영 모드도 자동 장애 조치(Failover)가 있는 보호 우선 모드로 변경됩니다.  
+  데이터베이스 미러링 엔드포인트에서 Windows 인증을 사용하는 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 미러링 모니터 서버를 추가하거나 바꿀 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 미러링 모니터 서버를 추가하면 운영 모드도 자동 장애 조치(Failover)가 있는 보호 우선 모드로 변경됩니다.  
   
 > [!NOTE]  
 >  미러링 모니터 서버는 파트너 중 별도의 컴퓨터에 있는 것이 좋습니다. 미러링 모니터 서버에서 사용하는 서비스 계정은 주 서버 인스턴스 및 미러 서버 인스턴스에서 사용하는 서비스 계정과 같은 도메인에 있거나 트러스트된 도메인에 있어야 합니다.  
@@ -47,13 +44,13 @@ ms.locfileid: "35311582"
   
 7.  **구성할 서버 선택** 대화 상자에서 **미러링 모니터 서버 인스턴스** 확인란이 자동으로 선택됩니다. **다음**을 클릭합니다.  
   
-8.  **주 서버 인스턴스** 대화 상자에서 기존 포트와 끝점을 유지합니다. **다음**을 클릭합니다.  
+8.  **주 서버 인스턴스** 대화 상자에서 기존 포트와 엔드포인트를 유지합니다. **다음**을 클릭합니다.  
   
 9. **미러링 모니터 서버 인스턴스** 대화 상자에서 **연결**을 클릭합니다.  
   
 10. **서버에 연결** 대화 상자에서 **서버 이름** 필드에 미러링 모니터 서버 인스턴스를 지정하고 Windows 인증(기본값)을 사용합니다. **연결**을 클릭합니다.  
   
-11. 연결이 설정되면 미러링 모니터 서버 인스턴스의 수신기 포트와 데이터베이스 미러링 끝점이 **미러링 모니터 서버 인스턴스** 대화 상자에 표시됩니다. **다음**을 클릭합니다.  
+11. 연결이 설정되면 미러링 모니터 서버 인스턴스의 수신기 포트와 데이터베이스 미러링 엔드포인트가 **미러링 모니터 서버 인스턴스** 대화 상자에 표시됩니다. **다음**을 클릭합니다.  
   
 12. **서비스 계정** 대화 상자에는 주 서버 인스턴스, 미러 서버 인스턴스 및 미러링 모니터 서버 인스턴스의 도메인 서비스 계정에 대한 필드가 있습니다.  
   

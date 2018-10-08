@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b879111ec000cbe051df2eb9bd377f265a7c013
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a594b214153c838b1b6f50ca29a3a478b94cf96f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689401"
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
 ## <a name="remarks"></a>Remarks  
  이 저장 프로시저는 *property_value*가 각 *property_name*에 대해 유효한지 확인합니다.  
@@ -54,7 +51,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
  카탈로그가 구성되면 작업 로그에 항목이 기록됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  

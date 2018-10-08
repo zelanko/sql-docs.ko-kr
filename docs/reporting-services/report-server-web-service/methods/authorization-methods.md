@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], reports
 - authorization [Reporting Services]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: edd6b4f1c6c4847096eaf181080187798a8be36d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3c6d344912019d3eb9f776b17bd2349f66786337
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663961"
 ---
 # <a name="authorization-methods"></a>권한 부여 메서드
   다음 메서드를 사용하여 보고서 서버에서 태스크, 역할 및 정책을 관리할 수 있습니다.  

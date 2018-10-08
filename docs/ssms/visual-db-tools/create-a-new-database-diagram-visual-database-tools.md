@@ -1,32 +1,28 @@
 ---
 title: 새 데이터베이스 다이어그램 만들기(Visual Database Tools) | Microsoft 문서
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a672bf8d0a05d928e9bc7101e5f1fb2860b8cd95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: aa4a72bf62b50709c516ba3fa8eb1c587b0416b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658401"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>새 데이터베이스 다이어그램 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 개체 탐색기를 사용하여 새 데이터베이스 다이어그램을 만들 수 있습니다. 데이터베이스 다이어그램은 데이터베이스의 구조를 그래픽으로 표시합니다. 데이터베이스 다이어그램을 사용하면 테이블, 열, 관계 및 키를 만들고 수정할 수 있으며, 인덱스 및 제약 조건을 수정할 수도 있습니다.  
   
 ### <a name="to-create-a-new-database-diagram"></a>새 데이터베이스 다이어그램을 만들려면  
@@ -45,5 +41,4 @@ ms.locfileid: "38023710"
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-  
+[데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)

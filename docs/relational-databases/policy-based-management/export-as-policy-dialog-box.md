@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.exportaspolicy.f1
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5cb887b7c6c1ca4243e0f313a352886ebf355bd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a74602445d85fd05a3280419ba4dd544ebe8fb35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612501"
 ---
 # <a name="export-as-policy-dialog-box"></a>정책으로 내보내기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 정책 기반 관리 패싯 속성 집합을 정책으로 저장할 수 있습니다. 정책을 XML 파일로 저장하거나 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 직접 저장할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **정책 정의 이름**  
  정책의 이름을 입력합니다.  
   

@@ -21,7 +21,7 @@ ms.locfileid: "48038993"
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
-최신 릴리스를 다운로드하고 설치합니다. *9월 GA 릴리스*:
+다운로드 하 고 최신 릴리스를 설치 합니다 *9 월 GA 릴리스*:
 
 > [!NOTE]
 > SQL Operations Studio를 통해 업데이트하고 설정, 바로 가기 키 또는 코드 조각을 유지하려는 경우 [사용자 설정 이동](#move-user-settings)을 확인합니다.
@@ -170,7 +170,7 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
    ![설정 복사](./media/download/copy-settings.png)
 
-4. 새 버전의 Azure Data Studio, 1-2, 3단계에 대한 다음 폴더에 저장한 콘텐츠를 붙여넣습니다. 단계를 수행합니다. 수동으로 설정, 키 바인딩 또는 해당 위치로의 코드 조각은 복사할 수 있습니다.
+4. 새 버전의 Azure Data Studio, 1-2, 3 단계에 대 한 다음 폴더에 저장 한 콘텐츠를 붙여 넣습니다. 단계를 수행 합니다. 수동으로 설정, 키 바인딩 또는 해당 위치로의 코드 조각은 복사할 수 있습니다.
 
 
 ## <a name="next-steps"></a>다음 단계

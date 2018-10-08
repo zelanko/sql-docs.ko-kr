@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.newagwizard.listeners.f1
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2802a87f9e4803451d3cb40860585910f943a90
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 1b2d68a048a1d2767bdbaf5931dd59f9a928e50a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623571"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.locfileid: "34769879"
 |탭|간단한 설명|  
 |---------|-----------------------|  
 |[복제본](#ReplicasTab)|보조 복제본을 호스팅할 예정이거나 현재 호스팅하고 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정하려면 이 탭을 사용합니다. 현재 연결된 서버 인스턴스가 주 복제본을 호스팅해야 합니다.<br /><br /> 다른 탭을 시작하기 전에 **복제본** 탭에서 모든 복제본의 지정을 마칩니다.<br/><br/> 클러스터 유형이 **없음**인 경우 **자동 장애 조치**를 사용하지 않도록 설정됩니다. 클러스터에 가용성 그룹이 없는 경우 SQL Server에서는 수동 장애 조치만 지원합니다. <br/><br/> 클러스터 유형이 '외부'인 경우 장애 복구 모드는 **외부**입니다. <br/><br/> 복제본을 추가할 때 모든 새 복제본은 기존 복제본과 동일한 운영 체제 유형에 호스팅되어야 합니다. <br/><br/>복제본을 추가할 때 주 복제본이 WSFC에 있으면 보조 복제본이 동일한 클러스터에 있어야 합니다.|
-|[끝점](#EndpointsTab)|기존 데이터베이스 미러링 끝점을 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 끝점이 없는 경우 끝점을 자동으로 만들려면 이 탭을 사용합니다.|  
+|[엔드포인트](#EndpointsTab)|기존 데이터베이스 미러링 엔드포인트를 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 엔드포인트가 없는 경우 엔드포인트를 자동으로 만들려면 이 탭을 사용합니다.|  
 |[백업 기본 설정](#BackupPreferencesTab)|가용성 그룹 전체에 대한 백업 기본 설정과 개별 가용성 복제본에 대한 백업 우선 순위를 지정하려면 이 탭을 사용합니다.|  
 |[수신기](#Listener)|가능한 경우 가용성 그룹 수신기를 만들려면 이 탭을 사용합니다. 기본적으로 수신기는 만들어지지 않습니다.<br /><br /> 이 탭은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]를 실행하는 경우에만 사용할 수 있습니다.<br/><br/>클러스터 유형이 '외부' 또는 '없음'인 경우 DHCP가 사용되지 않습니다. |  
   
@@ -75,28 +72,28 @@ ms.locfileid: "34769879"
  **복제본 제거**  
  선택한 보조 복제본을 가용성 그룹에서 제거하려면 클릭합니다.  
   
-##  <a name="EndpointsTab"></a> 끝점 탭  
- **끝점** 탭에는 가용성 복제본을 호스팅할 각 서버 인스턴스에 대한 기존 데이터베이스 미러링 끝점의 실제 값(있는 경우)이나 Windows 인증을 사용할 잠재적인 새 끝점의 제안된 값이 표시됩니다. 끝점 값 표에는 기존 끝점과 잠재적인 끝점 모두에 대한 다음 정보가 표시됩니다.  
+##  <a name="EndpointsTab"></a> 엔드포인트 탭  
+ **엔드포인트** 탭에는 가용성 복제본을 호스팅할 각 서버 인스턴스에 대한 기존 데이터베이스 미러링 엔드포인트의 실제 값(있는 경우)이나 Windows 인증을 사용할 잠재적인 새 엔드포인트의 제안된 값이 표시됩니다. 엔드포인트 값 표에는 기존 엔드포인트와 잠재적인 엔드포인트 모두에 대한 다음 정보가 표시됩니다.  
   
  **서버 이름**  
  가용성 복제본을 호스팅할 서버 인스턴스의 이름을 표시합니다.  
   
- **끝점 URL**  
- 데이터베이스 미러링 끝점의 실제 또는 제안된 URL을 표시합니다. 제안된 새 끝점의 경우 이 값을 변경할 수 있습니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ **엔드포인트 URL**  
+ 데이터베이스 미러링 엔드포인트의 실제 또는 제안된 URL을 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **포트 번호**  
- 끝점의 실제 또는 제안된 포트 번호를 표시합니다. 제안된 새 끝점의 경우 이 값을 변경할 수 있습니다.  
+ 엔드포인트의 실제 또는 제안된 포트 번호를 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다.  
   
- **끝점 이름**  
- 끝점의 실제 또는 제안된 이름을 표시합니다. 제안된 새 끝점의 경우 이 값을 변경할 수 있습니다.  
+ **엔드포인트 이름**  
+ 엔드포인트의 실제 또는 제안된 이름을 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다.  
   
  **데이터 암호화**  
- 이 끝점을 통해 보내는 데이터가 암호화되는지 여부를 나타냅니다. 제안된 새 끝점의 경우 이 설정을 변경할 수 있습니다.  
+ 이 엔드포인트를 통해 보내는 데이터가 암호화되는지 여부를 나타냅니다. 제안된 새 엔드포인트의 경우 이 설정을 변경할 수 있습니다.  
   
  **SQL Server 서비스 계정**  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 사용자 이름입니다.  
   
- 서버 인스턴스에서 Windows 인증을 사용하는 끝점을 사용하려면 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정이어야 합니다.  
+ 서버 인스턴스에서 Windows 인증을 사용하는 엔드포인트를 사용하려면 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정이어야 합니다.  
   
  이 요구 사항에 따라 다음과 같이 이후 구성 단계가 결정됩니다.  
   
@@ -106,9 +103,9 @@ ms.locfileid: "34769879"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 도메인 계정으로 변경합니다. 자세한 내용은 [SQL Server의 서비스 시작 계정 변경&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)을 참조하세요.  
   
-    -   인증서를 사용하는 데이터베이스 미러링 끝점을 수동으로 만들려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용합니다. 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) 또는 [Always On 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)에 적용됩니다.  
+    -   인증서를 사용하는 데이터베이스 미러링 엔드포인트를 수동으로 만들려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용합니다. 자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) 또는 [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)에 적용됩니다.  
   
-     끝점을 구성하는 동안 **가용성 복제본 지정** 페이지를 열어 둔 경우 **끝점** 탭으로 돌아와서 **새로 고침** 을 클릭하여 **끝점 값** 표를 업데이트합니다.  
+     엔드포인트를 구성하는 동안 **가용성 복제본 지정** 페이지를 열어 둔 경우 **엔드포인트** 탭으로 돌아와서 **새로 고침** 을 클릭하여 **엔드포인트 값** 표를 업데이트합니다.  
   
 ##  <a name="BackupPreferencesTab"></a> 백업 기본 설정 탭  
  백업이 수행되는 위치를 지정하려면 다음 옵션 중 하나를 선택합니다.  
@@ -206,11 +203,11 @@ ms.locfileid: "34769879"
   
 -   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

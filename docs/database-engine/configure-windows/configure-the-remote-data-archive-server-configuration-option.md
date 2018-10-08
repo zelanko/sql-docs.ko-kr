@@ -5,21 +5,18 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60b994027d5b135e3e1008992d159c3941ea970e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6465c5ccfc10847ac011274ed4b25cdb7f52b978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625651"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>원격 데이터 보관 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "32863568"
   
  **remote data archive** 옵션에는 다음과 같은 값이 올 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|서버의 데이터베이스 및 테이블을 Stretch에 사용할 수 없습니다.|  
 |1|서버의 데이터베이스 및 테이블을 Stretch에 사용할 수 있습니다.|  

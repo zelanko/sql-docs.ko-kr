@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13bf1f6c3cee8868acf735397f5a2b57e8f30d4c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7ba10b27fc9f28879c1c13ec48e1689a22623dfc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785401"
 ---
 # <a name="new-shared-schedule-management-studio"></a>새 공유 일정(Management Studio)
   이 페이지를 사용하여 게시된 보고서 및 구독의 공유 일정을 만들 수 있습니다. 보고서별 일정 또는 구독별 일정 대신 공유 일정을 사용할 수 있습니다. 공유 일정이 항목별 일정과 구분되는 두 가지 주요 기능은 중앙화된 일정 정보, 그리고 예약된 작업을 일시 중지했다가 재개하는 기능입니다.  

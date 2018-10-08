@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_CHECKCATALOG_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b71c8011ebf2830409f886dc61a3b9e93a00df92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7427364996b5ce2fdc684823dc4b149733dc4660
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596564"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ DBCC CHECKCATALOG
 ## <a name="remarks"></a>Remarks  
 DBCC CATALOG 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
   
-|State|Description|  
+|State|설명|  
 |-----------|-----------------|  
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|  
 |1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|  
@@ -96,7 +93,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  

@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.profiles.perfprofileagentname.f1
 helpviewer_keywords:
 - Agent Profile dialog box
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06660d4bfac7798d725c6f9b17c5ea7a47b9da4b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2eea554acc0276821c31296c91a77ed1987ef72c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598513"
 ---
 # <a name="agent-profiles-single-agent"></a>에이전트 프로필(단일 에이전트)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **에이전트 프로필** 대화 상자를 사용하여 에이전트 프로필을 관리할 수 있습니다. 에이전트 프로필을 사용하면 각 에이전트의 런타임 매개 변수를 편리하게 관리할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 미리 정의된 프로필이 추가된 에이전트도 있습니다. 예를 들어 병합 에이전트에는 느린 대역폭 연결을 위한 "느린 연결" 프로필이 있습니다. 대부분의 응용 프로그램은 미리 정의된 프로필만으로 충분하지만 사용자 정의 프로필을 만들어 에이전트 동작을 사용자 지정할 수도 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **새 에이전트에 대한 기본값**  
  지정한 유형의 에이전트에 대해 작업을 만들 때 사용할 프로필을 선택합니다. 예를 들어 병합 게시에 대한 구독을 여러 개 만들 경우 각 구독의 병합 에이전트 작업은 선택한 프로필을 사용합니다. 기존 작업의 프로필을 변경하려면 프로필을 선택하고 **기존 에이전트 변경**을 클릭합니다.  
   

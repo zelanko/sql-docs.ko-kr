@@ -5,21 +5,18 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68cb3af1c84db478c066593b59195b4020ea566b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819791"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>결과 집합  
  유효성 검사 단계의 출력은 결과 집합의 다른 섹션으로 반환됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 권한과 해당되는 경우 참조된 환경에 대한 READ 권한  

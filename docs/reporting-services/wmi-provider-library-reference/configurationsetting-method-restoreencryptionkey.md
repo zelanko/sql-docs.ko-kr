@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbe94f4599025465c058b2813796c7833bef01bf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: cf89b1839fe17df60d97719482c4418f7234eeff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692238"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>ConfigurationSetting 메서드 - RestoreEncryptionKey
   지정된 암호화 키를 보고서 서버 데이터베이스에 다시 적용합니다.  

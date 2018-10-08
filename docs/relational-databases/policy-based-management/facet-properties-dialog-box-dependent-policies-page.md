@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.facet.dependentpolicies.f1
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6de2b94ea21e20361c6baeaeeeac72d6fab21828
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5980fff06b2e0be395edad8fbebd3985784f1fd7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952038"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637601"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>패싯 속성 대화 상자, 종속 정책 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 이 정책 기반 관리 패싯을 현재 참조하는 정책 목록을 표시할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
  현재 패싯을 참조하는 각 정책의 이름을 나열합니다.  
   

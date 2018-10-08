@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 09/05/2017"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed5bcf08a4be00896e3d59b79494fcaffca5c63
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596131"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,10 +59,8 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
   
 나중에 메모리 내 OLTP의 성능 향상 데모를 제공하는 다음 문서를 참조하는 것이 좋습니다.  
   
-- 
-  [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
-- 
-  [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
+- [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
+- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
   
   
   
@@ -367,22 +361,18 @@ ALTER TABLE... ADD/DROP은 메모리 최적화 테이블 또는 인덱스에서 
 ### <a name="how-memory-optimized-tables-perform-faster"></a>메모리 최적화 테이블의 성능이 향상되는 방법  
   
   
-
-            **이중 특성:** 메모리 최적화 테이블은 활성 메모리에서 표현되고, 하드 디스크에도 표현되는 이중 특성이 있습니다. 각 트랜잭션은 테이블의 두 표현 방식으로 모두 커밋됩니다. 트랜잭션은 그중 더 빠른 활성 메모리 표현에 대해 작동합니다. 메모리 액세스에 최적화된 테이블은 디스크와 비교할 때 더 빨라진 활성 메모리 속도를 활용합니다. 또한 더 빨라진 활성 메모리로 인해 실제로 속도에 최적화된 고급 테이블 구조가 구현됩니다. 고급 구조는 또한 페이징되지 않아 래치 및 스핀 잠금의 오버헤드와 경합을 방지합니다.  
+**이중 특성:** 메모리 최적화 테이블은 활성 메모리에서 표현되고, 하드 디스크에도 표현되는 이중 특성이 있습니다. 각 트랜잭션은 테이블의 두 표현 방식으로 모두 커밋됩니다. 트랜잭션은 그중 더 빠른 활성 메모리 표현에 대해 작동합니다. 메모리 액세스에 최적화된 테이블은 디스크와 비교할 때 더 빨라진 활성 메모리 속도를 활용합니다. 또한 더 빨라진 활성 메모리로 인해 실제로 속도에 최적화된 고급 테이블 구조가 구현됩니다. 고급 구조는 또한 페이징되지 않아 래치 및 스핀 잠금의 오버헤드와 경합을 방지합니다.  
   
   
-
-            **잠금 없음:** 메모리 최적화 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 *최적*의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
+**잠금 없음:** 메모리 최적화 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 *최적*의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
   
   
-
-            **행 버전:** 잠금 대신 메모리 최적화 테이블은 tempdb가 아닌 테이블 자체에 업데이트된 행의 새로운 버전을 추가합니다. 원래 행은 트랜잭션이 커밋될 때까지 유지됩니다. 트랜잭션 중 다른 프로세스에서는 원래 버전의 행을 읽을 수 있습니다.  
+**행 버전:** 잠금 대신 메모리 최적화 테이블은 tempdb가 아닌 테이블 자체에 업데이트된 행의 새로운 버전을 추가합니다. 원래 행은 트랜잭션이 커밋될 때까지 유지됩니다. 트랜잭션 중 다른 프로세스에서는 원래 버전의 행을 읽을 수 있습니다.  
   
 - 디스크 기반 테이블의 경우 행 버전이 여러 개 만들어 지면 행 버전은 tempdb에 임시로 저장됩니다.  
   
   
-
-            **적어진 로깅:** 업데이트된 행의 이전 버전과 이후 버전은 메모리 최적화 테이블에서 유지됩니다. 이러한 행 쌍은 일반적으로 로그 파일에 기록된 정보의 상당 부분을 제공합니다. 이로 인해 시스템에서 기록하는 정보의 양과, 로그에 정보를 기록하는 빈도가 모두 줄어들었습니다. 그럼에도 불구하고 트랜잭션 무결성은 보장됩니다.  
+**적어진 로깅:** 업데이트된 행의 이전 버전과 이후 버전은 메모리 최적화 테이블에서 유지됩니다. 이러한 행 쌍은 일반적으로 로그 파일에 기록된 정보의 상당 부분을 제공합니다. 이로 인해 시스템에서 기록하는 정보의 양과, 로그에 정보를 기록하는 빈도가 모두 줄어들었습니다. 그럼에도 불구하고 트랜잭션 무결성은 보장됩니다.  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -408,8 +398,7 @@ ALTER TABLE... ADD/DROP은 메모리 최적화 테이블 또는 인덱스에서 
 ### <a name="trade-offs-of-memory-optimized-tables"></a>메모리 최적화 테이블의 장단점  
   
   
-
-            **메모리 추정:** 메모리 최적화 테이블이 사용하는 활성 메모리 양을 추정할 수 있습니다. 컴퓨터 시스템은 메모리 최적화 테이블을 호스트하는 데 적합한 메모리 용량을 확보해야 합니다. 자세한 내용은 다음을 참조하세요.  
+**메모리 추정:** 메모리 최적화 테이블이 사용하는 활성 메모리 양을 추정할 수 있습니다. 컴퓨터 시스템은 메모리 최적화 테이블을 호스트하는 데 적합한 메모리 용량을 확보해야 합니다. 자세한 내용은 다음을 참조하세요.  
   
 - [메모리 사용량 모니터링 및 문제 해결](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
@@ -510,7 +499,5 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
     
 메모리 내 OLTP를 사용하여 얻을 수 있는 성능 향상을 보여 주는 코드를 제공하는 문서는 다음과 같습니다.  
   
-- 
-  [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
-- 
-  [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
+- [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
+- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  

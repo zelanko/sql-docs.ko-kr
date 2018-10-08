@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7977a01e8c686f1418d5ba4690b1b0adbf6a6bc
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 67b2dff892cd84cfbc2041088bd9c5549b6ee1dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595891"
 ---
 # <a name="distributor-information-agents"></a>배포자 정보, 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "37356255"
   
  스냅숏, 로그 판독기 및 큐 판독기 에이전트와 유지 관리 작업에 대한 자세한 내용은 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)를 참조하십시오. 배포자에 대한 **에이전트** 탭에 있는 에이전트 정보를 표시하면 스냅숏 및 로그 판독기 에이전트에 대한 게시자 정보가 제공됩니다. 그러나 배포자 뷰의 배포자에 대한 **에이전트** 탭에서는 **배포자 에이전트** 및 **병합 에이전트**를 선택할 수도 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  다음 섹션에서는 이 탭에서 배포자 에이전트 및 병합 에이전트에 대해 표시되는 데이터를 설명합니다.  
   
 ### <a name="distributor-agent"></a>배포자 에이전트  

@@ -5,8 +5,6 @@ ms.technology: install
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Release Notes, SQL Server
@@ -15,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 407ad929d40c063f5648f109f3a89b669536eab5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775436"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671911"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -501,7 +499,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
   
 다음 표에서는 AlwaysOn 가용성 그룹의 드라이버 지원에 대해 간략하게 설명합니다.  
   
-|드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔트포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
+|드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔드포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
@@ -527,7 +525,7 @@ MultiSubnetFailover는 SQL Server 2012에서 AlwaysOn 가용성 그룹과 Always
   
 -   다중 서브넷 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스로 명명된 인스턴스 확인  
   
-    -   서브넷 끝점이 여러 개인 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스에 대한 명명된 인스턴스 확인 지원을 추가합니다.  
+    -   서브넷 엔드포인트가 여러 개인 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스에 대한 명명된 인스턴스 확인 지원을 추가합니다.  
   
 **MultiSubnetFailover=True가 .NET Framework 3.5 또는 OLEDB에서 지원되지 않음**  
   

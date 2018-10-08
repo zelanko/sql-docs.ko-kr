@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af38d08bf5d1d99b51617741324b13c396857b91
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 0d8d6ada06b3249c3fef4e21f4dfb271b4f576a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640361"
 ---
 # <a name="publication-properties-filter-rows"></a>게시 속성, 행 필터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +47,7 @@ ms.locfileid: "37350285"
   
 -   중요한 데이터를 전송하지 못하게 할 수 있습니다. 행 필터와 열 필터를 사용하여 구독자의 데이터 액세스를 제한할 수 있습니다. 병합 복제에서 HOST_NAME()을 포함하는 매개 변수가 있는 필터를 사용할 경우 보안 고려 사항이 있습니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)의 "HOST_NAME()으로 필터링" 섹션을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **필터링된 테이블**  
  이 창은 게시의 테이블 아티클에 필터를 추가하면 추가된 필터로 채워집니다. 행 필터가 있는 테이블은 창에서 최상위 노드로 표시됩니다. 병합 게시의 경우 조인 필터를 통해 필터링이 확장된 테이블은 자식 노드로 표시됩니다.  
   

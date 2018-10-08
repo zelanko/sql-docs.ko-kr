@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e46cebc6bfb2443f78d15a54b3ec59da5169d59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bddbfdd03a8209a80b78ad8a1faac9dcda983592
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773241"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plan Cache 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951068"
   
  다음 표에서는 **SQLServer:Plan Cache**카운터에 대해 설명합니다.  
   
-|SQL Server Plan Cache 카운터|Description|  
+|SQL Server Plan Cache 카운터|설명|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|캐시 적중 횟수와 조회 간 비율입니다.|  
 |**Cache Hit Ratio**|내부용으로만 사용할 수 있습니다.| 
@@ -42,7 +38,7 @@ ms.locfileid: "32951068"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|Plan Cache 인스턴스|Description|  
+|Plan Cache 인스턴스|설명|  
 |-------------------------|-----------------|  
 |**_Total**|모든 유형의 캐시 인스턴스에 대한 정보입니다.|  
 |**Sql Plans**|자동으로 매개 변수가 있는 쿼리를 포함하여 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 생성되는 쿼리 계획이거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **또는** sp_cursorprepare **를 사용하여 준비된**문으로 생성되는 쿼리 계획입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 동일한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나중에 실행되는 경우 다시 사용하기 위해 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 계획을 캐시합니다. 사용자가 매개 변수가 있는 쿼리(명시적으로 준비하지 않은 경우 포함)도 Prepared SQL Plans로 모니터링됩니다.|  

@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.adddatabasereference.dialog
 ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcdc8c48660399bb8f753c909f6fdfa9aa243178
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d6ebccd038bd2dc96f540e17c9ad67a135ec6ceb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651657"
 ---
 # <a name="add-database-reference-dialog-box"></a>데이터베이스 참조 추가 대화 상자
 이 항목에서는 **데이터베이스 참조 추가** 대화 상자에서 수행할 수 있는 절차에 대해 설명합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.joinreplica.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], joining
 - Availability Groups [SQL Server], configuring
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47e4705e32023950ed3cf009d8359be7e9f2c88b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e0c3bbe1e99f11626b42a1bf6aee0b54e823a7fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632811"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 조인(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "34768859"
   
 -   아직 가용성 그룹에 조인되지 않은 보조 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
--   로컬 서버 인스턴스에서 주 복제본을 호스팅하는 서버 인스턴스의 데이터베이스 미러링 끝점에 연결할 수 있어야 합니다.  
+-   로컬 서버 인스턴스에서 주 복제본을 호스팅하는 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 연결할 수 있어야 합니다.  
   
 > [!IMPORTANT]  
 >  필수 구성 요소가 충족되지 않으면 조인 작업이 실패합니다. 조인 시도에 실패 후 가용성 그룹에 조인하기 전 보조 복제본을 제거하고 다시 추가하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결해야 합니다. 자세한 내용은 [가용성 그룹에서 보조 복제본 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) 및 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  

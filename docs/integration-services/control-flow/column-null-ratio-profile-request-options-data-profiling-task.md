@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680021d90ba3cb5a1622d3c37dd4a15553112b78
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0ab7b4c0157924900682d3a96f617e8999c0c62e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648171"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>열 Null 비율 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 Null 비율 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 Null 비율 프로필은 선택한 열에 있는 Null 값의 비율을 보고합니다. 이 프로필을 사용하면 예기치 않게 높은 열 내 Null 값의 비율과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 열 Null 비율 프로필은 ZIP Code/Postal Code 열을 프로파일링하는 중 허용 불가능한 수준으로 높은 누락된 코드 비율을 검색할 수 있습니다.  

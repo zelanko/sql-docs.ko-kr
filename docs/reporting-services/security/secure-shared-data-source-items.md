@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5553797f786ae889d767d9f1cea3cde363466830
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 09ec5980236f5bd7f48431ff58a7ff9ae3ddb66c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603501"
 ---
 # <a name="secure-shared-data-source-items"></a>공유 데이터 원본 항목 보안 설정
   공유 데이터 원본 항목에 대한 보안을 설정하여 해당 항목에 대한 액세스를 허용하거나 허용하지 않을 수 있습니다.  

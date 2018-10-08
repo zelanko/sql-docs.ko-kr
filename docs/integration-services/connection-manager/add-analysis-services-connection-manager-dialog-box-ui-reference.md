@@ -5,32 +5,29 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.olapconnection.f1
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a91e3776f8732cfcfbfecdf4efe09ecdcbc170b4
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7372a68fb108b1ebccbc8354f338f17ef207a6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609131"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Analysis Services 연결 관리자 추가 대화 상자 UI 참조
   **Analysis Services 연결 관리자 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행하는 서버에 대한 연결을 만들거나 연결 속성을 편집할 수 있습니다.  
   
  Analysis Services 연결 관리자에 대한 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)를 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **Analysis Services를 실행하는 컴퓨터에 대한 연결 만들기**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스를 실행하는 서버에 대한 기본 연결을 사용하거나 **편집**을 클릭하여 새 연결을 만듭니다.  
   

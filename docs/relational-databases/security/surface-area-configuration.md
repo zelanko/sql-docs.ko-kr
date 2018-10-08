@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reducing attackable surface area
@@ -20,12 +18,12 @@ ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0a945e13450ed81bff0b5fc710942e04b86c7297
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c1741bd9365b0080541c60407ebaabba4a8630b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756371"
 ---
 # <a name="surface-area-configuration"></a>노출 영역 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +69,8 @@ ms.locfileid: "43032584"
 ## <a name="command-prompt-options"></a>명령 프롬프트 옵션  
  **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlet을 사용하여 노출 영역 구성 정책을 호출할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 cmdlet 사용](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)을 참조하세요.  
   
-## <a name="soap-and-service-broker-endpoints"></a>SOAP 및 Service Broker 끝점  
- 끝점을 끄려면 정책 기반 관리를 사용하고 끝점의 속성을 만들고 변경하려면 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) 및 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 사용합니다.  
+## <a name="soap-and-service-broker-endpoints"></a>SOAP 및 Service Broker 엔드포인트  
+ 엔드포인트를 끄려면 정책 기반 관리를 사용하고 엔드포인트의 속성을 만들고 변경하려면 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-endpoint-transact-sql.md) 및 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 사용합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

@@ -3,17 +3,16 @@ title: SharePoint용 Reporting Services 추가 기능 설치 또는 제거 | Mic
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94cb70a82569712ce60592b9803f670150cf2188
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: da0269e8320f0822723ab42cbe765c6586d0f2d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597912"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint용 Reporting Services 추가 기능 설치 또는 제거
 

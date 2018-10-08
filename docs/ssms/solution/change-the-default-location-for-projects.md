@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-solutions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], default locations
 - default project locations
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e42c55f9a6f1239ad035d12d6ac3c0a76049765
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 6088e4a6550c469a43c5e9fa82dbe9477b3ad8d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42774915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748171"
 ---
 # <a name="change-the-default-location-for-projects"></a>프로젝트 기본 위치 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

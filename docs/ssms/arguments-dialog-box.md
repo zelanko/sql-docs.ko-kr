@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Arguments dialog box
 - arguments [SQL Server Management Studio]
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5241956028ff8ed7d618cdbc6494fdfa4e1b3445
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 638dd1453b3f5388e870ef0133692aac496ee72c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626321"
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **인수** 대화 상자는 도구에 대한 새 인수나 기존 인수를 지정합니다. **외부 도구** 대화 상자에서 선택한 **인수 확인** 옵션이 있는 외부 도구를 시작하면 이 대화 상자가 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **인수**  
 **외부 도구** 대화 상자의 도구에 지정된 현재 변수를 나열합니다. 미리 정의된 인수 및 인수 정의의 전체 목록은 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)를 참조하십시오. 사용자 지정 인수를 입력할 수도 있습니다.  
   

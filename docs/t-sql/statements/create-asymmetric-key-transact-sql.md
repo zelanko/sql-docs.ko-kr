@@ -5,9 +5,7 @@ ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMMETRIC_KEY_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server]
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 53609e5c73daad45497c046b54ff800fefe00da7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d318349e792cb7579efcc2062ca8eb1b5521db48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600722"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -121,7 +118,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
   
  개인 키의 길이는 512, 1024 또는 2048비트일 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 CREATE ASYMMETRIC KEY 권한이 필요합니다. AUTHORIZATION 절이 지정된 경우 데이터베이스 보안 주체에 대한 IMPERSONATE 권한 또는 응용 프로그램 역할에 대한 ALTER 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 응용 프로그램 역할만 비대칭 키를 소유할 수 있습니다. 그룹 및 역할은 비대칭 키를 소유할 수 없습니다.  
   
 ## <a name="examples"></a>예  

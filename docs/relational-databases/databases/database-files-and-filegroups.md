@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3d3c7a580a347a487c31cd6667a76da9c984b90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a80a90c998e02e91546dfe306da558a0a7235df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642721"
 ---
 # <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ ms.locfileid: "32932608"
 ## <a name="database-files"></a>데이터베이스 파일  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 다음 표에 설명된 것처럼 세 가지 유형의 파일이 있습니다.  
   
-|파일|Description|  
+|파일|설명|  
 |----------|-----------------|  
 |주|주 데이터 파일은 데이터베이스의 시작 정보를 포함하며 데이터베이스의 나머지 파일을 가리킵니다. 사용자 데이터와 개체를 이 파일에 저장하거나 보조 데이터 파일에 저장할 수 있습니다. 모든 데이터베이스에는 하나의 주 데이터 파일이 있습니다. 권장되는 주 데이터 파일 확장명은 .mdf입니다.|  
 |보조|보조 데이터 파일은 선택적으로 사용하는 사용자 정의 데이터 파일이며 사용자 데이터를 저장합니다. 보조 파일은 각 파일을 서로 다른 디스크 드라이브에 배치하여 데이터를 여러 디스크에 분산시키는 데 사용할 수 있습니다. 또한 데이터베이스가 단일 Windows 파일의 최대 크기를 초과할 경우 보조 데이터 파일을 사용하여 데이터베이스 크기를 계속해서 늘릴 수 있습니다.<br /><br /> 권장되는 보조 데이터 파일 확장명은 .ndf입니다.|  
@@ -107,7 +103,7 @@ ms.locfileid: "32932608"
   
  모든 데이터 파일은 다음 표에 나열된 파일 그룹에 저장됩니다.  
   
-|파일 그룹|Description|  
+|파일 그룹|설명|  
 |---------------|-----------------|  
 |주|주 파일을 포함하는 파일 그룹. 주 파일 그룹에는 모든 시스템 테이블이 할당됩니다.|  
 |메모리 최적화 데이터|메모리 최적화 파일 그룹은 파일 스트림 파일 그룹을 기반으로 합니다.|  

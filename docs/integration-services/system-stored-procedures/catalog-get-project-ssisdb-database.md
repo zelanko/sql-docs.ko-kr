@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76668374ff89a6f38ebdbea9aec339653f1c1dca
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 281e3d3a5c85e2c89991487c5c4988d0e1077ba6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635101"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ## <a name="result-sets"></a>결과 집합  
  프로젝트의 이진 스트림은 **varbinary(MAX)** 로 반환됩니다. 폴더 또는 프로젝트가 없으면 아무 결과도 반환되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 권한  

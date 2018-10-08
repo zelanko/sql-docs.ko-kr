@@ -5,9 +5,7 @@ ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.swb.sysdatatype.properties.f1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 92
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7743c3c9a4e343a168fcaa2897eb511b8d312297
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: fb00480cb014e994c0dd888afa35acaeb8dd93c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814581"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -265,7 +262,7 @@ column_name <data_type>
 ## <a name="memory-optimized-table-types"></a>메모리 액세스에 최적화된 테이블 형식  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 테이블 형식의 데이터 처리는 디스크가 아닌 기본 메모리에서 수행될 수 있습니다. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 메모리 최적화 테이블을 만드는 방법을 보여주는 코드 샘플은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다. *assembly_name*을 지정하면 사용자는 어셈블리나 그에 대한 REFERENCES 권한을 소유해야 합니다.  
 
  CREATE TABLE 문의 열이 사용자 정의 형식으로 정의되면 해당 형식에 대한 REFERENCES 권한이 필요합니다.

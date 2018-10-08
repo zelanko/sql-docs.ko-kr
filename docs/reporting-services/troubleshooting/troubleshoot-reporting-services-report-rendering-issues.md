@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73b5fe3ae626076b6579671038c50ccc8cd87380
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 13a32ba9923a1655b6b8f44d6be2ad4617127edf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646611"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services 보고서 렌더링 문제 해결
 보고서 데이터와 레이아웃 정보가 조합되면 컴파일된 보고서가 보고서 렌더러로 전송됩니다. 예를 들어 보고서를 로컬로 미리 볼 때는 HTML 렌더러를 사용하여 컴파일된 보고서를 표시합니다. 이 항목을 사용하여 보고서 렌더링 관련 문제를 해결할 수 있습니다.   

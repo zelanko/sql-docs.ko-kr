@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3920dd90361862b255879362ec36e9ac057bf7a2
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 10e742d11000214bf663627d842e6ace3e68e13e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619283"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 보완 로깅 스크립트
   이 대화 상자에는 Oracle 보완 로깅 스크립트가 표시됩니다.  
@@ -28,7 +25,7 @@ ms.locfileid: "35331467"
   
  조직의 Oracle DBA 정책에 따라 보완 로깅 스크립트를 실행하려면 Oracle DBA의 검토와 승인이 필요할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  다음은 스크립트를 실행하는 방법을 지정하는 데 사용할 수 있는 옵션입니다.  
   
  **스크립트 실행**  

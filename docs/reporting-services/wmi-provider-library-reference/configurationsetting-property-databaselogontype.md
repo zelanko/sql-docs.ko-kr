@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseLogonType
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9980443ff67ffe481ec13c074b418ad436864358
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d9d20259ec79532db2ccbb04da4f83d66f3e2abd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265773"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608598"
 ---
 # <a name="configurationsetting-property---databaselogontype"></a>ConfigurationSetting 속성 - DatabaseLogonType
   보고서 서버가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 계정, Windows 사용자 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하여 보고서 서버 데이터베이스에 액세스하는지 여부를 지정합니다. 읽기 전용입니다.  

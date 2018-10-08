@@ -5,21 +5,18 @@ ms.date: 03/14/2018
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7dafd722700fa0fe7f1d165d3120a6f35765f9bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051941"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627021"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -171,8 +168,7 @@ SQL Server 2014 Standard의 변경 사항은 다음과 같습니다.
 4.  마이그레이션 스크립트를 실행합니다.  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>정보 메시지 "파일 액세스 거부됨"이 SQL Server 2014 오류 로그에서 오류로 잘못 보고됨  
-
-            **문제:** 메모리 최적화 테이블을 포함하는 데이터베이스가 있는 서버를 다시 시작하면 다음과 같은 유형의 오류 메시지가 SQL Server 2014 오류 로그에 표시될 수 있습니다.  
+**문제:** 메모리 최적화 테이블을 포함하는 데이터베이스가 있는 서버를 다시 시작하면 다음과 같은 유형의 오류 메시지가 SQL Server 2014 오류 로그에 표시될 수 있습니다.  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -184,23 +180,19 @@ memory-optimized table DLLs.
 **해결 방법:** 없습니다. 이 메시지는 정보 제공용입니다.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>메모리 최적화 테이블의 포함된 열이 누락된 인덱스 정보에서 잘못 보고됨  
-
-            **문제:** SQL Server 2014에서는 메모리 최적화 테이블에 대한 쿼리의 누락된 인덱스를 검색하는 경우, 누락된 인덱스를 SHOWPLAN_XML에서 보고하고 sys.dm_db_missing_index_details 등의 누락된 인덱스 DMV에서도 보고합니다. 포함된 열이 누락된 인덱스 정보에 들어 있는 경우도 있습니다. 모든 열이 메모리 최적화 테이블의 모든 인덱스와 함께 암시적으로 포함되므로 메모리 최적화 인덱스를 사용하여 포함된 열을 명시적으로 지정할 수 없습니다.  
+**문제:** SQL Server 2014에서는 메모리 최적화 테이블에 대한 쿼리의 누락된 인덱스를 검색하는 경우, 누락된 인덱스를 SHOWPLAN_XML에서 보고하고 sys.dm_db_missing_index_details 등의 누락된 인덱스 DMV에서도 보고합니다. 포함된 열이 누락된 인덱스 정보에 들어 있는 경우도 있습니다. 모든 열이 메모리 최적화 테이블의 모든 인덱스와 함께 암시적으로 포함되므로 메모리 최적화 인덱스를 사용하여 포함된 열을 명시적으로 지정할 수 없습니다.  
   
-
-            **해결 방법** : 메모리 최적화 테이블의 인덱스를 사용하여 INCLUDE 절을 지정하지 마세요.  
+**해결 방법** : 메모리 최적화 테이블의 인덱스를 사용하여 INCLUDE 절을 지정하지 마세요.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>해시 인덱스가 있지만 쿼리에 적합하지 않은 경우 누락된 인덱스가 누락된 인덱스 정보에서 생략됨  
-
-            **문제:** 쿼리에서 참조되는 메모리 최적화 테이블의 열에 해시 인덱스가 있지만 이 인덱스를 쿼리에 사용할 수 없는 경우, SQL Server 2014에서 누락된 인덱스가 SHOWPLAN_XML과 sys.dm_db_missing_index_details DMV에 보고되지 않을 수도 있습니다.  
+**문제:** 쿼리에서 참조되는 메모리 최적화 테이블의 열에 해시 인덱스가 있지만 이 인덱스를 쿼리에 사용할 수 없는 경우, SQL Server 2014에서 누락된 인덱스가 SHOWPLAN_XML과 sys.dm_db_missing_index_details DMV에 보고되지 않을 수도 있습니다.  
   
 특히 쿼리에 인덱스 키 열의 하위 집합이 포함된 같음 조건자가 있거나 인덱스 키 열이 포함된 같지 않음 조건자가 있는 경우, 해시 인덱스를 그대로 사용할 수 없으며 쿼리를 효율적으로 실행하려면 다른 인덱스가 필요합니다.  
   
 **해결 방법:** 해시 인덱스를 사용하는 경우 쿼리와 쿼리 계획을 조사하여 쿼리에서 인덱스 키의 하위 집합이나 같지 않음 조건자에 대한 Index Seek 연산을 활용할 수 있는지 여부를 확인합니다. 인덱스 키의 하위 집합에서 검색해야 하는 경우, 비클러스터형 인덱스를 사용하거나 검색해야 하는 정확한 열에서 해시 인덱스를 사용합니다. 같지 않음 조건자에서 검색해야 하는 경우에는 해시 대신 비클러스터형 인덱스를 사용합니다.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우 메모리 최적화 테이블과 메모리 최적화 테이블 변수를 동일한 쿼리에서 사용하면 실패함  
-
-            **문제:** READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우, 사용자 트랜잭션 컨텍스트 외부의 동일한 문에서 메모리 최적화 테이블과 메모리 최적화 테이블 변수 둘 다에 액세스하면 다음과 같은 오류 메시지가 나타날 수 있습니다.  
+**문제:** READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우, 사용자 트랜잭션 컨텍스트 외부의 동일한 문에서 메모리 최적화 테이블과 메모리 최적화 테이블 변수 둘 다에 액세스하면 다음과 같은 오류 메시지가 나타날 수 있습니다.  
   
 ```  
 Msg 41359  

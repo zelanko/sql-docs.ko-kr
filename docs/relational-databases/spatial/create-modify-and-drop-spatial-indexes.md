@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cde2105ac4291e7553b4a073d62ecb7e43348401
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f4582efcfd91c71e1b40b454712d5d0afeeb8765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076773"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646451"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ ms.locfileid: "43076773"
   
 11. **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
   
-     **geometry** 형식 열에서 인덱스를 만들 경우 경계 상자의 **(***X-min***,***Y-min***)** 및 **(***X-max***,***Y-max***)** 좌표를 지정해야 합니다. **geography** 형식 열의 인덱스의 경우 **지리 표** 공간 분할 구성표를 지정하면 지리 표 공간 분할이 경계 상자를 사용하지 않으므로 경계 상자 필드는 읽기 전용이 됩니다.  
+     **geometry** 형식 열에서 인덱스를 만들 경우 경계 상자의 **(**_X-min_**,**_Y-min_**)** 및 **(**_X-max_**,**_Y-max_**)** 좌표를 지정해야 합니다. **geography** 형식 열의 인덱스의 경우 **지리 표** 공간 분할 구성표를 지정하면 지리 표 공간 분할이 경계 상자를 사용하지 않으므로 경계 상자 필드는 읽기 전용이 됩니다.  
   
      필요에 따라 공간 분할(tessellation) 구성표의 모든 수준에서 표 밀도 및 **개체당 셀 수** 필드에 대해 기본값이 아닌 값을 지정할 수 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상의 경우 개체당 기본 셀 수는 각각 16과 8이고, 기본 표 밀도는 **의 경우** 보통 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]입니다.  
   

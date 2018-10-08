@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.agentsecurity.articles.f1
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90070570eda9f66896533d3d07ad1bb9aa1e76af
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c7bcf68e820e2f436995231dcee9d0a637e2c45b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622751"
 ---
 # <a name="agent-security-new-publication-wizard"></a>에이전트 보안(새 게시 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "37358345"
   
  에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **스냅숏 에이전트**  
  모든 게시에 대해 표시됩니다. **보안 설정** 을 클릭하여 **스냅숏 에이전트 보안** 대화 상자에서 보안 설정을 지정할 수 있습니다.  
   

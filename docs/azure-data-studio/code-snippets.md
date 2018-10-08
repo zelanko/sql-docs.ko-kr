@@ -17,13 +17,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "48039017"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 코드 조각을 만들고 사용해서 TRANSACT-SQL (T-SQL) 스크립트를 빠르게 생성하기 
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 코드 조각을 만들고 사용해서 TRANSACT-SQL (T-SQL) 스크립트를 빠르게 생성하기
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 코드 조각은 데이터베이스 및 데이터베이스 개체를 쉽게 만드는 템플릿입니다. 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 적절한 구문을 빠르게 생성하도록 도와주는 여러 개의 T-SQL 코드 조각을 제공합니다. 
 
-사용자 정의 코드 조각도 만들 수 있습니다.
+사용자 정의 코드 조각 또한 만들 수 있습니다.
 
 ## <a name="using-built-in-t-sql-code-snippets"></a>기본 제공 T-SQL 코드 조각 사용하기
 

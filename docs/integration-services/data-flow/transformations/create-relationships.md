@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4429f78bd1db0868733efc1620726378246925a8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9aa75919be7acd416d1c570e58180967f4e23239
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808568"
 ---
 # <a name="create-relationships"></a>관계 만들기
   **관계 만들기** 대화 상자를 사용하여 유사 항목 조회 변환 편집기, 조회 변환 편집기 및 용어 조회 변환 편집기에서 구성한 원본 열과 조회 테이블 열 간의 매핑을 편집할 수 있습니다.  
@@ -31,7 +28,7 @@ ms.locfileid: "35333327"
   
  **관계 만들기** 대화 상자를 사용하는 변환에 대한 자세한 내용은 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md), [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)및 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **입력 열**  
  사용 가능한 입력 열 목록에서 선택합니다.  
   

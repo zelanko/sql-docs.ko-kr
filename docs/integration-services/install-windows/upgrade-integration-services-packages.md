@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: b3d49a3702cfb781d89d4cda018d271eed52c17a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ea235b42cb215a52c523832d4c1b4daffa975971
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771631"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 인스턴스를 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스로 업그레이드할 때는 기존 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지가 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 릴리스에서 사용되는 패키지 형식으로 자동 업그레이드되지 않습니다. 직접 업그레이드 방법을 선택하고 수동으로 패키지를 업그레이드해야 합니다.  
