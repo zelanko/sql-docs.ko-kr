@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREDENTIAL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608845"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,13 +56,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  만들려는 자격 증명의 이름을 지정합니다. *credential_name*은 번호(#) 기호로 시작할 수 없습니다. 시스템 자격 증명은 ##으로 시작합니다.  SAS(공유 액세스 서명)를 사용할 때 이 이름은 컨테이너 경로와 일치해야 하며 https로 시작해야 하고 슬래시를 포함하지 말아야 합니다. 아래의 예 4를 참조하십시오.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **IDENTITY**가 Key Vault의 이름입니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 *SAS*입니다. 아래의 예 4를 참조하십시오.  
  
 > [!IMPORTANT]
 > Azure SQL Database는 Azure Key Vault와 공유 액세스 서명 ID만 지원합니다. Windows 사용자 ID는 지원되지 않습니다.
  
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  나가는 인증에 필요한 암호를 지정합니다.  
   
  Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 Azure Active Directory에 포함된 **Service Principal**의 *\<Client ID>*(하이픈 없이) 및 *\<Secret>* 가 필요합니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 SAS 토큰입니다. 아래의 예 4를 참조하십시오.  Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명을 만드는 방법은 [1 단원: Azure 컨테이너에 저장 된 액세스 정책 및 공유 액세스 서명 만들기](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)를 참조합니다.  
