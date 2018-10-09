@@ -44,7 +44,7 @@ ms.locfileid: "47844651"
   
 -   [방법: 자동 페이지 복구 시도 보기](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> 자동 페이지 복구 시도가 발생하는 오류 유형  
  데이터베이스 미러링 자동 페이지 복구는 다음 표에 나열된 오류 중 하나로 인해 실패한 작업이 있는 데이터 파일의 페이지만 복구하도록 시도합니다.  
   
 |오류 번호|설명|자동 페이지 복구 시도가 발생되는 인스턴스|  
@@ -56,7 +56,7 @@ ms.locfileid: "47844651"
  최근에 발생한 823 CRC 오류 및 824 오류를 보려면 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 데이터베이스의 [suspect_pages](../../relational-databases/databases/msdb-database.md) 테이블을 참조하세요.  
 
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="UnrepairablePageTypes"></a> 자동으로 복구할 수 없는 페이지 유형  
  다음 컨트롤 페이지 유형은 자동 페이지 복구를 통해 복구할 수 없습니다.  
   
 -   파일 헤더 페이지(페이지 ID 0)  
@@ -66,7 +66,7 @@ ms.locfileid: "47844651"
 -   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> 주/기본 데이터베이스에서 I/O 오류 처리  
  주/기본 데이터베이스에서는 데이터베이스가 SYNCHRONIZED 상태이고 주/기본 데이터베이스가 미러/보조 데이터베이스에 대한 로그 레코드를 계속 보내는 경우에만 자동 페이지 복구가 시도됩니다. 자동 페이지 복구 시도에서 기본적인 동작 시퀀스는 다음과 같습니다.  
   
 1.  주/기본 데이터베이스의 데이터 페이지에서 읽기 오류가 발생하면 주/기본 데이터베이스는 해당 오류 상태와 함께 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블에 행을 삽입합니다. 그런 다음 데이터베이스 미러링의 경우에는 주 데이터베이스가 미러 데이터베이스에 해당 페이지의 복사본을 요청합니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우에는 주 데이터베이스가 해당 요청을 모든 보조 데이터베이스에 브로드캐스팅하고 응답할 첫 번째 데이터베이스에서 페이지를 가져옵니다. 이 요청에는 페이지 ID와 현재 플러시된 로그 끝에 있는 LSN이 지정됩니다. 페이지가 *복원 보류*로 표시되므로 자동 페이지 복구 시도 중에는 액세스할 수 없습니다. 복구 시도 중에 이 페이지에 액세스하려고 하면 오류 829(복원 보류)가 발생하며 실패합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "47844651"
 5.  페이지 I/O 오류로 인해 [지연된 트랜잭션](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)이 발생한 경우 페이지를 복구하고 나면 주/기본 데이터베이스에서 이러한 트랜잭션을 해결하려고 시도합니다.  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> 미러/보조 데이터베이스에서 I/O 오류 처리  
  미러/보조 데이터베이스에서 발생하는 데이터 페이지에 대한 I/O 오류는 일반적으로 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서와 동일한 방식으로 처리됩니다.  
   
 1.  데이터베이스 미러링을 사용하는 경우 로그 레코드를 다시 실행할 때 미러 데이터베이스에 하나 이상의 페이지 I/O 오류가 발생한 경우 미러링 세션은 SUSPENDED 상태가 됩니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 사용하는 경우 로그 레코드를 다시 실행할 때 보조 복제본에 하나 이상의 페이지 I/O 오류가 발생한 경우 보조 데이터베이스는 SUSPENDED 상태가 됩니다. 이때 미러/보조 데이터베이스는 해당 오류 상태와 함께 **suspect_pages** 테이블에 행을 삽입합니다. 그런 다음 미러/보조 데이터베이스는 주/기본 데이터베이스에 해당 페이지의 복사본을 요청합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "47844651"
  자동 페이지 복구는 백그라운드로 실행되는 비동기 프로세스입니다. 따라서 읽을 수 없는 페이지를 요청하는 데이터베이스 작업은 실패하게 되고 오류를 일으킨 조건과 상관없이 오류 코드가 반환됩니다. 미러된 데이터베이스 또는 가용성 데이터베이스에 대한 응용 프로그램을 개발하는 경우 실패한 작업에 대한 예외를 차단해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 코드가 823, 824 또는 829인 경우 작업을 나중에 다시 시도해야 합니다.  
   
 
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> 자동 페이지 복구 시도 보기  
  다음 동적 관리 뷰는 지정된 가용성 데이터베이스 또는 미러된 데이터베이스에 대한 최근 자동 페이지 복구 시도에 해당하는 행을 데이터베이스당 최대 100개까지 반환합니다.  
   
 -   **Always On 가용성 그룹:**  
