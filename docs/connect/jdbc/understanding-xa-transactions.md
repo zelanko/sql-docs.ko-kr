@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 782b254eca5a0fb60ab354e35b40eae5d5fd2640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810811"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851978"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
@@ -59,7 +59,16 @@ MS DTC(Microsoft Distributed Transaction Coordinator)와 XA 데이터 원본을 
 
 > [!NOTE]  
 > JDBC 분산 트랜잭션 구성 요소는 JDBC 드라이버 설치의 xa 디렉터리에 있습니다. 이 구성 요소에는 xa_install.sql 및 sqljdbc_xa.dll 파일이 포함됩니다.  
-  
+
+> [!NOTE]  
+> SQL Server 2019 공개 미리 보기 CTP 2.0 이상에서는 JDBC XA 분산된 트랜잭션 구성 요소는 사용 하도록 설정 하거나 시스템을 사용 하 여 사용 하지 않도록 설정 될 수 있는 SQL Server 엔진에 포함 된 저장 프로시저입니다. JDBC 드라이버를 사용 하 여 XA 분산 트랜잭션 수행에 필요한 구성 요소를 사용 하도록 설정 하려면 다음 저장된 프로시저를 실행 합니다.
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> 이전에 설치 된 구성 요소를 사용 하지 않으려면 다음 저장된 프로시저를 실행 합니다. 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### <a name="running-the-ms-dtc-service"></a>MS DTC 서비스 실행
 
 MS DTC 서비스는 서비스 관리자에서 **자동**으로 표시하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 시작할 때 자동으로 실행되도록 해야 합니다. XA 트랜잭션에 대해 MS DTC를 활성화하려면 다음 단계를 따릅니다.  
