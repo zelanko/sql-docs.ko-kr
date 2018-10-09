@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727491"
 ---
 # <a name="connection-options"></a>연결 옵션
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,8 +33,8 @@ ms.locfileid: "42787276"
 |CharacterSet<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|String|서버에 데이터를 보내는 데 사용되는 문자 집합을 지정합니다.<br /><br />가능한 값은 SQLSRV_ENC_CHAR 및 UTF-8입니다. 자세한 내용은 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|**사용** 또는 **사용 안 함**|Always Encrypted 기능 사용 여부를 지정 합니다. |사용 안 함|  
 |ConnectionPooling|연결 풀링이 설정되면 1 또는 **true** 입니다.<br /><br />연결 풀링이 해제되면 0 또는 **false** 입니다.|연결이 연결 풀에서 할당되는지(1 또는 **true**) 할당되지 않는지(0 또는 **false**)를 지정합니다.<sup>1</sup>|**true**(1)|  
-|ConnectRetryCount|0에서 255 (포함) 사이의 정수|포기 하기 전에 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 단일 시도 분할 하는 경우 연결 다시 설정 하도록 합니다. 0 이면 없습니다 다시 연결 하려고 하는 값입니다.|@shouldalert|  
-|ConnectRetryInterval|1에서 60 (포함) 사이의 정수|연결을 다시 시도 간격 (초) 시간입니다. 응용 프로그램 끊어진된 연결을 검색할 때 즉시 다시 연결 하려고 하 고 다시 시도 하기 전에 ConnectRetryInterval 초를 기다립니다 됩니다. ConnectRetryCount 0 이면이 키워드는 무시 됩니다.|@shouldalert|  
+|ConnectRetryCount|0에서 255 (포함) 사이의 정수|포기 하기 전에 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 단일 시도 분할 하는 경우 연결 다시 설정 하도록 합니다. 0 이면 없습니다 다시 연결 하려고 하는 값입니다.|1|  
+|ConnectRetryInterval|1에서 60 (포함) 사이의 정수|연결을 다시 시도 간격 (초) 시간입니다. 응용 프로그램 끊어진된 연결을 검색할 때 즉시 다시 연결 하려고 하 고 다시 시도 하기 전에 ConnectRetryInterval 초를 기다립니다 됩니다. ConnectRetryCount 0 이면이 키워드는 무시 됩니다.|1|  
 |데이터베이스|String|<sup>2</sup>을 설정할 연결에 대해 사용 중인 데이터베이스 이름을 지정합니다.|사용할 로그인에 대한 기본 데이터베이스입니다.|  
 |드라이버|String|SQL Server와 통신 하는 데 기반 Microsoft ODBC driver를 지정 합니다.<br /><br />가능한 값은<br />SQL Server 용 ODBC 드라이버 17<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows만 해당).|Driver 키워드가 지정 되지 않은 경우 Microsoft Drivers for PHP for SQL Server 하려고 시스템에서 지원 되는 Microsoft ODBC 드라이버를 찾을 등 최신 버전의 ODBC 사용 하 여 시작 합니다.|  
 |Encrypt|암호화가 설정되면 1 또는 **true** 입니다.<br /><br />암호화가 해제되면 0 또는 **false** 입니다.|SQL Server와의 통신이 암호화되었는지(1 또는 **true**) 또는 암호화되지 않았는지(0 또는 **false**)<sup>3</sup> 여부를 지정합니다.|**false**(0)|  

@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: deffdb98790baa64eaa1983fee6839a65289d0d4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8d5d9fcb2664fa17e1138ebad57fd4330bea34af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769457"
 ---
-# <a name="cursor-types-sqlsrv-driver"></a>커서 유형(SQLSRV 드라이버)
+# <a name="cursor-types-sqlsrv-driver"></a>커서 형식(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 SQLSRV 드라이버를 사용하면 커서 유형에 따라 어떤 순서로든지 액세스할 수 있는 행이 있는 결과 집합을 만들 수 있습니다.  이 항목에서는 클라이언트 쪽 (버퍼 됨) 및 (버퍼링) 하는 서버 쪽 하겠습니다 커서입니다.  
@@ -51,7 +48,7 @@ SQLSRV 드라이버를 사용하면 커서 유형에 따라 어떤 순서로든�
 |SQLSRV_SCROLL_NEXT|다음 행을 지정합니다. 이 경우 기본 값을 지정 하지 않으면 합니다 *행* 스크롤 가능한 결과 집합에 대 한 매개 변수입니다.|  
 |SQLSRV_SCROLL_PRIOR|현재 행 앞에 있는 행을 지정합니다.|  
 |SQLSRV_SCROLL_FIRST|결과 집합에서 첫 번째 행을 지정합니다.|  
-|SQLSRV_SCROLL_LAST|결과 집합의 마지막 행을 지정합니다.|  
+|SQLSRV_SCROLL_LAST|결과 집합에서 첫 번째 행을 지정합니다.|  
 |SQLSRV_SCROLL_ABSOLUTE|지정 된 행을 지정 합니다 *오프셋* 매개 변수입니다.|  
 |SQLSRV_SCROLL_RELATIVE|지정 된 행을 지정 합니다 *오프셋* 현재 행에서 매개 변수입니다.|  
   

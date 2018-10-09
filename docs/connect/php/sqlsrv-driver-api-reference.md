@@ -5,31 +5,28 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756591"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 드라이버 API 참조
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 의 SQLSRV 드라이버 API 이름은 **sqlsrv**입니다. 모든 **sqlsrv** 함수 시작 **sqlsrv_** 동사 또는 명사가 옵니다 뒤에 야 합니다. 뒤에 동사가 오는 함수가 일부 작업을 수행하고 뒤에 명사가 오는 함수는 특정 형식의 메타데이터를 반환합니다.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 의 SQLSRV 드라이버 API 이름은 **sqlsrv**입니다. 모든 **sqlsrv** 함수는 **sqlsrv** 로 시작하고 뒤에 동사 또는 명사가 옵니다. 뒤에 동사가 오는 함수가 일부 작업을 수행하고 뒤에 명사가 오는 함수는 특정 형식의 메타데이터를 반환합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.  
   
-|기능|Description|  
+|함수|설명|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|트랜잭션을 시작합니다.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|문을 취소하고 문에 대한 모든 보류 중인 결과를 삭제합니다.|  
@@ -61,8 +58,8 @@ SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.
 ## <a name="reference"></a>참조  
 [PHP 매뉴얼](http://php.net/manual)  
   
-## <a name="see-also"></a>관련 항목  
-[Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>참고 항목  
+[Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
