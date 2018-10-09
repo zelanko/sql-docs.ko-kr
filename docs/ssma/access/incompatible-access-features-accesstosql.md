@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases
 - Access databases, features incompatible with SQL Azure
@@ -30,16 +25,15 @@ helpviewer_keywords:
 - unique indexes
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2c5819ffe66cfb6d80e19973cc9b3f2cba0251df
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: eb36afbcfe8d406708719fb7062510fd9f828a5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608361"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>호환 되지 않는 Access 기능 (AccessToSQL)
 모든 액세스 데이터베이스 기능을 사용 하 여 호환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 예약 된 키워드 집합은 및입니다. 문제에 성공적인 마이그레이션을 방해할 수 있습니다 이러한 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 가능한 마이그레이션 문제 및 수행할 수 있는 정보에 대해 자세히 알아보려면 다음 표를 사용 합니다.  
