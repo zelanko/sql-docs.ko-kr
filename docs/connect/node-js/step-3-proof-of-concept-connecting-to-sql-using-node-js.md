@@ -1,37 +1,34 @@
 ---
-title: '3 단계: Node.js를 사용 하 여 SQL에 연결 하는 개념 증명 | Microsoft Docs'
+title: '3단계: Java를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288923"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834142"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>3 단계: Node.js를 사용 하 여 SQL에 연결 하는 개념 증명
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명
 
-![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[Node.js SQL 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[Node.js SQL 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-이 예제에서는 개념 증명을 고려 되어야 합니다.  샘플 코드의 명확성을 위해 간소화 되 고 Microsoft에서 권장 모범 사례 나타내지는지 않습니다. 다른 예제 같은 중요 한 기능을 사용 하 여를 Github에서 사용할 수 있습니다.
+이 예제에서는 개념만 고려 되어야 합니다.  샘플 코드를 이해 하기 쉽도록 간소화 되었습니다 및 Microsoft에서 권장 하는 모범 사례를 반드시 나타내지는지 않습니다. 같은 중요 한 기능을 사용 하는 다른 예는 Github에서 사용할 수 있습니다.
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>1 단계: 연결  
   
-**새 연결** 함수는 SQL 데이터베이스에 연결 하는 데 사용 됩니다.  
+합니다 **새 연결** 함수는 SQL Database에 연결 하는 데 사용 됩니다.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -49,10 +46,10 @@ ms.locfileid: "35288923"
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>2 단계: 쿼리를 실행 합니다.  
+## <a name="step-2--execute-a-query"></a>2단계: 쿼리 실행  
   
   
-모든 SQL 문을 사용 하 여 실행 하는 **새 Request()** 함수입니다. 문은 select 문과 같은 행을 반환 하는 경우 검색할 수 있습니다 있습니다를 사용 하는 **request.on()** 함수입니다. 행이 없는 request.on() 함수 빈 목록을 반환 합니다.  
+모든 SQL 문을 사용 하 여 실행 하는 **new request ()** 함수입니다. 문이 select 문과 같은 행을 반환 하는 경우 검색할 수 있습니다 사용 하는 **request.on ()** 함수입니다. 행이 없는 경우 request.on () 함수는 빈 목록을 반환 합니다.  
   
   
 ```javascript  
@@ -99,9 +96,9 @@ ms.locfileid: "35288923"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>행을 삽입 하는 3 단계:  
+## <a name="step-3-insert-a-row"></a>3 단계: 행 삽입  
   
-이 예제를 실행 하는 방법을 표시 됩니다는 [삽입](../../t-sql/statements/insert-transact-sql.md) 문을에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 [SQL 주입](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값입니다.    
+이 예제에서는 실행 하는 방법에에서는 [삽입](../../t-sql/statements/insert-transact-sql.md) 에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 하는 문을 [SQL 주입](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값입니다.    
   
   
 ```javascript  

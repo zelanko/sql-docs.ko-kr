@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|applications
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.connecttoserver.options.registeredservers.f1
@@ -21,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: cbc464d86f77c609ecc53bc6ed02bb5fff60e3a8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c96a65c3935e91204d562933ba4f5f0de932f3e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838309"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +79,7 @@ ms.locfileid: "43026112"
 |키워드|초기화 속성|설명|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address"에 대한 동의어입니다.|  
-|**주소**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 서버의 네트워크 주소입니다. **Address**는 일반적으로 서버의 네트워크 이름이지만 파이프, IP 주소나 TCP/IP 포트 및 소켓 주소와 같은 다른 이름일 수도 있습니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> 값 **주소** 에 전달 된 값 보다 우선 **Server** SQL Server 용 OLE DB 드라이버를 사용 하는 경우 연결 문자열에서입니다. 또한 `Address=;`이면 **Server** 키워드에 지정된 서버에 연결하지만 `Address= ;, Address=.;`, `Address=localhost;` 및 `Address=(local);`이면 항상 로컬 서버에 연결합니다.<br /><br /> **Address** 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> [*프로토콜 ***:**]* 주소 *[* *, * * * 포트 &#124;\pipe\pipename*]<br /><br /> *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다. 프로토콜에 대 한 자세한 내용은 참조 하세요. [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)합니다.<br /><br /> 모두 *프로토콜* 또는 **Network** 키워드를 지정한 경우 OLE DB Driver for SQL Server에 지정 된 프로토콜 순서를 사용할지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager입니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.|   
+|**주소**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 서버의 네트워크 주소입니다. **Address**는 일반적으로 서버의 네트워크 이름이지만 파이프, IP 주소나 TCP/IP 포트 및 소켓 주소와 같은 다른 이름일 수도 있습니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> 값 **주소** 에 전달 된 값 보다 우선 **Server** SQL Server 용 OLE DB 드라이버를 사용 하는 경우 연결 문자열에서입니다. 또한 `Address=;`이면 **Server** 키워드에 지정된 서버에 연결하지만 `Address= ;, Address=.;`, `Address=localhost;` 및 `Address=(local);`이면 항상 로컬 서버에 연결합니다.<br /><br /> **Address** 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> [_프로토콜_**:**]_주소_[**하십시오**_포트 &#124;\pipe\pipename_]<br /><br /> _protocol_ 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다. 프로토콜에 대 한 자세한 내용은 참조 하세요. [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)합니다.<br /><br /> 모두 _프로토콜_ 또는 **Network** 키워드를 지정한 경우 OLE DB Driver for SQL Server에 지정 된 프로토콜 순서를 사용할지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager입니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.|   
 |**APP**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|연결할 수 있는 데이터베이스의 전체 경로 이름을 포함한 주 파일의 이름입니다. **AttachDBFileName**을 사용하려면 공급자 문자열 Database 키워드에도 데이터베이스 이름을 지정해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않으며 연결된 데이터베이스를 연결 기본값으로 사용합니다.|  
@@ -102,7 +99,7 @@ ms.locfileid: "43026112"
 |**PacketSize**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|문자열 "yes" 및 "no"를 값으로 받습니다. "no"인 경우 중요한 인증 정보를 데이터 원본 개체에 유지할 수 없습니다.|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 암호입니다.|  
-|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 이 값은 네트워크의 서버 이름(IP 주소)이거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자 별칭이어야 합니다.<br /><br /> 지정하지 않으면 로컬 컴퓨터의 기본 인스턴스에 연결합니다.<br /><br /> 합니다 **주소** 키워드를 재정의 합니다 **Server** 키워드입니다.<br /><br /> 다음 중 하나를 지정하여 로컬 서버에서 기본 인스턴스에 연결할 수 있습니다.<br /><br /> **Server =;**<br /><br /> **Server =.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\**  *instancename* **;**<br /><br /> Localdb에 대 한 자세한 내용은 참조 하세요. [OLE DB Driver for SQL Server LocalDB에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)합니다.<br /><br /> 명명된 된 인스턴스를 지정 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 추가  **\\ ***InstanceName *.<br /> <br /> 없는 서버를 지정 하는 경우 연결이 로컬 컴퓨터의 기본 인스턴스에 만들어집니다. <br /> <br /> IP 주소를 지정 하는 경우에서 TCP/IP 또는 명명 된 파이프 프로토콜이 설정 되어 있는지 확인 하십시오 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.<br /> <br /> 의 전체 구문은 합니다 **Server** 키워드는 다음과 같습니다:<br /> <br /> **Server =**[* 프로토콜***:**] *서버*[**, * * * 포트*]<br /><br /> *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.<br /><br /> 다음 예제는 명명된 파이프를 지정하는 방법입니다.<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 이 줄은 명명된 파이프 프로토콜, 로컬 시스템의 명명된 파이프(`\\.\pipe`), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름(`MSSQL$MYINST01`) 및 명명된 파이프의 기본 이름(`sql/query`)을 지정합니다.<br /><br /> 모두를 *프로토콜* 또는 **Network** 키워드를 지정한 경우 OLE DB Driver for SQL Server에 지정 된 프로토콜 순서를 사용할지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager입니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.<br /><br /> 전달 되는 값의 시작 부분에 있는 공백은 무시 됩니다 **Server** SQL Server 용 OLE DB 드라이버를 사용 하는 경우 연결 문자열에서입니다.|   
+|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 이 값은 네트워크의 서버 이름(IP 주소)이거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자 별칭이어야 합니다.<br /><br /> 지정하지 않으면 로컬 컴퓨터의 기본 인스턴스에 연결합니다.<br /><br /> 합니다 **주소** 키워드를 재정의 합니다 **Server** 키워드입니다.<br /><br /> 다음 중 하나를 지정하여 로컬 서버에서 기본 인스턴스에 연결할 수 있습니다.<br /><br /> **Server =;**<br /><br /> **Server =.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\**  *instancename* **;**<br /><br /> Localdb에 대 한 자세한 내용은 참조 하세요. [OLE DB Driver for SQL Server LocalDB에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)합니다.<br /><br /> 명명된 된 인스턴스를 지정 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 추가 **\\** _InstanceName_합니다.<br /><br /> 서버를 지정하지 않으면 로컬 컴퓨터의 기본 인스턴스에 연결합니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> ** 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> **Server =**[_프로토콜_**:**]*Server*[**하십시오**_포트_]<br /><br /> _protocol_ 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.<br /><br /> 다음 예제는 명명된 파이프를 지정하는 방법입니다.<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 이 줄은 명명된 파이프 프로토콜, 로컬 시스템의 명명된 파이프(`\\.\pipe`), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름(`MSSQL$MYINST01`) 및 명명된 파이프의 기본 이름(`sql/query`)을 지정합니다.<br /><br /> 모두를 *프로토콜* 또는 **Network** 키워드를 지정한 경우 OLE DB Driver for SQL Server에 지정 된 프로토콜 순서를 사용할지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager입니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.<br /><br /> 전달 되는 값의 시작 부분에 있는 공백은 무시 됩니다 **Server** SQL Server 용 OLE DB 드라이버를 사용 하는 경우 연결 문자열에서입니다.|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열에는 OLE DB Driver for SQL Server에서 기본적으로 공급자에서 생성 된 SPN을 사용 하면 됩니다.|  
 |**Timeout**|DBPROP_INIT_TIMEOUT|데이터 원본 초기화가 완료될 때까지 기다릴 시간(초)입니다.|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|경우는 OLE DB Driver for SQL Server 로그인 유효성 검사에 대 한 Windows 인증 모드를 사용 하도록 "yes" 인 지시 합니다. 그렇지 않으면 SQL Server용 OLE DB 드라이버가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름과 암호를 사용하여 로그인 유효성을 검사하도록 지시하므로 UID 및 PWD 키워드를 지정해야 합니다.|  

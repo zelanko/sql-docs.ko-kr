@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790611"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-매개 변수 스트림에서 서버로 데이터를 보냅니다. 최대 8 킬로바이트 (8k)의 데이터를 호출할 때마다와 함께 보내집니다 **sqlsrv_send_stream_data**합니다.  
+매개 변수 스트림에서 서버로 데이터를 보냅니다. sqlsrv_send_stream_data**에 대한 각 호출에서 최대 8킬로바이트(8K)의 데이터를 전송합니다.  
   
 > [!NOTE]  
 > 기본적으로 쿼리가 실행될 때 모든 스트림 데이터를 서버에 보냅니다. 이 기본 동작이 변경되지 않은 경우 스트림 데이터를 서버에 보내기 위해 **sqlsrv_send_stream_data** 를 사용할 필요가 없습니다. 기본 동작 변경에 대한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)의 매개 변수 섹션을 참조하세요.  
@@ -50,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 부울: 보낼 데이터가 더 있는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 제품 검토를 스트림으로 열고 서버에 보냅니다. 실행 시 모든 스트림 데이터를 보내는 기본 동작이 사용하지 않도록 설정됩니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 제품 검토를 스트림으로 열고 서버에 보냅니다. 실행 시 모든 스트림 데이터를 보내는 기본 동작이 사용하지 않도록 설정됩니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -98,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

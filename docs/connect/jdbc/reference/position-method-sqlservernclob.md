@@ -5,35 +5,32 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70df3c9bbd63176b785873d926d296a9e9dd0dda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a6882083b270825623253d4635afd3077a5a2d75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810561"
 ---
 # <a name="position-method-sqlservernclob"></a>position 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 문자 위치를 검색 **NClob** 부분 문자열 또는 개체는 **NClob** 지정된 된 시작 위치에 따라 합니다.  
+  지정된 시작 위치에 따라 지정된  개체 또는 해당 에 있는 부분 문자열의 문자 위치를 검색합니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[position 메서드 &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|검색 된 문자 위치 지정 된 **NClob** 개체 *searchstr* 이 나타납니다 **NClob** 개체입니다.|  
-|[position 메서드 &#40;java.lang.String, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|검색 되는 문자 위치 지정된 된 부분 문자열 *searchstr* 에 표시는 **NCLOB** 값이 표시 **NClob** 개체입니다.|  
+|[position 메서드(java.sql.NClob, long)](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|문자 위치를 검색 합니다. 지정 된 **NClob** 개체 *searchstr* 이 표시 됩니다 **NClob** 개체입니다.|  
+|[position 메서드 &#40;java.lang.String, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|문자 위치를 검색 합니다. 지정된 된 부분 문자열 *searchstr* 나타나는 합니다 **NCLOB** 값이 표시 **NClob** 개체입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob 멤버](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob 클래스](../../../connect/jdbc/reference/sqlservernclob-class.md)  

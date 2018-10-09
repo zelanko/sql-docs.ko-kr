@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setString (long, java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7194a8778ecae136d7a70086c5fa2e9353988a93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839111"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString 메서드(long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  기록에서 주어진 **문자열** 을 CLOB의 지정 된 위치에서 시작 합니다.  
+  지정된 String을 CLOB의 지정된 위치부터 씁니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +43,7 @@ public int setString(long pos,
   
  *s*  
   
- **문자열** CLOB에 쓸 수 있습니다.  
+ CLOB에 쓸 문자열입니다.  
   
 ## <a name="return-value"></a>반환 값  
  쓴 문자 수입니다.  
@@ -54,12 +51,12 @@ public int setString(long pos,
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 setString 메서드는 java.sql.Clob 인터페이스의 setString 메서드에 의해 지정 됩니다.  
   
  문자 데이터는 지정된 위치부터 덮어쓰여지며 CLOB의 초기 길이를 초과할 수 있습니다. 위치+1 값을 지정하면 문자열이 추가되고, 위치+2 이상(또는 0 이하)의 값을 지정하면 위치 오류가 발생합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [setString 메서드 &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob 메서드](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 멤버](../../../connect/jdbc/reference/sqlserverclob-members.md)   

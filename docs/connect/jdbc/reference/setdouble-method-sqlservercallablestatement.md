@@ -1,13 +1,11 @@
 ---
-title: setDouble 메서드 (SQLServerCallableStatement) | Microsoft Docs
+title: setTime 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setDouble
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1445675e81ae6c86bb3e5d00166163a45e468293
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ebb554c0fada590e22a151293738bd16b7447f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843438"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839171"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>setDouble 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 매개 변수를 설정 된 주어진 **double** 값입니다.  
+  지정된 매개 변수를 지정된 날짜 값으로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,19 +39,19 @@ public void setDouble(java.lang.String sCol,
 #### <a name="parameters"></a>매개 변수  
  *sCol*  
   
- A **문자열** 매개 변수 이름이 들어 있는입니다.  
+ 매개 변수 이름이 들어 있는 **문자열**입니다.  
   
- *D*  
+ *d*  
   
- A **double** 값입니다.  
+ A **이중** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 setDouble 메서드는 java.sql.CallableStatement 인터페이스의 setDouble 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 setURL 메서드는 java.sql.CallableStatement 인터페이스의 setURL 메서드에 의해 지정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

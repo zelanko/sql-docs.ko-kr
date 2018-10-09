@@ -1,25 +1,22 @@
 ---
-title: setDateTimeOffset 메서드 (SQLServerPreparedStatement) | Microsoft Docs
+title: setObject 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5014dba9-1755-4769-b070-6cbeecee864e
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cde6ab1ba13c8beea7ee3c2941c6d4a2c8b34425
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 94152d3cd620a7b8a95e308273b51243a475c391
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841551"
 ---
 # <a name="setdatetimeoffset-method-sqlserverpreparedstatement"></a>setDateTimeOffset 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
