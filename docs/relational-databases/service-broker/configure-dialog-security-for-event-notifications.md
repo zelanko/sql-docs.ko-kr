@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: service-broker
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 797aef8ddeab8daaf094556e5ba2ec96754a6ffe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894ba222854e21a5d02811ca457ffa47184c4431
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702581"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>이벤트 알림에 대한 대화 보안 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +73,9 @@ ms.locfileid: "32972318"
 |**master** 데이터베이스에 대한 마스터 키가 없으면 [마스터 키를 만듭니다](../../t-sql/statements/create-master-key-transact-sql.md).|**master** 데이터베이스에 대한 마스터 키가 없으면 마스터 키를 만듭니다.|  
 |데이터베이스를 인증하는[인증서를 만듭니다](../../t-sql/statements/create-certificate-transact-sql.md) .|데이터베이스를 인증하는 인증서를 만듭니다.|  
 |대상 서버가 액세스할 수 있는 파일에[인증서를 백업합니다](../../t-sql/statements/backup-certificate-transact-sql.md) .|원본 서버가 액세스할 수 있는 파일에 인증서를 백업합니다.|  
-|[끝점을 만들고](../../t-sql/statements/create-endpoint-transact-sql.md)합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|끝점을 만들고 합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|  
+|[엔드포인트를 만들고](../../t-sql/statements/create-endpoint-transact-sql.md)합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|엔드포인트를 만들고 합의된 TCP 포트 번호, FOR SERVICE_BROKER(AUTHENTICATION = CERTIFICATE *certificate_name*) 및 인증하는 인증서의 이름을 지정합니다.|  
 |[로그인을 만들고](../../t-sql/statements/create-login-transact-sql.md)대상 서버의 로그인을 지정합니다.|로그인을 만들고 원본 서버의 로그인을 지정합니다.|  
-|대상 인증자 로그인에 끝점에 대한[CONNECT 권한을 부여합니다](../../t-sql/statements/grant-transact-sql.md) .|원본 인증자 로그인에 끝점에 대한 CONNECT 권한을 부여합니다.|  
+|대상 인증자 로그인에 엔드포인트에 대한[CONNECT 권한을 부여합니다](../../t-sql/statements/grant-transact-sql.md) .|원본 인증자 로그인에 엔드포인트에 대한 CONNECT 권한을 부여합니다.|  
 |[사용자를 만들고](../../t-sql/statements/create-user-transact-sql.md)대상 인증자 로그인을 지정합니다.|사용자를 만들고 원본 인증자 로그인을 지정합니다.|  
   
  **5단계: 서버 수준의 인증에 대한 인증서를 공유하고 이벤트 알림을 만듭니다.**  
