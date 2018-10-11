@@ -24,10 +24,6 @@ items:
     href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
   - name: 브라우저를 사용하여 보고서 찾기 및 보기
     href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
-  - name: 보고서 및 기타 항목 검색
-    href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
-  - name: 내 보고서 사용
-    href: using-my-reports-report-builder-and-ssrs.md
   - name: CRI 변환 대화 상자
     href: convert-cri-dialog-box-report-builder.md
 - name: 항목 숨기기(보고서 작성기 및 SSRS)
@@ -35,7 +31,7 @@ items:
 - name: Export Reports
   href: export-reports-report-builder-and-ssrs.md
   items:
-  - name: 여러 보고서 렌더링 확장 프로그램의 대화형 기능
+  - name: 보고서 렌더링 확장 프로그램의 대화형 기능
     href: interactive-functionality-different-report-rendering-extensions.md
   - name: CSV 파일로 내보내기
     href: exporting-to-a-csv-file-report-builder-and-ssrs.md
@@ -79,9 +75,9 @@ items:
   href: security-report-builder.md
 - name: 용어 설명(보고서 작성기)
   href: glossary-report-builder.md
-ms.openlocfilehash: 0d2bd1b356f4f5dac7b4040658da5107d1b0b3f7
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 529e9e93786f4e4df5f0ae62266c1405f6eabb56
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427406"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085169"
