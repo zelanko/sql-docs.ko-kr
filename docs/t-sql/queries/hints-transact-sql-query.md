@@ -1,13 +1,11 @@
 ---
 title: 쿼리 힌트(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -53,17 +51,17 @@ helpviewer_keywords:
 - MIN_GRANT_PERCENT query hint
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
+- QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: e601914c82d2d9a2882f54f5ccc09073f50485fe
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089993"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852058"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.locfileid: "44089993"
   | NO_PERFORMANCE_SPOOL   
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
-  | PARAMETERIZATION { SIMPLE | FORCED }  
+  | PARAMETERIZATION { SIMPLE | FORCED }   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -155,7 +153,7 @@ ms.locfileid: "44089993"
   
  이 쿼리 힌트는 쿼리 계획에서 인덱싱된 뷰와 인덱싱된 뷰의 인덱스를 직접 사용하도록 허용하지 않습니다.  
   
- 인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하고 WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX( *index_value* [ **,***...n* ] ) )가 지정된 경우에만 확장되지 않습니다. 쿼리 힌트 WITH (NOEXPAND)에 대한 자세한 내용은 [FROM](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
+ 인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하고 WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) )가 지정된 경우에만 확장되지 않습니다. 쿼리 힌트 WITH (NOEXPAND)에 대한 자세한 내용은 [FROM](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
  INSERT, UPDATE, MERGE 및 DELETE 문을 비롯한 문의 SELECT 부분에 있는 뷰만 힌트의 영향을 받습니다.  
   
@@ -241,7 +239,7 @@ ms.locfileid: "44089993"
 > 자세한 내용은 [계획 지침을 사용하여 쿼리 매개 변수화 동작 지정](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)을 참조하세요.
   
  SIMPLE은 쿼리 최적화 프로그램이 단순 매개 변수화를 시도하도록 지시합니다. FORCED는 쿼리 최적화 프로그램이 강제 매개 변수화를 시도하도록 지시합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드에서 강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) 및 [쿼리 처리 아키텍처 가이드에서 단순 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)를 참조하세요.  
-  
+
  RECOMPILE  
  새로운 임시 쿼리 계획을 생성하고 쿼리 실행이 완료된 후 해당 계획을 즉시 무시하도록 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 지시합니다. 동일한 쿼리가 RECOMPILE 힌트 없이 실행될 경우 생성된 쿼리 계획은 캐시에 저장된 계획을 바꾸지 않습니다. RECOMPILE을 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리 계획을 캐시하여 다시 사용합니다. 쿼리 계획을 컴파일할 때 RECOMPILE 쿼리 힌트는 쿼리에 있는 지역 변수의 현재 값을 사용하며 쿼리가 저장 프로시저 안에 있는 경우 매개 변수에 전달된 현재 값을 사용합니다.  
   
@@ -252,7 +250,7 @@ ms.locfileid: "44089993"
   
  이러한 계획이 불가능할 경우 쿼리 최적화 프로그램은 쿼리 실행 시 오류를 검색하도록 지연시키지 않고 오류를 반환합니다. 행에는 가변 길이 열이 포함될 수 있으며 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 처리할 수 있는 범위 이상의 잠재적 최대 크기를 가진 행을 정의하도록 허용합니다. 그러나 대개 응용 프로그램은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 처리할 수 있는 한도 내의 실제 크기를 가진 행을 저장합니다. 너무 긴 행이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실행 오류를 반환합니다.  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  힌트 이름 **작은 따옴표 안**에서 지정한 대로 쿼리 프로세서에 하나 이상의 추가 힌트를 제공합니다.   
@@ -261,20 +259,16 @@ ms.locfileid: "44089993"
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  쿼리 프로세서가 쿼리 계획을 생성할 때 최적화된 중첩 루프 조인을 위해 정렬 연산(일괄 처리 정렬)을 사용하지 않도록 지시합니다 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340과 동일합니다.
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  
- 쿼리 최적화 프로그램이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 이전 버전의 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON에 해당합니다.
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a> 쿼리 최적화 프로그램이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 이전 버전의 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON에 해당합니다.
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
  쿼리 최적화 프로그램 핫픽스(SQL Server 누적 업데이트 및 서비스 팩에서 릴리스된 변경 내용)를 사용하도록 설정합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 QUERY_OPTIMIZER_HOTFIXES=ON에 해당합니다.
 *  'DISABLE_PARAMETER_SNIFFING'  
  쿼리 계획이 쿼리를 컴파일할 때 처음 사용된 매개 변수 값과 독립적이되도록, 쿼리 최적화 프로그램이 하나 이상의 매개 변수가 있는 쿼리를 컴파일할 때 평균 데이터 분산을 사용하도록 지시합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 PARAMETER_SNIFFING=OFF에 해당합니다.
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'  
- SQL Server가 상관 관계에 해당하는 필터에 대해 AND 조건자를 추정할 때 최소 선택을 사용하여 계획을 생성하게 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 그 이전 버전의 카디널리티 추정 모델에 사용하던 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137에 해당하며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471을 카디널리티 추정 모델 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에서 사용할 때 결과가 비슷합니다.
-*  'DISABLE_OPTIMIZER_ROWGOAL'  
- SQL Server가 TOP, OPTION (FAST N), IN 또는 EXISTS 키워드를 포함하는 쿼리에 행 목표 조정을 사용하지 않는 계획을 생성하게 합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138과 동일합니다.
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a> SQL Server가 상관 관계에 해당하는 필터에 대해 AND 조건자를 추정할 때 최소 선택을 사용하여 계획을 생성하게 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 그 이전 버전의 카디널리티 추정 모델에 사용하던 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137에 해당하며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471을 카디널리티 추정 모델 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에서 사용할 때 결과가 비슷합니다.
+*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a> SQL Server가 TOP, OPTION (FAST N), IN 또는 EXISTS 키워드를 포함하는 쿼리에 행 목표 조정을 사용하지 않는 계획을 생성하게 합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138과 동일합니다.
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  카디널리티 추정이 필요한 모든 선행 인덱스 열에 대해 자동으로 생성된 빠른 통계(히스토그램 수정)를 사용합니다. 카디널리티 추정에 사용되는 히스토그램은 이 열의 실제 최댓값 또는 최솟값을 반영하기 위해 쿼리 컴파일 시점에 조정됩니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139와 동일합니다. 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상의 쿼리 최적화 프로그램 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리를 생성하게 합니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상의 쿼리 최적화 프로그램 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리 계획을 생성하게 합니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  쿼리 최적화 프로그램이 현재 데이터베이스 호환성 수준에 해당하는 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. 이 힌트를 사용하여 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON 또는 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 재정의합니다.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
@@ -284,13 +278,23 @@ ms.locfileid: "44089993"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조합니다.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- 쿼리가 데이터베이스 호환성 수준 *n*으로 컴파일된 것처럼 쿼리 수준에서 쿼리 최적화 프로그램 동작을 강제 실행합니다. 여기서 *n*은 지원되는 데이터베이스 호환성 수준입니다. *n*에 대해 현재 지원되는 값 목록은 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10부터)   
+ 쿼리가 데이터베이스 호환성 수준 *n*으로 컴파일된 것처럼 쿼리 수준에서 쿼리 최적화 프로그램 동작을 강제 실행합니다. 여기서 *n*은 지원되는 데이터베이스 호환성 수준입니다. *n*에 대해 현재 지원되는 값 목록은 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10부터)    
  
-    > [!NOTE]
-    > 데이터베이스 범위 구성, 추적 플래그 또는 다른 쿼리 힌트(예: QUERYTRACEON)를 통해 강제 실행되는 경우 QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 힌트는 기본 또는 레거시 카디널리티 예상 설정을 재정의하지 않습니다.   
-    > 이 힌트는 쿼리 최적화 프로그램의 동작에만 영향을 줍니다. 특정 데이터베이스 기능의 가용성과 같이, 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 따라 달라질 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능에는 영향을 주지 않습니다.   
-  
-  지원되는 모든 USE HINT 이름 목록은 동적 관리 뷰 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 사용하여 쿼리할 수 있습니다.    
+   > [!NOTE]
+   > 데이터베이스 범위 구성, 추적 플래그 또는 다른 쿼리 힌트(예: QUERYTRACEON)를 통해 강제 실행되는 경우 QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 힌트는 기본 또는 레거시 카디널리티 예상 설정을 재정의하지 않습니다.   
+   > 이 힌트는 쿼리 최적화 프로그램의 동작에만 영향을 줍니다. 특정 데이터베이스 기능의 가용성과 같이, 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 따라 달라질 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능에는 영향을 주지 않습니다.  
+   > 이 힌트에 대한 자세한 내용은 [Developer’s Choice: Hinting Query Execution model](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)(개발자 선택 사항: 힌트 쿼리 실행 모델)을 참조하세요.
+    
+*  'QUERY_PLAN_PROFILE'      
+ 쿼리에 대해 간단한 프로파일링을 사용합니다. 이 새 힌트가 포함된 쿼리가 완료되면 새 확장 이벤트 query_plan_profile이 발생합니다. 이 확장 이벤트는 query_post_execution_showplan 확장 이벤트와 유사한 실행 통계 및 실제 실행 계획 XML을 표시하지만 새 힌트가 포함된 쿼리에 대해서만 표시합니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11부터 시작). 
+ 
+  > [!NOTE]
+  > query_post_execution_showplan 확장 이벤트 수집을 사용하도록 설정하는 경우 서버에서 실행되는 모든 쿼리에 표준 프로파일링 인프라가 추가되므로 전체 서버 성능에 영향을 미칠 수 있습니다.      
+  > 대신 *query_thread_profile* 확장 이벤트의 컬렉션을 사용하도록 설정하여 간단한 프로파일링 인프라를 사용하는 경우 성능 오버헤드가 훨씬 감소하지만 전체 서버 성능에는 여전히 영향을 미칩니다.       
+  > query_plan_profile 확장 이벤트를 사용하도록 설정하는 경우 QUERY_PLAN_PROFILE로 실행된 쿼리의 간단한 프로파일링 인프라만 사용하므로 서버의 다른 워크로드에는 영향을 미치지 않습니다. 이 힌트를 사용하여 서버 워크로드의 다른 부분에 영향을 미치지 않고 특정 쿼리를 프로파일링하세요.
+  > 간단한 프로파일링에 대한 자세한 내용은 [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)(개발자 선택 사항: 쿼리 진행률 - 시간, 장소에 제한 없음)를 참조하세요.
+ 
+지원되는 모든 USE HINT 이름 목록은 동적 관리 뷰 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 사용하여 쿼리할 수 있습니다.    
 
 > [!TIP]
 > 힌트 이름은 대/소문자를 구분하지 않습니다.   
@@ -298,10 +302,10 @@ ms.locfileid: "44089993"
 > [!IMPORTANT] 
 > 일부 USE HINT 힌트는 전역 또는 세션 수준에서 사용하는 추적 플래그나 데이터베이스 범위 구성 설정과 충돌할 수 있습니다. 이 경우 쿼리 수준 힌트(USE HINT)가 항상 우선합니다. USE HINT가 쿼리 수준에서 사용하는 다른 쿼리 힌트나 추적 플래그와 충돌하는 경우(예: QUERYTRACEON) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리를 실행할 때 오류를 생성합니다. 
 
- USE PLAN N **'***xml_plan***'**     
- 쿼리 최적화 프로그램이 **'***xml_plan***'** 에 의해 지정된 쿼리에 대해 기존의 쿼리 계획을 사용하도록 합니다. USE PLAN은 INSERT, UPDATE, MERGE 또는 DELETE 문에서 지정할 수 없습니다.  
+ USE PLAN N **'**_xml\_plan_**'**     
+ 쿼리 최적화 프로그램이 **'**_xml\_plan_**'** 에 의해 지정된 쿼리에 대해 기존의 쿼리 계획을 사용하도록 합니다. USE PLAN은 INSERT, UPDATE, MERGE 또는 DELETE 문에서 지정할 수 없습니다.  
   
-TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** 지정된 테이블 힌트를 *exposed_object_name*에 해당하는 테이블 또는 뷰에 적용합니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다.  
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** 지정된 테이블 힌트를 *exposed_object_name*에 해당하는 테이블 또는 뷰에 적용합니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다.  
   
  *exposed_object_name*은 다음 참조 중 하나일 수 있습니다.  
   
@@ -311,7 +315,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
  테이블 힌트는 지정하지 않고 *exposed_object_name*만 지정하면 쿼리에 개체에 대한 테이블 힌트의 일부로 지정된 인덱스가 모두 무시되고 쿼리 최적화 프로그램에서 인덱스 사용 여부를 결정합니다. 이 방법은 원래 쿼리를 수정할 수 없을 때 INDEX 테이블 힌트의 효과를 제거하는 데 이용할 수 있습니다. 자세한 내용은 예 10을 참조하세요.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용하는 테이블 힌트 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용하는 테이블 힌트 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
   
  쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 자세한 내용은 설명 부분을 참조하세요.  
   
